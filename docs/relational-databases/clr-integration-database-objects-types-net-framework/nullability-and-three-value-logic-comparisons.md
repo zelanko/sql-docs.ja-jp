@@ -1,15 +1,15 @@
 ---
-title: "Null 値許容と 3 値論理比較 |Microsoft ドキュメント"
-ms.custom: 
+title: Null 値許容と 3 値論理比較 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abef06c62b28aa2e25f61127d8dd23551652b12c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f2765043127179ee7578cd4258e909351198e727
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>NULL 値の許容と 3 値論理比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-慣れている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型のようなセマンティクスや有効桁数を検索は、 **System.Data.SqlTypes**で名前空間、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]です。 ただし、いくつか違いもあります。このトピックでは、これらの違いの中から最も重要な点について説明します。  
+  慣れている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型のようなセマンティクスや有効桁数を検索は、 **System.Data.SqlTypes**で名前空間、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]です。 ただし、いくつか違いもあります。このトピックでは、これらの違いの中から最も重要な点について説明します。  
   
 ## <a name="null-values"></a>NULL 値  
  CLR (共通言語ランタイム) のネイティブ データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の主な違いは、CLR データ型では NULL 値が許容されないのに対して、SQL Server データ型では完全な NULL セマンティクスが用意されているという点です。  

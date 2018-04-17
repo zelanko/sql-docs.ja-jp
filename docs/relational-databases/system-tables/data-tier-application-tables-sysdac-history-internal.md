@@ -1,16 +1,16 @@
 ---
-title: "sysdac_history_internal (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysdac_history_internal (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6a6c3f5690f60fb1343df27db377af42938da805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|アクションの識別子。|  
 |**sequence_id**|**int**|アクション内のステップを識別します。|  
-|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**内の列[dbo.sysdac_instances &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)。|  
+|**instance_id**|**uniqueidentifier**|DAC インスタンスの識別子。 この列に結合できます、 **instance_id**内の列[dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)です。|  
 |**action_type**|**tinyint**|アクションの種類の識別子。<br /><br /> **0** = 展開<br /><br /> **1** = 作成<br /><br /> **2**名前の変更を =<br /><br /> **3** = デタッチ<br /><br /> **4** = delete|  
 |**action_type_name**|**varchar(19)**|アクションの種類の名前。<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** dacpac を =<br /><br /> **1**ログインを =<br /><br /> **2** = データベース|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 02/03/2018
 |**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
 |**dac_object_name_pretran**|**sysname**|アクションを含んでいるトランザクションをコミットする前のオブジェクトの名前。 データベースとログイン専用です。|  
 |**dac_object_name_posttran**|**sysname**|アクションを含んでいるトランザクションをコミットした後のオブジェクトの名前。 データベースとログイン専用です。|  
-|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベースまたはログイン上でアクションを実行するスクリプトです。|  
-|**payload**|**varbinary(max)**|バイナリでエンコードされた文字列に保存される DAC パッケージ定義。|  
+|**sqlscript**|**nvarchar(max)**|データベースまたはログイン上でアクションを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト。|  
+|**ペイロード**|**varbinary(max)**|バイナリでエンコードされた文字列に保存される DAC パッケージ定義。|  
 |**コメント**|**varchar(max)**|DAC のアップグレードでの潜在的なデータ損失を許可したユーザーのログインを記録します。|  
 |**error_string**|**nvarchar(max)**|アクションにエラーが発生した場合に生成されるエラー メッセージ。|  
 |**created_by**|**sysname**|このエントリを作成したアクションを開始したログイン。|  
@@ -88,7 +88,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>参照  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal に対応する &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal に対応する&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

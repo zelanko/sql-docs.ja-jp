@@ -2,7 +2,7 @@
 title: SQLGetDescRec 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 569a3708c13a4182e651c902ce7e1f1f9c7711dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f38ea81cf7eac8d670548382d8ffb4c0b79d503b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 関数
 **準拠**  
@@ -94,7 +94,7 @@ SQLRETURN SQLGetDescRec(
  *NullablePtr*  
  [出力]記述子レコードの SQL_DESC_NULLABLE フィールドの値を返すバッファーへのポインター。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_NO_DATA、または SQL_INVALID_HANDLE です。  
   
  場合は、SQL_NO_DATA が返されます。 *RecNumber*記述子レコードの現在の数よりも大きいです。  

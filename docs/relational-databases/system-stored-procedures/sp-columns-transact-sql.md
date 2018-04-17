@@ -2,7 +2,7 @@
 title: sp_columns (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +66,7 @@ sp_columns [ @table_name = ] object
  [ **@column_name=**] *column*  
  1 つの列には、1 つだけカタログ情報の列が必要な場合に使用されます。 *列*は**nvarchar (384)**、既定値は NULL です。 場合*列*が指定されていないすべての列が返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、*列*に記載されている列の名前を表す、 **syscolumns**テーブル。 ワイルドカードによるパターン照合がサポートされています。 相互運用可能性を最大にするため、ゲートウェイのクライアントは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **@ODBCVer=**] *ODBCVer*  
  使用されている ODBC のバージョンです。 *ODBCVer*は**int**、既定値は 2 です。 既定値の 2 は ODBC Version 2 を示します。 有効な値は 2 または 3 です。 バージョン 2 および 3 の間での動作の違いは、ODBC を参照してください。 **SQLColumns**仕様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -87,7 +88,7 @@ sp_columns [ @table_name = ] object
 |**小数点以下桁数**|**smallint**|小数点より右側の桁数です。|  
 |**RADIX**|**smallint**|数値データ型の基数。|  
 |**NULLABLE**|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
-|**REMARKS**|**varchar(254)**|このフィールドは常に NULL を返します。|  
+|**「解説」**|**varchar(254)**|このフィールドは常に NULL を返します。|  
 |**COLUMN_DEF**|**nvarchar (4000)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と sql-92**間隔**データ型。 この列は、常に値を返します。|  
 |**SQL_DATETIME_SUB**|**smallint**|サブタイプ コード**datetime**と sql-92**間隔**データ型。 他のデータ型の場合、この列は NULL を返します。|  
@@ -125,7 +126,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [sp_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

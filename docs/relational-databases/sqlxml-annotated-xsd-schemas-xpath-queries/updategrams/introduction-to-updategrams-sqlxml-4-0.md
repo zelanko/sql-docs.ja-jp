@@ -1,16 +1,16 @@
 ---
-title: "アップデート グラム (SQLXML 4.0) の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: アップデート グラム (SQLXML 4.0) の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -25,27 +25,28 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>アップデートグラムの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-変更することができます (挿入、更新、または削除) のデータベースに[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用してドキュメントの既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
+  変更することができます (挿入、更新、または削除) のデータベースに[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アップデート グラムまたは OPENXML を使用してドキュメントの既存の XML から[!INCLUDE[tsql](../../../includes/tsql-md.md)]関数。  
   
  OPENXML 関数は、既存の XML ドキュメントを断片化し、INSERT、UPDATE または DELETE ステートメントに渡すことができる行セットを提供することで、データベースを変更する関数です。 OPENXML を使用すると、データベース テーブルに対して操作を直接実行できます。 したがって、ソースにテーブルなどの行セット プロバイダーがある場合は常に、OPENXML を使用するのが最適です。  
   
  アップデートグラムを使用すると、OPENXML と同様にデータベースに対してデータを挿入、更新、または削除できます。ただし、アップデートグラムは注釈付き XSD (または XDR) スキーマにより提供される XML ビューに対して動作します。たとえば、更新はマッピング スキーマにより提供される XML ビューに適用されます。 マッピング スキーマには、XML 要素と属性を対応するデータベース テーブルと列にマップするための、必要な情報が含まれています。 アップデートグラムでは、このマッピング情報を使用してデータベース テーブルと列が更新されます。  
   
 > [!NOTE]  
->  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、次を参照してください[注釈付き XSD スキーマの選択 &#40; の概要。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). XDR を使用する従来のアプリケーションでは、次を参照してください。[注釈付き XDR スキーマ &#40; SQLXML 4.0 &#41; で推奨されなくなった](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)です。  
+>  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、次を参照してください[注釈付き XSD スキーマの選択 & #40; の概要。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). XDR を使用する従来のアプリケーションでは、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では廃止&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)です。  
   
 ## <a name="required-namespaces-in-the-updategram"></a>アップデートグラムで必要な名前空間  
  アップデート グラムのキーワードなど**\<同期 >**、 **\<する前に >**、および**\<後 >**、内に存在**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} のアップデート グラム**名前空間。 名前空間プレフィックスは、任意のものを使用できます。 このドキュメントで、 **updg**プレフィックスを示します、**アップデート グラム**名前空間。  
@@ -110,13 +111,13 @@ ms.lasthandoff: 02/12/2018
   
  使用して、マッピング スキーマを明示的に指定する必要があります、アップデート グラムでは、複雑な更新プログラム (たとえば、マッピング スキーマで指定されている親子リレーションシップに基づいて複数のテーブルに挿入するレコード) を実行する場合、 **マッピング スキーマ**属性に対して、アップデート グラムを実行します。  
   
- アップデートグラムはテンプレートであり、アップデートグラム内でマッピング スキーマに指定するパスは、テンプレート ファイルの場所 (アップデートグラムが保存されている場所) に対する相対パスです。 詳細については、次を参照してください[アップデート グラム &#40; での注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ アップデートグラムはテンプレートであり、アップデートグラム内でマッピング スキーマに指定するパスは、テンプレート ファイルの場所 (アップデートグラムが保存されている場所) に対する相対パスです。 詳細については、次を参照してください。[注釈付きマッピング スキーマを指定するアップデート グラムで&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
 ## <a name="element-centric-and-attribute-centric-mapping-in-updategrams"></a>アップデートグラムでの要素中心および属性中心のマッピング  
  アップデートグラムでマッピング スキーマが指定されていないときに使用される既定のマッピングでは、アップデートグラムの要素がテーブルにマップされ、要素中心マッピングの場合は子要素、属性中心マッピングの場合は属性が、それぞれ列にマップされます。  
   
 ### <a name="element-centric-mapping"></a>要素中心のマッピング  
- 要素中心のアップデートグラムでは、要素に、要素のプロパティを表す子要素を含めます。 たとえば、次のアップデートグラムを参照してください。 **\<Person.Contact >**要素が含まれています、  **\<FirstName >**と **\<LastName >**子要素です。 これらの子要素のプロパティは、  **\<Person.Contact >**要素。  
+ 要素中心のアップデートグラムでは、要素に、要素のプロパティを表す子要素を含めます。 たとえば、次のアップデートグラムを参照してください。  **\<Person.Contact >**要素が含まれています、  **\<FirstName >**と **\<LastName >**子要素です。 これらの子要素のプロパティは、  **\<Person.Contact >**要素。  
   
  このアップデート グラムでは、マッピング スキーマを指定しないので、アップデート グラムでは暗黙的なマッピングを使用している、  **\<Person.Contact >**要素は Person.Contact テーブルにマップされ、その子要素が firstname マップとLastName 列です。  
   
@@ -180,6 +181,6 @@ ms.lasthandoff: 02/12/2018
 -   OLE DB コマンドとして送信する。  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

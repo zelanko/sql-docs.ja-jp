@@ -1,16 +1,16 @@
 ---
-title: "MSmerge_settingshistory (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: MSmerge_settingshistory (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac25c834da1e4101d7a5ae9f58f479994fd0e1b1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9e01e404abe840e8ddea6514694f430e8097c518
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.lasthandoff: 11/21/2017
 |**pubid**|**uniqueidentifier**|指定したパブリケーションの一意な識別番号。|  
 |**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
 |**イベントの種類**|**tinyint**|記録するイベントの種類を指定します。以下のいずれかの値をとります。<br /><br /> **1** – プロパティの初期パブリケーション レベル設定。<br /><br /> **2** -パブリケーションのプロパティを変更します。<br /><br /> **101** -初期アーティクル プロパティの設定。<br /><br /> **102** -アーティクルのプロパティを変更します。|  
-|**プロパティ名**|**sysname**|設定または変更されたプロパティの名前。|  
+|**propertyname**|**sysname**|設定または変更されたプロパティの名前。|  
 |**previousvalue**|**sysname**|前のプロパティ値 (プロパティが変更された場合)。|  
 |**newvalue**|**sysname**|変更後または作成時のプロパティの値。|  
 |**eventtext**|**nvarchar(2000)**|イベントを説明する文字列。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_cleanup_change_table (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_cleanup_change_table
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8f81a229286a1226403d6d06aeca56fa13e8c60
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6eb5b956d1bbbd6876b18b215e3660774f94aa5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,12 +93,12 @@ sys.sp_cdc_cleanup_change_table
   
      このストアド プロシージャは、単一のキャプチャ インスタンスに対してクリーンアップを実行します。このため、このストアド プロシージャを使用して、キャプチャ インスタンスごとにクリーンアップの規則が調整された、カスタムのクリーンアップ方法を構築することができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [cdc.fn_cdc_get_all_changes_ &#60; capture_instance &#62;。 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_get_min_lsn &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys.fn_cdc_increment_lsn &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_increment_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

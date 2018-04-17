@@ -2,7 +2,7 @@
 title: SQLCancel 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7adc83a958667e963749e390518bfc792c7cd85
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 262622d1131bab843375794f383a39f9ac5e017a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 関数
 **準拠**  
@@ -54,7 +54,7 @@ SQLRETURN SQLCancel(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

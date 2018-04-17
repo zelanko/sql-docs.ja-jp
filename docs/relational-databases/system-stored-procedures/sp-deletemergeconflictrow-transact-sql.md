@@ -1,16 +1,16 @@
 ---
-title: "sp_deletemergeconflictrow (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_deletemergeconflictrow (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e085a7010f25f40b95a45d8ddd0c7b455d7266c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c29bd82383b4df740dc3aac6c64529c8c8aafb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  競合テーブルから行を削除または[MSmerge_conflicts_info (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブル。 このストアド プロシージャは、競合テーブルが格納されているコンピューターの、任意のデータベース上で実行されます。  
+  競合テーブルから行を削除または[MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブル。 このストアド プロシージャは、競合テーブルが格納されているコンピューターの、任意のデータベース上で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
   
 ## <a name="arguments"></a>引数  
  [  **@conflict_table=**] **'***conflict_table***'**  
- 競合テーブルの名前を指定します。 *conflict_table*は**sysname**、既定値は **%**です。 場合、 *conflict_table*は NULL として指定または **%** 、競合は、削除の競合と一致する行であると見なされます*rowguid*と*origin_datasource*と*source_object*から削除されて、 [MSmerge_conflicts_info (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブル。  
+ 競合テーブルの名前を指定します。 *conflict_table*は**sysname**、既定値は **%**です。 場合、 *conflict_table*は NULL として指定または**%**、競合は、削除の競合と一致する行であると見なされます*rowguid*と*origin_datasource*と*source_object*から削除されて、 [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブル。  
   
  [  **@source_object=**] **'***source_object***'**  
  ソース テーブルの名前です。 *source_object*は**nvarchar (386)**、既定値は NULL です。  
@@ -71,9 +71,9 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="remarks"></a>解説  
  **sp_deletemergeconflictrow**はマージ レプリケーションで使用します。  
   
- [MSmerge_conflicts_info &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルはシステム テーブルであり、空である場合でも、データベースからは削除されません。  
+ [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルはシステム テーブルであり、空である場合でも、データベースからは削除されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_deletemergeconflictrow**です。  
   
 ## <a name="see-also"></a>参照  

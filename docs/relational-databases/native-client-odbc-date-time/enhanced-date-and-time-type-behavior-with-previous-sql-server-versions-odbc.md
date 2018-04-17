@@ -1,29 +1,30 @@
 ---
-title: "強化された日付と時刻型の前の SQL Server バージョン (ODBC) での動作 |Microsoft ドキュメント"
-ms.custom: 
+title: 強化された日付と時刻型の前の SQL Server バージョン (ODBC) での動作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2acc8c52d6e16cf17c05cc421faf5ea52b20e71
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ca69cfb2db83f221e4071b8ba9a3e8b0ff40af89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,15 +41,15 @@ ms.lasthandoff: 01/25/2018
   
  に対して下位クライアント アプリケーションを実行するときに、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降) サーバーの種類が加えられました日付/時刻へのスキーマ変更で、予想される動作は次のようにします。  
   
-|SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)](またはそれ以降)型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
+|SQL Server 2005 の型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはそれ以降)型|ODBC クライアントの型|結果の変換 (SQL から C へ)|パラメーターの変換 (C から SQL へ)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|日付|SQL_C_TYPE_DATE|OK|OK (1)|  
+|DateTime|日付|SQL_C_TYPE_DATE|OK|[OK] (1)|  
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
+||Time(0)|SQL_C_TYPE_TIME|OK|[OK] (1)|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time (7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|OK (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
+||Time (7)|SQL_C_TIME|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗します (時刻リテラルが無効です)。|[OK] (1)|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|[OK] (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
 |Smalldatetime|日付|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
@@ -118,6 +119,6 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンのサーバー インスタンスに接続している場合、新しいサーバーの型または関連するメタデータ コードおよび記述子フィールドを使用しようとすると、SQL_ERROR が返されます。 "接続しているサーバーのバージョンに対して、SQL データ型が無効です" というメッセージで SQLSTATE HY004 の診断レコード、または、"データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

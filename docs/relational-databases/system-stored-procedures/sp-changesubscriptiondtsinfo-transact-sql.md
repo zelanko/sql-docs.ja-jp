@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscriptiondtsinfo (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_changesubscriptiondtsinfo (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b551a265d30632f7ee96c86b78191388099c7d0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6f1998ee847522f1237a55f5b6174861b774d69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  [  **@job_id=**] *job_id*  
  プッシュ サブスクリプションのディストリビューション エージェントのジョブ ID を指定します。 *job_id*は**varbinary (16)**、既定値はありません。 ディストリビューション ジョブ ID を見つけるには実行**sp_helpsubscription**または**sp_helppullsubscription**です。  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、パッケージを指定する名前**DTSPub_Package**を指定する場合`@dts_package_name = N'DTSPub_Package'`です。  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は NULL の場合、変更されていないパスワード プロパティのままにすることを指定します。  
   
 > [!NOTE]  
 >  DTS パッケージにはパスワードが必要です。  
   
- [  **@dts_package_location** =] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'***dts_package_location***'**  
  パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は NULL、変更しないままにする、パッケージの場所を指定します。 パッケージの場所を変更できます**ディストリビューター**または**サブスクライバー**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -70,7 +70,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="remarks"></a>解説  
  **sp_changesubscriptiondtsinfo**スナップショット レプリケーションおよびトランザクション レプリケーションでプッシュ サブスクリプションのみに使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションの作成者が実行できる**sp_changesubscriptiondtsinfo**です。  
   
 ## <a name="see-also"></a>参照  

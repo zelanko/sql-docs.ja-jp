@@ -1,29 +1,30 @@
 ---
-title: "データで実行 (ODBC) を使用して、テーブル値パラメーターとしてデータを送信する |Microsoft ドキュメント"
-ms.custom: 
+title: データで実行 (ODBC) を使用して、テーブル値パラメーターとしてデータを送信する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102763d09848c21902ffd2226a98d70039072ea4
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dee56dc4d2de518c3154dd426aefc680252594a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/24/2018
 
   これがに似ていますが、[すべてメモリ内](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)ですが、プロシージャは、テーブル値パラメーターの実行時のデータを使用します。  
   
- テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
+ テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
   
  この例では SQLExecute または SQLExecDirect が呼び出されたときに、ドライバーは SQL_NEED_DATA を返します。 その後、アプリケーションは、ドライバーが SQL_NEED_DATA 以外の値を返すまで、SQLParamData を繰り返し呼び出します。 ドライバーを返します*ParameterValuePtr*パラメーターのデータを要求しているアプリケーションに通知します。 アプリケーションでは、[次へ] SQLParamData 呼び出しの前にパラメーター データを指定する SQLPutData を呼び出します。 テーブル値パラメーターの場合は、SQLPutData への呼び出しは、(この例では、常に 1) では、ドライバーの準備ができた行の数を示します。 テーブル値のすべての行は、ドライバーに渡されましたが、SQLPutData は 0 行が使用できることを示すために呼び出されます。  
   

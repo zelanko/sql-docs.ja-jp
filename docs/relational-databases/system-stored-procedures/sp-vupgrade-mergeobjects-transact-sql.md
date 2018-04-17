@@ -1,16 +1,16 @@
 ---
-title: "sp_vupgrade_mergeobjects (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_vupgrade_mergeobjects (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_mergeobjects
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83c761ec8e22321e1d46a3b9aacaf5c619c45599
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 10a03aebfdd4b22bf0e2e63f4ad4a9c1337a1201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
   
 ## <a name="arguments"></a>引数  
  [  **@login=**] **'***ログイン***'**  
- ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のログインを指定します。 *ログイン*は**sysname**、既定値は NULL です。 このパラメーターは不要な場合は*security_mode*に設定されている**1**、つまり Windows 認証です。  
+ ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のログインを指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは不要な場合は*security_mode*に設定されている**1**、つまり Windows 認証です。  
   
  [  **@password=**] **'***パスワード***'**  
  ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のパスワードを指定します。 *パスワード*は**sysname**、既定値は**'** (空の文字列)。 このパラメーターは不要な場合は*security_mode*に設定されている**1**、つまり Windows 認証です。  
@@ -69,7 +69,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## <a name="remarks"></a>解説  
  **sp_vupgrade_mergeobjects**はマージ レプリケーションに対してのみ使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  

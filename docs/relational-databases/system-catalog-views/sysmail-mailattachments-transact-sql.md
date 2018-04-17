@@ -1,16 +1,16 @@
 ---
-title: "sysmail_mailattachments (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_mailattachments (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 028ecfcb41a46c1a218d63fcb298dd2af9719678
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0f6a196b41a9fe768023969637841d20d7a843b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールに送信された添付ファイルごとに 1 行のデータを格納します。 データベース メールの添付ファイルに関する情報を確認するには、このビューを使用します。 データベース メールを使用するによって処理されるすべての電子メールを確認する[sysmail_allitems (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。  
+  データベース メールに送信された添付ファイルごとに 1 行のデータを格納します。 データベース メールの添付ファイルに関する情報を確認するには、このビューを使用します。 データベース メールを使用するによって処理されるすべての電子メールを確認する[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -55,10 +55,10 @@ ms.lasthandoff: 02/03/2018
  与え、 **sysadmin**固定サーバー ロールおよび**DatabaseMailUserRole**データベース ロール。 メンバーによって実行されると、 **sysadmin**固定サーバー ロール、このビューはすべての添付ファイルを表示します。 その他のユーザーの場合は、自分が送信したメッセージの添付ファイルだけを確認できます。  
   
 ## <a name="see-also"></a>参照  
- [sysmail_allitems &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_faileditems &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [sysmail_sentitems &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [sysmail_unsentitems &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
+ [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
+ [sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

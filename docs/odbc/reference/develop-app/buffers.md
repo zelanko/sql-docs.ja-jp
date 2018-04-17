@@ -1,15 +1,16 @@
 ---
-title: "バッファー |Microsoft ドキュメント"
-ms.custom: 
+title: バッファー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - input buffers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffers"></a>バッファー
 バッファーは、アプリケーションとドライバーの間でデータを渡すために使用するアプリケーションのメモリの任意の断片です。 たとえば、アプリケーション バッファー関連付けることができる、または*、バインド*結果セットの列**SQLBindCol**です。 各の行がフェッチされる間、これらのバッファー内の各列のデータが返されます。 *入力バッファー*アプリケーションからドライバーにデータを渡すために使用*出力バッファー*ドライバーからアプリケーションにデータを返すために使用します。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  通常、これらのバッファーはペアになっています。 *データ バッファー*はときに、データ自体を渡すために使用、*長さ/インジケーター バッファー*データ バッファーやデータが NULL であることを示す SQL_NULL_DATA などの特殊な値のデータの長さを渡すために使用します。 データ バッファー内のデータの長さは、それ自体のデータ バッファーの長さと異なります。 次の図は、データ バッファーおよび長さ/インジケーター バッファーの関係を示しています。  
   
- ![データ バッファーおよび長さ &#47; インジケーター バッファー](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![データ バッファーおよび長さ&#47;インジケーター バッファー](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  データ バッファーに文字またはバイナリ データなどの可変長データが含まれている場合、長さ/インジケーター バッファーが必要です。 データ バッファーには、整数や日付構造体などの固定長データが含まれている場合、長さ/インジケーター バッファーは、データの長さが既にわかっているので、インジケーターの値を渡すためにのみ必要です。 アプリケーションでは、固定長のデータの長さ/インジケーター バッファーを使用している場合、ドライバーは、渡された任意の長さを無視します。  
   

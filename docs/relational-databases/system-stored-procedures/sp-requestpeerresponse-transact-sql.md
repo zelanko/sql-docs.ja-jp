@@ -1,16 +1,16 @@
 ---
-title: "sp_requestpeerresponse (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_requestpeerresponse (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d0a4009c5a6615a000989e2d41f2902ac37535f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 339f3ddd78d506e256b995d3458ac0212e32e720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  ピア ツー ピア トポロジ内の、状態を確認するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@description** =] **'***説明***'**  
+ [ **@description**=] **'***説明***'**  
  個々の状態要求の識別に使用できるユーザー定義情報 *説明*は**nvarchar (4000)**、既定値は NULL です。  
   
- [  **@request_id**  =] *request_id*  
- 新しい要求の ID を返します。 *request_id*は**int**は出力パラメーターです。 実行するときに、この値を使用できる[sp_helppeerresponses (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)状態要求に応答するすべての表示にします。  
+ [ **@request_id** =] *request_id*  
+ 新しい要求の ID を返します。 *request_id*は**int**は出力パラメーターです。 実行するときに、この値を使用できます[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)状態要求に応答するすべての表示にします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -67,11 +67,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
  **sp_requestpeerresponse**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_requestpeerresponse**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_deletepeerrequesthistory &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

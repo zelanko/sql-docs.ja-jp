@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_hadr_database_replica_states (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_hadr_database_replica_states (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d0c1fcebeb62701761134103e16ee8127372858d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/12/2018
 |**replica_id**|**uniqueidentifier**|可用性グループ内の可用性レプリカの識別子。|  
 |**group_database_id**|**uniqueidentifier**|可用性グループ内のデータベースの識別子。 この識別子は、このデータベースが参加しているすべてのレプリカで同じです。|  
 |**is_local**|**bit**|可用性データベースがローカルであるかどうか。次のいずれかになります。<br /><br /> 0 = データベースがに対してローカルでない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。<br /><br /> 1 = データベースはサーバー インスタンスに対してローカルです。|  
-|**is_primary_replica**|**bit**|セカンダリ レプリカである場合、レプリカがプライマリ サーバー、または 0 の場合は、1 を返します。<br /><br />**適用されます:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。|  
+|**is_primary_replica**|**bit**|セカンダリ レプリカである場合、レプリカがプライマリ サーバー、または 0 の場合は、1 を返します。<br /><br />**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**synchronization_state**|**tinyint**|データ移動の状態値は次のいずれか。<br /><br /> 0 = 同期されていません。 プライマリ データベースの場合、データベースがそのトランザクション ログを対応するセカンダリ データベースと同期する準備ができていないことを示します。 セカンダリ データベースの場合、データベースが接続の問題によりログの同期を開始していないか、データベースが中断されているか、起動中またはロールの切り替え中にデータベースが遷移状態になっていることを示します。<br /><br /> 1 = Synchronizing です。 プライマリ データベースの場合、データベースがセカンダリ データベースからのスキャン要求を受け入れる準備ができてことを示します。 セカンダリ データベースについては、そのデータベースのアクティブなデータ移動が行われていることを示します。<br /><br /> 2 = 同期済みです。 プライマリ データベースでは、"SYNCHRONIZING" の代わりに、"SYNCHRONIZED" と表示されます。 同期コミットのセカンダリ データベースでは、データベース レプリカでフェールオーバーの準備ができていることをローカル キャッシュが示している場合、およびデータベース レプリカが同期中である場合、"同期済み" と表示されます。<br /><br /> 3 = Reverting です。 セカンダリ データベースがプライマリ データベースからページをアクティブに取得している場合の元に戻すプロセスのフェーズを示します。<br />**注意:**セカンダリ レプリカ上のデータベースが REVERTING 状態が、セカンダリ レプリカにフェールオーバーの強制状態のまま、データベースを起動できないプライマリ データベースとして。 データベースにセカンダリ データベースとして再接続するか、ログ バックアップから新しいログ レコードを適用する必要があります。<br /><br /> 4 = 初期化します。 セカンダリ データベースが元に戻す LSN からの遅れを取り戻すために必要なトランザクション ログがセカンダリ レプリカに配布され、書き込まれている場合の元に戻すフェーズを示します。<br />**注意:**データベースがある場合、セカンダリ レプリカで INITIALIZING 状態で強制的にフェールオーバーするセカンダリ レプリカによって、状態のデータベースでプライマリ データベースとして起動されます。 データベースにセカンダリ データベースとして再接続するか、ログ バックアップから新しいログ レコードを適用する必要があります。|  
 |**synchronization_state_desc**|**nvarchar(60)**|データ移動の状態の説明。次のいずれかになります。<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = このデータベース レプリカに対してトランザクションのコミットが同期されていません。<br /><br /> 1 = このデータベース レプリカに対してトランザクションのコミットが同期されています。<br /><br /> 非同期コミットの可用性レプリカにあるデータベースの場合、この値は常に 0 になります。<br /><br /> 同期コミットの可用性レプリカにあるデータベースの場合、この値はプライマリ データベースでのみ正確です。|  
@@ -79,12 +79,12 @@ ms.lasthandoff: 02/12/2018
 |**last_commit_lsn**|**Numeric(25,0)**|トランザクション ログの最終コミット レコードに対応する実際のログ シーケンス番号。<br /><br /> プライマリ データベースの場合、これは処理された最終コミット レコードに対応します。 セカンダリ データベースの行には、セカンダリ レプリカがプライマリ レプリカに送信したログ シーケンス番号が反映されます。<br /><br /> セカンダリ レプリカの場合、これは再実行された最終コミット レコードです。|  
 |**last_commit_time**|**datetime**|最終コミット レコードに対応する時刻。<br /><br /> セカンダリ データベースの場合、この時刻はプライマリ データベースと同じになります。<br /><br /> プライマリ レプリカの場合、各セカンダリ データベースの行に、そのセカンダリ データベースをホストするセカンダリ レプリカがプライマリ レプリカに報告した時刻が表示されます。 プライマリ データベースの行と特定のセカンダリ データベースの行の時刻の違いは、再実行プロセスの遅延が解消され、進行状況がセカンダリ レプリカからプライマリ レプリカに報告されることを想定した、おおよその目標復旧時間 (RPO) を表しています。|  
 |**low_water_mark_for_ghosts**|**bigint**|プライマリ データベースでの非実体クリーンアップで使用される低レベルのウォーター マークを示すデータベースの単調に増加する数値。 この数値が時間の経過と共に増加しない場合は、非実体クリーンアップが行われない可能性があることを意味します。 プライマリ レプリカでは、クリーンアップする非実体行を決定するために、すべての可用性レプリカ (プライマリ レプリカを含む) でこのデータベースのこの列の最小値を使用します。|  
-|**secondary_lag_seconds**|**bigint**|同期中に、セカンダリ レプリカがプライマリ レプリカの背後にあるが秒数。<br /><br />**適用されます:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。|  
+|**secondary_lag_seconds**|**bigint**|同期中に、セカンダリ レプリカがプライマリ レプリカの背後にあるが秒数。<br /><br />**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
 ##  <a name="LSNcolumns"></a> LSN 列の値をについてください。  
  値、 **end_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、**回復_lsn**、および**truncation_lsn**列が実際のログ シーケンス番号 (Lsn) ではありません。 これらの各値には、0 が埋め込まれたログ ブロック ID が反映されます。  
   
- **end_of_log_lsn**, **last_hardened_lsn**, and **recovery_lsn** are flush LSNs. たとえば、 **last_hardened_lsn**は既にディスク上にあるブロックの次のブロックの開始を示します。  したがって、LSN < の値**last_hardened_lsn**がディスクにします。  この値以上の LSN はフラッシュされません。  
+ **end_of_log_lsn**、 **last_hardened_lsn**、および**recovery_lsn**フラッシュ Lsn です。 たとえば、 **last_hardened_lsn**は既にディスク上にあるブロックの次のブロックの開始を示します。  したがって、LSN < の値**last_hardened_lsn**がディスクにします。  この値以上の LSN はフラッシュされません。  
   
  によって返される LSN 値の**sys.dm_hadr_database_replica_states**、のみ**last_redone_lsn**実際の LSN です。  
   

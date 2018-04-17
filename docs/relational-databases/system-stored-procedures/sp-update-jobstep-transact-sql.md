@@ -2,7 +2,7 @@
 title: sp_update_jobstep (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_update_jobstep
  [ **@step_name =**] **'***step_name***'**  
  ステップの新しい名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **'***サブシステム***'**  
  実行する Microsoft SQL Server エージェントによって使用されるサブシステム*コマンド*です。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
   
  [ **@command =**] **'***command***'**  
@@ -133,7 +133,7 @@ sp_update_jobstep
  [ **@retry_interval =**] *retry_interval*  
  再試行の間隔を分単位で指定します。 *retry_interval*は**int**、既定値は NULL です。  
   
- [ **@os_run_priority =**] *run_priority*  
+ [  **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@output_file_name =**] **'***file_name***'**  

@@ -1,16 +1,16 @@
 ---
-title: "sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13f768cd5e1cbbbcfa3f5b74d7ae52d2e9f357e1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 49bfb41a364ab5c82b42026d23d0768f4297a9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@parameter_name**  =] **'***parameter_name***'**  
- 取得する構成設定の名前を指定します。 指定した場合、構成設定の値は、  **@parameter_value** 出力パラメーターです。 ない場合 **@parameter_name** を指定すると、このストアド プロシージャは、すべてのインスタンスでデータベース メール構成設定を含む結果セットを返します。  
+ [**@parameter_name** =] **'***parameter_name***'**  
+ 取得する構成設定の名前を指定します。 指定した場合、構成設定の値は、 **@parameter_value**出力パラメーターです。 ない場合**@parameter_name**を指定すると、このストアド プロシージャは、すべてのインスタンスでデータベース メール構成設定を含む結果セットを返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ない場合 **@parameter_name** を指定すると、次の列を含む結果セットを返します。  
+ ない場合**@parameter_name**を指定すると、次の列を含む結果セットを返します。  
   
 ||||  
 |-|-|-|  
@@ -65,7 +65,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>解説  
  ストアド プロシージャ**sysmail_help_configure_sp**インスタンスの現在のデータベース メールの構成設定を一覧表示します。  
   
- ときに、  **@parameter_name** が指定されているの出力パラメーターが指定されていませんが、  **@parameter_value** 、このストアド プロシージャの出力はありません。  
+ ときに、 **@parameter_name**が指定されているの出力パラメーターが指定されていませんが、 **@parameter_value**、このストアド プロシージャの出力はありません。  
   
  ストアド プロシージャ**sysmail_help_configure_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合、3 部構成の名前を持つプロシージャを呼び出す必要があります**msdb**です。  
   
@@ -79,7 +79,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 EXECUTE msdb.dbo.sysmail_help_configure_sp ;  
 ```  
   
- 行の長さの編集、サンプルの結果セットを次に示します。  
+ 次に結果セットを示します。行の長さは編集されています。  
   
 ```  
 paramname                       paramvalue      description  
@@ -96,6 +96,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "ドライバー マネージャーの &#39; 接続プロセスでの役割 |Microsoft ドキュメント"
-ms.custom: 
+title: ドライバー マネージャー&#39;接続プロセスでの役割 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>ドライバー マネージャーの &#39; 接続プロセスでの役割
+# <a name="driver-manager39s-role-in-the-connection-process"></a>ドライバー マネージャー&#39;接続プロセスでの役割
 あるアプリケーション直接呼び出さないでくださいドライバー関数に注意してください。 同じ名前のドライバー マネージャーの関数を呼び出すし、ドライバー マネージャーがドライバー関数を呼び出します。 通常、これはほぼ即座にです。 たとえば、アプリケーションを呼び出す**SQLExecute**ドライバー マネージャーで、いくつかのエラー チェックした後、ドライバー マネージャーは、呼び出し**SQLExecute**ドライバーにします。  
   
  接続プロセスが異なります。 アプリケーションを呼び出すと**SQLAllocHandle** SQL_HANDLE_ENV および sql_handle_dbc としてのオプションが、関数がハンドル ドライバー マネージャーでのみを割り当てます。 ドライバー マネージャーを呼び出すには、どのドライバーがわからないために、ドライバーでは、この関数は呼び出されません。 同様に、アプリケーションがへの接続されていない接続のハンドルを渡すかどうか**SQLSetConnectAttr**または**SQLGetConnectAttr**、のみ、ドライバー マネージャーが、関数を実行します。 格納または取得の接続の属性値を処理し、属性の値を取得するが設定されていないと ODBC の SQLSTATE 08003 (接続が開かれていません) を返しますが、既定値を定義しません。  

@@ -1,16 +1,16 @@
 ---
-title: "srv_paramtype (拡張ストアド プロシージャ API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramtype (拡張ストアド プロシージャ API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramtype
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramtype
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53195012c558b438e24c95169fe373c08f8e37d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d47e3c7ef97358c908d511ee0d6eb1c18ffc601b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  リモート ストアド プロシージャ呼び出しのパラメーターのデータ型を返します。  
   
@@ -62,7 +62,7 @@ n
  パラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
 ## <a name="returns"></a>返します。  
- パラメーターのデータ型のトークン値を返します。 データ型については、「[データ型 &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)」をご覧ください。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。  
+ パラメーターのデータ型のトークン値を返します。 データ型については、「[データ型 &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)」をご覧ください。 ある場合ありません*n*番目のパラメーターまたはリモート ストアド プロシージャがないかどうかは、- 1 を返します。  
   
  パラメーターが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データ型のいずれかである場合、この関数は次の値を返します。  
   

@@ -1,16 +1,16 @@
 ---
-title: "注釈付き XSD スキーマ (SQLXML 4.0) の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: 注釈付き XSD スキーマ (SQLXML 4.0) の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>注釈付き XSD スキーマの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML スキーマ定義 (XSD) 言語を使用して、リレーショナル データの XML ビューを作成することができます。 作成したビューには、XML パス言語 (XPath) クエリを実行できます。 これは、CREATE VIEW ステートメントを使用し、そのビューに対して SQL クエリを指定してビューの作成に似ています。  
+  XML スキーマ定義 (XSD) 言語を使用して、リレーショナル データの XML ビューを作成することができます。 作成したビューには、XML パス言語 (XPath) クエリを実行できます。 これは、CREATE VIEW ステートメントを使用し、そのビューに対して SQL クエリを指定してビューの作成に似ています。  
   
  XML スキーマでは、XML ドキュメントの構造とドキュメント内のデータに対するさまざまな制約が記述されます。 スキーマに対して XPath クエリを指定した場合、返される XML ドキュメントの構造は、XPath クエリの実行対象のスキーマによって決定されます。  
   
@@ -52,7 +53,7 @@ XML スキーマ定義 (XSD) 言語を使用して、リレーショナル デ�
 </xsd:schema>  
 ```  
   
- **\<Xsd:schema >** http://www.w3.org/2001/XMLSchema の XML スキーマ名前空間の仕様に要素を派生します。  
+  **\<Xsd:schema >**要素は XML スキーマ名前空間の仕様にから派生http://www.w3.org/2001/XMLSchemaです。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD スキーマへの注釈  
  データベースへのマッピングを記述する注釈付きの XSD スキーマを使用して、データベースにクエリを実行し、結果を XML ドキュメントの形式で返すことができます。 注釈は、データベースのテーブルと列に XSD スキーマをマップするために指定します。 XSD スキーマで作成した XML ビューに対して XPath クエリを指定すると、データベースにクエリが実行され、結果を XML として取得できます。  
@@ -126,18 +127,18 @@ XML スキーマ定義 (XSD) 言語を使用して、リレーショナル デ�
 ## <a name="other-resources"></a>その他のリソース  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  
   
--   W3C Recommendation、「XML Schema Part 0: Primer」(http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer、W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
   
--   W3C Recommendation、「XML Schema Part 1: Structures」(http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: 構造体、W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   W3C Recommendation、「XML Schema Part 2:Datatypes」(http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: datatypes」、W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XML パス言語 (XPath) (http://www.w3.org/TR/xpath)  
   
 -   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>参照  
- [注釈付きスキーマのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [注釈付き XDR スキーマ (&) #40 です。 で非推奨の SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [セキュリティの考慮事項のスキーマ注釈が付けられた&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

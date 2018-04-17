@@ -1,16 +1,16 @@
 ---
-title: "sp_helptracertokenhistory (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helptracertokenhistory (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ad9a67f66222ff87753056ea1b27b2ad83e6e8d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1763672f446560e06686c46af3cc060045500ed8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  トレーサー トークンが挿入されたパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@tracer_id=** ] *tracer_id*  
- におけるトレーサー トークンの id、 [MStracer_tokens (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)履歴の情報が返されるテーブル。 *tracer_id*は**int**、既定値はありません。  
+ におけるトレーサー トークンの id、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)履歴の情報が返されるテーブル。 *tracer_id*は**int**、既定値はありません。  
   
  [  **@publisher=** ] **'***パブリッシャー***'**  
  パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
@@ -80,18 +80,18 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_helptracertokenhistory**トランザクション レプリケーションで使用します。  
   
- 実行[sp_helptracertokens (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)パブリケーションのトレーサー トークンの一覧を取得します。  
+ 実行[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 、パブリケーションのトレーサー トークンの一覧を取得します。  
   
  結果セットの値が NULL の場合は、待機時間の統計を計算することができません。 これは、トレーサー トークンが、ディストリビューターまたはいずれかのサブスクライバーで受信されなかったためです。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**パブリケーション データベースの固定データベース ロールまたは**db_owner**固定データベースまたは**replmonitor**ディストリビューション データベース内のロールが実行できる**sp_helptracertokenhistory**です。  
   
 ## <a name="see-also"></a>参照  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

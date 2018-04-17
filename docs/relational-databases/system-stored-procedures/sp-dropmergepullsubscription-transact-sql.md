@@ -1,16 +1,16 @@
 ---
-title: "sp_dropmergepullsubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_dropmergepullsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20bae9a8d1a27e0ec4a02a6cb3dc632fa50924ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8e4722f5b8a24d29cdadbc4f030aac2f9fd86861
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 このパラメーターは必須です。 値を指定して**すべて**すべてのパブリケーションに対するサブスクリプションを削除するには  
   
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 このパラメーターは必須です。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 このパラメーターは必須です。  
   
  [  **@reserved=**] **'***予約***'**  
@@ -72,14 +72,14 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたはマージ プル サブスクリプションを作成したユーザーが実行できる**sp_dropmergepullsubscription**です。 **Db_owner**固定データベース ロールが実行できる**sp_dropmergepullsubscription**マージ プル サブスクリプションを作成したユーザーがこのロールに属している場合。  
   
 ## <a name="see-also"></a>参照  
  [プル サブスクリプションを削除します。](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
+ [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
   
   

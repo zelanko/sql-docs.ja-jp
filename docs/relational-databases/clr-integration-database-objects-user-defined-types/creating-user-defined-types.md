@@ -1,15 +1,15 @@
 ---
-title: "ユーザー定義型を作成する |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー定義型を作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b8c9781e445e55b1b59d60db5d8e054da0d060
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b83df5bac8e4cf35d82dc3cd80a74d1c093a1e80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types"></a>ユーザー定義型を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールできる UDT (ユーザー定義型) を作成するには、まず、サポートされるいずれかの .NET Framework プログラミング言語 (Visual C# や Visual Basic など) のクラスを作成する必要があります。これは、UDT の作成に関する仕様に準拠しています。 その後、クラスを DLL (ダイナミック リンク ライブラリ) にコンパイルできます。この DLL は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 また、Visual Studio を使用して UDT を作成し、配置することもできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールできる UDT (ユーザー定義型) を作成するには、まず、サポートされるいずれかの .NET Framework プログラミング言語 (Visual C# や Visual Basic など) のクラスを作成する必要があります。これは、UDT の作成に関する仕様に準拠しています。 その後、クラスを DLL (ダイナミック リンク ライブラリ) にコンパイルできます。この DLL は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 また、Visual Studio を使用して UDT を作成し、配置することもできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 使用して CLR を有効にすることができます、 **sp_configure** 、次に示すように、システム ストアド プロシージャ、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
   

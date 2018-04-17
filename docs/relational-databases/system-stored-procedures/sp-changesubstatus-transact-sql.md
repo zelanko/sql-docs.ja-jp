@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubstatus (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_changesubstatus (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fb31421c8f9398e259b41f652d13a5ff8d565b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f38f61bdb7fe29846b9776e5b9c89dee6c52feda
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%**です。 場合*パブリケーション*が指定されていない、すべてのパブリケーションが影響を受けます。  
   
  [  **@article=**] **'***記事***'**  
@@ -164,25 +164,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  データ変換サービス (DTS) パッケージの名前。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、という名前のパッケージ**DTSPub_Package**を指定する場合`@dts_package_name = N'DTSPub_Package'`です。  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は NULL の場合、変更されていないパスワード プロパティのままにすることを指定します。  
   
 > [!NOTE]  
 >  DTS パッケージにはパスワードが必要です。  
   
- [  **@dts_package_location** =] *dts_package_location*  
+ [ **@dts_package_location**=] *dts_package_location*  
  パッケージの場所を指定します。 *dts_package_location*は、 **int**、既定値は**0**します。 場合**0**ディストリビューターでは、パッケージの場所。 場合**1**パッケージの場所はサブスクライバーです。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**です。  
   
- [  **@skipobjectactivation** =] *skipobjectactivation*  
+ [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **'***distribution_job_name***'**  
  ディストリビューション ジョブの名前を指定します。 *distribution_job_name*は**sysname**、既定値は NULL です。  
   
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -196,14 +196,14 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  **sp_changesubstatus**でサブスクライバーの状態変更、 **syssubscriptions**変更されたステータスを持つテーブルです。 内のアーティクルの状態を更新、必要な場合、 **sysarticles**アクティブまたは非アクティブを示す表。 必要な場合、そのレプリケーション フラグを設定、オンまたはオフ、 **sysobjects**レプリケートされたテーブルのテーブルです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションの作成者が実行できる**sp_changesubstatus**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

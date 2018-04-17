@@ -1,44 +1,45 @@
 ---
-title: "SQLXML 4.0 でのデータ型のサポートを xml |Microsoft ドキュメント"
-ms.custom: 
+title: SQLXML 4.0 でのデータ型のサポートを xml |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 530cd1e4fef24d925af9a6079b6afeeb07ec463d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 での xml データ型のサポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポート XML を使用してデータに型指定された、 **xml**データ型。 このトピックは、SQLXML 4.0 でのインスタンスを認識する方法に関する情報を提供、 **xml**それらのデータ型と実装をサポートします。  
+  以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポート XML を使用してデータに型指定された、 **xml**データ型。 このトピックは、SQLXML 4.0 でのインスタンスを認識する方法に関する情報を提供、 **xml**それらのデータ型と実装をサポートします。  
   
 ## <a name="working-with-xml-data-types"></a>xml データ型の使用  
  SQL テーブルの実装を使用する方法の詳細を理解する**xml**データ型の列、次の例が提供されます。  
   
 |タスク|例|トピック|  
 |----------|-------------|-----------|  
-|マップを含める方法、 **xml** XML ビューの列|"XML 要素を XML データ型の列にマップする"|[テーブルと列 &#40; に XSD 要素および属性の既定のマッピングSQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|データを挿入する方法、 **xml**アップデート グラムで列|"XML データ型列にデータを挿入する"|[XML アップデート グラム &#40; を使用してデータを挿入します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|XML データを一括読み込み、 **xml**列|"xml データ型の列に一括読み込みを行う"|[XML 一括読み込みの例 &#40;です。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|マップを含める方法、 **xml** XML ビューの列|"XML 要素を XML データ型の列にマップする"|[XSD 要素および属性からテーブルと列の既定のマッピング&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|データを挿入する方法、 **xml**アップデート グラムで列|"XML データ型列にデータを挿入する"|[XML アップデート グラムを使用してデータを挿入する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|XML データを一括読み込み、 **xml**列|"xml データ型の列に一括読み込みを行う"|[XML 一括読み込みの例 & #40 です。SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>ガイドラインと制限  
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergesubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addmergesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5db2e319393afd6d3751b5eeb6ee58fd4d84fd6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc7b47a0253b47e9c8e1a75131ae3003fce2ac33
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 パブリケーションは既に存在している必要があります。  
   
  [  **@subscriber =**] **'***サブスクライバー***'**  
@@ -197,13 +197,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  対話的に競合を回避できるすべてのアーティクルについて、対話的に競合を解決できるようにします。 *use_interactive_resolver*は**nvarchar (5)**、既定値は FALSE。  
   
  [  **@merge_job_name=** ] **'***merge_job_name***'**  
- *@merge_job_name* パラメーターは廃止されており、設定することはできません。 *merge_job_name*は**sysname**、既定値は NULL です。  
+ *@merge_job_name*パラメーターは廃止されており、設定することはできません。 *merge_job_name*は**sysname**、既定値は NULL です。  
   
- [  **@hostname** =] **'***hostname***'**  
+ [ **@hostname**=] **'***hostname***'**  
  によって返される値よりも優先[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化されたフィルターの WHERE 句でこの関数を使用する場合。 *ホスト名*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  
->  パラメーター化された行フィルター句では列名に関数を適用しないことをお勧めします。これは、 `LEFT([MyColumn]) = SUSER_SNAME()`のように指定すると、パフォーマンスに問題が生じるためです。 使用する場合[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 、フィルター句と HOST_NAME 値よりも優先的に使用するデータ型に変換しなければならない場合があります[変換](../../t-sql/functions/cast-and-convert-transact-sql.md)です。 このようなケースの推奨事項の詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)に拡張されます。  
+>  パラメーター化された行フィルター句では列名に関数を適用しないことをお勧めします。これは、 `LEFT([MyColumn]) = SUSER_SNAME()`のように指定すると、パフォーマンスに問題が生じるためです。 使用する場合[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 、フィルター句と HOST_NAME 値よりも優先的に使用するデータ型に変換しなければならない場合があります[変換](../../t-sql/functions/cast-and-convert-transact-sql.md)です。 このようなケースの推奨事項の詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値の上書き」をご覧ください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -211,21 +211,21 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_addmergesubscription**はマージ レプリケーションで使用します。  
   
- ときに**sp_addmergesubscription**のメンバーによって実行される、 **sysadmin**プッシュ サブスクリプションを作成するサーバーの役割を修正するには、マージ エージェント ジョブが暗黙的に作成し、実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービス アカウント。 実行することをお勧め[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)に対して異なるエージェントに固有の Windows アカウントの資格情報を指定して **@job_login** と **@job_password**. 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+ ときに**sp_addmergesubscription**のメンバーによって実行される、 **sysadmin**プッシュ サブスクリプションを作成するサーバーの役割を修正するには、マージ エージェント ジョブが暗黙的に作成し、実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービス アカウント。 実行することをお勧め[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)に対して異なるエージェントに固有の Windows アカウントの資格情報を指定して**@job_login**と **@job_password**. 詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergesubscription**です。  
   
 ## <a name="see-also"></a>参照  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
  [インタラクティブな競合解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

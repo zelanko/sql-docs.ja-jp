@@ -1,16 +1,16 @@
 ---
-title: sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_semantic_unregister_language_statistics_db (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 697af637dc9721fa7f8777f038c6ba3717ce2c2b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e49eead9ae619c909e68edee0e6530b1fdadab3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ GO
 ## <a name="general-remarks"></a>全般的な解説  
  セマンティック言語統計データベースの登録が解除されると、それに関連付けられているすべてのメタデータも削除されます。  
   
- **sp_fulltext_semantic_unregister_language_statistics_db** performs the following steps:  
+ **sp_fulltext_semantic_unregister_language_statistics_db**は、次の手順を実行します。  
   
 1.  現在のインスタンスに対して進行中のセマンティックな作成処理がないことを確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
@@ -68,7 +68,7 @@ GO
  詳細については、「 [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)」を参照してください。  
   
 ## <a name="metadata"></a>メタデータ  
- インスタンスにインストールされているセマンティック言語統計データベースに関する情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、カタログ ビューに対してクエリを[sys.fulltext_semantic_language_statistics_database &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ インスタンスにインストールされているセマンティック言語統計データベースに関する情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、カタログ ビューに対してクエリを[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)です。  
   
 ## <a name="security"></a>セキュリティ  
   

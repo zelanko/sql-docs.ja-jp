@@ -1,16 +1,16 @@
 ---
-title: "sp_mergecleanupmetadata (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_mergecleanupmetadata (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f13d51e68d864410bab57b2723fd2e89cac18dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、すべてのパブリケーションのメタデータをクリーンアップします。 パブリケーションを明示的に指定する場合は、これが既に存在している必要があります。  
+ [ **@publication =** ] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションのメタデータをクリーンアップします。 パブリケーションを明示的に指定する場合は、これが既に存在している必要があります。  
   
  [  **@reinitialize_subscriber =** ] **'***サブスクライバー***'**  
  サブスクライバーを再初期化するかどうかを指定します。 *サブスクライバー*は**nvarchar (5)**を指定できます**TRUE**または**FALSE**、既定値は**TRUE**です。 場合**TRUE**サブスクリプションが再初期化のマークが付けします。 場合**FALSE**サブスクリプションが再初期化のマークされていません。  
@@ -65,9 +65,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 > [!NOTE]  
 >  かどうか、データベースで複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間を使用して (**@retention**=**0**) 実行中、 **sp_mergecleanupmetadata**クリーンアップ、マージ レプリケーション変更の追跡データベースのメタデータがありません。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
   
- これを実行すると、プロシージャが格納されている、ときに、サブスクライバーを再初期化を設定するかどうかを選択できます、  **@reinitialize_subscriber** パラメーターを**TRUE** (既定) または**FALSE**. 場合**sp_mergecleanupmetadata**を実行すると、  **@reinitialize_subscriber** パラメーターに設定**TRUE**サブスクリプションがいた場合でも、サブスクライバーでスナップショットが再適用されます初期スナップショット (たとえば場合、スナップショットやデータとスキーマが手動で適用される、サブスクライバーに既に存在していた) なしで作成します。 パラメータを設定する**FALSE**パブリケーションが再初期化されていない場合、パブリッシャーとサブスクライバーでデータが同期されていることを確認する必要がありますので、注意、して使用する必要があります。  
+ これを実行すると、プロシージャが格納されている、ときに、サブスクライバーを再初期化を設定するかどうかを選択できます、 **@reinitialize_subscriber**パラメーターを**TRUE** (既定) または**FALSE**. 場合**sp_mergecleanupmetadata**を実行すると、 **@reinitialize_subscriber**パラメーターに設定**TRUE**サブスクリプションがいた場合でも、サブスクライバーでスナップショットが再適用されます初期スナップショット (たとえば場合、スナップショットやデータとスキーマが手動で適用される、サブスクライバーに既に存在していた) なしで作成します。 パラメータを設定する**FALSE**パブリケーションが再初期化されていない場合、パブリッシャーとサブスクライバーでデータが同期されていることを確認する必要がありますので、注意、して使用する必要があります。  
   
- 値に関係なく **@reinitialize_subscriber** 、 **sp_mergecleanupmetadata**が継続的なエラーが発生、パブリッシャーまたは再パブリッシュ サブスクライバーに変更をアップロードしようとしているプロセスのマージストアド プロシージャが呼び出された時刻。  
+ 値に関係なく**@reinitialize_subscriber**、 **sp_mergecleanupmetadata**が継続的なエラーが発生、パブリッシャーまたは再パブリッシュ サブスクライバーに変更をアップロードしようとしているプロセスのマージストアド プロシージャが呼び出された時刻。  
   
  **Sp_mergecleanupmetadata の実行@reinitialize_subscriber= TRUE:**  
   
@@ -121,14 +121,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergecleanupmetadata**です。  
   
  このストアド プロシージャを使用するには、パブリッシャーが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] を実行していることが必要です。 いずれかのサブスクライバーを実行する必要があります[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 では、Service Pack 2 です。  
   
 ## <a name="see-also"></a>参照  
- [MSmerge_genhistory &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

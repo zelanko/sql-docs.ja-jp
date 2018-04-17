@@ -1,28 +1,29 @@
 ---
-title: "sys.pdw_health_alerts (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.pdw_health_alerts (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
-caps.latest.revision: 
+caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28a38f60127100d80a7f9c52caa9851597403c45
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7647cc1fdc4182c8423e0eca4de429736e4acee9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 02/03/2018
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|アラートの一意の識別子。<br /><br /> このビューのキーです。|NOT NULL|  
-|component_id|**int**|このアラートの対象コンポーネントの ID。 コンポーネントは、「電源装置、」などのコンポーネントの一般的な識別子は、され、インストールに固有ではありません。 参照してください[sys.pdw_health_components &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
+|component_id|**int**|このアラートの対象コンポーネントの ID。 コンポーネントは、「電源装置、」などのコンポーネントの一般的な識別子は、され、インストールに固有ではありません。 参照してください[sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)です。|NOT NULL|  
 |alert_name|**nvarchar (255)**|アラートの名前です。|NOT NULL|  
-|state|**nvarchar(32)**|アラートの状態です。|NOT NULL<br /><br /> 有効値は次のとおりです。<br /><br /> 'Operational'<br /><br /> 'NonOperational'<br /><br /> 'Degraded'<br /><br /> 'Failed'|  
-|severity|**nvarchar(32)**|アラートの重大度。|NOT NULL<br /><br /> 有効値は次のとおりです。<br /><br /> ' 情報 '<br /><br /> 'Warning'<br /><br /> 'Error'|  
+|state|**nvarchar(32)**|アラートの状態です。|NOT NULL<br /><br /> 有効値は次のとおりです。<br /><br /> ' Operational'<br /><br /> 'NonOperational'<br /><br /> 'Degraded'<br /><br /> 'Failed'|  
+|severity|**nvarchar(32)**|アラートの重大度。|NOT NULL<br /><br /> 有効値は次のとおりです。<br /><br /> ' 情報 '<br /><br /> 「警告」<br /><br /> 'Error'|  
 |型|**nvarchar(32)**|アラートの種類。|NOT NULL<br /><br /> 有効値は次のとおりです。<br /><br /> 状況 - デバイスの状態が変更されました。<br /><br /> しきい値の値は、しきい値を超えました。|  
 |description|**nvarchar (4000)**|アラートの説明です。|NOT NULL|  
 |condition|**nvarchar (255)**|ときに使用される入力のしきい値を = です。 警告のしきい値の計算方法を定義します。|NULL|  

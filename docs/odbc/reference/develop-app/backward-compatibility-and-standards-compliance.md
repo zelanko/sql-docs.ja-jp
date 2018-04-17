@@ -1,31 +1,32 @@
 ---
-title: "旧バージョンとの互換性と標準の順守 |Microsoft ドキュメント"
-ms.custom: 
+title: 旧バージョンとの互換性と標準の順守 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
 - standards compliance [ODBC]
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48756878aa8130eb2cfe4c424f9084ea5a62aef7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>旧バージョンとの互換性と標準への準拠
 旧バージョンとの互換性は、以前の ODBC コンポーネントを使用する新しい ODBC コンポーネントの機能です。 次のセクションでは、これらのコンポーネントが ODBC 3 の変更による影響を受ける方法について説明*.x*です。 主に、それらに含まれる情報は、ODBC 3 の書き込みをアドレス*.x*アプリケーションおよび方法は、後方互換性の問題は、ODBC ドライバーによって処理されます。 どの旧バージョンとの互換性に関する特定のガイドラインについての問題に影響を与える ODBC 3 の書き込み*.x*ドライバーを参照してください[旧バージョンとの互換性のための付録 g: ドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)です。  

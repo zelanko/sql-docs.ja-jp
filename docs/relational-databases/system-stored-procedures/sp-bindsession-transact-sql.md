@@ -1,16 +1,16 @@
 ---
-title: "sp_bindsession (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_bindsession (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindsession
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28023afe6fa8440764bacab40ad3bca49b54611a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f7d47d969caa2e4f93482f4f457971d32c179264
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   バインドまたはの同じインスタンスの他のセッションにセッションをバインド解除、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]です。 セッションをバインドすると、複数のセッションを同じトランザクションに含むことができ、ROLLBACK TRANSACTION または COMMIT TRANSACTION が実行されるまでロックを共有できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 &#40;です。MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 & #40 です。MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +66,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  使用するか、セッションからバインド解除**sp_bindsession**を指定せず*bind_token*内の NULL を渡すことにより*bind_token*です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -83,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_getbindtoken &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
- [srv_getbindtoken &#40;です。拡張ストアド プロシージャ API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
+ [sp_getbindtoken & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [srv_getbindtoken&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

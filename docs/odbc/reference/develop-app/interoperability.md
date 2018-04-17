@@ -1,30 +1,31 @@
 ---
-title: "相互運用性 |Microsoft ドキュメント"
-ms.custom: 
+title: 相互運用性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4e7bbec995af3475208afa328c163dbbd42f0e46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interoperability"></a>相互運用性
 *相互運用性*多くのさまざまな Dbms で動作する 1 つのアプリケーションの機能です。 ジェネリック、相互運用可能なアプリケーションを記述する必要では、ODBC の開発につながる主な要因の 1 つでした。 ただし、相互運用性はありません「いない相互運用可能な」からの続き、単純なパスを「完全に相互運用可能な」。 パスは、多数の分岐を持ち、それぞれの機能、速度、コードの複雑性、および開発時間の間のトレードオフを必要とします。  

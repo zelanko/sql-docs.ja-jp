@@ -1,16 +1,16 @@
 ---
-title: "sp_replicationdboption (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replicationdboption (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 584c9ed9f4a9d0e00bcbd0de05788a1841189899
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab96eb1cc914000666bb09e34b38974d1e9b9524
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**マージ パブリッシュします。**|データベースは、マージ パブリケーションで使用できます。|  
 |**発行**|データベースは、他の種類のパブリケーションで使用できます。|  
 |**サブスクライブ**|データベースは、サブスクリプション データベースです。|  
-|**バックアップと同期させる**|データベースが連携バックアップに対して有効になっています。 詳細については、次を参照してください[トランザクション レプリケーション &#40; の連携バックアップを有効にする。レプリケーション TRANSACT-SQL プログラミング &#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**バックアップと同期させる**|データベースが連携バックアップに対して有効になっています。 詳細については、次を参照してください。[トランザクション レプリケーションの連携バックアップを有効にする&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)です。|  
   
  [  **@value=**] **'***値***'**  
  指定したデータベース オプションを有効にするか無効にするかを指定します。 *値*は**sysname**、でき、 **true**または**false**です。 この値が**false**と*optname*は**マージ パブリッシュ**、マージ パブリッシュされたデータベースへのサブスクリプションが削除されます。  
@@ -82,7 +82,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
  パブリッシングを無効にするには、パブリケーション データベースがオンラインであることが必要です。 パブリケーション データベースにデータベース スナップショットが存在する場合は、パブリッシングを無効にする前に削除する必要があります。 データベース スナップショットは、データベースの読み取り専用のオフライン コピーであり、レプリケーション スナップショットには関係していません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_replicationdboption**です。  
   
 ## <a name="see-also"></a>参照  
@@ -90,7 +90,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーションを削除します](../../relational-databases/replication/publish/delete-a-publication.md)   
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

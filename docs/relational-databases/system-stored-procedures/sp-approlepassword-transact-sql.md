@@ -1,16 +1,16 @@
 ---
-title: "sp_approlepassword (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_approlepassword (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_approlepassword
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_approlepassword
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6456a0fa5330b2c6ef921dec959f9cc9fb6f07b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 81c7816f206662489e797dfa4ed149ddfb53a3c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   現在のデータベース内にあるアプリケーション ロールのパスワードを変更します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +64,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="remarks"></a>解説  
  **sp_approlepassword**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -75,10 +75,10 @@ EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_addapprole &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [sp_setapprole と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_addapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

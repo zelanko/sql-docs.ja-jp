@@ -1,16 +1,16 @@
 ---
-title: "sp_serveroption (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_serveroption (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_serveroption_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0827584d30844193bc9c15c3a4b7abac230d7bcc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@server =** ] **'***サーバー***'**  
+ [ **@server =** ] **'***server***'**  
  オプションを設定するサーバーの名前です。 *server* のデータ型は **sysname**で、既定値はありません。  
   
  [  **@optname =** ] **'***option_name***'**  
@@ -68,7 +68,7 @@ sp_serveroption [@server = ] 'server'
 |**rpc**|指定されたサーバーからの RPC を有効にします。|  
 |**[rpc 出力]**|特定のサーバーに RPC を有効にします。|  
 |**sub**|サブスクライバーです。|  
-|**システム**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**リモート照合順序を使用します。**|リモート列とローカル サーバーのどちらの照合順序を使用するかを指定します。<br /><br /> 場合**true**、リモート列の照合順序は使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース、および照合順序で指定された**照合順序名**はため以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。<br /><br /> 場合**false**、分散クエリには常に、ローカル サーバーの既定の照合順序が使用中に**照合順序名**とリモート列の照合順序は無視されます。 既定値は **false**です。 (、 **False**値で使用される照合順序セマンティクスと互換性が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0)。|  
 |**リモート proc トランザクションの昇格**|このオプションを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 このオプションが TRUE の場合 (または) はリモート ストアド プロシージャを呼び出す分散トランザクションを開始し、され、トランザクションは MS DTC に参加します。 リモート ストアド プロシージャを呼び出す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、トランザクションを実行したインスタンスであり、このインスタンスによってトランザクションが制御されます。 この接続に対して引き続き COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントを実行すると、制御側のインスタンスは MS DTC 対して、コンピューター間の分散トランザクションの完了を管理することを要求します。<br /><br /> 後に、[!INCLUDE[tsql](../../includes/tsql-md.md)]分散トランザクションが開始された、リモート ストアド プロシージャが呼び出されるは、その他のインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク サーバーとして定義されています。 リンク サーバーがすべてに参加している、[!INCLUDE[tsql](../../includes/tsql-md.md)]分散トランザクション、および MS DTC により、各リンク サーバーに対して、トランザクションが完了したことです。<br /><br /> このオプションが FALSE (OFF) の場合は、リンク サーバーに対するリモート プロシージャ コールの呼び出し中、ローカル トランザクションは分散トランザクションに昇格されません。<br /><br /> サーバー間のプロシージャ コールを行う前にトランザクションが既に分散トランザクションである場合、このオプションに効力はありません。 リンク サーバーに対するプロシージャ コールは、同じ分散トランザクションで実行されます。<br /><br /> サーバー間のプロシージャ コールを行う前に接続にアクティブなトランザクションがない場合、このオプションに効力はありません。 プロシージャは、アクティブなトランザクションなしにリンク サーバーに対して実行されます。<br /><br /> このオプションの既定値は TRUE (ON) です。|  
   
@@ -83,7 +83,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="remarks"></a>解説  
  場合、**照合順序互換**オプションが TRUE に設定されている**照合順序名**自動的に NULL に設定されます。 場合**照合順序名**null 以外の値に設定されている**照合順序互換**自動的に FALSE に設定されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  サーバーに対する ALTER ANY LINKED SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -95,11 +95,11 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ```  
   
 ## <a name="see-also"></a>参照  
- [分散クエリ ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_adddistpublisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [分散クエリ ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropdistpublisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

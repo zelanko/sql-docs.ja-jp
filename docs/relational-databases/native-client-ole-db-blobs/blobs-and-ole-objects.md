@@ -1,15 +1,15 @@
 ---
-title: "Blob と OLE オブジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: Blob と OLE オブジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-blobs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03eb28507a7fa0fdc2bf8df55dbb39356f24109c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 686f9f7c4ec9562e6e5141553a3a36d779e7ad68
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および xml データ型とバイナリ ラージ オブジェクト (Blob)。 **読み取り**メソッド**ISequentialStream**コンシューマーが扱いやすい単位で多くのデータを取得することができます。  
   
- この機能を示すサンプルについては、次を参照してください。[大規模なデータの設定 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)です。  
+ この機能を示すサンプルについては、次を参照してください。[大規模なデータの設定 (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)です。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーに実装された Native Client OLE DB プロバイダーを使用して**IStorage**データ変更のため、コンシューマーはアクセサーのインターフェイス ポインターを提供するときのインターフェイスがバインドされています。  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/25/2018
 -   [BLOB 出力パラメーターのストリーミング サポート](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [大きな値の型を使用します。](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

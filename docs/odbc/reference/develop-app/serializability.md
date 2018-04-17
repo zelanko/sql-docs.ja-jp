@@ -1,15 +1,16 @@
 ---
-title: "シリアル化可能性 |Microsoft ドキュメント"
-ms.custom: 
+title: シリアル化可能性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction isolation [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19a70f6afcceeac41ef983a5756409fabcb428af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aa983da3ad05b6f4c4ac29fbdf986a7a8a350e34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="serializability"></a>シリアル化可能性
 トランザクションが理想的には、する必要があります*シリアル化可能な*します。 トランザクションが同時に実行されるトランザクションの結果が同じで、結果を逐次的に実行する場合は、シリアル化できると考えられます: つまり、1 つずつです。 トランザクションが最初に実行、のみ結果反映されていないトランザクションを混在させることは重要はありません。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_setreplfailovermode (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_setreplfailovermode (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68851fb6ad9a242536cc81c6688b7caed1067a2c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39e640d539dad66402d90fc450b5c22a1e338f89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 パブリケーションは既に存在している必要があります。  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [**@failover_mode=**] **'***failover_mode***'**  
@@ -68,9 +68,9 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |**キューに置かれました。**|データ変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューは廃止されており、現在サポートされていません。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューは廃止されており、現在サポートされていません。  
   
- [  **@override** =]*オーバーライド*  
+ [ **@override**=]*オーバーライド*  
  内部使用のみです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -79,7 +79,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_setreplfailovermode**はスナップショット レプリケーションまたはトランザクション レプリケーションでのサブスクリプションを有効にするか、キュー更新を即時更新にフェールオーバーを伴うまたは使用フェールオーバーを伴う即時更新キューに登録するには更新しています。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_setreplfailovermode**です。  
   
 ## <a name="see-also"></a>参照  

@@ -1,16 +1,16 @@
 ---
-title: "bcp_colfmt |Microsoft ドキュメント"
-ms.custom: 
+title: bcp_colfmt |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_colfmt
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c19dd268f958bc35f6e41fd6a6283ca23beb60e9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 477fcbfa6eb2f4a25877ecd563a565ce857d4523
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +63,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  ユーザー ファイル内にある列のデータ型です。 データベース テーブル内の対応する列のデータ型と異なる場合 (*idxServerColumn*)、一括コピーが可能であれば、データを変換します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]SQLXML、SQLUDT データ型のトークンのサポートが導入されました、 *eUserDataType*パラメーター。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML、SQLUDT データ型のトークンのサポートが導入されました、 *eUserDataType*パラメーター。  
   
  *EUserDataType*パラメーターは列挙型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.h 内のデータ型のトークン、されません、ODBC C データ型の列挙子。 たとえば、文字の文字列では、ODBC を指定できます SQL_C_CHAR の型を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定の種類 SQLCHARACTER です。  
   
@@ -148,9 +149,9 @@ RETCODE bcp_colfmt (
  [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)関数は、書式指定を永続化に使用できます。  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt による機能強化された日付と時刻のサポート  
- 使用される型については、 *eUserDataType*日付/時刻型のパラメーターを参照してください[強化された日付と時刻型 &#40; OLE DB と ODBC &#41; の変更の一括コピー](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)です。  
+ 使用される型については、 *eUserDataType*日付/時刻型のパラメーターを参照してください[強化された日付と時刻型の変更の一括コピー &#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)です。  
   
- 詳細については、次を参照してください。[日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
+ 詳細については、次を参照してください。[日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

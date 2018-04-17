@@ -1,16 +1,16 @@
 ---
-title: "sp_monitor (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_monitor (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_monitor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b4ef90280e72a7afd6a8787b053115a4bffa4fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b54b2e5cc7918a59780e631d60b8cfc9014cfee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_monitor
 |**seconds**|以降の経過秒数**sp_monitor**を実行します。|  
 |**cpu_busy**|サーバー コンピューターの CPU が実行されている秒数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作業します。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が入出力操作に費やした秒数|  
-|**アイドル状態**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
+|**アイドル状態します。**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
 |**packets_received**|入力パケットの数がによって読み取られた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が書き込んだ出力パケット数|  
 |**@packet_errors**|発生したエラーの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットを読み書き中にします。|  
@@ -71,7 +71,7 @@ sp_monitor
   
  各列の統計情報は、フォームで出力*数*(*数*)-*数*% または*数*(*数*). 最初の*数*秒の数を示します (の**cpu_busy**、 **io_busy**、および**アイドル**) または合計数 (他の変数の場合) から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が再起動されました。 *数*かっこで囲まれた秒数または前回の合計数を指します**sp_monitor**を実行します。 経過時間の割合が割合**sp_monitor**が最後に実行します。 たとえば、レポートには表示**cpu_busy**として 4250 (215) 68% の場合は、CPU がされてから 4250 ビジー状態の秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から 215 の秒数を最後に起動されて**sp_monitor**最後の実行、およびの 68% が、経過時間の合計**sp_monitor**が最後に実行します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -91,7 +91,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**cpu_busy**|**io_busy**|**アイドル状態**|  
+|**cpu_busy**|**io_busy**|**アイドル状態します。**|  
 |190(0)-0%|187(0)-0%|148(556)-99%|  
   
 ||||  
@@ -105,7 +105,7 @@ EXEC sp_monitor
 |141(0)|54920(127)|0(0)|4(0)|  
   
 ## <a name="see-also"></a>参照  
- [sp_who &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

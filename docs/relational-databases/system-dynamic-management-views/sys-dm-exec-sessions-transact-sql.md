@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_sessions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: 
+caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/20/2018
 |client_version|**int**|クライアントでサーバーへの接続に使用されるインターフェイスの TDS プロトコル バージョン。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |client_interface_name|**nvarchar(32)**|サーバーと通信するために、クライアントによって使用されているライブラリ/ドライバーの名前です。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |security_id|**varbinary(85)**|ログインに関連付けられた、Microsoft Windows のセキュリティ ID。 NULL 値は許可されません。|  
-|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セッションが現在実行しているログイン名です。 セッションを作成した元のログイン名については、original_login_name を参照してください。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名または Windows 認証済みのドメイン ユーザー名を認証します。 NULL 値は許可されません。|  
+|login_name|**nvarchar(128)**|現在セッションを実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 セッションを作成した元のログイン名については、original_login_name を参照してください。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名または Windows 認証済みのドメイン ユーザー名を認証します。 NULL 値は許可されません。|  
 |nt_domain|**nvarchar(128)**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションで Windows 認証または信頼された接続を使用している場合のクライアントの Windows ドメイン。 内部セッションまたはドメイン以外のユーザーの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |nt_user_name|**nvarchar(128)**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションで Windows 認証または信頼された接続を使用している場合のクライアントの Windows ユーザー名。 内部セッションまたはドメイン以外のユーザーの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |ステータス|**nvarchar(30)**|セッションの状態です。 有効値は次のとおりです。<br /><br /> **実行している**-現在 1 つまたは複数の要求を実行します。<br /><br /> **スリープ**-現在実行されていない要求<br /><br /> **休止**– セッションはリセットされたため、接続プールとはログイン前の状態に移行します。<br /><br /> **Preconnect** -セッションは、リソース ガバナーの分類します。<br /><br /> NULL 値は許可されません。|  
@@ -85,8 +86,8 @@ ms.lasthandoff: 02/20/2018
 |deadlock_priority|**int**|セッションの DEADLOCK_PRIORITY 設定。 NULL 値は許可されません。|  
 |row_count|**bigint**|セッションでこの時点までに返された行の数。 NULL 値は許可されません。|  
 |prev_error|**int**|セッションで最後に返されたエラーの ID。 NULL 値は許可されません。|  
-|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Original_login_name に関連付けられている Windows セキュリティ ID です。 NULL 値は許可されません。|  
-|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントがこのセッションの作成に使用されるログイン名。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名、Windows 認証済みのドメイン ユーザー名、または包含データベース ユーザーを認証します。 最初の接続後、セッションでは暗黙的または明示的にコンテキストが切り替えられている可能性があります。 たとえば場合、 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)を使用します。 NULL 値は許可されません。|  
+|original_security_id|**varbinary(85)**|original_login_name に関連付けられている [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows セキュリティ ID。 NULL 値は許可されません。|  
+|original_login_name|**nvarchar(128)**|クライアントがこのセッションの作成に使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名。 指定できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名、Windows 認証済みのドメイン ユーザー名、または包含データベース ユーザーを認証します。 最初の接続後、セッションでは暗黙的または明示的にコンテキストが切り替えられている可能性があります。 たとえば場合、 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)を使用します。 NULL 値は許可されません。|  
 |last_successful_logon|**datetime**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在のセッションが開始する前に、original_login_name のログオンが最後に成功した時間。|  
 |last_unsuccessful_logon|**datetime**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在のセッションが開始する前に、original_login_name のログオン試行が最後に失敗した時間。|  
 |unsuccessful_logons|**bigint**|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> last_successful_logon と login_time の間に、original_login_name のログオン試行が失敗した回数。|  
@@ -190,7 +191,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

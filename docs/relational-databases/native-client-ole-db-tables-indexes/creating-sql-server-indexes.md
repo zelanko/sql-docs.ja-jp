@@ -1,15 +1,15 @@
 ---
-title: "SQL Server インデックスの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server インデックスの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-tables-indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CreateIndex function
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - indexes [OLE DB]
 - adding indexes
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72d112e951b940a0eb424e79bc431237bcf06d0d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 11b93f96ba5e508310e27616d4f4c869adf5d05e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-sql-server-indexes"></a>SQL Server インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/25/2018
 |プロパティ ID|Description|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
-|DBPROP_INDEX_CLUSTERED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスのクラスター化を制御します。<br /><br /> VARIANT_TRUE: The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider attempts to create a clustered index on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どのテーブルでもクラスター化インデックスは 1 つしかサポートされません。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、非クラスター化インデックスを作成しようとしています、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。|  
+|DBPROP_INDEX_CLUSTERED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : インデックスのクラスター化を制御します。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが、クラスター化インデックスを作成しようとしています。、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どのテーブルでもクラスター化インデックスは 1 つしかサポートされません。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、非クラスター化インデックスを作成しようとしています、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。|  
 |DBPROP_INDEX_FILLFACTOR|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : インデックス ページの格納に使用する割合を指定します。 詳細については、次を参照してください。 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)です。<br /><br /> バリアントの型は VT_I4 です。 値は 1 ～ 100 にする必要があります。|  
 |DBPROP_INDEX_INITIALIZE|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  
 |DBPROP_INDEX_NULLCOLLATION|R/W 読み取り/書き込み<br /><br /> 既定: なし<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがこのプロパティをサポートしていません。 プロパティを設定しようとしています。 **CreateIndex** DB_S_ERRORSOCCURRED の戻り値が発生します。 *DwStatus*プロパティ構造体のメンバー DBPROPSTATUS_BADVALUE が示されます。|  

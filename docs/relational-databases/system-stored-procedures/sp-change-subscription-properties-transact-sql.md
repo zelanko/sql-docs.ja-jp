@@ -1,16 +1,16 @@
 ---
-title: "sp_change_subscription_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_change_subscription_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fe61cfc2088b75e2ab1af2c457073ad723dd7f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 42f06141f24970c2a787f9e0ddfca711a6657b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@property=**] **'***プロパティ***'**  
@@ -98,7 +98,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ホスト名**||パブリッシャーに接続するときに使用されるホスト名。|  
 |**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
 |**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに、マージ エージェントが接続するときのパスワード。|  
-|**internet_security_mode**|**1**|Web 同期に Windows 統合認証を使用。 基本認証を Web 認証と共に使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
+|**internet_security_mode**|**1**|Web 同期に Windows 統合認証を使用。 基本認証を Web 認証と共に使用することをお勧めします。 詳細については、「[Web 同期の構成](../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。|  
 ||**0**|Web 同期に基本認証を使用。<br /><br /> 注: Web 同期には、Web サーバーへの SSL 接続が必要です。|  
 |**internet_timeout**||Web 同期要求が期限切れとなるまでの時間 (秒単位)。|  
 |**internet_url**||Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
@@ -109,9 +109,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 変更する*publisher_security_mode*はマージ パブリケーションに対するサブスクリプションの場合のみサポートされます。|  
 ||**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
 |**@use_ftp**|**true**|標準のプロトコルの代わりに FTP を使用してスナップショットを取得。|  
-||**オプション**|標準のプロトコルを使用してスナップショットを取得。|  
+||**false**|標準のプロトコルを使用してスナップショットを取得。|  
 |**@use_web_sync**|**true**|Web 同期を有効にする。|  
-||**オプション**|Web 同期を無効にする。|  
+||**false**|Web 同期を無効にする。|  
 |**working_directory**||スナップショットのファイル転送でファイル転送プロトコル (FTP) を使用する場合、パブリケーションのデータとスキーマ ファイルを一時的に保存するために使用する作業ディレクトリの名前。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -124,15 +124,15 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Oracle パブリッシャーの場合の値の*publisher_db*だけなので Oracle サーバーのインスタンスにつき 1 つのデータベースは無視されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_change_subscription_properties**です。  
   
 ## <a name="see-also"></a>参照  
- [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [表示および変更のプル サブスクリプションのプロパティ](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

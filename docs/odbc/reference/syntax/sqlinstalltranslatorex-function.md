@@ -2,7 +2,7 @@
 title: SQLInstallTranslatorEx 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 220d3e6b0cc62c2d3d238332975c32e9c38bc030
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0493b2405beef6e400c320528b5eb93aef990a49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 関数
 **準拠**  
@@ -88,7 +88,7 @@ BOOL SQLInstallTranslatorEx(
   
  アプリケーションでは、使用率カウントは設定しないでください。 ODBC では、この数が維持されます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

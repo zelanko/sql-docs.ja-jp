@@ -1,15 +1,15 @@
 ---
-title: "MDAC から SQL Server Native Client へのアプリケーションの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: MDAC から SQL Server Native Client へのアプリケーションの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], vs. MDAC
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 
+caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、以前の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのアクセスをサポートしています。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client には、XML の統合は含まれていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、選択をサポートしています. XML のクエリが、その他の XML 機能をサポートしていません。 ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は Native Client のサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client には、XML の統合は含まれていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、選択をサポートしています. XML のクエリが、その他の XML 機能をサポートしていません。 ただし、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は Native Client のサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、接続文字列の属性のみを使用する、クライアント側のネットワーク ライブラリの構成がサポートされます。 ネットワーク ライブラリをさらに詳細に構成する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用する必要があります。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンに接続すると、サーバー エラー 16947 が SQL_ERROR として返されます。 このエラーは、位置指定更新または位置指定削除による行の更新や削除が失敗したときに発生します。 任意のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続している MDAC では、サーバー エラー 16947 は警告 (SQL_SUCCESS_WITH_INFO) として返されます。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client を実装して、 **IDBDataSourceAdmin**インターフェイスでしたが、以前は実装されているオプションの OLE DB インターフェイスが、 **CreateDataSource**この省略可能なメソッドインターフェイスを実装します。 [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を実装して、 **IDBDataSourceAdmin**インターフェイスでしたが、以前は実装されているオプションの OLE DB インターフェイスが、 **CreateDataSource**この省略可能なメソッドインターフェイスを実装します。 [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、TABLE_TYPE を SYNONYM に設定すると、TABLES スキーマ行セットと TABLE_INFO スキーマ行セットのシノニムを返します。  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/25/2018
   
 -   ODBC または OLE DB 呼び出しを使用してトランザクションを開始した場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC とでは動作が異なります。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではトランザクションがすぐに開始されますが、MDAC では最初のデータベース アクセスの後にトランザクションが開始されます。 ストアド プロシージャとバッチの動作に影響するためできますこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]@ 必要があります@TRANCOUNTバッチまたはストアド プロシージャが終了すると、バッチやストアド プロシージャの開始時と同じであります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction でトランザクションが即座に開始します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、次を参照してください。 [SET IMPLICIT_TRANSACTIONS &#40;です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction でトランザクションが即座に開始します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)」を参照してください。  
   
 -   使用する場合に、エラーが発生する可能性があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は、ODBC の汎用実装を提供し、後では公開しませんベンダー固有の機能または拡張機能です。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは最新の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能をネイティブでサポートするように更新されます)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
   

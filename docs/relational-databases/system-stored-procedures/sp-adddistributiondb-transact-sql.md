@@ -1,16 +1,16 @@
 ---
-title: "sp_adddistributiondb (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_adddistributiondb (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6657074bade1db3cb050d6ca0c33e358d05e5f0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**]*データベース '*  
  作成するディストリビューション データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません。 指定したデータベースが既に存在しており、まだディストリビューション データベースとしてマークされていない場合は、ディストリビューションの有効化に必要なオブジェクトがインストールされ、データベースがディストリビューション データベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
   
- [  **@data_folder=**] **'***data_folder'*  
+ [  **@data_folder=**] **' * * * data_folder'*  
  ディストリビューション データベース データ ファイルの格納に使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
   
  [  **@data_file=**] **'***data_file***'**  
@@ -94,7 +94,7 @@ sp_adddistributiondb [ @database= ] 'database'
  ディストリビューターに接続するときに使用するセキュリティ モードを指定します。 *security_mode*は**int**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証です。**1** Windows 統合認証を指定します。  
   
  [  **@login=**] **'***ログイン***'**  
- ディストリビューターに接続してディストリビューション データベースを作成するときに使用するログイン名を指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *ログイン*は**sysname**、既定値は NULL です。  
+ ディストリビューターに接続してディストリビューション データベースを作成するときに使用するログイン名を指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
  [  **@password=**] **'***パスワード***'**  
  ディストリビューターに接続するときに使用するパスワードを指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *パスワード*は**sysname**、既定値は NULL です。  
@@ -177,13 +177,13 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistributiondb**です。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  

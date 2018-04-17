@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_cdc_errors (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_cdc_errors (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_errors_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03e39dee1e8a04aa1222be9d5e477c7dd76895ad
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5d10ebd9e58b721cf70af36d1f24a3e48e6aca25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-data-capture---sysdmcdcerrors"></a>変更データ キャプチャの sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|セッションの ID を指定します。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
-|**phase_number**|**int**|エラー発生時のセッションのフェーズを示す数値です。 各フェーズの説明は、次を参照してください。 [sys.dm_cdc_log_scan_sessions &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)。|  
+|**phase_number**|**int**|エラー発生時のセッションのフェーズを示す数値です。 各フェーズの説明は、次を参照してください。 [sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)です。|  
 |**entry_time**|**datetime**|エラーが記録された日時です。 この値は、SQL のエラー ログのタイムスタンプに対応します。|  
 |**error_number**|**int**|エラー メッセージの ID です。|  
 |**error_severity**|**int**|メッセージの重大度レベルです。有効値は 1 ～ 25 です。|  
@@ -57,11 +57,11 @@ ms.lasthandoff: 02/03/2018
  **sys.dm_cdc_errors**以前の 32 セッションのエラー情報が含まれています。  
   
 ## <a name="permissions"></a>権限  
- クエリに VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_errors**動的管理ビュー。 動的管理ビューに対するアクセス許可の詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ クエリに VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_errors**動的管理ビュー。 動的管理ビューに対するアクセス許可の詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)です。  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
- [sys.dm_repl_traninfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
+ [sys.dm_cdc_log_scan_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
+ [sys.dm_repl_traninfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   
   
 

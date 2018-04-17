@@ -1,30 +1,31 @@
 ---
-title: "接続ハンドル |Microsoft ドキュメント"
-ms.custom: 
+title: 接続ハンドル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecfcfd0322e9bd158a7bbe92bdcc4bd63dad1eb5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc70c1ade4dcf55d6c66f4e6e44279dcc384fc25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-handles"></a>接続ハンドル
 A*接続*ドライバーと、データ ソースで構成されます。 接続ハンドルでは、各接続を識別します。 接続ハンドルは、使用するドライバーだけでなくそのドライバーを使用するデータ ソースを定義します。 ODBC ドライバー マネージャー (ドライバー) を実装するコードのセグメント内では、接続ハンドルは、次のような接続情報を格納する構造体を識別します。  

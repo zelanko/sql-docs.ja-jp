@@ -1,16 +1,16 @@
 ---
-title: "sp_publication_validation (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_publication_validation (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c08dc184475526abd962ab97f52ccfbb8c405e8f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0a2bca31164d91186426895fe4a25d0661400b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publication=**] **'***パブリケーション '*  
+ [**@publication=**] **' * * * パブリケーション '*  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -74,7 +74,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  検証の完了後すぐにディストリビューション エージェントをシャットダウンするかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、レプリケーション エージェントがシャット ダウンできません。 場合**1**、最後のアーティクルが検証された後にレプリケーション エージェントがシャット ダウンします。  
   
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -90,13 +90,13 @@ sp_publication_validation [ @publication = ] 'publication'
   
  場合は、アプリケーションがある即時更新サブスクライバー、 **sp_publication_validation**疑似エラーを検出することがあります。 **sp_publication_validation**行数またはチェックサムがパブリッシャーとサブスクライバー側でしをまずを計算します。 行数またはチェックサムがパブリッシャーで完了していて、サブスクライバーでは完了していない場合、即時更新トリガーはサブスクライバーからパブリッシャーに更新を通知できるため、値が変更される可能性があります。 パブリケーションの検証中にサブスクライバーとパブリッシャーの値が変更されないようにするには、検証中のパブリッシャーでの Microsoft 分散トランザクション コーディネーター (MS DTC) サービスを停止します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_publication_validation**です。  
   
 ## <a name="see-also"></a>参照  
  [サブスクライバーでのデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

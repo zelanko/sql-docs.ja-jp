@@ -1,30 +1,31 @@
 ---
-title: "バッチを実行して |Microsoft ドキュメント"
-ms.custom: 
+title: バッチを実行して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 620965b524b6d76d1f1d0a3d7adaf84c05c4540c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ebbba1ef4141ed71a80afa91c28d9b12a6dbacc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-batches"></a>バッチの実行
 アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずチェックする必要があります。 これには、アプリケーションの呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS と SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションでは、行のカウント – 生成および – セットを生成するステートメントが明示的なバッチおよび後者 2 つのオプションの戻り値の行の数と結果の可用性に関する情報を設定中に、プロシージャでサポートされる結果がパラメーター化するかどうかが返されます。実行します。  

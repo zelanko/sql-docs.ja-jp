@@ -1,16 +1,16 @@
 ---
-title: "sp_special_columns (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_special_columns (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_special_columns_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 902c3fc7afb5ede1af0d49ef4429f8177b2101ad
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 911828ded03593503026c573c0f921398cf5da43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,19 +83,19 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|行 ID の実際の範囲。 0、1、または 2 になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]常に 0 を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している間のみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は現在のトランザクションの間は、有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間は (複数のトランザクションにまたがって) 有効であることが保証されます。|  
+|SCOPE|**smallint**|行 ID の実際の範囲。 0、1、または 2 になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 0 を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している間のみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は現在のトランザクションの間は、有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間は (複数のトランザクションにまたがって) 有効であることが保証されます。|  
 |COLUMN_NAME|**sysname**|各列の列名、*テーブル*が返されます。 このフィールドは常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
 |TYPE_NAME|**sysname**|データ ソースに依存するデータ型の名前です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**です。|  
 |PRECISION|**Int**|データ ソース上の列の有効桁数。 このフィールドは常に値を返します。|  
 |LENGTH|**Int**|、(バイト単位) に必要な長さのバイナリ形式にデータ ソースのデータ型などの 10 **char (**10**)**、4 の**整数**、および 2 を**smallint**.|  
 |SCALE|**smallint**|データ ソース上の列の小数点以下桁数。 NULL は、小数点以下桁数を適用できないデータ型に対して返されます。|  
-|PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>解説  
  sp_special_columns は、ODBC で SQLSpecialColumns と同じです。 返される結果は、SCOPE の順序に従って並べ替えられます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -108,7 +109,7 @@ EXEC sp_special_columns @table_name = 'Department'
 ```  
   
 ## <a name="see-also"></a>参照  
- [カタログのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

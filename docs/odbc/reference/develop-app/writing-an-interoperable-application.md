@@ -1,15 +1,16 @@
 ---
-title: "相互運用可能なアプリケーションを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 相互運用可能なアプリケーションを作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a0b70251acdfebbe05bb0900af8be7ea25b6fa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-an-interoperable-application"></a>相互運用可能なアプリケーションを作成します。
 アプリケーションでは、1 つ以上のドライバーに対して同じコードを使用するたびにそのコードがこれらのドライバーの間で相互運用可能な場合があります。 ほとんどの場合、これは簡単な作業です。 たとえば、順方向専用カーソルに行をフェッチするコードは、すべてのドライバーは同じです。 場合によってより難しいこれができます。 たとえば、SQL ステートメントで使用するための識別子を構築するコードは、識別子の場合、引用符で囲む、および 1 つの要素、2 部構成、および 3 部構成の名前付け規則を考慮する必要があります。  

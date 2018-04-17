@@ -1,16 +1,16 @@
 ---
-title: "クライアント側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: クライアント側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - FOR XML clause, formatting
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1024bf5d057d2a5a5480592817827c21b423b0f3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: db7fd97f0b1151990ce2f8f947652b790b072f38
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>クライアント側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-ここでは、クライアント側の XML 書式設定に関する情報を提供します。 クライアント側の書式設定とは、中間層での XML の書式設定を指します。  
+  ここでは、クライアント側の XML 書式設定に関する情報を提供します。 クライアント側の書式設定とは、中間層での XML の書式設定を指します。  
   
 > [!NOTE]  
 >  ここでは、クライアント側での FOR XML 句の使用に関する追加情報を提供します。ここでは、FOR XML 句について理解していることを前提としています。 FOR XML の詳細については、次を参照してください。 [For を使用して XML](../../../relational-databases/xml/for-xml-sql-server.md)です。  
@@ -131,13 +132,13 @@ AS
 >  SQLXMLOLEDB プロバイダーを使用している ADO アプリケーションで XML テンプレートを実行して、両方を指定する場合、**クライアント側の xml**テンプレートとプロバイダー、ClientSideXML プロパティで指定された値の属性、テンプレートが優先されます。  
   
 ## <a name="see-also"></a>参照  
- [クライアント側およびサーバー側の XML 書式設定 (&) #40 です。 のアーキテクチャSQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [XML &#40;です。SQL Server &#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
- [XML のセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [FOR XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
+ [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [xml SQLXML 4.0 でのデータ型のサポート](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   
  [SQLXML マネージ クラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
- [クライアント側とサーバー側の XML 書式設定 (&) #40 です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
- [SqlXmlCommand オブジェクト &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [クライアント側とサーバー側の XML 書式設定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
+ [SqlXmlCommand オブジェクト & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [XML データ &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_help_spatial_geography_histogram (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_help_spatial_geography_histogram (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_histogram
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c65b21ab76c3ca5880c709e09255ad083ad05def
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e6045950af5e91a787fc793321b2f8f5f39bde4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |**セル**|**geography**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
 |**row_count**|**bigint**|セルに接しているかまたはセルを含む空間オブジェクトの数を示します。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ユーザーのメンバーである必要があります、**パブリック**ロール。 サーバーとオブジェクトに対する READ ACCESS 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
@@ -89,6 +89,6 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## <a name="see-also"></a>参照  
- [空間インデックス ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [空間インデックス ストアド プロシージャ&#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

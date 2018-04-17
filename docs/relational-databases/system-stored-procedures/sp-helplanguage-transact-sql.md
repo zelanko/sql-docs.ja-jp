@@ -1,16 +1,16 @@
 ---
-title: "sp_helplanguage (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helplanguage (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplanguage
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a94f66688ce53aef2dcf575d58e16ed6f2f1672b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5447f5cb5f41ab4c9a2dfa162e6ee04932c515c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,18 +59,18 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|言語 ID 番号です。|  
-|**dateformat**|**nchar (3)**|日付の形式です。|  
+|**dateformat**|**nchar(3)**|日付の形式です。|  
 |**datefirst**|**tinyint**|週の最初の曜日。1 は月曜、2 は火曜のようになり、7 は日曜になります。|  
 |**アップグレード**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
 |**name**|**sysname**|言語名です。|  
-|**エイリアス**|**sysname**|言語の別名です。|  
-|**か月間**|**nvarchar (372)**|月の名前です。|  
-|**shortmonths**|**nvarchar (132)**|月の短縮名です。|  
-|**日数**|**nvarchar(217)**|曜日です。|  
+|**alias**|**sysname**|言語の別名です。|  
+|**か月間**|**nvarchar(372)**|月の名前です。|  
+|**shortmonths**|**nvarchar(132)**|月の短縮名です。|  
+|**days**|**nvarchar(217)**|曜日です。|  
 |**lcid**|**int**|この言語を使用する Windows のロケール ID です。|  
-|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メッセージ グループ id。|  
+|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ グループ id。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -89,9 +90,9 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [言語を設定する &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
+ [言語を設定する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

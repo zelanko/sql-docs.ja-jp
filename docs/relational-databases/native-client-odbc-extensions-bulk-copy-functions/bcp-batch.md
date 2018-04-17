@@ -1,16 +1,16 @@
 ---
-title: "bcp_batch |Microsoft ドキュメント"
-ms.custom: 
+title: bcp_batch |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_batch
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1aa705c42846b02ae67eb66eba38660e724bf2e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c5e0b6eff2bede06aa406fd55b26cb4274b7326d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpbatch"></a>bcp_batch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ DBINT bcp_batch (HDBC
 ## <a name="remarks"></a>解説  
  一括コピーのバッチではトランザクションを定義します。 アプリケーションを使用する場合[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)と**bcp_sendrow**行を一括コピー プログラム変数から SQL Server テーブルに、行はコミットされた場合にのみ、プログラムを呼び出す**bcp_batch**または[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)です。  
   
- 呼び出すことができます**bcp_batch**したらすべて *n* 行 (アプリケーションと同様、製品利用統計情報) の受信データの転送が中断がある場合またはします。 アプリケーションが要求されていない場合**bcp_batch**一括コピーされた行がコミットされる場合にのみ**bcp_done**と呼びます。  
+ 呼び出すことができます**bcp_batch**したらすべて*n*行 (アプリケーションと同様、製品利用統計情報) の受信データの転送が中断がある場合またはします。 アプリケーションが要求されていない場合**bcp_batch**一括コピーされた行がコミットされる場合にのみ**bcp_done**と呼びます。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

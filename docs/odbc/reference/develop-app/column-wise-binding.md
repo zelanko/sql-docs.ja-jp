@@ -1,38 +1,39 @@
 ---
-title: "列方向のバインド |Microsoft ドキュメント"
-ms.custom: 
+title: 列方向のバインド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
 列方向のバインドを使用する場合、アプリケーションは、データが返される対象の各列に 1 つまたは 2 つ、または場合によっては、次の 3 つの配列をバインドします。 最初の配列が、データ値を保持し、2 番目の配列が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これは、3 番目の配列はバインドされています。 各配列には、行セットの行数が同じ数の要素が含まれています。  
   
  SQL_ATTR_ROW_BIND_TYPE ステートメント属性を持つ列方向のバインドが使用しているアプリケーションを宣言してバッファーを設定、バインド パラメーターではなく行セットのバッファーの種類を決定します。 ドライバーは、各配列の連続する要素の行ごとにデータを返します。 次の図は、列方向のバインドの動作を示します。  
   
- ![列 &#45; 3 つの列の観点からバインド](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![列&#45;3 つの列の観点からバインド](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
  たとえば、次のコードは、OrderID、販売員、およびステータスの列に 10 要素の配列をバインドします。  
   

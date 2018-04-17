@@ -1,16 +1,16 @@
 ---
-title: "sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4887304daf13f925201640ff89a87011f878ad01
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b6af0845ec009297b2395276c07b2d6af01a2fda
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@logged_before** = ] **'***logged_before***'**  
+ [ **@logged_before** =] **'***logged_before***'**  
  日付と時刻で指定されたエントリを削除、 *logged_before*引数。 *logged_before*は**datetime**で、既定値としては NULL です。 NULL はすべての日付を表します。  
   
- [ **@event_type** = ] **'***event_type***'**  
+ [ **@event_type** =] **'***event_type***'**  
  ログとして指定された型のエントリを削除、 *event_type*です。 *event_type*は**varchar (15)**既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**です。 NULL はすべてのイベントの種類を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -94,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sysmail_event_log &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdb (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpdb (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdb
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=** ] **'***名前***'**  
+ [ **@dbname=** ] **'***name***'**  
  情報を報告するデータベースの名前を指定します。 *名前*は**sysname**、既定値はありません。 場合*名前*が指定されていない**sp_helpdb**のすべてのデータベース上のレポート、 **sys.databases**カタログ ビューです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -60,7 +60,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**db_size**|**nvarchar (13)**|データベースの総サイズです。|  
 |**所有者**|**sysname**|データベースの所有者は、のように**sa**です。|  
 |**dbid**|**smallint**|データベース ID。|  
-|**作成**|**nvarchar (11)**|データベースの作成日です。|  
+|**created**|**nvarchar (11)**|データベースの作成日です。|  
 |**ステータス**|**nvarchar (600)**|データベースで現在設定されているデータベース オプションの、コンマで区切られたリストです。<br /><br /> ブール値を持つオプションは、有効になっている場合にのみリストに追加されます。 形式でそれらの値がブール型以外のオプションが表示されている*option_name*=*値*です。<br /><br /> 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |**compatibility_level**|**tinyint**|データベースの互換性レベル (60、65、70、80、および 90) です。|  
   
@@ -68,19 +68,19 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nchar (128)**|論理ファイル名です。|  
+|**name**|**nchar(128)**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイル ID。|  
-|**ファイル名**|**nchar(260)**|オペレーティング システム ファイル名 (物理ファイル名) です。|  
-|**ファイル グループ**|**nvarchar(128)**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルはログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
+|**filename**|**nchar(260)**|オペレーティング システム ファイル名 (物理ファイル名) です。|  
+|**filegroup**|**nvarchar(128)**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルはログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
 |**size**|**nvarchar(18)**|ファイル サイズ (MB 単位) です。|  
 |**maxsize**|**nvarchar(18)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
-|**成長**|**nvarchar(18)**|ファイルを拡張するときの増分です。 これは、新たに領域が必要になるたびにファイルに追加する容量を示します。|  
+|**growth**|**nvarchar(18)**|ファイルを拡張するときの増分です。 これは、新たに領域が必要になるたびにファイルに追加する容量を示します。|  
 |**使用状況**|**varchar (9)**|ファイルの使い方を示します。 データ ファイルの場合は、値は**'data only'**と、値は、ログ ファイルの**'ログのみ'**です。|  
   
 ## <a name="remarks"></a>解説  
  **ステータス**結果内の列がどのオプションは、データベースで ON に設定されているレポートを設定します。 すべてのデータベース オプションがによって報告されていない、**ステータス**列です。 現在のデータベース オプションの設定の完全な一覧を表示する、 **sys.databases**カタログ ビューです。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  1 つのデータベースが指定されている場合、メンバーシップ、**パブリック**データベース内のロールが必要です。 データベースが指定されていない場合のメンバーシップ、**パブリック**における役割、**マスター**データベースが必要です。  
   
  データベースにアクセスすることはできない場合、 **sp_helpdb**可能な限り、データベースに関するエラー メッセージ 15622 と情報が表示されます。  
@@ -103,13 +103,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [sys.master_files と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

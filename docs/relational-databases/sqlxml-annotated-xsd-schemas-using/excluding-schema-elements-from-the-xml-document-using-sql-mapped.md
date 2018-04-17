@@ -1,16 +1,16 @@
 ---
-title: "Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ |Microsoft ドキュメント"
-ms.custom: 
+title: 'Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -25,20 +25,21 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ccb3a9d274191ef11c031872062b07e5058acf54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 ですが、データベースのテーブル (ビュー) または列にマップされないと、XML で表示しない、XSD スキーマで要素を作成するかどうかを指定できます、 **sql: マップ**注釈。  
+  既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 ですが、データベースのテーブル (ビュー) または列にマップされないと、XML で表示しない、XSD スキーマで要素を作成するかどうかを指定できます、 **sql: マップ**注釈。  
   
  **Sql: マップ**注釈は、スキーマを変更することはできませんまたは他のソースし、まだデータベースに保存されていないデータを格納してから XML を検証するスキーマを使用する場合に特に便利です。 **Sql: マップ**注釈とは異なります**sql: 定数**点で、XML ドキュメントにマップされない要素と属性は表示されません。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/12/2018
   
  この XSD スキーマを AdventureWorks データベースの Person.Contact テーブルにマップする**sql: マップ**で指定された、 **HomeAddress** Employees テーブルで、ホームが格納されていないので属性従業員の住所。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact >**要素は Person.Contact テーブルにマップされ、すべての属性が Person.Contact テーブル内の同じ名前の列にマップします。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。  **\<Person.Contact >**要素は Person.Contact テーブルにマップされ、すべての属性が Person.Contact テーブル内の同じ名前の列にマップします。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -112,6 +113,6 @@ ms.lasthandoff: 02/12/2018
  ContactID、FirstName、および LastName 表示されているが、HomeAddress はマッピング スキーマの場合は 0 を指定するためにないことに注意してください、 **sql: マップ**属性。  
   
 ## <a name="see-also"></a>参照  
- [テーブルと列 &#40; に XSD 要素および属性の既定のマッピングSQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [XSD 要素および属性からテーブルと列の既定のマッピング&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

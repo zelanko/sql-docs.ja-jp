@@ -2,7 +2,7 @@
 title: SQLGetFunctions 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a38bc5d8e071efee286f726d75f6949243cbb77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
 **準拠**  
@@ -68,7 +68,7 @@ SQLRETURN SQLGetFunctions(
   
  返される配列 **SupportedPtr* 0 から始まるインデックスを使用します。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

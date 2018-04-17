@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_help_jobs (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_help_jobs (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_jobs
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_help_jobs
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4382b14729daf79809e8501f191657b11d4f311e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f085c591fa0c417974f15244f8d9af39101fcc35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ sys.sp_cdc_help_jobs
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ジョブの ID。|  
-|**job_type**|**nvarchar (20)**|ジョブの種類。|  
+|**job_type**|**nvarchar(20)**|ジョブの種類。|  
 |**maxtrans**|**int**|各スキャン サイクルで処理する最大トランザクション数。<br /><br /> **maxtrans**はキャプチャ ジョブでのみ有効です。|  
 |**maxscans**|**int**|ログからすべての行を抽出するために実行する最大スキャン サイクル数。<br /><br /> **maxscans**はキャプチャ ジョブでのみ有効です。|  
-|**継続的です**|**bit**|キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を示すフラグ。 詳細については、次を参照してください。 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **継続的な**はキャプチャ ジョブでのみ有効です。|  
+|**継続的です**|**bit**|キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を示すフラグ。 詳細については、次を参照してください。 [sys.sp_cdc_add_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)です。<br /><br /> **継続的な**はキャプチャ ジョブでのみ有効です。|  
 |**pollinginterval**|**bigint**|ログ スキャン サイクル間の秒数。<br /><br /> **pollinginterval**はキャプチャ ジョブでのみ有効です。|  
 |**保有期間**|**bigint**|変更行が変更テーブルに保持される分数。<br /><br /> **保有期間**はクリーンアップ ジョブでのみ有効です。|  
-|**しきい値**|**bigint**|クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数。|  
+|**threshold**|**bigint**|クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [dbo.cdc_jobs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_add_job & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

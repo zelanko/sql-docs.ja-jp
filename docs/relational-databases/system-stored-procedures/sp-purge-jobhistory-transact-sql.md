@@ -1,16 +1,16 @@
 ---
-title: sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_purge_jobhistory (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5ca210be5b062f7e09c3010597a37294f71379ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +57,9 @@ sp_purge_jobhistory
 >  メンバー、 **sysadmin**固定サーバー ロールまたはのメンバー、 **SQLAgentOperatorRole**固定データベース ロールが実行できる**sp_purge_jobhistory** の指定なし*job_name*または*job_id*です。 ときに**sysadmin**ユーザーでは、これらの引数を指定しない場合、すべてローカル ジョブおよびマルチ サーバー ジョブのジョブ履歴はによって指定された時間内で削除*oldest_date*です。 ときに**SQLAgentOperatorRole**ユーザーでは、これらの引数を指定しない場合で指定された時間内のすべてのローカル ジョブのジョブ履歴が削除された*oldest_date*です。  
   
  [ **@job_id=** ] *job_id*  
- 削除するレコードを持つジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 注の説明を参照してください **@job_name** 方法については**sysadmin**または**SQLAgentOperatorRole**ユーザーは、この引数を使用できます。  
+ 削除するレコードを持つジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 注の説明を参照してください**@job_name**方法については**sysadmin**または**SQLAgentOperatorRole**ユーザーは、この引数を使用できます。  
   
- [ **@oldest_date** = ] *oldest_date*  
+ [ **@oldest_date** =] *oldest_date*  
  履歴の中で保持する最も古いレコードを指定します。 *oldest_date*は**datetime**、既定値は NULL です。 ときに*oldest_date*が指定されている**sp_purge_jobhistory**のみに指定された値よりも古いレコードを削除します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -107,9 +108,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_help_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+ [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [GRANT オブジェクトのアクセス許可 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

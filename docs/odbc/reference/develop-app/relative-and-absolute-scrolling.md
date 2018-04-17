@@ -1,15 +1,16 @@
 ---
-title: "相対パスと絶対スクロール |Microsoft ドキュメント"
-ms.custom: 
+title: 相対パスと絶対スクロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - absolute scrolling [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対パスと絶対スクロール
-スクロール オプションのほとんど**SQLFetchScroll**相対的な現在の位置または絶対位置にカーソルを置きます。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セット、相対パスとしてもフェッチとして (行セットをフェッチ *n* 現在の行セットの先頭からの行) と絶対フェッチ (fetch、。行セットの行で始まる *n* )。 場合 *n* は行が結果セットの最後から数えられます絶対フェッチで負の値。 したがって、– 1 の行の絶対フェッチは結果セットの最後の行で始まる行セットをフェッチすることです。  
+スクロール オプションのほとんど**SQLFetchScroll**相対的な現在の位置または絶対位置にカーソルを置きます。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セット、相対パスとしてもフェッチとして (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (fetch、行セットの開始。行の*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 したがって、– 1 の行の絶対フェッチは結果セットの最後の行で始まる行セットをフェッチすることです。  
   
  動的カーソルは挿入および動的カーソルの速度が低下する可能性が、結果セットの先頭から読み取り以外の特定の番号に対応する行を取得する簡単な方法がないように、結果セットから削除された行を検出します。 さらに、絶対フェッチではありません非常に役に動的カーソル行番号を変更するように行が挿入および削除します。そのため、同じ行の数を連続してフェッチすることで得られる別の行にします。  
   

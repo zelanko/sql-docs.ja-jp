@@ -1,39 +1,40 @@
 ---
-title: "XPath クエリ (SQLXML 4.0) の使用の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: XPath クエリ (SQLXML 4.0) の使用の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], about XPath queries
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b08c314d50376e55d9825658aabc75385bbbe0be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 628efe2628353992667474d8c5cff2b9eb88e228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
+  XML パス言語 (XPath) クエリは、URL の一部として、またはテンプレート内で指定できます。 この結果のフラグメントの構造はマッピング スキーマによって決定され、値はデータベースから取得されます。 このプロセスは、CREATE VIEW ステートメントを使用してビューを作成し、そのビューに対して SQL クエリを記述するのと概念的には同じです。  
   
 > [!NOTE]  
->  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、次を参照してください[注釈付き XSD スキーマの選択 &#40; の概要。SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)と World Wide Web Consortium (W3C) で定義されている XPath 標準です。  
+>  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)、と World Wide Web Consortium (W3C) で定義されている XPath 標準です。  
   
  XML ドキュメントは、要素ノード、属性ノード、テキスト ノードなどのノードで構成されます。 たとえば、次の XML ドキュメントを考えてみます。  
   
@@ -57,7 +58,7 @@ XML パス言語 (XPath) クエリは、URL の一部として、またはテン
   
  XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、特定のセット**\<顧客 >** XPath のノードで、すべてを選択できます**\<順序 >**を持つノード、**日付**属性の値を指定します。**「7/14/1999」**です。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
   
- XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 には W3C XPath 仕様のサブセットが実装されています。W3C XPath 仕様は http://www.w3.org/TR/1999/PR-xpath-19991008.html にあります。  
+ XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 である W3C XPath 仕様のサブセットを実装するhttp://www.w3.org/TR/1999/PR-xpath-19991008.htmlです。  
   
  次に、W3C XPath 実装と SQLXML 4.0 実装の主な違いを示します。  
   
@@ -76,11 +77,11 @@ XML パス言語 (XPath) クエリは、URL の一部として、またはテン
      ドキュメント序数がないため、ノードの文字列値は、ノードが単一行の単一列にマップされる場合にのみ評価できます。 子要素を含む要素や IDREFS または NMTOKENS ノードは、文字列に変換できません。  
   
     > [!NOTE]  
-    >  場合によっては、**キー フィールド**注釈、またはキーを**リレーションシップ**注釈決定的なドキュメントの順序で発生することができます。 ただし、これはこれらの注釈の主な用途の詳細ではありませんを参照してください[sql:key を識別するキーを使用した列のフィールドと #40 です。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)と[sql:relationship を指定するリレーションシップを使用する &#40;です。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  場合によっては、**キー フィールド**注釈、またはキーを**リレーションシップ**注釈決定的なドキュメントの順序で発生することができます。 ただし、これはこれらの注釈の主な用途の詳細ではありませんを参照してください[を識別するキー列を使用して sql:key-フィールド&#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)と[を指定するリレーションシップを使用して sql:リレーションシップ&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)です。  
   
 -   **データ型**  
   
-     SQLXML 4.0 の XPath の実装の制限があります**文字列**、**数**、および**ブール**データ型。 詳細については、次を参照してください。 [XPath データ型 &#40;です。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+     SQLXML 4.0 の XPath の実装の制限があります**文字列**、**数**、および**ブール**データ型。 詳細については、次を参照してください。 [XPath データ型&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)です。  
   
 -   **クロス積クエリ**  
   
@@ -99,14 +100,14 @@ XML パス言語 (XPath) クエリは、URL の一部として、またはテン
   
 |機能|アイテム|サンプル クエリへのリンク|  
 |-------------|----------|----------------------------|  
-|軸|**属性**、**子**、**親**、および**self**軸|[XPath クエリで軸 &#40; を指定します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
-|連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリ &#40; での算術演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|すべての関係演算子|=, !=, <, \<=, >, >=|[XPath クエリ &#40; での関係演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|算術演算子|+、-、*、div|[XPath クエリ &#40; での算術演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|明示的な変換関数|**number()**, **string()**, **Boolean()**|[XPath クエリ &#40; での明示的な変換関数の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|ブール演算子|AND、OR|[XPath クエリ &#40; でのブール演算子の指定SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|論理関数|**true()**, **false()**, **not()**|[XPath クエリのブール関数 &#40; を指定します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|XPath 変数||[XPath クエリ &#40; XPath 変数を指定します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
+|軸|**属性**、**子**、**親**、および**self**軸|[XPath クエリで軸を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリで算術演算子を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|すべての関係演算子|=, !=, <, \<=, >, >=|[関係演算子を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|算術演算子|+、-、*、div|[XPath クエリで算術演算子を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|明示的な変換関数|**number()**, **string()**, **Boolean()**|[XPath クエリで明示的な変換関数を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|ブール演算子|AND、OR|[ブール演算子を指定する XPath クエリで&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|論理関数|**true()**, **false()**, **not()**|[XPath クエリ内で論理関数を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|XPath 変数||[XPath クエリ内で XPath 変数を指定する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>サポートされない機能  
  次の表は、SQLXML 4.0 で実装されていない XPath 言語の機能です。  
@@ -117,9 +118,9 @@ XML パス言語 (XPath) クエリは、URL の一部として、またはテン
 |数値を使用する述語||  
 |算術演算子|mod|  
 |ノード関数|**先祖**、**先祖または self**、**子孫**、**子孫または self (//)**、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
-|文字列関数|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|文字列関数|**string()**、 **concat()**、 **starts-with()**、 **contains()**、 **substring-before()**、 **substring-after()**、 **substring()**、 **string-length()**、 **normalize()**、 **translate()**|  
 |論理関数|**lang()**|  
-|数値関数|**sum()**, **floor()**, **ceiling()**, **round()**|  
+|数値関数|**sum()**、 **floor()**、 **ceiling()**、 **round()**|  
 |union 演算子|&#124;|  
   
  テンプレートに XPath クエリを指定する場合には、次の動作に注意してください。  

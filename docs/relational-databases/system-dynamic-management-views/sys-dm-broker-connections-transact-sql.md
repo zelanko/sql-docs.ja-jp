@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_broker_connections (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_broker_connections (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_connections
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abe087369c6584f1548930cf25f8930a2e78bc8c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3818944074a84e2eb5c97fcb12e8b1da940c1a2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,8 @@ ms.lasthandoff: 02/03/2018
 |**login_state**|**smallint**|接続のログイン プロセスの状態。 次の値になります。<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = オンライン<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|リモート コンピューターからのログインに関する現在の状態。 有効値は次のとおりです。<br /><br /> 接続ハンドシェイクを初期化しています。<br /><br /> 接続ハンドシェイクは、Login Negotiate メッセージを待機しています。<br /><br /> 接続ハンドシェイクを初期化し、認証用のセキュリティ コンテキストを送信しました。<br /><br /> 接続ハンドシェイクを受信し、認証用のセキュリティ コンテキストを承諾しました。<br /><br /> 接続ハンドシェイクを初期化し、認証用のセキュリティ コンテキストを送信しました。 ピアを認証するために使用できるオプションのメカニズムがあります。<br /><br /> 接続ハンドシェイクを受信し、認証用のセキュリティ コンテキストを送信しました。 ピアを認証するために使用できるオプションのメカニズムがあります。<br /><br /> 接続ハンドシェイクは、Initialize Security Context Confirmation メッセージを待機しています。<br /><br /> 接続ハンドシェイクは、Accept Security Context Confirmation メッセージを待機しています。<br /><br /> 接続ハンドシェイクは、失敗した認証に関する SSPI 拒否メッセージを待機しています。<br /><br /> 接続ハンドシェイクは、Pre-Master Secret メッセージを待機しています。<br /><br /> 接続ハンドシェイクは、Validation メッセージを待機しています。<br /><br /> 接続ハンドシェイクは、Arbitration メッセージを待機しています。<br /><br /> 接続ハンドシェイクが完了し、メッセージ交換がオンラインになりました (準備ができました)。<br /><br /> 接続にエラーがあります。|  
 |**peer_certificate_id**|**int**|認証でリモート インスタンスによって使用される証明書のローカル オブジェクト ID。 この証明書の所有者への CONNECT 権限を持つ必要があります、[!INCLUDE[ssSB](../../includes/sssb-md.md)]エンドポイント。 NULL 値は許可されます。|  
-|**encryption_algorithm**|**smallint**|接続で使用される暗号化アルゴリズム。 NULL 値は許可されます。 有効値は次のとおりです。<br /><br /> **値 &#124;です。説明 &#124;です。対応する DDL オプション**<br /><br /> 0 &#124;です。[なし] &#124;です。無効になっています。<br /><br /> 1 &#124;です。署名のみ<br /><br /> 2 &#124;です。AES、RC4 &#124;です。必要な &#124;です。アルゴリズム RC4 が必要}<br /><br /> 3 &#124;です。AES &#124;です。アルゴリズム AES が必要<br /><br /> **注:** RC4 アルゴリズムは、旧バージョンとの互換性に対してのみサポートされます。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]でき、以降のバージョンでは、RC4 または RC4_128 を使用して暗号化された素材を暗号化が解除されたどの互換性レベルです。|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムのテキスト表示。 NULL 値は許可されます。 有効値は次のとおりです。<br /><br /> **説明 &#124;です。対応する DDL オプション**<br /><br /> [なし] &#124;です。無効になっています。<br /><br /> RC4 &#124;です。{必須 &#124;です。必須のアルゴリズム RC4}<br /><br /> AES &#124;です。アルゴリズム AES が必要<br /><br /> NONE、RC4 (&) #124 です。{サポート &#124;です。アルゴリズム RC4 をサポート}<br /><br /> NONE、AES (&) #124 です。アルゴリズム RC4 をサポート<br /><br /> RC4、AES &#124;です。必要なアルゴリズム RC4 AES<br /><br /> AES、RC4 &#124;です。必須のアルゴリズム AES RC4<br /><br /> NONE、RC4、AES (&) #124 です。サポートされるアルゴリズム RC4 AES<br /><br /> NONE、AES、RC4 (&) #124 です。 アルゴリズム AES RC4 をサポート|  
+|**encryption_algorithm**|**smallint**|接続で使用される暗号化アルゴリズム。 NULL 値は許可されます。 有効値は次のとおりです。<br /><br /> **値&#124;説明&#124;対応する DDL オプション**<br /><br /> 0 &#124; none&#124;無効になっています。<br /><br /> 1&AMP;#124;署名のみ<br /><br /> 2 &#124; AES、RC4&#124;必要&#124;アルゴリズム RC4 が必要}<br /><br /> 3 &#124; AES&#124;アルゴリズム AES が必要<br /><br /> **注:** RC4 アルゴリズムは、旧バージョンとの互換性に対してのみサポートされます。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムのテキスト表示。 NULL 値は許可されます。 有効値は次のとおりです。<br /><br /> **説明&#124;対応する DDL オプション**<br /><br /> NONE&#124;無効になっています。<br /><br /> RC4 &#124; {必要&#124;アルゴリズム RC4 が必要}<br /><br /> AES&#124;アルゴリズム AES が必要<br /><br /> NONE、RC4 &#124; {サポート&#124;アルゴリズム RC4 をサポート}<br /><br /> NONE、AES&#124;アルゴリズム RC4 をサポート<br /><br /> RC4、AES&#124;必要アルゴリズム RC4 AES<br /><br /> AES、RC4&#124;アルゴリズム AES RC4 が必要<br /><br /> NONE、RC4、AES&#124;アルゴリズム RC4 をサポートされている AES<br /><br /> NONE、AES、RC4&#124;アルゴリズム AES RC4 をサポート|  
 |**receives_posted**|**smallint**|この接続でまだ完了していない非同期ネットワーク受信の数。 NULL 値は許可されます。|  
 |**is_receive_flow_controlled**|**bit**|ネットワークがビジー状態のときに行われたフロー制御が原因で、ネットワーク受信が延期されたかどうか。 NULL 値は許可されます。<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|この接続でまだ完了していない非同期ネットワーク送信の数。 NULL 値は許可されます。|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker 関連の動的管理ビュー & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

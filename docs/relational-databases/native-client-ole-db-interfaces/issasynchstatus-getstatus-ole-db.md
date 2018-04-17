@@ -1,16 +1,16 @@
 ---
-title: "Issasynchstatus::getstatus (OLE DB) |Microsoft ドキュメント"
-ms.custom: 
+title: Issasynchstatus::getstatus (OLE DB) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::GetStatus (OLE DB)
@@ -18,16 +18,17 @@ apitype: COM
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1a6d91a0224b53a09dd35e1b8adf0f48c77d578
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7eea02d14724c90656be1f9a67a5c3b7c98a2478
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_CANCELED は、オブジェクトの非同期処理が中止されたことを示します。 **Issasynchstatus::getstatus** DB_E_CANCELED が返されます。 非同期操作が呼び出しの結果が場合**icommand::execute**更新、削除、または行を挿入するコマンドの*pulProgress*がすべてのパラメーター セットの行の合計数に等しいキャンセルする前にコマンドを受けます。  
   
- *ppwszStatusText*[in/out]  
+ *ppwszStatusText*[送受信]  
  操作に関する詳細情報を保持するメモリへのポインター。 プロバイダーは、この値を使用して操作の異なる要素 (アクセス中のさまざまなリソースなど) を区別できます。 この文字列は、データ ソース オブジェクトの DBPROP_INIT_LCID プロパティに従ってローカライズされます。  
   
  場合*ppwszStatusText*が null 以外の入力の場合、プロバイダーを返しますで識別される特定の要素に関連付けられた状態*ppwszStatusText*です。 場合*ppwszStatusText*の要素を示しません*eOperation*、プロバイダーが S_OK が返されます*pulProgress*と*pulProgressMax*同じ値に設定します。 設定されている場合は、プロバイダーがテキスト識別子に基づいて要素を区別しません*ppwszStatusText* NULL を返しますの情報に、操作全体ですそれ以外の場合*ppwszStatusText*。は null 入力上でプロバイダーのまま*ppwszStatusText*アンタッチです。  
@@ -132,6 +133,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>参照  
  [非同期操作を実行します。](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus (&) #40";"OLE DB"&"#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

@@ -1,15 +1,15 @@
 ---
-title: "CLR パラメーター データのマッピング |Microsoft ドキュメント"
-ms.custom: 
+title: CLR パラメーター データのマッピング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,26 +28,26 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-次の表にリスト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の場合、共通言語ランタイム (CLR) 用の同等の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、 **System.Data.SqlTypes**名前空間、および、で、ネイティブのCLR同等[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET フレームワークです。  
+  次の表にリスト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の場合、共通言語ランタイム (CLR) 用の同等の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、 **System.Data.SqlTypes**名前空間、および、で、ネイティブのCLR同等[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET フレームワークです。  
   
 ||||  
 |-|-|-|  
 |**SQL Server データ型**|型 (System.Data.SqlTypes または Microsoft.SqlServer.Types)|**CLR データ型 (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64 では、null 許容\<Int64 >**|  
-|**[バイナリ]**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**[バイナリ]**|**SqlBytes、SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**ブール値、null 許容\<ブール値 >**|  
 |**char**|なし|なし|  
 |**カーソル (cursor)**|なし|なし|  
@@ -80,8 +80,8 @@ ms.lasthandoff: 02/09/2018
 |**tinyint**|**SqlByte**|**Byte、null 許容\<バイト >**|  
 |**uniqueidentifier**|**SqlGuid**|**Guid、null 許容\<Guid >**|  
 |**User-defined type(UDT)**|なし|同じアセンブリまたは依存アセンブリ内のユーザー定義型にバインドされている同じクラス|  
-|**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
+|**varbinary**|**SqlBytes、SqlBinary**|**Byte[]**|  
+|**varbinary(1)、binary(1)**|**SqlBytes、SqlBinary**|**バイト、byte[]、Nullable\<バイト >**|  
 |**varchar**|なし|なし|  
 |**xml**|**SqlXml**|なし|  
   
@@ -117,9 +117,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR データ型 (SQL Server)**|**SQL Server データ型**|  
-|**Decimal**|smallmoney|  
+|**10 進数**|smallmoney|  
 |**SqlMoney**|smallmoney|  
-|**Decimal**|money|  
+|**10 進数**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

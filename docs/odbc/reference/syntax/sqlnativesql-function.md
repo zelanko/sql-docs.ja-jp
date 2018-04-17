@@ -2,7 +2,7 @@
 title: SQLNativeSql 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0a18b6575d403c44fb8aa546a4ce90d3a99e6b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 関数
 **準拠**  
@@ -74,7 +74,7 @@ SQLRETURN SQLNativeSql(
  *TextLength2Ptr*  
  [出力]文字 (除外 null 終了あり) で返される使用可能な数の合計を返すバッファーへのポインター \* *OutStatementText*です。 返される文字数がより大きいかに等しい場合*BufferLength*では、SQL 文字列を翻訳\* *OutStatementText*に切り捨てられます*BufferLength* null 終端文字の長さマイナスです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

@@ -1,16 +1,16 @@
 ---
-title: "sp_helprotect (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helprotect (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
  [  **@grantorname =** ] **'***grantor***'**  
  権限を許可したプリンシパルの名前を指定します。 *権限の許可者*は**sysname**の既定値は NULL には、データベース内のすべてのプリンシパルにより許可された権限のすべての情報が返されます。  
   
- [  **@permissionarea =** ] **'***型***'**  
+ [ **@permissionarea =** ] **'***type***'**  
  オブジェクトのアクセス許可を表示するかどうかを示す文字の文字列 (文字の文字列**o**)、ステートメント権限 (文字の文字列**s**)、またはその両方 (**os**)。 *型*は**varchar (10)**、既定値は**os**です。 *型*の組み合わせにすることができます**o**と**s**、または間の空白またはコンマなしの**o**と**s**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -75,12 +75,12 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**[所有者]**|**sysname**|オブジェクト所有者の名前。|  
+|**所有者**|**sysname**|オブジェクト所有者の名前。|  
 |**オブジェクト**|**sysname**|オブジェクトの名前。|  
 |**権限付与対象ユーザー**|**sysname**|権限が許可されたプリンシパルの名前。|  
 |**Grantor**|**sysname**|指定したユーザーに権限を許可したプリンシパルの名前。|  
-|**ProtectType**|**nvarchar (10)**|保護の種類の名前。<br /><br /> GRANT REVOKE|  
-|**操作**|**nvarchar (60)**|アクセス許可の名前です。 有効な権限ステートメントは、オブジェクトの種類によって異なります。|  
+|**ProtectType**|**nvarchar(10)**|保護の種類の名前。<br /><br /> GRANT REVOKE|  
+|**操作**|**nvarchar(60)**|アクセス許可の名前です。 有効な権限ステートメントは、オブジェクトの種類によって異なります。|  
 |**列**|**sysname**|アクセス許可の種類です。<br /><br /> All = オブジェクトの現在の列すべてに対する権限<br /><br /> New = 今後 ALTER ステートメントを使用して変更される可能性のある、オブジェクトの新しい列に対する権限<br /><br /> All+New = All と New を組み合わせた権限<br /><br /> 権限の種類が列に適用されない場合は、ピリオドを返します。|  
   
 ## <a name="remarks"></a>解説  
@@ -100,7 +100,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  レポートは、権限カテゴリ、所有者、オブジェクト、被許可者、許可者、保護の種類のカテゴリ、保護の種類、動作、列順序 ID で並べ替えられます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
  返される情報は、メタデータへのアクセスに関する制限の対象となります。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -143,7 +143,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

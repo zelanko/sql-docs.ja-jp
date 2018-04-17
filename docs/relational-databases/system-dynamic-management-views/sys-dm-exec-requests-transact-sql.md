@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_requests (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_requests_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: 
+caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51f71a3274031ad3a9a795e94fa0c15968fc2bfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/03/2018
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  
 |connection_id|**uniqueidentifier**|要求を受信した接続の ID。 NULL 値が許可されます。|  
 |blocking_session_id|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を現時点では特定できませんでした。|  
-|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
+|wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)です。|  
 |wait_time|**int**|要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |last_wait_type|**nvarchar(60)**|要求がブロックされていた場合の最後の待機の種類。 NULL 値は許可されません。|  
 |wait_resource|**nvarchar (256)**|要求が現在ブロックされている場合の現在待機中のリソース。 NULL 値は許可されません。|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 02/03/2018
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
   
 ## <a name="permissions"></a>権限  
- 場合、ユーザーは`VIEW SERVER STATE`サーバーに対する権限をユーザーに表示されるセッションの実行中のすべてのインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 それ以外の場合、ユーザーが現在のセッションのみを表示します。 `VIEW SERVER STATE`付与することはできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ように`sys.dm_exec_requests`は常に現在の接続に限定されます。 
+ 場合、ユーザーは`VIEW SERVER STATE`サーバーに対する権限をユーザーに表示されるセッションの実行中のすべてのインスタンスで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 それ以外の場合、ユーザーが現在のセッションのみを表示します。 `VIEW SERVER STATE` 付与することはできません[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]ように`sys.dm_exec_requests`は常に現在の接続に限定されます。 
   
 ## <a name="examples"></a>使用例  
   
@@ -154,9 +155,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

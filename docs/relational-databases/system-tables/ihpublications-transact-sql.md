@@ -1,16 +1,16 @@
 ---
-title: "IHpublications (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: IHpublications (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93678262e3201e9fff338abb5a978771415609b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8041914733509d89ed6d17084ae30df5817e3505
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |**ftp_subdirectory**|**nvarchar(510)**|スナップショット ファイルは、パブリケーションが FTP を使用してスナップショットの配布をサポートしている場合に、ディストリビューション エージェントの使用可能な場所を指定します。|  
 |**ftp_login**|**nvarchar (256)**|FTP サービスへの接続に使用されるユーザー名。|  
 |**ftp_password**|**nvarchar(1048)**|FTP サービスへの接続に使用されるユーザー パスワード。|  
-|**allow_dts を含む**|**bit**|パブリケーションでデータを変換できるかどうかを指定します。 **1** DTS 変換が許可されていることを指定します。 *SQL 以外のパブリッシャーにサポートされていません。*|  
+|**allow_dts**|**bit**|パブリケーションでデータを変換できるかどうかを指定します。 **1** DTS 変換が許可されていることを指定します。 *SQL 以外のパブリッシャーにサポートされていません。*|  
 |**allow_anonymous**|**bit**|パブリケーションに対して匿名サブスクリプションを許可するかどうかを示す、 **1**が許可されていることを意味します。|  
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、パブリッシャーの両方と、競合の原因となったサブスクライバーで格納します。<br /><br /> **1** = 競合レコードはパブリッシャーに保存します。<br /><br /> *SQL 以外のパブリッシャーにサポートされていません。*|  
 |**conflict_retention**|**int**|競合の保有期間の日数を指定します。 *SQL 以外のパブリッシャーにサポートされていません。*|  
@@ -79,15 +79,15 @@ ms.lasthandoff: 11/21/2017
 |**allow_initialize_from_backup**|**bit**|サブスクライバーでは、最初のスナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できるかどうかを示します。 **1**をバックアップからサブスクリプションを初期化できることを意味し、 **0**できないことを意味します。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。 *SQL 以外のパブリッシャーにサポートされていません。*|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|スキーマ レプリケーションがパブリケーションに対してサポートされているかどうかを示します。 **1** 、パブリッシャー側で実行される DDL ステートメントがレプリケートされることを示すと**0** DDL ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。 *SQL 以外のパブリッシャーにサポートされていません。*|  
-|**オプション**|**int**|ビットごとのオプションの値が、追加の発行オプションを指定するビットマップ。<br /><br /> **0x1** - ピア ツー ピア レプリケーションに対して有効です。<br /><br /> **0x2** -ローカル変更のみをパブリッシュします。<br /><br /> **0x4** - SQL Server 以外のサブスクライバーに対して有効です。|  
+|**options**|**int**|ビットごとのオプションの値が、追加の発行オプションを指定するビットマップ。<br /><br /> **0x1** - ピア ツー ピア レプリケーションに対して有効です。<br /><br /> **0x2** -ローカル変更のみをパブリッシュします。<br /><br /> **0x4** - SQL Server 以外のサブスクライバーに対して有効です。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [syspublications &#40;です。システム ビュー &#41;&#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
- [syspublications &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/syspublications-transact-sql.md)  
+ [syspublications&#40;システム ビュー&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
+ [syspublications &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  
   
   

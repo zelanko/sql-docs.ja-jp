@@ -2,7 +2,7 @@
 title: SQLFreeHandle 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 関数
 **準拠**  
@@ -73,7 +73,7 @@ SQLRETURN SQLFreeHandle(
  *Handle*  
  [入力]解放されるハンドル。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_ERROR、または SQL_INVALID_HANDLE します。  
   
  場合**SQLFreeHandle**がまだ有効 SQL_ERROR、ハンドル値を取得します。  
@@ -85,7 +85,7 @@ SQLRETURN SQLFreeHandle(
 |--------------|-----------|-----------------|  
 |HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンス エラー|(DM)、 *HandleType*引数が SQL_HANDLE_ENV とには、少なくとも 1 つの接続は、割り当てられた、または接続されている状態にします。 **SQLDisconnect**と**SQLFreeHandle**で、 *HandleType*呼び出す前に各接続の sql_handle_dbc として呼び出す必要があります**SQLFreeHandle***HandleType* SQL_HANDLE_ENV のです。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として、および関数が呼び出す前に呼び出された**SQLDisconnect**接続します。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として。 非同期的に実行中の関数が呼び出されました*処理*関数は、この関数が呼び出されたときに実行されているとします。<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_STMT です。 **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**されたステートメント ハンドルで呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_STMT です。 ステートメント ハンドルで、または、関連付けられている接続ハンドルに非同期的に実行中の関数が呼び出された関数は、この関数が呼び出されたときに実行されている.<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_DESC です。 関連付けられた接続ハンドルで非同期的に実行中の関数が呼び出されましたこの関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM) すべての子会社ハンドルおよびその他のリソースが解放されていない前に、 **SQLFreeHandle**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかで呼び出され、*処理*および*HandleType* SQL_HANDLE_STMT を設定または SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE が返されます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
+|HY010|関数のシーケンス エラー|(DM)、 *HandleType*引数が SQL_HANDLE_ENV とには、少なくとも 1 つの接続は、割り当てられた、または接続されている状態にします。 **SQLDisconnect**と**SQLFreeHandle**で、 *HandleType*呼び出す前に各接続の sql_handle_dbc として呼び出す必要があります**SQLFreeHandle**で、*HandleType* SQL_HANDLE_ENV のです。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として、および関数が呼び出す前に呼び出された**SQLDisconnect**接続します。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として。 非同期的に実行中の関数が呼び出されました*処理*関数は、この関数が呼び出されたときに実行されているとします。<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_STMT です。 **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**されたステートメント ハンドルで呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_STMT です。 ステートメント ハンドルで、または、関連付けられている接続ハンドルに非同期的に実行中の関数が呼び出された関数は、この関数が呼び出されたときに実行されている.<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_DESC です。 関連付けられた接続ハンドルで非同期的に実行中の関数が呼び出されましたこの関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM) すべての子会社ハンドルおよびその他のリソースが解放されていない前に、 **SQLFreeHandle**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかで呼び出され、*処理*および*HandleType* SQL_HANDLE_STMT を設定または SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE が返されます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|*HandleType*引数が SQL_HANDLE_STMT または SQL_HANDLE_DESC、および基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY017|自動的に割り当てられた記述子ハンドルの使い方が正しくありません。|(DM)、*処理*引数は、自動的に割り当てられた記述子ハンドルに設定されました。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  

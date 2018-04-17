@@ -2,7 +2,7 @@
 title: SQLTablePrivileges 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a7ab7a3ce90677e0d403aaf430fa3859e9dc2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 関数
 **準拠**  
@@ -74,7 +74,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名の文字列の検索パターン。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*TableName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *TableName*パターン引数の値は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -82,7 +82,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength3*  
  [入力]文字の長さ **TableName*です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -131,7 +131,7 @@ SQLRETURN SQLTablePrivileges(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|カタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|テーブル名です。|  
 |権限の許可者 (ODBC 1.0)|4|Varchar|特権を付与したユーザーの名前データ ソースに適用されない場合は NULL です。<br /><br /> すべての行の権限付与対象ユーザーの列の値のオブジェクトの所有者、GRANTOR 列を「(_s)」となります。|  

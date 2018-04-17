@@ -1,16 +1,16 @@
 ---
-title: "バックアップ セット (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: バックアップ セット (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 
+caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1675b6703b8729458ff10fae7d83a2c56328ee59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  バックアップ セットごとに 1 行のデータを格納します。 A*バックアップ セット*、成功した 1 つのバックアップ操作からのバックアップが含まれています。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY、および RESTORE VERIFYONLY ステートメントは、単一または複数の指定バックアップ デバイス上のメディア セット内にある単一のバックアップ セットに対して機能します。  
+  バックアップ セットごとに 1 行のデータを格納します。 *バックアップ セット* には、正常に終了した 1 つのバックアップ操作のバックアップが含まれます。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY、および RESTORE VERIFYONLY ステートメントは、単一または複数の指定バックアップ デバイス上のメディア セット内にある単一のバックアップ セットに対して機能します。  
   
  次の表は、 **msdb**データベース。  
 
@@ -52,17 +53,17 @@ ms.lasthandoff: 02/03/2018
 |**last_media_number**|**smallint**|バックアップ セットの最終メディアのメディア番号。 NULL を指定できます。|  
 |**catalog_family_number**|**tinyint**|バックアップ セット ディレクトリの先頭を含むメディアのファミリ番号。 NULL を指定できます。|  
 |**catalog_media_number**|**smallint**|バックアップ セット ディレクトリの先頭を含むメディアのメディア番号。 NULL を指定できます。|  
-|**position**|**int**|復元操作で、該当するバックアップ セットとファイルを検出するために使用されるバックアップ セットの位置。 NULL を指定できます。 詳細については、ファイルを参照して[バックアップ &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/backup-transact-sql.md)。|  
+|**position**|**int**|復元操作で、該当するバックアップ セットとファイルを検出するために使用されるバックアップ セットの位置。 NULL を指定できます。 詳細については、ファイルを参照して[バックアップ&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)です。|  
 |**expiration_date**|**datetime**|バックアップ セットの期限が切れる日付と時刻。 NULL を指定できます。|  
 |**software_vendor_id**|**int**|バックアップ メディア ヘッダーを記述するソフトウェア ベンダーの識別番号。 NULL を指定できます。|  
 |**name**|**nvarchar(128)**|バックアップ セットの名前。 NULL を指定できます。|  
 |**説明**|**nvarchar (255)**|バックアップ セットの説明です。 NULL を指定できます。|  
 |**user_name**|**nvarchar(128)**|バックアップ操作を実行するユーザー名。 NULL を指定できます。|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメジャー バージョン番号。 NULL を指定できます。|  
-|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マイナー バージョン番号。 NULL を指定できます。|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビルド番号です。 NULL を指定できます。|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メジャー バージョン番号。 NULL を指定できます。|  
+|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマイナー バージョン番号。 NULL を指定できます。|  
+|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のビルド番号。 NULL を指定できます。|  
 |**time_zone**|**smallint**|バックアップ操作が行われている現地時間と、協定世界時 (UTC) の差 (15 分間隔)。 値は、-48 ～ +48 の範囲になります。 値 127 は、不明な状態を表します。 たとえば、-20 は東部標準時刻 (EST) を表し、これは UTC の 5 時間前にあたります。 NULL を指定できます。|  
-|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] テープのマイナー バージョン番号の書式設定します。 NULL を指定できます。|  
+|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format のマイナー バージョン番号。 NULL を指定できます。|  
 |**first_lsn**|**numeric(25,0)**|バックアップ セット内の先頭または最も古いログ レコードのログ シーケンス番号。 NULL を指定できます。|  
 |**last_lsn**|**numeric(25,0)**|バックアップ セットの次のログ レコードのログ シーケンス番号。 NULL を指定できます。|  
 |**checkpoint_lsn**|**numeric(25,0)**|再実行を開始する必要があるログ レコードのログ シーケンス番号。 NULL を指定できます。|  
@@ -100,20 +101,20 @@ ms.lasthandoff: 02/03/2018
 |**fork_point_lsn**|**numeric(25,0)**|場合**first_recovery_fork_guid**は等しくありません**last_recovery_fork_guid**、これは、分岐ポイントのログ シーケンス番号。 それ以外の場合は NULL になります。|  
 |**database_guid**|**uniqueidentifier**|データベースに割り当てられた一意 ID。 これに対応して**BindingID** RESTORE HEADERONLY のです。 データベースを復元すると、新しい値が割り当てられます。|  
 |**family_guid**|**uniqueidentifier**|作成時の元のデータベースの一意 ID。 この値は、データベースが別の名前で復元されても変更されません。|  
-|**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース ログ シーケンス番号。 シングル ベースの差分バックアップです。Lsn に以上を使用して変更**differential_base_lsn**差分バックアップに含まれています。<br /><br /> マルチの差分バックアップ、値は NULL の場合と、ベース LSN は、ファイル レベルで決定する必要があります (を参照してください[backupfile (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> 種類が差分バックアップ以外の場合は、常に NULL。|  
+|**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース ログ シーケンス番号。 シングル ベースの差分バックアップです。Lsn に以上を使用して変更**differential_base_lsn**差分バックアップに含まれています。<br /><br /> マルチの差分バックアップ、値は NULL の場合と、ベース LSN は、ファイル レベルで決定する必要があります (を参照してください[backupfile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md))。<br /><br /> 種類が差分バックアップ以外の場合は、常に NULL。|  
 |**differential_base_guid**|**uniqueidentifier**|シングル ベースの差分バックアップの場合は、差分ベースの一意識別子。<br /><br /> マルチ ベースの差分バックアップの場合は NULL。差分のベースはファイル レベルで決定される必要があります。<br /><br /> 差分バックアップ以外の種類のバックアップの場合は NULL。|  
-|**compressed_backup_size**|**Numeric(20,0)**|ディスクに格納されたバックアップの総バイト数。<br /><br /> 圧縮比率を計算するには、使用**backup_size**と**backup_size**です。<br /><br /> 中に、 **msdb**アップグレードすると、この値は NULL に設定します。 これは圧縮されていないバックアップを示します。|  
+|**compressed_backup_size**|**numeric(20,0)**|ディスクに格納されたバックアップの総バイト数。<br /><br /> 圧縮比率を計算するには、使用**backup_size**と**backup_size**です。<br /><br /> 中に、 **msdb**アップグレードすると、この値は NULL に設定します。 これは圧縮されていないバックアップを示します。|  
 |**key_algorithm**|**nvarchar(32)**|バックアップの暗号化に使用される暗号化アルゴリズム。 値が NO_Encryption である場合、バックアップが暗号化されていないことを示します。|  
 |**encryptor_thumbprint**|**varbinary(20)**|データベースに保存されている証明書や非対称キーを検索するために使用される暗号化機能の拇印。 バックアップが暗号化されていない場合、この値は NULL です。|  
 |**encryptor_type**|**nvarchar(32)**|使用される暗号化機能の種類 (証明書または非対称キー)。 」をご覧ください。 バックアップが暗号化されていない場合、この値は NULL です。|  
   
 ## <a name="remarks"></a>解説  
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY populates the column of the **backupmediaset** table with the appropriate values from the media-set header.  
+ RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY の列に設定します、 **backupmediaset**メディア セット ヘッダーから適切な値を持つテーブルです。  
   
  次の表では他のバックアップと履歴テーブルの行の数を減らすためには、実行、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアド プロシージャです。  
   
 ## <a name="see-also"></a>参照  
- [バックアップと復元のテーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [バックアップし、復元テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -122,6 +123,6 @@ ms.lasthandoff: 02/03/2018
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [バックアップと復元のテーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [バックアップし、復元テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

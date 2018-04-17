@@ -2,7 +2,7 @@
 title: SQLBindParameter 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 **準拠**  
@@ -95,7 +95,7 @@ SQLRETURN SQLBindParameter(
  *StrLen_or_IndPtr*  
  [遅延の入力]パラメーターの長さを格納するバッファーへのポインター。 詳細については、次を参照してください。"*StrLen_or_IndPtr*引数"で"コメント"です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  場合*ParameterNumber*への呼び出しで**SQLBindParameter** SQL_DESC_COUNT の値よりも大きい**SQLSetDescField** SQL_DESC_ の価値を高めるために呼び出されるカウントを*ParameterNumber*です。  
   
 ## <a name="inputoutputtype-argument"></a>InputOutputType 引数  
- *InputOutputType*引数パラメーターの型を指定します。 この引数は、IPD の SQL_DESC_PARAMETER_TYPE フィールドを設定します。 SQL ステートメントを呼び出すことはありません、プロシージャなどのすべてのパラメーター**挿入**ステートメント、*入力**パラメーター*です。 プロシージャ呼び出しのパラメーター入力として使用できる、入力/出力、または出力パラメーターです。 (アプリケーションを呼び出す**SQLProcedureColumns** ; プロシージャ呼び出しでパラメーターの型を特定の型を特定できないパラメーターは入力パラメーターと見なされます)。  
+ *InputOutputType*引数パラメーターの型を指定します。 この引数は、IPD の SQL_DESC_PARAMETER_TYPE フィールドを設定します。 SQL ステートメントを呼び出すことはありません、プロシージャなどのすべてのパラメーター**挿入**ステートメント、*入力 * * パラメーター*です。 プロシージャ呼び出しのパラメーター入力として使用できる、入力/出力、または出力パラメーターです。 (アプリケーションを呼び出す**SQLProcedureColumns** ; プロシージャ呼び出しでパラメーターの型を特定の型を特定できないパラメーターは入力パラメーターと見なされます)。  
   
  *InputOutputType*引数は、次の値のいずれか。  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      ステートメントが実行された後に、ドライバーを返しますパラメーターのデータ、アプリケーションにしない限り、 *ParameterValuePtr*と*StrLen_or_IndPtr*引数が両方とも null ポインターをその場合は、ドライバーは、出力値を破棄します。 ドライバーの設定、データ ソースが出力パラメーターの値を返さない場合、**StrLen_or_IndPtr* SQL_NULL_DATA をバッファーします。  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM です。 入力/出力パラメーターをストリーミングすることを示します。 **SQLGetData**部分のパラメーター値を読み取ることができます。 *BufferLength*バッファーの長さは、の呼び出しで判断するために無視**SQLGetData**です。 値、 *StrLen_or_IndPtr*バッファーが SQL_NULL_DATA、SQL_DEFAULT_PARAM、生成される場合、または、SQL_LEN_DATA_AT_EXEC マクロの結果を含める必要があります。 パラメーターは、出力にストリーミングされる場合、入力で、実行時データ (DAE) パラメーターとしてバインドする必要があります。 *ParameterValuePtr*によって返される任意の null ポインター値を指定できます**SQLParamData**に渡されたトークンの値を持つユーザー定義として*ParameterValuePtr*の両方の入力出力します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)です。  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM です。 入力/出力パラメーターをストリーミングすることを示します。 **SQLGetData**部分のパラメーター値を読み取ることができます。 *BufferLength*バッファーの長さは、の呼び出しで判断するために無視**SQLGetData**です。 値、 *StrLen_or_IndPtr*バッファーが SQL_NULL_DATA、SQL_DEFAULT_PARAM、生成される場合、または、SQL_LEN_DATA_AT_EXEC マクロの結果を含める必要があります。 パラメーターは、出力にストリーミングされる場合、入力で、実行時データ (DAE) パラメーターとしてバインドする必要があります。 *ParameterValuePtr*によって返される任意の null ポインター値を指定できます**SQLParamData**に渡されたトークンの値を持つユーザー定義として*ParameterValuePtr*の両方の入力と出力です。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)です。  
   
 -   SQL_PARAM_OUTPUT_STREAM です。 SQL_PARAM_INPUT_OUTPUT_STREAM、出力パラメーターのと同じです。 **StrLen_or_IndPtr*入力では無視されます。  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|入力には無視されます。|ストリーミングされる出力|*ParameterValuePtr*によって返される任意のポインター値を指定できます**SQLParamData**に渡されたトークンの値を持つユーザー定義として*ParameterValuePtr*です。|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_EXEC|入力のパーツと出力バインドされたバッファー|*ParameterValuePtr*も関数によって返される出力バッファーのアドレスは、 **SQLParamData**に渡されたトークンの値を持つユーザー定義として*ParameterValuePtr*です。|  
 |SQL_PARAM_INPUT_OUTPUT|いない SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_EXEC|入力は、バッファーと出力バインドされたバッファーのバインド|*ParameterValuePtr*共有入力/出力バッファーのアドレスです。|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_EXEC|入力のパーツとストリーミングされる出力|*ParameterValuePtr*によって返される任意の null ポインター値を指定できます**SQLParamData**に渡されたトークンの値を持つユーザー定義として*ParameterValuePtr*両方の入力と出力します。|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_EXEC|入力のパーツとストリーミングされる出力|*ParameterValuePtr*によって返される任意の null ポインター値を指定できます**SQLParamData**に渡されたトークンの値を持つユーザー定義として*ParameterValuePtr*の両方の入力出力します。|  
   
 > [!NOTE]  
 >  ドライバーは、アプリケーションが出力パラメーターまたは入出力パラメーターをバインドそしてときにどの SQL 型が許可を決める必要があります。 ドライバー マネージャーでは、無効な SQL 型のエラーは生成されません。  

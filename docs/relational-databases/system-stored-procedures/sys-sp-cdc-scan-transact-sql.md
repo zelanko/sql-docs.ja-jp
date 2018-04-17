@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_scan_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8cd29ff4ce371f6d893ceb396bb3a69d20bcab2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2e4a3c5b9e71401bc3dc25cac56d3f723a8392f7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのキャプチャ ジョブが変更データ キャプチャによって使用されている場合、sys.sp_cdc_scan は sys.sp_MScdc_capture_job によって内部的に呼び出されます。 変更データ キャプチャのログ スキャン操作が既にアクティブである場合、またはデータベースのトランザクション レプリケーションが有効になっている場合は、プロシージャは明示的に実行できません。 自動的に構成されているキャプチャ ジョブの動作をカスタマイズする管理者向けでは、このストアド プロシージャを使用してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [dbo.cdc_jobs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

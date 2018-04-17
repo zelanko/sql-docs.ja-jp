@@ -1,16 +1,16 @@
 ---
-title: "sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 212775844dde7400ca3ddb17753091aa56b582f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dd85f6f45b7104c73b83b08d6fc434eb14e9c70b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  サブスクライバーの更新に関係しているパブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。 パブリッシャーは、パブリッシング用にあらかじめ構成されている必要があります。  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  サブスクライバーの更新に関係しているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@failover_mode_id=**] **'***failover_mode_id***' 出力**  
@@ -76,10 +76,10 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_helpreplfailovermode**で即時更新サブスクリプションが有効になっているフェールオーバーとしてキュー更新、障害発生時に、スナップショット レプリケーションまたはトランザクション レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helpreplfailovermode**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_setreplfailovermode &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

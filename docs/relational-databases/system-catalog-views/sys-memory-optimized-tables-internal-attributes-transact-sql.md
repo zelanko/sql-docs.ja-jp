@@ -1,16 +1,16 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.memory_optimized_tables_internal_attributes
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89184c98512dcd4f4aeadc86ac4cfc8ccaff0ef7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |minor_id|  **int**|    0 は、ユーザー テーブルまたは内部テーブルを示します。<br/><br/>0 以外は、行外に格納されている列の ID を示します。 sys.columns で column_id と結合されます。<br/><br/>このシステム ビューには行外に格納されている各列に対応する行があります。|
 
 ## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
   

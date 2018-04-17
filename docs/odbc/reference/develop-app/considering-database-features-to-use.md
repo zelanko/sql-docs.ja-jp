@@ -2,7 +2,7 @@
 title: データベースの機能の使用を検討して |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a980d3f10b95af3f75945ad945bd5afd78ed5edf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="considering-database-features-to-use"></a>使用するデータベース機能の検討
 基本レベルの相互運用性がわかったら、アプリケーションで使用されるデータベースの機能を考慮する必要があります。 たとえば、どのような SQL ステートメントは、アプリケーションを実行しますか。 アプリケーションは、スクロール可能なカーソルを使用しますか。 トランザクションしますか。 プロシージャしますか。 長い形式のデータですか。 どのような機能に関する考慮事項は、Dbms のすべてでサポートされていない可能性がありますを参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明、および[付録 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)です。 アプリケーションに必要な機能は、ターゲットの Dbms の一覧から一部の Dbms を除外できます。 アプリケーションの場合、多くの dbms で簡単に対象も示します可能性があります。  

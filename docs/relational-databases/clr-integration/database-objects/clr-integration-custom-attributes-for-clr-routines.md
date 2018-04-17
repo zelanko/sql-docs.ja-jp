@@ -1,15 +1,15 @@
 ---
-title: "CLR ルーチンのカスタム属性 |Microsoft ドキュメント"
-ms.custom: 
+title: CLR ルーチンのカスタム属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], attributes
 - SqlUserDefinedTypeAttribute attribute
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
-caps.latest.revision: 
+caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6df69b1b413ca79e2ee6c9bb1de7c9d3e9ff1213
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f21dd7eff0767eb38da21720585e01fe9bb7b1d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR ルーチンの場合、CLR 統合のカスタム属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-共通言語ランタイム (CLR) のルーチン、ユーザー定義型、およびユーザー定義集計に登録されているを一覧表示される属性を適用できます[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 表示されている属性が定義されている、 **Microsoft.SqlServer.Server**名前空間。  
+  共通言語ランタイム (CLR) のルーチン、ユーザー定義型、およびユーザー定義集計に登録されているを一覧表示される属性を適用できます[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 表示されている属性が定義されている、 **Microsoft.SqlServer.Server**名前空間。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  **SqlUserDefinedAggregate**属性は、ユーザー定義集計として登録する必要がありますメソッドを示します。 すべてのユーザー定義集計にこのカスタム属性で注釈を付ける必要があります。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setstatus (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_trace_setstatus (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setstatus_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa482d6b81a7ac0486635f4d301f7803cda305b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a6f6aacf619df24477528b4d39ad9551be321e61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="arguments"></a>引数  
  [ **@traceid=** ] *trace_id*  
- 変更するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーが使用してこの*trace_id*識別、変更、およびトレースを制御する値。 取得する方法について、 *trace_id*を参照してください[sys.fn_trace_getinfo &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
+ 変更するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーが使用してこの*trace_id*識別、変更、およびトレースを制御する値。 取得する方法について、 *trace_id*を参照してください[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)です。  
   
- [ **@status=** ] *status*  
+ [  **@status=** ]*ステータス*  
  トレースに実装する操作を指定します。 *ステータス*は**int**、既定値はありません。  
   
  次の表は、指定できる状態の一覧です。  
@@ -88,9 +88,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  ユーザーに ALTER TRACE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [sys.fn_trace_geteventinfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  

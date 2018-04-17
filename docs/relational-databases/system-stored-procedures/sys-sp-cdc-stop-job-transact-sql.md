@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_stop_job (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_stop_job (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_stop_job_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_stop_job
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbafd11115696e37229f9c4d12431631982430cf
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e74b297203762f9ce20b054748f77c8f6524dbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_type=** ] **'***job_type*']  
+ [  **@job_type=** ] **' * * * job_type*']  
  追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**です。 有効な入力は**キャプチャ**と**クリーンアップ**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -60,7 +60,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>解説  
  管理者は sys.sp_cdc_stop_job を使用してキャプチャ ジョブまたはクリーンアップ ジョブのいずれかを明示的に停止できます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [dbo.cdc_jobs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_start_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

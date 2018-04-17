@@ -1,16 +1,16 @@
 ---
-title: "sp_validate_replica_hosts_as_publishers (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_validate_replica_hosts_as_publishers (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_replica_hosts_as_publishers
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f4cd7135f5773300e1d95291c778463cece6a85
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d228e234a084057ef69e95b5a6dea69044ffc465
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@original_publisher**  =] **'***original_publisher***'**  
+ [ **@original_publisher** =] **'***original_publisher***'**  
  インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを最初に発行します。 *original_publisher*は**sysname**、既定値はありません。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** =] **'***publisher_db***'**  
  パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@redirected_publisher**  =] **'***redirected_publisher***'**  
+ [ **@redirected_publisher** =] **'***redirected_publisher***'**  
  リダイレクトの対象と**sp_redirect_publisher**元パブリッシャーとパブリッシュされたデータベースのペアに対して呼び出されました。 *redirected_publisher*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -80,13 +80,13 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  レプリカ ホスト 'MyReplicaHostName' について、1 つまたは複数のパブリッシャー検証エラーが発生しました。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  呼び出し元必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**定義済みパブリケーションのパブリケーション アクセス リストのメンバーまたはディストリビューション データベースの固定データベース ロールパブリッシャー データベースと関連付けられています。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
   
   

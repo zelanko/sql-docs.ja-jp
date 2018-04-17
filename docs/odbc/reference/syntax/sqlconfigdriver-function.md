@@ -2,7 +2,7 @@
 title: SQLConfigDriver 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3af2f70156cae3427b5d22f3214f5c911af14a5d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6459e3faeafddc2faef3b69a68a1bf975ac6c3e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
 **準拠**  
@@ -86,7 +86,7 @@ BOOL SQLConfigDriver(
  *pcbMsgOut*  
  [出力]返される使用可能なバイトの合計数*lpszMsg*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbMsgMax*、内の出力メッセージ*lpszMsg*に切り捨てられます*cbMsgMax* null 終了負符号文字があります。 *PcbMsgOut*引数が null ポインターを指定できます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

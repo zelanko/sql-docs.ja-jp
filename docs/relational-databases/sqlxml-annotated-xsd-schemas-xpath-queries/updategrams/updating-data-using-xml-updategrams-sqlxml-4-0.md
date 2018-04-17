@@ -1,16 +1,16 @@
 ---
-title: "XML アップデート グラム (SQLXML 4.0) を使用してデータの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: XML アップデート グラム (SQLXML 4.0) を使用してデータの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -29,20 +29,21 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 613fe19b4cb3a63b1998cfa5ef2c6a7368481c6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-既存のデータを更新すると、両方を指定する必要があります、 **\<する前に >**と**\<後 >**ブロックします。 指定した要素を**\<する前に >**と**\<後 >**ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >**ブロックをデータベースの既存のレコードを識別します。 対応する要素で、 **\<後 >**ブロックは、更新操作を実行した後、レコードの外観を示します。 この情報から、アップデート グラムが一致する SQL ステートメントを作成、 **\<後 >**ブロックします。 そのステートメントによってデータベースが更新されます。  
+  既存のデータを更新すると、両方を指定する必要があります、 **\<する前に >**と**\<後 >**ブロックします。 指定した要素を**\<する前に >**と**\<後 >**ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >**ブロックをデータベースの既存のレコードを識別します。 対応する要素で、 **\<後 >**ブロックは、更新操作を実行した後、レコードの外観を示します。 この情報から、アップデート グラムが一致する SQL ステートメントを作成、 **\<後 >**ブロックします。 そのステートメントによってデータベースが更新されます。  
   
  更新操作のアップデートグラムの形式は次のとおりです。  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 02/12/2018
 ## <a name="examples"></a>使用例  
  アップデートグラムの例を使用する前に、次のことに注意してください。  
   
--   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください[アップデート グラム &#40; で注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
 -   ほとんどの例では、AdventureWorks サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。 AdventureWorks データベースは復元できます。  
   
@@ -352,7 +353,7 @@ ms.lasthandoff: 02/12/2018
   
      詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
   
- マッピング スキーマを使用するアップデート グラムの例については、次を参照してください[アップデート グラム &#40; で注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. マッピング スキーマを IDREFS 属性と共に使用する  
  この例では、アップデートグラムでマッピング スキーマ内の IDREFS 属性を使用して、複数のテーブルのレコードを更新する方法を示します。 この例では、データベースは次のテーブルから構成されるものとします。  
@@ -560,9 +561,9 @@ ms.lasthandoff: 02/12/2018
 </Schema>  
 ```  
   
- マッピング スキーマを使用するアップデート グラムの例については、次を参照してください[アップデート グラム &#40; で注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

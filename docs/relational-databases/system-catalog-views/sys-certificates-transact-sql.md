@@ -1,16 +1,16 @@
 ---
-title: "sys.certificates (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.certificates (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - certificates
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.certificates catalog view
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 60cb7a204aaa38a3aaaa24b8c04bb676715de783
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 812a342edbd7f8cca9ab594295fef42e4638fc44
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,21 +45,21 @@ ms.lasthandoff: 11/21/2017
 |**certificate_id**|**int**|証明書の ID。 データベース内で一意です。|  
 |**principal_id**|**int**|証明書を所有するデータベース プリンシパルの ID。|  
 |**pvt_key_encryption_type**|**char(2)**|秘密キーの暗号化方法。<br /><br /> NA = 証明書に秘密キーはありません。<br /><br /> MK = 秘密キーはマスター キーにより暗号化されています。<br /><br /> PW = 秘密キーはユーザー定義パスワードにより暗号化されています。<br /><br /> SK = 秘密キーはサービス マスター キーにより暗号化されています。|  
-|**pvt_key_encryption_type_desc**|**nvarchar (60)**|秘密キーの暗号化方法の説明。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
+|**pvt_key_encryption_type_desc**|**nvarchar(60)**|秘密キーの暗号化方法の説明。<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|1 の場合、この証明書はサービス間で暗号化されたメッセージ交換を開始するために使用されます。|  
 |**issuer_name**|**nvarchar(442)**|証明書の発行者の名前。|  
 |**cert_serial_number**|**nvarchar(64)**|証明書のシリアル番号。|  
-|**sid**|**varbinary (85)**|証明書に対するログイン SID。|  
-|**string_sid**|**nvarchar (128)**|証明書に対するログイン SID の文字列形式。|  
-|**件名**|**nvarchar (4000)**|証明書のサブジェクト。|  
+|**sid**|**varbinary(85)**|証明書に対するログイン SID。|  
+|**string_sid**|**nvarchar(128)**|証明書に対するログイン SID の文字列形式。|  
+|**subject**|**nvarchar (4000)**|証明書のサブジェクト。|  
 |**expiry_date**|**datetime**|証明書が期限切れにします。|  
 |**start_date**|**datetime**|証明書が有効になる日付。|  
-|**拇印**|**varbinary (32)**|証明書の SHA-1 ハッシュ。 SHA-1 ハッシュはグローバルに一意です。|  
-|**attested_by**|**nvarchar (260)**|システム使用のみ。|  
+|**拇印**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 SHA-1 ハッシュはグローバルに一意です。|  
+|**attested_by**|**nvarchar(260)**|システム使用のみ。|  
 |pvt_key_last_backup_date|**datetime**|証明書の秘密キーが前回エクスポートされた日時。|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

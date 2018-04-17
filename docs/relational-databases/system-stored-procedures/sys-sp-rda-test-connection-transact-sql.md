@@ -1,16 +1,16 @@
 ---
-title: sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_rda_test_connection (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_test_connection
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9cd981a64ea452c64e24f6578e33d171fd51559
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 45ba48abca5372cde0e303bce431ef66b6e299df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +50,20 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>引数  
- @database_name= N'*db_name*'  
+ @database_name = N'*db_name*'  
  Stretch 対応 SQL Server データベースの名前。 このパラメーターはオプションです。  
   
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure サーバーの完全修飾アドレスです。  
   
--   値を指定した場合 **@database_name** 、指定されたデータベースで Stretch 対応はありませんが、その値を指定する必要がある **@server_address**です。  
+-   値を指定した場合**@database_name**、指定されたデータベースで Stretch 対応はありませんが、その値を指定する必要がある **@server_address**です。  
   
--   値を指定した場合 **@database_name**の値を指定する必要はありませんし、指定されたデータベースがストレッチが有効な **@server_address**です。 値を指定した場合 **@server_address** 、ストアド プロシージャでは無視し、Stretch 対応データベースに関連付けられている既存の Azure サーバーを既に使用します。  
+-   値を指定した場合 **@database_name**の値を指定する必要はありませんし、指定されたデータベースがストレッチが有効な **@server_address**です。 値を指定した場合**@server_address**、ストアド プロシージャでは無視し、Stretch 対応データベースに関連付けられている既存の Azure サーバーを既に使用します。  
   
  @azure_username = N'*azure_username*  
  リモートの Azure サーバーのユーザー名。  
   
- @azure_password= N'*azure_password*'  
+ @azure_password = N'*azure_password*'  
  リモートの Azure サーバーのパスワード。  
   
  @credential_name = N'*credential_name*'  
@@ -100,7 +100,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*\<connection-related error message>*|  
+|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*\<接続に関連するエラー メッセージ >*|  
   
 ### <a name="check-the-azure-firewall"></a>Azure ファイアウォールを確認します。  
   
@@ -132,7 +132,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<authentication-related error number>*|*\<authentication-related error message>*|  
+|3|ERROR_AUTH_FAILURE|*\<認証に関連するエラー番号 >*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>リモートの Azure サーバーの状態を確認します。  
   

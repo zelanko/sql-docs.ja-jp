@@ -1,16 +1,16 @@
 ---
-title: "sp_releaseapplock (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_releaseapplock (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_releaseapplock_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5eb17b39125209ca15214356e84f832e2f8cbc73
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 503bfd0c13054852aeab822e3ec93d56a04bb4c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,10 +54,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側で、リソースが一意になるように管理しなければなりません。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)**既定値はありません。 *resource_name*はバイナリ比較、つまり現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。  
   
  [ @LockOwner=] '*lock_owner*'  
- これは、ロックの所有者である、 *lock_owner*ロックが要求されたときの値します。 *lock_owner*は**nvarchar (32)**です。 値を指定できます**トランザクション**(既定) または**セッション**です。 ときに、 *lock_owner*値は**トランザクション**により、既定または明示的に指定すると、sp_getapplock 必要がありますから実行するトランザクション内で。  
+ ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 ときに、 *lock_owner*値は**トランザクション**により、既定または明示的に指定すると、sp_getapplock 必要がありますから実行するトランザクション内で。  
   
  [ @DbPrincipal=] '*database_principal*'  
- データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーション ロールを指定します。 関数の呼び出し元のメンバーである必要があります*database_principal*、関数を呼び出すに dbo、または db_owner 固定データベース ロール。 既定値は public です。  
+ データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーション ロールを指定します。 関数を呼び出すには、*database_principal*、dbo、または固定データベース ロール db_owner のメンバーであることが必要です。 既定値は public です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  \>= 0 (成功) または < 0 (失敗)  
@@ -71,7 +72,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
  何かの理由でサーバーがシャットダウンすると、ロックは解放されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -87,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [APPLOCK_MODE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;TRANSACT-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_getapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

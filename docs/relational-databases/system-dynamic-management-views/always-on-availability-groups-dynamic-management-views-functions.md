@@ -1,32 +1,32 @@
 ---
-title: "常に可用性グループの動的管理ビューの 次のように機能します |。Microsoft ドキュメント"
-ms.custom: 
+title: 常に可用性グループの動的管理ビューの 次のように機能します |。Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4eec0dfdf084275302f48472ad04612f90b5b7fa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b2f5c641ec84a312f721c73b4c148218a8a1748f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>常に可用性グループの動的管理ビューの 次のように機能します。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループと &#40; です。SQL Server と &#41; です。](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループのカタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [AlwaysOn 可用性グループ カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [可用性グループの監視と &#40; です。Transact SQL と &#41; です。](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

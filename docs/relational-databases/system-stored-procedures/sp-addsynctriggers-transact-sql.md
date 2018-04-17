@@ -1,16 +1,16 @@
 ---
-title: "sp_addsynctriggers (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addsynctriggers (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf7770a9388c18922aeb551246c314caba5860fe
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e99ea52a8bd206da42168f1aed59589561de47e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@sub_table_owner=**] **'***sub_table_owner***'**  
  サブスクライバー テーブルの所有者の名前を指定します。 *sub_table_owner*は**sysname**、既定値はありません。  
   
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。 NULL の場合は、現在のデータベースが使用されます。  
   
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@ins_proc=**] **'***ins_proc***'**  
@@ -117,7 +117,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@distributor =** ] **'***ディストリビューター***'**  
  ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値はありません。  
   
- [  **@pubversion** =] *pubversion*  
+ [ **@pubversion**=] *pubversion*  
  パブリッシャーのバージョンを指定します。 *pubversion*は**int**、既定値は 1 です。 **1**パブリッシャーのバージョンであることを意味[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 以前です。**2**パブリッシャーであることを意味[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 以降。 *pubversion*に明示的に設定する必要があります**2**パブリッシャーのバージョンがいつ[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 またはそれ以降。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -126,12 +126,12 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="remarks"></a>解説  
  **sp_addsynctriggers**は、ディストリビューション エージェントによってサブスクリプションの初期化の一部として使用します。 このストアド プロシージャは、ユーザーが頻繁に実行するものではありません。ただし、同期なしサブスクリプションを手動で設定する場合に利用できるストアド プロシージャです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addsynctriggers**です。  
   
 ## <a name="see-also"></a>参照  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

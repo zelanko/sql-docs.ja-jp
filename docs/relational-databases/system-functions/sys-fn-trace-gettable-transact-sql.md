@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2624c7ea8a3c118f1bb1da2e456bd03cbbdbe968
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 461807f1d79032c85316551adb5229d02aa67b06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ fn_trace_gettable ( 'filename' , number_files )
  読み取るロールオーバー ファイルの数を指定します。 この数で指定された初期ファイルが含まれています。 *filename*です。 *number_files*は、 **int**です。  
   
 ## <a name="remarks"></a>解説  
- 場合*number_files*として指定された**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、次を参照してください。 [sp_trace_setevent &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+ 場合*number_files*として指定された**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、次を参照してください。 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)です。  
   
  Fn_trace_gettable 関数はロール オーバー ファイルを読み取らないことに注意してください (を使用してこのオプションが指定されている場合、 *number_files*引数) 元のトレース ファイル名がアンダー スコアと数値が終了します。 ただし、この状況は、ファイルがロールオーバーされるときに自動的に追加されたアンダースコアおよび数値については該当しません。この問題に対処するには、元のファイル名のアンダースコアを削除してトレース ファイルの名前を変更します。 たとえば、元のファイルの名前は**Trace_Oct_5.trc**でロール オーバー ファイルの名前が**Trace_Oct_5_1.trc**、ファイルの名前を変更することができます**TraceOct5.trc**と**TraceOct5_1.trc**です。  
   
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_trace_generateevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  

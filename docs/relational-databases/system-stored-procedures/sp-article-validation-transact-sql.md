@@ -1,16 +1,16 @@
 ---
-title: "sp_article_validation (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_article_validation (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed9bf6e4375c3b7afb18ffa938ae29e8d1e9e48e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8bfe42f440f6311bf9a2badc368b8fd13811c91e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  アーティクルが存在するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@article=**] **'***記事***'**  
@@ -86,7 +86,7 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@reserved=**]*予約済み*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -100,14 +100,14 @@ sp_article_validation [ @publication = ] 'publication'
   
  **sp_article_validation**検証の情報を指定したアーティクルで収集して、トランザクション ログに検証の要求を送信します。 ディストリビューション エージェントは、この要求を受け取ると、要求に含まれている検証の情報をサブスクライバー テーブルと比較します。 検証の結果は、レプリケーション モニターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に表示されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  検証するアーティクルが実行できる、ソース テーブルに対するすべての権限を選択を持つユーザー専用**sp_article_validation**です。  
   
 ## <a name="see-also"></a>参照  
  [レプリケートされたデータを検証します。](../../relational-databases/replication/validate-replicated-data.md)   
- [sp_marksubscriptionvalidation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

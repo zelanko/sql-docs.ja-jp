@@ -1,16 +1,16 @@
 ---
-title: "sp_changereplicationserverpasswords (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_changereplicationserverpasswords (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcd1cbfd5532703196e47d06f920ef7cfa81f019
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5a6e71440f8b167af8c875873f60da183ff3572
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,23 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@login_type**  =] *login_type*  
+ [ **@login_type** =] *login_type*  
  与えられた資格情報の認証の種類を指定します。 *login_type*は**tinyint**、既定値はありません。  
   
  **1** = Windows 統合認証  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証  
   
- [  **@login**  =] **'***ログイン***'**  
+ [ **@login** =] **'***ログイン***'**  
  Windows アカウントの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを変更します。 *ログイン*は**nvarchar (257)**、既定値はありません  
   
- [  **@password**  =] **'***パスワード***'**  
+ [ **@password** =] **'***パスワード***'**  
  新しいパスワードを格納する、指定された*ログイン*です。 *パスワード*は**sysname**、既定値はありません。  
   
 > [!NOTE]  
 >  レプリケーション パスワードを変更したら、そのパスワードを使用する各エージェントを停止して再起動し、エージェントに対して変更を反映させる必要があります。  
   
- [  **@server**  =] **'***サーバー***'**  
+ [ **@server** =] **'***サーバー***'**  
  保存パスワードを変更するサーバー接続を指定します。 *サーバー*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|Description|  
@@ -73,7 +73,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 |**ディストリビューター**|ディストリビューターへのすべてのエージェント接続です。|  
 |**パブリッシャー**|パブリッシャーへのすべてのエージェント接続です。|  
 |**サブスクライバー**|サブスクライバーへのすべてのエージェント接続です。|  
-|**%**(既定値)|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
+|**%** (既定値)|レプリケーション トポロジ内のすべてのサーバーへのすべてのエージェント接続です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -81,7 +81,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="remarks"></a>解説  
  **sp_changereplicationserverpasswords**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changereplicationserverpasswords**です。  
   
 ## <a name="see-also"></a>参照  

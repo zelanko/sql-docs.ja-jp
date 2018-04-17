@@ -1,16 +1,16 @@
 ---
-title: "sp_helpuser (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpuser (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpuser
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dcf314d52fd7d20dae8ad8ddb163a331a89d52c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2dbb61c94223346f69009522795986b3e6f67e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,15 +79,15 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**Role_name**|**sysname**|現在のデータベースに存在するロールの名前。|  
+|**role_name**|**sysname**|現在のデータベースに存在するロールの名前。|  
 |**Role_id**|**smallint**|現在のデータベースに存在するロールの ID。|  
 |**Users_in_role**|**sysname**|現在のデータベースに存在するロールのメンバー。|  
-|**ユーザー Id**|**smallint**|ロールのメンバーのユーザー ID。|  
+|**ユーザー id**|**smallint**|ロールのメンバーのユーザー ID。|  
   
 ## <a name="remarks"></a>解説  
  データベース ロールのメンバーシップに関する情報を表示する[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)です。 サーバー ロールのメンバーに関する情報を表示する[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)、サーバー レベル プリンシパルに関する情報を表示するを使用して[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
  返される情報は、メタデータへのアクセスに関する制限の対象となります。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -116,7 +116,7 @@ EXEC sp_helpuser 'db_securityadmin';
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

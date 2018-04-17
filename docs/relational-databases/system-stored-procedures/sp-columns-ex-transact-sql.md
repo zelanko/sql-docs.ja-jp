@@ -1,16 +1,16 @@
 ---
-title: "sp_columns_ex (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_columns_ex (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_ex
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90ba287e14dc19afef8e19be65c81337c653fe48
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 034955aad1d0ad90f78b36704c6d202a23176ad2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,15 +86,15 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**BUFFER_LENGTH 列**|**int**|データの転送サイズ。1|  
 |**DECIMAL_DIGITS**|**smallint**|小数点より右側の桁数です。|  
 |**NUM_PREC_RADIX**|**smallint**|数値型の基数。|  
-|**NULL 許容型**|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
+|**NULLABLE**|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = NULL 値を許容します。<br /><br /> 0 = NULL 値を許容しません。|  
 |**「解説」**|**varchar (**254**)**|このフィールドは常に NULL を返します。|  
 |**COLUMN_DEF**|**varchar (**254**)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と sql-92**間隔**データ型。 この列は、常に値を返します。|  
 |**SQL_DATETIME_SUB**|**smallint**|サブタイプ コード**datetime**と sql-92**間隔**データ型。 他のデータ型の場合、この列は NULL を返します。|  
 |**CHAR_OCTET_LENGTH**|**int**|文字型または整数型の列の最大長 (バイト単位)。 他のすべてのデータ型では、この列は NULL を返します。|  
 |**ORDINAL_POSITION**|**int**|テーブル内での列の序数。 テーブルの最初の列は 1 です。 この列は、常に値を返します。|  
-|**によって IS_NULLABLE**|**varchar (**254**)**|テーブル内にある列の NULL 値の許容属性。 NULL 値の許容属性の検査は ISO の規則に従います。 ISO SQL に準拠している DBMS では、空文字列を返すことはできません。<br /><br /> YES = 列に NULL を含むことができます。<br /><br /> NO = 列に NULL を含むことができません。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> この列が返される値と異なる値が返される、 **NULLABLE**列です。|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張ストアド プロシージャで使用されるデータ型。|  
+|**IS_NULLABLE**|**varchar (**254**)**|テーブル内にある列の NULL 値の許容属性。 NULL 値の許容属性の検査は ISO の規則に従います。 ISO SQL に準拠している DBMS では、空文字列を返すことはできません。<br /><br /> YES = 列に NULL を含むことができます。<br /><br /> NO = 列に NULL を含むことができません。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> この列が返される値と異なる値が返される、 **NULLABLE**列です。|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャで使用されるデータ型。|  
   
  1 詳細については、Microsoft ODBC のドキュメントを参照してください。  
   
@@ -103,7 +103,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  **sp_columns_ex**設定の指定したリンク サーバーの OLE DB プロバイダーがの COLUMNS 行セットをサポートしていない場合、空の結果を返します、 **IDBSchemaRowset**インターフェイスです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
@@ -121,13 +121,13 @@ EXEC sp_columns_ex 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_catalogs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

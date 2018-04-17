@@ -1,16 +1,16 @@
 ---
-title: "sp_revokedbaccess (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_revokedbaccess (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revokedbaccess_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_revokedbaccess
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3ecca338697b8dc858cfecc0919fd27929066ba
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 22170513e541a38f4de15f075c9a1ff74eb2c5f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   現在のデータベースからデータベース ユーザーを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name_in_db =** ] **'***名前***'**  
+ [ **@name_in_db =** ] **'***name***'**  
  削除するデータベース ユーザーの名前を指定します。 *名前*は、 **sysname**既定値はありません。 *名前*サーバー ログイン、Windows ログイン、または Windows グループの名前を指定でき、現在のデータベースに存在する必要があります。 Windows ログインまたは Windows グループを指定する場合は、データベースで認識される名前を指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -62,7 +62,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
   
  **sp_revokedbaccess**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する ALTER ANY USER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -74,9 +74,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [DROP USER &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER & #40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

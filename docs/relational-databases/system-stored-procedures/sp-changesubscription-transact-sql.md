@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_changesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +22,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2a49e9b60927d1838205a5ae594c01ee4a1ffb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d94c10040ec7dc82640a17e5454269790acca498
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  キュー更新トランザクション レプリケーションに関係する、スナップショットのプロパティまたはトランザクションのプッシュ サブスクリプションやプル サブスクリプションのプロパティを変更します。 その他のすべての種類のプル サブスクリプションのプロパティを変更するには、次のように使用します。 [sp_change_subscription_properties (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription**はパブリッシャーのパブリケーション データベースで実行します。  
+  キュー更新トランザクション レプリケーションに関係する、スナップショットのプロパティまたはトランザクションのプッシュ サブスクリプションやプル サブスクリプションのプロパティを変更します。 その他のすべての種類のプル サブスクリプションのプロパティを変更するには、次のように使用します。 [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)です。 **sp_changesubscription**はパブリッシャーのパブリケーション データベースで実行します。  
   
 > [!IMPORTANT]  
 >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -57,16 +57,16 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  変更するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません  
   
- [  **@article**  =] **'***記事***'**  
+ [ **@article** =] **'***記事***'**  
  変更するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
   
- [  **@subscriber**  =] **'***サブスクライバー***'**  
+ [ **@subscriber** =] **'***サブスクライバー***'**  
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値はありません。  
   
- [  **@destination_db**  =] **'***destination_db***'**  
+ [ **@destination_db** =] **'***destination_db***'**  
  サブスクリプション データベースの名前です。 *destination_db*は**sysname**、既定値はありません。  
   
  [  **@property=**] **'***プロパティ***'**  
@@ -105,15 +105,15 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_changesubscription**は、スナップショットおよびトランザクション レプリケーションで使用します。  
   
- **sp_changesubscription**プッシュ サブスクリプションのプロパティを変更またはプル サブスクリプションに関連するキュー更新トランザクション レプリケーションにのみ使用できます。 その他のすべての種類のプル サブスクリプションのプロパティを変更するには、次のように使用します。 [sp_change_subscription_properties (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription**プッシュ サブスクリプションのプロパティを変更またはプル サブスクリプションに関連するキュー更新トランザクション レプリケーションにのみ使用できます。 その他のすべての種類のプル サブスクリプションのプロパティを変更するには、次のように使用します。 [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)です。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changesubscription**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

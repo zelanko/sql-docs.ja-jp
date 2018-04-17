@@ -1,30 +1,31 @@
 ---
-title: "ODBC テーブル値パラメーターの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC テーブル値パラメーターの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), scenarios
 - ODBC, table-valued parameters
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 050d0e33419b2f73fba8e5e7fd011d786fcb9f21
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dc60cd2dba6917fca0d2836112801a7a1477ecf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/24/2018
   
  アプリケーションでは、場合によっては、動的な SQL を含むテーブル値パラメーターを使用して、テーブル値パラメーターの型名を指定する必要があります。 そうでは、テーブル値パラメーターは、接続の現在の既定のスキーマで定義されていない場合は、SQL_CA_SS_TYPE_CATALOG_NAME および SQL_CA_SS_TYPE_SCHEMA_NAME を SQLSetDescField を使用して設定する必要があります。 テーブル型の定義とテーブル値パラメーターは同じデータベースに存在する必要があるため、アプリケーションでテーブル値パラメーターを使用する場合は、SQL_CA_SS_TYPE_CATALOG_NAME を設定しないでください。 それ以外の場合、sqlsetdescfield によるエラーが報告されます。  
   
- このシナリオのサンプル コードはプロシージャ`demo_fixed_TVP_binding`で[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
+ このシナリオのサンプル コードはプロシージャ`demo_fixed_TVP_binding`で[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>行のストリーミングを使用するテーブル値パラメーター (実行時のデータを使用する TVP としてデータを送信する)  
  このシナリオでは、要求に応じてアプリケーションからドライバーに行が渡され、サーバーにストリーム送信されます。 これにより、すべての行をメモリ内にバッファリングする必要がなくなります。 これは、一括挿入や一括更新のシナリオの代表的な例です。 テーブル値パラメーターは、パフォーマンスの点ではパラメーター配列と一括コピーとの間に位置します。 つまり、テーブル値パラメーターは、パラメーター配列と同程度にプログラミングが容易ですが、サーバー側の柔軟性が増します。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/24/2018
   
  テーブル値パラメーターのすべての列が処理されたら、ドライバーはテーブル値パラメーターに戻り、テーブル値パラメーターのデータの次の行を処理します。 したがって、実行時データのテーブル値パラメーターの場合、バインドされたパラメーターを順番にスキャンする通常の方法には従いません。 SQLPutData がで呼び出されるまでにバインドされたテーブル値パラメーターをポーリングする*StrLen_Or_IndPtr* 0、れた時点で、ドライバーがテーブル値パラメーターの列をスキップし、[次へ] の実際のストアド プロシージャのパラメーターを移動します。  SQLPutData にインジケーター値が渡されたは、1 以上、ときに、ドライバー テーブル値パラメーター列と行順番に処理があるすべてのバインドされている行および列の値になるまでです。 その後、ドライバーはテーブル値パラメーターに戻ります。 SQLParamData からテーブル値パラメーターのトークンを受け取ると、テーブル値パラメーターの SQLPutData (hstmt、NULL の場合、n) を呼び出し、間、アプリケーション設定する必要がありますテーブル値パラメーターの構成要素である列のデータとインジケーター バッファーの内容を次の行またはサーバーに渡される行数。  
   
- このシナリオのサンプル コードは、ルーチン`demo_variable_TVP_binding`で[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
+ このシナリオのサンプル コードは、ルーチン`demo_variable_TVP_binding`で[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>システム カタログからテーブル値パラメーターのメタデータを取得  
  アプリケーションを呼び出すと SQLProcedureColumns テーブル値パラメーターのパラメーターを持つ手順については、DATA_TYPE が SQL_SS_TABLE れ、TYPE_NAME はテーブル値パラメーターのテーブル型の名前として返されます。 SQLProcedureColumns から返される結果セットに 2 つの列が追加されます: SS_TYPE_CATALOG_NAME が、テーブル値パラメーターのテーブル型が定義されているし、スキーマの名前を返します、カタログの名前を返します場所、テーブル値パラメーターのテーブル型が定義されています。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME で以前のバージョンで追加されたすべてのドライバーの特定列の前に表示、ODBC 仕様に準拠して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および ODBC 自体によって指定すべての列の後にします。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/24/2018
   
  アプリケーションでは、SQLColumns を使用して、永続的なテーブルの場合は、SQL_SOPT_SS_NAME_SCOPE が機能する実際のテーブルではなくテーブル型を示すために最初に設定する必要がありますが、同じ方法でテーブル型の列を調べます。 SQLPrimaryKeys はもう一度 SQL_SOPT_SS_NAME_SCOPE を使用して、テーブル型でも使用できます。  
   
- このシナリオのサンプル コードは、ルーチン`demo_metadata_from_catalog_APIs`で[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
+ このシナリオのサンプル コードは、ルーチン`demo_metadata_from_catalog_APIs`で[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>準備されたステートメント用にテーブル値パラメーターのメタデータを取得  
  このシナリオでは、アプリケーションは、テーブル値パラメーターのメタデータを取得するのに SQLNumParameters と SQLDescribeParam を使用します。  
@@ -90,9 +91,9 @@ ms.lasthandoff: 01/24/2018
   
  アプリケーションは、SQLDescribeParam は、テーブル値パラメーター列の列のメタデータを返さないため、このシナリオではテーブル値パラメーターの列のメタデータを取得するのに SQLColumns を使用します。  
   
- このユース ケースのサンプル コードは、ルーチン`demo_metadata_from_prepared_statement`で[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
+ このユース ケースのサンプル コードは、ルーチン`demo_metadata_from_prepared_statement`で[テーブル値パラメーターの&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)です。  
   
 ## <a name="see-also"></a>参照  
- [テーブル値パラメーター &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

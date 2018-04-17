@@ -1,16 +1,16 @@
 ---
-title: "SQL Server のシステム カタログよく寄せられる質問のクエリを実行する |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server のシステム カタログよく寄せられる質問のクエリを実行する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f63ac73300f4206acf65bf85b05e6802dada33ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28cf58ccd693f0c958901487a8387dd9d1c1073b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>SQL Server システム カタログに対するクエリに関してよく寄せられる質問
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、よく寄せられる質問の一覧を掲載しています。 これらの質問に対する答えは、カタログ ビューに基づくクエリです。  
   
-##  <a name="_TOP"></a>よく寄せられる質問  
+##  <a name="_TOP"></a> よく寄せられる質問  
  以下のセクションでは、よく寄せられる質問をカテゴリ別に示しています。  
   
 ### <a name="data-types"></a>データ型  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="answers"></a>回答  
   
-###  <a name="_FAQ1"></a>指定したデータベースのクラスター化インデックスを持たないすべてのテーブルを検索する方法は?  
+###  <a name="_FAQ1"></a> 指定したデータベースのクラスター化インデックスを持たないすべてのテーブルを検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`有効なデータベース名にします。  
   
 ```  
@@ -148,7 +148,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a>指定したスキーマに含まれるエンティティの所有者をすべてを検索する方法は?  
+###  <a name="_FAQ2"></a> 指定したスキーマに含まれるエンティティの所有者をすべてを検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name>`を有効な名前です。  
   
 ```  
@@ -176,7 +176,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a>主キーがないすべてのテーブルを検索する方法は?  
+###  <a name="_FAQ3"></a> 主キーがないすべてのテーブルを検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`有効なデータベース名にします。  
   
 ```  
@@ -211,7 +211,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a>インデックスを持たないすべてのテーブルを検索する方法は?  
+###  <a name="_FAQ4"></a> インデックスを持たないすべてのテーブルを検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`有効なデータベース名にします。  
   
 ```  
@@ -228,7 +228,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a>Identity 列が含まれるすべてのテーブルを検索する方法は?  
+###  <a name="_FAQ5"></a> Identity 列が含まれるすべてのテーブルを検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`有効なデータベース名にします。  
   
 ```  
@@ -263,7 +263,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a>指定したテーブルの列のデータ型を検索する方法は?  
+###  <a name="_FAQ7"></a> 指定したテーブルの列のデータ型を検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.table_name>`を有効な名前です。  
   
 ```  
@@ -288,7 +288,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a>指定した関数に対する依存関係を見つける方法  
+###  <a name="_FAQ8"></a> 指定した関数に対する依存関係を見つける方法  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.function_name>`を有効な名前です。  
   
 ```  
@@ -306,7 +306,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a>データベース内のすべてのストアド プロシージャを見つける方法をしますか。  
+###  <a name="_FAQ9"></a> データベース内のすべてのストアド プロシージャを見つける方法をしますか。  
  次のクエリを実行する前に置き換える`<database_name>`有効な名前です。  
   
 ```  
@@ -325,7 +325,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a>指定されたストアド プロシージャまたは関数のパラメーターを確認する方法  
+###  <a name="_FAQ10"></a> 指定されたストアド プロシージャまたは関数のパラメーターを確認する方法  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.object_name>`を有効な名前です。  
   
 ```  
@@ -351,7 +351,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a>データベース内のすべてのユーザー定義関数を見つける方法をしますか。  
+###  <a name="_FAQ12"></a> データベース内のすべてのユーザー定義関数を見つける方法をしますか。  
  次のクエリを実行する前に置き換える`<database_name>`有効なデータベース名にします。  
   
 ```  
@@ -370,7 +370,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a>データベース内のすべてのビューを見つける方法  
+###  <a name="_FAQ13"></a> データベース内のすべてのビューを見つける方法  
  次のクエリを実行する前に置き換える`<database_name>`有効なデータベース名にします。  
   
 ```  
@@ -388,7 +388,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a>過去 N 日間に変更されたすべてのエンティティを検索する方法は?  
+###  <a name="_FAQ6"></a> 過去 N 日間に変更されたすべてのエンティティを検索する方法は?  
  次のクエリの `<database_name>` と `<n_days>` を有効な値に置き換えてから、クエリを実行します。  
   
 ```  
@@ -408,7 +408,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a>指定したテーブルの LOB データ型を検索する方法は?  
+###  <a name="_FAQ14"></a> 指定したテーブルの LOB データ型を検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.table_name>`を有効な名前です。  
   
 ```  
@@ -436,7 +436,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a>モジュールの定義を表示する方法は?  
+###  <a name="_FAQ15"></a> モジュールの定義を表示する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.object_name>`を有効な名前です。  
   
 ```  
@@ -461,7 +461,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a>サーバー レベルのトリガーの定義を表示する方法は?  
+###  <a name="_FAQ19"></a> サーバー レベルのトリガーの定義を表示する方法は?  
   
 ```  
 SELECT definition  
@@ -472,7 +472,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a>指定されたテーブルの主キーの列を検索する方法は?  
+###  <a name="_FAQ16"></a> 指定されたテーブルの主キーの列を検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.table_name>`を有効な名前です。  
   
 ```  
@@ -515,7 +515,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a>指定されたテーブルの外部キーの列を検索する方法は?  
+###  <a name="_FAQ17"></a> 指定されたテーブルの外部キーの列を検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.table_name>`を有効な名前です。  
   
 ```  
@@ -539,7 +539,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a>指定したプリンシパルに付与または拒否のアクセス許可の検索方法  
+###  <a name="_FAQ18"></a> 指定したプリンシパルに付与または拒否のアクセス許可の検索方法  
  次の例では、権限が確認されたエンティティの名前を返す関数を作成します。 作成された関数は、後続のクエリで呼び出されます。 この関数は権限を確認する各データベースに作成する必要があります。  
   
 ```  
@@ -622,7 +622,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a>列は計算列の式で使用されているかどうかを判断する方法  
+###  <a name="_FAQ20"></a> 列は計算列の式で使用されているかどうかを判断する方法  
  次のクエリの `<database_name>`、`<schema_name.table_name>`、および `<column_name` を有効な名前に置き換えてから、クエリを実行します。  
   
 ```  
@@ -644,7 +644,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a>計算列の式で使用されているすべての列を検索する方法  
+###  <a name="_FAQ21"></a> 計算列の式で使用されているすべての列を検索する方法  
  次のクエリを実行する前に置き換える`<database_name>`有効な名前です。  
   
 ```  
@@ -666,7 +666,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a>指定された CLR ユーザー定義型または別名型に依存する列を検索する方法は?  
+###  <a name="_FAQ22"></a> 指定された CLR ユーザー定義型または別名型に依存する列を検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`、有効な名前と`<schema_name.data_type_name>`、有効なスキーマで修飾された CLR ユーザー定義型、またはスキーマで修飾されたエイリアス型名。 次のクエリがメンバーシップが必要です、 **db_owner**役割またはすべての依存列および計算列を表示する権限、データベース内のメタデータ。  
   
 ```  
@@ -704,7 +704,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a>指定された CLR ユーザー定義型または別名型に依存する計算列を検索する方法は?  
+###  <a name="_FAQ23"></a> 指定された CLR ユーザー定義型または別名型に依存する計算列を検索する方法は?  
  次のクエリの `<database_name>` を有効な名前に置き換え、`<schema_name.data_type_name>` をスキーマ修飾の CLR ユーザー定義型または別名型の有効な名前に置き換えてから、クエリを実行します。  
   
 ```  
@@ -721,7 +721,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a>指定された CLR ユーザー定義型または別名型に依存するパラメーターを検索する方法は?  
+###  <a name="_FAQ24"></a> 指定された CLR ユーザー定義型または別名型に依存するパラメーターを検索する方法は?  
  次のクエリの `<database_name>` を有効な名前に置き換え、`<schema_name.data_type_name>` をスキーマ修飾の CLR ユーザー定義型または別名型の有効な名前に置き換えてから、クエリを実行します。 次のクエリがメンバーシップが必要です、 **db_owner**役割またはすべての依存列および計算列を表示する権限、データベース内のメタデータ。  
   
 ```  
@@ -763,7 +763,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a>指定された CLR ユーザー定義型に依存する CHECK 制約の検索方法  
+###  <a name="_FAQ25"></a> 指定された CLR ユーザー定義型に依存する CHECK 制約の検索方法  
  次のクエリを実行する前に置き換える`<database_name>`、有効な名前と`<schema_name.data_type_name>`、有効なスキーマ修飾の CLR ユーザー定義型の名前にします。  
   
 ```  
@@ -783,7 +783,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a>ビュー、TRANSACT-SQL 関数、および指定された CLR ユーザー定義型または別名型に依存する TRANSACT-SQL ストアド プロシージャを見つける方法  
+###  <a name="_FAQ26"></a> ビュー、TRANSACT-SQL 関数、および指定された CLR ユーザー定義型または別名型に依存する TRANSACT-SQL ストアド プロシージャを見つける方法  
  次のクエリの `<database_name>` を有効な名前に置き換え、`<schema_name.data_type_name>` をスキーマ修飾の CLR ユーザー定義型または別名型の有効な名前に置き換えてから、クエリを実行します。  
   
  関数やプロシージャ内で定義されたパラメーターは、暗黙のうちにスキーマにバインドされます。 CLR ユーザー定義型または別名型に依存するパラメーターを使用して表示するため、 [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)カタログ ビューです。 プロシージャやトリガーはスキーマにバインドされません。 つまり、プロシージャやトリガーの本体で定義されている式と、CLR ユーザー定義型または別名型の間の依存関係は保守されません。 スキーマ バインド ビューとスキーマ バインドされた CLR ユーザー定義型に依存する式を含むユーザー定義関数または別名型はで保持されます、 **sys.sql_dependencies**カタログ ビューです。 型と CLR 関数や CLR プロシージャとの間の依存関係は保守されません。  
@@ -811,7 +811,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a>指定したテーブルのすべての制約の検索方法  
+###  <a name="_FAQ27"></a> 指定したテーブルのすべての制約の検索方法  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.table_name>`を有効な名前です。  
   
 ```  
@@ -835,7 +835,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a>指定されたテーブルのすべてのインデックスを検索する方法  
+###  <a name="_FAQ28"></a> 指定されたテーブルのすべてのインデックスを検索する方法  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.table_name>`を有効な名前です。  
   
 ```  
@@ -864,7 +864,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a>指定された列の名前を持つすべてのオブジェクトを検索する方法は?  
+###  <a name="_FAQ30"></a> 指定された列の名前を持つすべてのオブジェクトを検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<column_name>`を有効な名前です。  
   
 ```  
@@ -894,7 +894,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a>指定されたデータベース内のすべてのユーザー定義テーブルの検索方法  
+###  <a name="_FAQ31"></a> 指定されたデータベース内のすべてのユーザー定義テーブルの検索方法  
  次のクエリを実行する前に置き換える`<database_name>`有効な名前です。  
   
 ```  
@@ -908,7 +908,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a>すべてのテーブルとパーティション分割されたインデックスの検索方法  
+###  <a name="_FAQ32"></a> すべてのテーブルとパーティション分割されたインデックスの検索方法  
  次のクエリを実行する前に置き換える`<database_name>`有効な名前です。  
   
 ```  
@@ -930,7 +930,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a>指定されたオブジェクトに対するすべての統計情報を見つける方法  
+###  <a name="_FAQ33"></a> 指定されたオブジェクトに対するすべての統計情報を見つける方法  
  次のクエリを実行する前に置き換える`<database_name>`、有効な名前と`<schema_name.object_name>`有効なテーブル、インデックス付きビュー、またはテーブル値関数の名前にします。  
   
 ```  
@@ -949,7 +949,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a>検索方法すべての統計情報と統計情報列指定されたオブジェクトのですか。  
+###  <a name="_FAQ34"></a> 検索方法すべての統計情報と統計情報列指定されたオブジェクトのですか。  
  次のクエリを実行する前に置き換える`<database_name>`、有効な名前と`<schema_name.object_name>`有効なテーブル、インデックス付きビュー、またはテーブル値関数の名前にします。  
   
 ```  
@@ -970,7 +970,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a>ビューの定義を検索する方法は?  
+###  <a name="_FAQ35"></a> ビューの定義を検索する方法は?  
  次のクエリを実行する前に置き換える`<database_name>`と`<schema_name.object_name>`を有効な名前です。  
   
 ```  
@@ -996,6 +996,6 @@ GO
  [TOP](#_TOP)  
   
 ## <a name="see-also"></a>参照  
- [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_hadr_availability_group_states (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_hadr_availability_group_states (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_availability_group_states
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4d6dbddbf0fb211335789eefeff5f2a392f2d59
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0b5f23c9c5d9c21285d44e998dc0457795bf3670
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**primary_recovery_health_desc**|**nvarchar(60)**|説明**primary_replica_health**,、1 つの。<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|レプリカのセカンダリ レプリカでの 1 つの復旧の正常性を示します。<br /><br /> 0 = 実行中<br /><br /> 1 = オンライン<br /><br /> NULL<br /><br /> プライマリ レプリカの場合、 **secondary_recovery_health**列は NULL です。|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|説明**secondary_recovery_health**,、1 つの。<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|更新プログラムのロールアップを反映して、 **synchronization_health**すべての可用性レプリカの可用性グループです。 使用可能な値とその説明のとおりです。<br /><br /> 0: 正常ではありません。 正常ながある可用性レプリカがまったく**synchronization_health** (2 = HEALTHY)。<br /><br /> 1: 部分的に正常な状態です。 一部の可用性レプリカの同期状態は正常です。<br /><br /> 2: 正常な状態です。 すべての可用性レプリカの同期状態は正常です。<br /><br /> レプリカの同期状態については、次を参照してください。、 **synchronization_health**内の列[sys.dm_hadr_availability_replica_states &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)。|  
+|**synchronization_health**|**tinyint**|更新プログラムのロールアップを反映して、 **synchronization_health**すべての可用性レプリカの可用性グループです。 使用可能な値とその説明のとおりです。<br /><br /> 0: 正常ではありません。 正常ながある可用性レプリカがまったく**synchronization_health** (2 = HEALTHY)。<br /><br /> 1: 部分的に正常な状態です。 一部の可用性レプリカの同期状態は正常です。<br /><br /> 2: 正常な状態です。 すべての可用性レプリカの同期状態は正常です。<br /><br /> レプリカの同期状態については、次を参照してください。、 **synchronization_health**内の列[sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)です。|  
 |**synchronization_health_desc**|**nvarchar(60)**|説明**synchronization_health**,、1 つの。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>セキュリティ  
@@ -61,6 +61,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>参照  
  [可用性グループの監視と &#40; です。Transact SQL と &#41; です。](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [可用性グループの動的管理ビューおよび関数 &#40; always OnTRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [Always On 可用性グループの動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

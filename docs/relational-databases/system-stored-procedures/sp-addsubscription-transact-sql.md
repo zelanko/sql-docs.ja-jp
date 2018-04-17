@@ -1,7 +1,7 @@
 ---
 title: sp_addsubscription (TRANSACT-SQL) |Microsoft ドキュメント
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,13 +235,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher= ] '*publisher*'  
+ [ @publisher=] '*パブリッシャー*'  
  指定以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*を指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
+ [ @backupdevicetype=] '*backupdevicetype*'  
  バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)**、これらの値のいずれかを指定できます。  
   
 |値|Description|  
@@ -252,10 +252,10 @@ sp_addsubscription [ @publication = ] 'publication'
   
  *backupdevicetype*場合のみ使用*sync_method*が initialize_with_backup に設定します。  
   
- [ @backupdevicename= ] '*backupdevicename*'  
+ [ @backupdevicename=] '*backupdevicename*'  
  バックアップからサブスクライバーを初期化する際に使用するデバイスの名前を指定します。 *backupdevicename*は**nvarchar (1000)**、既定値は NULL です。  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword=] '*mediapassword*'  
  メディア セットのパスワードを指定します (メディアをフォーマットしたときにパスワードを設定した場合)。 *mediapassword*は**sysname**既定値は NULL です。  
   
 > [!NOTE]  

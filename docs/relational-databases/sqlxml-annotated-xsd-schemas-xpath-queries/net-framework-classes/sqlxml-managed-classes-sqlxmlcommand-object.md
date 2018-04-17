@@ -1,16 +1,16 @@
 ---
-title: "SqlXmlCommand オブジェクト (SQLXML マネージ クラス) |Microsoft ドキュメント"
-ms.custom: 
+title: SqlXmlCommand オブジェクト (SQLXML マネージ クラス) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - void ExecuteNonQuery() method
@@ -33,20 +33,21 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b2621c44e57dc83f21db4574e86b0ea16b22041
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b34c2f95c2e698e9e84a55850005a6aa409c4ad7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML マネージ クラス - SqlXmlCommand オブジェクト
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SqlXmlCommand オブジェクトのコンス トラクターは、次に示します。  
+  SqlXmlCommand オブジェクトのコンス トラクターは、次に示します。  
   
 ```  
 public SqlXmlCommand(string cnString)  
@@ -56,7 +57,7 @@ public SqlXmlCommand(string cnString)
   
  接続文字列では、`Provider` に SQLOLEDB を指定する必要があります。プロバイダーの文字列に `Data Provider` は使用できません。  
   
- 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
+ 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
 ## <a name="methods"></a>メソッド  
  TheSqlXmlCommand オブジェクトには、以下のコマンドを実行する方法を含め、いくつかの方法がサポートされています。  
@@ -65,10 +66,10 @@ public SqlXmlCommand(string cnString)
  コマンドを実行しますが、何も返しません。 このメソッドは、クエリ以外のコマンド (何も返さないコマンド) を実行する場合に便利です。 たとえば、アップデートグラムや DiffGram でレコードを更新し、何も返さない場合に使用できます。  
   
  Stream ExecuteStream()  
- 新しいストリーム オブジェクトを返します。 このメソッドは、クエリ結果を新しいストリームで返す場合に便利です。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
+ 新しいストリーム オブジェクトを返します。 このメソッドは、クエリ結果を新しいストリームで返す場合に便利です。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  public void ExecuteToStream (Stream outputStream)  
- クエリ結果を既存のストリームに書き込みます。 このメソッドは、結果を (たとえば、クエリ結果が、System.Web.HttpResponse.OutputStream に書き込まれた) 追加する必要があるストリームがある場合に便利です。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
+ クエリ結果を既存のストリームに書き込みます。 このメソッドは、結果を (たとえば、クエリ結果が、System.Web.HttpResponse.OutputStream に書き込まれた) 追加する必要があるストリームがある場合に便利です。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  XmlReader ExecuteXmlReader()  
  XmlReader オブジェクトを返します。 このメソッドは、XmlReader オブジェクト内のデータを直接操作または可能 System.Xml のアーキテクチャでは、接続のいずれかを使用することができます。 詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework のドキュメントを参照してください。 作業用サンプルについては、次を参照してください。 [ExecuteXMLReader メソッドを使用して SQL クエリを実行する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)です。  
@@ -76,7 +77,7 @@ public SqlXmlCommand(string cnString)
  TheSqlXmlCommand オブジェクトには、これらの追加メソッドもサポートしています。  
   
  SqlXmlParameter CreateParameter()  
- SqlXmlParameter オブジェクトを作成します。 値を設定することができます、*名前*と*値*このオブジェクトのパラメーターです。 このメソッドは、コマンドにパラメーターを渡す場合に便利です。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
+ SqlXmlParameter オブジェクトを作成します。 値を設定することができます、*名前*と*値*このオブジェクトのパラメーターです。 このメソッドは、コマンドにパラメーターを渡す場合に便利です。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  void ClearParameters()  
  指定したコマンド オブジェクトに作成されたパラメーターを消去します。 このメソッドは、同一のコマンド オブジェクトで複数のクエリを実行する場合に便利です。  
@@ -91,7 +92,7 @@ public SqlXmlCommand(string cnString)
  マッピング スキーマの名前とディレクトリ パス (C:\x\y\MySchema.xml など) を指定します。 このプロパティは、XPath クエリにマッピング スキーマを指定するときに便利です。 パスは、相対パスまたは絶対パスで指定できます。 パスが相対パスでの相対パスを解決するのには基本パスで指定されている基本パスが使用されます。 基本パスが指定されていない場合、相対パスは現在のディレクトリからのパスになります。 作業用サンプルについては、次を参照してください。 [.NET 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)です。  
   
  XslPath  
- XSL ファイルの名前とディレクトリ パスを指定します。 パスは、相対パスまたは絶対パスで指定できます。 パスが相対パスでの相対パスを解決するのには基本パスで指定されている基本パスが使用されます。 基本パスが指定されていない場合、相対パスは現在のディレクトリからのパスになります。 作業用サンプルについては、次を参照してください[XSL 変換 &#40; を適用する。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md).  
+ XSL ファイルの名前とディレクトリ パスを指定します。 パスは、相対パスまたは絶対パスで指定できます。 パスが相対パスでの相対パスを解決するのには基本パスで指定されている基本パスが使用されます。 基本パスが指定されていない場合、相対パスは現在のディレクトリからのパスになります。 作業用サンプルについては、次を参照してください[XSL 変換 & #40; を適用する。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md).  
   
  基本パス  
  基本パス (ディレクトリ パス) を指定します。 このプロパティは、XSL ファイル (を XslPath プロパティを使用)、(を SchemaPath プロパティを使用)、マッピング スキーマ ファイルまたは XML テンプレートの外部スキーマ参照に対して指定されている相対パスを解決するために便利です (を使用して指定された、 **マッピング スキーマ**属性)。  
@@ -100,13 +101,13 @@ public SqlXmlCommand(string cnString)
  コマンドを実行したときに返されるストリームのエンコードを指定します。 このプロパティは、返されるストリームに特定のエンコードを要求する場合に便利です。 一般的に使用されるエンコードには、UTF-8、ANSI、Unicode などがあります。 既定のエンコードは UTF-8 です。  
   
  名前空間  
- 名前空間を使用する XPath クエリの実行を有効にします。 名前空間を持つ XPath クエリの詳細については、次を参照してください[名前空間と #40 です。 使用する XPath クエリを実行する。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md). 作業用サンプルについては、次を参照してください。 [XPath クエリの実行 &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md).  
+ 名前空間を使用する XPath クエリの実行を有効にします。 名前空間を持つ XPath クエリの詳細については、次を参照してください[名前空間と #40 です。 使用する XPath クエリを実行する。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md). 作業用サンプルについては、次を参照してください。 [XPath クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md).  
   
  RootTag  
- コマンドを実行して生成される XML の、単一のルート要素を指定します。 有効な XML ドキュメントには、単一のルートレベルのタグが必要です。 このプロパティでは、コマンドを実行して単一の最上位要素のない XML フラグメントが生成された場合に、返される XML のルート要素を指定できます。 作業用サンプルについては、次を参照してください[XSL 変換 &#40; を適用する。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md).  
+ コマンドを実行して生成される XML の、単一のルート要素を指定します。 有効な XML ドキュメントには、単一のルートレベルのタグが必要です。 このプロパティでは、コマンドを実行して単一の最上位要素のない XML フラグメントが生成された場合に、返される XML のルート要素を指定できます。 作業用サンプルについては、次を参照してください[XSL 変換 & #40; を適用する。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md).  
   
  CommandText  
- コマンドのテキストを指定します。 このプロパティは、実行するコマンドのテキストを指定するときに使用します。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
+ コマンドのテキストを指定します。 このプロパティは、実行するコマンドのテキストを指定するときに使用します。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  CommandStream  
  コマンド ストリームを指定します。 このプロパティは、XML テンプレートなどのファイルからコマンドを実行する場合に便利です。 CommandStream、のみを使用する場合**"Template"**、 **"UpdateGram"**と**"DiffGram"CommandType**値はサポートされています。 作業用サンプルについては、次を参照してください。 [CommandStream プロパティを使用して、テンプレート ファイルを実行する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)です。  
@@ -124,7 +125,7 @@ public SqlXmlCommand(string cnString)
 |SqlXmlCommandType.Diffgram|DiffGram を実行します。|  
   
 ## <a name="see-also"></a>参照  
- [SqlXmlParameter オブジェクト &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)   
- [SqlXmlAdapter オブジェクト &#40;です。SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
+ [SqlXmlParameter オブジェクト & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)   
+ [SqlXmlAdapter オブジェクト & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
   
   

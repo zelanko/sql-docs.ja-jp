@@ -1,16 +1,16 @@
 ---
-title: "sp_statistics (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_statistics (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_statistics_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb1e775a99bb3c296064a65aa9eed7be5d17745
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bed13d18bf7055bd72280cabde3fe65ce05b7b64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +71,7 @@ sp_statistics [ @table_name = ] 'table_name'
  あるかどうか一意インデックスのみ (場合**Y**) 返されます。 *is_unique*は**char (1)**、既定値は**N**です。  
   
  [  **@accuracy=** ] **'***精度***'**  
- 統計の基数および統計のページの精度を指定します。 *精度*は**char (1)**、既定値は**Q**です。指定**E**基数やページは、正確に統計を更新するかどうかを確認します。  
+ 統計のカーディナリティおよび統計のページの精度を指定します。 *精度*は**char (1)**、既定値は**Q**です。指定**E**基数やページは、正確に統計を更新するかどうかを確認します。  
   
  値**E** (sql_ensure)、ドライバーを無条件に統計を取得します。  
   
@@ -89,10 +90,10 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TYPE**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュ化<br /><br /> 3 = 非クラスター化|  
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
 |**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は、常に値を返します。|  
-|**照合順序**|**char (1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
+|**COLLATION**|**char(1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
 |**基数**|**int**|テーブル内の行数またはインデックス内の一意な値の個数。|  
 |**ページ**|**int**|インデックスまたはテーブルを格納するページ数。|  
-|**FILTER_CONDITION**|**varchar (128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -106,10 +107,10 @@ sp_statistics [ @table_name = ] 'table_name'
   
  **sp_statistics**は等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**です。 詳細については、次を参照してください。、 [ODBC API リファレンス](http://go.microsoft.com/fwlink/?LinkId=68323)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、情報を返しますに関する、`DimEmployee`テーブル。  
   
 ```  
@@ -119,7 +120,7 @@ EXEC sp_statistics DimEmployee;
 ```  
   
 ## <a name="see-also"></a>参照  
- [カタログのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

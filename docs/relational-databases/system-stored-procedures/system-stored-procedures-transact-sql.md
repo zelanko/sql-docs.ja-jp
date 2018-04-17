@@ -1,16 +1,16 @@
 ---
-title: "システム ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: システム ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2016 CTP3)
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], categories
 - system stored procedures [SQL Server]
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b3caeee99c777501d79a9e9e39cf38ac2d223616
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 912a2c7dbe6f67d67a4ed43b9d51147bbab08ede
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-stored-procedures-transact-sql"></a>システム ストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,19 +53,19 @@ ms.lasthandoff: 11/21/2017
 |[カーソル ストアド プロシージャ](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|カーソル変数機能の実装に使用します。|  
 |[データ コレクター ストアド プロシージャ](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|データ コレクターや各種コンポーネント (コレクション セット、コレクション アイテム、コレクション型など) を操作するために使用します。|  
 |[データベース エンジン ストアド プロシージャ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の全般的なメンテナンスに使用します。|  
-|[データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|インスタンス内から電子メール操作を実行するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|[データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|インスタンス内から電子メール操作を実行するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |[データベース メンテナンス プラン ストアド プロシージャ](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|データベースのパフォーマンスの管理に必要な基本のメンテナンス タスクを設定する場合に使用します。|  
 |[分散クエリ ストアド プロシージャ](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|分散クエリの実装と管理に使用します。|  
-|[Filestream および FileTable ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|FILESTREAM 機能および FileTable 機能の構成と管理に使用します。|  
-|[ファイアウォール ルールのストアド プロシージャと #40 です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Azure SQL データベース ファイアウォールを構成するために使用します。|  
+|[Filestream および FileTable ストアド プロシージャ&#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|FILESTREAM 機能および FileTable 機能の構成と管理に使用します。|  
+|[ファイアウォール ルールのストアド プロシージャ&#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Azure SQL データベース ファイアウォールを構成するために使用します。|  
 |[フルテキスト検索ストアド プロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|フルテキスト インデックスの実装とクエリに使用します。|  
 |[汎用拡張ストアド プロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|インスタンスからインターフェイスを提供するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]さまざまなメンテナンス作業を外部プログラムにします。|  
 |[ログ配布ストアド プロシージャ](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|ログ配布構成の設定、変更、監視に使用します。|  
-|[管理データ ウェアハウスのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|管理データ ウェアハウスを構成するために使用します。|  
+|[管理データ ウェアハウスのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|管理データ ウェアハウスを構成するために使用します。|  
 |[OLE オートメーション ストアド プロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|標準のオートメーション オブジェクト、標準的な内での使用を有効にするために使用[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。|  
 |[ポリシー ベースの管理ストアド プロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|ポリシー ベースの管理に使用します。|  
 |[PolyBase ストアド プロシージャ](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|追加または PolyBase スケール アウトのグループからコンピューターを削除します。|  
-|[クエリ ストアのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|パフォーマンスのチューニングに使用されます。|  
+|[クエリ ストアのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|パフォーマンスのチューニングに使用されます。|  
 |[レプリケーション ストアド プロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|レプリケーションの管理に使用します。|  
 |[セキュリティ ストアド プロシージャ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|セキュリティの管理に使用します。|  
 |[バックアップ スナップショットのストアド プロシージャ](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|FILE_SNAPSHOT バックアップとそのすべてのスナップショットを削除するか、個別のバックアップ ファイルのスナップショットを削除するために使用します。|  
@@ -182,9 +183,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>参照  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [実行されているストアド プロシージャ &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
+ [ストアド プロシージャを実行している&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

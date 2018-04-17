@@ -1,15 +1,16 @@
 ---
-title: "文字データや C 文字列 |Microsoft ドキュメント"
-ms.custom: 
+title: 文字データや C 文字列 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ea6f6c65e1250a999d019e7cf8b81510b227831
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="character-data-and-c-strings"></a>文字データと C 文字列
 (列名、動的パラメーターは、文字列の属性値など) の可変長文字データを参照する入力パラメーターでは、関連付けられた長さパラメーターがあります。 アプリケーション終了した場合は c 言語で一般的な null 文字を含む文字列、長さの文字列 (null 終端文字を除く) のバイト数または SQL_NTS (Null-Terminated 文字列) のいずれかを引数としては提供します。 負でない長の引数は、関連付けられている文字列の実際の長さを指定します。 Length 引数には、NULL 値とは異なりますが、長さ 0 の文字列を指定する可能性があります。 SQL_NTS 負の値は、null 終端文字を検索する文字列の長さを判別するのには、ドライバーに指示します。  

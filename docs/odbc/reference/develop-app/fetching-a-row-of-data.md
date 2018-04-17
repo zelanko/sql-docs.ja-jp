@@ -1,15 +1,16 @@
 ---
-title: "データの行をフェッチ |Microsoft ドキュメント"
-ms.custom: 
+title: データの行をフェッチ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLFetch function [ODBC], fetching a row of data
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 81fff470f916155e9b6d85571db46c46d9e63454
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-a-row-of-data"></a>データの行のフェッチ
 アプリケーションを呼び出すデータの行をフェッチする**SQLFetch**です。 **SQLFetch**をカーソルの種類と呼ばれることができますが、順方向専用の方向に行セットのカーソルだけ移動します。 **SQLFetch**次の行にカーソルを移動し、データへの呼び出しにバインドされていたすべての列を返します**SQLBindCol**です。 設定すると、カーソルが結果の末尾に達したとき、 **SQLFetch** SQL_NO_DATA が返されます。 例については、呼び出し元の**SQLFetch**を参照してください[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)です。  

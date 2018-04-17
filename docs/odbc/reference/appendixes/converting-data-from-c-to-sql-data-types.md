@@ -1,15 +1,16 @@
 ---
-title: "データを C から SQL データ型に変換する |Microsoft ドキュメント"
-ms.custom: 
+title: データを C から SQL データ型に変換する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d87c393e9af2b3b24bd50b41287b9323a6e114cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>データを C から SQL データ型に変換します。
 アプリケーションを呼び出すと**SQLExecute**または**SQLExecDirect**のすべてのパラメーターがバインドされたデータを取り出します**SQLBindParameter**記憶域の場所からアプリケーションです。 アプリケーションを呼び出すと**SQLSetPos**、ドライバーの更新プログラムのデータを取得または追加操作を使用してバインドされた列から**SQLBindCol**です。 実行時データ パラメーターの場合、アプリケーション データを送信、パラメーターと**SQLPutData**です。 かどうか、必要に応じて、ドライバーのデータを変換で指定されたデータ型、 *ValueType*引数**SQLBindParameter**で指定されたデータ型を*ParameterType*引数**SQLBindParameter**、し、データ ソースにデータを送信します。  

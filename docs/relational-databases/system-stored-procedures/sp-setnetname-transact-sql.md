@@ -1,16 +1,16 @@
 ---
-title: "sp_setnetname (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_setnetname (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e9f439854cc1d3af3ca5db09981f2eba2af7a4f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2a0cc53bb8b4ef3c5c12c7154edc57b02c07a656
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引数  
- **@server= '** *サーバー* **'**  
+ **@server = '** *サーバー* **'**  
  ユーザーが作成したリモート ストアド プロシージャ呼び出しの構文で参照しているリモート サーバーの名前を指定します。 内のただ 1 つの行**sys.servers**これを使用する存在していなければなりません*サーバー*です。 *server* のデータ型は **sysname**で、既定値はありません。  
   
- **@netname='** *network_name* **'**  
+ **@netname ='** *network_name* **'**  
  リモート ストアド プロシージャ呼び出しが行われるコンピューターのネットワーク名を指定します。 *network_name*は**sysname**、既定値はありません。  
   
  この名前は一致する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コンピューター名、および名前で許可されていない文字を含めることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]識別子。  
@@ -80,7 +80,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  使用して**sp_setnetname**ローカル サーバーへのリンク サーバーをポイントすることはできません。 この方法で参照されたサーバーを分散トランザクションに加えることはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **sysadmin**と**setupadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -95,9 +95,9 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

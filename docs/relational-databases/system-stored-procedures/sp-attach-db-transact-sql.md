@@ -1,16 +1,16 @@
 ---
-title: "sp_attach_db (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_attach_db (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b17a11f31faff52e2519d2c10d34af88108f0399
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 460d9eab90fb65f4d271829d76d72dfa26f0b1b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +54,11 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=** ] **'***dbnam* **'**  
+ [  **@dbname=** ] **' * * * dbnam* **'**  
  サーバーにアタッチされるデータベースの名前を指定します。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
   
  [ **@filename1=** ] **'***filename_n***'**  
- データベース ファイルの物理名を、パスも含めて指定します。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名 **@filename1** に 1 ずつ増分 **@filename16**です。 指定するファイルには少なくともプライマリ ファイルが含まれている必要があります。 プライマリ ファイルには、データベース内の他のファイルを参照するシステム テーブルが含まれています。 また、データベースがデタッチされた後で移動したファイルも指定する必要があります。  
+ データベース ファイルの物理名を、パスも含めて指定します。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名**@filename1**に 1 ずつ増分 **@filename16**です。 指定するファイルには少なくともプライマリ ファイルが含まれている必要があります。 プライマリ ファイルには、データベース内の他のファイルを参照するシステム テーブルが含まれています。 また、データベースがデタッチされた後で移動したファイルも指定する必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  
@@ -85,14 +85,14 @@ sp_attach_db [ @dbname= ] 'dbname'
   
 -   元のデータベースと同じサーバー インスタンスおよびバージョンにデータベースをアタッチする場合は、必要な追加手順はありません。  
   
--   場合は、同じサーバー インスタンスにデータベースをアタッチする場合は、実行する必要があります、アップグレードされたバージョン[sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)アタッチ操作が完了した後にレプリケーションをアップグレードします。  
+-   同じサーバー インスタンスのアップグレードされたバージョンにデータベースをアタッチする場合は、アタッチ操作が完了した後、[sp_vupgrade_replication](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md) を実行してレプリケーションをアップグレードする必要があります。  
   
--   実行する必要があります、バージョンにかかわらず、別のサーバー インスタンスにデータベースをアタッチする場合[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)アタッチ操作が完了した後にレプリケーションを削除します。  
+-   バージョンに関係なく、別のサーバー インスタンスにデータベースをアタッチする場合は、アタッチ操作が完了した後、[sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) を実行してレプリケーションを削除する必要があります。  
   
  データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
   
 ## <a name="permissions"></a>権限  
- データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;です。SQL Server TRANSACT-SQL &#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)です。  
   
 ## <a name="examples"></a>使用例  
  次の例からのファイルをアタッチする[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]現在のサーバーにします。  
@@ -107,9 +107,9 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
   
 ## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_detach_db &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile を実行 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_removedbreplication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

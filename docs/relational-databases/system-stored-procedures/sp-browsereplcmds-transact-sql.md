@@ -1,16 +1,16 @@
 ---
-title: "sp_browsereplcmds (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_browsereplcmds (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e7a2a18736c95d11447d2330ffbe48c99da3a2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2e7bc94efc680663436b0cc77692c35aaa36bac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  場合を指定指定したコマンド*コ*が返されます。 *コ*は**int**、既定値は NULL です。  
   
  [  **@command_id =**] *command_id*  
- 内のコマンドの場所は、 [MSrepl_commands &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)デコードします。 *command_id*は**int**、既定値は NULL です。 指定すると場合、は、その他のすべてのパラメーターをさらに、指定する必要がありますと*xact_seqno_start*と同一である必要があります*xact_seqno_end*です。  
+ 内のコマンドの場所は、 [MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)デコードします。 *command_id*は**int**、既定値は NULL です。 指定すると場合、は、その他のすべてのパラメーターをさらに、指定する必要がありますと*xact_seqno_start*と同一である必要があります*xact_seqno_end*です。  
   
  [  **@agent_id =**] *agent_id*  
  特定のレプリケーション エージェントのコマンドのみを返すように指定します。 *agent_id*は**int**既定値は NULL です。  
@@ -84,17 +84,17 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary (16)**|コマンドのシーケンス番号です。|  
+|**xact_seqno**|**varbinary(16)**|コマンドのシーケンス番号です。|  
 |**originator_srvname**|**sysname**|トランザクションが発生したサーバーです。|  
 |**originator_db**|**sysname**|トランザクションが発生したデータベースです。|  
-|**コ**|**int**|アーティクルの ID です。|  
-|**型**|**int**|コマンドの種類です。|  
+|**article_id**|**int**|アーティクルの ID です。|  
+|**type**|**int**|コマンドの種類です。|  
 |**partial_command**|**bit**|部分的なコマンドかどうかを示します。|  
 |**hashkey**|**int**|内部使用のみです。|  
 |**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID です。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョンです。|  
-|**originator_lsn**|**varbinary (16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。 ピア ツー ピア トランザクション レプリケーションで使用します。|  
-|**command**|**nvarchar (1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンド。|  
+|**originator_lsn**|**varbinary(16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。 ピア ツー ピア トランザクション レプリケーションで使用します。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド。|  
 |**command_id**|**int**|内のコマンド ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)です。|  
   
  コマンド名が長いものは、結果セット内でいくつかの行に分割表示されることがあります。  
@@ -102,12 +102,12 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="remarks"></a>解説  
  **sp_browsereplcmds**トランザクション レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたはのメンバー、 **db_owner**または**replmonitor** を実行できるは、ディストリビューションデータベースの固定データベースロール**sp_browsereplcmds**です。  
   
 ## <a name="see-also"></a>参照  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

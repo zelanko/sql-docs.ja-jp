@@ -1,16 +1,16 @@
 ---
-title: "sp_enumdsn (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_enumdsn (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8d4dcb23cf06385d4c26a198f17e806bdc0671a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 471fa93ccd1c9e48f0baa1fa270a7a7db7b7d4af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +53,20 @@ sp_enumdsn
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**データ ソース名**|**sysname**|データ ソースの名前です。|  
-|**Description**|**varchar (255)**|データ ソースの説明です。|  
+|**Description**|**varchar(255)**|データ ソースの説明です。|  
 |**型**|**int**|データ ソースの種類です。<br /><br /> **1** ODBC DSN を =<br /><br /> **3** OLE DB データ ソースを =|  
-|**プロバイダー名**|**varchar (255)**|OLE DB プロバイダーの名前です。 ODBC DSN の場合、値は NULL です。|  
+|**プロバイダー名**|**varchar(255)**|OLE DB プロバイダーの名前です。 ODBC DSN の場合、値は NULL です。|  
   
 ## <a name="remarks"></a>解説  
  各[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスには、ユーザー コンテキスト。 ユーザー コンテキストは、そのユーザーの ODBC データ ソースの定義を含むレジストリ エントリの集合です。 におけるユーザー名によって、ユーザー コンテキストが提供される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。  
   
  たとえば、サーバーがシステム アカウントのユーザー コンテキストで実行されている場合は、返されるデータ ソース名 (DSN) はシステム アカウントに関連付けられているすべてのシステム DSN です。 サーバーがプライベートなユーザー アカウントで実行されている場合は、そのユーザーのプライベート アカウントで定義された DSN だけが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_enumdsn**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_dsninfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
+ [sp_dsninfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

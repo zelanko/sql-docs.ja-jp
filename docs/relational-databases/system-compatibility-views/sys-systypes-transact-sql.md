@@ -1,16 +1,16 @@
 ---
-title: "sys.systypes (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.systypes (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.systypes_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.systypes compatibility view
 - systypes system table
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
-caps.latest.revision: 
+caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa54909c2d3f5e83a51ef1814564ae80828a292a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ffbf54921f463e749d36b89985af5e5a98ef5518
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 02/09/2018
 |**xscale**|**tinyint**|サーバーが使用する内部の小数点以下桁数です。 クエリでは使用されません。|  
 |**tdefault**|**int**|このデータ型の整合性チェックを行うストアド プロシージャの ID です。|  
 |**domain**|**int**|このデータ型の整合性チェックを行うストアド プロシージャの ID です。|  
-|**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> **\*\*重要な\* \*** 場合は、次のいずれかを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL ステートメントを使用する必要がある、 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューの代わりに**sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> ユーザーとロールの数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
+|**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> **\*\* 重要な\* \*** 場合は、次のいずれかを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL ステートメントを使用する必要がある、 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューの代わりに**sys.systypes**です。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> ユーザーとロールの数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
 |**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|文字ベースの場合**collationid**現在のデータベースの照合順序の id は、それ以外の場合は NULL です。|  
 |**usertype**|**smallint**|ユーザー型の ID です。 データ型の数が 32,767 を超える場合は、オーバーフローが発生するか NULL が返されます。|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/09/2018
 |**collation**|**sysname**|文字ベースの場合**照合**現在のデータベースの照合順序は、それ以外の場合は NULL です。|  
   
 ## <a name="see-also"></a>参照  
- [互換性ビュー &#40;です。TRANSACT-SQL と #41 です。](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [互換性ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

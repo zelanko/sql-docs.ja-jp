@@ -1,15 +1,15 @@
 ---
-title: "SQL Server の既定の結果セットを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server の既定の結果セットを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - result sets [ODBC], default
 - ODBC applications, cursors
 ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea597efcb35428b65bb47a25e84e7790905c526a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5c5b7458ad4d1a80b7dc93d58d90ed35317ee502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sql-server-default-result-sets"></a>SQL Server の既定の結果セットの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);
   
  これらの属性は、既定値に設定されるたびに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定の結果セットです。 既定の結果セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるすべての SQL ステートメントに使用でき、結果セット全体をクライアントに転送する際の最も効率的な方法です。  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]複数のアクティブな結果セット (MARS); サポートが追加されましたアプリケーションでは、1 つ以上のアクティブな既定の結果を 1 つの接続設定ができますようになりました。 MARS は既定では有効になっていません。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 複数のアクティブな結果セット (MARS); サポートが追加されましたアプリケーションでは、1 つ以上のアクティブな既定の結果を 1 つの接続設定ができますようになりました。 MARS は既定では有効になっていません。  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、既定の結果セットは 1 つの接続における複数のアクティブなステートメントをサポートしていません。 SQL ステートメントが 1 つの接続で実行された後、サーバーは結果セットのすべての行が処理されるまで、その接続に対するクライアントからのコマンドを受け付けません (結果セットの残りの行の処理を取り消す要求は除きます)。 部分的に処理された結果セットの残りの部分をキャンセルする[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)または[SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)で、 *fOption*パラメーターに SQL_CLOSE を設定します。 完了するには、部分的に処理された結果セットと別の結果セットの存在テストを呼び出す[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)です。 呼び出しを呼び出すと、SQL_ERROR が生成されます、ODBC アプリケーションは、既定の結果セットが完全に処理される前に、接続ハンドルでコマンドを試みると、 **SQLGetDiagRec**を返します。  
   

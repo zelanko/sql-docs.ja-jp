@@ -1,16 +1,16 @@
 ---
-title: "core.sp_update_data_source を呼び出します (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: core.sp_update_data_source を呼び出します (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 042f03a9004a357e0b7a488494533d7f778247b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
   
  [ @machine_name =] '*machine_name*'  
  コレクション セットが存在するサーバーの名前を指定します。 *コンピューター名*は**sysname**既定値はありません。  
   
- [ @named_instance = ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  コレクション セットのインスタンスの名前を指定します。 *named_instance*は**sysname**既定値はありません。  
   
 > [!NOTE]  
@@ -68,7 +68,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  [ @days_until_expiration = ] *days_until_expiration*  
  スナップショット データ保持期間の日数を指定します。 *days_until_expiration*は**smallint**です。  
   
- [ @source_id = ] *source_id*  
+ [ @source_id =] *source_id*  
  更新元の一意な識別子を指定します。 *source_id*は**int**出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

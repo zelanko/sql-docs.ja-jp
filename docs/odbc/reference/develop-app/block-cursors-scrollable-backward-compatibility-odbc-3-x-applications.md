@@ -1,15 +1,16 @@
 ---
-title: "ブロックや ODBC の互換性のスクロール可能なカーソル 3.x |Microsoft ドキュメント"
-ms.custom: 
+title: ブロックや ODBC の互換性のスクロール可能なカーソル 3.x |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], cursors
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca3cbf2bc9aba7baccc4cfdda738a82949951fda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 116978a182b207f52e879310969a2a5aa5b4eb3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ブロック カーソル、スクロール可能なカーソル、および ODBC 3.x アプリケーションの旧バージョンとの互換性
 両方の存在**SQLFetchScroll**と**SQLExtendedFetch** ODBC の間で、アプリケーション プログラミング インターフェイス (API)、これは、一連の関数の最初のクリアが分割を表します、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) の関数のセットからなるドライバーを実装します。 この分割は、ODBC 3 要件のバランスをとる必要があります。*x*が使用される**SQLFetchScroll**と位置を合わせたり、標準の ODBC 2 と互換性がある*。x*が使用される**SQLExtendedFetch**です。  

@@ -1,16 +1,16 @@
 ---
-title: "IHarticles (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: IHarticles (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c13f239978f42e899bc7d909b33bf70ce837c19
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f6d2f9b3bba59f44246d60cd35cdea8d8706989
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,25 @@ ms.lasthandoff: 11/21/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**コ**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
+|**article_id**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
 |**name**|**sysname**|パブリケーションの中で一意なアーティクルに関係する名前です。|  
 |**publication_id**|**smallint**|そのアーティクルが属するパブリケーションの ID です。|  
 |**table_id**|**int**|パブリッシュされるテーブルの ID [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)です。|  
-|**publisher_id などがあります。**|**smallint**|非 SQL Server パブリッシャーの ID。|  
+|**publisher_id**|**smallint**|非 SQL Server パブリッシャーの ID。|  
 |**creation_script**|**nvarchar (255)**|そのアーティクルのスキーマ スクリプトです。|  
-|**del_cmd**|**nvarchar (255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
+|**del_cmd**|**nvarchar (255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。|  
 |**フィルター (filter)**|**int**|このコラムでは使用されませんしするためだけに含まれる、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)の表示、 **IHarticles**と互換性のあるテーブル、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューのための SQL Server の記事 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
 |**filter_clause**|**ntext**|アーティクルの WHERE 句は、フィルターによる行選択に使用され、SQL 以外のパブリッシャーが解釈できる標準の Transact-SQL で作成されます。|  
-|**ins_cmd**|**nvarchar (255)**|テーブル アーティクルの挿入をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
+|**ins_cmd**|**nvarchar (255)**|テーブル アーティクルの挿入をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。|  
 |**pre_creation_cmd**|**tinyint**|同じ名前のオブジェクトがサブスクライバーに既に存在する場合に、初期スナップショットが適用される前に実行するコマンドです。<br /><br /> **0** = なし - コマンドは実行されません。<br /><br /> **1** = DROP: レプリケーション先テーブルを削除します。<br /><br /> **2** = 削除 - コピー先のテーブルからデータを削除します。<br /><br /> **3** = TRUNCATE: レプリケーション先テーブルを切り捨てます。|  
 |**ステータス**|**tinyint**|アーティクル オプションとステータスのビットマスクです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **0** = その他のプロパティはありません。<br /><br /> **1**アクティブを = です。<br /><br /> **8** = INSERT ステートメントに列名を含みます。<br /><br /> **16** = ステートメント パラメーターを使用します。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は 17 になります。 値 0 は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを表します。|  
-|**型**|**tinyint**|アーティクルのタイプです。<br /><br /> **1**ログベースのアーティクルを = です。|  
-|**upd_cmd**|**nvarchar (255)**|テーブル アーティクルの更新をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
-|**schema_option**|**binary (8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **0x00** = スナップショット エージェントによるスクリプト作成無効にして、提供されている CreationScript を使用します。<br /><br /> **0x01** = オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。<br /><br /> **0x10** = 対応するクラスター化インデックスを生成します。<br /><br /> **0x40**生成に対応する非クラスター化インデックスを = です。<br /><br /> **0x80** Include 主キーに関する宣言参照整合性を = です。<br /><br /> **0x1000** = 列レベルの照合順序をレプリケートします。 注: このオプションは既定では大文字小文字を区別する比較を有効にする Oracle パブリッシャーに対して設定されます。<br /><br /> **0x4000** = テーブル アーティクルで定義されている場合、一意キーをレプリケートします。<br /><br /> **0x8000** = ALTER TABLE ステートメントを使用して、制約として主キーと一意キー、テーブルのアーティクルをレプリケートします。|  
+|**type**|**tinyint**|アーティクルのタイプです。<br /><br /> **1**ログベースのアーティクルを = です。|  
+|**upd_cmd**|**nvarchar (255)**|テーブル アーティクルの更新をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。|  
+|**schema_option**|**binary(8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **0x00** = スナップショット エージェントによるスクリプト作成無効にして、提供されている CreationScript を使用します。<br /><br /> **0x01** = オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。<br /><br /> **0x10** = 対応するクラスター化インデックスを生成します。<br /><br /> **0x40**生成に対応する非クラスター化インデックスを = です。<br /><br /> **0x80** Include 主キーに関する宣言参照整合性を = です。<br /><br /> **0x1000** = 列レベルの照合順序をレプリケートします。 注: このオプションは既定では大文字小文字を区別する比較を有効にする Oracle パブリッシャーに対して設定されます。<br /><br /> **0x4000** = テーブル アーティクルで定義されている場合、一意キーをレプリケートします。<br /><br /> **0x8000** = ALTER TABLE ステートメントを使用して、制約として主キーと一意キー、テーブルのアーティクルをレプリケートします。|  
 |**dest_owner**|**sysname**|目的のデータベースにおけるテーブルの所有者です。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
 |**それには**|**nvarchar (255)**|アーティクルのログ テーブルによって使用されるテーブルスペースを識別します。|  
-|**オブジェクト id**|**int**|このコラムでは使用されませんしするためだけに含まれる、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)の表示、 **IHarticles**と互換性のあるテーブル、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューのための SQL Server の記事 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
+|**objid**|**int**|このコラムでは使用されませんしするためだけに含まれる、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)の表示、 **IHarticles**と互換性のあるテーブル、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューのための SQL Server の記事 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
 |**sync_objid**|**int**|このコラムでは使用されませんしするためだけに含まれる、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)の表示、 **IHarticles**と互換性のあるテーブル、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)ビューのための SQL Server の記事 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
 |**説明**|**nvarchar (255)**|アーティクルの説明エントリします。|  
 |**publisher_status**|**int**|パブリッシュされたアーティクルを定義するビューを呼び出すことによって定義されているかどうかを示すために使用される[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)です。<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されています。<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されていません。|  
@@ -76,9 +76,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

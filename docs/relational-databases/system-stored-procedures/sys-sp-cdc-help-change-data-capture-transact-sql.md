@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d3c187f86ab51d8a96a4ea0115830963f058ff1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 637b9edcc51832e37289057e4513ca18f30ef446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sys.sp_cdc_help_change_data_capture
 |start_lsn|**binary(10)**|変更テーブルをクエリする際の下端を表すログ シーケンス番号 (LSN) です。<br /><br /> NULL = 下端は設定されていません。|  
 |end_lsn|**binary(10)**|変更テーブルをクエリする際の上端を表す LSN です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、この列は常に NULL です。|  
 |supports_net_changes|**bit**|差分変更のサポートが有効になっています。|  
-|has_drop_pending|**bit**|は使用されません[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]です。|  
+|has_drop_pending|**bit**|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では使用されません。|  
 |role_name|**sysname**|変更データへのアクセスを制御するデータベース ロールの名前です。<br /><br /> NULL = ロールは使用されません。|  
 |index_name|**sysname**|ソース テーブル内の行を一意に識別するためのインデックス名です。|  
 |filegroup_name|**sysname**|変更テーブルが存在するファイル グループの名前です。<br /><br /> NULL = 変更テーブルは、データベースの既定のファイル グループに存在します。|  
@@ -92,7 +92,7 @@ sys.sp_cdc_help_change_data_capture
 ## <a name="remarks"></a>解説  
  ときに両方*source_schema*と*source_name*既定で NULL の場合、または、NULL を明示的に設定されてこのストアド プロシージャは、呼び出し元が選択できるキャプチャ インスタンス、データベースのすべての情報を返しますアクセスします。 ときに*source_schema*と*source_name*は NULL 以外で、特定の名前付きの有効なテーブルに関する情報のみが返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ときに*source_schema*と*source_name*が NULL の場合、呼び出し元の承認は、有効なテーブルは、結果セットに含まれるを決定します。 呼び出し元には、キャプチャ インスタンスのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、テーブル情報を含める場合は、定義されたすべてのゲーティング ロールのメンバーシップも必要です。 db_owner データベース ロールのメンバーは、定義されたすべてのキャプチャ インスタンスに関する情報を表示できます。 特定の有効なテーブルの情報を要求する場合は、指定したテーブルについて、同じ SELECT およびメンバーシップ基準が適用されます。  
   
 ## <a name="examples"></a>使用例  

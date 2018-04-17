@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  宣言されていないパラメーターに関するメタデータを含む結果セットを返す、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 使用されている各パラメーターの検討、  **@tsql** バッチで宣言されていないが、  **@params**です。 これらの各パラメーターに対して 1 行のデータを含む結果セットが返されます。そのパラメーターについて推論される型の情報も含まれます。 このプロシージャには空の結果セットが返されます、  **@tsql** 入力バッチで宣言されている以外のパラメーターを持たない **@params**です。  
+  宣言されていないパラメーターに関するメタデータを含む結果セットを返す、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 使用されている各パラメーターの検討、 **@tsql**バッチで宣言されていないが、  **@params**です。 これらの各パラメーターに対して 1 行のデータを含む結果セットが返されます。そのパラメーターについて推論される型の情報も含まれます。 このプロシージャには空の結果セットが返されます、 **@tsql**入力バッチで宣言されている以外のパラメーターを持たない **@params**です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +53,7 @@ sp_describe_undeclared_parameters
  1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
   
  [  **@params =** ] **N'***パラメーター***'**  
- @paramsパラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
+ @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
   
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む*Transact SQL_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 TRANSACT-SQL ステートメントまたはステートメント内のバッチにパラメーターが含まれない場合@paramsは必要ありません。 このパラメーターの既定値は NULL です。  
   
@@ -83,11 +84,11 @@ sp_describe_undeclared_parameters
 |**suggested_xml_collection_database**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**suggested_xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**suggested_xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
-|**suggested_is_xml_document**|**ビット NOT NULL**|返される型が XML とその型が XML ドキュメントであることを保証する場合は、1 を返します。 それ以外の場合は 0 を返します。|  
-|**suggested_is_case_sensitive**|**ビット NOT NULL**|列がない場合に区別して文字列型と 0 の場合は、1 を返します。|  
-|**suggested_is_fixed_length_clr_type**|**ビット NOT NULL**|この列が固定長の CLR 型の場合は 1、それ以外の場合は 0 を返します。|  
-|**suggested_is_input**|**ビット NOT NULL**|パラメーターが、代入の左辺以外の場所で使用される場合は 1 を返します。 それ以外の場合は 0 を返します。|  
-|**suggested_is_output**|**ビット NOT NULL**|パラメーターが代入の左辺で使用される場合、またはストアド プロシージャの出力パラメーターに渡される場合は 1 を返します。 それ以外の場合は 0 を返します。|  
+|**suggested_is_xml_document**|**bit NOT NULL**|返される型が XML とその型が XML ドキュメントであることを保証する場合は、1 を返します。 それ以外の場合は 0 を返します。|  
+|**suggested_is_case_sensitive**|**bit NOT NULL**|列がない場合に区別して文字列型と 0 の場合は、1 を返します。|  
+|**suggested_is_fixed_length_clr_type**|**bit NOT NULL**|この列が固定長の CLR 型の場合は 1、それ以外の場合は 0 を返します。|  
+|**suggested_is_input**|**bit NOT NULL**|パラメーターが、代入の左辺以外の場所で使用される場合は 1 を返します。 それ以外の場合は 0 を返します。|  
+|**suggested_is_output**|**bit NOT NULL**|パラメーターが代入の左辺で使用される場合、またはストアド プロシージャの出力パラメーターに渡される場合は 1 を返します。 それ以外の場合は 0 を返します。|  
 |**formal_parameter_name**|**sysname NULL**|パラメーターがストアド プロシージャまたはユーザー定義関数の引数の場合は、対応する仮パラメーターの名前を返します。 それ以外の場合は NULL を返します。|  
 |**suggested_tds_type_id**|**int NOT NULL**|内部使用です。|  
 |**suggested_tds_length**|**int NOT NULL**|内部使用です。|  
@@ -172,7 +173,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   単純な推論  
   
-     場合 E (@p) =@pおよび TT (@p) が存在する、つまり場合、@pが直接、手順 2.、型推論アルゴリズムの冒頭に記載されている式のいずれかの引数には、データ型があると推測@pTT (にする@p). 例:  
+     場合 E (@p) =@pおよび TT (@p) が存在する、つまり場合、@pが直接、手順 2.、型推論アルゴリズムの冒頭に記載されている式のいずれかの引数には、データ型があると推測@pTT (にする@p). 以下に例を示します。  
   
     ```  
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -203,7 +204,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **varchar (8000)**、 **varchar (max)**、 **nvarchar (4000)**、および**nvarchar (max)** - その他の文字列データ型 (など**テキスト**、 **char (8000)**、 **nvarchar (30)**など) は考慮されません。  
   
-    -   **varbinary (8000)**と**varbinary (max)** -その他のバイナリ データ型は考慮されません (など**イメージ**、 **binary (8000)**、 **varbinary (30)**, などです。)。  
+    -   **varbinary (8000)**と**varbinary (max)** -その他のバイナリ データ型は考慮されません (など**イメージ**、 **binary (8000)**、 **varbinary(30)**, などです。)。  
   
     -   **日付**、 **time (7)**、 **smalldatetime**、 **datetime**、 **datetime2 (7)**、 **datetimeoffset (7)** - その他の日付し、時刻型のように**time(4)**とは見なされません。  
   
@@ -220,7 +221,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  電子メールで暗黙的な変換の最小数を生成するデータ型 (@p) を選択します。 特定のデータ型が、電子メールのデータの種類を生成するかどうか (@p) TT とは異なる (@p)、型推論アルゴリズムでは、この電子メールのデータ型から余分な暗黙的な変換では考慮 (@p) TT に (@p)。  
   
-     例:  
+     以下に例を示します。  
   
     ```  
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     この場合、 **int**と**smallint** 1 つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**よりも優先**smallint**、 **int**はため@pです。 データ型の優先順位の詳細については、次を参照してください。[データ型の優先順位 &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+     この場合、 **int**と**smallint** 1 つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**よりも優先**smallint**、 **int**はため@pです。 データ型の優先順位の詳細については、次を参照してください。[データ型の優先順位&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)です。  
   
      このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリで`SELECT @p FROM t`、任意のデータの型のためのデータ型の推論は失敗@p同等になります。 たとえばからの暗黙的な変換はありません**int**に**xml**です。  
   
@@ -254,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  最後の例として、クエリについて考えてみます`SELECT NULL + @p`、 **int**に選択されている@p型 (c) 変換の結果となるためです。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行する権限が必要です、@tsql引数。  
   
 ## <a name="examples"></a>使用例  
@@ -280,8 +281,8 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

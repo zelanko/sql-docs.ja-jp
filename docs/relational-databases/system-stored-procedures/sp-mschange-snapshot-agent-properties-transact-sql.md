@@ -1,16 +1,16 @@
 ---
-title: "sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c503aafed87719edd03996142ad6a47e34a68106
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b3219fc1832d781e3156ec4a2284c3a8e861db67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@frequency_type =** ] *frequency_type*  
@@ -109,10 +109,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値はありません。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  スナップショット エージェントを最初にスケジュール設定する日付を、YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値はありません。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  スナップショット エージェントのスケジュール設定を停止する日付を、YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値はありません。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
@@ -124,28 +124,28 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
  既存のジョブが使用されている場合、既存のスナップショット エージェントのジョブ名を指定します。 *snapshot_agent_name*は**nvarchar (100)**、既定値はありません。  
   
- [  **@publisher_security_mode** =] *publisher_security_mode*  
+ [ **@publisher_security_mode**=] *publisher_security_mode*  
  パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値はありません。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] **'***publisher_login***'**  
- パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login*が NULL で publisher*_**security_mode*は**1**で指定された Windows アカウント、 *job_login*パブリッシャーに接続するときに使用されます。  
+ [ **@publisher_login**=] **'***publisher_login***'**  
+ パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login*が NULL で publisher*_ * * security_mode*は**1**で指定した Windows アカウント*job_login*されますパブリッシャーに接続するときに使用されます。  
   
- [  **@publisher_password** =] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'***publisher_password***'**  
  パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**nvarchar (524)**、既定値はありません。  
   
 > [!IMPORTANT]  
 >  スクリプト ファイルに認証情報を格納しないでください。 セキュリティを強化するため、実行時にログイン名とパスワードを指定することをお勧めします。  
   
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。 新しいスナップショット エージェント ジョブを作成するときにはこのパラメーターを指定する必要があります。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。 新しいスナップショット エージェント ジョブを作成するときにはこのパラメーターを指定する必要があります。  
   
 > [!IMPORTANT]  
 >  スクリプト ファイルに認証情報を格納しないでください。 セキュリティを強化するため、実行時にログイン名とパスワードを指定することをお勧めします。  
   
- [  **@publisher_type** =] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'***publisher_type***'**  
  パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで実行されていないときのパブリッシャーの種類を指定します。 *publisher_type*は**sysname**値は次のいずれかを指定できます。  
   
 |値|Description|  
@@ -166,7 +166,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
  インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要ありますまたは[sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)スナップショット エージェント ジョブのプロパティを変更します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_snapshot_agent_properties**です。  
   
 ## <a name="see-also"></a>参照  

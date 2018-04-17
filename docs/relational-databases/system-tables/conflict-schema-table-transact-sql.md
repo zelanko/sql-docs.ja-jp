@@ -1,16 +1,16 @@
 ---
-title: "conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfb2f078495256ee53d021bb09801323bdca094f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d9c5faa805785b856aca59ff2cd026b6ee9cf5c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/21/2017
 |__$pre_version|**varbinary (32)**|競合する変更が発生したデータベースのバージョンです。|  
 |__$reason_code|**int**|競合の解決コード。 次の値のいずれかです。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、次を参照してください。 **_ _ $reason_text**です。|  
 |__$reason_text|**nvarchar (720)**|競合の解決。 次の値のいずれかです。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
-|__$update_bitmap|**varbinary (**  *n*  **)**です。 サイズは、内容によって異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
+|__$update_bitmap|**varbinary (** *n* **)**です。 サイズは、内容によって異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
 |__$inserted_date|**datetime**|競合する行がこのテーブルに挿入された日時です。|  
 |__$row_id|**timestamp**|競合の原因となった行に関連付けられている行バージョンです。|  
 |__$change_id|**binary (8)**|ローカル行の場合、この値はローカル行と競合している挿入行の __$row_id に等しくなります。 挿入行の場合、この値は NULL です。|  
 |\<ベース テーブルの列名 >|\<テーブル列の型を基本 >|この競合テーブルにはベース テーブルの列ごとに 1 行のデータが格納されます。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

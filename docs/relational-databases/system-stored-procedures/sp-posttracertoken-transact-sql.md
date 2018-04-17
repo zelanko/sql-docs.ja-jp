@@ -2,7 +2,7 @@
 title: sp_posttracertoken (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedur+I741es
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79102a0a4c9e0b2122b23f01a7e7808c0d610967
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b020aa95aa4f07732843cf360048e63f1d99f7cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_posttracertoken [ @publication = ] 'publication'
  [ **@publication**=] **'***パブリケーション***'**  
  待機時間を計測しているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@tracer_token_id=** ] *tracer_token_id***出力**  
+ [  **@tracer_token_id=** ] *@tracer_token_id * * * 出力**  
  挿入されたトレーサー トークンの ID です。 *tracer_token_id*は**int**既定値は NULL の場合、これは、出力パラメーターです。 この値を実行するために使用できます[sp_helptracertokenhistory (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)または[sp_deletetracertokenhistory (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)最初実行することがなく[sp_helptracertokens (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
  [  **@publisher=** ] **'***パブリッシャー***'**  
@@ -68,7 +68,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_posttracertoken**です。  
   
 ## <a name="see-also"></a>参照  

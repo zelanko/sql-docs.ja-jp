@@ -1,29 +1,30 @@
 ---
-title: "バインドとデータの転送のテーブル値パラメーターと列の値 |Microsoft ドキュメント"
-ms.custom: 
+title: バインドとデータの転送のテーブル値パラメーターと列の値 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 738981ef92321f4989497b20d027667698065a75
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fe37d43513051134632215cc6b551d8ec471b736
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>テーブル値パラメーターおよび列の値のバインドとデータ転送
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,6 +100,6 @@ ms.lasthandoff: 01/24/2018
 6.  SQLParamData を再度呼び出します。 テーブル値パラメーター列間のすべての実行時データ パラメーターがある場合、値によって識別されます*ValuePtrPtr* SQLParamData によって返されます。 すべての列値が使用できる場合は、SQLParamData が再び返さ、 *ParameterValuePtr*テーブル値パラメーター、およびアプリケーションの値がもう一度開始します。  
   
 ## <a name="see-also"></a>参照  
- [テーブル値パラメーター &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

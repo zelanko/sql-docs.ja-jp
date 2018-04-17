@@ -1,16 +1,16 @@
 ---
-title: "sp_schemafilter (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_schemafilter (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 635a9d8fc39ea3621c4ba9b11f54300c19ec1011
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dfa3e7382988a83764302d686815a23781709389
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher**  =] **'***パブリッシャー***'**  
+ [**@publisher** =] **'***パブリッシャー***'**  
  以外の名前を指定します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [ **@schema**  =] **'***スキーマ***'**  
+ [**@schema** =] **'***スキーマ***'**  
  スキーマの名前を指定します。 *スキーマ*は**sysname**既定値は NULL です。  
   
- [ **@operation**  =] **'***操作***'**  
+ [**@operation** =] **'***操作***'**  
  このスキーマで実行されるアクションです。 *操作*は**nvarchar (4)**値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
-|**追加**|指定されたスキーマを、パブリケーションに適さないスキーマの一覧に追加します。|  
-|**ドロップ**|指定されたスキーマを、パブリケーションに適さないスキーマの一覧から削除します。|  
+|**add**|指定されたスキーマを、パブリケーションに適さないスキーマの一覧に追加します。|  
+|**drop**|指定されたスキーマを、パブリケーションに適さないスキーマの一覧から削除します。|  
 |**ヘルプ**|パブリケーションに適さないスキーマの一覧を返します。|  
   
 ## <a name="result-sets"></a>結果セット  
@@ -75,7 +75,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_schemafilter**異種パブリッシャーでのみ使用する必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_schemafilter**です。  
   
 ## <a name="see-also"></a>参照  

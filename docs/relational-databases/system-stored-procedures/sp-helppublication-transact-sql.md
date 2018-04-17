@@ -1,16 +1,16 @@
 ---
-title: "sp_helppublication (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helppublication (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa78ce2aa9ed1ba80a7ee733a2e458ba231d968f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'***パブリケーション***'**  
- 表示するパブリケーションの名前を指定します。 *パブリケーション*は sysname で、既定値は **%** 、すべてのパブリケーションに関する情報が返されます。  
+ [ **@publication =** ] **'***publication***'**  
+ 表示するパブリケーションの名前を指定します。 *パブリケーション*は sysname で、既定値は**%**、すべてのパブリケーションに関する情報が返されます。  
   
  [  **@found =** ] **'***見つかった***'**出力  
  行を返すことを示すフラグです。 *見つかった*は**int**と、既定値は、出力パラメーター **23456**です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は sysname で、既定値は NULL です。  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|スナップショット エージェントが、新しいサブスクリプションでそのまま使用できるスナップショットを作成するかどうかを示します。 新しいサブスクリプションまたは再初期化されたサブスクリプションに対して常にスナップショットが提供されるようパブリケーションが設定されている場合のみ、このパラメーターを定義します。|  
 |allow_sync_tran|**bit**|かどうか、パブリケーションでは、即時更新サブスクリプションが許可されます。|  
 |autogen_sync_procs|**bit**|サブスクリプションの即時更新をサポートするストアド プロシージャを自動的に生成するかどうかを示します。|  
-|snapshot_jobid|**binary (16)**|スケジュールされているタスクの ID。|  
+|snapshot_jobid|**binary(16)**|スケジュールされているタスクの ID。|  
 |retention|**int**|指定されたパブリケーションに関する変更を保存する期間 (時間単位)。|  
 |has subscription|**bit**|パブリケーションにアクティブなサブスクリプションがあるかどうかを示します。 **1**パブリケーションにアクティブなサブスクリプションにが含まれていることを意味し、 **0**パブリケーションのサブスクリプションがないことを意味します。|  
 |allow_queued_tran|**bit**|変更をパブリッシャーで適用できるようになるまで、サブスクライバーで変更をキューイングする機能を無効にするかどうかを示します。 場合**0**、サブスクライバーの変更はキュー登録されません。|  
@@ -109,7 +109,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされるかどうかを示します。 値**1**手段を以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートします。 値**0**手段だけである[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーをサポートします。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。|  
 |enabled_for_p2p_conflictdetection|**int**|ピア ツー ピア レプリケーションが有効になっているパブリケーションでの競合をディストリビューション エージェントが検出するかどうかを指定します。 値**1**競合が検出されることを意味します。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
 |originator_id|**int**|ピア ツー ピア トポロジ内のノードの ID を指定します。 場合、この ID は競合検出に対して使用**enabled_for_p2p_conflictdetection**に設定されている**1**です。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。|  
-|p2p_continue_onconflict|**int**|競合の検出時にディストリビューション エージェントで変更の処理を継続するかどうかを指定します。 値**1**エージェントは引き続き変更を処理することを意味します。<br /><br /> **\*\*注意\* \*** の既定値を使用することをお勧め**0**します。 このオプションを設定すると**1**、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
+|p2p_continue_onconflict|**int**|競合の検出時にディストリビューション エージェントで変更の処理を継続するかどうかを指定します。 値**1**エージェントは引き続き変更を処理することを意味します。<br /><br /> **\*\* 注意\* \*** の既定値を使用することをお勧め**0**します。 このオプションを設定すると**1**、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
 |alllow_partition_switch|**int**|パブリッシュされたデータベースに対して ALTER TABLE ... SWITCH ステートメントを実行できるかどうかを指定します。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
 |replicate_partition_switch|**int**|パブリッシュされたデータベースに対して実行される ALTER TABLE ... SWITCH ステートメントをサブスクライバーにレプリケーションする必要があるかどうかを指定します。 このオプションは有効な場合にのみ、 *allow_partition_switch*に設定されている**1**です。|  
   
@@ -124,16 +124,16 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  sp_helppublication を実行できるのは、パブリッシャーの sysadmin 固定サーバー ロールのメンバー、パブリケーション データベースの db_owner 固定データベース ロールのメンバー、またはパブリケーション アクセス リスト (PAL) のユーザーだけです。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーの場合、sp_helppublication を実行できるのは、ディストリビューターの sysadmin 固定サーバー ロールのメンバー、ディストリビューション データベースの db_owner 固定データベース ロールのメンバー、または PAL のユーザーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

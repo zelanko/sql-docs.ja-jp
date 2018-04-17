@@ -1,16 +1,16 @@
 ---
-title: "sp_setapprole (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_setapprole (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setapprole
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc1376391dcf0fefd0fb621d73817b8257b95bf9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4c87856430cfad29f8494bf1ed5f5269d0f0dce7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_setapprole [ @rolename = ] 'role',
 > [!IMPORTANT]  
 >  ODBC**暗号化**関数では、暗号化は提供されません。 ネットワーク経由で転送されるパスワードを保護する場合は、この関数は使用しないでください。 情報をネットワーク経由で転送する場合は、SSL または IPSec を使用します。  
   
- **@encrypt'none' を =**  
+ **@encrypt 'none' を =**  
  暗号化を使用しないことを示します。 パスワードはプレーンテキストとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に渡されます。 これは既定値です。  
   
  **@encrypt= 'odbc'**  
@@ -72,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
  クッキーを作成するかどうかを指定します。 **true**は 1 を暗黙的に変換します。 **false**は暗黙的に 0 に変換します。  
   
  [  **@cookie =** ]  **@cookie出力**  
- クッキーを含める出力パラメーターを指定します。 場合にのみ、クッキーが生成される値の **@fCreateCookie** は**true**です。 **varbinary (8000)**  
+ クッキーを含める出力パラメーターを指定します。 場合にのみ、クッキーが生成される値の**@fCreateCookie**は**true**です。 **varbinary(8000)**  
   
 > [!NOTE]  
 >  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)**を返します。 アプリケーションが継続して予約する必要があります**varbinary (8000)**アプリケーションのサイズの増加、将来のリリースでクッキーの戻り値が正しく動作を継続できるようにします。  
@@ -90,7 +90,7 @@ sp_setapprole [ @rolename = ] 'role',
 >   
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC**暗号化**では、オプションはサポートされていない**SqlClient**です。 資格情報を格納する必要がある場合は、Crypto API 関数を使用して暗号化します。 パラメーター*パスワード*一方向のハッシュとして格納されます。 旧バージョンとの互換性を維持する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、パスワードの複雑性ポリシーは適用されません**sp_addapprole**です。 パスワードの複雑性ポリシーを適用するのには、使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要**パブリック**し、ロールのパスワードを認識します。  
   
 ## <a name="examples"></a>使用例  
@@ -124,9 +124,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_unsetapprole &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_unsetapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
   
   

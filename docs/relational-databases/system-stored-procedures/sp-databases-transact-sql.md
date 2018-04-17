@@ -1,16 +1,16 @@
 ---
-title: "sp_databases (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_databases (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_databases_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 444dc643385d2bf26cbc95984473f0b68519c92a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5356e3e2ceb67202d7ed9e64973eccd1c13e9f64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ sp_databases
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|データベースの名前です。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に格納されている、この列は、データベース名を表す、 **sys.databases**カタログ ビューです。|  
 |**DATABASE_SIZE**|**int**|データベースのサイズをキロバイト数で表します。|  
-|**「解説」**|**varchar (254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]、このフィールドは常に NULL を返します。|  
+|**「解説」**|**varchar(254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]、このフィールドは常に NULL を返します。|  
   
 ## <a name="remarks"></a>解説  
  返されるデータベース名は、現在のデータベース状況を変更するために USE ステートメントでパラメーターとして使えます。  
   
  **sp_databases**を持たないそれと同等にオープン データベース コネクティビティ)。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  CREATE DATABASE 権限、ALTER ANY DATABASE 権限、または VIEW ANY DEFINITION 権限と、データベースへのアクセス許可が必要です。 また、VIEW ANY DEFINITION 権限は拒否されないことが条件となります。  
   
 ## <a name="examples"></a>使用例  
@@ -75,6 +75,6 @@ EXEC sp_databases;
   
 ## <a name="see-also"></a>参照  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [(&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/has-dbaccess-transact-sql.md)  
+ [&#40;TRANSACT-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

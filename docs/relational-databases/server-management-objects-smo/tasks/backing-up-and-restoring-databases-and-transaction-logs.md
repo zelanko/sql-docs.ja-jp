@@ -1,15 +1,15 @@
 ---
-title: "バックアップおよびデータベースとトランザクション ログを復元する |Microsoft ドキュメント"
-ms.custom: 
+title: バックアップおよびデータベースとトランザクション ログを復元する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12728d80dbae777438b4b9d63a2bc736d2f4ece5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c9f97eadc69df46e904c11c7c3d3df72949974ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/12/2018
  同様に、<xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Restore>オブジェクトが使用して作成する必要はありません、**作成**メソッドのインスタンスで任意のオブジェクトを表していないため[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください[Visual C &#35; を作成する。Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic でのデータベースおよびトランザクション ログのバックアップ  
  このコード例では、既存のデータベースをファイルにバックアップする方法と復元する方法を示します。  

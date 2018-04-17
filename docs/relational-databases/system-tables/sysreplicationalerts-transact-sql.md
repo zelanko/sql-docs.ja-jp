@@ -1,16 +1,16 @@
 ---
-title: "sysreplicationalerts (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysreplicationalerts (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46550c4b3cca05eb6d3c434562970084530d4063
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0b3cbb8ee462007f59eac4aea41a10e0253651b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ ms.lasthandoff: 11/21/2017
 |**publication_type**|**int**|パブリケーションの種類。<br /><br /> **0**スナップショットを = です。<br /><br /> **1** = トランザクションです。<br /><br /> **2**マージを = です。|  
 |**サブスクライバー**|**sysname**|この警告を発生したエージェントに関係するサブスクライバー名です。|  
 |**@subscriber_db**|**sysname**|この警告を発生したエージェントに関係するサブスクライバー データベース名です。|  
-|**アーティクル**|**sysname**|この警告を発生したエージェントに関係するアーティクル名です。|  
+|**article**|**sysname**|この警告を発生したエージェントに関係するアーティクル名です。|  
 |**destination_object**|**sysname**|警告に関係するサブスクリプション テーブル名です。|  
 |**source_object**|**sysname**|警告に関係するパブリッシュされたテーブル名です。|  
 |**alert_error_text**|**ntext**|警告のテキストです。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

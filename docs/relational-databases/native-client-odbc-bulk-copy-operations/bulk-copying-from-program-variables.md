@@ -1,15 +1,15 @@
 ---
-title: "プログラム変数から一括コピー |Microsoft ドキュメント"
-ms.custom: 
+title: プログラム変数から一括コピー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 255e91a51f92c09f8ed1ba872cb5c8bdc052fd52
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5f00c8542691fcbdd66e5a35151161b3a901f439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>プログラム変数からの一括コピー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 01/25/2018
 |ODBC SQL データ型|ODBC C データ型|bcp_bind*型*パラメーター|SQL Server データ型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **可変の文字**<br /><br /> **char のさまざまな**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **可変の文字**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]署名されていない**tinyint**、unsigned **smallint**、または符号なし**int**データ型。 値のデータの損失を防ぐためには、これらのデータ型を移行するときに、作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [次へ] の最大の整数データ型を持つテーブルです。 ユーザーが元のデータ型で許容されている範囲外の値を後から追加しないようにするには、次のようにルールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に適用し、ソースのデータ型でサポートされる範囲内に許容値を限定します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 署名されていない**tinyint**、unsigned **smallint**、または符号なし**int**データ型。 値のデータの損失を防ぐためには、これらのデータ型を移行するときに、作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [次へ] の最大の整数データ型を持つテーブルです。 ユーザーが元のデータ型で許容されている範囲外の値を後から追加しないようにするには、次のようにルールを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に適用し、ソースのデータ型でサポートされる範囲内に許容値を限定します。  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,7 +112,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]interval データ型を直接サポートされていませんしません。 アプリケーション、ただし、間隔のエスケープ シーケンスとして格納の文字列、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列です。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interval データ型を直接サポートされていませんしません。 アプリケーション、ただし、間隔のエスケープ シーケンスとして格納の文字列、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列です。 アプリケーションでは、後で使用するためにこれらのエスケープ シーケンスを読み取ることができますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内では使用できません。  
   
  一括コピー関数は、すばやくデータを読み込むために使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ODBC データ ソースから読み取られています。 使用して[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)プログラム変数に結果セットの列をバインドするを使用し、 **bcp_bind**一括コピーを同じプログラム変数をバインドします。 呼び出す[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)または**SQLFetch**したプログラム変数と呼び出し元に、ODBC データ ソースからデータの行をフェッチ[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)データの一括コピープログラム変数から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
@@ -120,6 +121,6 @@ GO
  データを読み取ることができません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を一括コピー; を使用してプログラム変数には"bcp_readrow"関数のようなものがありません。 実行できるのは、アプリケーションからサーバーへのデータの送信だけです。  
   
 ## <a name="see-also"></a>参照  
- [一括コピー &#40;ODBC&#41; を実行します。](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [一括コピー操作を実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

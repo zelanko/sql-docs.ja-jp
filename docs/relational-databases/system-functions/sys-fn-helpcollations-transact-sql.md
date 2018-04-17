@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_helpcollations (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_helpcollations (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_helpcollations
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - collations [SQL Server], supported
 - fn_helpcollations function
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc85244ca2f3ee810001b685a08960c2e4355998
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0ad1f8d41d4d4ecbbe6fd00f55310a64c4780c9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -55,7 +56,7 @@ fn_helpcollations ()
 |名前|**sysname**|標準の照合順序名。|  
 |Description|**nvarchar(1000)**|照合順序の説明。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 照合順序をサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]限られた数をサポート (< 80) と呼ばれる照合順序の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序の前に開発された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 照合順序をサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序は旧バージョンと互換性のため、引き続きサポートされますが、新しい開発作業では使用できません。 Windows 照合順序の詳細については、次を参照してください。 [Windows 照合順序名 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/windows-collation-name-transact-sql.md)。 照合順序の詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Windows 照合順序をサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が Windows 照合順序をサポートする前に開発された、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序と呼ばれる、限られた数 (<80) の照合順序をサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序は旧バージョンとの互換性を維持するためにサポートされていますが、新規の開発作業に使用しないでください。 Windows 照合順序について詳しくは、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」をご覧ください。 照合順序の詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)です。  
   
 
 ## <a name="examples"></a>使用例  
@@ -84,6 +85,6 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
   
 ## <a name="see-also"></a>参照  
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[COLLATIONPROPERTY &#40;TRANSACT-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Azure SQL データ ウェアハウスのデータベース照合順序のサポート](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
 

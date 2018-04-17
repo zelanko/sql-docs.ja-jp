@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43e2866c70c60e8b7c7b7f1eaffabebf53a98ebe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sys.sp_cdc_enable_table
   
  名前がソース スキーマ名の形式でソース テーブル名から派生した指定しない場合、 *schemaname_sourcename*です。 *capture_instance* 100 文字を超えることはできませんし、データベース内で一意である必要があります。 指定されるか、派生*capture_instance*文字列の右側にある空白は切り捨てられます。  
   
- ソース テーブルには、最大 2 つのキャプチャ インスタンスを割り当てることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ ソース テーブルには、最大 2 つのキャプチャ インスタンスを割り当てることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)です。  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  差分変更クエリのサポートをこのキャプチャ インスタンスで有効にするかどうかを示します。 *supports_net_changes*は**ビット**、既定値は、テーブルに主キーまたはテーブルに一意のインデックスを使用して識別された場合は 1、@index_nameパラメーター。 それ以外の場合、既定値は 0 になります。  
@@ -90,7 +90,7 @@ sys.sp_cdc_enable_table
   
  場合*supports_net_changes*を 1 に設定されている*index_name*指定する必要がありますか、ソース テーブルが主キーが定義にあります。  
   
- [  **@index_name =** ] **'***index_name*'  
+ [  **@index_name =** ] **' * * * index_name*'  
  ソース テーブル内の行を一意に識別するために使用する、一意のインデックスの名前を指定します。 *index_name*は**sysname** NULL にすることができます。 指定した場合*index_name*ソース テーブルの一意のインデックスを有効にする必要があります。 場合*index_name*が指定されているインデックス列よりも優先、定義された主キー列として、テーブルの一意の行の識別子。  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
@@ -100,7 +100,7 @@ sys.sp_cdc_enable_table
   
  *captured_column_list*列名のコンマ区切り一覧を示します。 個々の列名は、二重引用符 ("") または角かっこ ([]) で囲んで指定することもできます。 列名そのものにコンマが含まれる場合は、列名をこれらの記号で囲んで指定する必要があります。  
   
- *captured_column_list*次の予約済みの列名を含めることはできません: **_ _ $start_lsn**、 **_ _ $end_lsn**、 **_ _ $$seqval**、 **_ _$operation**、および**_ _ $update_mask**です。  
+ *captured_column_list*次の予約済みの列名を含めることはできません: **_ _ $start_lsn**、 **_ _ $end_lsn**、 **_ _ $$seqval**、 **_ _ $操作**、および**_ _ $update_mask**です。  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  キャプチャ インスタンスに対して作成された変更テーブルに使用するファイル グループを指定します。 *filegroup_name*は**sysname** NULL にすることができます。 指定した場合*filegroup_name*現在のデータベースを定義する必要があります。 NULL の場合は、既定のファイル グループが使用されます。  
@@ -135,7 +135,7 @@ sys.sp_cdc_enable_table
 > [!NOTE]  
 >  テーブルで変更データ キャプチャが有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている必要はありません。 ただし、キャプチャ プロセスがトランザクション ログの処理されず、しない限り、変更テーブルにエントリを書き込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが実行されています。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -172,10 +172,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_cdc_disable_table &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_ &#60; capture_instance &#62;。 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_ &#60; capture_instance &#62;。&#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

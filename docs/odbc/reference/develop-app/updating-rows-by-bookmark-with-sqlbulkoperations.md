@@ -1,15 +1,16 @@
 ---
-title: "SQLBulkOperations とブックマークによる行の更新 |Microsoft ドキュメント"
-ms.custom: 
+title: SQLBulkOperations とブックマークによる行の更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations とブックマークによる行の更新
 ブックマークで行を更新するときに**SQLBulkOperations**ようにデータ ソース テーブルの 1 つまたは複数の行を更新します。 行は、バインドされたブックマーク列内のブックマークで識別されます。 アプリケーションのバッファーで列の長さ/インジケーター バッファー内の値がの場合を除き SQL_COLUMN_IGNORE) バインドされた各列のデータを使用して、行が更新されます。 バインドされていない列は更新されません。  

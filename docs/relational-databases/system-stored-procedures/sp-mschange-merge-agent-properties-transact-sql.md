@@ -1,16 +1,16 @@
 ---
-title: "sp_MSchange_merge_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_MSchange_merge_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_merge_agent_properties_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3563086e662ceb1dbe5cb8e8ea5b96b0c9430cc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 421b8dc45dff0124f7bc9b6ce9471102fb7b1917
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@subscriber=** ] **'***サブスクライバー***'**  
@@ -98,11 +98,11 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要がある、または[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)ディストリビューター側で実行されているプッシュ サブスクリプションを同期するマージ エージェント ジョブのプロパティを変更します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_merge_agent_properties**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addmergepushsubscription_agent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

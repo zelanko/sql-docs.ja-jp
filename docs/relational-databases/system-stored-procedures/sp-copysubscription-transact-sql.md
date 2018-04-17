@@ -1,16 +1,16 @@
 ---
-title: "sp_copysubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_copysubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,23 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9feaac9bb5dfd23bbdd4422f3ad9908663bc64c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a8a6a53bc7f9b793dfef4b685c4d55033657a152
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
->  これはアタッチ可能なサブスクリプション機能ですが、使用は推奨されず、将来のリリースで削除されます。 この機能は、新しい開発作業では使用できません。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+>  これはアタッチ可能なサブスクリプション機能ですが、使用は推奨されず、将来のリリースで削除されます。 この機能は、新しい開発作業では使用できません。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  プル サブスクリプションはあるがプッシュ サブスクリプションはないサブスクリプション データベースをコピーします。 単一ファイルのデータベースのみをコピーできます。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
   
@@ -52,7 +52,7 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@filename =**] **'***file_name***'**  
+ [ **@filename =**] **'***file_name***'**  
  データ ファイル (.mdf) のコピーを保存する場所を表す、ファイル名を含む完全なパスの文字列を指定します。 *ファイル名*は**nvarchar (260)**、既定値はありません。  
   
  [  **@temp_dir=**] **'***temp_dir***'**  
@@ -71,11 +71,11 @@ sp_copysubscription [ @filename = ] 'file_name'
   
  **sp_copysubscription**はクライアント サブスクリプションを持つデータベースに対してのみサポートされ、データベースはサーバー サブスクリプションを持つときに実行されることはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_copysubscription**です。  
   
 ## <a name="see-also"></a>参照  
- [スナップショット フォルダーの代替位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [代替スナップショット フォルダーの場所](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

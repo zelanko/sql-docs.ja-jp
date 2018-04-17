@@ -1,35 +1,36 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: aaef7f97fe07d30061318d8cad08eb1b667e0ccb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  管理者が下すシステム管理に役立つセグメント単位でクラスター化列ストア インデックス情報を提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
+  管理者が下すシステム管理に役立つセグメント単位でクラスター化列ストア インデックス情報を提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。 **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. 使用して**sys.pdw_nodes_column_store_row_groups**行を判断するグループが削除された行の割合が高いと、再構築する必要があります。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="remarks"></a>解説  
  クラスター化または非クラスター化列ストア インデックスがある各テーブルの列ストア行グループごとに 1 つの行を返します。  
   
- Use **sys.pdw_nodes_column_store_row_groups** to determine the number of rows included in the row group and the size of the row group.  
+ 使用して**sys.pdw_nodes_column_store_row_groups**行グループおよび行グループのサイズに含まれる行の数を決定します。  
   
  行グループ内の削除済みの行の数が合計行数に対して占める割合が高くなると、テーブルの効率が低下します。 テーブルのサイズが小さくなるよう列ストア インデックスを再構築して、テーブルを読み取るために必要なディスク I/O を削減します。 使用して列ストア インデックスを再構築する、**リビルド**のオプション、 **ALTER INDEX**ステートメントです。  
   
@@ -58,9 +59,9 @@ ms.lasthandoff: 02/03/2018
  列ストア行グループは、いっぱいになると圧縮され、新しい行の受け入れを停止します。 圧縮されたグループから行が削除されると、削除された行は、保持されますが、削除済みとしてマークされます。 圧縮されたグループに対する更新は、圧縮されたグループからの削除、および OPEN 状態のグループへの挿入として実装されます。  
   
 ## <a name="permissions"></a>権限  
- 必要があります**VIEW SERVER STATE**権限です。  
+ **VIEW SERVER STATE** アクセス許可が必要です。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例の結合、 **sys.pdw_nodes_column_store_row_groups**特定のテーブルに関する情報を返すには、他のシステム テーブル。 計算済みの `PercentFull` 列は、行グループの効率の推定値を示します。 1 つのテーブルの削除については、WHERE 句の前にあるコメント ハイフンを検索し、テーブル名を指定します。  
   
 ```  
@@ -113,8 +114,8 @@ ORDER BY 1, 2
   
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [COLUMNSTORE INDEX &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [列ストア インデックスを作成する&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [sys.pdw_nodes_column_store_segments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

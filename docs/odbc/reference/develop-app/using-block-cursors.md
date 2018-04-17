@@ -1,31 +1,32 @@
 ---
-title: "ブロック カーソルの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: ブロック カーソルの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb2662ac4dcfc6a1f0fa2362bfc71f7a173bcd9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4dc772c1f572c294bccd664cdd8aa013b85d985b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-block-cursors"></a>ブロック カーソルを使用します。
 ODBC 3 には、ブロック カーソルのサポートが組み込まれています。*x*です。 **SQLFetch** ODBC 3 で呼び出されると、複数行のフェッチにのみ使用できます*。x*以外の場合は、ODBC 2 *。x*アプリケーション呼び出し**SQLFetch**単一行、順方向専用カーソルだけが開きます。 ODBC 3 時にします。*x*アプリケーション呼び出し**SQLFetch** ODBC 2 *。x*ドライバー、1 つの行を返しますこれには、ドライバーがサポートしていない限り**SQLExtendedFetch**です。 詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  

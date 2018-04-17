@@ -1,16 +1,16 @@
 ---
-title: "sp_mergearticlecolumn (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_mergearticlecolumn (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 083d6d27d9417a76f9cafc1c3726e3f7c10df6d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 383b9a3f9994fa8ad627e143b59beac666248596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1**マージ アーティクルへの変更は、スナップショットが無効であることで発生する可能性がありますを指定し、この場合の値であるかどうか**1**新しいスナップショットを作成する権限が与えられます。  
   
- [  **@force_reinit_subscription =]***更によって*  
+ [* *@force_reinit_subscription =] * * * 更によって*  
  サブスクリプションを再初期化する機能を有効または無効にします。 *更によって*は bit で、既定値は**0**します。  
   
  **0**マージ アーティクルへの変更では、サブスクリプションを再初期化するのには発生しませんを指定します。  
@@ -99,13 +99,13 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergearticlecolumn**です。  
   
 ## <a name="see-also"></a>参照  
- [マージ アーティクル間の結合フィルター定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelppublicationthresholds (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replmonitorhelppublicationthresholds (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62f7770bb8127beba19170a6ee60369f83a11c02
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fd9a16067e4a7a1f670d0d50e1b44ea949208e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db** =] **'***publisher_db***'**  
+ [ **@publisher_db**=] **'***publisher_db***'**  
  パブリッシャー データベースの名前を指定します。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@publication_type** =] *publication_type*  
+ [ **@publication_type**=] *publication_type*  
  パブリケーションの種類を指定します。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -75,7 +75,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|レプリケーション パフォーマンス測定基準の ID。次のいずれかになります。<br /><br /> **1expiration** -トランザクション パブリケーションに対するサブスクリプションの期限が近づいているを監視します。<br /><br /> **2latency** -トランザクション パブリケーションに対するサブスクリプションのパフォーマンスを監視します。<br /><br /> **4mergeexpiration** -マージ パブリケーションへのサブスクリプションに期限が迫っていないか監視します。<br /><br /> **5mergeslowrunduration** -低帯域 (ダイアル アップ) 接続でのマージ同期の期間を監視します。<br /><br /> **6mergefastrunduration** -高帯域 (LAN) 接続でのマージ同期の期間を監視します。<br /><br /> **7mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。<br /><br /> **8mergeslowrunspeed** -低帯域 (ダイアル アップ) 接続でのマージ同期の同期率を監視します。|  
 |**title**|**sysname**|レプリケーション パフォーマンス測定基準の名前。|  
-|**値**|**int**|パフォーマンス測定単位のしきい値。|  
+|**value**|**int**|パフォーマンス測定単位のしきい値。|  
 |**shouldalert**|**bit**|メトリックです。 このパブリケーションに対して定義されたしきい値を超えたときに、アラートが生成するかどうかは、します。値**1**アラートを発生させることを示します。|  
 |**isenabled**|**bit**|このレプリケーション パフォーマンス基準です。 このパブリケーション用の監視が有効になっているかどうかは、します。値**1**監視が有効になっていることを示します。|  
   
@@ -85,7 +85,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_replmonitorhelppublicationthresholds**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **db_owner**または**replmonitor**ディストリビューション データベースの固定データベース ロールが実行できる**sp_replmonitorhelppublicationthresholds**です。  
   
 ## <a name="see-also"></a>参照  

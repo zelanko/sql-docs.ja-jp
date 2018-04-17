@@ -1,16 +1,16 @@
 ---
-title: "sp_dropremotelogin (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_dropremotelogin (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropremotelogin
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9edb5db6819950e517f26bee0d144ef3cf567bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a20a89de5b84881deb793406e0d507fdcbc3525f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル サーバーに対してリモート ストアド プロシージャを実行する場合に使用される、ローカル ログインにマップされているリモート ログインを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]代わりに、リンク サーバーとリンク サーバー ストアド プロシージャを使用します。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 代わりに、リンク サーバーとリンク サーバー ストアド プロシージャを使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,8 +54,8 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
  [  **@remoteserver =** ] **'***remoteserver***'**  
  削除するリモート ログインにマップされているリモート サーバーの名前を指定します。 *remoteserver*は**sysname**、既定値はありません。 *remoteserver*既に存在する必要があります。  
   
- [  **@loginame =** ] **'***ログイン***'**  
- リモート サーバーに関連付けられているローカル サーバー上のログイン名を指定します (省略可能)。 *ログイン*は**sysname**、既定値は NULL です。 *ログイン*指定されている場合に既に存在する必要があります。  
+ [ **@loginame =** ] **'***login***'**  
+ リモート サーバーに関連付けられているローカル サーバー上のログイン名を指定します (省略可能)。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*指定されている場合に既に存在する必要があります。  
   
  [  **@remotename =** ] **'***remote_name***'**  
  マップされているリモート ログインの名前を省略可能な*ログイン*リモート サーバーからにログインします。 *remote_name*は**sysname**、既定値は NULL です。  
@@ -72,7 +72,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  **sp_dropremotelogin**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **sysadmin**または**securityadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -99,14 +99,14 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addremotelogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_addserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_addremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpremotelogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

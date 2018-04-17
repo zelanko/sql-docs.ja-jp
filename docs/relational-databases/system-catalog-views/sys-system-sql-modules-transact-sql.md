@@ -1,16 +1,16 @@
 ---
-title: "sys.system_sql_modules (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.system_sql_modules (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - system_sql_modules_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_sql_modules catalog view
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66917b2a30649119ee7921f4343d79765efbb8b1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d93bfae7d8fffd57ddcc02fe5f7bef1311b58eae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|モジュールを含むオブジェクトのオブジェクト識別番号。データベース内で一意です。|  
-|**定義**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。|  
+|**definition**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。|  
 |**uses_ansi_nulls**|**bit**|1 = モジュールは、SET ANSI_NULLS データベース オプションが ON の状態で作成されました。<br /><br /> 常に 1 を返します。|  
 |**uses_quoted_identifier**|**bit**|1 = モジュールは、SET QUOTED_IDENTIFIER ON の状態で作成されました。<br /><br /> 常に 1 を返します。|  
 |**is_schema_bound**|**bit**|0 = モジュールは、SCHEMABINDING オプションで作成されませんでした。<br /><br /> 常に 0 を返します。|  
@@ -50,13 +51,13 @@ ms.lasthandoff: 11/21/2017
 |**null_on_null_input**|**bit**|0 = モジュールは、NULL 入力に対して NULL 出力を生成するように作成されませんでした。<br /><br /> 常に 0 を返します。|  
 |**execute_as_principal_id**|**int**|常に NULL を返します|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.all_sql_modules &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
+ [sys.all_sql_modules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [オブジェクトのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

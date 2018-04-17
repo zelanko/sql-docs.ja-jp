@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_sql_referencing_entities
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9508681edc0d105e776dd5b580f6385bdb0d93a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name.referenced_entity_name*は**nvarchar (517)**です。  
   
- *<referenced_class>* ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }  
+ *< Referenced_class >* :: = {オブジェクト |型 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
  参照先エンティティのクラスを指定します。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
  *< referenced_class >*は**nvarchar**(60)。  
@@ -109,12 +110,12 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|可*|はい|  
 |表示|はい|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ * *|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数 (user-defined function)|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
 |CLR ユーザー定義関数|いいえ|はい|  
 |CLR トリガー (DML および DDL)|いいえ|いいえ|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー (DML trigger)|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] データベース レベルの DDL トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
 |拡張ストアド プロシージャ|いいえ|はい|  
@@ -124,7 +125,7 @@ sys.dm_sql_referencing_entities (
 |XML スキーマ コレクション|いいえ|はい|  
 |パーティション関数|いいえ|はい|  
   
- \*テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
+ \* テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   

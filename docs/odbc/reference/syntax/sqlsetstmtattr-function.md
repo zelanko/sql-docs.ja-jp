@@ -2,7 +2,7 @@
 title: SQLSetStmtAttr 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 関数
 **準拠**  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetStmtAttr(
   
  場合、*属性*引数は、ドライバー固有の値を*ValuePtr*符号付き整数である可能性があります。  
   
- *StringLength*  
+ *stringLength*  
  [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります\* *ValuePtr*. 場合*属性*ODBC で定義された属性と*ValuePtr*整数*StringLength*は無視されます。  
   
  場合*属性*ドライバーの定義済みの属性は、アプリケーション、ドライバー マネージャーに属性の性質を示す設定、 *StringLength*引数。 *StringLength*次の値を持つことができます。  
@@ -95,7 +95,7 @@ SQLRETURN SQLSetStmtAttr(
   
 -   場合*ValuePtr*し、固定長の値を含む*StringLength*は SQL_IS_INTEGER か SQL_IS_UINTEGER、必要に応じて。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

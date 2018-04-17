@@ -1,16 +1,16 @@
 ---
-title: "sp_unsetapprole (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_unsetapprole (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_unsetapprole_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c85e56a002f6f6105e9bc9a05dab48d61c07dbc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b4d766bee9f883bb0de24866465eb8a6b5de87b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>引数  
  **@cookie**  
- アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)。 **varbinary (8000)**です。  
+ アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)です。 **varbinary (8000)**です。  
   
 > [!NOTE]  
 >  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)**を返します。 アプリケーションが継続して予約する必要があります**varbinary (8000)**アプリケーションのサイズの増加、将来のリリースでクッキーの戻り値が正しく動作を継続できるようにします。  
@@ -60,7 +60,7 @@ sp_unsetapprole @cookie
   
  アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要**パブリック**とアプリケーション ロールがアクティブ化されたときに保存されたクッキーの情報です。  
   
 ## <a name="examples"></a>使用例  
@@ -85,10 +85,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_setapprole と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [APPLICATION ROLE &#40; を作成します。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)  
   
   

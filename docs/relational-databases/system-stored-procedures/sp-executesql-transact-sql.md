@@ -2,7 +2,7 @@
 title: sp_executesql (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -26,11 +26,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29c2557584393605ba0e89f45dc079dea6d5ddb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +67,7 @@ sp_executesql [ @stmt = ] statement
  [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
  @stmt に埋め込まれたすべてのパラメーターの定義が含まれている 1 つの文字列を指定します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された@stmtmustで定義されている@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに@stmtパラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL です。  
   
- [ @param1= ] '*value1*'  
+ [ @param1=] '*value1*'  
  パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 @stmt に含まれる各パラメーターに対して、パラメーター値を指定する必要があります。値が必要なときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに@stmtパラメーターを持たない。  
   
  [ OUT | OUTPUT ]  

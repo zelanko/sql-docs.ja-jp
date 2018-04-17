@@ -1,33 +1,34 @@
 ---
-title: "大きな CLR Udt (OLE DB) を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: 大きな CLR Udt (OLE DB) を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c71b1fbe580694098b58381d396266723a339f89
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f02ac3083752ad961de06b8a1c009d1ead52a78a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-large-clr-udts-ole-db"></a>大きな CLR UDT の使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、次を参照してください。 [Large CLR User-Defined 型 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)です。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
+  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)です。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
   
 ## <a name="example"></a>例  
  このサンプルには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  

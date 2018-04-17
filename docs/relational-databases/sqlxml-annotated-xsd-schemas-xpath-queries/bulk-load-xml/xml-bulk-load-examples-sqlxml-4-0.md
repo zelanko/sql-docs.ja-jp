@@ -1,16 +1,16 @@
 ---
-title: "XML 一括読み込みの例 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: XML 一括読み込みの例 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -34,20 +34,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-以下の例では、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の XML 一括読み込み機能について示します。 それぞれの例では、XSD スキーマと、同等の XDR スキーマを提供します。  
+  以下の例では、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の XML 一括読み込み機能について示します。 それぞれの例では、XSD スキーマと、同等の XDR スキーマを提供します。  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>一括読み込みスクリプト (ValidateAndBulkload.vbs)  
  次のスクリプトで記述された、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript)、XML DOM に XML ドキュメントを読み込みます以外の場合はスキーマに対して検証し場合、ドキュメントは、有効な実行、XML 一括読み込みに XML、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 このスクリプトは、後に示す個々の例で使用できます。  

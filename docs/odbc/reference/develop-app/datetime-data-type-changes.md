@@ -1,15 +1,16 @@
 ---
-title: "Datetime データ型の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: Datetime データ型の変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time data type [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c81717abdde1a8427df5e20e9241820ab11b5879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime-data-type-changes"></a>Datetime データ型の変更
 ODBC 3 です。*x*、識別子、日付、時刻、および timestamp SQL データ型は SQL_DATE、SQL_TIME、および SQL_TIMESTAMP から変更された (のインスタンスと**#define** 9、10、および 11 のヘッダー ファイルで)、SQL_TYPE_DATE にSQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (のインスタンスと**#define** 91、92、および 93 のヘッダー ファイルで)、それぞれします。 対応する C 型識別子から変更された SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP、それぞれします。  

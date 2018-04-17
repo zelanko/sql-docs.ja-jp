@@ -1,32 +1,32 @@
 ---
-title: "オブジェクト階層構文 (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: オブジェクト階層構文 (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23464c196392c8be8eee21ca37e6ee1adb1d2ebb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b217fa48f2bbaad1b8c2423dd701f0f839f8786b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>オブジェクト階層構文 (Transac-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE オブジェクト構文の詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のマニュアルを参照してください。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [sp_OACreate &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
+ HRESULT のリターン コードの詳細については、次を参照してください。 [sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)です。  
   
 ## <a name="examples"></a>使用例  
  SQL-DMO SQLServer オブジェクトを使用するオブジェクト階層構文の例を次に示します。  

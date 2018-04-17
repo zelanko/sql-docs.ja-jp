@@ -2,7 +2,7 @@
 title: SQLInstallDriverManager 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1769b4951662f99cd50709b498891540fd4b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8cc717380a0d168ef3142d3836da63958ee43cc3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 関数
 **準拠**  
@@ -60,7 +60,7 @@ BOOL SQLInstallDriverManager(
  *pcbPathOut*  
  [出力]合計バイト数 (null 終了バイトを除く) で返される*lpszPath*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbPathMax*、パス*lpszPath*に切り捨てられます*cbPathMax* null 終了負符号文字があります。 *PcbPathOut*引数が null ポインターを指定できます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

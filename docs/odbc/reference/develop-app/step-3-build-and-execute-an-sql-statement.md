@@ -1,30 +1,31 @@
 ---
-title: "手順 3: ビルドし、SQL ステートメントを実行 |Microsoft ドキュメント"
-ms.custom: 
+title: '手順 3: ビルドし、SQL ステートメントを実行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d2be6f4e75ebc774c17bd0d80eb37efec74499d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>手順 3: ビルドし、SQL ステートメントを実行
 3 番目の手順は、次の図に示すようにビルドし、SQL ステートメントを実行するです。 この手順を実行するために使用するメソッドは、大幅に異なる可能性があります。 アプリケーションは、SQL ステートメントを入力して、ユーザー入力に基づいて SQL ステートメントを作成するように求めるか、ハード コーディングされた SQL ステートメントを使用する可能性があります。 詳細については、次を参照してください。 [SQL ステートメントを構築する](../../../odbc/reference/develop-app/constructing-sql-statements.md)です。  

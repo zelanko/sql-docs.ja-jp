@@ -1,31 +1,32 @@
 ---
-title: "SQL には、c: タイムスタンプ |Microsoft ドキュメント"
-ms.custom: 
+title: 'SQL には、c: タイムスタンプ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d877c369a071dfc9c28f2500dc6584fe99808cfa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 66e6d84f713911b91bc55a8757bb6b149d6ec582
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-timestamp"></a>SQL から c: Timestamp へ
 ODBC SQL データ型 timestamp の識別子です。  
@@ -36,10 +37,10 @@ ODBC SQL データ型 timestamp の識別子です。
   
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > バイトの長さを文字<br /><br /> 20 < = *BufferLength* < 文字バイトの長さを =<br /><br /> *BufferLength* < 20|data<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 文字長<br /><br /> 20 < = *BufferLength* < 文字の長さを =<br /><br /> *BufferLength* < 20|data<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|データの文字の長さ<br /><br /> データの文字の長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|data<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|タイムスタンプの時刻部分は 0 を [a]<br /><br /> タイムスタンプの時刻部分が 0 以外の値 [a]|data<br /><br /> 切り捨てられたデータ [c]|6 [f]<br /><br /> 6 [f]|n/a<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > バイトの長さを文字<br /><br /> 20 < = *BufferLength* < 文字バイトの長さを =<br /><br /> *BufferLength* < 20|Data<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 文字長<br /><br /> 20 < = *BufferLength* < 文字の長さを =<br /><br /> *BufferLength* < 20|Data<br /><br /> 切り捨てられたデータ [b]<br /><br /> 未定義。|データの文字の長さ<br /><br /> データの文字の長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|Data<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|タイムスタンプの時刻部分は 0 を [a]<br /><br /> タイムスタンプの時刻部分が 0 以外の値 [a]|Data<br /><br /> 切り捨てられたデータ [c]|6 [f]<br /><br /> 6 [f]|n/a<br /><br /> 01S07|  
 |SQL_C_TYPE_TIME|タイムスタンプの秒の小数部の部分は、0 を [a]<br /><br /> タイムスタンプの秒の小数部の部分では 0 以外の値 [a]|データ [d]<br /><br /> 切り捨てられたデータ [d]、[電子メール]|6 [f]<br /><br /> 6 [f]|n/a<br /><br /> 01S07|  
 _C_TYPE_TIMESTAMP|タイムスタンプの秒部分の切り捨て [a]<br /><br /> タイムスタンプの秒部分の切り捨て [a]|データ [e]<br /><br /> 切り捨てられたデータ [e]|16 [f]<br /><br /> 16 [f]|n/a<br /><br /> 01S07|  
   

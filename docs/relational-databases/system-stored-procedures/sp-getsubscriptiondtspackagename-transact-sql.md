@@ -1,16 +1,16 @@
 ---
-title: "sp_getsubscriptiondtspackagename (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80eaff3653634de814935f31b9312ab5db17f0f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1aa05697db40ce3f76b138b0aa2744a23aede265
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  パブリケーションの名前です。 **'***パブリケーション***'**は**sysname**、既定値はありません。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
@@ -65,7 +65,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_getsubscriptiondtspackagename**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_getsubscriptiondtspackagename**です。  
   
   

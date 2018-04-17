@@ -1,16 +1,16 @@
 ---
-title: "sp_column_privileges (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_column_privileges (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f930dc96633f526259dccf89f7fb592a4f9caf10
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,13 +75,13 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|返される TABLE_NAME の各列の名前。 このフィールドは常に値を返します。|  
 |GRANTOR|**sysname**|COLUMN_NAME に対する権限を、表示される GRANTEE に与えたデータベース ユーザーの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列は常に TABLE_OWNER と同じです。 このフィールドは常に値を返します。<br /><br /> GRANTOR 列の値は、データベース所有者 (TABLE_OWNER) か、GRANT ステートメントで WITH GRANT OPTION 句を使用して、データベース所有者が権限を許可したユーザーになります。|  
 |GRANTEE|**sysname**|COLUMN_NAME に対する権限を、表示される GRANTOR によって与えられたデータベース ユーザーの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列には常に、sysusers テーブルに記録されているデータベース ユーザーが格納されます。 このフィールドは常に値を返します。|  
-|PRIVILEGE|**varchar (**32**)**|有効な列権限。 列権限は、次に挙げる値 (または実装が定義されるときにデータ ソースによってサポートされるその他の値) のいずれかになります。<br /><br /> SELECT。GRANTEE は、列からデータを取得できます。<br /><br /> INSERT。GRANTEE は、テーブルに新しい行を挿入したときにこの列のデータを設定できます。<br /><br /> UPDATE。GRANTEE は、列内の既存のデータを修正できます。<br /><br /> REFERENCES。GRANTEE は、主キー/外部キーのリレーションシップで外部テーブル内の列を参照できます。 主キー/外部キーのリレーションシップは、テーブル制約を使って定義できます。|  
+|PRIVILEGE|**varchar(**32**)**|有効な列権限。 列権限は、次に挙げる値 (または実装が定義されるときにデータ ソースによってサポートされるその他の値) のいずれかになります。<br /><br /> SELECT。GRANTEE は、列からデータを取得できます。<br /><br /> INSERT。GRANTEE は、テーブルに新しい行を挿入したときにこの列のデータを設定できます。<br /><br /> UPDATE。GRANTEE は、列内の既存のデータを修正できます。<br /><br /> REFERENCES。GRANTEE は、主キー/外部キーのリレーションシップで外部テーブル内の列を参照できます。 主キー/外部キーのリレーションシップは、テーブル制約を使って定義できます。|  
 |IS_GRANTABLE|**varchar (**3**)**|(「許可の許可」権限とも呼ばれます) の他のユーザーに権限を与える、権限付与対象ユーザーが許可されているかどうかを示します。 YES、NO、NULL のいずれかになります。 不明な値または NULL の場合は、"許可の許可" が適用されないデータ ソースであることを示します。|  
   
 ## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、権限は GRANT ステートメントで与え、REVOKE ステートメントで取り消します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

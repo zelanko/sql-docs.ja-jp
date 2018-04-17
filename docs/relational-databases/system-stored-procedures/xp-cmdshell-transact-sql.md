@@ -1,16 +1,16 @@
 ---
-title: "xp_cmdshell (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: xp_cmdshell (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_cmdshell
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bb3fcd3cba2be225c4c45514b2dcbc021683c0db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 詳細については、次を参照してください。 [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ 詳細については、次を参照してください。 [sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
- 悪意のあるユーザーが場合がありますを使用して、特権の昇格を試行するため**xp_cmdshell**、 **xp_cmdshell**は既定で無効になります。 使用して**sp_configure**または**ポリシー ベースの管理**有効にします。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ 悪意のあるユーザーが場合がありますを使用して、特権の昇格を試行するため**xp_cmdshell**、 **xp_cmdshell**は既定で無効になります。 使用して**sp_configure**または**ポリシー ベースの管理**有効にします。 詳細については、「[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  
   
  最初に有効な場合、 **xp_cmdshell**を実行する、CONTROL SERVER 権限とによって作成される Windows プロセスが必要です**xp_cmdshell**と同じセキュリティ コンテキストを持つ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウント。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントは多くの場合、によって作成されるプロセスで実行される作業のために必要な以上のアクセス許可を持っている**xp_cmdshell**です。 アクセスをセキュリティ強化のため、 **xp_cmdshell**高い特権を持つユーザーに制限する必要があります。  
   
@@ -178,9 +178,9 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ## <a name="see-also"></a>参照  
- [汎用拡張ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

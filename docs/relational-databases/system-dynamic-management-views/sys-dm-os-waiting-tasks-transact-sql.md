@@ -2,7 +2,7 @@
 title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c21fa8cd03079695ddc8b94e9b2dc2ab105b2b5
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3b399543fbcd2bfc025f854caf18b015973eb81b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/05/2018
   
  **ロック リソース所有者:**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<型の説明固有 & > id = = ロック\<ロックから 16 進 アドレス > モード =\<モード > associatedObjectId =\<関連付けられたオブジェクト id >  
   
      **\<型の説明固有 & > を指定できます。**  
   

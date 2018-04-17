@@ -1,16 +1,16 @@
 ---
-title: "sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.QUERY_STORE_RUNTIME_STATS_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf026cb9beff10c6570a94bdd805aa2b78c0a4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59e280a58f0b220ea7bff6f530833f16ba69dfe3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|ランタイム実行統計情報を表す行の識別子、 **plan_id**、 **execution_type**と**runtime_stats_interval_id**です。 これは、ランタイム統計情報の過去の時間間隔に対してのみ一意です。 現在アクティブな間隔のある可能性があります複数の行によって参照されるプランの実行時統計を表す**plan_id**、によって表される実行の種類と**execution_type**です。 通常、1 つの行がフラッシュされたランタイム統計情報を表すその他の (s) がメモリ内状態を表すに対し、ディスクにします。 そのため、すべての間隔の実際の状態を取得する必要があります、集計されたメトリックによってグループ化**plan_id**、 **execution_type**と**runtime_stats_interval_id**です。 |  
-|**plan_id**|**bigint**|外部キーです。 結合[sys.query_store_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|外部キーです。 結合[sys.query_store_runtime_stats_interval &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|外部キーです。 結合[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)です。|  
+|**runtime_stats_interval_id**|**bigint**|外部キーです。 結合[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)です。|  
 |**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 ～ 通常の実行 (が正常に完了)<br /><br /> 3 – クライアントによって起動される実行を中止します。<br /><br /> 4-例外は、実行を中止します。|  
-|**execution_type_desc**|**nvarchar (128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 – 標準<br /><br /> 3 – 中止されました<br /><br /> 4-例外|  
+|**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキスト。<br /><br /> 0 – 標準<br /><br /> 3 – 中止されました<br /><br /> 4-例外|  
 |**first_execution_time**|**datetimeoffset**|集計間隔内に、クエリ プランの最初の実行時間。|  
 |**last_execution_time**|**datetimeoffset**|クエリの最後の実行時間は、集計間隔に含まれる計画します。|  
 |**count_executions**|**bigint**|集計間隔内でクエリ プランの実行数の合計数。|  
@@ -100,19 +101,19 @@ ms.lasthandoff: 11/21/2017
 |**max_log_bytes_used**|**bigint**|集計間隔内で、クエリ プランで使用されるデータベースのログのバイト数の最大数。  適用**Azure SQL データベースにのみ**です。| 
 |**stdev_log_bytes_used**|**float**|集計間隔内でのクエリ プランで使用されるデータベースのログのバイト数の標準偏差。  適用**Azure SQL データベースにのみ**です。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、 **VIEW DATABASE STATE**権限です。  
   
 ## <a name="see-also"></a>参照  
- [sys.database_query_store_options &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [クエリ ストアのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [クエリ ストアのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

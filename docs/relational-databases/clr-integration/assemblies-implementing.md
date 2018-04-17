@@ -1,33 +1,33 @@
 ---
-title: "アセンブリの実装 |Microsoft ドキュメント"
-ms.custom: 
+title: アセンブリの実装 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e295b80f737bbfcb3c9184974eb82e043da9b0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---implementing"></a>アセンブリの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、データベースにアセンブリを実装し、それらのアセンブリを使用して作業するのに役立つ次の情報について説明します。  
+  このトピックでは、データベースにアセンブリを実装し、それらのアセンブリを使用して作業するのに役立つ次の情報について説明します。  
   
 -   アセンブリの作成  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 02/09/2018
   
  **SQL Server Management Studio を使用してアセンブリを作成するには**  
   
--   [アセンブリのプロパティ &#40;です。[全般] ページ &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [アセンブリのプロパティ&#40;[全般] ページ&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>アセンブリの変更  
  アセンブリの変更は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ではアセンブリ支援エディターを使用して行います。 次の操作を行うと、アセンブリを変更できます。  
   
 -   アセンブリの新しいバージョンのバイナリをアップロードして、アセンブリの実装を変更します。 詳細については、次を参照してください。[アセンブリのバージョン管理](#_managing)このトピックで後述します。  
   
--   アセンブリの権限セットを変更します。 詳細については、次を参照してください。[アセンブリの設計](../../relational-databases/clr-integration/assemblies-designing.md)です。  
+-   アセンブリの権限セットを変更します。 詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」を参照してください。  
   
 -   アセンブリの表示設定を変更します。 表示されるアセンブリは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で参照できます。 表示されないアセンブリは、データベースにアップロードされている場合でも参照できません。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードされたアセンブリは表示されます。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
   
  **SQL Server Management Studio を使用してアセンブリを変更するには**  
   
--   [アセンブリのプロパティ &#40;です。[全般] ページ &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [アセンブリのプロパティ&#40;[全般] ページ&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>アセンブリの削除、無効化、および有効化  
  アセンブリの削除は、[!INCLUDE[tsql](../../includes/tsql-md.md)] DROP ASSEMBLY ステートメントまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して行います。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a>アセンブリのバージョンを管理  
+##  <a name="_managing"></a> アセンブリのバージョンを管理  
  アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアップロードすると、そのアセンブリはデータベース システム カタログ内に格納され、管理されます。 内のアセンブリの定義に加えられた変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]データベース カタログに格納されているアセンブリに反映する必要があります。  
   
  アセンブリを変更する必要がある場合は、ALTER ASSEMBLY ステートメントを実行してデータベース内のアセンブリを更新する必要があります。 これにより、アセンブリの実装を保持している [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新のコピーにアセンブリが更新されます。  
@@ -93,14 +93,14 @@ ms.lasthandoff: 02/09/2018
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] の関数またはメソッドによってアセンブリ内のメソッドを直接または間接的に参照する、永続化された計算列。  
   
--   アセンブリと型を実装に依存する CLR ユーザー定義型の列、 **UserDefined** (非**ネイティブ**) シリアル化形式。  
+-   アセンブリに依存する CLR ユーザー定義型の列と、**UserDefined** (非**ネイティブ**) シリアル化形式を実装する型の列。  
   
 > [!CAUTION]  
->  WITH UNCHECKED DATA を指定しない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ALTER ASSEMBLY がアセンブリの新しいバージョンのテーブル、インデックス、またはその他の永続的なサイトの既存のデータに影響を実行することを防止しようとしています。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR アセンブリの更新時に、計算列、インデックス、インデックス付きビュー、または式が、基になるルーチンや型と一致することは保証されません。 ALTER ASSEMBLY を実行する場合は、式の結果とアセンブリ内の式に基づく値との間に不一致が生じないように注意する必要があります。  
+>  WITH UNCHECKED DATA を指定せず、新しいバージョンのアセンブリによってテーブルの既存のデータ、インデックス、または他の固有サイトに影響が生じる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ALTER ASSEMBLY の実行回避が試みられます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR アセンブリの更新時に、計算列、インデックス、インデックス付きビュー、または式が、基になるルーチンや型と一致することは保証されません。 ALTER ASSEMBLY を実行する場合は、式の結果とアセンブリ内の式に基づく値との間に不一致が生じないように注意する必要があります。  
   
  メンバーにのみ、 **db_owner**と**db_ddlowner**固定データベース ロールは、WITH UNCHECKED DATA 句を使用して、ALTER ASSEMBLY を実行することができます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内に未チェック データでアセンブリが変更されている Windows アプリケーション イベント ログへのメッセージをポストします。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 **Has_unchecked_assembly_data**の列、 **sys.tables**カタログ ビューには、未チェック データ、および unchecked data を含まないテーブルに対して 0 を含むテーブルの値 1 が含まれています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、テーブル内に未チェック データがある状態でアセンブリが変更されたというメッセージを Windows アプリケーション イベント ログに記録します。 さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのアセンブリに依存するデータを含んでいるすべてのテーブルに、未チェック データを含むテーブルであるというマークを付けます。 **Has_unchecked_assembly_data**の列、 **sys.tables**カタログ ビューには、未チェック データ、および unchecked data を含まないテーブルに対して 0 を含むテーブルの値 1 が含まれています。  
   
  未チェック データの整合性を解決するを持つ各テーブルに対して DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS を実行未チェック データ。 EXTENDED_LOGICAL_CHECKS で DBCC CHECKDB が失敗した場合、いずれかが無効か、問題を解決するアセンブリ コードを変更するテーブルの行を削除して追加の ALTER ASSEMBLY ステートメントを発行します。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 02/09/2018
 -   [アセンブリの変更と &#40; です。Transact SQL と &#41; です。](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [アセンブリ &#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [アセンブリ (&) #40";"データベース エンジン"&"#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [アセンブリに関する情報の取得](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

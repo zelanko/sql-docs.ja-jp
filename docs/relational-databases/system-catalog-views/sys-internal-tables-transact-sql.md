@@ -1,16 +1,16 @@
 ---
-title: "sys.internal_tables (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.internal_tables (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.internal_tables
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc5ab8560914be149128c55f563bc9e5b422d4d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9f0f30bc972bf0af35d582b908da6e163917b965
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ ms.lasthandoff: 11/21/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)です。|  
 |**internal_type**|**tinyint**|内部テーブルの種類。<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (空間インデックスなど)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**|  
-|**internal_type_desc**|**nvarchar (60)**|内部テーブルの種類の説明。<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
+|**internal_type_desc**|**nvarchar(60)**|内部テーブルの種類の説明。<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
 |**parent_id**|**int**|親の ID。スキーマのスコープが設定されているかどうかは関係ありません。 親が存在しない場合は 0 です。<br /><br /> **queue_messages** = **object_id**キューの<br /><br /> **xml_index_nodes** = **object_id** xml インデックスの<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**フルテキスト カタログの<br /><br /> **fulltext_index_map** = **object_id**フルテキスト インデックスの<br /><br /> **query_notification**、または**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**の空間インデックスなど拡張インデックスは、<br /><br /> **object_id**追跡が有効にするテーブルのテーブルの = **change_tracking**|  
 |**parent_minor_id**|**int**|親のマイナー ID。<br /><br /> **xml_index_nodes** = **index_id** XML インデックスの<br /><br /> **extended_indexes** = **index_id**の空間インデックスなど拡張インデックスは、<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**、または**change_tracking**|  
 |**lob_data_space_id**|**int**|0 以外の値の場合、このテーブルのラージ オブジェクト (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID。|  
 |**filestream_data_space_id**|**int**|将来の使用のために予約されています。|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="remarks"></a>解説  
  内部テーブルは、親エンティティと同じファイル グループに配置されます。 後半の例 F で示すカタログ クエリを使用して、内部テーブルが行内データ、行外データ、およびラージ オブジェクト (LOB) データに使用するページ数を返すことができます。  
@@ -182,6 +182,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [オブジェクトのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

@@ -1,31 +1,32 @@
 ---
-title: "垂直方向アプリケーション |Microsoft ドキュメント"
-ms.custom: 
+title: 垂直方向アプリケーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], vertical applications
 - vertical applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81f0b9b75a1431b071e20425ba7f0386fe7a1b00
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c53a7541757bb1f9dc6c9c21cf2fd56461ffa1c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vertical-applications"></a>垂直方向のアプリケーション
 垂直方向のアプリケーションは、通常 1 つの DBMS に対して適切に定義されたタスクを実行します。 たとえば、受注アプリケーションは、会社内の注文を追跡します。 どのようなアプリケーションのこれらの型が共通は、データベース スキーマは通常、アプリケーション開発者によってに設計された、アプリケーションは、さまざまな Dbms の数が動作可能性があります中、それと共に単一 DBMS 1 人の顧客のです。  

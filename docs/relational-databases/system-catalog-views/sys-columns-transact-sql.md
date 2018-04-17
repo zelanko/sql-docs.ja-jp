@@ -1,16 +1,16 @@
 ---
-title: "sys.columns (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.columns (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.columns_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.columns catalog view
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: baf6cff936e446dce22a3d6c7fe7431f09272d58
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a34920ed4b98537dd9a405123de1124480e0e693
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,30 +77,30 @@ ms.lasthandoff: 11/28/2017
 |is_xml_document|**bit**|1 = 内容が完全な XML ドキュメントです。<br /><br /> 0 = コンテンツは、ドキュメント フラグメントまたは列のデータ型が無効**xml**です。|  
 |xml_collection_id|**int**|列のデータ型の場合は 0 以外。 **xml** XML が型指定されたとします。 この値は、列の検証 XML スキーマ名前空間を含むコレクションの ID です。<br /><br /> 0 = いいえの XML スキーマ コレクションです。|  
 |default_object_id|**int**|スタンドアロン オブジェクトであるかどうかに関係なく、既定のオブジェクトの ID [sys.sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)、または、インラインの列レベルの既定の制約。 インラインの列レベルの既定のオブジェクトの parent_object_id 列は、テーブル自体への参照です。<br /><br /> 0 = 既定値はありません。|  
-|rule_object_id|**int**|sys.sp_bindrule を使用して列にバインドするスタンドアロン ルールの ID です。<br /><br /> 0 = スタンドアロン ルールはありません。 列レベルの CHECK 制約を参照してください。 [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|rule_object_id|**int**|sys.sp_bindrule を使用して列にバインドするスタンドアロン ルールの ID です。<br /><br /> 0 = スタンドアロン ルールはありません。 列レベルの CHECK 制約を参照してください。 [sys.check_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)です。|  
 |is_sparse|**bit**|1 = 列はスパース列です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 |is_column_set|**bit**|1 = 列は列セットです。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
-|generated_always_type|**tinyint**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 識別列の値が生成されたときに (システム テーブル内の列の場合は 0 になります)。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 詳細については、次を参照してください。[テンポラル テーブルと #40 です。リレーショナル データベース &#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar (60)**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 説明テキスト`generated_always_type`の値 (常にシステム テーブル内の列に対して NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 暗号化の種類:<br /><br /> 1 = 明確な暗号化<br /><br /> 2 = ランダム化された暗号化|  
-|encryption_type_desc|**nvarchar(64)**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 暗号化の種類の説明。<br /><br /> ランダム化<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 暗号化アルゴリズムの名前です。<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 のみがサポートされているとします。|  
-|column_encryption_key_id|**int**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> CEK の ID です。|  
-|column_encryption_key_database_name|**sysname**|**適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]です。<br /><br /> 列のデータベースと異なる場合、列の暗号化キーが存在するデータベースの名前。 列と同じデータベースに、キーが存在する場合は NULL です。|  
-|is_hidden|**bit**|**適用されます**:[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> かどうか、列が非表示を示します。<br /><br /> 0 = 正規、not 非、表示される列<br /><br /> 1 = 非表示の列|  
-|is_masked|**bit**|**適用されます**:[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。<br /><br /> 動的データ マスクによって、列がマスクされるかどうかを示します。<br /><br /> 0 = 標準、not マスクされた列<br /><br /> 1 = 列はマスクされて|  
+|generated_always_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 識別列の値が生成されたときに (システム テーブル内の列の場合は 0 になります)。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 詳細については、次を参照してください。[テンポラル テーブル&#40;リレーショナル データベース&#41;](../../relational-databases/tables/temporal-tables.md)です。|  
+|generated_always_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 説明テキスト`generated_always_type`の値 (常にシステム テーブル内の列に対して NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化の種類:<br /><br /> 1 = 明確な暗号化<br /><br /> 2 = ランダム化された暗号化|  
+|encryption_type_desc|**nvarchar(64)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化の種類の説明。<br /><br /> ランダム化<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化アルゴリズムの名前です。<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 のみがサポートされているとします。|  
+|column_encryption_key_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK の ID です。|  
+|column_encryption_key_database_name|**sysname**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 列のデータベースと異なる場合、列の暗号化キーが存在するデータベースの名前。 列と同じデータベースに、キーが存在する場合は NULL です。|  
+|is_hidden|**bit**|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> かどうか、列が非表示を示します。<br /><br /> 0 = 正規、not 非、表示される列<br /><br /> 1 = 非表示の列|  
+|is_masked|**bit**|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 動的データ マスクによって、列がマスクされるかどうかを示します。<br /><br /> 0 = 標準、not マスクされた列<br /><br /> 1 = 列はマスクされて|  
 
 
  
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [システム ビュー &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.all_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.system_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
+ [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.system_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
   
   

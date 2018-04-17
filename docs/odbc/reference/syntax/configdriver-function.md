@@ -2,7 +2,7 @@
 title: ConfigDriver 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1697b7e697760afee2b62c49bd24c2ab22c9201d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56825fd24bd452365d5c3279c6aa68db83bd2470
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configdriver-function"></a>ConfigDriver 関数
 **準拠**  
@@ -84,7 +84,7 @@ BOOL ConfigDriver(
   
  場合は、使用できるバイト数を返すより大きいまたは等しい*cbMsgMax*、内の出力メッセージ*lpszMsg*に切り捨てられます*cbMsgMax* null 終了負符号文字があります。 *PcbMsgOut*引数が null ポインターを指定できます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

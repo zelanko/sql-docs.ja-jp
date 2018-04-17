@@ -1,31 +1,32 @@
 ---
-title: "構造化照会言語 (SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: 構造化照会言語 (SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: babb38e88d471cedceaa94e3c6696f9b5b59dcce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="structured-query-language-sql"></a>構造化照会言語 (SQL) (Structured Query Language) (SQL)
 一般的な DBMS では、保存、アクセス、および整理された、効率的な方法でデータを変更することができます。 最初に、Dbms のユーザーには、プログラマがでした。 格納されたデータにアクセスする COBOL などのプログラミング言語で、プログラムの作成が必要です。 これらのプログラムは、技術スタッフ以外のユーザーにわかりやすいインターフェイスを提供する多くの場合、書き込まれた、データ自体へのアクセスでは、知識の豊富なプログラマのサービスが必要です。 カジュアル データにアクセスするが実用的なでした。  

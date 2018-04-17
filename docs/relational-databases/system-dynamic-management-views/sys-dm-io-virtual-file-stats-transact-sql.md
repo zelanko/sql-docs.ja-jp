@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_io_virtual_file_stats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_io_virtual_file_stats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_io_virtual_file_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6b704b626969110929436663fc5b8aadc0932e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -63,7 +64,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **適用対象:** SQL Server (2008年以降)、Azure SQL Database
+ **適用対象:** SQL Server (2008 以降)、Azure SQL Database
 
  データベースの ID です。 *database_id* int で既定値はありません。 有効な入力値は、データベースの ID 番号または NULL です。 NULL を指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベースが返されます。  
   
@@ -71,7 +72,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**適用対象:** SQL Server (2008年以降)、Azure SQL Database
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database
  
 ファイルの ID です。 *file_id* int で既定値はありません。 有効な入力値は、ファイルの ID 番号または NULL です。 NULL を指定した場合、データベース上のすべてのファイルが返されます。  
   
@@ -94,13 +95,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|ファイルでの I/O 完了をユーザーが待機した総時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|ファイルに対して使用されているディスク上のバイト数。 スパース ファイルの場合、この数値は、データベース スナップショットに使用されているディスク上の実際のバイト数になります。|  
 |**file_handle**|**varbinary**|ファイルの Windows ファイル ハンドル。|  
-|**io_stall_queued_read_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]です。<br /><br /> 読み取りの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_read_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]です。<br /><br /> 読み取りの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)です。|  
 |**io_stall_queued_write_ms**|**bigint**|**適用されません。**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]です。<br /><br />  書き込みの IO リソース管理によって発生した IO 待機時間の合計。 NULL 値は許可されません。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
   
 ## <a name="permissions"></a>権限  
- VIEW SERVER STATE 権限が必要です。 詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ VIEW SERVER STATE 権限が必要です。 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)です。  
   
 ## <a name="examples"></a>使用例  
 
@@ -127,7 +128,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [関連する動的管理ビューおよび関数 &#40; I、OTRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [I、O 関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

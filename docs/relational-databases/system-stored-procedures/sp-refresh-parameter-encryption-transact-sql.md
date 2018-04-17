@@ -1,16 +1,16 @@
 ---
-title: "sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_refresh_parameter_encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 564d0bd6479d185ce37e1f4c293d73b87756edf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベルの DDL トリガーの名前を指定します。 *モジュール名*共通言語ランタイム (CLR) ストアド プロシージャまたは CLR 関数にすることはできません。 *モジュール名*スキーマ バインドをすることはできません。 *モジュール名*は`nvarchar`、既定値はありません。 *モジュール名*マルチパートの識別子を指定できますが、現在のデータベース内のオブジェクトに参照できるのみです。
 
 [  **@namespace =** ] **'** < クラス > **'**   
-指定されたモジュールのクラスです。 ときに*モジュール名*、DDL トリガーは、`<class>`が必要です。 `<class>`is `nvarchar(20)`. 有効な入力は`DATABASE_DDL_TRIGGER`と`SERVER_DDL_TRIGGER`です。    
+指定されたモジュールのクラスです。 ときに*モジュール名*、DDL トリガーは、`<class>`が必要です。 `<class>` `nvarchar(20)`します。 有効な入力は`DATABASE_DDL_TRIGGER`と`SERVER_DDL_TRIGGER`です。    
 
 ## <a name="return-code-values"></a>リターン コードの値  
 
@@ -71,14 +72,14 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 テーブルの暗号化プロパティが変更されると、`sp_refresh_parameter_encryption`直接的または間接的には、テーブルを参照するすべてのモジュールを実行する必要があります。 このストアド プロシージャは、その呼び出し元に移動する前にユーザーが内部のモジュールの最初の更新を必要とせずに任意の順序でこれらのモジュールで呼び出せます。
 
-`sp_refresh_parameter_encryption`拡張プロパティ、どのアクセス許可には影響しませんまたは`SET`オブジェクトに関連付けられているオプションです。 
+`sp_refresh_parameter_encryption` 拡張プロパティ、どのアクセス許可には影響しませんまたは`SET`オブジェクトに関連付けられているオプションです。 
 
 サーバー レベルの DDL トリガーを更新するには、このストアド プロシージャをデータベースのコンテキストから実行します。
 
 >  [!NOTE]   
 >  実行すると、オブジェクトに関連付けられている署名は削除`sp_refresh_parameter_encryption`です。
 
-## <a name="permissions"></a>アクセス許可
+## <a name="permissions"></a>権限
 
 必要があります`ALTER`モジュールに対する権限と`REFERENCES`任意の CLR ユーザー定義型と、オブジェクトによって参照されている XML スキーマ コレクションに対する権限。   
 

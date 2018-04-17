@@ -1,16 +1,16 @@
 ---
-title: "sp_server_diagnostics (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_server_diagnostics (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a3bd7cf97a37e2e01cb1d593ee1370c3d5430162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@repeat_interval**  =] **'***repeat_interval_in_seconds***'**  
+ [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  正常性の情報を送信するためにストアド プロシージャが繰り返し実行される期間を示します。  
   
  *repeat_interval_in_seconds*は**int**既定値は 0 です。 有効なパラメーター値は 0、または 5 以上の任意の値です。 完全なデータを返すには、ストアド プロシージャを少なくとも 5 秒間実行する必要があります。 ストアド プロシージャを繰り返しモードで実行するための最小値は 5 秒です。  
@@ -64,12 +64,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>結果セット  
 **sp_server_diagnostics**次の情報を返します  
   
-|[列]|データ型|Description|  
+|列|データ型|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|行の作成のタイムスタンプを示します。 単一の行セットの各行は、同じタイムスタンプを持っています。|  
 |**component_type**|**sysname**|行の情報を含んでいるかどうかを示す、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レベルのコンポーネントまたは Always On 可用性グループのインスタンスします。<br /><br /> インスタンス (instance)<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> イベント<br /><br /> *\<可用性グループの名前 >*|  
-|**state**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
+|**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> リソース (resource)<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> イベント<br /><br /> *\<可用性グループの名前 >*|  
+|**状態**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|状態列について説明します。 状態列の値に対応する説明は、次のとおりです。<br /><br /> 0: 不明<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
 |**data**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
   
@@ -95,7 +95,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Components|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |システム|x|x|x||  
-|resource|x|x|x||  
+|リソース (resource)|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |イベント||||x|  
@@ -105,7 +105,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 > [!NOTE]
 > Sp_server_diagnostics 内部プロシージャの実行は、優先順位の高いプリエンプティブなスレッドで実装されます。
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
 サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

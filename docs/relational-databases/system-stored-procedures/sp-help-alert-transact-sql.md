@@ -1,16 +1,16 @@
 ---
-title: "sp_help_alert (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_help_alert (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1dc2217a34afadc5a105709ac294325ac9e80a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 070e37092c8683b1709ae878686a337df74f3232
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@alert_name =**] **'***alert_name***'**  
+ [  **@alert_name =**] **'***alert_name***'**  
  警告名を指定します。 *alert_name*は**nvarchar (128)**です。 場合*alert_name*が指定されていないすべてのアラートに関する情報が返されます。  
   
- [ **@order_by =**] **'***order_by***'**  
+ [  **@order_by =**] **'***order_by***'**  
  結果を作成するときの並べ替え順を指定します。 *order_by*は**sysname**、既定値は N '*名前*' です。  
   
  [ **@alert_id =**] *alert_id*  
  情報をレポートする警告の識別番号を指定します。 *alert_id*は**int**、既定値は NULL です。  
   
- [ **@category_name =**]  **'***category***'**  
+ [  **@category_name =**] **'***カテゴリ***'**  
  警告のカテゴリを指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
  [ **@legacy_format**=] *legacy_format*  
@@ -69,7 +69,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ときに **@legacy_format** は**0**、 **sp_help_alert**次の結果セットを生成します。  
+ ときに**@legacy_format**は**0**、 **sp_help_alert**次の結果セットを生成します。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -98,12 +98,12 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|1 人以上のオペレーターに対して警告が通知される場合は、0 以外の値になります。 値は、1 つ以上の次の値 (和) には。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|場合**型**は**2**、この列は、パフォーマンス条件の定義を示したものです。 それ以外の場合、列には NULL です。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 常に '[Uncategorized]' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0。|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 の場合は常に '[Uncategorized]' となります。|  
 |**wmi_namespace**|**sysname**|場合**型**は**3**、この列は、WMI イベントの名前空間を表示します。|  
 |**wmi_query**|**nvarchar(512)**|場合**型**は**3**、この列は、WMI イベントのクエリを示します。|  
 |**type**|**int**|イベントの種類です。<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベントのアラート<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス警告<br /><br /> **3** = WMI イベント警告|  
   
- ときに **@legacy_format** は**1**、 **sp_help_alert**次の結果セットを生成します。  
+ ときに**@legacy_format**は**1**、 **sp_help_alert**次の結果セットを生成します。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -130,7 +130,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|ジョブ識別番号。|  
 |**job_name**|**sysname**|警告に応答して実行されるオン デマンド ジョブ。|  
 |**has_notification**|**int**|1 人以上のオペレーターに対して警告が通知される場合は、0 以外の値になります。 値は次のとおりです。複数の場合は OR で表されます。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]」をご覧ください。|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]」を参照してください。|  
 |**performance_condition**|**nvarchar(512)**|場合**型**は**2**、この列は、パフォーマンス条件の定義を示しています。 場合**型**は**3**、この列は、WMI イベントのクエリを示します。 それ以外の場合は NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 常に '**[未分類]**' の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**type**|**int**|警告の種類。<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベントのアラート<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス警告<br /><br /> **3** = WMI イベント警告|  
@@ -156,7 +156,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

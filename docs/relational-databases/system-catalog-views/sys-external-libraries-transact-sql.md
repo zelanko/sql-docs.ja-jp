@@ -1,15 +1,15 @@
 ---
-title: "sys.external_libraries (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.external_libraries (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external_libraries
@@ -23,11 +23,12 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: c1e65db4ccb43dde92188e462b6e99414ee05f52
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d8fa8a4d41cff452379c420b712f13b2d4415a74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,5 +52,5 @@ R、Python などの外部のランタイムに関連するパッケージ ラ�
 
 ## <a name="see-also"></a>参照  
 [sys.external_library_files](sys-external-library-files-transact-sql.md)  
-[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
+[外部ライブラリを作成します。](../../t-sql/statements/create-external-library-transact-sql.md)  
 [SQL Server R Services のパッケージの管理](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

@@ -1,16 +1,16 @@
 ---
-title: "xp_msver (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: xp_msver (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_msver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57509a7787087d747ae84f0bed6c67e8e3cd0f67
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 24f21887156b2c9fef1811ef5268887efd59bfe5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ xp_msver [ optname ]
 |オプション/列名|Description|  
 |-------------------------|-----------------|  
 |**ProductName**|製品名です。たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
-|**ProductVersion**|製品バージョン。|  
+|**製品バージョン**|製品バージョン。|  
 |**言語**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
 |**プラットフォーム**|オペレーティング システム名、製造元の名前、およびチップ ファミリ名を実行しているコンピューターの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**コメント**|その他の情報に関する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |**CompanyName**|会社名を生成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation します。|  
 |**主体**|オペレーティング システム。|  
-|**FileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョン。|  
-|**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]内部名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; たとえば、SQLSERVR です。|  
+|**fileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョン。|  
+|**internalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 内部名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; たとえば、SQLSERVR です。|  
 |**LegalCopyright**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要な著作権に関する法的情報。例: Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
 |**LegalTrademarks**|商標に関する法的情報に必要な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 たとえば、[!INCLUDE[msCoName](../../includes/msconame-md.md)]の登録商標[!INCLUDE[msCoName](../../includes/msconame-md.md)]Corporation します。|  
 |**[Originalfilename]**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に実行されるファイル名。Sqlservr.exe などです。|  
@@ -78,13 +78,13 @@ xp_msver [ optname ]
 ## <a name="result-sets"></a>結果セット  
  **xp_msver**、任意のパラメーターを指定せず、すべてのオプション値を一覧表示する 4 列の結果セットが返されます。 **xp_msver**、任意のパラメーターを 4 つの列を含む結果セット オプションの値を返します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [汎用拡張ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   
   

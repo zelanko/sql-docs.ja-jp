@@ -1,16 +1,16 @@
 ---
-title: "cdc です。&lt;capture_instance&gt;_CT (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: cdc です。&lt;capture_instance&gt;_CT (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f2078f3894d5db7c398b2470b4a3625320e948
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc です。&lt;capture_instance&gt;_CT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 |**__$seqval**|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値。|  
 |**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 次のいずれかになります。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
 |**__$update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビット マスク。|  
-|*\<キャプチャされたソース テーブルの列 >*|各種|変更テーブル内のその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
+|*\< キャプチャ対象のソース テーブルの列 >*|各種|変更テーブル内のその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
 |**_ _ $ command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
   
 ## <a name="remarks"></a>解説  
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/21/2017
  挿入操作と削除操作については、更新マスクのすべてのビットが設定されます。 更新操作の場合、更新操作中に変更された列を反映するため、update old 行と update new 行の両方の更新マスクが変更されます。  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_cdc_enable_table &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

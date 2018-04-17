@@ -1,16 +1,16 @@
 ---
-title: "sp_dropuser (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_dropuser (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropuser
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 242950773bb0eabbd8b4170a05fd228311604bdf
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d7499b5d45d5d55479fe00792a3631b3d655621
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   現在のデータベースからデータベース ユーザーを削除します。 **sp_dropuser**の旧バージョンとの互換性を提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[DROP USER](../../t-sql/statements/drop-user-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name_in_db =**] **'***ユーザー***'**  
+ [ **@name_in_db =**] **'***user***'**  
  削除するユーザーの名前を指定します。 *ユーザー*は、 **sysname**、既定値はありません。 *ユーザー*現在のデータベースに存在する必要があります。 Windows ログインを指定する場合は、データベースでログインとして認識されている名前を使用してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -66,7 +66,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  **sp_dropuser**ユーザー定義のトランザクション内で実行することはできません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する ALTER ANY USER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -78,9 +78,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [DROP USER &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER & #40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

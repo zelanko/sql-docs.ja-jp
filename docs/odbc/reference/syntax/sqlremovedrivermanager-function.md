@@ -2,7 +2,7 @@
 title: SQLRemoveDriverManager 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d74b3b3eda914210f8d69d6089eb9a474416318
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3dbb36481ff096f2964d597b8d215589b152bf02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **準拠**  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDriverManager(
  *pdwUsageCount*  
  [出力]使用率カウントのドライバー マネージャーがこの関数が呼び出された後にします。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。 エントリが存在しない場合、システム情報でこの関数が呼び出されたときに、関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  

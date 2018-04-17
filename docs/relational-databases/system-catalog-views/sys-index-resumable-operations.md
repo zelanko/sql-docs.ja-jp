@@ -1,16 +1,16 @@
 ---
-title: "sys.index_resumable_operations (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.index_resumable_operations (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.index_resumable_operations_TSQL
@@ -20,17 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53b6aad214f3d1760bb03ff340e5a5dab30c1067
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 5ab677122523c42f27aa206104911f213510d35e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |**page_count**|**bigint**|マッピング インデックス (null を許容しないと、新しいインデックス構築操作によって割り当てられているインデックス ページの合計数。 
 
 ## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
    
 ## <a name="example"></a>例  
  一時停止状態にあるすべての再開可能なインデックス再構築操作の一覧を表示します。 
@@ -65,11 +66,11 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
   
 ## <a name="see-also"></a>参照 
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](catalog-views-transact-sql.md) [オブジェクトのカタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](object-catalog-views-transact-sql.md) [sys.indexes &#40;です。TRANSACT-SQL と #41 です。](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;です。TRANSACT-SQL と #41 です。](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;です。TRANSACT-SQL と #41 です。](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;です。TRANSACT-SQL と #41 です。](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;です。TRANSACT-SQL と #41 です。](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes と #40 です。TRANSACT-SQL と #41 です。](sys-partition-schemes-transact-sql.md)   
+ [カタログ ビュー &#40;TRANSACT-SQL&#41; ](catalog-views-transact-sql.md) [カタログ ビューのオブジェクト&#40;TRANSACT-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;TRANSACT-SQL&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;TRANSACT-SQL&#41;](sys-index-columns-transact-sql.md)   
+ [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
+ [sys.key_constraints &#40;TRANSACT-SQL&#41;](sys-key-constraints-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
+ [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよくあるご質問](querying-the-sql-server-system-catalog-faq.md)   
   

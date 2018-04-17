@@ -1,16 +1,16 @@
 ---
-title: "sp_MSchange_distribution_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_MSchange_distribution_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a08ef7bb0fbbfcdfffd676c63bc2f1396fed4e5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 80bd5273bd33170bcf166b75b4056b9d720ac6d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@subscriber=** ] **'***サブスクライバー***'**  
@@ -88,7 +88,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_providerstring**||データ ソースを識別する、OLE DB プロバイダー固有の接続文字列。 *このプロパティは有効の SQL Server 以外のサブスクライバーだけです。*|  
 |**subscriber_security_mode**|**1**|Windows 認証。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
-|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー|  
+|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー|  
 ||**1**|ODBC データ ソース サーバー|  
 ||**3**|OLE DB プロバイダー|  
 |**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を表します。 *サポートされていません。 非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー、Oracle パブリッシャーの場合、またはピア ツー ピア サブスクリプションです。*|  
@@ -104,11 +104,11 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要がある、または[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)ディストリビューター側で実行されているプッシュ サブスクリプションを同期するマージ エージェント ジョブのプロパティを変更します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_distribution_agent_properties**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addpushsubscription_agent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_addsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
+ [sp_addpushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
   
   

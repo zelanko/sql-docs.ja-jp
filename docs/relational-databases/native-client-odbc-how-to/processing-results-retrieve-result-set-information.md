@@ -1,30 +1,31 @@
 ---
-title: "結果セットの情報 (ODBC) の取得 |Microsoft ドキュメント"
-ms.custom: 
+title: 結果セットの情報 (ODBC) の取得 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC]
 - result sets [ODBC], fetching
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab03d1cf3e91fc2b891647287eea063371196c5a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 90f044ee1cfa80597ffdd47170d0cebf97971ade
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>結果の処理結果セットの情報の取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,8 +45,8 @@ ms.lasthandoff: 01/25/2018
     -   呼び出す[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)結果列に関する具体的な記述子情報を取得します。  
   
 ## <a name="see-also"></a>参照  
-[プロセスの結果 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+[プロセスの結果 (&) #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[特性の結果セット &#40; ODBC &#41; を決定します。](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[特性の結果セット (&) #40; ODBC & #41; を決定します。](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

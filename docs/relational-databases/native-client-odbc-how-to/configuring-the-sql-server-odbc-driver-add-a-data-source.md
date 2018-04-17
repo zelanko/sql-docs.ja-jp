@@ -1,29 +1,30 @@
 ---
-title: "データ ソース (ODBC) の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: データ ソース (ODBC) の追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9c49084e289b005243f873814527f2d07834247e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 892aa1bd0e2a5b30bb4ea7825c66c38cfbe3d406
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>SQL Server ODBC ドライバーのデータ ソースを追加の構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してデータ ソースを追加するには  
   
-1.  **コントロール パネルの** 、アクセス**管理ツール**し**ODBC データ ソース (64 ビット)**または**ODBC データ ソース (32 ビット)**. または、odbcad32.exe を呼び出すことができます。  
+1.  **コントロール パネルの **、アクセス**管理ツール**し**ODBC データ ソース (64 ビット)**または**ODBC データ ソース (32 ビット)**. または、odbcad32.exe を呼び出すことができます。  
   
 2.  クリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**  タブをクリックして**追加**です。  
   
@@ -52,6 +53,6 @@ ms.lasthandoff: 01/25/2018
 1.  呼び出す[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) SAVEFILE = file_name パラメーター、接続文字列にします。 接続が確立されると、ODBC ドライバーによって、SAVEFILE パラメーターが指す場所の接続パラメーターを使用してファイル データ ソースが作成されます。  
   
 ## <a name="see-also"></a>参照  
-[データ ソース &#40;ODBC&#41; を削除します。](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
+[データ ソース (&) #40";"ODBC"&"#41; を削除します。](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md)    
   
   

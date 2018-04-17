@@ -1,16 +1,16 @@
 ---
-title: "srv_paramdata (拡張ストアド プロシージャ API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramdata (拡張ストアド プロシージャ API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramdata
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5837ecf48a6e97f5408d86f20b39e057285d64b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  リモート ストアド プロシージャ呼び出しのパラメーターの値を返します。 この関数に代わって **srv_paraminfo** 関数が使用されるようになりました。  
   
@@ -62,7 +62,7 @@ n
  パラメーターの番号です。 最初のパラメーターは 1 です。  
   
 ## <a name="returns"></a>返します。  
- パラメーター値を指すポインターを返します。 *n* 番目のパラメーターが NULL である場合、*n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合には、NULL を返します。 パラメーター値が文字列である場合、NULL 終端ではないこともあります。 文字列の長さを判断するには、**srv_paramlen** を使用します。  
+ パラメーター値を指すポインターを返します。 場合、 *n*番目のパラメーターが NULL ではない*n*番目のパラメーター、またはリモートがないストアド プロシージャは、NULL を返します。 パラメーター値が文字列である場合、NULL 終端ではないこともあります。 文字列の長さを判断するには、**srv_paramlen** を使用します。  
   
  パラメーターが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型のいずれかである場合、この関数は次の値を返します。 ポインター データには、データ型に対する有効なポインター (VP) か、NULL か、該当なし (N/A) かを示す情報と、ポインターが指すデータの内容が含まれます。  
   

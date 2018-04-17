@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_create (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_trace_create (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 39bdde1095f5780fac2f27a9da1e834e6c3af968
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  [ **@tracefile=** ] *'**trace_file**'*  
  トレースを書き込む場所とファイル名を指定します。 *trace_file*は**nvarchar (245)**既定値はありません。 *trace_file* (N 'C:\MSSQL\Trace\trace.trc') などのローカル ディレクトリまたは UNC 共有またはパスのいずれかを指定できます (N'\\\\*Servername*\\*Sharename*\\*ディレクトリ*\trace.trc')。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追加、 **.trc**すべてのトレース ファイル名に拡張します。 場合、TRACE_FILE_ROLLOVER オプションと*max_file_size*指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元のトレース ファイルが最大サイズに拡張する場合は、新しいトレース ファイルを作成します。 新しいファイルに同じ名前が、元のファイルは、_ *n* 以降で、その順番を示すために追加された**1**です。 たとえば、最初のトレース ファイルの名前は**filename.trc**、2 番目のトレース ファイルの名前は**filename_1.trc**です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追加、 **.trc**すべてのトレース ファイル名に拡張します。 場合、TRACE_FILE_ROLLOVER オプションと*max_file_size*指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元のトレース ファイルが最大サイズに拡張する場合は、新しいトレース ファイルを作成します。 新しいファイルに同じ名前が、元のファイルは、_*n*以降で、その順番を示すために追加された**1**です。 たとえば、最初のトレース ファイルの名前は**filename.trc**、2 番目のトレース ファイルの名前は**filename_1.trc**です。  
   
  TRACE_FILE_ROLLOVER オプションを使用する場合、元のトレース ファイル名にアンダースコア文字を使用しないことをお勧めします。 アンダースコアを使用した場合、次の動作が発生します。  
   
@@ -94,8 +94,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  両方*stop_time*と*max_file_size*指定すると、TRACE_FILE_ROLLOVER がないと指定すると、トレースを最重要、指定した停止時刻またはファイルの最大サイズに達したときにします。 場合*stop_time*、 *max_file_size*、し、TRACE_FILE_ROLLOVER を指定すると、トレースがドライブがいっぱいにならないと仮定すると指定された停止時に、トレースを停止します。  
   
- [ **@filecount=** ] **'***max_rollover_files***'**  
- 同じ基本ファイル名で保持するトレース ファイルの最大数を指定します。 *max_rollover_files*は**int**、1 よりも大きいです。 このパラメーターは、TRACE_FILE_ROLLOVER オプションを指定した場合のみ有効です。 ときに*max_rollover_files*が指定されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保た以上*max_rollover_files*新しいトレース ファイルを開く前に、最も古いトレース ファイルを削除することによってトレース ファイル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基本ファイル名に番号を追加して、トレース ファイルの世代を追跡します。  
+ [  **@filecount=** ] **'***max_rollover_files***'**  
+ 同じ基本ファイル名で保持するトレース ファイルの最大数を指定します。 *max_rollover_files*は**int**、1 よりも大きいです。 このパラメーターは、TRACE_FILE_ROLLOVER オプションを指定した場合のみ有効です。 ときに*max_rollover_files*が指定されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保た以上*max_rollover_files*新しいトレース ファイルを開く前に、最も古いトレース ファイルを削除することによってトレース ファイル。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基本ファイル名に番号を追加して、トレース ファイルの世代を追跡します。  
   
  たとえば、ときに、 *trace_file*パラメーターを指定"c:\mytrace"と"c:\mytrace_123.trc"の名前を持つファイルは"c:\mytrace_124.trc"のファイルよりも古いします。 場合*max_rollover_files*がセットを 2 に SQL Server は、ファイル"c:\mytrace_123.trc"を削除し、"c:\mytrace_125.trc"トレース ファイルを作成する前にします。  
   
@@ -130,7 +130,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  **Sp_trace_create**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントでは、トレース ファイルのフォルダーに対する書き込み権限が必要です。 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントが管理者ではない、トレース ファイルがあるコンピューターへの書き込み権限を付与する必要があります明示的に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウント。  
   
 > [!NOTE]  
->  作成したトレース ファイルを自動的に読み込むことができます**sp_trace_create**を使用してテーブルに、 **fn_trace_gettable**システム関数です。 このシステム関数を使用する方法については、次を参照してください。 [sys.fn_trace_gettable &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)。  
+>  作成したトレース ファイルを自動的に読み込むことができます**sp_trace_create**を使用してテーブルに、 **fn_trace_gettable**システム関数です。 このシステム関数を使用する方法については、次を参照してください。 [sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)です。  
   
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
@@ -160,7 +160,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  ユーザーに ALTER TRACE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [sp_trace_generateevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

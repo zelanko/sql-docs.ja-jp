@@ -1,15 +1,16 @@
 ---
-title: "行セット サイズ |Microsoft ドキュメント"
-ms.custom: 
+title: 行セット サイズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rowset size [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-size"></a>行セット サイズ
 使用するには、どの行セット サイズは、アプリケーションによって異なります。 通常、画面ベースのアプリケーションでは、2 つの方法に従います。 1 つは、行セット サイズを画面に表示される行の数に設定するのにはアプリケーションをユーザーが画面を変更する場合、行セットのサイズがそれに応じて変わります。 2 番目をより大きな数値に 100 など、データ ソースへの呼び出しの数が減少行セットのサイズを設定することです。 アプリケーションでは、可能な場合は、行セット内でローカルにまでスクロールし、行セットの外部スクロール場合にのみ新しい行がフェッチされます。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **SQLFetch**と**SQLFetchScroll**をフェッチする行数を決定する、呼び出し時に行セットのサイズを使用します。 ただし、 **SQLFetchScroll**で、 *FetchOrientation* SQL_FETCH_NEXT 増分のカーソルの行セットに基づく前回フェッチとし、フェッチの現在の行セットのサイズに基づく行セット。  
   
--   **SQLSetPos**前の呼び出しの時点で有効になっている行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**ので、 **SQLSetPos**を演算し、既に設定されている行セット。 **SQLSetPos**も場合を選択し、新しい行セット サイズを**SQLBulkOperations**が行セットのサイズが変更された後に呼び出されています。  
+-   **SQLSetPos**前の呼び出しの時点で有効になっている行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**ので、 **SQLSetPos**行セットに対する動作既に設定されています。 **SQLSetPos**も場合を選択し、新しい行セット サイズを**SQLBulkOperations**が行セットのサイズが変更された後に呼び出されています。  
   
 -   **SQLBulkOperations**すべてフェッチされる行セットの独立したテーブルに対する操作が実行されるため、呼び出し時に有効で、行セット サイズを使用します。

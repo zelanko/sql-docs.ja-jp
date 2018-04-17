@@ -2,7 +2,7 @@
 title: SQLPrimaryKeys 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc6e16493a91ee6d03efea376bdb0fcb5212549f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91fc4454f033cef139e50b8cd7cfbf4c21842c61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 関数
 **準拠**  
@@ -74,7 +74,7 @@ SQLRETURN SQLPrimaryKeys(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名です。 この引数は、null ポインターにすることはできません。 *TableName*検索パターンに文字列を含めることはできません。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*TableName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *TableName*は、通常の引数以外の場合は文字どおり、扱われ、そのケースは重要ではありません。  
@@ -82,7 +82,7 @@ SQLRETURN SQLPrimaryKeys(
  *NameLength3*  
  [入力]文字の長さ **TableName*です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -129,7 +129,7 @@ SQLRETURN SQLPrimaryKeys(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|主キー テーブルのカタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|主キー テーブルのカタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|主キー テーブルのスキーマ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|主キー テーブルの名前です。|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL でない Varchar|主キー列の名前です。 ドライバーでは、名前がない列の空の文字列を返します。|  

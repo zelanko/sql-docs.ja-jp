@@ -1,16 +1,16 @@
 ---
-title: "sp_table_privileges_ex (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_table_privileges_ex (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges_ex
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0b117cb37d12eed86de59fec60eeaac84aef15e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,13 +77,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**権限の許可者**|**sysname**|これに対する権限が許可されるデータベース ユーザー名**TABLE_NAME**を表示される**権限付与対象ユーザー**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に、同じ、 **TABLE_OWNER**です。 このフィールドは常に値を返します。 GRANTOR 列も、データベース所有者である可能性があります (**TABLE_OWNER**) または、権限をユーザーと、データベース所有者が GRANT ステートメントで WITH GRANT OPTION 句を使用しています。|  
 |**権限付与対象ユーザー**|**sysname**|このアクセス許可が与えられているデータベース ユーザー名**TABLE_NAME**によって、表示される**GRANTOR**です。 このフィールドは常に値を返します。|  
-|**特権**|**varchar (**32**)**|使用可能なテーブル権限の 1 つ。 次に示す値、または実装が定義されるときにデータ ソースによってサポートされるその他の値のいずれかになります。<br /><br /> オン =**権限付与対象ユーザー** 1 つまたは複数の列のデータを取得することができます。<br /><br /> 挿入 =**権限付与対象ユーザー**新しい行のデータを 1 つまたは複数の列を提供できます。<br /><br /> 更新 =**権限付与対象ユーザー** 1 つまたは複数の列の既存のデータを変更できます。<br /><br /> 削除 =**権限付与対象ユーザー**テーブルから行を削除することができます。<br /><br /> 参照 =**権限付与対象ユーザー**主キー/外部キーのリレーションシップで外部テーブルで列を参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルの制約を使用して主キー/外部キーのリレーションシップを定義します。<br /><br /> 与えられる操作のスコープ、**権限付与対象ユーザー**特権とは、特定のテーブルで、データ ソースに依存します。 UPDATE 権限により、たとえば、**権限付与対象ユーザー**を 1 つのデータ ソース上のテーブルのすべての列と列のみを更新する、 **GRANTOR**別のデータ ソースに対する更新権限を持っています。|  
+|**特権**|**varchar(**32**)**|使用可能なテーブル権限の 1 つ。 次に示す値、または実装が定義されるときにデータ ソースによってサポートされるその他の値のいずれかになります。<br /><br /> オン =**権限付与対象ユーザー** 1 つまたは複数の列のデータを取得することができます。<br /><br /> 挿入 =**権限付与対象ユーザー**新しい行のデータを 1 つまたは複数の列を提供できます。<br /><br /> 更新 =**権限付与対象ユーザー** 1 つまたは複数の列の既存のデータを変更できます。<br /><br /> 削除 =**権限付与対象ユーザー**テーブルから行を削除することができます。<br /><br /> 参照 =**権限付与対象ユーザー**主キー/外部キーのリレーションシップで外部テーブルで列を参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルの制約を使用して主キー/外部キーのリレーションシップを定義します。<br /><br /> 与えられる操作のスコープ、**権限付与対象ユーザー**特権とは、特定のテーブルで、データ ソースに依存します。 UPDATE 権限により、たとえば、**権限付与対象ユーザー**を 1 つのデータ ソース上のテーブルのすべての列と列のみを更新する、 **GRANTOR**別のデータ ソースに対する更新権限を持っています。|  
 |**IS_GRANTABLE**|**varchar (**3**)**|示すかどうか、**権限付与対象ユーザー**は他のユーザーに権限を与える許可。 これは、"許可の許可" 権限と呼ばれることがあります。 YES、NO、NULL のいずれかになります。 不明、つまり NULL の場合は、"許可の許可" が適用されないデータ ソースを示します。|  
   
 ## <a name="remarks"></a>解説  
  返される結果は並べ**TABLE_QUALIFIER**、 **TABLE_OWNER**、 **TABLE_NAME**、および**特権**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -97,8 +97,8 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_column_privileges_ex &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
+ [sp_column_privileges_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [分散クエリ ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [分散クエリ ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

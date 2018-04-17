@@ -1,36 +1,37 @@
 ---
-title: "データ型と XML 一括読み込み動作 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: データ型と XML 一括読み込み動作 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], data types
 - data types [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], data types
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d5e25e9d3a2df2e15c2dc9bf86d6d90acd1d450
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8315130a7228d0d5dce2f8baa2f337f16015ae23
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>データ型と XML 一括読み込みの動作 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-マッピング スキーマで指定されているデータ型 (XSD または XDR 型と**sql:datatype**) は、通常は無視されますでは、次の場合。  
+  マッピング スキーマで指定されているデータ型 (XSD または XDR 型と**sql:datatype**) は、通常は無視されますでは、次の場合。  
   
  XSD では、次の場合に注意してください。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 02/12/2018
   
 -   列に一括読み込みを行うときに**uniqueidentifier**に入力[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、XSD 値は中かっこ ({、}) を含む GUID を指定する必要があります**sql:datatype = uniqueidentifier**に列に値を挿入する前に、中かっこを削除します。 場合**sql:datatype**が指定されていない、値が中かっこで送信され、挿入は失敗します。  
   
- 詳細については**sql:datatype**を参照してください[データ型の強制変換と sql:datatype 注釈 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+ 詳細については**sql:datatype**を参照してください[データ型の強制変換と sql:datatype 注釈&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)です。  
   
  XDR では、次の場合に注意してください。  
   

@@ -1,30 +1,31 @@
 ---
-title: "ファイル データ ソース |Microsoft ドキュメント"
-ms.custom: 
+title: ファイル データ ソース |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 254e859c8533625cb34f7d867c62f26bea5cd04d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-data-sources"></a>[ファイル データ ソース]
 *ファイル データ ソース*ファイルに格納され、1 人のユーザーによって繰り返し使用または複数のユーザー間で共有する接続情報を許可します。 ファイル データ ソースを使用する場合、ドライバー マネージャーは、.dsn ファイルに情報を使用してデータ ソースへの接続はします。 このファイルは、その他のファイルと同様に操作できます。 ファイル データ ソースには、データ ソース名はありませんが、コンピューターのデータ ソースと任意の 1 つのユーザーまたはコンピューターに登録されていません。  

@@ -1,15 +1,15 @@
 ---
-title: "CLR 統合プログラミング モデルの制限事項 |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合プログラミング モデルの制限事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d282b317a5ea31fe8170a847f5b425bcd1af4fd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成するときはコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]まず、データベースに登録されているときに、マネージ コード アセンブリに対する検査は実行を使用して、 **CREATE ASSEMBLY**ステートメントでは、および実行時にもします。 マネージ コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要がある要件として、アセンブリが登録されているかどうかによって変わります**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**、**セーフ** 、最も制限の厳しい、され、次のとおりです。  
+  マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成するときはコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] まず、データベースに登録されているときに、マネージ コード アセンブリに対する検査は実行を使用して、 **CREATE ASSEMBLY**ステートメントでは、および実行時にもします。 マネージ コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要がある要件として、アセンブリが登録されているかどうかによって変わります**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**、**セーフ** 、最も制限の厳しい、され、次のとおりです。  
   
  マネージ コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージ コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **安全な**、 **EXTERNAL_ACCESS**、および**UNSAFE**アセンブリが別の CAS 権限を持っています。 詳細については、次を参照してください。 [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)です。  
   

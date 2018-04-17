@@ -1,15 +1,15 @@
 ---
-title: "行セットのプロパティと動作 |Microsoft ドキュメント"
-ms.custom: 
+title: 行セットのプロパティと動作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/24/2018
   
 |プロパティ ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_ABORTPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティで中止操作後の行セットの動作が決まります。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、中止操作後の行セットを無効になります。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。<br /><br /> VARIANT_TRUE: The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider maintains a valid rowset.|  
+|DBPROP_ABORTPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティで中止操作後の行セットの動作が決まります。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、中止操作後の行セットを無効になります。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが有効な行セットを保持します。|  
 |DBPROP_ACCESSORDER|R/W 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_AO_RANDOM <br /><br /> 説明 : アクセスの順序です。 行セット内の列にアクセスする順序を指定します。<br /><br /> DBPROPVAL_AO_RANDOM: 任意の順序で列にアクセスできます。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: ストレージ オブジェクトとしてバインドされている列は、列序数で決まるシーケンシャルな順序でしかアクセスできません。<br /><br /> DBPROPVAL_AO_SEQUENTIAL: すべての列には、列序数で決まるシーケンシャルな順序でアクセスする必要があります。|  
 |DBPROP_APPENDONLY|この行セット プロパティはによって実装されていません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクト ブロックは他の行セット メソッドを使用します。|  
@@ -45,11 +46,11 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|R/w 読み取り専用<br /><br /> 既定値 : DBPROPVAL_BMK_NUMERIC <br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、数値ブックマークのみを実装します。 A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのブックマークは 32 ビット符号なし整数、DBTYPE_UI4 を入力します。|  
 |DBPROP_CACHEDEFERRED|この行セット プロパティはによって実装されていません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、旧バージョンとフェッチとスクロールの非シーケンシャル行セットでサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBPROP_CANFETCHBACKWARDS または DBPROP_CANSCROLLBACKWARDS が VARIANT_TRUE の場合に、カーソルでサポートされている行セットを作成します。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
-|DBPROP_CANHOLDROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB_E_ROWSNOTRELEASED 場合、コンシューマーが保留中の変更中に、行セットの複数の行を取得しようとした場合に存在して、行セット内の既存 Native Client OLE DB プロバイダーを返します。 この動作を変更できます。<br /><br /> DBPROP_CANHOLDROWS と DBPROP_IRowsetChange の両方が VARIANT_TRUE の場合は、ブックマークが設定された行セットになります。 両方のプロパティが VARIANT_TRUE の場合、 **IRowsetLocate**インターフェイスを使用して、行セットに、DBPROP_BOOKMARKS と DBPROP_LITERALBOOKMARKS 両方が VARIANT_TRUE です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーの行セットを含むブックマークでサポートされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソル。|  
+|DBPROP_CANHOLDROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB_E_ROWSNOTRELEASED 場合、コンシューマーが保留中の変更中に、行セットの複数の行を取得しようとした場合に存在して、行セット内の既存 Native Client OLE DB プロバイダーを返します。 この動作を変更できます。<br /><br /> DBPROP_CANHOLDROWS と DBPROP_IRowsetChange の両方が VARIANT_TRUE の場合は、ブックマークが設定された行セットになります。 両方のプロパティが VARIANT_TRUE の場合、 **IRowsetLocate**インターフェイスを使用して、行セットに、DBPROP_BOOKMARKS と DBPROP_LITERALBOOKMARKS 両方が VARIANT_TRUE です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの行セットを含むブックマークでサポートされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソル。|  
 |DBPROP_CHANGEINSERTEDROWS|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : 行セットがキーセット ドリブン カーソルを使用している場合、このプロパティには VARIANT_TRUE しか設定できません。|  
 |DBPROP_COLUMNRESTRICT|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーが行セット内の列を変更することはできませんとを VARIANT_TRUE にプロパティを設定します。 行セットの他の列は、更新可能にできます。また、行自体を削除することもできます。<br /><br /> プロパティが VARIANT_TRUE の場合と、コンシューマーを調べて、 *dwFlags* DBCOLUMNINFO 構造体のメンバーか、個々 の列の値を書き込むことがあるかどうかを決定します。 変更可能な列は、 *dwFlags* DBCOLUMNFLAGS_WRITE が発生します。|  
 |DBPROP_COMMANDTIMEOUT|R/W 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明: 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでのタイムアウトのない、 **icommand::execute**メソッドです。|  
-|DBPROP_COMMITPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティでコミット操作後の行セットの動作が決まります。<br /><br /> VARIANT_TRUE: The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider maintains a valid rowset.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コミット操作後の行セットを無効になります。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。|  
+|DBPROP_COMMITPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティでコミット操作後の行セットの動作が決まります。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが有効な行セットを保持します。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コミット操作後の行セットを無効になります。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。|  
 |DBPROP_DEFERRED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: が VARIANT_TRUE に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、行セットのサーバー カーソルを使用しようとしています。 **テキスト**、 **ntext**、および**イメージ**アプリケーションによってアクセスされるまでの列は、サーバーから返されません。|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、ストレージ オブジェクトで即時更新モードをサポートしています。<br /><br /> シーケンシャル ストリーム オブジェクトのデータに加えた変更は、直ちに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されます。 変更は、行セットのトランザクション モードに基づいてコミットされます。|  
 |DBPROP_HIDDENCOLUMNS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> **説明:**列数を非表示<br /><br /> DBPROP_UNIQUEROWS が VARIANT_TRUE の場合、DBPROP_HIDDENCOLUMNS プロパティは、行セット内の行を一意に識別するためにプロバイダーによって追加された追加の "非表示" 列の数を返します。 これらの列がによって返される**icolumnsinfo::getcolumninfo**と**icolumnsrowset::getcolumnsrowset**です。 ただし、これらは含まれませんによって返される行の数の*pcColumns*によって返される引数**icolumnsinfo::getcolumninfo**です。<br /><br /> 表される列の合計数を決定する、 *:getcolumninfo*によって返される構造体**icolumnsinfo::getcolumninfo**コンシューマーが dbprop _ の値を加算する非表示の列を含む返される列の数に HIDDENCOLUMNS **icolumnsinfo::getcolumninfo**で*pcColumns*です。 DBPROP_UNIQUEROWS が VARIANT_FALSE の場合、DBPROP_HIDDENCOLUMNS は 0 です。|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_MAYWRITECOLUMN|この行セット プロパティはによって実装されていません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_MEMORYUSAGE|この行セット プロパティはによって実装されていません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_NOTIFICATIONGRANULARITY|この行セット プロパティはによって実装されていません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
-|DBPROP_NOTIFICATIONPHASES|R/w 読み取り専用<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、すべての通知フェーズをサポートしています。|  
+|DBPROP_NOTIFICATIONPHASES|R/w 読み取り専用<br /><br /> 既定値: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、すべての通知フェーズをサポートしています。|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w 読み取り専用<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 説明:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行セットの変更を実行しようとすると、示される前に、Native Client OLE DB プロバイダーの通知フェーズをキャンセルします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、実行が完了した後フェーズのキャンセル サポートしません。|  
 |DBPROP_ORDEREDBOOKMARKS|この行セット プロパティはによって実装されていません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーです。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 設定の変更の可視性プロパティ原因、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行セットをサポートするカーソル。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  
@@ -98,14 +99,14 @@ ms.lasthandoff: 01/24/2018
   
 |プロパティ ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|列 : ColumnID <br /><br /> R/w 読み取り専用<br /><br /> 型: VT_U12 &#124;です。VT_ARRAY<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明 :  現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント内にある COMPUTE 句の結果列の序数位置 (1 から始まります) を表す整数値の配列。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、ODBC SQL_CA_SS_COLUMN_ID 属性に相当します。|  
+|SSPROP_COLUMN_ID|列 : ColumnID <br /><br /> R/w 読み取り専用<br /><br /> 型: VT_U12 &#124; VT_ARRAY<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明 :  現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント内にある COMPUTE 句の結果列の序数位置 (1 から始まります) を表す整数値の配列。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー、ODBC SQL_CA_SS_COLUMN_ID 属性に相当します。|  
 |SSPROP_DEFERPREPARE|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: VARIANT_TRUE: 準備実行でコマンドの準備がまで延期**icommand::execute**が呼び出されたまたはメタプロパティ操作が実行されます。 プロパティが次の値に設定されている場合は、ステートメントの準備が行われます。<br /><br /> VARIANT_FALSE: ステートメントが準備**icommandprepare::prepare**を実行します。|  
 |SSPROP_IRowsetFastLoad|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: このプロパティを VARIANT_TRUE に設定を高速読み込み行セットを開く**iopenrowset::openrowset**です。 このプロパティを設定することはできません**icommandproperties::setproperties**です。|  
 |SSPROP_ISSAsynchStatus|列: いいえ。<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: このプロパティを VARIANT_TRUE に設定を使用して非同期操作を有効にする、 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)インターフェイスです。|  
 |SSPROP_MAXBLOBLENGTH|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_I4<br /><br /> 既定値 : プロバイダーは、サーバーから返されるテキストのサイズを制限しません。このプロパティの値は、サーバーの最大値に設定されます。 たとえば、2147483647 に設定されます。<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが SELECT ステートメントで返されるバイナリ ラージ オブジェクト (BLOB) データの長さを制限する SET TEXTSIZE ステートメントを実行します。|  
 |SSPROP_NOCOUNT_STATUS|列 : NoCount <br /><br /> R/w 読み取り専用<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SET NOCOUNT ON/OFF の状態を表すブール値です。<br /><br /> VARIANT_TRUE: SET NOCOUNT ON の場合<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF の場合|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR (許可される文字数 : 1 ～ 2,000 文字)<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知のメッセージ テキストです。 これはユーザーが定義するので、定義済みの書式はありません。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの文字列の構文です。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 例:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの文字列の構文です。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 以下に例を示します。<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_UI4 <br /><br /> 既定値 : 432,000 秒 (5 日)<br /><br /> 最小値 : 1 秒<br /><br /> 最大値 : 2^31-1 秒<br /><br /> 説明 : クエリ通知をアクティブのままにしておく秒数です。|  
   
 ## <a name="see-also"></a>参照  

@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - active secondary replicas [SQL Server], backup on secondary replicas
 - sys.fn_hadr_backup_is_preferred_replica function
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86dd2be162ab29587589bd4388387da7cf171f6e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 24efc3b2cf4032ecb034fc15edbd9fac3da74995
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,10 +83,10 @@ GO
 -   [可用性レプリカと &#40; のバックアップを構成します。SQL Server と &#41; です。](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループの関数と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Always On 可用性グループの関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [可用性グループ &#40;Transact SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [アクティブなセカンダリ: セカンダリ レプリカ &#40; でのバックアップAlways On 可用性グループ &#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Always On 可用性グループのカタログ ビュー &#40;です。TRANSACT-SQL と #41 です。    ](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [アクティブなセカンダリ: セカンダリ レプリカでバックアップの&#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[Always On 可用性グループ カタログ ビュー &#40;TRANSACT-SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

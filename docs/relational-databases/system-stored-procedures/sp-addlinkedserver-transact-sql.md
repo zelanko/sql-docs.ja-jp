@@ -1,16 +1,16 @@
 ---
-title: "sp_addlinkedserver (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addlinkedserver (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35173890392c69d6ef6fe40c71b484ae9db3bee3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@server=** ] **'***サーバー***'**  
+ [ **@server=** ] **'***server***'**  
  作成するリンク サーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。  
   
  [  **@srvproduct=** ] **'***product_name***'**  
@@ -72,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  に対して、リンク サーバーを作成するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー サーバーとして、SERVER キーワードを使用して、インスタンスを指定することができます =*servername*\\*instancename*の特定のインスタンスを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *servername*いるコンピューターの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると*instancename*の特定のインスタンスの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーを接続します。  
   
 > [!NOTE]  
->  ミラー化されたデータベースにアクセスするには、接続文字列にデータベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースを指定することができます、  **@provstr** または **@catalog** パラメーター。 必要に応じて、接続文字列でフェールオーバー パートナー名も指定できます。  
+>  ミラー化されたデータベースにアクセスするには、接続文字列にデータベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースを指定することができます、 **@provstr**または**@catalog**パラメーター。 必要に応じて、接続文字列でフェールオーバー パートナー名も指定できます。  
   
  [  **@catalog=** ] **'***カタログ***'**  
  OLE DB プロバイダーに接続したときに使用されるカタログです。 *カタログ*は**sysname**、既定値は NULL です。 *カタログ*OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 インスタンスに対して、リンク サーバーが定義されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログは、リンク サーバーがマップされている既定のデータベースを参照します。  
@@ -88,16 +88,16 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 |リモート OLE DB データ ソース|OLE DB プロバイダー|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (既定値)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー||**SQLNCLI**|ネットワーク名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](既定のインスタンス)|||データベース名 (省略可能)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー||**SQLNCLI**|*servername*\\*instancename* (特定のインスタンスの)|||データベース名 (省略可能)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (既定値)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー||**SQLNCLI**|ネットワーク名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](既定のインスタンス)|||データベース名 (省略可能)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー||**SQLNCLI**|*servername*\\*instancename* (特定のインスタンスの)|||データベース名 (省略可能)|  
 |Oracle、バージョン 8 以降|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|Oracle データベースに対する別名||||  
 |Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet データベース ファイルの完全なパス||||  
 |ODBC データ ソース (ODBC data source)|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC データ ソースのシステム DSN||||  
 |ODBC データ ソース (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 接続文字列||  
-|ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)]インデックス サービス用の OLE DB プロバイダー|Any|**MSIDXS は、その**|インデックス作成サービス カタログ名||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
-|IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for DB2|Any|**DB2OLEDB**|||参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for DB2 のドキュメントです。|DB2 データベースのカタログ名|  
+|ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)] インデックス サービス用の OLE DB プロバイダー|Any|**MSIDXS は、その**|インデックス作成サービス カタログ名||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
+|IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for DB2 のドキュメントです。|DB2 データベースのカタログ名|  
   
  <sup>1</sup>リンク サーバーを設定するには、この方法のリモート インスタンスのネットワーク名と同じにするリンク サーバーの名前は必ず[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 使用して*data_source*サーバーを指定します。  
   
@@ -114,7 +114,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!IMPORTANT]  
 >  使用してリンク サーバーを作成するときに**sp_addlinkedserver**、すべてのローカル ログインに対して既定の自己マッピングが追加されます。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロバイダー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証済みログインでプロバイダーにアクセスできる場合があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウント。 管理者は、使用を検討する必要があります`sp_droplinkedsrvlogin <linkedserver_name>, NULL`グローバル マッピングを削除します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  `sp_addlinkedserver`ステートメントが必要です、`ALTER ANY LINKED SERVER`権限です。 (SSMS**新規リンク サーバー**  ダイアログ ボックスがメンバーシップが必要な方法で実装されている、`sysadmin`固定サーバー ロールです)。  
   
 ## <a name="examples"></a>使用例  
@@ -311,13 +311,13 @@ select * from myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>参照  
- [分散クエリ ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [分散クエリ ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_setnetname &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [システム テーブルと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

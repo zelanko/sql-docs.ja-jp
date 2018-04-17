@@ -1,31 +1,32 @@
 ---
-title: "SQL Graph のアーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Graph のアーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 40a1cf05c5c17be3c11d25cd5e8792eb504c2fa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph のアーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -105,13 +106,13 @@ SQL のグラフを構築する方法について説明します。 基本を知
 ノードはテーブルの暗黙の列  
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |internal graph_id column  |
+|graph_id_\<hex_string> |bigint |1  |内部 graph_id 列  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |外部のノード id 列  |
 
 エッジ テーブル内の暗黙の列  
 |列名    |データ型  |is_hidden  |解説  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |internal graph_id column  |
+|graph_id_\<hex_string> |bigint |1  |内部 graph_id 列  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |id 列の外部境界  |
 |from_obj_id_\<hex_string>  |INT    |1  |オブジェクト id のノードから内部  |
 |from_id_\<hex_string>  |bigint |1  |内部ノード graph_id から  |

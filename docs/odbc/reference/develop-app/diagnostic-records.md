@@ -1,15 +1,16 @@
 ---
-title: "診断レコード |Microsoft ドキュメント"
-ms.custom: 
+title: 診断レコード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df08adfc15a2ad80bac007a65ce4ed9304194f20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 191be40ee4d85cc3dcb0915887aa4ef734f67e04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostic-records"></a>診断レコード
 各環境に関連付けられた、接続、ステートメント、および記述子ハンドルは*診断レコード*です。 これらのレコードと呼ばれる特定のハンドルを使用する最後の関数に関する診断情報が含まれています。 ハンドルを使用して別の関数が呼び出されたときにのみ、レコードが置き換えられます。 任意の時点で格納できる診断レコードの数に制限はありません。  

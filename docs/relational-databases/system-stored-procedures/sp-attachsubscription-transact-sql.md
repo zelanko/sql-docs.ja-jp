@@ -1,16 +1,16 @@
 ---
-title: "sp_attachsubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_attachsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a942884b2e77ead86bb088ea98b5824eb2156bc0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7104db0241fe6d68137f5290f82e33f5dd3984ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   既存のサブスクリプション データベースを任意のサブスクライバーにアタッチします。 このストアド プロシージャは、master データベース上の新しいサブスクライバー側で実行されます。  
   
 > [!IMPORTANT]  
->  この機能は廃止されており、今後のリリースでは削除されます。 この機能は、新しい開発作業では使用できません。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+>  この機能は廃止されており、今後のリリースでは削除されます。 この機能は、新しい開発作業では使用できません。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=** ] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  対象となるサブスクリプション データベースの名前を文字列で指定します。 *dbname*は**sysname**、既定値はありません。  
   
  [  **@filename=** ] **'***filename***'**  
@@ -133,7 +133,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
   
  パブリケーション保有期間が過ぎている場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間を過ぎたサブスクリプションを指定した場合は、サブスクリプションがアタッチされたとき、または初めて同期したときにエラーが発生します。 パブリケーションのパブリケーション保有期間が**0** (無期限) は無視されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_attachsubscription**です。  
   
 ## <a name="see-also"></a>参照  

@@ -1,16 +1,16 @@
 ---
-title: "sp_register_custom_scripting (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_register_custom_scripting (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16274b71d1ce14b2a143e5d6ce723bcb64cbaebd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b0f249f4c70ec6892ca6cb576dad0d70c60527b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@type**  =] **'***型***'**  
+ [ **@type** =] **'***型***'**  
  登録するカスタム ストアド プロシージャまたはスクリプトの種類を指定します。 *型*は**varchar (16)**, で、既定値はありませんは、次の値のいずれかを指定します。  
   
 |値|Description|  
 |-----------|-----------------|  
-|**挿入します。**|登録したカスタム ストアド プロシージャを、INSERT ステートメントがレプリケートされるときに実行。|  
+|**insert**|登録したカスタム ストアド プロシージャを、INSERT ステートメントがレプリケートされるときに実行。|  
 |**更新プログラム**|登録したカスタム ストアド プロシージャを、UPDATE ステートメントがレプリケートされるときに実行。|  
-|**削除**|登録したカスタム ストアド プロシージャを、DELETE ステートメントがレプリケートされるときに実行。|  
+|**delete**|登録したカスタム ストアド プロシージャを、DELETE ステートメントがレプリケートされるときに実行。|  
 |**custom_script**|スクリプトをデータ定義言語 (DDL) トリガーの最後に実行。|  
   
- [  **@value** =] **'***値***'**  
+ [ **@value**=] **'***値***'**  
  登録するストアド プロシージャの名前または登録する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの名前とその完全修飾パスを指定します。 *値*は**nvarchar (1024)**、既定値はありません。  
   
 > [!NOTE]  
@@ -67,10 +67,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  ときの値*型*は**custom_script**の完全なパスと名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルが必要です。 それ以外の場合、*値*登録済みのストアド プロシージャの名前を指定する必要があります。  
   
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  カスタム ストアド プロシージャまたはスクリプトを登録するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**NULL**です。  
   
- [  **@article** =] **'***記事***'**  
+ [ **@article**=] **'***記事***'**  
  カスタム ストアド プロシージャまたはスクリプトを登録するアーティクルの名前を指定します。 *記事*は**sysname**、既定値は**NULL**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -81,10 +81,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  このストアド プロシージャは、レプリケートされるテーブルにスキーマ変更を行う前に実行する必要があります。 詳細については、このストアド プロシージャを使用して、次を参照してください。[を再生成カスタム トランザクション プロシージャ スキーマ変更の反映](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロールが実行できる**sp _register_custom_scripting**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_unregister_custom_scripting &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [sp_unregister_custom_scripting &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

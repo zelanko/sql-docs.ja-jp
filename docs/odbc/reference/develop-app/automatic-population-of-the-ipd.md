@@ -1,15 +1,16 @@
 ---
-title: "自動生成、IPD |Microsoft ドキュメント"
-ms.custom: 
+title: 自動生成、IPD |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD の自動設定
 一部のドライバーでは、パラメーター化クエリを準備した後、IPD のフィールドを設定できます。 記述子フィールドには、データ型、有効桁数、小数点以下桁数、およびその他の特性を含め、パラメーターに関する情報が自動的に設定されます。 これはサポートに相当**SQLDescribeParam**です。 この情報は、アプリケーションが認識していないパラメーターを使用してアドホック クエリが行われる場合など、検出するには、他の方法があるないときをアプリケーションに特に有用です。  

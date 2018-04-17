@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d95fad7337666594aa41552a20e6ab5d4f211995
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b3155994177127d9739b9a908ab439acaf50c979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  変更データ キャプチャの構成テンプレート "Instantiate CDC Wrapper TVFs for Schema" には、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、スキーマの定義済みクエリ関数に対するすべてのラッパー関数の CREATE スクリプトを取得する方法が示されています。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、次を参照してください。[テンプレート エクスプ ローラー](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)です。  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_cdc_generate_wrapper_function &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

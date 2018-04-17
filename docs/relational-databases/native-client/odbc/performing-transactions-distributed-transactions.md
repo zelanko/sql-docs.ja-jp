@@ -1,15 +1,15 @@
 ---
-title: "分散トランザクションの実行 |Microsoft ドキュメント"
-ms.custom: 
+title: 分散トランザクションの実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MS DTC, performing distributed transactions
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 176f39a779bcb50ecc35c49856b1ed96f2f61173
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4375f4561368540c5411342748982db6d79a1088
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performing-transactions---distributed-transactions"></a>分散トランザクションのトランザクションの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,6 +43,6 @@ ms.lasthandoff: 01/25/2018
  分散トランザクションに参加しているときに 2 番目の分散トランザクションに参加すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは元の分散トランザクションへの参加を解除して、新しいトランザクションに参加します。 詳細については、次を参照してください。 [DTC プログラマ リファレンス](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)です。  
   
 ## <a name="see-also"></a>参照  
- [実行するトランザクション &#40; ODBC &#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+ [実行するトランザクション & #40; ODBC & #41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

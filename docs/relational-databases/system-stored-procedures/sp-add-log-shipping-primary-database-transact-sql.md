@@ -1,16 +1,16 @@
 ---
-title: "sp_add_log_shipping_primary_database (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_log_shipping_primary_database (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24a1158b85bc9c53070c0c6cd16f2b6b36dcfe92
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0c1655c96f5a088ac2176b5a9c421036e08b8907
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@database=** ] '*database*'  
+ [  **@database=** ] '*データベース*'  
  ログ配布プライマリ データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [ **@backup_directory=** ] '*backup_directory*'  
+ [  **@backup_directory=** ] '*backup_directory*'  
  プライマリ サーバー上のバックアップ フォルダーのパスを指定します。 *backup_directory*は**nvarchar (500)**、既定値はありません、NULL にすることはできません。  
   
  [ **@backup_share=** ] '*backup_share*'  
@@ -77,20 +77,20 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  [ **@backup_retention_period=** ] *backup_retention_period*  
  プライマリ サーバー上のバックアップ ディレクトリでログ バックアップ ファイルを保持する期間を、分単位で指定します。 *backup_retention_period*は**int**、既定値はありません、NULL にすることはできません。  
   
- [ **@monitor_server=** ] '*monitor_server*'  
+ [  **@monitor_server=** ] '*monitor_server*'  
  監視サーバーの名前を指定します。 *Monitor_server*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
+ [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
  監視サーバーへの接続に使用されるセキュリティ モード。  
   
  1 = Windows 認証です。  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *monitor_server_security_mode*は**ビット**NULL にすることはできません。  
   
- [ **@monitor_server_login=** ] '*monitor_server_login*'  
+ [  **@monitor_server_login=** ] '*monitor_server_login*'  
  監視サーバーへのアクセスに使用するアカウントのユーザー名を指定します。  
   
- [ **@monitor_server_password=** ] '*monitor_server_password*'  
+ [  **@monitor_server_password=** ] '*monitor_server_password*'  
  監視サーバーへのアクセスに使用するアカウントのパスワードを指定します。  
   
  [ **@backup_threshold=** ] *backup_threshold*  
@@ -111,7 +111,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  [ **@primary_id=** ] *primary_id* OUTPUT  
  ログ配布構成におけるプライマリ データベースの ID。 *primary_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [ **@backup_compression**= ] *backup_compression_option*  
+ [ **@backup_compression**=] *backup_compression_option*  
  ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)です。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
   
  0 = 無効。 ログ バックアップは圧縮されません。  
@@ -127,7 +127,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_log_shipping_primary_database** must be run from the **master** database on the primary server. このストアド プロシージャでは、次の関数を実行します。  
+ **sp_add_log_shipping_primary_database**から実行する必要があります、**マスター**プライマリ サーバー上のデータベースです。 このストアド プロシージャでは、次の関数を実行します。  
   
 1.  プライマリ ID を生成し、テーブルに、プライマリ データベースのエントリを追加**log_shipping_primary_databases**指定された引数を使用します。  
   
@@ -169,7 +169,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

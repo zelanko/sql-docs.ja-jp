@@ -1,31 +1,32 @@
 ---
-title: "ユーザー、ロール、およびログインの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー、ロール、およびログインの管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - logins [SMO]
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47c2cf548bdc703f86a7ff90f2e32e44fceb9a7f
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bf373c1fb741dc21686340e898ce994d9b0b8cc4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-users-roles-and-logins"></a>ユーザー、ロール、およびログインの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,10 +37,10 @@ ms.lasthandoff: 01/12/2018
   
  各<xref:Microsoft.SqlServer.Management.Smo.Database>オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.UserCollection>データベースですべてのユーザーを指定するオブジェクト。 各ユーザーはログオンに関連付けられています。 1 つのログオンを 2 つ以上のデータベース内のユーザーに関連付けることもできます。 <xref:Microsoft.SqlServer.Management.Smo.Login>オブジェクトの<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>メソッドは、ログオンに関連付けられているすべてのデータベースのすべてのユーザーの一覧を使用することができます。 または、<xref:Microsoft.SqlServer.Management.Smo.User> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Login> プロパティで、ユーザーに関連付けられたログオンを指定します。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースでは、ユーザーが特定のタスクを実行することのできるデータベース レベルの権限のセットを指定するロールもあります。 サーバー ロールと異なり、データベース ロールは固定されていません。 データベース ロールは、作成、変更、および削除を行うことができます。 権限およびユーザーは、データベースに割り当てて、一括管理することができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースでは、ユーザーが特定のタスクを実行することのできるデータベース レベルの権限のセットを指定するロールもあります。 サーバー ロールと異なり、データベース ロールは固定されていません。 データベース ロールは、作成、変更、および削除を行うことができます。 権限およびユーザーは、データベースに割り当てて、一括管理することができます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください[Visual C &#35; を作成する。Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Visual C# でのログインおよび関連付けられたユーザーの列挙  
  データベース内の各ユーザーは、ログオンに関連付けられています。 ログオンは 2 つ以上のデータベース内のユーザーに関連付けることもできます。 コード例では、<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Login> メソッドを呼び出して、ログオンに関連付けられているすべてのデータベース ユーザーをリストする方法を示します。 例では、ログオンおよびユーザーの作成、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]データベースを列挙するマッピング情報があるかどうかを確認します。  

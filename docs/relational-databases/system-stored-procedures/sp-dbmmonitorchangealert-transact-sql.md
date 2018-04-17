@@ -1,16 +1,16 @@
 ---
-title: "sp_dbmmonitorchangealert (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_dbmmonitorchangealert (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41132fa5fd69036e9bc504628cd353d809d6a0bf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ec370000d664f8caa5dfb6eff526bbff2cb49ae2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  追加または変更する警告を識別する整数値を指定します。 次のいずれかの値を指定します。  
   
-|[値]|パフォーマンス基準|警告しきい値|  
+|値|パフォーマンス基準|警告しきい値|  
 |-----------|------------------------|-----------------------|  
 |1|最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告を使用すると、時間的な面からデータ損失の可能性を判断できます。この警告は特に高パフォーマンス モードに関係しますが、 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |2|未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告を使用すると、KB の面からデータ損失の可能性を判断できます。この警告は特に高パフォーマンス モードに関係しますが、 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
@@ -66,7 +66,7 @@ sp_dbmmonitorchangealert database_name
 |4|ミラー コミットのオーバーヘッド|許容可能な、トランザクションあたりの平均遅延時間 (ミリ秒単位) を指定します。この時間を経過すると、プリンシパル サーバーで警告が生成されます。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。 この値は高安全モードにのみ関係します。|  
 |5|保有期間|データベース ミラーリングの状態テーブルにある行の保有期間を制御するメタデータです。|  
   
- 警告に対応するイベント Id については、次を参照してください。[を使用して警告のしきい値および警告のミラーリング パフォーマンス基準 &#40;です。SQL Server &#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ 警告に対応するイベント Id については、次を参照してください。[使用警告しきい値および警告ミラーリング パフォーマンス基準の&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)です。  
   
  *alert_threshold*  
  警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、パフォーマンス基準に応じて、KB、分、またはミリ秒となります。  
@@ -114,7 +114,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングと &#40; の監視SQL Server と &#41; です。](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorhelpalert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+ [sp_dbmmonitorhelpalert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   
   

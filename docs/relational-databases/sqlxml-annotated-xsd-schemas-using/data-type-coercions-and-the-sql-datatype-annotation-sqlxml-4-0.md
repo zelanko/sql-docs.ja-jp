@@ -1,16 +1,16 @@
 ---
-title: "データ型の強制変換と sql:datatype 注釈 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: データ型の強制変換と sql:datatype 注釈 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -24,25 +24,26 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8a2dc2c3d91eea67e9e08a87d5aa7735a1b45b1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の強制型変換と sql:datatype 注釈 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD スキーマで、 **xsd:type**属性が要素または属性の XSD データ型を指定します。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
+  XSD スキーマで、 **xsd:type**属性が要素または属性の XSD データ型を指定します。 XSD スキーマを使用したデータベースからのデータの抽出では、指定されているデータ型を使用して、データが書式設定されます。  
   
  スキーマを XSD 型を指定するだけでなく、Microsoft を指定することも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用して、 **sql:datatype**注釈。 **Xsd:type**と**sql:datatype**属性は、XSD データ型間のマッピングを制御および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 属性  
- 使用することができます、 **xsd:type** XML データ型を指定する属性または列にマップされる要素の属性です。 **Xsd:type**サーバーとも実行される XPath クエリから返されるドキュメントに影響します。 含むマッピング スキーマに対して XPath クエリを実行すると**xsd:type**、XPath クエリを処理するときに指定されたデータ型を使用しています。 XPath の使用方法の詳細については**xsd:type**を参照してください[XPath データ型 &#40; への XSD データ型のマッピングSQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
+ 使用することができます、 **xsd:type** XML データ型を指定する属性または列にマップされる要素の属性です。 **Xsd:type**サーバーとも実行される XPath クエリから返されるドキュメントに影響します。 含むマッピング スキーマに対して XPath クエリを実行すると**xsd:type**、XPath クエリを処理するときに指定されたデータ型を使用しています。 XPath の使用方法の詳細については**xsd:type**を参照してください[から XPath データ型への XSD データ型のマッピング&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)です。  
   
  返されるドキュメントでは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型は文字列表記に変換されます。 また、データ型によっては追加の変換が必要です。 次の表に、各種に使用される変換**xsd:type**値。  
   
@@ -198,6 +199,6 @@ XSD スキーマで、 **xsd:type**属性が要素または属性の XSD デー�
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. sql:datatype を使用して SQL データ型を指定する  
- 作業用サンプルについては、例 G を参照してください[XML 一括読み込みの例 &#40;です。SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). この例では、"{" および "}" を含む GUID 値の一括読み込みが行われます。 この例では、スキーマが指定**sql:datatype**を識別する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型として**uniqueidentifier**です。 この例ではいつ**sql:datatype**スキーマで指定する必要があります。  
+ 作業用サンプルについては、例 G を参照してください[XML 一括読み込みの例&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)です。 この例では、"{" および "}" を含む GUID 値の一括読み込みが行われます。 この例では、スキーマが指定**sql:datatype**を識別する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型として**uniqueidentifier**です。 この例ではいつ**sql:datatype**スキーマで指定する必要があります。  
   
   

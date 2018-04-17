@@ -1,15 +1,15 @@
 ---
-title: "実行を指示 |Microsoft ドキュメント"
-ms.custom: 
+title: 実行を指示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, statements
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b0dbe099a36f7571f024e34838337f38b5ddef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff1baa498a99f9e9279d1c104df179fa34cbea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-execution"></a>直接実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、マルチユーザー環境で通常実行されるステートメントに関して、直接実行のパフォーマンスが大幅に向上します。また、通常、SQL ステートメントの実行にパラメーター マーカーを指定して SQLExecDirect を使用すると、準備実行に近い効率を得ることができます。  
   
- インスタンスに接続しているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して[sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) SQL ステートメントまたはで指定されたバッチを送信する**SQLExecDirect**です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]場合、SQL ステートメントをすばやく判断するロジックを備えてまたはバッチの実行と**sp_executesql**ステートメントまたはメモリに既に存在する実行プランを生成したバッチと一致します。 一致する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は新しいプランをコンパイルしないで、単に既存のプランを再利用します。 一般的に実行される SQL ステートメントを実行することを意味**SQLExecDirect**は、ユーザー数の多いシステムでのみ使用可能になったの以前のバージョンのストアドプロシージャを再利用のプランの利点の多くを利用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ インスタンスに接続しているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して[sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) SQL ステートメントまたはで指定されたバッチを送信する**SQLExecDirect**です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 場合、SQL ステートメントをすばやく判断するロジックを備えてまたはバッチの実行と**sp_executesql**ステートメントまたはメモリに既に存在する実行プランを生成したバッチと一致します。 一致する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は新しいプランをコンパイルしないで、単に既存のプランを再利用します。 一般的に実行される SQL ステートメントを実行することを意味**SQLExecDirect**は、ユーザー数の多いシステムでのみ使用可能になったの以前のバージョンのストアドプロシージャを再利用のプランの利点の多くを利用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  実行プランを再利用することで得られる利点は、複数のユーザーが同じ SQL ステートメントやバッチを実行しているときにのみ効果があります。 異なるクライアントが実行する SQL ステートメントを可能な限り統一の取れたステートメントにして、実行プランの再利用を可能にするために、次のコーディング規則に従ってください。  
   
@@ -51,6 +52,6 @@ ms.lasthandoff: 01/25/2018
  すべてのステートメントが実行される場合**SQLExecDirect**はこれらの規則を使用してコード化された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]営業案件が発生したときに、実行プランを再利用することができます。  
   
 ## <a name="see-also"></a>参照  
- [実行中のステートメント &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [実行中のステートメント (&) #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

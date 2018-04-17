@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergearticle (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addmergearticle (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd9d9ead2695338116dd3da6a60285756cb433c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@source_object=** ] **'***source_object***'**  
  パブリッシュされるデータベース オブジェクトを指定します。 *source_object*は**sysname**、既定値はありません。 マージ レプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、次を参照してください。[公開データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)です。  
   
- [  **@type=** ] **'***型***'**  
+ [ **@type=** ] **'***type***'**  
  アーティクルの種類を指定します。 *型*は**sysname**、既定値は**テーブル**値は次のいずれかを指定できます。  
   
 |値|Description|  
@@ -121,7 +121,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**[なし]**|サブスクライバーに既にテーブルがある場合、操作は何も行われません。|  
-|**削除**|サブセット フィルター内の WHERE 句に基づいて削除します。|  
+|**delete**|サブセット フィルター内の WHERE 句に基づいて削除します。|  
 |**drop** (既定値)|テーブルを再作成する前に削除します。 サポートするために必要な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバーです。|  
 |**truncate**|レプリケーション先テーブルを切り捨てます。|  
   
@@ -171,7 +171,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 |**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)です。<br /><br /> 関連するオプションを参照してください**0x100000000**です。|  
 |**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) に変換**varbinary (max)**を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。|  
-|**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)です。|  
 |**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。|  
 |**0x8000000000**|変換、 **geography**と**geometry**データ型を**varbinary (max)** を実行しているサブスクライバーにこれらの型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|型の列にインデックスをレプリケート**geography**と**geometry**です。|  
@@ -232,7 +232,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **1**署名が元が信頼できるかどうかを確認することを指定します。  
   
  [  **@destination_object=** ] **'***destination_object***'**  
- サブスクリプション データベース内のオブジェクトの名前を指定します。 *destination_object*は**sysname**での新機能の既定値を持つ **@source_object**です。 このパラメーターは、アーティクルが、ストアド プロシージャ、ビュー、UDF など、スキーマ専用アーティクルである場合にのみ指定できます。 指定したアーティクルが、テーブル アーティクルの値がかどうか *@source_object* 内の値をオーバーライド*destination_object*です。  
+ サブスクリプション データベース内のオブジェクトの名前を指定します。 *destination_object*は**sysname**での新機能の既定値を持つ **@source_object**です。 このパラメーターは、アーティクルが、ストアド プロシージャ、ビュー、UDF など、スキーマ専用アーティクルである場合にのみ指定できます。 指定したアーティクルが、テーブル アーティクルの値がかどうか*@source_object*内の値をオーバーライド*destination_object*です。  
   
  [  **@allow_interactive_resolver=** ] **'***allow_interactive_resolver***'**  
  アーティクルに対するインタラクティブ競合回避モジュールの使用を有効または無効にします。 *allow_interactive_resolver*は**nvarchar (5)**、既定値は FALSE。 **true**はアーティクルに対するインタラクティブ競合回避モジュールを使用できます**false**それを無効にします。  
@@ -275,7 +275,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **true**論理レコードのどこでも変更が加えられた場合に競合が検出されることを指定します。  
   
- **false**既定の競合検出を使用することを指定して指定されたとおり*column_tracking*です。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
+ **false**既定の競合検出を使用することを指定して指定されたとおり*column_tracking*です。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」(論理レコードによる関連行への変更のグループ化) をご覧ください。  
   
 > [!NOTE]  
 >  論理レコードでサポートされていないため[!INCLUDE[ssEW](../../includes/ssew-md.md)]のサブスクライバー, の値を指定する必要があります**false**の*logical_record_level_conflict_detection*これらのサブスクライバーをサポートするためにします。  
@@ -285,7 +285,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **true**優先されなかった論理レコード全体が優先されなかった論理レコードを上書きすることを指定します。  
   
- **false**優先されなかった行が論理レコードに制約を受けないことを指定します。 場合*logical_record_level_conflict_detection*は**true**、し*logical_record_level_conflict_resolution*にも設定する必要があります**true**. 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
+ **false**優先されなかった行が論理レコードに制約を受けないことを指定します。 場合*logical_record_level_conflict_detection*は**true**、し*logical_record_level_conflict_resolution*にも設定する必要があります**true**. 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」(論理レコードによる関連行への変更のグループ化) をご覧ください。  
   
 > [!NOTE]  
 >  論理レコードでサポートされていないため[!INCLUDE[ssEW](../../includes/ssew-md.md)]のサブスクライバー, の値を指定する必要があります**false**の*logical_record_level_conflict_resolution*これらのサブスクライバーをサポートするためにします。  
@@ -304,10 +304,10 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  アーティクルのソース テーブルが、別のパブリケーションの値で既にパブリッシュされている場合*partition_options*の両方のアーティクルで同じである必要があります。  
   
  [  **@processing_order=** ] *processing_order*  
- マージ パブリケーション内のアーティクルの処理順序を示します。 *processing_order*は**int**、既定値は 0 です。 **0**アーティクルが順序付けられた、し、その他の値は、このアーティクルの処理順序の序数値を表すことを指定します。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 処理順序が内のアーティクルのニックネームの順序によって決まりますが 2 つのアーティクルの値が同じ場合は、 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)システム テーブル。 詳細については、「[Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。  
+ マージ パブリケーション内のアーティクルの処理順序を示します。 *processing_order*は**int**、既定値は 0 です。 **0**アーティクルが順序付けられた、し、その他の値は、このアーティクルの処理順序の序数値を表すことを指定します。 アーティクルは、最も小さい値から最も大きい値の順序で処理されます。 処理順序が内のアーティクルのニックネームの順序によって決まりますが 2 つのアーティクルの値が同じ場合は、 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)システム テーブル。 詳細については、「[マージ アーティクルの処理順序の指定](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」を参照してください。  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
- サブスクライバーにおける、クライアント サブスクリプションを使用した更新に対する制限を定義します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。 *subscriber_upload_options*は**tinyint**値は次のいずれかを指定できます。  
+ サブスクライバーにおける、クライアント サブスクリプションを使用した更新に対する制限を定義します。 詳細については、次を参照してください。 [Download-Only アーティクルを使用したマージ レプリケーション パフォーマンスの最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)します。 *subscriber_upload_options*は**tinyint**値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -315,7 +315,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**1**|サブスクライバー側での変更は可能ですが、パブリッシャーに変更はアップロードされません。|  
 |**2**|サブスクライバー側での変更は許可されていません。|  
   
- 変更する*subscriber_upload_options*を呼び出すことで再初期化するサブスクリプションが必要です[sp_reinitmergepullsubscription (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
+ 変更する*subscriber_upload_options*を呼び出すことで再初期化するサブスクリプションが必要です[sp_reinitmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)です。  
   
 > [!NOTE]  
 >  値、別のパブリケーションでアーティクルのソース テーブルが既にパブリッシュされている場合*subscriber_upload_options*の両方のアーティクルで同じである必要があります。  
@@ -366,11 +366,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  値を指定する場合**3**の*partition_options*を単一のサブスクリプションのみパーティションごとに該当するアーティクル内のデータがあります。 第 2 のサブスクリプションを作成し、その新しいサブスクリプションのフィルター選択条件が既存のサブスクリプションと同じパーティションとして判別される場合、既存のサブスクリプションは削除されます。  
   
- 3 の値を指定するときに*partition_options*メタデータがクリーンアップたびに、マージ エージェントを実行し、パーティションのスナップショットに有効期限が短くします。 このオプションを使用するときは、サブスクライバーが要求したパーティション スナップショットを有効にすることを検討してください。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
+ 3 の値を指定するときに*partition_options*メタデータがクリーンアップたびに、マージ エージェントを実行し、パーティションのスナップショットに有効期限が短くします。 このオプションを使用するときは、サブスクライバーが要求したパーティション スナップショットを有効にすることを検討してください。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
   
  静的行フィルターを追加する場合、アーティクルを使用して、 *subset_filterclause*を既存のパブリケーションがパラメーター化されたフィルターの記事は、サブスクリプションを再初期化が必要です。  
   
- 指定するときに*processing_order*、ことをお勧めアーティクルの順序の値の間にすきまを残したりをしやすく、将来新しい値を設定します。 たとえば、Article1、Article2、Article3 の 3 つのアーティクルがあれば、設定*processing_order* 10、20、および 30 ではなく、1、2、および 3 にします。 詳細については、「[Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」 (マージ アーティクルの処理順序の指定) を参照してください。  
+ 指定するときに*processing_order*、ことをお勧めアーティクルの順序の値の間にすきまを残したりをしやすく、将来新しい値を設定します。 たとえば、Article1、Article2、Article3 の 3 つのアーティクルがあれば、設定*processing_order* 10、20、および 30 ではなく、1、2、および 3 にします。 詳細については、「[マージ アーティクルの処理順序の指定](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」を参照してください。  
   
 ## <a name="default-schema-option-table"></a>既定のスキーマ オプションの一覧  
  次の表の NULL 値が指定されている場合、ストアド プロシージャによって設定されている既定値*schema_option*アーティクルの種類によって異なります。  
@@ -400,11 +400,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [アーティクルを定義します。](../../relational-databases/replication/publish/define-an-article.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 列をレプリケートします。](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   

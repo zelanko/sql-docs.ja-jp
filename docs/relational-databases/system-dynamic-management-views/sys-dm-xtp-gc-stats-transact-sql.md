@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_xtp_gc_stats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_gc_stats
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2440605950721a0b3a0555bebd250344b19d2cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   現在の動作に関する情報 (全体的な統計情報) を提供、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]ガベージ コレクション プロセスです。  
   
- 行のガベージ コレクションは、通常のトランザクション処理の一環として、またはガベージ コレクションのメイン スレッド (アイドル ワーカー) によって実行されます。 ガベージ コレクション キューから 1 つの作業項目をデキュー ユーザー トランザクションがコミットされたときに ([sys.dm_xtp_gc_queue_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). ガベージ コレクションが可能であってもメイン ユーザー トランザクションでアクセスされなかった行のガベージ コレクションは、ダスティ コーナー スキャン (使用頻度が低いインデックスの領域のスキャン) の一環としてアイドル ワーカーによって実行されます。  
+ 行のガベージ コレクションは、通常のトランザクション処理の一環として、またはガベージ コレクションのメイン スレッド (アイドル ワーカー) によって実行されます。 ガベージ コレクション キューから 1 つの作業項目をデキュー ユーザー トランザクションがコミットされたときに ([sys.dm_xtp_gc_queue_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md))。 ガベージ コレクションが可能であってもメイン ユーザー トランザクションでアクセスされなかった行のガベージ コレクションは、ダスティ コーナー スキャン (使用頻度が低いインデックスの領域のスキャン) の一環としてアイドル ワーカーによって実行されます。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
@@ -78,6 +78,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

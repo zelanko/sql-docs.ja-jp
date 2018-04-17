@@ -1,31 +1,32 @@
 ---
-title: "行方向のバインド |Microsoft ドキュメント"
-ms.custom: 
+title: 行方向のバインド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
 行方向のバインドを使用して、またはアプリケーションを含む 1 つまたは 2 つ、構造体を定義、いくつかの場合、3 つ、データが返される対象の各列の要素。 最初の要素をデータ値を保持し、2 番目の要素が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これを行う場合、構造体には、3 番目の要素が含まれています。 その後、アプリケーションでは、行セットの行数が同じ数の要素を格納しているこれらの構造体の配列を割り当てます。  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  ここで行番号が付けられます 1、行セットのサイズにします。 (いずれかから差し引かれます行番号が C でのインデックスの配列は 0 から始まるためです。)次の図は、行方向のバインドの動作を示します。 一般に、構造にバインドされている列のみが含まれています。 構造体には、結果セット列に関連しないフィールドを含めることができます。 列は、任意の順序で、構造に配置することができますが、わかりやすくするためのシーケンシャルな順序で表示されます。  
   
- ![表示行 &#45; 賢明バインディング](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![表示行&#45;賢明バインディング](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  たとえば、次のコードは、OrderID、販売員、およびステータスの列のデータ、および長さ/インジケーターの販売員と状態列に返される要素を持つ構造体を作成します。 これらの構造体の 10 を割り当てるし、OrderID、販売員、およびステータスの列にバインドします。  
   

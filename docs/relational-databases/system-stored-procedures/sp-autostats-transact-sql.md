@@ -1,16 +1,16 @@
 ---
-title: "sp_autostats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_autostats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_autostats_TSQL
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_autostats
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a73ac5060a62ba73bb05addc780fcd356ca9a102
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b57f708d24cff611e256915b9981e13ecf89d4e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   インデックス、統計オブジェクト、テーブル、またはインデックス付きビューの自動統計更新オプション (AUTO_UPDATE_STATISTICS) を表示または変更します。  
   
- AUTO_UPDATE_STATISTICS オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[統計](../../relational-databases/statistics/statistics.md)です。  
+ AUTO_UPDATE_STATISTICS オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[統計](../../relational-databases/statistics/statistics.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -88,7 +89,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  AUTO_UPDATE_STATISTICS はメモリ最適化テーブルでは常に OFF です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  オプションを AUTO_UPDATE_STATISTICS を変更するにはメンバーシップ n が必要です、 **db_owner**の固定データベース ロール、または ALTER 権限*table_name*です。オプションを AUTO_UPDATE_STATISTICS を表示するにはメンバーシップが必要です、**パブリック**ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -124,13 +125,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [統計情報](../../relational-databases/statistics/statistics.md)   
- [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [統計](../../relational-databases/statistics/statistics.md)   
+ [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_createstats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

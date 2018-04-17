@@ -2,7 +2,7 @@
 title: パラメーターを記述する |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b90b71a5e327e894329ca8474e8edff5740d8826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f746b7df2ac3ef4de73e54c6d78df02e0c64ec34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="describing-parameters"></a>パラメーターを記述します。
 **SQLBindParameter**パラメーターを記述する引数を持つ: その SQL 型、有効桁数、および小数点以下桁数です。 ドライバーは、この情報を使用または*メタデータ、*パラメーター値をデータ ソースで必要な型に変換します。 一見すると、思えますが、ドライバーが、パラメーターのメタデータをアプリケーション、つまりより認識する最適な位置にあります。結局のところ、結果セットの列、ドライバーは、メタデータを検出簡単にできます。 結局のところ、大文字と小文字ではありません。 最初に、ほとんどのデータ ソースは用意されていない、ドライバーがパラメーターのメタデータを検出するためです。 2 つ目は、ほとんどのアプリケーションが既にわかっているメタデータ。  

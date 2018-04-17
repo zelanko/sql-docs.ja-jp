@@ -2,7 +2,7 @@
 title: SQLParamData 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 395cf795659b47398639f30fbd863b1f2d385e55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 関数
 **準拠**  
@@ -56,7 +56,7 @@ SQLRETURN SQLParamData(
  *ValuePtrPtr*  
  [出力]アドレスを取得するためのバッファーへのポインター、 *ParameterValuePtr*で指定されたバッファー **SQLBindParameter** (のパラメーターのデータ) のアドレス、または、 *TargetValuePtr*で指定されたバッファー **SQLBindCol** (列、データの) SQL_DESC_DATA_PTR 記述子レコード フィールドに含まれているとします。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_PARAM_DATA_AVAILABLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -73,7 +73,7 @@ SQLRETURN SQLParamData(
 |HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*; で、関数が再度呼び出さし、*StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  
-|HY010|関数のシーケンス エラー|(DM) 前の関数呼び出しがへの呼び出し**SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、または**SQLSetPos**ここで、コードは SQL_NEED_DATA、または前の関数呼び出しがへの呼び出しを返す**SQLPutData**です。<br /><br /> 前の関数呼び出しがへの呼び出し**SQLParamData**です。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLParamData**関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle*SQL_NEED_DATA が返される。 **SQLCancel**がすべての実行時データ パラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY010|関数のシーケンス エラー|(DM) 前の関数呼び出しがへの呼び出し**SQLExecDirect**、 **SQLExecute**、 **SQLBulkOperations**、または**SQLSetPos**ここで、コードは SQL_NEED_DATA、または前の関数呼び出しがへの呼び出しを返す**SQLPutData**です。<br /><br /> 前の関数呼び出しがへの呼び出し**SQLParamData**です。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLParamData**関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle*と返される SQL_NEED_DATA です。 **SQLCancel**がすべての実行時データ パラメーターまたは列に対してデータが送信される前に呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
  場合**SQLParamData**が呼び出された SQL ステートメントにパラメーターのデータを送信中に、ステートメントを実行すると呼ばれる、関数によって返される任意の SQLSTATE を返すこと (**SQLExecute**または**SQLExecDirect**)。 列のデータを送信中に呼び出されると更新または追加された**SQLBulkOperations**で更新されているまたは**SQLSetPos**、によって返される任意の SQLSTATE を返すことができます**SQLBulkOperations**または**SQLSetPos**です。  
   
 ## <a name="comments"></a>コメント  
- **SQLParamData** 2 つの用途の実行時データのデータを指定するに呼び出せる: パラメーターのデータへの呼び出しで使用される**SQLExecute**または**SQLExecDirect**、または使用される列のデータ行が更新またはへの呼び出しによって追加されたときに**SQLBulkOperations**への呼び出しによって更新または**SQLSetPos**です。 実行時に、 **SQLParamData**のどのデータを示すインジケーターが必要になるアプリケーションに返します。  
+ **SQLParamData** 2 つの用途の実行時データのデータを指定するに呼び出せる: パラメーターのデータへの呼び出しで使用される**SQLExecute**または**SQLExecDirect**、または列のデータとなる場合に使用されます行が更新またはへの呼び出しによって追加された**SQLBulkOperations**への呼び出しによって更新または**SQLSetPos**です。 実行時に、 **SQLParamData**のどのデータを示すインジケーターが必要になるアプリケーションに返します。  
   
  アプリケーションを呼び出すと**SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**ドライバーは SQL_NEED_ を返します実行時データのデータが必要がある場合は、データ。 その後、アプリケーションを呼び出す**SQLParamData**を送信するデータを決定します。 ドライバーは、パラメーターのデータを必要とする場合、ドライバーを返します、  *\*ValuePtrPtr*出力バッファーの行セットのバッファーでアプリケーションを配置する値。 アプリケーションでは、この値を使用して、ドライバーが要求しているパラメーター データを決定します。 ドライバーは、列のデータを必要とする場合、ドライバーを返します、  *\*ValuePtrPtr*バッファーの列が最初にバインドされている、次のように、アドレス。  
   

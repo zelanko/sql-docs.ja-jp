@@ -1,27 +1,28 @@
 ---
-title: "テーブル値パラメーター (OLE DB) の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: テーブル値パラメーター (OLE DB) の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13268f402765d75c939f11a39ea196ac6d1d1e23
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e738a1d9a88661e750d5584350bc66a721fc2c8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>テーブル値パラメーターの使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/24/2018
   
 -   SQLNCLI11 エラーのエラー処理を表示します。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーターと #40 です。SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーターと #40 です。SQL Server Native Client"&"#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>例  
  最初の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用されるデータベースを作成します。  

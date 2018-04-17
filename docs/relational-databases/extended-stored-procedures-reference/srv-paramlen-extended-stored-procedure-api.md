@@ -1,16 +1,16 @@
 ---
-title: "srv_paramlen (拡張ストアド プロシージャ API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramlen (拡張ストアド プロシージャ API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramlen
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramlen
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c619d69e425f28c6a8416d2ef96bbc67602f311
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: ee85bd0792b31ea3d1dd759ad9effc96b0b2195b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  リモート ストアド プロシージャ呼び出しのパラメーターのデータ長を返します。 この関数に代わって **srv_paraminfo** 関数が使用されるようになりました。  
   
@@ -62,7 +62,7 @@ n
  パラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
 ## <a name="returns"></a>返します。  
- パラメーター データの実際の長さをバイト数で返します。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。 *n* 番目のパラメーターが NULL である場合は 0 を返します。  
+ パラメーター データの実際の長さをバイト数で返します。 ある場合ありません*n*番目のパラメーター、またはリモート ストアド プロシージャがない、-1 を返します。 場合、 *n*番目のパラメーターが NULL、0 を返します。  
   
  パラメーターが次に示すいずれかの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] システム データ型である場合、この関数は次の値を返します。  
   

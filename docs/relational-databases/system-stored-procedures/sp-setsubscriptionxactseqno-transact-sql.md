@@ -1,16 +1,16 @@
 ---
-title: "sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab7bf1c5fb7653f4b61af1912af7de3454bf776
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7ec407d84267e8a2a03d2a6774e7c86cc469af94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**元の XACT_SEQNO**|**varbinary (16)**|サブスクライバー側で適用される次のトランザクションの、元の LSN。|  
-|**更新された XACT_SEQNO**|**varbinary (16)**|サブスクライバー側で適用される次のトランザクションの、更新された LSN。|  
+|**元の XACT_SEQNO**|**varbinary(16)**|サブスクライバー側で適用される次のトランザクションの、元の LSN。|  
+|**更新された XACT_SEQNO**|**varbinary(16)**|サブスクライバー側で適用される次のトランザクションの、更新された LSN。|  
 |**サブスクリプション ストリームの数**|**int**|最後の同期中に使用されたサブスクリプション ストリームの数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -80,7 +80,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  **sp_setsubscriptionxactseqno**ピア ツー ピア トランザクション レプリケーション トポロジでは使用できません。  
   
- **sp_setsubscriptionxactseqno**エラーの原因となった特定のトランザクションをスキップするために使用するときに、サブスクライバーで適用されます。 エラーが発生したとき、およびディストリビューション エージェントが停止後は、呼び出す[sp_helpsubscriptionerrors (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 、ディストリビューターの失敗したトランザクションの xact_seqno 値を取得し、呼び出す**sp_setsubscriptionxactseqno**の値を渡します*xact_seqno*です。 こうすると、この LSN より後のコマンドだけが処理されます。  
+ **sp_setsubscriptionxactseqno**エラーの原因となった特定のトランザクションをスキップするために使用するときに、サブスクライバーで適用されます。 エラーが発生したとき、およびディストリビューション エージェントが停止後は、呼び出す[sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) 、ディストリビューターの失敗したトランザクションの xact_seqno 値を取得し、を呼び出す**sp_setsubscriptionxactseqno**の値を渡します*xact_seqno*です。 こうすると、この LSN より後のコマンドだけが処理されます。  
   
  値を指定して**0**の*xact_seqno*ディストリビューション データベースに保留中のすべてのコマンドをサブスクライバーに配信します。  
   
@@ -88,7 +88,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  このエラーが発生した場合は、単一のサブスクリプション ストリームでディストリビューション エージェントを実行する必要があります。 詳細については、「 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_setsubscriptionxactseqno**です。  
   
   

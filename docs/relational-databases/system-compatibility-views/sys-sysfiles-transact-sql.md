@@ -1,16 +1,16 @@
 ---
-title: "sys.sysfiles (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sysfiles (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysfiles
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sysfiles system table
 - sys.sysfiles compatibility view
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46f241ec9402dc275f265419344bc2e3ccf4d007
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1a20db1447de39febf8508b4fd81fc44c7b784ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/09/2018
 |**filename**|**nvarchar(260)**|物理デバイスの名前です。 ファイルの完全なパスが含まれます。|  
   
 ## <a name="see-also"></a>参照  
- [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

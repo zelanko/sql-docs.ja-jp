@@ -1,16 +1,16 @@
 ---
-title: "sys.syslanguages (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.syslanguages (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syslanguages
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03708a28eb0cdd1a961035f95d89cc9476cfbd63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 |months|**nvarchar(372)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形ではなく、それぞれ 20 文字までです。|  
 |shortmonths|**nvarchar(132)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形で、それぞれ 9 文字までです。|  
 |日|**nvarchar(217)**|月曜から日曜の順に、コンマで区切った曜日の名前。曜日の名前はそれぞれ 30 文字までです。|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] この言語を使用する Windows のロケール ID です。|  
+|lcid|**int**|この言語を使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のロケール ID。|  
 |msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ id。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]次のインストールされている言語が含まれています。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 02/09/2018
 |エストニア語|1061|1061|  
 |ラトビア語|1062|1062|  
 |リトアニア語|1063|1063|  
-|(ブラジル)|1046|1046|  
+|ブラジル|1046|1046|  
 |繁体字中国語|1028|1028|  
 |韓国語|1042|1042|  
 |簡体字中国語|2052|2052|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 02/09/2018
 |タイ語|1054|1054|  
   
 ## <a name="see-also"></a>参照  
- [互換性ビュー &#40;です。TRANSACT-SQL と #41 です。](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [互換性ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

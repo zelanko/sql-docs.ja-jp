@@ -1,16 +1,16 @@
 ---
-title: "sp_add_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 965f2191ba9dbdbba5be91412c1459064972c22c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c2cc8460059274458016d24e106e554f78394618
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +60,22 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@secondary_database**  =] '*secondary_database*'  
+ [ **@secondary_database** =] '*secondary_database*'  
  セカンダリ データベースの名前を指定します。 *secondary_database*は**sysname**、既定値はありません。  
   
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** =] '*primary_server*'  
  プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
   
- [  **@primary_database**  =] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
   
- [  **@restore_delay**  =] '*restore_delay*'  
+ [ **@restore_delay** =] '*restore_delay*'  
  セカンダリ サーバーは、指定されたバックアップ ファイルを復元する前に待機を分単位での時間数。 *restore_delay*は**int** NULL にすることはできません。 既定値は 0 です。  
   
- [  **@restore_all**  =] '*restore_all*'  
+ [ **@restore_all** =] '*restore_all*'  
  1 に設定すると、セカンダリ サーバーでは復元ジョブの実行時にすべてのトランザクション ログ バックアップが復元されます。 1 以外の場合は、1 つのファイルが復元された後セカンダリ サーバーは停止します。 *restore_all*は**ビット**NULL にすることはできません。  
   
- [  **@restore_mode**  =] '*restore_mode*'  
+ [ **@restore_mode** =] '*restore_mode*'  
  セカンダリ データベースの復元モードを指定します。  
   
  0 = NORECOVERY でログを復元します。  
@@ -84,28 +84,28 @@ sp_add_log_shipping_secondary_database
   
  *復元*は**ビット**NULL にすることはできません。  
   
- [  **@disconnect_users**  =] '*disconnect_users*'  
+ [ **@disconnect_users** =] '*disconnect_users*'  
  1 に設定すると、復元操作の実行時、ユーザーはセカンダリ データベースから切断されます。 既定値 0 を = です。 *切断*users は**ビット**NULL にすることはできません。  
   
- [  **@block_size**  =] '*block_size*'  
+ [ **@block_size** =] '*block_size*'  
  バックアップ デバイスのブロック サイズに使用されるサイズ (バイト単位)。 *block_size*は**int**で既定値は-1。  
   
- [  **@buffer_count**  =] '*buffer_count*'  
+ [ **@buffer_count** =] '*buffer_count*'  
  バックアップまたは復元操作で使用されるバッファーの総数。 *buffer_count*は**int**で既定値は-1。  
   
- [ **@max_transfer_size** = ] '*max_transfer_size*'  
+ [ **@max_transfer_size** =] '*max_transfer_size*'  
  サイズをバイト単位の最大入力または出力要求によって発行されたで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップ デバイスにします。 *max_transfersize*は**int** NULL にすることができます。  
   
- [  **@restore_threshold**  =] '*restore_threshold*'  
+ [ **@restore_threshold** =] '*restore_threshold*'  
  復元操作が始まってから警告が生成されるまでの許容経過時間 (分単位)。 *restore_threshold*は**int** NULL にすることはできません。  
   
- [  **@threshold_alert**  =] '*threshold_alert*'  
+ [ **@threshold_alert** =] '*threshold_alert*'  
  バックアップのしきい値を超過したときに生成する警告を指定します。 *threshold_alert*は**int**の既定値は 14,420 です。  
   
- [  **@threshold_alert_enabled**  =] '*threshold_alert_enabled*'  
+ [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*'  
  アラートが発生するかどうかを指定と*backup_threshold*を超過します。 値 1 (既定値) では、警告が発生します。 *threshold_alert_enabled*は**ビット**です。  
   
- [  **@history_retention_period**  =] '*ヒストリは削除*'  
+ [ **@history_retention_period** =] '*ヒストリは削除*'  
  分の履歴を保持する時間の長さです。 *ヒストリは削除*は**int**、既定値は NULL です。 何も指定しない場合は、値 14420 が使用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -117,7 +117,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="remarks"></a>解説  
  **sp_add_log_shipping_secondary_database**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベースです。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  **sp_add_log_shipping_secondary_primary** should be called prior to this stored procedure to initialize the primary log shipping database information on the secondary server.  
+1.  **sp_add_log_shipping_secondary_primary**プライマリ ログ配布セカンダリ サーバー上のデータベース情報を初期化するためにこのストアド プロシージャの前に呼び出す必要があります。  
   
 2.  内のセカンダリ データベースのエントリを追加**log_shipping_secondary_databases**指定された引数を使用します。  
   
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

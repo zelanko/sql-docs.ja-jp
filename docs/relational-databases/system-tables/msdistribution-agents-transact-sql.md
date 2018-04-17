@@ -1,16 +1,16 @@
 ---
-title: "MSdistribution_agents (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: MSdistribution_agents (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,37 +22,37 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f71cc1c79f36dcc14980ce4a04b1079fba6a8ee9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfaf9388efc32949540731d0b311ac4f42c9110
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistribution_agents**テーブルには、ローカルのディストリビューターで実行されるディストリビューション エージェントごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ディストリビューション エージェントの ID。|  
-|**name**|**nvarchar (100)**|ディストリビューション エージェントの名前。|  
-|**化コ**|**int**|パブリッシャー データベースの ID。|  
-|**publisher_id などがあります。**|**smallint**|パブリッシャーの ID。|  
+|**name**|**nvarchar(100)**|ディストリビューション エージェントの名前。|  
+|**publisher_database_id**|**int**|パブリッシャー データベースの ID。|  
+|**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**subscriber_id**|**smallint**|既知のエージェントだけが使用するサブスクライバーの ID。 匿名のエージェントに対しては、予約済みとなります。|  
 |**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ。<br /><br /> **1**プルを = です。<br /><br /> **2** = 匿名です。|  
 |**local_job**|**bit**|ローカル ディストリビューターに SQL Server エージェント ジョブがあるかどうかを示します。|  
-|**job_id**|**binary (16)**|ジョブの識別番号。|  
-|**subscription_guid**|**binary (16)**|エージェントのサブスクリプションの GUID 値。|  
-|**profile_id**|**int**|構成の ID、 [MSagent_profiles (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブル。|  
+|**job_id**|**binary(16)**|ジョブの識別番号。|  
+|**subscription_guid**|**binary(16)**|エージェントのサブスクリプションの GUID 値。|  
+|**profile_id**|**int**|構成の ID、 [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブル。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名エージェントの ID です。|  
 |**subscriber_name**|**sysname**|匿名のエージェントだけが使用するサブスクライバーの名前。|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 |**dts_package_name**|**sysname**|DTS パッケージの名前です。 たとえば、という名前のパッケージ**DTSPub_Package**、指定`@dts_package_name = N'DTSPub_Package'`です。|  
 |**dts_package_password**|**nvarchar (524)**|パッケージのパスワード。|  
 |**dts_package_location**|**int**|パッケージの場所。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**です。|  
-|**sid**|**varbinary (85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
+|**sid**|**varbinary(85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|サブスクライバーに接続するときにエージェントが使用するセキュリティ モードです。次のいずれかの値をとります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証です。|  
 |**subscriber_login**|**sysname**|サブスクライバーに接続するときに使用するログイン名です。|  

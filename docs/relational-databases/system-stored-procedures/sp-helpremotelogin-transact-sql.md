@@ -1,16 +1,16 @@
 ---
-title: "sp_helpremotelogin (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpremotelogin (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b34842bc6265d9a1615cb1f2e45d727b257a5c90
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1c47b54288d561377444ed8797b2e493c483f8bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   ローカル サーバーで定義されている、特定のリモート サーバーまたはすべてのリモート サーバーのリモート ログインに関する情報をレポートします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]代わりに、リンク サーバーとリンク サーバー ストアド プロシージャを使用します。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]代わりに、リンク サーバーとリンク サーバー ストアド プロシージャを使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @remoteserver  **=**  ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'***remoteserver***'**  
  リモート ログイン情報を返すリモート サーバーを指定します。 *remoteserver*は**sysname**、既定値は NULL です。 場合*remoteserver*が指定されていないローカル サーバーで定義されたすべてのリモート サーバーに関する情報が返されます。  
   
- [ @remotename  **=**  ] **'***remote_name***'**  
+ [ @remotename **=** ] **'***remote_name***'**  
  リモート サーバー上の特定のリモート ログインを指定します。 *remote_name*は**sysname**、既定値は NULL です。 場合*remote_name*が指定されていない、すべてのリモート ユーザーに関する情報の定義の*remoteserver*が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -71,7 +71,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ## <a name="remarks"></a>解説  
  Sp_helpserver を使用して、ローカル サーバーで定義されたリモート サーバーの名前を一覧表示します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  権限は確認されません。  
   
 ## <a name="examples"></a>使用例  
@@ -91,10 +91,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_addremotelogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_addremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

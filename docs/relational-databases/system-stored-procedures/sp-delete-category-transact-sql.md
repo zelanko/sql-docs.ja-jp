@@ -1,16 +1,16 @@
 ---
-title: "sp_delete_category (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_delete_category (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2ce1cd0406cbb69b6dd280bc8c36fdbd31c5d2e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cfcc4bb540bf11f8f1ca6d8e632185219145bf71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@class =**] **'***class***'**  
+ [  **@class =**] **'***クラス***'**  
  カテゴリのクラスを指定します。 *クラス*は**varchar (8)**, ない必要があり、既定で、これらの値のいずれかであります。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**JOB**|ジョブ カテゴリを削除します。|  
 |**アラートを生成します。**|警告カテゴリを削除します。|  
-|**OPERATOR**|オペレーター カテゴリを削除します。|  
+|**演算子**|オペレーター カテゴリを削除します。|  
   
  [ **@name =**] **'***name***'**  
  削除するカテゴリの名前を指定します。 *名前*は**sysname**、既定値はありません。  
@@ -87,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_add_category &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "syscollector_execution_log_full (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: syscollector_execution_log_full (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93ff62b9c91fee116679d0fb9ffe7d6b28f61024
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c1c5eb4ef3a15b8c7183038cd526c7bbbc66c13a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |last_iteration_time|**datetime**|継続的に実行されるパッケージで、スナップショットが最後にキャプチャされた日時を表します。 NULL 値が許可されます。|  
 |finish_time|**datetime**|完了済みのパッケージおよびコレクション セットについて、実行が完了した日時を表します。 NULL 値が許可されます。|  
 |duration|**int**|パッケージまたはコレクション セットが実行されている時間 (秒) です。 NULL 値が許可されます。|  
-|failure_message|**nvarchar(2048)**|コレクション セットまたはコレクション パッケージでエラーが発生した場合に、そのコンポーネントの最近のエラー メッセージを表します。 NULL 値が許可されます。 詳細なエラー情報を取得するを使用して、 [fn_syscollector_get_execution_details (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)関数。|  
+|failure_message|**nvarchar(2048)**|コレクション セットまたはコレクション パッケージでエラーが発生した場合に、そのコンポーネントの最近のエラー メッセージを表します。 NULL 値が許可されます。 詳細なエラー情報を取得するを使用して、 [fn_syscollector_get_execution_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)関数。|  
 |演算子 (operator)|**nvarchar(128)**|コレクション セットまたはコレクション パッケージをだれが開始したかを示します。 NULL 値が許可されます。|  
 |package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ログ テーブルへのリンクを提供します。 NULL 値が許可されます。|  
 |collection_set_id|**int**|msdb 内のデータ コレクション構成テーブルへのリンクを提供します。 NULL 値が許可されます。|  

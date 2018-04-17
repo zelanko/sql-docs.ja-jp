@@ -1,16 +1,16 @@
 ---
-title: "sp_add_alert (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_alert (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4e6218ad7eaba6f6f6e108739dee392b0f9ec177
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@severity =** ] *severity*  
  重大度レベル (から**1**を通じて**25**)、アラートを定義します。 任意[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にメッセージが格納されている、 **sysmessages**テーブルに送信される、[!INCLUDE[msCoName](../../includes/msconame-md.md)]で指定された重大度での Windows アプリケーション ログと警告が送信されます。 *重大度*は**int**、既定値は 0 です。 場合*message_id*警告を定義するために使用*重大度*する必要があります**0**します。  
   
- [  **@enabled =** ]*有効になっています。*  
+ [ **@enabled =** ] *enabled*  
  警告の現在の状態を示します。 *有効になっている*は**tinyint**の既定値は 1 (有効) です。 場合**0**アラートが有効でないは発生しません。  
   
  [ **@delay_between_responses =** ] *delay_between_responses*  
@@ -84,16 +84,16 @@ sp_add_alert [ @name = ] 'name'
   
  この値を設定すると、たとえば短時間に繰り返し警告が発生したとき、不要な電子メール メッセージの送信を防止できます。  
   
- [ **@notification_message =** ] **'***notification_message***'**  
+ [  **@notification_message =** ] **'***このパラメーター***'**  
  電子メールの一部としてオペレーターに送信される追加の省略可能なメッセージ**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)**、既定値は NULL です。 指定する*このパラメーター*は書き加えるなど特別な注意を追加するために便利です。  
   
- [ **@include_event_description_in =** ] *include_event_description_in*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*is **tinyint**, with a default of **5** (e-mail and **net send**), and can have one or more of these values combined with an **OR** logical operator.  
+ [  **@include_event_description_in =** ] *include_event_description_in*  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**、既定値は**5** (電子メールと**net send**)、いずれかまたはと共にこれらの値と、**または**論理演算子です。  
   
 > [!IMPORTANT]  
 >  今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|なし|  
 |**1**|[電子メール]|  
@@ -103,8 +103,8 @@ sp_add_alert [ @name = ] 'name'
  [ **@database_name =** ] **'***database***'**  
  どのデータベースでエラーが発生したときに警告を起動するかを指定します。 場合*データベース*が指定されていない、エラーが発生した場所に関係なく警告が発生します。 *データベース*は**sysname**です。 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]LIKE 式のパターン検索文字を使用していることができます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターは、オブジェクト名をフィルター処理用に (たとえば、 **%customer_table%**)。  
+ [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 式のパターン検索文字を使用していることができます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターは、オブジェクト名をフィルター処理用に (たとえば、 **%customer_table%**)。  
   
  [ **@job_id =** ] *job_id*  
  対象となる警告に対する応答として実行するジョブのジョブ ID 番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
@@ -127,7 +127,7 @@ sp_add_alert [ @name = ] 'name'
 |*比較演算子*|演算子 >、<、または = のいずれか。|  
 |*値*|カウンターの数値。|  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'***カテゴリ***'**  
  警告カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
  [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
@@ -190,12 +190,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_add_notification &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sys.sysperfinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

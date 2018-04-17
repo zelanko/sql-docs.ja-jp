@@ -1,16 +1,16 @@
 ---
-title: "MSmerge_subscriptions (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: MSmerge_subscriptions (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a58f591a2149080f86d8bc1b2dac57459b35a71a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0e711ef84fce0cd1b2e8db1fb2b9338ce5ee6b13
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_id などがあります。**|**smallint**|パブリッシャーの ID。|  
+|**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**publication_id**|**int**|パブリケーションの ID。|  
 |**subscriber_id**|**smallint**|サブスクライバーの ID。|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**subscription_time**|**datetime**|サブスクリプションが追加された時刻。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

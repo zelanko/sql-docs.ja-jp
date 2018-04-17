@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setfilter (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_trace_setfilter (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トレースにフィルターを適用します。 **sp_trace_setfilter**停止している既存のトレースに対してのみ実行できます (*ステータス*は**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このストアド プロシージャが存在しないトレースまたはで実行される場合はエラーを返します*ステータス*は**0**します。  
+  トレースにフィルターを適用します。 **sp_trace_setfilter**停止している既存のトレースに対してのみ実行できます (*ステータス*は**0**)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このストアド プロシージャが存在しないトレースまたはで実行される場合はエラーを返します*ステータス*は**0**します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
@@ -65,7 +65,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
  [ **@comparison_operator=** ] *comparison_operator*  
  実行される比較の種類を示します。 *comparison_operator*は**int**、既定値はありません。 次の表は、比較演算子と各比較演算子に対応する値の一覧です。  
   
-|[値]|比較演算子|  
+|値|比較演算子|  
 |-----------|-------------------------|  
 |**0**|= (等しい)|  
 |**1**|<> (等しくない)|  
@@ -106,7 +106,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="remarks"></a>解説  
  **sp_trace_setfilter**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンで利用可能な拡張のストアド プロシージャで実行される操作の多くを実行するストアド プロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 使用して**sp_trace_setfilter**の代わりに、 **xp_trace_set\*フィルター**を作成するストアド プロシージャを拡張するには、適用、削除、またはトレースのフィルターを操作します。 詳細については、次を参照してください。[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)です。  
   
- 特定の列のすべてのフィルターは、の 1 つの実行で同時に有効にする必要があります**sp_trace_setfilter**です。 たとえば、ユーザーがアプリケーション名の列に 2 つのフィルターを適用し、ユーザー名の列に 1 つのフィルターを適用する場合は、アプリケーション名のフィルターを続けて指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの場合、ユーザーが、1 つのストアド プロシージャ呼び出しでアプリケーション名でフィルターを指定しようとしています。 後にフィルターでユーザー名、アプリケーション名の別のフィルターを返します。  
+ 特定の列のすべてのフィルターは、の 1 つの実行で同時に有効にする必要があります**sp_trace_setfilter**です。 たとえば、ユーザーがアプリケーション名の列に 2 つのフィルターを適用し、ユーザー名の列に 1 つのフィルターを適用する場合は、アプリケーション名のフィルターを続けて指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの場合、ユーザーが、1 つのストアド プロシージャ呼び出しでアプリケーション名でフィルターを指定しようとしています。 後にフィルターでユーザー名、アプリケーション名の別のフィルターを返します。  
   
  ストアド プロシージャのすべての SQL トレースのパラメーター (**sp_trace_xx**) は、厳密に型指定されています。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   

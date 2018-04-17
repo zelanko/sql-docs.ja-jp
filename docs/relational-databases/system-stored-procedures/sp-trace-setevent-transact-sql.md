@@ -1,16 +1,16 @@
 ---
-title: "sp_trace_setevent (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_trace_setevent (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bf4e3f645a8480104fcb6f67790563fbb05d0480
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|参照されたオブジェクトの所有者名。|  
 |38|**RoleName**|ステートメントの対象となっているデータベースまたはサーバー全体のロールの名前。|  
 |39|**TargetUserName**|アクションの対象となるユーザー名。|  
-|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのデータベース ユーザー名。|  
+|40|**DBUserName**|クライアントの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー名。|  
 |41|**LoginSid**|ログインしたユーザーのセキュリティ識別子 (SID)。|  
 |42|**TargetLoginName**|アクションの対象となるログイン名。|  
 |43|**TargetLoginSid**|アクションの対象となるログインの SID。|  
@@ -324,7 +324,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  場合*で*に設定されている**0**、および*column_id* NULL の場合は、イベントが有効になって OFF され、すべての列が消去されます。 場合*column_id*が null でない列が有効になって OFF です。  
   
- 次の表は、間の相互作用を示しています。  **@on** と **@columnid**です。  
+ 次の表は、間の相互作用を示しています。 **@on**と **@columnid**です。  
   
 |@on|@columnid|結果|  
 |---------|---------------|------------|  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- ユーザーが実行する必要があります**sp_trace_setevent**イベントごとに追加された列ごとにします。 各実行中に場合 **@on** に設定されている**1**、 **sp_trace_setevent**トレースのイベントの一覧に指定されたイベントを追加します。 場合 **@on** に設定されている**0**、 **sp_trace_setevent**一覧から、指定されたイベントを削除します。  
+ ユーザーが実行する必要があります**sp_trace_setevent**イベントごとに追加された列ごとにします。 各実行中に場合**@on**に設定されている**1**、 **sp_trace_setevent**トレースのイベントの一覧に指定されたイベントを追加します。 場合**@on**に設定されている**0**、 **sp_trace_setevent**一覧から、指定されたイベントを削除します。  
   
  ストアド プロシージャのすべての SQL トレースのパラメーター (**sp_trace_xx**) は、厳密に型指定されています。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
@@ -367,9 +367,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  ユーザーに ALTER TRACE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [sys.fn_trace_geteventinfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server イベント クラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  
   

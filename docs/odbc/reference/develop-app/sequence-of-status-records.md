@@ -1,31 +1,32 @@
 ---
-title: "状態レコードのシーケンス |Microsoft ドキュメント"
-ms.custom: 
+title: 状態レコードのシーケンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a101cf26b66f3556330354c0fa9ded4c6d9ad583
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0a45a5be0c99dd6389fd060cc53f5140c5e7c263
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sequence-of-status-records"></a>状態レコードのシーケンス
 2 つ以上の状態レコードが返される場合は、ドライバー マネージャーとドライバーのランク付けに次の規則に従ってします。 最高のランクを持つレコードは、最初のレコードです。 (ドライバー マネージャー、ドライバー、ゲートウェイ、およびなど) のレコードのソースとは見なされませんときにレコードを順位付けされます。  

@@ -1,30 +1,31 @@
 ---
-title: "ODBC の用語集 |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC の用語集 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-glossary"></a>ODBC の用語集
 ## <a name="a"></a>A  
@@ -77,14 +78,14 @@ ms.lasthandoff: 11/20/2017
  **バッファー**  
  アプリケーションとドライバーの間でデータを渡すために使用するアプリケーションのメモリの一部。 バッファーは多くの場合、ペアになって:*データ バッファー*と*データ長バッファー*です。  
   
- **バイト**  
+ **byte**  
  8 ビット、または 1 つのオクテット。 *関連項目*オクテット。  
   
 ## <a name="c"></a>C  
  **C データ型**  
  この場合、アプリケーションでの C プログラムでは、変数のデータ型。  
   
- **カタログ**  
+ **catalog**  
  データベース内のデータベースの図形を説明するシステム テーブルのセット。 呼ばれる、*スキーマ*または*データ辞書*です。  
   
  **カタログ関数**  
@@ -96,10 +97,10 @@ ms.lasthandoff: 11/20/2017
  **クライアント/サーバー**  
  1 つまたは複数のクライアントがサーバー経由のデータ アクセスをデータベース アクセスの方法です。 サーバー コントロールのデータベースへのアクセス中に、クライアントは通常、ユーザー インターフェイスを実装します。  
   
- **列**  
+ **column**  
  行の情報の 1 つのアイテムのコンテナーです。 呼ばれる*フィールド*です。  
   
- **コミット**  
+ **commit**  
  変更を行うトランザクションで永続的です。  
   
  **同時実行**  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **実行時データ パラメーター**  
  後にデータを送信するパラメーター **SQLExecute**または**SQLExecDirect**と呼びます。 という名前は、SQL ステートメントのパラメーター バッファーに格納されているのではなく実行時にデータを送信します。 長い形式のデータは、実行時にパーツで一般に送信されます。  
   
- **database**  
+ **データベース (database)**  
  DBMS 内のデータの不連続のコレクション。 また、DBMS します。  
   
  **データベース エンジン**  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
  埋め込まれた SQL ステートメントの作成し、実行時にコンパイルすると、SQL での型。 *関連項目*静的 SQL です。  
   
 ## <a name="e"></a>E  
- **埋め込まれた SQL**  
+ **Embedded SQL**  
  C. ODBC COBOL などの別の言語で書かれたプログラムに直接含まれている SQL ステートメントは、embedded SQL を使用しません。 *関連項目*静的 SQL*と*動的 SQL です。  
   
  **環境**  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **escape 句**  
  SQL ステートメントの句。  
   
- **実行します。**  
+ **execute**  
  SQL ステートメントを実行します。  
   
 ## <a name="f"></a>F  
@@ -213,7 +214,7 @@ ms.lasthandoff: 11/20/2017
  **フェッチ**  
  結果セットから 1 つまたは複数の行を取得します。  
   
- **フィールド**  
+ **field**  
  *参照してください*列です。  
   
  **ファイル ベースのドライバー**  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
  進めることができますのみの結果セットおよび一般に、カーソルは、一度に 1 行のみをフェッチします。 ほとんどのリレーショナル データベースでは、順方向専用カーソルのみをサポートします。  
   
 ## <a name="h"></a>H  
- **ハンドル**  
+ **handle**  
  ファイルまたはデータ構造体などのものを一意に識別する値。 ハンドルは、意味のあるソフトウェアを作成しますが、それらを使用し、点を識別するには、その他のソフトウェアによって渡されるをするだけです。 ODBC では、環境、接続、ステートメント、および記述子のハンドルを定義します。  
   
 ## <a name="i"></a>I  
@@ -265,7 +266,7 @@ ms.lasthandoff: 11/20/2017
  内の値を照合することによって、2 つ以上のテーブル内の行をリンクするリレーショナル データベース内の操作は、列を指定します。  
   
 ## <a name="k"></a>K  
- **キー**  
+ **key**  
  列または列の値を持つ行を識別します。 *関連項目*外部キー*と*主キー。  
   
  **キーセット**  
@@ -275,7 +276,7 @@ ms.lasthandoff: 11/20/2017
  スクロール可能なカーソルを検出したが更新され、キーセット カーソルを使用して行を削除します。  
   
 ## <a name="l"></a>L  
- **リテラル**  
+ **literal**  
  SQL ステートメント内の実際のデータ値の文字表記。  
   
  **ロック**  
@@ -327,7 +328,7 @@ ms.lasthandoff: 11/20/2017
  テーブルの所有者です。  
   
 ## <a name="p"></a>P  
- **パラメーター**  
+ **parameter**  
  SQL ステートメント内の変数は、パラメーター マーカーまたは疑問符 (?) でマークします。 パラメーターは、アプリケーション変数と、ステートメントが実行されるときに取得した値にバインドされます。  
   
  **パラメーター記述子**  
@@ -357,7 +358,7 @@ ms.lasthandoff: 11/20/2017
  **主キー**  
  列またはテーブルの行を一意に識別する列。  
   
- **プロシージャ**  
+ **procedure**  
  1 つまたは複数のグループには、データベースの名前付きオブジェクトとして格納されている SQL ステートメントがプリコンパイル済みです。  
   
  **プロシージャの列**  
@@ -367,7 +368,7 @@ ms.lasthandoff: 11/20/2017
  **修飾子**  
  1 つまたは複数のテーブルを含むデータベース。  
   
- **クエリ**  
+ **query**  
  SQL ステートメント。 意味に使用される場合、**選択**ステートメントです。  
   
  **引用符で囲まれた識別子 (quoted identifier)**  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
  **スカラー関数**  
  1 つの値から 1 つの値を生成する関数。 たとえば、文字データの大文字と小文字を変更する関数です。  
   
- **スキーマ**  
+ **schema**  
  *参照してください*カタログ。  
   
  **スクロール可能なカーソル**  

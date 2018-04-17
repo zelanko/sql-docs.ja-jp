@@ -1,16 +1,16 @@
 ---
-title: "sp_helpfile を実行 (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpfile を実行 (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpfile
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f17fa70885b833fcaeabaa221382c738a5885eb6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6c0d246c2ed8ea670f2d8c2fc05bca828ce152ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@filename =** ] **'***名前***'**  
+ [ **@filename =** ] **'***name***'**  
  データベース内のファイルの論理名を指定します。 *名前*は**sysname**、既定値は NULL です。 場合*名前*が指定されていない、現在のデータベース内のすべてのファイルの属性が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -58,14 +58,14 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|論理ファイル名です。|  
 |**fileid**|**smallint**|ファイルの数値識別子。 場合は返されません*名前*が指定されている*です。*|  
-|**ファイル名**|**nchar(260)**|物理ファイル名|  
-|**ファイル グループ**|**sysname**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルは、ログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
-|**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
-|**maxsize**|**nvarchar (15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
-|**成長**|**nvarchar (15)**|ファイルを拡張するときの増分です。 これは、新しい領域が必要になるたびにファイルに追加される容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
+|**filename**|**nchar(260)**|物理ファイル名|  
+|**filegroup**|**sysname**|ファイルが属するファイル グループです。<br /><br /> NULL = ファイルは、ログ ファイルです。 ログ ファイルはファイル グループのメンバーにはなりません。|  
+|**size**|**nvarchar(15)**|ファイル サイズ (KB 単位) です。|  
+|**maxsize**|**nvarchar(15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
+|**growth**|**nvarchar(15)**|ファイルを拡張するときの増分です。 これは、新しい領域が必要になるたびにファイルに追加される容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
 |**使用状況**|**varchar (9)**|データ ファイルの場合、値は**'data only'**と、値は、ログ ファイルの**'ログのみ'**です。|  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -79,11 +79,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpfilegroup &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys.master_files と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys.filegroups &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース ファイルとファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md)  
   

@@ -2,7 +2,7 @@
 title: SQLPoolConnect 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd862492513daceda364205d965b1d00e6cb649f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 130c39d4aab986b5053192d2fe2c548e89ccef2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 関数
 **準拠**  
@@ -62,7 +62,7 @@ SQLRETURN  SQLPoolConnect(
  *cchConnectStringLen*  
  [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\* *wszOutConnectString*です。 返される文字数がより大きいかに等しい場合*cchConnectStringBuffer*、内の接続文字列を完了した\* *wszOutConnectString* に切り捨てられます*cchConnectStringBuffer* null 終端文字の長さマイナスです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

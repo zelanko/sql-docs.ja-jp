@@ -1,16 +1,16 @@
 ---
-title: "sys.column_store_row_groups (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.column_store_row_groups (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.column_store_row_groups_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea17802f24a60df24fdc4107f52a5170ca4f0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 74dad9d3d3ee2db8c53d8f95d208afb1c6628b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |**row_group_id**|**int**|この行グループに関連付けられている行グループ番号。 この番号はパーティション内で一意です。<br /><br /> -1 = メモリ内のテーブルの末尾。|  
 |**delta_store_hobt_id**|**bigint**|デルタ ストアで OPEN の行グループの hobt_id でします。<br /><br /> 行グループがデルタ ストア内にない場合は NULL です。<br /><br /> メモリ内のテーブルの末尾の場合は NULL です。|  
 |**状態**|**tinyint**|state_description に関連付けられている ID 番号。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED <br /><br /> 4 = 廃棄 (TOMBSTONE)|  
-|**state_description**|**nvarchar (60)**|行グループの永続的な状態の説明:<br /><br /> INVISIBLE - デルタ ストアのデータからの構築プロセスにおける非表示の圧縮されたセグメント。 非表示の圧縮されたセグメントが完了するまで、読み取りアクションでデルタ ストアが使用されます。 その後、新しいセグメントが表示されると、ソース デルタ ストアは削除されます。<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
+|**state_description**|**nvarchar(60)**|行グループの永続的な状態の説明:<br /><br /> INVISIBLE - デルタ ストアのデータからの構築プロセスにおける非表示の圧縮されたセグメント。 非表示の圧縮されたセグメントが完了するまで、読み取りアクションでデルタ ストアが使用されます。 その後、新しいセグメントが表示されると、ソース デルタ ストアは削除されます。<br /><br /> OPEN - 新しいレコードを受け入れる読み取り/書き込み行グループ。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED - いっぱいになったが、組ムーバー プロセスによってまだ圧縮されていない行グループ。<br /><br /> COMPRESSED - いっぱいになり、圧縮された行グループ。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除された行がまだ格納されていることがあります。 1 つの行グループの最大行数は 1,048,576 (16 進数では FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除済みとしてマークされている行グループ内の行の合計。 これはデルタ行グループの場合は常に 0 です。|  
 |**size_in_bytes**|**bigint**|この行グループ内にあるすべてのデータ (メタデータと共有辞書は除く) のサイズ (バイト単位)。デルタ行グループと列ストア行グループの両方が対象です。|  
@@ -62,10 +62,10 @@ ms.lasthandoff: 11/21/2017
   
  列ストア行グループは、いっぱいになると圧縮され、新しい行の受け入れを停止します。 圧縮されたグループから行が削除されると、削除された行は、保持されますが、削除済みとしてマークされます。 圧縮されたグループに対する更新は、圧縮されたグループからの削除、および OPEN 状態のグループへの挿入として実装されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  場合、ユーザーは、テーブルの情報を返します**VIEW DEFINITION**テーブルに対する権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
  次の例の結合、 **sys.column_store_row_groups**特定のテーブルに関する情報を返すには、他のシステム テーブル。 計算済みの `PercentFull` 列は、行グループの効率の推定値を示します。 コメントのハイフンの前に 1 つのテーブルの削除に関する情報、**場所**句テーブル名を指定します。  
@@ -84,14 +84,14 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)     
- [sys.column_store_dictionaries &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   

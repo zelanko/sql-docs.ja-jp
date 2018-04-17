@@ -1,16 +1,16 @@
 ---
-title: "sp_change_agent_profile (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_change_agent_profile (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c8c323a3783c18a1ceb13d7fce8e00fe181c542
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f873d60a003da09753c7c382be71ad1a3fc78e63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  格納されているレプリケーション エージェント プロファイルのパラメーターの変更、 [MSagent_profiles (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブル。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  格納されているレプリケーション エージェント プロファイルのパラメーターの変更、 [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブル。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@profile_id=** ] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  プロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。  
   
  [  **@property=** ] **'***プロパティ***'**  
@@ -69,13 +69,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ## <a name="remarks"></a>解説  
  **sp_change_agent_profile**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_change_agent_profile**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_add_agent_profile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

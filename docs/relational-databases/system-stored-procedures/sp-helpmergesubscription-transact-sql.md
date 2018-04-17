@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergesubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpmergesubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85f9d4b9bba5d3dd6e56fcda1a81b6eafd49223d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e00420643c9579cbb963060a73f61a9fa22ef242
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%**です。 パブリケーションが存在し、識別子の規則に従っている必要があります。 NULL の場合、または **%** 、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
+ [ **@publication=**] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%**です。 パブリケーションが存在し、識別子の規則に従っている必要があります。 NULL の場合、または**%**、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は **%**です。 NULL または % の場合は、指定したパブリケーションへのすべてのサブスクリプションに関する情報が返されます。  
   
  [  **@subscriber_db=**] **'***@subscriber_db***'**  
- サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は **%** 、すべてのサブスクリプション データベースに関する情報が返されます。  
+ サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は**%**、すべてのサブスクリプション データベースに関する情報が返されます。  
   
- [  **@publisher=**] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 パブリッシャーは有効なサーバーであることが必要です。 *パブリッシャー*は**sysname**、既定値は **%** 、すべてのパブリッシャーに関する情報が返されます。  
+ [ **@publisher=**] **'***publisher***'**  
+ パブリッシャーの名前です。 パブリッシャーは有効なサーバーであることが必要です。 *パブリッシャー*は**sysname**、既定値は**%**、すべてのパブリッシャーに関する情報が返されます。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** 、すべてのパブリッシャー データベースに関する情報が返されます。  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は**%**、すべてのパブリッシャー データベースに関する情報が返されます。  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
  サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (15)**、これらの値のいずれかを指定できます。  
@@ -92,10 +92,10 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**ステータス**|**int**|サブスクリプションの状態。<br /><br /> **0** = すべてのジョブが開始を待機しています。<br /><br /> **1** = 1 つ以上のジョブが起動中<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも 1 つジョブが実行中<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態<br /><br /> **5** = 少なくとも 1 つジョブが前回のエラーの後に実行しようとしています<br /><br /> **6** = 少なくとも 1 つは正常に実行するジョブが失敗しました|  
 |**subscriber_type**|**int**|サブスクライバーの種類です。|  
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0**プッシュを =<br /><br /> **1**プルを =<br /><br /> **2** = 両方|  
-|**優先順位**|**float(8)**|サブスクリプションの優先度を示す数値。|  
+|**priority**|**float(8)**|サブスクリプションの優先度を示す数値。|  
 |**sync_type**|**tinyint**|サブスクリプションの同期の種類。|  
 |**説明**|**nvarchar (255)**|マージ サブスクリプションの簡単な説明。|  
-|**merge_jobid**|**binary (16)**|マージ エージェントのジョブ ID。|  
+|**merge_jobid**|**binary(16)**|マージ エージェントのジョブ ID。|  
 |**full_publication**|**tinyint**|完全なパブリケーションとフィルター選択されたパブリケーションのどちらに対するサブスクリプションであるかを示します。|  
 |**offload_enabled**|**bit**|レプリケーション エージェントの負荷を軽減するためにサブスクライバーでの実行が設定されているかどうかを示します。 NULL の場合は、パブリッシャー側で実行されます。|  
 |**offload_server**|**sysname**|エージェントが動作しているサーバーの名前。|  
@@ -113,13 +113,13 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
  匿名サブスクリプションの場合、 *subscription_type*値は常に**1** (プル) です。 ただし、実行する必要があります[sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)匿名サブスクリプションに関する情報のサブスクライバーでします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールまたはサブスクリプションが属するパブリケーションのパブリケーション アクセス リストが実行できる**sp _helpmergesubscription**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addmergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "日付、時刻、および間隔を扱う関数 |Microsoft ドキュメント"
-ms.custom: 
+title: 日付、時刻、および間隔を扱う関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], time functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数
 次の表には、ODBC スカラー関数のセットに含まれている日付と時刻の関数が一覧表示します。 アプリケーションでは、どの日付と時刻の関数が呼び出すことによって、ドライバーでサポートされるを判断できます**SQLGetInfo**で、*情報の種類*SQL_TIMEDATE_FUNCTIONS のです。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  CURRENT_DATE、CURRENT_TIME、CURRENT_TIMESTAMP timedate スカラー関数、sql-92 に合うように ODBC 3.0 で追加されました。  
   
-|機能|Description|  
+|関数|Description|  
 |--------------|-----------------|  
 |**CURRENT_DATE に関するページ ()** (ODBC 3.0)|現在の日付を返します。|  
 |**CURRENT_TIME [(** *時間精度* **)]** (ODBC 3.0)|現在のローカル時間を返します。 *時間精度*引数は、戻り値の秒の有効桁数を決定します。|  

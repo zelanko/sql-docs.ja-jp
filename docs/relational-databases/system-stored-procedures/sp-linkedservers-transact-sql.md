@@ -1,16 +1,16 @@
 ---
-title: "sp_linkedservers (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_linkedservers (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_linkedservers
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8fd9f6a3c9f9acd4f1f956a827cab76dfa810af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c017d5b0e510147b668eeab458841ebcbf15de00
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,26 +53,26 @@ sp_linkedservers
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|リンク サーバーの名前|  
-|**SRV_PROVIDERNAME**|**nvarchar (**128**)**|指定したリンク サーバーへのアクセスを管理している OLE DB プロバイダーの名前|  
-|**SRV_PRODUCT**|**nvarchar (**128**)**|リンク サーバーの製品名|  
+|**SRV_PROVIDERNAME**|**nvarchar(**128**)**|指定したリンク サーバーへのアクセスを管理している OLE DB プロバイダーの名前|  
+|**SRV_PRODUCT**|**nvarchar(**128**)**|リンク サーバーの製品名|  
 |**SRV_DATASOURCE**|**nvarchar (**4000**)**|指定したリンク サーバーに対応する OLE DB のデータ ソース プロパティ|  
 |**SRV_PROVIDERSTRING**|**nvarchar (**4000**)**|リンク サーバーに対応する OLE DB プロバイダーの文字列プロパティ|  
 |**SRV_LOCATION**|**nvarchar (**4000**)**|指定したリンク サーバーに対応する OLE DB の位置プロパティ|  
 |**SRV_CAT**|**sysname**|指定したリンク サーバーに対応する OLE DB のカタログ プロパティ|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [sp_catalogs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_columns_ex &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_foreignkeys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_primarykeys &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_table_privileges &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
- [sp_tables_ex &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_columns_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_foreignkeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_primarykeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [分散クエリ ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [分散クエリ ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

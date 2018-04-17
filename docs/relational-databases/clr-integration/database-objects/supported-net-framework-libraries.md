@@ -1,34 +1,34 @@
 ---
-title: ".NET Framework ライブラリのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: .NET Framework ライブラリのサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], .NET Framework libraries
 - .NET Framework [CLR Integration]
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9b970822a872a03fa3f2ba3044d2e8432ac595e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 26f1259cc971e87d42454c881f73f02d7737b4cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-net-framework-libraries"></a>サポートされている .NET Framework ライブラリ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にホストされている共通言語ランタイム (CLR) を使用すると、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計をマネージ コードで作成できます。 .NET Framework クラス ライブラリに用意されている機能を使用すると、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供する組み込みのクラスにアクセスできます。 これらのクラスは、任意のマネージ ストアド プロシージャ、ユーザー定義型、トリガー、ユーザー定義関数、またはユーザー定義集計からアクセスできます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にホストされている共通言語ランタイム (CLR) を使用すると、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、およびユーザー定義集計をマネージ コードで作成できます。 .NET Framework クラス ライブラリに用意されている機能を使用すると、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供する組み込みのクラスにアクセスできます。 これらのクラスは、任意のマネージ ストアド プロシージャ、ユーザー定義型、トリガー、ユーザー定義関数、またはユーザー定義集計からアクセスできます。  
   
 > [!NOTE]  
 >  グローバル アセンブリ キャッシュ (GAC) で、サポートされていないアセンブリを提供またはアップグレードすると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アプリケーションが動作しなくなる可能性があります。 これは、GAC でライブラリを提供またはアップグレードしても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内でそれらのアセンブリが更新されないためです。 アセンブリが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと GAC の両方に存在する場合、アセンブリの 2 つのコピーが完全に一致する必要があります。 一致しない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合によってアセンブリが使用されたときにエラーが発生します。 提供またはサポートされていない .NET Framework アセンブリを含む、データベースにも登録されている、GAC 内のアセンブリをアップグレードする場合も、サービスまたはアセンブリ内のコピーをアップグレードすることを確認、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースでは、 **ALTER ASSEMBLY**ステートメントです。 詳細については、次を参照してください。[サポート技術情報の資料 949080](http://support.microsoft.com/kb/949080)です。  

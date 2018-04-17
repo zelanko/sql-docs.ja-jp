@@ -1,16 +1,16 @@
 ---
-title: "sp_addextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproperty
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_addextendedproperty
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5788b9d376acd46d7e7b357d70a4dd93aaa58064
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f8d32e2f2b2c27b1e997438c0a1e06a3219786a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -108,7 +109,7 @@ sp_addextendedproperty
 ## <a name="schema-vs-user"></a>スキーマとユーザー  
  名前解決にあいまいさが発生する可能性があるため、拡張プロパティをデータベース オブジェクトに適用するときに USER をレベル 0 の種類として指定することをお勧めしません。 たとえば、ユーザー Mary が 2 つのスキーマ (Mary と MySchema) を所有し、これらのスキーマの両方に MyTable という名前のテーブルがある場合を考えます。 Mary が拡張プロパティをテーブル MyTable に追加し、指定かどうか **@level0type = N'USER'**、  **@level0name = Mary**、拡張プロパティを適用するテーブルをオフにされていません。 旧バージョンとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Mary という名前のスキーマに含まれているテーブルにプロパティが適用されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  固定サーバー ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトに拡張プロパティを追加できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、またはロールにプロパティを追加できません。  
   
  ユーザーは、自身が所有するオブジェクトや、ALTER 権限または CONTROL 権限を持つオブジェクトの拡張プロパティを追加できます。  
@@ -243,9 +244,9 @@ EXEC sys.sp_addextendedproperty
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

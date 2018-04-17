@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_physical_stats
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 
+caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048961489aee9c369c8b01a04a083eba32d255dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]
 > クエリを実行する場合**sys.dm_db_index_physical_stats** Alwayson をホストするサーバー インスタンスで[読み取り可能なセカンダリ レプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)REDO のブロック問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
   
- **sys.dm_db_index_physical_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。  
+ **sys.dm_db_index_physical_stats**メモリ最適化インデックスに関する情報は返されません。 メモリ最適化インデックスの使用方法については、次を参照してください。 [sys.dm_db_xtp_index_stats & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -116,7 +117,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均レコード サイズになります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれる平均レコード サイズになります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体での平均レコード サイズになります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  
 |forwarded_record_count|**bigint**|別のデータの場所への転送ポインターを持つ、ヒープ内の転送されたレコード数 (この状態は、更新中に、新しい行を格納できる十分なスペースが元の場所にない場合に発生します)。<br /><br /> ヒープの IN_ROW_DATA アロケーション ユニット以外のアロケーション ユニットでは NULL になります。<br /><br /> NULL を時にヒープ*モード*LIMITED を = です。|  
 |compressed_page_count|**bigint**|圧縮されたページ数。<br /><br /> ヒープの場合、新しく割り当てられたページはページ圧縮されません。 ヒープは、2 つの特殊な条件、つまりデータを一括インポートする場合、またはヒープを再構築する場合に、ページ圧縮されます。 ページ割り当ての原因となる通常の DML 操作ではページ圧縮されません。 compressed_page_count の値が目標のしきい値を超えた場合は、ヒープを再構築してください。<br /><br /> クラスター化インデックスを含むテーブルの場合、compressed_page_count の値はページ圧縮の効果を示します。|  
-|hobt_id|bigint|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これには、パーティションの内部列ストアのデータを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、次を参照してください。 [sys.internal_partitions &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> NULL の場合|  
+|hobt_id|bigint|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これには、パーティションの内部列ストアのデータを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、次を参照してください。 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)です。<br /><br /> NULL の場合|  
 |column_store_delete_buffer_state|tinyint|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = のドレイン<br /><br /> 3 = フラッシュ<br /><br /> 4 = のインベントリから削除<br /><br /> 5 = 準備完了|  
 |column_store_delete_buff_state_desc||**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> NOT_APPLICABLE – 親インデックスは列ストア インデックスではありません。<br /><br /> OPEN-deleters し、スキャナーでは、これを使用します。<br /><br /> ドレイン中 – deleters ドレインが、スキャナーが引き続き使用します。<br /><br /> フラッシュ – は、バッファーが閉じられ、バッファー内の行は、削除のビットマップに書き込まれています。<br /><br /> 削除のビットマップに書き込まれた RETIRING – 閉じた削除バッファー内の行がのスキャナーはまだ使用しているために、バッファーが切り捨てられていません。 新しいスキャナーは、開いているバッファーが十分であるために、中止のバッファーを使用する必要はありません。<br /><br /> 準備ができました – この削除バッファーが使用できる状態。|  
   
@@ -183,7 +184,7 @@ GO
   
  **論理的な断片化**  
   
- これは、インデックスのリーフ ページでの順序が不正なページの割合です。 順序不定なページは、対象のインデックスに割り当てられている次の物理ページが不正なページを指す次ページ ページ*e*現在のリーフ ページのポインター。  
+ これは、インデックスのリーフ ページでの順序が不正なページの割合です。 順序が不正なページとは、インデックスに割り当てられている次の物理的なページと、現在のリーフ ページの*次ページ* ポインターが示すページが異なるページのことです。  
   
  **エクステントの断片化**  
   
@@ -240,7 +241,7 @@ GO
   
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 データベースのワイルドカード @*database_id*= NULL を指定すると、データベースは省略します。  
   
- 詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -300,7 +301,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. sys.dm_db_index_physical_stats をスクリプトで使用してインデックスを再構築または再構成する  
- 次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを、自動的に再構成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが 80 以下になっているとエラーが発生します。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+ 次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを、自動的に再構成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが 80 以下になっているとエラーが発生します。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)です。  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -433,10 +434,10 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [システム ビュー &#40;です。TRANSACT-SQL と #41 です。](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

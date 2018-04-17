@@ -1,16 +1,16 @@
 ---
-title: "sp_addpublication (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addpublication (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e47d331f57abede1d4b0e20ebba44cced109035
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,22 +92,22 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  作成するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。 この名前は、データベース内で一意であることが必要です。  
   
  [  **@taskid=**] *taskid*  
- 旧バージョンとの互換性のためです。 サポートされています。使用して[sp_addpublication_snapshot (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
+ 旧バージョンとの互換性のためです。 サポートされています。使用して[sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)です。  
   
  [  **@restricted=**] **'***制限***'**  
  旧バージョンとの互換性のためです。 サポートされています。使用して*default_access*です。  
   
- [  **@sync_method=**] *' sync_method***'**  
+ [  **@sync_method=**] *' sync_method * * * '**  
  同期モードを指定します。 *sync_method*は**nvarchar (13)**値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
-|**ネイティブ**|すべてのテーブルのネイティブ モード BCP 出力を作成する。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
-|**文字**|すべてのテーブルのキャラクタモード BCP 出力を作成する。 *Oracle パブリッシャーの場合、* **文字***はスナップショット レプリケーションでのみ有効*です。|  
+|**native**|すべてのテーブルのネイティブ モード BCP 出力を作成する。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
+|**character**|すべてのテーブルのキャラクタモード BCP 出力を作成する。 *Oracle パブリッシャーの場合、* **文字***はスナップショット レプリケーションでのみ有効*です。|  
 |**同時実行**|すべてのテーブルのネイティブ モード BCP 出力を作成するが、スナップショット中はテーブルをロックしない。 トランザクション パブリケーションでのみサポートされます。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
 |**concurrent_c**|すべてのテーブルのキャラクタモードの BCP 出力を作成するが、スナップショット中はテーブルをロックしない。 トランザクション パブリケーションでのみサポートされます。|  
 |**データベース スナップショット**|データベース スナップショットから、すべてのテーブルのネイティブ モードの一括コピー プログラム出力を作成します。 データベース スナップショットは、すべてのエディションで利用可能な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|  
@@ -162,7 +162,7 @@ sp_addpublication [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**true**|更新サブスクリプションが有効の場合、自動的に生成される。|  
-|**オプション**|更新サブスクリプションが無効の場合、または Oracle パブリッシャーの場合、自動的に生成される。|  
+|**false**|更新サブスクリプションが無効の場合、または Oracle パブリッシャーの場合、自動的に生成される。|  
 |NULL (既定値)|既定値は**true**更新サブスクリプションが有効になっているときに、 **false**とサブスクリプションの更新が有効になっていません。|  
   
 > [!NOTE]  
@@ -175,7 +175,7 @@ sp_addpublication [ @publication = ] 'publication'
  変更をパブリッシャーに適用できるようになるまで、サブスクライバーでの変更のキュー登録を有効または無効にします。 *allow_queued_updating*は**nvarchar (5)**既定値は FALSE。 場合**false**、サブスクライバーの変更はキュー登録されません。 **true**は*Oracle パブリッシャーに対してサポートされていません*です。  
   
  [  **@snapshot_in_defaultfolder=** ] **'***snapshot_in_default_folder***'**  
- スナップショット ファイルを既定のフォルダーに格納するかどうかを指定します。 *snapshot_in_default_folder*は**nvarchar (5)**既定値は TRUE です。 場合**true**、スナップショット ファイルは既定のフォルダーにあります。 場合**false**、スナップショット ファイルで指定された代替位置に格納されている*alternate_snapshot_folder*です。 代替位置は、他のサーバー、ネットワーク ドライブ、CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに設定できます。 スナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。 このパラメーターが true にしてもに、場所があることができますに注意してください、  **@alt_snapshot_folder** パラメーター。 これらのパラメーターを組み合わせて指定した場合、スナップショット ファイルは、既定のフォルダーと代替位置の両方に格納されます。  
+ スナップショット ファイルを既定のフォルダーに格納するかどうかを指定します。 *snapshot_in_default_folder*は**nvarchar (5)**既定値は TRUE です。 場合**true**、スナップショット ファイルは既定のフォルダーにあります。 場合**false**、スナップショット ファイルで指定された代替位置に格納されている*alternate_snapshot_folder*です。 代替位置は、他のサーバー、ネットワーク ドライブ、CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに設定できます。 スナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。 このパラメーターが true にしてもに、場所があることができますに注意してください、 **@alt_snapshot_folder**パラメーター。 これらのパラメーターを組み合わせて指定した場合、スナップショット ファイルは、既定のフォルダーと代替位置の両方に格納されます。  
   
  [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder***'**  
  スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)**既定値は NULL です。  
@@ -187,7 +187,7 @@ sp_addpublication [ @publication = ] 'publication'
  ポインターを指定します、 **.sql**ファイルの場所。 *post_snapshot_script*は**nvarchar (255)**、既定値は NULL です。 最初の同期時、ディストリビューション エージェントでは、他のすべてのレプリケートされたオブジェクト スクリプトとデータが適用された後、ポスト スナップショット スクリプトが実行されます。 このスクリプトは、サブスクリプション データベースへの接続時にディストリビューション エージェントによって使用されるセキュリティ コンテキストで実行されます。  
   
  [  **@compress_snapshot=** ] **'***compress_snapshot***'**  
- 指定に書き込まれたスナップショット、  **@alt_snapshot_folder** の場所を圧縮するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式です。 *compress_snapshot*は**nvarchar (5)**、既定値は FALSE。 **false**指定したスナップショットは圧縮されません。**true**スナップショットが圧縮されることを指定します。 2 GB を超えるスナップショット ファイルは圧縮できません。 圧縮されたスナップショット ファイルは、ディストリビューション エージェントが実行される場所に展開されます。プル サブスクリプションでは通常、ファイルがサブスクライバーで展開されるよう、圧縮されたスナップショットが使用されます。 既定のフォルダー内のスナップショットは圧縮できません。  
+ 指定に書き込まれたスナップショット、 **@alt_snapshot_folder**の場所を圧縮するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式です。 *compress_snapshot*は**nvarchar (5)**、既定値は FALSE。 **false**指定したスナップショットは圧縮されません。**true**スナップショットが圧縮されることを指定します。 2 GB を超えるスナップショット ファイルは圧縮できません。 圧縮されたスナップショット ファイルは、ディストリビューション エージェントが実行される場所に展開されます。プル サブスクリプションでは通常、ファイルがサブスクライバーで展開されるよう、圧縮されたスナップショットが使用されます。 既定のフォルダー内のスナップショットは圧縮できません。  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  ディストリビューター用の FTP サービスのネットワーク アドレスです。 *ftp_address*は**sysname**、既定値は NULL です。 ここでは、サブスクライバーのディストリビューション エージェントまたはマージ エージェントがパブリケーション スナップショット ファイルを取得する場所を指定します。 各パブリケーションを別に持つことができますので、このプロパティはパブリケーションごとに格納される、 *ftp_address*です。 パブリケーションでは、FTP を使用したスナップショットの配布がサポートされている必要があります。  
@@ -243,7 +243,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Oracle パブリッシャーに対してサポートされていません。*です。  
   
- [  **@add_to_active_directory =** ] **'***追加**_**to_active_directory***'**  
+ [  **@add_to_active_directory =** ] **' * * * 追加**_**to_active_directory * * * '**  
  このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。  
   
  [  **@logreader_job_name =** ] **'***logreader_agent_name***'**  
@@ -264,7 +264,7 @@ sp_addpublication [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**true**|バックアップからの初期化を有効にする。|  
-|**オプション**|バックアップからの初期化を無効にする。|  
+|**false**|バックアップからの初期化を無効にする。|  
 |NULL (既定値)|既定値は**true** 、ピア ツー ピア レプリケーション トポロジでパブリケーションのおよび**false**他のすべてのパブリケーション。|  
   
  詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
@@ -275,11 +275,11 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  スキーマ レプリケーションがパブリケーションに対してサポートされているかどうかを示します。 *replicate_ddl*は**int**、既定値は**1**の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーと**0**の以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 **1** 、パブリッシャー側で実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示すと**0** DDL ステートメントがレプリケートされないことを示します。 *スキーマ レプリケーションが Oracle パブリッシャーに対してサポートされていません。* 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
- *@replicate_ddl*  DDL ステートメントは、列を追加するときは、パラメーターを有効にします。 *@replicate_ddl*  DDL ステートメントが変更または次の理由により、列を削除すると、パラメーターは無視されます。  
+ *@replicate_ddl* DDL ステートメントは、列を追加するときは、パラメーターを有効にします。 *@replicate_ddl* DDL ステートメントが変更または次の理由により、列を削除すると、パラメーターは無視されます。  
   
--   列を削除すると場合、は、ディストリビューション エージェントは失敗が発生すると、削除された列を含むから新しい DML ステートメントを防ぐために sysarticlecolumns を更新する必要があります。 *@replicate_ddl* レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
+-   列を削除すると場合、は、ディストリビューション エージェントは失敗が発生すると、削除された列を含むから新しい DML ステートメントを防ぐために sysarticlecolumns を更新する必要があります。 *@replicate_ddl*レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
   
--   列が変更される場合は、ソースのデータ型または NULL 値の許容属性が変更され、サブスクライバーにあるテーブルと互換性のない値が DML ステートメントに含まれる可能性があります。 そうした DML ステートメントは、ディストリビューション エージェントが失敗する原因となる場合があります。 *@replicate_ddl* レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
+-   列が変更される場合は、ソースのデータ型または NULL 値の許容属性が変更され、サブスクライバーにあるテーブルと互換性のない値が DML ステートメントに含まれる可能性があります。 そうした DML ステートメントは、ディストリビューション エージェントが失敗する原因となる場合があります。 *@replicate_ddl*レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
   
 -   ときの DDL ステートメントは、新しい列を追加、sysarticlecolumns では、新しい列が含まれません。 DML ステートメントによって、新しい列のデータがレプリケートされることはありません。 DDL をレプリケートするかしないかのどちらかが許容されるため、パラメーターは有効になります。  
   
@@ -381,16 +381,16 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpublication**です。 Windows 認証ログインを行うには、Windows ユーザー アカウントを表すユーザー アカウントがデータベースに必要です。 Windows グループを表すユーザー アカウントでは不十分です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addlogreader_agent &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [sp_addpublication_snapshot &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_addlogreader_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [sp_replicationdboption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -1,32 +1,33 @@
 ---
-title: "概要 (SMO) |Microsoft ドキュメント"
-ms.custom: 
+title: 概要 (SMO) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-caps.latest.revision: 
+caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b8fc017c4005021ca22350feb8c6e19a869b5bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-smo"></a>概要 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) は、プログラムによる管理のために設計されたオブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SMO を使用すると、カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理アプリケーションを作成することができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための強力で高度なアプリケーションですが、SMO アプリケーションの方が適している場合もあります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) は、プログラムによる管理のために設計されたオブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 SMO を使用すると、カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理アプリケーションを作成することができます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を管理するための強力で高度なアプリケーションですが、SMO アプリケーションの方が適している場合もあります。  
   
  たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理タスクを制御するユーザー アプリケーションでは、新規ユーザーのニーズを満たし、トレーニング コストを削減するために、単純化を必要とする場合があります。 カスタマイズされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの作成や、インデックスの効率を高めて、効率性を監視するためのアプリケーション作成が必要になることもあります。 また、サード パーティ製のハードウェアやソフトウェアをデータベース管理アプリケーションにシームレスに含めるために、SMO アプリケーションを使用する場合もあります。  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 01/12/2018
   
 -   同時実行性を高めるためのスナップショット分離と行レベルのバージョニング。 詳細については、次を参照してください。[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)です。  
   
--   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション &#40;です。SQL Server &#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)と[XML スキーマを使用して](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)です。  
+-   XML データの検証と格納を可能にする、XML スキーマ コレクション、XML インデックス、および XML データ型。 詳細については、次を参照してください。 [XML スキーマ コレクション&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)と[を使用して XML スキーマ](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)です。  
   
 -   データベースの読み取り専用コピーを作成するためのスナップショット データベース。  
   
 -   メッセージ ベースの通信に対する [!INCLUDE[ssSB](../../includes/sssb-md.md)] サポート。 詳細については、次を参照してください。 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)です。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの複数の名前に対するシノニム サポート。 詳細については、次を参照してください。[シノニム &#40;データベース エンジン&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの複数の名前に対するシノニム サポート。 詳細については、次を参照してください。[シノニム&#40;データベース エンジン&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)です。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での電子メール サービス、電子メール プロファイル、および電子メール アカウントの作成を可能にするデータベース メールの管理。 詳細については、「 [Database Mail](../../relational-databases/database-mail/database-mail.md)」を参照してください。  
   

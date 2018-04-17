@@ -1,16 +1,16 @@
 ---
-title: "sp_add_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,31 +60,31 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@primary_server**  =] '*primary_server*'  
+ [ **@primary_server** =] '*primary_server*'  
  プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
   
- [  **@primary_database**  =] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
   
- [  **@backup_source_directory**  =] '*backup_source_directory*'  
- プライマリ サーバーのトランザクション ログ バックアップ ファイルが格納されているディレクトリ。 *backup_source_directory* is **nvarchar(500)** and cannot be NULL.  
+ [ **@backup_source_directory** =] '*backup_source_directory*'  
+ プライマリ サーバーのトランザクション ログ バックアップ ファイルが格納されているディレクトリ。 *backup_source_directory*は**nvarchar (500)** NULL にすることはできません。  
   
- [  **@backup_destination_directory**  =] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** =] '*backup_destination_directory*'  
  バックアップ ファイルのコピー先となるセカンダリ サーバーのディレクトリ。 *backup_destination_directory*は**nvarchar (500)** NULL にすることはできません。  
   
  [ **@copy_job_name** = ] '*copy_job_name*'  
  使用する名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクション ログ バックアップをセカンダリ サーバーにコピーするために作成されているエージェント ジョブ。 *copy_job_name*は**sysname** NULL にすることはできません。  
   
- [ **@restore_job_name** = ] '*restore_job_name*'  
+ [ **@restore_job_name** =] '*restore_job_name*'  
  名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セカンダリ データベースにバックアップを復元するセカンダリ サーバー上のエージェント ジョブ。 *restore_job_name*は**sysname** NULL にすることはできません。  
   
- [  **@file_retention_period**  =] '*file_retention_period*'  
+ [ **@file_retention_period** =] '*file_retention_period*'  
  分単位で指定されたパスのセカンダリ サーバーでバックアップ ファイルが保持される時間の長さ、@backup_destination_directoryパラメーターを削除する前にします。 *ヒストリは削除*は**int**、既定値は NULL です。 値 14420 は、指定されていない場合に使用されます。  
   
- [  **@monitor_server**  =] '*monitor_server*'  
+ [ **@monitor_server** =] '*monitor_server*'  
  監視サーバーの名前を指定します。 *Monitor_server*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [  **@monitor_server_security_mode**  =] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  監視サーバーへの接続に使用されるセキュリティ モード。  
   
  1 = Windows 認証です。  
@@ -93,19 +93,19 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode*は**ビット**NULL にすることはできません。  
   
- [  **@monitor_server_login**  =] '*monitor_server_login*'  
+ [ **@monitor_server_login** =] '*monitor_server_login*'  
  監視サーバーへのアクセスに使用するアカウントのユーザー名を指定します。  
   
- [  **@monitor_server_password**  =] '*monitor_server_password*'  
+ [ **@monitor_server_password** =] '*monitor_server_password*'  
  監視サーバーへのアクセスに使用するアカウントのパスワードを指定します。  
   
- [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
+ [ **@copy_job_id** =] '*copy_job_id*' 出力  
  セカンダリ サーバーでのコピー ジョブに関連付けられた ID。 *copy_job_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
+ [ **@restore_job_id** =] '*restore_job_id*' 出力  
  セカンダリ サーバーでの復元ジョブに関連付けられた ID。 *restore_job_id*は**uniqueidentifier** NULL にすることはできません。  
   
- [  **@secondary_id**  =] '*secondary_id*' 出力  
+ [ **@secondary_id** =] '*secondary_id*' 出力  
  ログ配布構成におけるセカンダリ サーバーの ID。 *secondary_id*は**uniqueidentifier** NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -115,7 +115,7 @@ sp_add_log_shipping_secondary_primary
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_log_shipping_secondary_primary** must be run from the **master** database on the secondary server. このストアド プロシージャでは次の処理が行われます。  
+ **sp_add_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベースです。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  指定したプライマリ サーバーとプライマリ データベースのセカンダリ ID を生成する。  
   
@@ -155,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ログ配布 &#40; についてSQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [ログ配布 & #40; についてSQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

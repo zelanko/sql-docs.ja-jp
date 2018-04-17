@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_column (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_fulltext_column (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_column_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1099b9ee7ebf38703701a2160e15d24b80ba859
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@tabname=** ] **'***qualified_table_name***'**  
+ [  **@tabname=** ] **'***qualified_table_name***'**  
  1 つまたは 2 つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 テーブルにフルテキスト インデックスがある。 *qualified_table_name*は**nvarchar (517)**既定値はありません。  
   
  [ **@colname=** ] **'***column_name***'**  
@@ -65,13 +66,13 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  [  **@action=** ] **'***アクション***'**  
  実行する操作を指定します。 *アクション*は**varchar (20)**, で、ない既定値は、次の値のいずれかを指定します。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**add**|追加*column_name*の*qualified_table_name*テーブルの非アクティブなフルテキスト インデックスにします。 この操作を行うと、列に対するフルテキスト インデックス作成が有効になります。|  
 |**drop**|削除*column_name*の*qualified_table_name*テーブルの非アクティブなフルテキスト インデックスからです。|  
   
- [ **@language=** ] **'***language_term***'**  
- 列に格納されているデータの言語を指定します。 含まれる言語の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[sys.fulltext_languages &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+ [  **@language=** ] **'***language_term***'**  
+ 列に格納されているデータの言語を指定します。 含まれる言語の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)です。  
   
 > [!NOTE]  
 >  複数の言語のデータ、またはサポートされていない言語のデータが列に含まれる場合は、"ニュートラル言語" を使用します。 既定値は構成オプション 'default full-text language' で指定されます。  
@@ -125,11 +126,11 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
   
 ## <a name="see-also"></a>参照  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [照会する &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [sp_help_fulltext_columns_cursor &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [sp_help_fulltext_tables &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [フルテキスト検索およびセマンティック検索ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [フルテキスト検索およびセマンティック検索ストアド プロシージャの&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

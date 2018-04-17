@@ -2,7 +2,7 @@
 title: 翻訳 Dll |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 284bc373cca1721ea66195115a320f5a4e53e797
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0aaed3a9ef5f4ae81cad3407cdecb0c18b753b6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="translation-dlls"></a>翻訳の Dll
 アプリケーションとデータ ソース多くの場合、異なる文字セットでデータを格納します。 ODBC では、1 つの文字セットを他のデータを変換するドライバーを使用する汎用メカニズムを提供します。 変換関数を実装する DLL で構成されて**SQLDriverToDataSource**と**SQLDataSourceToDriver**、データ ソースの間をフローさせるすべてのデータを変換するドライバーと呼ばれるドライバーです。 この DLL は、ドライバーの開発者に、アプリケーション開発者によって書き込まれることができますか、サード パーティ製です。  

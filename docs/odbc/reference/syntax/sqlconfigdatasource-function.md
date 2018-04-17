@@ -2,7 +2,7 @@
 title: SQLConfigDataSource 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f2c33bc5c946331057486719750086a1f962924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 関数
 **準拠**  
@@ -80,7 +80,7 @@ BOOL SQLConfigDataSource(
  *lpszAttributes*  
  [入力]二重の null で終わる、キーワードと値のペアの形式での属性の一覧。 詳細については、次を参照してください。 [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。 エントリが存在しない場合、システム情報でこの関数が呼び出されたときに、関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource**見つからないか、セットアップの DLL をロードすることがない場合、またはユーザーがダイアログ ボックスを取り消す場合は FALSE を返します。 受け取ったステータスを返すそれ以外の場合、 **ConfigDSN**です。  
   
- **SQLConfigDataSource**システム DSN をマップ*起こり*ユーザー DSN を*起こり*(ODBC_ADD_DSN に ODBC_ADD_SYS_DSN、ODBC_CONFIG_DSN、および ODBC_REMOVE_SYS ODBC_CONFIG_SYS_DSN s_DSN ODBC_REMOVE_DSN に)。 ユーザーとシステム Dsn を区別するために**SQLConfigDataSource**インストーラーに次の表に従って構成モードを設定します。 戻る、前に**SQLConfigDataSource** BOTHDSN 構成モードに戻します。 **ConfigDSN** (ドライバーによって実装される) 呼び出す必要があります**SQLWriteDSNToIni**と**SQLWritePrivateProfileString**システム DSN をサポートするためにします。 詳細については、次を参照してください。 [ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)です。  
+ **SQLConfigDataSource**システム DSN をマップ*起こり*ユーザー DSN を*起こり*(ODBC_ADD_DSN に ODBC_ADD_SYS_DSN、ODBC_CONFIG_DSN、および ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSN sDSN ODBC_REMOVE_DSN)。 ユーザーとシステム Dsn を区別するために**SQLConfigDataSource**インストーラーに次の表に従って構成モードを設定します。 戻る、前に**SQLConfigDataSource** BOTHDSN 構成モードに戻します。 **ConfigDSN** (ドライバーによって実装される) 呼び出す必要があります**SQLWriteDSNToIni**と**SQLWritePrivateProfileString**システム DSN をサポートするためにします。 詳細については、次を参照してください。 [ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)です。  
   
 |*起こり*|構成モード|  
 |----------------|------------------------|  

@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsubscription_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpsubscription_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 060aad04898e9ce47c91cf835b107e4c2efc39e3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 78637041673509151652fd1e6d4125c8e41e2aa2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は **%** 、すべてのパブリッシャーに関する情報を返します。  
+ [ **@publisher=**] **'***publisher***'**  
+ パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は**%**、すべてのパブリッシャーに関する情報を返します。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** 、すべてのパブリッシャー データベースに関する情報を返します。  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は**%**、すべてのパブリッシャー データベースに関する情報を返します。  
   
- [  **@publication=**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、すべてのパブリケーションに関する情報を返します。  
+ [ **@publication=**] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションに関する情報を返します。  
   
  [  **@publication_type=**] *publication_type*  
  パブリケーションの種類です。*publication_type*は**int**、既定値は NULL です。 指定した場合、 *publication_type*値は次のいずれかを指定する必要があります。  
@@ -96,12 +96,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**offload_server**|**sysname**|リモートからのアクティブ化に使用するサーバーのネットワーク名。|  
 |**dynamic_snapshot_location**|**nvarchar (255)**|スナップショット ファイルが保存されるフォルダーへのパス。|  
 |**@use_web_sync**|**bit**|HTTPS 経由で、サブスクリプションを同期させることができるかどうかの値を指定します**1**この機能が有効になっていることを意味します。|  
-|**internet_url**|**nvarchar (260)**|Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
-|**internet_login**|**nvarchar (128)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
+|**internet_url**|**nvarchar(260)**|Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
+|**internet_login**|**nvarchar(128)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
 |**internet_password**|**nvarchar (524)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインのパスワードです。|  
 |**internet_security_mode**|**int**|値が、Web 同期をホストしている Web サーバーに接続するときに使用する認証モード**1** 、Windows 認証を示し、値は**0**基本認証を意味します。|  
 |**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間 (秒単位)。|  
-|**ホスト名**|**nvarchar (128)**|この関数が WHERE 句のパラメーター化された行フィルターで使用される場合の HOST_NAME() の値を指定します。|  
+|**ホスト名**|**nvarchar(128)**|この関数が WHERE 句のパラメーター化された行フィルターで使用される場合の HOST_NAME() の値を指定します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -109,7 +109,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>解説  
  **sp_helpsubscription_properties**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helpsubscription_properties**です。  
   
 ## <a name="see-also"></a>参照  

@@ -1,16 +1,16 @@
 ---
-title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_os_host_info (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sys.dm_os_host_info
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23adfb73309f54720889b7eb3350bc6b5062f60
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e8e36375f534a187c749bbd4217fddd0a98f8fb9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +84,6 @@ Windows 上でサンプルの結果を次に示します。
   
 ## <a name="see-also"></a>参照  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
+ [sys.dm_os_windows_info (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

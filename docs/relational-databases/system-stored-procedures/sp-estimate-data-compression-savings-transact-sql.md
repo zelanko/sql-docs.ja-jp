@@ -1,16 +1,16 @@
 ---
-title: "sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acb61e6c699728902bc7ada6d5cfd7e12febb1c8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d93c3626e7177df5920cd2e8888ba75a2416fdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_estimate_data_compression_savings
  テーブルまたはインデックス付きビューを含んでいるデータベース スキーマの名前です。 *schema_name*は**sysname**です。 場合*schema_name* NULL の場合は、現在のユーザーの既定のスキーマを使用します。  
   
  [ @object_name=] '*object_name*'  
- インデックスが有効になっているテーブルまたはインデックス付きビューの名前です。 *object_name*は**sysname**です。  
+ インデックスが有効になっているテーブルまたはインデックス付きビューの名前です。 *object_name* は **sysname** です。  
   
  [ @index_id=] '*index_id*'  
  インデックスの ID です。 *index_id*は**int**、値は次のいずれかを指定できます。 インデックス、NULL の場合、または 0 の場合の ID 番号*object_id*ヒープ。 ベース テーブルまたはビューのすべてのインデックスについて情報を返すには、NULL を指定します。 NULL を指定する場合も NULL を指定する必要があります*partition_number*です。  
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
   
  インデックス ID またはパーティション ID が存在しない場合は、結果が返されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  テーブルに対する SELECT 権限が必要です。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
@@ -127,10 +127,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.partitions および #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Unicode 圧縮の実装](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

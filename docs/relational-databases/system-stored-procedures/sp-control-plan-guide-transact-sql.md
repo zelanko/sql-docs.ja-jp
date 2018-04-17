@@ -1,16 +1,16 @@
 ---
-title: "sp_control_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_control_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f093a05ebbfe14a0d9436b0b2a9503aadc5b6440
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  指定されたプラン ガイドを削除*plan_guide_name*です。 プラン ガイドの削除後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DROP ALL  
- 現在のデータベースのすべてのプラン ガイドを削除します。 **N'***plan_guide_name* DROP ALL が指定されている場合に指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを削除します。 **N' * * * plan_guide_name* DROP ALL が指定されている場合に指定することはできません。  
   
  DISABLE  
  指定したプラン ガイドを無効に*plan_guide_name*です。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DISABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを無効にします。 **N'***plan_guide_name* DISABLE ALL が指定されている場合に指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを無効にします。 **N' * * * plan_guide_name* DISABLE ALL が指定されている場合に指定することはできません。  
   
  ENABLE  
  指定したプラン ガイドを有効に*plan_guide_name*です。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは作成時に有効になります。  
@@ -85,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  プラン ガイドはすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、実行できます。 **sp_control_plan_guide**の任意のエディションで DROP または DROP ALL オプションを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行する**sp_control_plan_guide** OBJECT 型のプラン ガイドで (指定して作成 **@type ='**オブジェクト**'** ) オブジェクトに対する ALTER 権限が必要ですプラン ガイドによって参照されます。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -141,7 +141,7 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

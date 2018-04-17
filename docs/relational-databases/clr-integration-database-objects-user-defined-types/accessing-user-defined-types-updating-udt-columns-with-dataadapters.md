@@ -1,15 +1,15 @@
 ---
-title: "Dataadapter による UDT 列の更新 |Microsoft ドキュメント"
-ms.custom: 
+title: Dataadapter による UDT 列の更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b27e47e8aa8563b004f0ad7b07163ecd3891ffb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Dataadapter による UDT 列の更新のユーザー定義の型へのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用してユーザー定義型 (Udt) がサポートされている、 **System.Data.DataSet**と**System.Data.SqlClient.SqlDataAdapter**を取得し、データを変更します。  
+  使用してユーザー定義型 (Udt) がサポートされている、 **System.Data.DataSet**と**System.Data.SqlClient.SqlDataAdapter**を取得し、データを変更します。  
   
 ## <a name="populating-a-dataset"></a>Dataset の読み込み  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例であるか、**ポイント**次の構造とサンプル データで定義されているテーブル。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを作成、**ポイント**テーブルが表示され、いくつかの行を挿入します。  
@@ -92,7 +92,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  次の ADO.NET の例には 2 つのメソッドが含まれています。  
   
--   **UserProvidedCommands**を指定する方法を例示**InsertCommand**、 **UpdateCommand**、および**DeleteCommand**オブジェクトを更新するため、**ポイント**で UDT、**ポイント**テーブル (を含まない、**タイムスタンプ**列)。  
+-   **UserProvidedCommands**を指定する方法を例示**InsertCommand**、 **UpdateCommand**、および**DeleteCommand** を更新するためのオブジェクト**ポイント**で UDT、**ポイント**テーブル (を含まない、**タイムスタンプ**列)。  
   
 -   **CommandBuilder**、使用する方法を示しますが、 **SqlCommandBuilder**で、 **Points_ts**を含むテーブル、**タイムスタンプ**列です。  
   

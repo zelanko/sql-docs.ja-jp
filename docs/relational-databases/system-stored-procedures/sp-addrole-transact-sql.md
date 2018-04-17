@@ -1,16 +1,16 @@
 ---
-title: "sp_addrole (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addrole (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrole
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrole
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 070e1d0e71b49689e547dc29300bf5a5476d17ec
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551ac618a2643fabfed717677e0892c8781f52e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="remarks"></a>解説  
  名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールは 1 ~ 128 文字、文字、記号、および数字を含めることができます。 データベース ロールの名前をことはできません: バック スラッシュ文字を含める (\\)、null 値、または空の文字列 (**'**)。  
   
- データベース ロールを追加した後を使用して[sp_addrolemember &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)プリンシパルをロールに追加します。 GRANT、DENY、または REVOKE ステートメントを使用して権限をデータベース ロールに適用すると、そのデータベース ロールのメンバーには、それぞれのアカウントに直接適用した場合と同様に、権限が継承されます。  
+ データベース ロールを追加した後を使用して[sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)プリンシパルをロールに追加します。 GRANT、DENY、または REVOKE ステートメントを使用して権限をデータベース ロールに適用すると、そのデータベース ロールのメンバーには、それぞれのアカウントに直接適用した場合と同様に、権限が継承されます。  
   
 > [!NOTE]  
 >  新しいサーバー ロールを作成することはできません。 ロールは、データベース レベルでのみ作成できます。  
   
  **sp_addrole**ユーザー定義のトランザクション内で使用できません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する CREATE ROLE 権限が必要です。 スキーマを作成する場合は、データベースに対する CREATE SCHEMA 権限が必要です。 場合*所有者*ユーザーまたはグループとして指定すると、そのユーザーまたはグループに対する impersonate 権限が必要です。 場合*所有者*ロールとして指定すると、そのロールまたはそのロールのメンバーに対する ALTER 権限が必要です。 所有者をアプリケーション ロールとして指定する場合は、そのアプリケーション ロールに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -80,7 +80,7 @@ EXEC sp_addrole 'Managers';
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

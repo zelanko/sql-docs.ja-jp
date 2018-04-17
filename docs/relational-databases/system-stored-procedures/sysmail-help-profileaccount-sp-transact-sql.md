@@ -1,16 +1,16 @@
 ---
-title: "sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dfe0115ca0e641ca0b6397cd624d093f7d94acff
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 652fa8630640233427df040b155ca283b7041d74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sysmail_help_profileaccount_sp
  [ **@profile_id** = ] *profile_id*  
  表示するプロファイルのプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'***profile_name***'**  
  表示するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@account_id** = ] *account_id*  
+ [ **@account_id** =] *account_id*  
  表示するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示します。  
   
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** =] **'***account_name***'**  
  表示するアカウント名を指定します。 *account_name*は**sysname**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -95,7 +95,7 @@ EXECUTE msdb.dbo.sysmail_help_profileaccount_sp
    @profile_name = 'AdventureWorks Administrator';  
 ```  
   
- 行の長さの編集、サンプルの結果セットを次に示します。  
+ 次に結果セットを示します。行の長さは編集されています。  
   
 ```  
 profile_id  profile_name                 account_id  account_name         sequence_number  
@@ -113,7 +113,7 @@ EXECUTE msdb.dbo.sysmail_help_profileaccount_sp
     @profile_id = 131 ;  
 ```  
   
- 行の長さの編集、サンプルの結果セットを次に示します。  
+ 次に結果セットを示します。行の長さは編集されています。  
   
 ```  
 profile_id  profile_name                 account_id  account_name         sequence_number  
@@ -130,7 +130,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 EXECUTE msdb.dbo.sysmail_help_profileaccount_sp;  
 ```  
   
- 行の長さの編集、サンプルの結果セットを次に示します。  
+ 次に結果セットを示します。行の長さは編集されています。  
   
 ```  
 profile_id  profile_name                 account_id  account_name         sequence_number  
@@ -144,6 +144,6 @@ profile_id  profile_name                 account_id  account_name         sequen
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

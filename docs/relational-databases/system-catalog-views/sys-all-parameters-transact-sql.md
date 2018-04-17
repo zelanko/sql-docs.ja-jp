@@ -1,16 +1,16 @@
 ---
-title: "sys.all_parameters (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.all_parameters (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - all_parameters_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_parameters catalog view
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0513ae73ab3feb03bf2da24fcd2e0b458f4e9af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8de0c0b19a858bd129797edad00f86cd92bbaef8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysallparameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,23 +47,23 @@ ms.lasthandoff: 11/21/2017
 |**system_type_id**|**tinyint**|パラメーターのシステム型の ID です。|  
 |**user_type_id**|**int**|ユーザーが定義されているパラメーターの型の ID。<br /><br /> 型の名前を返すに参加させる、 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログをこの列に表示します。|  
 |**max_length**|**smallint**|パラメーターの最大長 (バイト単位)。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**です。|  
-|**有効桁数**|**tinyint**|パラメーターが数値ベースの場合の有効桁数。数値ではない場合は 0 です。|  
-|**小数点以下桁数**|**tinyint**|パラメーターが数値ベースの場合の小数点以下桁数。数値ではない場合は 0 です。|  
+|**有効桁数 (precision)**|**tinyint**|パラメーターが数値ベースの場合の有効桁数。数値ではない場合は 0 です。|  
+|**scale**|**tinyint**|パラメーターが数値ベースの場合の小数点以下桁数。数値ではない場合は 0 です。|  
 |**is_output**|**bit**|1 = パラメーターが出力 (またはを返す)。それ以外の場合、0 を返します。|  
 |**is_cursor_ref**|**bit**|1 = パラメーターはカーソル参照パラメーターです。|  
-|**has_default_value**|**bit**|1 = パラメーターには既定値があります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみです。 このカタログ ビュー内の CLR オブジェクトの既定値が保持されます。したがって、この列には 0 に設定する値が常に[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクト。 内のパラメーターの既定値を表示する、[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクト、クエリ、**定義**の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビュー、またはを使用して、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数です。|  
+|**has_default_value**|**bit**|1 = パラメーターには既定値があります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみです。 このカタログ ビュー内の CLR オブジェクトの既定値が保持されます。したがって、この列には 0 に設定する値が常に[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクト。 内のパラメーターの既定値を表示する、[!INCLUDE[tsql](../../includes/tsql-md.md)]オブジェクト、クエリ、**定義**の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビュー、またはを使用して、 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)システム関数です。|  
 |**is_xml_document**|**bit**|1 = 内容が完全な XML ドキュメントです。<br /><br /> 0 = 内容がドキュメントの一部か、列のデータ型が**xml**です。|  
-|**default_value です。**|**sql_variant**|場合**has_default_value** 1 の場合は、この列の値のパラメーターの既定値です。 それ以外の場合は NULL です。|  
+|**default_value**|**sql_variant**|場合**has_default_value** 1 の場合は、この列の値のパラメーターの既定値です。 それ以外の場合は NULL です。|  
 |**xml_collection_id**|**int**|パラメーターを評価するために使用される XML スキーマ コレクションの ID。<br /><br /> パラメーターのデータ型の場合は 0 以外。 **xml** XML が型指定されたとします。<br /><br /> 0 = XML スキーマ コレクションが存在しないか、パラメーターが XML ではありません。|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
- [sys.system_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
+ [sys.system_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

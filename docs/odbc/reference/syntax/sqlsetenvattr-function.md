@@ -2,7 +2,7 @@
 title: SQLSetEnvAttr 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef21f18346ad21afbba42d282763db5a527029f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 関数
 **準拠**  
@@ -61,12 +61,12 @@ SQLRETURN SQLSetEnvAttr(
  *ValuePtr*  
  [入力]関連付けられる値へのポインター*属性*です。 値に応じて*属性*、 *ValuePtr*は 32 ビット整数の値を指定または null で終わる文字列をポイントします。  
   
- *StringLength*  
+ *stringLength*  
  [入力]場合*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります **ValuePtr*です。 文字の文字列データでは、この引数は、文字列のバイト数を含める必要があります。  
   
  場合*ValuePtr*整数*StringLength*は無視されます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

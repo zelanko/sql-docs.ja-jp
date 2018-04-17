@@ -2,7 +2,7 @@
 title: SQLGetConnectAttr 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11e1ae7c2dc3de4611687349295bdd3344c46d47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9bdc72acac47f44f65b5902c56e1436f5c647341
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
 **準拠**  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetConnectAttr(
  *StringLengthPtr*  
  [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*です。 場合\* *ValuePtr* null ポインターでは、長さは返されません。 属性値、文字の文字列であり、使用できるバイト数を返すよりも大きい場合*BufferLength* null 終端文字、内のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

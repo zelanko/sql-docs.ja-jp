@@ -1,16 +1,16 @@
 ---
-title: "sp_addpullsubscription_agent (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addpullsubscription_agent (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ca6f7bda4d6d9e0387dcbd98a09040be4d0a0d0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,13 +88,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db=**] **'***publisher_db'*  
+ [  **@publisher_db=**] **' * * * publisher_db'*  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**既定値は NULL です。 *publisher_db* Oracle パブリッシャーでは無視されます。  
   
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
@@ -154,7 +154,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *frequency_type*  
  ディストリビューション エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|指定日時|  
 |**2** (既定値)|[要求時]|  
@@ -210,7 +210,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@active_end_date=**] *active_end_date*  
  ディストリビューション エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は**0**します。  
   
- [  **@distribution_jobid =**] *distribution_jobid***出力**  
+ [  **@distribution_jobid =**] *distribution_jobid * * * 出力**  
  このジョブのディストリビューションの ID を指定します。 *distribution_jobid*は**binary (16)**NULL の場合は、既定値は、出力パラメーターです。  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
@@ -231,48 +231,48 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@ftp_password=**] **'***ftp_password***'**  
  これは旧バージョンとの互換性のためにだけ用意されています。  
   
- [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder'*  
+ [  **@alt_snapshot_folder=** ] **' * * * alternate_snapshot_folder'*  
  スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)**、既定値は NULL です。  
   
- [  **@working_directory** =] **'***working_director***'**  
+ [ **@working_directory**=] **'***working_director***'**  
  パブリケーション用のデータ ファイルとスキーマ ファイルの格納に使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**、既定値は NULL です。 名前は UNC 形式で指定する必要があります。  
   
- [  **@use_ftp** =] **'***@use_ftp***'**  
+ [ **@use_ftp**=] **'***@use_ftp***'**  
  標準のプロトコルの代わりに FTP を使用してスナップショットを取得します。 *@use_ftp*は**nvarchar (5)**、既定値は FALSE。  
   
- [  **@publication_type** =] *publication_type*  
+ [ **@publication_type**=] *publication_type*  
  パブリケーションのレプリケーションの種類を指定します。 *publication_type*は、 **tinyint** 、既定値は**0**します。 場合**0**パブリケーションがトランザクションの種類。 場合**1**パブリケーションはスナップショット タイプ。 場合**2**パブリケーションはマージ タイプ。  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**既定値は NULL です。 たとえば、`DTSPub_Package` というパッケージを指定するには、パラメーターを `@dts_package_name = N'DTSPub_Package'` と設定します。  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  パッケージのパスワード (ある場合) を指定します。 *dts_package_password*は**sysname**既定値は NULL には、つまり、パスワードがパッケージにします。  
   
 > [!NOTE]  
 >  場合は、パスワードを指定する必要があります*dts_package_name*を指定します。  
   
- [  **@dts_package_location** =] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'***dts_package_location***'**  
  パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は**サブスクライバー**です。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**です。  
   
- [  **@reserved** =] **'***予約***'**  
+ [ **@reserved**=] **'***予約***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@offloadagent** =] '*remote_agent_activation*'  
+ [ **@offloadagent**=] '*remote_agent_activation*'  
  > [!NOTE]  
 >  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**でエラーが発生します。  
   
- [  **@offloadserver** =] '*remote_agent_server_name*'  
+ [ **@offloadserver**=] '*remote_agent_server_name*'  
  > [!NOTE]  
 >  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
- [  **@job_name** =] '*job_name*'  
+ [ **@job_name**=] '*job_name*'  
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーではない場合、 **sysadmin**固定サーバー ロールを指定してください*job_login*と*job_password*を指定すると*job_name*.  
   
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはサブスクライバーへのエージェント接続で常に使用されます。  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
   
 > [!IMPORTANT]  
@@ -287,16 +287,16 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription_agent**です。  
   
 ## <a name="see-also"></a>参照  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

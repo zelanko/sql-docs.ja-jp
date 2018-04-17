@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_get_sql (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_get_sql (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2f4572bfe948456f98e446d05e8c5601490431c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   指定した SQL ハンドルに対して、SQL ステートメントのテキストを返します。  
   
 > [!IMPORTANT]  
->  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)。  
+>  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、次を参照してください。 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)です。  
   
  
   
@@ -67,11 +67,11 @@ sys.fn_get_sql ( SqlHandle )
 |dbid|**smallint**|データベース ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |objectid|**int**|データベース オブジェクトの ID。 アドホック SQL ステートメントの場合は NULL になります。|  
 |number|**smallint**|プロシージャがグループ化されている場合、そのグループの番号。<br /><br /> 0 = エントリはプロシージャではない<br /><br /> NULL = アドホック SQL ステートメント|  
-|encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化されていません。<br /><br /> 1 = 暗号化|  
+|encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
 |text|**text**|SQL ステートメントのテキスト。 暗号化されているオブジェクトの場合は NULL になります。|  
   
 ## <a name="remarks"></a>解説  
- 有効な SQL ハンドルは、の sql_handle 列から取得できます、 [sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビュー。  
+ 有効な SQL ハンドルは、の sql_handle 列から取得できます、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビュー。  
   
  ハンドルを渡すを不要になった場合と、キャッシュ内に存在**l**は空の結果セットを返します。 無効なハンドルを渡すと、バッチは停止し、エラー メッセージが返されます。  
   
@@ -101,8 +101,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DBCC INPUTBUFFER &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
- [sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+ [DBCC INPUTBUFFER &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
+ [sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.dm_exec_requests (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

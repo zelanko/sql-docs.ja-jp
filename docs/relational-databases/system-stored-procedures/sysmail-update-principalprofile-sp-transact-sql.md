@@ -1,16 +1,16 @@
 ---
-title: "sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 21479f5ae60a12165bcda38702f540dd3746fa2f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@principal_id** = ] *principal_id*  
+ [ **@principal_id** =] *principal_id*  
  データベース ユーザーまたはロールの ID、 **msdb**の関連付けを変更するデータベース。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+ [ **@principal_name** =] **'***principal_name***'**  
  データベース ユーザーまたはロールの名前、 **msdb**データベースの関連付けを更新します。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
   
  [ **@profile_id** = ] *profile_id*  
  関連付けを変更するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'***profile_name***'**  
  関連付けを変更するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [  **@is_default**  =] **'***is_default***'**  
+ [ **@is_default** =] **'***is_default***'**  
  このプロファイルがデータベース ユーザーの既定のプロファイルかどうかを指定します。 データベース ユーザーが持つことのできる既定のプロファイルは 1 つだけです。 *is_default*は**ビット**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -74,7 +74,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  アソシエーションのプリンシパルの名前は、いつ**パブリック**またはアソシエーションのプリンシパルの id は**0**、このストアド プロシージャは、パブリック プロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ときに **@is_default** は '**1**' と、プリンシパルが複数のプロファイルに関連付けられた、指定されたプロファイルのプリンシパルの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
+ ときに**@is_default**は '**1**' と、プリンシパルが複数のプロファイルに関連付けられた、指定されたプロファイルのプリンシパルの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
   
  ストアド プロシージャ**sysmail_update_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   
@@ -107,6 +107,6 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

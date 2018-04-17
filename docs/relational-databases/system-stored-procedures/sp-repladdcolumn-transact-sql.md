@@ -1,16 +1,16 @@
 ---
-title: "sp_repladdcolumn (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_repladdcolumn (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d638619d087d43b0820fdf21650a9b8db1f7cf63
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e7457c7829662d5716db9e794836f12e3a785564
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  新しい列の追加先となるパブリケーションの名前を指定します。 *publication_to_add*は**nvarchar (4000)**、既定値は**すべて**です。 場合**すべて**、このテーブルを含むすべてのパブリケーションが影響を受けます。 場合*publication_to_add*が指定されている、このパブリケーションのみがある、新しい列を追加します。  
   
  [ @from_agent =] *from_agent*  
- ストアド プロシージャがレプリケーション エージェントにより実行されているかどうかを示します。 *from_agent*は**int**、既定値は**0**値が、 **1**はレプリケーション エージェントによってこのストアド プロシージャが実行されている場合に使用他のすべての場合、既定値**0**使用する必要があります。  
+ ストアド プロシージャがレプリケーション エージェントにより実行されているかどうかを示します。 *from_agent*は**int**、既定値は**0**値が、 **1**はレプリケーション エージェントによってこのストアド プロシージャが実行されている場合に使用すべてその他の場合、既定値の**0**使用する必要があります。  
   
  [ @schema_change_script =] '*schema_change_script*'  
  パスと名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムを変更するためのスクリプトは、カスタム ストアド プロシージャを生成します。 *schema_change_script*は**nvarchar (4000)**、既定値は NULL です。 レプリケーションを行うと、トランザクション レプリケーションで使用される 1 つ以上の既定のプロシージャを、ユーザー定義カスタム ストアド プロシージャに置き換えることができます。 *schema_change_script*スキーマの変更がレプリケートされたテーブル アーティクルに sp_repladdcolumn でが行われ、次のいずれかの操作に使用できる後に実行します。  
@@ -94,7 +94,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  sp_repladdcolumn を実行できるのは、sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  

@@ -1,16 +1,16 @@
 ---
-title: "SQLGetDiagRec および SQLGetDiagField を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: SQLGetDiagRec および SQLGetDiagField を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db4a853206e402228eb9d76dca72a421444ed042
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 895eb4b04b974c66f64e4ded31b84890cf19e076
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField を使用してください。
 アプリケーションのコール**SQLGetDiagRec**または**SQLGetDiagField**診断情報を取得します。 これらの関数は、環境、接続、ステートメント、または記述子ハンドルをそのまま使用し、最後にそのハンドルを使用した関数から診断を返します。 ハンドルを使用して、新しい関数が呼び出されたときに、特定のハンドルにログオンしているため、診断が破棄されます。 関数に複数の診断レコードが返される場合は、アプリケーションが呼び出すこれらの関数複数回です。状態レコードの合計数が呼び出すことによって取得**SQLGetDiagField** SQL_DIAG_NUMBER オプションを使用してヘッダー レコード (レコード 0) です。  

@@ -1,16 +1,16 @@
 ---
-title: "sp_addsubscriber (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addsubscriber (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48dba20940cff922fa3bdacd78471d57fbec7707
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364f88ae30fa71cd5f2a39dea897252b967d8228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,13 +77,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |値|Description|  
 |-----------|-----------------|  
-|**0** (既定値)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー|  
+|**0** (既定値)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー|  
 |**1**|ODBC データ ソース サーバー|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet データベース|  
 |**3**|OLE DB プロバイダー|  
   
  [  **@login=**] **'***ログイン***'**  
- ログイン id を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *ログイン*は**sysname**、既定値は NULL です。  
+ ログイン id を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
@@ -213,7 +213,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@encrypted_password=**] *encrypted_password*  
  このパラメーターは廃止されており、旧バージョンとの互換性のための設定のみが提供*encrypted_password*任意の値が、 **0**エラーが発生します。  
   
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -229,14 +229,14 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
  **sp_addsubscriber**に書き込み、 [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)テーブルに、**配布**データベース。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_addsubscriber**です。  
   
 ## <a name="see-also"></a>参照  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

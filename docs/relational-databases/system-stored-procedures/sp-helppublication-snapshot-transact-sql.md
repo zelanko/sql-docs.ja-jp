@@ -1,16 +1,16 @@
 ---
-title: "sp_helppublication_snapshot (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helppublication_snapshot (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 823e243240143e04902e86c03f81882ed517679e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1598b35bf6fc7148c288d61fba959ac6360903d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@publisher =** ] **'***パブリッシャー***'**  
@@ -58,16 +58,16 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|スナップショット エージェントの ID です。|  
-|**name**|**nvarchar (100)**|スナップショット エージェント名です。|  
+|**name**|**nvarchar(100)**|スナップショット エージェント名です。|  
 |**publisher_security_mode**|**smallint**|次のいずれかと、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証です。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
-|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由の値 **\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
+|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \***は常に返されます。|  
 |**job_id**|**uniqueidentifier**|エージェント ジョブの一意な ID。|  
 |**job_login**|**nvarchar(512)**|形式で返される、スナップショット エージェントを実行する Windows アカウントは、*ドメイン*\\*username*です。|  
-|**job_password**|**sysname**|セキュリティ上の理由の値 **\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
+|**job_password**|**sysname**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \***は常に返されます。|  
 |**schedule_name**|**sysname**|このエージェント ジョブに使用されるスケジュールの名前です。|  
 |**frequency_type**|**int**|スケジュールに組み込まれているエージェントの実行の頻度。次のいずれかの値になります。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 毎日<br /><br /> **8** = 毎週<br /><br /> **16**毎月を =<br /><br /> **32** = 月単位<br /><br /> **64**自動開始を =<br /><br /> **128** = 定期的|  
 |**frequency_interval**|**int**|エージェントの実行日。次のいずれかの値になります。<br /><br /> **1**日曜日を =<br /><br /> **2**月曜日を =<br /><br /> **3** = 火曜日<br /><br /> **4** = 水曜日<br /><br /> **5** = 木曜日<br /><br /> **6** = 金曜日<br /><br /> **7** = 土曜日<br /><br /> **8** = 日<br /><br /> **9** = 平日<br /><br /> **10**週末の曜日を =|  
@@ -86,14 +86,14 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_help_publication_snapshot**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**のメンバーまたはパブリッシャーの固定サーバー ロール、 **db_owner** 、パブリケーション データベースの固定データベース ロールが実行できる**sp_help_publication_snapshot**.  
   
 ## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication_snapshot &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication_snapshot &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_dropmergepublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_droppublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
+ [sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_adddynamicsnapshot_job (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_adddynamicsnapshot_job (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3b2201611c5b58b795063dd06ecc7c0918c57f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6590dad37937cb5b937ac49e541e2264a266de8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  フィルター選択されたデータ スナップショット ジョブを作成するには、パブリケーションに対する標準スナップショット ジョブが既に存在している必要があります。  
   
- 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
+ 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,16 +65,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  フィルター選択されたデータ スナップショット ジョブを追加するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@suser_sname** =] **'***suser_sname***'**  
+ [ **@suser_sname**=] **'***suser_sname***'**  
  値によってフィルター選択は、サブスクリプションのフィルター選択されたデータ スナップショットを作成するときに使用される値は、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数。 *suser_sname*は**sysname**、既定値はありません。 *suser_sname*この関数は、パブリケーションを動的にフィルター選択に使用しない場合、NULL をする必要があります。  
   
- [  **@host_name** =] **'***host_name***'**  
+ [ **@host_name**=] **'***host_name***'**  
  値によってフィルター選択は、サブスクリプションのフィルター選択されたデータ スナップショットを作成するときに使用される値は、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。 *host_name*は**sysname**、既定値はありません。 *host_name*この関数は、パブリケーションを動的にフィルター選択に使用しない場合、NULL をする必要があります。  
   
- [  **@dynamic_snapshot_jobname** =] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
  作成するフィルター選択されたデータ スナップショット ジョブの名前です。 *dynamic_snapshot_jobname*は**sysname**、既定値は NULL の場合は省略可能な出力パラメーターです。 指定した場合*dynamic_snapshot_jobname*ディストリビューター側で一意なジョブに解決する必要があります。 指定しない場合、ジョブ名が自動的に生成され、結果セットに返されます。この場合、次のような名前が作成されます。  
   
 ```  
@@ -84,7 +84,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  動的スナップショット ジョブの名前を生成すると、標準スナップショット ジョブの名前が切り捨てられる場合があります。  
   
- [  **@dynamic_snapshot_jobid** =] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
  作成するフィルター選択されたデータ スナップショット ジョブの識別子です。 *dynamic_snapshot_jobid*は**uniqueidentifier**、既定値は NULL の場合は省略可能な出力パラメーターです。  
   
  [  **@frequency_type=**] *frequency_type*  
@@ -108,9 +108,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval*は使用されません。|  
 |**4** (既定値)|各*frequency_interval*既定値は日単位、日。|  
-|**8**|*frequency_interval*は、次の 1 つ以上 (と組み合わせて、 [&#124; &#40;です。ビットごとの OR &#41;&#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/bitwise-or-transact-sql.md)論理演算子)。<br /><br /> **1**日曜日 &#124;です。**2** = 月曜日 &#124;です。**4** = 火曜日 &#124;です。**8** = 水曜日 &#124;です。**16** = 木曜日 &#124;です。**32** = 金曜日 &#124;です。**64** = 土曜日|  
+|**8**|*frequency_interval*は、次の 1 つ以上 (と組み合わせて、 [ &#124; &#40;ビットごとの OR&#41; &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md)論理演算子)。<br /><br /> **1**日曜日&#124; **2** = 月曜日&#124; **4** = 火曜日&#124; **8** = 水曜日&#124; **16** =木曜日&#124; **32** = 金曜日&#124; **64** = 土曜日|  
 |**16**|*Frequency_interval*します月の日です。|  
-|**32**|*frequency_interval*は、次のいずれか。<br /><br /> **1**日曜日 &#124;です。**2** = 月曜日 &#124;です。**3** = 火曜日 &#124;です。**4** = 水曜日 &#124;です。**5** = 木曜日 &#124;です。**6** = 金曜日 &#124;です。**7** = 土曜日 &#124;です。**8** = 日 &#124;です。**9** = 平日 &#124;です。**10** = 土日|  
+|**32**|*frequency_interval*は、次のいずれか。<br /><br /> **1**日曜日&#124; **2** = 月曜日&#124; **3** = 火曜日&#124; **4** = 水曜日&#124; **5** =木曜日&#124; **6** = 金曜日&#124; **7** = 土曜日&#124; **8**日 = &#124; **9**平日&#124; **10** = 土日|  
 |**64**|*frequency_interval*は使用されません。|  
 |**128**|*frequency_interval*は使用されません。|  
   
@@ -155,7 +155,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|フィルター選択されたデータ スナップショット ジョブの識別、 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md)システム テーブル。|  
 |**dynamic_snapshot_jobname**|**sysname**|フィルター処理されたスナップショット ジョブの名前。|  
@@ -170,13 +170,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_adddynamicsnapshot_job**です。  
   
 ## <a name="see-also"></a>参照  
  [パラメーター化されたフィルターによるマージ パブリケーションのスナップショットを作成します。](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

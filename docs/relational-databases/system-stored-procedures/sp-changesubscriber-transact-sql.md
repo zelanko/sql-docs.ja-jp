@@ -1,16 +1,16 @@
 ---
-title: "sp_changesubscriber (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_changesubscriber (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b52c51d2e516b8d4c4f787c8e5d56d95922b2d4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fd7a0652f2c1f00ec2d577d0c8e74efdc19558d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  サブスクライバーの種類です。 *型*は**tinyint**、既定値は NULL です。 **0**を示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 **1**以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはその他の ODBC データ ソース サーバー サブスクライバーです。  
   
  [  **@login=**] **'***ログイン***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID を指定します。 *ログイン*は**sysname**、既定値は NULL です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
  [  **@password=**] **'***パスワード***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のパスワード。 *パスワード*は**sysname**、既定値は **%**です。 **%**プロパティのパスワードの変更がないことを示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のパスワード。 *パスワード*は**sysname**、既定値は **%**です。 **%** プロパティのパスワードの変更がないことを示します。  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
  旧バージョンとの互換性のためにのみサポートされています。  
@@ -153,7 +153,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [認証]|  
 |**1**|[Windows 認証]|  
   
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -165,14 +165,14 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="remarks"></a>解説  
  **sp_changesubscriber**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changesubscriber**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addsubscriber &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

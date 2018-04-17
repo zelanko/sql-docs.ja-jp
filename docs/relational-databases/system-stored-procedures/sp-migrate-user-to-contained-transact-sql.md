@@ -1,16 +1,16 @@
 ---
-title: "sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_migrate_user_to_contained
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5630fe30f2841932a87293e3dd371b1a591e4223
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  [ **@username =** ] **N'***ユーザー***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインにマップされた、現在の包含データベースのユーザーの名前を指定します。 値が**sysname**、既定値は**NULL**です。  
   
- [ **@rename =** ] **N'***copy_login_name***'** | **N'** *keep_name***'**  
+ [ **@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
  ログインに基づくデータベース ユーザーのログイン名よりも別のユーザー名のときに使用*keep_name*移行中に、データベース ユーザー名を保持します。 使用して*copy_login_name* user の代わりに、ログインの名前を持つ新しい包含データベース ユーザーを作成します。 ログインに基づくデータベース ユーザーがログイン名と同じユーザー名を持つ場合は、どちらのオプションでも、名前を変更することなく包含データベース ユーザーが作成されます。  
   
- [ **@disablelogin =** ] **N'***disable_login***'** | **N'** *do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
  *disable_login* master データベース内のログインを無効にします。 ログインが無効にするとを接続する接続が、包含データベース名を入力する必要があります、**初期カタログ**接続文字列の一部として。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -75,12 +75,12 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **sp_migrate_user_to_contained**システム データベースでは使用できません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  ユーザーを移行する場合は、無効化またはのインスタンスからすべての管理者ログインを削除しないように注意する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 すべてのログインが削除された場合は、次を参照してください。 [SQL Server システム管理者がロックアウトされた場合に接続する](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)です。  
   
  場合、 **builtin \administrators**ログインが存在、管理者を使用して、アプリケーションを起動して接続できる、**管理者として実行**オプション。  
   
-### <a name="permissions"></a>アクセス許可  
+### <a name="permissions"></a>権限  
  **CONTROL SERVER** 権限が必要です。  
   
 ## <a name="examples"></a>使用例  

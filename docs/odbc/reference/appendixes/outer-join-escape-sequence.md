@@ -1,31 +1,32 @@
 ---
-title: "外部結合エスケープ シーケンス |Microsoft ドキュメント"
-ms.custom: 
+title: 外部結合エスケープ シーケンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a2621b150980c5053d62ddae1a03bcf180daf81
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 71205972831d4a0370a0905aeaa8f94d9639894e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-join-escape-sequence"></a>外部結合エスケープ シーケンス
 ODBC では、外部結合のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -41,9 +42,9 @@ ODBC では、外部結合のエスケープ シーケンスを使用します�
   
  *ODBC esc イニシエーター* oj*外部結合 ODBC esc ターミネータ*  
   
- *外部結合*:: =*テーブル名*[*相関名*] {左 &#124;です。右 &#124;です。完全}  
+ *外部結合*:: =*テーブル名*[*相関名*] {左&#124;右&#124;完全}  
   
- OUTER JOIN {*テーブル名*[*相関名*] &#124;です。*外部結合*} ON  
+ 外部結合 {*テーブル名*[*相関名*] &#124; *外部結合*} ON  
   
  *検索-*  
   

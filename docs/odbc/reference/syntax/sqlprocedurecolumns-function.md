@@ -2,7 +2,7 @@
 title: SQLProcedureColumns 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c509d2e02535a7bb30a167eba3ee1f93c70c234
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 関数
 **準拠**  
@@ -84,7 +84,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength3*  
  [入力]文字の長さ **ProcName*です。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [入力]列名の文字列の検索パターン。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*ColumnName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *ColumnName*パターン引数の値は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -92,7 +92,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength4*  
  [入力]文字の長さ **ColumnName*です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -163,7 +163,7 @@ SQLRETURN SQLProcedureColumns(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|@shouldalert|Varchar|プロシージャのカタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどに一部のプロシージャが、他のカタログをサポートする場合 ("") のカタログはありません。 それらの手順をします。|  
+|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|プロシージャのカタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどに一部のプロシージャが、他のカタログをサポートする場合 ("") のカタログはありません。 それらの手順をします。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|プロシージャのスキーマ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどに一部のプロシージャが、他のスキーマをサポートする場合 ("") のスキーマはありません。 それらの手順です。|  
 |PROCEDURE_NAME (ODBC 2.0)|3|NULL でない Varchar|プロシージャの名前。 プロシージャの名前がない、空の文字列が返されます。|  
 |COLUMN_NAME (ODBC 2.0)|4|NULL でない Varchar|プロシージャ列の名前。 ドライバーでは、名前がないプロシージャ列の空の文字列を返します。|  

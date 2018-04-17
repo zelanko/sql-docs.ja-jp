@@ -1,15 +1,16 @@
 ---
-title: "データの長さ、バッファー長、および切り捨て |Microsoft ドキュメント"
-ms.custom: 
+title: データの長さ、バッファー長、および切り捨て |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6934769c4f78063e24a393877112c2219121740
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>データの長さ、バッファー長、および切り捨て
 *データ長*はデータのバイト長アプリケーションのデータ バッファーに格納されますが、データ ソースに格納されていることがではありません。 データは多くの場合よりも、データ ソース内のデータ バッファー内のさまざまな種類に格納されているために、この区別は重要です。 したがって、データ ソースに送信されるデータ、これは、データ ソースの型への変換前に、のデータのバイト長です。 データ ソースから取得されるデータ、これは、データのバイト長切り捨てが行われる前に、データ バッファーの型に変換した後です。  

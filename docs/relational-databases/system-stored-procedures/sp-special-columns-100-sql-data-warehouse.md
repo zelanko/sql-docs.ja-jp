@@ -1,37 +1,38 @@
 ---
-title: "sp_special_columns_100 (SQL データ ウェアハウス) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_special_columns_100 (SQL データ ウェアハウス) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64aafbee1cae4cbdf8a2d43c7367fdbae6e40b27
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: f63087431cfca9578d4af19c7a213a08806f97c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   テーブル内の行を一意に識別する列の最適集合を返します。 トランザクションが行の任意の値を更新した場合に自動的に更新される列も返します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -79,14 +80,14 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|行 ID の実際の範囲。 0、1、または 2 になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]常に 0 を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している間のみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は現在のトランザクションの間は、有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間は (複数のトランザクションにまたがって) 有効であることが保証されます。|  
+|SCOPE|**smallint**|行 ID の実際の範囲。 0、1、または 2 になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 0 を返します。 このフィールドは常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID は、その行に位置している間のみ有効であることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION。 行 ID は現在のトランザクションの間は、有効であることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION。 行 ID は、セッションの間は (複数のトランザクションにまたがって) 有効であることが保証されます。|  
 |COLUMN_NAME|**sysname**|各列の列名、*テーブル*が返されます。 このフィールドは常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
 |TYPE_NAME|**sysname**|データ ソースに依存するデータ型の名前です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**です。|  
 |PRECISION|**Int**|データ ソース上の列の有効桁数。 このフィールドは常に値を返します。|  
 |LENGTH|**Int**|、(バイト単位) に必要な長さのバイナリ形式にデータ ソースのデータ型などの 10 **char (**10**)**、4 の**整数**、および 2 を**smallint**.|  
 |SCALE|**smallint**|データ ソース上の列の小数点以下桁数。 NULL は、小数点以下桁数を適用できないデータ型に対して返されます。|  
-|PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>解説  
  sp_special_columns は、ODBC で SQLSpecialColumns と同じです。 返される結果は、SCOPE の順序に従って並べ替えられます。  
@@ -94,7 +95,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、内の行を一意に識別する列についての情報を返します、`FactFinance`テーブル。  
   
 ```  

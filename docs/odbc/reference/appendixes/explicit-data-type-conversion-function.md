@@ -1,31 +1,32 @@
 ---
-title: "明示的なデータ型変換関数 |Microsoft ドキュメント"
-ms.custom: 
+title: 明示的なデータ型変換関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e86113ed304bc0876ce961e4c8691f53e9065d1b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicit-data-type-conversion-function"></a>明示的なデータ型変換関数
 明示的なデータ型の変換は、SQL データ型の定義を使用して指定します。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  形式、**変換**関数は。  
   
- **変換 (** *value_exp*、 *data_type***)**  
+ **変換 (** *value_exp*、 *data_type * * *)**  
   
  指定された値が返されます*value_exp*を指定された変換*data_type*ここで、 *data_type*は次のキーワードのいずれか。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  ODBC 構文明示的なデータ型変換関数は、変換形式の仕様をサポートしていません。 明示的な形式の仕様が、基になるデータ ソースによってサポートされている場合、ドライバーは既定値を指定や、形式の仕様を実装する必要があります。  
   
- 引数*value_exp*列名、または指定できます、別のスカラー関数、または数値の結果の文字列リテラルです。 例 :  
+ 引数*value_exp*列名、または指定できます、別のスカラー関数、または数値の結果の文字列リテラルです。 以下に例を示します。  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_xml_handles (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_xml_handles (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_xml_handles
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8d9b94690a487911414fdceeb9cd173116ea9c0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5a136adca5f9c44c763d8acbe82e933ec68954ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,7 +73,7 @@ dm_exec_xml_handles (session_id | 0 )
  有効期間**sql_handle**への呼び出しを実行する SQL テキストを取得するために使用**sp_xml_preparedocument**十分、キャッシュされたプランがクエリを実行するために使用します。 クエリ テキストがキャッシュ内で使用できない場合は、関数の結果に示された情報を使用してデータを取得することはできません。 この状況は、大きなバッチを多数実行している場合に発生する可能性があります。  
   
 ## <a name="permissions"></a>権限  
- 呼び出し元が所有していないすべてのセッションまたはセッション ID を参照するには、サーバーに対する VIEW SERVER STATE 権限が必要です。 呼び出し元は常に自分の現在のセッション ID のデータを参照できます。  
+ 呼び出し元が所有していないすべてのセッションまたはセッション ID を参照するには、サーバーに対する VIEW SERVER STATE 権限が必要です。 呼び出し元は常に自分の現在のセッション ID のデータを参照できます。      
   
 ## <a name="examples"></a>使用例  
  次の例では、アクティブ ハンドルをすべて選択します。  
@@ -82,7 +83,12 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
 ```  
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ <br>[動的管理ビューおよび関数 (TRANSACT-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+ <br>[実行関連の動的管理ビューおよび関数 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+ <br>[sp_xml_preparedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+
+
+ 
   
   

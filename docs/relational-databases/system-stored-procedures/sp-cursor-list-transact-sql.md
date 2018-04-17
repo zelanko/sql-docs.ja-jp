@@ -1,16 +1,16 @@
 ---
-title: "sp_cursor_list (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_cursor_list (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4ce00bf096ecbd0c40b723c017b21d6fa982d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7a01fabe88b8e38c9495ebd349c6251fa2388fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope=] *cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |1|すべてのローカル カーソルをレポートします。|  
 |2|すべてのグローバル カーソルをレポートします。|  
@@ -88,13 +88,13 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="remarks"></a>解説  
  sp_cursor_list は、接続によってオープンされた現在のサーバー カーソルの一覧を作成し、カーソルのスクロール機能や更新機能など、各カーソルにとってグローバルな属性を示します。 sp_cursor_list によってレポートされるカーソルは次のとおりです。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー カーソル。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソル。  
   
 -   SQLSetCursorName、カーソルに名前が呼び出される、ODBC アプリケーションによって開かれた API サーバー カーソル。  
   
  カーソルによって返される結果セットの属性の詳細については、sp_describe_cursor_columns を使用します。 カーソルが参照するベース テーブルのレポートが必要な場合は、sp_describe_cursor_tables を使用します。 sp_describe_cursor は、指定されたカーソルに対してのみですが、sp_cursor_list と同じ情報を報告します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行権限は、既定では public ロールに与えられています。  
   
 ## <a name="examples"></a>使用例  

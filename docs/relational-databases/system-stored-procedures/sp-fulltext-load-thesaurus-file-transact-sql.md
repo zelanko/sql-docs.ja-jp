@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_load_thesaurus_file (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_fulltext_load_thesaurus_file (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de4468120488b4f7d8942ecf540c36370a36de7f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6001b06b6caef3819b6243b7029a082f19257228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>引数  
  *lcid*  
- 類義語辞典 XML 定義を読み込む言語のロケール識別子 (LCID) に対応する整数です。 サーバー インスタンスで使用可能な言語の Lcid を取得するを使用して、 [sys.fulltext_languages &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログ ビューです。  
+ 類義語辞典 XML 定義を読み込む言語のロケール識別子 (LCID) に対応する整数です。 サーバー インスタンスで使用可能な言語の Lcid を取得するを使用して、 [sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログ ビューです。  
   
  **@loadOnlyIfNotLoaded** = *アクション*  
  類義語辞典ファイルが既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルを読み込むかどうかを指定します。 *アクション*の 1 つです。  
   
-|[値]|定義|  
+|値|定義|  
 |-----------|----------------|  
 |**0**|類義語辞典ファイルが既に読み込まれているかどうかにかかわらず、類義語辞典ファイルを読み込みます。 既定の動作は、この**sp_fulltext_load_thesaurus_file**です。|  
 |1|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [FULLTEXTSERVICEPROPERTY &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [構成して、フルテキスト検索の類義語辞典ファイルの管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  

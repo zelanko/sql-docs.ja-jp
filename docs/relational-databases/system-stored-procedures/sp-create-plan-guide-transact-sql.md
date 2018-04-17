@@ -2,7 +2,7 @@
 title: sp_create_plan_guide (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name* 、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることもできません (#)。 最大長*plan_guide_name* 124 文字です。  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N'*statement_text*'  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントに対してプラン ガイドを作成します。 ときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリ オプティマイザーがクエリに一致する*statement_text*、 *plan_guide_name*は有効になります。 成功するプラン ガイドを作成するため*statement_text*で指定されたコンテキストに存在する必要があります、 @type、 @module_or_batch、および@paramsパラメーター。  
   
  *statement_text*ことによって識別されるモジュールと、バッチ内で対応するステートメントと一致するようにクエリ オプティマイザーの方法で指定する必要があります@module_or_batchと@paramsです。 詳細については、「解説」セクションを参照してください。 サイズ*statement_text*サーバーの使用可能なメモリによってのみ制限されます。  
@@ -78,7 +78,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  示されたフォームにパラメーター化されるクエリに対してプラン ガイドが適用されることを示します*statement_text*です。 テンプレートが指定されている場合のみ PARAMETERIZATION {FORCED |単純な} クエリ ヒントで指定できる、@hintsパラメーター。 TEMPLATE プラン ガイドの詳細については、次を参照してください。[を指定するパラメーター化クエリの動作を使用してプラン ガイドによって](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)です。  
   
- [@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [@module_or_batch =] {N'[ *schema_name*です。 *object_name*' |N'*batch_text*' |NULL}  
  オブジェクトの名前を指定*statement_text*が表示されたら、またはバッチのテキストを*statement_text*が表示されます。 バッチのテキストは、使用を含めることはできません*データベース*ステートメントです。  
   
  アプリケーションから送信されたバッチと一致するプラン ガイドの*batch_tex*t は、同じ形式で指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この適合を容易にするために内部変換は実行されません。 詳細については、「解説」を参照してください。  
@@ -338,9 +338,9 @@ GO
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
  [sp_get_query_template &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  

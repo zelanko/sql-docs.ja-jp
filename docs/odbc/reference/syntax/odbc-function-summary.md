@@ -2,7 +2,7 @@
 title: ODBC 関数の概要 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9aab042c14953c170d86dda5fcd3432a471a12b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2f02221f02c41c74f56d37b4c8b414103e5238bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-function-summary"></a>ODBC 関数の概要
 次の表は、ODBC 関数をタスクの種類別にグループ化し、の適合性表記と各関数の目的の簡単な説明が含まれています。 準拠の詳細については、次を参照してください。 [ODBC と標準の CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)です。 各関数のセマンティクスと構文に関する詳細については、次を参照してください。 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)です。  
@@ -46,9 +46,9 @@ ms.lasthandoff: 12/21/2017
 ||[SQLGetEnvAttr](../../../odbc/reference/syntax/sqlgetenvattr-function.md)|ISO 92|環境属性の値を返します。|  
 ||[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|ISO 92|ステートメント属性を設定します。|  
 ||[SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|ISO 92|ステートメント属性の値を返します。|  
-|設定および記述子フィールドを取得します。|[SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)<br /><br /> [SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|ISO 92<br /><br /> ISO 92|1 つの記述子フィールドの値を返します。<br /><br /> 複数の記述子フィールドの値を返します。|  
-||[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|ISO 92|1 つの記述子フィールドを設定します。|  
-||[SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|ISO 92|複数の記述子フィールドを設定します。|  
+|設定および記述子フィールドを取得します。|[SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)<br /><br /> [Sqlgetdescrec による](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|ISO 92<br /><br /> ISO 92|1 つの記述子フィールドの値を返します。<br /><br /> 複数の記述子フィールドの値を返します。|  
+||[Sqlsetdescfield による](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|ISO 92|1 つの記述子フィールドを設定します。|  
+||[Sqlsetdescrec による](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|ISO 92|複数の記述子フィールドを設定します。|  
 ||[SQLCopyDesc](../../../odbc/reference/syntax/sqlcopydesc-function.md)|ISO 92|別の記述子が 1 つのハンドルから記述子情報をコピーします。|  
 |SQL の準備を要求します。|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|ISO 92|後で実行する SQL ステートメントを準備します。|  
 ||[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)|ODBC|SQL ステートメントにパラメーターの記憶域を割り当てます。|  

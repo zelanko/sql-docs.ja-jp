@@ -1,29 +1,30 @@
 ---
-title: "作成、変更、および削除、インデックス. |Microsoft ドキュメント"
-ms.custom: 
+title: 作成、変更、および削除、インデックス. |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d20eca4b6c27aee5f19b2b15cf51c374874d4415
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d25f05da3840f8f3c94bd40094c123091fa3a019
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Index> プロパティを指定すると、XML 列のインデックスを作成できます。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください[Visual C &#35; を作成する。Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C を作成する&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)です。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic での非クラスター化複合インデックスの作成  
  このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 設定、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>プロパティを**False**の非クラスター化インデックス。  

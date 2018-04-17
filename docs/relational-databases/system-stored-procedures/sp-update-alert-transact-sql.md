@@ -2,7 +2,7 @@
 title: sp_update_alert (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ sp_update_alert
  [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  予約されています。  
   
- [ **@performance_condition =**] **'***performance_condition***'**  
+ [  **@performance_condition =**] **'***performance_condition***'**  
  形式で表す値を**'***itemcomparatorvalue***'**です。 *performance_condition*は**nvarchar (512)**、既定値は NULL、これらの要素で構成されています。  
   
 |形式の要素|Description|  
@@ -146,7 +146,7 @@ sp_update_alert
 |*比較演算子*|これらの演算子のいずれかの: **>**、 **<**、 **=**|  
 |*値*|カウンターの数値。|  
   
- [ **@category_name =**] **'***category***'**  
+ [  **@category_name =**] **'***カテゴリ***'**  
  警告カテゴリの名前を指定します。 *カテゴリ*は**sysname**既定値は NULL です。  
   
  [ **@wmi_namespace**= ] **'***wmi_namespace***'**  

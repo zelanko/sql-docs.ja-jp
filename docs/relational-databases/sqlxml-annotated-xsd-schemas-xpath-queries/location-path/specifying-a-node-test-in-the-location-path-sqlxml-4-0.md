@@ -1,16 +1,16 @@
 ---
-title: "ノード テストの場所のパス (SQLXML 4.0) に指定 |Microsoft ドキュメント"
-ms.custom: 
+title: ノード テストの場所のパス (SQLXML 4.0) に指定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7e2483b8bf861a677e1fbe7b417376bb266e7f4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 52a2be7c03a3e5265a36f40952398279ab4ec589
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>ロケーション パスでのノード テストの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、または**self**) 主ノード型を持ちます。 **属性**軸、主ノード型は**\<属性 >**です。 **親**、**子**、および**self**軸の場合、主ノード型は**\<要素 >**です。  
+  ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、または**self**) 主ノード型を持ちます。 **属性**軸、主ノード型は**\<属性 >**です。 **親**、**子**、および**self**軸の場合、主ノード型は**\<要素 >**です。  
   
 > [!NOTE]  
 >  ワイルドカード (*) のノード テスト (たとえば `child::*`) は、サポートされていません。  

@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_disable_table (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_disable_table (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_disable_table
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1909d0d284642166312fe4dde2f2eda4f4ebac09
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d4364f6cba3a5eb28cfac72e4f5f727ddf1bd1ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sys.sp_cdc_disable_table
 ## <a name="remarks"></a>解説  
  **sys.sp_cdc_disable_table**変更データ キャプチャ変更テーブルとシステム関数を指定されたソース テーブルとキャプチャ インスタンスに関連付けられている削除します。 変更データ キャプチャのシステム テーブルとセットから、指定したキャプチャ インスタンスに関連付けられているすべての行を削除、 **is_tracked_by_cdc**列、テーブル内のエントリ、 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログ ビュー0 を返します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
@@ -93,6 +93,6 @@ EXECUTE sys.sp_cdc_disable_table
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_cdc_enable_table &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

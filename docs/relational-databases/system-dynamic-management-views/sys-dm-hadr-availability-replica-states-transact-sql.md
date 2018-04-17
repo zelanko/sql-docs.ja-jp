@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_hadr_availability_replica_states (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_hadr_availability_replica_states (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_hadr_availability_replica_states
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-caps.latest.revision: 
+caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9adddf8b74848948bfdd45fdf93813ed7489d40a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2d5e82f9da96f1831d7f0b76b92f469ec567a508
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/03/2018
 |**operational\_state\_desc**|**nvarchar(60)**|説明**運用\_状態**,、1 つの。<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
 |**recovery\_health**|**tinyint**|ロールアップ、**データベース\_状態**の列、 [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)動的管理ビュー。 使用可能な値とその説明を次に示します。<br /><br /> 0: 進行中です。  少なくとも 1 つの参加データベースがオンライン以外のデータベースの状態 (**データベース\_状態**が 0 ではありません)。<br /><br /> 1: オンラインです。 すべての参加データベースがオンラインのデータベースの状態にある (**database_state**は 0) です。<br /><br /> NULL : **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|説明**recovery_health**,、1 つの。<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization\_health**|**tinyint**|データベースの同期状態のロールアップが反映されます (**synchronization_state**) すべての可用性データベースを参加 (とも呼ばれる*レプリカ*) とレプリカ (可用性モード同期コミット モードまたは非同期コミット モード)。 ロールアップ状態が反映されます少なくとも正常累積、データベース レプリカでします。 使用可能な値とその説明のとおりです。<br /><br /> 0: 正常ではありません。   少なくとも 1 つの参加データベースが NOT SYNCHRONIZING 状態です。<br /><br /> 1: 部分的に正常な状態です。 一部のレプリカが目標の同期状態ではありません: 同期コミット レプリカは SYNCHRONIZED である必要があり、非同期コミット レプリカは SYNCHRONIZING である必要があります。<br /><br /> 2: 正常な状態です。 すべてのレプリカが目標の同期状態です: 同期コミット レプリカは SYNCHRONIZED であり、非同期コミット レプリカは SYNCHRONIZING です。|  
+|**同期\_ヘルス**|**tinyint**|データベースの同期状態のロールアップが反映されます (**synchronization_state**) すべての可用性データベースを参加 (とも呼ばれる*レプリカ*) とレプリカ (可用性モード同期コミット モードまたは非同期コミット モード)。 ロールアップ状態が反映されます少なくとも正常累積、データベース レプリカでします。 使用可能な値とその説明のとおりです。<br /><br /> 0: 正常ではありません。   少なくとも 1 つの参加データベースが NOT SYNCHRONIZING 状態です。<br /><br /> 1: 部分的に正常な状態です。 一部のレプリカが目標の同期状態ではありません: 同期コミット レプリカは SYNCHRONIZED である必要があり、非同期コミット レプリカは SYNCHRONIZING である必要があります。<br /><br /> 2: 正常な状態です。 すべてのレプリカが目標の同期状態です: 同期コミット レプリカは SYNCHRONIZED であり、非同期コミット レプリカは SYNCHRONIZING です。|  
 |**synchronization_health_desc**|**nvarchar(60)**|説明**synchronization_health**,、1 つの。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**connected_state**|**tinyint**|セカンダリ レプリカが現在接続しているか、プライマリ レプリカにします。 使用可能な値は、その説明を以下に示します。<br /><br /> 0: 切断します。 切断された状態への可用性レプリカの応答は、そのロールによって異なりますプライマリ レプリカでセカンダリ レプリカが切断されている場合、セカンダリ データベースはマーク セカンダリを待って、プライマリ レプリカに同期されていない。再接続します。切断されていることを検出すると、セカンダリ レプリカでセカンダリ レプリカはプライマリ レプリカに再接続しようとします。<br /><br /> 1: 接続されています。<br /><br /> 各プライマリ レプリカでは、同じ可用性グループに含まれるすべてのセカンダリ レプリカの接続状態を追跡します。 セカンダリ レプリカでは、プライマリ レプリカの接続状態のみを追跡します。|  
 |**connected_state_desc**|**nvarchar(60)**|説明**connection_state**,、1 つの。<br /><br /> DISCONNECTED<br /><br /> CONNECTED|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/03/2018
 |**last_connect_error_description**|**nvarchar(1024)**|テキスト、 **last_connect_error_number**メッセージ。|  
 |**last_connect_error_timestamp**|**datetime**|いつかを示す日付と時刻のタイムスタンプ、 **last_connect_error_number**エラーが発生しました。|  
   
-##  <a name="RolesAndOperationalStates"></a>ロールと操作状態  
+##  <a name="RolesAndOperationalStates"></a> ロールと操作状態  
  役割、**ロール**、特定の可用性レプリカの状態と動作の状態を反映**operational_state**レプリカはすべてのクライアント要求を処理する準備ができているかどうかについて説明します、可用性レプリカのデータベースです。 各ロールの可能なオペレーション状態の概要を次に示します: 解決して、プライマリ、およびセカンダリ。  
   
  **RESOLVING:**運用状態には、次の表に示すように可用性レプリカが RESOLVING ロールの場合は、します。  

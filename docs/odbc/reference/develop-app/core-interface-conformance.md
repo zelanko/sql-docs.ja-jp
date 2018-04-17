@@ -1,31 +1,32 @@
 ---
-title: "インターフェイスへの準拠をコア |Microsoft ドキュメント"
-ms.custom: 
+title: インターフェイスへの準拠をコア |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1df0215014eea87559e87aeb2f29e848e1473a66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37ee705f6ead5317fe206fc4da27c42387f50e04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-interface-conformance"></a>コア インターフェイスへの準拠
 すべての ODBC ドライバーは、少なくともコア レベルを示す必要がありますインターフェイスへの準拠です。 最も一般的な相互運用可能なアプリケーションで必要なものでは、コア レベルの機能、ために、ドライバーは、このようなアプリケーションで操作できます。 コア レベルの機能は、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている nonoptional 機能にも対応しています。 コア レベル – インターフェイスに準拠する ODBC ドライバーは、以下のすべてを実行するようにアプリケーションを使用できます。  

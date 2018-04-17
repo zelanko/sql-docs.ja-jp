@@ -1,16 +1,16 @@
 ---
-title: "ADO を使用して、SQLXML 4.0 を実行するクエリを実行 |Microsoft ドキュメント"
-ms.custom: 
+title: ADO を使用して、SQLXML 4.0 を実行するクエリを実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query testers [SQLXML]
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b20cdf458264460b6d2e8630d8bc211599fc165b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0f572d784c1fcda4fbcccfd1ad5ec214117cae10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-以前のバージョンの SQLXML では、SQLXML IIS 仮想ディレクトリと SQLXML ISAPI フィルターを使用して、HTTP ベースのクエリを実行することができました。 SQLXML 4.0 では、重複する類似の機能が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のネイティブ XML Web サービスに付属しているため、これらのコンポーネントが削除されました。  
+  以前のバージョンの SQLXML では、SQLXML IIS 仮想ディレクトリと SQLXML ISAPI フィルターを使用して、HTTP ベースのクエリを実行することができました。 SQLXML 4.0 では、重複する類似の機能が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のネイティブ XML Web サービスに付属しているため、これらのコンポーネントが削除されました。  
   
  SQLXML 4.0 では、代わりに Microsoft Data Access Components (MDAC) 2.6 以降で最初に導入された ADO (ActiveX Data Objects) への SQLXML 拡張を使用して、COM ベースのアプリケーションで SQLXML 4.0 を使用してクエリを実行することができます。  
   

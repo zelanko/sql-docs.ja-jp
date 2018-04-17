@@ -1,16 +1,16 @@
 ---
-title: "sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dbdbe2a627eb49dbd2ab71bef5bc102f1b157d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b69b3557009b72579e579e9ca0400b1639d3787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@viewname** =] **'***view_name***'**  
+ [ **@viewname**=] **'***view_name***'**  
  検証するビューの名前を指定します。 *view_name*は**sysname**、既定値はありません。  
   
- [  **@fhasnullcols** =] *field_has_null_columns*出力  
+ [ **@fhasnullcols**=] *field_has_null_columns*出力  
  NULL が許容される列がビュー インデックスにあるかどうかを示すフラグです。 *view_name*は**sysname**、既定値はありません。 値を返します**1**場合は NULL が許容される列がビュー インデックスにします。 値を返します**0**ビューに NULL を許容する列が含まれていない場合。  
   
 > [!NOTE]  
@@ -64,7 +64,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
  既定では、サブスクライバー側でパブリケーション内のインデックス付きビュー アーティクルはテーブルとして作成されます。 ただし、インデックス列で NULL 値が許容される場合、サブスクライバー側でインデックス付きビューはテーブルではなくインデックス付きビューとして作成されます。 このストアド プロシージャを実行することによって、現在のインデックス付きビューにこの問題があるかどうかをユーザーに知らせることができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_ivindexhasnullcols**です。  
   
 ## <a name="see-also"></a>参照  

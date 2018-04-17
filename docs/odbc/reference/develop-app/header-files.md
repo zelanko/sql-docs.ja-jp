@@ -2,7 +2,7 @@
 title: ヘッダー ファイル |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 197c7ef28124fb1b1c52facbec541913330c69c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 75a2e7bcee4f777a3f0442425c0395be99000668
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="header-files"></a>ヘッダー ファイル
 Sql.h ヘッダー ファイルには、主要な ODBC インターフェイスへの準拠レベルの機能と関数のプロトタイプが含まれています。 Sqlext.h ヘッダー ファイルには、レベル 1 およびレベル 2 の API への準拠レベルで機能と関数のプロトタイプが含まれています。 Sqltypes.h ヘッダー ファイルには、型の定義と SQL データ型のインジケーターが含まれています。  

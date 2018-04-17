@@ -1,27 +1,28 @@
 ---
-title: "ODBC 64 ビット情報 |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC 64 ビット情報 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1c7c878a850134d625c6c956449a400672ad6f7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
 Windows Server 2003 以降では、Microsoft のオペレーティング システムがサポートされている 64 ビット ODBC ライブラリです。 ODBC ヘッダーと最初 MDAC 2.7 SDK に付属のライブラリは、新しい 64 ビット プラットフォーム用のコードを簡単に記述するプログラマのための変更を含めます。 64 ビットおよび 32 ビットのプラットフォームの両方に基づいて、同じソース コードをコンパイルするコードが以下に示す ODBC が定義されている型を使用するようにするには、によって、 **_WIN64**または**WIN32**マクロです。  
@@ -398,7 +399,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_QUIET_MODE  
   
- **SQLSetDescField**  
+ **Sqlsetdescfield による**  
   
  ときに、 *FieldIdentifier*パラメーターには、次の値のいずれかの 64 ビット値が渡された、**ValuePtr*:  
   

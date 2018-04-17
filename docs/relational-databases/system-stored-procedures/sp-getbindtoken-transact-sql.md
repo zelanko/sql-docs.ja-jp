@@ -1,16 +1,16 @@
 ---
-title: "sp_getbindtoken (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_getbindtoken (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getbindtoken
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58c73d303ac8fdcd8e9d4acf9f937538c3df816c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 92ad4bead82c82f1a8d23de15bb2c525b66db74a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   トランザクションの一意識別子を返します。 この一意識別子は、sp_bindsession を使用してセッションをバインドするために使用する文字列です。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 &#40;です。MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 & #40 です。MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  なし  
   
 ## <a name="remarks"></a>解説  
- アクティブなトランザクション内部ストアド プロシージャが実行される場合にのみ、sp_getbindtoken は有効なトークンを返します。 それ以外の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]エラー メッセージが返されます。 例:  
+ アクティブなトランザクション内部ストアド プロシージャが実行される場合にのみ、sp_getbindtoken は有効なトークンを返します。 それ以外の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]エラー メッセージが返されます。 以下に例を示します。  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -72,7 +72,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken を使用して、開いているトランザクション内の分散トランザクションの接続を参加させるときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同じトークンを返します。 例:  
+ Sp_getbindtoken を使用して、開いているトランザクション内の分散トランザクションの接続を参加させるときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同じトークンを返します。 以下に例を示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 > [!NOTE]  
 >  拡張ストアド プロシージャからバインド トークンを取得するときは、srv_getbindtoken オープン データ サービス API を使用することをお勧めします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -133,8 +133,8 @@ SELECT @bind_token AS Token;
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
 ## <a name="see-also"></a>参照  
- [sp_bindsession &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken &#40;です。拡張ストアド プロシージャ API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [srv_getbindtoken&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

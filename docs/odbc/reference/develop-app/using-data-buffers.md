@@ -1,31 +1,32 @@
 ---
-title: "データ バッファーを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: データ バッファーを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], about data buffers
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f89e0dd3fe9cba90416cab839ab7df42a8e4e5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 459f5ca4bbc29c146f9ddf3b6c92e4df6ec7e9b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-data-buffers"></a>データ バッファーを使用します。
 データ バッファーが 3 つの情報が記載されている: その種類、アドレス、およびバイトの長さ。 関数は、これらの種類の情報のうち 1 つしは理解していないこと、ときに使用するアプリケーションに渡すこと引数を持ちます。  

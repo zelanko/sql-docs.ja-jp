@@ -2,7 +2,7 @@
 title: SQLStatistics 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **準拠**  
@@ -76,7 +76,7 @@ SQLRETURN SQLStatistics(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名です。 この引数は、null ポインターにすることはできません。 *SchemaName*検索パターンに文字列を含めることはできません。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*TableName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *TableName*通常の引数は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -87,14 +87,14 @@ SQLRETURN SQLStatistics(
  *[一意]*  
  [入力]インデックスの種類: SQL_INDEX_UNIQUE または SQL_INDEX_ALL です。  
   
- *Reserved*  
+ *予約済み*  
  [入力]結果セットの基数およびページの列の重要度を示します。 次のオプションに影響を与える基数およびページの列のみです。 戻り値基数およびページは返されません場合でも、インデックスの情報が返されます。  
   
  SQL_ENSURE では、ドライバーが統計を無条件に取得することを要求します。 (ドライバーのみ、Open Group 標準に準拠しているし、ODBC 拡張機能をサポートしていませんができなく SQL_ENSURE をサポートするためにします。)  
   
  SQL_QUICK では、サーバーからすぐに使用できる場合に、ドライバーで基数とページを取得するを要求します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (ODBC 3 から SQL_QUICK 動作を常に取得は、Open Group 標準に記述されたアプリケーションを*.x*-準拠のドライバーです)。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -145,7 +145,7 @@ SQLRETURN SQLStatistics(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|統計またはインデックスを適用する; テーブルのカタログ名データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|統計またはインデックスを適用する; テーブルのカタログ名データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|統計またはインデックスを適用する; テーブルのスキーマ名データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|統計またはインデックスを適用するテーブルのテーブル名です。|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|インデックスでは重複する値が許可されないかどうかを示します。<br /><br /> SQL_TRUE 場合は、インデックス値が一意でなくなることができます。<br /><br /> SQL_FALSE 場合は、インデックス値を一意にする必要があります。<br /><br /> 型が SQL_TABLE_STAT の場合は、NULL が返されます。|  

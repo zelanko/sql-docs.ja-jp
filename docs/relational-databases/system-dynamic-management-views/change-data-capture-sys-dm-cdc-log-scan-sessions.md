@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_cdc_log_scan_sessions (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_cdc_log_scan_sessions (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4417ef0b9d7aef7de1133d05772ae8e80160b30b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>変更データ キャプチャの sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/03/2018
  この動的管理ビューでは値がリセットされるたびに、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始します。  
   
 ## <a name="permissions"></a>権限  
- クエリに VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_log_scan_sessions**動的管理ビュー。 動的管理ビューに対するアクセス許可の詳細については、次を参照してください[動的管理ビューおよび関数 &#40;。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ クエリに VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_log_scan_sessions**動的管理ビュー。 動的管理ビューに対するアクセス許可の詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、最新のセッションの情報を返します。  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_cdc_errors &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys.dm_cdc_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

@@ -1,15 +1,15 @@
 ---
-title: "CLR 統合のコード アクセス セキュリティ |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合のコード アクセス セキュリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b93a1955adb6f38eebd8de86599e1861a80ff75b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ebe23e9aa58308e404f8cf748abe3e903471cb11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-共通言語ランタイム (CLR) では、マネージ コードに対してコード アクセス セキュリティというセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
+  共通言語ランタイム (CLR) では、マネージ コードに対してコード アクセス セキュリティというセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
   
  アセンブリに許可される権限を決定するセキュリティ ポリシーは、次の 3 つに分類されます。  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 02/09/2018
  マネージ コードを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部で実行する際に許可されるコード アクセス セキュリティ権限のセットは、上記の 3 つのポリシー レベルで許可される権限のセットの共通部分です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に読み込まれたアセンブリに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が一連の権限を許可しても、最終的にユーザー コードに許可される権限セットは、ユーザー レベルおよびコンピューター レベルのポリシーによってさらに制限されることがあります。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server ホスト ポリシー レベルの権限セット  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 次の 3 つのアクセス許可セットが生成されます:**セーフ**、 **EXTERNAL_ACCESS**と**UNSAFE** (を使用して指定、 **PERMISSION_SET** のオプション[アセンブリ &#40; を作成します。TRANSACT-SQL と #41 です。](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 次の 3 つのアクセス許可セットが生成されます:**セーフ**、 **EXTERNAL_ACCESS**と**UNSAFE** (を使用して指定、 **PERMISSION_SET** のオプション[アセンブリを作成&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] それをホストしているときに CLR をホスト レベルのセキュリティ ポリシー レベルを提供します。このポリシーは、追加のポリシー レベルは常に有効な 2 つのポリシー レベル以下です。 このポリシーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって作成されるアプリケーション ドメインごとに設定されます。 このポリシーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR のインスタンスを作成するときに有効になる、既定のアプリケーション ドメイン用ではありません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、CLR のホスト時に、ホスト レベルのセキュリティ ポリシー レベルを提供します。このポリシーは、常に効力を持つ 2 つのポリシー レベルより下位の追加ポリシー レベルになります。 このポリシーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって作成されるアプリケーション ドメインごとに設定されます。 このポリシーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR のインスタンスを作成するときに有効になる、既定のアプリケーション ドメイン用ではありません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト レベル ポリシーは、システム アセンブリの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固定ポリシーと、ユーザー アセンブリのユーザー指定ポリシーの組み合わせです。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/09/2018
 |権限|値/説明|  
 |----------------|-----------------------------|  
 |**DistributedTransactionPermission**|**無制限:**分散トランザクションが許可されます。|  
-|**DNSPermission**|**無制限:**ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
+|**コード**|**無制限:**ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
 |**EnvironmentPermission**|**無制限:**完全システムとユーザーの環境変数へのアクセスを許可します。|  
 |**EventLogPermission**|**管理:**次の操作が許可されます: イベント ソースまたはオフにすると、イベントをリッスンしていると、すべてのイベント ログのコレクションへのアクセスのイベント ログ エントリに応答して、ログを削除すると、既存のログの読み取り、イベント ソースを作成します。|  
 |**FileIOPermission**|**無制限:**ファイルへのフル アクセスのフォルダーが許可されているとします。|  

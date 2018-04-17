@@ -1,34 +1,34 @@
 ---
-title: "標準モードとコンテキスト接続に関する制限事項 |Microsoft ドキュメント"
-ms.custom: 
+title: 標準モードとコンテキスト接続に関する制限事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01a520c613a93806736d8e11fd1d451fe67b4eb0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e5fa26af795fb13f7953f635fe5f9d1f2c2ce194
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>コンテキスト接続や通常の接続の制限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでの実行中のコードに関連付けられている制限について説明します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンテキストと通常の接続を処理します。  
+  このトピックでの実行中のコードに関連付けられている制限について説明します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンテキストと通常の接続を処理します。  
   
 ## <a name="restrictions-on-context-connections"></a>コンテキスト接続に関する制限事項  
  アプリケーションを開発するときは、コンテキスト接続に適用される次の制限事項を考慮してください。  

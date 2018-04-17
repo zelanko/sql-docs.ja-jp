@@ -1,15 +1,16 @@
 ---
-title: "ドライバー固有の接続情報 |Microsoft ドキュメント"
-ms.custom: 
+title: ドライバー固有の接続情報 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
 **SQLConnect**データ ソース名、ユーザー ID とパスワードがデータ ソースに接続するための十分なことと、システム上の他のすべての接続情報を格納できることを前提としています。 これは頻繁に当てはまりません。 たとえば、ドライバーは、1 人のユーザー ID とパスワード、サーバー、および別のユーザー ID とパスワードにログオンする DBMS にログオンする必要があります。 **SQLConnect** 1 人のユーザー ID とパスワードを受け入れるつまり他のユーザー ID とパスワードが場合、システム上のデータ ソース情報を格納する必要があります**SQLConnect**を使用します。 これは潜在的なセキュリティ侵害であり、パスワードが暗号化されていない限り避ける必要があります。  

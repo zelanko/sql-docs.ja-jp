@@ -1,16 +1,16 @@
 ---
-title: "sp_get_redirected_publisher (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_get_redirected_publisher (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -18,16 +18,16 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdd0079a3af3ae647c66ea7106e79fb6f9a93ef9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 746f55b0230bf75ac835be901432d0e8eae278d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@original_publisher**  =] **'***original_publisher***'**  
+ [ **@original_publisher** =] **'***original_publisher***'**  
  パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** =] **'***publisher_db***'**  
  パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**、既定値はありません。  
   
  [ **@bypass_publisher_validation** = ] [0 | 1 ]  
@@ -73,17 +73,17 @@ sp_get_redirected_publisher
   
  検証が要求されていない場合、またはパブリッシャーとパブリッシングのデータベースのエントリが存在しない*error_number*と*error_severity* 0 が返されると*error_message*null を返します。  
   
- 検証ストアド プロシージャの検証が要求されると場合、 [sp_validate_redirected_publisher (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)が呼び出され、リダイレクトの対象がパブリッシング データベースに適したホストであることを確認します。 検証が成功すると、 **sp_get_redirected_publisher**リダイレクトされたパブリッシャー名の場合は 0 を返します、 *error_number*と*error_severity*列、および内の null*error_message*列です。  
+ 検証ストアド プロシージャの検証が要求されると場合、 [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) 、リダイレクトの対象がパブリッシングに適したホストであることを確認するために呼び出されるデータベースです。 検証が成功すると、 **sp_get_redirected_publisher**リダイレクトされたパブリッシャー名の場合は 0 を返します、 *error_number*と*error_severity*列、および内の null*error_message*列です。  
   
  検証が要求されて失敗した場合は、リダイレクトされたパブリッシャーの名前がエラー情報と一緒に返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  呼び出し元必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**定義済みパブリケーションのパブリケーション アクセス リストのメンバーまたはディストリビューション データベースの固定データベース ロールパブリッシャー データベースと関連付けられています。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

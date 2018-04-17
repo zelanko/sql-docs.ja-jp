@@ -1,36 +1,37 @@
 ---
-title: "SQLGetInfo サポート |Microsoft ドキュメント"
-ms.custom: 
+title: SQLGetInfo サポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], SQLGetInfo
 - backward compatibility [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], support
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c276373e01ab45c8c0464869296a121f8388884f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91f38a5c5ad19d5df6e253ee2fdbf7bf44eec930
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo サポート
 ODBC 2 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 3*.x*ドライバー、*情報の種類*次の表に引数をサポートする必要があります。  
   
-|*情報の種類*|戻り値|  
+|*情報の種類*|返します。|  
 |----------------|-------------|  
 |SQL_ALTER_TABLE (ODBC 2.0)**注:**この情報の種類は推奨されていません。 右側にある列ビットマスクは推奨されなくなりました。|内の句を列挙する SQLINTEGER ビットマスク、 **ALTER TABLE**ステートメント、データ ソースによってサポートされています。<br /><br /> 以下のビットマスクを使用して、どの句がサポートされてを調べます。<br /><br /> SQL_AT_DROP_COLUMN = 列を削除する機能をサポートします。 この結果が cascade または動作を制限するかどうかは、ドライバーの定義です。 (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN、単一の ALTER TABLE ステートメントで複数の列のサポートを追加する機能を = です。 このビットは、他の SQL_AT_ADD_COLUMN_XXX bits または SQL_AT_CONSTRAINT_XXX bits と組み合わせないでください。 (ODBC 2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> 情報の種類が ODBC 1.0; で導入されました。各ビットマスクには、導入されたバージョンが付いています。|サポートされる fetch の方向オプションを列挙する SQLINTEGER ビットマスクです。<br /><br /> 以下のビットマスクを決定するオプションがサポートされているとフラグの組み合わせで使用されます。<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) (ODBC 1.0)、SQL_FD_FETCH_RELATIVE SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  

@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_servershareddrives (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_servershareddrives (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_servershareddrives
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - names [SQL Server], shared drives
 - sys.fn_serversharedrives function
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed011c2c17cb7f15796aa74fc98eadfde1233a2a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c5f0ee99cd93738241f9e4ab6346e89ae5b3a8c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnservershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   クラスター化されたサーバーが使用する共有ドライブの名前を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのシステム関数は、旧バージョンとの互換性のために用意されています。 使用することをお勧め[sys.dm_io_cluster_valid_path_names &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のこのシステム関数は、旧バージョンとの互換性のために用意されています。 使用することをお勧め[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ fn_servershareddrives()
  現在のサーバー インスタンスが、クラスター化されたサーバーではない場合**fn_servershareddrives**空の行セットを返します。  
   
 ## <a name="remarks"></a>解説  
- `fn_servershareddrives`このクラスター化されたサーバーで使用する共有ドライブの一覧を返します。 これらの共有ドライブのと同じクラスター グループに属している、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リソース。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースはこれらのドライブに依存しています。  
+ `fn_servershareddrives` このクラスター化されたサーバーで使用する共有ドライブの一覧を返します。 これらの共有ドライブのと同じクラスター グループに属している、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リソース。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースはこれらのドライブに依存しています。  
   
  この機能は、ユーザーが利用できるドライブを識別する場合に便利です。  
   
@@ -82,8 +82,8 @@ SELECT * FROM fn_servershareddrives();
  n  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_io_cluster_valid_path_names &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
- [sys.fn_virtualservernodes &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
+ [sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
+ [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+ [sys.fn_virtualservernodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualservernodes-transact-sql.md)  
   
   

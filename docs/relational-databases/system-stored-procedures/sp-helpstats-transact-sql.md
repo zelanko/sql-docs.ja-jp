@@ -1,16 +1,16 @@
 ---
-title: "sp_helpstats (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpstats (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpstats
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpstats
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45d6df772da027568b1fbd7593e404f291246bb4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aa8ecd07602cb03242247a47126a5b560bb58802
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/27/2017
   指定したテーブルの列およびインデックスに関する統計を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]統計に関する情報を取得するクエリ、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)と[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)カタログ ビューです。  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 統計に関する情報を取得するクエリ、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)と[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)カタログ ビューです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,9 +69,9 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_keys**|統計の基準となるキー。 返します**nvarchar (2078)** null にすることはできません。|  
   
 ## <a name="remarks"></a>解説  
- 特定のインデックスまたは統計に関する詳細な統計情報を表示するには、DBCC SHOW_STATISTICS を使用します。 詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sp_helpindex (& a) #40 です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)。  
+ 特定のインデックスまたは統計に関する詳細な統計情報を表示するには、DBCC SHOW_STATISTICS を使用します。 詳細については、次を参照してください。 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)と[sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -108,6 +109,6 @@ EXEC sp_helpstats
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

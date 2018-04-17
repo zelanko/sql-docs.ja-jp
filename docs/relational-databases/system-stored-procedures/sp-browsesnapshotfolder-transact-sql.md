@@ -1,16 +1,16 @@
 ---
-title: "sp_browsesnapshotfolder (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_browsesnapshotfolder (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b31f3bb0e865452fd6f557a4832b04a21c11624
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fff4d6ca3c05e75dfbbfb756abcec6540cd33949
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
@@ -73,7 +73,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
   
  パブリケーションが、パブリッシャーの作業ディレクトリとパブリッシャーのスナップショット フォルダーの両方にスナップショット ファイルを生成するようにセットアップされている場合、結果セットには 2 行のデータが含まれます。 第 1 の行にはパブリケーションのスナップショット フォルダーが含まれ、第 2 の行にはパブリッシャーの作業ディレクトリが含まれます。 **sp_browsesnapshotfolder**スナップショット ファイルが生成されるディレクトリを特定するのに役立ちます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_browsesnapshotfolder**です。  
   
 ## <a name="see-also"></a>参照  

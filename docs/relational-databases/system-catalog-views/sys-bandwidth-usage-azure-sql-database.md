@@ -1,16 +1,16 @@
 ---
-title: "sys.bandwidth_usage (Azure SQL データベース) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.bandwidth_usage (Azure SQL データベース) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b61df6847269b609ba6a474b0ad87a355d5abe9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,11 +51,11 @@ ms.lasthandoff: 11/21/2017
 |**time**|帯域幅が使用されていた時間。 このビューの行は、1 時間単位です。 たとえば、2009-09-19 02:00: 00.000 は、帯域幅が 2009 年 9 月 19 日午前 2:00 から午前 3:00 までの間に使用された ことを示します。|  
 |**database_name**|帯域幅を使用したデータベースの名前。|  
 |**方向**|使用された帯域幅の種類。次のどちらかです。<br /><br /> 入力: データに移行する、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> Egress: データの移動が、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。|  
-|**クラス**|使用された帯域幅のクラス。次のどちらかです。<br />内部エラー: データは、Azure プラットフォーム内を移動します。<br />Azure platform から移行する外部: データ。<br /><br /> データベースは地域間の連続コピー リレーションシップに関与している場合にのみ、このクラスが返されます ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 特定のデータベースは連続コピー リレーションシップに参加していない、「インター リンク」行は返されません。 詳細については、後述する「解説」をご覧ください。|  
+|**class**|使用された帯域幅のクラス。次のどちらかです。<br />内部エラー: データは、Azure プラットフォーム内を移動します。<br />Azure platform から移行する外部: データ。<br /><br /> データベースは地域間の連続コピー リレーションシップに関与している場合にのみ、このクラスが返されます ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 特定のデータベースは連続コピー リレーションシップに参加していない、「インター リンク」行は返されません。 詳細については、後述する「解説」をご覧ください。|  
 |**time_period**|使用状況が発生したときの時間帯とは、ピーク時または OffPeak のいずれかです。 Peak 時間帯は、サーバーが作成された領域に基づいています。 たとえば、 サーバーが "US_Northwest" リージョンで作成された場合、Peak 時間帯は太平洋標準時の午前 10:00 から 午後 6 時まで  定義されます。|  
 |**数量**|使用された帯域幅の量 (キロバイト (KB) 単位)。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  このビューはのみで使用できます、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  
   
 ## <a name="remarks"></a>解説  

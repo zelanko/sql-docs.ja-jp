@@ -2,7 +2,7 @@
 title: SQLGetStmtAttr 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10ef63cf77fc4668d9f9f80daaff8ab483d1876b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ee7c6b895be856f6ec2023c0795cf8b8ee291e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 関数
 **準拠**  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetStmtAttr(
  *StringLengthPtr*  
  [出力]合計バイト数 (null 終了文字を除く) を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*です。 場合*ValuePtr* null ポインターでは、長さは返されません。 属性値が文字の文字列と、使用できるバイト数を返すより大きいまたは等しい*BufferLength*、内のデータ *\*ValuePtr* に切り捨てられます*BufferLength* null 終端文字の長さマイナスはドライバーによって null で終わるとします。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

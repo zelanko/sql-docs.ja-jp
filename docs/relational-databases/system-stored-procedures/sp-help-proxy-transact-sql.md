@@ -1,16 +1,16 @@
 ---
-title: "sp_help_proxy (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 314eeb6365afafce64ff85aa822e9b2be8c64770
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +50,18 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@proxy_id** = ] *id*  
+ [ **@proxy_id** =] *id*  
  情報を一覧表示するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**、既定値は NULL です。 いずれか、 *id*または*proxy_name*指定することがあります。  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'***proxy_name***'**  
  情報を一覧表示するプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか、 *id*または*proxy_name*指定することがあります。  
   
- [  **@subsystem_name**  =] '*subsystem_name*'  
+ [ **@subsystem_name** =] '*subsystem_name*'  
  プロキシを一覧表示するサブシステムの名前を指定します。 *Subsystem_name*は**sysname**、既定値は NULL です。 ときに*subsystem_name*が指定されている*名前*も指定する必要があります。  
   
  次の表は、各サブシステムの ID に指定できる値の一覧です。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
@@ -75,7 +75,7 @@ sp_help_proxy
 |Dts|SSIS パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
- [  **@name**  =] '*名前*'  
+ [ **@name** =] '*名前*'  
  名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロキシを一覧にログインします。 名前は**nvarchar (256)**、既定値は NULL です。 ときに*名前*が指定されている*subsystem_name*も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_proxy &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

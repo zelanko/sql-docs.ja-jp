@@ -2,7 +2,7 @@
 title: SQLPutData 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfe33eb04b4948dcba85aa2d9549c301eb65c8a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 関数
 **準拠**  
@@ -68,7 +68,7 @@ SQLRETURN SQLPutData(
   
  すべての他の種類の C データ場合*StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM ではないドライバーと見なしますのサイズ、 \* *DataPtr*バッファーが指定された C データ型のサイズ*ValueType*または*TargetType*し、データ値全体を送信します。 詳細については、次を参照してください。[に変換するデータを C から SQL データ型を](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d: データ型にします。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -106,7 +106,7 @@ SQLRETURN SQLPutData(
  場合**SQLPutData**が呼び出された SQL ステートメントにパラメーターのデータを送信中に、ステートメントを実行すると呼ばれる、関数によって返される任意の SQLSTATE を返すこと (**SQLExecute**または**SQLExecDirect**)。 列のデータを送信中に呼び出されると更新または追加された**SQLBulkOperations**で更新されているまたは**SQLSetPos**、によって返される任意の SQLSTATE を返すことができます**SQLBulkOperations**または**SQLSetPos**です。  
   
 ## <a name="comments"></a>コメント  
- **SQLPutData** 2 つの用途の実行時データのデータを指定するに呼び出せる: パラメーターのデータへの呼び出しで使用される**SQLExecute**または**SQLExecDirect**、または列のデータ行がある場合に使用します。更新またはへの呼び出しによって追加**SQLBulkOperations**への呼び出しによって更新または**SQLSetPos**です。  
+ **SQLPutData** 2 つの用途の実行時データのデータを指定するに呼び出せる: パラメーターのデータへの呼び出しで使用される**SQLExecute**または**SQLExecDirect**、または行が更新されたときに使用される列のデータ呼び出しによって追加されたまたは**SQLBulkOperations**への呼び出しによって更新または**SQLSetPos**です。  
   
  アプリケーションを呼び出すと**SQLParamData**データを決定するを送る、ドライバーは、アプリケーション パラメーター データを送信する決定を使用している、または列のデータがあるインジケーターを返します。 また、これを呼び出して、アプリケーションにインジケーターは SQL_NEED_DATA を返します**SQLPutData**データを送信します。 *DataPtr*引数**SQLPutData**アプリケーションが、パラメーターまたは列の実際のデータを格納するバッファーへのポインターを渡します。  
   

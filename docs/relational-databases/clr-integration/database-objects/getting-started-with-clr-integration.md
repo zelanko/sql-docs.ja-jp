@@ -1,15 +1,15 @@
 ---
-title: "CLR 統合の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -27,20 +27,20 @@ helpviewer_keywords:
 - Hello World example [CLR integration]
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 
+caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 387ca6168d809aaf1a4a4938ee40f41a8d4f6bfb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2c66ea7d5067752cf6929f0b2a8e238dd6a0dc65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、名前空間とライブラリを使用してデータベース オブジェクトのコンパイルに必要なの概説、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) と統合します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
+  このトピックでは、名前空間とライブラリを使用してデータベース オブジェクトのコンパイルに必要なの概説、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 共通言語ランタイム (CLR) と統合します。 また、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# を使用した簡単な CLR ストアド プロシージャを記述、コンパイル、および実行する方法についても説明します。  
   
 ## <a name="required-namespaces"></a>必要な名前空間  
  基本的な CLR データベース オブジェクトの開発に必要なコンポーネントがインストールされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 CLR 統合機能は、.NET Framework の一部である system.data.dll というアセンブリで公開されます。 このアセンブリは、.NET Framework ディレクトリ内だけでなく、GAC (グローバル アセンブリ キャッシュ) 内にもあります。 通常、このアセンブリへの参照は、コマンド ライン ツールと [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio の両方で自動的に追加されるので、手動で追加する必要はありません。  
@@ -92,12 +92,12 @@ End Class
   
 ```  
   
- この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドは、2 つの新しいクラスを使用して **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** と **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**マネージを作成する、単純なテキストを出力するオブジェクトをデータベースメッセージ。 メソッドも割り当てます、文字列"Hello world!" out パラメーターの値。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
+ この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドは、2 つの新しいクラスを使用して**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)**と **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**マネージを作成する、単純なテキストを出力するオブジェクトをデータベースメッセージ。 メソッドも割り当てます、文字列"Hello world!" out パラメーターの値。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
   
  このプログラムをライブラリとしてコンパイル、読み込みます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、およびストアド プロシージャとして実行します。  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>"Hello World"ストアド プロシージャをコンパイルします。  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]既定では .NET Framework 再配布ファイル。 インストールされるファイルには、Visual C# プログラムと Visual Basic プログラム用のコマンド ライン コンパイラである csc.exe と vbc.exe が含まれています。 サンプルをコンパイルする前に、csc.exe または vbc.exe が格納されたディレクトリを指すようにパス変数を変更する必要があります。 .NET Framework の既定のインストール パスは、次のとおりです。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の再配布ファイルが既定でインストールされます。 インストールされるファイルには、Visual C# プログラムと Visual Basic プログラム用のコマンド ライン コンパイラである csc.exe と vbc.exe が含まれています。 サンプルをコンパイルする前に、csc.exe または vbc.exe が格納されたディレクトリを指すようにパス変数を変更する必要があります。 .NET Framework の既定のインストール パスは、次のとおりです。  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  

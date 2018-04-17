@@ -1,15 +1,16 @@
 ---
-title: "Update ステートメントと Delete ステートメントに配置されているシミュレート |Microsoft ドキュメント"
-ms.custom: 
+title: Update ステートメントと Delete ステートメントに配置されているシミュレート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 116f99d1a2dd5e904586978de4345111df278dab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d89bd5919985a98d7e5ed59ee103be49cc40ab3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>位置指定更新ステートメントと Delete ステートメントをシミュレートします。
 場合は、データ ソースは位置指定更新はサポートされず、delete ステートメント、ドライバーはこれらをシミュレートできます。 たとえば、ODBC カーソル ライブラリは、位置指定更新をシミュレートし、ステートメントを削除します。 位置指定更新ステートメントと delete ステートメントをシミュレートするための一般的な戦略は、位置指定のステートメントを検索したものに変換するは。 これは、置き換えることで、 **WHERE CURRENT OF** 、検索結果を含む句**場所**現在の行を識別する句。  

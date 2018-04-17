@@ -1,16 +1,16 @@
 ---
-title: "IHcolumns (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: IHcolumns (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHcolumns system table
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 857380d30397d02b2fe1ba9adfd11ca9382b9eee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dbe58b3cbe0f18f0ad3bbf5934fa6a70ebcfaa38
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 |**column_id**|**int**|パブリッシュされた列の識別子。|  
 |**publishercolumn_id**|**int**|パブリッシュされた列に格納されている列のメタデータに関連付け、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)システム テーブル。|  
 |**name**|**sysname**|列の名前を指定します。|  
-|**コ**|**int**|列が所属するアーティクルを識別します。|  
+|**article_id**|**int**|列が所属するアーティクルを識別します。|  
 |**column_ordinal**|**int**|順序に基づいた列の識別子。|  
 |**mapped_type**|**tinyint**|サブスクライバーのマップ先となる列のデータ型です。|  
 |**mapped_length**|**bigint**|サブスクライバーの列の長さです。|  
@@ -55,10 +55,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sysarticlecolumns &#40;です。システム ビュー &#41;&#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
- [sysarticlecolumns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
+ [sysarticlecolumns&#40;システム ビュー&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
+ [sysarticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   
   

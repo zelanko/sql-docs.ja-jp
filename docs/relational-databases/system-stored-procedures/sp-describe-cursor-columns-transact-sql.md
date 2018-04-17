@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_cursor_columns (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_describe_cursor_columns (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor_columns
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fe882cf908e4ae227a486b68c54d34376164455
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4e5d7c2462551e31d9a32ad62bacd0a281fb9249
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ sp_describe_cursor_columns
 ## <a name="remarks"></a>解説  
  sp_describe_cursor_columns は、各カーソルの名前やデータ型など、サーバー カーソルの結果セットにある列の属性を示します。 サーバー カーソルにグローバルな属性の説明が必要な場合は、sp_describe_cursor を使用します。 カーソルが参照するベース テーブルのレポートが必要な場合は、sp_describe_cursor_tables を使用します。 接続時に可視になる [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルのレポートが必要な場合は、sp_cursor_list を使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -144,11 +144,11 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カーソル](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_describe_cursor &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [sp_cursor_list と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_tables &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
+ [sp_describe_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_cursor_list &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

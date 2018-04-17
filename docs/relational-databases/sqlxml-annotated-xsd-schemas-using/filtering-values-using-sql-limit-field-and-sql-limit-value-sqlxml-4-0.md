@@ -1,16 +1,16 @@
 ---
-title: "使用した、値をフィルター処理のフィールドと sql:limit-値 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: 使用した、値をフィルター処理のフィールドと sql:limit-値 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16f6ae44bce9828525e10c49604ab224bc402446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 **Sql:limit-フィールド**と**sql:limit-値**注釈を使用制限値を含むデータベース列を識別するデータをフィルター処理に使用する特定の制限値を指定するには返されます。  
+  データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 **Sql:limit-フィールド**と**sql:limit-値**注釈を使用制限値を含むデータベース列を識別するデータをフィルター処理に使用する特定の制限値を指定するには返されます。  
   
  **Sql:limit-フィールド**注釈が制限値を格納する列を識別するためです。 各マップ要素または属性で許可されています。  
   
@@ -314,8 +315,8 @@ ms.lasthandoff: 02/12/2018
   
 ## <a name="see-also"></a>参照  
  [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar および nvarchar &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [nchar および nvarchar &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [SQL Server Native Client をインストールします。](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [注釈が付けられたクエリ &#40; での XSD スキーマを使用します。SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [クエリでの XSD スキーマを使用して注釈が付けられた&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

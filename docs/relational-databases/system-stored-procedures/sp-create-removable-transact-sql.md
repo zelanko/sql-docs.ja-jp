@@ -1,16 +1,16 @@
 ---
-title: "sp_create_removable (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_create_removable (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_create_removable
  [ **@syslogical=** ] **'***syslogical***'**  
  システム カタログ テーブルを格納するファイルの論理名を指定します。 *syslogical*は**sysname**です。  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
+ [  **@sysphysical=** ] **'***sysphysical***'**  
  物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)**です。  
   
  [ **@syssize=** ] *syssize*  
@@ -77,21 +77,21 @@ sp_create_removable
  [ **@loglogical=** ] **'***loglogical***'**  
  トランザクション ログを格納するファイルの論理名を指定します。 *loglogical*は**sysname**です。  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+ [  **@logphysical=** ] **'***logphysical***'**  
  物理名です。 トランザクション ログを格納するファイルの名前をフル パスと共に指定します。 *logphysical*は**nvarchar (260)**です。  
   
  [ **@logsize=** ] *logsize*  
  トランザクション ログを格納するファイルのサイズ (MB) を指定します。 *logsize*は**int**です。最小*logsize*は 1 です。  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] **'***datalogical***'**  
  データ テーブルを格納するファイルの論理名を指定します。 *datalogical*は**sysname**です。  
   
  データ ファイルの数は 1 ～ 16 です。 データベースが大きくなり複数のディスクに分散する必要が生じた場合に備えて、通常、複数のデータ ファイルを作成します。  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+ [  **@dataphysical1=** ] **'***dataphysical***'**  
  物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)**です。  
   
- [ **@datasize1=** ] **'***datasize***'**  
+ [  **@datasize1=** ] **'***datasize***'**  
  データ テーブルを格納するファイルのサイズ (MB) を指定します。 *datasize*は**int**です。最小*datasize*は 1 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -137,12 +137,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile を実行 &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

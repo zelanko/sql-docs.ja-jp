@@ -1,16 +1,16 @@
 ---
-title: "カタログ ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: カタログ ストアド プロシージャ (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], catalog
 - catalog system stored procedures [SQL Server]
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7fd710966bfe5eede7a740c01b17bc13b644d3d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e73d85e4961687dad4d8d6f34243e7331f081709
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>ストアド プロシージャ カタログ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次のシステムはストアド プロシージャを ODBC データ辞書関数を実装し、基になるシステム テーブルが変更されても、ODBC アプリケーションを分離です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステムはストアド プロシージャを ODBC データ辞書関数を実装し、基になるシステム テーブルが変更されても、ODBC アプリケーションを分離です。  
   
 |||  
 |-|-|  

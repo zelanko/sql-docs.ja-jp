@@ -2,7 +2,7 @@
 title: SQLTables 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 207415fc333cbc4373454b815ad27431c07c8d61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **準拠**  
@@ -76,7 +76,7 @@ SQLRETURN SQLTables(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名の文字列の検索パターン。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*TableName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *TableName*パターン引数の値は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -92,7 +92,7 @@ SQLRETURN SQLTables(
  *NameLength4*  
  [入力]文字の長さ **TableType*です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -159,7 +159,7 @@ SQLRETURN SQLTables(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|カタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|テーブル名です。|  
 |TABLE_TYPE (ODBC 1.0)|4|Varchar|テーブル型の名前です。次のいずれかの:"TABLE"、"VIEW"、"システム TABLE"、「グローバルの一時」、「ローカル一時」、"ALIAS"、「シノニム」、またはデータ ソース固有の型の名前。<br /><br /> 「エイリアス」および「シノニム」の意味は、ドライバー固有です。|  

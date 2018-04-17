@@ -1,16 +1,16 @@
 ---
-title: "sys.sql_logins (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sql_logins (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_logins_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_logins catalog view
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12dcc799255ebc44ed2b8d6401de80a98d83bcbb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ecff509ffd103928f6a3e73872f9c814c45fab5e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -43,19 +44,19 @@ ms.lasthandoff: 11/21/2017
 |**\<継承された列 >**|--|継承**sys.server_principals**です。|  
 |**is_policy_checked**|**bit**|パスワード ポリシーが確認されるかどうかを示します。|  
 |**is_expiration_checked**|**bit**|パスワードの期限が確認されるかどうかを示します。|  
-|**password_hash**|**varbinary (256)**|SQL ログイン パスワードのハッシュ。 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]保存されたパスワード情報はソルト化パスワードの sha-512 を使用して計算されます。|  
+|**password_hash**|**varbinary(256)**|SQL ログイン パスワードのハッシュ。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。|  
   
- このビューが継承する列の一覧は、次を参照してください。 [sys.server_principals &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ このビューが継承する列の一覧は、次を参照してください。 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)です。  
   
 ## <a name="remarks"></a>解説  
- 両方を表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のログインと Windows 認証ログインを参照してください。 [sys.server_principals &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ 両方を表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証のログインと Windows 認証ログインを参照してください。 [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)です。  
   
- 含まれる場合にデータベース ユーザーが有効で、ログインのない、接続を作成することができます。 これらのアカウントを識別するのを参照してください。 [sys.database_principals と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ 含まれる場合にデータベース ユーザーが有効で、ログインのない、接続を作成することができます。 これらのアカウントを識別するのを参照してください。 [sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  どの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログインは、独自のログイン名と sa ログインを参照できます。 他のログインを参照するには、ALTER ANY LOGIN、またはログインに対する権限が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

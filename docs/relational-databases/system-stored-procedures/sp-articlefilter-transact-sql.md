@@ -1,16 +1,16 @@
 ---
-title: "sp_articlefilter (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_articlefilter (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlefilter
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de8979cdc3cb382aa290148e560d8eb72db94b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ca25ec698e928ef247148be55d65c3ea37f59be8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@article=**] **'***記事***'**  
@@ -92,23 +92,23 @@ sp_articlefilter [ @publication = ] 'publication'
   
  実行する**sp_articlefilter**の既存のサブスクリプションを持つアーティクルでは、する必要があります、サブスクリプションを再初期化します。  
   
- **sp_articlefilter**フィルターを作成し、フィルター ストアド プロシージャの ID を挿入、**フィルター**の列、 [sysarticles (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブル、および制限句のテキストを挿入、 **filter_clause**列です。  
+ **sp_articlefilter**フィルターを作成し、フィルター ストアド プロシージャの ID を挿入、**フィルター**の列、 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルし、制限句のテキストを挿入、 **filter_clause**列です。  
   
- 水平方向のフィルターを使用してアーティクルを作成するには、実行[sp_addarticle (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)なし*フィルター*パラメーター。 実行**sp_articlefilter**、含むすべてのパラメーターを提供する*filter_clause*、し、実行[sp_articleview (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を同じを含むすべてのパラメーターを提供する*filter_clause*です。 場合、フィルターが既に存在する場合、**型**で**sysarticles**は**1** (ログベース アーティクル) は、以前のフィルターが削除され、新しいフィルターを作成します。  
+ 水平方向のフィルターを使用してアーティクルを作成するには、実行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)なし*フィルター*パラメーター。 実行**sp_articlefilter**、含むすべてのパラメーターを提供する*filter_clause*、し、実行[sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)、同じを含むすべてのパラメーターを提供する*filter_clause*です。 場合、フィルターが既に存在する場合、**型**で**sysarticles**は**1** (ログベース アーティクル) は、以前のフィルターが削除され、新しいフィルターを作成します。  
   
  場合*filter_name*と*filter_clause*が指定されていない、以前のフィルターが削除され、フィルター ID に設定されている**0**します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articlefilter**です。  
   
 ## <a name="see-also"></a>参照  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [アーティクルを定義します。](../../relational-databases/replication/publish/define-an-article.md)   
  [静的行フィルターの定義と変更](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

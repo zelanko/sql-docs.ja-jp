@@ -1,16 +1,16 @@
 ---
-title: "sys.column_master_keys (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.column_master_keys (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -30,16 +30,17 @@ helpviewer_keywords:
 - sys.column_master_key_definitions catalog view
 - sys.column_master_keys catalog view
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e22e052d88c339828e0a7e5d6f5803bc04b30925
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c514b239547c943adbd8cedf1d7295e1c7ca07c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -55,10 +56,10 @@ ms.lasthandoff: 11/21/2017
 |**key_store_provider_name**|**sysname**|CMK を格納している列のマスター_キーのストアのプロバイダーの名前。 使用できる値は次のとおりです。<br /><br /> 列のマスター キー ストアが証明書ストアである場合は – MSSQL_CERTIFICATE_STORE です。<br /><br /> ユーザー定義値をカスタム型の列マスター キー ストアがある場合。|  
 |**key_path**|**nvarchar (4000)**|キーの列マスター_キー ストア固有のパス。 パスの形式は、列のマスター_キーのストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 開発者は、責任を定義するためのカスタム列マスター_キー ストアでは、カスタムの列のマスター_キーのストアの場合、どのようなキーのパスをします。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  必要があります、 **VIEW ANY COLUMN MASTER KEY**権限です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   

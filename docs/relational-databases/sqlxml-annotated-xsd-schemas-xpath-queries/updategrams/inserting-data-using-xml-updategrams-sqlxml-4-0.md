@@ -1,16 +1,16 @@
 ---
-title: "XML アップデート グラム (SQLXML 4.0) を使用してデータを挿入する |Microsoft ドキュメント"
-ms.custom: 
+title: XML アップデート グラム (SQLXML 4.0) を使用してデータを挿入する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -36,20 +36,21 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-レコード インスタンスが表示されたら、アップデート グラムは挿入操作を示す、 **\<後 >**ブロックではなく、対応する**\<する前に >**ブロックします。 アップデート グラムが内のレコードを挿入します。 ここでは、、 **\<後 >**データベースにブロックします。  
+  レコード インスタンスが表示されたら、アップデート グラムは挿入操作を示す、 **\<後 >**ブロックではなく、対応する**\<する前に >**ブロックします。 アップデート グラムが内のレコードを挿入します。 ここでは、、 **\<後 >**データベースにブロックします。  
   
  挿入操作のアップデートグラムの形式は次のとおりです。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 02/12/2018
  場合、 **\<後 >**ブロックが特定の列の値を提供せず、アップデート グラムでは、(スキーマが指定されている) 場合は、注釈付きスキーマで指定されている既定値を使用します。 スキーマでは、列の既定値を指定しない場合、アップデート グラムでこの列に任意の明示的な値を指定しないと、代わりに、割り当て、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定この列に値 (指定した場合)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg:returnid**属性は、IDENTITY 型列のテーブルにレコードが追加されたときに、システムによって生成される id 値を返すに使用します。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
- アップデート グラムでは、レコードだけの挿入する場合、アップデート グラムでは必要ありません、 **updg:id**属性。 詳細については**updg:id**を参照してください[更新データを使用して XML アップデート グラム &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ アップデート グラムでは、レコードだけの挿入する場合、アップデート グラムでは必要ありません、 **updg:id**属性。 詳細については**updg:id**を参照してください[更新データを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)です。  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity 属性  
  アップデート グラムでは、IDENTITY 型列を持つテーブルにレコードを挿入する場合、アップデート グラムではオプションを使用して、このシステムによって割り当てられた値をキャプチャできます**updg: identity に**属性。 キャプチャした値は、後続のアップデートグラム操作で使用できます。 を、アップデート グラムの実行時に指定することによって生成される id 値を返すことができます、 **updg:returnid**属性。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/12/2018
   
  アップデート グラムの例を使用する前に、次の点に注意します。  
   
--   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください[アップデート グラム &#40; で注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
 -   ほとんどの例では、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。  
   
@@ -418,7 +419,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- マッピング スキーマを指定するアップデート グラムの例については、次を参照してください[アップデート グラム &#40; で注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ マッピング スキーマを指定するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -734,6 +735,6 @@ CustOrder(OrderID, EmployeeID, OrderType)
      詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

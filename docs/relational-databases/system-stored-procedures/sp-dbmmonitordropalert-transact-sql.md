@@ -1,16 +1,16 @@
 ---
-title: "sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_dbmmonitordropalert (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0d44857fac9113592a14dd3dd41f85abfe95fdf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7daa0de1b18d6e34e9dab2880ffb07401f575b7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  削除する警告を識別する整数値を指定します。 この引数を省略した場合は、データベースのすべての警告が削除されます。 指定したパフォーマンス基準に対する警告を削除するには、次のいずれかの値を指定します。  
   
-|[値]|パフォーマンス基準|警告しきい値|  
+|値|パフォーマンス基準|警告しきい値|  
 |-----------|------------------------|-----------------------|  
 |1|最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告を使用すると、時間的な面からデータ損失の可能性を判断できます。この警告は特に高パフォーマンス モードに関係しますが、 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |2|未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告を使用すると、KB の面からデータ損失の可能性を判断できます。この警告は特に高パフォーマンス モードに関係しますが、 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
@@ -65,7 +65,7 @@ sp_dbmmonitordropalert database_name
 > [!NOTE]  
 >  このプロシージャを削除するかどうかが、指定された使用に関係なく、警告しきい値**sp_dbmmonitorchangealert**またはデータベース ミラーリング モニターします。  
   
- 警告に対応するイベント Id については、次を参照してください。[を使用して警告のしきい値および警告のミラーリング パフォーマンス基準 &#40;です。SQL Server &#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ 警告に対応するイベント Id については、次を参照してください。[使用警告しきい値および警告ミラーリング パフォーマンス基準の&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  

@@ -2,7 +2,7 @@
 title: SQLEndTran 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 関数
 **準拠**  
@@ -65,7 +65,7 @@ SQLRETURN SQLEndTran(
   
  指定して SQL_ROLLBACK  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -113,9 +113,9 @@ SQLRETURN SQLEndTran(
   
  カーソルのトランザクション操作の影響を確認するのにアプリケーションを呼び出す**SQLGetInfo** SQL_CURSOR_ROLLBACK_BEHAVIOR と SQL_CURSOR_COMMIT_BEHAVIOR オプションを使用します。 詳細については、次の段落を参照してください。 とも参照してください[カーソルおよび準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)です。  
   
- 場合は、SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_DELETE、 **SQLEndTran**を閉じ、接続に関連付けられているすべてのステートメントですべての開いているカーソルの削除、保留中のすべての結果を破棄します。 **SQLEndTran**割り当て済みの (準備解除) 状態である任意のステートメントのまま、アプリケーションが SQL の後続の要求の再利用できる、または呼び出すことができます**SQLFreeStmt**または**SQLFreeHandle***HandleType* sql_handle_stmt としてそれらの割り当てを解除するのです。  
+ 場合は、SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_DELETE、 **SQLEndTran**を閉じ、接続に関連付けられているすべてのステートメントですべての開いているカーソルの削除、保留中のすべての結果を破棄します。 **SQLEndTran**割り当て済みの (準備解除) 状態である任意のステートメントのまま、アプリケーションが SQL の後続の要求の再利用できる、または呼び出すことができます**SQLFreeStmt**または**SQLFreeHandle**と*HandleType* sql_handle_stmt としてそれらの割り当てを解除するのです。  
   
- 場合は、SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_CLOSE、 **SQLEndTran**接続に関連付けられているすべてのステートメントにすべての開いているカーソルを閉じます。 **SQLEndTran**準備された状態にある任意のステートメントのまま、アプリケーションを呼び出すことができます**SQLExecute**最初呼び出さずに、接続に関連付けられているステートメントの**SQLPrepare**.  
+ 場合は、SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_CLOSE、 **SQLEndTran**接続に関連付けられているすべてのステートメントにすべての開いているカーソルを閉じます。 **SQLEndTran**準備された状態にある任意のステートメントのまま、アプリケーションを呼び出すことができます**SQLExecute**最初呼び出さずに、接続に関連付けられているステートメントの**SQLPrepare**です。  
   
  場合は、SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_PRESERVE、 **SQLEndTran**接続に関連付けられた開いているカーソルには影響しません。 呼び出す前に、示される行にカーソルをまま**SQLEndTran**です。  
   

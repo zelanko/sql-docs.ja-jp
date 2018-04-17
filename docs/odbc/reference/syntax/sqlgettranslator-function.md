@@ -2,7 +2,7 @@
 title: SQLGetTranslator 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0687666f81d30615a2cc94268ed861faf1031d8d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aa7c60996c5792744fea425170ab7a4c05bd6472
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 関数
 **準拠**  
@@ -80,7 +80,7 @@ BOOL SQLGetTranslator(
  *pvOption*  
  [出力] の 32 ビットの変換オプション。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数が正常に終了したが失敗した場合、またはユーザーがダイアログ ボックスを取り消す場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

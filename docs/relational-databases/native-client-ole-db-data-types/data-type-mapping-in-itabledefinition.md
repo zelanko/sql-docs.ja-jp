@@ -1,15 +1,15 @@
 ---
-title: "ITableDefinition でのデータ型マッピング |Microsoft ドキュメント"
-ms.custom: 
+title: ITableDefinition でのデータ型マッピング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [OLE DB]
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - CreateTable function
 - OLE DB, data types
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6e67b2b12d10053478013d737df7120c2047f60
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5de94f9c92e7dcef540e40828fbc9209072f7fa0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition でのデータ型のマッピング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/25/2018
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
 |DBTYPE_STR|**char**、 **varchar**、**テキスト、**または**varchar (max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって、 *ulColumnSize* DBCOLUMNDESC 構造体のメンバーです。 値とのバージョンに基づいて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、インスタンス、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの型をマップする**テキスト**です。<br /><br /> 場合の値*ulColumnSize*マルチバイト文字データ型の列の最大長よりも小さい、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって、DBCOLUMNDESC *rgPropertySets*メンバー。 DBPROP_COL_FIXEDLENGTH が VARIANT_TRUE の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの型をマップする**char**です。 プロパティの値が VARIANT_FALSE の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの型をマップする**varchar**です。 どちらの場合、DBCOLUMNDESC の*ulColumnSize*メンバーの幅を決定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列を作成します。|  
-|DBTYPE_UDT|**UDT**|次の情報が使用される**DBCOLUMNDESC**構造体**itabledefinition::createtable** UDT 列が必要な場合。<br /><br /> *pwSzTypeName*は無視されます。<br /><br /> *rgPropertySets*含める必要があります、 **DBPROPSET_SQLSERVERCOLUMN**プロパティに関するセクションで説明したように設定**DBPROPSET_SQLSERVERCOLUMN**の[を使用してユーザー定義型](../../relational-databases/native-client/features/using-user-defined-types.md)です。|  
+|DBTYPE_UDT|**UDT**|次の情報が使用される**DBCOLUMNDESC**構造体**itabledefinition::createtable** UDT 列が必要な場合。<br /><br /> *pwSzTypeName*は無視されます。<br /><br /> *rgPropertySets*含める必要があります、 **DBPROPSET_SQLSERVERCOLUMN**プロパティに関するセクションで説明したように設定**DBPROPSET_SQLSERVERCOLUMN**の[ユーザーの種類](../../relational-databases/native-client/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_WSTR|**nchar**、 **nvarchar**、 **ntext、**または**nvarchar (max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって、 *ulColumnSize* DBCOLUMNDESC 構造体のメンバーです。 値に基づいて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの型をマップする**ntext**です。<br /><br /> 場合の値*ulColumnSize*の Unicode 文字データ型列の最大サイズよりも小さい、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって、DBCOLUMNDESC *rgPropertySets*メンバー。 DBPROP_COL_FIXEDLENGTH が VARIANT_TRUE の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの型をマップする**nchar**です。 プロパティの値が VARIANT_FALSE の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの型をマップする**nvarchar**です。 どちらの場合、DBCOLUMNDESC の*ulColumnSize*メンバーの幅を決定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列を作成します。|  
 |DBTYPE_XML|**XML**||  

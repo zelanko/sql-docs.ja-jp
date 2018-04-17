@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_cursors (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_cursors (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_cursors_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3765face3d65bbb56f65bd9383aa21f62225e79d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|カーソルを保持しているセッションの ID。|  
 |**cursor_id**|**int**|カーソル オブジェクトの ID。|  
 |**name**|**nvarchar (256)**|ユーザーによって定義されたカーソルの名前。|  
-|**properties**|**nvarchar (256)**|カーソルのプロパティ。 次のプロパティの値を連結して、この列の値を作成します。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子のレベル<br /><br /> たとえば、この列に返される値があります"TSQL &#124;です。動的 &#124;です。オプティミスティック &#124;です。Global (0)"です。|  
+|**プロパティ**|**nvarchar (256)**|カーソルのプロパティ。 次のプロパティの値を連結して、この列の値を作成します。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子のレベル<br /><br /> たとえば、この列に返される値があります"TSQL&#124;動的&#124;Optimistic &#124; Global (0)"です。|  
 |**sql_handle**|**varbinary(64)**|カーソルを宣言したバッチのテキストへのハンドル。|  
 |**statement_start_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 組み合わせて使用することができます、 **sql_handle**、 **statement_end_offset**、および[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動的管理関数を取得する、現在要求に対してステートメントを実行します。|  
 |**statement_end_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが終了するまでの文字数。 組み合わせて使用することができます、 **sql_handle**、 **statement_start_offset**、および**sys.dm_exec_sql_text**動的管理関数を取得する、現在要求に対してステートメントを実行します。|  
@@ -73,7 +73,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|フェッチ バッファー内のカーソル位置。|  
 |**worker_time**|**bigint**|カーソルを実行するワーカーによって消費された時間 (ミリ秒単位)。|  
 |**reads**|**bigint**|カーソルで実行された読み取りの数。|  
-|**writes**|**bigint**|カーソルで実行された書き込みの数。|  
+|**書き込み**|**bigint**|カーソルで実行された書き込みの数。|  
 |**dormant_duration**|**bigint**|カーソルの前回のクエリ (開くまたはフェッチ) が開始されてから経過した時間 (ミリ秒単位)。|  
   
 ## <a name="permissions"></a>権限  
@@ -126,7 +126,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   

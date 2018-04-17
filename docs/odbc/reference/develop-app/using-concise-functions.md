@@ -1,31 +1,32 @@
 ---
-title: "簡潔な関数の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 簡潔な関数の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fecf227f991a3c9c6edfb1ce29f5b3b781898e45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 84e1a884406e4060b957279078b8bfb106b92661
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-concise-functions"></a>簡潔な関数の使用
 一部の ODBC 関数へのアクセス暗黙の型記述子。 アプリケーション ライターがありますに呼び出し元より便利**SQLSetDescField**または**SQLGetDescField**です。 これらの関数を呼び出す*簡潔な*のさまざまな機能、設定、記述子フィールドの取得などを実行するために機能します。 いくつかの簡潔な関数は、1 つの関数の呼び出しで複数の関連する記述子フィールドを取得または設定アプリケーションを使用できます。  

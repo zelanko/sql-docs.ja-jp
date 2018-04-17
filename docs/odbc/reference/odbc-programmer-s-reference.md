@@ -1,8 +1,8 @@
 ---
-title: ODBC プログラマ &#39; リファレンス |Microsoft ドキュメント
+title: ODBC プログラマ&#39;リファレンス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC プログラマ &#39; リファレンス
+# <a name="odbc-programmer39s-reference"></a>ODBC プログラマ&#39;リファレンス
 *ODBC プログラマ リファレンス*次のセクションが含まれています。  
   
 -   [ODBC 3.8 新](../../odbc/reference/what-s-new-in-odbc-3-8.md)Windows 8 SDK で追加された新しい ODBC の機能を一覧表示します。  
@@ -54,15 +54,15 @@ ms.lasthandoff: 12/21/2017
   
  次の表記規則が使用されます。  
   
-|[形式]|使用目的|  
+|形式|使用目的|  
 |------------|--------------|  
 |選択 * から|大文字の使用は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
 |`RETCODE SQLFetch(hdbc)`|コマンドラインのサンプルとプログラム コードの固定幅フォントを使用します。|  
-|*引数*|斜体の単語は、プログラム引数をユーザーまたはアプリケーションする必要があります提供または情報は、word の強調を示します。|  
+|*argument*|斜体の単語は、プログラム引数をユーザーまたはアプリケーションする必要があります提供または情報は、word の強調を示します。|  
 |**SQLEndTran**|太字では、構文を示すように、関数名を含む正確に入力する必要あることを示します。|  
 |&#124;|垂直バーは、構文の行で相互に排他的な 2 つの選択肢を区切ります。|  
 |[...]|省略記号を引数繰り返せることを示します何回か。|  
-|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 と呼ばれています。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|3 つのドットの列では、前の行のコードの継続タスクを示します。|  
+|」をご覧ください。 と呼ばれています。 」をご覧ください。|3 つのドットの列では、前の行のコードの継続タスクを示します。|  
   
 ## <a name="about-the-code-examples"></a>コード例について  
  このガイドのコード例は、わかりやすくするためだけに設計されています。 ODBC 原則のデモンストレーションに主に書き込まれる、ため効率も確保されているわかりやすくするためです。 さらに、コードのセクションでは全体は、わかりやすくするため省略された場合があります。 これらには、非 ODBC 関数 (これらの関数が名前が"SQL"で始まらない) とほとんどのエラー処理の定義が含まれます。  

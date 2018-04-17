@@ -1,16 +1,16 @@
 ---
-title: "XSL 変換 (SQLXMLOLEDB プロバイダー) の適用 |Microsoft ドキュメント"
-ms.custom: 
+title: XSL 変換 (SQLXMLOLEDB プロバイダー) の適用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5a39d9069824e21b9c6fee2489b0c16c66e76f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 23986c6fdddfd8cc632aac6efd7df2dee8532076
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 変換の適用 (SQLXMLOLEDB プロバイダー)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-このサンプル ADO アプリケーションでは、SQL クエリが実行され、結果に XSL 変換が適用されます。 ClientSideXML プロパティを True に設定すると、クライアント側で行セットの処理が適用されます。 SQL クエリをテンプレートで指定する場合は、テンプレート実行時にコマンド言語を指定する必要があるため、コマンド言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を設定します。 Xsl プロパティでは、変換の適用に使用する XSL ファイルを指定します。 Base Path プロパティの値は、XSL ファイルの検索に使用されます。 Xsl プロパティの値にパスを指定する場合、パス Base Path プロパティで指定されているパスの相対パスです。  
+  このサンプル ADO アプリケーションでは、SQL クエリが実行され、結果に XSL 変換が適用されます。 ClientSideXML プロパティを True に設定すると、クライアント側で行セットの処理が適用されます。 SQL クエリをテンプレートで指定する場合は、テンプレート実行時にコマンド言語を指定する必要があるため、コマンド言語 {5d531cb2-e6ed-11d2-b252-00c04f681b71} を設定します。 Xsl プロパティでは、変換の適用に使用する XSL ファイルを指定します。 Base Path プロパティの値は、XSL ファイルの検索に使用されます。 Xsl プロパティの値にパスを指定する場合、パス Base Path プロパティで指定されているパスの相対パスです。  
   
  この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティについて、使用法を示します。  
   

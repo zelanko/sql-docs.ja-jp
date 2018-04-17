@@ -2,7 +2,7 @@
 title: SQLWriteDSNToIni 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 315ea45ac8f88d482f0b2cf81ed3b9d15b80a7b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 090c29b141d78a7dbbbfd5b4119408c65f00fa41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 関数
 **準拠**  
@@ -56,7 +56,7 @@ BOOL SQLWriteDSNToIni(
  *lpszDriver*  
  [入力]ドライバーの名前 (通常は、関連付けられた DBMS の名前)、物理ドライバー名の代わりにユーザーに表示されます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

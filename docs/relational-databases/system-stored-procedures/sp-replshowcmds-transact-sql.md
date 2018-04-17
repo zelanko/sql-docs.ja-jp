@@ -1,16 +1,16 @@
 ---
-title: "sp_replshowcmds (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replshowcmds (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7e949d3372266ca3857204e5d6bc5e35111855a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d684722c0112dcadac5484aa21ca5c84226d479d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@maxtrans**  =] *maxtrans*  
+ [ **@maxtrans** =] *maxtrans*  
  情報を返すトランザクションの数です。 *maxtrans*は**int**、既定値は**1**、レプリケーションが保留中のトランザクションの最大数を指定する**sp_replshowcmds**情報を返します。  
   
 ## <a name="result-sets"></a>結果セット  
@@ -56,10 +56,10 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|コマンドのシーケンス番号です。|  
 |**originator_id**|**int**|ID コマンド実行者、常に**0**します。|  
-|**化コ**|**int**|常にパブリッシャー データベースの ID **0**します。|  
-|**コ**|**int**|アーティクルの ID です。|  
-|**型**|**int**|コマンドの種類です。|  
-|**command**|**nvarchar (1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンド。|  
+|**publisher_database_id**|**int**|常にパブリッシャー データベースの ID **0**します。|  
+|**article_id**|**int**|アーティクルの ID です。|  
+|**type**|**int**|コマンドの種類です。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド。|  
   
 ## <a name="remarks"></a>解説  
  **sp_replshowcmds**トランザクション レプリケーションで使用します。  
@@ -73,15 +73,15 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  **sp_replshowcmds**レプリケーションに関する問題のトラブルシューティングにのみ実行する必要があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replshowcmds**です。  
   
 ## <a name="see-also"></a>参照  
  [エラー メッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

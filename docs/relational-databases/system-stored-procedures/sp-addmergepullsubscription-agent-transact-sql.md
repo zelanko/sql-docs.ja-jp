@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergepullsubscription_agent (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addmergepullsubscription_agent (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4658a2c2f960cdee289eb90940aac7cb92107e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a4034453646cc75c41ac2dd0f2bd7661778e65c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name =** ] **'***名前***'**  
+ [ **@name =** ] **'***name***'**  
  エージェントの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
   
  [  **@publisher =** ] **'***パブリッシャー***'**  
@@ -107,7 +107,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@publisher_db =** ] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
@@ -243,10 +243,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  マージ エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  マージ エージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は NULL です。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  マージ エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
   
  [  **@optional_command_line =** ] **'***optional_command_line***'**  
@@ -301,7 +301,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーではない場合、 **sysadmin**固定サーバー ロールを指定してください*job_login*と*job_password*を指定すると*job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- フィルター選択されたデータのスナップショットを使用する場合に、読み込むスナップショット ファイルが格納されているフォルダーのパスを指定します。 *dynamic_snapshot_location*は**nvarchar (260)**、既定値は NULL です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+ フィルター選択されたデータのスナップショットを使用する場合に、読み込むスナップショット ファイルが格納されているフォルダーのパスを指定します。 *dynamic_snapshot_location*は**nvarchar (260)**、既定値は NULL です。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  [  **@use_web_sync =** ] *@use_web_sync*  
  Web 同期が有効であることを示します。 *@use_web_sync*は**ビット**、既定値は 0 です。 **1** HTTP を使用して、インターネット経由でプル サブスクリプションを同期できることを指定します。  
@@ -327,7 +327,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1** (既定値)|Windows 統合認証を使用|  
   
 > [!NOTE]  
->  基本認証を Web 認証と共に使用することをお勧めします。 Web 認証を使用するには、Web サーバーに SSL で接続する必要があります。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
+>  基本認証を Web 認証と共に使用することをお勧めします。 Web 認証を使用するには、Web サーバーに SSL で接続する必要があります。 詳細については、「[Web 同期の構成](../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。  
   
  [  **@internet_timeout =** ] *internet_timeout*  
  Web 同期要求が期限切れとなるまでの時間を秒単位で指定します。 *internet_timeout*は**int**、既定値は**300** (秒)。  
@@ -355,16 +355,16 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergepullsubscription_agent**です。  
   
 ## <a name="see-also"></a>参照  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

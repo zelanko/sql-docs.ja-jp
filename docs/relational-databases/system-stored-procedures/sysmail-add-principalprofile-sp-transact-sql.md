@@ -1,16 +1,16 @@
 ---
-title: "sysmail_add_principalprofile_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_add_principalprofile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d84d54c489b15a9fbe8f739efee5be02535a004
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8811ab095afe55a43b9b018e083d97f51525c2df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,30 +48,30 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@principal_id** = ] *principal_id*  
+ [ **@principal_id** =] *principal_id*  
  データベース ユーザーまたはロールの ID、 **msdb**アソシエーションのデータベースです。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_id*の**0**使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+ [ **@principal_name** =] **'***principal_name***'**  
  データベース ユーザーまたはロールの名前、 **msdb**アソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_name*の**'public'**使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
   
  [ **@profile_id** = ] *profile_id*  
  関連付けに使用するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'***profile_name***'**  
  関連付けに使用するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値はありません。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@is_default** = ] *is_default*  
+ [ **@is_default** =] *is_default*  
  このプロファイルをプリンシパルの既定のプロファイルとするかどうかを指定します。 プリンシパルは既定のプロファイルを 1 つだけ持つ必要があります。 *is_default*は**ビット**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>解説  
- プロファイルをパブリックにするには、指定、  **@principal_id** の**0**または **@principal_name** の**パブリック**です。 パブリック プロファイルは、すべてのユーザーに利用可能な**msdb**データベース、ユーザーは、のメンバーでもある必要がありますが**DatabaseMailUserRole**を実行する**sp_send_dbmail**です。  
+ プロファイルをパブリックにするには、指定、 **@principal_id**の**0**または**@principal_name**の**パブリック**です。 パブリック プロファイルは、すべてのユーザーに利用可能な**msdb**データベース、ユーザーは、のメンバーでもある必要がありますが**DatabaseMailUserRole**を実行する**sp_send_dbmail**です。  
   
- データベース ユーザーが持つことのできる既定のプロファイルは 1 つだけです。 ときに **@is_default** は '**1**' と既に 1 つまたは複数のプロファイルに関連付けられたユーザーが、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
+ データベース ユーザーが持つことのできる既定のプロファイルは 1 つだけです。 ときに**@is_default**は '**1**' と既に 1 つまたは複数のプロファイルに関連付けられたユーザーが、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
   
- ときに **@is_default** は '**0**' もう一方の関連付けが存在しないと、ストアド プロシージャには、エラーが返されます。  
+ ときに**@is_default**は '**0**' もう一方の関連付けが存在しないと、ストアド プロシージャには、エラーが返されます。  
   
  ストアド プロシージャ**sysmail_add_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマです。 現在のデータベースがない場合は、3 部構成の名前を持つプロシージャを実行する必要があります**msdb**です。  
   
@@ -104,6 +104,6 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

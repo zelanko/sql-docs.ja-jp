@@ -1,16 +1,16 @@
 ---
-title: "sp_lookupcustomresolver (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_lookupcustomresolver (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df262bcf0d12d99b2c16b7eeff18cbc80c151ad8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad45f26fbd1c6b7f9488497333f5ba44a2b5fa8c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [  **@article_resolver =** ] **'***article_resolver***'**  
  登録を解除するカスタム ビジネス ロジックの名前を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。 削除されるビジネス ロジックが COM コンポーネントの場合、そのコンポーネントの表示名です。 ビジネス ロジックがある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリでは、このパラメーターは、アセンブリの名前。  
   
- [  **@resolver_clsid** =] **'***resolver_clsid***'**出力  
+ [ **@resolver_clsid**=] **'***resolver_clsid***'**出力  
  指定されたカスタム ビジネス ロジックの名前に関連付けられている COM オブジェクトの CLSID 値は、 *article_resolver*パラメーター。 *resolver_clsid*は**nvarchar (50)**、既定値は NULL です。  
   
  [  **@is_dotnet_assembly=** ] **'***@is_dotnet_assembly***'**出力  
@@ -79,7 +79,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
  **sp_lookupcustomresolver**によって呼び出される[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)と[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を指定された検証*article_resolver*です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **db_owner** 、パブリケーション データベースの固定データベース ロールが実行できる**sp_lookupcustomresolver**です。  
   
 ## <a name="see-also"></a>参照  
@@ -87,8 +87,8 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [マージ同期中にビジネス ロジックを実行します。](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [マージ アーティクルの競合回避モジュールを指定します。](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

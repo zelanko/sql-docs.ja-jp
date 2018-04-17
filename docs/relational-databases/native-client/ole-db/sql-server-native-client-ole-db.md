@@ -1,15 +1,15 @@
 ---
-title: "SQL Server Native Client (OLE DB) |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server Native Client (OLE DB) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, about SQL Server Native Client OLE DB provider
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91ec3d738f8a718a2af7415a6f204be3c204201a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bc3ed2b32a51e3daa21bb34d6d3869ada0e212f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、データへのアクセスに使用される低レベルの COM API。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、データへのアクセスに使用する低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するアプリケーションに OLE DB サポートを提供します。  
   
@@ -56,23 +58,23 @@ ms.lasthandoff: 01/25/2018
   
 -   [データ型 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [スキーマ行セットのサポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
+-   [スキーマ行セットのサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
--   [テーブル値パラメーター (&) #40 です。 OLE DB &#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
+-   [テーブル値パラメーター &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [日付と時刻の強化 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日付と時刻の強化 (&) #40";"OLE DB"&"#41;](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [大きな CLR ユーザー定義型 (&) #40 です。 OLE DB &#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [大きな CLR ユーザー定義型&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [FILESTREAM のサポート &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
 -   [トランザクション](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [エラー](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   
--   [サービス プリンシパル名 &#40;です。Spn &#41;クライアント接続 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [スパース列のサポート (&) #40 です。 OLE DB &#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
+-   [スパース列のサポート&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41;参照](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   

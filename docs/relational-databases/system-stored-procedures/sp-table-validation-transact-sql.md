@@ -1,16 +1,16 @@
 ---
-title: "sp_table_validation (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_table_validation (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@table_name =**] *table_name*  
  出力メッセージ用に使用されるビューのテーブル名です。 *table_name*は**sysname**、既定値は **@table**です。  
   
- [  **@column_list** =] **'***column_list***'**  
+ [ **@column_list**=] **'***column_list***'**  
  チェックサム関数で使用する列リストです。 *column_list*は**nvarchar (4000)**、既定値は NULL です。 マージ アーティクルを検証する場合は、計算列とタイムスタンプ列を除く列リストを指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -105,14 +105,14 @@ sp_table_validation [ @table = ] 'table'
   
  浮動小数点値はキャラクター モードの場合は、チェックサムの違いを生成する可能性が**bcp**を使用している場合は、パブリケーションに含まれていないことが必ずしも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 これは、文字モード間で変換を実行するときの、わずかではあるが避けられない有効桁数の違いに基づきます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  実行する**sp_table_validation**、検証対象のテーブルに対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [チェックサム &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)   
+ [チェックサム&#40;TRANSACT-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

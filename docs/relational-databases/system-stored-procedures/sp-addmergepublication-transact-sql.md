@@ -1,16 +1,16 @@
 ---
-title: "sp_addmergepublication (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addmergepublication (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  作成するマージ パブリケーションの名前です。 *パブリケーション*は**sysname**, ない必要があり、既定でのキーワードは指定できませんすべてです。 パブリケーションの名前は、データベース内で一意である必要があります。  
   
- [  **@description =** ] **'***説明***'**  
+ [ **@description =** ] **'***description***'**  
  パブリケーションの説明を指定します。 *説明*は**nvarchar (255)**、既定値は NULL です。  
   
  [  **@retention =** ]*保有期間*  
@@ -102,7 +102,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**ネイティブ**(既定値)|すべてのテーブルのネイティブ モード BCP 出力を作成する。|  
-|**文字**|すべてのテーブルのキャラクタモード BCP 出力を作成する。 サポートするために必要な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]と非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。|  
+|**character**|すべてのテーブルのキャラクタモード BCP 出力を作成する。 サポートするために必要な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]と非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。|  
   
  [  **@allow_push =** ] **'***allow_push***'**  
  特定のパブリケーションに対して、プッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)**TRUE の場合、既定値は、パブリケーションに対してプッシュ サブスクリプションを許可します。  
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  マージ パブリケーションでパラメーター化された行フィルターを使用できるようにします。 *dynamic_filters*は**nvarchar (5)**、既定値は FALSE。  
   
 > [!NOTE]  
->  このパラメーターを指定する必要がありますが、許可する代わりに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動的にかどうかをパラメーター化された行フィルターが使用されています。 値を指定する場合**true**の*dynamic_filters*アーティクルのパラメーター化された行フィルターを定義する必要があります。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+>  このパラメーターを指定する必要がありますが、許可する代わりに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]自動的にかどうかをパラメーター化された行フィルターが使用されています。 値を指定する場合**true**の*dynamic_filters*アーティクルのパラメーター化された行フィルターを定義する必要があります。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
  [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder***'**  
  スナップショット ファイルが既定のフォルダーに格納されるかどうかを示します。 *snapshot_in_default_folder*は**nvarchar (5)**、既定値は TRUE です。 場合**true**、スナップショット ファイルは既定のフォルダーにあります。 場合**false**で指定された別の場所にスナップショット ファイルが保存される*alternate_snapshot_folder*です。 代替位置としては、他のサーバー、ネットワーク ドライブ、または CD-ROM やリムーバブル ディスクなどのリムーバブル メディアを指定できます。 また、スナップショット ファイルは、後でサブスクライバーにより取得するために、ファイル転送プロトコル (FTP) サイトに保存してもかまいません。 このパラメーターが true にしてで指定された場所がまだあることができますに注意してください*alt_snapshot_folder*です。 これらのパラメーターを組み合わせて指定した場合、スナップショット ファイルは、既定のフォルダーと代替位置の両方に格納されます。  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  ポインターを指定します、 **.sql**ファイルの場所。 *post_snapshot_script*は**nvarchar (255)**、既定値は NULL です。 最初の同期のときに、マージ エージェントは、他のすべてのレプリケートされたオブジェクト スクリプトとデータが適用された後に、ポストスナップショット スクリプトを実行します。 このスクリプトは、マージ エージェントがサブスクリプション データベースに接続するときにセキュリティ コンテキスト内で実行されます。 ポスト スナップ ショット スクリプトは実行されません[!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバーです。  
   
  [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
- 書き込まれるスナップショットを指定します、  **@alt_snapshot_folder** の場所を圧縮するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式です。 *compress_snapshot*は**nvarchar (5)**、既定値は FALSE。 **false**指定したスナップショットは圧縮されません。**true**スナップショットが圧縮されることを指定します。 2 GB より大きいスナップショット ファイルは圧縮できません。 圧縮されたスナップショット ファイルは、マージ エージェントが実行されている場所で解凍されます。一般にプル サブスクリプションでは、サブスクライバーでファイルが解凍されるように、圧縮されたスナップショットが使用されます。 既定のフォルダー内のスナップショットは圧縮できません。 サポートする[!INCLUDE[ssEW](../../includes/ssew-md.md)]を指定する必要がありますサブスクライバー、 **false**です。  
+ 書き込まれるスナップショットを指定します、 **@alt_snapshot_folder**の場所を圧縮するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式です。 *compress_snapshot*は**nvarchar (5)**、既定値は FALSE。 **false**指定したスナップショットは圧縮されません。**true**スナップショットが圧縮されることを指定します。 2 GB より大きいスナップショット ファイルは圧縮できません。 圧縮されたスナップショット ファイルは、マージ エージェントが実行されている場所で解凍されます。一般にプル サブスクリプションでは、サブスクライバーでファイルが解凍されるように、圧縮されたスナップショットが使用されます。 既定のフォルダー内のスナップショットは圧縮できません。 サポートする[!INCLUDE[ssEW](../../includes/ssew-md.md)]を指定する必要がありますサブスクライバー、 **false**です。  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  ディストリビューター用の FTP サービスのネットワーク アドレスです。 *ftp_address*は**sysname**、既定値は NULL です。 マージ エージェントを取得するサブスクライバーのパブリケーションのスナップショット ファイルの場所を指定します。 各パブリケーションを別に持つことができますので、このプロパティはパブリケーションごとに格納される、 *ftp_address*です。 パブリケーションでは、FTP を使用したスナップショットの配布がサポートされている必要があります。  
@@ -203,7 +203,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**true**|パブリケーションは事前計算済みパーティションを使用します。|  
-|**オプション**|パブリケーションは事前計算済みパーティションを使用しません。|  
+|**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |NULL(default)|システムがパーティション分割ストラテジを決定します。|  
   
  既定では事前計算済みパーティションを使用します。 事前計算済みパーティションを使用しないように*use_partition_groups*に設定する必要があります**false**です。 NULL に指定すると、システムが事前計算済みパーティションを使用するかどうかを決定します。 パーティションを使用することはできませんし、この値になる効果的に事前計算済み場合**false**任意のエラーは生成されません。 このような場合、 *keep_partition_changes*に設定することができます**true**をある程度最適化を提供します。 詳細については、次を参照してください。 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)と[事前計算済みパーティションを持つパラメーター化されたフィルター パフォーマンスの最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)です。  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  スキーマ レプリケーションがパブリケーションに対してサポートされているかどうかを示します。 *replicate_ddl*は**int**、既定値は 1 です。 **1** 、パブリッシャー側で実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示すと**0** DDL ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
- *@replicate_ddl*  DDL ステートメントは、列を追加するときは、パラメーターを有効にします。 *@replicate_ddl*  DDL ステートメントが変更または次の理由により、列を削除すると、パラメーターは無視されます。  
+ *@replicate_ddl* DDL ステートメントは、列を追加するときは、パラメーターを有効にします。 *@replicate_ddl* DDL ステートメントが変更または次の理由により、列を削除すると、パラメーターは無視されます。  
   
--   列を削除すると場合、は、ディストリビューション エージェントは失敗が発生すると、削除された列を含むから新しい DML ステートメントを防ぐために sysarticlecolumns を更新する必要があります。 *@replicate_ddl* レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
+-   列を削除すると場合、は、ディストリビューション エージェントは失敗が発生すると、削除された列を含むから新しい DML ステートメントを防ぐために sysarticlecolumns を更新する必要があります。 *@replicate_ddl*レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
   
--   列が変更される場合は、ソースのデータ型または NULL 値の許容属性が変更され、サブスクライバーにあるテーブルと互換性のない値が DML ステートメントに含まれる可能性があります。 そうした DML ステートメントは、ディストリビューション エージェントが失敗する原因となる場合があります。 *@replicate_ddl* レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
+-   列が変更される場合は、ソースのデータ型または NULL 値の許容属性が変更され、サブスクライバーにあるテーブルと互換性のない値が DML ステートメントに含まれる可能性があります。 そうした DML ステートメントは、ディストリビューション エージェントが失敗する原因となる場合があります。 *@replicate_ddl*レプリケーションは、スキーマの変更を常にレプリケートする必要がありますので、パラメーターは無視されます。  
   
 -   ときの DDL ステートメントは、新しい列を追加、sysarticlecolumns では、新しい列が含まれません。 DML ステートメントによって、新しい列のデータがレプリケートされることはありません。 DDL をレプリケートするかしないかのどちらかが許容されるため、パラメーターは有効になります。  
   
@@ -248,9 +248,9 @@ sp_addmergepublication [ @publication = ] 'publication'
 |値|バージョン|  
 |-----------|-------------|  
 |**1 日**(既定値)|保有期間は、日単位で指定されます。|  
-|**週**|保有期間は、週単位で指定されます。|  
-|**月**|保有期間は、月単位で指定されます。|  
-|**1 年**|保有期間は、年単位で指定されます。|  
+|**week**|保有期間は、週単位で指定されます。|  
+|**month**|保有期間は、月単位で指定されます。|  
+|**year**|保有期間は、年単位で指定されます。|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  1 回の生成に含まれる変更の数です。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。 *generation_leveling_threshold*は**int**既定値は 1000 とします。  
@@ -277,25 +277,25 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_addmergepublication**はマージ レプリケーションで使用します。  
   
- 使用して、Active Directory パブリケーション オブジェクトの一覧に、  **@add_to_active_directory**  、パラメーター、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトは、Active Directory で既に作成する必要があります。  
+ 使用して、Active Directory パブリケーション オブジェクトの一覧に、 **@add_to_active_directory** 、パラメーター、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトは、Active Directory で既に作成する必要があります。  
   
  同じデータベース オブジェクトを使用するパブリケーションのみをパブリッシュする複数のパブリケーションが存在しない場合、 *replicate_ddl*の値**1**は ALTER TABLE、ALTER VIEW、ALTER PROCEDURE、ALTER FUNCTION をレプリケートし、ALTER TRIGGER DDL ステートメント。 ただし、ALTER TABLE DROP COLUMN DDL ステートメントは、削除された列をパブリッシュするすべてのパブリケーションでレプリケートされます。  
   
  [!INCLUDE[ssEW](../../includes/ssew-md.md)]の値のサブスクライバー, *alternate_snapshot_folder*場合のみ使用の値*snapshot_in_default_folder*は**false**です。  
   
- DDL レプリケーションが有効になっている (*replicate_ddl***= 1**)、パブリケーションに対してレプリケーションなしの DDL を行うために変更をパブリケーション、 [sp_changemergepublication (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)最初設定に実行する必要があります*replicate_ddl*に**0**します。 レプリケーションなしの DDL ステートメントが実行された後**sp_changemergepublication** DDL レプリケーションを再びオンにもう一度実行することができます。  
+ DDL レプリケーションが有効になっている (* replicate_ddl ***= 1**)、パブリケーションに対してレプリケーションなしの DDL を行うために変更をパブリケーション、 [sp_changemergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)最初設定に実行する必要があります*replicate_ddl*に**0**します。 レプリケーションなしの DDL ステートメントが実行された後**sp_changemergepublication** DDL レプリケーションを再びオンにもう一度実行することができます。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergepublication**です。  
   
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

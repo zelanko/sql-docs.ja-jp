@@ -1,15 +1,16 @@
 ---
-title: "Standard ゲートウェイ |Microsoft ドキュメント"
-ms.custom: 
+title: Standard ゲートウェイ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - standard gateways [ODBC]
 - gateways [ODBC]
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e70ef86e0fce41e73cee16074cdfcd6a97177ba7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef59162739835fa2e6bdd0cba6bb4f4c648901cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="standard-gateway"></a>Standard ゲートウェイ
 A*ゲートウェイ*は、別のように 1 つの DBMS の原因となるソフトウェアの一部です。 ゲートウェイは、受け取りプログラミング インターフェイス、SQL の文法とデータ ストリーム プロトコルは単一の DBMS のプログラミングのインターフェイスでは、SQL の文法に変換されますおよびデータ ストリームの非表示の DBMS のプロトコル。 たとえば、Microsoft® SQL Server™ を使用するアプリケーションもアクセスできる DB2 データ ゲートウェイを介して、Micro Decisionware DB2;この製品は、DB2 SQL Server のように表示します。 ゲートウェイを使用している場合は、ターゲット データベースごとに別のゲートウェイを書き込む必要があります。  

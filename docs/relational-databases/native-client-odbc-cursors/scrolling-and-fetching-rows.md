@@ -1,15 +1,15 @@
 ---
-title: "スクロールとフェッチ行 |Microsoft ドキュメント"
-ms.custom: 
+title: スクロールとフェッチ行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - scrollable cursors [SQL Server]
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f84d14d3ab2eb2bd3be56e61d34741916446aa48
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3b2824c0b21c845fe2925fec00e58ea46d0cf4d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/24/2018
   
  ODBC アプリケーションを使用できる**SQLFetch**順方向専用カーソルを介してフェッチを実行します。  
   
- **SQLFetchScroll**カーソルの周囲をスクロールするために使用します。 **SQLFetchScroll** 、次のフェッチをサポートしているだけでなく相対フェッチ前に、最初と最後の行セット (行セットをフェッチ *n* 現在の行セットの先頭からの行) と絶対フェッチ (フェッチ行で始まる行セット *n* )。 場合 *n* は行が結果セットの最後から数えられます絶対フェッチで負の値。 たとえば、行 -1 の絶対フェッチは、結果セット内にある最後の行を起点とした行セットをフェッチします。  
+ **SQLFetchScroll**カーソルの周囲をスクロールするために使用します。 **SQLFetchScroll** 、次のフェッチをサポートしているだけでなく相対フェッチ前に、最初と最後の行セット (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (fetch、行セット行で始まる*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 たとえば、行 -1 の絶対フェッチは、結果セット内にある最後の行を起点とした行セットをフェッチします。  
   
  使用するアプリケーション**SQLFetchScroll**そのブロックにのみレポートなどのカーソル機能は、1 回、結果セットを通過する可能性がありますオプションのみを使用して、次の行セットをフェッチします。 スクリーン ベースのアプリケーションでは、その一方で、活用することのすべての機能**SQLFetchScroll**です。 スクロール バー操作を直接の呼び出しを変換できる場合は、アプリケーションでは、画面に表示される行数を行セットのサイズに設定しを結果セットに、画面バッファーをバインド、 **SQLFetchScroll**です。  
   
@@ -68,6 +69,6 @@ ms.lasthandoff: 01/24/2018
 -   [ODBC での行のブックマーク](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>参照  
- [使用してカーソル &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [使用してカーソル (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

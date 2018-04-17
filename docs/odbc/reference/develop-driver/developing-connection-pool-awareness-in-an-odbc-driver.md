@@ -1,27 +1,28 @@
 ---
-title: "ODBC ドライバー対応接続プールの開発 |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC ドライバー対応接続プールの開発 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7c6412263587f171c0b0281436364b2e54e46bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールのサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  ドライバー対応のプールを有効にすることができるようにドライバーも次の既存の関数を実装する必要があります。  
   
-|機能|追加された機能|  
+|関数|追加された機能|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|新しいハンドル型のサポート: SQL_HANDLE_DBC_INFO_TOKEN (以下の説明を参照してください)。|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|新しい設定専用の接続属性をサポート: 接続をリセットするための SQL_ATTR_DBC_INFO_TOKEN (以下の説明を参照してください)。|  

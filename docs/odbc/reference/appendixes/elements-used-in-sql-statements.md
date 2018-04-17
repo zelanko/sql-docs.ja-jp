@@ -1,31 +1,32 @@
 ---
-title: "SQL ステートメントで使用される要素 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL ステートメントで使用される要素 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], elements supported
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f619ebbbc3bb7c0ebbc90025a65c7f0530e3e4e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 60e0bf5d464b85aeca56d89fa130553f8114b813
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  *比較述語*:: =*式*比較演算式  
   
- *データ型*:: =*文字の文字列型*(*文字の文字列型*SQLGetTypeInfo から返される結果セット内の""DATA_TYPE""列のいずれかの SQL_CHAR データ型であります。または SQL_VARCHAR)。  
+ *データ型*:: =*文字の文字列型*(*文字の文字列型*SQLGetTypeInfo から返される結果セット内の""DATA_TYPE""列のいずれかの SQL_CHAR データ型であるかSQL_VARCHAR。)  
   
  *桁*:: 0 &#124; 1 &#124; = 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/21/2017
   
  *選択サブリスト*:: =*式*  
   
- *並べ替え仕様*:: = {*符号なし整数 &#124; 列名*} [*ASC &#124;です。DESC*]  
+ *並べ替え仕様*:: = {*符号なし整数 (&) #124; 列名*} [*ASC &#124;です。DESC*]  
   
  *テーブル識別子*:: =*ユーザー定義名*  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
  *テーブルの参照リスト*:: =*テーブル参照*[、*テーブル参照*].  
   
- *用語*:: =*係数*&#124;です。*用語*{\*&#124;*/* }*要素*  
+ *用語*:: =*係数*&#124;です。*用語*{\*& #124;*/* }*要素*  
   
  *符号なし整数*:: = {*桁*}  
   

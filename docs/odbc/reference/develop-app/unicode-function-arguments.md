@@ -1,30 +1,31 @@
 ---
-title: "Unicode 関数の引数 |Microsoft ドキュメント"
-ms.custom: 
+title: Unicode 関数の引数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5675d39ff68b3ddd9231a90a54fd19793bd829be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0b2e30db5cacd2266ee14ec847210d7ff8407b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
 ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI と Unicode の両方の引数の文字列や文字の SQLPOINTER へのポインターをそのまま使用するすべての関数のバージョンをサポートします。 Unicode 関数は、関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (のサフィックスの有無を呼び出すことができる*A*) 現在の ODBC API 関数と同じです。  
@@ -50,12 +51,12 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
 |**SQLDrivers**|**SQLSetConnectAttr**|  
 |**SQLError**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
-|**SQLForeignKeys**|**SQLSetDescField**|  
+|**SQLForeignKeys**|**Sqlsetdescfield による**|  
 |**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
 |**SQLGetConnectOption**|**SQLSpecialColumns**|  
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
-|**SQLGetDescRec**|**SQLTables**|  
+|**Sqlgetdescrec による**|**SQLTables**|  
   
  Unicode (W) や ANSI (A) の両方のバージョンをサポートする ODBC インストーラーと ODBC トランスレーター関数の一覧を次に示します。  
   

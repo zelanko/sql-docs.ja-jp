@@ -1,16 +1,16 @@
 ---
-title: "sp_add_notification (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_add_notification (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_notification_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22e6f2373ba35b24d74b7045350c7cb78a504c05
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 65687af95ff4d8f608d528277e897e0cca2c70ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  [ **@operator_name=** ] **'***operator***'**  
  警告が発生したときに通知を受け取るオペレーターを指定します。 *演算子*は**sysname**、既定値はありません。  
   
- [ **@notification_method=** ] *notification_method*  
+ [  **@notification_method=** ] *notification_method*  
  オペレーターが通知を受ける方法を指定します。 *notification_method*は**tinyint**、既定値はありません。 *notification_method*と共にこれらの値の 1 つ以上にすることができます、 **OR**論理演算子です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|[電子メール]|  
 |**2**|[ポケットベル]|  
@@ -97,10 +97,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_delete_notification &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [sp_add_operator &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

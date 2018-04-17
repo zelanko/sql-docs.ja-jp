@@ -1,16 +1,16 @@
 ---
-title: "sp_syscollector_create_collection_set (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_syscollector_create_collection_set (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_syscollector_create_collection_set
   
  *名前*一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
   
- [ **@target =** ] '*target*'  
+ [  **@target =** ] '*ターゲット*'  
  将来の使用のために予約されています。 *名前*は**nvarchar (128)**で、既定値は NULL です。  
   
  [ **@collection_mode =** ] *collection_mode*  
@@ -93,7 +93,7 @@ sp_syscollector_create_collection_set
   
  ときに*collection_mode*を 0 に設定されている*schedule_uid*または*schedule_name*指定する必要があります。 ときに*collection_mode*を 1 に設定されている*schedule_uid*または*schedule_name*指定されている場合は無視されます。  
   
- [ **@schedule_name =** ] '*schedule_name*'  
+ [  **@schedule_name =** ] '*schedule_name*'  
  スケジュールの名前です。 *schedule_name*は**sysname**で、既定値は NULL です。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルにクエリします。  
   
  [ **@logging_level =** ] *logging_level*  
@@ -125,7 +125,7 @@ sp_syscollector_create_collection_set
  [ **@collection_set_id =** ] *collection_set_id*  
  コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**で出力が必要とします。  
   
- [ **@collection_set_uid =** ] '*collection_set_uid*'  
+ [  **@collection_set_uid =** ] '*collection_set_uid*'  
  コレクション セットの場合は GUID です。 *collection_set_uid*は**uniqueidentifier**出力で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -140,7 +140,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 既定値を使用してコレクション セットを作成する  
- 次の例では、必須パラメーターのみを指定してコレクション セットを作成します。 `@collection_mode`必須ではありませんが (キャッシュ済み)、既定のコレクション モードは、スケジュール ID またはスケジュール名を指定する必要があります。  
+ 次の例では、必須パラメーターのみを指定してコレクション セットを作成します。 `@collection_mode` 必須ではありませんが (キャッシュ済み)、既定のコレクション モードは、スケジュール ID またはスケジュール名を指定する必要があります。  
   
 ```  
 USE msdb;  

@@ -1,34 +1,35 @@
 ---
-title: "XML アップデート グラム (SQLXML 4.0) のガイドラインと制限 |Microsoft ドキュメント"
-ms.custom: 
+title: XML アップデート グラム (SQLXML 4.0) のガイドラインと制限 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a8396c837707ad9560aebb2e86617df8bfb2b69
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 08cd4c5cd8bf7aef6472cc46fb573816e7ce7b85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML アップデートグラムのガイドラインと制限 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML アップデートグラムを使用する場合は、次の点に注意してください。  
+  XML アップデートグラムを使用する場合は、次の点に注意してください。  
   
 -   1 つのペアのみを使用して、挿入操作のアップデート グラムを使用している場合**\<する前に >**と**\<後 >** 、ブロック、 **\<する前に>**ブロックを省略できます。 逆に、削除操作が発生した場合、 **\<後 >**ブロックを省略できます。  
   
@@ -61,6 +62,6 @@ XML アップデートグラムを使用する場合は、次の点に注意し�
     ```  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

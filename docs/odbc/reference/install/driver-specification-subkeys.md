@@ -1,15 +1,16 @@
 ---
-title: "ドライバーの仕様のサブキー |Microsoft ドキュメント"
-ms.custom: 
+title: ドライバーの仕様のサブキー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
@@ -17,24 +18,24 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52899dd2d473ac083d2d0effaca5b3b1726322c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specification-subkeys"></a>ドライバーの仕様のサブキー
 ODBC ドライバーのサブキーに表示されている各ドライバーでは、独自のサブキーがあります。 このサブキーは、ODBC ドライバーのサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、ドライバーとドライバーのセットアップ Dll の場合、によって返されるドライバー キーワードの値の完全パスを一覧表示**SQLDrivers**、および使用状況カウントします。 値の形式は、次の表に示すようにします。  
   
-|[オブジェクト名]|データ型|data|  
+|名前|データ型|Data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
 |CreateDSN|REG_SZ|*ドライバーの説明*|  
 |Driver|REG_SZ|*ドライバー DLL パス*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  

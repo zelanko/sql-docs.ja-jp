@@ -2,7 +2,7 @@
 title: SQLManageDataSources |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b10fd1109c41d1d19418ce83dd14b60488a85fd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9d0fdf13051944c7af3c08418ac5182c9836db21
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **準拠**  
@@ -52,7 +52,7 @@ BOOL SQLManageDataSources(
  *hwnd*  
  [入力]親ウィンドウ ハンドル。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  **SQLManageDataSources**場合は FALSE を返します*hwnd*有効なウィンドウ ハンドルではありません。 それ以外の場合、TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

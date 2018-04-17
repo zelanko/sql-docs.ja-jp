@@ -1,16 +1,16 @@
 ---
-title: "XML 一括読み込み (SQLXML 4.0) の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: XML 一括読み込み (SQLXML 4.0) の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nontransacted XML Bulk Load operations
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ebdbed96867a664fe64f6b8508c6a38e97d27166
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Microsoft に半構造化 XML データを読み込むことができますをスタンドアロン COM オブジェクトは、XML 一括読み込み[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。  
+  Microsoft に半構造化 XML データを読み込むことができますをスタンドアロン COM オブジェクトは、XML 一括読み込み[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。  
   
  INSERT ステートメントと OPENXML 関数を使用すれば、XML データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに挿入できますが、大量の XML データを挿入する必要があるときには、一括読み込みユーティリティを使用すると効率的です。  
   
@@ -46,9 +47,9 @@ Microsoft に半構造化 XML データを読み込むことができますを�
   
  ユーザーは、次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能について理解していることを前提としています。  
   
--   注釈付き XSD および XDR スキーマ。 注釈付き XSD スキーマの詳細については、次を参照してください[注釈付き XSD スキーマ &#40; の概要。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). 注釈付き XDR スキーマについては、次を参照してください。[注釈付き XDR スキーマ &#40; SQLXML 4.0 &#41; で推奨されなくなった](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)です。  
+-   注釈付き XSD および XDR スキーマ。 注釈付き XSD スキーマの詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)です。 注釈付き XDR スキーマについては、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では廃止&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)です。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括挿入メカニズムなど、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT ステートメントおよび bcp ユーティリティです。 詳細については、次を参照してください。[一括挿入 (&) #40 です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/bulk-insert-transact-sql.md)と[bcp ユーティリティ](../../../tools/bcp-utility.md)です。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の BULK INSERT ステートメント、bcp ユーティリティなどの [!INCLUDE[tsql](../../../includes/tsql-md.md)] 一括挿入メカニズム。 詳細については、次を参照してください。 [BULK INSERT &#40;TRANSACT-SQL&#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md)と[bcp ユーティリティ](../../../tools/bcp-utility.md)です。  
   
 ## <a name="streaming-of-xml-data"></a>XML データのストリーミング  
  ソースの XML ドキュメントは大きい可能性があるため、一括読み込み処理では、メモリにドキュメント全体は読み込まれません。 代わりに、XML 一括読み込みでは XML データがストリームとして解釈され読み取られます。 データが読み取られるとき、このユーティリティではデータベース テーブルが特定され、XML データ ソースを基に適切なレコードが生成された後、そのレコードが挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。  

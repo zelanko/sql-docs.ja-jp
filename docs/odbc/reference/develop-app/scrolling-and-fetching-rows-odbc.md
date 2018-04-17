@@ -1,15 +1,16 @@
 ---
-title: "スクロールとフェッチ (ODBC) の行 |Microsoft ドキュメント"
-ms.custom: 
+title: スクロールとフェッチ (ODBC) の行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 304baeafe4918433ab5c9495d54e4cd8970eb628
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 273046a04849b0b1501e2dd4be476c9abb540c5f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>スクロールとフェッチ (ODBC) の行
-スクロール可能なカーソルを使用するときにアプリケーションを呼び出す**SQLFetchScroll** cursor および fetch の行を配置します。 **SQLFetchScroll**相対スクロールをサポートしています (次へ、prior、relative  *n* 行)、スクロールの絶対 (first、last、および行の *n* )、およびブックマークを配置します。 *FetchOrientation*と*FetchOffset*引数**SQLFetchScroll**次の図に示すようをフェッチする行セットを指定します。  
+スクロール可能なカーソルを使用するときにアプリケーションを呼び出す**SQLFetchScroll** cursor および fetch の行を配置します。 **SQLFetchScroll**相対スクロールをサポートしています (次へ、prior、relative *n*行)、スクロールの絶対 (first、last、および行の*n*)、およびブックマークによる位置指定します。 *FetchOrientation*と*FetchOffset*引数**SQLFetchScroll**次の図に示すようをフェッチする行セットを指定します。  
   
  ![次に、前に、最初と最後の行セットのフェッチ](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

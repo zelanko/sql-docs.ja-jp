@@ -2,7 +2,7 @@
 title: sp_configure (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: ''
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63ab5d253d26375b3f53cb0f38ffa96f56e0a93d
-ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81e174922753ed4a40111caba8aa34efd359e866
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]

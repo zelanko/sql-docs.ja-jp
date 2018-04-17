@@ -1,16 +1,16 @@
 ---
-title: "sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a95c2e905efa377edb83fd82a104758853b18271
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0a5979dd6b797ced4b4785fedd068671ae9e05f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  実行すると、オブジェクトに関連付けられている署名は削除**sp_refreshsqlmodule**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  モジュールに対する ALTER 権限、およびオブジェクトによって参照される CLR ユーザー定義型と XML スキーマ コレクションに対する REFERENCES 権限が必要です。 指定されたモジュールがデータベース レベルの DDL トリガーである場合は、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。 指定されたモジュールがサーバー レベルの DDL トリガーである場合は、CONTROL SERVER 権限が必要です。  
   
  さらに、EXECUTE AS 句で定義されているモジュールでは、指定したプリンシパルに対して IMPERSONATE 権限が必要です。 通常、オブジェクトを更新しても、モジュールが EXECUTE AS USER を指定して定義された場合を除いて、オブジェクトの EXECUTE AS のプリンシパルは変更されません。プリンシパルのユーザー名は、モジュールが作成された時点とは異なるユーザーに解決されます。  
@@ -177,7 +178,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_refreshview &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

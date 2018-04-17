@@ -1,16 +1,16 @@
 ---
-title: "sp_server_info (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_server_info (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_info
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0261a011e7c331745494070efb5a3d38e37ffa23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab2bee2085b2b86015225f67a99bb01d833efb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (**60**)**|属性名です。|  
 |**ATTRIBUTE_VALUE**|**varchar (**255**)**|属性の現在の設定です。|  
   
- 次の表に属性の一覧を示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC クライアント ライブラリは、現在の属性を使用して**1**、 **2**、 **18**、 **22**、および**500**で接続時間です。  
+ 次の表に属性の一覧を示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC クライアント ライブラリは、現在の属性を使用して**1**、 **2**、 **18**、 **22**、および**500**接続時間です。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME の説明|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -79,7 +79,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**20**|MULTI_RESULT_SETS<br /><br /> 基になるデータベースまたはゲートウェイ自体が、複数の結果セットをサポートするかどうか (複数のステートメントをゲートウェイを使用して送り、複数の結果セットをクライアントに返すことができるかどうか) を示します。|Y|  
 |**22**|ACCESSIBLE_TABLES<br /><br /> 指定でかどうか**sp_tables**、唯一のテーブル、ビュー、およびに、現在のユーザー (つまり、テーブルの少なくとも SELECT 権限を持っているユーザー) がアクセスできるゲートウェイが返されます。|Y|  
 |"**100**"|USERID_LENGTH<br /><br /> ユーザー名の最大文字数を示します。|128|  
-|**101**|QUALIFIER_TERM<br /><br /> DBMS ベンダーの用語で、テーブル修飾子 (3 つの要素から成る名前の最初の部分) を示します。|database|  
+|**101**|QUALIFIER_TERM<br /><br /> DBMS ベンダーの用語で、テーブル修飾子 (3 つの要素から成る名前の最初の部分) を示します。|[データベース]|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 基になる DBMS が、名前付きトランザクションをサポートするかどうかを示します。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> ストアド プロシージャを言語イベントとして実行できるかどうかを示します。|Y|  
 |**104**|ACCESSIBLE_SPROC<br /><br /> 指定では、ある**sp_stored_procedures**ゲートウェイが現在のユーザーが実行可能なストアド プロシージャのみを返します。|Y|  
@@ -97,11 +97,11 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>解説  
  **sp_server_info**によって提供される情報のサブセットを返します**SQLGetInfo** ODBC にします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [カタログのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

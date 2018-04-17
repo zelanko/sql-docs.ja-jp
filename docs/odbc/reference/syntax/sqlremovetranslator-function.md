@@ -2,7 +2,7 @@
 title: SQLRemoveTranslator 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b076c209964110d2253681d97252ece25610ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6eef32c1e9a1497294cfbfddda0449423c2c04a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 関数
 **準拠**  
@@ -56,7 +56,7 @@ BOOL SQLRemoveTranslator(
  *lpdwUsageCount*  
  [出力]この関数が呼び出された後、変換プログラムの使用率カウントします。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。 エントリが存在しない場合、システム情報でこの関数が呼び出されたときに、関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  

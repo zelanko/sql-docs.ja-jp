@@ -2,7 +2,7 @@
 title: sys.dm_column_store_object_pool (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -20,11 +20,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c9ce143112a96856879fa90a1b29d2a9a451b58
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 87e29fcf0cda33208089f98b09bad395ef1ff722
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/05/2018
 |`column_id`|`int`|列ストアの列の ID。 これは、DELETE_BITMAP の場合は NULL です。| 
 |`row_group_id`|`int`|行グループの ID です。|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|Column_segment – では、列セグメント。 `object_id` セグメント ID です。 セグメントは、1 つの行グループ内の 1 つの列のすべての値を格納します。 たとえば、テーブルに 10 個の列がある場合は、行グループあたり 10 個の列セグメントです。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – A global dictionary that contains lookup information for all of the column segments in the table.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - 1 つの列に関連付けられているローカルのディクショナリ。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – グローバル辞書の別の表現。 これは、dictionary_id に値を逆の外観を提供します。 組ムーバーまたは一括読み込みの一部として圧縮されたセグメントを作成するために使用します。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – セグメントを追跡するビットマップを削除します。 パーティションごとに 1 つの delete ビットマップがあります。|  
+|`object_type_desc`|`nvarchar(60)`|Column_segment – では、列セグメント。 `object_id` セグメント ID です。 セグメントは、1 つの行グループ内の 1 つの列のすべての値を格納します。 たとえば、テーブルに 10 個の列がある場合は、行グループあたり 10 個の列セグメントです。 <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – 列セグメント テーブル内のすべての参照情報を格納しているグローバル ディクショナリ。<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - 1 つの列に関連付けられているローカルのディクショナリ。<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – グローバル辞書の別の表現。 これは、dictionary_id に値を逆の外観を提供します。 組ムーバーまたは一括読み込みの一部として圧縮されたセグメントを作成するために使用します。<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – セグメントを追跡するビットマップを削除します。 パーティションごとに 1 つの delete ビットマップがあります。|  
 |`access_count`|`int`|読み取りまたは、このオブジェクトへのアクセスの書き込みの数。|  
 |`memory_used_in_bytes`|`bigint`|オブジェクト プール内には、このオブジェクトによって使用されるメモリ。|  
 |`object_load_time`|`datetime`|Object_id が、オブジェクト プールになったは、クロック時間。|  

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_external_work (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_external_work (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_EXTERNAL_WORK
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfa5093bdd49caa95b36a948c103e27bbae1065c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc5c37ce63dda93ca251856648150b22aa9bea97
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -44,10 +45,10 @@ ms.lasthandoff: 02/03/2018
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|関連付けられている PolyBase クエリの一意の識別子。|参照してください*request_ID*で[sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|step_index|**int**|このワーカーは、要求を実行します。|参照してください*step_index*で[sys.dm_exec_requests &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
-|dms_step_index|**int**|このワーカーを実行している DMS プランのステップします。|参照してください[sys.dm_exec_dms_workers &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
-|compute_node_id|**int**|ノードの作業者が行われています。|参照してください[sys.dm_exec_compute_nodes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|execution_id|**nvarchar(32)**|関連付けられている PolyBase クエリの一意の識別子。|参照してください*request_ID*で[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)です。|  
+|step_index|**int**|このワーカーは、要求を実行します。|参照してください*step_index*で[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)です。|  
+|dms_step_index|**int**|このワーカーを実行している DMS プランのステップします。|参照してください[sys.dm_exec_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)です。|  
+|compute_node_id|**int**|ノードの作業者が行われています。|参照してください[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)です。|  
 |型|**nvarchar(60)**|外部の作業の種類。|[ファイルの分割]|  
 |work_id|**int**|実際の分割の ID です。|以上の値を 0 にします。|  
 |input_name|**nvarchar (4000)**|読み取るへの入力の名前|Hadoop を使用する場合は、ファイル名です。|  
@@ -62,6 +63,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>参照  
  [PolyBase 動的管理ビューでのトラブルシューティング](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

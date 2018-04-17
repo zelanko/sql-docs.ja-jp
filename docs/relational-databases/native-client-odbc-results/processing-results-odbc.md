@@ -1,15 +1,15 @@
 ---
-title: "処理 (Odbc) |Microsoft ドキュメント"
-ms.custom: 
+title: 処理 (Odbc) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], about result sets
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - result sets [ODBC]
 - COMPUTE BY clause
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f96430e6dee07e1c3bd385bb68b5057637974217
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 44484fe30b7dd6f672310fe69f3ba3a5c0e7bd89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-results-odbc"></a>結果の処理 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,13 +74,13 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [特性の結果セット &#40; ODBC &#41; を決定します。](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [特性の結果セット (&) #40; ODBC & #41; を決定します。](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
 -   [ストレージの割り当て](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
 -   [結果データのフェッチ](../../relational-databases/native-client-odbc-results/fetching-result-data.md)  
   
--   [データ型のマッピング &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
+-   [データ型のマッピング&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
   
 -   [データ型の使用方法](../../relational-databases/native-client-odbc-results/data-type-usage.md)  
   
@@ -87,6 +88,6 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [処理結果の操作方法に関するトピック &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [処理結果の操作方法に関するトピック (&) #40";"ODBC"&"#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

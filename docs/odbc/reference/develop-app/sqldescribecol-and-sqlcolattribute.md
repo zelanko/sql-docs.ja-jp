@@ -1,15 +1,16 @@
 ---
-title: "SQLDescribeCol と SQLColAttribute |Microsoft ドキュメント"
-ms.custom: 
+title: SQLDescribeCol と SQLColAttribute |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], and SQLDescribeCol
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a79fa6a02a5c17be0180b0593e28c7827e751bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4f3e09d40f81753029de94a480519540ebe6ef07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol と SQLColAttribute
 **SQLDescribeCol**と**SQLColAttribute**結果セットのメタデータの取得に使用されます。 これら 2 つの関数の違いを**SQLDescribeCol**中に情報 (列の名前、データ型、有効桁数、スケール、および null 値許容属性) の同じ 5 つの部分は常に返します**SQLColAttribute** 、1 つのアプリケーションによって要求された情報を返します。 ただし、 **SQLColAttribute**列の大文字小文字の区別を含む、メタデータのはるかに充実した選択範囲を返す、サイズ、更新、および検索機能を表示できます。  

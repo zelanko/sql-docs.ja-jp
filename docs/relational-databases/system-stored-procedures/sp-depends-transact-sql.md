@@ -1,16 +1,16 @@
 ---
-title: "sp_depends (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_depends (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_depends
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f10445e28fd8f0a23d5dcf3f11208cbb733bcc49
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 22068e036009c938cda5f67ad813021a863f8638
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   テーブルまたはビューに従属するビューおよびプロシージャ、ビューまたはプロシージャが従属するテーブルおよびビューなど、データベース オブジェクトの従属性に関する情報を表示します。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)と[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)と[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,19 +75,19 @@ sp_depends [ @objname = ] '<object>'
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|従属性が存在するアイテムの名前。|  
-|**型**|**nvarchar (16)**|アイテムの種類。|  
-|**更新**|**nvarchar (7)**|アイテムが更新されているかどうかを示します。|  
-|**選択されています。**|**nvarchar (8)**|アイテムが SELECT ステートメントで使用されているかどうかを示します。|  
-|**列**|**sysname**|従属性が存在する列またはパラメーター。|  
+|**type**|**nvarchar(16)**|アイテムの種類。|  
+|**更新**|**nvarchar(7)**|アイテムが更新されているかどうかを示します。|  
+|**選択されています。**|**nvarchar(8)**|アイテムが SELECT ステートメントで使用されているかどうかを示します。|  
+|**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
  次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >*です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|従属性が存在するアイテムの名前。|  
-|**型**|**nvarchar (16)**|アイテムの種類。|  
+|**type**|**nvarchar(16)**|アイテムの種類。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -109,10 +109,10 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sql_dependencies &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

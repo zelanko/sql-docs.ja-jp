@@ -1,16 +1,16 @@
 ---
-title: "sp_helppullsubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helppullsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e121aacbf65adc239f5474af32a863fc5d65f1f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54c20f748133b02604a59c96ae75004e7bbc6a93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
- リモート サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値は **%** 、すべてのパブリッシャーに対して情報が返されます。  
+ [ **@publisher=**] **'***publisher***'**  
+ リモート サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値は**%**、すべてのパブリッシャーに対して情報が返されます。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** 、すべてのパブリッシャー データベースが返されます。  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は**%**、すべてのパブリッシャー データベースが返されます。  
   
- [  **@publication=**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、すべてのパブリケーションが返されます。 このパラメーターがすべて、プル サブスクリプションのみ independent_agent = **0**が返されます。  
+ [ **@publication=**] **'***publication***'**  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションが返されます。 このパラメーターがすべて、プル サブスクリプションのみ independent_agent = **0**が返されます。  
   
  [  **@show_push=**] **'***show_push***'**  
  すべてのプッシュ サブスクリプションを返すかどうかを指定します。 *show_push*は**nvarchar (5)**、既定値は FALSE を返さないことプッシュ サブスクリプションです。  
@@ -70,16 +70,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**パブリケーション**|**sysname**|パブリケーションの名前です。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。|  
 |**サブスクリプションの種類**|**int**|パブリケーションへのサブスクリプションの種類。|  
-|**ディストリビューション エージェント**|**nvarchar (100)**|サブスクリプションを処理するディストリビューション エージェント。|  
+|**ディストリビューション エージェント**|**nvarchar(100)**|サブスクリプションを処理するディストリビューション エージェント。|  
 |**パブリケーションの説明**|**nvarchar (255)**|パブリケーションの説明です。|  
 |**最終更新時刻**|**date**|サブスクリプション情報を更新した時刻。 これは、ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh:mi:sss.mmm で、yyyy は年、mm は月、dd は日、hh は時間、mi は分、sss は秒、mmm はミリ秒を表します。|  
 |**サブスクリプション名**|**varchar(386)**|サブスクリプションの名前。|  
-|**最後のトランザクションのタイムスタンプ**|**varbinary (16)**|最後にレプリケートしたトランザクションのタイムスタンプ。|  
+|**最後のトランザクションのタイムスタンプ**|**varbinary(16)**|最後にレプリケートしたトランザクションのタイムスタンプ。|  
 |**更新モード**|**tinyint**|許可された更新の種類。|  
 |**ディストリビューション エージェント job_id**|**int**|ディストリビューション エージェントのジョブ ID。|  
 |**enabled_for_synmgr**|**int**|サブスクリプションを介した同期が可能かどうか、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。|  
-|**サブスクリプション guid**|**binary (16)**|パブリケーションに対してサブスクリプションのバージョンのグローバル識別子です。|  
-|**subid**|**binary (16)**|匿名サブスクリプションを表すグローバル識別子。|  
+|**サブスクリプション guid**|**binary(16)**|パブリケーションに対してサブスクリプションのバージョンのグローバル識別子です。|  
+|**subid**|**binary(16)**|匿名サブスクリプションを表すグローバル識別子。|  
 |**immediate_sync**|**bit**|スナップショット エージェントを実行するたびに、同期ファイルを作成または再作成するかどうかを示します。|  
 |**パブリッシャーのログイン**|**sysname**|パブリッシャーで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**パブリッシャーのパスワード**|**nvarchar (524)**|パブリッシャーで使用する (暗号化) パスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
@@ -112,12 +112,12 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>解説  
  **sp_helppullsubscription**は、スナップショットおよびトランザクション レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helppullsubscription**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_addpullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

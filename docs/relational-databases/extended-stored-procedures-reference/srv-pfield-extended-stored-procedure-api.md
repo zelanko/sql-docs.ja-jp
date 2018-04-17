@@ -1,16 +1,16 @@
 ---
-title: "srv_pfield (拡張ストアド プロシージャ API) | Microsoft Docs"
-ms.custom: 
+title: srv_pfield (拡張ストアド プロシージャ API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_pfield
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_pfield
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 157bf19237d3b2dcf64a1401823c746fd2849cf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c593cab9b3de64c0b2442c7c8be1390553b01497
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  データベース接続に関する情報を返します。  
   
@@ -64,7 +64,7 @@ len
  *field*  
  その接続について返すデータを指定します。  
   
-|[値]|返します。|  
+|値|返します。|  
 |-----------|-------------|  
 |SRV_APPLNAME|接続の確立時にクライアントから提供されたアプリケーション名。|  
 |SRV_BCPFLAG|クライアントが一括コピー操作の準備中である場合は TRUE、それ以外の場合は FALSE を示すフラグ。|  

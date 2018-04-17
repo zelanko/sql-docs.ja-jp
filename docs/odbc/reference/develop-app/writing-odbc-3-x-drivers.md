@@ -1,15 +1,16 @@
 ---
-title: "ODBC 3.x ドライバーの記述 |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC 3.x ドライバーの記述 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -17,99 +18,99 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27bdcf1a1254b24c87280fbfc86e4374e277a976
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-odbc-3x-drivers"></a>書き込み ODBC 3.x ドライバー
 次の表は、ODBC 3 関数のサポートを示します。*x*ドライバーと ODBC アプリケーションでは、ODBC 3 に対して関数が呼び出されると、ドライバー マネージャーでを実行するマッピング*。x*ドライバー。  
   
-|機能|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> アプリケーションか。|マップ サポート<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
+|関数|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3 です。*x*<br /><br /> アプリケーションか。|マップ サポート<br /><br /> ODBC 3 です。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|不可|[1]|可|  
-|**SQLAllocEnv**|不可|[1]|可|  
-|**SQLAllocHandle**|可|可|不可|  
-|**SQLAllocStmt**|不可|[1]|可|  
-|**SQLBindCol**|可|可|不可|  
-|**SQLBindParam**|不可|[2] を [はい]|可|  
-|**SQLBindParameter**|可|可|不可|  
-|**SQLBrowseConnect**|可|可|不可|  
-|**SQLBulkOperations**|可|可|不可|  
-|**SQLCancel**|可|可|不可|  
-|**SQLCloseCursor**|可|可|不可|  
-|**SQLColAttribute**|可|可|不可|  
-|**SQLColAttributes**|[3]|不可|可|  
-|**SQLColumnPrivileges**|可|可|不可|  
-|**SQLColumns**|可|可|不可|  
-|**SQLConnect**|可|可|不可|  
-|**SQLCopyDesc**|可|可|[はい] [4]|  
-|**SQLDataSources**|不可|可|可|  
-|**SQLDescribeCol**|可|可|不可|  
-|**SQLDescribeParam**|可|可|不可|  
-|**SQLDisconnect**|可|可|不可|  
-|**SQLDriverConnect**|可|可|不可|  
-|**SQLDrivers**|不可|可|可|  
-|**SQLEndTran**|可|可|不可|  
-|**SQLError**|不可|[1]|可|  
-|**SQLExecDirect**|可|可|不可|  
-|**SQLExecute**|可|可|不可|  
-|**SQLExtendedFetch**|可|不可|不可|  
-|**SQLFetch**|可|可|不可|  
-|**SQLFetchScroll**|可|可|不可|  
-|**SQLForeignKeys**|可|可|不可|  
-|**SQLFreeConnect**|不可|[1] を [はい]|可|  
-|**SQLFreeEnv**|不可|[1] を [はい]|可|  
-|**SQLFreeHandle**|可|可|不可|  
-|**SQLFreeStmt**|可|可|不可|  
-|**SQLGetConnectAttr**|可|可|不可|  
-|**SQLGetConnectOption**|[5]|[1]|可|  
-|**SQLGetCursorName**|可|可|不可|  
-|**SQLGetData**|可|可|不可|  
-|**SQLGetDescField**|可|可|不可|  
-|**SQLGetDescRec**|可|可|不可|  
-|**SQLGetDiagField**|可|可|不可|  
-|**SQLGetDiagRec**|可|可|不可|  
-|**SQLGetEnvAttr**|可|可|不可|  
-|**SQLGetFunctions**|[6]|可|可|  
-|**SQLGetInfo**|可|可|不可|  
-|**SQLGetStmtAttr**|可|可|不可|  
-|**SQLGetStmtOption**|[5]|[1]|可|  
-|**SQLGetTypeInfo**|可|可|不可|  
-|**SQLMoreResults**|可|可|不可|  
-|**SQLNativeSql**|可|可|不可|  
-|**SQLNumParams**|可|可|不可|  
-|**SQLNumResultCols**|可|可|不可|  
-|**SQLParamData**|可|可|不可|  
-|**SQLParamOptions**|不可|不可|可|  
-|**SQLPrepare**|可|可|不可|  
-|**SQLPrimaryKeys**|可|可|不可|  
-|**SQLProcedureColumns**|可|可|不可|  
-|**SQLProcedures**|可|可|不可|  
-|**SQLPutData**|可|可|不可|  
-|**SQLRowCount**|可|可|不可|  
-|**SQLSetConnectAttr**|可|可|不可|  
-|**SQLSetConnectOption**|[5]|[1]|可|  
-|**SQLSetCursorName**|可|可|不可|  
-|**SQLSetDescField**|可|可|不可|  
-|**SQLSetDescRec**|可|可|不可|  
-|**SQLSetEnvAttr**|可|可|不可|  
-|**SQLSetPos**|可|可|不可|  
-|**SQLSetParam**|不可|不可|可|  
-|**SQLSetScrollOption**|可|可|不可|  
-|**SQLSetStmtAttr**|可|可|不可|  
-|**SQLSetStmtOption**|[5]|[1]|可|  
-|**SQLSpecialColumns**|可|可|不可|  
-|**SQLStatistics**|可|可|不可|  
-|**SQLTablePrivileges**|可|可|不可|  
-|**SQLTables**|可|可|不可|  
-|**SQLTransact**|不可|[1]|可|  
+|**SQLAllocConnect**|いいえ|[1]|はい|  
+|**SQLAllocEnv**|いいえ|[1]|はい|  
+|**SQLAllocHandle**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLAllocStmt**|いいえ|[1]|はい|  
+|**SQLBindCol**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLBindParam**|いいえ|[2] を [はい]|はい|  
+|**SQLBindParameter**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLBrowseConnect**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLBulkOperations**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLCancel**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLCloseCursor**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLColAttribute**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLColAttributes**|[3]|いいえ|はい|  
+|**SQLColumnPrivileges**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLColumns**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLConnect**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLCopyDesc**|はい|はい|[はい] [4]|  
+|**SQLDataSources**|いいえ|[ユーザー アカウント制御]|はい|  
+|**SQLDescribeCol**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLDescribeParam**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLDisconnect**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLDriverConnect**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLDrivers**|いいえ|[ユーザー アカウント制御]|はい|  
+|**SQLEndTran**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLError**|いいえ|[1]|はい|  
+|**SQLExecDirect**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLExecute**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLExtendedFetch**|はい|いいえ|いいえ|  
+|**SQLFetch**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLFetchScroll**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLForeignKeys**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLFreeConnect**|いいえ|[1] を [はい]|はい|  
+|**SQLFreeEnv**|いいえ|[1] を [はい]|はい|  
+|**SQLFreeHandle**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLFreeStmt**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetConnectAttr**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetConnectOption**|[5]|[1]|はい|  
+|**SQLGetCursorName**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetData**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetDescField**|はい|[ユーザー アカウント制御]|いいえ|  
+|**Sqlgetdescrec による**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetDiagField**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetDiagRec**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetEnvAttr**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetFunctions**|[6]|はい|はい|  
+|**SQLGetInfo**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetStmtAttr**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLGetStmtOption**|[5]|[1]|はい|  
+|**SQLGetTypeInfo**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLMoreResults**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLNativeSql**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLNumParams**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLNumResultCols**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLParamData**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLParamOptions**|いいえ|いいえ|はい|  
+|**SQLPrepare**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLPrimaryKeys**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLProcedureColumns**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLProcedures**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLPutData**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLRowCount**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetConnectAttr**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetConnectOption**|[5]|[1]|はい|  
+|**SQLSetCursorName**|はい|[ユーザー アカウント制御]|いいえ|  
+|**Sqlsetdescfield による**|はい|[ユーザー アカウント制御]|いいえ|  
+|**Sqlsetdescrec による**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetEnvAttr**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetPos**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetParam**|いいえ|いいえ|はい|  
+|**SQLSetScrollOption**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetStmtAttr**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLSetStmtOption**|[5]|[1]|はい|  
+|**SQLSpecialColumns**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLStatistics**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLTablePrivileges**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLTables**|はい|[ユーザー アカウント制御]|いいえ|  
+|**SQLTransact**|いいえ|[1]|はい|  
   
  [1] この関数は、ODBC 3 で廃止されました。*x*です。 ODBC 3 です。*x*アプリケーションでは、この関数は使用する必要があります。 ただし、Open Group または ISO CLI 互換のアプリケーションは、この関数を呼び出すことができます。  
   

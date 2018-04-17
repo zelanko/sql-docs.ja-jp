@@ -1,16 +1,16 @@
 ---
-title: dbo.sysdownloadlist (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dbo.sysdownloadlist (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdownloadlist
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8e8dc5a4e145cf0965fa509029225336e621c9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 77e6f3c548e7ab610b84c68cc1545836cfc02c77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|行の挿入順序を表す ID 列。|  
 |**source_server**|**sysname**|ソース サーバーの名前。|  
-|**operation_code**|**tinyint**|ジョブの操作コード。<br /><br /> **1**アドイン (INSERT) を =<br /><br /> **2** UPD (更新) を =<br /><br /> **3** DEL (削除) を =<br /><br /> **4**開始を =<br /><br /> **5** = STOP|  
+|**operation_code**|**tinyint**|ジョブの操作コード。<br /><br /> **1**アドイン (INSERT) を =<br /><br /> **2** UPD (更新) を =<br /><br /> **3** DEL (削除) を =<br /><br /> **4**開始を =<br /><br /> **5**停止を =|  
 |**object_type**|**tinyint**|オブジェクトの種類のコード。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|オブジェクト ID 番号。|  
 |**target_server**|**sysname**|対象サーバーの名前。|  

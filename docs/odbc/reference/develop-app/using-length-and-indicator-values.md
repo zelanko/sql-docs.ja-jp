@@ -1,15 +1,16 @@
 ---
-title: "長さのインジケーター値を使って |Microsoft ドキュメント"
-ms.custom: 
+title: 長さのインジケーター値を使って |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c3a817aa541d397a46ae75d09ed09ccbb550842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-length-and-indicator-values"></a>長さとインジケーターの値を使用してください。
 長さ/インジケーター バッファーを使用して、データ バッファーやデータが NULL であることを示す SQL_NULL_DATA などの特殊なインジケーター内のデータのバイトの長さを渡します。 使用されている、関数によっては、長さ/インジケーター バッファーは、SQLINTEGER または、SQLSMALLINT に定義されます。 そのため、それを記述する 1 つの引数が必要です。 データ バッファーが使用中として入力バッファーの場合は、この引数には、データ自体のバイトの長さまたはインジケーターの値が含まれます。 という名前が多くの場合、 *StrLen_or_Ind*または類似した名前です。 たとえば、次のコード呼び出し**SQLPutData**にバッファーを渡すデータの完全; バイトの長さ (*ValueLen*) あるために、直接渡すはデータ バッファー (*ValuePtr*) は入力バッファー。  
@@ -58,7 +59,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  長さまたはインジケーターの値として有効な次の長さです。  
   
--   *n*、、  *n*  > 0 です。  
+-   *n*ここで、 *n* > 0 です。  
   
 -   0.  
   

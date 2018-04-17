@@ -1,35 +1,35 @@
 ---
-title: "照合順序と CLR 統合データ タイプ |Microsoft ドキュメント"
-ms.custom: 
+title: 照合順序と CLR 統合データ タイプ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data types [CLR integration]
 - parameter collation [CLR integration]
 - collations [CLR integration]
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab94a6397d8b070af754fa5fd8dd47f9bd553630
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 617c8dea3844f1b2ae980775949d4d1c793b4f1a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="collation-and-clr-integration-data-types"></a>照合順序と CLR 統合データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **CompareInfo**オブジェクトは照合順序を処理します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文字列のアプリケーション プログラミング インターフェイス (Api) を使用して、 **CompareInfo**プロパティに関連付けられている、 **CultureInfo**現在のスレッドの文字列比較を実行するオブジェクト。 既定の設定、 **CultureInfo**オブジェクトがに基づいて、[!INCLUDE[msCoName](../../includes/msconame-md.md)]いるコンピューターの Windows ロケール設定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 これは、設定で決定既定の比較セマンティクスは、明示的な**CultureInfo**指定すると、比較の**System.String**値。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]明示的に変わらないので、 **CompareInfo**プロパティをデータベースまたはサーバーの照合順序。 必要な場合、ユーザーは、適切な設定する必要があります**CompareInfo**がルーチン内でのプロパティです。  
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **CompareInfo**オブジェクトは照合順序を処理します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文字列のアプリケーション プログラミング インターフェイス (Api) を使用して、 **CompareInfo**プロパティに関連付けられている、 **CultureInfo**現在のスレッドの文字列比較を実行するオブジェクト。 既定の設定、 **CultureInfo**オブジェクトがに基づいて、[!INCLUDE[msCoName](../../includes/msconame-md.md)]いるコンピューターの Windows ロケール設定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されています。 これは、設定で決定既定の比較セマンティクスは、明示的な**CultureInfo**指定すると、比較の**System.String**値。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明示的に変わらないので、 **CompareInfo**プロパティをデータベースまたはサーバーの照合順序。 必要な場合、ユーザーは、適切な設定する必要があります**CompareInfo**がルーチン内でのプロパティです。  
   
 ## <a name="parameter-collation"></a>パラメーターの照合順序  
  型のルーチンは、共通言語ランタイム (CLR) のルーチンを作成すると、CLR のメソッドのパラメーターにバインド**SQLString**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの既定の照合順序でパラメーターのインスタンスを作成呼び出し元のルーチンを含むです。 パラメーターではない場合、 **SqlType** (たとえば、**文字列**なく**SQLString**)、データベースの照合順序情報は、パラメーターに関連付けられていません。  

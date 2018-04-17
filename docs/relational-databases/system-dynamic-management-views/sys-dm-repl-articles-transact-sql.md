@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_repl_articles (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdesttable**|**nvarchar(514)**|パブリッシュ先での、パブリッシュされたオブジェクトの名前。|  
 |**wszArtdesttableowner**|**nvarchar(514)**|パブリッシュ先での、パブリッシュされたオブジェクトの所有者。|  
 |**wszArtinscmd**|**nvarchar(510)**|挿入に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeIns**|**int**|挿入ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeIns**|**int**|挿入ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
 |**wszArtdelcmd**|**nvarchar(510)**|削除に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeDel**|**int**|削除ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeDel**|**int**|削除ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **7** = UNKNOWN|  
 |**wszArtupdcmd**|**nvarchar(510)**|更新に使用されるコマンドまたはストアド プロシージャ。|  
-|**cmdTypeUpd**|**int**|更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **4** MCALL を =<br /><br /> **5** = VCALL<br /><br /> **6** SCALL を =<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **0** XCALL を =<br /><br /> **1**呼び出しを =<br /><br /> **2** = SQL<br /><br /> **3** = なし<br /><br /> **4** MCALL を =<br /><br /> **5** VCALL を =<br /><br /> **6** SCALL を =<br /><br /> **7** = UNKNOWN|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|部分更新に使用されるコマンドまたはストアド プロシージャ。|  
 |**cmdTypePartialUpd**|**int**|部分更新ストアド プロシージャの呼び出し構文。次のいずれかになります。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|列方向にフィルター選択されたアーティクルのパーティション内の列数。|  
-|**artcmdtype**|**tinyint**|現在レプリケートされているコマンドの種類。次のいずれかになります。<br /><br /> **1**挿入を =<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = なし<br /><br /> **6** = 内部使用のみ<br /><br /> **7** = 内部使用のみ<br /><br /> **8** = 部分的な更新|  
+|**artcmdtype**|**tinyint**|現在レプリケートされているコマンドの種類。次のいずれかになります。<br /><br /> **1**挿入を =<br /><br /> **2** = DELETE<br /><br /> **3**更新プログラムを =<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = なし<br /><br /> **6** = 内部使用のみ<br /><br /> **7** = 内部使用のみ<br /><br /> **8** = 部分的な更新|  
 |**artgeninscmd**|**nvarchar(510)**|アーティクルに含まれる列に基づく INSERT コマンド テンプレート。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE コマンド テンプレート。呼び出し構文が使用されているかどうかに基づいて、アーティクル内にある主キーまたは列が含まれます。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE コマンド テンプレート。呼び出し構文が使用されているかどうかに基づいて、主キー、更新された列、または完全な列リストが含まれます。|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [レプリケーション関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [レプリケーション関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

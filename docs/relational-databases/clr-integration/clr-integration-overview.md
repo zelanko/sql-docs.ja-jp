@@ -1,15 +1,15 @@
 ---
-title: "CLR 統合の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -20,27 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e0dd551de6b8ac7c9174d6cbccdb8378d195854
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration---overview"></a>CLR 統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-CLR (共通言語ランタイム) は Microsoft .NET Framework の中核部分であり、あらゆる .NET Framework コードに対する実行環境を提供します。 CLR 内で実行されるコードを、マネージ コードと呼びます。 CLR では、JIT (Just-In-Time) コンパイル、メモリの割り当てと管理、タイプ セーフの確保、例外処理、スレッド管理、セキュリティなど、プログラムの実行に必要なさまざまな機能やサービスが提供されます。  詳細については、.NET Framework SDK を参照してください。  
+  CLR (共通言語ランタイム) は Microsoft .NET Framework の中核部分であり、あらゆる .NET Framework コードに対する実行環境を提供します。 CLR 内で実行されるコードを、マネージ コードと呼びます。 CLR では、JIT (Just-In-Time) コンパイル、メモリの割り当てと管理、タイプ セーフの確保、例外処理、スレッド管理、セキュリティなど、プログラムの実行に必要なさまざまな機能やサービスが提供されます。  詳細については、.NET Framework SDK を参照してください。  
   
  Microsoft SQL Server でホストされる CLR のことを CLR 統合と呼びます。この CLR 統合を使用すると、マネージ コードで、ストアド プロシージャ、トリガー、ユーザー定義関数、ユーザー定義型、ユーザー定義集計を作成できます。 マネージ コードは実行前にネイティブ コードにコンパイルされるので、シナリオによってはパフォーマンスの大幅な向上を図ることができます。  
   
  マネージ コードでは、アセンブリが特定の操作を実行できないように、CAS (コード アクセス セキュリティ) が使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CAS を使用して、マネージ コードをセキュリティで保護し、オペレーティング システムやデータベース サーバーが危険にさらされる状況を回避しています。  
   
 ## <a name="advantages-of-clr-integration"></a>CLR 統合機能の利点  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 直接のデータ アクセスおよびデータベースの操作用に作られています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] はデータへのアクセスやデータの管理に優れていますが、いわゆる本格的なプログラミング言語ではありません。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] では、配列、コレクション、for-each ループ、ビット シフト、およびクラスはサポートされません。 このような構成要素の一部は [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して類似したものを作成することもできますが、マネージ コードにはこれらの構成要素に対するサポートが組み込まれています。 シナリオによっては、この特性が、特定のデータベースの機能をマネージ コードに実装するかどうかの決め手となることがあります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] は、データに直接アクセスしたり、データベースを直接操作することを主眼に設計されています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] はデータへのアクセスやデータの管理に優れていますが、いわゆる本格的なプログラミング言語ではありません。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] では、配列、コレクション、for-each ループ、ビット シフト、およびクラスはサポートされません。 このような構成要素の一部は [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して類似したものを作成することもできますが、マネージ コードにはこれらの構成要素に対するサポートが組み込まれています。 シナリオによっては、この特性が、特定のデータベースの機能をマネージ コードに実装するかどうかの決め手となることがあります。  
   
  Microsoft Visual Basic .NET と Microsoft Visual C# では、カプセル化、継承、多態性などオブジェクト指向の機能が提供されています。 関連のあるコードは、簡単にクラスや名前空間に編成することができます。 大量のサーバー コードを使用している場合も、この機能により、コードの編成と管理を簡略化できます。  
   

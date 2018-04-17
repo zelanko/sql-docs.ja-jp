@@ -2,7 +2,7 @@
 title: 配置 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0368a42e1f6238e151dd14de03012237f9c20cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alignment"></a>Alignment
 ODBC アプリケーションで配置の問題は一般にまったく同じ、他のアプリケーションよりも。 つまり、ほとんどの ODBC アプリケーションでは、配置にほとんどまたはまったくの問題があります。 処罰のアドレスを配置できませんハードウェアとオペレーティング システムでさまざまであり、わずかなパフォーマンスの低下としてとしてマイナーまたは実行時の致命的なエラーとして、メジャーがあります。 したがって、ODBC アプリケーション、およびポータブルの ODBC アプリケーション具体的には、する必要がありますデータを正しく整列するように注意します。  

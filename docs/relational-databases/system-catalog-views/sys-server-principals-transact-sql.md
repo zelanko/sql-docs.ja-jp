@@ -1,16 +1,16 @@
 ---
-title: "sys.server_principals (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.server_principals (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_principals catalog view
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a37a7a41cfb219ec584c03b932cfe450cead48c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3705caa0221d2e0f4a6b93b6d2ffffb9b2fcb9e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|プリンシパルの名前。 サーバー内で一意です。|  
 |**principal_id**|**int**|プリンシパルの ID 番号。 サーバー内で一意です。|  
-|**sid**|**varbinary (85)**|プリンシパルの SID (セキュリティ識別子)。 Windows プリンシパルの場合、これは Windows SID に一致します。|  
-|**型**|**char (1)**|プリンシパルの種類。<br /><br /> S = SQL ログイン<br /><br /> U = Windows ログイン<br /><br /> G = Windows グループ<br /><br /> R = サーバー ロール<br /><br /> C = 証明書にマップされるログイン<br /><br /> K = 非対称キーにマップされるログイン|  
-|**type_desc**|**nvarchar (60)**|プリンシパルの種類の説明:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**sid**|**varbinary(85)**|プリンシパルの SID (セキュリティ識別子)。 Windows プリンシパルの場合、これは Windows SID に一致します。|  
+|**type**|**char(1)**|プリンシパルの種類。<br /><br /> S = SQL ログイン<br /><br /> U = Windows ログイン<br /><br /> G = Windows グループ<br /><br /> R = サーバー ロール<br /><br /> C = 証明書にマップされるログイン<br /><br /> K = 非対称キーにマップされるログイン|  
+|**type_desc**|**nvarchar(60)**|プリンシパルの種類の説明:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = ログインは無効です。|  
 |**create_date**|**datetime**|プリンシパルが作成された日時。|  
 |**modify_date**|**datetime**|プリンシパルの定義が最後に変更された日時。|  
@@ -54,10 +55,10 @@ ms.lasthandoff: 11/21/2017
 |**owning_principal_id**|**int**|**Principal_id**サーバー ロールの所有者のです。 プリンシパルがサーバー ロールでない場合は NULL です。|  
 |**is_fixed_role**|**bit**|プリンシパルが固定サーバー ロールの場合、1 を返します。 詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  すべてのログインは自分のログイン名、システム ログイン、および固定サーバー ロールを参照できます。 他のログインを参照するには、ALTER ANY LOGIN、またはログインに対する権限が必要です。 ユーザー定義のサーバー ロールを参照するには、ALTER ANY SERVER ROLE、またはロールのメンバーシップが必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
  次のクエリは、サーバー プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  

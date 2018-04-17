@@ -1,16 +1,16 @@
 ---
-title: "sp_marksubscriptionvalidation (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_marksubscriptionvalidation (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b6286a062e41741145962cf123041812b6d366c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 774c796716705a61de3ab0885261a4838357902c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@subscriber** =] **'***サブスクライバー***'**  
+ [ **@subscriber**=] **'***サブスクライバー***'**  
  サブスクライバーの名前です。 *サブスクライバー*は sysname で、既定値はありません。  
   
  [  **@destination_db=**] **'***destination_db***'**  
@@ -74,13 +74,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
  非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行することはできません、発行元**sp_marksubscriptionvalidation**から明示的なトランザクションです。 これは、パブリッシャーへのアクセスに使用されるリンク サーバー接続で、明示的なトランザクションがサポートされないためです。  
   
- **sp_marksubscriptionvalidation**と組み合わせて使用する必要があります[sp_article_validation (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)の値を指定する**1**の*subscription_level*とには、その他の呼び出しで使用できます**sp_marksubscriptionvalidation**を示すために、その他のサブスクライバーに対して現在開いているトランザクションです。  
+ **sp_marksubscriptionvalidation**と組み合わせて使用する必要があります[sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)の値を指定する**1**の*subscription_level*とには、その他の呼び出しで使用できます**sp_marksubscriptionvalidation**を他のサブスクライバーの現在開いているトランザクションをマークします。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_marksubscriptionvalidation**です。  
   
 ## <a name="example"></a>例  
- 次のクエリは、サブスクリプションレベルの検証コマンドを通知するために、パブリッシング データベースに適用できます。 これらのコマンドは、指定されたサブスクライバーのディストリビューション エージェントによって処理されます。 最初のトランザクションがアーティクルを検証することに注意してください '**art1**'、トランザクションの検証中、2 番目に'**art2**' です。 またへの呼び出し**sp_marksubscriptionvalidation**と[sp_article_validation (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションにカプセル化します。 1 つだけの呼び出しをお勧め[sp_article_validation (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) (トランザクションあたり)。 これは、ため[sp_article_validation (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションの実行中、ソース テーブルで、共有テーブル ロックを保持します。 同時実行性を最大限に高めるために、トランザクションは短くしてください。  
+ 次のクエリは、サブスクリプションレベルの検証コマンドを通知するために、パブリッシング データベースに適用できます。 これらのコマンドは、指定されたサブスクライバーのディストリビューション エージェントによって処理されます。 最初のトランザクションがアーティクルを検証することに注意してください '**art1**'、トランザクションの検証中、2 番目に'**art2**' です。 なおへの呼び出し**sp_marksubscriptionvalidation**と[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションにカプセル化されました。 1 つだけの呼び出しをお勧め[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) (トランザクションあたり)。 これは、ため[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションの実行中、ソース テーブルで、共有テーブル ロックを保持します。 同時実行性を最大限に高めるために、トランザクションは短くしてください。  
   
 ```  
 begin tran  

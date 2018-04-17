@@ -1,16 +1,16 @@
 ---
-title: "sp_unbindefault (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_unbindefault (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_unbindefault_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bb54f7beba7a4c08be537c74a49889942558b11
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7db184099a58cf2dd6c8395a23a316739d4437a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   現在のデータベースの列または別名データ型から、デフォルトをバインド解除 (削除) します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]DEFAULT キーワードを使用して既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT キーワードを使用して既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@objname=** ] **'***object_name***'**  
+ [ **@objname=** ] **'***object_name***'**  
  デフォルトをバインド解除する、テーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
   
  別名データ型からデフォルトをバインド解除すると、そのデータ型の列で同じデフォルトが設定されている列もバインド解除されます。 ただし、同じデータ型でも、デフォルトが直接バインドされている列は影響を受けません。  
@@ -58,7 +58,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 > [!NOTE]  
 >  *object_name*角かっこを含めることができます**:operator[]**として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  別名データ型からデフォルトをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、既存のデータ型の列には、指定されたデフォルトは失われません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -67,7 +67,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="remarks"></a>解説  
  表示するには、既定値のテキスト実行**sp_helptext**パラメーターとして既定の名前に置き換えます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  テーブルの列からデフォルトをバインド解除するには、そのテーブルに対する ALTER 権限が必要です。 別名データ型からデフォルトをバインド解除するには、そのデータ型に対する CONTROL 権限、またはそのデータ型が属するスキーマに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -110,10 +110,10 @@ EXEC sp_unbindefault '[t.3].c1';
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [既定値 &#40; を削除します。TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_bindefault &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

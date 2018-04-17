@@ -1,16 +1,16 @@
 ---
-title: "sp_dropextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_dropextendedproperty (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropextendedproperty_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed3a14354abb946bd072cf1f1b3da29a1667c0e2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b8937b491afa9489779513a20ace182a49ef56e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_dropextendedproperty
   
  指定する有効な*property_name*プロパティが削除されるか、すべてのオブジェクトの種類および名前が null と、プロパティは、現在のデータベースに存在するかどうか。 このトピックの例 B を参照してください。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  固定データベース ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトの拡張プロパティを削除できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、およびロールに対しては、プロパティを追加できません。  
   
  ユーザーは、自身が所有するオブジェクト、および ALTER 権限または CONTROL 権限を持つオブジェクトの拡張プロパティを削除できます。  
@@ -139,10 +139,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

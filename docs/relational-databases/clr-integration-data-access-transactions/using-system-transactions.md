@@ -1,15 +1,15 @@
 ---
-title: "System.Transactions の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: System.Transactions の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 67ccba900d3aa22b5aad79e6112fbc8695298e85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**System.Transactions**名前空間は ADO.NET と完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions.TransactionScope**クラスは、暗黙的に接続を分散トランザクションに参加させることで、コード ブロックをトランザクションです。 呼び出す必要があります、**完了**でマークされたメソッドのコード ブロックの最後に、 **TransactionScope**です。 **Dispose**プログラムの実行が中止された場合、トランザクションの原因と、コード ブロックを離れるときに、メソッドが呼び出され、**完了**メソッドは呼び出されません。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
+  **System.Transactions**名前空間は ADO.NET と完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions.TransactionScope**クラスは、暗黙的に接続を分散トランザクションに参加させることで、コード ブロックをトランザクションです。 呼び出す必要があります、**完了**でマークされたメソッドのコード ブロックの最後に、 **TransactionScope**です。 **Dispose**プログラムの実行が中止された場合、トランザクションの原因と、コード ブロックを離れるときに、メソッドが呼び出され、**完了**メソッドは呼び出されません。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
   
  使用されていることをお勧め、**を使用して**いることを確認するブロック、 **Dispose**メソッドが、 **TransactionScope**オブジェクトと、 **を使用して**ブロックを終了します。 コミットまたは保留中のトランザクションをロールバックに失敗することができます重大なパフォーマンスが低下するための既定のタイムアウト、 **TransactionScope**は 1 分です。 使用しない場合、**を使用して**ステートメントでは、すべての処理を実行する必要があります、**再試行**をブロックし、明示的に呼び出す、 **Dispose**メソッドで、**最後に**ブロックします。  
   

@@ -1,15 +1,16 @@
 ---
-title: "SQL ステートメントの処理 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL ステートメントの処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sending SQL statements to DBMS [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaf3c1fddb673e0cd62d334e9b87eeb2d9016ec6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6ad96aa66a68d83677b85ca28cf1f6d0a1fefccf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによる SQL を使用する方法を説明する前に、SQL ステートメントを処理する方法について説明する必要があります。 必要な手順は、各方法に異なるタイミングで実行が次の 3 つの方法がすべてに必要な場合に共通です。 次の図では、このセクションの残りの部分で説明する SQL ステートメントの処理に関連した手順を示します。  

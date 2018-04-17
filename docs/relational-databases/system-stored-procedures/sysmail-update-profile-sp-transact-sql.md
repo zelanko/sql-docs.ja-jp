@@ -1,16 +1,16 @@
 ---
-title: "sysmail_update_profile_sp (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_update_profile_sp (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profile_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1da9b999f30a31928849f5a31a2144117d94e1f7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f16d17779ed6c60ef91b89503f69259eb2093d74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
  [ **@profile_id** = ] *profile_id*  
  更新するプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。 少なくとも 1 つの*profile_id*または*profile_name*指定する必要があります。 両方を指定した場合、プロシージャではプロファイルの名前が変更されます。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'***profile_name***'**  
  更新するプロファイルの名前、またはプロファイルの新しい名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*profile_id*または*profile_name*指定する必要があります。 両方を指定した場合、プロシージャではプロファイルの名前が変更されます。  
   
- [  **@description**  =] **'***説明***'**  
+ [ **@description** =] **'***説明***'**  
  プロファイルの新しい説明を指定します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -93,6 +93,6 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [データベース メールのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

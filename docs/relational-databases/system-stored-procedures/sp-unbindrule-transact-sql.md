@@ -1,16 +1,16 @@
 ---
-title: "sp_unbindrule (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_unbindrule (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_unbindrule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 587578e7b9133b5323557b6cd1b5246a148bcb6e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 066e2b7f88f9afd82b8f76418bfd2efc1e32b85a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   現在のデータベース内の列または別名データ型のルールをバインド解除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]DEFAULT キーワードを使用して既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] DEFAULT キーワードを使用して既定の定義を作成することをお勧め、 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)または[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ステートメント代わりにします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,26 +50,26 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@objname=** ] **'***object_name***'**  
+ [ **@objname=** ] **'***object_name***'**  
  ルールをバインド解除する、テーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型のルールをバインド解除すると、指定したデータ型の列のルールがすべてバインド解除されます。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
   
 > [!NOTE]  
 >  *object_name*角かっこを含めることができます**:operator[]**として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  別名データ型からルールをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には、指定されたルールは失われません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- ルールのテキストを表示するには実行**sp_helptext**ルール名、パラメーターを使用します。  
+ ルールのテキストを表示するには、ルール名をパラメーターに使用して **sp_helptext** を実行します。  
   
  ルールがバインド解除、バインドに関する情報はから削除、 **sys.columns**テーブルの列との間に、ルールがバインドされていた場合、 **sys.types**テーブルの場合は、ルールを別名データ型にバインドされました。  
   
  別名データ型からルールをバインド解除すると、その別名データ型のすべての列からも該当するルールがバインド解除されます。 ルールは、列のデータ型が変更されたか後で ALTER TABLE ステートメントの ALTER COLUMN 句にもバインド可能性がありますを使用してこれらの列からルールをバインド解除する必要があります具体的には**sp_unbindrule**を指定して、列の名前。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  テーブル列からルールをバインド解除するには、そのテーブルに対する ALTER 権限が必要です。 別名データ型からルールをバインド解除するには、そのデータ型に対する CONTROL 権限、またはそのデータ型が属するスキーマに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -113,10 +113,10 @@ EXEC sp_unbindrule '[t.4].c1';
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [DROP RULE &#40;TRANSACT-SQL と #41 です。](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_bindrule &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

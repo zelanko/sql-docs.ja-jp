@@ -1,30 +1,31 @@
 ---
-title: "ODBC 日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC 日付と時刻の強化のデータ型のサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17acf73e2a190b1a9f55c07dc24d7ce391056aee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b92a4e5cbb678e4c40bda526b0796e4a3beaf696
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日付と時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/25/2018
   
  次の表は、サーバーの完全な種類のマッピングを示します。 表の一部のセルには、2 つの項目が記載されています。このような場合、1 つ目は ODBC 3.0 の値、2 つ目は ODBC 2.0 の値です。  
   
-|SQL Server データ型|SQL データ型|[値]|  
+|SQL Server データ型|SQL データ型|値|  
 |--------------------------|-------------------|-----------|  
 |DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/25/2018
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |日付|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |[時刻]|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' - yyyy-mm-dd hh:mm:ss [.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
   
  日付リテラルまたは時刻リテラルの ODBC エスケープ シーケンスに変更はありません。  
@@ -145,6 +146,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  場合、 **timezone_hour**は負の値、 **timezone_minute**負の値である必要がありますまたはゼロです。 場合、 **timezone_hour**が正の値、 **timezone_minute**正である必要がありますまたはゼロです。 場合、 **timezone_hour**ゼロ、s**timezone_minute** -59 ~ +59 の範囲内で任意の値があります。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "レコード生成処理 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: レコード生成処理 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7e494f0d849834bfe4434f42da1de8fddb9d10d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>レコードの生成処理 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 一括読み込みでは、XML 入力データが処理され、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の適切なテーブルに格納するレコードが用意されます。 XML 一括読み込みのロジックでは、新しいレコードを生成するタイミングと、レコードのフィールドにコピーする子要素および属性値が決定され、完成したレコードを挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信するタイミングが判断されます。  
+  XML 一括読み込みでは、XML 入力データが処理され、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の適切なテーブルに格納するレコードが用意されます。 XML 一括読み込みのロジックでは、新しいレコードを生成するタイミングと、レコードのフィールドにコピーする子要素および属性値が決定され、完成したレコードを挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信するタイミングが判断されます。  
   
  XML 一括読み込みでは、すべての XML 入力データがメモリに読み込まれるわけではなく、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にデータが送信される前に完全なレコード セットが作成されるわけではありません。 これは、XML 入力データが大きなドキュメントの場合に、ドキュメント全体をメモリに読み込むと時間がかかる可能性があるためです。 代わりに、XML 一括読み込みでは次の操作が行われます。  
   
@@ -50,7 +51,7 @@ XML 一括読み込みでは、XML 入力データが処理され、Microsoft [!
  XML 一括読み込みでは、注釈により明示的に、または既定のマッピングにより暗黙的に行われる列とテーブルのマッピングを含む一般的なマッピング スキーマ注釈、および結合リレーションシップが処理されます。  
   
 > [!NOTE]  
->  注釈付き XSD または XDR マッピング スキーマについて理解していることを前提としています。 スキーマの詳細については、次を参照してください[注釈付き XSD スキーマの選択 &#40; の概要。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)または[注釈付き XDR スキーマ &#40; SQLXML 4.0 &#41; では非推奨](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)です。  
+>  注釈付き XSD または XDR マッピング スキーマについて理解していることを前提としています。 スキーマの詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)または[注釈付き XDR スキーマ&#40;SQLXML 4.0 では廃止&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)です。  
   
  レコード生成を理解するには、次の概念を理解する必要があります。  
   
@@ -226,7 +227,7 @@ XML 一括読み込みでは、XML 入力データが処理され、Microsoft [!
 ## <a name="exceptions-to-the-record-generation-rule"></a>レコード生成の規則の例外  
  XML 一括読み込みでは、IDREF または IDREFS 型のノードがスコープ内に入っても、ノードのレコードは生成されません。 スキーマのどこかで、レコードを完全に記述するようにしてください。 **Dt:type ="nmtokens"**は IDREFS 型が無視されると同様に注釈は無視されます。  
   
- たとえば、次の XSD スキーマを示す**\<顧客 >**と**\<順序 >**要素。 **\<顧客 >**要素が含まれています、 **OrderList** IDREFS 型の属性です。 **\<Sql:relationship >**タグは、顧客と注文リストの間の一対多リレーションシップを指定します。  
+ たとえば、次の XSD スキーマを示す**\<顧客 >**と**\<順序 >**要素。 **\<顧客 >**要素が含まれています、 **OrderList** IDREFS 型の属性です。  **\<Sql:relationship >**タグは、顧客と注文リストの間の一対多リレーションシップを指定します。  
   
  スキーマは次のようになります。  
   

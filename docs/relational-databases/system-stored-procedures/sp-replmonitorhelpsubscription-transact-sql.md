@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelpsubscription (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replmonitorhelpsubscription (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24254591967a08df8a46446e485af1be5760c862
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 44fccedae1010ec6b79268552a990c88ba5975a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  状態を監視しているパブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**既定値は NULL です。 場合**null**ディストリビューターを使用するすべてのパブリッシャーの情報が返されます。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** =] **'***publisher_db***'**  
  パブリッシャー データベースの名前を指定します。 *publisher_db*は**sysname**既定値は NULL です。 NULL の場合、パブリッシャー側のパブリッシュされたすべてのデータベースに関する情報が返されます。  
   
- [  **@publication**  =] **'***パブリケーション***'**  
+ [ **@publication** =] **'***パブリケーション***'**  
  監視されているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**既定値は NULL です。  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  パブリケーションの種類を指定します。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -72,7 +72,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|マージ パブリケーションです。|  
 |NULL (既定値)|レプリケーションでは、パブリケーションの種類の判別が試行されます。|  
   
- [  **@mode**  =]*モード*  
+ [ **@mode** =]*モード*  
  サブスクリプションの監視情報を返すときに使用するフィルター選択モードを指定します。 *モード*は**int**、これらの値のいずれかを指定できます。  
   
 |値|Description|  
@@ -86,11 +86,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|現在同期しているサブスクリプションだけを返します。|  
 |**7**|現在同期していないサブスクリプションだけを返します。|  
   
- [  **@topnum**  =] *topnum*  
+ [ **@topnum** =] *topnum*  
  返されたデータのうち、先頭から指定した数のサブスクリプションだけを結果セットに含めます。 *topnum*は**int**、既定値はありません。  
   
- [  **@exclude_anonymous**  =] *exclude_anonymous*  
- 匿名プル サブスクリプションを結果セットから除外するかどうかを指定します。 *exclude_anonymous*は**ビット**、既定値は**0**です値の**1**匿名サブスクリプションを除外することを意味し、値を**。0**含まれていることを意味します。  
+ [ **@exclude_anonymous** =] *exclude_anonymous*  
+ 匿名プル サブスクリプションを結果セットから除外するかどうかを指定します。 *exclude_anonymous*は**ビット**、既定値は**0**です値の**1**匿名サブスクリプションを除外することを意味し、値を**0。**含まれていることを意味します。  
   
  [  **@refreshpolicy=** ] *refreshpolicy*  
  内部使用のみです。  
@@ -107,7 +107,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**パブリケーション**|**sysname**|パブリケーションの名前です。|  
 |**publication_type**|**int**|パブリケーションで、これらの値のいずれかの種類を示します。<br /><br /> **0** = トランザクション パブリケーション<br /><br /> **1** = スナップショット パブリケーション<br /><br /> **2** = マージ パブリケーション|  
 |**サブタイプ**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0**プッシュを =<br /><br /> **1**プルを =<br /><br /> **2** = 匿名|  
-|**待機時間**|**int**|データ変更が、トランザクション パブリケーションのログ リーダー エージェントとディストリビューション エージェントで伝達されるまでの最大待機時間 (秒単位) です。|  
+|**latency**|**int**|データ変更が、トランザクション パブリケーションのログ リーダー エージェントとディストリビューション エージェントで伝達されるまでの最大待機時間 (秒単位) です。|  
 |**latencythreshold**|**int**|トランザクション パブリケーションの最大待機時間です。この値を超過すると警告が生成されます。|  
 |**agentnotrunning**|**int**|エージェントが実行されていない期間 (時間単位) です。|  
 |**agentnotrunningthreshold**|**int**|エージェントが実行されていない期間 (時間単位) です。この値を超過すると警告が生成されます。|  
@@ -123,8 +123,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|前回のサブスクリプションの同期の配信率です。|  
 |**mergerunduration**|**int**|前回のサブスクリプションの同期の完了にかかった時間です。|  
 |**monitorranking**|**int**|結果セットのサブスクリプションの並べ替えに使用される順位値。次のいずれかの値をとります。<br /><br /> トランザクション パブリケーションの場合 :<br /><br /> **60** = エラー<br /><br /> **56** = 警告: パフォーマンス クリティカル<br /><br /> **52** = 警告: まもなく期限切れまたは期限切れ<br /><br /> **50** = 警告: 初期化されていないサブスクリプション<br /><br /> **40** = コマンドの再試行に失敗しました<br /><br /> **30** = (成功) を実行していません。<br /><br /> **20** = 実行中 (開始、実行中、またはアイドル状態)<br /><br /> マージ パブリケーションの場合<br /><br /> **60** = エラー<br /><br /> **56** = 警告: パフォーマンス クリティカル<br /><br /> **54** = 警告: 長期マージ<br /><br /> **52** = 警告: まもなく期限切れ<br /><br /> **50** = 警告: 初期化されていないサブスクリプション<br /><br /> **40** = コマンドの再試行に失敗しました<br /><br /> **30** = 実行中 (開始、実行中、またはアイドル状態)<br /><br /> **20** = (成功) を実行していません。|  
-|**distributionagentjobid**|**binary (16)**|トランザクション パブリケーションへのサブスクリプションに関するディストリビューション エージェント ジョブの ID です。|  
-|**mergeagentjobid**|**binary (16)**|マージ パブリケーションへのサブスクリプションに関するマージ エージェント ジョブの ID です。|  
+|**distributionagentjobid**|**binary(16)**|トランザクション パブリケーションへのサブスクリプションに関するディストリビューション エージェント ジョブの ID です。|  
+|**mergeagentjobid**|**binary(16)**|マージ パブリケーションへのサブスクリプションに関するマージ エージェント ジョブの ID です。|  
 |**distributionagentid**|**int**|サブスクリプションに関するディストリビューション エージェント ジョブの ID です。|  
 |**distributionagentprofileid**|**int**|ディストリビューション エージェントで使用されるエージェント プロファイルの ID です。|  
 |**mergeagentid**|**int**|サブスクリプションに関するマージ エージェント ジョブの ID です。|  
@@ -138,7 +138,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
  **sp_replmonitorhelpsubscription**の値によって決定されると、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます*monitorranking*です。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **db_owner**または**replmonitor**ディストリビューション データベースの固定データベース ロールが実行できる**sp_replmonitorhelpsubscription**です。  
   
 ## <a name="see-also"></a>参照  

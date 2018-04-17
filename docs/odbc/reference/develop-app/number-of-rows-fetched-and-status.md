@@ -1,31 +1,32 @@
 ---
-title: "フェッチされた行の数と状態 |Microsoft ドキュメント"
-ms.custom: 
+title: フェッチされた行の数と状態 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row status array [ODBC]
 - number of rows fetched [ODBC]
 - result sets [ODBC], row status array
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45d53845cdbda6ab7cec5e17fdeedf3c6d6cd832
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7d4925e42b7039564096be578b02df8f8fcd036c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="number-of-rows-fetched-and-status"></a>フェッチされた行の数と状態
 バッファーへの呼び出しによってフェッチされた行の数を表すオブジェクトを指定 SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性が設定されている場合**SQLFetch**または**SQLFetchScroll**、およびエラーの行。 (この数は、ステータス SQL_ROW_NO_ROWS を持たないすべての行の数です)。呼び出しの後に**SQLBulkOperations**または**SQLSetPos**バッファーには、関数によって実行される一括操作の影響を受けた行の数が含まれています。 SQL_ATTR_ROW_STATUS_PTR ステートメント属性が設定されている場合**SQLFetch**または**SQLFetchScroll**を返します、*行状態配列、*ごとの状態を提供します。返された行。 アプリケーションによって割り当てられているこれらのフィールドによって示されるバッファーの両方は、およびドライバーによって設定します。 アプリケーションは、カーソルが閉じられるまで、これらのポインターが有効なままいることを確認してください。  

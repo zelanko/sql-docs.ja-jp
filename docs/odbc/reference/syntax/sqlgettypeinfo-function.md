@@ -2,7 +2,7 @@
 title: SQLGetTypeInfo 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4afbb9ce8ffce9ca1eb4cea099d11f6cf92ebb80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 関数
 **準拠**  
@@ -56,10 +56,10 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [入力]結果セットのステートメント ハンドルです。  
   
- *データ型*  
+ *DataType*  
  [入力]SQL データ型です。 これは内の値のいずれかをする必要があります、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型、またはドライバー固有の SQL データ型のセクションです。 SQL_ALL_TYPES では、すべてのデータ型に関する情報が返されることを指定します。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -118,9 +118,9 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo**すべてのデータ型を返さない可能性があります。 たとえば、ドライバーはユーザー定義データ型を返さない可能性があります。 アプリケーションは、によって返されるかどうかに関係なく、任意の有効なデータ型を使用できます**SQLGetTypeInfo**です。 によって返されるデータ型**SQLGetTypeInfo**は、データ ソースによってサポートされています。 データ定義言語 (DDL) ステートメントで使用するためのものです。 ドライバーは、によって返される型以外のデータ型を使用してデータを結果セットを返すことができます**SQLGetTypeInfo**です。 カタログ関数の結果セットを作成するで、ドライバーは、データ ソースによってサポートされていないデータ型を使用する可能性があります。  
   
-|列名|[列]<br /><br /> number|データ型|コメント|  
+|列名|列<br /><br /> number|データ型|コメント|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|@shouldalert|NULL でない Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR()"、"VARCHAR()"、"MONEY"、"LONG VARBINARY"、または「CHAR () FOR BIT DATA」です。 アプリケーションでこの名前を使用する必要があります**CREATE TABLE**と**ALTER TABLE**ステートメントです。|  
+|TYPE_NAME (ODBC 2.0)|1|NULL でない Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR()"、"VARCHAR()"、"MONEY"、"LONG VARBINARY"、または「CHAR () FOR BIT DATA」です。 アプリケーションでこの名前を使用する必要があります**CREATE TABLE**と**ALTER TABLE**ステートメントです。|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 Datetime 型または interval データ型は、この列は、簡潔なデータ型 (SQL_TYPE_TIME SQL_INTERVAL_YEAR_TO_MONTH など) を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型にします。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
 |COLUMN_SIZE (ODBC 2.0)|3|Integer|このデータ型のサーバーでサポートされている列の最大サイズ。 数値データは、これは、最大有効桁数です。 文字列データの場合は、これは、文字の長さです。 Datetime データ型では、これは (秒部分の最大有効桁数を想定) の文字列形式の文字の長さです。 NULL が返されますのデータ型列のサイズは適用されません。 Interval データ型では、これは、文字形式のリテラルの間隔の文字数 (先頭の有効桁数です。 間隔の定義に従ってを参照してください。 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)付録 d: データ型)。<br /><br /> 列のサイズの詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型にします。|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|文字または文字列リテラルのプレフィックスを使用します。たとえば、単一引用符 (') 文字データ型またはバイナリ データ型です。 0 xNULL を返しますのデータ型のリテラル プレフィックスは適用されません。|  

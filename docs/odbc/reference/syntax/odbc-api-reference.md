@@ -1,28 +1,29 @@
 ---
-title: "ODBC API リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC API リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 025ad811b25f822c22c9ff81402de196b191baa6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3a8781c93cdf83bd4af3ffe68e1cc3ad96600622
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
 このセクションのトピックでは、アルファベット順に各 ODBC 関数について説明します。 各関数は、C のプログラミング言語の関数として定義されます。 説明を以下に示します。  

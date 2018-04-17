@@ -1,16 +1,16 @@
 ---
-title: "sys.sql_expression_dependencies (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sql_expression_dependencies (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   ユーザー定義エンティティに対する名前による依存関係ごとに 1 つの行を現在のデータベースに格納します。 これにより、ネイティブ コンパイル、スカラー ユーザー定義関数およびその他の間の依存関係が含まれます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]モジュール。 1 つのエンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる別のエンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照している*です。 たとえば、ビューの定義内でテーブルが参照されている場合、参照元エンティティであるビューは、参照先エンティティであるテーブルに依存します。 テーブルが削除された場合、ビューは使用できなくなります。  
   
- 詳細については、次を参照してください。 [scalar user-defined 関数は、インメモリ OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)です。  
+ 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
  このカタログ ビューを使用すると、次のエンティティについて依存関係情報をレポートできます。  
   
@@ -57,11 +58,11 @@ ms.lasthandoff: 11/21/2017
 |referencing_id|**int**|参照元エンティティの ID。 NULL 値は許可されません。|  
 |referencing_minor_id|**int**|参照元エンティティが列の場合は列 ID。それ以外の場合は 0。 NULL 値は許可されません。|  
 |referencing_class|**tinyint**|参照元エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 12 = データベース DDL トリガー<br /><br /> 13 = サーバー DDL トリガー<br /><br /> NULL 値は許可されません。|  
-|referencing_class_desc|**nvarchar (60)**|参照元エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> NULL 値は許可されません。|  
+|referencing_class_desc|**nvarchar(60)**|参照元エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> NULL 値は許可されません。|  
 |is_schema_bound_reference|**bit**|1 = 参照先エンティティはスキーマ バインドです。<br /><br /> 0 = 参照先エンティティは非スキーマ バインドです。<br /><br /> NULL 値は許可されません。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数<br /><br /> NULL 値は許可されません。|  
-|referenced_class_desc|**nvarchar (60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> NULL 値は許可されません。|  
-|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド エンティティの場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
+|referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> NULL 値は許可されません。|  
+|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド エンティティの場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
 |referenced_database_name|**sysname**|参照先エンティティのデータベース名。<br /><br /> 有効な 3 部構成または 4 部構成の名前を指定することによって作成された複数データベースまたは複数サーバーにまたがる参照については、この列に値が格納されます。<br /><br /> 1 部構成または 2 部構成の名前を使って指定された非スキーマ バインド参照の場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
 |referenced_schema_name|**sysname**|参照先エンティティが属しているスキーマ。<br /><br /> スキーマ名を指定せずにエンティティが参照される非スキーマ バインド参照の場合は NULL。<br /><br /> スキーマ バインド エンティティは 2 つの部分で構成される名前を使用して定義および参照する必要があるので、スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_entity_name|**sysname**|参照先エンティティの名前。 NULL 値は許可されません。|  
@@ -75,32 +76,32 @@ ms.lasthandoff: 11/21/2017
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|テーブル|可*|可|  
-|表示|可|可|  
-|フィルター選択されたインデックス|可**|不可|  
-|フィルター選択された統計情報|可**|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ***|可|可|  
-|CLR ストアド プロシージャ (CLR stored procedure)|不可|可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|可|可|  
-|CLR ユーザー定義関数|不可|可|  
-|CLR トリガー (DML および DDL)|不可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]データベース レベルの DDL トリガー|可|不可|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|可|不可|  
-|拡張ストアド プロシージャ|不可|可|  
-|キュー|不可|可|  
-|シノニム|不可|可|  
-|型 (別名および CLR ユーザー定義型)|不可|可|  
-|XML スキーマ コレクション|不可|可|  
-|パーティション関数|不可|可|  
+|Table|可*|はい|  
+|表示|はい|はい|  
+|フィルター選択されたインデックス|可**|いいえ|  
+|フィルター選択された統計情報|可**|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ***|はい|はい|  
+|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
+|CLR ユーザー定義関数|いいえ|はい|  
+|CLR トリガー (DML および DDL)|いいえ|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベース レベルの DDL トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
+|拡張ストアド プロシージャ|いいえ|はい|  
+|キュー|いいえ|はい|  
+|シノニム|いいえ|はい|  
+|型 (別名および CLR ユーザー定義型)|いいえ|はい|  
+|XML スキーマ コレクション|いいえ|はい|  
+|パーティション関数|いいえ|はい|  
   
- \*テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
+ \* テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** フィルター述語で使用する各列は、参照元エンティティとして追跡されます。  
   
  *** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  データベースに対する VIEW DEFINITION 権限およびデータベースの sys.sql_expression_dependencies に対する SELECT 権限が必要です。 既定では、SELECT 権限は db_owner 固定データベース ロールのメンバーだけに与えられます。 SELECT 権限と VIEW DEFINITION 権限が別のユーザーに与えられている場合、権限が許可されているユーザーはデータベース内のすべての依存関係を表示できます。  
   
 ## <a name="examples"></a>使用例  

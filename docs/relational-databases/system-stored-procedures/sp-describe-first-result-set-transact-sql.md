@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_first_result_set (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_describe_first_result_set (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -378,7 +379,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- Result: Column1 **bigint NOT NULL**  
+ 結果: Column1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>あいまいな結果セットによるエラー  
  この例では、user1 という名前の別のユーザーが列を含む既定のスキーマ s1 内の t1 という名前のテーブル (、 **int NOT NULL**)。  

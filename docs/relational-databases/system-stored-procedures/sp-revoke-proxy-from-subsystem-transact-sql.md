@@ -1,16 +1,16 @@
 ---
-title: "sp_revoke_proxy_from_subsystem (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_revoke_proxy_from_subsystem (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_proxy_from_subsystem
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3408c3ddee13886edaaa410341379ee50d4f9cb3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9a088cad68d795b4975194cc86c5997e801dcb89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@proxy_id** = ] *id*  
+ [ **@proxy_id** =] *id*  
  アクセス権を取り消すプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
   
- [  **@proxy_name**  =] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'***proxy_name***'**  
  アクセス権を取り消すプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@subsystem_id** = ] *id*  
+ [ **@subsystem_id** =] *id*  
  取り消すアクセス権の対象となるサブシステムの ID 番号を指定します。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**2**|ActiveX スクリプト<br /><br /> **\*\* 重要な \*\*** ActiveX スクリプティング サブシステムはから削除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の将来のバージョンのエージェント[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |**3**|オペレーティング システム (CmdExec)|  
@@ -73,10 +73,10 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
   
- [ **@subsystem_name**= ] **'***subsystem_name***'**  
+ [ **@subsystem_name**=] **'***subsystem_name***'**  
  取り消すアクセス権の対象となるサブシステムの名前を指定します。 *Subsystem_name*は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表は、各サブシステムの ID に指定できる値の一覧です。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
@@ -112,8 +112,8 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [SQL Server エージェントのセキュリティを実装します。](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
- [sp_grant_proxy_to_subsystem &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_filestream_file_io_requests (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_filestream_file_io_requests (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35d32705c8bce23a9cd46c5844fdc1a20c0cf7c3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0e2115473a557df341cb1e1244d4b6378a69c15b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/03/2018
 |**request_id**|**int**|ドライバーによってこの要求に割り当てられた一意の要求 ID を示します。 NULL 値は許可されません。|  
 |**irp_id**|**int**|一意の IRP ID を示します。 これは、特定の IRP に関連するすべての I/O 要求を識別する場合に役立ちます。 NULL 値は許可されません。|  
 |**handle_id**|**int**|名前空間のハンドル ID を示します。 これは NSO 固有の識別子で、インスタンス内で一意です。 NULL 値は許可されません。|  
-|**client_thread_id**|**varbinary(8)**|要求の発行元であるクライアント アプリケーションのスレッド ID を示します。<br /><br /> **\*\*警告\* \*** これは、クライアント アプリケーションが SQL Server と同じコンピューターで実行されている場合にのみ意味を持ちます。 クライアント アプリケーションがリモートで実行されている場合、 **client_thread_id**リモート クライアントの代理として動作するいくつかのシステム プロセスのスレッド ID を示します。<br /><br /> NULL 値が許可されます。|  
+|**client_thread_id**|**varbinary(8)**|要求の発行元であるクライアント アプリケーションのスレッド ID を示します。<br /><br /> **\*\* 警告\* \*** これは、クライアント アプリケーションが SQL Server と同じコンピューターで実行されている場合にのみ意味を持ちます。 クライアント アプリケーションがリモートで実行されている場合、 **client_thread_id**リモート クライアントの代理として動作するいくつかのシステム プロセスのスレッド ID を示します。<br /><br /> NULL 値が許可されます。|  
 |**client_process_id**|**varbinary(8)**|クライアント アプリケーションが SQL Server と同じコンピューター上で実行されている場合に、クライアント アプリケーションのプロセス ID を示します。 リモート クライアントの場合は、クライアント アプリケーションの代わりに動作しているシステム プロセス ID を示します。 NULL 値が許可されます。|  
 |**handle_context_address**|**varbinary(8)**|クライアントのハンドルに関連付けられた内部 NSO 構造のアドレスを示します。 NULL 値が許可されます。|  
 |**filestream_transaction_id**|**varbinary (128)**|特定のハンドルに関連付けられているトランザクションの ID と、このハンドルに関連付けられているすべての要求を示します。 によって返される値では、 **get_filestream_transaction_context**関数。 NULL 値が許可されます。|  
@@ -56,6 +56,6 @@ ms.lasthandoff: 02/03/2018
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [Filestream および FileTable 動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Filestream および FileTable 動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

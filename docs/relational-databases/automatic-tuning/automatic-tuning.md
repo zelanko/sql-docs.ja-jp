@@ -3,7 +3,7 @@ title: 自動チューニング |Microsoft ドキュメント
 description: SQL Server と Azure SQL データベースで自動チューニングについてください。
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,6 +75,8 @@ ms.lasthandoff: 04/05/2018
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] どの潜在的なプランの選択による後退が正しくないプランではなく使用する計画を含むを自動的に検出します。
 ときに、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]最後に適用される既知の適切な計画を自動的に監視プランのパフォーマンスです。 新しいプランが強制されます強制プランが低下したプランよりも高くない場合は、および[!INCLUDE[ssde_md](../../includes/ssde_md.md)]新しいプランをコンパイルします。 場合[!INCLUDE[ssde_md](../../includes/ssde_md.md)]強制プランが低下したものよりも良い、強制プランが保持されます (たとえば、次の統計情報やスキーマの変更) 上に再コンパイルされるまで低下したプランよりもをお勧めすることを確認します。
+
+注: 強制プラン自動任意できません固定されている可能性、SQL Server インスタンスの再開時に実行します。
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>自動プラン選択の補正を有効にします。
 
@@ -135,13 +138,15 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | スクリプト (script) | query\_id | current plan\_id | プランをお勧め\_id | 推定\_取得 | error\_prone
+| reason | score | スクリプト (script) | query\_id | 現在のプラン\_id | プランをお勧め\_id | 推定\_取得 | エラー\_が発生しやすい
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 3 つの ms から 46 ミリ秒に変更された CPU 時間 | 36 | EXEC sp\_クエリ\_格納\_強制的\_プラン 12、17 です。 | 12 | 28 | 17 | 11.59 | 0
 
 `estimated_gain` 現在のプランではなく、推奨されるプランが実行される場合を保存すると秒の推定数を表します。 ゲインが 10 秒より大きい場合、現在のプランではなく、推奨されるプランを強制するか。 ある場合 (たとえば、タイムアウトまたは中断された実行数) の多くのエラーよりも、現在のプランで、推奨される計画、列`error_prone`値に設定が`YES`です。 エラーが発生しやすいプランは、現在のものではなく、推奨されるプランを適用する理由別の理由です。
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]プランの選択による後退以外の場合は継続的な監視とパフォーマンスの問題の修正を識別するために必要なすべての情報には、面倒な可能性がありますを提供します。 自動チューニングと、このプロセスがはるかに簡単になります。
+
+注: この DMV のデータは、SQL Server インスタンスの再起動後は保持されません。
 
 ## <a name="automatic-index-management"></a>自動インデックス管理
 
@@ -183,5 +188,5 @@ Azure SQL データベースの自動調整を有効にし、自動調整機能�
  [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 関数](../../relational-databases/json/index.md)

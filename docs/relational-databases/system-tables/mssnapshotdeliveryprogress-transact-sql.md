@@ -1,16 +1,16 @@
 ---
-title: "MSsnapshotdeliveryprogress (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: MSsnapshotdeliveryprogress (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7fbb80963679858339cc1df9206f101968f4f8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 312cb47a150fa8e1d492306981c13c2f2e32bde3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.lasthandoff: 11/21/2017
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**session_token**|**nvarchar (260)**|ファイルが正常に配信された配信元のスナップショット フォルダーへのパスを識別します。 パラメーター化されたフィルター文字列を使用するパブリケーションの**dynsnap**の値に追加されます。|  
+|**session_token**|**nvarchar(260)**|ファイルが正常に配信された配信元のスナップショット フォルダーへのパスを識別します。 パラメーター化されたフィルター文字列を使用するパブリケーションの**dynsnap**の値に追加されます。|  
 |**progress_token_hash**|**int**|生成されたハッシュ値の値に基づく*progress_token*ために使用される参照の効率を向上させる、指定された*progress_token*値。|  
-|**progress_token**|**nvarchar (500)**|正常に配信されたファイルを識別します。値は、ファイル名とパスの組み合わせです。|  
+|**progress_token**|**nvarchar(500)**|正常に配信されたファイルを識別します。値は、ファイル名とパスの組み合わせです。|  
 |**progress_timestamp**|**datetime**|**Datetime**スナップショット ファイルが正常に配信されるかを示す値。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

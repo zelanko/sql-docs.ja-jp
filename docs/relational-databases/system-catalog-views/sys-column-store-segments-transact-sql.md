@@ -1,16 +1,16 @@
 ---
-title: "sys.column_store_segments (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.column_store_segments (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_store_segments
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_segments catalog view
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 648535c4c8a28078dba7070026f3eafec1ac32a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/18/2018
 |**column_id**|**int**|列ストアの列の ID。|  
 |**segment_id**|**int**|行グループの ID です。 旧バージョンと互換性のため、列名が呼び出す segment_id 行グループ ID です。 この場合でも引き続き 使用してセグメントを一意に識別できる\<hobt_id で、partition_id、column_id >、< segment_id >。|  
 |**version**|**int**|列セグメント形式のバージョン。|  
-|**encoding_type**|**int**|そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に非常に似ています)<br /><br /> 2 = VALUE_HASH_BASED   - non-string/binary column with common values in dictionary<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。|  
+|**encoding_type**|**int**|そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に非常に似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。|  
 |**row_count**|**int**|行グループ内の行の数。|  
 |**has_nulls**|**int**|列セグメントに NULL 値がある場合は 1。|  
 |**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が使用されていない場合、base_id は-1 に設定します。|  
@@ -79,12 +79,12 @@ GO
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

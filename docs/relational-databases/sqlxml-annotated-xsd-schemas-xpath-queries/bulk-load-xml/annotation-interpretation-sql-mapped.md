@@ -1,16 +1,16 @@
 ---
-title: "sql: マップ (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: 'sql: マップ (SQLXML 4.0) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9c73f8e4c26927904d1a5f9e65adc8c268e2b0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 288a045d5bea7da63ef058b749f4e92409be28ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql: マップ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 一括読み込み処理、 **sql: マップ**期待どおりに、XSD スキーマで注釈-つまり、マッピング スキーマを指定する場合**sql: マップ ="false"**任意の要素または属性を使用して、XML 一括読み込みはできません対応する列に関連付けられているデータを格納しようとしてください。  
+  XML 一括読み込み処理、 **sql: マップ**期待どおりに、XSD スキーマで注釈-つまり、マッピング スキーマを指定する場合**sql: マップ ="false"**任意の要素または属性を使用して、XML 一括読み込みはできません対応する列に関連付けられているデータを格納しようとしてください。  
   
  XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマで記述されていないか、XSD スキーマで注釈が付いているため**sql: マップ ="false"**)。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**です。  
   

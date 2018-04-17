@@ -1,16 +1,16 @@
 ---
-title: "sp_tableoption (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_tableoption (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,8 +64,8 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 |table lock on bulk load|無効である場合 (既定)、ユーザー定義テーブル上で行ロックを取得するための一括読み込み処理が行われます。 有効である場合、ユーザー定義テーブル上で一括更新ロックを取得するための一括読み込み処理が行われます。|  
 |insert row lock|サポートされていません。<br /><br /> このオプションはロックの動作に影響を与えません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と既存のスクリプトおよびプロシージャの互換性のためだけに用意されています。|  
 |text in row|OFF または 0 (無効、つまり既定値) である場合は、現在の動作を変更せず、行内 BLOB はありません。<br /><br /> 指定した場合と@OptionValueon (有効) または 24 ~ 7,000、新しい整数値**テキスト**、 **ntext**、または**イメージ**文字列は、データ行に直接格納します。 すべての既存の BLOB (バイナリ ラージ オブジェクト:**テキスト**、 **ntext**、または**イメージ**データ)、BLOB 値が更新されたときに、text in row 形式に変更されます。 詳細については、「解説」を参照してください。|  
-|large value types out of row|1 = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**テーブル内の大きなユーザー定義型 (UDT) 列が格納されますルートに 16 バイトのポインターと共に、行はタイムアウトします。<br /><br /> 0 = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**大きな UDT 値は、上限に達するまで、データ行に直接格納および8,000 バイトのと、値がレコードに収まる限りです。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 既定値は 0 です。<br /><br /> 大きなユーザー定義型 (UDT) の適用対象: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> TEXTIMAGE_ON のオプションを使用[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ラージ データ型の記憶域の場所を指定します。 |  
-|Vardecimal ストレージ形式|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> TRUE、ON、または 1 の場合、指定されたテーブルでは vardecimal ストレージ形式が有効です。 FALSE、OFF、または 0 の場合、そのテーブルでは vardecimal ストレージ形式が無効です。 データベースは vardecimal ストレージ形式を使用して有効になってが場合にのみ、Vardecimal ストレージ形式を有効にすることができます[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)です。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、 **vardecimal**ストレージ形式は推奨されなくなりました。 代わりに行の圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 既定値は 0 です。|  
+|large value types out of row|1 = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**テーブル内の大きなユーザー定義型 (UDT) 列が格納されますルートに 16 バイトのポインターと共に、行はタイムアウトします。<br /><br /> 0 = **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**大きな UDT 値は、上限に達するまで、データ行に直接格納および8,000 バイトのと、値がレコードに収まる限りです。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 0 が既定値です。<br /><br /> 大きなユーザー定義型 (UDT) の適用対象: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 <br /><br /> TEXTIMAGE_ON のオプションを使用[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)ラージ データ型の記憶域の場所を指定します。 |  
+|Vardecimal ストレージ形式|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> TRUE、ON、または 1 の場合、指定されたテーブルでは vardecimal ストレージ形式が有効です。 FALSE、OFF、または 0 の場合、そのテーブルでは vardecimal ストレージ形式が無効です。 データベースは vardecimal ストレージ形式を使用して有効になってが場合にのみ、Vardecimal ストレージ形式を有効にすることができます[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)です。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、 **vardecimal**ストレージ形式は推奨されなくなりました。 代わりに行の圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 0 が既定値です。|  
   
  [ @OptionValue =] '*値*'  
  かどうか、 *option_name*が有効 (TRUE、ON、または 1) か無効 (FALSE、OFF、または 0) です。 *値*は**varchar (12)**、既定値はありません。 *値*は大文字小文字を区別します。  
@@ -85,15 +86,15 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row オプションが有効。  
   
--   文字列の長さがで指定された制限よりも短い@OptionValue  
+-   文字列の長さがで指定された制限よりも短い @OptionValue  
   
 -   データ行に十分な使用可能領域がある。  
   
- 読み取りと書き込みの BLOB 文字列は、データ行に格納されている、ときに、**テキスト**、 **ntext**、または**イメージ**文字列を読み取りまたは書き込みの文字やバイナリ文字列と同じ速度で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み取りまたは書き込みの BLOB 文字列を別のページにアクセスすることはありません。  
+ 読み取りと書き込みの BLOB 文字列は、データ行に格納されている、ときに、**テキスト**、 **ntext**、または**イメージ**文字列を読み取りまたは書き込みの文字やバイナリ文字列と同じ速度で指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 読み取りまたは書き込みの BLOB 文字列を別のページにアクセスすることはありません。  
   
  場合、**テキスト**、 **ntext**、または**イメージ**文字列は、指定された制限または行で使用可能な領域を超える、ポインターが代わりに、行に格納します。 ただし、BLOB 文字列を行に格納する場合の条件は引き続き適用されます。ただし、データ行にはポインターを格納するのに十分な領域が必要です。  
   
- テーブル内の行に格納されている BLOB 文字列やポインターは、可変長文字列と同じように扱われます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列またはポインターを格納するために必要なバイト数のみを使用します。  
+ テーブル内の行に格納されている BLOB 文字列やポインターは、可変長文字列と同じように扱われます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字列またはポインターを格納するために必要なバイト数のみを使用します。  
   
  既存の BLOB 文字列は、text in row を有効にしても、直ちに変換されるわけではありません。 文字列は、それらが更新されたときに初めて変換されます。 同様に、いつ row オプションの制限内のテキストは大きくしても、**テキスト**、 **ntext**、または**イメージ**データ行には既に文字列は、新しい制限値に変換できません更新されるまでです。  
   
@@ -109,7 +110,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  変更する場合は既存の LOB データ型列 (text、ntext、または image) 小 ~ 中程度の大きな値型 (varchar (max)、nvarchar (max)、または varbinary(max))、およびほとんどのステートメントがない環境内で大きな値型の列の参照を検討してください。変更する**large_value_types_out_of_row**に**1**最適なパフォーマンスを確保します。 ときに、 **large_value_types_out_of_row**オプションの値を変更すると、既存の varchar (max)、nvarchar (max)、varbinary (max)、および xml 値はすぐに変換されません。 文字列のストレージは、後で文字列が更新されたときに変更されます。 テーブルに挿入される新しい値は、有効なテーブル オプションに従って格納されます。 即時の結果を得るには、いずれかのデータのコピーを作成し、再作成し、テーブルを変更した後、 **large_value_types_out_of_row**設定またはそれ自体に各小規模から中に大きな値型の列を更新できるようにの記憶域、文字列は有効でテーブル オプションを使用して変更されます。 更新または再作成の後でテーブルのインデックスを再構築し、テーブルを圧縮することを検討します。 
     
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  sp_tableoption を実行するには、テーブルに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -143,6 +144,6 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

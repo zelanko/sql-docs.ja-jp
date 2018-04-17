@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_io_backup_tapes (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_io_backup_tapes (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_io_backup_tapes
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3ac436bf8cecfd0f1c255e769dcfcd9b7420cc84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.lasthandoff: 02/03/2018
 |**spid**|**int**|セッション ID。 テープのユーザーを識別できます。 NULL 値が許可されます。|  
 |**command**|**int**|バックアップを実行するコマンド。 NULL 値が許可されます。|  
 |**command_desc**|**nvarchar(120)**|コマンドの説明。 NULL 値が許可されます。|  
-|**media_family_id**|**int**|メディア ファミリのインデックス (1...*n* )、  *n* メディア セット内のメディア ファミリの数です。 NULL 値が許可されます。|  
+|**media_family_id**|**int**|メディア ファミリのインデックス (1...*n*)、 *n*メディア セット内のメディア ファミリの数です。 NULL 値が許可されます。|  
 |**media_set_name**|**nvarchar (256)**|メディア セットが作成されている場合、MEDIANAME オプションで指定されたメディア セットの名前 (存在する場合)。 NULL 値が許可されます。|  
 |**media_set_guid**|**uniqueidentifier**|メディア セットを一意に識別する識別子。 NULL 値が許可されます。|  
-|**media_sequence_number**|**int**|メディア ファミリ内のボリュームのインデックス (1...*n*). NULL 値が許可されます。|  
+|**media_sequence_number**|**int**|メディア ファミリ内のボリュームのインデックス (1...*n*)。 NULL 値が許可されます。|  
 |**tape_operation**|**int**|実行中のテープ操作。<br /><br /> 1 = 読み取り<br /><br /> 2 = フォーマット<br /><br /> 3 = 初期化<br /><br /> 4 = 追加<br /><br /> NULL 値が許可されます。|  
 |**tape_operation_desc**|**nvarchar(120)**|テープの実行中の操作。<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND <br /><br /> NULL 値が許可されます。|  
 |**mount_request_type**|**int**|マウント要求の種類。<br /><br /> 1 = 特定のテープ。 によって識別される、テープ、 **media _\*** フィールドが必要です。<br /><br /> 2 = 次のメディア ファミリ。 まだ復元されていない次のメディア ファミリが要求されています。 これは、メディア ファミリより少ないデバイスから復元するときに使用されます。<br /><br /> 3 = 後続テープ。 メディア ファミリが拡張され、後続テープが要求されています。<br /><br /> NULL 値が許可されます。|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [関連する動的管理ビューおよび関数 &#40; I、OTRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [I、O 関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

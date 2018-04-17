@@ -1,16 +1,16 @@
 ---
-title: "xp_logininfo (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: xp_logininfo (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  Windows ユーザーまたはグループへのアクセス許可の名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *account_name*は**sysname**、既定値は NULL です。 場合*account_name*が指定されていない、すべての Windows グループと明示的に設定されている Windows ユーザー ログイン権限が与え報告されます。 *account_name*完全修飾する必要があります。 たとえば、「ADVWKS4\macraes」または「BUILTIN\Administrators」のように指定します。  
   
  **'all'** | **'メンバー'**  
- アカウントに対するすべての権限のパスに関する情報をレポートするのか、または Windows のグループのメンバーに関する情報をレポートするのかを指定します。 **@option****varchar (10)**、既定値は NULL です。 しない限り、**すべて**を指定すると、最初の権限のパスのみが表示されます。  
+ アカウントに対するすべての権限のパスに関する情報をレポートするのか、または Windows のグループのメンバーに関する情報をレポートするのかを指定します。 **@option** **varchar (10)**、既定値は NULL です。 しない限り、**すべて**を指定すると、最初の権限のパスのみが表示されます。  
   
  [  **@privilege =** ] *variable_name*  
  指定した Windows アカウントの特権レベルを返す出力パラメーターを指定します。 *variable_name*は**varchar (10)**で、既定値は 'Not wanted' です。 特権レベルに返される**ユーザー**、 **admin**、または**null**です。  
@@ -68,8 +68,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**アカウント名**|**sysname**|Windows アカウントの完全修飾名。|  
-|**型**|**char (8)**|Windows アカウントの種類。 有効な値は**ユーザー**または**グループ**です。|  
-|**特権**|**char (9)**|に対するアクセス権限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 有効な値は**admin**、**ユーザー**、または**null**です。|  
+|**type**|**char (8)**|Windows アカウントの種類。 有効な値は**ユーザー**または**グループ**です。|  
+|**特権**|**char(9)**|に対するアクセス権限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 有効な値は**admin**、**ユーザー**、または**null**です。|  
 |**マップされたログイン名**|**sysname**|ユーザー特権を持っているユーザー アカウントの**マッピングされたログイン名**マップされたログイン名を示しています[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]前に、ドメイン名にマップされている規則を使用して、このアカウントでログインが追加されたときに使用しようとしています。|  
 |**権限のパス**|**sysname**|アカウントのアクセスを許可したグループのメンバーシップ。|  
   
@@ -84,7 +84,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  **xp_logininfo** Active Director グローバル グループ、ユニバーサルいないグループからのみ情報が返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーシップが必要、 **sysadmin**固定サーバー ロールのメンバーシップまたは、**パブリック**の固定データベース ロール、**マスター** EXECUTE 権限が付与されたデータベースです。  
   
 ## <a name="examples"></a>使用例  
@@ -99,6 +99,6 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [汎用拡張ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "DiffGram の例 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: DiffGram の例 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], examples
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - diffgr:parentID
 - parentID annotation
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bba1fe2e0a141d9bbac3ae67ece5d7e32d0b197
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e9d54edb652ab38ff92de8d439507555b1401d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-ここでは、データベースに対して挿入、変更、および削除の各操作を実行する DiffGram の例を示します。 例を使用する前に、次のことに注意してください。  
+  ここでは、データベースに対して挿入、変更、および削除の各操作を実行する DiffGram の例を示します。 例を使用する前に、次のことに注意してください。  
   
 -   例では、2 つのテーブル (Cust と Ord) を使用します。したがって、DiffGram の例をテストするにはこれらを作成する必要があります。  
   
@@ -107,7 +108,7 @@ ms.lasthandoff: 02/12/2018
 </ROOT>  
 ```  
   
- **\<する前に >**ブロックは、 **\<順序 >**要素 (**diffgr:id ="Order1"**) および **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。 これらの要素はデータベースの既存のレコードを表します。 **\<DataInstance >**要素に対応するレコードがありません (同じ**diffgr:id**)。 これは削除操作を表します。  
+ **\<する前に >**ブロックは、 **\<順序 >**要素 (**diffgr:id ="Order1"**) および **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。 これらの要素はデータベースの既存のレコードを表します。  **\<DataInstance >**要素に対応するレコードがありません (同じ**diffgr:id**)。 これは削除操作を表します。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -246,7 +247,7 @@ ms.lasthandoff: 02/12/2018
 </ROOT>  
 ```  
   
- **\<する前に >**ブロックに含まれる、 **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。 **\<DataInstance >**ブロックに含まれる、対応する**\<顧客 >**要素と同じ**id**です。**\<顧客 >**内の要素、  **\<NewDataSet >**も指定**diffgr:hasChanges ="modified"**です。 これは、更新操作、および内の顧客レコードを示します、 **Cust**テーブルはそれに従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
+ **\<する前に >**ブロックに含まれる、 **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。  **\<DataInstance >**ブロックに含まれる、対応する**\<顧客 >**要素と同じ**id**です。**\<顧客 >**内の要素、  **\<NewDataSet >**も指定**diffgr:hasChanges ="modified"**です。 これは、更新操作、および内の顧客レコードを示します、 **Cust**テーブルはそれに従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -353,9 +354,9 @@ ms.lasthandoff: 02/12/2018
   
 -   **\<する前に >**ブロックには、 **\<顧客 >**要素 (**diffgr:id ="Customer2"**) が対応するの**\<顧客 >**内の要素、  **\<DataInstance >** (同じ ID) を持つブロックします。 内の要素、  **\<DataInstance >**ブロックで指定**diffgr:hasChanges ="modified"**です。 これは顧客 ANATR に対し、CompanyName と ContactName の情報は、Cust テーブル更新で指定されている値を使用して更新操作、  **\<DataInstance >**ブロックします。  
   
--   **\<DataInstance >**ブロックには、 **\<顧客 >**要素 (**diffgr:id ="Customer3"**) および **\<順序 >**要素 (**diffgr:id ="Order3"**)。 これらの要素のどちらが指定されて、 **diffgr:hasChanges**属性。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
+-    **\<DataInstance >**ブロックには、 **\<顧客 >**要素 (**diffgr:id ="Customer3"**) および **\<順序 >**要素 (**diffgr:id ="Order3"**)。 これらの要素のどちらが指定されて、 **diffgr:hasChanges**属性。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
   
--   **\<DataInstance >**ブロックには、 **\<顧客 >**要素 (**diffgr:id ="Customer4"**) および **\<順序 >**要素 (**diffgr:id ="Order4"**) がないに対応する要素、\<する前に > ブロックします。 これらの要素を **\<DataInstance >**ブロックで指定**diffgr:hasChanges ="inserted"**です。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
+-    **\<DataInstance >**ブロックには、 **\<顧客 >**要素 (**diffgr:id ="Customer4"**) および **\<順序 >**要素 (**diffgr:id ="Order4"**) がないに対応する要素、\<する前に > ブロックします。 これらの要素を **\<DataInstance >**ブロックで指定**diffgr:hasChanges ="inserted"**です。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   

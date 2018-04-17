@@ -1,31 +1,32 @@
 ---
-title: "SQLGetData を使用して出力パラメーターを取得する |Microsoft ドキュメント"
-ms.custom: 
+title: SQLGetData を使用して出力パラメーターを取得する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
 - retrieving output parameters [ODBC]
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a76a7c78a6dc5b9cc1d3128863d7c8a0de2ff4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用して出力パラメーターを取得します。
 ODBC 3.8 する前に、アプリケーションは、バインドされた出力バッファーを持つクエリの出力パラメーターを取得のみでした。 ただし、パラメーター値のサイズが (たとえば、大きな画像) 非常に大きい場合に非常に大きなバッファーを割り当てるにくくなっています。 ODBC 3.8 には、部分の出力パラメーターを取得する新しい方法が導入されています。 アプリケーションを呼び出せるようになりました**SQLGetData**小さなバッファーを伴うに複数回、大きなパラメーター値を取得します。 これは、大きな列データの取得に似ています。  
@@ -71,7 +72,7 @@ ODBC 3.8 する前に、アプリケーションは、バインドされた出�
   
  次の表では、サーバー、およびアプリケーションの動作に送信された 1 つのコマンドのさまざまなシナリオについて説明します。  
   
-|シナリオ|SQLExecute、SQLExecDirect またはからの戻り値|次への対処方法|  
+|Scenario|SQLExecute、SQLExecDirect またはからの戻り値|次への対処方法|  
 |--------------|---------------------------------------------------|---------------------|  
 |データには、ストリーミングされる出力パラメーターにはのみが含まれます。|SQL_PARAM_DATA_AVAILABLE|使用して**SQLParamData**と**SQLGetData**ストリーミングされる出力パラメーターを取得します。|  
 |データが結果セットが含まれています、ストリーム出力パラメーター|SQL_SUCCESS|使用して結果セットを取得**SQLBindCol**と**SQLGetData**です。<br /><br /> 呼び出す**SQLMoreResults**をストリーム出力パラメーターの処理を開始します。 SQL_PARAM_DATA_AVAILABLE が返されます。<br /><br /> 使用して**SQLParamData**と**SQLGetData**ストリーミングされる出力パラメーターを取得します。|  

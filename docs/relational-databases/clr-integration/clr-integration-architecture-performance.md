@@ -1,35 +1,35 @@
 ---
-title: "CLR 統合のパフォーマンス |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合のパフォーマンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
 - common language runtime [SQL Server], compilation process
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
-caps.latest.revision: 
+caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327c531d44fc883afa144252dda3ba43d188682a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 285df1ab327617437fa9edf32f21b84b2499e0ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合アーキテクチャのパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは一部のパフォーマンスを向上させる設計の選択肢の[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との統合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR)。  
+  このトピックでは一部のパフォーマンスを向上させる設計の選択肢の[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との統合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR)。  
   
 ## <a name="the-compilation-process"></a>コンパイル処理  
  SQL 式のコンパイル時に、マネージ ルーチンへの参照が検出されると、MSIL ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language) スタブが生成されます。 このスタブには、ルーチン パラメーターを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から CLR にマーシャリングして関数を呼び出し、結果を返すコードが含まれています。 この "グルー" (接着剤) コードは、パラメーターの型とパラメーターの方向 (入力、出力、または参照) に基づいています。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/09/2018
 >  この機能の使用は推奨されないため、拡張ストアド プロシージャを新規作成しないことをお勧めします。  
   
 ### <a name="native-serialization-for-user-defined-types"></a>ユーザー定義型のネイティブ シリアル化  
- UDT (ユーザー定義型) は、スカラー型システムの拡張方式として設計されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]という Udt のシリアル化形式が実装されて**Format.Native**です。 コンパイルのとき、型の定義に合わせてカスタマイズされた MSIL を生成するために型の構造を検査します。  
+ UDT (ユーザー定義型) は、スカラー型システムの拡張方式として設計されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という Udt のシリアル化形式が実装されて**Format.Native**です。 コンパイルのとき、型の定義に合わせてカスタマイズされた MSIL を生成するために型の構造を検査します。  
   
  ネイティブ シリアル化は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の実装です。 ユーザー定義のシリアル化を行うと、型の作成者がシリアル化のために定義したメソッドが呼び出されます。 **Format.Native**シリアル化可能な場合に最適なパフォーマンスに使用します。  
   

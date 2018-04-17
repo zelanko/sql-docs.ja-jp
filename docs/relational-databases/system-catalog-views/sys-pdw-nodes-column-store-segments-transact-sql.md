@@ -20,11 +20,12 @@ author: hirokib
 ms.author: elbutter;barbkess
 manager: jrj
 ms.workload: Inactive
-ms.openlocfilehash: 8e3daa47eea78bb90c736a42e7e541bea62e5ac4
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 6096185bec4378bd5d6b2f478796f8a2e34f5e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/30/2018
 | **column_id**               | **int**    | 列ストアの列の ID。                                |
 | **segment_id**              | **int**    | 列セグメントの ID。 旧バージョンと互換性のため、列名が呼び出す segment_id 行グループ ID です。 この場合でも引き続き < Hobt_id で、partition_id、column_id > を使用してセグメントを一意に識別できます < segment_id >。 |
 | **version**                 | **int**    | 列セグメント形式のバージョン。                        |
-| **encoding_type**           | **int**    | そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に類似)<br /><br /> 2 = VALUE_HASH_BASED   - non-string/binary column with common values in dictionary<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。 |
+| **encoding_type**           | **int**    | そのセグメントで使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (いくつか内部のバリエーションを 4 に類似)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列またはバイナリ列<br /><br /> 4 STORE_BY_VALUE_BASED - 非文字列/バイナリないディクショナリを =<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - 文字列/にあるバイナリ辞書が見つかりません<br /><br /> すべてのエンコーディング利用可能な場合のエンコード ビット パッキングと実行の長さ。 |
 | **row_count**               | **int**    | 行グループ内の行の数。                             |
 | **has_nulls**               | **int**    | 列セグメントに NULL 値がある場合は 1。                     |
 | **base_id**                 | **bigint** | エンコードの種類 1 が使用されている場合は、ID をベース値です。  エンコードの種類 1 が、使用されていない場合、base_id は 1 に設定します。 |
@@ -90,8 +91,8 @@ ORDER BY    table_nm
 ## <a name="see-also"></a>参照  
  [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [列ストア インデックスを作成する&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_row_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 
   
 

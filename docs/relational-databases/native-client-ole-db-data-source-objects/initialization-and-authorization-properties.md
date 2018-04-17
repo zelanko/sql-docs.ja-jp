@@ -1,15 +1,15 @@
 ---
-title: "初期化プロパティと承認プロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: 初期化プロパティと承認プロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - authorization [OLE DB]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, authorization properties
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5c2658d15a374a4cd971eb0236d5a45dca2c9752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_INIT_ENCRYPT|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: ネットワーク経由で転送されるデータを暗号化する場合は、SSPROP_INIT_ENCRYPT プロパティを VARIANT_TRUE に設定します。<br /><br /> プロトコルの暗号化が有効な場合は、SSPROP_INIT_ENCRYPT の設定に関係なく、常に暗号化が行われます。 プロトコルの暗号化が無効な場合でも、SSPROP_INIT_ENCRYPT が VARIANT_TRUE に設定されている場合は、暗号化が行われます。<br /><br /> プロトコルの暗号化が無効で、SSPROP_INIT_ENCRYPT が VARIANT_FALSE に設定されている場合は、暗号化は行われません。|  
 |SSPROP_INIT_FAILOVERPARTNER|型 : VT_BSTR<br /><br /> R/W 読み取り/書き込み<br /><br /> 説明: データベース ミラーリングのフェールオーバー パートナーの名前を示します。 これは、初期化プロパティで、初期化前にしか設定できません。 初期化後は、フェールオーバー パートナーが構成されている場合は、プライマリ サーバーから返されたフェールオーバー パートナー名を返します。<br /><br /> これにより、アプリケーションで、最後に判別したバックアップ サーバーのキャッシュが、このようなアプリケーションはこと情報が、接続が最初の更新だけ確立 (かリセット、プールされている場合) に注意してください長期的な接続の期限切れになることができます。<br /><br /> 接続後は、アプリケーションでこの属性をクエリすることにより、フェールオーバー パートナーの ID を判別できます。 プライマリ サーバーのフェールオーバー パートナーが存在しないと、この属性は空文字列を返します。 詳細については、次を参照してください。 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)です。|  
 |SSPROP_INIT_FILENAME|型 : VT_BSTR<br /><br /> R/W 読み取り/書き込み<br /><br /> 説明: アタッチできるデータベースのプライマリ ファイル名を示します。 このデータベースがアタッチされ、接続の既定のデータベースとして使用されます。 SSPROP_INIT_FILENAME を使用するには、初期化プロパティ DBPROP_INIT_CATALOG の値にデータベース名を指定する必要があります。 指定したデータベース名が存在しない場合は、SSPROP_INIT_FILENAME に指定されているプライマリ ファイル名を確認し、そのデータベースと DBPROP_INIT_CATALOG に指定されている名前とをアタッチします。 データベースが以前にアタッチされていた場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はこれを再アタッチしません。|  
-|SSPROP_INIT_MARSCONNECTION|型 : VT_BOOL<br /><br /> R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 複数のアクティブな結果セット (MARS) が接続で有効かどうかを示します。 このオプションは、データベースへの接続が確立される前に、TRUE に設定する必要があります。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 &#40;です。MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|型 : VT_BOOL<br /><br /> R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 複数のアクティブな結果セット (MARS) が接続で有効かどうかを示します。 このオプションは、データベースへの接続が確立される前に、TRUE に設定する必要があります。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 & #40 です。MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|型 : VT_BSTR<br /><br /> R/W 読み取り/書き込み<br /><br /> 説明: DBPROP_INIT_DATASOURCE プロパティで指定されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを実行するサーバーのネットワーク アドレスです。|  
 |SSPROP_INIT_NETWORKLIBRARY|型 : VT_BSTR<br /><br /> R/W 読み取り/書き込み<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの通信に使われるネットワーク ライブラリ (DLL) の名前です。 この名前には、パスやファイル拡張子 (.dll) は含めません。<br /><br /> 既定値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント構成ユーティリティを使用してカスタマイズできます。<br /><br /> 注: のみの TCP と名前付きパイプは、このプロパティでサポートされます。 このプロパティにプレフィックスを使用した場合、プレフィックスが二重になりエラーが発生します。これは、内部でこのプロパティを使用してプレフィックスが生成されるためです。|  
 |SSPROP_INIT_PACKETSIZE|型 : VT_I4<br /><br /> R/W 読み取り/書き込み<br /><br /> 説明: ネットワーク パケットのバイト単位のサイズです。 このパケット サイズ プロパティの値は 512 ～ 32,767 にする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの既定のネットワーク パケット サイズは 4,096 です。|  

@@ -1,16 +1,16 @@
 ---
-title: "sp_help_downloadlist (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_help_downloadlist (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c768ab8d8908d6c62805539e3fb811cee293da55
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b891780620de40d8541b7fc42e100b575e6ad7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,20 +65,20 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@operation=** ] **'***操作***'**  
  指定したジョブに有効な操作を指定します。 *操作*は**varchar (64)**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
-|**DEFECT**|マスターからの参加を解除する対象サーバーを要求するサーバー操作**SQLServerAgent**サービス。|  
+|**参加解除**|マスターからの参加を解除する対象サーバーを要求するサーバー操作**SQLServerAgent**サービス。|  
 |**DELETE**|ジョブ全体を削除するジョブ操作。|  
 |**INSERT**|ジョブ全体の追加、または既存のジョブの更新を行うジョブ操作。 場合によっては、この操作にはすべてのジョブ ステップとスケジュールが含まれます。|  
 |**RE-ENLIST**|対象サーバーで参加情報の再送信を行うためのサーバー操作。この情報にはマルチサーバー ドメインの呼び出し間隔やタイム ゾーンも含まれます。 対象サーバーはでも、 **MSXOperator**詳細です。|  
 |**SET-POLL**|対象サーバーがマルチサーバー ドメインを呼び出す間隔を秒単位で設定するサーバー操作。 指定した場合*値*は、必要な間隔の値として解釈されから値を指定できます**10**に**28,800**です。|  
-|**START**|ジョブ実行の開始を要求するジョブ操作。|  
+|**開始**|ジョブ実行の開始を要求するジョブ操作。|  
 |**STOP**|ジョブ実行の停止を要求するジョブ操作。|  
-|**SYNC-TIME**|対象サーバーでシステム クロックとマルチサーバー ドメインとの同期化を行うためのサーバー操作。 これは非常に時間のかかる操作なので、頻繁に実行しないでください。限られた場合にだけ、実行するようにしてください。|  
+|**同期時刻**|対象サーバーでシステム クロックとマルチサーバー ドメインとの同期化を行うためのサーバー操作。 これは非常に時間のかかる操作なので、頻繁に実行しないでください。限られた場合にだけ、実行するようにしてください。|  
 |**UPDATE**|ジョブだけを更新する操作、 **sysjobs**ジョブ ステップ、スケジュールではない、ジョブの情報です。 によって自動的に呼び出される**sp_update_job**です。|  
   
  [ **@object_type=** ] **'***object_type***'**  
- 指定したジョブのオブジェクトの種類を指定します。 *object_type*は**varchar (64)**、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかを指定できます。 詳細については、有効な*object_type*値を参照してください[sp_add_category (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
+ 指定したジョブのオブジェクトの種類を指定します。 *object_type*は**varchar (64)**、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかを指定できます。 詳細については、有効な*object_type*値を参照してください[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)です。  
   
  [ **@object_name=** ] **'***object_name***'**  
  オブジェクトの名前。 *object_name*は**sysname**、既定値は NULL です。 場合*object_type*ジョブ、 *object_name*ジョブ名です。 場合*object_type*サーバー、 *object_name*サーバーの名前を指定します。  
@@ -89,7 +89,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@has_error=** ] *has_error*  
  ジョブでエラーを肯定するかどうかを指定します。 *has_error*は**tinyint**の既定値は NULL には、これを示すエラーを肯定しません。 **1**すべてのエラーを肯定することを示します。  
   
- [ **@status=** ] *status*  
+ [  **@status=** ]*ステータス*  
  ジョブの状態を指定します。 *ステータス*は**tinyint**既定値は NULL です。  
   
  [ **@date_posted=** ] *date_posted*  

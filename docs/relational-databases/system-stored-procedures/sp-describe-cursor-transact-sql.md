@@ -1,16 +1,16 @@
 ---
-title: "sp_describe_cursor (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_describe_cursor (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38eae1442b8058b6596efd525196f2f76b4b6dce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce7ca0bb9efe8f00cb65dfe9c8cc1dd1d383544b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,19 +89,19 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |同時実行 (concurrency)|**tinyint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**tinyint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**tinyint**|0 = 閉じた状態<br /><br /> 1 = 開いた状態|  
-|cursor_rows|**decimal(10,0)**|条件を満たすの結果セットを行数します。 詳細については、次を参照してください。 [@@CURSOR_ROWS &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/functions/cursor-rows-transact-sql.md)。|  
-|fetch_status|**smallint**|このカーソル上での最後のフェッチのステータスです。 詳細については、次を参照してください。 [@@FETCH_STATUS &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/functions/fetch-status-transact-sql.md)。<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
+|cursor_rows|**decimal(10,0)**|条件を満たすの結果セットを行数します。 詳細については、「[@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)」を参照してください。|  
+|fetch_status|**smallint**|このカーソル上での最後のフェッチのステータスです。 詳細については、「[@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)」を参照してください。<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
 |column_count|**smallint**|カーソル結果セット内の列の数。|  
-|row_count|**decimal(10,0)**|カーソルの最後の操作によって影響を受ける行の数。 詳細については、次を参照してください。 [@@ROWCOUNT &#40;です。TRANSACT-SQL と #41 です;](../../t-sql/functions/rowcount-transact-sql.md)。|  
+|row_count|**decimal(10,0)**|カーソルの最後の操作によって影響を受ける行の数。 詳細については、「[@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)」を参照してください。|  
 |last_operation|**tinyint**|カーソル上で実行された最後の操作です。<br /><br /> 0 = カーソル上で操作は実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE <br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーの有効範囲内でのカーソルの一意な値です。|  
   
 ## <a name="remarks"></a>解説  
  sp_describe_cursor は、カーソルがスクロール可能かどうか、更新可能かどうかなど、サーバー カーソルのグローバルな属性を説明します。 カーソルによって返される結果セットの属性の詳細については、sp_describe_cursor_columns を使用します。 カーソルが参照するベース テーブルのレポートが必要な場合は、sp_describe_cursor_tables を使用します。 接続時に可視になる [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルのレポートが必要な場合は、sp_cursor_list を使用します。  
   
- DECLARE CURSOR ステートメントがいない、カーソルの種類を要求することが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DECLARE CURSOR に含まれている SELECT ステートメントを使用することはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カーソルを SELECT ステートメントの使用をサポートできる型に暗黙的に変換します。 DECLARE CURSOR ステートメントで TYPE_WARNING を指定した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]情報メッセージの変換が完了したことをアプリケーションに送ります。 sp_describe_cursor は、インプリメントされたカーソルの種類を判断し、呼び出すことができます。  
+ DECLARE CURSOR ステートメントがいない、カーソルの種類を要求することが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DECLARE CURSOR に含まれている SELECT ステートメントを使用することはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを SELECT ステートメントの使用をサポートできる型に暗黙的に変換します。 DECLARE CURSOR ステートメントで TYPE_WARNING を指定した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]情報メッセージの変換が完了したことをアプリケーションに送ります。 sp_describe_cursor は、インプリメントされたカーソルの種類を判断し、呼び出すことができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -145,10 +145,10 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カーソル](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_cursor_list と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_columns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [sp_describe_cursor_tables &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_cursor_list &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

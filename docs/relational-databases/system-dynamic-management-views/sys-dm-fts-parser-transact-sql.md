@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_fts_parser (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_fts_parser (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  フルテキスト検索で分音文字を区別するかしないかを制御するブール値です。 *accent_sensitivity*は**ビット**、次の値のいずれか。  
   
-|[値]|アクセントの区別|  
+|値|アクセントの区別|  
 |-----------|----------------------------|  
 |0|区別しない<br /><br /> "Café"と"café"などの単語が同一に扱われます。|  
 |1|区別する<br /><br /> "Café"と"café"などの単語は異なる方法で扱われます。|  
@@ -77,12 +77,12 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |キーワード (keyword)|**varbinary (128)**|ワード ブレーカーによって返される、特定のキーワードの 16 進数表記です。 この表記は、フルテキスト インデックスにキーワードを格納するために使用します。 この値は人間が判読できるなど、フルテキスト インデックスの内容を返す他の動的管理ビューによって返される関連する特定のキーワードを出力するため便利ですが[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)と[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)です。<br /><br /> **注:** 0 Xff は、ファイルまたはデータセットの終了を示す特殊文字を表します。|  
 |group_id|**int**|特定の用語の生成元になった論理グループを区別する際に役立つ整数値を格納します。 たとえば、英語の場合、'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' で次の group_id 値が生成されます。<br /><br /> 1: サーバー<br />2: DB<br />3: DB|  
-|phrase_id|**int**|フルテキストなどの複合語の代替形式がワード ブレーカーによって発行されているかどうかを区別する際に役立つ整数値を格納します。 複合語 ('multi-million' など) が存在する場合、ワード ブレーカーによって代替形式が発行されることがあります。 このような代替形式 (語句) は区別が必要になる場合があります。<br /><br /> たとえば、英語の場合、'`multi-million`' で次の phrase_id 値が生成されます。<br /><br /> 場合は 1`multi`<br />場合は 1`million`<br />2`multimillion`|  
-|occurrence|**int**|解析結果の各用語の順序を示します。 たとえば、英語の "`SQL Server query processor`" という語句の場合、occurrence には語句内の用語に対する次のオカレンス値が格納されます。<br /><br /> 場合は 1`SQL`<br />2`Server`<br />3`query`<br />4`processor`|  
+|phrase_id|**int**|フルテキストなどの複合語の代替形式がワード ブレーカーによって発行されているかどうかを区別する際に役立つ整数値を格納します。 複合語 ('multi-million' など) が存在する場合、ワード ブレーカーによって代替形式が発行されることがあります。 このような代替形式 (語句) は区別が必要になる場合があります。<br /><br /> たとえば、英語の場合、'`multi-million`' で次の phrase_id 値が生成されます。<br /><br /> 場合は 1 `multi`<br />場合は 1 `million`<br />2 `multimillion`|  
+|occurrence|**int**|解析結果の各用語の順序を示します。 たとえば、英語の "`SQL Server query processor`" という語句の場合、occurrence には語句内の用語に対する次のオカレンス値が格納されます。<br /><br /> 場合は 1 `SQL`<br />2 `Server`<br />3 `query`<br />4 `processor`|  
 |special_term|**nvarchar (4000)**|ワード ブレーカーによって発行されている用語の特性に関する情報を格納します。次のいずれかになります。<br /><br /> 完全一致<br /><br /> ノイズ ワード<br /><br /> 文の末尾<br /><br /> 段落の末尾<br /><br /> 章の末尾|  
 |display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードを格納します。 フルテキスト インデックスのコンテンツにアクセスするように設計されている関数と同様に、ここに表示される用語は、非正規化の制限のため元の用語と同一とは限りません。 ただし、元の入力から特定できるだけの十分な精度は確保されます。|  
 |expansion_type|**int**|特定の用語の拡張の特性に関する情報を格納します。次のいずれかになります。<br /><br /> 0 = 1 つの単語の場合<br /><br /> 2 = 変化形の拡張<br /><br /> 4 = 類義語辞典の拡張と置換<br /><br /> たとえば、類義語辞典で run が `jog` の拡張として定義されている場合を考えてみます。<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> 用語`FORMSOF (FREETEXT, run)`次の出力が生成されます。<br /><br /> `run` : expansion_type=0<br /><br /> `runs` : expansion_type=2<br /><br /> `running` : expansion_type=2<br /><br /> `ran` : expansion_type=2<br /><br /> `jog` : expansion_type=4|  
-|source_term|**nvarchar (4000)**|特定の用語の生成元または解析元になった用語または語句です。 たとえば、英語の場合、`word breakers" AND stemmers'` に対するクエリで次の source_term 値が生成されます。<br /><br /> `word breakers`display_term の`word`<br />`word breakers`display_term の`breakers`<br />`stemmers`display_term の`stemmers`|  
+|source_term|**nvarchar (4000)**|特定の用語の生成元または解析元になった用語または語句です。 たとえば、英語の場合、`word breakers" AND stemmers'` に対するクエリで次の source_term 値が生成されます。<br /><br /> `word breakers` display_term の`word`<br />`word breakers` display_term の`breakers`<br />`stemmers` display_term の`stemmers`|  
   
 ## <a name="remarks"></a>解説  
  **sys.dm_fts_parser**など構文と、フルテキスト述語の機能をサポートしている[CONTAINS](../../t-sql/queries/contains-transact-sql.md)と[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、関数、およびなど[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)と[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)です。  
@@ -170,7 +170,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>参照  
- [フルテキスト検索およびセマンティック検索の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フル テキスト検索](../../relational-databases/search/full-text-search.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [構成して、フルテキスト検索の類義語辞典ファイルの管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

@@ -1,16 +1,16 @@
 ---
-title: "sp_mergemetadataretentioncleanup (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_mergemetadataretentioncleanup (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5ddc3ccb31599685dc9b41e383f29422b8b74e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 32a8e2654428569f189efd111839fbde7c6258f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +67,9 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  実行している場合は、データベースでの複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間を使用して、 **sp_mergemetadataretentioncleanup**クリーンアップ、マージ レプリケーション変更の追跡がありませんデータベースのメタデータ。 このため、無期限のパブリケーション保有期間は注意して使用してください。 かどうか、パブリケーションに無期限の保有期間を特定するのには、実行[sp_helpmergepublication (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 、パブリッシャーと注意結果内のすべてのパブリケーションの設定の値を持つ**0**の**保有**です。  
+>  実行している場合は、データベースでの複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション保有期間を使用して、 **sp_mergemetadataretentioncleanup**クリーンアップ、マージ レプリケーション変更の追跡がありませんデータベースのメタデータ。 このため、無期限のパブリケーション保有期間は注意して使用してください。 かどうか、パブリケーションに無期限の保有期間を特定するのには、実行[sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 、パブリッシャーと注意結果内のすべてのパブリケーションの設定の値を持つ**0**の**保有**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **db_owner** 、パブリッシュされたデータベースが実行できるは、データベース ロールまたはパブリケーション アクセス リスト内のユーザーを固定**sp_mergemetadataretentioncleanup**です。  
   
 ## <a name="see-also"></a>参照  

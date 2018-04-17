@@ -1,16 +1,16 @@
 ---
-title: "sysmail_allitems (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmail_allitems (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb11426c67ddb253a1aa76ae3ea435e115b6fa69
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5fe6ed0c4d40cf7d4d3986c4eb5db10aeffd46d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データベース メールで処理されたメッセージごとに 1 行のデータを格納します。 このビューは、すべてのメッセージの状態を確認するときに使用できます。  
   
- 状態が失敗したメッセージのみを表示する[sysmail_faileditems (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)。 未送信のメッセージだけを表示する[sysmail_unsentitems (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 送信されたメッセージのみを表示する[sysmail_sentitems (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。  
+ 状態が失敗したメッセージのみを表示する[sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)です。 未送信のメッセージだけを表示する[sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)です。 送信されたメッセージのみを表示する[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/03/2018
 |**query_result_header**|**bit**|値が 1 の場合、クエリの結果に列のヘッダーが含まれていることを示します。 値が 0 の場合、クエリの結果に列のヘッダーが含まれていないことを示します。|  
 |**query_result_width**|**int**|**Query_result_width**メッセージのパラメーターです。|  
 |**query_result_separator**|**char(1)**|クエリの出力で列の区切りに使用された文字。|  
-|**exclude_query_output**|**bit**|**Exclude_query_output**メッセージのパラメーターです。 詳細については、次を参照してください。 [sp_send_dbmail &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
+|**exclude_query_output**|**bit**|**Exclude_query_output**メッセージのパラメーターです。 詳細については、次を参照してください。 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)です。|  
 |**append_query_error**|**bit**|**Append_query_error**メッセージのパラメーターです。 0 は、クエリにエラーがあった場合、データベース メールで電子メール メッセージが送信されないことを示します。|  
 |**send_request_date**|**datetime**|メッセージがメール キューに挿入された日時。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これはメッセージの [差出人] フィールドに表示されるユーザーではなく、データベース メール プロシージャのユーザー コンテキストです。|  

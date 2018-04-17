@@ -1,15 +1,15 @@
 ---
-title: "SQL Server Native Client の機能 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server Native Client の機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f86438187351bfe36409c34c3a4193ac0120a777
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client の機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  [検証を伴わない暗号化の使用](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用して、証明書の検証をせずに、サーバーに送信されるデータを暗号化する方法について説明します。  
   
- [テーブル値パラメーターと #40 です。SQL Server Native Client&#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [テーブル値パラメーター &#40;SQL Server Native Client&#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるテーブル値パラメーターのサポートについて説明します。  
   
  [大きな CLR ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)  
  説明[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client、強化された FILESTREAM 機能のサポート。  
   
- [サービス プリンシパル名 &#40;です。SPN &#41;クライアント接続でのサポート](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [サービス プリンシパル名&#40;SPN&#41;クライアント接続でのサポート](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  あらゆるプロトコルでの相互認証を可能にする、サービス プリンシパル名 (SPN) のサポート強化について説明します。  
   
  [SQL Server Native Client におけるスパース列のサポート](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  

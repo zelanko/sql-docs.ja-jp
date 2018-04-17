@@ -1,16 +1,16 @@
 ---
-title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_rda_reauthorize_db (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3450d9d9dc491e0c3c57b560281148929d0ce907
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a62cae8b4c47975d7d0941458fefbafea7c6288a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  ローカルの Stretch 対応データベースに関連付けられたデータベース スコープ資格情報がします。  
   
  @with_copy = *@with_copy*  
- リモート データのコピーを作成し、コピー (推奨) に接続するかどうかを指定します。 *@with_copy*bit です。  
+ リモート データのコピーを作成し、コピー (推奨) に接続するかどうかを指定します。 *@with_copy* bit です。  
   
  @azure_servername = *@azure_servername*  
- リモート データを格納している Azure サーバーの名前を指定します。 *@azure_servername*型は sysname です。  
+ リモート データを格納している Azure サーバーの名前を指定します。 *@azure_servername* 型は sysname です。  
   
  @azure_databasename = *@azure_databasename*  
- リモート データを格納している Azure のデータベースの名前を指定します。 *@azure_databasename*型は sysname です。  
+ リモート データを格納している Azure のデータベースの名前を指定します。 *@azure_databasename* 型は sysname です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
@@ -78,7 +78,7 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_rda_deauthorize_db &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

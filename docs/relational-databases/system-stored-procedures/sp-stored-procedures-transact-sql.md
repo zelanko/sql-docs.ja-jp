@@ -1,16 +1,16 @@
 ---
-title: "sp_stored_procedures (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_stored_procedures (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c71f292c8d6d1b93e73b028ed6d2fc75e944386c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@sp_name =** ] **'***名前***'**  
+ [ **@sp_name =** ] **'***name***'**  
  カタログ情報を返すために使用するプロシージャの名前を指定します。 *名前*は**nvarchar (390)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。  
   
  [  **@sp_owner =** ] **'***スキーマ***'**  
@@ -86,7 +86,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|将来の使用のために予約されています。|  
 |**NUM_OUTPUT_PARAMS**|**int**|将来の使用のために予約されています。|  
 |**NUM_RESULT_SETS**|**int**|将来の使用のために予約されています。|  
-|**「解説」**|**varchar (254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この列の値を返しません。|  
+|**「解説」**|**varchar(254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値を返しません。|  
 |**PROCEDURE_TYPE**|**smallint**|プロシージャの種類。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に 2.0 を返します。 この値は次のいずれかになります。<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>解説  
@@ -96,7 +96,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
  **sp_stored_procedures**は等価**SQLProcedures** ODBC にします。 返される結果は並べ**PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、および**PROCEDURE_NAME**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -120,7 +120,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>参照  
- [カタログのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "マネージ クラスの SQLXML を使用して、DiffGram の実行 |Microsoft ドキュメント"
-ms.custom: 
+title: マネージ クラスの SQLXML を使用して、DiffGram の実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], Managed Classes
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9788bf33cb9ec0b1502fb338f39884bfb2f7dec8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fa04e87ef14c0a863cbace5e2dfa41a31ec2c7a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML マネージ クラスを使用した、DiffGram の実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-この例で DiffGram ファイルを実行する方法を示しています、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]データを適用する .NET Framework 環境を更新する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) を使用するテーブルします。  
+  この例で DiffGram ファイルを実行する方法を示しています、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]データを適用する .NET Framework 環境を更新する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) を使用するテーブルします。  
   
  この例では、DiffGram で顧客 ALFKI の顧客情報 (CompanyName と ContactName) を更新します。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 02/12/2018
 </ROOT>  
 ```  
   
- **\<する前に >**ブロックに含まれる、 **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。 **\<DataInstance >**ブロックに含まれる、対応する**\<顧客 >**要素と同じ**id**です。**\<顧客 >**内の要素、  **\<NewDataSet >**も指定**diffgr:hasChanges ="modified"**です。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
+ **\<する前に >**ブロックに含まれる、 **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。  **\<DataInstance >**ブロックに含まれる、対応する**\<顧客 >**要素と同じ**id**です。**\<顧客 >**内の要素、  **\<NewDataSet >**も指定**diffgr:hasChanges ="modified"**です。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
   
  C# チュートリアル アプリケーション SQLXML マネージ クラスを使用して、上の DiffGram を実行しでも作成する 2 つのテーブル (Cust、Ord) を更新する方法を示すためのコードを次に示します、 **tempdb**データベース。  
   
@@ -186,6 +187,6 @@ class Test
 8.  コマンド プロンプトで、DiffgramSample.exe を実行します。  
   
 ## <a name="see-also"></a>参照  
- [DiffGram の例 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [DiffGram の例 & #40 です。SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

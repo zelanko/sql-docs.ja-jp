@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_exec_describe_first_result_set (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_exec_describe_first_result_set (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 203db81a3bf752b071ee63453330ac08fc9db8a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   この動的管理関数には、[!INCLUDE[tsql](../../includes/tsql-md.md)]をパラメーターとしてステートメントと最初の結果、ステートメントのセットのメタデータについて説明します。  
   
- **sys.dm_exec_describe_first_result_set** has the same result set definition as [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set**が、同じ結果セットの定義[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)と似ています[sp _describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)です。  
   
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,7 +56,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  *@params*  
  @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)**または**nvarchar (max)**です。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n* 追加のパラメーター定義を示すプレース ホルダー。 Stmt に指定する各パラメーターを定義する必要があります@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL はします。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダーです。 Stmt に指定する各パラメーターを定義する必要があります@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL はします。  
   
  *@include_browse_information*  
  1 に設定すると、各クエリは FOR BROWSE オプションが指定されているように分析されます。 追加のキー列とソース テーブル情報が返されます。  
@@ -108,7 +109,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
 ## <a name="remarks"></a>解説  
- この関数と同じアルゴリズムを使用して**sp_describe_first_result_set**です。 詳細については、次を参照してください。 [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+ この関数と同じアルゴリズムを使用して**sp_describe_first_result_set**です。 詳細については、次を参照してください。 [sp_describe_first_result_set & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  次の表に、エラーの種類とその説明を示します。  
   
@@ -132,7 +133,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  実行する権限が必要です、@tsql引数。  
   
 ## <a name="examples"></a>使用例  
- 追加トピックの例で、 [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)を使用するよう適合させることができます**sys.dm_exec_describe_first_result_set**です。  
+ 追加トピックの例で、 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)を使用するよう適合させることができます**sys.dm_exec_describe_first_result_set**です。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 単一の Transact-SQL ステートメントに関する情報を返す  
  次のコードは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果に関する情報を返します。  
@@ -176,8 +177,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_describe_first_result_set &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

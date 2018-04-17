@@ -1,16 +1,16 @@
 ---
-title: "Update ステートメントと Delete ステートメントを配置 |Microsoft ドキュメント"
-ms.custom: 
+title: Update ステートメントと Delete ステートメントを配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f1685fb077fbc7d5b99f0d33f58f7624d6bd23c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>位置指定更新ステートメントと Delete ステートメント
 アプリケーションの更新または位置指定更新と結果セットの現在の行を削除またはステートメントを削除します。 Update および delete に配置されているステートメントは、それらのすべてではなく一部のデータ ソースでサポートされています。 アプリケーションが配置されているデータ ソースのサポートが update および delete ステートメントであるかどうかを決定するを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1*情報の種類*(カーソルの種類) によって異なります。 ODBC カーソル ライブラリが位置指定更新をシミュレートおよび delete ステートメントことに注意してください。  
@@ -46,13 +46,13 @@ ms.lasthandoff: 02/15/2018
   
  **UPDATE** *table-name*  
   
- **設定***列識別子*  **=**  {*式*&#124; です。**NULL**}  
+ **設定***列識別子* **=** {*式*&#124; です。**NULL**}  
   
- [**、** *列識別子*  **=**  {*式*&#124; です。**NULL**}].  
+ [**、** *列識別子* **=** {*式*&#124; です。**NULL**}].  
   
  **WHERE CURRENT OF** *カーソル名*  
   
- **DELETE FROM** *table-name* **WHERE CURRENT OF** *cursor-name*  
+ **DELETE FROM** *テーブル名* **WHERE CURRENT OF** *カーソル名*  
   
  これらのステートメントにカーソル名が必要なことに注意してください。 アプリケーションはいずれかでカーソル名を指定できます**SQLSetCursorName**設定またはデータ ソースを自動的にさせることができます、結果を作成するステートメントを実行する前に、カーソルが作成されるとき、カーソル名を生成します。 後者の場合、アプリケーションで呼び出すことで位置指定更新ステートメントと delete ステートメントで使用するためには、このカーソル名を取得**SQLGetCursorName**です。  
   

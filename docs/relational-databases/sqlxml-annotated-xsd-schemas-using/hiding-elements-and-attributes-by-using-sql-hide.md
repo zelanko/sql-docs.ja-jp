@@ -1,16 +1,16 @@
 ---
-title: "Sql:hide による要素と属性を非表示にする |Microsoft ドキュメント"
-ms.custom: 
+title: Sql:hide による要素と属性を非表示にする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - hiding elements
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab705046d11a6290670fc8bb695643b297b5210
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide による要素と属性の非表示
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 いくつかの要素と属性非表示にするスキーマを使用して指定できます、 **sql:hide**注釈。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
+  XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 いくつかの要素と属性非表示にするスキーマを使用して指定できます、 **sql:hide**注釈。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
   
  **Sql:hide**注釈はブール値 (0 = false、1 = true)。 指定できる値は 0、1、true、false です。  
   
@@ -50,7 +51,7 @@ XSD スキーマに対して XPath クエリを実行すると、結果の XML �
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 属性に sql:hide を指定する  
  この例では、XSD スキーマ、  **\<Person.Contact >**を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。  
   
- **\<Person.Contact >**要素は複合型であり、したがって、同じ名前 (既定のマッピング) のテーブルにマップします。 すべての属性 **\<Person.Contact >**要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、 **sql:hide**注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリが指定されている場合、 **ContactID** XML ドキュメントでは返されません。  
+  **\<Person.Contact >**要素は複合型であり、したがって、同じ名前 (既定のマッピング) のテーブルにマップします。 すべての属性 **\<Person.Contact >**要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、 **sql:hide**注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリが指定されている場合、 **ContactID** XML ドキュメントでは返されません。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

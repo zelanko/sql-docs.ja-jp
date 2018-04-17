@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2014
@@ -24,16 +24,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89309e660606a4ce9845ce71748fb37061d5628a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |object_id|**int**|統計オブジェクトのプロパティを返す対象であるオブジェクト (テーブル) の ID。|  
 |stats_id|**int**|統計オブジェクトの ID。 テーブル内で一意です。 詳細については、「 [sysには含まれていません。stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)には含まれていません。|
 |partition_number|**int**|テーブルのその部分を含むパーティション番号。|  
-|last_updated|**datetime2**|オブジェクトが最後に更新された日付と時刻。 詳細については、次を参照してください。、[解説](#Remarks)このページで、セクションです。|  
+|last_updated|**datetime2**|オブジェクトが最後に更新された日付と時刻。 詳細については、このページの「[解説](#Remarks)」セクションを参照してください。|  
 |rows|**bigint**|統計情報が最後に更新された時点のテーブルの行の総数。 統計がフィルター選択されている場合、またはフィルター選択されたインデックスに対応している場合は、行数がテーブルの行数よりも少なくなることがあります。|  
 |rows_sampled|**bigint**|統計の計算時にサンプリングされた行の合計数。|  
 |steps|**int**|ヒストグラムの区間の数。 詳細については、「 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)には含まれていません。|  
@@ -79,7 +79,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  この動作によって、 `sys.dm_db_incremental_stats_properties` や `sys.objects` などのビュー内の行へのクロス適用時に、 `sys.stats`を安全に使用できます。 このメソッドで、各パーティションに対応する統計情報のプロパティを返すことができます。 すべてのパーティションをまとめてマージした統計情報のプロパティを表示するには、代わりに sys.dm_db_stats_properties を使用します。 
 
-統計の更新の日付が格納されている、[統計 blob オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)と共に、[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)と[密度ベクトル](../../relational-databases/statistics/statistics.md#density)メタデータではなく、します。 統計情報データを生成するデータが読み取られず、統計情報の blob は作成されません、日付が使用できないと、 *last_updated*列は NULL です。 これは、述語返さない行、または新しい空のテーブルのフィルター選択された統計の場合です。
+統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計情報データを生成するデータが読み取られず、統計情報の blob は作成されません、日付が使用できないと、 *last_updated*列は NULL です。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
 
 ## <a name="permissions"></a>権限  
  ユーザーは、統計情報列に対する select 権限を持つテーブルを所有するユーザーまたはユーザーのメンバーである必要があります、`sysadmin`固定サーバー ロール、`db_owner`固定データベース ロール、または`db_ddladmin`固定データベース ロール。  

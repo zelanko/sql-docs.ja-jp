@@ -1,16 +1,16 @@
 ---
-title: "sp_apply_job_to_targets (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_apply_job_to_targets (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0a9b3cca205dc3af412ae9c0dfd426b18c05a4fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
  [ **@target_server_groups =**]  **'***target_server_groups***'**  
- 指定したジョブを適用する対象サーバー グループを、コンマ区切りのリストで指定します。 *target_server_groups* is **nvarchar(2048)**, with a default of NULL.  
+ 指定したジョブを適用する対象サーバー グループを、コンマ区切りのリストで指定します。 *target_server_groups*は**nvarchar (2048)**、既定値は NULL です。  
   
  [ **@target_servers=** ] **'***target_servers***'**  
- 指定したジョブを適用する対象サーバーを、コンマ区切りのリストで指定します *target_servers*is **nvarchar(2048)**, with a default of NULL.  
+ 指定したジョブを適用する対象サーバーを、コンマ区切りのリストで指定します *target_servers*は**nvarchar (2048)**、既定値は NULL です。  
   
  [  **@operation=** ] **'***操作***'**  
  指定したジョブを、指定した対象サーバーまたは対象サーバー グループに対して適用するか削除するかを指定します。 *操作*は**varchar (7)**、既定値は APPLY です。 有効な操作は**適用**と**削除**です。  
@@ -71,7 +71,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_apply_job_to_targets**代わりを呼び出すことで、複数の対象サーバーからジョブを適用 (または削除) する簡単な方法を提供**sp_add_jobserver** (または**sp_delete_jobserver**) に必要なターゲット サーバーごとに 1 回です。  
+ **sp_apply_job_to_targets**代わりを呼び出すことで、複数の対象サーバーからジョブを適用 (または削除) する簡単な方法を提供**sp_add_jobserver** (または**sp_delete_jobserver**)各対象サーバーが必要に対して 1 回です。  
   
 ## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**この手順を実行できるは、固定サーバー ロール。  
@@ -91,9 +91,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_add_jobserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_add_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

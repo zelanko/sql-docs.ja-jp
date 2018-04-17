@@ -1,16 +1,16 @@
 ---
-title: "sp_OACreate (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_OACreate (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OACreate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36d46482582d877241d5ec621896d8aa4206fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *objecttoken* **出力**  
  返されるオブジェクト トークンは、データ型のローカル変数でなければなりません**int**です。このオブジェクト トークンは、作成する OLE オブジェクトを識別するもので、その他の OLE オートメーション ストアド プロシージャの呼び出しに使用されます。  
   
- *コンテキスト*  
+ *context*  
  新しく作成した OLE オブジェクトを実行するときの実行条件を指定します。 指定する場合は、次のいずれかの値を指定する必要があります。  
   
  **1** = 組み込み (.dll) OLE サーバーのみです。  
@@ -89,7 +89,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [OLE オートメーションのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE オートメーション ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

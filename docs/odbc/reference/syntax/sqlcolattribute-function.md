@@ -2,7 +2,7 @@
 title: SQLColAttribute 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 関数
 **準拠**  
@@ -95,7 +95,7 @@ SQLRETURN SQLColAttribute (
  *NumericAttributePtr*  
  [出力]値を返す整数バッファーへのポインター、 *FieldIdentifier*のフィールド、 *ColumnNumber*フィールドが SQL_DESC_COLUMN_LENGTH など、記述子の数値型である場合は、IRD の行。 それ以外の場合、フィールドは使用されません。 一部のドライバーのみ書き込むことが、下位 32 ビットまたは 16 ビットのバッファーとのままにして、上位ビットに変更されていないことに注意してください。 そのため、アプリケーションでは、この関数を呼び出す前に 0 に値を初期化する必要があります。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -136,7 +136,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3 です。*x*ドライバーは、の各記述子フィールドの値を返す必要があります。 記述子フィールドは、ドライバーまたはデータ ソースには適用されませんし、ドライバーに 0 を返します、明記しない限り場合\* *StringLengthPtr*または空の文字列で **CharacterAttributePtr*です。  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>旧バージョンとの互換性  
  ODBC 3 です。*x*関数**SQLColAttribute**非推奨の ODBC 2 が置き換えられます*。x*関数**SQLColAttributes**です。 マップするとき**SQLColAttributes**に**SQLColAttribute** (ときに ODBC 2 *。x* ODBC 3 を利用するアプリケーション*。x*ドライバー)、またはマッピング**SQLColAttribute**に**SQLColAttributes** (ときに ODBC 3 *。x* ODBC 2 を利用するアプリケーション*。x*ドライバー)、ドライバー マネージャーがいずれかの値を渡します*FieldIdentifier*を通じて、新しい値にマップまたは次のように、エラーが返されます。  
   
 > [!NOTE]  
@@ -152,7 +152,7 @@ SQLRETURN SQLColAttribute (
   
  次の表に、によって返される記述子型**SQLColAttribute**です。 型は、 *NumericAttributePtr*値は**SQLLEN \***です。  
   
-|*FieldIdentifier*|[情報]<br /><br /> 返される|Description|  
+|*FieldIdentifier*|情報<br /><br /> 返される|Description|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|列が自動増分列の場合は SQL_TRUE にします。<br /><br /> 列が自動増分列でないかが数値でない場合は SQL_FALSE にします。<br /><br /> このフィールドは数値データ型の列にのみ有効です。 アプリケーションは、自動増分列を含む行に値を挿入することができますが、通常、列の値を更新することはできません。<br /><br /> Autoincrement 列に挿入が行われると、挿入時に、一意の値が列に挿入されます。 増分値は定義されていませんがデータ ソース固有です。 アプリケーションは autoincrement 列がする特定の値によって、特定の時点または単位で開始されると想定する必要があります。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|結果をベースの列名は、列を設定します。 (式である列の場合) と同じベースの列名が存在しない場合、この変数は、空の文字列を格納します。<br /><br /> この情報は、IRD フィールドは読み取り専用の SQL_DESC_BASE_COLUMN_NAME レコード フィールドから返されます。|  

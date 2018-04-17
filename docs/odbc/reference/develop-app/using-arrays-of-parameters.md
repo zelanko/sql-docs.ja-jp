@@ -1,30 +1,31 @@
 ---
-title: "パラメーターの配列の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: パラメーターの配列の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-arrays-of-parameters"></a>パラメーターの配列の使用
 アプリケーションの呼び出し、パラメーターの配列を使用する**SQLSetStmtAttr**で、*属性*SQL_ATTR_PARAMSET_SIZE パラメーター セットの数を指定の引数。 呼び出す**SQLSetStmtAttr**で、*属性*SQL_ATTR_PARAMS_PROCESSED_PTR ドライバーが処理された、パラメーターのセットの数を返すことができます、変数のアドレスを指定の引数などのエラーを設定します。 呼び出す**SQLSetStmtAttr**で、*属性*パラメーター値の行ごとに状態情報を返す対象の配列を指す SQL_ATTR_PARAM_STATUS_PTR の引数。 ドライバーは、ステートメントを保持する構造体でこれらのアドレスを格納します。  

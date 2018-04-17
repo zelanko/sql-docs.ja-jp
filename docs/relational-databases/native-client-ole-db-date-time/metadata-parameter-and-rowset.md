@@ -1,29 +1,30 @@
 ---
-title: "パラメーターと行セットのメタデータ |Microsoft ドキュメント"
-ms.custom: 
+title: パラメーターと行セットのメタデータ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d7d4ee439ff2695ab2094c3e1e4784506173b27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -151,6 +152,6 @@ ms.lasthandoff: 01/25/2018
  新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE がで提供される*dwFlags*アプリケーションで、列のサーバーの種類を決定するを許可する場所*wType* DBTYPE_DBTIMESTAMP がします。 *bScale*サーバーの種類の識別にも使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [メタデータ &#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [メタデータ&#40;OLE DB&#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

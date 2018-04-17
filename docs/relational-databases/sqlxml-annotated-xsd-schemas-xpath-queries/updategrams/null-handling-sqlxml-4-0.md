@@ -1,16 +1,16 @@
 ---
-title: "NULL の取り扱い (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: NULL の取り扱い (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updg:nullvalue attribute
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e5b4f5ceaa6ba03a48f834d0ad4ec26baf029a6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 73dfd298bfe9b6dd603c70ab22b20dc48af69957
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL の取り扱い (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML 構文では、NULL は "存在しない" ことを表します。 たとえば、属性または要素値が NULL の場合、その属性または要素は XML ドキュメントに存在しません。[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、SQLXML、 **updg:nullvalue**属性を使用して、要素または属性値に NULL を指定します。  
+  XML 構文では、NULL は "存在しない" ことを表します。 たとえば、属性または要素値が NULL の場合、その属性または要素は XML ドキュメントに存在しません。[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、SQLXML、 **updg:nullvalue**属性を使用して、要素または属性値に NULL を指定します。  
   
  たとえば、次のアップデート グラムで確実に、**タイトル**値である連絡先**ContactID** 64 を NULL に更新し、**タイトル**"Mr."の値 この連絡先にします。  
   
@@ -48,9 +49,9 @@ XML 構文では、NULL は "存在しない" ことを表します。 たとえ
 </ROOT>  
 ```  
   
- パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これを指定することで、 **nullvalue**属性、  **\<updg:header >**ブロックします。 例については、次を参照してください。 [Passing Parameters to アップデート グラム &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md).  
+ パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これを指定することで、 **nullvalue**属性、  **\<updg:header >**ブロックします。 例については、次を参照してください。[アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)です。  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

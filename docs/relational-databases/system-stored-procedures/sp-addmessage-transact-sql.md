@@ -1,16 +1,16 @@
 ---
-title: "sp_addmessage (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addmessage (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@lang =** ] **'***言語***'**  
  このメッセージの言語を指定します。 *言語*は**sysname**既定値は NULL です。 複数の言語は、同じサーバーにインストールできる*言語*各メッセージを記述する言語を指定します。 ときに*言語*は省略すると、言語が既定の言語のセッションです。  
   
- [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
- メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **@with_log****varchar (5)**既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーにのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
+ [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
+ メッセージを、発生時に Windows のアプリケーション ログに書き込むかどうかを指定します。 **@with_log** **varchar (5)**既定値は FALSE。 TRUE の場合は、エラーは常に Windows のアプリケーション ログに書き込まれます。 FALSE の場合、常に Windows のアプリケーション ログに書き込まれるわけではありませんが、エラーの発生状況によっては書き込まれることもあります。 メンバーにのみ、 **sysadmin**サーバーの役割は、このオプションを使用できます。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
- [  **@replace**   *=*  ] **'***置換***'**  
+ [ **@replace** *=* ] **'***置換***'**  
  文字列として指定されている場合*置換*、既存のエラー メッセージが新しいメッセージ テキストと重大度レベルで上書きされます。 *置き換える*は**varchar (7)**既定値は NULL です。 場合、このオプションを指定する必要があります*msg_id*既に存在します。 英語版のすべてのメッセージが同じであるその他のすべての言語の英語版のメッセージの重大度レベルが置き換えられます*msg_id*です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -171,8 +171,8 @@ GO                                       -- parameters.
   
 ## <a name="see-also"></a>参照  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_altermessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_dropmessage &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

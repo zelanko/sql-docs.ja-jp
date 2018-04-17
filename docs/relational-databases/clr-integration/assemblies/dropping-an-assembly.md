@@ -1,15 +1,15 @@
 ---
-title: "アセンブリを削除する |Microsoft ドキュメント"
-ms.custom: 
+title: アセンブリを削除する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], removing
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1db4c5af104f3f00db4cdf26c3ab2f7c94800513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43dbe5a4d72563217b4c2ad7a74e78aea7e7ac09
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dropping-an-assembly"></a>アセンブリの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-CREATE ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録された各アセンブリは、そのアセンブリで提供される機能が不要になれば削除できます。 アセンブリを削除すると、アセンブリと、デバッグ ファイルなどこれに関連するファイルがすべて、データベースから削除されます。 アセンブリを削除するには、DROP ASSEMBLY ステートメントを次の構文で使用します。  
+  CREATE ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録された各アセンブリは、そのアセンブリで提供される機能が不要になれば削除できます。 アセンブリを削除すると、アセンブリと、デバッグ ファイルなどこれに関連するファイルがすべて、データベースから削除されます。 アセンブリを削除するには、DROP ASSEMBLY ステートメントを次の構文で使用します。  
   
 ```  
 DROP ASSEMBLY MyDotNETAssembly  
@@ -74,10 +74,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [アセンブリを変更します。](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [アセンブリを作成します。](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [DROP AGGREGATE &#40;です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [DROP FUNCTION &#40;TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE &#40;TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP AGGREGATE &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [DROP PROCEDURE & #40;TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [ドロップ タイプ &#40;です。TRANSACT-SQL と #41 です。](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [ドロップ タイプ&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

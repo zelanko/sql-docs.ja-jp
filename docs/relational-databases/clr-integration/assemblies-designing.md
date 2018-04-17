@@ -1,34 +1,34 @@
 ---
-title: "アセンブリのデザイン |Microsoft ドキュメント"
-ms.custom: 
+title: アセンブリのデザイン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 769c0aa7f6d9593ab3e2360a0e26876f23f16b41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---designing"></a>アセンブリの設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
+  このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
   
 -   アセンブリのパッケージ化  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
   
  コードをアセンブリにパッケージ化しているときは、次のことを考慮する必要があります。  
   
--   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](../../relational-databases/clr-integration/assemblies-implementing.md)と[ALTER ASSEMBLY &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-assembly-transact-sql.md)。  
+-   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](../../relational-databases/clr-integration/assemblies-implementing.md)と[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)です。  
   
 -   マネージ コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
   
@@ -61,10 +61,10 @@ ms.lasthandoff: 02/09/2018
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE を使用すると、アセンブリでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内外を問わずどちらのリソースにも無制限にアクセスできます。 UNSAFE アセンブリの内部で実行されているコードで、アンマネージ コードを呼び出すことができます。  
   
- また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリは、いずれかのセキュリティ システムを覆すも可能性があることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または共通言語ランタイム。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 メンバーにのみ、 **sysadmin**固定サーバー ロールは、UNSAFE アセンブリを作成できます。  
+ また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 メンバーにのみ、 **sysadmin**固定サーバー ロールは、UNSAFE アセンブリを作成できます。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信頼性の高い、スケーラブルな方法で実行できることを確認するアセンブリ内のマネージ コードを特定の制限を設定します。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージ コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
   
 ### <a name="disallowed-custom-attributes"></a>禁止されているカスタム属性  
  アセンブリには次のカスタム属性で注釈を付けることができません。  
@@ -124,7 +124,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>参照  
- [アセンブリ &#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [アセンブリ (&) #40";"データベース エンジン"&"#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

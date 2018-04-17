@@ -1,16 +1,16 @@
 ---
-title: "sp_MSchange_logreader_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_MSchange_logreader_agent_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea342cad83b587382ca9e25141facd613263a20e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23fd179360bfa85bdaef243faca12cd7e221be3e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,32 +53,32 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publisher_security_mode** =] *publisher_security_mode*  
+ [ **@publisher_security_mode**=] *publisher_security_mode*  
  パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**smallint**、既定値はありません。  
   
  **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
   
  **1** Windows 認証を指定します。  
   
- [  **@publisher_login** =] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'***publisher_login***'**  
  パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値はありません。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login* null と*publisher_security_mode*は**1**で指定した Windows アカウント*job_login*使用されますパブリッシャーへの接続時に  
   
- [  **@publisher_password** =] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'***publisher_password***'**  
  パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値はありません。  
   
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 *これ以外は変更できません*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *パブリッシャーです。*  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
   
- [  **@publisher_type** =] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'***publisher_type***'**  
  パブリッシャーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで実行されていないときのパブリッシャーの種類を指定します。 *publisher_type*は**sysname**値は次のいずれかを指定できます。  
   
 |値|Description|  
@@ -92,13 +92,13 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_MSchange_logreader_agent_properties**トランザクション レプリケーションで使用します。  
   
- 実行する際は、すべてのパラメーターを指定する必要があります**sp_MSchange_logreader_agent_properties**です。 実行[sp_helplogreader_agent (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)をログ リーダー エージェント ジョブの現在のプロパティを返します。  
+ 実行する際は、すべてのパラメーターを指定する必要があります**sp_MSchange_logreader_agent_properties**です。 実行[sp_helplogreader_agent &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)をログ リーダー エージェント ジョブの現在のプロパティを返します。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
  インスタンスで、パブリッシャーを実行するときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンを使用する必要ありますまたは[sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)ログ リーダー エージェントのプロパティを変更します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_MSchange_logreader_agent_properties**です。  
   
 ## <a name="see-also"></a>参照  

@@ -1,31 +1,32 @@
 ---
-title: "SQLBrowseConnect による接続 |Microsoft ドキュメント"
-ms.custom: 
+title: SQLBrowseConnect による接続 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], SQLBrowseConnect
 - SQLBrowseConnect function [ODBC], connecting
 - connecting to data source [ODBC], SQLBrowseConnect
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d8f7e8722c9386267aeb429301a71132c999d8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6382b0a02963395008dd02c962c10479aa5f29d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect による接続
 **SQLBrowseConnect**と同様、 **SQLDriverConnect**、接続文字列を使用します。 使用して、ただし、 **SQLBrowseConnect**アプリケーションは実行時に完全な接続文字列を構築することができます。 この方法を使用すると、アプリケーションで次の 2 つのことを行えます。  

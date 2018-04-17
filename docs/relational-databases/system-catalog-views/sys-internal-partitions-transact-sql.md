@@ -1,16 +1,16 @@
 ---
-title: "sys.internal_partitions (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.internal_partitions (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -18,21 +18,22 @@ applies_to:
 dev_langs:
 - TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 160441134e0f848d9b4c46d6501638e8d46e3244
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ディスク ベース テーブルで列ストア インデックスの内部データを追跡するそれぞれの行セットの 1 つの行を返します。 これらの行セットでは、列ストア インデックスに内部し、トラックが削除された行、行グループのマッピング、およびデルタは、行グループを格納します。 データを追跡ごとに各テーブル パーティション。すべてのテーブルには、少なくとも 1 つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再行セットを列ストア インデックスを再構築するたびに作成されます。   
+  ディスク ベース テーブルで列ストア インデックスの内部データを追跡するそれぞれの行セットの 1 つの行を返します。 これらの行セットでは、列ストア インデックスに内部し、トラックが削除された行、行グループのマッピング、およびデルタは、行グループを格納します。 データを追跡ごとに各テーブル パーティション。すべてのテーブルには、少なくとも 1 つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 再行セットを列ストア インデックスを再構築するたびに作成されます。   
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +69,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

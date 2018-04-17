@@ -1,8 +1,8 @@
 ---
-title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44e298879fcd4493bcf9a817d84a1962cfb377db
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8744cd8041f08d0b846b388bf0c06e01b2713220
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,9 +55,9 @@ ms.lasthandoff: 04/05/2018
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
     
 ## <a name="remarks"></a>解説  
- **sys.dm_exec_query_optimizer_info** contains the following properties (counters). すべての発生回数の値は累積され、システムの再起動時に 0 に設定されます。 値フィールドのすべての値は、システムの再起動時に NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 すべてのクエリの最適化のときに測定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への変更を判断**dm_exec_query_optimizer_info**、両方のユーザーとシステムによって生成されたクエリを含むです。 既にキャッシュされている計画の実行がの値を変更していない**dm_exec_query_optimizer_info**、大幅な最適化のみです。  
+ **sys.dm_exec_query_optimizer_info**次のプロパティ (カウンター) が含まれています。 すべての発生回数の値は累積され、システムの再起動時に 0 に設定されます。 値フィールドのすべての値は、システムの再起動時に NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 すべてのクエリの最適化のときに測定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への変更を判断**dm_exec_query_optimizer_info**、両方のユーザーとシステムによって生成されたクエリを含むです。 既にキャッシュされている計画の実行がの値を変更していない**dm_exec_query_optimizer_info**、大幅な最適化のみです。  
   
-|カウンター|個数|[値]|  
+|カウンター|個数|値|  
 |-------------|----------------|-----------|  
 |optimizations|最適化の合計数。|適用なし|  
 |elapsed time|最適化の合計数。|個別のステートメント (クエリ) の最適化ごとの平均経過時間 (秒単位)。|  

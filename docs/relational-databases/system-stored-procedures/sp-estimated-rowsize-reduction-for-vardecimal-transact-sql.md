@@ -1,16 +1,16 @@
 ---
-title: "sp_estimated_rowsize_reduction_for_vardecimal (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_estimated_rowsize_reduction_for_vardecimal (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimated_rowsize_reduction_for_vardecimal
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - estimate decimal compression
 - table compression [SQL Server]
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd67eb412ba93dd19a828963f2f10d0589d1987c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cf5b858da943d056d80b135ad98e31ce534b1c9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   テーブルで vardecimal ストレージ形式が有効になっている場合に、行の平均サイズの削減量を見積もります。 この数値を使用して、テーブル サイズ全体の削減量を見積もることができます。 行サイズの平均削減量を計算するには、統計サンプリングが使用されます。このため、結果はあくまでも見積もりとして扱ってください。 vardecimal ストレージ形式を有効にした後、まれに行サイズが増加する場合があります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、行の圧縮とページの圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 テーブルとパーティション インデックスのサイズに圧縮効果を参照してください。 [sp_estimate_data_compression_savings &#40;です。TRANSACT-SQL と #41 です;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、行の圧縮とページの圧縮を使用してください。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 テーブルとパーティション インデックスのサイズに圧縮効果を参照してください。 [sp_estimate_data_compression_savings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,7 +75,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
   
  テーブルが vardecimal ストレージ形式の有効な場合を使用して**sp_estimated_rowsize_reduction_for_vardecimal**を vardecimal ストレージ形式が無効になっている場合、行の平均サイズを推定します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  テーブルに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -89,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_db_vardecimal_storage_format &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
- [sp_tableoption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

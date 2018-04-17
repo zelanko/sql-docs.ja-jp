@@ -1,16 +1,16 @@
 ---
 title: sys.dm_resource_governor_resource_pool_affinity (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_resource_pool_affinity_TSQL
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_affinity
 - sys.dm_resource_governor_resource_pool_affinity
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83c425a7346e58b4332ee4c8e78b4fe607b9ca6a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 069de4c82a5b8519cd07cfb232346a697bdf0658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmresourcegovernorresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   リソース プール アフィニティを追跡します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 |Colmn 名|データ型|Description|  
 |----------------|---------------|-----------------|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |Scheduler_mask|**bigint**|このプールに関連付けられているスケジューラを表すバイナリ マスク。 NULL 値は許可されません。|  
   
 ## <a name="remarks"></a>解説  
- AUTO アフィニティで作成されたプールにはアフィニティがないので、このビューには表示されません。 詳細については、次を参照してください。、 [CREATE RESOURCE POOL &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-resource-pool-transact-sql.md)と[リソース プール &#40; を ALTERTRANSACT-SQL と #41 です。](../../t-sql/statements/alter-resource-pool-transact-sql.md)ステートメントです。  
+ AUTO アフィニティで作成されたプールにはアフィニティがないので、このビューには表示されません。 詳細については、次を参照してください。、 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-resource-pool-transact-sql.md)と[ALTER RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-resource-pool-transact-sql.md)ステートメントです。  
   
 ## <a name="see-also"></a>参照  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

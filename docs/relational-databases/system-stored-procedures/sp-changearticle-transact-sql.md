@@ -1,16 +1,16 @@
 ---
-title: "sp_changearticle (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_changearticle (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
  [  **@article=**] **'***記事***'**  
@@ -81,8 +81,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||実行する INSERT ステートメントです。指定しないと、ログから作成されます。|  
 |**pre_creation_cmd**||同期が適用される前に、レプリケーション先のテーブルを削除したり、切り捨てたりできる作成準備コマンドです。|  
 ||**[なし]**|コマンドを使用しません。|  
-||**ドロップ**|レプリケーション先テーブルを破棄します。|  
-||**削除**|レプリケーション先テーブルを削除します。|  
+||**drop**|レプリケーション先テーブルを破棄します。|  
+||**delete**|レプリケーション先テーブルを削除します。|  
 ||**truncate**|レプリケーション先テーブルを切り捨てます。|  
 |**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**schema_option**||指定されたアーティクルに対するスキーマ生成オプションのビットマップを指定します。 *schema_option*は**binary (8)**です。 詳細については、このトピックの後半の「解説」セクションを参照してください。|  
@@ -124,7 +124,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 ||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)です。<br /><br /> 関連するオプションを参照してください**0x100000000**です。|  
 ||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) 8000 バイトを超えるに変換します**varbinary (max)**を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。|  
-||**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)です。|  
 ||**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。|  
 ||**0x8000000000**|変換、 **geography**と**geometry**データ型を**varbinary (max)** を実行しているサブスクライバーにこれらの型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|型の列にインデックスをレプリケート**geography**と**geometry**です。|  
@@ -137,11 +137,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**列名は使用できません。**|列名は、レプリケートされる INSERT ステートメントに含まれません。|  
 ||**dts 水平パーティションのないです。**|アーティクルの行方向のパーティション分割は、変換可能なサブスクリプションによって定義されません。|  
 ||**[なし]**|内のすべての状態オプションをクリア、 [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルが表示され、アーティクルを非アクティブとしてマークを付けます。|  
-||**パラメーター**|パラメーター化コマンドを使用して、変更がサブスクライバーに反映されます。 これは新しいアーティクルに対する既定値です。|  
+||**parameters**|パラメーター化コマンドを使用して、変更がサブスクライバーに反映されます。 これは新しいアーティクルに対する既定値です。|  
 ||**文字列リテラル**|文字列リテラル値を使用して、変更がサブスクライバーに反映されます。|  
 |**sync_object**||同期出力ファイルを作成するのに使用されるテーブルまたはビューの名前です。 既定値は NULL です。 Oracle パブリッシャーに対してはサポートされていません。|  
 |**テーブル スペース**||Oracle データベースからパブリッシュされたアーティクルのログ テーブルによって使用されたテーブルスペースを識別します。 詳細については、「[Manage Oracle Tablespaces](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」 (Oracle テーブルスペースの管理) を参照してください。|  
-|**しきい値**||ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 ピア ツー ピア レプリケーションではサポートされません。|  
+|**threshold**||ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**type**||Oracle パブリッシャーに対してはサポートされていません。|  
 ||**logbased**|ログベースのアーティクルです。|  
 ||**logbased manualboth**|手動フィルターと手動ビューを使用する、ログベースのアーティクルです。 このオプションでは、する必要があります、 *sync_object*と*フィルター*プロパティも設定します。 Oracle パブリッシャーに対してはサポートされていません。|  
@@ -163,7 +163,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  変更によって新しいスナップショットの生成が必要になるプロパティについては、「解説」を参照してください。  
   
- [  **@force_reinit_subscription=]***更によって*  
+ [**@force_reinit_subscription=] * * * 更によって*  
  このストアド プロシージャが実行する操作によって、既存のサブスクリプションの再初期化が必要になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**アーティクルへの変更によってが再初期化するサブスクリプションを指定します。 変更に既存のサブスクリプションの再初期化が必要であることをストアド プロシージャが検出すると、エラーが発生し、変更は加えられません。  
@@ -172,7 +172,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  変更によって既存のサブスクリプションの再初期化が必要になるプロパティについては、「解説」を参照してください。  
   
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  指定以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
@@ -249,16 +249,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changearticle**です。  
   
 ## <a name="see-also"></a>参照  
  [表示およびアーティクルのプロパティの変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

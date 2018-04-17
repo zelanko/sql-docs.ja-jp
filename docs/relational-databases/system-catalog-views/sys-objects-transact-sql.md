@@ -1,16 +1,16 @@
 ---
-title: "sys.objects (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.objects (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 0/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.objects_TSQL
@@ -25,28 +25,29 @@ helpviewer_keywords:
 - user-defined table types [SQL Server]
 - table types [SQL Server]
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99d4a8338f389fcabbff4a7ffa5bcb594a9149c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e233f72cc5198a594278ff503f33b56b7f38f02c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   をネイティブ コンパイルのスカラー ユーザー定義関数を含む、データベース内で作成される各ユーザー定義のスキーマ スコープ オブジェクトの行が含まれています。  
   
- 詳細については、次を参照してください。 [scalar user-defined 関数は、インメモリ OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)です。  
+ 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
 > [!NOTE]  
 >  DDL トリガーはスキーマ スコープでないため、sys.objects では DDL トリガーは表示されません。 すべてのトリガー、DML と DDL の両方に含まれて[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)です。 sys.triggers には、さまざまな種類のトリガーの名前スコープ ルールの両方がサポートされています。  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|オブジェクト名です。|  
 |object_id|**int**|オブジェクト ID 番号。 データベース内で一意です。|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |schema_id|**int**|オブジェクトが含まれているスキーマの ID。<br /><br /> スキーマ スコープ システム オブジェクトは、常に sys スキーマまたは INFORMATION_SCHEMA スキーマに含まれています。|  
 |parent_object_id|**int**|このオブジェクトが所属するオブジェクトの ID です。<br /><br /> 0 = 子オブジェクトではありません。|  
 |型|**char(2)**|オブジェクトの種類:<br /><br /> AF = 集計関数 (CLR)<br /><br /> C = CHECK 制約<br /><br /> D = DEFAULT (制約またはスタンドアロン)<br /><br /> F = FOREIGN KEY 制約<br /><br /> FN = SQL スカラー関数<br /><br /> FS = アセンブリ (CLR) スカラー関数<br /><br /> FT = アセンブリ (CLR) テーブル値関数<br /><br /> IF = SQL インライン テーブル値関数<br /><br /> IT = 内部テーブル<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> PG = プラン ガイド<br /><br /> PK = PRIMARY KEY 制約<br /><br /> R = ルール (旧形式、スタンドアロン)<br /><br /> RF = レプリケーション フィルター プロシージャ<br /><br /> S = システム ベース テーブル<br /><br /> SN = シノニム<br /><br /> SO = シーケンス オブジェクト<br /><br /> U = テーブル (ユーザー定義)<br /><br /> V = ビュー<br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> <br /><br /> SQ = サービス キュー<br /><br /> TA = アセンブリ (CLR) DML トリガー<br /><br /> TF = SQL テーブル値関数<br /><br /> TR = SQL DML トリガー<br /><br /> TT = テーブルの種類<br /><br /> UQ = UNIQUE 制約<br /><br /> X = 拡張ストアド プロシージャ<br /><br /> <br /><br /> **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]です。<br /><br /> <br /><br /> ET 外部テーブルを =|  
-|type_desc|**nvarchar (60)**|オブジェクトの種類の説明です。<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
+|type_desc|**nvarchar(60)**|オブジェクトの種類の説明です。<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|オブジェクトが作成された日付です。|  
 |modify_date|**datetime**|ALTER ステートメントを使用して最後にオブジェクトが変更された日付です。 オブジェクトがテーブルまたはビューの場合は、テーブルやビューのクラスター化インデックスが作成または変更されると、modify_date も変更されます。|  
 |is_ms_shipped|**bit**|オブジェクトが内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによって作成されることを示します。|  
@@ -80,8 +81,8 @@ ms.lasthandoff: 11/21/2017
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+## <a name="permissions"></a>権限  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -168,11 +169,11 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.all_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
- [sys.system_objects &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
+ [sys.all_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
- [オブジェクト カタログ ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.internal_tables &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [sys.internal_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

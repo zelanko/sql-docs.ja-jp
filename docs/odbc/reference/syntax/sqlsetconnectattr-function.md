@@ -2,7 +2,7 @@
 title: SQLSetConnectAttr 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 関数
 **準拠**  
@@ -64,7 +64,7 @@ SQLRETURN SQLSetConnectAttr(
  *ValuePtr*  
  [入力]関連付けられる値へのポインター*属性*です。 値に応じて*属性*、 *ValuePtr*符号なし整数値となるかが null で終わる文字列を指します。 整数型を*属性*引数がない固定長であること、詳細の [コメント] セクションを参照してください。  
   
- *StringLength*  
+ *stringLength*  
  [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリ バッファーへのポインター、この引数の長さにする必要があります **ValuePtr*です。 文字の文字列データでは、この引数は、文字列のバイト数を含める必要があります。  
   
  場合*属性*ODBC で定義された属性と*ValuePtr*整数*StringLength*は無視されます。  
@@ -79,7 +79,7 @@ SQLRETURN SQLSetConnectAttr(
   
 -   場合*ValuePtr*し、固定長の値を含む*StringLength*は SQL_IS_INTEGER か SQL_IS_UINTEGER、必要に応じて。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING です。  
   
 ## <a name="diagnostics"></a>診断  

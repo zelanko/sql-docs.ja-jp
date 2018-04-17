@@ -2,7 +2,7 @@
 title: SQLPrepare 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 関数
 **準拠**  
@@ -60,7 +60,7 @@ SQLRETURN SQLPrepare(
  *TextLength*  
  [入力]長さ **StatementText*文字です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -86,7 +86,7 @@ SQLRETURN SQLPrepare(
 |42S11|インデックスが既に存在します。|\**StatementText*に含まれる、 **CREATE INDEX**ステートメント、および指定したインデックス名が既に存在します。|  
 |42S12|インデックスが見つかりません|\**StatementText*に含まれる、 **DROP INDEX**ステートメントと指定したインデックス名は存在しませんでした。|  
 |42S21|列が既に存在します。|\**StatementText*に含まれる、 **ALTER TABLE**ステートメントとで指定された列、**追加**句が一意でないか、ベース テーブルの既存の列を識別します。|  
-|42S22|列が見つかりません。|\**StatementText*に含まれる、 **CREATE INDEX**ステートメント、および 1 つ以上の列リストで指定した名前が存在しない列です。<br /><br /> \**StatementText*に含まれる、 **GRANT**または**取り消す**ステートメントと指定された列名は存在しませんでした。<br /><br /> \**StatementText*に含まれる、**選択**、**削除**、**挿入**、または**更新**ステートメント、および指定された列名前は存在しません。<br /><br /> \**StatementText*に含まれる、 **CREATE TABLE**ステートメント、および制約 (テーブルを参照する以外の 1 つ作成される) で指定された列は提供されません。|  
+|42S22|列が見つかりません。|\**StatementText*に含まれる、 **CREATE INDEX**ステートメント、および 1 つ以上の列リストで指定した名前が存在しない列です。<br /><br /> \**StatementText*に含まれる、 **GRANT**または**取り消す**ステートメントと指定された列名は存在しませんでした。<br /><br /> \**StatementText*に含まれる、**選択**、**削除**、**挿入**、または**更新**ステートメント、および指定された列名存在しません。<br /><br /> \**StatementText*に含まれる、 **CREATE TABLE**ステートメント、および制約 (テーブルを参照する以外の 1 つ作成される) で指定された列は提供されません。|  
 |HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効で、 *StatementHandle*です。 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*関数が呼び出されたし、再度、 *StatementHandle*です。<br /><br /> 関数が呼び出され、前に、実行を完了**SQLCancel**または**SQLCancelHandle**で呼び出されましたが、 *StatementHandle*の別のスレッドから、マルチ スレッド アプリケーションです。|  

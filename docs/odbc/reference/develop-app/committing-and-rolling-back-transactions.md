@@ -1,15 +1,16 @@
 ---
-title: "コミットして、トランザクションをロールバックしています |Microsoft ドキュメント"
-ms.custom: 
+title: コミットして、トランザクションをロールバックしています |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>コミットして、トランザクションをロールバックしています
 アプリケーションが呼び出すをコミットまたは手動コミット モードでのトランザクションをロールバック、 **SQLEndTran**です。 通常のトランザクションをサポートする Dbms 用のドライバーを実行してこの関数を実装する、**コミット**または**ロールバック**ステートメントです。 ドライバー マネージャーは呼び出しません**SQLEndTran**場合でも、アプリケーションが、トランザクションをロールバックしようとしています。 SQL_SUCCESS、単純に返します接続が自動コミット モードであるとします。 いずれかを実装できるため、トランザクションをサポートしない Dbms 用のドライバーは、自動コミット モードでは常に、 **SQLEndTran**を何もせずに関係なく SQL_SUCCESS を返しますまたは、まったく実装しません。  

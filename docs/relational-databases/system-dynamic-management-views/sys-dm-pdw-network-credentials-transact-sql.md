@@ -1,30 +1,31 @@
 ---
-title: "sys.dm_pdw_network_credentials (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_pdw_network_credentials (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bddbdd676ab829f1468866c09d745919d1fe97d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6c4c13a3e2db6090c400d0aaf7df0be9ce4596a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -45,6 +46,6 @@ ms.lasthandoff: 02/03/2018
  この動的管理ビューのキーは*pdw_node_id* plus *target_server_name*です。  
   
 ## <a name="see-also"></a>参照  
- [SQL データ ウェアハウスと並列データ ウェアハウスの動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL データ ウェアハウスと並列データ ウェアハウスの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

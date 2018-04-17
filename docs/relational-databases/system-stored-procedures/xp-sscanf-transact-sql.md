@@ -1,16 +1,16 @@
 ---
-title: "xp_sscanf (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: xp_sscanf (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_sscanf_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70835bdde4e84dbe889c8ae4f2ec5da24b314d5f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 315612c728140f575ed78e94f5643e795951a9fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>引数  
- **string**  
+ **文字列**  
  引数の値を読み出す文字列を指定します。  
   
  OUTPUT  
  値を指定した場合、配置*引数*出力パラメーターです。  
   
- *書式設定*  
+ *format*  
  書式設定された文字列がに似ていますが、C 言語のサポート内容**sscanf**関数。 現在サポートしているのは %s フォーマット引数のみです。  
   
- *引数*  
+ *argument*  
  **Varchar**変数の対応する値に設定*形式*引数。  
   
  *n*  
@@ -69,7 +69,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -91,7 +91,7 @@ products10.tmp        random
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [汎用拡張ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+ [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_sprintf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

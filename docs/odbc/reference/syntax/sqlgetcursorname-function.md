@@ -2,7 +2,7 @@
 title: SQLGetCursorName 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69a0da5196c5724284c2da75dc6c7deb3c3cedcd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 関数
 **準拠**  
@@ -66,7 +66,7 @@ SQLRETURN SQLGetCursorName(
  *NameLengthPtr*  
  [出力]文字 (null 終了文字を除く) の合計数を返すメモリへのポインターで返される使用可能な\**カーソル名*です。 返される文字数がより大きいかに等しい場合*BufferLength*、内のカーソル名\**カーソル名*に切り捨てられます*BufferLength*null 終端文字の長さマイナスです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

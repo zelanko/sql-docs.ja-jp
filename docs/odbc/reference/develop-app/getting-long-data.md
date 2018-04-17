@@ -1,15 +1,16 @@
 ---
-title: "長い形式のデータの取得 |Microsoft ドキュメント"
-ms.custom: 
+title: 長い形式のデータの取得 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ff0a11691216d03edc80d5be16c18f428664e7b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-long-data"></a>長い形式のデータを取得します。
 Dbms 定義*長いデータ*任意の文字または 255 文字などの特定のサイズ以上のバイナリ データとして。 このデータは、いくつかの文字が 1000 単位のパーツの説明など、1 つのバッファーに格納するのに十分な小さ可能性があります。 ただし、長いテキスト ドキュメントやビットマップなどのメモリに格納するには長すぎる場合があります。 ドライバーを使用してパーツにから取得されたこのようなデータは、1 つのバッファーに格納されることはできません、ので**SQLGetData**行の他のデータがフェッチされた後にします。  
@@ -39,7 +40,7 @@ Dbms 定義*長いデータ*任意の文字または 255 文字などの特定�
   
  1 つの列に関する**SQLGetData**のように動作**SQLFetch**: 列のデータを取得、アプリケーション変数の型に変換し、その変数に返します。 長さ/インジケーター バッファー内のデータのバイトの長さも返します。 方法の詳細についての**SQLFetch**のデータを返しますを参照してください[行のデータのフェッチ](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)です。  
   
- **SQLGetData**異なる**SQLFetch** 1 つの重要な点でします。 これが呼び出された場合も複数回連続して、同じ列の各呼び出しは、データの連続する部分を返します。 各呼び出しの最後の呼び出し以外を返します SQL_SUCCESS_WITH_INFO と SQLSTATE 01004 (文字列データの右側切り捨てられます)。最後の呼び出しは関係なく SQL_SUCCESS を返します。 これは、どのように**SQLGetData**部分で長い形式のデータを取得するために使用します。 戻るには、データがある場合に**SQLGetData** SQL_NO_DATA が返されます。 アプリケーションは、長い形式のデータをまとめるため、データの部分を連結することを意味する可能性があります。 各部分は null で終わるです。アプリケーションは、部分を連結する場合、null 終端文字を削除する必要があります。 ブックマークを他の長い形式のデータの場合と同様に可変長の部分のデータの取得を実行できます。 一般的に、ドライバーを使用できるデータの量を検出し、SQL_NO_TOTAL バイトの長さを返すことができませんが、前の呼び出しで返されるバイトの数によって、長さ/インジケーター バッファーの増減の各呼び出しで返される値。 例 :  
+ **SQLGetData**異なる**SQLFetch** 1 つの重要な点でします。 これが呼び出された場合も複数回連続して、同じ列の各呼び出しは、データの連続する部分を返します。 各呼び出しの最後の呼び出し以外を返します SQL_SUCCESS_WITH_INFO と SQLSTATE 01004 (文字列データの右側切り捨てられます)。最後の呼び出しは関係なく SQL_SUCCESS を返します。 これは、どのように**SQLGetData**部分で長い形式のデータを取得するために使用します。 戻るには、データがある場合に**SQLGetData** SQL_NO_DATA が返されます。 アプリケーションは、長い形式のデータをまとめるため、データの部分を連結することを意味する可能性があります。 各部分は null で終わるです。アプリケーションは、部分を連結する場合、null 終端文字を削除する必要があります。 ブックマークを他の長い形式のデータの場合と同様に可変長の部分のデータの取得を実行できます。 一般的に、ドライバーを使用できるデータの量を検出し、SQL_NO_TOTAL バイトの長さを返すことができませんが、前の呼び出しで返されるバイトの数によって、長さ/インジケーター バッファーの増減の各呼び出しで返される値。 以下に例を示します。  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  

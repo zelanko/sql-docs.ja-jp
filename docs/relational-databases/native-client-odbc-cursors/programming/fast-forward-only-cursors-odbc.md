@@ -1,15 +1,15 @@
 ---
-title: "高速順方向専用カーソル (ODBC) |Microsoft ドキュメント"
-ms.custom: 
+title: 高速順方向専用カーソル (ODBC) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de4f780218dcb665f4a4a1336e5557615bcc1cd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 04cde52abf320d7fa99d4cb748d491e63bc0eb50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>高速順方向専用カーソル (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +41,13 @@ ms.lasthandoff: 01/24/2018
   
  アプリケーションでは、ドライバー固有のステートメント属性 SQL_SOPT_SS_CURSOR_OPTIONS を使用して高速順方向専用カーソルを要求します。 SQL_SOPT_SS_CURSOR_OPTIONS 属性に SQL_CO_FFO を設定すると、高速順方向専用カーソルが有効になりますが、autofetch オプションは有効になりません。 SQL_CO_FFO_AF を設定すると、autofetch オプションも有効になります。 Autofetch オプションの詳細については、次を参照してください。 [Autofetch と ODBC カーソル](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)です。  
   
- autofetch オプションを有効にした高速順方向専用カーソルは、サーバーとのやり取りを 1 度だけ行って小さい結果セットを取得する場合に使用できます。 次の手順で *n* 返される行の数です。  
+ autofetch オプションを有効にした高速順方向専用カーソルは、サーバーとのやり取りを 1 度だけ行って小さい結果セットを取得する場合に使用できます。 次の手順で*n*返される行の数です。  
   
 1.  SQL_SOPT_SS_CURSOR_OPTIONS を SQL_CO_FFO_AF に設定します。  
   
-2.  SQL_ATTR_ROW_ARRAY_SIZE を設定 *n*  + 1 です。  
+2.  SQL_ATTR_ROW_ARRAY_SIZE を設定*n* + 1 です。  
   
-3.  配列に結果の列をバインド *n*  + 1 個の要素 (安全である場合は *n*  + 1 行が実際にフェッチされた)。  
+3.  配列に結果の列をバインド*n* + 1 個の要素 (安全である場合は*n* + 1 行が実際にフェッチされた)。  
   
 4.  いずれかでカーソルをオープン**SQLExecDirect**または**SQLExecute**です。  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/24/2018
 -   行セットのサイズを結果セットの行数よりも 1 だけ多いサイズに設定したので、サーバーでカーソルが最後まで達したことが検出され、そのカーソルが閉じられます。  
   
 ## <a name="see-also"></a>参照  
- [カーソル プログラミングの詳細 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [カーソル プログラミングの詳細&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

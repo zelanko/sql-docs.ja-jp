@@ -2,7 +2,7 @@
 title: SQLColumnPrivileges 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5058ae7c097858469db0aad57509f013e68db7ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 419bb70737c37e8cb47e53f7b1179d46b68582fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 関数
 **準拠**  
@@ -76,7 +76,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名です。 この引数は、null ポインターにすることはできません。 *TableName*検索パターンに文字列を含めることはできません。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*TableName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *TableName*通常の引数は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -84,7 +84,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength3*  
  [入力]文字の長さ **TableName*です。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [入力]列名の文字列の検索パターン。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*ColumnName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *ColumnName*パターン引数の値は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -92,7 +92,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength4*  
  [入力]文字の長さ **ColumnName*です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|カタログの識別子です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログの識別子です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマの識別子。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|テーブルの識別子です。|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL でない Varchar|列名 ドライバーでは、名前がない列の空の文字列を返します。|  

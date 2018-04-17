@@ -1,16 +1,16 @@
 ---
-title: "sp_help_job (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_help_job (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e195e4fb851b1b301b1ccac9501ae5be107e0689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ sp_help_job { [ @job_id = ] job_id
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+>  か、特定のジョブを表示する*job_id*または*job_name*指定する必要があります。  両方とも省略*job_id*と*job_name*すべてのジョブに関する情報を返します。
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  表示するジョブ属性を指定します。 *job_aspect*は**varchar (9)**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**ALL**|ジョブのすべての属性情報|  
 |**JOB**|ジョブ情報|  
@@ -88,7 +88,7 @@ sp_help_job { [ @job_id = ] job_id
  [  **@subsystem =**] **'***サブシステム***'**  
  サブシステムの名前です。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
   
- [ **@category_name =**] **'***category***'**  
+ [  **@category_name =**] **'***カテゴリ***'**  
  カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
  [ **@enabled =**] *enabled*  
@@ -97,7 +97,7 @@ sp_help_job { [ @job_id = ] job_id
  [ **@execution_status =**] *status*  
  ジョブの実行状態を指定します。 *ステータス*は**int**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|アクティブなジョブだけを返す。|  
 |**1**|実行中。|  
@@ -198,10 +198,10 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_name**|**sysname**|このジョブでのみ一意なスケジュールの名前。|  
 |**enabled**|**int**|スケジュールがアクティブかどうか (**1**) か (**0**)。|  
 |**freq_type**|**int**|ジョブを実行する頻度を示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 毎日<br /><br /> **8** = 毎週<br /><br /> **16**毎月を =<br /><br /> **32** = 毎月、相対的な**freq_interval**<br /><br /> **64** = 時に実行**SQLServerAgent**サービスの開始。|  
-|**freq_interval**|**int**|日数は、ジョブが実行されるとします。 値は、の値によって異なります。 **freq_type**です。 詳細については、次を参照してください。 [sp_add_schedule (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**Int**|単位**freq_subday_interval**です。 詳細については、次を参照してください。 [sp_add_schedule (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**int**|数**freq_subday_type**ジョブの各実行間に発生する期間。 詳細については、次を参照してください。 [sp_add_schedule (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**int**|スケジュールされたジョブの発生、 **freq_interval**各月にします。 詳細については、次を参照してください。 [sp_add_schedule (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_interval**|**int**|日数は、ジョブが実行されるとします。 値は、の値によって異なります。 **freq_type**です。 詳細については、次を参照してください[sp_add_schedule &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**Int**|単位**freq_subday_interval**です。 詳細については、次を参照してください[sp_add_schedule &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_interval**|**int**|数**freq_subday_type**ジョブの各実行間に発生する期間。 詳細については、次を参照してください[sp_add_schedule &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|スケジュールされたジョブの発生、 **freq_interval**各月にします。 詳細については、次を参照してください[sp_add_schedule &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_recurrence_factor**|**int**|定期ジョブの実行間隔 (月単位)。|  
 |**active_start_date**|**int**|ジョブの実行を開始する日付。|  
 |**active_end_date**|**int**|ジョブの実行を終了する日付。|  
@@ -284,8 +284,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

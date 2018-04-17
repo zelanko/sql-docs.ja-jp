@@ -2,7 +2,7 @@
 title: SQLGetPrivateProfileString 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7829cbff471b431b5c4975e8066356479631596
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e970b4d3e087e2df4043a36f1fe2881680cf7d3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 関数
 **準拠**  
@@ -72,7 +72,7 @@ int SQLGetPrivateProfileString(
  *場合*  
  [入力]初期化ファイルの名前を null で終わる文字列へのポインター。 この引数に、ファイルへの完全パスが含まれていない場合、既定のディレクトリが検索されます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  **SQLGetPrivateProfileString**読み取られた文字数を示す整数値を返します。  
   
 ## <a name="diagnostics"></a>診断  

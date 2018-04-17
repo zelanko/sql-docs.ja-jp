@@ -1,16 +1,16 @@
 ---
-title: "sys.sp_cdc_drop_job (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sp_cdc_drop_job (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_drop_job_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c1f47950e219d5e07375cc8356a48e6a086a585
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 157b0b02373b18e545d081a8584bdccd66cef539
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @job_type  **=**  ] '*job_type*'  
+ [ @job_type **=** ] '*job_type*'  
  削除するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力値は 'capture' と 'cleanup' です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -60,7 +60,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>解説  
  sp_cdc_drop_job はによって内部的に呼び出されます[sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -73,8 +73,8 @@ EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';
 ```  
   
 ## <a name="see-also"></a>参照  
- [dbo.cdc_jobs &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_disable_db &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
- [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
+ [sys.sp_cdc_add_job & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

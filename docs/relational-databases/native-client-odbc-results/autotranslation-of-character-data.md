@@ -1,15 +1,15 @@
 ---
-title: "文字データの自動変換 |Microsoft ドキュメント"
-ms.custom: 
+title: 文字データの自動変換 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], autotranslating character data
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26dc8b3db6dae8f93f7e029a47b28d438d418cbf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 599a3b980373fdfa7db0da556b6da319178f4634
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="autotranslation-of-character-data"></a>文字データの自動変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/25/2018
  文字から Unicode にデータが移動される場合、データは必ず変換されます。  
   
 ## <a name="see-also"></a>参照  
- [処理結果 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
+ [結果の処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

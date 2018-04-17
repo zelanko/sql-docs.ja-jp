@@ -1,16 +1,16 @@
 ---
-title: "sp_helpdatatypemap (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpdatatypemap (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d22a2c19f5824ef0a1cb5e0a145afd72492289df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e594c9b1d13730df2ccc93bf04d0348a5d2175b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@source_dbms** =] **'***source_dbms***'**  
+ [ **@source_dbms**=] **'***source_dbms***'**  
  データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**値は次のいずれかを指定できます。  
   
 |値|Description|  
@@ -60,13 +60,13 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|ソースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。|  
 |**ORACLE**|マップ元は Oracle データベース。|  
   
- [  **@source_version** =] **'***source_version***'**  
+ [ **@source_version**=] **'***source_version***'**  
  マップ元 DBMS の製品バージョンです。 *source_version*は**varchar (10)**、指定されていない場合、データの型マッピング DBMS を返すソースのすべてのバージョン。 値を指定した場合は、マップ元 DBMS のバージョンによって結果セットがフィルター選択されます。  
   
- [  **@source_type** =] **'***source_type***'**  
+ [ **@source_type**=] **'***source_type***'**  
  マップ元 DBMS で定義されているデータ型です。 *source_type*は**sysname**、指定されていない場合のマップ元 DBMS でのすべてのデータ型マッピングが返されます。 値を指定した場合は、マップ元 DBMS のデータ型によって結果セットがフィルター選択されます。  
   
- [  **@destination_dbms**  =] **'***destination_dbms***'**  
+ [ **@destination_dbms** =] **'***destination_dbms***'**  
  マップ先 DBMS の名前です。 *destination_dbms*は**sysname**値は次のいずれかを指定できます。  
   
 |値|Description|  
@@ -76,13 +76,13 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|マップ先は IBM DB2 データベース。|  
 |**SYBASE**|マップ先は Sybase データベース。|  
   
- [  **@destination_version** =] **'***destination_version***'**  
+ [ **@destination_version**=] **'***destination_version***'**  
  マップ先 DBMS の製品バージョンを指定します。 *destination_version*は**varchar (10)**、マップ先 DBMS のすべてのバージョンのマッピングが返されますが指定されていない場合。 値を指定した場合は、マップ先 DBMS のバージョンによって結果セットがフィルター選択されます。  
   
- [  **@destination_type** =] **'***destination_type***'**  
+ [ **@destination_type**=] **'***destination_type***'**  
  マップ先 DBMS で定義されているデータ型を指定します。 *destination_type*は**sysname**、指定されていない場合のマップ先 DBMS でのすべてのデータ型マッピングが返されます。 値を指定した場合は、マップ先 DBMS のデータ型によって結果セットがフィルター選択されます。  
   
- [  **@defaults_only** =] *defaults_only*  
+ [ **@defaults_only**=] *defaults_only*  
  既定のデータ型マッピングのみを返すかどうかを示します。 *defaults_only*は**ビット**、既定値は**0**します。 **1**ことを意味するのみの既定のデータ型マッピングが返されます。 **0**ことを意味する、既定およびすべてのユーザー定義データ型マッピングが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
@@ -104,11 +104,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
  指定したソースとマップ先 DBMS の組み合わせがサポートされていないとき**sp_helpdatatypemap**は空の結果セットを返します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>参照  
- [sp_getdefaultdatatypemapping &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+ [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

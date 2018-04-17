@@ -1,16 +1,16 @@
 ---
-title: "sp_helpsubscriberinfo (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpsubscriberinfo (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec5df274042b35d30a251c90802c06cd4347ab1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d564d0221b908b385bfea42ab9a9fbf4df72865c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="arguments"></a>引数  
  [  **@subscriber =** ] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は **%** 、すべての情報が返されます。  
+ サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は**%**、すべての情報が返されます。  
   
  [  **@publisher =** ] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、および既定値は、現在のサーバーの名前。  
@@ -60,9 +60,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**パブリッシャー**|**sysname**|パブリッシャーの名前です。|  
 |**サブスクライバー**|**sysname**|サブスクライバーの名前です。|  
-|**型**|**tinyint**|サブスクライバーの種類。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース**1** = ODBC データ ソース|  
-|**ログイン**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID。|  
-|**パスワード**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のパスワード。|  
+|**type**|**tinyint**|サブスクライバーの種類。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース**1** = ODBC データ ソース|  
+|**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID。|  
+|**password**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のパスワード。|  
 |**commit_batch_size**|**int**|サポートされていません。|  
 |**status_batch_size**|**int**|サポートされていません。|  
 |**flush_frequency**|**int**|サポートされていません。|  
@@ -83,7 +83,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**frequency_type2**|**int**|マージ エージェントを実行する頻度。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 毎日<br /><br /> **8** = 毎週<br /><br /> **16**毎月を =<br /><br /> **32** = 月単位<br /><br /> **64**自動開始を =<br /><br /> **128** = 定期的|  
 |**frequency_interval2**|**int**|設定した頻度に適用される値*frequency_type*です。|  
 |**frequency_relative_interval2**|**int**|マージ エージェントの日が使用されるときに*frequency_type* 32 (月単位) に設定されています。<br /><br /> **1**最初を =<br /><br /> **2**秒を =<br /><br /> **4**サードパーティを =<br /><br /> **8**第 4 を =<br /><br /> **16**最後を =|  
-|**frequency_recurrence_factor2**|**int**|使用される定期実行係数*frequency_type**です。*|  
+|**frequency_recurrence_factor2**|**int**|使用される定期実行係数*frequency_type * *。*|  
 |**frequency_subday2**|**int**|定義した期間にスケジュールを組み直す頻度。<br /><br /> **1** = 1 回<br /><br /> **2**秒を =<br /><br /> **4**分を =<br /><br /> **8**時間を =|  
 |**frequency_subday_interval2**|**int**|間隔*frequency_subday*です。|  
 |**active_start_time_of_day2**|**int**|マージ エージェントを最初にスケジュールに組み込んだ時刻。形式は HHMMSS です。|  
@@ -97,16 +97,16 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="remarks"></a>解説  
  **sp_helpsubscriberinfo**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはパブリケーションのパブリケーション アクセス リストが実行できる**sp_helpsubscriberinfo**.  
   
 ## <a name="see-also"></a>参照  
- [sp_adddistpublisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addpullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_changesubscriber &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

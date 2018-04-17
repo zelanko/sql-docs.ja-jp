@@ -1,16 +1,16 @@
 ---
-title: "core.sp_create_snapshot を呼び出します (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: core.sp_create_snapshot を呼び出します (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1b0ff5c71ec0516b51040c157eb517fcd0402ca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +54,16 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  コレクション セットの GUID を指定します。 *collection_set_uid*は**uniqueidentifier**既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collection_sets ビューにクエリを実行します。  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collector_types ビューにクエリを実行します。  
   
  [ @machine_name=] '*machine_name*'  
  コレクション セットが存在するサーバーの名前を指定します。 *コンピューター名*は**sysname**既定値はありません。  
   
- [ @named_instance= ] '*named_instance*'  
+ [ @named_instance=] '*named_instance*'  
  コレクション セットのインスタンスの名前を指定します。 *named_instance*は**sysname**既定値はありません。  
   
  [ @log_id = ] *log_id*  

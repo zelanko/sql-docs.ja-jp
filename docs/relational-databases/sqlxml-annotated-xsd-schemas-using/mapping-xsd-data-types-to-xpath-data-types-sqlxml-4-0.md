@@ -1,16 +1,16 @@
 ---
-title: "XPath データ型 (SQLXML 4.0) に XSD データ型のマッピング |Microsoft ドキュメント"
-ms.custom: 
+title: XPath データ型 (SQLXML 4.0) に XSD データ型のマッピング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -22,20 +22,21 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dae91d7e4c23c01d99de52c1ef6e1f1010bd081c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e64d1119f80406c2865ed3ca4b147d5004688cdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>XSD データ型から XPath データ型へのマッピング (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD スキーマに対して XPath クエリが実行され、XSD 型がで指定された、 **xsd:type**属性、XPath を使用してクエリを処理するときに指定されたデータ型。  
+  XSD スキーマに対して XPath クエリが実行され、XSD 型がで指定された、 **xsd:type**属性、XPath を使用してクエリを処理するときに指定されたデータ型。  
   
  ノードの XPath データ型は、次の表に示すように、スキーマ内に指定されている XSD データ型から派生します。 ここでは説明のため、EmployeeID というノードを使用します。  
   

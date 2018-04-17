@@ -1,16 +1,16 @@
 ---
-title: "sp_helpmergedeleteconflictrows (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpmergedeleteconflictrows (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af2e83f26bfe8f94dd0befcc71259c4d04ed148a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6af4f2128a2ced993129c4e9b813ecd8d9154716
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,28 +49,28 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%**です。 パブリケーションを指定した場合は、パブリケーションに関係するすべての競合が返されます。  
   
  [  **@source_object=**] **'***source_object***'**  
  ソース オブジェクトの名前を指定します。 *source_object*は**nvarchar (386)**、既定値は NULL です。  
   
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャーの名前です。*パブリッシャー*は**sysname**、既定値は NULL です。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。*publisher_db*は**sysname**、既定値は NULL です。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**source_object**|**nvarchar (386)**|削除競合のソース オブジェクトです。|  
+|**source_object**|**nvarchar(386)**|削除競合のソース オブジェクトです。|  
 |**rowguid**|**uniqueidentifier**|削除競合の行識別子 (ROWID) です。|  
 |**conflict_type**|**int**|競合の種類を示すコードです。<br /><br /> **1** = UpdateConflict: 行レベルで競合が検出されました。<br /><br /> **2** = ColumnUpdateConflict: 列レベルで競合が検出されます。<br /><br /> **3** = UpdateDeleteWinsConflict: 削除競合で優先されます。<br /><br /> **4** = UpdateWinsDeleteConflict: 競合を避けるに削除された rowguid がこのテーブルに記録されます。<br /><br /> **5** = UploadInsertFailed: サブスクライバーからの挿入がパブリッシャーで適用できませんでした。<br /><br /> **6** = DownloadInsertFailed: パブリッシャーからの挿入がサブスクライバーで適用できませんでした。<br /><br /> **7** = UploadDeleteFailed: サブスクライバーでの削除がパブリッシャーにアップロードできませんでした。<br /><br /> **8** = DownloadDeleteFailed: パブリッシャーでの削除をサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = UploadUpdateFailed: サブスクライバーでの更新がパブリッシャーで適用できませんでした。<br /><br /> **10** = DownloadUpdateFailed: パブリッシャーでの更新がサブスクライバーに適用できませんでした。|  
 |**reason_code**|**Int**|状況依存のエラー コードです。|  
 |**reason_text**|**varchar(720)**|状況依存のエラーの説明です。|  
-|**origin_datasource**|**varchar (255)**|競合の元です。|  
+|**origin_datasource**|**varchar(255)**|競合の元です。|  
 |**pubid**|**uniqueidentifier**|パブリケーションの識別子です。|  
 |**MSrepl_create_time**|**datetime**|競合情報が追加された時刻です。|  
   
@@ -80,7 +80,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ## <a name="remarks"></a>解説  
  **sp_helpmergedeleteconflictrows**はマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergedeleteconflictrows**です。  
   
 ## <a name="see-also"></a>参照  

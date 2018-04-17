@@ -2,7 +2,7 @@
 title: SQLSetDescRec 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 関数
 **準拠**  
@@ -67,10 +67,10 @@ SQLRETURN SQLSetDescRec(
  *型*  
  [入力]記述子レコードの SQL_DESC_TYPE フィールドを設定する値です。  
   
- *サブタイプ*  
+ *SubType*  
  [入力]型を持つが SQL_DATETIME または SQL_INTERVAL のレコード、これに SQL_DESC_DATETIME_INTERVAL_CODE フィールドを設定する値です。  
   
- *Length*  
+ *長さ*  
  [入力]記述子レコードの SQL_DESC_OCTET_LENGTH フィールドを設定する値です。  
   
  *有効桁数*  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
  *IndicatorPtr*  
  [遅延の入力または出力]記述子レコードの SQL_DESC_INDICATOR_PTR フィールドを設定する値です。 *IndicatorPtr*フィールドを設定、SQL_DESC_INDICATOR_PTR null ポインターに null ポインターを設定できます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

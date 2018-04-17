@@ -1,15 +1,15 @@
 ---
-title: "ユーザー定義型のコーディング |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー定義型のコーディング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>ユーザー定義型のコーディングを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-ユーザー定義型 (UDT) の定義をコーディングする際は、形式やシリアル化のオプションを選択するだけでなく、UDT をクラスと構造体のどちらで実装するかによって、さまざまな機能を実装する必要があります。  
+  ユーザー定義型 (UDT) の定義をコーディングする際は、形式やシリアル化のオプションを選択するだけでなく、UDT をクラスと構造体のどちらで実装するかによって、さまざまな機能を実装する必要があります。  
   
  このセクションの例では、実装を示しています。、**ポイント**として UDT、**構造体**(または**構造**Visual Basic で)。 **ポイント**UDT は X と Y 座標として実装されているプロパティ プロシージャです。  
   
@@ -72,7 +72,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>属性の指定  
  UDT のストレージ表現を構築し、クライアントに UDT を値として転送するためにシリアル化を使用する方法は、属性で決まります。  
   
- **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**が必要です。 **Serializable**属性は省略可能です。 指定することも、 **Microsoft.SqlServer.Server.SqlFacetAttribute** UDT の戻り値の型に関する情報を提供します。 詳細については、次を参照してください。 [CLR ルーチンのカスタム属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)です。  
+ **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**が必要です。 **Serializable**属性は省略可能です。 指定することも、 **Microsoft.SqlServer.Server.SqlFacetAttribute** UDT の戻り値の型に関する情報を提供します。 詳細については、「[CLR ルーチンのカスタム属性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)」を参照してください。  
   
 ### <a name="point-udt-attributes"></a>Point UDT の属性  
  **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute**のストレージ形式を設定、**ポイント**に UDT**ネイティブ**です。 **IsByteOrdered**に設定されている**true**比較の結果が異なる SQL Server のように行われた場合、同じ比較したマネージ コードですることを保証します。 UDT を実装して、 **System.Data.SqlTypes.INullable** UDT の null を対応するインターフェイスです。  
@@ -99,7 +99,7 @@ public struct Point : INullable
   
  という名前のプロパティを作成する必要があります**IsNull**値が CLR コード内から null かどうかを判断するに必要なです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では UDT が NULL インスタンスであることを検出すると、通常の NULL 値処理メソッドを使用して UDT を保存します。 そのため、サーバーが NULL の UDT の不要なシリアル化やシリアル化解除に時間を費やしたり、NULL の UDT を格納して領域を無駄にすることはありません。 この NULL に関するチェックは CLR から UDT が渡されるたびに実行されます。つまり、[!INCLUDE[tsql](../../includes/tsql-md.md)] の IS NULL コンストラクトを使用して NULL UDT のチェックを実行すると、必ず成功することを意味します。 **IsNull**プロパティにも使用によって、サーバー インスタンスが null かどうかをテストします。 UDT が NULL であることを判断できれば、サーバーはネイティブの NULL 処理を使用できます。  
   
- **Get()**メソッドの**IsNull**任意の方法で、特殊な例ではありません。 場合、**ポイント**変数 **@p** は**Null**、し **@p.IsNull** が、既定と評価される"NULL"、「1」です。 これは、ため、 **SqlMethod(OnNullCall)**の属性、 **IsNull get()**メソッド既定値は false。 このオブジェクトは**Null**オブジェクトが逆シリアル化されない、メソッドが呼び出されないと、既定値は"NULL"が返されるプロパティが要求されたときに、します。  
+ **Get()**メソッドの**IsNull**任意の方法で、特殊な例ではありません。 場合、**ポイント**変数**@p**は**Null**、し**@p.IsNull**が、既定と評価される"NULL"、「1」です。 これは、ため、 **SqlMethod(OnNullCall)**の属性、 **IsNull get()**メソッド既定値は false。 このオブジェクトは**Null**オブジェクトが逆シリアル化されない、メソッドが呼び出されないと、既定値は"NULL"が返されるプロパティが要求されたときに、します。  
   
 ### <a name="example"></a>例  
  次の例では、プライベート変数の `is_Null` に、UDT のインスタンスが NULL かどうかに関する状態が格納されます。 コードを作成する際は、`is_Null` の値を適切な状態に保つように注意する必要があります。 UDT はという名前の静的プロパティにも必要**Null** UDT の null 値のインスタンスを返します。 これにより、データベース内の UDT のインスタンスが実際に NULL の場合に、UDT から NULL 値を返すことができます。  

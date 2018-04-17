@@ -1,16 +1,16 @@
 ---
-title: "sp_grant_publication_access (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_grant_publication_access (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a961e086d738d1784884142f22ed6dd45928897
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c9b95f3e2132c2e38bda95280ebf32fc35e8f8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  アクセスするパブリケーションの名前です。 **'***パブリケーション***'**は**sysname**、既定値はありません。  
   
- [  **@login** =] **'***ログイン***'**  
+ [ **@login**=] **'***ログイン***'**  
  ログイン ID です。 **'***ログイン***'**は**sysname**、既定値はありません。  
   
  [  **@reserved =**] **'***予約***'**  
@@ -64,12 +64,12 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
   
  このストアド プロシージャは繰り返し呼び出すことができます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_grant_publication_access**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_help_publication_access &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_help_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

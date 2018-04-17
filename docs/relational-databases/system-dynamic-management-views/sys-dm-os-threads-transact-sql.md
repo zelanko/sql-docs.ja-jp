@@ -2,7 +2,7 @@
 title: sys.dm_os_threads (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebecbd762d9c689d5564772c377001d69a1941b2
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 79d6ca163f2df910825e7000372b70cb6814b839
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +78,7 @@ ms.lasthandoff: 04/05/2018
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限です。   
 
 ## <a name="examples"></a>使用例  
- 起動時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スレッドを開始して、ワーカー スレッドが関連付けられます。 ただし、拡張ストアド プロシージャなどの外部コンポーネントがでスレッドを開始できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのスレッドの制御できません。 sys.dm_os_threads can provide information about rogue threads that consume resources in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.  
+ 起動時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スレッドを開始して、ワーカー スレッドが関連付けられます。 ただし、拡張ストアド プロシージャなどの外部コンポーネントがでスレッドを開始できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのスレッドの制御できません。 sys.dm_os_threads がリソースを消費する悪意のあるスレッドに関する情報を提供できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスです。  
   
  次のクエリがによって開始されなかったスレッドを実行している、実行に使用される時間と共にのワーカーの検索に使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   

@@ -1,16 +1,16 @@
 ---
-title: "sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53bf08bf26d8682093d72e55f290701d0b3c625
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 050eb8a82a7c4e9b3204af812072ea83fec7ecea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@dbname=**] **'***dbname***'**  
- データベースの名前です。 *dbname*は**sysname**、既定値は **%**です。 場合 **%** 、その結果セットには、パブリッシャーのすべてのデータベースが含まれています、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
+ [ **@dbname=**] **'***dbname***'**  
+ データベースの名前です。 *dbname*は**sysname**、既定値は **%**です。 場合**%**、その結果セットには、パブリッシャーのすべてのデータベースが含まれています、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
   
  [  **@type=**] **'***型***'**  
  結果セットを含まれているデータベースのみに制限、指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  
@@ -82,11 +82,11 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="remarks"></a>解説  
  **sp_helpreplicationdboption**はスナップショット、トランザクション、およびマージ レプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバー、 **sysadmin**固定サーバー ロールが実行できる**sp_helpreplicationdboption**任意のデータベースにします。 メンバー、 **db_owner**固定データベース ロールが実行できる**sp_helpreplicationdboption**データベース。  
   
 ## <a name="see-also"></a>参照  
- [sp_replicationdboption &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

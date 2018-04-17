@@ -1,30 +1,31 @@
 ---
-title: "基本的な ODBC アプリケーションの手順 |Microsoft ドキュメント"
-ms.custom: 
+title: 基本的な ODBC アプリケーションの手順 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf9073f8dc4ec4a3216ee676a0f942c8e2ff982f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8879cf9a2d6d56cfb4ac8503b7c8a67d6d2773f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basic-odbc-application-steps"></a>基本的な ODBC アプリケーションのステップ
 このセクションでは、ODBC アプリケーションの全体的な流れについて説明します。 可能性はほとんどありませんが、任意のアプリケーションを呼び出すすべてこれらの関数のこの順序で。 ただし、ほとんどのアプリケーションは、次の手順のいくつかのバリエーションを使用します。 アプリケーションの基本手順は、次の図に表示されます。  

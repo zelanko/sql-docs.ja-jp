@@ -1,15 +1,15 @@
 ---
-title: "sp_rxPredict |Microsoft ドキュメント"
-ms.custom: 
+title: sp_rxPredict |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -22,18 +22,18 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cef37349cd363ad7baea6300f3d236eefafd0046
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 保存されたモデルに基づいて予測した値を生成します。
 
-ほぼリアルタイムでの機械学習モデルのスコアを提供します。 `sp_rxPredict`ラッパーとして指定されたストアド プロシージャは、`rxPredict`関数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)と[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)です。 C + で記述され、スコア付けの操作専用に最適化します。 両方の R をサポートしている、または Python 機械学習モデルです。
+ほぼリアルタイムでの機械学習モデルのスコアを提供します。 `sp_rxPredict` ラッパーとして指定されたストアド プロシージャは、`rxPredict`関数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)と[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)です。 C + で記述され、スコア付けの操作専用に最適化します。 両方の R をサポートしている、または Python 機械学習モデルです。
 
 **このトピックの対象**:  
 - SQL Server 2017  
@@ -76,7 +76,7 @@ sp_rxPredict  ( @model, @input )
 - Microsoft Machine Learning サーバー  
 - SQL Server R Services 2016、Microsoft R Server 9.1.0 に R Services のインスタンスのアップグレードまたはそれ以降  
 
-### <a name="supported-algorithms"></a>サポートされるアルゴリズム
+### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
 サポートされているアルゴリズムの一覧は、次を参照してください。[リアルタイム スコアリング](../../advanced-analytics/real-time-scoring.md)です。
 
@@ -98,9 +98,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-有効な SQL クエリ内の入力データだけでなく *@inputData* ストアドのモデル内の列と互換性のある列を含める必要があります。
+有効な SQL クエリ内の入力データだけでなく*@inputData*ストアドのモデル内の列と互換性のある列を含める必要があります。
 
-`sp_rxPredict`次の .NET の列型のみをサポートしています: float、short、ushort、double、long、ulong と文字列。 リアルタイムのスコアリングのために使用する前に、入力データでサポートされていない型を除外する必要があります。 
+`sp_rxPredict` 次の .NET の列型のみをサポートしています: float、short、ushort、double、long、ulong と文字列。 リアルタイムのスコアリングのために使用する前に、入力データでサポートされていない型を除外する必要があります。 
 
   対応する SQL 型については、次を参照してください。 [SQL-CLR 型マッピング](https://msdn.microsoft.com/library/bb386947.aspx)または[CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)です。
 

@@ -1,27 +1,28 @@
 ---
-title: "非同期実行 (通知方法) |Microsoft ドキュメント"
-ms.custom: 
+title: 非同期実行 (通知方法) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 070ef059855d4c95b4225676ab67eddcd9c16ad1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)
 ODBC では、接続とステートメントの操作の非同期実行を許可します。 アプリケーション スレッドは、非同期モードで ODBC 関数を呼び出すことができ、操作が完了すると、その他のタスクを実行するアプリケーション スレッドを許可する前に、関数が返すことができます。 非同期ステートメントまたは接続操作で、Windows 7 SDK では、アプリケーションは、非同期操作がポーリング メソッドを使用して完了したことを決定します。 詳細については、次を参照してください。[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)です。 以降、Windows 8 SDK では、非同期操作が、通知方法を使用して完了したことを確認できます。  
@@ -332,7 +333,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  接続属性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE および SQL_ATTR_ASYNC_DBC_EVENT は、ODBC が非同期モードで実行するかどうかと、ODBC 接続ハンドルの通知モードを有効にするかどうかを決定します。 SQL_ATTR_ASYNC_ENABLE と SQL_ATTR_ASYNC_STMT_EVENT ステートメント属性は、ODBC が非同期モードで実行するかどうかと、ODBC ステートメント ハンドルに通知モードを有効にするかどうかを決定します。  
   
-|SQL_ATTR_ASYNC_ENABLE または SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT または SQL_ATTR_ASYNC_DBC_EVENT|モード|  
+|SQL_ATTR_ASYNC_ENABLE または SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT または SQL_ATTR_ASYNC_DBC_EVENT|[モード]|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |[有効化]|null 以外|非同期通知|  
 |[有効化]|null|非同期のポーリング|  

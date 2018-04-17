@@ -1,27 +1,28 @@
 ---
-title: "FILESTREAM (ODBC) を使用して増分データの送受信を行う |Microsoft ドキュメント"
-ms.custom: 
+title: FILESTREAM (ODBC) を使用して増分データの送受信を行う |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a469aaaf1e1b84a27091ead07fded761b02c3f0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4d186c51a85f7aa008f5b3a5012fb3d0ba95ea61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
- FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)です。  
+ FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)です。  
   
 ## <a name="example"></a>例  
  コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  

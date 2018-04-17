@@ -1,29 +1,30 @@
 ---
-title: "大きな CLR ユーザー定義型 (OLE DB) |Microsoft ドキュメント"
-ms.custom: 
+title: 大きな CLR ユーザー定義型 (OLE DB) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25a6a8fe27093f70ac84da9a6b32f4cb72b31761
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,14 +32,14 @@ ms.lasthandoff: 01/25/2018
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB に対する変更について説明します。  
   
- における大きな CLR Udt のサポートの詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client を参照してください[Large CLR User-Defined 型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)です。 サンプルについては、次を参照してください。[大きな CLR Udt の使用 &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)です。  
+ における大きな CLR Udt のサポートの詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client を参照してください[Large CLR User-Defined 型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)です。 サンプルについては、次を参照してください。[を使用して大きな CLR Udt &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)です。  
   
 ## <a name="data-format"></a>データ形式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、大きなオブジェクト (LOB) の型についてサイズが無制限である値の長さを表す場合に、~0 が使用されます。 8,000 バイトを超える CLR UDT のサイズも ~0 で表されます。  
   
  次の表に、パラメーターおよび行セットでのデータ型のマッピングを示します。  
   
-|SQL Server データ型|OLE DB データ型|メモリ レイアウト|[値]|  
+|SQL Server データ型|OLE DB データ型|メモリ レイアウト|値|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|Byte[] (バイト配列\)|132 (oledb.h)|  
   

@@ -1,15 +1,15 @@
 ---
-title: "ストアド プロシージャ (OLE DB) を呼び出す |Microsoft ドキュメント"
-ms.custom: 
+title: ストアド プロシージャ (OLE DB) を呼び出す |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d756f34ea2ac9e5bf2803dc27b80a374ab9cd56
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 901bea0996dd993f8238df9c73301f2cc874f65e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures---calling"></a>ストアド プロシージャの呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
  {**[?=]****call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -123,7 +124,7 @@ ms.lasthandoff: 01/25/2018
 {rpc SalesByCategory}  
 ```  
   
- RPC エスケープ シーケンスを示すサンプル アプリケーションを参照してください[ストアド プロシージャ &#40; を実行。RPC 構文 &#41; を使用します。リターン コードと出力パラメーター &#40; OLE DB &#41; の処理](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ RPC エスケープ シーケンスを示すサンプル アプリケーションを参照してください[ストアド プロシージャ & #40; を実行。RPC 構文 & #41; を使用します。リターン コードと出力パラメーター (&) #40; OLE DB & #41; の処理](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE ステートメント  
  ODBC CALL エスケープ シーケンスおよび RPC エスケープ シーケンスは、ストアド プロシージャの呼び出しに推奨される方法ではなく、 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)ステートメントです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、の RPC 機構[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンドの処理を最適化します。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  

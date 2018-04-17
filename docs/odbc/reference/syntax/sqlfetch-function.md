@@ -2,7 +2,7 @@
 title: SQLFetch 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
 **準拠**  
@@ -52,7 +52,7 @@ SQLRETURN SQLFetch(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -112,7 +112,7 @@ SQLRETURN SQLFetch(
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|開始する前に|@shouldalert|  
+|開始する前に|1|  
 |*CurrRowsetStart* \< =  *LastResultRow – 複合カーソル*[1]|*CurrRowsetStart* + *複合カーソル*[2]|  
 |*CurrRowsetStart* > *LastResultRow – 複合カーソル*[1]|末尾の後に|  
 |末尾の後に|末尾の後に|  

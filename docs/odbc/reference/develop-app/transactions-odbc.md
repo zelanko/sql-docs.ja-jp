@@ -1,30 +1,31 @@
 ---
-title: "トランザクション ODBC |Microsoft ドキュメント"
-ms.custom: 
+title: トランザクション ODBC |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 943c1240a9a9ad80c5787597f01917c517966005
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-odbc"></a>ODBC トランザクション
 A*トランザクション*作業の単位ですが、1 つのアトミック操作として完了する以外の場合は、操作として成功または失敗全体です。 たとえば、間の 1 つの銀行口座の money を転送します。 これは、2 つの手順: 参加お金を最初のアカウントと 2 番目にデポジットです。 重要です。 両方の手順が成功します。1 つのステップが成功して失敗する余裕がないです。 トランザクションをサポートするデータベースは、これを保証できません。  

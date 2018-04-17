@@ -2,7 +2,7 @@
 title: sp_spaceused (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f255eaa4837ac7193925265f6427706d55009b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -52,7 +53,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]と[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]、`sp_spaceused`名前付きパラメーターを指定する必要があります (たとえば`sp_spaceused (@objname= N'Table1');`パラメーターの序数位置によって証明書利用者のではなくです。 
 
- [ **@objname=**] **'***objname***'** 
+ [  **@objname=**] **'***objname***'** 
    
  領域の使用情報を要求するテーブル、インデックス付きビュー、またはキューの、修飾付きまたは修飾なしの名前を指定します。 引用符は、オブジェクトの修飾名を指定する場合のみ必要です。 データベース名も含めてオブジェクトの完全修飾名を指定した場合は、そのデータベース名は現在のデータベース名であることが必要です。  
 場合*objname*が指定されていない、データベース全体の結果が返されます。  
@@ -68,7 +69,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *モード*引数は、次の値を持つことができます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |ALL|オブジェクトまたはローカル部分およびリモートの部分の両方を含むデータベースの記憶域の統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分だけの記憶域の統計を返します。 返す場合と同様の統計情報の場合は、オブジェクトまたはデータベースがストレッチが有効な@mode= ALL です。|  
@@ -108,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
-|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
+|**未使用**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
   
  場合*objname*を省略した場合の値と*oneresultset* 1 に設定されて現在のデータベースのサイズ情報を提供する次の 1 つの結果セットが返されます。  
   
@@ -120,7 +121,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
-|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
+|**未使用**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|  
   
  場合*objname*を指定すると、指定したオブジェクトの次の結果セットが返されます。  
   
@@ -131,7 +132,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|予約領域の量の合計*objname*です。|  
 |**data**|**varchar(18)**|内のデータによって使用される領域の合計金額*objname*です。|  
 |**index_size**|**varchar(18)**|インデックスで使用される領域の合計容量*objname*です。|  
-|**unused**|**varchar(18)**|予約された領域の合計金額*objname*が使用されていません。|  
+|**未使用**|**varchar(18)**|予約された領域の合計金額*objname*が使用されていません。|  
  
 これは、パラメーターが指定されていない場合、既定のモードです。 次の結果セットには、ディスク上のデータベース サイズの詳細情報が返されます。 
 
@@ -148,7 +149,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
-|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
+|**未使用**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
 
 次の結果セットが返される**場合のみ**データベースには、少なくとも 1 つのコンテナーと、MEMORY_OPTIMIZED_DATA ファイル グループには。 
 
@@ -168,7 +169,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスの使用領域の合計。|  
-|**unused**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
+|**未使用**|**varchar(18)**|データベース内でオブジェクト用に予約されており、使用されていない領域の合計。|
 |**xtp_precreated**|**varchar(18)**|状態 (KB 単位) の PRECREATED とチェックポイント ファイルの合計サイズ。 データベース内の未割り当て領域に、全体としてカウントされます。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 *この列はのみが含まれる場合@include_total_xtp_storage= 1*です。| 
 |**xtp_used**|**varchar(18)**|UNDER CONSTRUCTION、アクティブ、およびマージ ターゲット (KB 単位) の状態を持つチェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータをアクティブに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 *この列はのみが含まれる場合@include_total_xtp_storage= 1*です。| 
 |**xtp_pending_truncation**|**varchar(18)**|状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION とチェックポイント ファイルの合計サイズ。 これは、ログの切り捨てが発生したら、クリーンアップ処理を待機しているチェックポイント ファイルに使用されるディスク領域です。 データベースには、少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループがない場合は、NULL を返します。 この列はのみが含まれる場合`@include_total_xtp_storage=1`です。|

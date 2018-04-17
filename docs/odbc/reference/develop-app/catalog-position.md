@@ -1,31 +1,32 @@
 ---
-title: "カタログの位置 |Microsoft ドキュメント"
-ms.custom: 
+title: カタログの位置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], catalog position
 - catalog position [ODBC]
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6b8bf58c2d8db8cf394e6017a9e817c1f20096e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8691e7a8f8e9f015f6c468f3deeb06973d017ab3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="catalog-position"></a>カタログの位置
 識別子と識別子の残りの部分からの区切られた内のカタログ名の位置は、データ ソースにデータ ソースとは異なります。 たとえば、Xbase データ ソースにある、カタログ名ディレクトリし、Microsoft® Windows® で区切られてから、テーブル名 (ファイル名)、円記号 (\\)。 次の図では、この条件を示します。  

@@ -2,7 +2,7 @@
 title: SQLColumns 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86cf72d9a0f061b4cdec3416df315c1e8f9fe91b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **準拠**  
@@ -78,7 +78,7 @@ SQLRETURN SQLColumns(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名の文字列の検索パターン。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [入力]文字の長さ **TableName*です。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [入力]列名の文字列の検索パターン。  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ SQLRETURN SQLColumns(
  *NameLength4*  
  [入力]文字の長さ **ColumnName*です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -164,9 +164,9 @@ SQLRETURN SQLColumns(
   
  次の表には、結果セット内の列が一覧表示します。 ドライバーでは、18 (によって IS_NULLABLE) の列を超える追加の列を定義できます。 アプリケーションは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンしてドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)です。  
   
-|列名|[列]<br /><br /> number|データ型|コメント|  
+|列名|列<br /><br /> number|データ型|コメント|  
 |-----------------|-----------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|カタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のカタログをサポートする場合 ("")、それらのテーブルのカタログがないです。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名です。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得、するときなどにいくつかのテーブルが、他のスキーマをサポートする場合 ("")、それらのテーブルのスキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL でない Varchar|テーブル名です。|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL でない Varchar|列名 ドライバーでは、名前がない列の空の文字列を返します。|  

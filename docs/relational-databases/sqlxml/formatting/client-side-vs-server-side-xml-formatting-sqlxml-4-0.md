@@ -1,16 +1,16 @@
 ---
-title: "クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント"
-ms.custom: 
+title: クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - NESTED mode
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95088fe868d8e9e392613a147f61438e1818e643
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-ここでは、SQLXML における、クライアント側とサーバー側の XML 書式設定の一般的な違いについて説明します。  
+  ここでは、SQLXML における、クライアント側とサーバー側の XML 書式設定の一般的な違いについて説明します。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>クライアント側の書式設定では複数の行セット クエリがサポートされない  
  複数の行セットを生成するクエリは、クライアント側の XML 書式設定を使用するときにはサポートされません。 たとえば、クライアント側の書式設定が指定されている仮想ディレクトリがあるとし、 2 つの SELECT ステートメントが次のサンプル テンプレートで、  **\<sql:query >**ブロック。  
@@ -221,8 +222,8 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 -   指定すると**クライアント側の xml =「1」** (true)、テンプレートで、要求しているクライアント側の XML 書式設定します。 この場合、FOR XML NESTED を指定できます。 FOR XML AUTO を指定すると、XML 書式設定場合は、サーバー側では**クライアント側の xml =「1」**テンプレートで指定します。  
   
 ## <a name="see-also"></a>参照  
- [XML のセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [クライアント側の XML 書式設定 (&) #40 です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [サーバー側の XML 書式設定 (&) #40 です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+ [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [クライアント側の XML 書式設定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [サーバー側の XML 書式設定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

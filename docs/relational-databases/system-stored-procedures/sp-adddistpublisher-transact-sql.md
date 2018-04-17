@@ -1,16 +1,16 @@
 ---
-title: "sp_adddistpublisher (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_adddistpublisher (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e29470258112326d4a8a3c17c0bb0cadfacbab3e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0332ecba1226855d841ba9f8619e660cb72e91af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。 なお、ストアド プロシージャ[sp_adddistributor (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)このストアド プロシージャを使用する前に実行されている必要があります。  
+  指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。 なお、ストアド プロシージャ[sp_adddistributor &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)このストアド プロシージャを使用する前に実行されている必要がありますプロシージャです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャー名です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
  [  **@distribution_db=**] **'***distribution_db***'**  
@@ -70,7 +70,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**1** (既定値)|ディストリビューター側のレプリケーション エージェントは Windows 認証を使用してパブリッシャーに接続します。|  
   
  [  **@login=**] **'***ログイン***'**  
- ログインを指定します。 このパラメーターは必要な場合*security_mode*は**0**します。 *ログイン*は**sysname**、既定値は NULL です。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
+ ログインを指定します。 このパラメーターは必要な場合*security_mode*は**0**します。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
   
  [  **@password=**] **'***パスワード***'**]  
  パスワードです。 *パスワード*は**sysname**、既定値は NULL です。 このパラメーターは、レプリケーション エージェントがパブリッシャーに接続するために使用します。  
@@ -92,10 +92,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 |値|Description|  
 |-----------|-----------------|  
-|**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
+|**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータベース|  
   
- [  **@publisher_type** =] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'***publisher_type***'**  
  パブリッシャーがない場合に、パブリッシャーの種類を示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *publisher_type* sysname は、次の値のいずれかになります。  
   
 |値|Description|  
@@ -115,13 +115,13 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistpublisher**です。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  

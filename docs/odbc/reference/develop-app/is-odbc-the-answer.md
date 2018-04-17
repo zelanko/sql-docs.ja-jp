@@ -2,7 +2,7 @@
 title: ODBC の答えですか。 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4fffe02b0e000750792bc71654bbc59becf0f087
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="is-odbc-the-answer"></a>ODBC の答えですか。
 相互運用性の問題を詳しく調べる前に、次の質問を検討してください必要があります、アプリケーションを使用して ODBC にしますか?。 奇妙な ODBC では、ガイドの「にたずねる質問かもしれませんが、実際には、正当なものです。 完全にデータベースを置き換えるネイティブ Api、ODBC がものではありません。 またが、すべての環境でデータベースへのアクセスを提供するよう設計されています。 データベースに共通のインターフェイスを提供するように設計されましたし、空きについて学習し、複数のデータベースへのリンクを維持することから、アプリケーション プログラマが想定されていました。  

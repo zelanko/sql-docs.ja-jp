@@ -1,16 +1,16 @@
 ---
-title: "sys.database_mirroring_witnesses (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.database_mirroring_witnesses (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_witnesses
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ce23f7d9f763bf08842a1f121c881fb5fbdcee0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 42d31f59d652e7f92f4051dab3af741c6f161c73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>データベース ミラーリング監視サーバーのカタログ ビューの sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ ms.lasthandoff: 02/03/2018
 |**family_guid**|**uniqueidentifier**|データベースのバックアップ ファミリの識別子。 一致する復元状態を検出するために使用します。|  
 |**is_suspended**|**bit**|データベース ミラーリングが一時中断していることを示す値。|  
 |**is_suspended_sequence_number**|**int**|設定のシーケンス番号**is_suspended**です。|  
-|**partner_sync_state**|**tinyint**|ミラーリング セッションの同期状態 :<br /><br /> 5 = パートナーが同期されています。 フェールオーバーできる可能性があります。 フェールオーバーでは、「要件については[ロール切り替えセッション中のデータベース ミラーリング &#40;SQL Server &#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = パートナーが同期されていません。 現在フェールオーバーはできません。|  
+|**partner_sync_state**|**tinyint**|ミラーリング セッションの同期状態 :<br /><br /> 5 = パートナーが同期されています。 フェールオーバーできる可能性があります。 フェールオーバーでは、「要件については[ロールの切り替え中にデータベース ミラーリング セッション&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)です。<br /><br /> 6 = パートナーが同期されていません。 現在フェールオーバーはできません。|  
 |**partner_sync_state_desc**|**nvarchar(60)**|ミラーリング セッションの同期状態の説明 :<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>権限  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "MSqreader_history (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: MSqreader_history (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9615bb702c89d8b2a5be0087671df9d8a6a910
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8621dddfded5d4a12a642ce13262284cb1b7614b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ ms.lasthandoff: 11/21/2017
 |**start_time**|**datetime**|エージェント セッションの開始日時。|  
 |**time**|**datetime**|最後にメッセージがログに記録された日時。|  
 |**duration**|**int**|セッションの利用状況をログに記録してからの経過時間 (秒単位)。|  
-|**コメント**|**nvarchar (255)**|説明のテキスト。|  
-|**transaction_id**|**nvarchar (40)**|メッセージと共に格納されるトランザクション ID です (適用できる場合)。|  
+|**comments**|**nvarchar (255)**|説明のテキスト。|  
+|**transaction_id**|**nvarchar(40)**|メッセージと共に格納されるトランザクション ID です (適用できる場合)。|  
 |**transaction_status**|**int**|トランザクションの状態です。|  
 |**transactions_processed**|**int**|セッション中に処理されたトランザクション数の累計。|  
 |**commands_processed**|**int**|セッション中に処理されたコマンド数の累計。|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 |**timestamp**|**timestamp**|テーブルのタイムスタンプ列。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

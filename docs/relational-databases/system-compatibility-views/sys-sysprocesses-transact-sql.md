@@ -1,16 +1,16 @@
 ---
-title: "sys.sysprocesses (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.sysprocesses (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprocesses_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 56a8fecff1c129a210766fa4820ee90a11ff2dbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 |last_batch|**datetime**|クライアント プロセスがリモート ストアド プロシージャ呼び出しまたは EXECUTE ステートメントを前回実行した時刻です。|  
 |ecid|**smallint**|単一プロセスに代わって動作しているサブスレッドを一意に識別するために使用する実行コンテキスト ID です。|  
 |open_tran|**smallint**|プロセスの開いているトランザクションの数です。|  
-|ステータス|**nchar(30)**|プロセス ID の状態です。 可能な値は次のとおりです。<br /><br /> **休止** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションがリセットされています。<br /><br /> **実行している**= セッションでは、1 つまたは複数のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効な場合、1 回のセッションで複数のバッチを実行できます。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 &#40;です。MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **バック グラウンド**= セッションがデッドロック検出など、バック グラウンド タスクを実行しています。<br /><br /> **ロールバック**= セッションでは、プロセスのトランザクションのロールバックします。<br /><br /> **保留中**=、セッションが使用可能になるワーカー スレッドを待機しています。<br /><br /> **実行可能な**= セッションのタスクはクォンタムの取得を待機中にスケジューラの実行可能キューではします。<br /><br /> **spinloop** = セッションのタスクはスピンロックが解放を待機しています。<br /><br /> **中断**= セッションは、完了する I/O など、イベントを待機しています。|  
+|ステータス|**nchar(30)**|プロセス ID の状態です。 可能な値は次のとおりです。<br /><br /> **休止** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションがリセットされています。<br /><br /> **実行している**= セッションでは、1 つまたは複数のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効な場合、1 回のセッションで複数のバッチを実行できます。 詳細については、次を参照してください。[複数のアクティブな結果セットの使用 & #40 です。MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **バック グラウンド**= セッションがデッドロック検出など、バック グラウンド タスクを実行しています。<br /><br /> **ロールバック**= セッションでは、プロセスのトランザクションのロールバックします。<br /><br /> **保留中**=、セッションが使用可能になるワーカー スレッドを待機しています。<br /><br /> **実行可能な**= セッションのタスクはクォンタムの取得を待機中にスケジューラの実行可能キューではします。<br /><br /> **spinloop** = セッションのタスクはスピンロックが解放を待機しています。<br /><br /> **中断**= セッションは、完了する I/O など、イベントを待機しています。|  
 |sid|**binary(86)**|ユーザーのグローバル一意識別子 (GUID) です。|  
 |hostname|**nchar(128)**|ワークステーションの名前です。|  
 |program_name|**nchar(128)**|アプリケーション プログラム名です。|  
@@ -81,8 +81,8 @@ ms.lasthandoff: 02/09/2018
  インスタンスで実行中のすべてのセッションを表示、サーバーの VIEW SERVER STATE 権限を持つユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 それ以外の場合、ユーザーが現在のセッションのみを表示します。  
   
 ## <a name="see-also"></a>参照  
- [実行関連の動的管理ビューおよび関数 &#40;TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [システム ビュー &#40; をシステム テーブルのマッピングTRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

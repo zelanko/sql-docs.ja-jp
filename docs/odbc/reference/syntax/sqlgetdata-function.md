@@ -2,7 +2,7 @@
 title: SQLGetData 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 関数
 **準拠**  
@@ -96,7 +96,7 @@ SQLRETURN SQLGetData(
   
  詳細については、次を参照してください。[長さ/インジケーターの値を使用する](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)とこのトピックでは、"コメント"です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了するが呼び出されていません。|ハンドルに対する前の関数呼び出しに SQL_STILL_EXECUTING が返された場合、および通知モードが有効になっている**SQLCompleteAsync**ハンドルの後処理を行い、操作を完了するに呼び出せる必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLGetData**指定された列のデータを返します。 **SQLGetData**ごとに結果セットから 1 つまたは複数の行がフェッチされた後にのみ呼び出すことができる**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**. 可変長のデータが大きすぎるため、1 回の呼び出しで返される場合**SQLGetData** (制限のため、アプリケーションで)、 **SQLGetData**部分で取得できます。 行と呼び出しで一部の列をバインドすることは**SQLGetData**他のユーザーが、これは、いくつかの制限の対象とします。 詳細については、次を参照してください。[長い形式のデータを取得する](../../../odbc/reference/develop-app/getting-long-data.md)です。  
+ **SQLGetData**指定された列のデータを返します。 **SQLGetData**ごとに結果セットから 1 つまたは複数の行がフェッチされた後にのみ呼び出すことができる**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**です。 可変長のデータが大きすぎるため、1 回の呼び出しで返される場合**SQLGetData** (制限のため、アプリケーションで)、 **SQLGetData**部分で取得できます。 行と呼び出しで一部の列をバインドすることは**SQLGetData**他のユーザーが、これは、いくつかの制限の対象とします。 詳細については、次を参照してください。[長い形式のデータを取得する](../../../odbc/reference/develop-app/getting-long-data.md)です。  
   
  使用方法について**SQLGetData**ストリーミングされる出力パラメーターを使用して、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)です。  
   

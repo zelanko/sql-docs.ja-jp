@@ -1,16 +1,16 @@
 ---
-title: "sp_helpxactsetjob (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fb4f08d51379368a99647a3e2a1cbe86c8fba5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5bcea94b8d7e83d74ee9295658943ac41c619628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher**  =] **'***パブリッシャー***'**  
+ [**@publisher** =] **'***パブリッシャー***'**  
  ジョブが属する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
@@ -75,11 +75,11 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
  **sp_helpxactsetjob**常に、パブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブ キューに入っている場合は、Oracle パブリッシャーにおいて、管理者アカウントで作成された USER_JOB データ辞書ビューから、ジョブの属性も返します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_helpxactsetjob**です。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

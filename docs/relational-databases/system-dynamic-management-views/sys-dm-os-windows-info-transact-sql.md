@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_windows_info (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_os_windows_info (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_windows_info
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdb100404984cd679c2899a78a655872afbf501c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ac000ce78154d6650c388709257178f4576161cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Windows オペレーティング システムのバージョン情報を示す 1 行のデータを返します。  
   
-  Windows で実行されている SQL Server にのみ適用されます。 使用して、Linux などの非 Windows ホストで実行されている SQL Server のような情報を参照する[sys.dm_os_host_info &#40;です。TRANSACT-SQL と #41 です](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
+  Windows で実行されている SQL Server にのみ適用されます。 使用して、Linux などの非 Windows ホストで実行されている SQL Server のような情報を参照する[sys.dm_os_host_info &#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)です。 
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 Sys.dm_os_windows_info に対する SELECT 権限は、既定では、public ロールに与えられます。 失効させた場合、サーバーに対する VIEW SERVER STATE 権限が必要です。  
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
-Linux などの非 Windows ホストで実行されている SQL の情報を表示する使用[sys.dm_os_host_info &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)。 
+Linux などの非 Windows ホストで実行されている SQL の情報を表示する使用[sys.dm_os_host_info &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)です。 
   
 ## <a name="examples"></a>使用例  
  次の例は、のすべての列を返して、 **sys.dm_os_windows_info**ビュー。  

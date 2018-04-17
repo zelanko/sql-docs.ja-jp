@@ -1,16 +1,16 @@
 ---
-title: "sp_helppeerrequests (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_helppeerrequests (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d2ea35c01385de46ded538c98faf701e34d3892
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c5266359d366acad62f7ef5e4def8c176ea12682
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  これらの要求が実行することによって開始された、ピア ツー ピア レプリケーション トポロジ内の参加者が受信したすべての状態要求に関する情報を返します[sp_requestpeerresponse (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)トポロジでパブリッシュされたデータベースでします。 このストアド プロシージャは、ピア ツー ピア レプリケーション トポロジに参加しているパブリッシャー側のパブリケーション データベースで実行されます。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
+  これらの要求が実行することによって開始された、ピア ツー ピア レプリケーション トポロジ内の参加者が受信したすべての状態要求に関する情報を返します[sp_requestpeerresponse &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)いつでもトポロジでパブリッシュされたデータベースです。 このストアド プロシージャは、ピア ツー ピア レプリケーション トポロジに参加しているパブリッシャー側のパブリケーション データベースで実行されます。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,15 +47,15 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  状態要求の送信の対象となったピア ツー ピア トポロジ内のパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@description** =] **'***説明***'**  
- 呼び出すときに指定されたユーザー定義情報に基づいて、返された応答をフィルター処理することにより、個々 の状態要求の識別に使用できる値[sp_requestpeerresponse (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *説明*は**nvarchar (4000)**、既定値は **%**です。 既定では、パブリケーションに対するすべての状態要求が返されます。 指定された値に一致する説明と状態要求のみを返すためにこのパラメーターを使用*説明*, を使用して文字の文字列が一致するが、[のような &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)句。  
+ [ **@description**=] **'***説明***'**  
+ 呼び出すときに指定されている情報を定義したユーザーに基づいて返される応答をフィルター選択されるようにすること、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)です。 *説明*は**nvarchar (4000)**、既定値は **%**です。 既定では、パブリケーションに対するすべての状態要求が返されます。 指定された値に一致する説明と状態要求のみを返すためにこのパラメーターを使用*説明*を使用して文字の文字列が一致するという、[と同様に&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)句。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|要求を識別する値|  
 |**パブリケーション**|**sysname**|状態要求の送信の対象となったパブリケーションの名前です。|  
@@ -70,11 +70,11 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
  **sp_helppeerrequests**は、ピア ツー ピア トポロジでパブリッシュされたデータベースを復元するときに使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helppeerrequests**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_deletepeerrequesthistory &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerresponses &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerresponses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

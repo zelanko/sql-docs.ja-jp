@@ -1,16 +1,16 @@
 ---
-title: "sys.fn_xe_file_target_read_file (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.fn_xe_file_target_read_file (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6284bd7690c715ed47177b42a5a1f5beb4b4b6a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   拡張イベント非同期ファイル ターゲットによって作成されるファイルを読み取ります。 行ごとに、XML 形式の 1 つのイベントが返されます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] および[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]XEL および XEM 形式で生成されたトレース結果をそのまま使用します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]トレース結果を XEL 形式でのイベントのみをサポートを拡張します。 SQL Server Management Studio を使用して、トレース結果を XEL 形式で読み取ることをお勧めします。    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] および[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]XEL および XEM 形式で生成されたトレース結果をそのまま使用します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] トレース結果を XEL 形式でのイベントのみをサポートを拡張します。 SQL Server Management Studio を使用して、トレース結果を XEL 形式で読み取ることをお勧めします。    
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,7 +82,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|XML 形式のイベント コンテンツです。 NULL 値は許可されません。|  
 |file_name|**nvarchar(260)**|イベントを含むファイルの名前です。 NULL 値は許可されません。|  
 |file_offset|**bigint**|イベントを含むファイル内のブロックのオフセットです。 NULL 値は許可されません。|  
-|timestamp_utc|**datetime2**|**適用されます**:[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br />日付とイベントの時刻 (UTC タイム ゾーン)。 NULL 値は許可されません。|  
+|timestamp_utc|**datetime2**|**適用対象**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />日付とイベントの時刻 (UTC タイム ゾーン)。 NULL 値は許可されません。|  
 
   
 ## <a name="remarks"></a>解説  

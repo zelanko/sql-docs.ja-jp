@@ -1,30 +1,31 @@
 ---
-title: "パラメーター バインドのオフセット |Microsoft ドキュメント"
-ms.custom: 
+title: パラメーター バインドのオフセット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - offsets of parameters [ODBC]
 - binding offsets of parameters [ODBC]
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9487394f3fb1ac4a14c86fff6b85f5113724e05b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2d5228c7ce920eb56b0b947784b3d5a7bb2d6266
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parameter-binding-offsets"></a>パラメーターのバインドのオフセット
 アプリケーションでは、バインドされたパラメーター バッファーのアドレスおよび対応する長さ/インジケーターにオフセットを追加することを指定できるときにバッファー アドレス**SQLExecDirect**または**SQLExecute**と呼びます。 これらの追加の結果では、これらの操作で使用されるアドレスを決定します。  

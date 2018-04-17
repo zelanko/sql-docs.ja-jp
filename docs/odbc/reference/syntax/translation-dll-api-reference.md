@@ -2,7 +2,7 @@
 title: 翻訳 DLL の API リファレンス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5dabb51b2f381663d8096d9086f1a3def12cefd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c2aa9aa359be627d4b53d17b0a94dfa9aaa31830
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="translation-dll-api-reference"></a>翻訳 DLL の API リファレンス
 このセクションでは、翻訳 DLL の API は、2 つの関数で構成の構文を説明します。 **SQLDriverToDataSource**と**SQLDataSourceToDriver**です。 これらの関数は、ドライバーの変換を実行する DLL に含める必要があります。  

@@ -1,16 +1,16 @@
 ---
-title: "backupfile (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: backupfile (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfile
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: adc995b312ea396c8fba84cbb5e5b43d2f3545e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |**logical_name**|**nvarchar(128)**|バックアップされたファイルの論理名。 NULL を指定できます。|  
 |**physical_drive**|**nvarchar(260)**|物理ドライブまたはパーティションの名前。 NULL を指定できます。|  
 |**physical_name**|**nvarchar(260)**|残りの物理 (オペレーティング システム) ファイルの名前。 NULL を指定できます。|  
-|**状態**|**tinyint**|ファイルの状態。次のいずれかです。<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 注: これらの値がデータベースの状態の値に対応するように、値 5 はスキップされます。|  
+|**状態**|**tinyint**|ファイルの状態。次のいずれかです。<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = 削除<br /><br /> 注: これらの値がデータベースの状態の値に対応するように、値 5 はスキップされます。|  
 |**state_desc**|**nvarchar(64)**|ファイルの状態の説明。次のいずれかです。<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|ファイルが作成されたときのログ シーケンス番号。|  
 |**drop_lsn**|**numeric(25,0)**|ファイルが削除されたときのログ シーケンス番号。 NULL を指定できます。<br /><br /> ファイルが削除されていない場合、この値は NULL です。|  
@@ -67,16 +67,16 @@ ms.lasthandoff: 02/03/2018
 |**is_present**|**bit**|1 = ファイルはバックアップ セットに含まれる。|  
   
 ## <a name="remarks"></a>解説  
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY populates the columns of the **backupmediaset** table with the appropriate values from the media-set header.  
+ RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY の列に設定、 **backupmediaset**メディア セット ヘッダーから適切な値を持つテーブルです。  
   
  次の表では他のバックアップと履歴テーブルの行の数を減らすためには、実行、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアド プロシージャです。  
   
 ## <a name="see-also"></a>参照  
- [バックアップと復元のテーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [バックアップし、復元テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [システム テーブルと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

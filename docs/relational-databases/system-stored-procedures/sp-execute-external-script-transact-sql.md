@@ -2,7 +2,7 @@
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +63,16 @@ sp_execute_external_script
  @script = N'*スクリプト*'  
  外部の言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)**です。  
   
- [ @input_data_1_name = N'*input_data_1_name*' ]  
- によって定義されたクエリを表すために使用する変数の名前を指定@input_data_1です。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力が表形式でなければなりません。 *input_data_1_name* is **sysname**.  
+ [ @input_data_1_name = N'*input_data_1_name*']  
+ によって定義されたクエリを表すために使用する変数の名前を指定@input_data_1です。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力が表形式でなければなりません。 *input_data_1_name*は**sysname**です。  
   
  既定値は`InputDataSet`します。  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*']  
  形式で外部のスクリプトで使用される入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)**です。
   
  [ @output_data_1_name =  N'*output_data_1_name*' ]  
- 返されるデータを含む外部スクリプトで変数の名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームをする必要があります。 Python、出力はパンダ データ フレームをする必要があります。 *output_data_1_name* is **sysname**.  
+ 返されるデータを含む外部スクリプトで変数の名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームをする必要があります。 Python、出力はパンダ データ フレームをする必要があります。 *output_data_1_name*は**sysname**です。  
   
  既定値は、"OutputDataSet"です。  
   
@@ -84,7 +84,7 @@ sp_execute_external_script
   
  RevoScaleR 関数を使用する R スクリプトには、並列処理は自動的に処理し、指定しないで`@parallel = 1`を**sp_execute_external_script**呼び出します。  
   
- [ @params = N'*@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]' ]  
+ [ @params = N' *@parameter_name data_type* [アウト |出力] [、.. .n]']  
  外部のスクリプトで使用される入力パラメーターの宣言の一覧。  
   
  [ @parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  

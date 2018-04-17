@@ -2,7 +2,7 @@
 title: SQLDescribeCol 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
 **準拠**  
@@ -63,7 +63,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [入力]結果のデータの列数は、列の昇順に、1 から始まります順番に順序付けします。 *ColumnNumber*ブックマーク列を記述する引数が 0 に設定することもできます。  
   
- *ColumnName*  
+ *[ColumnName]*  
  [出力]列名を取得するための null で終わるバッファーへのポインター。 この値は、IRD の SQL_DESC_NAME フィールドから読み取られます。 列が名前付きでない、または列名を特定することはできません、ドライバーは、空の文字列を返します。  
   
  場合*ColumnName* null、 *NameLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*ColumnName*です。  
@@ -98,7 +98,7 @@ SQLRETURN SQLDescribeCol(
   
  SQL_NULLABLE_UNKNOWN: ドライバーを特定できません列で NULL 値が許容されているかどうか。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

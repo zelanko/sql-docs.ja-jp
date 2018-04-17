@@ -1,16 +1,16 @@
 ---
-title: "sysarticlecolumns (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysarticlecolumns (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysarticlecolumns system table
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b4872dce57b1f7f33a1fc03af3aae31562ceab2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 030b409328d896f0f8b76fc9ef02a6f351c029c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.lasthandoff: 11/21/2017
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの識別子です。|  
-|**返された colid**|**smallint**|アーティクル内の列の識別子。|  
+|**colid**|**smallint**|アーティクル内の列の識別子。|  
 |**is_udt**|**bit**|列がユーザー定義データ型 (UDT) 列であるかどうかを示します。 値**1** UDT 列を示します。|  
 |**is_xml**|**bit**|列があるかどうかを示す、 **xml**列です。 値**1** xml 列を示します。|  
 |**is_max**|**bit**|列が大きな値データ型の列であるかどうかを示します**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)**です。 値**1**大きな値の列を示します。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

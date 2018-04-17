@@ -1,16 +1,16 @@
 ---
-title: "sp_replmonitorhelppublication (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replmonitorhelppublication (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 581bfbad00edf6797f2bc21b15a17421d8217d73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 880ceb504a2ad8fba418374db362fa0574dfa9c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  状態を監視しているパブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**既定値は NULL です。 場合**null**、すべてのパブリッシャーのディストリビューターを使用する情報が返されます。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** =] **'***publisher_db***'**  
  パブリッシャー データベースの名前を指定します。 *publisher_db*は**sysname**既定値は NULL です。 NULL の場合、パブリッシャー側のパブリッシュされたすべてのデータベースに関する情報が返されます。  
   
- [  **@publication**  =] **'***パブリケーション***'**  
+ [ **@publication** =] **'***パブリケーション***'**  
  監視されているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**既定値は NULL です。  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  パブリケーションの種類を指定します。 *publication_type*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -106,7 +106,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_replmonitorhelppublication**はあらゆる種類のレプリケーションで使用します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **db_owner**または**replmonitor**ディストリビューション データベースの固定データベース ロールが実行できる**sp_replmonitorhelppublication**です。  
   
 ## <a name="see-also"></a>参照  

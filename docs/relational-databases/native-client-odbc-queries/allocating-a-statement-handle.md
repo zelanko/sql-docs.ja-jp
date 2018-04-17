@@ -1,15 +1,15 @@
 ---
-title: "ステートメント ハンドルを割り当て |Microsoft ドキュメント"
-ms.custom: 
+title: ステートメント ハンドルを割り当て |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetStmtAttr function
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc701ff4419fdb60f2b954333aa2af7ec9845521
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab0eaf1961372521c13c89d1a37b132d1f76a146
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当てください。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,11 +46,11 @@ ms.lasthandoff: 01/25/2018
   
  呼び出す**SQLSetStmtAttr**で*fOption*に SQL_ATTR_QUERY_TIMEOUT を設定は、実行時間の長いクエリから、サーバーと、ユーザーを保護するために、クエリのタイムアウト間隔を設定します。  
   
- 呼び出す**SQLSetStmtAttr**で*fOption*に SQL_ATTR_MAX_LENGTH を設定の量を制限する**テキスト**と**イメージ**データを個別のステートメントを取得できます。 呼び出す**SQLSetStmtAttr**で*fOption* SQL_ATTR_MAX_ROWS を設定する最初の行セットを制限も *n* すべてのアプリケーションである場合は、行数が必要です。 SQL_ATTR_MAX_ROWS を設定すると、ドライバーがサーバーに対して SET ROWCOUNT ステートメントを実行することになります。 全体に影響[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント、トリガーや更新などです。  
+ 呼び出す**SQLSetStmtAttr**で*fOption*に SQL_ATTR_MAX_LENGTH を設定の量を制限する**テキスト**と**イメージ**データを個別のステートメントを取得できます。 呼び出す**SQLSetStmtAttr**で*fOption* SQL_ATTR_MAX_ROWS を設定する最初の行セットを制限も*n*すべてのアプリケーションである場合は、行数が必要です。 SQL_ATTR_MAX_ROWS を設定すると、ドライバーがサーバーに対して SET ROWCOUNT ステートメントを実行することになります。 全体に影響[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント、トリガーや更新などです。  
   
  上記のオプションを設定するときは注意が必要です。 SQL_ATTR_MAX_LENGTH と SQL_ATTR_MAX_ROWS の場合、接続ハンドルのすべてのステートメント ハンドルが同じ設定になるようにすることをお勧めします。 ドライバーが、あるステートメント ハンドルから、これらのオプションに異なる値を持つ別のステートメント ハンドルに切り替える場合、適切な SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを生成して、設定を変更する必要があります。 ユーザー SQL ステートメントには、バッチ内では先頭に含めなければならないステートメントを含めることができるので、ドライバーはユーザー SQL ステートメントと同じバッチ内にこれらのステートメントを配置することはできません。 ドライバーは SET TEXTSIZE ステートメントと SET ROWCOUNT ステートメントを別のバッチで送信する必要があります。その結果、サーバーに対する追加のラウンドトリップが自動的に生成されます。  
   
 ## <a name="see-also"></a>参照  
- [実行中のクエリ &#40; ODBC &#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [クエリを実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

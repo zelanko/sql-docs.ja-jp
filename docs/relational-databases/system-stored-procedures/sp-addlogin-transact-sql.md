@@ -1,16 +1,16 @@
 ---
-title: "sp_addlogin (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addlogin (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogin
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlogin
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a8425f9c3d773af00a0418ff4430839c221d87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f191cf305941d837a65708aea62527c0649b6e7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   新たに作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続するユーザーを許可するログイン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)代わりにします。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -61,7 +61,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @loginame=] '*ログイン*'  
  ログインの名前を指定します。 *ログイン*は**sysname**、既定値はありません。  
   
- [ @passwd=] '*パスワード*'  
+ [ @passwd= ] '*password*'  
  ログイン パスワードを指定します。 *パスワード*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  
@@ -110,7 +110,7 @@ sp_addlogin [ @loginame = ] 'login'
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)|ユーザーの既定のデータベースを変更します。|  
 |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md)|ユーザーの既定の言語を変更します。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  ALTER ANY LOGIN 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -148,8 +148,8 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ## <a name="see-also"></a>参照  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpuser &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

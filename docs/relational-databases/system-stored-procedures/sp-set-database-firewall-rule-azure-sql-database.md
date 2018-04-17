@@ -1,16 +1,16 @@
 ---
-title: "sp_set_database_firewall_rule (Azure SQL データベース) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_set_database_firewall_rule (Azure SQL データベース) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_set_database_firewall_rule
 - firewall_rules, setting database rules
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c83057218c015eb9d3488ea730e507ab795ddade
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 33ba0433400c5848cc3e96dd0afad6e8c402660d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address**  =] '*start_ip_address*'  
  データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。 *start_ip_address*は**varchar (50)**既定値はありません。  
   
- [ **@end_ip_address**  =] '*end_ip_address*'  
+ [**@end_ip_address** =] '*end_ip_address*'  
  データベース レベルのファイアウォール設定の範囲の最上位の IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。 *end_ip_address*は**varchar (50)**既定値はありません。  
   
  次の表は、サポートされている引数を示していて、オプション[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
@@ -69,8 +70,8 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
  最初と最後の IP アドレスに等しいデータベース レベルのファイアウォール設定を追加するときに`0.0.0.0`、内のデータベースにアクセスを有効にする、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]任意の Azure リソースからサーバー。 値を指定、*名前*を支援するパラメーターは、どのようなファイアウォールの設定が注意してください。  
   
-## <a name="permissions"></a>Permissions  
- 必要があります**コントロール**データベースに対する権限。  
+## <a name="permissions"></a>権限  
+ データベースに対する **CONTROL** 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
  次のコードは、データベース レベルのファイアウォール設定と呼ばれる`Allow Azure`Azure からデータベースへのアクセスを有効します。  
@@ -95,8 +96,8 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ## <a name="see-also"></a>参照  
  [Azure SQL データベース ファイアウォール](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;です。Azure SQL データベース &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [sys.database_firewall_rules &#40;Azure SQL データベース&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

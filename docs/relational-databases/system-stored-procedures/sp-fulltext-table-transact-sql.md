@@ -1,16 +1,16 @@
 ---
-title: "sp_fulltext_table (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_fulltext_table (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,13 +56,13 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@tabname=**] **'***qualified_table_name***'**  
+ [  **@tabname=**] **'***qualified_table_name***'**  
  1 つまたは 2 つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 *qualified_table_name*は**nvarchar (517)**、既定値はありません。  
   
  [  **@action=**] **'***アクション***'**  
  実行する操作を指定します。 *アクション*は**nvarchar (50)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**作成**|によって参照されるテーブルのフルテキスト インデックスのメタデータ作成*qualified_table_name*このテーブルのフルテキスト インデックス データに配置することを指定して*fulltext_catalog_name*です。 このアクションの使用も指定する*unique_index_name*フルテキスト キー列として。 この一意なインデックスは既に存在していて、テーブル内の列に定義しておく必要があります。<br /><br /> このテーブルに対するフルテキスト検索は、フルテキスト カタログが作成されるまで実行できません。|  
 |**Drop**|メタデータのフルテキスト インデックスを削除*qualified_table_name*です。 フルテキスト インデックスがアクティブな場合は、自動的に非アクティブになってからデータが削除されます。 フルテキスト インデックスを削除する前に、列を削除する必要はありません。|  
@@ -103,7 +104,7 @@ sp_fulltext_table
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. フルテキスト インデックスに対してテーブルを有効にする  
- 次の例では、フルテキスト インデックスのメタデータを`Document`のテーブル、`AdventureWorks`データベース。 `Cat_Desc`フルテキスト カタログです。 `PK_Document_DocumentID` は `Document` の一意な単一列のインデックスです。  
+ 次の例では、フルテキスト インデックスのメタデータを`Document`のテーブル、`AdventureWorks`データベース。 `Cat_Desc` フルテキスト カタログです。 `PK_Document_DocumentID` は `Document` の一意な単一列のインデックスです。  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,10 +141,10 @@ GO
 ## <a name="see-also"></a>参照  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_tables &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [フルテキスト検索およびセマンティック検索ストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [フルテキスト検索およびセマンティック検索ストアド プロシージャの&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

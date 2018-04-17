@@ -2,7 +2,7 @@
 title: SQLExecDirect 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e2db598d233bb36eadd8161dc63a6be9a8ac4be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b162ebac689c25f287d8f20e6ee449a60e87ff43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 関数
 **準拠**  
@@ -60,7 +60,7 @@ SQLRETURN SQLExecDirect(
  *TextLength*  
  [入力]長さ **StatementText*文字です。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR、SQL_NO_DATA、SQL_INVALID_HANDLE、または SQL_PARAM_DATA_AVAILABLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -76,7 +76,7 @@ SQLRETURN SQLExecDirect(
 |01007|権限が与えられていません|*\*StatementText*されました、 **GRANT**ステートメント、およびユーザーは許可されませんでした、指定した権限です。|  
 |01S02|オプション値が変更されました|指定されたステートメント属性は、ような値が一時的に置き換えるための実装の動作条件のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値の特定を呼び出すことができます)。代替値は有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。<br /><br /> SQL _ ATTR_CONCURRENCY SQL _ ATTR_CURSOR_TYPE SQL _ ATTR_KEYSET_SIZE SQL _ ATTR_MAX_LENGTH SQL _ ATTR_MAX_ROWS SQL _ ATTR_QUERY_TIMEOUT SQL _ ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S07|小数部の切り捨て|入力/出力のデータが返される、または出力パラメーターが数値データ型の小数部が切り捨てられたか、時刻、タイムスタンプ、または期間のデータ型の時刻部分の小数部が切り捨てられましたになるように切り詰められました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07002|COUNT フィールドが正しくありません。|指定されたパラメーターの数**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数より少なくなった\* *StatementText*です。<br /><br /> **SQLBindParameter**で呼び出されました*ParameterValuePtr*を null ポインターでは、設定*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC に設定されていないと*InputOutputType*に設定されていない SQL_PARAM_OUTPUT、パラメーターの数で指定できるように**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数よりも大きかった **StatementText*です。|  
+|07002|COUNT フィールドが正しくありません。|指定されたパラメーターの数**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数より少なくなった\* *StatementText*です。<br /><br /> **SQLBindParameter**で呼び出されました*ParameterValuePtr*を null ポインターでは、設定*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC に設定されていないと*InputOutputType*に設定されていない SQL_PARAM_OUTPUT、パラメーターの数で指定できるように**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数よりも大きかった **StatementText*.|  
 |07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**で識別されるデータ型にバインドされたパラメーターを変換できませんでしたの*ParameterType*引数**SQLBindParameter**です。<br /><br /> SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT で識別されるデータ型に変換できませんとしてバインドされたパラメーターのデータ値が返されます、 *ValueType*引数**SQLBindParameter**です。<br /><br /> (1 つまたは複数の行のデータ値を変換できませんでしたが、1 つまたは複数の行が正常に返される、この関数 sql_success_with_info が返されます。)|  
 |07007|制限付きのパラメーターの値違反|パラメーターの型 SQL_PARAM_INPUT_OUTPUT_STREAM は部分にデータを送受信するパラメーターのみ使用されます。 このパラメーターの型には、入力バインドされたバッファーすることはできません。<br /><br /> このエラーは、パラメーターの型は、SQL_PARAM_INPUT_OUTPUT とき、および、 \* *StrLen_or_IndPtr*で指定された**SQLBindParameter**が SQL_NULL_DATA、SQL_DEFAULT_ と等しくないです。PARAM、SQL_LEN_DATA_AT_EXEC(len)、または SQL_DATA_AT_EXEC です。|  
 |07S01|既定のパラメーターの使い方が正しくありません。|パラメーターの値の設定と**SQLBindParameter**SQL_DEFAULT_PARAM が、および対応するパラメーターが、既定値はありませんでした。|  
@@ -106,7 +106,7 @@ SQLRETURN SQLExecDirect(
 |42S11|インデックスが既に存在します。|\**StatementText*に含まれる、 **CREATE INDEX**ステートメント、および指定したインデックス名が既に存在します。<br /><br /> \**StatementText*に含まれる、 **CREATE SCHEMA**ステートメント、および指定したインデックス名が既に存在します。|  
 |42S12|インデックスが見つかりません|\**StatementText*に含まれる、 **DROP INDEX**ステートメントと指定したインデックス名は存在しませんでした。|  
 |42S21|列が既に存在します。|\**StatementText*に含まれる、 **ALTER TABLE**ステートメントとで指定された列、**追加**句が一意でないか、ベース テーブルの既存の列を識別します。|  
-|42S22|列が見つかりません。|\**StatementText*に含まれる、 **CREATE INDEX**ステートメント、および 1 つ以上の列リストで指定した名前が存在しない列です。<br /><br /> \**StatementText*に含まれる、 **GRANT**または**取り消す**ステートメントと指定された列名は存在しませんでした。<br /><br /> \**StatementText*に含まれる、**選択**、**削除**、**挿入**、または**更新**ステートメント、および指定された列名前は存在しません。<br /><br /> \**StatementText*に含まれる、 **CREATE TABLE**ステートメント、および制約 (テーブルを参照する以外の 1 つ作成される) で指定された列は提供されません。<br /><br /> \**StatementText*に含まれる、 **CREATE SCHEMA**ステートメントと指定された列名は存在しませんでした。|  
+|42S22|列が見つかりません。|\**StatementText*に含まれる、 **CREATE INDEX**ステートメント、および 1 つ以上の列リストで指定した名前が存在しない列です。<br /><br /> \**StatementText*に含まれる、 **GRANT**または**取り消す**ステートメントと指定された列名は存在しませんでした。<br /><br /> \**StatementText*に含まれる、**選択**、**削除**、**挿入**、または**更新**ステートメント、および指定された列名存在しません。<br /><br /> \**StatementText*に含まれる、 **CREATE TABLE**ステートメント、および制約 (テーブルを参照する以外の 1 つ作成される) で指定された列は提供されません。<br /><br /> \**StatementText*に含まれる、 **CREATE SCHEMA**ステートメントと指定された列名は存在しませんでした。|  
 |44000|WITH CHECK OPTION 違反|引数*StatementText*に含まれる、**挿入**表示されたテーブルに対して実行されるステートメントまたはを指定することによって作成された、表示されたテーブルから派生したテーブル**WITH CHECK OPTION**、そのような 1 つまたは複数の行が影響を受けました、**挿入**ステートメントできなくなります表示されたテーブル内に存在します。<br /><br /> 引数*StatementText*に含まれる、**更新**表示されたテーブルに対して実行されるステートメントまたはを指定することによって作成された、表示されたテーブルから派生したテーブル**WITH CHECK OPTION**、そのような 1 つまたは複数の行が影響を受けました、**更新**ステートメントできなくなります表示されたテーブル内に存在します。|  
 |HY000|一般的なエラー|存在しなかった固有の SQLSTATE となる実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
@@ -116,7 +116,7 @@ SQLRETURN SQLExecDirect(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 引数*TextLength*がより小さいか等しい 0 は SQL_NTS に等しくないです。<br /><br /> パラメーターの値が設定**SQLBindParameter**が null ポインターの場合、およびパラメーターの長さの値が 0、SQL_NULL_DATA、SQL_DATA_AT_EXEC、SQL_DEFAULT_PARAM、SQL_LEN_DATA_AT_EXEC_OFFSET 以下です。<br /><br /> パラメーターの値の設定と**SQLBindParameter**が null ポインター以外の場合は、C データ型が、SQL_C_BINARY または SQL_C_CHAR; およびパラメーターの長さの値が 0 未満の値がでした、SQL_NTS、SQL_NULL_DATA、SQL_DATA_AT_EXEC SQL_DEFAULT_PARAM、SQL_LEN_DATA_AT_EXEC_OFFSET 以下です。<br /><br /> パラメーターの長さの値がによってバインドされる**SQLBindParameter** SQL_DATA_AT_EXEC に設定された以外の場合は、SQL 型が SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソース固有のデータ型以外および SQL_NEED_LONG_DATA_LEN 情報入力**SQLGetInfo** "Y"がします。|  
 |HY105|無効なパラメーターの型|引数が指定された値*InputOutputType*で**SQLBindParameter** SQL_PARAM_OUTPUT、パラメーターが入力パラメーターをでした。|  
-|HY109|無効なカーソルの位置|\**StatementText* 、カーソルが置かれていると、位置指定更新または delete ステートメントを包含 (によって**SQLSetPos**または**SQLFetchScroll**) を行が削除されたか、できませんでしたフェッチされます。|  
+|HY109|無効なカーソルの位置|\**StatementText* 、カーソルが置かれていると、位置指定更新または delete ステートメントを包含 (によって**SQLSetPos**または**SQLFetchScroll**) の行が削除されたか、取得できませんでした。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースによっては、SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE ステートメント属性の現在の設定の組み合わせはサポートされていません。<br /><br /> SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークにできないカーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト時間は、データ ソースには、結果セットが返される前に期限切れです。 によって、タイムアウト期間が設定されている**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT です。|  

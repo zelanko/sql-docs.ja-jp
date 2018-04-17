@@ -1,40 +1,41 @@
 ---
-title: "データ ソースの仕様のサブキー |Microsoft ドキュメント"
-ms.custom: 
+title: データ ソースの仕様のサブキー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source specification subkeys [ODBC]
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f3080d85b2c01491d94ecb75b956d6c67bc061b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-specification-subkeys"></a>データ ソースの仕様のサブキー
 ODBC データ ソースのサブキーに表示されている各データ ソースには、独自のサブキーがあります。 このサブキーは、ODBC データ ソースのサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、ドライバー DLL を一覧表示する必要があり、データ ソースの説明が表示されます。 ドライバーは、翻訳者をサポートする場合は、既定トランスレーター、デフォルト トランスレーター DLL、および既定の変換オプションの名前をリスト値可能性があります。 値は、ドライバーによってデータ ソースに接続するために必要なその他の情報も一覧表示します。 たとえば、ドライバーでは、サーバー名、データベース名、またはスキーマ名を必要があります。  
   
  値の形式は、次の表に示すようにします。 ドライバーの値のみが必要です。  
   
-|[オブジェクト名]|データ型|data|  
+|名前|データ型|Data|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*説明*|  
+|Description|REG_SZ|*description*|  
 |Driver|REG_SZ|*ドライバー DLL パス*|  
 |TranslationDLL|REG_SZ|*トランスレーター DLL パス*|  
 |TranslationName|REG_SZ|*翻訳者名*|  

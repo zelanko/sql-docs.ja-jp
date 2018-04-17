@@ -1,16 +1,16 @@
 ---
-title: "sp_change_users_login (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_change_users_login (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/13/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_users_login
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_users_login
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 207272f7644ab39055b7c6bb330faf6053353601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 065126113e8914d1f22959bbfacc3e341d8855c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  マップする既存のデータベース ユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用して[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)代わりにします。  
+  マップする既存のデータベース ユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)代わりにします。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -64,9 +64,9 @@ sp_change_users_login [ @Action = ] 'action'
  現在のデータベースに存在するユーザーの名前を指定します。 *ユーザー*は**sysname**、既定値は NULL です。  
   
  [ @LoginName=] '*ログイン*'  
- 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 *ログイン*は**sysname**、既定値は NULL です。  
+ 名前を指定、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
- [ @Password=] '*パスワード*'  
+ [ @Password= ] '*password*'  
  新しいに割り当てられているパスワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定して作成されたログイン**Auto_Fix**です。 一致するログインが既に存在する場合、ユーザーとログインがマップと*パスワード*は無視されます。 Sp_change_users_login が新たに作成一致するログインが存在しない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインと割り当てます*パスワード*新しいログインのパスワードとして。 *パスワード*は**sysname**NULL にする必要がありません。  
   
 > **重要!!** 常に使用する、[強力なパスワードです。](../../relational-databases/security/strong-passwords.md)
@@ -79,7 +79,7 @@ sp_change_users_login [ @Action = ] 'action'
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|データベース ユーザー名。|  
-|UserSID|**varbinary (85)**|ユーザーのセキュリティ識別子。|  
+|UserSID|**varbinary(85)**|ユーザーのセキュリティ識別子。|  
   
 ## <a name="remarks"></a>解説  
  sp_change_users_login は、現在のデータベースのデータベース ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとリンクする場合に使用します。 ユーザーのログインが既に変更されている場合は、sp_change_users_login を使用してユーザーを新しいログインにリンクすれば、ユーザーの権限が失われることはありません。 新しい*ログイン*sa にすることはできません、*ユーザー*dbo、guest、または INFORMATION_SCHEMA ユーザーにすることはできません。  
@@ -90,7 +90,7 @@ sp_change_users_login [ @Action = ] 'action'
   
  ユーザー定義のトランザクション内では、sp_change_users_login は実行できません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  db_owner 固定データベース ロールのメンバーシップが必要です。 Sysadmin 固定サーバー ロールのメンバーのみを指定できます、 **Auto_Fix**オプション。  
   
 ## <a name="examples"></a>使用例  
@@ -127,10 +127,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

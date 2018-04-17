@@ -1,16 +1,16 @@
 ---
-title: "sp_datatype_info (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_datatype_info (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_datatype_info_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32edf386d51ab28ae453db75c4adc8067c747cff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c93dec5dc4f6ed8ed01244cd3c30c8725e91efce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  対象となるデータ型のコード番号を指定します。 すべてのデータ型の一覧を表示するには、このパラメーターを省略します。 *data_type*は**int**、既定値は 0 です。  
   
- [  **@ODBCVer=** ] *odbc_version*  
+ [ **@ODBCVer=** ] *odbc_version*  
  使用している ODBC のバージョンを指定します。 *odbc_version*は**tinyint**、既定値は 2 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -63,9 +63,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS に依存するデータ型です。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
 |PRECISION|**int**|データ ソースでのデータ型の最大有効桁数です。 有効桁数を適用できないデータ型については、NULL が返されます。 PRECISION 列の戻り値は 10 進表記です。|  
-|LITERAL_PREFIX|**varchar (**32**)**|定数の先頭に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの 0x をします。|  
-|LITERAL_SUFFIX|**varchar (**32**)**|定数の末尾に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの引用符のです。|  
-|CREATE_PARAMS|**varchar (**32**)**|データ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が NULL の場合、および**varchar** "max_length"は、します。|  
+|LITERAL_PREFIX|**varchar(**32**)**|定数の先頭に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの 0x をします。|  
+|LITERAL_SUFFIX|**varchar(**32**)**|定数の末尾に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの引用符のです。|  
+|CREATE_PARAMS|**varchar(**32**)**|データ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が NULL の場合、および**varchar** "max_length"は、します。|  
 |NULLABLE|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = null 値を許可します。<br /><br /> 0 = は null 値を許容します。|  
 |CASE_SENSITIVE|**smallint**|大文字と小文字を区別するかどうかを示します。<br /><br /> 1 = この型のすべての列では、大文字と小文字を区別します (照合の場合)。<br /><br /> 0 = この型のすべての列では、大文字と小文字を区別しません。|  
 |SEARCHABLE|**smallint**|列の型の検索機能を示します。<br /><br /> 1 = 検索できません。<br /><br /> 2 = LIKE で検索できます。<br /><br /> 3 = WHERE で検索できます。<br /><br /> 4 = WHERE または LIKE で検索できます。|  
@@ -84,7 +84,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>解説  
  sp_datatype_info は、ODBC で SQLGetTypeInfo と同じです。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

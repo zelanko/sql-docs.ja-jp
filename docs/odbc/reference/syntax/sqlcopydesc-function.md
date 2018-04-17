@@ -2,7 +2,7 @@
 title: SQLCopyDesc 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2df05d157c7079a3b5c1a8ef9286dd2c4c7a633
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8f857ee82ffb9d715e0e408715c9c56353687fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 関数
 **準拠**  
@@ -56,7 +56,7 @@ SQLRETURN SQLCopyDesc(
  *TargetDescHandle*  
  [入力]ターゲット記述子ハンドルです。 *TargetDescHandle*引数は、IPD アプリケーション記述子へのハンドルを指定できます。 *TargetDescHandle* 、IRD へのハンドルに設定することはできませんまたは**SQLCopyDesc** SQLSTATE HY016 (実装行記述子は修正できません) が返されます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

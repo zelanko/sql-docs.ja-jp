@@ -2,7 +2,7 @@
 title: プロシージャ パラメーター |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,18 +18,18 @@ ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea30d30d66761e245a89fadd4bea37d6503c458b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc40885f18679bdcaa36a40ee2fd27147d97ac6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="procedure-parameters"></a>プロシージャのパラメーター
 プロシージャ呼び出しのパラメーター入力として使用できる、入力/出力、または出力パラメーターです。 これは、すべての他の SQL ステートメントで、入力パラメーターでは常にパラメーターと異なります。  
   
- プロシージャに値を送信する入力パラメーターが使用されます。 たとえば、部品テーブルに PartID、説明、および価格の列があるとします。 InsertPart プロシージャ、テーブル内の各列の入力パラメーターがあります。 例 :  
+ プロシージャに値を送信する入力パラメーターが使用されます。 たとえば、部品テーブルに PartID、説明、および価格の列があるとします。 InsertPart プロシージャ、テーブル内の各列の入力パラメーターがあります。 以下に例を示します。  
   
 ```  
 {call InsertPart(?, ?, ?)}  

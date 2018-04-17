@@ -2,7 +2,7 @@
 title: SQLExecute 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: def8205423e1f79045cb54e80cf9bc33c4d8246d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 関数
 **準拠**  
@@ -52,7 +52,7 @@ SQLRETURN SQLExecute(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR、SQL_NO_DATA、SQL_INVALID_HANDLE、または SQL_PARAM_DATA_AVAILABLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecute(
 |01007|権限が与えられていません|準備済みステートメントに関連付けられている、 *StatementHandle*されました、 **GRANT**ステートメント、およびユーザーは許可されませんでした、指定した権限です。|  
 |01S02|オプション値が変更されました|指定されたステートメント属性は、ような値が一時的に置き換えるための実装の動作条件のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値の特定を呼び出すことができます)。代替値は有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は、: SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_KEYSET_SIZE、SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT、および SQL_ATTR_SIMULATE_CURSOR です。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S07|小数部の切り捨て|入力/出力のデータが返される、または出力パラメーターが数値データ型の小数部が切り捨てられたか、時刻、タイムスタンプ、または期間のデータ型の時刻部分の小数部が切り捨てられましたになるように切り詰められました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07002|COUNT フィールドが正しくありません。|指定されたパラメーターの数**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数より少なくなった\* *StatementText*です。<br /><br /> **SQLBindParameter**で呼び出されました*ParameterValuePtr*を null ポインターでは、設定*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC に設定されていないと*InputOutputType*に設定されていない SQL_PARAM_OUTPUT、パラメーターの数で指定できるように**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数よりも大きかった **StatementText*です。|  
+|07002|COUNT フィールドが正しくありません。|指定されたパラメーターの数**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数より少なくなった\* *StatementText*です。<br /><br /> **SQLBindParameter**で呼び出されました*ParameterValuePtr*を null ポインターでは、設定*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC に設定されていないと*InputOutputType*に設定されていない SQL_PARAM_OUTPUT、パラメーターの数で指定できるように**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数よりも大きかった **StatementText*.|  
 |07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**で識別されるデータ型にバインドされたパラメーターを変換できませんでしたの*ParameterType*引数**SQLBindParameter**です。<br /><br /> SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT で識別されるデータ型に変換できませんとしてバインドされたパラメーターのデータ値が返されます、 *ValueType*引数**SQLBindParameter**です。<br /><br /> (1 つまたは複数の行のデータ値を変換できませんでしたが、1 つまたは複数の行が正常に返される、この関数 sql_success_with_info が返されます。)|  
 |07007|制限付きのパラメーターの値違反|パラメーターの型 SQL_PARAM_INPUT_OUTPUT_STREAM は部分にデータを送受信するパラメーターのみ使用されます。 このパラメーターの型には、入力バインドされたバッファーすることはできません。<br /><br /> このエラーは、パラメーターの型は、SQL_PARAM_INPUT_OUTPUT とき、および、 \* *StrLen_or_IndPtr*で指定された**SQLBindParameter**が SQL_NULL_DATA、SQL_DEFAULT_ と等しくないです。PARAM、SQL_LEN_DATA_AT_EXEC(len)、または SQL_DATA_AT_EXEC です。|  
 |07S01|既定のパラメーターの使い方が正しくありません。|パラメーターの値の設定と**SQLBindParameter**SQL_DEFAULT_PARAM が、および対応するパラメーターが、ODBC 標準的なプロシージャ呼び出しのパラメーターです。|  

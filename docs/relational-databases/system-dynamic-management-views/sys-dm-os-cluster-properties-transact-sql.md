@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_cluster_properties (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_os_cluster_properties (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_properties_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71ac8027fa835a1d087c9914b73b8a1e4c0ead34
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3e6ddcfa2a72ade2a6102ef35a02f5c2860ec764
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 
 |列名|プロパティ|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次の値のいずれかになります。<br /><br /> 0: ログ記録はオフです (既定)。<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告。<br /><br /> 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;です。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
+|VerboseLogging|bigint|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次の値のいずれかになります。<br /><br /> 0: ログ記録はオフです (既定)。<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告。<br /><br /> 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)です。|  
 |SqlDumperDumpFlags|bigint|SQLDumper ダンプ フラグによって生成されたダンプ ファイルの種類を決定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 既定の設定は 0 です。|  
 |SqlDumperDumpPath|nvarchar (260)|SQLDumper ユーティリティがダンプ ファイルを生成する場所です。|  
 |SqlDumperDumpTimeOut|bigint|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位) です。 既定値は 0 です。|  

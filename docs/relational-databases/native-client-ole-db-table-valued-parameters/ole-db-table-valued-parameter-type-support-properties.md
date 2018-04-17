@@ -1,29 +1,30 @@
 ---
-title: "OLE DB テーブル値パラメーター型のサポート (プロパティ) |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB テーブル値パラメーター型のサポート (プロパティ) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365ed52a0ea01d2ec62c001eda9de5ec9874c4de
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cacd878bed63696eee40d42e6854c73c6235c73a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
   
-|プロパティ ID|[値]|  
+|プロパティ ID|値|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/25/2018
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &AMP;#124; DBPROPVAL_UP_DELETE &AMP;#124; DBPROPVAL_UP_INSERT|  
   
 ## <a name="property-sets"></a>プロパティ セット  
  次のプロパティ セットでは、テーブル値パラメーターがサポートされます。  
@@ -99,11 +100,11 @@ ms.lasthandoff: 01/25/2018
 |SSPROP_PARAM_TYPE_TYPENAME|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型 : VT_BSTR<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、テーブル値パラメーターの型名を取得または設定します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。<br /><br /> このプロパティは、テーブル値パラメーターのテーブルの型名を指定するように、必要に応じて指定できます (ODBC の呼び出し構文のコマンドの場合)。 このプロパティは、パラメーター化されたアドホック SQL クエリに必要です。|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型 : VT_BSTR<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、テーブル値パラメーターの型のスキーマ名を取得または設定します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W: 読み取り専用<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型 : VT_BSTR<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、テーブル値パラメーターの型のカタログ名を取得します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。 このプロパティを設定するとエラーになります。ユーザー定義テーブル型は、それを使用するテーブル値パラメーターと同じデータベースに内にある必要があります。|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型: VT_UI2 &#124;です。VT_ARRAY<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、既定値として扱う、行セット内の列セットを指定します。 これらの列の値は送信されません。 プロバイダーは、コンシューマーの行セット オブジェクトからデータをフェッチしている間、このような列のバインドを必要としません。<br /><br /> 配列の各要素は、行セット オブジェクト内の列の序数である必要があります。 序数が無効な場合、コマンドの実行時にエラーが発生します。|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型: VT_UI2 &#124;です。VT_ARRAY<br /><br /> 説明 : このプロパティは、列データの並べ替え順を示すヒントをサーバーに提供するためにコンシューマーによって使用されます。 プロバイダーでは検証は行われず、提供された仕様にコンシューマーが準拠していることが想定されます。 サーバーでは、このプロパティを使用して最適化を実行します。<br /><br /> 各列の列順序情報は、配列内の要素のペアで表されます。 ペアの最初の要素は列数で、 ペアの 2 番目の要素は、昇順の場合は 1、降順の場合は 2 になります。|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型: VT_UI2 &#124; VT_ARRAY<br /><br /> 説明 : コンシューマーは、このプロパティを使用して、既定値として扱う、行セット内の列セットを指定します。 これらの列の値は送信されません。 プロバイダーは、コンシューマーの行セット オブジェクトからデータをフェッチしている間、このような列のバインドを必要としません。<br /><br /> 配列の各要素は、行セット オブジェクト内の列の序数である必要があります。 序数が無効な場合、コマンドの実行時にエラーが発生します。|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 型: VT_UI2 &#124; VT_ARRAY<br /><br /> 説明 : このプロパティは、列データの並べ替え順を示すヒントをサーバーに提供するためにコンシューマーによって使用されます。 プロバイダーでは検証は行われず、提供された仕様にコンシューマーが準拠していることが想定されます。 サーバーでは、このプロパティを使用して最適化を実行します。<br /><br /> 各列の列順序情報は、配列内の要素のペアで表されます。 ペアの最初の要素は列数で、 ペアの 2 番目の要素は、昇順の場合は 1、降順の場合は 2 になります。|  
   
 ## <a name="see-also"></a>参照  
  [OLE DB テーブル値パラメーターの型のサポート](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [使用してテーブル値パラメーター (&) #40 です。 OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [使用してテーブル値パラメーター (&) #40 です。 OLE DB (&) #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

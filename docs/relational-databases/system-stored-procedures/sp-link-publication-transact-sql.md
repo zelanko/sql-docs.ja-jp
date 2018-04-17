@@ -1,16 +1,16 @@
 ---
-title: "sp_link_publication (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_link_publication (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d23e5dc68133f607d5058351bf8b620d13aaaa5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d80016d32818b0435903b71e6b2f1444fc1ae28d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +58,16 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher** =] **'***パブリッシャー***'**  
+ [ **@publisher**=] **'***パブリッシャー***'**  
  リンクするパブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db** =] **'***publisher_db***'**  
+ [ **@publisher_db**=] **'***publisher_db***'**  
  リンクするパブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication** =] **'***パブリケーション***'**  
+ [ **@publication**=] **'***パブリケーション***'**  
  リンクするパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@security_mode** =] *security_mode*  
+ [ **@security_mode**=] *security_mode*  
  サブスクライバーが即時更新のためにリモートのパブリッシャーに接続するときに使用するセキュリティ モードです。 *security_mode*は**int**、これらの値のいずれかを指定できます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |値|説明|  
@@ -76,10 +76,10 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|セキュリティ コンテキストを使用 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証または Windows 認証)、サブスクライバーの変更を行うユーザーのです。<br /><br /> 注: このアカウントは、十分な特権を持つパブリッシャーの存在も必要があります。 Windows 認証を使用する場合は、セキュリティ アカウントの委任がサポートされる必要があります。|  
 |**2**|使用して作成、既存のユーザー定義リンク サーバー ログイン**sp_link_publication**です。|  
   
- [  **@login** =] **'***ログイン***'**  
- ログインを指定します。 *ログイン*は**sysname**、既定値は NULL です。 このパラメーターを指定する必要がある時に指定された*security_mode*は**0**します。  
+ [ **@login**=] **'***ログイン***'**  
+ ログインを指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターを指定する必要がある時に指定された*security_mode*は**0**します。  
   
- [  **@password** =] **'***パスワード***'**  
+ [ **@password**=] **'***パスワード***'**  
  パスワードです。 *パスワード*は**sysname**、既定値は NULL です。 このパラメーターを指定する必要がある時に指定された*security_mode*は**0**します。  
   
  [  **@distributor=** ] **'***ディストリビューター***'**  
@@ -91,22 +91,22 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_link_publication**はトランザクション レプリケーションで即時更新サブスクリプションによって使用されます。  
   
- **sp_link_publication**プッシュとプルは両方のサブスクリプションに使用することができます。 サブスクリプション作成前、または作成後に呼び出すことができます。 エントリが挿入または更新、 [MSsubscription_properties (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システム テーブル。  
+ **sp_link_publication**プッシュとプルは両方のサブスクリプションに使用することができます。 サブスクリプション作成前、または作成後に呼び出すことができます。 エントリが挿入または更新、 [MSsubscription_properties &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システム テーブル。  
   
- プッシュ サブスクリプションの場合、エントリ クリーンアップできますによって[sp_subscription_cleanup (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). プル サブスクリプションの場合、エントリ クリーンアップできますによって[sp_droppullsubscription (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)または[sp_subscription_cleanup (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). 呼び出すこともできます**sp_link_publication**内のエントリをクリアする NULL パスワードで、 [MSsubscription_properties (& a) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)セキュリティ関連のシステム テーブル。  
+ プッシュ サブスクリプションの場合、エントリ クリーンアップできますによって[sp_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)です。 プル サブスクリプションの場合、エントリ クリーンアップできますによって[sp_droppullsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)または[sp_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)です。 呼び出すこともできます**sp_link_publication**内のエントリをクリアする NULL パスワードで、 [MSsubscription_properties &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)セキュリティ関連のシステム テーブル。  
   
  即時更新サブスクライバーがパブリッシャーに接続するときに使用する既定のモードでは、Windows 認証を使っての接続は許可されません。 Windows 認証のモードを使って接続するには、パブリッシャーに対してリンク サーバーを設定する必要があり、即時更新サブスクライバーは、サブクライバを更新するときにこの接続を使用する必要があります。 これは、必要があります、 **sp_link_publication**で実行する*security_mode* = **2**です。 Windows 認証を使用する場合は、セキュリティ アカウントの委任がサポートされる必要があります。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_link_publication**です。  
   
 ## <a name="see-also"></a>参照  
- [sp_droppullsubscription &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [sp_subscription_cleanup &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

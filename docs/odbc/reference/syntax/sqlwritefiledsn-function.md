@@ -2,7 +2,7 @@
 title: SQLWriteFileDSN 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 973c27fb58411e0fd3ddc482a0a8cbee3d929ee8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2984c14d1a3fd7f912ca3e71ba33f05e92fe2061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 関数
 **準拠**  
@@ -64,7 +64,7 @@ BOOL SQLWriteFileDSN(
  *lpszString*  
  [出力]書き込むキーに関連付けられている文字列を指し示していました。 この引数が指す文字列の最大長は、32,767 のバイトです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  関数は、それが成功した場合、FALSE が失敗した場合に TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  

@@ -1,15 +1,15 @@
 ---
-title: "準備実行 |Microsoft ドキュメント"
-ms.custom: 
+title: 準備実行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deferred statement preparation
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cedfb3926904af0a9d7393a1ff896c3c2f08a61f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f8650a69f3fef94e0b0344bc27a36ced79a3a924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-execution"></a>準備実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +54,6 @@ ms.lasthandoff: 01/25/2018
  使用する以前の ODBC アプリケーション**SQLPrepare**いつでも[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)が使用されました。 **SQLBindParameter**の使用は不要**SQLPrepare**で使用できます**SQLExecDirect**です。 たとえば、使用して**SQLExecDirect**で**SQLBindParameter**リターン コードを取得または実行された 1 回のみであるストアド プロシージャからパラメーターを出力します。 使用しないでください**SQLPrepare**で**SQLBindParameter**同じステートメントは複数回実行される場合を除き、します。  
   
 ## <a name="see-also"></a>参照  
- [実行中のステートメント &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [実行中のステートメント (&) #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "sys.master_files (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.master_files (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.master_files
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0ee418f8b04c8a549fb107698bd1f2df5648b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d56dde664eba328a74db87d7c3ce22aef014ff6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,12 +45,12 @@ ms.lasthandoff: 11/21/2017
 |file_id|**int**|データベース内のファイルの ID です。 プライマリ ファイルの file_id は常に 1 です。|  
 |file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンからアップグレードされています。|  
 |型|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行 <br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
-|type_desc|**nvarchar (60)**|ファイルの種類の説明です。<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。)|  
+|type_desc|**nvarchar(60)**|ファイルの種類の説明です。<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。)|  
 |data_space_id|**int**|このファイルが属するデータ領域の ID です。 データ領域はファイル グループです。<br /><br /> 0 = ログ ファイル|  
 |name|**sysname**|データベース内のファイルの論理名です。|  
-|physical_name|**nvarchar (260)**|オペレーティング システム ファイル名です。|  
+|physical_name|**nvarchar(260)**|オペレーティング システム ファイル名です。|  
 |state|**tinyint**|ファイルの状態です。<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
-|state_desc|**nvarchar (60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳細については、次を参照してください。[ファイルの状態](../../relational-databases/databases/file-states.md)です。|  
+|state_desc|**nvarchar(60)**|ファイルの状態の説明です。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 詳しくは、「[ファイルの状態](../../relational-databases/databases/file-states.md)」をご覧ください。|  
 |サイズ|**int**|現在のファイル サイズ (8 KB ページ単位) です。 データベース スナップショットの場合、size は、スナップショットがファイルに対して使用する中で最大の領域を表します。<br /><br /> 注: このフィールドは、FILESTREAM コンテナーに対して 0 として設定されます。 クエリ、 *sys.database_files*カタログ ビューの FILESTREAM コンテナーの実際のサイズの詳細。|  
 |max_size|**int**|8 KB ページ単位の最大ファイル サイズ:<br /><br /> 0 = 拡張は許可されません。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログ ファイルが最大 2 TB まで拡張することを表します。<br /><br /> 注: が無制限のログ ファイル サイズとアップグレードされたデータベースは、ログ ファイルの最大サイズに達すると-1 に報告されます。|  
 |growth|**int**|0 = ファイル サイズは固定されてし、なることはありません。<br /><br /> >0 = ファイルは自動的に拡張されます。<br /><br /> is_percent_growth が 0 の場合、拡張増分は 8 KB ページ単位で表され、最も近い 64 KB 単位の値に切り上げられます。<br /><br /> is_percent_growth が 1 の場合、拡張増分は、整数のパーセンテージで表されます。|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  ドロップまたは大規模なインデックスを再構築またはドロップまたは大規模なテーブルを切り捨てるしたときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]トランザクションがコミットされた後に、まで、実際のページの割り当て解除と、関連するロックを延期します。 削除操作が延期された場合、割り当てられた領域は、すぐには解放されません。 そのため、ラージ オブジェクトを削除または切り捨てた後すぐに sys.master_files から返される値は、実際の使用可能ディスク領域を表していない場合があります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  対応する行を参照するには、少なくとも CREATE DATABASE、ALTER ANY DATABASE、または VIEW ANY DEFINITION 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

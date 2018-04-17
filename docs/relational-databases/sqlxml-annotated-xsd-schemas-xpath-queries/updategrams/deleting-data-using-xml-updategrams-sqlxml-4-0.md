@@ -1,16 +1,16 @@
 ---
-title: "XML アップデート グラム (SQLXML 4.0) を使用してデータを削除する |Microsoft ドキュメント"
-ms.custom: 
+title: XML アップデート グラム (SQLXML 4.0) を使用してデータを削除する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <after> block
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec9979c3c6f474cfd0702da990fa71be57d37bbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9d71554373fab48fe3636500a70c800d66ec9863
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの削除 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-レコード インスタンスが表示されたら、アップデート グラムは削除操作を示す、 **\<する前に >**に対応するレコードのないブロック、 **\<後 >**ブロックします。 この場合、アップデート グラムでレコードを削除、 **\<する前に >**データベースからブロックされます。  
+  レコード インスタンスが表示されたら、アップデート グラムは削除操作を示す、 **\<する前に >**に対応するレコードのないブロック、 **\<後 >**ブロックします。 この場合、アップデート グラムでレコードを削除、 **\<する前に >**データベースからブロックされます。  
   
  削除操作のアップデートグラムの形式は次のとおりです。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/12/2018
  アップデート グラムではエラーが返され、全体を取り消す場合は、アップデート グラムで指定される要素は、テーブル内の 1 つ以上の行と一致するか、任意の行と一致しません、 **\<同期 >**ブロックします。 アップデートグラム内の要素で削除できるのは、一度に 1 つのレコードだけです。  
   
 ## <a name="examples"></a>使用例  
- この例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください[アップデート グラム &#40; で注釈付きマッピング スキーマの指定。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ この例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
   
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要がある[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
   
@@ -88,15 +89,15 @@ ms.lasthandoff: 02/12/2018
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
-1.  完全な例 ("複数のレコードを使用した挿入アップデート グラム") で B[を挿入するデータを使用して XML アップデート グラム &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+1.  完全な例 ("複数のレコードを使用した挿入アップデート グラム") で B[を挿入するデータを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)です。  
   
-2.  上のアップデート グラムをメモ帳にコピーしで ("複数のレコードを使用した挿入アップデート グラム") を完了するために使用された同じフォルダーに Updategram-removeshifts.xml として保存[を挿入するデータを使用して XML アップデート グラム &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  上のアップデート グラムをメモ帳にコピーしで ("複数のレコードを使用した挿入アップデート グラム") を完了するために使用された同じフォルダーに Updategram-removeshifts.xml として保存[を挿入するデータを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
      詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に使用する ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)です。  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項 &#40;です。SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

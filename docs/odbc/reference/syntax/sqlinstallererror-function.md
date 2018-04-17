@@ -2,7 +2,7 @@
 title: SQLInstallerError 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3cdc3ae1e4efe4292077851a4f457bae4af17bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f2f23e236da96615c08ccf3c2841da650d9d5730
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 関数
 **準拠**  
@@ -71,7 +71,7 @@ RETCODE SQLInstallerError(
  *pcbErrorMsg*  
  [出力]\(Null 終了文字を除く) バイトの総数へのポインターで返される使用可能な*lpszErrorMsg*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*cbErrorMsgMax*、エラー メッセージ テキスト*lpszErrorMsg*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字のバイト数です。 *PcbErrorMsg*引数が null ポインターを指定できます。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、または SQL_ERROR です。  
   
 ## <a name="diagnostics"></a>診断  

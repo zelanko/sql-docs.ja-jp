@@ -1,16 +1,16 @@
 ---
-title: "sp_rename (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_rename (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rename_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3e8a506b800ebb81c1721175009c41d7f2a748d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @objname = ] '*object_name*'  
+ [ @objname =] '*object_name*'  
  ユーザー オブジェクトやデータ型に関する現在の修飾名または非修飾名を指定します。 名前を変更するオブジェクトがテーブルの列の場合*object_name*という形式にする必要があります*table.column*または*schema.table.column*です。 名前を変更するオブジェクトが、インデックスの場合*object_name*という形式にする必要があります*table.index*または*schema.table.index*です。 名前を変更するオブジェクトが、制約の場合*object_name*という形式にする必要があります*schema.constraint*です。  
   
  引用符は、修飾オブジェクトを指定する場合のみ必要です。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *object_name*は**nvarchar (776)**、既定値はありません。  
@@ -64,16 +65,16 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 > [!NOTE]  
 >  トリガー名の先頭に # または ## は使用できません。  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  名前を変更するオブジェクトの種類を指定します。 *object_type*は**varchar (13)**、既定値は NULL、これらの値のいずれかを指定できます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |COLUMN|名前を変更する列。|  
 |DATABASE|ユーザー定義のデータベース。 データベースの名前を変更する場合は、このオブジェクトの種類が必要です。|  
 |INDEX|ユーザー定義のインデックス。 統計のあるインデックスの名前を変更すると、統計の名前も自動的に変更されます。|  
 |OBJECT|型の項目の追跡[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)です。 たとえば、OBJECT を使用して、制約 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、ユーザー テーブル、ルールなどのオブジェクトの名前を変更できます。|  
-|STATISTICS|**適用されます**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]です。<br /><br /> ユーザーによって明示的に作成された統計、作成またはインデックスで暗黙的に作成された統計です。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
+|STATISTICS|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> ユーザーによって明示的に作成された統計、作成またはインデックスで暗黙的に作成された統計です。 インデックスの統計の名前を変更すると、インデックスの名前も自動的に変更されます。|  
 |USERDATATYPE|A [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)実行することによって追加[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)または[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -213,6 +214,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジンのストアド プロシージャと #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

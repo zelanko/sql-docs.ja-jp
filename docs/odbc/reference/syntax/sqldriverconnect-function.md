@@ -2,7 +2,7 @@
 title: SQLDriverConnect 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **準拠**  
@@ -98,7 +98,7 @@ SQLRETURN SQLDriverConnect(
   
  (詳細については、「コメント」を参照してください)  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -151,11 +151,11 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>コメント  
  接続文字列には、次の構文があります。  
   
- *接続文字列*:: =*空文字列*[;] &#124;です。*属性*[;] &#124;です。*属性*です。*接続文字列*  
+ *接続文字列*:: =*空文字列*[;]&#124; *属性*[;]&#124; *属性*です。*接続文字列*  
   
- *空の文字列*:: =*属性*:: =*属性キーワード*=*属性と値*&#124;です。ドライバー = [{}]*属性と値*[}]  
+ *空の文字列*:: =*属性*:: =*属性キーワード*=*属性と値*&#124;ドライバー = [{}]*属性値*[}]  
   
- *属性キーワード*:: = DSN &#124;です。UID &#124;です。PWD &#124;です。*ドライバーの定義の属性のキーワード*  
+ *属性キーワード*:: = DSN &#124; UID &#124; PWD &#124; *ドライバーの定義の属性のキーワード*  
   
  *属性値*:: =*文字の文字列*  
   

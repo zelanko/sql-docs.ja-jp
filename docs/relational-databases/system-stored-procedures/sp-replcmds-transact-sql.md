@@ -1,16 +1,16 @@
 ---
-title: "sp_replcmds (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replcmds (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 279d002e0a088386440cd978410476dee8def3ac
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28b41af867b956f64391a2332a95015b46db823f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**partial_command**|**bit**|これが部分的なコマンドかどうかを示します。|  
 |**command**|**varbinary(1024)**|コマンドの値。|  
 |**xactid**|**binary(10)**|トランザクション id。|  
-|**xact_seqno**|**varbinary (16)**|トランザクション シーケンス番号です。|  
+|**xact_seqno**|**varbinary(16)**|トランザクション シーケンス番号です。|  
 |**publication_id**|**int**|パブリケーションの ID。|  
 |**command_id**|**int**|内のコマンド ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)です。|  
 |**command_type**|**int**|コマンドの種類です。|  
@@ -69,7 +69,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|内部使用のみです。|  
 |**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID です。|  
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョンです。|  
-|**originator_lsn**|**varbinary (16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。|  
+|**originator_lsn**|**varbinary(16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。|  
   
 ## <a name="remarks"></a>解説  
  **sp_replcmds**はトランザクション レプリケーションでログ読み取りプロセスによって使用されます。  
@@ -85,14 +85,14 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  両方に警告メッセージ番号 18759 が追加された、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログと[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows アプリケーション ログ**sp_replcmds**テキスト ポインターができなかったために、テキスト コマンドをレプリケートすることはありません同じトランザクションで取得します。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replcmds**です。  
   
 ## <a name="see-also"></a>参照  
  [エラー メッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone と #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

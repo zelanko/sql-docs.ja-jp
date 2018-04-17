@@ -1,16 +1,16 @@
 ---
-title: "sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9d843930ab1626ac4caadc169567163043e8b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9616ca0c5e420ae43c9e7a2cfd3611d7db26201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,16 +64,16 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  [  **@article=**] **'***記事***'**  
  スクリプト作成の対象となるアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません  
   
- [  **@publisher=**] **'***パブリッシャー***'**  
+ [ **@publisher=**] **'***publisher***'**  
  パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
   
- [  **@publication=**] **'***パブリケーション***'**  
+ [ **@publication=**] **'***publication***'**  
  スクリプト作成の対象となるパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@dest_table=** ] *' dest_table***'**  
+ [  **@dest_table=** ] *' dest_table * * * '**  
  対象テーブルの名前を指定します。 *dest_table*は**sysname**、既定値はありません。  
   
  [ **@owner =** ] **'***所有者***'**  
@@ -90,13 +90,13 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)の代わりに**sp_addqueued_artinfo**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addqueued_artinfo**です。  
   
 ## <a name="see-also"></a>参照  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

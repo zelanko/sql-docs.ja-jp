@@ -1,15 +1,15 @@
 ---
-title: "接続ハンドルの割り当て |Microsoft ドキュメント"
-ms.custom: 
+title: 接続ハンドルの割り当て |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-communication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, passwords
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2046fc4df80ba780e7ab16948105ef0aebb1e84c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bf2fe53571bacec1da93110f9da4849dfe6cb904
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="allocating-a-connection-handle"></a>接続ハンドルの割り当て
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,6 +49,6 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーには、アプリケーションが機能強化のために使用できる拡張接続属性の数が含まれています。 拡張属性の一部にはデータ ソースで指定されるオプションと同じものを制御するものがあります。このような属性を使用すると、常に、データ ソースで設定されたオプションよりも、拡張属性のオプションが優先されます。 たとえば、アプリケーションで引用符で囲まれた識別子を使用する場合は、ドライバー固有の属性である SQL_COPT_SS_QUOTED_IDENT を SQL_QI_ON に設定すると、データ ソースの設定とは関係なく、識別子を引用符で囲むというオプションが常に有効になります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server &#40;ODBC&#41; と通信します。](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [SQL Server との通信&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

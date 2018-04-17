@@ -1,15 +1,15 @@
 ---
-title: "CLR 統合のセキュリティ |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合のセキュリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 
+caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc6038395a2a4206095da0d7a2a3ecf8ab5f72cc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bcf484ba9d27cf430797271ae157b120d41ba7ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) と [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を統合したセキュリティ モデルは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内で使用されるさまざまな種類の CLR オブジェクトと CLR 以外のオブジェクトとの間のアクセスを管理し、セキュリティで保護します。 これらのオブジェクトは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントやサーバー内で使用される別の CLR オブジェクトから呼び出すことができます。 オブジェクト間の呼び出しをリンクと呼びます。 このようなオブジェクトに対して実行されるセキュリティ チェックの種類は、関連するリンクの種類によって異なります。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) と [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を統合したセキュリティ モデルは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内で使用されるさまざまな種類の CLR オブジェクトと CLR 以外のオブジェクトとの間のアクセスを管理し、セキュリティで保護します。 これらのオブジェクトは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントやサーバー内で使用される別の CLR オブジェクトから呼び出すことができます。 オブジェクト間の呼び出しをリンクと呼びます。 このようなオブジェクトに対して実行されるセキュリティ チェックの種類は、関連するリンクの種類によって異なります。  
   
  CLR 統合のセキュリティ モデルは、次のことを目標にしています。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセスで実行することによって、ユーザー定義コードがシステム リソースへの未承認のアクセス手段を獲得してはならない。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 現在のユーザー ベースのセキュリティ モデルを統合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR のコード アクセス ベースのセキュリティ モデルを使用します。 このセクションでは、このようにセキュリティ モデルを組み合わせたアプローチによるメリットの一部を紹介します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザーベースのセキュリティ モデルと CLR のコード アクセスベースのセキュリティ モデルが統合されました。 このセクションでは、このようにセキュリティ モデルを組み合わせたアプローチによるメリットの一部を紹介します。  
   
  次の表は、このセクションのトピックを一覧表示します。  
   

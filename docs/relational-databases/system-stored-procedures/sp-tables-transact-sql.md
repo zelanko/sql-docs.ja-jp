@@ -1,16 +1,16 @@
 ---
-title: "sp_tables (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_tables (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95a0bae2722c519cea3e1dac14c633fe582ed5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +55,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_name=** ] **'***名前***'**  
+ [ **@table_name=** ] **'***name***'**  
  カタログ情報を返すために使用するテーブルを指定します。 *名前*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。  
   
  [  **@table_owner=** ] **'***所有者***'**  
@@ -85,7 +86,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|テーブル所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列がテーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar (32)**|テーブル、システム テーブル、またはビューです。|  
-|**「解説」**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この列の値を返しません。|  
+|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値を返しません。|  
   
 ## <a name="remarks"></a>解説  
  相互運用可能性を最大にするため、ゲートウェイのクライアントは、SQL-92 標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
@@ -94,7 +95,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  **sp_tables**は等価**SQLTables** ODBC にします。 返される結果は並べ**TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および**TABLE_NAME**です。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
@@ -118,7 +119,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例:[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. 現在の環境でクエリされるオブジェクトの一覧を返す  
  次の例では、現在の環境でクエリされるオブジェクトの一覧が返されます。  
@@ -140,7 +141,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.synonyms &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [sys.synonyms &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

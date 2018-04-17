@@ -1,29 +1,30 @@
 ---
-title: "SQL から C への変換 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL から C への変換 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a29e6ce735286d2d864fdb30fc468c02b58846a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 784a1b9453faa39bac3171905c88f829f77d5f50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime SQL から C へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,6 +75,6 @@ ms.lasthandoff: 01/25/2018
  このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合でサーバーの種類が指定されている場合 SQLBindParameter がサーバー上の実際の型と一致しません、暗黙的な変換は、サーバーで実行するクライアントに返される型は型と一致して、SQLBindParameter を使用して指定します。 これにより、サーバー側の変換規則が上記の表の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の強化 (&) #40";"ODBC"&"#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -2,7 +2,7 @@
 title: SQLSpecialColumns 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **準拠**  
@@ -88,7 +88,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength2*  
  [入力]文字の長さ **SchemaName*です。  
   
- *テーブル名*  
+ *TableName*  
  [入力]テーブル名です。 この引数は、null ポインターにすることはできません。 *TableName*検索パターンに文字列を含めることはできません。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*TableName*識別子として処理し、そのケースは重要ではありません。 場合は SQL_FALSE、 *TableName*通常の引数は、以外の場合は文字どおり、扱われ、大文字と小文字が重要です。  
@@ -112,7 +112,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_NULLABLE: は、NULL 値を持っている場合でも、特別な列を返します。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -171,7 +171,7 @@ SQLRETURN SQLSpecialColumns(
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
-|スコープ (ODBC 1.0)|@shouldalert|Smallint|Rowid の実際の範囲です。 次の値のいずれかが含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL が返されます*IdentifierType* SQL_ROWVER がします。 各値については、の説明を参照してください。*スコープ*構文では"、"このセクションでします。|  
+|スコープ (ODBC 1.0)|1|Smallint|Rowid の実際の範囲です。 次の値のいずれかが含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL が返されます*IdentifierType* SQL_ROWVER がします。 各値については、の説明を参照してください。*スコープ*構文では"、"このセクションでします。|  
 |COLUMN_NAME (ODBC 1.0)|2|NULL でない Varchar|列名 ドライバーでは、名前がない列の空の文字列を返します。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)です。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
 |TYPE_NAME (ODBC 1.0)|4|NULL でない Varchar|データ ソースに依存するデータ型の名前です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR () FOR BIT DATA」です。|  

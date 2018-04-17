@@ -1,16 +1,16 @@
 ---
-title: "sp_replqueuemonitor (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_replqueuemonitor (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd29cdd9e22873dd7d10db99078f25ce7e15d55f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d996f735cb105215deb6de44cc56533a42fe6c3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher**  =] **'***パブリッシャー***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 サーバーはパブリッシング用に構成されている必要があります。 NULL はすべてのパブリッシャーを表します。  
   
- [  **@publisherdb**  =] **'***publisher_db***'** ]  
+ [ **@publisherdb** =] **'***publisher_db***'** ]  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 NULL はすべてのパブリケーション データベースを表します。  
   
- [  **@publication**  =] **'***パブリケーション***'** ]  
+ [ **@publication** =] **'***パブリケーション***'** ]  
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 NULL はすべてのパブリケーションを表します。  
   
- [  **@tranid**  =] **'***tranid***'** ]  
+ [ **@tranid** =] **'***tranid***'** ]  
  トランザクション ID です。 *tranid*は**sysname**、既定値は NULL です。 NULL はすべてのトランザクションを表します。  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
@@ -69,7 +69,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**0**|すべての種類のキューです。|  
 |**1**|メッセージ キューイング (Message Queuing)|  
-|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー|  
+|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キュー|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -77,7 +77,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>解説  
  **sp_replqueuemonitor**はスナップショット レプリケーションまたはトランザクション レプリケーションでは、キュー更新サブスクリプションで使用します。 SQL コマンドが含まれないキュー メッセージ、または SQL コマンドの一部であるキュー メッセージは表示されません。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replqueuemonitor**です。  
   
 ## <a name="see-also"></a>参照  

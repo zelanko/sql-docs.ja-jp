@@ -1,16 +1,16 @@
 ---
-title: "srv_message_handler (拡張ストアド プロシージャ API) | Microsoft Docs"
-ms.custom: 
+title: srv_message_handler (拡張ストアド プロシージャ API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_message_handler
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_message_handler
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50dd0f7514e03bf9f0e3d51dc3354d4842a24b51
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 8eb5cff9bf0d4a79c0bbce3fcd35a981e0eda5e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] CLR 統合を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  インストールされている拡張ストアド プロシージャ API メッセージ ハンドラーを呼び出します。 通常この関数は、拡張ストアド プロシージャから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を呼び出して、拡張ストアド プロシージャで定義されているエラーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログ ファイルや [!INCLUDE[msCoName](../../includes/msconame-md.md)] のアプリケーション ログに書き込む場合に使用します。  
   

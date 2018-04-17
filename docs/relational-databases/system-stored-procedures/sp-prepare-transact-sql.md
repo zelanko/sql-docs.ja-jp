@@ -1,16 +1,16 @@
 ---
-title: "sp_prepare (Transact SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_prepare (Transact SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/28/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
@@ -20,23 +20,24 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepare
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9917490d96272d948560789201f4455a12ab2584
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 363b1a822cc5fa748ee573c2dd613826f9359f1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   パラメーター化された準備[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント ステートメントを返しますと*処理*実行します。 sp_prepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 11 を = です。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [TRANSACT-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +59,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*int の次の入力値が必要です。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

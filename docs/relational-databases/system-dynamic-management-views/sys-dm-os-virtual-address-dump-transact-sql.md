@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_os_virtual_address_dump (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_os_virtual_address_dump (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_virtual_address_dump
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_virtual_address_dump dynamic management view
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 451cc209f36a16341cb76ec6ae9319473480d541
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a0326ff840c6874a709541d25f9e8fb55ef3ba8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosvirtualaddressdump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**region_base_address**|**varbinary(8)**|ページ領域の基本アドレスへのポインター。 NULL 値は許可されません。|  
 |**region_allocation_base_address**|**varbinary(8)**|VirtualAlloc Windows API 関数により割り当てられるページ範囲の基本アドレスへのポインター。 BaseAddress メンバーによりポイントされるページは、この割り当て範囲内に含まれます。 NULL 値は許可されません。|  
-|**region_allocation_protection**|**varbinary(8)**|領域が最初に割り当てられたときの保護属性。 値は次のいずれかになります。<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-   PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-   PAGE_NOCACHE<br /><br /> NULL 値は許可されません。|  
+|**region_allocation_protection**|**varbinary(8)**|領域が最初に割り当てられたときの保護属性。 値は次のいずれかになります。<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-です。<br />-PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> NULL 値は許可されません。|  
 |**region_size_in_bytes**|**bigint**|領域サイズ (バイト単位)。すべてのページが同じ属性となる基本アドレスから始まります。 NULL 値は許可されません。|  
 |**region_state**|**varbinary(8)**|領域の現在の状態。 これは、次のいずれかです。<br /><br /> -   MEM_COMMIT<br />-   MEM_RESERVE<br />-   MEM_FREE<br /><br /> NULL 値は許可されません。|  
-|**region_current_protection**|**varbinary(8)**|保護属性。 値は次のいずれかになります。<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-   PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-   PAGE_NOCACHE<br /><br /> NULL 値は許可されません。|  
-|**region_type**|**varbinary(8)**|領域内のページの種類。 値は、次のいずれかです。<br /><br /> -   MEM_PRIVATE<br />-   MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> NULL 値は許可されません。|  
+|**region_current_protection**|**varbinary(8)**|保護属性。 値は次のいずれかになります。<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-です。<br />-PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> NULL 値は許可されません。|  
+|**region_type**|**varbinary(8)**|領域内のページの種類。 値は、次のいずれかです。<br /><br /> -   MEM_PRIVATE<br />-MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> NULL 値は許可されません。|  
 |**pdw_node_id**|**int**|**適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
   
 ## <a name="permissions"></a>権限  
@@ -60,7 +61,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

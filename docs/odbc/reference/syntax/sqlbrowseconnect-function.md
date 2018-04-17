@@ -2,7 +2,7 @@
 title: SQLBrowseConnect 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
@@ -75,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
  [出力]合計文字数 (除外 null 終了あり) で返される使用可能な\* *OutConnectionString*です。 返される文字数がより大きいかに等しい場合*BufferLength*、内の接続文字列\* *OutConnectionString*に切り捨てられます*BufferLength* null 終端文字の長さマイナスです。  
   
 ## <a name="returns"></a>返します。  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING です。  
   
 ## <a name="diagnostics"></a>診断  
  ときに**SQLBrowseConnect** SQL_ERROR、SQL_SUCCESS_WITH_INFO、または SQL_NEED_DATA、関連付けられた SQLSTATE 値を返しますを呼び出すことによって取得できます**SQLGetDiagRec**で、 *HandleType* sql_handle_stmt としての*ConnectionHandle のハンドル*です。 次の表に、一般的にによって返される SQLSTATE 値**SQLBrowseConnect**とコンテキストでこの関数のいずれかを説明します。 表記"(DM)"の前に、ドライバー マネージャーによって返される SQLSTATEs の説明。 SQLSTATE 値ごとに関連付けられている戻り値のコードは、特に明記しない限り、SQL_ERROR です。  
@@ -118,11 +118,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引数  
  参照の要求の接続文字列には、次の構文があります。  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
- *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
- *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
- *attribute-value* ::= *character-string*<br>
- *driver-defined-attribute-keyword* ::= *identifier*<br>
+ *接続文字列*:: =*属性*[`;`] &#124; *属性* `;` *接続文字列*です。<br>
+ *属性*:: =*属性キーワード*`=`*属性と値* &#124; `DRIVER=`[`{`]*属性と値*[`}`]<br>
+ *属性キーワード*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *ドライバーの定義の属性のキーワード*<br>
+ *属性値*:: =*文字の文字列*<br>
+ *ドライバーの定義の属性-キーワード*:: =*識別子*<br>
   
  ここで*文字列*0 個以上の文字です。*識別子*が 1 つ以上の文字です。*属性キーワード*; 大文字小文字を区別することはありません*属性と値*可能性があります。 大文字小文字を区別しの値、 **DSN**空白だけのキーワードはで構成されていません。 接続文字列および初期化ファイルの文法、キーワード、および属性値のため、文字を含む**{} ()、;?\*=! @**避ける必要があります。 システム情報の文法、ためキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。 ODBC 2 の場合。*x*ドライバー、DRIVER キーワードの属性値を囲む中かっこが必要です。  
   
@@ -133,11 +133,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引数  
  参照の結果の接続文字列は、接続属性の一覧です。 接続属性は、属性キーワードと対応する属性値で構成されます。 参照の結果の接続文字列には、次の構文があります。  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
- *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
- *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
+ *接続文字列*:: =*属性*[`;`] &#124; *属性* `;` *接続文字列*<br>
+ *属性*:: = [`*`]*属性キーワード*`=`*属性値*<br>
+ *属性キーワード*:: = *ODBC 属性キーワード* &#124; *ドライバーの定義の属性のキーワード*<br>
  *ODBC 属性キーワード*= {`UID` &#124; `PWD`} [`:`*ローカライズ識別子*]*ドライバーの定義の属性-キーワード*:: = *識別子*[`:`*ローカライズ識別子*]*属性と値*:: = `{` *属性値リスト* `}` &#124; `?` (中かっこはリテラル以外の場合は、ドライバーによって返される)。<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *属性値リスト*:: =*文字列*[`:`*ローカライズされた文字の文字列*] &#124; *文字列*[`:`*ローカライズされた文字の文字列*] `,` *属性値リスト*<br>
   
  ここで*文字列*と*ローカライズされた文字の文字列*0 個以上の文字です。*識別子*と*ローカライズ識別子*1 つまたは複数の文字です。*属性キーワード*小文字は区別; されず*属性と値*大文字小文字を区別することがあります。 接続のための文字列と初期化ファイル文法、キーワード、ローカライズされた識別子は、および属性値を文字を含む**{} ()、;?\*=! @**避ける必要があります。 システム情報の文法、ためキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。  
   
