@@ -1,16 +1,16 @@
 ---
-title: "IHsyscolumns (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: IHsyscolumns (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - IHsyscolumns view
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 416b4256f162ee76c10f56aa06a3f952b77e872b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3860a82146f8fb9a91ac5d1a550d12d5c5e2a154
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|列またはプロシージャ パラメーターの名前です。|  
 |**id**|**int**|この列が所属するテーブルのオブジェクト ID、またはこのパラメーターが使用されているストアド プロシージャの ID です。|  
-|**xtype**|**tinyint**|物理記憶型[sys.systypes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
+|**xtype**|**tinyint**|物理記憶型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)です。|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|拡張ユーザー定義データ型の ID。|  
-|**長さ**|**bigint**|最大物理記憶長[sys.systypes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
+|**長さ**|**bigint**|最大物理記憶長[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)です。|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|列またはパラメーターの id。|  
@@ -60,10 +60,10 @@ ms.lasthandoff: 02/03/2018
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|この列が表示される行へのオフセット。|  
 |**collationid**|**int**|列の照合順序の ID。 列に基づく文字以外の場合は NULL です。|  
-|**language**|**int**|列の言語識別子です。|  
+|**言語**|**int**|列の言語識別子です。|  
 |**ステータス**|**int**|列またはパラメーターのプロパティを説明するために使用するビットマップ。<br /><br /> **0x08** = 列は null 値を許可します。<br /><br /> **0x10** = ANSI による埋め込みが効果的とき**varchar**または**varbinary**列が追加されました。 末尾の空白を保持しつつ**varchar**の後続のゼロが保持されるので**varbinary**列です。<br /><br /> **0x40** = パラメーターは出力パラメーターです。<br /><br /> **0x80** = 列が id 列です。|  
-|**type**|**int**|物理記憶型[sys.systypes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
-|**usertype**|**tinyint**|ユーザー定義データ型の ID [sys.systypes &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)。|  
+|**type**|**int**|物理記憶型[sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)です。|  
+|**usertype**|**tinyint**|ユーザー定義データ型の ID [sys.systypes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)です。|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|この列の有効桁数のレベルです。|  
 |**scale**|**int**|この列の小数点以下桁数です。|  
@@ -75,8 +75,8 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

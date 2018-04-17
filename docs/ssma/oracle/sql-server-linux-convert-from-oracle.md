@@ -1,24 +1,24 @@
 ---
-title: "Linux 上の SQL Server への Oracle HR スキーマの移行 |Microsoft ドキュメント"
-description: "Oracle スキーマのサンプルを SQL Server on Linux に変換します。"
+title: Linux 上の SQL Server への Oracle HR スキーマの移行 |Microsoft ドキュメント
+description: Oracle スキーマのサンプルを SQL Server on Linux に変換します。
 author: edmacauley
 ms.author: edmacauley
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: f4ab25f440db693c0fd81093f6191fc0c3390ebb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aadea44e433473384c12472c93ec287aec5c0323
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant Linux での SQL Server 2017 への Oracle スキーマを移行します。
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 > * サンプルの人事部のスキーマを変換します。
 > * データを移行します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - Oracle 12c の (12.2.0.1.0) を持つインスタンス、 **HR**スキーマがインストールされています。
 - Linux 上の SQL Server の作業インスタンス
@@ -94,11 +94,11 @@ SSMA for Oracle は Oracle サンプル スキーマが既定では使用され�
 
    ![移行のサンプル レポート](./media/sql-server-linux-convert-from-oracle/SSMAReport.png)
 
-## <a name="connect-to-sql-server"></a>SQL Server に接続します。
+## <a name="connect-to-sql-server"></a>SQL Server への接続
 
 次に選択**SQL Server への接続**適切な接続情報を入力します。  存在データベース名がないを使用する場合は、SSMA for Oracle が自動的に作成します。
 
-![SQL Server に接続します。](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
+![SQL Server への接続](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
 
 ## <a name="convert-schema"></a>スキーマを変換します。
 

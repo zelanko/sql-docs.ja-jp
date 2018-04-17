@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール | Microsoft ドキュメント
 description: Windows、macOS、そして Linux に対応する Microsoft SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 ms.custom: tools|sos
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: HT
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー) のダウンロードおよびインストール
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/08/2018
 1. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
-**.zip file**
+**.zip ファイル**
 
 1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=870838) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/08/2018
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>SQL Operations Studio (プレビュー) for Linux の取得
 
-1. ダウンロード [!含める[名前 sos](../includes/name-sos-short.md)インストーラーまたは tar.gz アーカイブのいずれかを使用して Linux 用。
+1. ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Linux のインストーラーまたは tar.gz アーカイブのいずれかを使用します。
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/08/2018
 
    > [!NOTE]
    > Debian、Redhat、および Ubuntu で、依存関係が見つからないことがあります。 これらの依存関係をインストールするために、Linux のバージョンに応じて、次のコマンドを使用してください。
-
+   
 
    **Debian:** 
    ```bash
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (preview)</a> のアンインストール
+## <a name="uninstall-sql-operations-studio-preview"></a>SQL Operations Studio (プレビュー)</a> のアンインストール
 
 Windows インストーラーを使用して[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]をインストールした場合、他の Windows アプリケーションの削除と同じ方法でアンインストールしてください。
 
@@ -146,7 +146,7 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## <a name="check-for-updates">更新を確認する</a>
+## <a name="check-for-updates"></a>更新を確認する
 最新の更新を確認するには、ウィンドウの左下にある歯車アイコンをクリックして **更新を確認する** をクリックしてください。
 
 ## <a name="next-steps"></a>次の手順

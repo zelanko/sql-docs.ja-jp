@@ -1,16 +1,16 @@
 ---
-title: "syspublications (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: syspublications (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410ba9ae2cd3329550ee7920b7213add598db5d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 22a669d1295b7ad2ed057034d847b7e9789131f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |**repl_freq**|**tinyint**|レプリケーションの頻度。<br /><br /> **0** = トランザクション ベースします。<br /><br /> **1** = テーブルの定期更新します。|  
 |**ステータス**|**tinyint**|状態。<br /><br /> **0** = 非アクティブです。<br /><br /> **1**アクティブを = です。|  
 |**sync_method**|**tinyint**|同期方法。<br /><br /> **0** = ネイティブ モードの一括コピー プログラム ユーティリティ (**BCP**)。<br /><br /> **1** = キャラクター モード BCP。<br /><br /> **3** = 同時実行は、ネイティブ モード BCP が使用されますが、スナップショット時に、テーブルはロックされていないことを意味します。<br /><br /> **4** = Concurrent_c 文字モード BCP が使用されますが、スナップショット時に、テーブルはロックされていないことを意味します。|  
-|**snapshot_jobid**|**binary (16)**|スケジュールされたタスク id。|  
+|**snapshot_jobid**|**binary(16)**|スケジュールされたタスク id。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションでは共有ディストリビューション エージェントを使用して、パブリッシャー データベース/サブスクライバー データベースの各ペアが 1 つの共有エージェントです。<br /><br /> **1** = このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。|  
 |**immediate_sync**|**bit**|同期ファイルが作成またはスナップショット エージェントを実行するたびに再作成するかどうかを示す、 **1**が作成されるたびにエージェントが実行されることを意味します。|  
 |**enabled_for_internet**|**bit**|パブリケーションの同期ファイルがファイル転送プロトコル (FTP) やその他のサービスを介してインターネットに公開されるかどうかを示します、 **1**インターネットからアクセスできることを意味します。|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 |**ftp_subdirectory**|**nvarchar (255)**|パブリケーションで、FTP を利用したスナップショット配布がサポートされている場合に、ディストリビューション エージェントがパブリケーション スナップショット ファイルを取得する場所。|  
 |**ftp_login**|**sysname**|FTP サービスへの接続に使用されるユーザー名。|  
 |**ftp_password**|**nvarchar (524)**|FTP サービスへの接続に使用されるユーザー パスワード。|  
-|**allow_dts を含む**|**bit**|パブリケーションがデータ変換を許可するかどうかを示します。 **1** DTS 変換が許可されていることを指定します。|  
+|**allow_dts**|**bit**|パブリケーションがデータ変換を許可するかどうかを示します。 **1** DTS 変換が許可されていることを指定します。|  
 |**allow_subscription_copy**|**bit**|パブリケーションにサブスクライブするサブスクリプション データベースをコピーする機能が有効かどうかを示します。 **1**コピーが許可されていることを意味します。|  
 |**centralized_conflicts**|**bit**|競合レコードがパブリッシャーに格納されるかどうかを示します。<br /><br /> **0** = 競合レコードは、パブリッシャーの両方と、競合の原因となったサブスクライバーで格納します。<br /><br /> **1** = 競合レコードはパブリッシャーに保存します。|  
 |**conflict_retention**|**int**|競合の保有期間の日数を指定します。|  
@@ -79,14 +79,14 @@ ms.lasthandoff: 11/21/2017
 |**allow_initialize_from_backup**|**bit**|サブスクライバーが初期スナップショットではなく、バックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 **1**をバックアップからサブスクリプションを初期化できることを意味し、 **0**できないことを意味します。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。|  
 |**min_autonosync_lsn**|**[バイナリ]**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|パブリケーションに対してスキーマ レプリケーションがサポートされているかどうかを示します。 **1** 、パブリッシャー側で実行されるデータ定義言語 (DDL) ステートメントがレプリケートされることを示すと**0** DDL ステートメントがレプリケートされないことを示します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。|  
-|**オプション**|**int**|追加のパブリッシング オプションを指定するビットマップ。ビットごとのオプション値は次のようになります。<br /><br /> **0x1** - ピア ツー ピア レプリケーションに対して有効です。<br /><br /> **0x2** -ピア ツー ピア レプリケーションに対してローカル変更のみをパブリッシュします。<br /><br /> **0x4** - に対して有効ではない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。<br /><br /> **0x8** - ピア ツー ピア競合検出に対して有効です。|  
+|**options**|**int**|追加のパブリッシング オプションを指定するビットマップ。ビットごとのオプション値は次のようになります。<br /><br /> **0x1** - ピア ツー ピア レプリケーションに対して有効です。<br /><br /> **0x2** -ピア ツー ピア レプリケーションに対してローカル変更のみをパブリッシュします。<br /><br /> **0x4** - に対して有効ではない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。<br /><br /> **0x8** - ピア ツー ピア競合検出に対して有効です。|  
 |**originator_id**|**smallint**|競合検出のためにピア ツー ピア レプリケーション トポロジの各ノードを識別します。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

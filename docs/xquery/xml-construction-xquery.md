@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ This is product model catalog description.
   
  構築される要素 <`ProductModel`> は、ProductModelID 属性とこれらの子ノード。  
   
--   テキスト ノード`This is product model catalog description.`  
+-   テキスト ノード `This is product model catalog description.`  
   
 -   要素ノード <`Summary`>。 このノードには、`Some description` という子テキスト ノードが 1 つあります。  
   
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>その他の直接 XML コンストラクター  
  処理命令や XML コメントのコンストラクターでは、対応する XML の構築と同じ構文を使用します。 テキスト ノードの計算コンストラクターもサポートされますが、主に、テキスト ノードを構築するために XML DML で使用されます。  
   
- **注**明示的なテキスト ノード コンス トラクターを使用しての例は、特定の例でを参照してください。 [insert &#40;です。XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
+ **注**明示的なテキスト ノード コンス トラクターを使用しての例は、特定の例でを参照してください。[挿入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)です。  
   
  次のクエリでは、構築される XML に 1 つの要素、2 つの属性、1 つのコメント、および 1 つの処理命令が含まれます。 前にコンマが使用されて、<`FirstLocation`> シーケンスが構築されるため、します。  
   
@@ -590,7 +590,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>計算コンストラクターの使用  
- . このコンストラクターを使用する場合は、構築するノードの種類を特定するキーワードを指定します。 サポートされているキーワードは次の 3 つのみです。  
+ 」をご覧ください。 このコンストラクターを使用する場合は、構築するノードの種類を特定するキーワードを指定します。 サポートされているキーワードは次の 3 つのみです。  
   
 -   element  
   

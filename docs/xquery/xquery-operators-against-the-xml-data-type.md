@@ -24,13 +24,13 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml データ型に対する XQuery の演算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
 -   一般的な比較演算子 (=、! =、 \<、>、 \<=、> =)  
   
- これらの演算子の詳細については、次を参照してください。[比較式 &#40;です。XQuery と #41 です。](../xquery/comparison-expressions-xquery.md)  
+ これらの演算子の詳細については、次を参照してください[比較式&#40;XQuery。&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-general-operators"></a>A. 一般的な演算子の使用  
  次のクエリでは、シーケンスおよびシーケンスの比較に適用される一般的な演算子の用途について説明します。 クエリは、各顧客からの電話番号のシーケンスを取得する、 **AdditionalContactInfo**の列、**連絡先**テーブル。 取得されたシーケンスは、2 つの電話番号 ("111-111-1111"、"222-2222") のシーケンスと比較されます。  
   
- クエリを使用して、  **=** 比較演算子です。 右側にあるシーケンス内の各ノード、  **=** 演算子は、左側にあるシーケンス内の各ノードと比較されます。 ノードが一致する場合、ノード比較は**TRUE**です。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
+ クエリを使用して、 **=**比較演算子です。 右側にあるシーケンス内の各ノード、 **=**演算子は、左側にあるシーケンス内の各ノードと比較されます。 ノードが一致する場合、ノード比較は**TRUE**です。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -100,7 +100,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- に、両方のオペランド、 **eq**演算子がアトミック値な値の演算子は、クエリで使用します。 一般的な比較演算子を使用して、同じクエリを記述することができます (  **=**  )。  
+ に、両方のオペランド、 **eq**演算子がアトミック値な値の演算子は、クエリで使用します。 一般的な比較演算子を使用して、同じクエリを記述することができます ( **=** )。  
   
 ## <a name="see-also"></a>参照  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   

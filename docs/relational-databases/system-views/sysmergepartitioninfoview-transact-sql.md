@@ -1,16 +1,16 @@
 ---
-title: "sysmergepartitioninfoview (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sysmergepartitioninfoview (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 92e3effdde5a4272094e55e7baed289d009ce275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 |**select_proc**|**sysname**|マージ エージェントがロックやアーティクルの列と行の検索に使用する、自動生成ストアド プロシージャの名前です。|  
 |**metadata_select_proc**|**sysname**|マージ レプリケーション システム テーブル内のメタデータへのアクセスに使用する、自動生成ストアド プロシージャの名前です。|  
 |**delete_proc**|**sysname**|同期時に行の削除に使用するプロシージャです。|  
-|**schema_option**|**binary(8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。 詳細については、サポート*schema_option*値を参照してください[sp_addmergearticle (& a) #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
+|**schema_option**|**binary(8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。 詳細については、サポート*schema_option*値を参照してください[sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)です。|  
 |**destination_object**|**sysname**|サブスクライバーで作成されるテーブルの名前。|  
 |**destination_owner**|**sysname**|目的のオブジェクトの所有者名。|  
 |**resolver_clsid**|**nvarchar (50)**|カスタム競合回避モジュールの ID。 ビジネス ロジック ハンドラーの場合、この値は NULL です。|  
@@ -102,8 +102,8 @@ ms.lasthandoff: 02/03/2018
 |**partition_view_id**|**int**|サブスクライバー パーティションを定義するビューを指定します。|  
 |**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|マージ レプリケーション トリガー内で、列の古い値に基づいて削除または更新された各行のパーティション ID を取得するために使用されるステートメントです。|  
-|**partition_inserted_view_rule**|**Sysname**|マージ レプリケーション トリガー内で、列の新しい値に基づいて挿入または更新された各行のパーティション ID を取得するために使用されるステートメントです。|  
-|**membership_eval_proc_name**|**sysname**|内の行の現在のパーティション Id を評価するプロシージャの名前[MSmerge_contents &#40;です。TRANSACT-SQL と #41 です](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)。|  
+|**partition_inserted_view_rule**|**sysname**|マージ レプリケーション トリガー内で、列の新しい値に基づいて挿入または更新された各行のパーティション ID を取得するために使用されるステートメントです。|  
+|**membership_eval_proc_name**|**sysname**|内の行の現在のパーティション Id を評価するプロシージャの名前[MSmerge_contents &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)です。|  
 |**column_list**|**sysname**|アーティクル内でパブリッシュされた列のコンマ区切りの一覧です。|  
 |**column_list_blob**|**sysname**|バイナリ ラージ オブジェクトの列を含む、アーティクル内でパブリッシュされた列のコンマ区切りの一覧です。|  
 |**expand_proc**|**sysname**|新たに挿入された親行のすべての子行、パーティションを変更された親行、および削除された親行のパーティション ID を再評価するプロシージャの名前です。|  
@@ -117,9 +117,9 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>参照  
  [パラメーター化されたフィルターによるマージ パブリケーションのパーティションを管理します。](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [レプリケーション テーブル &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepartition &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_helpmergepartition &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_helpmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   
   
