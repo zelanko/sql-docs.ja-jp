@@ -1,7 +1,7 @@
-# [OLE DB Driver for SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [OLE DB Driver for SQL Server のプログラミング](oledb-driver-for-sql-server-programming.md)
 
 # 特定の領域
-## [OLE DB Driver for SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [OLE DB Driver for SQL Server のアプリケーションの作成 +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [OLE DB データ ソース オブジェクト +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [コマンド +](../../oledb/ole-db-commands/commands.md)
 ## [行セット +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [インターフェイス +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [操作方法 +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [FILESTREAM のサポート (OLE DB)](filestream-support-ole-db.md)
-# [大きな CLR ユーザー定義型 (OLE DB)](large-clr-user-defined-types-ole-db.md)
-# [スキーマ行セットのサポート (OLE DB)](schema-rowset-support-ole-db.md)
+# [大きな CLR ユーザー定義型](large-clr-user-defined-types-ole-db.md)
+# [スキーマ行セットのサポート](schema-rowset-support-ole-db.md)
 # [スキーマ行セット - 分散クエリのサポート](schema-rowsets-distributed-query-support.md)
 # [スキーマ行セット - LINKEDSERVERS 行セット](schema-rowsets-linkedservers-rowset.md)
-# [クライアント接続でのサービス プリンシパル名 (SPN) (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [スパース列のサポート (OLE DB)](sparse-columns-support-ole-db.md)
+# [クライアント接続でのサービス プリンシパル名 (SPN)](service-principal-names-spns-in-client-connections-ole-db.md)
+# [スパース列のサポート](sparse-columns-support-ole-db.md)
 # [ストアド プロシージャ - 呼び出し](stored-procedures-calling.md)
 # [ストアド プロシージャ - 実行](stored-procedures-running.md)
 # [ストアド プロシージャ](stored-procedures.md)

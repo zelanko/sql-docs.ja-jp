@@ -9,4 +9,5 @@
 # [Scale Out ログのアカウントの変更](change-logdb-account.md)
 # [Scale Out の証明書の管理](deal-with-certificates-in-ssis-scale-out.md)
 # [Scale Out の高可用性](scale-out-support-for-high-availability.md)
+# [SQL Server フェールオーバー クラスター インスタンスを介した高可用性](scale-out-failover-cluster-instance.md)
 # [Scale Out のトラブルシューティング](troubleshooting-scale-out.md)

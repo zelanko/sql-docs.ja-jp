@@ -9,6 +9,7 @@
 
 # [概要](overview-of-the-php-sql-driver.md)
 ## [システム要件](system-requirements-for-the-php-sql-driver.md)
+## [SQL Server 用 Drivers のダウンロード](download-drivers-php-sql-server.md)
 ## [ドライバーを読み込む](loading-the-php-sql-driver.md)
 ## [IIS の構成](configuring-iis-for-php-sql-driver.md)
 ## [PHP Linux と Mac ドライバーのインストールのチュートリアル](installation-tutorial-linux-mac.md)
