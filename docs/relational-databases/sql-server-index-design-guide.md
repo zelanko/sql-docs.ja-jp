@@ -1,16 +1,16 @@
 ---
-title: "SQL Server インデックス デザイン ガイド | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: SQL Server インデックス デザイン ガイド | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 *columnstore index* は、列ストアと呼ばれる列指向データ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 詳細については、「[列ストア インデックス - 概要](../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。 
 
-**適用対象**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]
+バージョン情報については、「[列ストア インデックス - 新機能](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)」を参照してください。
 
 ### <a name="columnstore-index-architecture"></a>列ストア インデックスのアーキテクチャ
 
@@ -649,7 +649,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 また、列ストア インデックスでは、デルタストアという行ストア形式で一部の行を物理的にも格納します。 デルタストア (デルタ行グループとも呼ばれます) は、列ストアへの圧縮に適合させるために、数が少なすぎる行を格納する場所です。 デルタ行グループはそれぞれ、クラスター化された B ツリー インデックスとして実装されます。 
 
-- **デルタストア**は、列ストアに圧縮するには数が少なすぎる行を保持する場所です。 デルタストアは行ストアです。 
+- **デルタストア**は、列ストアに圧縮するには数が少なすぎる行を保持する場所です。 デルタストアは、行ストア形式で行を格納します。 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>操作は行グループと列セグメント上で実行される
 

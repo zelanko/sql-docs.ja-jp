@@ -1,16 +1,16 @@
 ---
-title: "tempdb データベース | Microsoft Docs"
-description: "このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。"
+title: tempdb データベース | Microsoft Docs
+description: このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>tempdb データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **tempdb** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたは SQL Database に接続しているすべてのユーザーが使用できるグローバル リソースです。 Tempdb で保持するもの:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  **tempdb** システム データベースは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたは SQL Database に接続しているすべてのユーザーが使用できるグローバル リソースです。 Tempdb で保持するもの:  
   
 - グローバルまたはローカルな一時テーブルおよびインデックス、一時ストアド プロシージャ、テーブル変数、テーブル値関数で返されるテーブル、カーソルなど、明示的に作成された一時的な**ユーザー オブジェクト**。  
 - データベース エンジンによって作成された**内部オブジェクト**。 たとえば、次のオブジェクトにアクセスできます。
@@ -105,6 +106,9 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="tempdb-database-in-sql-database"></a>SQL Database の Tempdb データベース
 
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>DTU に基づくサービス層の tempdb のサイズ
+
 |SLO|最大 Tempdb データ ファイル サイズ (MB)|tempdb データ ファイルの数|最大 tempdb データ サイズ (MB)|
 |---|---:|---:|---:|
 |[標準]|14,225|@shouldalert|14,225|
@@ -128,6 +132,9 @@ ms.lasthandoff: 01/18/2018
 |Basic エラスティック プール (すべての DTU 構成)|14,225|12|170,700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>vCore に基づくサービス層の tempdb のサイズ
+
+[vCore に基づくリソースの制限](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits) を参照してください
 
 ## <a name="restrictions"></a>制限  
  **tempdb** データベースでは、次の操作は実行できません。  

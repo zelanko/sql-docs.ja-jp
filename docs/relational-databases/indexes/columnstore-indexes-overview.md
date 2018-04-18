@@ -1,16 +1,16 @@
 ---
-title: "列ストア インデックス - 概要 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2016
+title: 列ストア インデックス - 概要 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>列ストア インデックス - 概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ ms.lasthandoff: 02/12/2018
   
  列セグメントの断片化を低減し、パフォーマンスを高めるために、列ストア インデックスでは、一部のデータを、クラスター化インデックス (デルタストアと呼ばれます) と削除された行の ID の btree リストに格納することがあります。 デルタストア操作は内部で処理されます。 列ストア インデックスは、正しいクエリ結果を返すために、列ストアとデルタストアの両方からのクエリ結果を結合します。  
   
- デルタストア  
- *デルタストア* は、クラスター化列ストア インデックスでのみ使用されるクラスター化インデックスです。このデルタストアは、行数がしきい値に達して列ストアに移動できるまで行を格納することで、列ストアの圧縮とパフォーマンスを高めます。  
+ デルタ行グループ  
+ *デルタ行グループ*は、列ストア インデックスでのみ使用されるクラスター化インデックスです。このデルタストアは、行数がしきい値に達して列ストアに移動できるまで行を格納することで、列ストアの圧縮とパフォーマンスを高めます。  
+
+ デルタ行グループは、最大行数に達すると閉じられます。 閉じている行グループは、組ムーバー プロセスによって確認されます。 閉じている行グループが見つかると、その行グループが圧縮され、列ストアに格納されます。  
   
- 大規模な一括読み込みでは、行のほとんどがデルタストアを通らずに列ストアに直接移動します。 一括読み込みの最後に位置する行の数は、行グループの最小サイズである 102,400 行を満たすには足りないことがあります。 この場合、それらの行は列ストアではなくデルタストアに移動します。 102,400 行未満の小規模な一括読み込みでは、すべての行がデルタストアに直接移動します。  
+デルタストア A 列ストア インデックスは、複数のデルタ行グループを持つことができます。  すべてのデルタ行グループは総称して、*デルタストア*と呼ばれます。   
+
+大規模な一括読み込みでは、行のほとんどがデルタストアを通らずに列ストアに直接移動します。 一括読み込みの最後に位置する行の数は、行グループの最小サイズである 102,400 行を満たすには足りないことがあります。 この場合、それらの行は列ストアではなくデルタストアに移動します。 102,400 行未満の小規模な一括読み込みでは、すべての行がデルタストアに直接移動します。  
   
- デルタストアは、最大行数に達すると閉じられます。 閉じている行グループは、組ムーバー プロセスによって確認されます。 閉じている行グループが見つかると、その行グループが圧縮され、列ストアに格納されます。  
+
   
  非クラスター化列ストア インデックス  
  *非クラスター化列ストア インデックス* とクラスター化列ストアインデックスは同じように機能します。 異なるのは、非クラスター化列ストア インデックスが、行ストア テーブルに作成されたセカンダリ インデックスであるのに対し、クラスター化インデックスは、テーブル全体のプライマリ ストレージである点です。  

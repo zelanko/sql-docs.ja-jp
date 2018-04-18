@@ -1,16 +1,16 @@
 ---
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_MODE_TSQL
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6b5c0a0879580e5c1e084259b61ff206d49c896
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7a43cdaab7b944aeb4af4ced1345447d03e3a29a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-特定のアプリケーション リソースで、ロック所有者によって保持されているロック モードを返します。 APPLOCK_MODE はアプリケーション ロック関数であり、現在のデータベースで動作します。 アプリケーション ロックのスコープはデータベースです。
+この関数は、特定のアプリケーション リソースで、ロック所有者によって保持されているロック モードを返します。 APPLOCK_MODE はアプリケーション ロック関数であり、現在のデータベース上で動作します。 データベースはアプリケーション ロックのスコープです。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +49,10 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>引数  
 '*database_principal*'  
-データベース内のオブジェクトに対する権限を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数を呼び出すには、*database_principal*、dbo、または固定データベース ロール db_owner のメンバーであることが必要です。
+データベース内のオブジェクトに対するアクセス許可を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数を正常に呼び出すには、関数の呼び出し元が *database_principal*、dbo、または、db_owner 固定データベース ロールのメンバーである必要があります。
   
 '*resource_name*'  
-クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は **nvarchar (255**) 既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
+クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーが内部的に保存できる値に内部的にハッシュされます。 *resource_name* は **nvarchar (255**) であり、既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 '*lock_owner*'  
 ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**, 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。
@@ -69,7 +69,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**[Exclusive]**||  
   
-* このロック モードは他のロック モードの組み合わせであり、sp_getapplock を使用して明示的に取得することはできません。
+* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
   
 ## <a name="function-properties"></a>関数のプロパティ
 **非決定的**
@@ -79,7 +79,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 **並列不可**
   
 ## <a name="examples"></a>使用例  
-次の例では、個別にセッションを開いている 2 人のユーザー (ユーザー A とユーザー B) が、一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。
+セッションが異なる 2 つのユーザー (ユーザー A とユーザー B) の次のシーケンスを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。
   
 ユーザー A が次のステートメントを実行します。
   

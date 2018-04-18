@@ -1,16 +1,16 @@
 ---
 title: ASIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19cffa5a72ded3ac274fd032fd97a664bd57c09c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-角度を持つサイン (正弦) は、指定されたラジアンで返します **float** 式です。 これは、アークサイン (逆正弦) とも呼ばれます。
+角度 (ラジアン) を返す関数。サインは、指定された **float** 式です。 これは、**アークサイン** (逆正弦) とも呼ばれます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-**float** 型または float に暗黙的に変換できる型で、-1 ～ 1 の値を持つ[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 この範囲外の値を指定すると、NULL が返され、ドメイン エラーが発生します。
+**float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 -1.00 ～ 1.00 の範囲の値のみが有効です。 この範囲外の値を指定すると、NULL が返され、ASIN がドメイン エラーを報告します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
   
 ## <a name="examples"></a>使用例  
-次の例は、 **float** 式と、指定された角度の ASIN を返します。
+次の例は、**float** 式と、指定された角度の ASIN 値を返します。
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -96,7 +96,7 @@ The ASIN of the angle is: 0.147811
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の式では、1.00 のアークサインが返されます。
+この例では、1.00 のアークサインが返されます。
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  

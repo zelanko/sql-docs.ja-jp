@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key (プレビュー) サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ TDE と BYOK には、次のような利点があります。
 ### <a name="general-guidelines"></a>一般的なガイドライン
 - Azure Key Vault と Azure SQL Database が、同じテナント内にあることを確認します。  クロステナントのキー コンテナーとサーバー相互作用は、**サポートされていません**。
 - 必要なリソースに使用されるサブスクリプションを決定します。サブスクリプション間のサーバーの移動には、後で BYOK を使用して TDE の新しいセットアップを行う必要があります。
-- BYOK で TDE を構成するときは、ラップ/ラップ解除操作の繰り返しによってキー コンテナーにかかる負荷を考慮することが重要です。 たとえば、論理サーバーに関連付けられているすべてのデータベースは同じ TDE プロテクターを使うため、そのサーバーでフェールオーバーが発生すると、サーバー内のデータベースと同じ数のキー操作がコンテナーに対してトリガーされます。 これまでの実績から、また[キー コンテナー サービスの制限](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)に記されている内容から、コンテナー内の TDE プロテクターへのアクセスに対して常に高い可用性を保証するには、1 つのサブスクリプションの 1 つの Azure Key Vault に関連付けるデータベースの数を、Standard データベースで最大 500 個、Premium データベースで最大 200 個にすることをお勧めします。 
+- BYOK で TDE を構成するときは、ラップ/ラップ解除操作の繰り返しによってキー コンテナーにかかる負荷を考慮することが重要です。 たとえば、論理サーバーに関連付けられているすべてのデータベースは同じ TDE プロテクターを使うため、そのサーバーでフェールオーバーが発生すると、サーバー内のデータベースと同じ数のキー操作がコンテナーに対してトリガーされます。 これまでの実績から、また[キー コンテナー サービスの制限](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)に記されている内容から、コンテナー内の TDE プロテクターへのアクセスに対して常に高い可用性を保証するには、1 つのサブスクリプションの 1 つの Azure Key Vault に関連付けるデータベースの数を、Standard / General Purpose のデータベースで最大 500 個、Premium / Business Critical データベースで最大 200 個にすることをお勧めします。 
 - 推奨: TDE プロテクターのコピーはオンプレミスで保持してください。  これには、ローカルに TDE プロテクターを作成するために HSM デバイスが必要で、TDE プロテクターのローカル コピーを格納するためにキー エスクロー システムが必要です。
 
 

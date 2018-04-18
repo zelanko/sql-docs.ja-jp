@@ -1,16 +1,16 @@
 ---
 title: ATAN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ATAN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - ATAN function
 - tangent
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efb6cbe8dcc58d8989b8f8ce9b4deb6ce587dc83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f5701d45426eef09e5c743685c0541679e38005
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-角度をラジアンに正接がある、指定したで返します **float** 式です。 これはアークタンジェント (逆正接) とも呼ばれます。
+角度 (ラジアン) を返す関数。正接は、指定された **float** 式です。 これはアークタンジェント (逆正接) とも呼ばれます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ ATAN ( float_expression )
 **float**
   
 ## <a name="examples"></a>使用例  
-次の例は、 **float** 式と、指定された角度の ATAN を返します。
+この例は、**float** 式と、指定された角度の ATAN を返します。
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -96,7 +96,7 @@ The ATAN of 197.1099392 is: 1.56572
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の例は、**float** 式を使用し、指定された角度のアークタンジェントを返します。
+この例は、**float** 式と、指定された角度のアークタンジェントを返します。
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  

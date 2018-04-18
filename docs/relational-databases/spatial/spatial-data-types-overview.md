@@ -18,16 +18,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: af185275ebb9a886b929f0b91b12a46ad6d30c8b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ OGC の仕様の詳細については、以下を参照してください。
 >  Z 値が円弧セグメントに指定されている場合、円弧セグメントが入力として許容されるようにするには、円弧セグメント内のすべての点で Z 値が同じである必要があります。 たとえば、 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` は許容されますが、 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` は許容されません。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString と CircularString の比較  
-次の図は、同一の二等辺三角形を示しています (三角形 A は直線セグメントを使用して三角形を定義し、三角形 B は円弧セグメントを使用して三角形を定義しています)。  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) この例は、**LineString** インスタンスと **CircularString** インスタンスの両方を使用して上の二等辺三角形を格納する方法を示しています。  
+この例は、**LineString** インスタンスと **CircularString** インスタンスの両方を使用して同一の二等辺三角形を格納する方法を示しています。  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -135,11 +133,7 @@ LS LengthCS Length
 5.65685…6.28318…
 ```
 
-次の図は、各型の格納方法を示します (赤い線は **LineString**`@g1`を示し、青い線は **CircularString**`@g2`を示します)。  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-上の図が示すように、 **CircularString** インスタンスでは **LineString** インスタンスよりも少ない点を使用して、さらに高い精度で曲面境界を格納します。 **CircularString** インスタンスは、たとえば特定の点から半径 20 マイルの検索を行う際など、円形境界を格納する場合に便利です。 **LineString** インスタンスは、四角い都市区画のような直線的な境界を格納する場合に適しています。  
+**CircularString** インスタンスでは **LineString** インスタンスよりも少ない点を使用して、さらに高い精度で曲面境界を格納します。 **CircularString** インスタンスは、たとえば特定の点から半径 20 マイルの検索を行う際など、円形境界を格納する場合に便利です。 **LineString** インスタンスは、四角い都市区画のような直線的な境界を格納する場合に適しています。  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString と CompoundCurve の比較  
 次のコード例は、 **LineString** インスタンスと **CompoundCurve** インスタンスを使用して同じ図を格納する方法を示します。

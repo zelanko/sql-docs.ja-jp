@@ -1,16 +1,16 @@
 ---
 title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLYPROPERTY_TSQL
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - ASSEMBLYPROPERTY statement
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a38d9f773e010ab779204d7c92b351d88c0d08f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 911459eec04d6ed2f20c0b6365b493bf938643df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-アセンブリのプロパティに関する情報を返します。
+この関数は、アセンブリのプロパティに関する情報を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,7 +47,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
   
 ## <a name="arguments"></a>引数  
 *assembly_name*  
-アセンブリの名前を指定します。
+アセンブリの名前です。
   
 *property_name*  
 情報を取得するプロパティの名前を指定します。 *property_name* 値は次のいずれかを指定することができます。
@@ -65,7 +65,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 |**アーキテクチャ**|アセンブリのプロセッサ アーキテクチャ。|  
 |**CLRName**|アセンブリの簡単な名前、バージョン番号、カルチャ、公開キー、およびアーキテクチャをエンコードする正規文字列。 この値は、共通言語ランタイム (CLR) 側でアセンブリを一意に識別する値です。|  
   
-## <a name="return-type"></a>戻り値の型
+## <a name="return-type"></a>の戻り値の型 : 
 **sql_variant**
   
 ## <a name="examples"></a>使用例  

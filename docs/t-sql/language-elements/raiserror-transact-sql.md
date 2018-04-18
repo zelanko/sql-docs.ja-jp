@@ -1,16 +1,16 @@
 ---
 title: RAISERROR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6102463ccd42e8057349b4480aa71d818aaafedf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 >  これらの型指定は、C 標準ライブラリの **printf** 関数に対して定義されている型指定に基づいています。 RAISERROR メッセージ文字列に使用される型指定は [!INCLUDE[tsql](../../includes/tsql-md.md)] のデータ型にマップされ、**printf** で使用される型指定は C 言語のデータ型にマップされます。 **printf** で使用される型指定は、関連する C のデータ型に類似するデータ型が [!INCLUDE[tsql](../../includes/tsql-md.md)] にない場合、RAISERROR でサポートされません。 たとえば、ポインターに対する *%p* 指定は、[!INCLUDE[tsql](../../includes/tsql-md.md)] にポインターのデータ型がないため、RAISERROR でサポートされません。  
   
 > [!NOTE]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint** データ型に値を変換するには、**%I64d** を指定します。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** データ型に値を変換するには、**%I64d** を指定します。  
   
- **@** *local_variable*  
- *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 **@***local_variable* のデータ型は **char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  
+ *@local_variable*  
+ *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 *@local_variable* のデータ型は **char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  
   
  *severity*  
  このメッセージに関連付けられたユーザー定義重大度レベルです。 sp_addmessage を使用して作成されたユーザー定義メッセージを、*msg_id* を使用して出力するときは、RAISERROR で指定された重大度が sp_addmessage で指定された重大度より優先されます。  

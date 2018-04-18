@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンで利用可能な列ストア機能の概要と、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の最新リリース。  
 
  > [!NOTE]
- > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが SQL Database Premium レベルおよび Standard レベル (S3 以上) で使用できます。 SQL Server (2016 SP1 以降) では、列ストア インデックスがすべてのエディションで使用できます。 SQL Server (2016 以前) では、列ストア インデックスが Enterprise Edition でのみ使用できます。
+ > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが SQL Database Premium レベル、Standard レベル (S3 以上)、およびすべての vCore レベルで使用できます。 SQL Server (2016 SP1 以降) では、列ストア インデックスがすべてのエディションで使用できます。 SQL Server (2016 以前) では、列ストア インデックスが Enterprise Edition でのみ使用できます。
  
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  列ストア インデックスの主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
@@ -119,7 +119,8 @@ ms.lasthandoff: 03/22/2018
   
 ### <a name="limitations"></a>制限事項  
   
--   クラスター化列ストア インデックスに対して B ツリー インデックスが定義されている場合、MERGE は無効になります。  
+
+  
 -   インメモリ テーブルの場合、列ストア インデックスにはすべての列が含まれている必要があります。列ストア インデックスにフィルター適用条件を含めることはできません。  
 -   インメモリ テーブルの場合、列ストア インデックスに対するクエリは相互運用モードでのみ実行され、インメモリ ネイティブ モードでは実行されません。 並列実行がサポートされています。  
   

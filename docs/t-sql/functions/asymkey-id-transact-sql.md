@@ -1,16 +1,16 @@
 ---
 title: ASYMKEY_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AsymKey_ID
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IDs [SQL Server], asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf4f12b058c3a4df46679d1d4d5bf9bd56958deb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4393d3a6a9c14465c307a1986aef31b3a8a69557
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
   
 ## <a name="arguments"></a>引数  
 *Asym_Key_Name*  
-データベース内の非対称キーの名前を指定します。
+データベース内の非対称キーの名前。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
 ## <a name="permissions"></a>アクセス許可  
-非対称キーに対する権限が必要です。呼び出し元で、非対称キーに対する VIEW 権限が拒否されていないことも必要になります。
+非対称キーに対する適切なアクセス許可が必要です。また、非対称キーに対する呼び出し元の VIEW アクセス許可が拒否されていない必要があります。 非対称キーのアクセス許可の詳細については、「[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
-次の例では、非対称キー `ABerglundKey11` の ID を返します。
+この例では、非対称キー `ABerglundKey11` の ID が返されます。
   
 ```sql
 SELECT ASYMKEY_ID('ABerglundKey11');  

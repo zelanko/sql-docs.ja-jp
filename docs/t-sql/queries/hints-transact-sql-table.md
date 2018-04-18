@@ -1,16 +1,16 @@
 ---
-title: "テーブル ヒント (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: テーブル ヒント (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  WITH キーワードの有無にかかわらず使用できるテーブル ヒントは、NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、および NOEXPAND です。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例 :  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  ヒントを他のオプションと一緒に指定する場合は、次のように WITH キーワードを使用して指定する必要があります。  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |INDEX ヒントと組み合わせた場合|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|クエリ オプティマイザーでは、指定されたインデックスを介してテーブルやビューにアクセスするためのインデックスのシーク操作のみが検討されます。|  
 |インデックスとインデックス列を指定してパラメーター化する場合|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|少なくとも指定されたインデックス列を使用した場合、クエリ オプティマイザーでは、指定されたインデックスを介してテーブルやビューにアクセスするためのインデックスのシーク操作のみが検討されます。|  
   
- (インデックス パラメーターを使用するかどうかにかかわらず) FORCESEEK ヒントを使用する際は、次のガイドラインを考慮してください。  
+(インデックス パラメーターを使用するかどうかにかかわらず) FORCESEEK ヒントを使用する際は、次のガイドラインを考慮してください。  
   
 -   ヒントは、テーブル ヒントまたはクエリ ヒントとして指定できます。 クエリ ヒントの詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   FORCESEEK が原因でプランが見つからない場合、エラー 8622 が返されます。  
   
- インデックス パラメーターを使用して FORCESEEK を指定する際は、次のガイドラインと制限が適用されます。  
+インデックス パラメーターを使用して FORCESEEK を指定する際は、次のガイドラインと制限が適用されます。  
   
 -   ヒントは、INSERT、UPDATE、または DELETE ステートメントの対象であるテーブルには指定できません。  
   
@@ -324,7 +324,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  READUNCOMMITTED および NOLOCK は、挿入、更新、削除の各操作によって変更されるテーブルに対しては指定できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーは、UPDATE ステートメントまたは DELETE ステートメントの対象テーブルに適用する FROM 句内の READUNCOMMITTED ヒントおよび NOLOCK ヒントを無視します。  
   
 > [!NOTE]  
->  FROM 句を UPDATE または DELETE ステートメントの対象テーブルに適用する場合、この句での READUNCOMMITTED ヒントおよび NOLOCK ヒントの使用は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされなくなる予定です。 新しい開発作業ではこのコンテキストでのヒントの使用を避け、現在このヒントを使用しているアプリケーションは変更を検討してください。  
+>  FROM 句を UPDATE または DELETE ステートメントの対象テーブルに適用する場合、この句での READUNCOMMITTED ヒントと NOLOCK ヒントの使用は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされなくなる予定です。 新しい開発作業ではこのコンテキストでのヒントの使用を避け、現在このヒントを使用しているアプリケーションは変更を検討してください。  
   
  次のいずれかを使用することによって、ロックの競合を最小限に抑えながら、コミットされていないデータ変更のダーティ リードからトランザクションを保護することができます。  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  メモリ最適化されたテーブルは、SNAPSHOT 分離でアクセスされます。 SNAPSHOT は、メモリ最適化されたテーブルだけで使用できまます (ディスク ベースのテーブルでは使用できません)。 詳細については、「[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」を参照してください。  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>フィルター選択されたインデックス ヒント  
  フィルター選択されたインデックスをテーブル ヒントとして使用できますが、クエリで選択する行のすべてがカバーされているわけではない場合、クエリ オプティマイザーからエラー 8622 が返されます。 フィルター選択されたインデックス ヒントが無効になる例を次に示します。 この例では、フィルター選択されたインデックス `FIBillOfMaterialsWithComponentID` を作成し、SELECT ステートメントのインデックス ヒントとして使用します。 フィルター選択されたインデックスの述語には、ComponentID が 533、324、および 753 のデータ行が含まれています。 クエリ述語にも ComponentID が 533、324、および 753 のデータ行が含まれていますが、フィルター選択されたインデックスには存在しない ComponentID 855 および 924 も結果セットに含めるよう拡張されています。 したがって、クエリ オプティマイザーはフィルター選択されたインデックス ヒントを使用できず、エラー 8622 が生成されます。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. FORCESEEK ヒントを使用したインデックスのシーク操作の指定  
  次の例では、インデックスを指定せずに FORCESEEK ヒントを使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Sales.SalesOrderDetail` テーブルに対するインデックスのシーク操作を実行するようにクエリ オプティマイザーを設定します。  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

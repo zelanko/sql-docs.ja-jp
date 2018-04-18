@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、テーブルをクラスター化列ストア インデックスとして作成できます。   最初に行ストア テーブルを作成し、それをクラスター化列ストア インデックスに変換する作業は不要になりました。  
 
 > [!TIP]
-> インデックスの設計のガイドラインについて詳しくは、「[SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」をご覧ください。
+> インデックスの設計のガイドラインについては、「[SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」をご覧ください。
 
 例に進みます。  
 -   [行ストア テーブルを列ストアに変換する例](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
@@ -160,7 +160,7 @@ COLUMNSTORE
 COLUMNSTORE_ARCHIVE  
    COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズをより小さなサイズに圧縮します。 などの状況をこのオプションを使用してアーカイブを記憶域のサイズを必要とし、保存と取得に多くの時間に余裕があることができます。  
   
-   圧縮の詳細については、「[データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
+   圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
 
 ON  
    ON オプションを使用すると、パーティション構成、特定のファイル グループ、既定のファイル グループなど、データ ストレージのオプションを指定できます。 ON オプションを指定しない場合、インデックスでは、既存のテーブルの設定パーティションまたはファイル グループ設定が使用されます。  
@@ -182,10 +182,10 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
 行ストア テーブルにメモリ内の非クラスター化列ストア インデックスを作成、ヒープまたはクラスター化インデックスとして格納します。 インデックスでは、フィルター選択された条件し、基になるテーブルの列のすべてを含める必要はありません。 列ストア インデックスでは、データのコピーを保存するには、十分な領域が必要です。 更新可能であり、基になるテーブルが変更されると更新されます。 クラスター化インデックスに非クラスター化列ストア インデックスでは、リアルタイム分析の機能を使用できます。  
   
 *index_name*  
-   インデックスの名前を指定します。 *index_name* はテーブル内で一意にする必要がありますが、データベース内で一意である必要はありません。 インデックス名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従う必要があります。  
+   インデックスの名前を指定します。 *index_name* はテーブル内で一意にする必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
  **(** *column*  [ **,**...*n* ] **)**  
-    格納する列を指定します。 非クラスター化列ストア インデックスは、1,024年列に制限されます。  
+    格納する列を指定します。 非クラスター化列ストア インデックスは、1,024 列に制限されます。  
    各列は、列ストア インデックスでサポートされているデータ型である必要があります。 サポートされるデータ型の一覧については、「[制限事項と制約事項](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)」を参照してください。  
 
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
@@ -207,7 +207,7 @@ MAXDOP = *max_degree_of_parallelism*
    詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
->  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションで使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 ONLINE = [ON | OFF]   
    適用対象: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]、非クラスター化インデックスのみ。
@@ -229,7 +229,7 @@ COLUMNSTORE_ARCHIVE
    適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 非クラスター化列ストア インデックスとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズをより小さなサイズに圧縮します。 これは、保存用や、ストレージのサイズを減らす必要があり、しかも保存と取得に時間をかける余裕があるその他の状況で使用できます。  
   
- 圧縮の詳細については、「[データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
+ 圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 WHERE \<filter_expression> [ AND \<filter_expression> ] 適用対象: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -260,7 +260,7 @@ ON
 **"**default**"**  
 既定のファイル グループに、指定したインデックスを作成します。  
   
-この文脈での default という語はキーワードではありません。 既定ファイル グループの識別子であるため、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 ##  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
@@ -320,13 +320,13 @@ ON
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (プレミアム価格レベルの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と Azure SQL Database に適用、クラスター化列ストアのインデックスのみ)   
+-   nvarchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max) (プレミアム価格レベルの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と Azure SQL Database に適用、クラスター化列ストアのインデックスのみ)
+-   varchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary(max) (プレミアム価格レベルの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と Azure SQL Database に適用、クラスター化列ストアのインデックスのみ)
+-   varbinary (max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層の Azure SQL Database に適用されます)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降に適用)
   
@@ -349,7 +349,7 @@ ON
 -   **ALTER INDEX** ステートメントを使用して変更することはできません。 非クラスター化インデックスを変更するには、列ストア インデックスを削除してから再作成する必要があります。 **ALTER INDEX** を使用し、列ストア インデックスを無効にし、再構築できます。  
 -   **INCLUDE** キーワードを使用して作成することはできません。  
 -   インデックスを並べ替えるための **ASC** または **DESC** キーワードを含めることはできません。 列ストア インデックスは、圧縮アルゴリズムに従って順序付けされます。 並べ替えを行うと、パフォーマンス上の利点の多くが無効になります。  
--   非クラスター化列ストア インデックスに型が nvarchar(max)、varchar(max)、varbinary(max) のラージ オブジェクト (LOB) 列を含めることはできません。 プレミアム価格レベルで構成されている [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] バージョンと Azure SQL Database 以降で、クラスター化列ストア インデックスのみ LOB 型をサポートしています。 以前のバージョンでは、クラスター化列ストア インデックスと非クラスター化列ストア インデックスで LOB 型をサポートしていません。
+-   非クラスター化列ストア インデックスに型が nvarchar(max)、varchar(max)、varbinary(max) のラージ オブジェクト (LOB) 列を含めることはできません。 Premium 層、Standard 層 (S3 以上)、およびすべての VCore サービス層で構成されている [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] バージョンと Azure SQL Database 以降で、クラスター化列ストア インデックスのみ LOB 型をサポートしています。 以前のバージョンでは、クラスター化列ストア インデックスと非クラスター化列ストア インデックスで LOB 型をサポートしていません。
 
 
  **列ストア インデックスと同時に使用できない機能:**  

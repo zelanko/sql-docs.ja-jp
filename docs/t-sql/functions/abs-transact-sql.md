@@ -1,16 +1,16 @@
 ---
 title: ABS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ABS_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9f96d651f179120fab6fabfb78d08cca84404bd1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab75a2147946366fba194f654a3710b32f68d626
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ABS ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
 *numeric_expression*  
-真数型または概数型の式を指定します。
+真数のデータ型または概数のデータ型の式を指定します。
   
 ## <a name="return-types"></a>戻り値の型  
 *numeric_expression*と同じ型を返します。
@@ -68,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 1.0  .0   1.0  
 ```  
   
-`ABS` 関数では、数値の絶対値が指定のデータ型で表現できる最大値を超えている場合、オーバーフロー エラーが返されることがあります。 たとえば、`int` データ型では `-2,147,483,648` ～ `2,147,483,647` の範囲の値のみを表現できますが、 符号付整数値 `-2,147,483,648` の絶対値を計算すると `int` データ型の正数の範囲を超えるので、オーバーフロー エラーが発生します。
+`ABS` 関数では、数値の絶対値が指定のデータ型で表現できる最大値を超えている場合に、オーバーフロー エラーを生成することができます。 たとえば、`int` データ型の値の範囲が `-2,147,483,648` から `2,147,483,647` だとします。 符号付き整数 `-2,147,483,648` の絶対値を計算すると、`int` データ型の正数範囲の上限を超えるため、オーバーフロー エラーが発生します。
   
 ```sql
 DECLARE @i int;  
@@ -77,7 +77,7 @@ SELECT ABS(@i);
 GO  
 ```  
   
-次にエラー メッセージを示します。
+次のエラー メッセージが返されます。
   
 "メッセージ 8115、レベル 16、状態 2、行 3"
   
@@ -87,7 +87,7 @@ GO
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [組み込み関数 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

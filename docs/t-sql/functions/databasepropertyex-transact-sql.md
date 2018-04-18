@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,8 +60,8 @@ DATABASEPROPERTYEX ( database , property )
 |プロパティ|Description|返される値|  
 |---|---|---|
 |[照合順序]|データベースの既定の照合順序名です。|照合順序名<br /><br /> NULL = データベースを閉じている場合<br /><br /> 基本データ型: **nvarchar(128)**|  
-|ComparisonStyle|照合順序の Windows 比較形式です。 ComparisonStyle はビットマップであり、利用可能な形式に対応する次の値を使用して計算されます。<br /><br /> 大文字と小文字を区別しない<br /><br /> アクセントを無視する<br /><br /> ひらがなとカタカナを区別しない<br /><br /> 全角と半角を区別しない<br /><br /> <br /><br /> たとえば、既定値 196609 は、大文字と小文字を区別しない、ひらがなとカタカナを区別しない、全角と半角を区別しないという 3 つのオプションを足した値を表しています。|比較スタイルを返します。<br /><br /> バイナリ照合順序ではすべて 0 が返されます。<br /><br /> 基本データ型: * * **int** * *|  
-|のエディション|データベースのエディションまたはサービス層です。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]､[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> Web = Web Edition のデータベース<br /><br /> Business = Business Edition のデータベース<br /><br /> [標準]<br /><br /> Standard<br /><br /> Premium<br /><br /> システム (マスター データベース)<br /><br /> NULL = データベースを閉じている場合<br /><br /> 基本データ型: **nvarchar**(64)|  
+|ComparisonStyle|照合順序の Windows 比較形式です。 ComparisonStyle はビットマップであり、利用可能な形式に対応する次の値を使用して計算されます。<br /><br /> 大文字と小文字を区別しない<br /><br /> アクセントを無視する: 2<br /><br /> ひらがなとカタカナを区別しない: 65536<br /><br /> 全角と半角を区別しない: 131072<br /><br /> <br /><br /> たとえば、既定値 196609 は、大文字と小文字を区別しない、ひらがなとカタカナを区別しない、全角と半角を区別しないという 3 つのオプションを足した値を表しています。|比較スタイルを返します。<br /><br /> バイナリ照合順序ではすべて 0 が返されます。<br /><br /> 基本データ型: * * **int** * *|  
+|のエディション|データベースのエディションまたはサービス層です。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> General Purpose<br /><br /> Business Critical<br /><br /> [標準]<br /><br /> Standard<br /><br /> Premium<br /><br /> システム (マスター データベース)<br /><br /> NULL = データベースを閉じている場合<br /><br /> 基本データ型: **nvarchar**(64)|  
 |IsAnsiNullDefault|データベースは、ISO のルールに従い NULL 値を許可します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAnsiNullsEnabled|NULL 値との比較はすべて、不明として評価されます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAnsiPaddingEnabled|比較または挿入を行う前に、対象の文字列が同じ長さになるようにパディングを行います。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
@@ -90,7 +90,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、電源障害やその他のシステムの停止によって発生した不完全な I/O 操作を検出します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsXTPSupported|データベースがインメモリ OLTP、つまり、メモリ最適化テーブルとネイティブ コンパイル モジュールの作成と使用をサポートするかどうかを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有:<br /><br /> IsXTPSupported は、インメモリ OLTP オブジェクトを作成するために必要な MEMORY_OPTIMIZED_DATA ファイル グループの存在に依存しません。|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: * * **int** * *|  
 |LCID (LCID)|照合順序の Windows ロケール識別子 (LCID) です。|LCID 値 (10 進数形式)。<br /><br /> 基本データ型: * * **int** * *|  
-|MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]､[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = データベースを閉じている場合<br /><br /> 基本データ型: * * * * **bigint** 型|  
+|MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = データベースを閉じている場合<br /><br /> 基本データ型: * * * * **bigint** 型|  
 |復旧|データベースの復旧モデルです。|FULL = 完全復旧モデル<br /><br /> BULK_LOGGED = 一括ログ復旧モデル<br /><br /> SIMPLE = 単純復旧モデル<br /><br /> 基本データ型: **nvarchar(128)**|  
 |ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のデータベースのパフォーマンス レベルについて説明します。|次のいずれかになります。<br /><br /> Null: データベースが開始されていません。<br /><br /> Shared (Web/Business エディション向け)<br /><br /> [標準]<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (マスター DB 向け)<br /><br /> 基本データ型: **nvarchar(32)**|  
 |ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] のサービス目標の ID です。|* * **uniqueidentifier** * * をサービス目標を識別します。|  
@@ -106,7 +106,7 @@ DATABASEPROPERTYEX ( database , property )
 ## <a name="exceptions"></a>例外  
 エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECT_ID など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECT_ID など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
 ## <a name="remarks"></a>Remarks  
 DATABASEPROPERTYEX は、プロパティの設定値を一度に 1 つだけ返します。 表示するには複数のプロパティの設定を使用して、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューです。
