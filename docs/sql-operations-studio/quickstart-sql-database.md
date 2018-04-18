@@ -22,24 +22,24 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]接続し、Azure SQL データベースを照会するには
 
-このクイック スタートを使用する方法を示しています*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 、Azure SQL database に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
+このクイック スタートでは、*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* を使用してどのように Azure SQL database に接続するか、そして *TutorialDB* を作成するために TRANSACT-SQL (T-SQL) ステートメントを使用するか、のチュートリアルを説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および Azure SQL サーバー。
+このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および Azure SQL サーバーが必要です。
 
-- [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)
 
-Azure SQL サーバーがない場合は、次の Azure SQL Database のクイック スタート (サーバー名、およびログイン資格情報を注意してください)。 のいずれかを完了します。
+まだ Azure SQL サーバーを持っていないという場合は、次のいずれかの Azure SQL Database のクイック スタートを完了させてください (そのときにサーバー名とログイン資格情報を覚えておくようにしてください)。
 
-- [DB - ポータルを作成します。](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [DB - CLI を作成します。](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [作成 DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [DB の作成 - ポータル](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [DB の作成 - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [DB の作成 - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL データベース サーバーへの接続します。
 
-使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]Azure SQL データベース サーバーへの接続を確立します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL データベース サーバーへの接続を確立します。
 
 1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
    
