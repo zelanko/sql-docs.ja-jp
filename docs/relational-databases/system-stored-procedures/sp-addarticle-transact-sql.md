@@ -1,16 +1,16 @@
 ---
-title: "sp_addarticle (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sp_addarticle (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addarticle
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-caps.latest.revision: 
+caps.latest.revision: 108
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db34c4936cb02aaf65bd1c8117f54ad3b769f158
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bc5ed5d56541436e80eeafdccb1b1cdfe3ec6c9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'***パブリケーション***'**  
+ [ **@publication =** ] **'***publication***'**  
  目的のアーティクルを含むパブリケーションの名前を指定します。 名前はデータベース内で一意であることが必要です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@article =** ] **'***記事***'**  
@@ -89,7 +89,7 @@ sp_addarticle [ @publication = ] 'publication'
  *このパラメーターは、Oracle パブリッシャーに対してはサポートされません。*  
   
  [  **@destination_table =** ] **'***destination_table***'**  
- 異なる場合は、レプリケーション先 (サブスクリプション) テーブルの名前を*ソース テーブル*またはストアド プロシージャを指定します。 *destination_table*は**sysname**の既定値は NULL には、つまり*ソース テーブル*equals *destination_table**です。*  
+ 異なる場合は、レプリケーション先 (サブスクリプション) テーブルの名前を*ソース テーブル*またはストアド プロシージャを指定します。 *destination_table*は**sysname**の既定値は NULL には、つまり*ソース テーブル*equals *destination_table * *。*  
   
  [  **@vertical_partition =** ] **'***vertical_partition***'**  
  テーブル アーティクル上の列フィルター選択を有効または無効にします。 *vertical_partition*は**nchar (5)**、既定値は FALSE。  
@@ -98,7 +98,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  **true**すべての宣言された主キー以外の列、既定値はありません、null 許容の列と一意キー列を消去します。 使用して列が追加された[sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)です。  
   
- [  **@type =** ] **'***型***'**  
+ [ **@type =** ] **'***type***'**  
  アーティクルの種類を指定します。 *型*は**sysname**値は次のいずれかを指定できます。  
   
 |値|Description|  
@@ -131,10 +131,10 @@ sp_addarticle [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**NONE**|アクションが行われません。|  
-|**CALL sp_msins _**<br /> ***テーブル***(既定値)<br /><br /> -または-<br /><br /> **呼び出し custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msins _*テーブル** * の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`CALL sp_MSins_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 指定する*custom_stored_procedure*サブスクライバーの更新はサポートされていません。|  
+|**CALL sp_msins _**<br /> ***テーブル***(既定値)<br /><br /> -または-<br /><br /> **呼び出し custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msins _ * テーブル*** の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`CALL sp_MSins_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 指定する*custom_stored_procedure*サブスクライバーの更新はサポートされていません。|  
 |**SQL**または NULL|INSERT ステートメントをレプリケートします。 INSERT ステートメントでは、アーティクル内にある、パブリッシュされるすべての列の値が指定されます。 次のコマンドは挿入時にレプリケートされます。<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
- 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
+ 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。  
   
  [  **@del_cmd =**] **'***del_cmd***'**  
  このアーティクルの削除をレプリケートするときに使用するレプリケーション コマンドの種類を指定します。 *del_cmd*は**nvarchar (255)**値は次のいずれかを指定できます。  
@@ -142,11 +142,11 @@ sp_addarticle [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**NONE**|アクションが行われません。|  
-|**CALLsp_MSdel_**<br /> ***テーブル***(既定値)<br /><br /> -または-<br /><br /> **呼び出し custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msdel _*テーブル** * の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`CALL sp_MSdel_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 指定する*custom_stored_procedure*サブスクライバーの更新はサポートされていません。|  
+|**CALLsp_MSdel_**<br /> ***テーブル***(既定値)<br /><br /> -または-<br /><br /> **呼び出し custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msdel _ * テーブル*** の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`CALL sp_MSdel_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 指定する*custom_stored_procedure*サブスクライバーの更新はサポートされていません。|  
 |**XCALL sp_msdel _**<br /> ***テーブル***<br /><br /> -または-<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 サブスクライバーの更新では、ユーザーが作成したストアド プロシージャを指定できません。|  
 |**SQL**または NULL|DELETE ステートメントをレプリケートします。 DELETE ステートメントでは、すべての主キー列の値が指定されます。 次のコマンドは削除時にレプリケートされます。<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
- 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
+ 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。  
   
  [  **@upd_cmd =**] **'***upd_cmd***'**  
  このアーティクルの更新をレプリケートするときに使用するレプリケーション コマンドの種類を指定します。 *upd_cmd*は**nvarchar (255)**値は次のいずれかを指定できます。  
@@ -155,13 +155,13 @@ sp_addarticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**NONE**|アクションが行われません。|  
 |**呼び出し sp_msupd _**<br /> ***テーブル***<br /><br /> -または-<br /><br /> **呼び出し custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。|  
-|**MCALL sp_msupd _**<br /> ***テーブル***<br /><br /> -または-<br /><br /> **MCALL custom_stored_procedure_name**|MCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msupd _*テーブル** * の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`MCALL sp_MSupd_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 サブスクライバーの更新では、ユーザーが作成したストアド プロシージャを指定できません。|  
-|**SCALL sp_msupd _**<br /> ***テーブル***(既定値)<br /><br /> -または-<br /><br /> **SCALL custom_stored_procedure_name**|SCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msupd _*テーブル** * の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`SCALL sp_MSupd_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 サブスクライバーの更新では、ユーザーが作成したストアド プロシージャを指定できません。|  
+|**MCALL sp_msupd _**<br /> ***テーブル***<br /><br /> -または-<br /><br /> **MCALL custom_stored_procedure_name**|MCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msupd _ * テーブル*** の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`MCALL sp_MSupd_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 サブスクライバーの更新では、ユーザーが作成したストアド プロシージャを指定できません。|  
+|**SCALL sp_msupd _**<br /> ***テーブル***(既定値)<br /><br /> -または-<br /><br /> **SCALL custom_stored_procedure_name**|SCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 *custom_stored_procedure*ユーザーが作成したストアド プロシージャの名前を指定します。 **sp_msupd _ * テーブル*** の代わりに、変換先テーブルの名前を含む、 *_table*パラメーターの一部です。 ときに*destination_owner*を指定すると、前の対象のテーブル名に付加します。 たとえば、 **ProductCategory**で所有するテーブル、**運用**パラメーターであるが、サブスクライバーのスキーマ、`SCALL sp_MSupd_ProductionProductCategory`です。 ピア ツー ピア レプリケーション トポロジ内のアーティクル*_table* GUID 値が付加されます。 サブスクライバーの更新では、ユーザーが作成したストアド プロシージャを指定できません。|  
 |**XCALL sp_msupd _**<br /> ***テーブル***<br /><br /> -または-<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 この方法でレプリケーションを使用する*schema_option*ストアド プロシージャの自動作成を指定するか、アーティクルの各サブスクライバーのレプリケーション先データベースの指定したストアド プロシージャを作成します。 サブスクライバーの更新では、ユーザーが作成したストアド プロシージャを指定できません。|  
 |**SQL**または NULL|UPDATE ステートメントをレプリケートします。 UPDATE ステートメントでは、すべての列の値と主キー列の値が指定されます。 次のコマンドは更新時にレプリケートされます。<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
->  構文が CALL 構文、MCALL 構文、SCALL 構文、および XCALL 構文のいずれであるかによって、サブスクライバーに反映されるデータの量が異なります。 CALL 構文では、挿入されたすべての列および削除されたすべての列に関するすべての値が渡されます。 SCALL 構文では、影響を受けた列の値のみが渡されます。 XCALL 構文では、列が変更されているかどうかに関係なく、列の以前の値を含むすべての列の値が渡されます。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
+>  構文が CALL 構文、MCALL 構文、SCALL 構文、および XCALL 構文のいずれであるかによって、サブスクライバーに反映されるデータの量が異なります。 CALL 構文では、挿入されたすべての列および削除されたすべての列に関するすべての値が渡されます。 SCALL 構文では、影響を受けた列の値のみが渡されます。 XCALL 構文では、列が変更されているかどうかに関係なく、列の以前の値を含むすべての列の値が渡されます。 詳しくは、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」をご覧ください。  
   
  [  **@creation_script =**] **'***creation_script***'**  
  オプションのアーティクル スキーマ スクリプトのパスと名前を指定します。このスクリプトは、サブスクリプション データベースでアーティクルを作成する場合に使用されます。 *creation_script*は**nvarchar (255)**、既定値は NULL です。  
@@ -175,12 +175,12 @@ sp_addarticle [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**[なし]**|コマンドを使用しません。|  
-|**削除**|スナップショットを適用する前に、レプリケーション先テーブルからデータを削除します。 アーティクルが行方向にフィルター選択されている場合、フィルターによって指定された列のデータのみが削除されます。 行フィルターが定義されている場合は、Oracle パブリッシャーに対してはサポートされません。|  
+|**delete**|スナップショットを適用する前に、レプリケーション先テーブルからデータを削除します。 アーティクルが行方向にフィルター選択されている場合、フィルターによって指定された列のデータのみが削除されます。 行フィルターが定義されている場合は、Oracle パブリッシャーに対してはサポートされません。|  
 |**drop** (既定値)|レプリケーション先テーブルを破棄します。|  
 |**truncate**|レプリケーション先テーブルを切り捨てます。 ODBC サブスクライバーまたは OLE DB サブスクライバーに対しては無効です。|  
   
  [  **@filter_clause=**] **'***filter_clause***'**  
- 行フィルターを定義する制限句 (WHERE) を指定します。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**ntext**、既定値は NULL です。 詳細については、「[パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
+ 行フィルターを定義する制限句 (WHERE) を指定します。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**ntext**、既定値は NULL です。 詳細については、次を参照してください。 [パブリッシュされたデータのフィルター](../../relational-databases/replication/publish/filter-published-data.md)します。  
   
  [  **@schema_option =**] *schema_option*  
  指定したアーティクルに対するスキーマ生成オプションのビットマスクを指定します。 *schema_option*は**binary (8)**、可能であり、 [|(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)これらの値の 1 つ以上の製品。  
@@ -228,7 +228,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 |**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)です。<br /><br /> 関連するオプションを参照してください**0x100000000**です。|  
 |**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) 8000 バイトを超えるに変換します**varbinary (max)**を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。|  
-|**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)です。|  
 |**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。|  
 |**0x8000000000**|変換、 **geography**と**geometry**データ型を**varbinary (max)** を実行しているサブスクライバーにこれらの型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|型の列にインデックスをレプリケート**geography**と**geometry**です。|  
@@ -286,17 +286,17 @@ sp_addarticle [ @publication = ] 'publication'
 |値|Description|  
 |-----------|-----------------|  
 |**true**|自動 ID 範囲処理を有効にします。|  
-|**オプション**|自動 ID 範囲処理を無効にします。|  
+|**false**|自動 ID 範囲処理を無効にします。|  
 |NULL(default)|設定されている id 範囲処理*identityrangemanagementoption*です。|  
   
 > [!NOTE]  
 >  *auto_identity_range*は廃止されておりは旧バージョンとの互換性を保つのために提供します。 使用する必要があります*identityrangemanagementoption* id 範囲管理オプションを指定するためです。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
  [  **@pub_identity_range =** ] *identity_range*  
- 場合、アーティクルはパブリッシャーの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true。**. *identity_range*は**bigint**、既定値は NULL です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
+ 場合、アーティクルはパブリッシャーの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true**。 *identity_range*は**bigint**、既定値は NULL です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
   
  [  **@identity_range =** ] *identity_range*  
- 場合、アーティクルはサブスクライバーでの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true。**. *identity_range*は**bigint**、既定値は NULL です。 際に使用される*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
+ 場合、アーティクルはサブスクライバーでの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true**。 *identity_range*は**bigint**、既定値は NULL です。 際に使用される*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
   
  [  **@threshold =** ]*しきい値*  
  ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値を指定します。 値の比率が指定されている場合*しきい値*はディストリビューション エージェントは、新しい id 範囲を作成を使用します。 *しきい値*は**bigint**、既定値は NULL です。 際に使用される*identityrangemanagementoption*に設定されている**自動**または*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
@@ -429,18 +429,18 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>権限  
  メンバーにのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addarticle**です。  
   
 ## <a name="see-also"></a>参照  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [アーティクルを定義します。](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
- [sp_articleview &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
+ [sp_helparticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

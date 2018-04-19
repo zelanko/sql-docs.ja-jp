@@ -2,7 +2,7 @@
 title: SQLBindCol 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 関数
 **準拠**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  拡張の C データ型を指定することもできます。 詳細については、次を参照してください。 [ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)です。  
   
  *TargetValuePtr*  
- [遅延入力/出力]列にバインドするデータ バッファーへのポインター。 **SQLFetch**と**SQLFetchScroll**このバッファーにデータを返します。 **SQLBulkOperations**これでデータを返す場合にバッファー*操作*SQL_FETCH_BY_BOOKMARK; は、これからデータを取得場合にバッファー*操作*SQL_ADD または SQL_UPDATE_BY_BOOKMARK. **SQLSetPos**これでデータを返す場合にバッファー*操作*SQL_REFRESH; は、これからデータを取得場合にバッファー*操作*SQL_UPDATE がします。  
+ [遅延入力/出力]列にバインドするデータ バッファーへのポインター。 **SQLFetch**と**SQLFetchScroll**このバッファーにデータを返します。 **SQLBulkOperations**これでデータを返す場合にバッファー*操作*SQL_FETCH_BY_BOOKMARK; は、これからデータを取得場合にバッファー*操作*SQL_ADD または SQL_UPDATE_BY_BOOKMARK です。 **SQLSetPos**これでデータを返す場合にバッファー*操作*SQL_REFRESH; は、これからデータを取得場合にバッファー*操作*SQL_UPDATE がします。  
   
  場合*TargetValuePtr* null ポインターでは、ドライバーは、列のデータ バッファーをバインド解除します。 アプリケーションは、すべての列をバインド解除を呼び出して**SQLFreeStmt** SQL_UNBIND オプションを使用します。 アプリケーションが列のデータ バッファーをバインド解除が場合に、列のバインドされる長さ/インジケーター バッファーをまだ、 *TargetValuePtr*への呼び出しで引数**SQLBindCol** null ポインターしますですが、*StrLen_or_IndPtr*引数が有効な値です。  
   
@@ -108,13 +108,13 @@ SQLRETURN SQLBindCol(
   
  インジケーターのバッファー長バッファーと別のバッファーには、長バッファーは、その他のすべての値を返すことができますが、インジケーター バッファーはのみの SQL_NULL_DATA を返すことができます。  
   
- 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する。](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+ 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
  場合*StrLen_or_IndPtr*は null ポインター、いない長さまたはインジケーターの値を使用します。 これは、データとデータのフェッチが NULL の場合のエラーです。  
   
  参照してください[ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)、64 ビット オペレーティング システム、アプリケーションが実行される場合。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -289,7 +289,7 @@ SQLRETURN SQLBindCol(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションの実行、**選択**名前により、結果セットを返す、顧客の Id、名前、および電話番号、Customers テーブルでのステートメントが並べ替えられます。 呼び出して**SQLBindCol**のローカル バッファーにデータの列をバインドします。 アプリケーションが最後を使用してデータの各行をフェッチ**SQLFetch**各顧客の名前、ID、および電話番号を出力します。  
   
- コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数。](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
 ```  
 // SQLBindCol_ref.cpp  

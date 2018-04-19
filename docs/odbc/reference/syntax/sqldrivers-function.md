@@ -2,7 +2,7 @@
 title: SQLDrivers 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad4afa4a54b63b759b03774f77ed7ec0371ff931
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13a9290f18c46b776afe9ab2b17c839ea6fdf6a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 関数
 **準拠**  
@@ -59,7 +59,7 @@ SQLRETURN SQLDrivers(
  *EnvironmentHandle*  
  [入力]環境ハンドルです。  
   
- *[方向]*  
+ *方向*  
  [入力]ドライバー マネージャーがリスト (SQL_FETCH_NEXT) または (SQL_FETCH_FIRST) の一覧の先頭から検索を開始するかどうかに次のドライバーの記述をフェッチするかどうかを判断します。  
   
  *DriverDescription*  
@@ -74,7 +74,7 @@ SQLRETURN SQLDrivers(
  [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\* *DriverDescription*です。 返される文字数がより大きいかに等しい場合*BufferLength1*、ドライバーの説明で\* *DriverDescription*に切り捨てられます*BufferLength1* null 終端文字の長さマイナスです。  
   
  *DriverAttributes*  
- [出力](「コメント」を参照してください) ドライバー属性値のペアの一覧を返すバッファーへのポインター。  
+ [出力]\(「コメント」を参照してください) ドライバー属性値のペアの一覧を返すバッファーへのポインター。  
   
  場合*DriverAttributes*が NULL の場合、 *AttributesLengthPtr*はバイト (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*DriverAttributes*です。  
   
@@ -84,7 +84,7 @@ SQLRETURN SQLDrivers(
  *AttributesLengthPtr*  
  [出力]合計バイト数 (null 終了バイトを除く) を返すバッファーへのポインターで返される使用可能な\* *DriverAttributes*です。 場合は、使用できるバイト数を返すより大きいまたは等しい*BufferLength2*、属性値のペアの一覧\* *DriverAttributes*に切り捨てられます*BufferLength2* null 終端文字の長さマイナスです。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  

@@ -2,7 +2,7 @@
 title: SQLBulkOperations 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1872238d5e017ef8b6bd3fbfb2dc185051fc3557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: efc1d363d11982e0732fc50ca66a665520b59c39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
 **準拠**  
@@ -60,7 +60,7 @@ SQLRETURN SQLBulkOperations(
   
  詳細については、「コメント」を参照してください。  
   
-## <a name="returns"></a>戻り値  
+## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
@@ -262,7 +262,7 @@ SQLRETURN SQLBulkOperations(
  アプリケーションを呼び出す場合**SQLCancel**ドライバーでは、実行時データ列のデータが引き続き必要があります、中に、ドライバー操作をキャンセルします。 アプリケーションが呼び出すことができますし、 **SQLBulkOperations**再度を取り消すには影響しません、カーソルの状態または現在のカーソル位置。  
   
 ## <a name="row-status-array"></a>行の状態配列  
- 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**です。 ドライバーでは、この配列に状態の値を設定への呼び出し後**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations。**. この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって参照されます。 行の状態配列内の要素の数は、(で定義されている、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性)、行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)です。  
+ 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**です。 ドライバーでは、この配列に状態の値を設定への呼び出し後**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations**。 この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって参照されます。 行の状態配列内の要素の数は、(で定義されている、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性)、行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)です。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、Customers テーブルから一度に 10 行のデータをフェッチします。 ユーザーにアクションを実行し、メッセージが表示されます。 ネットワーク トラフィックを減らすためは、例のバッファーは、更新、削除、し、バインドの配列では、過去の行セットのデータ オフセット位置にローカルに挿入します。 コードが適切にオフセット、バインドを設定しを呼び出す場合、ユーザーは、更新、削除、送信するによって選択され、データ ソースへの挿入、 **SQLBulkOperations**です。 わかりやすくするため、ユーザーは、10 個より多くの更新、削除、または挿入バッファーことはできません。  

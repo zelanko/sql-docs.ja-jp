@@ -1,16 +1,16 @@
 ---
-title: "sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: sys.dm_sql_referenced_entities (TRANSACT-SQL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *schema_name*. ] *referencing_entity_name*  
+ [ *schema_name*. *referencing_entity_name*  
  参照元エンティティの名前です。 *schema_name*参照元のクラスが OBJECT の場合は必須です。  
   
  *schema_name.referencing_entity_name*は**nvarchar (517)**です。  
@@ -86,7 +87,7 @@ sys.dm_sql_referenced_entities (
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|参照元エンティティが列の場合は列 ID。それ以外の場合は 0。 NULL 値は許可されません。|  
-|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則 &#40;です。TRANSACT-SQL と #41 です](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド依存関係の場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
+|referenced_server_name|**sysname**|参照先エンティティのサーバー名。<br /><br /> 有効な 4 部構成の名前を指定することによって作成されたサーバー間依存関係については、この列に値が格納されます。 マルチパート名については、次を参照してください。 [TRANSACT-SQL 構文表記規則&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)です。<br /><br /> 4 部構成の名前を指定せずにエンティティが参照される非スキーマ バインド依存関係の場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
 |referenced_database_name|**sysname**|参照先エンティティのデータベース名。<br /><br /> 有効な 3 部構成または 4 部構成の名前を指定することによって作成された複数データベースまたは複数サーバーにまたがる参照については、この列に値が格納されます。<br /><br /> 1 部構成または 2 部構成の名前を使って指定された非スキーマ バインド参照の場合は NULL。<br /><br /> 同じデータベースに存在する必要がありますをのみ定義できます 2 つの部分を使用するためのスキーマ バインド エンティティの場合は NULL (*schema.object*) 名です。|  
 |referenced_schema_name|**sysname**|参照先エンティティが属しているスキーマ。<br /><br /> スキーマ名を指定せずにエンティティが参照される非スキーマ バインド参照の場合は NULL。<br /><br /> スキーマ バインド参照の場合、NULL にすることはできません。|  
 |referenced_entity_name|**sysname**|参照先エンティティの名前。 NULL 値は許可されません。|  
@@ -128,12 +129,12 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|可*|はい|  
 |表示|はい|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ * *|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
 |CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数 (user-defined function)|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
 |CLR ユーザー定義関数|いいえ|はい|  
 |CLR トリガー (DML および DDL)|いいえ|いいえ|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー (DML trigger)|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] データベース レベルの DDL トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
 |拡張ストアド プロシージャ|いいえ|はい|  
@@ -143,7 +144,7 @@ sys.dm_sql_referenced_entities (
 |XML スキーマ コレクション|いいえ|はい|  
 |パーティション関数|いいえ|はい|  
   
- \*テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
+ \* テーブルは、参照している場合にのみ、参照元エンティティとして追跡、[!INCLUDE[tsql](../../includes/tsql-md.md)]モジュール、ユーザー定義型、または計算列、CHECK 制約、または既定の制約の定義の XML スキーマ コレクションです。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   
