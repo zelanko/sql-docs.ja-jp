@@ -1,33 +1,33 @@
 ---
-title: "VBScript でのエラー処理 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: VBScript でのエラー処理 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: 
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df4db3ae987690fdf27212e71a726cff2f636e88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 98122280f37e37c60493e4daf05371f6f3d2d270
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="handling-errors-in-vbscript"></a>VBScript でのエラーを処理
 Visual Basic で使用されるメソッドと VBScript で使用されるものの間のほとんどの違いがありません。 主な違いは、VBScript がラベルで実行を継続により、エラー処理の概念をサポートしていません。 つまり、使用することはできません`On Error GoTo`VBScript でします。 代わりに、`On Error Resume Next`両方を確認および**Err.Number**と**カウント**のプロパティ、**エラー**次の例のように、コレクション。  

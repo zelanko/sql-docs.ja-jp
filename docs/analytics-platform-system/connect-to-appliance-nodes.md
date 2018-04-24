@@ -1,29 +1,22 @@
 ---
-title: アプライアンスのノード (Analytics Platform System) に接続します。
-author: barbkess
-ms.author: barbkess
+title: アプライアンスのノードの分析プラットフォーム システムへの接続 |Microsoft ドキュメント
+description: この記事では、Analytics Platform System アプライアンス内の各ノードに接続するさまざまな方法について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>アプライアンスのノードに接続します。
-このトピックでは、Analytics Platform System アプライアンス内の各ノードに接続するさまざまな方法について説明します。  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>分析プラットフォーム システム内のアプライアンスのノードへの接続します。
+この記事では、Analytics Platform System アプライアンス内の各ノードに接続するさまざまな方法について説明します。  
   
 ## <a name="connecting-with-hadoop"></a>Hadoop を使用した接続  
 SQL Server PDW の Hadoop を使用して、前に SQL Server PDW に Java ランタイム環境をインストールする、アプライアンス管理者に問い合わせてください。 手順については、次を参照してください。[外部データへの PolyBase 接続を構成する&#40;Analytics Platform System&#41; ](configure-polybase-connectivity-to-external-data.md)アプライアンス Operations guide の「にします。  

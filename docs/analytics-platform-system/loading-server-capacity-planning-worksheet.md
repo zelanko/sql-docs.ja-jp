@@ -1,27 +1,21 @@
 ---
-title: サーバーの容量計画ワークシート (SQL Server PDW) の読み込み
-author: barbkess
-ms.author: barbkess
+title: サーバーの容量を読み込み、Analytics Platform System の計画 |Microsoft ドキュメント
+description: この容量の計画ワークシート、読み込みサーバー分析プラットフォーム システム並列データ ウェアハウスにデータを読み込むための要件を決定できます。"
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: この容量の計画ワークシートでは、SQL Server PDW にデータを読み込むためのサーバーを読み込んでの要件を決定するのに役立ちます。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 73f4b55c82f0b2b5e3c7cb73222a546d3dfc4af6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="loading-server-capacity-planning-worksheet"></a>サーバーの容量の計画ワークシートの読み込み
+# <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Analytics Platform System のサーバー容量の計画ワークシートの読み込み
 この容量の計画ワークシートでは、SQL Server PDW にデータを読み込むためのサーバーを読み込んでの要件を決定するのに役立ちます。 購入または既存のサーバーに負荷をプロビジョニングするために、プランを作成するのにには、これを使用します。  
   
 ## <a name="worksheet-notes"></a>ワークシートの注意事項

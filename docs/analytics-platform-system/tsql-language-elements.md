@@ -1,41 +1,30 @@
 ---
-title: T-SQL 言語要素の分析プラットフォーム システム Parallel Data Warehouse |Microsoft ドキュメント
-author: barbkess
-ms.author: barbkess
+title: T-SQL 言語要素に並列データ ウェアハウス |Microsoft ドキュメント
+description: T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
-services: sql-data-warehouse
-documentationcenter: NA
-editor: ''
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: fc6d1b69896ffeef0402d0b359f3b978bf43d961
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="language-elements"></a>言語要素
-TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>並列データ ウェアハウスの T-SQL 言語要素
+T-SQL 言語要素の分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 
 ## <a name="core-elements"></a>主要な要素
 * [構文表記規則](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [オブジェクトの名前付け規則](../relational-databases/databases/database-identifiers.md)
 * [予約済みキーワード](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [照合順序](https://msdn.microsoft.com/library/ff848763.aspx)
 * [comments](../t-sql/language-elements/comment-transact-sql.md)
-* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [定数](../t-sql/data-types/constants-transact-sql.md)
 * [データ型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [expressions](../t-sql/language-elements/expressions-transact-sql.md)
@@ -235,7 +224,7 @@ TRANSACT-SQL (T-SQL) 言語要素の分析 Platform System (APS) SQL Server 並�
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>トランザクション
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [トランザクション](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>診断セッション
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

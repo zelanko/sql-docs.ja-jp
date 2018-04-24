@@ -1,27 +1,21 @@
 ---
-title: PDW の証明書 (Analytics Platform System) のプロビジョニング
-author: barbkess
-ms.author: barbkess
+title: 証明書のプロビジョニング、Analytics Platform System |Microsoft ドキュメント
+description: Analytics Platform System でのプロビジョニング証明書します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: PDW 証明書の準備 ページの Analytics Platform System Configuration Manager では、インポートまたは PDW で使用される証明書を削除します。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82907692bbba3ad92e796e8ecc8bb99e3141cb1a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>PDW 証明書のプロビジョニング
+# <a name="certificate-provisioning-in-analytics-platform-system"></a>Analytics Platform System で証明書のプロビジョニング
 **PDW 証明書のプロビジョニング**Analytics Platform System のページ**Configuration Manager**をインポートまたは PDW で使用される証明書を削除します。 
 
 使用して、接続の暗号化に証明書は SQL Server クライアント、SQL Server PDW ドライバーを使用するツールを使ってコントロール ノードをセキュリティで保護された通信を支援できます、[管理コンソール](monitor-the-appliance-by-using-the-admin-console.md)、Integration Services で読み込まれるとします。 

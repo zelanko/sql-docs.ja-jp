@@ -1,28 +1,21 @@
 ---
-title: Windows Server Update Services (WSUS) (Analytics Platform System) を構成します。
-author: barbkess
-ms.author: barbkess
+title: WSUS の分析プラットフォーム システムの構成 |Microsoft ドキュメント
+description: これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System の WSUS を構成するための手順について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS) を構成します。
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System の WSUS を構成するための手順について説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM のバーチャル マシンに既にインストールされています。  
   
 WSUS の構成の詳細については、次を参照してください。、 [WSUS ステップ バイ ステップのインストール ガイド](http://go.microsoft.com/fwlink/?LinkId=202417)、WSUS web サイトです。 WSUS を構成した後、次を参照してください。[ダウンロードと Microsoft 更新プログラムの適用&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)更新を開始します。  
@@ -81,7 +74,7 @@ WSUS を構成する必要があります。
   
     すると、**上流サーバーの選択**ページ。 次のスクリーン ショットは、構成ウィザードの開始ポイントです。  
   
-    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  アップ ストリーム サーバーを選択します。  
   
@@ -89,9 +82,9 @@ WSUS を構成する必要があります。
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft Update を使用して更新するには  
   
-    1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]**をクリックします。  
+    1.  Microsoft Update と同期するために選択する場合は何も変更する必要はありません、**上流サーバーの選択**ページ。 **[次へ]** をクリックします。  
   
-        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>別の WSUS サーバーから更新するには  
   
@@ -107,7 +100,7 @@ WSUS を構成する必要があります。
   
         ![WSUS のアップ ストリーム サーバーのレプリカ](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
-    4.  この時点では、アップ ストリーム サーバーの構成が完了したらです。 をクリックして**[次へ]**、または選択**プロキシ サーバーの指定**左側のナビゲーション ウィンドウでします。  
+    4.  この時点では、アップ ストリーム サーバーの構成が完了したらです。 をクリックして **[次へ]**、または選択**プロキシ サーバーの指定**左側のナビゲーション ウィンドウでします。  
   
 5.  プロキシ サーバーを指定します。  
   
@@ -119,7 +112,7 @@ WSUS を構成する必要があります。
   
     1.  **プロキシ サーバーの指定**構成ウィザード のページ、**を同期するときにプロキシ サーバーを使用して**チェック ボックスをオンし、プロキシ サーバーの IP アドレスが名前ではなく) とポート番号 (ポート 80 で入力既定値)、対応するボックス。  
   
-    2.  特定のユーザーの資格情報、選択を使用してプロキシ サーバーに接続する場合、**ユーザーの資格情報を使用してプロキシ サーバーに接続する**チェック ボックスをオンし、対応するユーザー名、ドメイン、およびユーザーのパスワードを入力ボックス。 プロキシ サーバーに接続するユーザーに対して基本認証を有効にする場合、**基本認証を許可する (パスワードはクリア テキストで送信)**チェック ボックスをオンします。  
+    2.  特定のユーザーの資格情報、選択を使用してプロキシ サーバーに接続する場合、**ユーザーの資格情報を使用してプロキシ サーバーに接続する**チェック ボックスをオンし、対応するユーザー名、ドメイン、およびユーザーのパスワードを入力ボックス。 プロキシ サーバーに接続するユーザーに対して基本認証を有効にする場合、**基本認証を許可する (パスワードはクリア テキストで送信)** チェック ボックスをオンします。  
   
         ![WSUS のプロキシ資格情報](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
@@ -173,7 +166,7 @@ WSUS を構成する必要があります。
   
 12. 完了します。  
   
-    **[完了]**をクリックします。  
+    **[完了]** をクリックします。  
   
 ## <a name="bkmk_WSUSGroup"></a>WSUS でアプライアンス サーバーをグループ化します。  
 Analytics Platform System の WSUS を構成した後は、次の手順は、アプライアンスのサーバーをグループ化は。 に追加するすべてのアプライアンス サーバー グループには、WSUS が、アプライアンスのすべてのサーバーにソフトウェア更新プログラムを適用することができます。  

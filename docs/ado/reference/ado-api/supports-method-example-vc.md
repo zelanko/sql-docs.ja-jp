@@ -1,32 +1,32 @@
 ---
-title: "メソッドの例 (vc++) をサポートしています |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: メソッドの例 (vc++) をサポートしています |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6013186a6c58cf7be43e8c126b86ffa7fed3d8c2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 177a85a4bec52bb359d05bc29a2c0cad7b360994
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="supports-method-example-vc"></a>メソッドの例 (vc++) をサポートしています
 この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)別のカーソルの種類を使用して開いたレコード セットでサポートされるオプションを表示するメソッド。 DisplaySupport 関数は、この例を実行する必要があります。  

@@ -1,29 +1,22 @@
 ---
-title: 外部データ (Analytics Platform System) への接続を PolyBase を構成します。
-author: barbkess
-ms.author: barbkess
+title: PolyBase 接続性の分析プラットフォーム システムの構成 |Microsoft ドキュメント
+description: 外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースに接続する並列データ ウェアハウスに PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、並列データ ウェアハウスなど、複数のソースからデータを統合するクエリを実行します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>外部データへの接続を PolyBase を構成します。
-外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースへの接続に SQL Server PDW で PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、SQL Server PDW など、複数のソースからデータを統合するクエリを実行します。  
+外部 Hadoop または Microsoft Azure ストレージ blob のデータ ソースに接続する並列データ ウェアハウスに PolyBase を構成する方法について説明します。 PolyBase を使用して、Hadoop や Azure blob ストレージ、並列データ ウェアハウスなど、複数のソースからデータを統合するクエリを実行します。  
   
 ### <a name="to-configure-connectivity"></a>接続を構成するには  
   
@@ -57,7 +50,7 @@ ms.lasthandoff: 04/06/2018
   
 4.  外部データ ソースとして Microsoft Azure blob ストレージを有効にするには、PDW core-site.xml ファイルに 1 つまたは複数の Microsoft Azure ストレージ アカウント アクセス キーを追加します。 キーを追加します。  
   
-    1.  Microsoft Azure ストレージ アカウント名を検索します。 をストレージ アカウントへのログインを表示する、[Azure ポータル](https://portal.azure.com) をクリック**ストレージ アカウント (クラシック)**です。  
+    1.  Microsoft Azure ストレージ アカウント名を検索します。 をストレージ アカウントへのログインを表示する、[Azure ポータル](https://portal.azure.com) をクリック**ストレージ アカウント (クラシック)** です。  
   
         ![Windows Azure ストレージ アカウント名](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
@@ -96,7 +89,7 @@ ms.lasthandoff: 04/06/2018
   
     外部の Hadoop 1.3 に接続している場合は、この手順をスキップします。  
   
-    Hadoop 2.0 から始まり、yarn-site.xml ファイルには、Hadoop YARN フレームワークの構成設定が含まれています。 このファイルは、[管理] ノードの下にあるは**C:\program files \microsoft SQL Server 並列データ Warehouse\100\Hadoop\conf\\**です。  
+    Hadoop 2.0 から始まり、yarn-site.xml ファイルには、Hadoop YARN フレームワークの構成設定が含まれています。 このファイルは、[管理] ノードの下にあるは**C:\program files \microsoft SQL Server 並列データ Warehouse\100\Hadoop\conf\\** です。  
   
     Windows または Linux で、外部の Hadoop 2.0 クラスターに対して PolyBase クエリを実行するには、yarn.application.classpath プロパティと、外部の Hadoop クラスター上の yarn-site.xml 設定と一致するように値を構成する必要があります。 外部の Hadoop クラスターは、既定の設定を使用する場合でも、この構成は必要があります。  
   

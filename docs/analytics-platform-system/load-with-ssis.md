@@ -1,27 +1,21 @@
 ---
-title: Integration Services データの読み込み
-author: barbkess
-ms.author: barbkess
+title: Integration Services - 並列データ ウェアハウスに読み込む |Microsoft ドキュメント
+description: SQL Server Integration Services (SSIS) パッケージを使用して並列データ ウェアハウス (PDW) にデータを読み込むための参照および展開の情報を提供します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: SQL Server Integration Services (SSIS) パッケージを使用して SQL Server 並列データ ウェアハウスにデータを読み込むための参照および展開の情報を提供します。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>Integration Services を使用してデータを読み込む
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>並列データ ウェアハウスに統合サービスを使用してデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server 並列データ ウェアハウスにデータを読み込むための参照および展開の情報を提供します。  
   
 <!-- MISSING LINKS
@@ -221,7 +215,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  選択**新しい接続を作成**です。  
   
-5.  アプライアンスに固有の情報を持つサーバー、ユーザー、パスワード、および変換先のデータベースの情報を入力します。 (例については、以下に示します。) **[OK]**をクリックします。  
+5.  アプライアンスに固有の情報を持つサーバー、ユーザー、パスワード、および変換先のデータベースの情報を入力します。 (例については、以下に示します。) **[OK]** をクリックします。  
   
     InfiniBand 接続**サーバー名**: < アプライアンス名 > を入力してください-SQLCTL01、17001 です。  
   

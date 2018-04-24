@@ -1,28 +1,21 @@
 ---
-title: ダウンロードし、Microsoft 更新プログラム (Analytics Platform System) の適用
-author: barbkess
-ms.author: barbkess
+title: Microsoft Updates - Analytics Platform System のダウンロード |Microsoft ドキュメント
+description: このトピックでは、Windows Server Update Services (WSUS) を Microsoft Update カタログから更新プログラムをダウンロードし、Analytics Platform System アプライアンス サーバーにそれらの更新プログラムを適用する方法について説明します。 Microsoft Update は Windows および SQL Server のすべての該当する更新プログラムをインストールします。 WSUS は、アプライアンスの VMM 仮想マシンにインストールされます。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>ダウンロードし、Microsoft 更新プログラムの適用
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>ダウンロードし、Analytics Platform System の Microsoft 更新プログラムを適用
 このトピックでは、Windows Server Update Services (WSUS) を Microsoft Update カタログから更新プログラムをダウンロードし、Analytics Platform System アプライアンス サーバーにそれらの更新プログラムを適用する方法について説明します。 Microsoft Update は Windows および SQL Server のすべての該当する更新プログラムをインストールします。 WSUS は、アプライアンスの VMM 仮想マシンにインストールされます。  
   
 ## <a name="TOP"></a>はじめに  
@@ -71,7 +64,7 @@ ms.lasthandoff: 04/06/2018
   
 1.  クリックして、WSUS コンソールの左側で**更新プログラムをすべて**です。  
   
-2.  **すべての更新プログラム** ウィンドウで、をクリックして、**承認**設定し、ドロップダウン メニュー**承認**に**辞退を除く任意**です。 をクリックして、**ステータス**設定し、ドロップダウン メニュー**ステータス**に**任意**です。 **[更新]**をクリックします。  
+2.  **すべての更新プログラム** ウィンドウで、をクリックして、**承認**設定し、ドロップダウン メニュー**承認**に**辞退を除く任意**です。 をクリックして、**ステータス**設定し、ドロップダウン メニュー**ステータス**に**任意**です。 **[更新]** をクリックします。  
   
     右クリックし、**タイトル**列を選択**ファイルの状態の**をダウンロードが完了した後、ファイルの状態を確認します。  
   
@@ -129,13 +122,13 @@ ms.lasthandoff: 04/06/2018
   
 5.  **ステータス**ドロップダウン メニューで、**任意** をクリック**更新**です。  
   
-6.  展開**サービス更新**、 *<appliance name>*VMM、**更新**、**すべての更新プログラム**ここで、  *<appliance name>*アプライアンスの名前を指定します。  
+6.  展開**サービス更新**、 *<appliance name>* VMM、**更新**、**すべての更新プログラム**ここで、  *<appliance name>* アプライアンスの名前を指定します。  
   
 7.  **更新プログラムをすべて**ウィンドウ セット**承認**に**辞退を除く任意**です。  
   
 8.  **更新プログラムをすべて**ウィンドウで、設定**ステータス**に**失敗、または必要**です。  
   
-9. **[更新]**をクリックします。  
+9. **[更新]** をクリックします。  
   
 10. 場合**必要な更新プログラム**がゼロ、連絡先のサポートにお問い合わせより大きい。  
   
@@ -153,7 +146,7 @@ ms.lasthandoff: 04/06/2018
   
 1.  HST01 ノード ファブリック ドメイン管理者としてログインしていることを確認してください。  
   
-2.  コマンド プロンプト ウィンドウを開き、次のコマンドを入力します。 置き換える*<parameter>*指定された情報を使用します。  
+2.  コマンド プロンプト ウィンドウを開き、次のコマンドを入力します。 置き換える*<parameter>* 指定された情報を使用します。  
   
 **Microsoft Update を実行します。**  
   

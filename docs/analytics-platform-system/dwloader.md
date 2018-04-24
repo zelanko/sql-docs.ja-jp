@@ -1,27 +1,21 @@
 ---
-title: dwloader Parallel Data Warehouse 用のコマンド ライン ローダー
-author: barbkess
-ms.author: barbkess
+title: dwloader のコマンド ライン ローダー - Parallel Data Warehouse |Microsoft ドキュメント
+description: dwloader は、既存のテーブルに一括でテーブルの行をロードする並列データ ウェアハウス (PDW) コマンド ライン ツールです。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader のコマンド ライン ローダー
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader Parallel Data Warehouse 用のコマンド ライン ローダー
 **dwloader**を既存のテーブルに一括でテーブルの行を読み込む並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行を追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の読み込みの前に行とし、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  
   
 **データを読み込むためのプロセス**  
@@ -248,7 +242,7 @@ ASCII ファイルでは、null 値が区切り文字を連続して配置する
   
 -t \t  
   
--t '~|~'  
+-t ' ~ | ~'  
   
 **-r** *row_delimiter*  
 元のデータ ファイルの行ごとに区切り記号です。 行区切り記号は、1 つまたは複数の ASCII 値です。  
@@ -430,7 +424,7 @@ SQL Server 2012 PDW から始まり、コントロールのノードは、既定
 <reject_options>  
 ローダーにより、読み込みエラーの数を決定するためのオプションを指定します。 読み込みエラーがしきい値を超えた場合、ローダーは停止し、すべての行をコミットできません。  
   
-**-rt** { **value** | percentage }  
+**-rt** {**値**| 割合}  
 指定するかどうかは、*reject_value*で、 **-rv** *reject_value*オプションは、リテラル (値) または行数、エラー (割合) の割合がします。 既定値は、値です。  
   
 割合オプションは、リアルタイム - rs オプションに基づいて間隔で発生する計算です。  
@@ -456,7 +450,7 @@ Char、nchar、varchar、および nvarchar のフィールドの右側と左側
   
 '' に切り捨て '  
   
-'    abc     ' gets truncated to 'abc'  
+'abc' は取得 'abc' に切り捨てられます。  
   
 – C を使用する場合、E、– E の操作が最初に発生します。 空白文字のみを含むフィールドは、空の文字列と NULL に変換されます。  
   
@@ -551,7 +545,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 追加 (– m 引数を使用して) マルチ トランザクション モードで実行することができますが、トランザクションの安全ではありません。 そのための追加 (– m 引数を使用) せずに、トランザクション操作として使用する必要があります。 残念ながら、最終的な INSERT SELECT 操作で、トランザクション モードが現在約 6 倍よりも低い複数のトランザクション モードです。  
   
-Append モードでは、2 つのフェーズでデータが読み込まれます。 第 1 フェーズでは、ステージング テーブルに同時に (断片化が発生することができます)、ソース ファイルからデータを読み込みます。 フェーズ 2 では、最終テーブルにステージング テーブルからデータを読み込みます。 2 番目のフェーズを実行、 **INSERT INTO.選択 WITH (TABLOCK)**操作します。 追加モードのログ記録の動作を使用する場合と、次の表は、最終テーブルにロックの動作を示しています。  
+Append モードでは、2 つのフェーズでデータが読み込まれます。 第 1 フェーズでは、ステージング テーブルに同時に (断片化が発生することができます)、ソース ファイルからデータを読み込みます。 フェーズ 2 では、最終テーブルにステージング テーブルからデータを読み込みます。 2 番目のフェーズを実行、 **INSERT INTO.選択 WITH (TABLOCK)** 操作します。 追加モードのログ記録の動作を使用する場合と、次の表は、最終テーブルにロックの動作を示しています。  
   
 |テーブル型|複数のトランザクション<br />モード (-m)|テーブルが空です。|サポートされている同時実行|ログ記録|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
@@ -559,10 +553,10 @@ Append モードでは、2 つのフェーズでデータが読み込まれま�
 |ヒープ|はい|いいえ|はい|最小|  
 |ヒープ|いいえ|可|いいえ|最小|  
 |ヒープ|いいえ|いいえ|いいえ|最小|  
-|Cl|はい|[ユーザー アカウント制御]|いいえ|最小|  
-|Cl|はい|いいえ|はい|Full|  
-|Cl|いいえ|可|いいえ|最小|  
-|Cl|いいえ|いいえ|はい|Full|  
+|cl|はい|[ユーザー アカウント制御]|いいえ|最小|  
+|cl|はい|いいえ|はい|Full|  
+|cl|いいえ|可|いいえ|最小|  
+|cl|いいえ|いいえ|はい|Full|  
   
 上記の表に示す**dwloader** append モード、ヒープまたはクラスター化インデックス (CI) テーブル、トランザクションで複数のフラグの有無を読み込むと、空のテーブルまたは空でないテーブルへの読み込みを使用します。 ロックと、負荷のような組み合わせでは、それぞれの動作をログ記録は、テーブルに表示されます。 たとえばのフェーズ append モードとは異なる (2) の読み込みとテーブル PDW テーブルに排他ロックを作成する必要があるマルチ トランザクション モードを使用せず、クラスター化インデックスと、空にログ記録は最小限に抑える。 これは、顧客がいないできる (2 番目) の段階とクエリを同時に空のテーブルに読み込むことを意味します。 ただし、PDW では、テーブルに排他ロックは発行されませんと空でないテーブルに同じ構成を読み込むときに、同時実行が可能です。 残念ながら、完全ログ記録が発生したプロセスのパフォーマンスの低下します。  
   
@@ -605,7 +599,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-次のスクリプトのスニペットは、DimAccount し、DimCurrency テーブルにデータを読み込む dwloader を使用します。 このスクリプトは、イーサネット アドレスを使用しています。 InfiniBand、使用していた場合、サーバーがなります*< appliance_name >*`-SQLCTL01`です。  
+次のスクリプトのスニペットは、DimAccount し、DimCurrency テーブルにデータを読み込む dwloader を使用します。 このスクリプトは、イーサネット アドレスを使用しています。 InfiniBand、使用していた場合、サーバーがなります *< appliance_name >*`-SQLCTL01`です。  
   
 ```  
 set server=10.193.63.134  
@@ -688,7 +682,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe �
   
 -   *-i.\DimAccount.txt*データが、現在のディレクトリに存在する DimAccount.txt という名前のファイルを指定します。  
   
--   *-T AdventureWorksPDW2012.dbo.DimAccount* specifies the 3-part name of the table to receive the data.  
+-   *-T AdventureWorksPDW2012.dbo.DimAccount*データを受信するテーブルの 3 部構成の名前を指定します。  
   
 -   *-R DimAccount.bad* DimAccount.bad という名前のファイルに書き込まれます読み込みに失敗した行を指定します。  
   

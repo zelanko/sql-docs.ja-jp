@@ -1,28 +1,22 @@
 ---
-title: 取得および APS PDW のサーバーのバックアップを構成します。
-author: barbkess
-ms.author: barbkess
+title: 取得および、サーバーのバックアップの並列データ ウェアハウスの構成 |Microsoft ドキュメント
+description: この記事では、Analytics Platform System (APS) と並列データ ウェアハウス (PDW) のバックアップと復元の機能を使用するサーバーのバックアップとしてアプライアンス非 Windows システムを構成する方法について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: アプライアンス非 Windows システム バックアップで使用するサーバーのバックアップとして構成し、Analytics Platform System (APS) および SQL Server 並列データ ウェアハウス (PDW) 機能を復元します。
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>取得して、サーバーのバックアップを構成します。
-このトピックでは、Analytics Platform System (APS) でのバックアップと復元の機能で使用するサーバーのバックアップおよび SQL Server 並列データ ウェアハウス (PDW) としてアプライアンス非 Windows システムを構成する方法について説明します。  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得して、並列データ ウェアハウスのサーバーのバックアップを構成します。
+この記事では、Analytics Platform System (APS) と並列データ ウェアハウス (PDW) のバックアップと復元の機能を使用するサーバーのバックアップとしてアプライアンス非 Windows システムを構成する方法について説明します。  
   
   
 ## <a name="Basics"></a>サーバーのバックアップの基礎  
@@ -125,7 +119,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 詳細については、以下をご覧ください。 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
 -   [データベースを復元します。](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   

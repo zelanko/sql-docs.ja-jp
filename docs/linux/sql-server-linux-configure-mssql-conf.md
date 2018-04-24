@@ -1,6 +1,6 @@
 ---
-title: "Linux 上の SQL Server の設定の構成 |Microsoft ドキュメント"
-description: "この記事では、mssql conf ツールを使用して Linux 上の SQL Server 2017 設定を構成する方法について説明します。"
+title: Linux 上の SQL Server の設定の構成 |Microsoft ドキュメント
+description: この記事では、mssql conf ツールを使用して Linux 上の SQL Server 2017 設定を構成する方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf ツールを使用して Linux 上の SQL Server を構成します。
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> SQL Server エージェントを有効にします。
 
-**Sqlagent.enabled**設定有効[SQL Server エージェント](sql-server-linux-run-sql-server-agent-job.md)です。 既定では、SQL Server エージェントは無効です。
+**Sqlagent.enabled**設定有効[SQL Server エージェント](sql-server-linux-run-sql-server-agent-job.md)です。 既定では、SQL Server エージェントは無効です。 場合**sqlagent.enabled**が存在しない mssql.conf 設定ファイルで、SQL Server が内部で SQL Server エージェントが有効になっていることを前提とします。
 
 この設定を変更するには、次の手順を使用します。
 
@@ -358,9 +358,9 @@ SQL Server では収集するメモリの種類を制御するダンプの 2 つ
     | 型 | Description |
     |-----|-----|
     | **mini** | ミニは、最小のダンプ ファイルの種類です。 スレッドとプロセスのモジュールを確認するのに、Linux システム情報を使用します。 ダンプには、ホスト環境のスレッドのスタックとモジュールのみが含まれています。 これは、メモリの間接参照またはグローバル変数には含まれません。 |
-    | **miniplus** | MiniPlus がミニに似ていますが、追加のメモリが含まれています。 SQLPAL とダンプを次のメモリ領域を追加するホスト環境の内部構造を認識します。</br></br> さまざまなグローバル変数</br> -64 TB を超えるすべてのメモリ</br> -すべてのという名前で地域が見つかりません**/proc/$pid/マップ**</br> スレッド ウィンドウとスタックから間接メモリ</br> のスレッド情報</br> 関連付けられている Teb のおよび Peb</br> モジュール情報</br> VMM と VAD ツリー |
+    | **miniplus** | MiniPlus がミニに似ていますが、追加のメモリが含まれています。 SQLPAL とダンプを次のメモリ領域を追加するホスト環境の内部構造を認識します。</br></br> さまざまなグローバル変数</br> -64 TB を超えるすべてのメモリ</br> -すべてのという名前で地域が見つかりません **/proc/$pid/マップ**</br> スレッド ウィンドウとスタックから間接メモリ</br> のスレッド情報</br> 関連付けられている Teb のおよび Peb</br> モジュール情報</br> VMM と VAD ツリー |
     | **filtered** | 減算に基づくフィルター処理された使用は、ここで、プロセス内のすべてのメモリが含まれる具体的には除外されていない限りをデザインします。 設計は、SQLPAL とダンプから特定の地域を除く、ホスト環境の内部構造を理解しています。
-    | **full** | 完全をすべての領域を含む完全なプロセス ダンプ内にある**/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
+    | **full** | 完全をすべての領域を含む完全なプロセス ダンプ内にある **/proc/$pid/マップ**です。 これによって制御されない**coredump.captureminiandfull**設定します。 |
 
 ## <a id="dbmail"></a> Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。
 
@@ -537,9 +537,9 @@ sudo cat /var/opt/mssql/mssql.conf
 
 このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションでは、サンプルを提供**mssql.conf**ファイル。
 
-## <a name="mssqlconf-format"></a>mssql.conf format
+## <a name="mssqlconf-format"></a>mssql.conf 形式
 
-次**/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 この形式を使用してへの変更を手動で行うことができます、 **mssql.conf**必要に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルし、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)です。
+次 **/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 この形式を使用してへの変更を手動で行うことができます、 **mssql.conf**必要に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルし、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)です。
 
 ```ini
 [EULA]

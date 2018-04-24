@@ -1,28 +1,21 @@
 ---
-title: 管理コンソールのアラート (Analytics Platform System) についてください。
-author: barbkess
-ms.author: barbkess
+title: 管理コンソールの警告の分析プラットフォーム システム |Microsoft ドキュメント
+description: 管理コンソールのアラート Analytics Platform System (APS) を理解できます。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>管理コンソールのアラートをについてください。
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Analytics Platform System の管理者コンソールのアラートをについてください。
 アプライアンスに表示されるアラート**管理コンソール**し、 **System Center Operations Manager** (SCOM)。 このアラートの一覧を使用して、どのアラートには、追加の調査が必要です。 識別できるようにします。  
   
 接続する方法について、**管理コンソール**Internet Explorer を使用すると、次を参照してください。[アプライアンスを管理コンソールを使用して監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)です。 について**SCOM**を参照してください[System Center Operations Manager を使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
@@ -132,7 +125,7 @@ Transact を使用して、アラートの情報を取得する方法につい�
 |SAS ホスト バス アダプターには、失敗の条件があります。|はい|失敗|警告|SAS ホスト バス アダプターを報告するには、HBA の全体的な状態が制御される、物理ドライブのすべてを含む、障害が発生した状態であります。 置換するコンポーネントが必要 (仕入先の状態: 失敗しました)。 仕入先の状態は、コンポーネントの"hba_device_rollup_status"プロパティで報告されます。|詳細情報や連絡先のデバイスの製造元のノードの Windows イベント ログを確認します。|  
 |SAS ホスト バス アダプターが、正常な状態です。|いいえ|運用|情報提供|SAS ホスト バス アダプターが正常に動作 (仕入先の状態: ok) です。 仕入先の状態は、コンポーネントの"hba_device_rollup_status"プロパティで報告されます。||  
 |SAS ホスト バス アダプターが不明な状態です。|はい|低下しています|警告|SAS ホスト バス アダプターの状態を特定できませんでした (仕入先の状態: その他)。 仕入先の状態は、コンポーネントの"hba_device_status"プロパティで報告されます。|詳細情報や連絡先のデバイスの製造元のノードの Windows イベント ログを確認します。|  
-|SQL Server は、重大な状態です。|はい|NonOperational|[エラー]|このサービスが重大な状態でありが動作しなく (状態: 停止) または停止するための移行中の状態に (ステータス: StopPending)。  コンポーネントの"sql_server_service_status"プロパティで、ステータスが報告されます。|詳細については、そのノードの Windows イベント ログを確認します。|  
+|SQL Server は、重大な状態です。|はい|操作不可状態|[エラー]|このサービスが重大な状態でありが動作しなく (状態: 停止) または停止するための移行中の状態に (ステータス: StopPending)。  コンポーネントの"sql_server_service_status"プロパティで、ステータスが報告されます。|詳細については、そのノードの Windows イベント ログを確認します。|  
 |SQL Server は、正常な状態です。|いいえ|運用|情報提供|このサービスが正常に実行されている (ステータス: 実行されている)。 コンポーネントの"sql_server_service_status"プロパティで、ステータスが報告されます。||  
 |記憶域エンクロージャ ファンには、"degraded"状態があります。|はい|低下しています|警告|記憶域エンクロージャのファンはデグレードしていることを報告 (仕入先の状態: 10,15)。 仕入先の状態は、コンポーネントの"storage_fan_status"プロパティで報告されます。|詳細情報や連絡先のデバイスの製造元のノードの Windows イベント ログを確認します。|  
 |記憶域エンクロージャ ファンには、失敗の状態があります。|はい|失敗|警告|記憶域エンクロージャのファンが障害状態にある報告されます。 置換するコンポーネントが必要 (仕入先の状態: 20,25)。 仕入先の状態は、コンポーネントの"storage_fan_status"プロパティで報告されます。|詳細情報や連絡先のデバイスの製造元のノードの Windows イベント ログを確認します。|  

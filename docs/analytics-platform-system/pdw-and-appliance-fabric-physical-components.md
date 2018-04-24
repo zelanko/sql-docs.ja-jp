@@ -1,29 +1,22 @@
 ---
-title: PDW とアプライアンスのファブリックの物理的なコンポーネント (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: アプライアンスの物理的なコンポーネントの分析プラットフォーム システム |Microsoft ドキュメント
+description: 名前と説明の PDW アプライアンスとファブリックの物理コンポーネント。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: 17
-ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-and-appliance-fabric-physical-components"></a>PDW とアプライアンスのファブリックの物理的なコンポーネント
-名前と説明の PDW アプライアンスとファブリックの物理コンポーネント。 PDW 地域には、これらすべてのコンポーネントが含まれます。  
+# <a name="appliance-physical-components---analytics-platform-system"></a>アプライアンスの物理的なコンポーネントの分析プラットフォーム システム
+名前と説明の PDW アプライアンスとファブリックの物理コンポーネント。 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
@@ -61,7 +54,7 @@ PDW の仮想マシンは、PDW 領域の一部です。
   
 *Appliance_domain*WDS-仮想マシンが HST01 上で実行し、HST02 にフェールオーバーすることができます。 WDS の仮想マシンと VMM バーチャル マシンは、アプライアンスのインストール中に、物理ホスト上に Windows を展開できます。 WDS と VMM は、アプライアンスのライフ サイクル中にホストを交換などの操作を実行します。  
   
-*appliance_domain*-VMM  
+*appliance_domain*VMM  
 Virtual Machine Manager (VMM) は、仮想マシンで実行され、HST02 にフェールオーバーすることができます。 VMM では、物理ホスト上のオペレーティング システムを展開する System Center をホストします。 VMM では、適用またはすべてのホストとバーチャル マシン間での Windows 更新プログラムを削除する Windows Server Update Services (WSUS) も提供します。  
   
 *appliance_domain*-AD01、 *appliance_domain*-AD02  

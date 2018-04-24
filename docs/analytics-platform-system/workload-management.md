@@ -1,28 +1,22 @@
 ---
-title: ワークロードの管理 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Analytics Platform System でのワークロードの管理 |Microsoft ドキュメント
+description: ワークロード分析プラットフォーム システムで管理します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>ワークロードの管理
+# <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System でのワークロードの管理
+
 SQL Server PDW のワークロードの管理機能には、ユーザーと管理者はあらかじめ設定されているメモリ、および同時実行の構成への要求を割り当てることができるようにします。 すべての要求を永久に不足せずに必要な適切なリソースへの要求を許可することで、一貫性のある、または混合、ワークロードのパフォーマンスを向上させるためにワークロードの管理を使用します。  
   
 たとえば、SQL Server PDW でワークロードの管理方法を使用することができます。  
@@ -120,15 +114,15 @@ SQL ステートメントおよびリソース クラスによって管理され
   
 -   ALTER INDEX REORGANIZE  
   
--   ALTER TABLE REBUILD  
+-   ALTER テーブルの再構築  
   
 -   CREATE CLUSTERED INDEX  
   
 -   CREATE CLUSTERED COLUMNSTORE INDEX  
   
--   CREATE TABLE AS SELECT  
+-   作成テーブルとしての選択  
   
--   CREATE REMOTE TABLE AS SELECT  
+-   リモート テーブルとして選択を作成します。  
   
 -   データを読み込むと**dwloader**です。  
   
