@@ -22,11 +22,11 @@ ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]接続し、Azure SQL データベースを照会するには
 
-このクイック スタートを使用する方法を示しています*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 、Azure SQL database に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
+このクイック スタートでは、*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* を使用して Azure SQL database に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して [!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用される *TutorialDB* を作成する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および Azure SQL サーバー。
+このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および Azure SQL サーバーが必要です。
 
 - [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
 

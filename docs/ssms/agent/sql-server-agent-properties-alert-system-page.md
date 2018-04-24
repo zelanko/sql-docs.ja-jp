@@ -1,5 +1,5 @@
 ---
-title: '[SQL Server エージェントのプロパティ]([警告システム] ページ) | Microsoft Docs'
+title: SQL Server エージェントのプロパティ ([警告システム] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,13 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b8fb51dffa427c3a896620efd0e989fec3c7cf7
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 460783993c1404a99240ca621cb681a72bd65487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sql-server-agent-properties-alert-system-page"></a>[SQL Server エージェントのプロパティ] \([警告システム] ページ)
+# <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server エージェントのプロパティ ([警告システム] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/22/2018
 **[ポケットベル メールのアドレス形式]**  
 このセクションでは、アドレスの形式とポケットベル メールに含める件名行を指定できます。  
   
-**[[宛先] 行]**  
+**宛先 行**  
 メッセージの **[宛先]** 行のオプションを指定します。  
   
 **プレフィックス**  
@@ -108,7 +109,7 @@ ms.lasthandoff: 03/22/2018
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント警告によって実行されるジョブで使用するジョブ ステップ トークンを有効にできます。 ジョブ ステップ トークンの詳細については、「 [ジョブ ステップでのトークンの使用](../../ssms/agent/use-tokens-in-job-steps.md)」をご覧ください。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント警告でアクティブになるジョブ ステップには、Windows イベント ログに書き込み権限を持つ任意の Windows ユーザーがアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 無効になっているトークンは、 **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)**、 **$(A-MSG)**です。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント警告でアクティブになるジョブ ステップには、Windows イベント ログに書き込み権限を持つ任意の Windows ユーザーがアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント トークンは、既定で無効になっています。 無効になっているトークンは、 **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)**、 **$(A-MSG)** です。  
 >   
 > これらのトークンを使用する必要がある場合は、有効にする前に、信頼された Windows セキュリティ グループ (Administrators など) のメンバーだけが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] が動作するコンピューターのイベント ログに書き込み権限を持つことを確認してください。  
   

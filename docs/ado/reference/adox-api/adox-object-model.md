@@ -27,11 +27,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-object-model"></a>ADOX オブジェクト モデル
-次の図は、オブジェクトの表現方法と ADOX に関連する方法を示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンス トピックを参照してください。 または[ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)と[ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)です。  
+次の図は、オブジェクトの表現方法と ADOX に関連する方法を示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンス トピック、または[ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)や[ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)を参照してください。  
   
  ![ADOX オブジェクト モデル](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- 各、[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、および[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトにも標準 ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+ 各[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、そして[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトも標準 ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを備えています。  
   
 ## <a name="see-also"></a>参照  
  [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   

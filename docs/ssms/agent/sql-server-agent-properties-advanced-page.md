@@ -1,5 +1,5 @@
 ---
-title: '[SQL Server エージェントのプロパティ]([詳細設定] ページ) | Microsoft Docs'
+title: SQL Server エージェントのプロパティ ([詳細設定] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,13 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b919bd29bb78700e0b183da869ae7317556eaed6
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aec17d6401a2759e4f3bbf77425be60b455960a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sql-server-agent-properties-advanced-page"></a>[SQL Server エージェントのプロパティ] ([詳細設定] ページ)
+# <a name="sql-server-agent-properties-advanced-page"></a>SQL Server エージェントのプロパティ ([詳細設定] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
