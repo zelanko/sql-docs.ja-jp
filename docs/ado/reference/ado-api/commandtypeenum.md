@@ -1,40 +1,40 @@
 ---
-title: "CommandTypeEnum |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: CommandTypeEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CommandTypeEnum
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fa6315ca90d959b381ba96d17e4526481a945a32
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 コマンドの引数を解釈する方法を指定します。  
   
  ユーザーが指定したを検証することが重要*クラスヒント*アプリケーションのユーザーに実行する ADO の危険性のあるコマンドを挿入する機会を提供しないようにする値。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|コマンドの型引数を指定しません。|  
 |**adCmdText**|1|評価[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)コマンドまたはストアド プロシージャのテキストの定義として呼び出します。|  

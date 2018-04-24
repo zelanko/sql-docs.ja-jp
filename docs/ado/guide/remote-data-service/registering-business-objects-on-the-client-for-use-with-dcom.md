@@ -1,30 +1,30 @@
 ---
-title: "DCOM を使用するクライアントでビジネス オブジェクトに登録する |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: DCOM を使用するクライアントでビジネス オブジェクトに登録する |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: adba9240c501136d891686da3e5361be96e80ee0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c9f797023e5a6893dd6370ddf9245c066435227c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM を使用するクライアントでビジネス オブジェクトに登録します。
 カスタム ビジネス オブジェクトは、クライアント側が DCOM 経由で使用できる識別子 (CLSID) にそのプログラム名 (ProgId) をマップできることを確認する必要があります。 このため、DCOM オブジェクトの ProgID 必要がありますでクライアント側のレジストリになり、サーバー側のビジネス オブジェクトのクラス ID にマップします。 その他のサポートされているプロトコル (HTTP、HTTPS、およびプロセス内)、これは必要ありません。  

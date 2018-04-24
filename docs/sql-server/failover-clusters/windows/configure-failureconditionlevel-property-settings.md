@@ -1,43 +1,45 @@
 ---
-title: "FailureConditionLevel プロパティ設定の構成 | Microsoft Docs"
-ms.custom: 
+title: FailureConditionLevel プロパティ設定の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 293e16b103fb05beadd59d5ef3b7e395e0f2ec91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5cc2b9c92f30af507ec9750e74a8ee3a3af331af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。 このプロパティへの変更はすぐに適用され、Windows Server フェールオーバー クラスター サービス (WSFC) または FCI リソースの再起動を必要としません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。 このプロパティへの変更はすぐに適用され、Windows Server フェールオーバー クラスター サービス (WSFC) または FCI リソースの再起動を必要としません。  
   
 -   **作業を開始する準備:**  [FailureConditionLevel プロパティの設定](#Restrictions)、 [セキュリティ](#Security)  
   
 -   **FailureConditionLevel プロパティ設定の構成に使用する機能:** [PowerShell](#PowerShellProcedure)、 [フェールオーバー クラスター マネージャー](#WSFC)、 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> FailureConditionLevel プロパティの設定  
  エラー状態にはレベルが設定されています。 レベル 1 ～ 5 の各レベルには、前のレベルのすべての状態に加えて独自の状態が含まれています。 これは、それぞれのレベルで、フェールオーバーまたは再起動の可能性が増加することを意味します。  詳細については、この「 [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md) 」の「フェールオーバーの特定」セクションを参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  ALTER SETTINGS 権限および VIEW SERVER STATE 権限が必要です。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  

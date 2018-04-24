@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 53cbc9dd9fe0f2043026345e3385bdcdb2075f39
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-features-for-each-release"></a>ADO の各リリースの機能
 このトピックでは、ADO、ADO MD および ADOX の各リリースで導入された新機能を示します。
@@ -37,30 +37,30 @@ ms.lasthandoff: 04/03/2018
  *信頼済みゾーンの外部ハード ドライブへのアクセスが許可されていません。*
 ドメイン間スクリプト信頼されていないサイトが関係する、次の操作は無効になっています: **Stream.SaveToFile**、 **Stream.LoadFromFile**、 **Recordset.Save**、および**Recordset.Open**、と共に使用される、 **adCmdFile**フラグ、または、Microsoft OLE DB 永続化プロバイダー (MSPersist)。
 
- **Recordset.Open** *,*  **Recordset.Save** *,*  **Stream.SaveToFile** *, and*  **Stream.LoadFromFile**  *operate on physical files only.*
+ **Recordset.Open** *、***Recordset.Save** *、***Stream.SaveToFile** *、および***Stream.LoadFromFile***物理ファイルのみで動作します。* 
 これらのメソッドでは、ファイル ハンドルが物理ファイルのみを指しているようになりましたことを確認します。
 
- **Recordset.ActiveCommand***HTML/ASP ページから呼び出されたときにエラーが返されます。* 
+ **Recordset.ActiveCommand***HTML/ASP ページから呼び出されたときにエラーが返されます。*
 これにより、**コマンド**誤用されるオブジェクト。
 
- *数***レコード セット***、入れ子になったによって返される***図形***コマンドには上限値です。* 
+ *数***レコード セット***、入れ子になったによって返される***図形***コマンドには上限値です。*
 入れ子になった shape コマンドは 512 の最大値を返すようになりました**レコード セット**です。 つまり、**図形**コマンドは、任意の深さでネスト不要になったことができます。 代わりに、最大レベルの深さは、512、各コマンドを実行する 1 つ (子) の場合**Recordset**です。 任意のレベルでは、場合、**図形**コマンドが複数返されます**レコード セット**、最大の深さのレベルは 512 未満になります。
 
 ## <a name="ado-27"></a>ADO 2.7
  *64 ビット プラットフォームのサポート*ADO 2.7 64 ビット プロセッサのサポートが導入されています。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。   親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
+ **CubDef.GetSchemaObject***メソッド*ADO 2.6 以降では、ADO MD 取得できるオブジェクトで指定された一意の名前を使用して、 [UniqueName プロパティ (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)です。 親オブジェクトの名前は、既知である必要はありませんし、親のコレクションは、スキーマ オブジェクトを取得する事前設定する必要はありません。 参照してください[GetSchemaObject メソッド (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)です。
 
  *コマンド ストリーム*、**コマンド**オブジェクトでは、ストリームの形式でコマンドをサポートを使用する代わりに、 **CommandText**プロパティです。 [CommandStream プロパティ (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) XML テンプレートまたはアップデート グラムとしてを指定するために使用する、**コマンド**for SQL Server、Microsoft OLE DB プロバイダーで入力します。
 
- **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。  
+ **Dialect***プロパティ* [Dialect](../../ado/reference/ado-api/dialect-property.md)構文を定義する新しいプロパティは、一般的な規則を文字列またはストリームを解析するプロバイダーを使用することです。
 
- **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。  
+ **Command.Execute***メソッド*、[メソッドを実行する](../../ado/reference/ado-api/execute-method-ado-command.md)ADO の**コマンド**入力と出力にストリームを使用するオブジェクトが強化されました。
 
  *フィールド statusvalues*ユーザーを変更する場合、DB_E_ERRORSOCCURRED エラーが発生した場合、**フィールド**の**Recordset**、ADO に収まるようになりました、 **Field.Status**プロパティを適切なステータス情報を使用できるように、ユーザーの詳細については、どのような問題が発生しました。 参照してください[Status プロパティ (ADO フィールド)](../../ado/reference/ado-api/status-property-ado-field.md)です。
 
- **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。  
+ **NamedParameters***プロパティ* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)の新しいプロパティ、**コマンド**という名前のオブジェクトを示す、プロバイダーを使用する必要がありますパラメーター。
 
  *ストリームの結果セット*ADO は、データ ソースからの結果セットを返すことができます、**ストリーム**ではなく、 **Recordset**オブジェクト。 Microsoft OLE DB プロバイダーの最新バージョンを使用して、SQL Server 用、する XML 結果が得られますプロバイダーから"の XML"クエリを実行します。 A**ストリーム**結果セットを受け取る、ソースとして"XML の"コマンドを使用して開くことができます。 参照してください[ストリームに結果セットを取得する](../../ado/guide/data/retrieving-resultsets-into-streams.md)です。
 

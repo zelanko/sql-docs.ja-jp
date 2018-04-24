@@ -1,31 +1,31 @@
 ---
-title: "非パラメーター化コマンドの操作 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 非パラメーター化コマンドの操作 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a025cf381bdf5a51cb825294bf5a5399fc033b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非パラメーター化コマンドの操作
 コマンドのパラメーターのないすべてのプロバイダー コマンドが実行されると、**レコード セット**コマンドの実行中に作成されます。 コマンドが同期的に実行される場合すべて、**レコード セット**が完全に設定されます。 非同期モードを選択した場合のデータが設定された状態、**レコード セット**母集団モードとのサイズによって異なりますが、**レコード セット**です。  

@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -191,7 +191,7 @@ ms.lasthandoff: 04/03/2018
  ISAPI (インターネット サーバー アプリケーション プログラミング インターフェイス)  
  インターネット サーバーでは、Microsoft® インターネット インフォメーション サービス (IIS) を実行している Windows NT® Server または Windows 2000 Server などの関数のセット。  
   
- [キー]  
+ Key  
  列またはテーブル内の 1 つの行を一意に識別する列多くの場合、テーブルのインデックス化に使用されます。  
   
 ## <a name="m"></a>M  

@@ -1,15 +1,16 @@
 ---
-title: "新しい SQL Server フェールオーバー クラスターの作成 (セットアップ) | Microsoft Docs"
-ms.custom: 
+title: 新しい SQL Server フェールオーバー クラスターの作成 (セットアップ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14ed72a03a7911dd9e6bf29c38f516781b5df6a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1553c7584ec6d90bcefbbdabf7c44788830740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 他のノードを管理するアクティブなノードでは、セットアップを実行しないでください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 他のノードを管理するアクティブなノードでは、セットアップを実行しないでください。  
   
  ノードがクラスター化される方法に応じて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターは次のように構成されます。  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
  Windows フェールオーバー クラスターへの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインストールの詳細については、「 [SQL Server Analysis Services をクラスター化する方法](http://go.microsoft.com/fwlink/p/?LinkId=396548)」をご覧ください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  作業を開始する前に、次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのトピックを参照してください。  
   
 -   [SQL Server のインストール計画](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -94,13 +96,13 @@ ms.lasthandoff: 11/20/2017
   
 2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール センターが開始されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しいクラスター インストールを行うには、インストール ページで **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [フェールオーバー クラスターの新規インストール]** をクリックします。  
   
-3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 画面に詳細を表示するには、 **[詳細の表示]**をクリックするか、または **[詳細レポートの表示]**をクリックして HTML レポートを表示します。  
+3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 4.  続行するには、 **[次へ]**をクリックします。  
   
 5.  [セットアップ サポート ファイル] ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。  
   
-6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、 **[詳細の表示]**をクリックするか、または **[詳細レポートの表示]**をクリックして HTML レポートを表示します。  
+6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 7.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、「 [SQL Server 2016 のエディションとコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
@@ -243,11 +245,11 @@ ms.lasthandoff: 11/20/2017
   
 3.  必須コンポーネントがインストールされると、インストール ウィザードによって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール センターが起動します。 クラスタリングに対してノードを準備するには、 **[詳細設定]** ページに移動し、 **[高度なクラスターの準備]**をクリックします。  
   
-4.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 画面に詳細を表示するには、 **[詳細の表示]**をクリックするか、または **[詳細レポートの表示]**をクリックして HTML レポートを表示します。  
+4.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 5.  [セットアップ サポート ファイル] ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。  
   
-6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、 **[詳細の表示]**をクリックするか、または **[詳細レポートの表示]**をクリックして HTML レポートを表示します。  
+6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 7.  ローカライズされたオペレーティング システムでのインストールで、インストール メディアに英語とそのオペレーティング システムに対応する言語の両方の言語パックが含まれている場合は、[言語の選択] ページで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの言語を指定できます。 言語間サポートとインストールに関する注意点の詳細については、「 [SQL Server のローカル言語版](../../../sql-server/install/local-language-versions-in-sql-server.md)」を参照してください。  
   
@@ -335,7 +337,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  [セットアップ サポート ファイル] ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。  
   
-4.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、 **[詳細の表示]**をクリックするか、または **[詳細レポートの表示]**をクリックして HTML レポートを表示します。  
+4.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。 確認が完了したら、 **[次へ]** をクリックして続行します。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。  
   
 5.  ローカライズされたオペレーティング システムでのインストールで、インストール メディアに英語とそのオペレーティング システムに対応する言語の両方の言語パックが含まれている場合は、[言語の選択] ページで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの言語を指定できます。 言語間サポートとインストールに関する注意点の詳細については、「 [SQL Server のローカル言語版](../../../sql-server/install/local-language-versions-in-sql-server.md)」を参照してください。  
   
@@ -367,7 +369,7 @@ ms.lasthandoff: 11/20/2017
   
 11. このトピックの残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
   
-12. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [の構成 - アカウントの準備] ページを使用して、次の項目を指定します。  
+12. [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の構成 - アカウントの準備] ページを使用して、次の項目を指定します。  
   
     -   [セキュリティ モード] : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス用に Windows 認証または混合モード認証を選択します。 混合モード認証を選択した場合は、組み込みの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力する必要があります。  
   
@@ -401,7 +403,7 @@ ms.lasthandoff: 11/20/2017
   
 19. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]**をクリックします。 この手順により、同じフェールオーバー クラスターに対して準備されたすべてのノードが、完成した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの一部となります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  **新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール内容の構成**: システムのセキュリティを向上させるため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 詳細については、「 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   
  ログ ファイルの場所の詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」をご覧ください。  

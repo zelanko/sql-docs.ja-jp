@@ -1,34 +1,36 @@
 ---
-title: "WSFC クォーラム モードと投票の構成 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: WSFC クォーラム モードと投票の構成 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/03/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ee025e1435ea03fb5e9a9402eda86932268b84d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 13c6e85b191619c61c4a38ffabf4db6f3310af39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC クォーラム モードと投票の構成 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、Always On 高可用性およびディザスター リカバリー ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、Always On 高可用性およびディザスター リカバリー ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
   
  **このトピックの内容:**  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server Always On ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Always On 可用性グループ ウィザードでのクォーラムの投票の構成のチェック](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   

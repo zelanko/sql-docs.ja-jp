@@ -1,17 +1,17 @@
 ---
-title: "BOF、EOF プロパティ (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: BOF、EOF プロパティ (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::BOF
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1941b22639091d673bb687c3ae8b2d9ea1fdf063
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
 -   **BOF**の最初のレコードの前に、現在のレコードの位置があることを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -68,9 +68,9 @@ ms.lasthandoff: 02/09/2018
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**、 **MoveLast**|設定**は True。**|設定**は True。**|  
-|**移動**0|変更はありません。|変更はありません。|  
-|**MovePrevious**、**移動**< 0|設定**は True。**|変更はありません。|  
-|**MoveNext**、**移動**> 0|変更はありません。|設定**は True。**|  
+|**移動**0|変更なし|変更なし|  
+|**MovePrevious**、**移動**< 0|設定**は True。**|変更なし|  
+|**MoveNext**、**移動**> 0|変更なし|設定**は True。**|  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

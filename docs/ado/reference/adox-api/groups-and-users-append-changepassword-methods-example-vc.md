@@ -1,17 +1,17 @@
 ---
-title: "グループとユーザーの追加、ChangePassword メソッドの例 (vc++) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: グループとユーザーの追加、ChangePassword メソッドの例 (vc++) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Append method [ADOX], VC++ example
 - Users Append method [ADOX], VC++ example
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5e0fc3a0e0979486f65b6719d36682d6a9f5466
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1753ee4f16598904514a414c56dde03b3b5d30c6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>グループとユーザーの追加、ChangePassword メソッドの例 (vc++)
 この例を示します、 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドの[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、だけでなく、 [Append](../../../ado/reference/adox-api/append-method-adox-users.md)メソッドの[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)新しいを追加することによって[グループ](../../../ado/reference/adox-api/group-object-adox.md)され、新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)システムにします。 新しい**グループ**に追加されますが、**グループ**の新しいコレクション**ユーザー**です。 したがって、新しい**ユーザー**に追加、**グループ**です。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドを使用して指定、**ユーザー**パスワードです。  

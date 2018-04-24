@@ -1,32 +1,32 @@
 ---
-title: "ステータスのプロパティの例 (フィールド) (VB) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ステータスのプロパティの例 (フィールド) (VB) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ea3ebba271ebdc12802b31cc1f50cdd3befead0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9c931092b6fea724d3be747cf8c6e69dd8517e6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="status-property-example-field-vb"></a>状態プロパティ (フィールド) (VB) の使用例
 次の例を使用して読み取り/書き込みフォルダーからドキュメントを開くと、[インターネット パブリッシング用プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)です。 [ステータス](../../../ado/reference/ado-api/status-property-ado-field.md)のプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)のオブジェクト、[レコード](../../../ado/reference/ado-api/record-object-ado.md)は最初に設定されます**adFieldPendingInsert**、し、を更新します。**adfieldok で**です。  

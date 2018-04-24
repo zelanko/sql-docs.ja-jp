@@ -1,17 +1,17 @@
 ---
-title: "イベント パラメーター |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: イベント パラメーター |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Error parameter [ADO]
 - Object parameter [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43bea31384f503ea0e98d8e485002135f1cbbf57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-parameters"></a>イベントのパラメーター
 すべてのイベント ハンドラーには、イベント ハンドラーを制御する状態パラメーターがあります。 完全なイベントは、このパラメーターは、イベントを生成する操作の成否を示すためにも使用します。 最も包括的なイベントには、発生したエラーと、操作を実行するために使用する ADO オブジェクトを参照する 1 つまたは複数のオブジェクトのパラメーターに関する情報を提供するエラー パラメーターもがあります。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントにはオブジェクトのパラメーターが含まれています、**コマンド**、 **Recordset**、および**接続**オブジェクトイベントに関連付けられています。 Microsoft® Visual Basic® の次の例では、pCommand、pRecordset、およびを表す pConnection オブジェクトを参照できます、**コマンド**、 **Recordset**、および**接続**オブジェクトによって使用されている、 **Execute**メソッドです。  
@@ -50,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>状態パラメーター  
  イベント ハンドラー ルーチンを呼び出したときに、*ステータス*パラメーターは、次の値のいずれかに設定します。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|完了イベントの両方に渡されます。 この値は、正常に完了したイベントの原因となった操作を意味します。|  
 |**adStatusErrorsOccurred**|完全なイベントのみに渡されます。 この値は、イベントの原因となった操作が成功すると、できなかったかはイベントには、操作が取り消されましたことを示します。 チェック、*エラー*詳細パラメーター。|  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  不要になったイベントを処理する場合は、設定*ステータス*に**adStatusUnwantedEvent**アプリケーションでは、そのイベントの通知を受け取る不要になったとします。 ただし、理由の 1 つ以上のいくつかのイベントが発生することに注意してください。 その場合は、指定する必要があります**adStatusUnwantedEvent**の考えられる各理由。 たとえば、保留中の通知の受信を停止する**RecordChange**設定する必要があります、イベント、*ステータス*パラメーターを**adStatusUnwantedEvent**の**adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、**adRsnUndoDelete**、および**adRsnFirstChange**発生するとします。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|このイベント ハンドラーにさらに通知が発生しないことを要求します。|  
 |**adStatusCancel**|実行する操作のキャンセルを要求します。|  

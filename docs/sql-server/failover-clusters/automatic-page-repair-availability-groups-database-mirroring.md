@@ -1,15 +1,16 @@
 ---
-title: "ページの自動修復 (可用性グループ: データベース ミラーリング) | Microsoft Docs"
-ms.custom: 
+title: 'ページの自動修復 (可用性グループ: データベース ミラーリング) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatic page repair
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fb7034634b662ce184065adb72f190ce6b2aa4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3977d1893d009b9a427a28d4f320d31c1e747d03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ページの自動修復は、データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でサポートされます。 特定の種類のエラーによってページが破損し、読み取りができなくなると、データベース ミラーリング パートナー (プリンシパルまたはミラー) または可用性レプリカ (プライマリまたはセカンダリ) が自動的にページの修復を試みます。 ページの読み取りができないパートナー/レプリカは、そのページの新しいコピーを自分のパートナーまたは別のレプリカから要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページが読み取り可能なコピーに置き換えられます。通常、これによりエラーは解決します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ページの自動修復は、データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でサポートされます。 特定の種類のエラーによってページが破損し、読み取りができなくなると、データベース ミラーリング パートナー (プリンシパルまたはミラー) または可用性レプリカ (プライマリまたはセカンダリ) が自動的にページの修復を試みます。 ページの読み取りができないパートナー/レプリカは、そのページの新しいコピーを自分のパートナーまたは別のレプリカから要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページが読み取り可能なコピーに置き換えられます。通常、これによりエラーは解決します。  
   
  一般に、データベース ミラーリングと [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] は、I/O エラーが同じ方法で処理されます。 ただし、わずかながら異なる部分もあります。ここでは、そうした違いについて説明します。  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  次の表に示すいずれかのエラーが原因でデータ ファイル操作が失敗した場合のみ、そのページにデータベース ミラーリングの自動修復が適用されます。  
   
-|エラー番号|説明|ページの自動修復の原因となるインスタンス|  
+|エラー番号|Description|ページの自動修復の原因となるインスタンス|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|オペレーティング システムがデータの巡回冗長検査 (CRC) を実行し、それに失敗した場合のみ処理が行われます。|ERROR_CRC。 このエラーのオペレーティング システムの値は 23 です。|  
 |824|論理エラー。|破損した書き込みや不適切なページ チェックサムなどの論理データ エラー。|  

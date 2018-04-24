@@ -1,38 +1,38 @@
 ---
-title: "ExecuteOptionEnum |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ExecuteOptionEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ExecuteOptionEnum
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e4d901326e801d9c6724dfd05d7a14bb7acd8b7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8156680517cc3776e4a164199bf3a881a22b48e1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 プロバイダーでのコマンドの実行方法を指定します。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|コマンドを非同期的に実行することを示します。<br /><br /> この値と組み合わせることはできません、 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値**adCmdTableDirect**です。|  
 |**adAsyncFetch**|0x20|残りの行を後で指定した初期量を示す、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを非同期に取得する必要があります。|  

@@ -1,25 +1,25 @@
 ---
-title: "SQL Server on Linux の概要 |Microsoft ドキュメント"
-description: "このトピックでは、SQL Server が Linux 上でどのように実行されるかを説明し、詳細な知識を得るための情報を提供します。"
+title: SQL Server on Linux の概要 |Microsoft ドキュメント
+description: このトピックでは、SQL Server が Linux 上でどのように実行されるかを説明し、詳細な知識を得るための情報を提供します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 3ec35adddc04a42ed885600a2e8402121c86107c
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6542e86862b64b3c880cc3300a37384c28ab039d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -60,3 +60,5 @@ SQL Server を使い慣れている場合は、[リリース ノート](sql-serv
 > よく寄せられる質問に対する回答については、次を参照してください。、 [SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)です。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

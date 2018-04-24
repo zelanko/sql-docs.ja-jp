@@ -1,32 +1,32 @@
 ---
-title: "ステータスのプロパティの例 (レコード セット) (VB) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ステータスのプロパティの例 (レコード セット) (VB) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Recordset], Visual Basic example
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04f599ee353033b0874a7e7f18ab572d19b225bd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 70100d9009c2751af10d47c011a6eada263419f9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="status-property-example-recordset-vb"></a>ステータスのプロパティの例 (レコード セット) (VB)
 この例では、[ステータス](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新の前に、バッチ操作で変更されたレコードを表示するプロパティです。  

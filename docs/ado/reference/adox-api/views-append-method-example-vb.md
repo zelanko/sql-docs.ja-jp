@@ -1,32 +1,32 @@
 ---
-title: "ビューの追加メソッドの例 (VB) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ビューの追加メソッドの例 (VB) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 807c6ddff7af0c21f73a71a4457f9aba37e01a97
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a3513431ecfcd9539e2e5e4eb1e1dad7edecd114
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="views-append-method-example-vb"></a>ビューの追加メソッドの例 (VB)
 次のコードを使用する方法を示しています、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトおよび[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクション[Append](../../../ado/reference/adox-api/append-method-adox-views.md)メソッドを基になるデータ ソースに新しいビューを作成します。  

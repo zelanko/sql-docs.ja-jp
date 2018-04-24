@@ -1,28 +1,21 @@
 ---
-title: リモート テーブルのコピー InfiniBand PDW の外部の Windows システムを構成します。
-author: barbkess
-ms.author: barbkess
+title: Windows を受け取りますが、リモート テーブルの並列データ ウェアハウス構成 |Microsoft ドキュメント
+description: 購入して Parallel Data Warehouse でのリモート テーブルのコピー機能で使用するための InfiniBand ネットワークを使用して接続されているアプライアンス非 Windows システムを構成する方法について説明します。 Windows システムでは、SQL Server PDW のデータベースからリモート テーブルのコピーを受信する SQL Server データベースをホストします。 アプライアンスから別途購入、アプライアンスの InfiniBand ネットワークに接続します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
-caps.latest.revision: 11
-ms.openlocfilehash: 32875c5c7b93f47dbf9dbcc01c621df402ab782d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>InfiniBand を使用してリモート テーブルのコピーを受信する外部の Windows システムを構成します。
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand - 並列データ ウェアハウスを使用してリモート テーブルのコピーを受信する外部の Windows システムを構成します。
 購入して、SQL Server PDW でリモート テーブルのコピー機能で使用するための InfiniBand ネットワークを使用して接続されているアプライアンス非 Windows システムを構成する方法について説明します。 Windows システムでは、SQL Server PDW のデータベースからリモート テーブルのコピーを受信する SQL Server データベースをホストします。 アプライアンスから別途購入、アプライアンスの InfiniBand ネットワークに接続します。  
   
 > [!NOTE]  

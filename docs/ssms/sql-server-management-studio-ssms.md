@@ -3,36 +3,37 @@ title: SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.date: 02/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1319f45b9a41cf32357f4c92c3088e5dc18ade25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 860ddbc3201ee7d457674ed0ef95c3e8fd2c7d18
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) は、SQL インフラストラクチャを管理するための統合環境です。 SSMS を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]、Azure SQL Database、および SQL Data Warehouse のすべてコンポーネントのアクセス、構成、管理、運営、および開発を行います。 SSMS には、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターを結合して、あらゆるスキル レベルの開発者やデータベース管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] にアクセスできる包括的なユーティリティが 1 つ用意されています。
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] (SSMS) は、SQLインフラストラクチャを管理するための統合環境です。 SSMS を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]、Azure SQL Database、および SQL Data Warehouse のすべてコンポーネントのアクセス、構成、管理、運営、および開発を行います。 SSMS には、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターを結合して、あらゆるスキル レベルの開発者やデータベース管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] にアクセスできる包括的なユーティリティが 1 つ用意されています。
 
 
 
  
  - [**SQL Server Management Studio (SSMS) のダウンロード**](download-sql-server-management-studio-ssms.md) 
  - [**SQL Server 2016 Developer のダウンロード**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
- - [**Visual Studio のダウンロード**](https://www.visualstudio.com/post-download-vs/?sku=community&clcid=0x409&downloadrename=true)
+ - [**Visual Studio のダウンロード**](https://www.visualstudio.com/downloads/)
 
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント  

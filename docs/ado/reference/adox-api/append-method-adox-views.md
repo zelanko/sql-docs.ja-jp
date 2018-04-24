@@ -1,17 +1,17 @@
 ---
-title: "Append メソッド (ADOX Views) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Append メソッド (ADOX Views) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Views::raw_Append
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5db1507f6574567cc6acd54e9ede053e36f1552
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 040e7d79a2c2fc30cc4782cf47f4b7d25733f692
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-method-adox-views"></a>Append メソッド (ADOX ビュー)
 新たに作成[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトに追加され、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクション。  

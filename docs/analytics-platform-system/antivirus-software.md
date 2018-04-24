@@ -1,28 +1,21 @@
 ---
-title: ウイルス対策ソフトウェア (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: ウイルス対策ソフトウェア、Analytics Platform System |Microsoft ドキュメント
+description: データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 会社のデータ センターの要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: 29
-ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed050520a53aea596b2f315047c68d593c578f27
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="antivirus-software"></a>ウイルス対策ソフトウェア
+# <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System のウイルス対策ソフトウェア
 データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 会社のデータ センターの要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。  
   
 > [!WARNING]  
@@ -37,9 +30,9 @@ ms.lasthandoff: 04/06/2018
   
 **これらのディレクトリを除外するには。**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V - 仮想マシンの構成ディレクトリ  
   
--   C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks - Default virtual hard disk drive directory  
+-   C:\Users\Public\Documents\Hyper-V\Virtual ハード_ディスク - 既定の仮想ハード ディスク ドライブのディレクトリ  
   
 -   仮想ハード ディスク ドライブのディレクトリにある C:\clusterStorage  
   
@@ -68,11 +61,11 @@ Vm にウイルス対策ソフトウェアをインストールするには、�
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+***appliance_domain *-VMM**  
   
 -   制限はありません。  
   
-***appliance_domain*-WDS**  
+***appliance_domain *-WDS**  
   
 -   制限はありません。  
   

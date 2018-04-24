@@ -1,17 +1,17 @@
 ---
-title: "BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f366c21d5ea0ee0fb0ffaa32238a29e173e63a4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a9f9e37795e62bebab9047bbe8af5eb639907ff2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
 この例ですべての心理学の本型を変更する、***タイトル***データベースのテーブルです。 後に、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドに加えられたすべての変更を分離するトランザクションを開始する、***タイトル***、テーブル、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは、変更を保存します。 使用することができます、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して保存した変更を元に戻す、[更新](../../../ado/reference/ado-api/update-method.md)メソッドです。  

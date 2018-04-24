@@ -1,29 +1,22 @@
 ---
-title: アプライアンス (Analytics Platform System) の監視
-author: barbkess
-ms.author: barbkess
+title: アプライアンスの監視 - Analytics Platform System |Microsoft ドキュメント
+description: このアプライアンス監視ガイドは、Analytics Platform System アプライアンスを監視するためのタスクとツールについて説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
-caps.latest.revision: 25
-ms.openlocfilehash: f361b56581fd5a8dadb4ff41c387074abc006879
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f87734a14337e7e35655439ddf70f0a126147eb7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-monitoring"></a>アプライアンスの監視
-このアプライアンス監視ガイドは、SQL Server PDW アプライアンスを監視するためのタスクとツールについて説明します。  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスの監視
+このアプライアンス監視ガイドは、Analytics Platform System アプライアンスを監視するためのタスクとツールについて説明します。  
   
 ## <a name="Basics"></a>監視の基本とツール  
 値と、SQL Server PDW アプライアンスで監視できる情報は、広範なです。 たとえば、次は一般的なタスクを監視します。  

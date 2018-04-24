@@ -1,26 +1,19 @@
 ---
-title: PDW トポロジ (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: PDW トポロジ - Analytics Platform System |Microsoft ドキュメント
+description: Analytics Platform System の PDW トポロジです。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 9bf6fb50-eba0-418c-b6b5-787b8e263cac
-caps.latest.revision: 3
-ms.openlocfilehash: 5bc8325180feaf69c36e6347362fbcef514981d0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b68a0bfefab0cd299ec93722857a65caf8525393
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="pdw-topology"></a>PDW のトポロジ
 SQL Server PDW のコンポーネントに関する名とネットワークの情報を表示します。 使用して、**アプライアンス トポロジのネットワーク構成**ネットワーク IP アドレスを変更するページ。  

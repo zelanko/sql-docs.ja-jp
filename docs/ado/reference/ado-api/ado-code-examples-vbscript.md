@@ -1,39 +1,39 @@
 ---
-title: "ADO コードの例の VBScript |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO コードの例の VBScript |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - VBScript code examples [ADO], about VBScript code examples
 - VBScript code examples [ADO]
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3a7542d10622ee073596967a0b540ee7e49b84d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 90f76880a2a5cb0b7487addcf781d7cc2d0b4918
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO コードの例の VBScript
 次のコード例を使用して、Microsoft® Visual Basic® Scripting Edition (VBScript) で作成するときに、ADO のメソッドを使用する方法について説明します。  
   
 > [!NOTE]
->  全体のコード例は、最初から最後まで、コード エディターに貼り付けます。 部分的な例を使用する場合、または段落の書式設定が失われた場合、例が正しく動作しない可能性があります。  
+>  全体のコード例は、最初から最後まで、コード エディターに貼り付けます。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
   
 ## <a name="methods"></a>メソッド  
   

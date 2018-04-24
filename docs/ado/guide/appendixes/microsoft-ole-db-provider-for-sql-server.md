@@ -1,6 +1,6 @@
 ---
 title: Microsoft OLE DB Provider for SQL Server |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 2ec6a57af7dcc0e964445800823aef1c13aa1a4a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server、SQLOLEDB では、ADO では Microsoft SQL Server にアクセスできます。
@@ -163,7 +163,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |DBMS の名前|DBPROP_DBMSNAME|
 |DBMS のバージョン|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|グループ化のサポート|DBPROP_GROUPBY|
+|グループ化のサポート|DBPROP_GROUPBY と|
 |異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES|
 |識別子の大文字と小文字の区別|DBPROP_IDENTIFIERCASE|
 |Initial Catalog|DBPROP_INIT_CATALOG|

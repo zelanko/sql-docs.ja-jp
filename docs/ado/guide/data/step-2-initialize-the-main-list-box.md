@@ -1,28 +1,28 @@
 ---
-title: "手順 2: メイン リスト ボックスの初期化 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: '手順 2: メイン リスト ボックスの初期化 |Microsoft ドキュメント'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60ece26fab2c6f691614b609d1dd3f07f42231e4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8272c721c2717df494db5ead86716900f44c46e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>手順 2: メイン リスト ボックスを初期化します。
 グローバルのレコードと、レコード セット オブジェクトを宣言するには、([全般]) (宣言) Form1 に次のコードを挿入します。  
@@ -52,9 +52,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- このコードは、グローバルのレコードと、レコード セット オブジェクトをインスタンス化します。 Record オブジェクト`grec`、ActiveConnection として指定された URL でが開きます。 URL が存在する場合は、開かれています。これは既に存在しない場合は作成されます。 お客様の環境から"http://servername/foldername/"の有効な URL を置き換える必要がありますに注意してください。  
+ このコードは、グローバルのレコードと、レコード セット オブジェクトをインスタンス化します。 Record オブジェクト`grec`、ActiveConnection として指定された URL でが開きます。 URL が存在する場合は、開かれています。これは既に存在しない場合は作成されます。 置き換える必要があります"http://servername/foldername/"環境から有効な URL を使用しています。  
   
- レコード セット オブジェクト`grs`、レコードの子で開かれる`grec`です。  `lstMain` URL に公開されているリソースのファイル名が格納されます。  
+ レコード セット オブジェクト`grs`、レコードの子で開かれる`grec`です。 `lstMain` URL に公開されているリソースのファイル名が格納されます。  
   
 ## <a name="see-also"></a>参照  
  [インターネット発行シナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   

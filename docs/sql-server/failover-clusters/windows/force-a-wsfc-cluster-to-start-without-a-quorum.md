@@ -1,33 +1,35 @@
 ---
-title: "クォーラムを使用せずに WSFC クラスターを強制的に起動する | Microsoft Docs"
-ms.custom: 
+title: クォーラムを使用せずに WSFC クラスターを強制的に起動する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 02a44205f2f00c8da5da141c3c54dee1f900e10c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2a63f46adf399e2a96d7b6f03a1fefeff6ba55a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、ディザスター リカバリーとマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、ディザスター リカバリーとマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
 -   **開始前の準備:**  [推奨事項](#Recommendations)、 [セキュリティ](#Security)  
   

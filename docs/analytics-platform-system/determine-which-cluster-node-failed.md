@@ -1,29 +1,22 @@
 ---
-title: 失敗した (Analytics Platform System) のクラスター ノードを特定します。
-author: barbkess
-ms.author: barbkess
+title: 障害が発生したクラスター ノードの Analytics Platform System を決める |Microsoft ドキュメント
+description: この記事では、クラスターのフェールオーバーが発生し、クラスター フェールオーバーの警告が発生しました後に失敗しました Analytics Platform System (APS) ノードの名前を確認する方法について説明します。 クラスターのフェイル オーバーのトラブルシューティングの一環として、問題を解決するためにマイクロソフトに連絡する前に失敗したノードの名前を決定する必要があります。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>クラスター ノードでエラーの特定します。
-このトピックでは、クラスターのフェールオーバーが発生したし、クラスター フェールオーバーの警告が発生しましたが失敗した SQL Server PDW ノードの名前を確認する方法について説明します。 クラスターのフェイル オーバーのトラブルシューティングの一環として、問題を解決するためにマイクロソフトに連絡する前に失敗したノードの名前を決定する必要があります。  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>どのクラスター決定 Analytics Platform System のノードに失敗しました
+このトピックでは、クラスターのフェールオーバーが発生し、クラスター フェールオーバーの警告が発生しました後に失敗しました Analytics Platform System (APS) ノードの名前を確認する方法について説明します。 クラスターのフェイル オーバーのトラブルシューティングの一環として、問題を解決するためにマイクロソフトに連絡する前に失敗したノードの名前を決定する必要があります。  
   
 ## <a name="Background"></a>バック グラウンド  
 SQL Server PDW で高可用性は、コントロールのノードとコンピューティング ノードは、Windows フェールオーバー クラスターのアクティブまたはパッシブのコンポーネントとして構成されます。 アクティブなサーバーは、重要なシステムの要求に応答する失敗した場合、パッシブのサーバーはフェールオーバーされ、失敗したサーバーの機能を実行します。  

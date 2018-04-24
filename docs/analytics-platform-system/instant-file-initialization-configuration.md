@@ -1,26 +1,19 @@
 ---
-title: ファイルの瞬時初期化構成 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: ファイルの瞬時初期化 - 分析プラットフォーム システムの構成 |Microsoft ドキュメント
+description: Analytics Platform System では、ファイルの瞬時初期化を構成します。 ファイルの瞬時初期化は、データ ファイルの操作をより迅速に実行を許可する SQL Server 機能です。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: 20
-ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>ファイルの瞬時初期化の構成
 ファイルの瞬時初期化は、データ ファイルの操作をより迅速に実行を許可する SQL Server 機能です。 チェック ボックスをファイルの瞬時初期化を有効にすると、SQL Server PDW のパフォーマンスが向上します。 ただし、ビジネスのセキュリティ上のリスクを伴いますこの場合、オフのままにします。  

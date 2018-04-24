@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27ac2cc8b7a10d421296987db230cdde33384203
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 20044ab8bc57f8c943a26457cd165d95afcd077f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 アプリケーションで ADO ライブラリを参照します。
 Microsoft Visual Basic 6 アプリケーションに、ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  
@@ -57,6 +57,6 @@ Microsoft Visual Basic 6 アプリケーションに、ADO ライブラリをイ
   
 -   *msado21.tlb*、ADO 2.1 のタイプ ライブラリ  
   
--   *msado20.tlb*, ADO 2.0 Type Library  
+-   *msado20.tlb*、ADO 2.0 タイプ ライブラリ  
   
  アプリケーションではこれらの ADO ライブラリを使用の旧バージョンと互換性の理由から必要がある場合は、タイプ ライブラリの適切なバージョンをインポートする必要があります。 これを行うには、前のセクションの手順に従います交換*msado15.dll*によって*msadoXX.tlb*ここで、 *XX*をインポートする必要があります。 バージョン番号を表します。

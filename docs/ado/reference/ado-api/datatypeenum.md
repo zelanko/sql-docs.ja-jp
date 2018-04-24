@@ -1,38 +1,38 @@
 ---
-title: DataTypeEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: 格納 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataTypeEnum
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0603713db7a1a1e7012b1dd28328d4ea2c668304
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 データ型を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)です。 次の表の説明の列内のかっこに対応する OLE DB 型インジケーターを示します。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|常に他のデータ型定数は、その他のデータ型の配列を示すと組み合わせるフラグ値です。 ADOX には適用されません。|  
 |**adBigInt**|20|8 バイト符号付き整数 (DBTYPE_I8) を示します。|  

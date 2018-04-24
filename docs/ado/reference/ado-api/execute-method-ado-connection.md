@@ -1,17 +1,17 @@
 ---
-title: "Execute メソッド (ADO 接続) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Execute メソッド (ADO 接続) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05d1df49596da99bc98fba9cef7999772ea78f40
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO 接続)
 指定されたクエリ、SQL ステートメント、ストアド プロシージャ、またはプロバイダー固有のテキストを実行します。  
@@ -54,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *Options*  
  省略可。 A**長い**をプロバイダーに、CommandText 引数を評価する方法を示す値。 1 つ以上のビットマスクを指定できます[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)または[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値。  
   
- **注**を使用して、 **ExecuteOptionEnum**値**adExecuteNoRecords**内部処理を最小限に抑えることによって、および Visual Basic から移植するアプリケーションのパフォーマンスを向上させる6.0。  
+ **注**を使用して、 **ExecuteOptionEnum**値**adExecuteNoRecords**内部処理を最小限に抑えることによって、および Visual Basic 6.0 から移植するアプリケーションのパフォーマンスを向上させるためにします。  
   
  使用しないでください**adExecuteStream**で、 **Execute**のメソッド、**接続**オブジェクト。  
   

@@ -1,38 +1,38 @@
 ---
-title: XactAttributeEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: XactAttributeEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - XactAttributeEnum
 helpviewer_keywords:
 - XactAttributeEnum enumeration [ADO]
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4ffc6f7ad1c7b65a5a6345c459c695409840a1e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f421b2521cc0d662dc46b94bde81e7f1383d306e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 トランザクション属性を指定します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adXactAbortRetaining**|262144|保持中止を呼び出して実行[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)を自動的に新しいトランザクションを開始します。 すべてのプロバイダーは、この動作をサポートします。|  
 |**adXactCommitRetaining**|131072|保持コミットを呼び出すことによって実行[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)を自動的に新しいトランザクションを開始します。 すべてのプロバイダーは、この動作をサポートします。|  

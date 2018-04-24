@@ -1,51 +1,45 @@
 ---
-title: Analytics Platform System (APS) の InfiniBand ネットワーク アダプターを構成します。
-author: barbkess
-ms.author: barbkess
+title: InfiniBand - 分析プラットフォーム システムの構成 |Microsoft ドキュメント
+description: '[管理] ノードで並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスが自動的にアクティブな InfiniBand ネットワークに接続するようは基本的な接続と高可用性のための次の手順を使用します。'
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 15
-ms.openlocfilehash: 5724f5e61d458d19e8fc52d77fbff1401ca2afd3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8e67d63e7bb4bded0bd19e5db4a0b7faddb80977
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
-管理 ノード SQL Server 並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスがアクティブの InfiniBand ネットワークに自動的に接続できるように基本的な接続と高可用性は、これらの手順に従います。  
+[管理] ノードで並列データ ウェアハウス (PDW) に接続する非アプライアンス クライアント サーバーの InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込み、バックアップ、およびその他のプロセスが自動的にアクティブな InfiniBand ネットワークに接続するようは基本的な接続と高可用性のための次の手順を使用します。  
   
 ## <a name="Basics"></a>説明  
-これらの手順では、検索し、し、正しい InfiniBand IP アドレスとサブネット マスク、サーバーで設定 InfiniBand 接続する方法を示します。 APS アプライアンス DNS を使用して、接続がアクティブの InfiniBand ネットワークに解決されるようにするようにサーバーを設定する方法についても説明します。  
+これらの手順では、検索し、し、正しい InfiniBand IP アドレスとサブネット マスク、サーバーで設定 InfiniBand 接続する方法を示します。 APS アプライアンス DNS を使用して、アクティブの InfiniBand ネットワークに接続が解決されるようにするようにサーバーを設定する方法についても説明します。  
   
 高可用性を実現 AP は、2 つの InfiniBand ネットワーク、1 つはアクティブとパッシブの 1 つです。 各 InfiniBand ネットワークには、コントロールのノードに対して異なる IP アドレスがあります。 アクティブの InfiniBand ネットワークに障害が発生した場合は、アクティブなネットワークがパッシブの InfiniBand ネットワークになります。 このような場合、スクリプトまたはプロセスに自動的に接続アクティブの InfiniBand ネットワーク スクリプトのパラメーターを変更することがなくです。  
   
-具体的には、このトピックでは説明します。  
+具体的には、このアーティクルのします。  
   
 1.  APS DNS の InfiniBand IP アドレスにサーバーを検索 (appliance_domain AD01 と appliance_domain *-AD02)。 これを行うには、AD01 および AD02 のサーバーにログインし、各 InfiniBand ネットワークの IP アドレスを取得します。 AD ノード上の InfiniBand IP アドレスは、DNS の IP アドレスです。  
   
 2.  APS の InfiniBand ネットワークで使用可能な IP アドレスを使用するには、各ネットワーク アダプターを構成します。  
   
-    1.  呼ばれる TeamIB1、および使用可能な IP アドレスとその他のアダプターと呼ばれる 2 番目の InfiniBand ネットワークの最初の InfiniBand ネットワークの使用可能な IP アドレスを 1 つのアダプターを構成する場合は 2 つの InfiniBand ネットワーク アダプターがある場合は、TeamIB2 です。 優先 DNS サーバーおよび appliance_domain AD02 TeamIB1 として IP アドレスを使う appliance_domain AD01 TeamIB1 TeamIB1 ネットワーク アダプターの代替 DNS サーバーに IP アドレス。 優先 DNS サーバーおよび appliance_domain AD02 TeamIB2 として IP アドレスを使う appliance_domain AD01 TeamIB2 TeamIB2 のネットワーク アダプターの代替 DNS サーバーに IP アドレス。  
+    1.  2 つの InfiniBand ネットワーク アダプターがある場合は場合、と呼ばれる TeamIB1、およびその他のアダプターが使用可能な IP アドレスと TeamIB2 と呼ばれる 2 番目の InfiniBand ネットワークの最初の InfiniBand ネットワークの使用可能な IP アドレスを 1 つのアダプターを構成する必要があります。 優先 DNS サーバーおよび appliance_domain AD02 TeamIB1 として IP アドレスを使う appliance_domain AD01 TeamIB1 TeamIB1 ネットワーク アダプターの代替 DNS サーバーに IP アドレス。 優先 DNS サーバーおよび appliance_domain AD02 TeamIB2 として IP アドレスを使う appliance_domain AD01 TeamIB2 TeamIB2 のネットワーク アダプターの代替 DNS サーバーに IP アドレス。  
   
-    2.  1 つだけの InfiniBand ネットワーク アダプターがあれば、InfiniBand ネットワークのいずれかから使用可能な IP アドレスとアダプターを構成します。 Appliance_domain AD01 TeamIB1 および appliance_domain AD02 TeamIB1 のいずれかを使用してまたは appliance_domain AD01 TeamIB2 および appliance_domain AD02 TeamIB2 の方を使用して、このアダプターで、優先および代替 DNS サーバーを構成するが、同じネットワークに、優先として構成されているアダプターと代替の DNS サーバーそれぞれします。  
+    2.  1 つだけの InfiniBand ネットワーク アダプターがあれば、InfiniBand ネットワークのいずれかから使用可能な IP アドレスとアダプターを構成します。 Appliance_domain AD01 TeamIB1 および appliance_domain AD02 TeamIB1 のいずれかを使用してまたはを使用して appliance_domain AD01 TeamIB2 と appliance_domain AD02 TeamIB2 方が同じでは、このアダプターで、優先および代替 DNS サーバーを構成する、優先として構成されているアダプターと代替の DNS サーバーとして、それぞれネットワークです。  
   
 3.  作業中の InfiniBand ネットワークに接続を解決するのには APS DNS サーバーを使用する InfiniBand ネットワーク アダプターを構成します。  
   
-    1.  これを構成するのにには、クライアント サーバー上の DNS サフィックスの一覧の先頭にアプライアンス ドメインの DNS サフィックスを追加するのに TCP/IP 詳細設定を使用するされます。 これは、のみ; のネットワーク アダプターのいずれかで構成する必要があります。この設定は、両方のアダプターに適用されます。  
+    1.  これを構成するには TCP/IP 詳細設定を使用して、クライアント サーバー上の DNS サフィックスの一覧の先頭にアプライアンス ドメインの DNS サフィックスを追加します。 これは、のみ; のネットワーク アダプターのいずれかで構成する必要があります。設定は、両方のアダプターに適用されます。  
   
-InfiniBand ネットワーク アダプターを構成すると、クライアント プロセスに接続できる InfiniBand ネットワーク上の管理ノードを使用して`PDW_region-SQLCTL01`サーバーのアドレスに対応します。 サーバーは、分析プラットフォーム システム DNS サフィックスを追加または完全なアドレスを入力する`PDW_region-SQLCTL01.appliance_domain.pdw.local`です。  
+InfiniBand ネットワーク アダプターを構成すると、クライアント プロセスに接続できる InfiniBand ネットワーク上の管理ノードを使用して`PDW_region-SQLCTL01`サーバーのアドレスに対応します。 サーバーが分析プラットフォーム システム DNS サフィックスを追加するか、これは完全なアドレスを入力する`PDW_region-SQLCTL01.appliance_domain.pdw.local`です。  
   
-たとえば、PDW 地域名 MyPDW、アプライアンスの名前は MyAPS dwloader のサーバーのデータを読み込むための仕様は、次のいずれか。  
+たとえば、PDW 地域名は MyPDW アプライアンス名は MyAPS 場合は、データを読み込むため dwloader のサーバーの仕様は、次のいずれか。  
   
 -   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
@@ -62,14 +56,14 @@ APS アプライアンスのドメイン アカウント、AD01 ノードへの�
 これらの手順では、クライアント サーバーのラックおよびアプライアンスの InfiniBand ネットワークに配線されていると仮定します。 ラック マウントと指示をケーブルは、次を参照してください。[取得および構成を読み込むサーバー](acquire-and-configure-loading-server.md)です。  
   
 ### <a name="general-remarks"></a>全般的な解説  
-SQLCTL01 を使用すると、分析プラットフォーム システム DNS は、クライアント サーバー接続管理ノードに作業中の InfiniBand ネットワークを使用しています。 これは; 接続にのみ適用されます。InfiniBand ネットワークがダウンした場合の負荷やバックアップ中に、プロセスを再起動する必要があります。  
+SQLCTL01 を使用するは、分析プラットフォーム システム DNS は、active の InfiniBand ネットワークを使用して、クライアント サーバーを [管理] ノードに接続します。 これは; 接続にのみ適用されます。InfiniBand ネットワークがダウンした場合の負荷やバックアップ中に、プロセスを再起動する必要があります。  
   
 独自のビジネス要件を満たすためには、クライアント サーバーをアプライアンス以外のワークグループまたは Windows ドメインに参加することもできます。  
   
 ## <a name="Sec1"></a>手順 1: は、アプライアンスの InfiniBand ネットワークの設定を取得します。  
 *アプライアンスの InfiniBand ネットワークの設定を取得するには*  
   
-1.  Appliance_domain\Administrator アカウントを使用してアプライアンス AD01 ノードにログインします。  
+1.  をログイン アプライアンス AD01 ノード appliance_domain\Administrator アカウントを使用します。  
   
 2.  アプライアンス AD01 ノードで、コントロール パネルを開き、ネットワークおよびインターネット、ネットワークと共有センター * を選択およびアダプター設定の変更を選択します。  
   
@@ -113,7 +107,7 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
 ### <a name="to-configure-the-infiniband-network-adapter-settings-on-your-client-server"></a>クライアント サーバー上の InfiniBand ネットワーク アダプターの設定を構成するには  
   
-1.  読み込み、バックアップ、またはアプライアンスの InfiniBand ネットワーク上の他のクライアント サーバー、Windows 管理者としてログインします。  
+1.  ログイン、Windows 管理者として、読み込み、バックアップ、またはその他のクライアント サーバー アプライアンス上の InfiniBand ネットワークします。  
   
 2.  開くコントロール ウィンドウ *、ネットワークと共有センターを選択し、アダプターの設定を変更します。  
   
@@ -125,7 +119,7 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
 2.  [プロパティ] ウィンドウ  
   
-    1.  [全般] タブには、free TeamIB1 の ping テストとして検証済み IP アドレスを IP アドレスを設定します。 このトピックで使用される値の例は 172.16.14.254 を入力します。  
+    1.  [全般] タブには、free TeamIB1 の ping テストとして検証済み IP アドレスを IP アドレスを設定します。 この記事で使用される値の例は 172.16.14.254 を入力します。  
   
     2.  サブネット マスクを TeamIB1 にメモしたサブネット マスクを設定します。  
   
@@ -147,7 +141,7 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
 3.  [プロパティ] ウィンドウ  
   
-    1.  [全般] タブには、free TeamIB2 の ping テストとして検証済み IP アドレスを IP アドレスを設定します。 このトピックで使用される値の例は 172.16.18.254 を入力します。  
+    1.  [全般] タブには、free TeamIB2 の ping テストとして検証済み IP アドレスを IP アドレスを設定します。 この記事で使用される値の例は 172.16.18.254 を入力します。  
   
     2.  TeamIB2 のメモしたサブネット マスクにサブネット マスクを設定します。  
   
@@ -168,7 +162,7 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
 2.  [詳細設定] をクリックしてください. ボタンをクリックします。  
   
-3.  [TCP/IP 詳細設定] ウィンドウで場合は、追加これらの DNS サフィックスを順に) オプションがないグレー、チェック ボックスと呼ばれるこれら DNS サフィックスを追加 (順序で): アプライアンス ドメイン サフィックスを選択して、[追加] をクリックしています. アプライアンスのドメイン サフィックスになります `appliance_domain.local`  
+3.  [TCP/IP 詳細設定] ウィンドウで場合は、追加これらの DNS サフィックスを順に) オプションがないグレー、チェック ボックスと呼ばれるこれら DNS サフィックスを追加 (順序で): アプライアンス ドメイン サフィックスを選択して、[追加] をクリックしています. アプライアンスのドメイン サフィックスは、します。 `appliance_domain.local`  
   
 4.  場合は、以下の DNS サフィックス (順序で): オプションがグレーで \software\policies\microsoft\windows NT\DNSClient のレジストリ キーを変更することでこのサーバーに APS ドメインを追加することができます。  
   
@@ -180,11 +174,11 @@ SQLCTL01 を使用すると、分析プラットフォーム システム DNS �
   
 7.  使用して、アプライアンスの Infiniband ネットワークに接続できるようになりました、 `PDW_region-SQLCTL01.appliance_domain.local`、または単に`appliance_domain-SQLCTL01`です。 完全名と DNS サフィックスを持つ接続する場合も高速接続を確立する可能性があります。  
   
-    MyPDW PDW 地域に MyAPS をという名前のアプライアンスは、という名前の例:  
+    アプライアンスの例では、MyPDW PDW 地域に MyAPS という名前。  
   
-    -   MyPDW-SQLCTL01.MyAPS.local  
+    -   MyPDW SQLCTL01.MyAPS.local  
   
-    -   MyPDW-SQLCTL01  
+    -   MyPDW SQLCTL01  
   
 ## <a name="see-also"></a>参照  
 [取得し、読み込みサーバーを構成します。 ](acquire-and-configure-loading-server.md)  

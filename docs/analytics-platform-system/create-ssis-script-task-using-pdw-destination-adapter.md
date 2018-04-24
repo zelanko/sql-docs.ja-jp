@@ -1,28 +1,22 @@
 ---
-title: SSIS PDW 変換先アダプターを使用するスクリプト タスクを作成する方法
-author: barbkess
-ms.author: barbkess
+title: SSIS PDW 変換先アダプターをスクリプト タスクを作成 |Microsoft ドキュメント
+desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Integration Services のスクリプト タスクでは、SSIS 制御フローのコンテキスト内で .Net アプリケーションで実行できるあらゆる操作を実行することができます。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
-caps.latest.revision: 8
-ms.openlocfilehash: d10bdf6dc8bd403ea29a928d1a89319cbb19f9f6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>SSIS PDW 変換先アダプターを使用するスクリプト タスクを作成する方法
-Integration Services のスクリプト タスクでは、SSIS 制御フローのコンテキスト内で .Net アプリケーションで実行できるあらゆる操作を実行することができます。 この SSIS パッケージのスクリプト コードでは、SSIS PDW 変換先アダプターを使用するためのコード例を示します。  
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプト タスクを作成します。
+この SSIS パッケージのスクリプト コードでは、SSIS PDW 変換先アダプターを使用するためのコード例を示します。  Integration Services のスクリプト タスクでは、SSIS 制御フローのコンテキスト内で .Net アプリケーションで実行できるあらゆる操作を実行することができます。 
   
 ## <a name="sample-code"></a>サンプル コード  
   

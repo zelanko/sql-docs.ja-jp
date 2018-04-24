@@ -1,31 +1,31 @@
 ---
-title: "コマンドのプロパティ-動的 (ADO) を再同期 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: コマンドのプロパティ-動的 (ADO) を再同期 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43e3b1fdebfeb24233e36324f1225868353d25a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8b3434c97e9548d5b37326a967f540f5f6d3a073
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>コマンドのプロパティ-動的 (ADO) を再同期します。
 文字列をユーザーが指定したコマンドを指定します、[再同期](../../../ado/reference/ado-api/resync-method.md)でという名前のテーブル内のデータを更新するメソッドの問題、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的なプロパティです。  
@@ -87,7 +87,7 @@ WHERE Orders.ordid  = @ordid
   
  もう一度、**一意テーブル**は*Orders*その主キー、 *OrderID*がパラメーター化します。  
   
- **コマンドを再同期**に動的なプロパティが追加、 **Recordset**オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションと、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定**adUseClient**です。  
+ **コマンドを再同期**に動的なプロパティが追加、 **Recordset**オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションと、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) にプロパティが設定されています。**adUseClient**です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

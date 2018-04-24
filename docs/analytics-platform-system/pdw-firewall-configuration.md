@@ -1,28 +1,21 @@
 ---
-title: PDW のファイアウォールの構成 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: PDW のファイアウォールの構成 - Analytics Platform System |Microsoft ドキュメント
+description: SQL Server PDW 構成マネージャーの [ファイアウォール] ページでは有効にするにまたは許可するか、Analytics Platform System アプライアンス上の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。
+aauthor: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>PDW のファイアウォールの構成
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System での並列データ ウェアハウス ファイアウォール構成
 **ファイアウォール**ページの SQL Server PDW 構成マネージャーでは、有効にするにまたは許可するか、Analytics Platform System アプライアンス上の特定のポートにアクセスできないようにするファイアウォール規則を無効にすることができます。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>ポートとファイアウォールを管理するには、アプライアンス ノードのルールします。  

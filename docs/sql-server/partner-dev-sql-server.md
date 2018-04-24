@@ -1,32 +1,33 @@
 ---
-title: "SQL Server 開発のパートナー | Microsoft Docs"
-description: "サーバー開発のソリューションを提供しているサードパーティ パートナーの一覧を表示します。"
+title: SQL Server 開発のパートナー | Microsoft Docs
+description: サーバー開発のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開発のパートナー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server データベース ソリューションの開発をサポートするためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server の開発ソリューションを提供する Microsoft パートナー会社を示します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SQL Server データベース ソリューションの開発をサポートするためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server の開発ソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="our-development-partners"></a>Microsoft の開発パートナー
 | Partner | Description | リンク |

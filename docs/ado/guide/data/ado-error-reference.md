@@ -1,32 +1,32 @@
 ---
-title: "ADO エラー リファレンス |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO エラー リファレンス |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], number reference
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a25f9697d00a234bb98fe65eaaa2cd85520b45db
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5e1b20ffe6165688a438f97c2c23a7ac573ad320
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-errors"></a>ADO エラー
 **ErrorValueEnum**定数は、ADO のエラー値を表します。 これらの列挙定数、値を含む完全な一覧については、次を参照してください。[付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)です。 このセクションではさらに興味深いもののエラーのいくつかを確認し、いくつか特定の状況させることができる、または問題の解決策について説明します。 両方の**ErrorValueEnum**定数および短いの正の 10 進数が表示されます。

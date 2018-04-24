@@ -1,33 +1,33 @@
 ---
-title: "メソッドとインデックスのプロパティの例 (VB) をシーク |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: メソッドとインデックスのプロパティの例 (VB) をシーク |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc9b364d38cfa14ba69598c8c8f4cc09811a0395
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07fd097076dd16d5a77b4011e87ca6bbe0ae5f0a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>メソッドとインデックスのプロパティの例 (VB) にシークします。
 この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドおよび[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティと組み合わせて、指定された***従業員 ID***、検索するには従業員の名、***従業員***Nwind.mdb データベースのテーブルです。  

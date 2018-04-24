@@ -1,16 +1,16 @@
 ---
-title: "Windows Server フェールオーバー クラスタリングと SQL Server | Microsoft Docs"
-ms.custom: 
+title: Windows Server フェールオーバー クラスタリングと SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1a0a35efc021adae73035bb98a62f2b3edd9291d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server フェールオーバー クラスタリングと SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-*Windows Server フェールオーバー クラスター* (WSFC) は、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
+  *Windows Server フェールオーバー クラスター* (WSFC) は、アプリケーションとサービスの可用性を高めるために連携する独立したサーバーのグループです。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] は、WSFC サービスと機能を活用して [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをサポートします。  
   
    
 ##  <a name="TermsAndDefs"></a> 用語と定義  
@@ -83,7 +83,8 @@ ms.lasthandoff: 02/23/2018
  詳細については、「 [フェールオーバー クラスタリングの概要](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)」を参照してください。  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server Always On テクノロジと WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 
+ 
+            [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]
             *Always On* は、WSFC を利用する、高可用性およびディザスター リカバリー ソリューションです。 Always On 機能は、アプリケーションの可用性を高め、ハードウェア投資の回収率を上げ、高可用性配置と管理を簡素化する、統合された柔軟なソリューションを提供します。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と Always On フェールオーバー クラスター インスタンスのどちらも WSFC をプラットフォーム テクノロジとして使用して、コンポーネントを WSFC クラスター リソースとして登録します。  関連するリソースは*ロール*としてまとめられ、他の WSFC クラスター リソースに依存するように設定できます。 これによって、WSFC は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要がある場合はこれを検出して通知したり、WSFC 内の他のサーバー ノードに自動的にフェールオーバーしたりできます。  

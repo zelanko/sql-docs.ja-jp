@@ -1,30 +1,30 @@
 ---
-title: "マルチ ディメンション スキーマとデータの概要 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: マルチ ディメンション スキーマとデータの概要 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 061c8df1aff59c97df54a973491d333858288fd4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>マルチ ディメンション スキーマとデータの概要
 ## <a name="understanding-multidimensional-schemas"></a>マルチ ディメンション スキーマを理解します。  
@@ -65,15 +65,15 @@ Hamburg, Munich, Stuttgart}
   
  各レベルでは、メンバーのセットを次のようには。  
   
--   世界中`= {All}`  
+-   世界中 `= {All}`  
   
--   大陸`= {North America, Europe}`  
+-   大陸 `= {North America, Europe}`  
   
--   国`= {Canada, USA, UK, Germany}`  
+-   国 `= {Canada, USA, UK, Germany}`  
   
--   地域`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   地域 `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   都市`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   都市 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>メンバー  
  階層のリーフ レベルのメンバーには、子がなくと親を持つルート レベルのメンバーがありません。 他のすべてのメンバーは、少なくとも 1 つの親とには、少なくとも 1 つの子があります。 たとえば、Geography ディメンションの階層ツリーの部分的なトラバースには、次の親子リレーションシップが得られます。  

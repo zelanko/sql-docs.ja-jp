@@ -1,31 +1,31 @@
 ---
-title: "CacheSize を使用して |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: CacheSize を使用して |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdce85373638fc8884f50ab7b81abfbbabfe2d47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 701fd5ff1c5f9fd09eb9827b92c20770cd18612c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-cachesize"></a>CacheSize を使用します。
 使用して、 **CacheSize**プロパティは、プロバイダーからローカル メモリに一度に取得するレコードの数を制御します。 たとえば場合、 **CacheSize**は 10 ですが最初に開く後、**レコード セット**オブジェクト、プロバイダーがローカル メモリに最初の 10 個のレコードを取得します。 間を移動すると、 **Recordset**オブジェクト、プロバイダーがローカル メモリ バッファーからデータを返します。 過去のキャッシュの最後のレコードを移動するとすぐに、プロバイダーは、キャッシュにデータ ソースから、次の 10 個のレコードを取得します。  

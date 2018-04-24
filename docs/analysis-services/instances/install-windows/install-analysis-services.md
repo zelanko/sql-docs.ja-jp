@@ -1,31 +1,31 @@
 ---
-title: "Analysis Services のインストール |Microsoft ドキュメント"
-ms.custom: 
+title: Analysis Services のインストール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1810a2de0e4337bfae9a387e98e933dc0a922a4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ_ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
+  SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ_ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
   
  Analysis Services は、複数のインスタンスが 1 台のコンピューターに複数のコピーをインストールまたは新しいバージョンと古いバージョンを同時に実行できます。 インストールしたすべてのインスタンスは、セットアップ時に決定される 3 つのモード: 多次元およびデータ マイニング、表形式、または SharePoint のいずれかで実行されます。 複数のモードを使用する場合は、それぞれに個別のインスタンスが必要です。  
   
@@ -64,7 +64,7 @@ SQL Server Analysis Services は、表形式モデル、多次元キューブ、
   
 ```  
   
-Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
+Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  **INSTANCENAME** は 17 文字未満にする必要があります。  
@@ -73,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、 **ASSERVERMODE**の有効な値を示します。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |TABULAR|これが既定値です。 設定しない場合**ASSERVERMODE**、表形式モードでは、サーバーをインストールします。|
 |MULTIDIMENSIONAL|この値は省略可能です。|  

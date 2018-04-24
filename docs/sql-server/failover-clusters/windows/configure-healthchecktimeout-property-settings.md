@@ -1,43 +1,45 @@
 ---
-title: "HealthCheckTimeout プロパティ設定の構成 | Microsoft Docs"
-ms.custom: 
+title: HealthCheckTimeout プロパティ設定の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0165e046d479cab6f541dbc7cd81787ebd0accf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4130fd646080339fe0f62154742879290dbbe053
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] HealthCheckTimeout 設定を使用して、SQL Server リソース DLL が [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ストアド プロシージャによって返される情報を待機する時間を、ミリ秒単位で指定できます。この待機時間を経過すると、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能としてレポートされます。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  HealthCheckTimeout 設定を使用して、SQL Server リソース DLL が [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ストアド プロシージャによって返される情報を待機する時間を、ミリ秒単位で指定できます。この待機時間を経過すると、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能としてレポートされます。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
   
 -   **作業を開始する準備:**  [制限事項と制約事項](#Limits)、 [セキュリティ](#Security)  
   
 -   **HeathCheckTimeout 設定を構成する方法:**  [PowerShell](#PowerShellProcedure)、 [フェールオーバー クラスター マネージャー](#WSFC)、 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Limits"></a> 制限事項と制約事項  
  このプロパティの既定値は 30,000 ミリ秒 (30 秒) です。 最小値は 15,000 ミリ秒 (15 秒) です。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  ALTER SETTINGS 権限および VIEW SERVER STATE 権限が必要です。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  

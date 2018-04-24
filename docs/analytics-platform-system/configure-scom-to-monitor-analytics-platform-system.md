@@ -1,28 +1,21 @@
 ---
-title: Analytics Platform System を監視する SCOM を構成します。
-author: barbkess
-ms.author: barbkess
+title: Analytics Platform System を監視する SCOM の構成 |Microsoft ドキュメント
+description: Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 SCOM から分析プラットフォーム システムを監視する管理パックが必要です。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: 10
-ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4c2e8a42d488c18e705c9d7d8c1d53c9ff7c9cb8
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-scom-to-monitor-analytics-platform-system"></a>Analytics Platform System を監視する SCOM を構成します。
+# <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>System Center Operations Manager (SCOM) を分析プラットフォーム システムの監視を構成します。
 Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 SCOM から分析プラットフォーム システムを監視する管理パックが必要です。  
   
 ## <a name="BeforeBegin"></a>はじめに  
@@ -33,13 +26,13 @@ System Center Operations Manager 2007 R2 は、インストールして実行す
 管理パックをインストールして構成する必要があります。 参照してください[SCOM 管理パックをインストール&#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md)と[PDW の SCOM 管理パックをインポート&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)です。  
   
 ## <a name="ConfigureRunAsProfile"></a>System Center でのユーザーとして実行プロファイルを構成します。  
-System Center を構成するために次の手順を実行する必要。  
+System Center を構成するのには、次の手順を実行する必要が。  
   
 -   実行アカウントを作成、 **APS ウォッチャー**ドメイン ユーザーにマップ、 **Microsoft APS 監視アカウント。**  
   
 -   実行アカウントを作成、 **monitoring_user** APS ユーザーにマップし、 **Microsoft APS アクション アカウント**です。  
   
-この操作方法についての詳細を次に示します。  
+タスクを実行する方法の詳細な手順を次に示します。  
   
 1.  作成、 **APS ウォッチャー**実行アカウントを**Windows**アカウントのタイプ、 **APS ウォッチャー**ドメイン ユーザー。  
   
@@ -47,21 +40,19 @@ System Center を構成するために次の手順を実行する必要。
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  **作成する実行アカウント ウィザード**ダイアログが開きます。 **概要**ページをクリック**次**です。  
+    2.  **作成する実行アカウント ウィザード**ダイアログが開きます。 **概要** ページで、をクリックして**次**です。  
   
-    3.  **全般プロパティ**ページ**Windows**から**実行アカウントの種類**として「APS ウォッチャー」を指定し、**表示名**です。  
+    3.  **全般プロパティ**] ページで、[ **Windows**から**実行アカウントの種類**として「APS ウォッチャー」を指定し、**表示名**です。  
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
-    4.  **資格情報**ページは、「APS ウォッチャー」ドメイン ユーザーの資格情報を指定します。  
+    4.  **資格情報** ページで、 ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
   
-        ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
-  
-    5.  **配布セキュリティ**選択のページ**安全性の低い** をクリック、**作成**完了 をクリックします。  
+    5.  **配布セキュリティ** ページで、**安全性の低い** をクリックし、**作成**完了 をクリックします。  
   
         ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
-        1.  使用する場合、**より安全な**する資格情報にコンピューターを手動で指定する必要があるオプションが分散されます。 これを行うには、実行アカウントを作成した後を右クリックし、選択**プロパティ**です。  
+        1.  使用する場合、**より安全な**オプション、資格情報の配布先コンピューターを手動で指定する必要があります。 これを行うには、実行アカウントを作成した後を右クリックし、選択**プロパティ**です。  
   
         2.  移動、**配布** タブと**追加**コンピューターが必要です。  
   
@@ -79,9 +70,9 @@ System Center を構成するために次の手順を実行する必要。
   
     3.  **実行プロファイル ウィザード**ダイアログが開きます。 Skip、**概要**をクリックしてページ**次**です。  
   
-    4.  **全般プロパティ**ページをクリックして**次**です。  
+    4.  **全般プロパティ** ページで、をクリックして**次**です。  
   
-    5.  **アカウントとして実行**ページをクリックして、**追加しています.** ボタンをクリックし、以前に作成した選択**APS ウォッチャー**アカウントとして実行します。  
+    5.  **アカウントとして実行** ページで、をクリックして、**追加しています.** ボタンをクリックし、以前に作成した選択**APS ウォッチャー**アカウントとして実行します。  
   
         ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
@@ -93,9 +84,7 @@ System Center を構成するために次の手順を実行する必要。
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
-    2.  アプライアンスが一覧に表示されるまで待ちます。 アプライアンスの名前は、レジストリで指定された 1 つに一致する必要があります。  
-  
-    探索の完了後に表示されますが、監視されていないすべてのアプライアンスが表示されます。 作業を監視するための次の手順に従います。  
+    2.  アプライアンスが一覧に表示されるまで待ちます。 アプライアンスの名前は、レジストリで指定された 1 つに一致する必要があります。 探索の完了後に表示されますが、監視されていないすべてのアプライアンスが表示されます。 監視できるように、次の手順に従います。  
   
     > [!NOTE]  
     > アプライアンスが初期検出が終了するを待機しているときに、次の手順を同時に実行することができます。  
@@ -104,11 +93,11 @@ System Center を構成するために次の手順を実行する必要。
   
     1.  手順 1 の説明に従って、新しい実行アカウントの作成を開始します。  
   
-    2.  **全般プロパティ**ページ**基本認証**アカウントの種類。  
+    2.  **全般プロパティ**] ページで、[**基本認証**アカウントの種類。  
   
         ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
-    3.  **資格情報**ページ APS 正常性状態の Dmv にアクセスする有効な資格情報を指定します。  
+    3.  **資格情報** ページで、AP 正常性状態の Dmv にアクセスする有効な資格情報を指定します。  
   
         ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
@@ -116,7 +105,8 @@ System Center を構成するために次の手順を実行する必要。
   
     1.  移動し、 **Microsoft APS アクション アカウント**ように手順 2. で説明されているプロパティ。  
   
-    2.  **アカウントとして実行**ページをクリックして**追加しています.** 新しく作成された実行アカウントを選択します。  
+    2.  **アカウントとして実行**] ページで [**追加しています.** 」、「 
+    3.  新しく作成された実行アカウントを選択します。  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   

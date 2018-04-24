@@ -1,29 +1,22 @@
 ---
-title: システム ビュー (Analytics Platform System) を使用してアプライアンスを監視します。
-author: barbkess
-ms.author: barbkess
+title: Analytics Platform System のシステム ビューを持つモニター |Microsoft ドキュメント
+description: この記事は、分析プラットフォーム システム アプライアンスを監視するために使用できるシステム ビューを一覧表示します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>システム ビューを使用してアプライアンスを監視します。
-このトピックは、SQL Server PDW を監視するために使用できるシステム ビューを一覧表示します。  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Analytics Platform System のシステム ビューとアプライアンスを監視します。
+この記事は、SQL Server PDW を監視するために使用できるシステム ビューを一覧表示します。  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>システム ビューを使用してアプライアンスを監視するには  
 SQL Server PDW には、アプライアンスの正常性、状態、およびパフォーマンスに関する詳細情報を取得するための包括的なシステム ビューが含まれています。 次の表は、各監視機能を使用できるシステム ビューへのリンクを提供します。  

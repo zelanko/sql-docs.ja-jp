@@ -1,26 +1,22 @@
 ---
-title: ワークロードの管理タスク
-author: barbkess
-ms.author: barbkess
+title: ワークロードの管理タスクの Analytics Platform System |Microsoft ドキュメント
+description: Analytics Platform System でワークロードの管理タスク。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 0a9c3ffd4768d78a4063ad40f7903dfe00b647e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16206cb5cefd68b19e1640592b903890808b5a31
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management-tasks"></a>ワークロードの管理タスク
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System でのワークロードの管理タスク
+Analytics Platform System でワークロードの管理タスク。
 
 ## <a name="view-login-members-of-each-resource-class"></a>各リソースのクラスのログインのメンバーを表示
 SQL Server PDW で各リソース クラスのサーバー ロールのログインのメンバーを表示する方法について説明します。 このクエリを使用すると、各ログインで送信された要求の使用可能なリソースのクラスを確認します。  
@@ -45,7 +41,7 @@ WHERE
   
 ログインがこの一覧にない場合は、その要求は既定のリソースを受信します。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大のクラスは、優先順位をいます。  
   
-リソース割り当ては、「、[ワークロード管理](workload-management.md)トピックです。  
+リソース割り当ては、「[ワークロード管理](workload-management.md)です。  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>変更要求に割り当てられたシステム リソース
 リソースを把握する方法について説明で、SQL Server PDW 要求が実行されるクラスとし、その要求のシステム リソースを変更する方法です。 メンバーシップの変更、リソース クラスを使用して、要求を送信するログインの要求のリソースを変更すると、 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)ステートメントです。  
@@ -71,9 +67,9 @@ WHERE
 GO  
 ```  
   
-リソース クラスのサーバー ロールのメンバーであるログインがない場合、結果のテーブルが空になります。 ここでは、クエリを返す場合 Ching をという名前のログイン、し、Ching が、要求を送信するときに要求を受け取ります既定のシステム リソースがリソース クラスのシステム リソースよりも小さく。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大のクラスは、優先順位をいます。  
+リソース クラスのサーバー ロールのメンバーであるログインがない場合、結果のテーブルが空になります。 ここでは、クエリを返す場合 Ching をという名前のログイン、し Ching が、要求を送信するときに要求を受け取ります既定のシステム リソース、リソース クラスのシステム リソースよりも小さい。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大のクラスは、優先順位をいます。  
   
-各リソースのクラスのリソース割り当ての一覧は、次を参照してください。[ワークロード管理](workload-management.md)トピックです。  
+各リソースのクラスのリソース割り当ての一覧は、次を参照してください。[ワークロード管理](workload-management.md)です。  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>手順 2: 別のリソース クラスのメンバーシップを持つログインで要求を実行します。  
 これには、拡大または縮小のシステム リソースと要求を実行する 2 つの方法があります。  
@@ -90,7 +86,7 @@ ALTER SERVER ROLE xlargerc ADD MEMBER Ching;
   
 Ching は、largerc と xlargerc サーバー ロールのメンバーであるようになりました。 Ching 要求を送信すると、要求 xlargerc のシステム リソースが表示されます。  
   
-次の例は、戻る、Ching を mediumrc サーバーの役割に移動します。  これを行うには、彼女は必要があります xlargerc、および largerc のサーバーの役割から削除して mediumrc サーバー ロールに追加します。  
+次の例は、戻る、Ching を mediumrc サーバーの役割に移動します。  新しいロールを変更するには、ログインを xlargerc、および largerc サーバーの役割から削除され、mediumrc サーバー ロールに追加する必要があります。  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -99,7 +95,7 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching は mediumrc サーバー ロールのメンバーであるようになりました。  次の例では、自分の要求の既定のシステム リソースに Ching を変更します。  
+Ching は mediumrc サーバー ロールのメンバーであるようになりました。  次の例では、要求の既定のシステム リソースを Ching を変更します。  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
@@ -109,13 +105,13 @@ ALTER SERVER ROLE mediumrc DROP MEMBER Ching;
 リソース クラスのロールのメンバーシップを変更する方法の詳細については、次を参照してください。 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)です。  
 
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>ログインを要求の既定のシステム リソースに変更します。
-既定値への SQL Server PDW ログインに割り当てられたシステム リソースの割り当てを変更する方法について説明します。 これは、SQL Server PDW は、ログインが送信した要求を代入するシステム リソースに影響します。  
+既定値への SQL Server PDW ログインに割り当てられたシステム リソースの割り当てを変更する方法について説明します。 
   
 リソース クラスの説明を参照してください[ワークロードの管理。](workload-management.md)  
   
 ログインは、どのリソース クラスのサーバー ロールのメンバーではない、ログインで送信された要求は、既定のシステム リソース量に表示されます。  
   
-Matt 現在リソース クラスのすべてのサーバー ロールのメンバーは、既定のリソースのみが表示される、要求に戻すには、ログインがあるとします。  次の例は、すべての 3 つのリソース クラス サーバー ロールのメンバーシップを削除することにより、Matt の要求に既定のリソースを割り当てます。  
+Matt 現在リソース クラスのすべてのサーバー ロールのメンバーは、既定のリソースのみが表示される要求に戻すには、ログインがあるとします。  次の例は、すべての 3 つのリソース クラス サーバー ロールのメンバーシップを削除することにより、Matt の要求に既定のリソースを割り当てます。  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -130,7 +126,7 @@ ALTER SERVER ROLE MediumRC DROP MEMBER Matt;
   
 詳細については、次を参照してください。[ワークロード管理](workload-management.md)です。  
   
-要求は、実行されることがなく長時間待機している可能性があります。 要求が必要な同時実行スロットの番号を確認するとトラブルシューティングを行う方法の 1 つです。  次の例では、各待機中の要求で必要な同時実行スロットの数を示します。  
+要求は、実行されることがなく長時間待機している可能性があります。 要求が必要な同時実行スロットの番号を確認要求をトラブルシューティングする方法の 1 つです。  次の例では、各待機中の要求で必要な同時実行スロットの数を示します。  
   
 ```sql  
 --Display the number of concurrency slots required   

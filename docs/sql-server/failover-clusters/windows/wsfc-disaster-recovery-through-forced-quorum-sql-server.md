@@ -1,36 +1,38 @@
 ---
-title: "WSFC の強制クォーラムによる災害復旧 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: WSFC の強制クォーラムによる災害復旧 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1a9b29ea5d7307496b35e6191ff57906aabab7bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 145742e14b82fa992a40ef7ca629e47ada88bce5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] クォーラム障害は、通常、システム障害、永続的な通信障害、または WSFC クラスター内の複数のノードにおける不適切な構成が原因で発生します。  クォーラム障害からの復旧には、手動による介入が必要になります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  クォーラム障害は、通常、システム障害、永続的な通信障害、または WSFC クラスター内の複数のノードにおける不適切な構成が原因で発生します。  クォーラム障害からの復旧には、手動による介入が必要になります。  
   
--   **開始前の準備:**  [前提条件](#Prerequisites)、 [セキュリティ](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
 -   **WSFC の強制クォーラムの手順による災害復旧** [WSFC の強制クォーラムの手順による災害復旧](#Main)  
   

@@ -1,31 +1,31 @@
 ---
-title: "図形は一般にコマンド |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 図形は一般にコマンド |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb85b1f835f494e7f86e69d25ed225ce4c605e55
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e065f912b468091ee84201247fc9acbeb546b5e9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-commands-in-general"></a>一般的な図形コマンド
 形の列を定義するデータの整形**Recordset**、列、および方法によって表されるエンティティ間のリレーションシップ、**レコード セット**データが格納されます。  

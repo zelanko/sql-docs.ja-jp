@@ -1,30 +1,30 @@
 ---
-title: "トランザクション (ADO) を制御する |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: トランザクション (ADO) を制御する |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df516c37eb40638cd23fa9e6ada2683c9af8e05c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 72cd4742328a27e732fdd4f49ab9ce06df5fd145
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="controlling-transactions-ado"></a>トランザクション (ADO) を制御します。
 ADO のヘルプへの接続内のトランザクション処理をサポートする、 **BeginTrans**、 **CommitTrans**、および**RollbackTrans**のメソッド、 **接続**オブジェクト。 次の単純なコード スニペットは、ADO のトランザクション処理を実装する一般的なという概念を示しています。  

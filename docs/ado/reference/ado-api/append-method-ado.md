@@ -1,33 +1,33 @@
 ---
-title: "Append メソッド (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Append メソッド (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _DynaCollection::Append
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c7007b09de937c013f7da1605ea78093d7a4ce51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-method-ado"></a>Append メソッド (ADO)
 オブジェクトをコレクションに追加します。 コレクションが場合[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)、新しい[フィールド](../../../ado/reference/ado-api/field-object.md)をコレクションに追加する前に、オブジェクトを作成できます。  
@@ -59,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *DefinedSize*  
  省略可。 A**長い**文字または新しいフィールドのバイト単位で定義されたサイズを表す値です。 このパラメーターの既定値はから派生*型*です。 指定されたフィールド、 *DefinedSize* 255 バイトは、可変長の列として扱われます。 より大きい。 既定の*DefinedSize*は指定されていません。  
   
- *Attrib*  
+ *attrib*  
  省略可。 A [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)値、既定値は**adFldDefault**、新しいフィールドの属性を指定します。 この値が指定されていない場合から派生した属性が、フィールドが含まれます*型*です。  
   
  *FieldValue*  
@@ -78,7 +78,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*パラメーターは、追加する場合にのみ有効です、**フィールド**オブジェクトを[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトしないように、 **Recordset**オブジェクト。 **レコード**オブジェクト、フィールドを追加し、同時に値を提供することができます。 **Recordset**オブジェクトの中にフィールドを作成する必要があります、**レコード セット**、終了して開き、**レコード セット**フィールドに値を割り当てるとします。  
   
 > [!NOTE]
->  新しい**フィールド**に追加されたオブジェクト、**フィールド**のコレクション、**レコード**オブジェクト、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティを設定する必要がありますその他の前に**フィールド**プロパティを指定できます。 最初の特定の値、**値**プロパティが割り当てられている必要がありますと[更新](../../../ado/reference/ado-api/update-method.md)上、**フィールド**と呼ばれるコレクション。 などの他のプロパティ、[型](../../../ado/reference/ado-api/type-property-ado.md)または[属性](../../../ado/reference/ado-api/attributes-property-ado.md)アクセスできます。 **フィールド**次のデータ型のオブジェクト (**格納**) に追加することはできません、**フィールド**コレクションと、エラーが発生して: **adArray**、 **adChapter**、 **adEmpty**、 **adPropVariant**、および**adUserDefined**です。 また、次のデータ型が ADO でサポートされていません:**追加**、**しようとする**、および**エラー**です。 これらの種類について、追加したときにエラーが発生ありませんが、使用量がメモリ リークをなど、予期しない結果を生成できます。  
+>  新しい**フィールド**に追加されたオブジェクト、**フィールド**のコレクション、**レコード**オブジェクト、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティを設定する必要がありますその他の前に**フィールド**プロパティを指定できます。 最初の特定の値、**値**プロパティが割り当てられている必要がありますと[更新](../../../ado/reference/ado-api/update-method.md)上、**フィールド**と呼ばれるコレクション。 などの他のプロパティ、[型](../../../ado/reference/ado-api/type-property-ado.md)または[属性](../../../ado/reference/ado-api/attributes-property-ado.md)アクセスできます。 **フィールド**次のデータ型のオブジェクト (**格納**) に追加することはできません、**フィールド**コレクションと、エラーが発生して: **adArray**、**adChapter**、 **adEmpty**、 **adPropVariant**、および**adUserDefined**です。 また、次のデータ型が ADO でサポートされていません:**追加**、**しようとする**、および**エラー**です。 これらの種類について、追加したときにエラーが発生ありませんが、使用量がメモリ リークをなど、予期しない結果を生成できます。  
   
 ## <a name="recordset"></a>レコードセット  
  設定しない場合、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを呼び出す前に、 **Append**メソッド、 **CursorLocation**に設定されます**adUseClient** ([CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)値) ときに自動的に、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)のメソッド、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが呼び出されるとします。  

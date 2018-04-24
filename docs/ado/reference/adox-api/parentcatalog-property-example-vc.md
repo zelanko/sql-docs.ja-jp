@@ -1,32 +1,32 @@
 ---
-title: "ParentCatalog プロパティの例 (vc++) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ParentCatalog プロパティの例 (vc++) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b98423b519809f94d1956971c9613bc4747632b3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9eeb1a844d93d2f20b0f1c8a9e9cbd1767482f5b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog プロパティの例 (vc++)
 次のコードを使用する方法を示しています、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)カタログにテーブルを追加する前に、プロバイダー固有のプロパティにアクセスするプロパティです。 このプロパティは**AutoIncrement**、Microsoft Jet データベースで自動増分 フィールドを作成します。  

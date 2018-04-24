@@ -1,30 +1,30 @@
 ---
-title: "XSLT 変換 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: XSLT 変換 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7dc90399ec31c921bfebbd342bbc082365dc238d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d235ea5208f5c4cbf98f7f5664b1a3b3666b9207
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-transformations"></a>XSLT 変換
 XSLT は、別の形式に変換する、生成された XML に適用できます。 ADO では、XML 形式を理解することは、わかりやすい形式に変換できる XSLT テンプレートの開発に役立ちます。  

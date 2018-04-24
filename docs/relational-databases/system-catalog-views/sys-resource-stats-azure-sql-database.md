@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7b8087839e5ea151d69a18cdf46d19fa5c917e66
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 947214e4b8da0d4d76ab16eb24bd73dec994aeb2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 |start_time|**datetime**|5 分間のレポート間隔の開始を示す UTC 時刻です。|  
 |end_time|**datetime**|5 分間のレポート間隔の終了を示す UTC 時刻です。|  
 |database_name|**varchar**|ユーザー データベースの名前。|  
-|sku|**varchar**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br />一般的な用途<br /><br />ビジネス上重要|  
+|sku|**varchar**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|データベースのデータ、インデックス、ストアド プロシージャ、およびメタデータを含む、期間のメガバイト単位でストレージの最大サイズ。|  
 |avg_cpu_percent|**numeric**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
 |avg_data_io_percent|**numeric**|サービス層の上限に基づくパーセンテージで示した、平均入出力使用率。|  

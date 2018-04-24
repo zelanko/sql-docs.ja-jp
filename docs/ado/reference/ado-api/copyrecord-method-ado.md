@@ -1,17 +1,17 @@
 ---
-title: "つまりメソッド (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: つまりメソッド (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::raw_CopyRecord
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 96ce055d28959d2846e954423340164536df50e3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="copyrecord-method-ado"></a>つまりメソッド (ADO)
 によって表されるエンティティのコピー、[レコード](../../../ado/reference/ado-api/record-object-ado.md)別の場所にします。  
@@ -56,7 +56,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Options*  
  省略可。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)の既定値を持つ値**adCopyUnspecified**です。 このメソッドの動作を指定します。  
   
- *Async*  
+ *非同期*  
  省略可。 A**ブール**値と**True**、この操作を非同期にすることを指定します。  
   
 ## <a name="return-value"></a>戻り値  

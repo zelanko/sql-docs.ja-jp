@@ -1,17 +1,17 @@
 ---
-title: "Cancel メソッド (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Cancel メソッド (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset20::Cancel
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9dd6f6c62d9ee20f75dabc8b28831b7376fc00b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfa05c071a40189478c361c1d5f4e3b34813daf1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cancel-method-ado"></a>Cancel メソッド (ADO)
 保留中の非同期メソッド呼び出しの実行をキャンセルします。  
@@ -53,7 +53,7 @@ object.Cancel
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[接続](../../../ado/reference/ado-api/connection-object-ado.md)|[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)または[開く](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[レコード](../../../ado/reference/ado-api/record-object-ado.md)|[つまり](../../../ado/reference/ado-api/copyrecord-method-ado.md)、[関係する](../../../ado/reference/ado-api/deleterecord-method-ado.md)、[後続](../../../ado/reference/ado-api/moverecord-method-ado.md)、または[開く](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
 |[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|[[ファイル]](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>適用対象  

@@ -1,30 +1,32 @@
 ---
-title: "SQL Server フェールオーバー クラスターのインストール | Microsoft Docs"
-ms.custom: 
+title: SQL Server フェールオーバー クラスターのインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2583f611ef0e3db1a00fded935ba8a758de3965
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b01ae5041d57ef4f7937c0d1efbb61e8271d104a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のフェールオーバー クラスターをインストールするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してフェールオーバー クラスター インスタンスを作成し、構成する必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のフェールオーバー クラスターをインストールするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してフェールオーバー クラスター インスタンスを作成し、構成する必要があります。  
   
 ## <a name="installing-a-failover-cluster"></a>フェールオーバー クラスターのインストール  
  フェールオーバー クラスターをインストールするには、ローカル管理者権限、サービスとしてログオンする権限、およびフェールオーバー クラスター内にあるすべてのノード上のオペレーティング システムの一部として動作する権限を持つドメイン アカウントを使用する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ プログラムを使用してフェールオーバー クラスターをインストールするには、次の手順を実行します。  

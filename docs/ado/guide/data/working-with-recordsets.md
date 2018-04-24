@@ -1,30 +1,30 @@
 ---
-title: "レコード セットの操作 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: レコード セットの操作 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>レコード セットの操作
 **Recordset**オブジェクトが組み込みの機能を指定する条件に基づいて特定のレコードを検索して、インデックスを使用してこれらの検索操作を最適化するためにも、結果セット内のデータの順序を変更することができます。 これらの機能を使用できるかどうかは、プロバイダーによって異なります: などの[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティ — データ ソース自体の構造。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  条件の比較演算子を指定できます"**>**「(より大きい)、」**\<**"(より小さい)、「=」(等しい)、"> ="(より大きいまたは等しい)、"< ="(以下)、"<>"(等しくない)、または「のように」(パターン一致)。  
   
- 基準値には、文字列、浮動小数点数、または日付を指定できます。 文字列の値が単一引用符または「#」(シャープ記号) 記号で区切られた (たとえば、"状態 = 'WA'"または"の状態 = WA #") です。 日付の値は「#」(シャープ記号) 記号で区切られます (たとえば、"start_date > #7 月 22 日/&#97;") です。  
+ 基準値には、文字列、浮動小数点数、または日付を指定できます。 文字列の値が単一引用符または「#」(シャープ記号) 記号で区切られた (たとえば、"状態 = 'WA'"または"の状態 = WA #") です。 日付の値は「#」(シャープ記号) 記号で区切られます (たとえば、"start_date > #7 月 22 日/97 #") です。  
   
  比較演算子が"like"にある場合は、文字列値は、アスタリスク (*) を 1 つ以上の出現箇所を任意の文字または部分文字列の検索を含めることができます。 たとえば、"のような状態にして\*'"メイン州と Massachusetts に一致します。 また、値に含まれる部分文字列を検索するのに先頭および末尾のアスタリスクを使用することができます。 たとえば、"のような状態 '\*として\*'"アラスカ、アーカンソー、Massachusetts に一致します。  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 02/09/2018
   
 -   *FieldName*から有効なフィールド名にする必要があります、 **Recordset**です。 フィールド名にスペースが含まれている場合は、角かっこで囲んで、名前を囲む必要があります。  
   
--   *演算子*、次のいずれかを指定する必要があります:  **\<** 、  **>** 、  **\< =** 、  **>=** 、  **<>** 、  **=** 、または**など**です。  
+-   *演算子*、次のいずれかを指定する必要があります: **\<**、 **>**、 **\< =**、 **>=**、 **<>**、 **=**、または**など**です。  
   
 -   *値*これには、フィールドの値を比較し、値は、(たとえば、 `'Smith'`、 `#8/24/95#`、 `12.345`、または`$50.00`)。 文字列に単一引用符 (') を使用し、シャープ記号 (`#`) 日付。 数値の場合は、小数点、ドル記号、および科学的表記法を使用できます。 場合*演算子*は**など**、*値*ワイルドカード文字を使用できます。 アスタリスクのみ (\*) とパーセント記号 (%) のワイルドカード文字は使用すると、および文字列の最後の文字であることが必要です。 *値*null にすることはできません。  
   

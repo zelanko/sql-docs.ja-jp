@@ -1,31 +1,31 @@
 ---
-title: "再同期のプロパティ-動的 (ADO) の更新 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 再同期のプロパティ-動的 (ADO) の更新 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6084a0075508c8a9a3658b4a8c694957409376c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d79953a8ae35c2e3b7da1edecd4db4a73f14462f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="update-resync-property-dynamic-ado"></a>再同期のプロパティ-動的 (ADO) の更新します。
 指定するかどうか、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドは暗黙的な続けている[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド操作と、そのその操作のスコープです。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
  定数**adResyncConflicts**基になる値として、再同期の値を格納しますが、保留中の変更をオーバーライドしません。  
   
- **再同期を更新**に動的なプロパティが追加、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションときに、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定**adUseClient**です。  
+ **再同期を更新**に動的なプロパティが追加、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションと、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) にプロパティが設定されています。**adUseClient**です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

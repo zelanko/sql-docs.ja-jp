@@ -1,31 +1,31 @@
 ---
-title: "作り直して、|Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 作り直して、|Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c15ec2a356fa1d9593de20f301fcdce44585445
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58a09ecb5ad1828a94bdc5e5b82e59de61396be6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshaping"></a>形状を変更
 A **Recordset**作成図形の句でのコマンドを割り当てることができます、*エイリアス*名 (通常の AS キーワード) です。 形状のエイリアス**Recordset**は完全に別のコマンドで参照できます。 つまり、再利用できる、または*変形*、以前形**レコード セット**新しい図形コマンドでします。 この機能をサポートする ADO には、プロパティが用意されて[変形名前](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)です。  

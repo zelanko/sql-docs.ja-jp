@@ -1,29 +1,22 @@
 ---
-title: ポーリング間隔 (Analytics Platform System) の決定します。
-author: barbkess
-ms.author: barbkess
+title: ポーリング頻度 - Analytics Platform System |Microsoft ドキュメント
+description: この記事では、Analytics Platform System アプライアンス通知のポーリング頻度を決定する方法について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
-caps.latest.revision: 7
-ms.openlocfilehash: e67ab38c12000f3d78a9179a177ce5f673b8eaa2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e8e2a1ccf469e6c587870c0d5921014d797f87d1
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="determine-polling-frequency"></a>ポーリングの頻度を決定します。
-このトピックでは、SQL Server PDW アプライアンス通知のポーリング頻度を決定する方法について説明します。  
+この記事では、Analytics Platform System アプライアンス通知のポーリング頻度を決定する方法について説明します。  
   
 ## <a name="to-determine-the-polling-frequency"></a>ポーリングの頻度を決定するには  
 PDW サポートしていないので現在プロアクティブ通知アラートが発生したときに、監視ソリューションを継続的に、アプライアンスの Dll をポーリングする必要があります。  内部的には、PDW は、さまざまな間隔でコンポーネントをポーリングします。  
@@ -38,7 +31,7 @@ PDW サポートしていないので現在プロアクティブ通知アラー�
   
 System Center によっても使用される、共通のアラートをポーリングする間隔が**15 分ごと**です。  当然ながら、頻繁に増減したり、照会することが、6 時間未満であるごとにポーリングをお勧めできません。  
   
-頻繁にポーリングが許容されるが、煩雑になります。 頻度が高すぎるポーリング、 [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV。  これは、ため、可能性の場合、クエリのパフォーマンス問題の診断にあるユーザーが簡単にクエリを実行ビューから外れてロールアップします。  
+頻繁にポーリングが許容されるが、煩雑になります。 頻度が高すぎるポーリング、 [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV。  ポーリングの頻度が高すぎるため、可能性が困難なクエリのパフォーマンスを診断するユーザーに対して発行するときに、ビューから外れて迅速にロールバックします。  
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -1,32 +1,32 @@
 ---
-title: "プロパティの例 (vc++) を最適化 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: プロパティの例 (vc++) を最適化 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 927448414395ded11b0896b0f0e692ef05c13ce1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e4cceefba08de84b95e7563daeddb32a6c6ecc8d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="optimize-property-example-vc"></a>プロパティの例 (vc++) を最適化します。
 この例で、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト ダイナミック**最適化**プロパティです。 **Zip**のフィールド、**作成者**テーブルに、 **Pubs**データベースのインデックスが付いていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 **zip**フィールド承認のパフォーマンスを向上させるインデックスを作成する ADO、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッドです。  
@@ -139,7 +139,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto    3 Silver Ct.クルミ クリーク CA**   
+ **Akiko Yokomoto 3 Silver-2-xクルミ クリーク CA**   
 ## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

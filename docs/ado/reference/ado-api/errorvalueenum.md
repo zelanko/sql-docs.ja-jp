@@ -1,33 +1,33 @@
 ---
-title: "ErrorValueEnum |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ErrorValueEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a79af3564a177da2953b053ce943a2d740e4cc7d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a8a543a2e8816a23d420dd7bb007ae157d676f98
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO の実行時エラーの種類を指定します。  
@@ -43,7 +43,7 @@ ADO の実行時エラーの種類を指定します。
 > [!NOTE]
 >  OLE DB エラーは、ADO アプリケーションに渡すことができます。 通常、これらを特定するのには Windows 機能のコードの*4*です。 たとえば、0x800***4***です。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|変更することはできません、 **ActiveConnection**のプロパティ、**レコード セット**を持つオブジェクト、**コマンド**オブジェクトのソースとして。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|サーバーは、操作を完了できません。|  

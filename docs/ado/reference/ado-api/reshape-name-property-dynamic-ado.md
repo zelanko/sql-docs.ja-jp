@@ -1,31 +1,31 @@
 ---
-title: "名前のプロパティ-動的 (ADO) の形状変更 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 名前のプロパティ-動的 (ADO) の形状変更 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>名前のプロパティ-動的 (ADO) の形状変更します。
 名前を指定、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
  使用して、**変形名前**プロパティを参照するときに、**レコード セット**Shape コマンド、または Data Shaping Service によって作成されたため、名前がわからない場合。 その場合は、コマンドによって返される文字列を連結することにより図形コマンドを生成する可能性があります、**変形名前**プロパティです。  
   
- **名前の形状変更**に動的なプロパティが追加、**レコード セット**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションと、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定**adUseClient**です。  
+ **名前の形状変更**に動的なプロパティが追加、 **Recordset**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションときに、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) にプロパティが設定されています。**adUseClient**です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

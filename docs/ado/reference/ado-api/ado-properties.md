@@ -1,31 +1,31 @@
 ---
-title: "ADO プロパティ |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO プロパティ |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22d01847cb4d2a4bc6e1019fda0d29458af751c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 919d3573a0d5b1178d24af3befd553a39b3c0d3a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|フィールドの値の実際の長さを示します。|  
 |[属性](../../../ado/reference/ado-api/attributes-property-ado.md)|オブジェクトの 1 つまたは複数の特性を示します。|  
 |[BOF と EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**レコード セット オブジェクトの最初のレコードの前に、現在のレコードの位置があることを示します。<br /><br /> **EOF**レコード セット オブジェクトの最後のレコードの後に、現在のレコードの位置があることを示します。|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|ブックマークの現在のレコードを一意に識別することを示します、**レコード セット**オブジェクトまたは現在のレコードを設定、**レコード セット**レコードの有効なブックマークによって識別されるオブジェクト。|  
+|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|ブックマークの現在のレコードを一意に識別することを示します、**レコード セット**オブジェクトまたは現在のレコードを設定、**レコード セット**レコードの有効なブックマークによって識別されるオブジェクト。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|レコードの数を示す、 **Recordset**メモリにローカルにキャッシュされたオブジェクト。|  
 |[章](../../../ado/reference/ado-api/chapter-property-ado.md)|OLE DB の設定を取得または**章**オブジェクトから/上、 **ADORecordsetConstruction**オブジェクト。|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|文字セットを示します、テキストの内容**ストリーム**変換する必要があります。|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/09/2018
 |[モード](../../../ado/reference/ado-api/mode-property-ado.md)|データの変更の利用可能なアクセス許可を示す、**接続**、**レコード**、または**ストリーム**オブジェクト。|  
 |[名前](../../../ado/reference/ado-api/name-property-ado.md)|オブジェクトの名前を示します。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|特定のプロバイダー固有のエラー コードを示します**エラー**オブジェクト。|  
-|[Number](../../../ado/reference/ado-api/number-property-ado.md)|一意に識別する数値を示します、**エラー**オブジェクト。|  
+|[数](../../../ado/reference/ado-api/number-property-ado.md)|一意に識別する数値を示します、**エラー**オブジェクト。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|内の数値の小数点以下桁数を示す、**パラメーター**または**フィールド**オブジェクト。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|値を示す、**フィールド**すべての変更が行われる前に、レコード内に存在します。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|データのページ数を示す、 **Recordset**オブジェクトが含まれます。|  

@@ -18,18 +18,19 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8829a826c0e31d1c37cf7b65478cbd781cf89d0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの高可用性ソリューションまたは災害復旧ソリューションを展開する場合、**master** 内のデータベースまたは **msdb** データベースに格納されている関連情報を再現することが重要です。 通常、関連情報には、プライマリ/プリンシパル データベースのジョブおよびデータベースへの接続に必要なユーザーまたはプロセスのログインが含まれます。 セカンダリ/ミラー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のインスタンスでこの情報を複製する必要があります。 可能であれば、役割の交代後に、プログラムで新しいプライマリ/プリンシパル データベースに情報を再現することが最善の方法です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの高可用性ソリューションまたは災害復旧ソリューションを展開する場合、 **master** 内のデータベースまたは **msdb** データベースに格納されている関連情報を再現することが重要です。 通常、関連情報には、プライマリ/プリンシパル データベースのジョブおよびデータベースへの接続に必要なユーザーまたはプロセスのログインが含まれます。 セカンダリ/ミラー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のインスタンスでこの情報を複製する必要があります。 可能であれば、役割の交代後に、プログラムで新しいプライマリ/プリンシパル データベースに情報を再現することが最善の方法です。  
   
-## <a name="logins"></a>ログイン  
+## <a name="logins"></a>Login  
  データベースのコピーをホストするすべてのサーバー インスタンスで、プリンシパル データベースにアクセスする権限を持つログインを再現する必要があります。 プライマリ/プリンシパルの役割が交代すると、新しいプリンシパル/プライマリ サーバー インスタンスにログインが存在するユーザーのみが新しいプリンシパル/プライマリ データベースにアクセスできます。 ログインが新しいプライマリ/プリンシパル サーバー インスタンスで定義されていないユーザーは孤立して、データベースにアクセスできません。  
   
  ユーザーが孤立している場合は、新しいプライマリ/プリンシパル サーバー インスタンスでログインを作成し、 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)を実行します。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  詳細については、「 [Orphaned Users with Database Mirroring and Log Shipping](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) 」(データベース ミラーリングとログ配布での孤立ユーザー) (データベース エンジンのブログ) を参照してください。  
   
-## <a name="jobs"></a>ジョブ  
+## <a name="jobs"></a>の  
  バックアップ ジョブなどのジョブでは、特別な考慮が必要になります。 通常は、役割の交代後、データベース所有者またはシステム管理者が、新しいプライマリ/プリンシパル データベース用にジョブを再作成する必要があります。  
   
  元のプライマリ/プリンシパル サーバー インスタンスが使用できる場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のそのインスタンスで元のジョブを削除する必要があります。 現在のミラー データベースのジョブは RESTORING 状態であるため失敗し、使用できなくなります。  

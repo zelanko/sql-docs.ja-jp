@@ -1,32 +1,32 @@
 ---
-title: "AddNew メソッドの例 (JScript) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: AddNew メソッドの例 (JScript) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - AddNew method [ADO], JScript example
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d75647a16b2bbecd91c7cb8b98e97649907f0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6bba653e598269ae66fa3b81db240efff3608ce6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew メソッドの例 (JScript)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。 切り取りをメモ帳または別のテキスト エディターでは、次のコードを貼り付けとして保存して**AddNewJS.asp**です。  

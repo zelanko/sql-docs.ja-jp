@@ -1,31 +1,31 @@
 ---
-title: "カスタマイズ ファイルのセクションの接続 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: カスタマイズ ファイルのセクションの接続 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859324a8cbf2f08bfae2ac18e86525a9e65914d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bc00af717ef3161f414525f109236b0aba0c442e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルのセクションを接続します。
 ハンドラーの既定の動作は、すべての接続を拒否するのにです。 **接続**セクションでは、その動作に例外を指定します。 たとえば、すべての場合、**接続**セクションがないか、空で、既定で接続を確立できませんでした。  

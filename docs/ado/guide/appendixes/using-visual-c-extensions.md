@@ -1,33 +1,33 @@
 ---
-title: "Visual C の拡張機能の使用 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Visual C の拡張機能の使用 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 80dd87f6946abc4cc37af7d75de6d36a8bb9980e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -93,26 +93,26 @@ Update(CADORecordBinding *binding)
  詳細については、次を参照してください。[付録 a: データ型](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6)、OLE DB プログラマーズ リファレンスのです。
 
 ### <a name="begin-binding-entries"></a>バインディング エントリを開始します。
- **BEGIN_ADO_BINDING**(*Class*)
+ **BEGIN_ADO_BINDING**(*クラス*)
 
 ### <a name="fixed-length-data"></a>固定長のデータ
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY**(*序数、データ型、バッファー、状態、変更*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*序数、バッファーのデータ型を変更*)
 
 ### <a name="numeric-data"></a>数値データ
- **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
+ **ADO_NUMERIC_ENTRY**(*序数、データ型、バッファー、有効桁数、小数点以下桁数、状態、変更*)
 
  **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>可変長のデータ
- **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*序数、データ型、バッファー、サイズ、ステータス、長さ、変更*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*序数、データ型、バッファー、サイズ、状態、変更*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*序数、データ型、バッファー、サイズ、長さ、変更*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*、序数、データ型、バッファーのサイズ変更*)
 
 ### <a name="end-binding-entries"></a>バインディング エントリの終了
  **END_ADO_BINDING**()
@@ -135,7 +135,7 @@ Update(CADORecordBinding *binding)
 
  データを設定するときに*ステータス*に設定することがあります**adFldNull**を示すために、 **Recordset**フィールドを設定する必要がありますを null にします。
 
-|定数|[値]|Description|
+|定数|値|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールドの値が返されました。|
 |**adFldBadAccessor**|1|バインドが無効でした。|

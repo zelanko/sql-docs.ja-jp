@@ -1,17 +1,17 @@
 ---
-title: "実行、クエリを再実行、およびメソッドの例 (JScript) をオフ |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 実行、クエリを再実行、およびメソッドの例 (JScript) をオフ |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e497eae1211dce02e5c05581d1ddf29dce3570
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 38b2921e9615bc23acec31326cf4d5b44b5dc0ad
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>実行、クエリを再実行、およびメソッドの例 (JScript) をオフに
 この例で、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトおよび[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 でも使用、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得する方法を[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[オフ](../../../ado/reference/ado-api/clear-method-ado.md)の内容を消去するメソッドを[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 (、**エラー**コレクションを介してアクセス、**接続**のオブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md))。ファイルの名前を付けます**ExecuteJS.asp**です。  

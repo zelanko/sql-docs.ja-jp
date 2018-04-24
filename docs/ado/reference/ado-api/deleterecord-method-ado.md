@@ -1,17 +1,17 @@
 ---
-title: "関係するメソッド (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 関係するメソッド (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 74a3a1dcbd909042ab52bb115cd7cd70c9dd3660
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deleterecord-method-ado"></a>関係するメソッド (ADO)
 によって表されるエンティティを削除、[レコード](../../../ado/reference/ado-api/record-object-ado.md)です。  
@@ -44,7 +44,7 @@ Record.DeleteRecord Source, Async
  *ソース*  
  省略可。 A**文字列**を削除する (たとえば、ファイルまたはディレクトリ) のエンティティを識別する URL を含む値です。 場合*ソース*を省略するか、空の文字列は、現在で表されるエンティティを示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)を削除します。 場合は、レコードは、コレクション ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)の**adCollectionRecord**、ディレクトリなど) (たとえば、サブディレクトリ) のすべての子も削除されます。  
   
- *Async*  
+ *非同期*  
  省略可。 A**ブール**値と**True**、削除操作を非同期に指定します。  
   
 ## <a name="remarks"></a>解説  

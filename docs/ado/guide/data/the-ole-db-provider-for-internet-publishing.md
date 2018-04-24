@@ -1,17 +1,17 @@
 ---
-title: "インターネットへの発行の OLE DB Provider |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: インターネットへの発行の OLE DB Provider |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
 - ADO, Internet publishing
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 128d8531f1a5f4c2ebff06b9db8b1510964bdcd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c3dfd95a9df4e67effa659e3d76d92ce1927d778
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>インターネットへの発行用の OLE DB プロバイダー
 ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft によって処理されます。 ADO のソースを指定することができます、**レコード**、**ストリーム**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) URL であります。 ことができますし、アップロード、ダウンロード、移動、コピー、および、リソースを削除またはリソースのプロパティを直接操作します。  
@@ -39,19 +39,19 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[スト
   
  ストアには、ADO プロバイダーに接続する、インターネット発行の 3 つの方法があります。  
   
--   指定"URL ="接続文字列にします。 例:  
+-   指定"URL ="接続文字列にします。 以下に例を示します。  
   
     ```  
     objConn.Open "URL=http://servername"  
     ```  
   
--   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワードです。 例:  
+-   指定の Msdaipp.dso、*プロバイダー*接続文字列のキーワードです。 以下に例を示します。  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
     ```  
   
--   指定の Msdaipp.dso、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)のプロパティ、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 例:  
+-   指定の Msdaipp.dso、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)のプロパティ、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 以下に例を示します。  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

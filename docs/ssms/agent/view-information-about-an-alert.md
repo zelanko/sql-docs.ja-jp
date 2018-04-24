@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edd9053514a593ea946a15d3d3071ad2b6e27093
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a6f1e0be2382e9981886616af207ab94185ee9f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 04/10/2018
   
 **このトピックの内容**  
   
--   **開始する前に。**  
+-   **作業を開始する準備:**  
   
-    [セキュリティ](#Security)  
+    [Security](#Security)  
   
 -   **警告に関する情報を表示する方法:**  
   

@@ -1,15 +1,16 @@
 ---
-title: "SQL Server リソースへの依存関係の追加 | Microsoft Docs"
-ms.custom: 
+title: SQL Server リソースへの依存関係の追加 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - resource dependencies [SQL Server]
@@ -17,25 +18,26 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2875eb668df6512a0ed3ce01b400c183d3cf898
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0b7dc1fee54afb366518547f4c2c9518843d0ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server リソースへの依存関係の追加
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
 -   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [前提条件](#Prerequisites)  
   
 -   **SQL Server リソースに依存関係を追加するために使用するもの:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループに他のリソースを追加する場合、そのリソースには必ず独自の固有の SQL ネットワーク名リソースと独自の SQL IP アドレス リソースが必要であることに注意してください。  

@@ -1,31 +1,31 @@
 ---
-title: "CreateObject メソッド (RDS) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: CreateObject メソッド (RDS) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 355c56509e8c06b0d687e5d6164cf0e7c4abe93c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネス オブジェクトのプロキシを作成し、ポインターを返します。 インターネット経由で要求とデータを送信するビジネス オブジェクトとの通信のサーバー側のスタブをプロキシ パッケージとマーシャ リング データ。 インプロセス コンポーネント オブジェクトのプロキシは使用されず、オブジェクトへのポインターのみが提供されます。  
@@ -38,10 +38,10 @@ ms.lasthandoff: 02/09/2018
   
 |[プロトコル]|構文|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
-|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
-|インプロセス|Set object = DataSpace.CreateObject("ProgId", "")|  
+|HTTP|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"http://awebsrvr")|  
+|HTTPS|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"https://awebsrvr")|  
+|DCOM|Set オブジェクト DataSpace.CreateObject ("ProgId"、"computername") を =|  
+|インプロセス|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"")|  
   
 ## <a name="parameters"></a>パラメーター  
  *オブジェクト*  

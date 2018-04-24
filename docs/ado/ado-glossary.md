@@ -1,30 +1,30 @@
 ---
-title: "ADO の用語集 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO の用語集 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO 用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="b"></a>B
  テーブル内のフィールドと変数のエントリ、マッピングをバインドします。 ADO の Visual C 拡張機能で**Recordset**フィールドは、C と C++ の変数にマップされます。
 
- ビットマスク A の数値では、他のパラメーターのオプション フラグに通常の数値の値または戻り値と比較値のビット単位の対象としています。 通常この比較はビットごとの論理演算子を含むよう**と**と**または**Visual basic で **&** と**&#124;**C++ では。
+ ビットマスク A の数値では、他のパラメーターのオプション フラグに通常の数値の値または戻り値と比較値のビット単位の対象としています。 通常この比較はビットごとの論理演算子を含むよう**と**と**または**Visual basic で**&**と**&#124;** C++ でします。
 
  たとえば、ADO **FieldAttributeEnum**値は、フィールドの属性を確認するビットマスクとして使用できます。 フィールドが更新可能なかどうかを判断したいとします。 Visual Basic では、次の式で、これをテストできます。`Field.Attributes AND adFldUpdatable`
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 02/09/2018
  動的なプロパティ、プロパティ、データ プロバイダーまたはカーソル サービスに固有です。 **プロパティ**オブジェクトのコレクションが自動的に入力されます (「動的」) です。 特定のデータ プロバイダーを介してデータ ソースに接続されるまで、オブジェクトは動的なプロパティがありません。 参照データ プロバイダー、カーソル。
 
 ## <a name="e"></a>E
- 名前付き定数の一覧を列挙します。 列挙値は一意でない必要があります。 ただしの各値の名前を列挙が定義されているスコープ内で一意にする必要があります。 ADO では、列挙型数値パラメーターの使用し、戻り値の意味を ADO コードを追加して、開発者は、数値 (バージョンを変更することがあります) を保護します。 例についてを開くには、静的な**Recordset**を使用して、 **adOpenStatic**列挙値。`Recordset.Open ,,adOpenStatic`
+ 名前付き定数の一覧を列挙します。 列挙値は一意でない必要があります。 ただしの各値の名前を列挙が定義されているスコープ内で一意にする必要があります。 ADO では、列挙型数値パラメーターの使用し、戻り値の意味を ADO コードを追加して、開発者は、数値 (バージョンを変更することがあります) を保護します。 例についてを開くには、静的な**Recordset**を使用して、 **adOpenStatic**列挙値。 `Recordset.Open ,,adOpenStatic`
 
  呼びます*列挙型定数*です。 関連項目*定数*です。
 

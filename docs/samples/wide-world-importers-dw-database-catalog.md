@@ -17,13 +17,14 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 8039efbdb9157b45f8fcc67d0b8f72d367d81e52
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9148c4efb219b020f84556afb7f21ba3bb9fca0f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW database catalog
+# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベース カタログ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 スキーマ、テーブル、および WideWorldImportersDW データベース内のストアド プロシージャの説明。 
 
@@ -57,7 +58,7 @@ WideWorldImportersDW には、次のディメンション テーブルがあり�
 |Employee|`Application.People`」を参照してください。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |業者|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`」を参照してください。|
+|[支払い方法]|`Application.PaymentMethods`」を参照してください。|
 |TransactionType|`Application.TransactionTypes`」を参照してください。|
 
 ### <a name="fact-tables"></a>ファクト テーブル

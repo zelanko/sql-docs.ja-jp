@@ -1,34 +1,36 @@
 ---
-title: "SQL Server フェールオーバー クラスター インスタンスのアップグレード | Microsoft Docs"
-ms.custom: 
+title: SQL Server フェールオーバー クラスター インスタンスのアップグレード | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b2b516e71d14bc8615505c22f1317255925ba5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>SQL Server フェールオーバー クラスター インスタンスのアップグレード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを、新しいバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス パック、または累積更新プログラムにアップグレードするか、新しい Windows サービス パックや累積更新プログラムを、すべてのフェールオーバー クラスター ノードに個別にインストールして、ダウンタイムを、単一の手動フェールオーバー (元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) に制限できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]バージョン、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービス パック、または累積更新プログラムにアップグレードするか、新しい Windows サービス パックや累積更新プログラムを、すべてのフェールオーバー クラスター ノードに個別にインストールして、ダウンタイムを、単一の手動フェールオーバー (元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) に制限できます。  
   
  フェールオーバー クラスターの Windows オペレーティング システムのアップグレードは、[!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] より前のオペレーティング システムではサポートされません。 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 以降で実行されているクラスター ノードのアップグレードについては、「[ローリング アップグレードまたは更新の実行](#perform-a-rolling-upgrade-or-update)」を参照してください。  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 -   フェールオーバー クラスターのアップグレードにおけるダウンタイムは、フェールオーバー時間およびアップグレード スクリプトの実行に必要な時間のみです。 次のフェールオーバー クラスターのローリング アップグレード プロセスに従い、さらに、すべてのノードですべての前提条件を満たしてから、アップグレード プロセスを開始することで、ダウンタイムを最小限に抑えることができます。 メモリ最適化テーブルを使用している場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をアップグレードすると、余分な時間がかかることがあります。 詳細については、「 [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>Prerequisites  
  作業を開始する前に、次の重要な情報を確認してください。  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 自分のバージョンの Windows オペレーティング システムと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] にアップグレードできることを確認します。 たとえば、SQL Server 2005 フェールオーバー クラスタリング インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] には直接アップグレードできません。また、[!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] で実行されているフェールオーバー クラスターをアップグレードすることもできません。  

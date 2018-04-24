@@ -1,33 +1,33 @@
 ---
-title: "作成日時と最終更新日時プロパティの例 (vc++) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 作成日時と最終更新日時プロパティの例 (vc++) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DateCreated property [ADOX], VC++ example
 - DateModified property [ADOX], VC++ example
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5dcbb96b9c3d640bd338e22671437b88787987e1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9bea2f6635c32495cecbfcdadd24708b797f998
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>作成日時と最終更新日時プロパティの例 (vc++)
 この例で、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)と[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを追加して[列](../../../ado/reference/adox-api/column-object-adox.md)既存[テーブル](../../../ado/reference/adox-api/table-object-adox.md)および新たに作成する**テーブル**です。 DateOutput プロシージャは、この例を実行する必要があります。  

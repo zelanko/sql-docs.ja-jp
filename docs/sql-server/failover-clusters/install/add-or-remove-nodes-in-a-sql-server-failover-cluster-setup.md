@@ -1,15 +1,16 @@
 ---
-title: "SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ) | Microsoft Docs"
-ms.custom: 
+title: SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding nodes
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad5dbfd8ad4774d1b8877f3699157908bb449592
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9da0d18f86ed1a764295663cb3bf251ec0723fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 次の手順を使用すると、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでノードを管理できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  次の手順を使用すると、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでノードを管理できます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを更新または削除するには、フェールオーバー クラスターのすべてのノードでサービスとしてログインする権限を持つローカル管理者である必要があります。 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。  
   

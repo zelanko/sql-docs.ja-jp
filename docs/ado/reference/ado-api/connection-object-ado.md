@@ -1,33 +1,33 @@
 ---
-title: "接続オブジェクト (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 接続オブジェクト (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection
 helpviewer_keywords:
 - Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1354a3037c81d8d439908faf74caefd426f78d58
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-object-ado"></a>接続オブジェクト (ADO)
 データ ソースへの接続を開くを表します。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/09/2018
 >  この機能を使用しないでください (場合と同様、ネイティブ メソッドの名前付きコマンドまたはストアド プロシージャを呼び出して、**接続**オブジェクト)、Microsoft® .NET Framework アプリケーションのため機能競合の基になる実装.NET Framework を方法には、com 相互運用します。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてコマンドを実行します。  
- コマンドを実行するには、付与、コマンドを使用して名前、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティです。 設定、 **ActiveConnection**のプロパティ、**コマンド**接続するオブジェクト。 メソッドがある場合のように、コマンド名が使用されているステートメントを発行し、**接続**すべてのパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティをその結果をカスタマイズする**レコード セット**です。 例:  
+ コマンドを実行するには、付与、コマンドを使用して名前、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティです。 設定、 **ActiveConnection**のプロパティ、**コマンド**接続するオブジェクト。 メソッドがある場合のように、コマンド名が使用されているステートメントを発行し、**接続**すべてのパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティをその結果をカスタマイズする**レコード セット**です。 以下に例を示します。  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -86,7 +86,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてストアド プロシージャを実行します。  
- ストアド プロシージャを実行する場合と同様、メソッドで、ストアド プロシージャ名が使用されているステートメントを発行、**接続**任意のパラメーターの前に、オブジェクトです。 ADO とパラメーターの型「最善の推測」になります。 例:  
+ ストアド プロシージャを実行する場合と同様、メソッドで、ストアド プロシージャ名が使用されているステートメントを発行、**接続**任意のパラメーターの前に、オブジェクトです。 ADO とパラメーターの型「最善の推測」になります。 以下に例を示します。  
   
 ```  
 Dim cnn As New ADODB.Connection  

@@ -1,38 +1,38 @@
 ---
 title: ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADCPROP_UPDATERESYNC_ENUM
 helpviewer_keywords:
 - ADCPROP_UPDATERESYNC_ENUM [ADO]
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ef67068f1c2451fa5f8e2d314ae49f08f7be181
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 18a8333ab516c0f3563f66bb5c294aa1a06db795
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 指定するかどうか、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドは暗黙的な続けている[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド操作と、そのその操作のスコープです。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|呼び出す**再同期**ADCPROP_UPDATERESYNC_ENUM に関するその他のすべてのメンバーの合計値にします。|  
 |**adResyncAutoIncrement**|1|既定値です。 自動的にインクリメントまたは Microsoft Jet AutoNumber フィールドまたは Microsoft SQL Server の Id 列など、データ ソースによって生成されている列の新しい id 値を取得しようとしています。|  

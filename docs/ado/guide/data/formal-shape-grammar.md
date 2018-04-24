@@ -1,31 +1,31 @@
 ---
-title: "図形の正式な文法 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 図形の正式な文法 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9eb99feba381701f7e590add3906cd0285b2720
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0273d30952b35a4796e65cf0138d449a9f04185c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="formal-shape-grammar"></a>図形の正式な文法
 これは、正式な文法任意図形のコマンドを作成するためです。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/09/2018
 |\<aggregate-exp>|SUM (\<修飾されたフィールド名 >) &#124;<br /><br /> AVG (\<修飾されたフィールド名 >) &#124;<br /><br /> MIN (\<修飾されたフィールド名 >) &#124;<br /><br /> MAX (\<修飾されたフィールド名 >) &#124;<br /><br /> カウント (\<修飾されたエイリアス > &#124; です。\<修飾名 >) &#124;<br /><br /> STDEV (\<修飾されたフィールド名 >) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
 |\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
+|\<エイリアス >|\<quoted-name>|  
 |\<field-name>|\<quoted-name> [[AS] \<alias>]|  
 |\<quoted-name>|"\<文字列 >"&#124; です。<br /><br /> '\<文字列 >' &#124;<br /><br /> [\<文字列 >] &#124; です。<br /><br /> \<name>|  
 |\<qualified-name>|エイリアス [.alias...]|  

@@ -1,29 +1,29 @@
 ---
-title: "ADO プログラマ&#39;ガイド |Microsoft ドキュメント"
-ms.custom: 
+title: ADO プログラマ&#39;ガイド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6414a5691c89a2a399f207a3cf2059c17a00991c
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 3fa9da99204196279491c89973846804836188b3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO プログラマ&#39;ADO オブジェクトを使用するためのガイド
 このドキュメントでは、さまざまなデータ ソースからデータを操作する ADO オブジェクトを使用する方法の概要を示します。 最初に、導入は、新機能とインストール、使用、および ADO のコンポーネントを再配布するための要件をまとめます。 次のセクションでは、ADO オブジェクトのさまざまな種類の使用について説明します。 最後に、付録各種の Microsoft 提供のデータとサービス プロバイダー、エラー メッセージ、およびヒントについて議論のサンプルと用語集だけでなく、複数のプログラミング言語で ADO を使用する方法です。

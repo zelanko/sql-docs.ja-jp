@@ -1,32 +1,32 @@
 ---
-title: "プロパティの例 (フィールド) (VB) を入力 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: プロパティの例 (フィールド) (VB) を入力 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9741763935e0c9bafc68402c2898ee1278fec5f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fb9d3fc5f701ef3854eb49ecbc7c1f864e3528d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-property-example-field-vb"></a>型のプロパティの例 (フィールド) (VB)
 この例で、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、[型](../../../ado/reference/ado-api/type-property-ado.md)すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  

@@ -1,29 +1,22 @@
 ---
-title: アプライアンス ネットワークの構成 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: アプライアンス ネットワークの構成 - Analytics Platform System |Microsoft ドキュメント
+description: Analytics Platform System (APS) アプライアンスを構築およびすべてのサーバーと IHV の工場から、該当するデバイス全体での IP アドレスの修正プログラムのセットで構成します。 アプライアンスの配信、ごとには、特定の顧客のデータ センターの要件に一致する (イーサネット) の外部 IP アドレスを再構成する必要があります。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>アプライアンス ネットワークの構成
-SQL Server PDW アプライアンスが構築され、すべてのサーバーと IHV の工場から、該当するデバイス全体での IP アドレスの修正プログラムのセットで構成されています。 アプライアンスの配信、ごとには、特定の顧客のデータ センターの要件に一致する (イーサネット) の外部 IP アドレスを再構成する必要があります。  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System のアプライアンス ネットワークの構成
+Analytics Platform System (APS) アプライアンスを構築およびすべてのサーバーと IHV の工場から、該当するデバイス全体での IP アドレスの修正プログラムのセットで構成します。 アプライアンスの配信、ごとには、特定の顧客のデータ センターの要件に一致する (イーサネット) の外部 IP アドレスを再構成する必要があります。  
   
 > [!NOTE]  
 > PDW V1 必要 8 IP 外部 (*顧客が直面している*) を各コントロールの外部接続を提供するアドレスのラックのノードです。 PDW 2012 (V2) は、IP アドレスを使用して外部アプライアンスのすべてのコンポーネントを公開することでネットワーク通信を強化します。 この方法は、コストが削減され、柔軟性、およびデータの移動、データの読み込みと Hadoop の統合を強化するより堅牢なデザインを提供します。 必要な IP アドレスの数は、アプライアンス内のノードの数と HDInsight などの機能の存在に依存します。 対応するための IP アドレスの大きなブロックをお客様は PDW の別のサブネットに設定する必要があります。 このサブネット内で、最大 5 つの PDW ラックのコンポーネントに対応するための十分なの IP アドレス空間 (最大 250 個のアドレス) があります。  

@@ -1,30 +1,33 @@
 ---
-title: "SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム | Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 45707ee7bbed4fe4060bcf3134fe98783cb59690
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 58e671eb7e69bbc0487065342b141a5c5bfb1e9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP) により、どのようにしてソフトウェアを改善する方法を特定しているかについて説明します。  有効または無効にするツールはいつでも構成することができます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP) により、どのようにしてソフトウェアを改善する方法を特定しているかについて説明します。  有効または無効にするツールはいつでも構成することができます。  
   
 > [!NOTE]  
 >  Microsoft SQL Server 2016 リリースと、その他の製品およびサービスのユーザー データの収集および使用方法については、この [Microsoft のプライバシーに関する声明](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)を参照してください。  
@@ -129,7 +132,7 @@ ms.lasthandoff: 12/05/2017
   
      CEIP を有効にするには、 **[参加する (推奨)]**をクリックします。  
   
-4.  クリックして **OK**です。  
+4.  **[OK]** をクリックします。  
   
  **レジストリ ベースのポリシーまたはグループ ポリシーを使用する**  
   

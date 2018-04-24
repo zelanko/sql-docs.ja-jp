@@ -1,27 +1,21 @@
 ---
-title: 分析プラットフォームの処理と記憶域の容量
-author: barbkess
-ms.author: barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 処理と記憶域の容量の Analytics Platform System |Microsoft ドキュメント
 description: お客様のビジネス要件では、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: 7
-ms.openlocfilehash: 68852344c65863ee051467e524eb0c3f09211483
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f552372ac108d219ad410b88ec9911ecaea63ab3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-processing-and-storage-capacity"></a>Analytics Platform System の処理と記憶域の容量
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System での処理と記憶域の容量
 お客様のビジネス要件では、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。 これらの処理およびストレージの計算を使用して、容量を購入し、計画に関する決定事項を進めます。  
   
   

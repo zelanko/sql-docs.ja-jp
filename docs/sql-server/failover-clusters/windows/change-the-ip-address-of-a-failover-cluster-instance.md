@@ -1,15 +1,16 @@
 ---
-title: "フェールオーバー クラスター インスタンスの IP アドレスの変更 | Microsoft Docs"
-ms.custom: 
+title: フェールオーバー クラスター インスタンスの IP アドレスの変更 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying IP addresses
@@ -17,28 +18,29 @@ helpviewer_keywords:
 - IP addresses [SQL Server]
 - clusters [SQL Server], IP addresses
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e60e644c6e427c0dd3abb5af6553743e2bfbdf56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 692598e4fa27e18c40767d14e46aa48d4d03d265
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスの IP アドレスの変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、Always On フェールオーバー クラスター インスタンス (FCI) の IP アドレス リソースを変更する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、Always On フェールオーバー クラスター インスタンス (FCI) の IP アドレス リソースを変更する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
  開始する前に、「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのトピック: [フェールオーバー クラスタ リングをインストールする前に](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  FCI を保持または更新するには、FCI のすべてのノードにおいて、サービスとしてログオンする権限を持つローカル管理者である必要があります。  
   
 ##  <a name="WSFC"></a> フェールオーバー クラスター マネージャー スナップインの使用  

@@ -1,17 +1,17 @@
 ---
-title: "プロバイダー エラー |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: プロバイダー エラー |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors collection [ADO]
 - provider errors [ADO]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 14f79d299850bf6163fb328b0dd54be9d84f9a7b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダー エラーが発生したときに-2147467259 の実行時エラーが返されます。 このエラーが表示されたら、確認、**エラー**のアクティブなコレクション**接続**問題の概要を説明する 1 つ以上のエラーを含むオブジェクト。  
@@ -76,7 +76,7 @@ End Function
 |**Description**|発生したエラーの説明文です。|  
 |**HelpContext、ヘルプ ファイル**|発生したエラーの説明が含まれているヘルプ トピックとヘルプ ファイルを参照します。|  
 |**NativeError**|プロバイダー固有のエラー番号。|  
-|**Number**|数を表す長整数 (に一覧表示、 **ErrorValueEnum**) のエラーが発生します。|  
+|**数**|数を表す長整数 (に一覧表示、 **ErrorValueEnum**) のエラーが発生します。|  
 |**ソース**|オブジェクトまたはエラーが発生したアプリケーションの名前を示します。|  
 |**SQLState**|プロバイダーを返す SQL ステートメントの処理中に 5 文字のエラー コード。|  
   

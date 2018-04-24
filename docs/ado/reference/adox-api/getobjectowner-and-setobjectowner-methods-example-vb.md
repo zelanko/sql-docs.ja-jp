@@ -1,33 +1,33 @@
 ---
-title: "GetObjectOwner と SetObjectOwner メソッドの例 (VB) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: GetObjectOwner と SetObjectOwner メソッドの例 (VB) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3d1c1490138ce3b13352cd7ce72ac24b762d9c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6a10869852225f7d50f44ad4ef174cf285d1cf0f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner と SetObjectOwner メソッドの例 (VB)
 この例で、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドです。 このコードを想定して、グループのアカウンティング (を参照してください、[グループとユーザーの追加、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)をシステムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、アカウンティングに設定されます。  

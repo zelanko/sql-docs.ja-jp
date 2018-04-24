@@ -1,29 +1,22 @@
 ---
-title: 分析プラットフォーム システムの修正プログラム (Analytics Platform System) の適用します。
-author: barbkess
-ms.author: barbkess
+title: Analytics Platform System の修正プログラム適用 |Microsoft ドキュメント
+description: この記事では、分析プラットフォーム システム ソフトウェアの修正プログラムを適用する方法について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
-caps.latest.revision: 25
-ms.openlocfilehash: 1a054ead9ef39169257eb1813ba49eae06082b96
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b3a7a31ce791fbe44c38d1d30ce408235720e241
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="apply-analytics-platform-system-hotfixes"></a>分析プラットフォーム システムの修正プログラムを適用します。
-このトピックでは、分析プラットフォーム システム ソフトウェアの修正プログラムを適用する方法について説明します。  
+# <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムを適用します。
+この記事では、分析プラットフォーム システム ソフトウェアの修正プログラムを適用する方法について説明します。  
   
 ## <a name="before-you-begin"></a>はじめに  
   

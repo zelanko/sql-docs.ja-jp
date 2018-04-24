@@ -1,32 +1,22 @@
 ---
-title: T-SQL システム ビュー - 分析プラットフォーム システム Parallel Data Warehouse |Microsoft ドキュメント
-author: barbkess
-ms.author: barbkess
+title: システム ビュー - 分析プラットフォーム システム Parallel Data Warehouse |Microsoft ドキュメント
+description: システム ビューの分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: TRANSACT-SQL (T-SQL) システム ビューの分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
-documentationcenter: NA
-editor: ''
-ms.assetid: 21ec594b-d270-4202-a8cd-bb150e5ae12c
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: f6964967bc0ba44b6dd72463c6cbd90c36ad3115
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="system-views"></a>システム ビュー
-TRANSACT-SQL (T-SQL) システム ビューの分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System 並列データ ウェアハウスのシステム ビュー
+システム ビューの分析 Platform System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>並列データ ウェアハウスのカタログ ビュー
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)
@@ -222,7 +212,7 @@ Parallel Data Warehouse では、SQL Server の動的管理ビュー (Dmv) の�
 * [sys.dm_exec_external_operations](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
-## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA views
+## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA ビュー
 * [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
 * [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
 * [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)

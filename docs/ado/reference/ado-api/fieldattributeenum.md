@@ -1,38 +1,38 @@
 ---
-title: "FieldAttributeEnum |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: FieldAttributeEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FieldAttributeEnum
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eeeeea72ae2a0e3fc0ca777b16e70d1120f9d247
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 1 つまたは複数の属性を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|プロバイダーはフィールドの値がキャッシュされると、キャッシュからその後の読み込みを行うことを示します。|  
 |**adFldFixed**|0x10|フィールドが固定長のデータが含まれていることを示します。|  
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/09/2018
 |**adFldRowID**|0x100|フィールドに書き込むことができません (など、レコード番号、一意の識別子など)、行を識別する以外の意味のある値を持たないを永続的な行識別子が含まれていることを示します。|  
 |**adFldRowVersion**|0x200|フィールドに何らか更新プログラムを追跡するために使用される日付または時刻のタイムスタンプにはが含まれていることを示します。|  
 |**adFldUnknownUpdatable**|0x8|プロバイダーが、フィールドを書き込むことができるかどうかを判断できないことを示します。|  
-|**adFldUnspecified**|-1 0xFFFFFFFF|プロバイダーに、フィールドの属性が指定されていないことを示します。|  
+|**adFldUnspecified**|-1 0 xffffffff|プロバイダーに、フィールドの属性が指定されていないことを示します。|  
 |**adFldUpdatable**|0x4|フィールドに記述できることを示します。|  
   
 ## <a name="adowfc-equivalent"></a>該当するショートカットは ADO/WFC  

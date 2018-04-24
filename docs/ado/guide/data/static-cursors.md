@@ -1,31 +1,31 @@
 ---
-title: "静的カーソル |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 静的カーソル |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41af8e500710f3944f43f2408f00f24184204718
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 02867f7cfa2595f9d7427023092d1cdd9cae2754
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="static-cursors"></a>静的カーソル
 常に、静的カーソルには、カーソルが最初に開いた時点と、結果セットが表示されます。 実装によって静的カーソルは読み取り専用または読み取り/書き込みと前方と後方スクロールを提供します。 静的カーソルは、メンバーシップ、順序、または、カーソルが開かれた後に結果セットの値に加えられた変更を通常は検出されません。 静的カーソルは、これらは、これを行うには必要ありませんが、独自の更新、削除、および挿入を検出することがあります。  

@@ -1,32 +1,32 @@
 ---
-title: "値のプロパティの例 (vc++) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 値のプロパティの例 (vc++) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f8e13c408d08daafcb397314c9635f1578fe9ab
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8802aac5f12a5bc1e5010f6cf13877b759371cac
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="value-property-example-vc"></a>値プロパティの例 (vc++)
 この例で、[値](../../../ado/reference/ado-api/value-property-ado.md)を持つプロパティ[フィールド](../../../ado/reference/ado-api/field-object.md)と[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトのフィールドとプロパティの値を表示することによって、***従業員***テーブル。  

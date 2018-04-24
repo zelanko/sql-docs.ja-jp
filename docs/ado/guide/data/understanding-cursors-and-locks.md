@@ -1,31 +1,31 @@
 ---
-title: "カーソルとロック |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: カーソルとロック |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a28f672ffd4a5cd1cb7cbf98353a9fb3b987c5e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d409dd8f667a39ecd9faa5ce77b4fde2c43b37d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="understanding-cursors-and-locks"></a>カーソルとロック
 アプリケーションのデータ アクセスの要件については、最適なと最も効率的なカーソルの種類を選択する、カーソルの動作を理解しておく必要があります。 最適の小さいカーソルの構成を落としてデータ アクセス操作となります。  

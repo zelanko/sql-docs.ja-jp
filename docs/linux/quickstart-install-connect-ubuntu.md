@@ -1,6 +1,6 @@
-﻿---
-title: "Ubuntu の SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタート チュートリアルでは、Ubuntu に SQL Server 2017 をインストールし、sqlcmd によりデータベースを作成してクエリを実行する方法を示します。"
+---
+title: Ubuntu の SQL Server 2017 の概要 |Microsoft ドキュメント
+description: このクイック スタート チュートリアルでは、Ubuntu に SQL Server 2017 をインストールし、sqlcmd によりデータベースを作成してクエリを実行する方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fd3b175cd8440d17da0f341cd13f65bb044f45a0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: SQL Server をインストールし、Ubuntu でデータベースを作成
 
@@ -28,13 +28,13 @@ ms.lasthandoff: 02/24/2018
 このクイック スタート チュートリアルでは、初めに Ubuntu 16.04 に SQL Server 2017 をインストールします。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
 
 > [!TIP]
-> このチュートリアルでは、ユーザーの入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)インストールに興味がある場合、次の手順を参照してください。[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md)
+> このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
 Ubuntu 16.04 コンピューターに **少なくとも 2 GB** メモリを搭載する必要があります。
 
-Ubuntu を自分のコンピューターにインストールするには [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server) に移動してください。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) を参照してください。
+Ubuntu を自分のコンピューターにインストールするに移動[ http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)です。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) を参照してください。
 
 > [!NOTE]
 > 現時点で、 Windows 10 の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) は、インストール対象としてサポートされていません。
@@ -96,29 +96,45 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
 
 データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順では、次の SQL Server コマンド ライン ツールをインストールします。[sqlcmd](../tools/sqlcmd-utility.md) と[bcp](../tools/bcp-utility.md)
 
-1. パブリック リポジトリ GPG キーをインポートします。
+インストールする次の手順を使用して、 **mssql ツール**Ubuntu でします。 
+
+1. パブリック リポジトリ鍵キーをインポートします。
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Microsoft Ubuntu リポジトリを登録します。
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. ソース リストを更新し、unixODBC Developer パッケージでインストール コマンドを実行します。
+1. ソース リストを更新し、unixODBC 開発者のパッケージでインストール コマンドを実行します。
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install -y mssql-tools unixodbc-dev
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-1. 利便性のため、`/opt/mssql-tools/bin/` を、**PATH** 環境変数に追加します。 これにより、完全なパスを指定せずに、ツールを実行することができます。 次のコマンドを実行し、**PATH** をログイン セッションと対話型/非ログイン セッションの両方に変更します。
+   > [!Note] 
+   > 最新バージョンに更新する**mssql ツール**次のコマンドを実行します。
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **省略可能な**: 追加`/opt/mssql-tools/bin/`を**パス**bash シェルの環境変数。
+
+   させる**sqlcmd と bcp**ログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bash_profile**次のコマンドでファイル。
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   させる**sqlcmd と bcp**対話型/以外のログイン セッションでは、bash シェルからアクセス可能な変更、**パス**で、 **~/.bashrc**次のコマンドでファイル。
+
+   ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```

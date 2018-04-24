@@ -1,30 +1,30 @@
 ---
-title: "カーソルとは何ですか。 | Microsoft Docs"
-ms.prod: sql-non-specified
+title: カーソルとは何ですか。 | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e467c01afe9ebdb53d5d66e4c939205a97ca4be7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1681bdc14576915d3c9a6833e99d6f0f1c3b95ab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-a-cursor"></a>カーソルとは何ですか。
 リレーショナル データベースで操作を実行する場合、行の完全なセットが操作の対象になります。 SELECT ステートメントでは、WHERE 句で指定した条件を満たすすべての行のセットが返されます。 このステートメントが返す行の完全なセットを結果セットと呼びます。 アプリケーション、特に対話型と、オンラインであることはできません常に使用実質的に、結果セット全体の単位として。 そのため、このようなアプリケーションでは、一度に 1 行または少数の行のブロックを使用するためのメカニズムが必要になります。 カーソルはそのメカニズムを提供する結果セットの拡張機能です。  

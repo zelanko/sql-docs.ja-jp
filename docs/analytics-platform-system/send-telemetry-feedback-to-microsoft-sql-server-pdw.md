@@ -1,35 +1,28 @@
 ---
-title: (SQL Server PDW) を Microsoft にフィードバックを製品利用統計情報
-author: barbkess
-ms.author: barbkess
+title: 製品利用統計情報のフィードバック - Analytics Platform System |Microsoft ドキュメント
+description: Analytics Platform System の遠隔測定のフィードバックをマイクロソフトに送信します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>製品利用統計情報のフィードバックをマイクロソフトに送信します。
-Analytics Platform System が、管理コンソールのデータを Microsoft に送信する省略可能な製品利用統計情報の機能です。 この製品の改善にご協力を有効にすることをお勧めします。  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform System の遠隔測定のフィードバックをマイクロソフトに送信します。
+Analytics Platform System が、管理コンソールのデータを Microsoft に送信する省略可能な製品利用統計情報の機能です。 
   
 > [!NOTE]  
 > このリリースで Microsoft が積極的に監視していない遠隔測定データ。 分析用にのみ、データは収集されています。  
   
 ## <a name="privacy"></a>プライバシー  
-最大のプライバシー保護を提供するには、遠隔測定を有効にせず APS が同梱されています。 この機能を有効にする前に確認最初、 [Microsoft Analytics Platform System のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=400902)です。 次に、オプトインを実行する、PowerShell スクリプトを次に説明します。  
+最大のプライバシー保護を提供するには、遠隔測定を有効にせず APS が同梱されています。 この機能を有効にする前に確認最初、 [Microsoft Analytics Platform System のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=400902)です。 オプトインには、次に示す PowerShell スクリプトを実行します。  
   
 ## <a name="enable"></a>遠隔測定を有効にします。  
 **DNS の転送:** DNS フォワーダーを経由してインターネットに接続する Analytics Platform System 遠隔測定データを Microsoft に送信する必要があります。 この機能を有効にするには、すべてのホストと仮想マシンのワークロードで転送する DNS を有効にする必要があります。 呼び出す、`Enable-RemoteMonitoring`コマンドと、`SetupDnsForwarder`正しく DNS の転送を構成し、製品利用統計情報を有効にするにはオプションです。 呼び出す、`Enable-RemoteMonitoring`コマンドは使用せず、 `SetupDnsForwarder` DNS の転送が既に構成されているし、ハートビート監視を有効にするオプションを選択します。  
@@ -116,9 +109,10 @@ Analytics Platform System が、管理コンソールのデータを Microsoft �
   
 実行中で害はありません、`Disable-RemoteMonitoring`コマンドを複数回です。  
   
-## <a name="see-also"></a>参照  
-[管理者コンソールを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[システム ビューを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-views.md)  
-[System Center Operations Manager を使用してアプライアンスを監視する&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[非アプライアンスの DNS 名を解決するのには、DNS フォワーダーを使用して&#40;分析プラットフォーム システム&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>次の手順
+詳細については、以下をご覧ください。
+- [管理者コンソールを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [システム ビューを使用してアプライアンスをモニター&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [System Center Operations Manager を使用してアプライアンスを監視する&#40;分析プラットフォーム システム&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [非アプライアンスの DNS 名を解決するのには、DNS フォワーダーを使用して&#40;分析プラットフォーム システム&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

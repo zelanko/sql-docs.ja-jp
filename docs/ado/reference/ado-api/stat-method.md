@@ -1,33 +1,33 @@
 ---
-title: "Stat メソッド |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Stat メソッド |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::Stat
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ad80d2f42e11834b0872f581913ad64939d25af
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: af54b0972e51336d3a4a21487e420b96819d379f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stat-method"></a>Stat メソッド
 に関する情報を取得、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -49,7 +49,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  このメソッドで返されない一部のメンバーこれにより、メモリ割り当て操作が節約 STATSTG の構造体を指定します。 値は、STATFLAG 列挙体から取得されます。 STATFLAG 列挙体は 2 つの値  
   
-|定数|[値]|  
+|定数|値|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  

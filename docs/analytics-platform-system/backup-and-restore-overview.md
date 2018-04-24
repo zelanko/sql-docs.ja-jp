@@ -1,28 +1,22 @@
 ---
-title: バックアップと復元
-author: barbkess
-ms.author: barbkess
+title: バックアップと復元の Parallel Data Warehouse |Microsoft ドキュメント
+description: データのバックアップし、復元は並列データ ウェアハウス (PDW) について説明します。 バックアップと復元操作は、災害復旧のために使用されます。 バックアップと復元は、1 つのアプライアンスから別のアプライアンスにデータベースをコピーするも使用できます。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: データのバックアップし、復元はの SQL Server 並列データ ウェアハウス (PDW) について説明します。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>バックアップと復元
-データのバックアップし、復元はの SQL Server 並列データ ウェアハウス (PDW) について説明します。 バックアップと復元操作は、災害復旧のために使用されます。 バックアップと復元は、1 つのアプライアンスから別のアプライアンスにデータベースをコピーするも使用できます。  
+データのバックアップし、復元は並列データ ウェアハウス (PDW) について説明します。 バックアップと復元操作は、災害復旧のために使用されます。 バックアップと復元は、1 つのアプライアンスから別のアプライアンスにデータベースをコピーするも使用できます。  
     
 ## <a name="BackupRestoreBasics"></a>バックアップと復元の基本事項  
 PDW*データベースのバックアップ*アプライアンスに、元のデータベースを復元するために使用できるようにの形式で格納されている、アプライアンスのデータベースのコピーです。  
@@ -134,7 +128,7 @@ PDW では、バックアップし、復元のアプライアンス データベ
 |バックアップと復元タスク|Description|  
 |---------------------------|---------------|  
 |バックアップ サーバーとして、サーバーを準備します。|[取得して、サーバーのバックアップを構成します。 ](acquire-and-configure-backup-server.md)|  
-|データベースをバックアップします。|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
+|データベースをバックアップします。|[データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |データベースを復元します。|[データベースを復元します。](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|

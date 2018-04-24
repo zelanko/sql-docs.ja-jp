@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="failover-policy-for-failover-cluster-instances"></a>フェールオーバー クラスター インスタンスのフェールオーバー ポリシー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) において、特定の時点で Windows Server フェールオーバー クラスター (WSFC) クラスター リソース グループを所有できるノードは 1 つだけです。 FCI のこのノードを通じて、クライアント要求が処理されます。 万一障害が発生した場合や再起動が失敗した場合、グループの所有権が、FCI 内の別の WSFC ノードに移ります。 この処理はフェールオーバーと呼ばれます。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では、障害検出の信頼性が向上し、柔軟なフェールオーバー ポリシーが提供されます。  
+# <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) において、特定の時点で Windows Server フェールオーバー クラスター (WSFC) クラスター リソース グループを所有できるノードは 1 つだけです。 FCI のこのノードを通じて、クライアント要求が処理されます。 万一障害が発生した場合や再起動が失敗した場合、グループの所有権が、FCI 内の別の WSFC ノードに移ります。 この処理はフェールオーバーと呼ばれます。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では、障害検出の信頼性が向上し、柔軟なフェールオーバー ポリシーが提供されます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI は、基になる WSFC サービスにフェールオーバー検出を依存します。 したがって、FCI のフェールオーバー動作は、ネイティブ WSFC 機能と、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップによって追加される機能の 2 つのメカニズムによって決定されます。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  システム  
   
-2.  リソース (resource)  
+2.  resource  
   
 3.  query process  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 12/05/2017
   
  「[sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)」を確認してください。このシステム ストアド プロシージャは、エラー条件レベルで重要な役割を果たします。  
   
-|レベル|条件|説明|  
+|レベル|条件|Description|  
 |-----------|---------------|-----------------|  
 |0|自動フェールオーバーまたは再起動なし|どのようなエラー状態でも、フェールオーバーまたは再起動が自動的に行われないことを示します。 このレベルは、システム メンテナンスの目的でのみ使用されます。|  
-|1|サーバーの停止によるフェールオーバーまたは再起動|次の状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。|  
+|@shouldalert|サーバーの停止によるフェールオーバーまたは再起動|次の状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。|  
 |2|サーバーの応答停止によるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。|  
 |3*|重大なサーバー エラーによるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から "system エラー" が返される。|  
 |4|中程度のサーバー エラーによるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から "system エラー" が返される。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から "resource エラー" が返される。|  

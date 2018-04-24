@@ -1,26 +1,19 @@
 ---
-title: リモート テーブルのコピー (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: リモート テーブルのコピー - Parallel Data Warehouse |Microsoft ドキュメント
+description: 分析プラットフォーム システム Parallel Data Warehouse でリモート テーブルのコピーを使用します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: 23
-ms.openlocfilehash: fe6e808b8db8534f38db250d838d6a2cf132a30d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remote-table-copy"></a>リモート テーブルのコピー
 リモート テーブルのコピー機能を使用して、SQL Server PDW のデータベースからテーブルをリモートの (非アプライアンス) SMP SQL Server データベースにコピーする方法について説明します。 SQL Server PDW のハブとスポークのシナリオを有効にするリモート テーブルのコピーを使用します。  

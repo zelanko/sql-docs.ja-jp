@@ -1,35 +1,35 @@
 ---
-title: "多次元データを扱う |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 多次元データを扱う |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
 A*セルセット*多次元データに対するクエリの結果を示します。 軸、通常は 4 つ以下の軸と通常 2 つまたは 3 つのコレクションで構成されます。 *軸*探すか、キューブ内の特定の値をフィルター処理に使用される 1 つまたは複数のディメンションのメンバーのコレクションです。  
   
- A*位置*軸に沿ったポイントです。 1 つのディメンションで構成される軸、それらの位置は、ディメンションのメンバーのサブセットです。 軸は、1 つ以上のディメンションで構成される場合は、各位置が、複合エンティティ *n*  where 部分 *n* その軸に沿って配置ディメンションの数です。 位置の各部分は、1 つの構成要素であるディメンションのメンバーです。  
+ A*位置*軸に沿ったポイントです。 1 つのディメンションで構成される軸、それらの位置は、ディメンションのメンバーのサブセットです。 軸は、1 つ以上のディメンションで構成される場合は、各位置が、複合エンティティ*n* where 部分*n*その軸に沿って配置ディメンションの数です。 位置の各部分は、1 つの構成要素であるディメンションのメンバーです。  
   
  たとえば場合は、売上データを含むキューブからディメンションの Geography と製品ディメンションは、セルセットの x 軸に沿った指向は、この軸に沿った位置可能性がありますメンバーを含む"USA"と「コンピューター」 この例では、x 軸に沿った位置を決定する必要があります各ディメンションのメンバーは、軸に沿った並びます。  
   

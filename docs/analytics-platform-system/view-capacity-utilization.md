@@ -1,28 +1,21 @@
 ---
-title: 容量使用率の表示 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Analytics Platform System での容量使用率の表示 |Microsoft ドキュメント
+description: Analytics Platform System では、容量の使用率を表示します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>容量使用率の表示
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Analytics Platform System の容量使用率の表示
 このトピックでは、SQL Server PDW アプライアンスで容量使用率を表示する方法について説明します。  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>管理コンソールを使用して容量使用率を表示するには  

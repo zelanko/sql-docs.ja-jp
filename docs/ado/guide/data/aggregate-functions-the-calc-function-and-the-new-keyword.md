@@ -1,33 +1,33 @@
 ---
-title: "集計関数、CALC 関数と NEW キーワード |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 集計関数、CALC 関数と NEW キーワード |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
 - CALC function [ADO]
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f490ca1a9e95f92d39367c3914b5a0ea5cf0c9a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数と NEW キーワード
 データ シェイプには、次の関数がサポートされています。 処理される列を含む章に割り当てられた名前が、*章エイリアス*です。  
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/09/2018
 |AVG (*章エイリアス*.*列名*)|指定された列のすべての値の平均を計算します。|  
 |MAX (*章エイリアス*.*列名*)|指定された列の最大値を計算します。|  
 |MIN (*章エイリアス*.*列名*)|指定された列内の最小値を計算します。|  
-|COUNT(*chapter-alias*[.*column-name*])|指定したエイリアスの行数をカウントします。 列が指定されている場合は、カウントにその列の Null 以外のみの行が含まれます。|  
-|STDEV(*chapter-alias*.*column-name*)|指定された列の標準偏差を計算します。|  
-|ANY(*chapter-alias*.*column-name*)|指定された列の値です。 予測可能な値は、列の値はチャプター内のすべての行の同じ場合にのみいずれかが存在します。<br /><br /> **注**列にチャプター内の行のすべてに対して同じ値が含まれていない場合、図形コマンド任意を返します、関数の値を指定する値のいずれか。|  
+|カウント (*章エイリアス*[.*列名*])|指定したエイリアスの行数をカウントします。 列が指定されている場合は、カウントにその列の Null 以外のみの行が含まれます。|  
+|STDEV (*章エイリアス*.*列名*)|指定された列の標準偏差を計算します。|  
+|任意 (*章エイリアス*.*列名*)|指定された列の値です。 予測可能な値は、列の値はチャプター内のすべての行の同じ場合にのみいずれかが存在します。<br /><br /> **注**列にチャプター内の行のすべてに対して同じ値が含まれていない場合、図形コマンド任意を返します、関数の値を指定する値のいずれか。|  
   
 |計算式|Description|  
 |---------------------------|-----------------|  
@@ -66,9 +66,9 @@ ms.lasthandoff: 02/09/2018
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_BYTES|adBinary、AdVarBinary、adLongVarBinary|  
 |DBTYPE_STR|ファミリ、それぞれ、adLongVarChar|  
-|DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
+|DBTYPE_WSTR|adWChar、adVarWChar、adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  

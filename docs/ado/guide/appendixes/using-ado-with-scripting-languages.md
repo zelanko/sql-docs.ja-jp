@@ -1,31 +1,31 @@
 ---
-title: "スクリプト言語と ADO の併用 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: スクリプト言語と ADO の併用 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語と ADO の併用
 ADO では、スクリプト環境では、サーバー側のスクリプトを使用してデータを公開できます。 この場合は、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されるコンポーネントです。 この HTML コンテンツは、クライアントの Web ブラウザーに HTTP 経由で渡すことができます。 スクリプトを使用して Web ページは、サーバー側のスクリプトは、更新、移動、および特定のデータを表示することができますに戻す操作を送信できます。  

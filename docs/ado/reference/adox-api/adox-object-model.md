@@ -1,37 +1,37 @@
 ---
-title: "ADOX オブジェクト モデル |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADOX オブジェクト モデル |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46dc06e89839347b86b7ef68045ee6463a562b2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fdefd4a38405f8bc3b4237de463415d26b913d6d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-object-model"></a>ADOX オブジェクト モデル
-次の図は、オブジェクトの表現方法と ADOX に関連する方法を示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンス トピック、または[ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)や[ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)を参照してください。
-
+次の図は、オブジェクトの表現方法と ADOX に関連する方法を示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンス トピックを参照してください。 または[ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)と[ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)です。  
+  
  ![ADOX オブジェクト モデル](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
-
-各[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、そして[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトも標準 ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを備えています。
+  
+ 各、[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、および[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトにも標準 ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
   
 ## <a name="see-also"></a>参照  
  [ADOX API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   

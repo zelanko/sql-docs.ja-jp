@@ -1,31 +1,31 @@
 ---
-title: "Commands という |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Commands という |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e00f320409602e33ba250f4943b782ec7ea9a96
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4e9f82cc25d589d222b312e362252e4447f3bea0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="named-commands"></a>名前付きコマンド
 [作成して、簡単なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)コマンドを実行する方法を示しています。 別の方法がある: 名前付きのコマンドを作成し、この名前付き上で直接コマンドを呼び出すことができます、**接続**オブジェクト (に割り当てられている、 **ActiveConnection**のプロパティ、**コマンド**オブジェクト)。 コマンドの名前を付けることを意味に名前が割り当てられて、**名前**のプロパティ、**コマンド**オブジェクト。 例を次に示します。  

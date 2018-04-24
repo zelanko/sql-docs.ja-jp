@@ -1,32 +1,32 @@
 ---
-title: "ADO イベント モデルの例 (vc++) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO イベント モデルの例 (vc++) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e141eadd6f641608ccef1fb6b1b48b4138bf2728
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (vc++)
 Visual C のセクションの[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)ADO イベント モデルのインスタンスを作成する方法の一般的な説明。 によって作成された環境でのイベント モデルのインスタンス化の具体的な例を次に示します、 **#import**ディレクティブです。  

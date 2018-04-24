@@ -1,33 +1,33 @@
 ---
-title: "Visual Basic アプリケーションの関数の |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Visual Basic アプリケーションの関数の |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdf33a21339147c9e6b24ff35f08fb2b483bb8f1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0a41a263f8b6d6ea69c013656c5863ea9b366c57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic アプリケーション関数
 データ シェイプの計算式では、アプリケーションの関数の次の Visual Basic を使用できます。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/09/2018
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |[今]|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|Right|  
-|RightB|Right$|RightB $|Rnd|RTrim|RTrim$|  
+|RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |第 2 週|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|文字列|  
 |String$|SYD|Tan|[時刻]|Time$|Timer|  

@@ -1,28 +1,22 @@
 ---
-title: 取得し、読み込みサーバー (SQL Server PDW) を構成します。
-author: barbkess
-ms.author: barbkess
+title: 取得および読み込みサーバー - 並列データ ウェアハウスの構成 |Microsoft ドキュメント
+description: この記事では、取得、および読み込みサーバー データが読み込まれた並列データ ウェアハウス (PDW) を送信するためのアプライアンス非 Windows システムとして構成する方法について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 取得し、SQL Server 並列データ ウェアハウスにデータが読み込まれたを送信するためのアプライアンス非 Windows システムと読み込みサーバーを構成します。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>取得し、読み込みサーバーを構成します。
-このトピックでは、取得、および読み込みサーバー データの読み込みに SQL Server 並列データ ウェアハウス (PDW) を送信するためのアプライアンス非 Windows システムとして構成する方法について説明します。  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得して、並列データ ウェアハウスの読み込みサーバーを構成します。
+この記事では、取得、および読み込みサーバー データが読み込まれた並列データ ウェアハウス (PDW) を送信するためのアプライアンス非 Windows システムとして構成する方法について説明します。  
   
 ## <a name="Basics"></a>基本  
 読み込みサーバー:  

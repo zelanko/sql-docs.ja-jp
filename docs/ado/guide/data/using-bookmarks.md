@@ -1,31 +1,31 @@
 ---
-title: "ブックマークの使用 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ブックマークの使用 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a8da466d7fb1cc988df297dee72d80ed19fed44
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c2d4036cbe8205a4dd25c5a1f97ec490b20afa20
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-bookmarks"></a>ブックマークの使用
 移動した後、特定のレコードに直接取得すると便利です、 **Recordset**すべてのレコードをスクロールし、値を比較する必要はありません。 たとえばを使用してレコードを検索しようとする場合、**検索**メソッドが、検索、レコードが返されない、いずれかの端に自動的に、**レコード セット**です。 位置をマークを使用する前にブックマークを使用できる、プロバイダーは、それらをサポートする場合、**検索**メソッドの場所に戻れるようにします。 ブックマークは、**バリアント**内のレコードを一意に識別する値を入力、 **Recordset**オブジェクト。  

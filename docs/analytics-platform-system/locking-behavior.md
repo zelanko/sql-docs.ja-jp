@@ -1,29 +1,22 @@
 ---
-title: ロック動作 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: ロック動作の Parallel Data Warehouse |Microsoft ドキュメント
+description: Parallel Data Warehouse との使用方法のロックのトランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するについて説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: 27
-ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="locking-behavior"></a>ロック動作
-SQL Server PDW は、トランザクションの整合性を確保して、複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するために、ロックを使用します。  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのロック動作
+Parallel Data Warehouse との使用方法のロックのトランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するについて説明します。  
   
 ## <a name="Basics"></a>ロックの基礎  
 **モード**  
@@ -93,7 +86,7 @@ SQL Server では、次の種類のロックをサポートします。 すべ�
   
 -   範囲 I_u。 RangeI_N と U ロックの重なりによって作成されるキー範囲変換ロックです。  
   
--   RangeI_X. RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロックです。  
+-   範囲 I_x。 RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロックです。  
   
 -   RangeX_S です。 RangeI_N と RangeS_S ロックの重なりによって作成されるキー範囲変換 ロックです。  
   

@@ -1,38 +1,38 @@
 ---
-title: CursorTypeEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: CursorTypeEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CursorTypeEnum
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0e58e1d7660b4bcd014d5e4b80226fc9c3cfb293
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4da9f1f931a9f6d15c5b0e13959f0e9effd40bcc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 使用するカーソルの種類を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|動的カーソルを使用します。 追加、変更、および他のユーザーによって削除が可視性、および内の移動の型はすべて、**レコード セット**は許可されて、ブックマークを除く場合は、プロバイダーはサポートされていません。|  
 |**adOpenForwardOnly**|0|既定値です。 順方向専用カーソルを使用します。 カーソル、静的カーソルと同じすることができますのみ転送レコードをスクロールする点を除いてです。 これは、1 つだけを通過する必要があるときにパフォーマンスが向上する**Recordset**です。|  

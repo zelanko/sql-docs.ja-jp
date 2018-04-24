@@ -1,30 +1,24 @@
 ---
-title: 並列データ ウェアハウスの transparent Data Encryption
-author: barbkess
-ms.author: barbkess
+title: 並列データ ウェアハウスの transparent data encryption |Microsoft ドキュメント
+description: 透過的なデータ暗号化 (TDE) 並列データ ウェアハウス (PDW) のリアルタイムの I/O の暗号化と実行データとトランザクション ログ ファイルと、特別な PDW ログ ファイルの復号化します。"
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 透過的なデータ暗号化 (TDE) は、データとトランザクション ログ ファイルと、特別な PDW ログ ファイルのリアルタイムの I/O の暗号化と解読を実行します。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: 22
-ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6dc8bef420939d64b569ae285e6a3525d57983bd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
-データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
+データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、シナリオについては、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合、悪意のある人物できますだけを復元またはデータベースをアタッチし、データを参照します。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
   
-*透過的なデータ暗号化*(TDE) は、データのリアルタイムの I/O の暗号化と解読を実行し、トランザクション ログ ファイルと特殊な PDW ログ ファイルです。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、SQL Server PDW の master データベースに格納されている証明書を使用して、セキュリティで保護された対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 これによりソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および 3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
+*透過的なデータ暗号化*(TDE) は、データのリアルタイムの I/O の暗号化と解読を実行し、トランザクション ログ ファイルと特殊な PDW ログ ファイルです。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、SQL Server PDW の master データベースに格納されている証明書を使用して、セキュリティで保護された対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 この機能は、ソフトウェア開発者は、既存のアプリケーションを変更することがなく、AES および 3 des 暗号化アルゴリズムを使用してデータを暗号化できます。  
   
 > [!IMPORTANT]  
 > TDE では、クライアントと PDW 間を移動するデータの暗号化は提供されません。 クライアントと SQL Server PDW の間でデータを暗号化する方法の詳細については、次を参照してください。[証明書をプロビジョニング](provision-certificate.md)です。  
@@ -40,7 +34,7 @@ ms.lasthandoff: 04/06/2018
   
 次の図は、TDE 暗号化のキーの階層を示しています。  
   
-![トピックで説明された階層を表示します。] (media/tde-architecture.png "TDE_Architecture")  
+![階層を表示](media/tde-architecture.png "TDE_Architecture")  
   
 ## <a name="using-tde"></a>Transparent Data Encryption の使用  
 TDE を使用するには、次の手順を実行します。 最初の 3 つの手順は一度だけ実行 TDE をサポートする SQL Server PDW の準備をする場合。  
@@ -49,11 +43,11 @@ TDE を使用するには、次の手順を実行します。 最初の 3 つの
   
 2.  使用して**sp_pdw_database_encryption**を SQL Server PDW で TDE を有効にします。 この操作は、将来の一時データの保護を実現するために、一時的なデータベースを変更し、一時テーブルを持つアクティブなセッションがある場合にしようとした場合は失敗します。 **sp_pdw_database_encryption**ユーザー データのマスキング PDW システム ログをオンにします。 (ユーザー データのマスキング PDW システム ログの詳細については、次を参照してください[sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)。)。  
   
-3.  使用して[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)認証および証明書のバックアップが格納される共有への書き込みできる資格情報を作成します。 目的の記憶域サーバーの資格情報が既に存在する場合は、既存の資格情報を使用できます。  
+3.  使用して[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)認証および証明書のバックアップが格納される共有への書き込みできる資格情報を作成します。 目的の記憶域サーバーの資格情報が既に存在する場合は、既存の資格情報を使用することができます。  
   
 4.  Master データベースでは、マスター _ キーによって保護される証明書を作成します。  
   
-5.  記憶域共有に証明書をバックアップします。  
+5.  記憶域共有に、証明書をバックアップします。  
   
 6.  ユーザー データベースでデータベース暗号化キーを作成し、master データベースに格納されている証明書で保護します。  
   
@@ -61,7 +55,7 @@ TDE を使用するには、次の手順を実行します。 最初の 3 つの
   
 次の例は、暗号化を示しています、`AdventureWorksPDW2012`という証明書を使用してデータベース`MyServerCert`SQL Server PDW で作成された。  
   
-**1: SQL Server PDW で TDE を有効にします。** これはのみに必要な 1 回です。  
+**1: SQL Server PDW で TDE を有効にします。** このアクションは 1 回のみ必要です。  
   
 ```sql  
 USE master;  
@@ -80,7 +74,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**: 2 番目のコード例を作成して、master データベース内の証明書をバックアップします。** これは 1 回が必要です。 (推奨)、データベースごとに別の証明書をも、1 つの証明書に複数のデータベースを保護することができます。  
+**: 2 番目のコード例を作成して、master データベース内の証明書をバックアップします。** このアクションは、のみ 1 回が必要です。 (推奨)、データベースごとに別の証明書をも、1 つの証明書に複数のデータベースを保護することができます。  
   
 ```sql  
 -- Create certificate in master  
@@ -98,7 +92,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**: 最後は、DEK を作成し、ユーザー データベースの暗号化に ALTER DATABASE を使用します。** これは、TDE で保護されているデータベースごとに繰り返されます。  
+**: 最後は、DEK を作成し、ユーザー データベースの暗号化に ALTER DATABASE を使用します。** この操作は、TDE で保護されているデータベースごとに繰り返されます。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -113,7 +107,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-暗号化および暗号化解除の操作は、SQL Server によってバック グラウンド スレッドでスケジュールされます。 これらの操作の状態は、この後の一覧に示すカタログ ビューおよび動的管理ビューを使用して確認できます。  
+暗号化および暗号化解除の操作は、SQL Server によってバック グラウンド スレッドでスケジュールされます。 この記事の後半に表示される一覧で、カタログ ビューと動的管理ビューを使用してこれらの操作の状態を表示することができます。  
   
 > [!CAUTION]  
 > TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。  
@@ -125,9 +119,9 @@ TDE の証明書を次に示すステートメントで処理できるように�
   
 |コマンドまたは関数|用途|  
 |-----------------------|-----------|  
-|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
-|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
-|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
+|[データベース暗号化キーを作成します。](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
+|[データベース暗号化キーを変更します](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
+|[データベース暗号化キーを削除します。](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)|TDE を有効にするために使用される **ALTER DATABASE** オプションについて説明します。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
@@ -147,7 +141,7 @@ TDE に関係するメタデータを表示する必要があります、`CONTRO
 ## <a name="considerations"></a>考慮事項  
 データベース暗号化操作の再暗号化スキャンが実行されている間は、データベースに対するメンテナンス操作が無効になります。  
   
-使用してデータベース暗号化の状態を調べることができます、 **sys.dm_pdw_nodes_database_encryption_keys**動的管理ビュー。 詳細については、次を参照してください。、*カタログ ビューおよび動的管理ビュー*このトピックの前半の「)。  
+使用してデータベース暗号化の状態を調べることができます、 **sys.dm_pdw_nodes_database_encryption_keys**動的管理ビュー。 詳細については、次を参照してください。、*カタログ ビューおよび動的管理ビュー*この記事の前半の「します。  
   
 ### <a name="restrictions"></a>制限  
 中に、次の操作は許可されていません、 `CREATE DATABASE ENCRYPTION KEY`、 `ALTER DATABASE ENCRYPTION KEY`、 `DROP DATABASE ENCRYPTION KEY`、または`ALTER DATABASE...SET ENCRYPTION`ステートメントです。  
@@ -245,7 +239,7 @@ SQL Server PDW では、一連のトラブルシューティングのログを�
   
 `setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
   
-[置換] バーチャル マシン操作の例です。  
+仮想マシンを置換するアクションの例です。  
   
 `setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
   
@@ -253,7 +247,7 @@ SQL Server PDW では、一連のトラブルシューティングのログを�
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
   
-PDW で手動でこれらのステートメントを実行して、DMK を回復するために、その後アプライアンスを再起動してください。  
+PDW でこれらのステートメントを手動で実行し、その後 DMK を回復するためにアプライアンスを再起動します。  
   
 ```sql
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
@@ -273,7 +267,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 TDE のパフォーマンスに与える影響は、データの種類がある場合、格納方法と SQL Server PDW に対するワークロード アクティビティの種類によって異なります。 TDE で保護されているときに、I/O の読み取りとデータの暗号化を解除し、暗号化やデータを書き込むの CPU 処理を要するアクティビティでありと他の CPU 負荷の高いアクティビティが同時に発生しているときに複数の影響を及ぼします。 TDE で暗号化ため`tempdb`、TDE 暗号化されていないデータベースのパフォーマンスに影響することができます。 パフォーマンスを正確に把握を取得するには、データとクエリのアクティビティは、システム全体をテストする必要があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
-次のリンクには、SQL Server が暗号化を管理する方法に関する一般的な情報が含まれています。 これらのトピックでは、SQL Server の暗号化がこれらのトピックに SQL Server PDW に固有の情報がないし、機能が SQL Server PDW に存在しませんが、についても説明を理解できます。  
+次のリンクには、SQL Server が暗号化を管理する方法に関する一般的な情報が含まれています。 これらの記事は、SQL Server の暗号化がこれらの記事には SQL Server PDW に固有の情報がないとについて話し合い、SQL Server PDW ではない機能を理解するのに役立ちます。  
   
 -   [SQL Server の暗号化](../relational-databases/security/encryption/sql-server-encryption.md)  
   
@@ -284,8 +278,8 @@ TDE のパフォーマンスに与える影響は、データの種類がある�
   
 ## <a name="see-also"></a>参照  
 [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
-[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[マスター_キーを作成します。](../t-sql/statements/create-master-key-transact-sql.md)  
+[データベース暗号化キーを作成します。](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  

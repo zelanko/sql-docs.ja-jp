@@ -1,38 +1,38 @@
 ---
-title: "StringFormatEnum |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: StringFormatEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - StringFormatEnum
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e6584a40917078c29e8fc619afb6a4f3bddd541
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 332a19096035fc271062c8138351197316f46377
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 取得するときに、形式を指定、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|行を取り出すため*RowDelimiter*、列、 *ColumnDelimiter*、および null 値によって*NullExpr*です。 3 つのパラメーター、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドがでのみ有効ですが、 *StringFormat*の**adClipString**です。|  
   

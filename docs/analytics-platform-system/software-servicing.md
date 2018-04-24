@@ -1,28 +1,21 @@
 ---
-title: ソフトウェア (Analytics Platform System) のサービス
-author: barbkess
-ms.author: barbkess
+title: ソフトウェアのサービスの Analytics Platform System |Microsoft ドキュメント
+description: ソフトウェアは、Analytics Platform System (APS) を処理します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
-caps.latest.revision: 33
-ms.openlocfilehash: 8bddf00569ad4c5e5c78e801399b589a9f6d5f42
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 7d9991dfb310e2cebc3c61bbd6f9f04a40a0f38e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="software-servicing"></a>ソフトウェアのサービス
+# <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System でのソフトウェア サービス
 このセクションでは、サービスの Analytics Platform System アプライアンスには、WSUS および Analytics Platform System の修正プログラムを含むの要件、ソフトウェアをまとめたものです。  
   
 ## <a name="Basics"></a>ソフトウェアのサービスの基礎  

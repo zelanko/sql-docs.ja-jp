@@ -1,26 +1,26 @@
 ---
-title: "ADO の動的プロパティ インデックス |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO の動的プロパティ インデックス |Microsoft ドキュメント
+ms.prod: sql
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d646865c5fc95ed032c0cc21e973a3204162201
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動的プロパティのインデックス
 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネントが動的なプロパティを追加できます、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)と[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 特定のプロバイダーは、これらのオブジェクトが開かれたときに、追加のプロパティを挿入も可能性があります。 これらのプロパティの一部は、「、 [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)セクションです。 内の特定のプロバイダーの詳細に表示される、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)セクションです。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/09/2018
 |DBMS の名前|DBPROP_DBMSNAME|  
 |DBMS のバージョン|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
-|グループ化のサポート|DBPROP_GROUPBY|  
+|グループ化のサポート|DBPROP_GROUPBY と|  
 |異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES|  
 |識別子の大文字と小文字の区別|DBPROP_IDENTIFIERCASE|  
 |Initial Catalog|DBPROP_INIT_CATALOG|  

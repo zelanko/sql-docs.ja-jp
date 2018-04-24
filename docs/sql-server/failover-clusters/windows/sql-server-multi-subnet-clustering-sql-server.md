@@ -1,15 +1,16 @@
 ---
-title: "SQL Server マルチサブネット クラスタリング (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: SQL Server マルチサブネット クラスタリング (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - stretch cluster
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - multi-site failover cluster
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46c0f7963cf82e80b5c60309aab2369805931c09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ce8157ed0f2e0090d7ec03394f809a110ff609f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターとは、各フェールオーバー クラスター ノードが異なるサブネットに接続されているか、異なるサブネットのセットに接続されている構成のことです。 これらのサブネットには、同じ場所や地理的に分散したサイトを指定できます。 地理的に分散したサイトのクラスタリングは、拡張クラスターと呼ばれることがあります。 すべてのノードがアクセスできる共有ストレージがないため、複数のサブネットのデータ ストレージ間でデータをレプリケートする必要があります。 データをレプリケートすることで、使用可能なデータのコピーが複数存在することになります。 そのため、マルチサブネット フェールオーバー クラスターによって、高可用性に加えてディザスター リカバリー ソリューションも実現します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターとは、各フェールオーバー クラスター ノードが異なるサブネットに接続されているか、異なるサブネットのセットに接続されている構成のことです。 これらのサブネットには、同じ場所や地理的に分散したサイトを指定できます。 地理的に分散したサイトのクラスタリングは、拡張クラスターと呼ばれることがあります。 すべてのノードがアクセスできる共有ストレージがないため、複数のサブネットのデータ ストレージ間でデータをレプリケートする必要があります。 データをレプリケートすることで、使用可能なデータのコピーが複数存在することになります。 そのため、マルチサブネット フェールオーバー クラスターによって、高可用性に加えてディザスター リカバリー ソリューションも実現します。  
   
    
 ##  <a name="VisualElement"></a> SQL Server マルチサブネット フェールオーバー クラスター (2 ノード、2 サブネット)  

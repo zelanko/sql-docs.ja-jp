@@ -1,38 +1,38 @@
 ---
-title: SeekEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: SeekEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - SeekEnum
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40c15bd116b4e0a7ba13127dc48ec18421b5924b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 25585f77de1e5a05051d4fad8e1cdca7ca1172c6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seekenum"></a>SeekEnum
 型を指定[シーク](../../../ado/reference/ado-api/seek-method.md)を実行します。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|最初のキーと等しいをシーク*keyvalues とも*します。|  
 |**adSeekLastEQ**|2|最後のキーと等しいをシーク*keyvalues とも*します。|  

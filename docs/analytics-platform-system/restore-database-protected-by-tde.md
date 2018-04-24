@@ -1,27 +1,21 @@
 ---
-title: 並列データ ウェアハウスでの TDE で保護されたデータベースを復元します。
-author: barbkess
-ms.author: barbkess
+title: TDE の Parallel Data Warehouse で保護されたデータベースを復元 |Microsoft ドキュメント
+description: 分析プラットフォーム システム Parallel Data Warehouse での transparent data encryption を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: 透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>TDE で保護されたデータベースを復元します。
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Parallel Data Warehouse での TDE で保護されたデータベースを復元します。
 透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。  
   
 [Transparent Data Encryption を使用して](transparent-data-encryption.md#using-tde)例は、コードで TDE を有効にする、`AdventureWorksPDW2012`データベース。 次のコードは、元の Analytics Platform System (APS) アプライアンスに、データベースのバックアップを作成し、証明書と異なるアプライアンス上のデータベースの復元によってこの例を続行します。  
@@ -64,7 +58,7 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>参照  
-[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+[データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  

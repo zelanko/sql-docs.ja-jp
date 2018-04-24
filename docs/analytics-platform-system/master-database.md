@@ -1,29 +1,21 @@
 ---
-title: master データベース (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Master データベースの並列データ ウェアハウス |Microsoft ドキュメント
+description: Parallel Data Warehouse で master データベースについて説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
-caps.latest.revision: 8
-ms.workload: not set
-ms.openlocfilehash: 0031e4720c7fbcf7e60b7e35a59d16ad31a24103
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="master-database"></a>master データベース
+# <a name="master-database---parallel-data-warehouse"></a>Master データベースの並列データ ウェアハウス
 SQL Server PDW の master データベースは、アプライアンス レベルのログイン情報と、データベース カタログに格納します。 コントロールのノードに存在する SQL Server マスター データベースであります。 そのため、SQL Server PDW のような機能を提供マスターは、SQL Server に示されています。  
   
 システム データベースの詳細については、次を参照してください。[システム データベース](system-databases.md)です。  

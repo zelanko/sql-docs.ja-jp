@@ -1,31 +1,31 @@
 ---
-title: "Internet Explorer のエラー コード |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Internet Explorer のエラー コード |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf4ee8c31a09ad1c1bf88ffb37d987f5dabb8bf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3865a413a0530e5d21b358b953adce5e5cc4c5f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Remote Data Service のインターネット エクスプ ローラーのエラー コード
 次の表は、リモートのデータ サービスの使用に関連する Microsoft® Internet Explorer のエラー コードを一覧表示します。 下位 2 バイトの正の 10 進変換、完全なエラー コードと 16 進数の値の負の値の 10 進数の翻訳が表示されます。

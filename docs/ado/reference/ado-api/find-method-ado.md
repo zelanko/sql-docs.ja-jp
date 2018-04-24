@@ -1,17 +1,17 @@
 ---
-title: "Find メソッド (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Find メソッド (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行にします。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 検出されたレコード; で現在の行位置を設定、条件が満たされる場合それ以外の場合、位置に設定されている (先頭または末尾) の**Recordset**です。  
@@ -58,7 +58,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  比較演算子で*条件*可能性があります"**>**「(より大きい)、」**\<**"(より小さい)、「=」(等しい)、"> ="(より大きいまたは等しい)"< ="(以下)、"<>"(等しくない)、または「のように」(パターン一致)。  
   
- 値*条件*文字列、浮動小数点数、または日付にすることがあります。 文字列の値が単一引用符または「#」) で区切られた (たとえば、"状態 = 'WA'"または"の状態 = WA #") です。 日付の値は「#」(シャープ記号) 記号で区切られます (たとえば、"start_date > #7 月 22 日/&#97;") です。 これらの値は、時間、分、および秒を示すタイムスタンプを含めることができますが、ミリ秒を含めることはできませんまたはエラーが発生します。  
+ 値*条件*文字列、浮動小数点数、または日付にすることがあります。 文字列の値が単一引用符または「#」) で区切られた (たとえば、"状態 = 'WA'"または"の状態 = WA #") です。 日付の値は「#」(シャープ記号) 記号で区切られます (たとえば、"start_date > #7 月 22 日/97 #") です。 これらの値は、時間、分、および秒を示すタイムスタンプを含めることができますが、ミリ秒を含めることはできませんまたはエラーが発生します。  
   
  比較演算子が"like"にある場合は、文字列値はアスタリスク (*) を 1 つ以上の出現箇所を任意の文字または部分文字列の検索を含めることがあります。 たとえば、"のような状態にして\*'"メイン州と Massachusetts に一致します。 また、値内に含まれる部分文字列を検索するのに先頭および末尾のアスタリスクを使用することができます。 たとえば、"のような状態 '\*として\*'"アラスカ、アーカンソー、Massachusetts に一致します。  
   

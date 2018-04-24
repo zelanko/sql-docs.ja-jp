@@ -1,28 +1,28 @@
 ---
-title: "ADO 基礎 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO 基礎 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76892d6ae394b41c64852cd721e22f494aee51af
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 54e829ed3c28702144c64c49a9bd425e6488e5d7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO では、プログラムへのアクセス、編集、およびさまざまなシステムの OLE DB インターフェイス経由でデータ ソースからデータの更新の開発者強力で論理オブジェクト モデルを使用します。 ADO の最も一般的な使用法が、テーブルやリレーショナル データベース内のテーブルをクエリを取得し、アプリケーションでは、結果を表示し、おそらくユーザー データへの変更を保存します。 その他のタスクを以下に示します。  

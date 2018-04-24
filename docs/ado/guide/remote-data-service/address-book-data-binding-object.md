@@ -1,31 +1,31 @@
 ---
-title: "アドレス帳のデータ バインディング オブジェクト |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: アドレス帳のデータ バインディング オブジェクト |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 353e086d8350364a07486eba2334c76b470237db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-data-binding-object"></a>アドレス帳のデータ バインディング オブジェクト
 アドレス帳を使用して、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)クライアント HTML ページで、アプリケーションの SQL Server データベースからデータを (この場合は、DHTML テーブル) 内のビジュアル オブジェクトにバインドするオブジェクト。 VBScript プログラム イベント ドリブン ロジックを使用して、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)に。  
@@ -68,7 +68,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |パラメーター|Description|  
 |---------------|-----------------|  
 |[サーバー](../../../ado/reference/rds-api/server-property-rds.md)|HTTP を使用している場合、値が続く、サーバー コンピューターの名前は`http://`します。|  
-|[接続](../../../ado/reference/rds-api/connect-property-rds.md)|接続に必要な情報を提供、 **.rds ですDataControl** SQL Server に接続します。|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|接続に必要な情報を提供、 **.rds ですDataControl** SQL Server に接続します。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定または取得するために使用するクエリ文字列を返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。|  
   
 ## <a name="see-also"></a>参照  

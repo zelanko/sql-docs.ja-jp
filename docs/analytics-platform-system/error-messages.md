@@ -1,29 +1,23 @@
 ---
-title: エラー メッセージ (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 並列データ ウェアハウスのエラー メッセージ |Microsoft ドキュメント
+description: 並列データ ウェアハウス (PDW) エラー メッセージがエラーを報告および問題 PDW コンポーネントで発生した PDW を通じて表示される SQL Server のエラーを含めることもできます。 これらのエラー メッセージは、情報を表すための一貫性のある構文を使用します。 この構文を理解することを特定し、問題を解決できるようにします。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>エラー メッセージ
-SQL Server PDW エラー メッセージがエラーを報告し、問題が、SQL Server PDW コンポーネントによって発生し、SQL Server PDW を通じて表示される SQL Server のエラーを含めることもできます。 これらのエラー メッセージは、情報を表すための一貫性のある構文を使用します。 この構文を理解することを特定し、SQL Server PDW 上の問題を解決できるようにします。  
+# <a name="error-messages-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのエラー メッセージ
+
+並列データ ウェアハウス (PDW) エラー メッセージがエラーを報告および問題 PDW コンポーネントで発生した PDW を通じて表示される SQL Server のエラーを含めることもできます。 これらのエラー メッセージは、情報を表すための一貫性のある構文を使用します。 この構文を理解することを特定し、SQL Server PDW 上の問題を解決できるようにします。  
   
 ## <a name="Basics"></a>エラー メッセージの基本事項  
 返されるエラー メッセージでは、同じ構文に従います。  

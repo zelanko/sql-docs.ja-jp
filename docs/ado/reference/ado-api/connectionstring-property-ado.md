@@ -1,33 +1,33 @@
 ---
-title: "ConnectionString プロパティ (ADO) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ConnectionString プロパティ (ADO) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 68c7a10a4b674b9ff4092c37c332dffd7e5ff199
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するために使用される情報を示します。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/09/2018
  内の引数の重複、 **ConnectionString**プロパティは無視されます。 いずれかの引数の最後のインスタンスが使用されます。  
   
 > [!NOTE]
->  **リモートのデータ サービスの使用法**クライアント側で使用すると**接続**オブジェクト、 **ConnectionString**プロパティにのみを含めることができます、*リモート プロバイダー*と*リモート サーバー*パラメーター。  
+>  **リモートのデータ サービスの使用法**クライアント側で使用すると**接続**オブジェクト、 **ConnectionString**プロパティにのみを含めることができます、*リモート プロバイダー*および*リモート サーバー*パラメーター。  
   
  次の表に、各 Windows オペレーティング システムの既定の ADO プロバイダーを示します。  
   

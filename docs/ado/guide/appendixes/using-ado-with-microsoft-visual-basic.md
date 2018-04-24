@@ -1,33 +1,33 @@
 ---
-title: "Microsoft Visual Basic と ADO を使用して |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Microsoft Visual Basic と ADO を使用して |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: abeb037ed89277082fce38c833baadc5a4170e3c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0a27c38bde206b841829956ef3a555c5c655f8d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO プロジェクトの設定や ADO コードの記述はのようなアプリケーションの Visual Basic または Visual Basic を使用するかどうかです。 このトピックでは、Visual Basic および Visual Basic の両方で ADO を使用してアプリケーションに対応し、ノートのすべての差異。
@@ -105,7 +105,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- オブジェクトがインスタンス化される**CreateObject**遅延バインディングがない厳密に型指定し、コマンド ライン入力候補が無効になっていることを意味します。 ただし、では、プロジェクトから ADO ライブラリの参照をスキップすることし、特定のバージョンのオブジェクトをインスタンス化することができます。 例:
+ オブジェクトがインスタンス化される**CreateObject**遅延バインディングがない厳密に型指定し、コマンド ライン入力候補が無効になっていることを意味します。 ただし、では、プロジェクトから ADO ライブラリの参照をスキップすることし、特定のバージョンのオブジェクトをインスタンス化することができます。 以下に例を示します。
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

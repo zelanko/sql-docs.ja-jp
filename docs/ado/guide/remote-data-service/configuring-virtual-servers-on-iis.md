@@ -1,30 +1,30 @@
 ---
-title: "IIS で仮想サーバーの構成 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: IIS で仮想サーバーの構成 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 838a9ee2dd248a41ecb4874e75b669f9dd4ba51d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a482169a963f5ca878ca892cf85c9c3a334596cb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS で仮想サーバーを構成します。
 Internet Information Services 4.0 での仮想サーバーの作成、RDS を使用する仮想サーバーを構成するために、次の 2 つの余分な手順が必要です。  

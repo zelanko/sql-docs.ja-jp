@@ -1,31 +1,31 @@
 ---
-title: "パラメーター化コマンドの操作 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: パラメーター化コマンドの操作 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子で作業している場合**レコード セット**、特に、親のサイズに比べて**レコード セット**、いくつかの子チャプターのみにアクセスする必要がありますが、した方がより効果的に使用、パラメーター化コマンド。  
@@ -81,7 +81,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  パラメーターのない階層を使用して、ないようにチームとゲームのテーブルを関連付けるを子**Recordset**チームごとに、完全なスケジュールが含まれています。 ホームのスケジュールと道路スケジュールだけが含まれている章を作成することができます。 これは、RELATE 句によって、フォームの親子関係に制限されているため (pc1 = cc1) AND (pc2 pc2 を =)。 そのため場合は、コマンドには、"RELATE team_id TO home_team、team_id TO visiting_team"が含まれている、する得られるゲームのみここで、チームが再生された自体です。 必要な"(team_id=home_team) または (team_id = visiting_team)"は Shape プロバイダーは、OR 句をサポートしていません。  
   
- 目的の結果を得るには、パラメーター化コマンドを使用できます。 例:  
+ 目的の結果を得るには、パラメーター化コマンドを使用できます。 以下に例を示します。  
   
 ```  
 SHAPE {SELECT * FROM teams}   

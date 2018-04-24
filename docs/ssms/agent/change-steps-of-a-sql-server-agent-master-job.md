@@ -18,11 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e6604550fd8d34e6a1beeff7734eb67344d1e5c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 32d9aabf72bd5d800aaeabda5ff7dec312186591
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,11 +35,11 @@ ms.lasthandoff: 04/10/2018
   
 **このトピックの内容**  
   
--   **開始する前に。**  
+-   **作業を開始する準備:**  
   
-    [制限事項と制約](#Restrictions)  
+    [制限事項と制約事項](#Restrictions)  
   
-    [セキュリティ](#Security)  
+    [Security](#Security)  
   
 -   **以下を使用して SQL Server エージェントのマスター ジョブのステップに変更を加えるには:**  
   

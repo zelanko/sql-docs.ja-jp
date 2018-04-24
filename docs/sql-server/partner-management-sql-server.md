@@ -1,32 +1,33 @@
 ---
-title: "SQL Server のパートナーの管理 | Microsoft Docs"
-description: "サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。"
+title: SQL Server のパートナーの管理 | Microsoft Docs
+description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: database-engine
-ms.component: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 6e4cd02cdf12b18516bbf795db347f2035619774
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d6a6559da315ccb2b601f7d28af444d3cdabb6b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理のパートナー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server サービスを管理するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする管理ソリューションを提供する Microsoft パートナー会社を示します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+SQL Server サービスを管理するためのツールを、業界をリードする豊富な種類の中から選びます。  この記事では、Microsoft SQL Server をサポートする管理ソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="our-management-partners"></a>Microsoft の管理パートナー
 | Partner | Description | リンク |

@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB Provider for Microsoft インテックス サービス |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for Microsoft インテックス サービス |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f84d13fa3f4e2da728c914f2228233a04e64643f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft インデックス作成サービスの概要
 Microsoft OLE DB Provider for Microsoft インテックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
@@ -105,7 +105,7 @@ MSIDXS
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|いいえ|
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|いいえ|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|
+|[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|
 |[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
@@ -114,8 +114,8 @@ MSIDXS
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|
 |[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|はい|
+|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|はい|
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|
 |[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|

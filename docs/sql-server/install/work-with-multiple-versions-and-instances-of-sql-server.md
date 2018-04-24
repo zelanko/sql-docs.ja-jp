@@ -1,16 +1,16 @@
 ---
-title: "SQL Server の複数のバージョンおよびインスタンスの使用 | Microsoft Docs"
-ms.custom: 
+title: SQL Server の複数のバージョンおよびインスタンスの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - concurrent installations [SQL Server]
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: 
+caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccae571c9784b781197bf5ec462b6a8142d56452
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9b7ac90b84240bf8629c8bd8f8e50e0436761e4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>SQL Server の複数のバージョンおよびインスタンスの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の複数のインスタンスをサポートします。 また、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードしたり、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既にインストールされているコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすることもできます。 サポートされるアップグレード シナリオについては、「 [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同じコンピューター上で [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の複数のインスタンスをサポートします。 また、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードしたり、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既にインストールされているコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすることもできます。 サポートされるアップグレード シナリオについては、「 [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
 ## <a name="version-components-and-numbering"></a>バージョンのコンポーネントと番号付け  
  次に示す概念は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサイド バイ サイドのインスタンスでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の動作について理解するうえで役立ちます。  

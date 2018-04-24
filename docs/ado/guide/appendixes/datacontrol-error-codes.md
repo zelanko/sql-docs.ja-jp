@@ -1,31 +1,31 @@
 ---
-title: "DataControl がエラー コード |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: DataControl がエラー コード |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1933a555212045c157656a0ee46aba77dc9f699d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c2585dea389693001321fb38e2c507a4734df033
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラー コード
 次の表、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのエラー コード。 下位 2 バイトの正の 10 進変換、完全なエラー コードと 16 進数の値の負の値の 10 進数の翻訳が表示されます。

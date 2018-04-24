@@ -1,27 +1,21 @@
 ---
-title: 容量計画ワークシートのサーバーのバックアップ (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: バックアップ サーバーの容量計画 - Parallel Data Warehouse |Microsoft ドキュメント
+description: この容量の計画ワークシートでは並列データ ウェアハウス データベースのバックアップを実行するサーバーのバックアップの要件を決定し、復元操作を行うことができます。 購入新規またはプロビジョニング既存バックアップ サーバーの計画を作成するのにには、これを使用します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: この容量の計画ワークシートでは SQL Server PDW のデータベース バックアップを実行するサーバーのバックアップの要件を決定し、復元操作を行うことができます。
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
-caps.latest.revision: 6
-ms.openlocfilehash: 1548d284f78043e5f878bafe9922480fe762dbfe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 500bebab375a0d0b94032a1855af3844bc2e6fa7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-server-capacity-planning-worksheet"></a>サーバーのバックアップの容量の計画ワークシート
+# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>バックアップ サーバー容量計画ワークシートの Parallel Data Warehouse
 この容量の計画ワークシートでは SQL Server PDW のデータベース バックアップを実行するサーバーのバックアップの要件を決定し、復元操作を行うことができます。 購入新規またはプロビジョニング既存バックアップ サーバーの計画を作成するのにには、これを使用します。  
   
 このワークシートは」の手順を補う[取得およびサーバーのバックアップを構成](acquire-and-configure-backup-server.md)です。  

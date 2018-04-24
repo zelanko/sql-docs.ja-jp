@@ -1,38 +1,38 @@
 ---
-title: MoveRecordOptionsEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: MoveRecordOptionsEnum |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - MoveRecordOptionsEnum
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d42dbc66f84a3b087401063ee3a53a00f2f37105
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2fc64189ae993456d5c4f9f6dc15e362b5e637d7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 動作を指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[後続](../../../ado/reference/ado-api/moverecord-method-ado.md)メソッドです。  
   
-|定数|[値]|Description|  
+|定数|値|Description|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|既定値です。 既定の移動操作を実行します。 変換先ファイルまたはディレクトリが既に存在し、操作は、ハイパー テキスト リンクを更新する場合、操作は失敗します。|  
 |**adMoveOverWrite**|1|既に存在する場合でも、変換先ファイルまたはディレクトリを上書きします。|  

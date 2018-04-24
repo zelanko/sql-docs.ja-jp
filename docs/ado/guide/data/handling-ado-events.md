@@ -1,32 +1,32 @@
 ---
-title: "ADO イベントの処理 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO イベントの処理 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO]
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b1eb14b35aa2031dc405f3c1b7f5a9e1d932e9f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e03bf8916836cf271aa77546d71c60049b39235e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="handling-ado-events"></a>ADO イベントの処理
 ADO イベント モデルは、同期および非同期 ADO する特定の操作を発行をサポートしている*イベント*、または、操作を開始する前に、または完了後に、通知します。 イベントは、実際には、アプリケーションで定義するイベント ハンドラー ルーチンの呼び出しです。  

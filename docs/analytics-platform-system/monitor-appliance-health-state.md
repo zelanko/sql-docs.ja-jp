@@ -1,29 +1,22 @@
 ---
-title: モニター アプライアンス正常性状態 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: アプライアンスの状態の監視 - 分析プラットフォーム システム
+description: 管理コンソールを使用するか、並列データ ウェアハウスの動的管理ビューを直接照会して、Analytics Platform System アプライアンスの状態を監視する方法。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>アプライアンス正常性状態の監視
-このトピックでは、管理コンソールを使用するか、SQL Server PDW 動的管理ビューを直接照会するには、SQL Server PDW アプライアンスの状態を監視する方法について説明します。  
+この記事では、管理コンソールを使用するか、並列データ ウェアハウスの動的管理ビューを直接照会して、Analytics Platform System アプライアンスの状態を監視する方法について説明します。 
   
 ## <a name="to-monitor-the-appliance-state"></a>アプライアンスの状態を監視するには  
 システム管理者は、ノード、コンポーネント、およびソフトウェアの完全な階層を取得するのに、管理コンソールまたは、SQL Server PDW 動的管理ビュー (Dmv) を使用できます。 次の図は、SQL Server PDW を監視するコンポーネントの高レベルな理解を示します。  
@@ -77,7 +70,7 @@ Status プロパティを返される値は次のとおりです。
   
 -   わかりました  
   
--   NonCritical  
+-   重大でないです。  
   
 -   重大  
   

@@ -1,28 +1,28 @@
 ---
-title: "更新プログラムを送信する: UpdateBatch メソッド |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: '更新プログラムを送信する: UpdateBatch メソッド |Microsoft ドキュメント'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 061435976bb08c644705e80c0d1d605ee944f304
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c19c51655a972b512c4d3b3978a3d176bae25dac
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>更新プログラムを送信する: UpdateBatch メソッド
 次のコードは、adLockBatchOptimistic およびを CursorLocation LockType プロパティを設定して、バッチ モードでレコード セットを表示します。 2 つの新しいレコードを追加して、元の値を保存、既存のレコードのフィールドの値を変更し、データ ソースへの変更を返信する UpdateBatch を呼び出します。  

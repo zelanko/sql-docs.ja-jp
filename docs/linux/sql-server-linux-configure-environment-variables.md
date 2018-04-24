@@ -1,6 +1,6 @@
-﻿---
-title: "環境変数で SQL Server の設定を構成する |Microsoft ドキュメント"
-description: "このトピックでは、環境変数を使用して、Linux で SQL Server 2017 の特定の設定を構成する方法について説明します。"
+---
+title: 環境変数で SQL Server の設定を構成する |Microsoft ドキュメント
+description: このトピックでは、環境変数を使用して、Linux で SQL Server 2017 の特定の設定を構成する方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の SQL Server の設定を環境変数で構成する
 
@@ -53,15 +53,16 @@ ms.lasthandoff: 02/21/2018
 | **MSSQL_AGENT_ENABLED** | SQL Server エージェントを有効にします。 たとえば、'true' が有効で、'false' は無効になっています。 既定では、エージェントが無効です。  |
 | **MSSQL_MASTER_DATA_FILE** | Master データベースのデータ ファイルの場所を設定します。 |
 | **MSSQL_MASTER_LOG_FILE** | Master データベース ログ ファイルの場所を設定します。 |
+| **MSSQL_ERROR_LOG_FILE** | エラー ログ ファイルの場所を設定します。 |
 
 
 ## <a name="example-initial-setup"></a>例: 初回セットアップ
 
 この例では構成した環境変数で `mssql-conf setup` を実行します。 次の環境変数が指定されます。
 
-- **ACCEPT_EULA** 使用許諾契約書を受け入れます。
+- **ACCEPT_EULA**使用許諾契約書を受け入れます。
 - **MSSSQL_PID** 非運用環境で利用できる、フリーライセンスの Developer Edition の SQL Server を指定します。
-- **MSSQL_SA_PASSWORD** 強力なパスワードを設定します。
+- **MSSQL_SA_PASSWORD**強力なパスワードを設定します。
 - **MSSQL_TCP_PORT** SQL Server がリッスンする TCP ポートを 1234 として設定します。
 
 ```bash
@@ -72,9 +73,9 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 
 この例の docker コマンドでは、次の環境変数を使用して、新しい SQL Server 2017 コンテナーを作成します。
 
-- **ACCEPT_EULA** 使用許諾契約書を受け入れます。
+- **ACCEPT_EULA**使用許諾契約書を受け入れます。
 - **MSSSQL_PID** 非運用環境で利用できる、フリーライセンスの Developer Edition の SQL Server を指定します。
-- **MSSQL_SA_PASSWORD** 強力なパスワードを設定します。
+- **MSSQL_SA_PASSWORD**強力なパスワードを設定します。
 - **MSSQL_TCP_PORT** SQL Server がリッスンする TCP ポートを 1234 として設定します。 つまり、この例では、ポート 1433 (既定値) をホスト ポートにマップする代わりに、このカスタム TCP ポートを `-p 1234:1234` コマンドでマップしなければなりません。
 
 Linux/macOS で Docker を実行している場合は、単一引用符で、次の構文を使用します。

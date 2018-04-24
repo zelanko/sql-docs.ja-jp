@@ -1,29 +1,22 @@
 ---
-title: System Center Operations Manager (AP) とモニター アプライアンス
-author: barbkess
-ms.author: barbkess
+title: SCOM - Analytics Platform System とモニター |Microsoft ドキュメント
+description: System Center Operations Manager (SCOM) を使用すると、Analytics Platform System (APS) アプライアンスを監視できます。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>System Center Operations Manager を使用してアプライアンスを監視します。
-これには、System Center Operations Manager を使用して、SQL Server PDW と HDInsight を監視する方法について説明します。  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager の Analytics Platform System とモニター
+System Center Operations Manager (SCOM) を使用すると、Analytics Platform System (APS) アプライアンスを監視できます。
   
 ## <a name="before-you-begin"></a>はじめに  
   
@@ -33,7 +26,7 @@ ms.lasthandoff: 04/06/2018
   
 2.  SQL Server 2008 R2 Native Client または SQL Server 2012 Native Client をインストールする必要があります。  
   
-3.  SQL Server PDW と HDInsight を監視する管理パックのインストール、インポート、および構成されている必要があります。 手順については、次を使用すると、これらのタスクを実行できます。  
+3.  SQL Server PDW と HDInsight を監視する管理パックのインストール、インポート、および構成されている必要があります。 手順については、次の記事を使用すると、これらのタスクを実行できます。  
   
     -   [SCOM 管理パックをインストール&#40;分析プラットフォーム システム&#41;](install-the-scom-management-packs.md)  
   
@@ -50,12 +43,12 @@ SCOM 管理パックを構成した後の監視 ウィンドウの SCOM をク�
 ### <a name="alerts"></a>警告  
 アラートは、管理する現在のアラートを見つけることができます。  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![アラート](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>アプライアンス  
-アプライアンスは、環境内で現在検出され、監視している SQL Server の PDW アプライアンスを表示します。 アプライアンスが表示されないここでの ODBC 接続を作成した場合、し、ある可能性があります、PDWWatcher アカウントに何らかの問題です。 「監視しない」として表示する場合があります、PDWMonitor アカウント何らかの問題。 のでお待ち SCOM がリアルタイムで変更されることはできませんが、定期的に監視する新しいアプライアンスのチェックし、定期的に監視するためのアプライアンスにクエリを送信します。  
+アプライアンスは、環境内で現在検出され、監視している SQL Server の PDW アプライアンスを表示します。 アプライアンスが表示されないここでの ODBC 接続を作成した場合、し、ある可能性があります、PDWWatcher アカウントに何らかの問題です。 「監視しない」表示する場合があります、PDWMonitor アカウントに何らかの問題。 SCOM がリアルタイムで変更されることはできませんが、定期的に監視する新しいアプライアンスのチェックのために、患者をでし、定期的にアプライアンスを監視するためにクエリを送信します。  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![アプライアンス](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>アプライアンスの図  
 アプライアンスの図のページは、ツリー ビューでは、アプライアンスの正常性を見てを取得できます。  

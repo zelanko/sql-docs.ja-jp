@@ -1,6 +1,6 @@
 ---
 title: SQL Server のドキュメントに投稿する方法 | Microsoft Docs
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a id="githubui"></a> ブラウザーで編集する
 
-以下の手順では、ブラウザーで SQL Server のコンテンツを簡単に編集する方法の概要を説明します。 詳細なプロセスについては、「[軽微な変更や低頻度の変更の GitHub 共同作成ワークフロー](https://docs.microsoft.com/contribute/contribute/light-workflow)」を参照してください。
+以下の手順では、ブラウザーで SQL Server のコンテンツを簡単に編集する方法の概要を説明します。 詳細なプロセスについては、「[軽微な変更や低頻度の変更の GitHub 共同作成ワークフロー](https://docs.microsoft.com/contribute/light-workflow)」を参照してください。
 
 1. この記事もそうですが、すべての記事の右側には **[編集]** ボタンがあります。 変更したい記事を探し、**[編集]** ボタンをクリックして作業を始めます。
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/19/2018
    ![[編集] ボタン](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > 記事を編集するには、GitHub にサインインする必要があります。 GitHub アカウントを持っていない場合は、「[GitHub アカウントのセットアップ](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)」を参照してください。 新しいアカウントを作成した後、編集する前に、GitHub でメール アドレスを確認する必要もあります。
+   > 記事を編集するには、GitHub にサインインする必要があります。 GitHub アカウントを持っていない場合は、「[GitHub アカウントのセットアップ](https://docs.microsoft.com/contribute/get-started-setup-github)」を参照してください。 新しいアカウントを作成した後、編集する前に、GitHub でメール アドレスを確認する必要もあります。
 
 1. ブラウザーで記事を編集します。 すべての記事は Markdown で書かれています。 Markdown については、[Markdown の基礎](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)に関するページを参照してください。 公開されている記事で既存の Markdown のレンダリング方法を調べて学習することもできます。
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
    ![プル要求を作成する](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-この時点では、プル要求のコメントでプロセスの残りの手順が案内されているはずです。 完全なプロセスと他の詳細については、「[共同作成者ガイド](https://docs.microsoft.com/contribute/contribute/light-workflow)」を参照してください。
+この時点では、プル要求のコメントでプロセスの残りの手順が案内されているはずです。 完全なプロセスと他の詳細については、「[共同作成者ガイド](https://docs.microsoft.com/contribute/light-workflow)」を参照してください。
 
 ## <a id="tools"></a> ツールを使ってローカルに編集する
 
@@ -73,10 +74,10 @@ ms.lasthandoff: 03/19/2018
 
 この方法で投稿する場合は、次の記事を参照してください。
 
-- [GitHub アカウントを作成する](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [コンテンツ オーサリング ツールをインストールする](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [Git リポジトリをローカルに設定する](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [ツールを使って投稿する](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [GitHub アカウントを作成する](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [コンテンツ オーサリング ツールをインストールする](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [Git リポジトリをローカルに設定する](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [ツールを使って投稿する](https://docs.microsoft.com/contribute/full-workflow)
 
 ドキュメントを大幅に変更するプル要求を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)**の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、プル要求は受け付けられません。
 

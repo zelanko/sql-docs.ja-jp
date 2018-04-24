@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB Provider for Oracle |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for Oracle |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for Oracle
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 71ce9defd8d06a220da3c3f74c439d8a4a7ecc84
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
@@ -74,7 +74,7 @@ MSDAORA
 |**ウィンドウ ハンドル**|ウィンドウ ハンドルを使用して追加の情報を要求することを示します。|
 |**[Locale Identifier]**|32 ビットの一意の番号 (1033 など)、ユーザーの言語に関連する設定を指定することを示します。 これらの設定を示す日付と時刻を書式設定方法、項目はアルファベット順に並べ替えられます、文字列を比較してなります。|
 |**OLE DB サービス**|OLE DB サービスを有効または無効を指定するビットマスクを示します。|
-|**Prompt**|接続が確立されるときにユーザーに確認するかどうかを示します。|
+|**プロンプト**|接続が確立されるときにユーザーに確認するかどうかを示します。|
 |**拡張プロパティ**|プロバイダー固有の拡張された接続情報を含む文字列。 このプロパティを使用して、プロパティのメカニズムを通じてを記述できないプロバイダーに固有の接続情報に対してだけです。|
 
 ## <a name="see-also"></a>参照

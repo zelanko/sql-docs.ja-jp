@@ -1,33 +1,33 @@
 ---
-title: "ADO 用の visual C 拡張機能 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ADO 用の visual C 拡張機能 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c48eff858219640bf58bcd9abd9b222e48619b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 55f76e23f032f98a4f0ede00660dff62ccd6dec4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 Visual C で ADO のプログラミングの推奨される方法を使用して、 **#import**で説明したように、ディレクティブ[C++ ADO プログラミングのビジュアル Microsoft](../../../ado/guide/appendixes/visual-c-ado-programming.md)です。 ただし、以前のバージョンの ADO 付属の Visual C を使用したプログラミングの別の方法: Visual C 拡張します。 このセクションでは、この機能を説明の Visual C の拡張機能のコードを保守する必要がありますが、# を使用して新しい ADO コードを記述する必要があります**インポート**です。

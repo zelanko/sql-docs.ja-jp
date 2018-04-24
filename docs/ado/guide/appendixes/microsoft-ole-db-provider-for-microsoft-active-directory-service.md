@@ -1,33 +1,33 @@
 ---
-title: "Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory サービスの Microsoft OLE DB プロバイダー
 Active Directory サービス インターフェイス (ADSI) プロバイダーでは、adsi エディターを使用した異種のディレクトリ サービスに接続する ADO が許可されます。 これにより、ADO アプリケーションは、Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory サービスに、すべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなく読み取り専用アクセスできるようにします。 ADSI 自体は、プロバイダー モデルに基づいて、できるように、別のディレクトリに新しいプロバイダーの提供アクセスがある場合、ADO アプリケーションはシームレスにアクセスします。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
@@ -66,20 +66,20 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |*Root*|示します、 **ADsPath** (つまり、検索のルート) の検索を開始する対象のオブジェクト。|  
 |*フィルター*|RFC 1960 形式の検索フィルターを示します。|  
 |*属性*|返される属性のコンマ区切りの一覧を示します。|  
 |*スコープ*|省略可。 A**文字列**検索のスコープを指定します。 次のいずれかになります。<br /><br /> ベース-は、基本オブジェクト (検索のルート) のみを検索します。<br />-OneLevel-は、1 レベルのみを検索します。<br />-サブツリー-は、サブツリー全体を検索します。|  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- プロバイダーもサポートしています SQL SELECT コマンドのテキスト。 例:  
+ プロバイダーもサポートしています SQL SELECT コマンドのテキスト。 以下に例を示します。  
   
 ```  
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
@@ -102,7 +102,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|読み取り専用|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|読み取り/書き込み|  
+|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|読み取り/書き込み|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
@@ -126,7 +126,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|いいえ|  
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|いいえ|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|いいえ|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|  
+|[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|はい|  
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|  
 |[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|  
@@ -138,8 +138,8 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|  
 |[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|はい|  
+|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|はい|  
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|はい|  
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|  

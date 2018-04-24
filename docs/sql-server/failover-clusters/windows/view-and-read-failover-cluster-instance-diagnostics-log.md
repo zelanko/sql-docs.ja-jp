@@ -1,30 +1,32 @@
 ---
-title: "フェールオーバー クラスター インスタンスの診断ログを表示して読む方法 | Microsoft Docs"
-ms.custom: 
+title: フェールオーバー クラスター インスタンスの診断ログを表示して読む方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 853edff8b7e7e0713b3133d8819fa4537caea48a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bda925a4330ccd5a53e6176d8aaae4ca74c04412
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル (*SQLDIAG* ログとも呼ばれます) に書き込まれます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル (*SQLDIAG* ログとも呼ばれます) に書き込まれます。  
   
 -   **作業を開始する準備:**  [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **診断ログ設定の構成:** [Transact-SQL の使用](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Recommendations"></a> 推奨事項  
  既定では、SQLDIAG は、SQL Server インスタンス ディレクトリのローカル ログ フォルダーに保存されます。たとえば、AlwaysOn フェールオーバー クラスター インスタンス (FCI) の所有元ノードの "C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG" です。 各 SQLDIAG ログ ファイルのサイズは 100 MB に固定されています。 10 個のログ ファイルがコンピューターに格納された後、新しいログとして再利用されます。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> 権限  
+####  <a name="Permissions"></a> Permissions  
  **fn_xe_file_target_read_file**を実行するには、VIEW SERVER STATE 権限が必要です。  
   
  SQL Server Management Studio を管理者として開きます。  

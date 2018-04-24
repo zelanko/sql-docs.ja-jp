@@ -1,17 +1,17 @@
 ---
-title: "DataControl オブジェクト (RDS) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: DataControl オブジェクト (RDS) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
 データ クエリ バインド[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)1 つまたは複数のコントロール (たとえば、テキスト ボックス、取引先グリッド コントロールまたはコンボ ボックス) を表示する、 **Recordset** Web ページ上のデータ。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/09/2018
  内のすべてのプロパティ、 **.rds ですDataControl**は省略可能なカスタム ビジネス オブジェクトがそれらの機能を置き換えることができます。  
   
 > [!NOTE]
->  複数の結果を得るには、照会する場合は、最初のメッセージだけ[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が返されます。 複数の結果セットが必要な場合は、それぞれ独自に割り当てる**DataControl**です。 複数の結果のクエリの例は、以下である可能性があります。`"Select * from Authors, Select * from Topics"`  
+>  複数の結果を得るには、照会する場合は、最初のメッセージだけ[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が返されます。 複数の結果セットが必要な場合は、それぞれ独自に割り当てる**DataControl**です。 複数の結果のクエリの例は、以下である可能性があります。 `"Select * from Authors, Select * from Topics"`  
   
  追加する"DFMode = 20 です"を使用すると接続文字列、 **.rds です。DataControl**データを更新するときに、オブジェクトが、サーバーのパフォーマンスを向上させることができます。 この設定で、 **RDSServer.DataFactory**サーバー上のオブジェクトで少ないリソースを消費するモードを使用します。 ただし、次の機能では、この構成では利用できません。  
   

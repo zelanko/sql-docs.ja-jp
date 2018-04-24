@@ -1,31 +1,31 @@
 ---
-title: "Microsoft OLE DB Provider for ODBC |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB Provider for ODBC |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界がいずれかですべてのデータ ソースは、OLE DB インターフェイスを公開する ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースはこの方法はまだ公開されません。 ただし、現在使用しているほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -185,7 +185,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|使用不可|使用不可|読み取り/書き込み|読み取り/書き込み|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|読み取り専用|読み取り専用|読み取り専用|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|使用不可|使用不可|読み取り/書き込み|読み取り/書き込み|
+|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)|使用不可|使用不可|読み取り/書き込み|読み取り/書き込み|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|読み取り/書き込み|
@@ -210,7 +210,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
+|[ただし](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|[ユーザー アカウント制御]|はい|
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[Del](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
@@ -222,8 +222,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[[ファイル]](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|[ユーザー アカウント制御]|はい|
+|[クエリを再実行します。](../../../ado/reference/ado-api/requery-method.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
+|[再同期](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|[ユーザー アカウント制御]|はい|
 |[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[Update](../../../ado/reference/ado-api/update-method.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|[ユーザー アカウント制御]|[ユーザー アカウント制御]|はい|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |DBMS の名前|DBPROP_DBMSNAME|
 |DBMS のバージョン|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|グループ化のサポート|DBPROP_GROUPBY|
+|グループ化のサポート|DBPROP_GROUPBY と|
 |異なるテーブルのサポート|DBPROP_HETEROGENEOUSTABLES|
 |識別子の大文字と小文字の区別|DBPROP_IDENTIFIERCASE|
 |Initial Catalog|DBPROP_INIT_CATALOG|

@@ -1,15 +1,16 @@
 ---
-title: "SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ) | Microsoft Docs"
-ms.custom: 
+title: SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
-ms.reviewer: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: ''
+ms.component: failover-clusters
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading clusters
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cab55502d441bd32ba4256db1a78bd755396eaf2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d7bdf71944c3ac248ab61bb43fc07f2db7bc9eab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] フェールオーバー クラスターにアップグレードするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ UI またはコマンド プロンプトを使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] フェールオーバー クラスターにアップグレードするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ UI またはコマンド プロンプトを使用します。  
   
  ローカルでのインストールの場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  前述の手順に従って、クラスターを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]にアップグレードします。  
   
-2.  AddNode セットアップ操作を使用して別のサブネット上のノードを追加し、 **[クラスター ネットワークの構成]** ページで IP アドレス リソースの依存関係が OR になっていることを確認します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
+2.  AddNode セットアップ操作を使用して別のサブネット上のノードを追加し、 **[クラスター ネットワークの構成]** ページで IP アドレス リソースの依存関係が OR になっていることを確認します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
 #### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>拡張 V-LAN を現在使用しているマルチサブネット クラスターをアップグレードするには  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Windows フェールオーバー クラスター管理ツールを使用して、IP アドレス リソースの依存関係が OR に設定された新しいサブネットの新しい IP アドレスを追加します。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]へのアップグレード後は、次の作業を実行します。  
   
 -   [データベース エンジンのアップグレードの完了](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

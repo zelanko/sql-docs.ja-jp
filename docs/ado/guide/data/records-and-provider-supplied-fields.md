@@ -1,31 +1,31 @@
 ---
-title: "レコードおよびフィールドのプロバイダーが指定した |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: レコードおよびフィールドのプロバイダーが指定した |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fbde4c56512a93113e583f906d812e93f8b9e921
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、開いているは、現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL、開いていると組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  

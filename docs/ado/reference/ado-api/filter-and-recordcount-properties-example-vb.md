@@ -1,33 +1,33 @@
 ---
-title: "フィルターおよび RecordCount のプロパティの例 (VB) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: フィルターおよび RecordCount のプロパティの例 (VB) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0214769a09f0a7a2e572082d7972cd7606c27f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2a9369d44976f5cc4543277876ded62967a68702
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>フィルターおよび RecordCount のプロパティの例 (VB)
 この例が開いている、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)発行元のテーブルで、 ***Pubs***データベース。 次を使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを特定の国/地域のパブリッシャーに対して表示されるレコードの数を制限します。 **RecordCount**およびフィルター処理がフィルター選択されたレコード セットの違いを表示するプロパティを使用します。  

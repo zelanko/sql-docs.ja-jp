@@ -1,22 +1,22 @@
-﻿---
-title: "クラウド内の SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタートでは、任意のクラウド内の Linux で SQL Server 2017 を実行する方法を示します。"
+---
+title: クラウド内の SQL Server 2017 の概要 |Microsoft ドキュメント
+description: このクイック スタートでは、任意のクラウド内の Linux で SQL Server 2017 を実行する方法を示します。
 author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.component: 
+ms.component: ''
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.assetid: ''
+ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>クイック スタート: SQL Server 2017 をクラウドで実行します。
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  マーケットプレースから Linux AMI を、少なくとも 2 gb のメモリで作成します。 
-    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3 以降](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  AMI に ssh で接続します
@@ -49,13 +49,13 @@ ms.lasthandoff: 02/24/2018
 1. 少なくとも 2 GB のメモリの Ubuntu 16.04 のドロップレットを選択します。
 1. ドロップレットに ssh で接続します
 1. [Ubuntu のクイック スタート](quickstart-install-connect-ubuntu.md) を参照します
-1. リモート接続を構成します。 
+1. リモート接続を構成します。
     * コントロール パネルの上部の、**ネットワーク** のリンクをクリックし、**ファイアウォール** を選択します。
     * SQL Server がリッスンするポートでトラフィックを許可する受信規則を追加します。(既定の TCP ポートは 1433)
     
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  クラウド ランチャーから少なくとも 2 GB のメモリのLinux イメージを作成します。 
-    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3 以降](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  イメージに ssh で接続します

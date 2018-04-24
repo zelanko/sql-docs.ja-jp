@@ -1,17 +1,17 @@
 ---
-title: "ReadText メソッド |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: ReadText メソッド |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e26f365d2b25bab878f0a8b9a321240d7c8ee347
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2557106f3a4560181465dbd6f21fcb65bd5db0b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="readtext-method"></a>ReadText メソッド
 指定されたテキストの文字数を読み取ります[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -53,7 +53,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  **ReadText**メソッドがテキスト ストリームで使用される ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 バイナリ ストリームの (**型**は**adTypeBinary**)、使用して[読み取り](../../../ado/reference/ado-api/read-method.md)です。  
   
- クエリから返される XML データを大量になる、 **ReadText** ActiveX データ オブジェクト (ADO) ストリーム オブジェクトのメソッドは、これは、COM + コンポーネントから呼び出された場合です実行にかかる時間を大幅に向上にかかる場合があります、。ASP ページで、ユーザーのセッションはタイムアウトします。ADO から utf-8 エンコードが Unicode; にストリーム オブジェクトのデータを変換します一度に大量のデータの変換に関連する頻繁なメモリの再割り当ては非常に時間がかかる場合です。 解決するにを繰り返し呼び出す、 **ReadText**を ADO コマンド オブジェクト、およびより小さい文字数を指定します。 テストによる 128 K (131,072) と同じ値が最適であります。 この値がよりも減少した応答時間が低下します。 詳細については、サポート技術情報の記事 280067 を参照してください。"[prb]: 速度が低下する可能性があります ADO ストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する"、http://support.microsoft.com で Microsoft サポート技術情報でします。  
+ クエリから返される XML データを大量になる、 **ReadText** ActiveX データ オブジェクト (ADO) ストリーム オブジェクトのメソッドは、これは、COM + コンポーネントから呼び出された場合です実行にかかる時間を大幅に向上にかかる場合があります、。ASP ページで、ユーザーのセッションはタイムアウトします。ADO から utf-8 エンコードが Unicode; にストリーム オブジェクトのデータを変換します一度に大量のデータの変換に関連する頻繁なメモリの再割り当ては非常に時間がかかる場合です。 解決するにを繰り返し呼び出す、 **ReadText**を ADO コマンド オブジェクト、およびより小さい文字数を指定します。 テストによる 128 K (131,072) と同じ値が最適であります。 この値がよりも減少した応答時間が低下します。 詳細については、サポート技術情報の記事 280067 を参照してください。"[prb]: 速度が低下する可能性があります ADO ストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する"、Microsoft サポート技術情報でhttp://support.microsoft.comです。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

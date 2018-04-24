@@ -1,33 +1,33 @@
 ---
-title: "RDS のコード例 VBScript |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: RDS のコード例 VBScript |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - RDS samples [ADO], VBScript
 - VBScript RDS examples [ADO]
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81e6ae7dd9b72fba1ad33cbd2f4bcac7627a38a4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 76cb0dcff7896a01ca0ed12fec31731515385c35
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-code-examples-in-vbscript"></a>RDS のコード例では、VBScript
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
  次のコード例を使用して、Microsoft Visual Basic Scripting Edition (VBScript) で記述するときに、RDS オブジェクト、メソッド、およびプロパティを使用する方法について説明します。  
   
 > [!NOTE]
->  コード例全体をコード エディターに貼り付けます。 部分的な例を使用する場合、または段落の書式設定が失われた場合、例が正しく動作しない可能性があります。  
+>  コード例の全体をコード エディターに貼り付けてください。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
   
 ## <a name="objects"></a>オブジェクト  
   

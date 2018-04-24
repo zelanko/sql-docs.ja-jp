@@ -1,28 +1,22 @@
 ---
-title: 並列データ ウェアハウスのモニターの読み込み
-author: barbkess
-ms.author: barbkess
+title: 並列データ ウェアハウスの読み込みを監視 |Microsoft ドキュメント
+description: Analytics Platform System (AP) 管理コンソールまたは並列データ ウェアハウス (PDW) のシステム ビューを使用してアクティブになっており、最新の負荷を監視します。"
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Active と最近を監視する[dwloader](dwloader.md) Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) システム ビューを使用して読み込みます。
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-loads"></a>モニターを読み込みます
-Active と最近を監視する[dwloader](dwloader.md) Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) を使用してロード[システム ビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)です。 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Parallel Data Warehouse にモニターを読み込みます
+Active と最近モニター [dwloader](dwloader.md) Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) を使用してロード[システム ビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)です。 
   
 > [!TIP]  
 > INSERT ステートメントまたは SQL ステートメントを使用して、負荷を実行するビジネス インテリジェンス ツールを使用して、いくつかの読み込みが開始されます。 

@@ -1,26 +1,22 @@
 ---
-title: '[アクセス許可の付与]'
-author: barbkess
-ms.author: barbkess
+title: Grant T-SQL アクセス許可 - Parallel Data Warehouse |Microsoft ドキュメント
+description: Grant T-SQL Parallel Data Warehouse でのデータベース操作のアクセス許可。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>[アクセス許可の付与]
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>並列データ ウェアハウスのアクセス許可を付与 T-SQL
+Grant T-SQL Parallel Data Warehouse でのデータベース操作のアクセス許可。
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>データベースにクエリを送信するアクセス許可を付与します。
 このセクションでは、データベース ロールに権限およびユーザーが SQL Server PDW アプライアンス上のクエリ データに付与する方法について説明します。  

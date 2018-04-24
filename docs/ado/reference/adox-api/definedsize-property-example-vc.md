@@ -1,32 +1,32 @@
 ---
-title: "DefinedSize プロパティの例 (vc++) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: DefinedSize プロパティの例 (vc++) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7a9366879aa23b1ceefa6bfe688f168fff2dfee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 57609bce13555f6a8927c48c7d3d2a39f3169628
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize プロパティの例 (vc++)
 この例で、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)です。 コードがの FirstName 列のサイズを再定義、**従業員**のテーブル、 *Northwind*データベース。 FirstName の値に変更し、[フィールド](../../../ado/reference/ado-api/field-object.md)の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブルが表示されます。 既定では、FirstName フィールドが空白で埋められます再定義した後に注意してください、 **DefinedSize**プロパティです。  
