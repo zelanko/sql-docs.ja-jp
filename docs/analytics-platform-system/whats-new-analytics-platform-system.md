@@ -1,23 +1,19 @@
 ---
-title: 'Analytics Platform System: スケール アウト データ ウェアハウスの新機能'
-author: happynicolle
-ms.author: nicw;barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: 'Analytics Platform System: スケール アウト データ ウェアハウスの新機能 |Microsoft ドキュメント'
 description: Microsoft® Analytics Platform System、MPP SQL Server 並列データ ウェアハウスをホストするスケール アウト、内部設置型アプライアンスの新機能を参照してください。
-ms.date: 11/28/2016
-ms.topic: article
-ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4beb44ac45d95aa0338dc9dc0be0796a223d3243
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System 2016、スケール アウト MPP データ ウェアハウスの新機能
 Microsoft® Analytics Platform System (APS) 2016、アプライアンスの最新の更新プログラムは、スケール アウト、内部設置型のアプライアンス MPP SQL Server 並列データ ウェアハウスをホストする新しい内容を確認します。 
@@ -53,7 +49,7 @@ APS 2016 では、それらの改良の T-SQL の互換性をサポートしま�
 
 ### <a name="security-functions"></a>セキュリティ関数
 
-- [CHECKSUM()][] and [BINARY_CHECKSUM()][]
+- [CHECKSUM()][]と[BINARY_CHECKSUM()][]
 - [HAS_PERMS_BY_NAME()][]
 
 ### <a name="additional-functions"></a>追加の関数

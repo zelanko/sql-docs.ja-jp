@@ -1,28 +1,21 @@
 ---
-title: 電源オンまたはオフ (Analytics Platform System) APS アプライアンス
-author: barbkess
-ms.author: barbkess
+title: 電源をオンまたはオフ、Analytics Platform System アプライアンス |Microsoft ドキュメント
+description: Analytics Platform System の電源をオンまたはオフ、アプライアンス
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>APS アプライアンスの電源をオンまたはオフ
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System の電源をオンまたはオフ、アプライアンス
 このトピックでは、電源をオンまたは電源オフ、Analytics Platform Systemappliance で並列データ ウェアハウスを実行する HDInsight 領域を必要に応じて実行する方法について説明します。 使用してこのトピック Analytics Platform System アプライアンスを移動すると、または電源にアプライアンスで壊滅的な停電後です。  
   
 アプライアンスの電源オンとオフは、開始と停止、アプライアンスのサービスと同じではないです。 サブジェクトについては、次を参照してください。 [PDW サービス ステータス&#40;Analytics Platform System&#41;](pdw-services-status.md)です。 詳細については、電源をオンまたはオフ、SQL Server 2008 並列データ ウェアハウス、SQL Server 2008 並列データ ウェアハウス ヘルプ ファイルを参照してください。 電源をオンまたはオフ、SQL Server 2012 AU1 または AU2 Parallel Data Warehouse の詳細については、これらのバージョンのヘルプ ファイルを参照してください。  
