@@ -1,35 +1,35 @@
 ---
-title: "例 : ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs"
-ms.custom: 
+title: '例 : ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9998ad6318f303861473e5e510c782b16fbb42ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8b5c4f8ee5a764d5d6c5a22a4c8564ca90f0e07b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
+  この例は、「 [ELEMENTXSINIL ディレクティブの指定](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
   
 ```  
 USE AdventureWorks2012;  

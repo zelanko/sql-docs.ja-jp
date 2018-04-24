@@ -1,34 +1,35 @@
 ---
-title: "SP:Recompile イベント クラス | Microsoft Docs"
-ms.custom: 
+title: SP:Recompile イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f56543d46915673c51e1626d669f473416aed01f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bb54befe1e768f21298ee1417057b2d01976cbee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SP:Recompile イベント クラスは、ストアド プロシージャ、トリガー、またはユーザー定義関数が再コンパイルされたことを示します。 このイベント クラスから報告される再コンパイルは、ステートメント レベルで発生します。  
+  SP:Recompile イベント クラスは、ストアド プロシージャ、トリガー、またはユーザー定義関数が再コンパイルされたことを示します。 このイベント クラスから報告される再コンパイルは、ステートメント レベルで発生します。  
   
  ステートメント レベルの再コンパイルを追跡する方法としては、SQL:StmtRecompile イベント クラスの使用をお勧めします。 SP:Recompile イベント クラスの使用が推奨されなくなりました。 詳細については、「 [SQL:StmtRecompile イベント クラス](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)」を参照してください。  
   

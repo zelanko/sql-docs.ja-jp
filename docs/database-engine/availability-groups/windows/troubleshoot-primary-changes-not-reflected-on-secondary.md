@@ -13,12 +13,12 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 caps.latest.revision: 9
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 8e828a3e3578fbe3ff8ce733d30a7aea549fbcef
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: f700fc08614bb9c63579eaff16244723d257f349
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,17 +81,17 @@ ms.lasthandoff: 04/05/2018
   
 -   パフォーマンス カウンター `SQL Server:Database > Log Bytes Flushed/sec`  
   
--   パフォーマンス カウンター `SQL Server:Database Mirroring > Send/Receive Ack Time`  
+-   パフォーマンス カウンター`SQL Server:Database Mirroring > Send/Receive Ack Time`  
   
--   パフォーマンス カウンター `SQL Server:Availability Replica > Bytes Sent to Replica/sec`  
+-   パフォーマンス カウンター`SQL Server:Availability Replica > Bytes Sent to Replica/sec`  
   
--   パフォーマンス カウンター `SQL Server:Availability Replica > Bytes Sent to Transport/sec`  
+-   パフォーマンス カウンター`SQL Server:Availability Replica > Bytes Sent to Transport/sec`  
   
--   パフォーマンス カウンター `SQL Server:Availability Replica > Flow Control Time (ms/sec)`  
+-   パフォーマンス カウンター`SQL Server:Availability Replica > Flow Control Time (ms/sec)`  
   
--   パフォーマンス カウンター `SQL Server:Availability Replica > Flow Control/sec`  
+-   パフォーマンス カウンター`SQL Server:Availability Replica > Flow Control/sec`  
   
--   パフォーマンス カウンター `SQL Server:Availability Replica > Resent Messages/sec`  
+-   パフォーマンス カウンター`SQL Server:Availability Replica > Resent Messages/sec`  
   
  この問題を解決するには、ネットワーク帯域幅をアップグレードするか、不要なネットワーク トラフィックを削除するか減らしてみてください。  
   

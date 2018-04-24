@@ -2,7 +2,7 @@
 title: 強力なパスワード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -26,11 +26,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c5b783d4899479523d0e54fda7620ad0145b642
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b92fe5fd85a062dd4de6d86fab6b7a559f2e0010
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="strong-passwords"></a>強力なパスワード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/10/2018
   
 -   $ または @ で始まる  
   
- OLE DB または ODBC の接続文字列で使用する場合、ログインまたはパスワードの文字に、[] {}() , ; ? * ! @ は含めないでください。 * ! @。 これらの文字は、接続の初期化や、接続の値を区切る場合に使用されています。  
+ OLE DB または ODBC の接続文字列で使用する場合、ログインまたはパスワードの文字に、[] {}() , ; ? * ! @ は含めないでください。 * ! @」をご覧ください。 これらの文字は、接続の初期化や、接続の値を区切る場合に使用されています。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [パスワード ポリシー](../../relational-databases/security/password-policy.md)  

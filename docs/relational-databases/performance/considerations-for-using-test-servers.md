@@ -1,16 +1,16 @@
 ---
-title: "テスト サーバーの使用に関する注意点 | Microsoft Docs"
-ms.custom: 
+title: テスト サーバーの使用に関する注意点 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb2515163afb01ece59d6d1dc7d681e67dfbbbd4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1dea281ca7666a1d2b680a3d264f136785ebb3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>テスト サーバーの使用に関する注意点
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 実稼働サーバー上のデータベースのチューニングにテスト サーバーを使用することは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの大きな利点です。 この機能を使用して、実際のデータを実稼働サーバーからテスト サーバーにコピーすることなく、チューニングにかかるオーバーヘッドをテスト サーバーに移行できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  実稼働サーバー上のデータベースのチューニングにテスト サーバーを使用することは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの大きな利点です。 この機能を使用して、実際のデータを実稼働サーバーからテスト サーバーにコピーすることなく、チューニングにかかるオーバーヘッドをテスト サーバーに移行できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) では、テスト サーバーのチューニング機能はサポートされません。  

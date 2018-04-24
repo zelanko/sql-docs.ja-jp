@@ -1,34 +1,35 @@
 ---
-title: "Object:Deleted イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Object:Deleted イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Object:Deleted event class
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60f8eedf4a629b452dc74d08d04823811577ec8d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f459cfd2d0a9c6aff0d6ff5cfdd6cd88197b07f7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Object:Deleted イベント クラスは、DROP INDEX ステートメントや DROP TABLE ステートメントなどによって、オブジェクトが削除されたことを示します。 たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが削除されているかどうかを判断するために使用できます。  
+  Object:Deleted イベント クラスは、DROP INDEX ステートメントや DROP TABLE ステートメントなどによって、オブジェクトが削除されたことを示します。 たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが削除されているかどうかを判断するために使用できます。  
   
  Objects イベント クラスに加えて、既定の LoginName データ列と NTUserName データ列を監視することで、オブジェクトを作成、削除、またはアクセスしたユーザーの名前を特定できます。  
   

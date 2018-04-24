@@ -1,15 +1,16 @@
 ---
-title: "[進行状況] ページ (AlwaysOn 可用性グループ ウィザード) | Microsoft Docs"
-ms.custom: 
+title: '[進行状況] ページ (AlwaysOn 可用性グループ ウィザード) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.failoverwizard.progress.f1
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.swb.addreplicawizard.progress.f1
 - sql13.swb.newagwizard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fad41153c117a5b76c3e7023bb9eb40b268d4b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e8840feae0d634ccbf35108f5fdab8c8cf48a60a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>[進行状況] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/18/2018
  **ステータス**  
  完了した手順の結果と、現在の手順の完了の割合を次のように示します。  
   
-|[結果]|Description|  
+|結果|Description|  
 |------------|-----------------|  
 |**[エラー]**|この手順の操作がエラーになったことを示します。 リンクをクリックすると、エラーを説明するメッセージ ダイアログ ボックスが表示されます。|  
 |**[実行中 (** *完了の割合* **)]**|操作が現在実行中であることを示し、この手順の進行状況をパーセンテージで示します。|  

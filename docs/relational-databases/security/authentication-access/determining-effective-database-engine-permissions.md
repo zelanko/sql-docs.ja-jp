@@ -2,7 +2,7 @@
 title: データベース エンジンの有効なアクセス許可の決定 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,9 +92,8 @@ SELECT DP1.name AS DatabaseRoleName,
 
 このシステムは柔軟であり、厳密に設定すると複雑になることがあります。 簡単にするには、ロールを作成し、ロールにアクセス許可を割り当て、ロールにグループを追加します。 データベース開発チームがスキーマで活動を降りし、個々のテーブルやプロシージャではなく、スキーマ全体にロール アクセス許可を与えると、さらに簡単になります。 現実のシナリオは複雑であり、ビジネス ニーズによって予想もしないようなセキュリティ要件が発生する可能性があります。   
 
-次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 この記事のポスターは、読み取るには小さすぎます。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
-  
- [![データベース エンジンのアクセス許可](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### <a name="security-classes"></a>セキュリティ クラス
 

@@ -2,7 +2,7 @@
 title: 統計の作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: statistics
@@ -26,11 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 791e92681938ee0b198f3f6524354e7412ae371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-statistics"></a>統計の作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +39,11 @@ ms.lasthandoff: 04/10/2018
   
  **このトピックの内容**  
   
--   **開始する前に。**  
+-   **作業を開始する準備:**  
   
-     [制限事項と制約](#Restrictions)  
+     [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **統計を作成するために使用するもの:**  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/10/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  ユーザーがテーブルまたはインデックス付きビューの所有者であるか、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -91,16 +92,16 @@ ms.lasthandoff: 04/10/2018
      **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
-     **データ型**  
+     **[データ型]**  
      統計の対象となる列のデータ型を表します。  
   
-     **サイズ**  
+     **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
      **Identity**  
      オンの場合、ID 列を示します。  
   
-     **Allow Nulls**  
+     **[NULL を許容]**  
      列で NULL 値が許容されるかどうかを示します。  
   
      **[追加]**  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/10/2018
      **[フィルター]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスに次のプロパティが表示されます。  
   
      **[フィルター式]**  
-     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、IPv4 アドレスの場合、「 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  **[全般]** ページの *[テーブルの新しい統計 - <テーブル名>]* ダイアログ ボックスで **[追加]** をクリックします。  
   
@@ -133,10 +134,10 @@ ms.lasthandoff: 04/10/2018
      **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
-     **データ型**  
+     **[データ型]**  
      統計の対象となる列のデータ型を表します。  
   
-     **サイズ**  
+     **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
      **Identity**  

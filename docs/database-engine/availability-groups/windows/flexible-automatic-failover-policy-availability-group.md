@@ -1,15 +1,16 @@
 ---
-title: "柔軟な自動フェールオーバー ポリシー - 可用性グループ | Microsoft Docs"
-ms.custom: 
+title: 柔軟な自動フェールオーバー ポリシー - 可用性グループ | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - flexible failover policy
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 486be04f76c4a8b3cb017a2cbd1e6ac73942aeb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>柔軟な自動フェールオーバー ポリシー - 可用性グループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 柔軟なフェールオーバー ポリシーを使用すると、可用性グループの[自動フェールオーバー](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)を実行する条件をきめ細かく制御できます。 自動フェールオーバーを実行するエラー条件および正常性チェックの頻度を変更することで、自動フェールオーバーの確率値を増減して高可用性の SLA をサポートできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  柔軟なフェールオーバー ポリシーを使用すると、可用性グループの [自動フェールオーバー](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) を実行する条件をきめ細かく制御できます。 自動フェールオーバーを実行するエラー条件および正常性チェックの頻度を変更することで、自動フェールオーバーの確率値を増減して高可用性の SLA をサポートできます。  
   
  可用性グループの柔軟なフェールオーバー ポリシーは、そのエラー条件レベルと正常性チェックのタイムアウトしきい値によって定義されます。 可用性グループがエラー条件レベルまたはその正常性チェックのタイムアウトしきい値を超えていることを検出すると、可用性グループのリソース DLL が Windows Server フェールオーバー クラスタリング (WSFC) クラスターに応答を送り返します。 その後、WSFC クラスターは、セカンダリ レプリカに対する自動フェールオーバーを開始します。  
   

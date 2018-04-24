@@ -1,16 +1,16 @@
 ---
-title: "フルテキスト インデックスの作成 | Microsoft Docs"
-ms.custom: 
+title: フルテキスト インデックスの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index populations [full-text search]
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
+  フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
   
 ##  <a name="types"></a> Types of population  
 フルテキスト インデックスは次の種類の作成に対応しています。
@@ -167,7 +168,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  増分作成では、インデックスが設定されたテーブルに **timestamp** データ型の列が存在する必要があります。 **timestamp** 型の列が存在しない場合には、増分作成を実行できません。   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 作成が終わると、Full-Text Engine は新しい **timestamp** 型の値を記録します。 この値は、SQL Gatherer が検出した **timestamp** 型の最大値です。 次回、増分作成を開始するとき、この値が使用されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**timestamp** 列を使用して前回の作成後に変更された行が識別されます。 増分作成では、前回のカタログ作成後、または作成中に追加、削除、または変更された行のフルテキスト インデックスが更新されます。 作成が終わると、Full-Text Engine は新しい **timestamp** 型の値を記録します。 この値は、SQL Gatherer が検出した **timestamp** 型の最大値です。 次回、増分作成を開始するとき、この値が使用されます。  
  
 増分作成が要求された結果、完全作成が行われることもあります。
 -   **timestamp** 型の列を含んでいないテーブルで増分作成を要求すると、完全作成が実行されます。
@@ -225,7 +226,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 クロール ログ ファイルの可変部分は次のようになります。
 -   <**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
 -   <**FullTextCatalogID**> - フルテキスト カタログ ID。 <**catid**> は、ゼロで始まる 5 桁の数字です。  
--   <**n**> は、同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
+-   <**n**> - 同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  
 

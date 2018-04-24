@@ -1,16 +1,16 @@
 ---
-title: "認証モードの選択 | Microsoft Docs"
-ms.custom: 
+title: 認証モードの選択 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ins.instwizard.authenticationmode.f1
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - SQL authentication mode
 - Password Expired dialog box
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1164bed25cbd7c13809c4a4ec8ea679119befd7b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: efed26ea51f00df312711083423bb86632a72544
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] セットアップ中に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の認証モードを選択する必要があります。 Windows 認証モードと混在モードという 2 つのモードを使用できます。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 Windows 認証モードと混在モードという 2 つのモードを使用できます。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
   
 ## <a name="configuring-the-authentication-mode"></a>認証モードの構成  
  セットアップ中に混合モード認証を選択した場合は、sa という組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力して確認する必要があります。 sa アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。  

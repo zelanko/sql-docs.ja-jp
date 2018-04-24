@@ -2,7 +2,7 @@
 title: レプリケーション エージェントのセキュリティ モデル | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: replication
@@ -28,11 +28,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07b24a4d11b0bb95417d3808afb8d9d4e5c1b849
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 30e8b72f0715f8e194fdabfab89f23444eb3df25
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/10/2018
 > [!NOTE]  
 >  特定の Windows オペレーティング システム内のユーザー アカウント制御 (UAC) により、スナップショット共有への管理アクセスが妨害される場合があります。 このため、スナップショット エージェント、ディストリビューション エージェント、およびマージ エージェントによって使用される Windows アカウントに、スナップショット共有の権限を明示的に与える必要があります。 この操作は、Windows アカウントが Administrators グループのメンバーである場合にも必要です。 詳細については、「[Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
-|エージェント|権限|  
+|エージェント|アクセス許可|  
 |-----------|-----------------|  
 |スナップショット エージェント|このエージェントを実行する Windows アカウントは、ディストリビューターに接続するときに使用されます。 このアカウントは、次の条件を満たしている必要があります。<br /><br /> - 最低でも、ディストリビューション データベースで **db_owner** 固定データベース ロールのメンバーである。<br /><br /> - スナップショット共有に対する読み取り、書き込み、変更権限がある。<br /><br /> <br /><br /> パブリッシャーへの *接続* に使用されるアカウントは、最低でもパブリケーション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。|  
 |ログ リーダー エージェント (Log Reader Agent)|このエージェントを実行する Windows アカウントは、ディストリビューターに接続するときに使用されます。 このアカウントは、最低でもディストリビューション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。<br /><br /> パブリッシャーへの接続に使用されるアカウントは、最低でもパブリケーション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。<br /><br /> **sync_type** オプション *replication support only*、 *initialize with backup*、または *initialize from lsn*を選択した場合、 **sp_addsubscription**の実行後にログ リーダー エージェントを実行して、スクリプトの設定がディストリビューション データベースに書き込まれるようにする必要があります。 ログ リーダー エージェントが、 **sysadmin** 固定サーバー ロールのメンバーであるアカウントで実行されている必要があります。 **sync_type** オプションが *Automatic*に設定されている場合、特別なログ リーダー エージェントの操作は必要ありません。|  

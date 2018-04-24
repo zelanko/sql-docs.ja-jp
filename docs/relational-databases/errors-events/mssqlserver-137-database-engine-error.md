@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_137 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 137 (Database Engine error)
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c242db0377a97305c26e35b53e165346af87815
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c3866d22aff34e006ef9ee9a815443423ed263c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ EXECUTE ('SELECT @mycol FROM Production.Product;');
 ## <a name="user-action"></a>ユーザーの操作  
 SQL スクリプトで使用する変数がスクリプト内の別の場所で事前に宣言されていることを確認します。  
   
-外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例:  
+外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例 :  
   
 USE AdventureWorks2012;  
   

@@ -1,36 +1,37 @@
 ---
-title: "SQL Server 2016 の非推奨フルテキスト検索機能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 の非推奨フルテキスト検索機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [full-text search]
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4b5a661ce5efe520c680d91a29d89a2130219d8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3d2f146e006853a12e3cda5e94fca3f1d6d2380
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016 の非推奨フルテキスト検索機能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-このトピックでは、SQL Server でまだ使用できるものの、非推奨となったフルテキスト検索機能について説明します。 これらの機能は今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。  
+  このトピックでは、SQL Server でまだ使用できるものの、非推奨となったフルテキスト検索機能について説明します。 これらの機能は今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。  
   
 非推奨機能の使用は、**SQL Server:Deprecated Features** オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視します。 詳細については、「 [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   

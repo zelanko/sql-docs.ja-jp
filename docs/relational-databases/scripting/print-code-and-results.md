@@ -1,16 +1,16 @@
 ---
-title: "コードと結果の印刷 | Microsoft Docs"
-ms.custom: 
+title: コードと結果の印刷 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d1f662f0911234962948fe9e68123aaf06e5fd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d198072951c81ab11c3258aab0be4bfb0d4c9819
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="print-code-and-results"></a>コードと結果の印刷
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリまたはファイルの印刷時には、プリンターがカラー印刷をサポートしており、プリンターの設定でカラー印刷が有効になっている場合、色分けされた要素はカラーで印刷されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  クエリまたはファイルの印刷時には、プリンターがカラー印刷をサポートしており、プリンターの設定でカラー印刷が有効になっている場合、色分けされた要素はカラーで印刷されます。  
   
  ただし、エディター内のテキストのフォントと色は、プリンターで印刷したときのテキストとは異なる場合があります。 **[ツール]** メニューの **[オプション]**をクリックします。 **[環境]**の **[フォントおよび色]**をクリックし、エディターで表示する項目のフォントと色、および印刷時に有効にするフォントと色を選択します。 これらの設定が異なっている場合、エディターでの表示と出力結果が異なります。  
   

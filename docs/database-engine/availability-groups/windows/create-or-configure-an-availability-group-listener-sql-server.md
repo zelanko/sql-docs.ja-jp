@@ -2,7 +2,7 @@
 title: 可用性グループ リスナーの作成または構成 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: fae108d9d72c9ba183b7f4b37b418b6d99ed5f56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 746cdda3b75aee4f15f7c03f9754614f15c68434
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの "*可用性グループ リスナー*" を作成または構成する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 *で* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)]可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を作成または構成する方法について説明します。  
   
 > [!IMPORTANT]  
 >  可用性グループの最初の可用性グループ リスナーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell を使用することを強くお勧めします。 必要な場合 (追加リスナーを作成する場合など) を除いて、WSFC クラスターでリスナーを直接作成することは避けてください。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
      [可用性グループの追加のリスナーの作成 (省略可能)](#CreateAdditionalListener)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="DoesListenerExist"></a> この可用性グループに既にリスナーが存在するか  
  **可用性グループにリスナーが既に存在するかどうかを確認するには**  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **可用性グループ リスナーを作成または構成するには**  
   
-1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更します (**cd**)。  
+1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
   
 2.  可用性グループ リスナーを作成または変更するには、次のコマンドレットのいずれかを使用します。  
   
@@ -298,7 +299,7 @@ ms.lasthandoff: 11/20/2017
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、クライアント接続文字列で  **(推奨どおり) を指定しているクライアントのフェールオーバー後の再接続時間を短縮するために、** RegisterAllProvidersIP `MultiSubnetFailover = True`プロパティを 1 に設定します。 リスナーのマルチサブネット機能を活用するには、クライアントに **MultiSubnetFailover** キーワードをサポートするデータ プロバイダーが必要な場合があります。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)」を参照してください。  
   
-     マルチサブネット クラスタリングについては、「[SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)」を参照してください。  
+     マルチサブネット クラスタリングについては、「 [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)を作成または構成する方法について説明します。  
   
     > [!TIP]  
     >  `RegisterAllProvidersIP = 1`のときに、WSFC クラスターに対して WSFC の構成の検証ウィザードを実行すると、次の警告メッセージが表示されます。  
@@ -337,7 +338,7 @@ Start-ClusterResource yourListenerName
   
 -   この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
   
--   可能であれば、`MultiSubnetFailover = True` を指定するようにクライアント接続文字列を更新することを開発者に勧めます。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)」を参照してください。  
+-   可能であれば、 `MultiSubnetFailover = True`を指定するようにクライアント接続文字列を更新することを開発者に勧めます。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)」を参照してください。  
   
 ###  <a name="CreateAdditionalListener"></a> 可用性グループの追加のリスナーの作成 (省略可能)  
  SQL Server で 1 つのリスナーを作成した後、次の手順で追加のリスナーを追加できます。  

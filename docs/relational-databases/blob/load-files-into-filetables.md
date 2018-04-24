@@ -1,36 +1,36 @@
 ---
-title: "FileTable へのファイルの読み込み | Microsoft Docs"
-ms.custom: 
+title: FileTable へのファイルの読み込み | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: cae14be4676927821a5d30f1eb1503f91b0d45ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-FileTable にファイルを読み込むまたは移行する方法について説明します。  
+  FileTable にファイルを読み込むまたは移行する方法について説明します。  
   
 ##  <a name="BasicsLoadNew"></a> FileTable へのファイルの読み込みまたは移行  
  FileTable へのファイルの読み込みや移行の方法は、ファイルが現在格納されている場所によって異なります。  

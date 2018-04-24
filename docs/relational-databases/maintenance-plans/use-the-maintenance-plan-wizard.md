@@ -1,7 +1,7 @@
 ---
 title: メンテナンス プラン ウィザードの使用 | Microsoft Docs
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -42,14 +42,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e0aa3d178355e9b50ad381f3ef3517aabce8c78f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
     
  
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
@@ -169,7 +170,7 @@ ms.lasthandoff: 01/18/2018
   
   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **およびユーザーが作成したデータベースを除く** システム データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
- **[すべてのユーザー データベース] \(master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース] (master、model、msdb、tempdb は対象外)**  
   
  - ユーザーが作成したすべてのデータベースを対象として、このタスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
@@ -180,10 +181,10 @@ ms.lasthandoff: 01/18/2018
 **[インデックスを含める]** チェック ボックス  
  - すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
-**[Physical only] \(物理のみ)**  
+**[Physical only] (物理のみ)**  
  - ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
-**[Tablock] \(Tablock)**  
+**[Tablock] (Tablock)**  
  - DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
   
 ## <a name="define-database-shrink-tasks"></a>データベースの圧縮タスクを定義する  

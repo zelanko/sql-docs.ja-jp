@@ -2,7 +2,7 @@
 title: 可用性グループ - グループへのデータベースの追加ウィザード | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7a24cc777a0b13329c38fe4a276fae1c8b22d36
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3a28e3c73df8e4f9e57ad7acbd5e52a913d8b782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>可用性グループ - グループへのデータベースの追加ウィザード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 可用性グループへのデータベースの追加ウィザードを使用して、既存の AlwaysOn 可用性グループに 1 つ以上のデータベースを追加できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  可用性グループへのデータベースの追加ウィザードを使用して、既存の AlwaysOn 可用性グループに 1 つ以上のデータベースを追加できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用してデータベースを追加する方法については、「[可用性グループへのデータベースの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)」を参照してください。  

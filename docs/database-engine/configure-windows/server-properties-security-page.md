@@ -2,7 +2,7 @@
 title: サーバーのプロパティ ([セキュリティ] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba93d13e40d98ff36933bb18353b249c7b0e32ba
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 620776f8d4f968be1811da4637c123d03364cea6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---security-page"></a>[サーバーのプロパティ] - [セキュリティ] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、サーバー セキュリティ オプションを表示したり変更したりできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このページを使用すると、サーバー セキュリティ オプションを表示したり変更したりできます。  
   
 ## <a name="server-authentication"></a>[サーバー認証]  
  **[Windows 認証モード]**  

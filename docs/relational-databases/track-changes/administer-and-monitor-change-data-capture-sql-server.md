@@ -1,36 +1,36 @@
 ---
-title: "変更データ キャプチャの管理と監視 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 変更データ キャプチャの管理と監視 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: be4459a471c9b4530f2ef831b3fb5e1ce9b9ad28
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
+  このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
   
 ##  <a name="Capture"></a> キャプチャ ジョブ  
  キャプチャ ジョブは、パラメーターなしのストアド プロシージャ **sp_MScdc_capture_job**を実行すると開始されます。 このストアド プロシージャは、msdb.dbo.cdc_jobs からキャプチャ ジョブの *maxtrans*、 *maxscans*、 *continuous*、および *pollinginterval* の構成値を抽出することによって開始されます。 これらの構成値は、パラメーターとしてストアド プロシージャ **sp_cdc_scan**に渡されます。 これは **sp_replcmds** を呼び出してログ スキャンを実行する場合に使用されます。  

@@ -2,7 +2,7 @@
 title: 拡張イベントへの PowerShell プロバイダーの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c51331b402cf848d9b76d5dfc42801c71c3e2a6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f804f515f31b64923cdc4dd2a70bcc285568414a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- 次のスクリプトでは、前の例で作成したセッションにリング バッファー ターゲットが追加されます  (この例では、 **Alter** メソッドの使用方法を示しています。 ターゲットは、最初にセッションを作成するときに追加できます)。  
+ 次のスクリプトでは、前の例で作成したセッションにリング バッファー ターゲットが追加されます (この例では、 **Alter** メソッドの使用方法を示しています。 ターゲットは、最初にセッションを作成するときに追加できます)。  
   
 ```  
 #Script to alter a session.  
@@ -113,7 +114,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  拡張イベント セッションを作成、変更、または削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   
 ## <a name="see-also"></a>参照  

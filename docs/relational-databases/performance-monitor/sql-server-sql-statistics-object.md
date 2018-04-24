@@ -1,34 +1,35 @@
 ---
-title: "SQL Server: SQL Statistics オブジェクト | Microsoft Docs"
-ms.custom: 
+title: 'SQL Server: SQL Statistics オブジェクト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8254edc172dc9e10133e90eab8842dcc0347cb8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Statistics** オブジェクトには、コンパイルの動作や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **の** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
   
  コンパイルは、クエリのターンアラウンド時間の大半を占めます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、コンパイルのコストを節約するために、コンパイル済みのクエリ プランがクエリ キャッシュに保存されます。 キャッシュを使用して、コンパイル済みのクエリを再使用のために保存すると、後から実行するときに再コンパイルの必要がなくなるので、コンパイルを減らすことができます。 ただし、一意のクエリはすべて、少なくとも 1 回コンパイルする必要があります。 クエリの再コンパイルは、次の要因によって生じることがあります。  
   

@@ -1,34 +1,35 @@
 ---
-title: "SQL Server: User Settable オブジェクト | Microsoft Docs"
-ms.custom: 
+title: 'SQL Server: User Settable オブジェクト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fac823d76b763243ecb97303dd88f30c38535fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft **の** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
   
  **User Settable** オブジェクトには、 **ユーザー カウンター 1** から **ユーザー カウンター 10**まで、クエリ カウンターの 10 個のインスタンスが含まれています。 これらのカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **から** sp_user_counter10 **までの**ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
   

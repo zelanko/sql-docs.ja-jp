@@ -1,30 +1,32 @@
 ---
-title: "バッファー プール拡張 | Microsoft Docs"
-ms.custom: 
+title: バッファー プール拡張 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4ffff5a902f7758e901301cc733b1260ef4d5dd6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で導入されたバッファー プール拡張は、不揮発性ランダム アクセス メモリ (ソリッドステート ドライブ) 拡張としての [!INCLUDE[ssDE](../../includes/ssde-md.md)] バッファー プールへのシームレスな統合を実現することで、I/O スループットを大幅に向上させます。 バッファー プール拡張は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションでは使用できません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]で導入されたバッファー プール拡張は、不揮発性ランダム アクセス メモリ (ソリッドステート ドライブ) 拡張としての [!INCLUDE[ssDE](../../includes/ssde-md.md)] バッファー プールへのシームレスな統合を実現することで、I/O スループットを大幅に向上させます。 バッファー プール拡張は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションでは使用できません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>バッファー プール拡張の利点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの主な目的はデータの格納と取得であるため、データベース エンジンの主要な特性は頻繁なディスク I/O ということになります。 ディスク I/O 操作は多くのリソースを消費するうえ、完了するのに比較的長い時間がかかるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では I/O の効率を上げることに重点を置いています。 バッファー プールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のプライマリ メモリの割り当て元となります。 バッファー管理は、この効率向上を実現するための重要なコンポーネントです。 バッファー管理コンポーネントは 2 つのメカニズムから構成されています。1 つはデータベース ページに対するアクセスと更新を行うバッファー マネージャーで、もう 1 つはデータベース ファイルの I/O 数を削減するためのバッファー プールです。  

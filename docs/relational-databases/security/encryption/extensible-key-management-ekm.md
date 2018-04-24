@@ -1,35 +1,37 @@
 ---
-title: "拡張キー管理 (EKM) | Microsoft Docs"
-ms.custom: 
+title: 拡張キー管理 (EKM) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c642ca8448624c79b77f84c71619439918856767
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c42cd4b6f5f1ee8355e124c46e2cc194e1de080a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、"*拡張キー管理*" (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には "*Microsoft Cryptographic API*" (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
   
  法規制遵守の必要性やデータ プライバシーに対する関心の高まりを受けて、組織では、"多層防御" のソリューションを実現するための手段として暗号化が活用されるようになっています。 このアプローチは多くの場合、データベースの暗号化管理ツールを使用するだけで実現できるものではありません。 各ハードウェア ベンダーからは、 *ハードウェア セキュリティ モジュール* (HSM) を使用して企業のキー管理の問題に対処する製品が提供されています。 HSM デバイスでは、暗号化キーがハードウェア モジュールまたはソフトウェア モジュールに格納されます。 この場合、暗号化キーが暗号化データと一緒に保管されないため、より安全なソリューションが実現されます。  
   
@@ -139,7 +141,7 @@ DECRYPTION BY EKM_AKey1
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、EKM プロバイダーから生成された非対称キーを使用してモジュールに署名することをサポートしていません。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [EKM provider enabled サーバー構成オプション](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [EKM の使用による TDE の有効化](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  

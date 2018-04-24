@@ -1,16 +1,16 @@
 ---
-title: "データベース スナップショット (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: データベース スナップショット (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - static database views
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 
+caps.latest.revision: 54
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dbc97b4e0a07f21471c1c6de18308390a3a9183
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-snapshots-sql-server"></a>データベース スナップショット (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース スナップショットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ("*ソース データベース*") の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベース スナップショットは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース (*ソース データベース*) の読み取り専用の静的ビューです。 データベース スナップショットには、そのスナップショットを作成した時点でのソース データベースに対するトランザクションが反映されています。 データベース スナップショットは、常にそのソース データベースと同じサーバー インスタンス上に存在します。 ソース データベースが更新されると、データベース スナップショットが更新されます。 したがって、データベース スナップショットが長期間にわたって存在するほど、使用可能なディスク領域が使い尽くされる可能性が高くなります。  
   
  1 つのソース データベースには複数のスナップショットが存在できます。 各データベース スナップショットは、データベースの所有者によって明示的に削除されるまで保持されます。  
   

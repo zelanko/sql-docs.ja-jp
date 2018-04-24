@@ -2,7 +2,7 @@
 title: データベースの整合性確認タスク (メンテナンス プラン) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 60f26433932c754a5aadbd79d9527d4e2638f75d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4b9e560ba3b262ca2eee64e62561c3c2bd8208f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="check-database-integrity-task-maintenance-plan"></a>データベースの整合性確認タスク (メンテナンス プラン)
+# <a name="check-database-integrity-task-maintenance-plan"></a>[データベースの整合性確認タスク]\(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   **[データベースの整合性確認タスク]** ダイアログを使用すると、 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することにより、ユーザーおよびシステム テーブルの割り当ておよび構造の整合性、データベース内のインデックスを確認できます。 `DBCC` を実行することにより、データベース整合性に問題があった場合にレポートし、システム管理者またはデータベースの所有者によって対処できます。  
@@ -66,10 +66,10 @@ ms.lasthandoff: 01/18/2018
  **[インデックスを含める]**  
  すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
- **[Physical only] \(物理のみ)**  
+ **[Physical only] (物理のみ)**  
  ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
- **[Tablock] \(Tablock)**  
+ **[Tablock] (Tablock)**  
  DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでの同時実行性が低下します。  
   
  **[T-SQL の表示]**  

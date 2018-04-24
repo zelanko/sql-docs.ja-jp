@@ -1,34 +1,36 @@
 ---
-title: "データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス | Microsoft Docs"
-ms.custom: 
+title: データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - failover clustering [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c5b3b9ace8303a31df5a374b7ef35d4cf61fcbb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] フェールオーバー クラスターは、リソース グループと呼ばれる [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) クラスター グループに含まれる、クラスターのノードに参加している物理ディスクのうち、1 つ以上を組み合わせたものです。 リソース グループは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスはネットワーク上では 1 台のコンピューターのように認識されますが、あるノードが利用できなくなった場合に、別のノードへフェールオーバーする機能を備えています。 詳細については、「 [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  フェールオーバー クラスターは、リソース グループと呼ばれる [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) クラスター グループに含まれる、クラスターのノードに参加している物理ディスクのうち、1 つ以上を組み合わせたものです。 リソース グループは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスはネットワーク上では 1 台のコンピューターのように認識されますが、あるノードが利用できなくなった場合に、別のノードへフェールオーバーする機能を備えています。 詳細については、「 [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)のインスタンスをホストするフェールオーバー クラスター インスタンスとして構成されます。  
   
  フェールオーバー クラスターにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体の高可用性が確保されます。一方、データベース ミラーリングは、1 つのデータベースの高可用性を確保します。 データベース ミラーリングは、フェールオーバー クラスター間のほか、フェールオーバー クラスターと非クラスター化ホスト間でも機能します。  
   

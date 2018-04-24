@@ -1,16 +1,16 @@
 ---
-title: "クエリ エディターによる SQLCMD スクリプトの編集 | Microsoft Docs"
-ms.custom: 
+title: クエリ エディターによる SQLCMD スクリプトの編集 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35f569c6d26c888566eb8dbb47f1472101158d61
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 383564a5aed33b7263c0c4ade4b0339f9afbfe87
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターを使用すると、クエリを SQLCMD スクリプトとして作成したり、編集したりできます。 Windows システムのコマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じスクリプトで処理する必要がある場合は、SQLCMD スクリプトを使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用すると、クエリを SQLCMD スクリプトとして作成したり、編集したりできます。 Windows システムのコマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じスクリプトで処理する必要がある場合は、SQLCMD スクリプトを使用します。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD モード  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターで SQLCMD スクリプトの作成や編集を行うには、SQLCMD スクリプト モードを有効にする必要があります。 クエリ エディターの SQLCMD モードは、既定では有効ではありません。 スクリプト モードを有効にするには、ツール バーの **[SQLCMD モード]** アイコンをクリックするか、 **[クエリ]** メニューの **[SQLCMD モード]** をクリックします。  

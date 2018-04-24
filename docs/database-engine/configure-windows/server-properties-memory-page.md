@@ -2,7 +2,7 @@
 title: サーバーのプロパティ ([メモリ] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a614fb49bb9e346d97b3c573d03e8911db53f2f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---memory-page"></a>[サーバーのプロパティ] - [メモリ] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  
   
 ## <a name="options"></a>および  
  **[最小サーバー メモリ (MB)]**  

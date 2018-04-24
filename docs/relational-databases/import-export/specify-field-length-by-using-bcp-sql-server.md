@@ -1,16 +1,16 @@
 ---
-title: "bcp を使用したフィールド長の指定 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: bcp を使用したフィールド長の指定 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -19,23 +19,24 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad5143f4bc309f4156ebc4ea174ac11f4b9246fb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d225c6b4cb82c5e22e94c0c0d78e96ff15f5f365
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
+  フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-n**または **-N**または **in**または **-N**オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、**-c**、**-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
   
  `Enter length of field <field_name> [<default>]:`  
   

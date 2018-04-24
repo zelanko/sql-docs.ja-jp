@@ -2,7 +2,7 @@
 title: 権限 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -21,25 +21,24 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: ''
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5d0fcc6fcb0e0a40e23f65f4efbf7f6ff8a39255
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の権限は、ログインおよびサーバー ロールに割り当てられたサーバー レベル、およびデータベース ユーザーおよびデータベース ロールに割り当てられたデータベース レベルで管理されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のモデルには、データベース権限用に同じシステムがありますが、サーバー レベルの権限は使用できません。 このトピックでは、権限の一覧を示します。 アクセス許可の一般的な実装については、「 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の権限の合計数 は 237 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は SQL データベースに対して付与することができず、 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。 次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
-  
-[![データベース エンジンの権限](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の権限の合計数 は 237 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は SQL データベースに対して付与することができず、 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。
 
 権限を理解したら、 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)、および [DENY](../../t-sql/statements/deny-transact-sql.md) ステートメントを使用してサーバー レベルの権限をログインとデータベース レベルの権限ユーザーに付与します。 例:   
 ```sql
@@ -102,7 +101,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
      オブジェクトを参照する `WITH SCHEMABINDING` 句を含む関数またはビューを作成するには、そのオブジェクトに対する REFERENCES 権限が必要です。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ##  <a name="_securables"></a> 特定のセキュリティ保護可能なリソースに適用できる権限  
  次の表に、主な権限のクラスおよび各権限を適用できるセキュリティ保護可能なリソースの種類を示します。  

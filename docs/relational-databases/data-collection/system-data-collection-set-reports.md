@@ -1,16 +1,16 @@
 ---
-title: "システム データ コレクション セット レポート | Microsoft Docs"
-ms.custom: 
+title: システム データ コレクション セット レポート | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collector [SQL Server], server activity
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9a7edb1ffcbc2a1679bdae6f01ff0fed50562704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-data-collection-set-reports"></a>システム データ コレクション セット レポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-データ コレクターは、各システム データ コレクション セットの履歴レポートを提供します。 次の各レポートでは、管理データ ウェアハウスに格納されているデータが使用されます。  
+  データ コレクターは、各システム データ コレクション セットの履歴レポートを提供します。 次の各レポートでは、管理データ ウェアハウスに格納されているデータが使用されます。  
   
 -   [ディスク使用量の概要](#Disk)  
   

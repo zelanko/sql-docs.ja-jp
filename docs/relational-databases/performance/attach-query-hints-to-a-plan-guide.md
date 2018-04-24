@@ -1,31 +1,32 @@
 ---
-title: "プラン ガイドへのクエリ ヒントのアタッチ | Microsoft Docs"
-ms.custom: 
+title: プラン ガイドへのクエリ ヒントのアタッチ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c40b32936d616205850fe62877eb8b0dc7640486
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 282a867a7bd3013d99dbc0109fd0a1d82dd6c14e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>プラン ガイドへのクエリ ヒントのアタッチ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] クエリ ヒントは、有効なものであれば、任意の組み合わせでプラン ガイドに使用できます。 プラン ガイドをクエリと照合する際、コンパイルや最適化が行われる前に、そのプラン ガイドのヒント句で指定されている OPTION 句がクエリに追加されます。 プラン ガイドと照合するクエリで既に OPTION 句が使用されている場合、クエリ内のクエリ ヒントがプラン ガイドで指定されているクエリ ヒントに置換されます。 ただし、既に OPTION 句が使用されているクエリと照合するプラン ガイドでは、sp_create_plan_guide ステートメントで照合するクエリのテキストを指定するときに、そのクエリの OPTION 句を含める必要があります。 プラン ガイドで指定されたヒントを、クエリの既存のヒントに代わりに使用するのではなく、既存のヒントに追加する場合は、既存のヒントと追加するヒントの両方をプラン ガイドの OPTION 句で指定する必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  クエリ ヒントは、有効なものであれば、任意の組み合わせでプラン ガイドに使用できます。 プラン ガイドをクエリと照合する際、コンパイルや最適化が行われる前に、そのプラン ガイドのヒント句で指定されている OPTION 句がクエリに追加されます。 プラン ガイドと照合するクエリで既に OPTION 句が使用されている場合、クエリ内のクエリ ヒントがプラン ガイドで指定されているクエリ ヒントに置換されます。 ただし、既に OPTION 句が使用されているクエリと照合するプラン ガイドでは、sp_create_plan_guide ステートメントで照合するクエリのテキストを指定するときに、そのクエリの OPTION 句を含める必要があります。 プラン ガイドで指定されたヒントを、クエリの既存のヒントに代わりに使用するのではなく、既存のヒントに追加する場合は、既存のヒントと追加するヒントの両方をプラン ガイドの OPTION 句で指定する必要があります。  
   
 > [!CAUTION]  
 >  クエリ ヒントの使用方法が正しくないプラン ガイドは、コンパイル、実行、またはパフォーマンスに関する問題の原因になることがあります。 プラン ガイドは、上級開発者とデータベース管理者のみが使用するようにしてください。  

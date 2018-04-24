@@ -2,7 +2,7 @@
 title: '[データベースのプロパティ] ([クエリ ストア] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/09/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: databases
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7d65de7c2c53b3f1ad6530197386201ceca682a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-query-store-page"></a>データベースのプロパティ (クエリのストアのページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページにはプリンシパル データベースからアクセスし、これを使用してデータベースのクエリのストアのプロパティを構成および変更します。 これらのオプションは、 [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)を使用して構成することもできます。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このページにはプリンシパル データベースからアクセスし、これを使用してデータベースのクエリのストアのプロパティを構成および変更します。 これらのオプションは、 [ALTER DATABASE SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)を使用して構成することもできます。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
   
 ||  
 |-|  
@@ -53,11 +54,11 @@ ms.lasthandoff: 01/18/2018
  クエリのストアに割り当てられた合計領域を取得、および設定します。  
   
  Query Store Capture Mode (クエリ ストアのキャプチャ モード)  
- -   [None] \(なし) に設定すると、新しいクエリがキャプチャされません。  
+ -   [None] (なし) に設定すると、新しいクエリがキャプチャされません。  
   
 -   [All] \(すべて) に設定すると、すべてのクエリがキャプチャされます。  
   
--   [Auto] \(自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
+-   [Auto] (自動) に設定すると、リソースの消費量に基づいてクエリがキャプチャされます。  
   
  古いクエリのしきい値 (日)  
  古いクエリのしきい値を取得、および設定します。 STALE_QUERY_THRESHOLD_DAYS 引数を構成して、クエリのストア内にデータを保持する日数を指定します。  

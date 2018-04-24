@@ -1,15 +1,16 @@
 ---
-title: "SQL Server へのログイン | Microsoft Docs"
-ms.custom: 
+title: SQL Server へのログイン | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server, logging in
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9afd0526acb2531222828a104a81096a29846342
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 918c10f9fc0527619e9eaa239ffe9b83f0820dbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのグラフィカルな管理ツールを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のインスタンスにログインする場合、必要に応じて、サーバー名、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびパスワードを指定するように求められます。 Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを使用したログインが行われます。 混合モード認証 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード) で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用してログインする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインとパスワードを指定する必要があります。 可能な場合は、Windows 認証を使用します。  
   

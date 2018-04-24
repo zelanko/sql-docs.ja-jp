@@ -1,16 +1,16 @@
 ---
-title: "サーバー レベルのロール | Microsoft Docs"
-ms.custom: 
+title: サーバー レベルのロール | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.Security.NT_AUTHORITY.SYSTEM
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a095d9f3e7839a2f3cfa14a2bf49790776f0cd1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7c77f856173a581fbab9d462af15279b5cc983a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="fixed-server-level-roles"></a>固定サーバー レベル ロール  
  次の表に、固定サーバー レベル ロールとその機能を示します。  
   
-|固定サーバー レベル ロール|説明|  
+|固定サーバー レベル ロール|Description|  
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 固定サーバー ロールのメンバーは、サーバーに対するすべての操作を実行できます。|  
 |**serveradmin**|**serveradmin** 固定サーバー ロールのメンバーは、サーバー全体の構成オプションを変更したり、サーバーをシャットダウンしたりできます。|  
@@ -83,19 +84,19 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>サーバー レベルのロールの操作  
  次の表では、サーバー レベルのロールを操作するためのコマンド、ビュー、および関数について説明します。  
   
-|機能|型|説明|  
+|機能|型|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|メタデータ|サーバー レベルのロールの一覧を返します。|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|メタデータ|サーバー レベルのロールのメンバーに関する情報を返します。|  
 |[sp_srvrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|メタデータ|サーバー レベルのロールの権限を表示します。|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|メタデータ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインが、指定されたサーバー レベルのロールのメンバーであるかどうかを示します。|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|メタデータ|各サーバー レベルのロールのメンバーごとに 1 行のデータを返します。|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|ログインをサーバー レベルのロールのメンバーとして追加します。 非推奨。 代わりに [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) を使用してください。|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|サーバー レベルのロールから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。 非推奨。 代わりに [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) を使用してください。|  
-|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|Command|ユーザー定義サーバー ロールを作成します。|  
-|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|Command|サーバー ロールのメンバーシップを変更、またはユーザー定義のサーバー ロールの名前を変更します。|  
-|[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|ユーザー定義サーバー ロールを削除します。|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|関数|サーバー ロールのメンバーシップを決定します。|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|コマンド|ログインをサーバー レベルのロールのメンバーとして追加します。 非推奨。 代わりに [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) を使用してください。|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|コマンド|サーバー レベルのロールから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。 非推奨。 代わりに [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) を使用してください。|  
+|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|コマンド|ユーザー定義サーバー ロールを作成します。|  
+|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|コマンド|サーバー ロールのメンバーシップを変更、またはユーザー定義のサーバー ロールの名前を変更します。|  
+|[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|コマンド|ユーザー定義サーバー ロールを削除します。|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|機能|サーバー ロールのメンバーシップを決定します。|  
   
 ## <a name="see-also"></a>参照  
  [データベース レベルのロール](../../../relational-databases/security/authentication-access/database-level-roles.md)   

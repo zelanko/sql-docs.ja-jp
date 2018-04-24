@@ -1,34 +1,36 @@
 ---
-title: "[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード) | Microsoft Docs"
-ms.custom: 
+title: '[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.newagwizard.listeners.f1
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fc2b166d0e56bb1590e3da1705553ffab2b6ac0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 15d4a3a83018c2cc40c335aea3e475df30d03add
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、**[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
   
 |タブ|簡単な説明|  
 |---------|-----------------------|  

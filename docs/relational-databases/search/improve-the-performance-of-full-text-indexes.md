@@ -1,16 +1,16 @@
 ---
-title: "フルテキスト インデックスのパフォーマンスの向上 | Microsoft Docs"
-ms.custom: 
+title: フルテキスト インデックスのパフォーマンスの向上 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - performance [SQL Server], full-text search
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a3255ca28229a171f65a0e64ef553d7d0a80333f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 02/13/2018
 クロール ログ ファイルの可変部分は次のようになります。
 -   <**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
 -   <**FullTextCatalogID**> - フルテキスト カタログ ID。 <**catid**> は、ゼロで始まる 5 桁の数字です。  
--   <**n**> は、同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
+-   <**n**> - 同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  
 

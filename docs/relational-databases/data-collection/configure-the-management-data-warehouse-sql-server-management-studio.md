@@ -1,16 +1,16 @@
 ---
-title: "管理データ ウェアハウスの構成 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 管理データ ウェアハウスの構成 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dc.datacollection.wizard_completecfg.f1
@@ -26,20 +26,20 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da6483877cf2f69a3aa638f635366f91b9f7352a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d34ed103c530e6cb6dcf9eda3670b99c150d9488
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、データ コレクターを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。 対象のインスタンスは、同じサーバーまたは別々のサーバーのどちらに配置されていてもかまいません。 このトピックでは、 [管理データ ウェアハウス構成ウィザード](#Wizard) のユーザー インターフェイスについても説明します。 データ コレクターの構成の詳細については、「 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)」を参照してください。  
+  このトピックでは、データ コレクターを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスのデータ ストレージをサポートするように管理データ ウェアハウスを構成する方法について説明します。 対象のインスタンスは、同じサーバーまたは別々のサーバーのどちらに配置されていてもかまいません。 このトピックでは、 [管理データ ウェアハウス構成ウィザード](#Wizard) のユーザー インターフェイスについても説明します。 データ コレクターの構成の詳細については、「 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)」を参照してください。  
   
 > [!NOTE]  
 >  システム サービス アカウント (ローカル システム、ネットワーク サービス、またはローカル サービス) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行するように構成している場合に、管理データ ウェアハウスをデータ コレクターとは別のインスタンス上に作成するときは、プロキシを使用して管理データ ウェアハウスにデータをアップロードするようにコレクション セットを構成する必要があります。  

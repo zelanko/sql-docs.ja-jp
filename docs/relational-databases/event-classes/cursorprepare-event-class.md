@@ -1,34 +1,35 @@
 ---
-title: "CursorPrepare イベント クラス | Microsoft Docs"
-ms.custom: 
+title: CursorPrepare イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorPrepare event class
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e97aee3b314dddda05c5cfd90be851ec8e88cbd3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad37c5ed0b2d0f46a4a8f439166a76b6e13e0161
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**CursorPrepare** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソル準備イベントを記述しています。 カーソル準備イベントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、カーソルに関連付けられた SELECT ステートメントのコンパイルにより実行プランが作成され、カーソルの作成は行われなかったときに発生します。  
+  **CursorPrepare** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソル準備イベントを記述しています。 カーソル準備イベントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、カーソルに関連付けられた SELECT ステートメントのコンパイルにより実行プランが作成され、カーソルの作成は行われなかったときに発生します。  
   
  **CursorPrepare** イベント クラスは、カーソルのパフォーマンスを記録しているトレース内で使用します。 **CursorPrepare** イベント クラスをトレースに含めた場合、発生するオーバーヘッドの量は、トレース中にデータベースに対してカーソルを使用する頻度によって異なります。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  
   

@@ -1,16 +1,16 @@
 ---
-title: "データベースを DAC として登録する方法 | Microsoft Docs"
-ms.custom: 
+title: データベースを DAC として登録する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.registerdacwizard.summary.f1
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c80a09793bae9691c25590b1c929a76f0da4e4b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**データ層アプリケーションの登録ウィザード** または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース (**では** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]データベース) に登録します。  
+  **データ層アプリケーションの登録ウィザード** または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成し、その DAC 定義を **msdb** システム データベース (**では** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]データベース) に登録します。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 02/23/2018
  [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- *SchemaName* **を実行できません****。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName***.***ObjectName* は、現在検証されているオブジェクトを示します。  
+ ****  *SchemaName* **を実行できません。** *ObjectName* **を実行できません。** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 *SchemaName***.***ObjectName* は、現在検証されているオブジェクトを示します。  
   
  **[< 戻る]** : **[プロパティの設定]** ページに戻り、現在の設定を変更できます。  
   

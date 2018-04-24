@@ -1,34 +1,35 @@
 ---
-title: "SQL Server: General Statistics オブジェクト | Microsoft Docs"
-ms.custom: 
+title: 'SQL Server: General Statistics オブジェクト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9d3c24bb7875975221d3af721fe29d6dd3b0433
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1fc2e9b5685aaffd290172eb1d844e6504793d97
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server: General Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:General Statistics** オブジェクトには、現在の接続数や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターとの間で接続または切断を行っている 1 秒あたりのユーザー数など、一般的なサーバー全体の利用状況を監視するためのカウンターがあります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの間で接続と切断を行うクライアントの数が多い、大規模オンライン トランザクション処理 (OLTP) で作業している場合に便利です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **の** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、現在の接続数や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターとの間で接続または切断を行っている 1 秒あたりのユーザー数など、一般的なサーバー全体の利用状況を監視するためのカウンターがあります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの間で接続と切断を行うクライアントの数が多い、大規模オンライン トランザクション処理 (OLTP) で作業している場合に便利です。  
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** カウンターについて説明します。  
   

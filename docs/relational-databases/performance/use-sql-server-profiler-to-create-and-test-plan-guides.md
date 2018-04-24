@@ -1,16 +1,16 @@
 ---
-title: "SQL Server Profiler を使用したプラン ガイドの作成とテスト | Microsoft Docs"
-ms.custom: 
+title: SQL Server Profiler を使用したプラン ガイドの作成とテスト | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - checking plan guides
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bbb800f0f0bd06e32357cda69d9a01a5c25e866
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a19fd733c0367c53c56228aeb1e04293f3eb2ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] プラン ガイドを作成するとき、**sp_create_plan_guide** ストアド プロシージャの *statement_text* 引数に使用するために、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  プラン ガイドを作成するとき、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sp_create_plan_guide *ストアド プロシージャの* statement_text **引数に使用するために、** を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>SQL Server Profiler を使用したクエリ テキストのキャプチャ  
  クエリを実行し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に送信されたテキストを正確にキャプチャすると、そのクエリ テキストに正確に一致する SQL 型または TEMPLATE 型のプラン ガイドを作成できます。 これにより、このプラン ガイドをクエリ オプティマイザーに使用させることができます。  

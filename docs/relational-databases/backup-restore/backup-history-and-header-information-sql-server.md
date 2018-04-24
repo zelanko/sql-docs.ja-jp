@@ -1,16 +1,16 @@
 ---
-title: "バックアップの履歴とヘッダーの情報 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: バックアップの履歴とヘッダーの情報 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -36,19 +36,20 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d03a11e3048a65ef344b14dbcd2a7840a619b52f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>バックアップの履歴とヘッダーの情報 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **msdb** データベースには、サーバー インスタンスで行われた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバックアップ操作および復元操作の完全な履歴が格納されます。 このトピックでは、バックアップと復元の履歴テーブルに加え、バックアップ履歴へのアクセスに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントについても説明します。 また、データベース ファイルとトランザクション ログ ファイルの一覧表示が役立つ状況について説明し、メディア ヘッダー情報を使用する状況とバックアップ ヘッダー情報を使用する状況の比較についても説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースには、サーバー インスタンスで行われた** のすべてのバックアップ操作および復元操作の完全な履歴が格納されます。 このトピックでは、バックアップと復元の履歴テーブルに加え、バックアップ履歴へのアクセスに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントについても説明します。 また、データベース ファイルとトランザクション ログ ファイルの一覧表示が役立つ状況について説明し、メディア ヘッダー情報を使用する状況とバックアップ ヘッダー情報を使用する状況の比較についても説明します。  
   
 > [!IMPORTANT]  
 >  バックアップと復元の履歴に対する最新の変更情報の損失リスクを管理するために、頻繁に **msdb** をバックアップしてください。 バックアップする必要があるシステム データベースの詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  

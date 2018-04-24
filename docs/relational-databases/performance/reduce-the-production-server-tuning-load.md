@@ -1,16 +1,16 @@
 ---
-title: "実稼動サーバーのチューニング負荷の軽減 | Microsoft Docs"
-ms.custom: 
+title: 実稼動サーバーのチューニング負荷の軽減 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -21,19 +21,21 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 124c7be2ec961ff536c8b3909579176964c58c6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>実稼動サーバーのチューニング負荷の軽減
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>データベース エンジン チューニング アドバイザーでテスト サーバーを使用する方法  
  これまでは、テスト サーバーを使用するために、実稼働サーバーからテスト サーバーにすべてのデータをコピーし、テスト サーバーをチューニングして、実稼働サーバーに推奨設定を実装する方法を使用してきました。 この処理により、実稼働サーバーのパフォーマンスに影響が及ぶことはありませんが、これは最善の解決策ではありません。 たとえば、大量のデータを実稼働サーバーからテスト サーバーにコピーする場合、非常に時間がかかり、多量のリソースが使用される可能性があります。 また、テスト サーバーのハードウェアが、実稼働サーバーに配置されているハードウェアほど優れていることはめったにありません。 チューニング処理は、クエリ オプティマイザーに依存し、生成される推奨設定は基になるハードウェアに部分的に基づきます。 テスト サーバーと実稼働サーバーのハードウェアが異なる場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの推奨設定の特性が低下します。  

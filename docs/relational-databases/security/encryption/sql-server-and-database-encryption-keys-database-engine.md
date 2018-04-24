@@ -1,33 +1,34 @@
 ---
-title: "SQL Server とデータベースの暗号化キー (データベース エンジン) | Microsoft Docs"
-ms.custom: 
+title: SQL Server とデータベースの暗号化キー (データベース エンジン) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d640b7fc6ce4aa49b19dac142d9fcfa1d412993
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを最初に起動するときの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初期化時に作成されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、このキーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されている機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、データベースに機密データを格納する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに作成されます。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  [拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でサード パーティのキー管理システムを使用する方法について説明します。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  [サービス マスター キーのバックアップ](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)  
   
  [サービス マスター キーの復元](../../../relational-databases/security/encryption/restore-the-service-master-key.md)  

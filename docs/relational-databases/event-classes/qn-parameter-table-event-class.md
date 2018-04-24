@@ -1,34 +1,35 @@
 ---
-title: "QN:Parameter Table イベント クラス | Microsoft Docs"
-ms.custom: 
+title: QN:Parameter Table イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80378bb789ea155890793ec9d0f75beba9c6d901
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aab090e3ff10cf12df7a01c06ac08567081e00cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-QN:Parameter table イベントでは、パラメーター情報を格納する内部テーブルの作成や削除、およびその内部テーブルに対する参照カウンターの管理に必要な操作に関する情報が報告されます。 また、このイベントでは、内部的な動作状況も報告されます。この情報はパラメーター テーブルの使用カウントをリセットするために使用されます。  
+  QN:Parameter table イベントでは、パラメーター情報を格納する内部テーブルの作成や削除、およびその内部テーブルに対する参照カウンターの管理に必要な操作に関する情報が報告されます。 また、このイベントでは、内部的な動作状況も報告されます。この情報はパラメーター テーブルの使用カウントをリセットするために使用されます。  
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>QN:Parameter table イベント クラスのデータ列  
   

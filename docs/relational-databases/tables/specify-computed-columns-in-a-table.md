@@ -2,7 +2,7 @@
 title: テーブルの計算列の指定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -20,11 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d6c2822097b4f900034006a01e70b1c81e977981
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,11 +34,11 @@ ms.lasthandoff: 04/10/2018
   
  **このトピックの内容**  
   
--   **開始する前に。**  
+-   **作業を開始する準備:**  
   
-     [制限事項と制約](#Limitations)  
+     [制限事項と制約事項](#Limitations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **計算列を指定する方法:**  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/10/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Limitations"></a> 制限事項と制約事項  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/10/2018
   
 1.  **オブジェクト エクスプローラー**で、変更する列が含まれているテーブルを右クリックし、 **[列]** フォルダーを展開します。  
   
-2.  計算列の数式を指定する列を右クリックし、 **[削除]**をクリックします。 クリックして **OK**です。  
+2.  計算列の数式を指定する列を右クリックし、 **[削除]**をクリックします。 **[OK]** をクリックします。  
   
 3.  前の手順に従って、新しい列を追加し、計算列の数式を指定して、新しい計算列を追加します。  
   

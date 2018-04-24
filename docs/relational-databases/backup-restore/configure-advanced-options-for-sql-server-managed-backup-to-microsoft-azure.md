@@ -1,31 +1,32 @@
 ---
-title: "Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1f64010973cd54bee7723668c861ca515e818bce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップの詳細設定オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 次のチュートリアルでは、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の詳細設定オプションを設定する方法について説明します。 この手順は、その機能が必要な場合のみ必要です。 それ以外の場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にし、既定の動作に依存します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  次のチュートリアルでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定オプションを設定する方法について説明します。 この手順は、その機能が必要な場合のみ必要です。 それ以外の場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にし、既定の動作に依存します。  
   
  各シナリオで、バックアップは `database_name` パラメーターを使用して指定します。 `database_name` が NULL または * の場合、変更はインスタンス レベルで既定の設定に影響します。 インスタンス レベルの設定は、変更後に作成された新しいデータベースにも影響します。  
   

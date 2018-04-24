@@ -1,16 +1,16 @@
 ---
-title: "CPU 使用率の監視 | Microsoft Docs"
-ms.custom: 
+title: CPU 使用率の監視 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2422da83b7ac09fef52fbab3d8ca1286308c2950
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-cpu-usage"></a>CPU 使用率の監視
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] CPU 使用率が通常の範囲内にあるかどうかを確認するため、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視する必要があります。 CPU 使用率が常に高い場合は、CPU のアップグレードまたは多重プロセッサの追加を検討する必要があります。 また、CPU 使用率が高い場合、アプリケーションのチューニングや設計に問題がある可能性もあります。 この場合は、アプリケーションを最適化することで CPU 使用率を下げることができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  CPU 使用率が通常の範囲内にあるかどうかを確認するため、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視する必要があります。 CPU 使用率が常に高い場合は、CPU のアップグレードまたは多重プロセッサの追加を検討する必要があります。 また、CPU 使用率が高い場合、アプリケーションのチューニングや設計に問題がある可能性もあります。 この場合は、アプリケーションを最適化することで CPU 使用率を下げることができます。  
   
  CPU 使用率を効率よく確認するには、システム モニターの **Processor:% Processor Time** カウンターを使用します。 このカウンターは、アイドル状態でないスレッドを実行するために CPU が費やす時間を監視します。 使用率が常に 80 ～ 90% である場合は、CPU のアップグレードまたはプロセッサの追加が必要です。 多重プロセッサ システムでは、各プロセッサについて、このカウンターを個別に監視します。 この値は、特定のプロセッサの処理時間の合計を表します。 すべてのプロセッサの平均値を調べるには、代わりに **System: %Total Processor Time** カウンターを使用します。  
   

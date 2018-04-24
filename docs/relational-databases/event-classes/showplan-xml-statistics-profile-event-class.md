@@ -1,34 +1,35 @@
 ---
-title: "Showplan XML Statistics Profile イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Showplan XML Statistics Profile イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan XML Statistics Profile event class
 ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c743509a96148b8115bf8c8a8ba34662cf9fce7b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 75a3cd094bd421ff9e619b2e7b70aaf87549e73d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Showplan XML Statistics Profile イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントを実行したときに発生します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の Showplan 操作を識別するには、Showplan XML Statististics Profile イベント クラスを含めます。  
+  Showplan XML Statistics Profile イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントを実行したときに発生します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の Showplan 操作を識別するには、Showplan XML Statististics Profile イベント クラスを含めます。  
   
  Showplan XML Statistics Profile イベント クラスを使用すると、コンパイル時間についてデータが完全に表示されます。そのため、トレースにこのイベント クラスが含まれていると、パフォーマンスのオーバーヘッドが大幅に増える場合があります。 発生するオーバーヘッドを最小限に抑えるには、短期間だけ特定の問題を監視するトレースに限定してこのイベント クラスを使用するようにします。  
   

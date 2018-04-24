@@ -1,35 +1,37 @@
 ---
-title: "ヒット カウントの指定 | Microsoft Docs"
-ms.custom: 
+title: ヒット カウントの指定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug.breakpt.hitcount
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1430ec114f5aa14457fcff1d58a7f41e2e5bbe48
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 616cd4b40eb04ef19e5f9b2325a56786c94e8bed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-hit-count"></a>ヒット カウントの指定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ブレークポイントのヒット カウントは、ブレークポイントに達するたびに [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによって増加されるカウンターです。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  ブレークポイントのヒット カウントは、ブレークポイントに達するたびに [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによって増加されるカウンターです。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
   
 ## <a name="hit-count-considerations"></a>ヒット カウントの考慮事項  
  既定では、ブレークポイントにヒットするたびに、実行が中断します。 次のオプションのいずれかを選択できます。  

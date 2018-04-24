@@ -1,34 +1,35 @@
 ---
-title: "Sort Warnings イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Sort Warnings イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4516aaaeb429ae735251a272dc77b1f6ba4edb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 21694a628cde3aa602f1b4bfd404fe74a05ba645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Sort Warnings イベント クラスは、並べ替え操作をメモリ内で処理できないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句などのクエリ内の並べ替え操作のみが対象になります。  
+  Sort Warnings イベント クラスは、並べ替え操作をメモリ内で処理できないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句などのクエリ内の並べ替え操作のみが対象になります。  
   
  並べ替え操作を伴うクエリで Sort Warnings イベント クラスが発生し、EventSubClass データ列の値が 2 である場合は、データを並べ替えるためにデータを複数回受け渡す必要があるため、クエリのパフォーマンスが低下する可能性があります。 クエリをさらに検証し、並べ替え操作を排除できるかどうかを確認してください。  
   

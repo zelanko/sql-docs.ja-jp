@@ -1,34 +1,35 @@
 ---
-title: "Broker:Conversation イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Broker:Conversation イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d021508d5b8774e3f3fa0f416819dfee48cc6918
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d2cb10be89108ddb8f7a11b34db0a70b7f7f9da8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation イベント クラスのデータ列  
   

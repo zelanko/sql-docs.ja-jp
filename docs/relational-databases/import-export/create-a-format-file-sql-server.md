@@ -1,34 +1,35 @@
 ---
-title: "フォーマット ファイルの作成 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: フォーマット ファイルの作成 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/23/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: 
+caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39e7e7d14ab96b696ac5b849b413544f1de24c14
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 14339022437c024b50d2f524667e63eb6e6e08ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非 XML 形式と XML 形式の 2 種類のフォーマット ファイルがサポートされます。 XML 以外のフォーマットとは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でサポートされる従来のフォーマットです。  
   

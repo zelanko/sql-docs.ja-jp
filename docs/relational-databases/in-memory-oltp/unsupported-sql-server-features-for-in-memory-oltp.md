@@ -1,28 +1,29 @@
 ---
-title: "インメモリ OLTP に対してサポートされていない SQL Server の機能 | Microsoft Docs"
-ms.custom: 
+title: インメモリ OLTP に対してサポートされていない SQL Server の機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a2ccc853663dd125fec186b9e9e3834f28345c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0cdaeb155f34ec4adaf285c2b1345ab3af713980
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされていない SQL Server の機能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |-------------------------|-------------------------|  
 |メモリ最適化テーブルに対するデータ圧縮。|データ圧縮機能を使用することにより、データベース内のデータを圧縮したり、データベースのサイズを小さくすることができます。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 |メモリ最適化テーブルと HASH インデックスのパーティション分割、および非クラスター化インデックス。|パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。|  
-| レプリケーション | サブスクライバー上でのメモリ最適化されたテーブルに対するトランザクション レプリケーションを除き、他のレプリケーション構成は、メモリ最適化されたテーブルを参照するテーブルまたはビューと互換性がありません。<br /><br />メモリ最適化ファイル グループがある場合、sync_mode='database snapshot' を使用したレプリケーションはサポートされません。<br /><br />詳細については、「 [メモリ最適化テーブル サブスクライバーへのレプリケーション](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。|
+| のレプリケーション | サブスクライバー上でのメモリ最適化されたテーブルに対するトランザクション レプリケーションを除き、他のレプリケーション構成は、メモリ最適化されたテーブルを参照するテーブルまたはビューと互換性がありません。<br /><br />メモリ最適化ファイル グループがある場合、sync_mode='database snapshot' を使用したレプリケーションはサポートされません。<br /><br />詳細については、「[メモリ最適化テーブル サブスクライバーへのレプリケーション](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。|
 |ミラーリング|データベース ミラーリングは、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースではサポートされていません。 ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。|  
 |ログの再構築|ログの再構築は、MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、アタッチと ALTER DATABASE のいずれによるものでもサポートされていません。|  
 |Linked Server|メモリ最適化テーブルと同じクエリまたはトランザクションで、リンク サーバーにアクセスすることはできません。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 
 |データベース|Allowed|Description|  
 |---------------|-------------|-----------------|  
-| ユーザー データベース、**model**、および **msdb**。 | 不可 | ほとんどの場合、複数のデータベースにまたがるクエリおよびトランザクションは*サポートされません*。<br /><br />クエリがメモリ最適化テーブルまたはネイティブにコンパイルされたストアド プロシージャを使用している場合、そのクエリは他のデータベースにアクセスできません。 この制限は、クエリだけでなくトランザクションにも適用されます。<br /><br />例外は、システム データベースである **tempdb** と **master** です。 ここで、**master** データベースは読み取り専用アクセスで利用できます。 |
+| ユーザー データベース、**model**、および **msdb**。 | いいえ | ほとんどの場合、複数のデータベースにまたがるクエリおよびトランザクションは*サポートされません*。<br /><br />クエリがメモリ最適化テーブルまたはネイティブにコンパイルされたストアド プロシージャを使用している場合、そのクエリは他のデータベースにアクセスできません。 この制限は、クエリだけでなくトランザクションにも適用されます。<br /><br />例外は、システム データベースである **tempdb** と **master** です。 ここで、**master** データベースは読み取り専用アクセスで利用できます。 |
 | **Resource** データベース、**tempdb** | はい | インメモリ OLTP オブジェクトを扱うトランザクションでは、**Resource** および **tempdb** システム データベースを追加の制限なく使用できます。
 
 

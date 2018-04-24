@@ -1,16 +1,16 @@
 ---
-title: "Microsoft Azure Virtual Machine の SQL Server データベースの配置 | Microsoft Docs"
+title: Microsoft Azure Virtual Machine の SQL Server データベースの配置 | Microsoft Docs
 ms.date: 07/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.deploymentwizard.deploymentsettings.f1
@@ -37,20 +37,20 @@ helpviewer_keywords:
 - Deploy a SQL Server database to Azure
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fef490a7fe90e6d2ceeadb203b468f710d208fc
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f1bc6b5581f7744b983d558ee0cb6ca8f9f46c9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**Microsoft Azure 仮想マシンにデータベースを配置** ウィザードを使用して、データベースを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスから Microsoft Azure Virtual Machine (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
+  **Microsoft Azure 仮想マシンにデータベースを配置** ウィザードを使用して、データベースを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスから Microsoft Azure Virtual Machine (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
   
  このウィザードを使用して差分バックアップを実行することはできません。 なぜなら、同じデータベース名を持つ既存のデータベースが上書きされないからです。 仮想マシン上にある既存のデータベースを置き換えるには、まず既存のデータベースを削除するか、データベース名を変更する必要があります。 インフライト配置操作を実行しているときに、複数のデータベース名の間で名前の競合が発生し、既存のデータベースが仮想マシン上に存在している場合は、ウィザードはインフライト データベースに対して付加的なデータベース名を提示し、操作を完了できるようにします。  
   

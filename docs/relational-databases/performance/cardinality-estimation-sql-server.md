@@ -1,38 +1,39 @@
 ---
-title: "基数推定 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: カーディナリティ推定 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 71d5c75e27a71a76f014376ad61a04a13bac389c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cardinality-estimation-sql-server"></a>基数推定 (SQL Server)
+# <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
-この記事では、SQL システムに最適な基数推定 (CE) 構成を評価し選択する方法を示しています。 最も正確なので、ほとんどのシステムで最新の CE のメリットを享受できます。 CE はクエリが返す可能性のある行の数を予測します。 クエリ オプティマイザーでは基数予測を使用して、最適なクエリ プランを生成します。 推定が正確であるほど、通常はクエリ オプティマイザーでより最適なクエリ プランを生成できます。  
+この記事では、SQL システムに最適なカーディナリティ推定 (CE) 構成を評価し選択する方法を示しています。 最も正確なので、ほとんどのシステムで最新の CE のメリットを享受できます。 CE はクエリが返す可能性のある行の数を予測します。 クエリ オプティマイザーではカーディナリティ予測を使用して、最適なクエリ プランを生成します。 推定が正確であるほど、通常はクエリ オプティマイザーでより最適なクエリ プランを生成できます。  
   
 アプリケーション システムには、新しい CE が原因で低速のプランに変更された重要なクエリが含まれている可能性があります。 そのようなクエリは、次のいずれかのようになります。  
   
@@ -108,7 +109,7 @@ ALTER DATABASE <yourDatabase>
  > [!TIP] 
  > 最新リリースの [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) をインストールし、頻繁に更新することをお勧めします。  
   
- 基数推定処理を追跡するための別のオプションは、**query_optimizer_estimate_cardinality** という名前の拡張イベントを使用することです。 次の T-SQL コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行します。 これは C:\Temp\ に .xel ファイルを書き込みます (ただし、パスを変更することができます)。 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で .xel ファイルを開くと、ユーザーにわかりやすい方法で詳細情報が表示されます。  
+ カーディナリティ推定処理を追跡するための別のオプションは、**query_optimizer_estimate_cardinality** という名前の拡張イベントを使用することです。 次の T-SQL コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行します。 これは C:\Temp\ に .xel ファイルを書き込みます (ただし、パスを変更することができます)。 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で .xel ファイルを開くと、ユーザーにわかりやすい方法で詳細情報が表示されます。  
   
 ```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -269,7 +270,8 @@ WHERE s.ticket = r.ticket  AND
   
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [SQL Server 2014 の基数推定機能によるクエリプランの最適化](http://msdn.microsoft.com/library/dn673537.aspx)  
+ 
+  [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](http://msdn.microsoft.com/library/dn673537.aspx)  
  [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)    
  [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)   

@@ -1,44 +1,45 @@
 ---
-title: "SQL Server 監査レコード | Microsoft Docs"
-ms.custom: 
+title: SQL Server 監査レコード | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9b78d8f726e89b0807ea04bfb52f3732226741c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee9a108347a7c480ff0986de2e9041e3eb3a5805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」をご覧ください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」をご覧ください。  
   
  監査は、監査 *対象*に記録される 0 個以上の監査アクション項目で構成されます。 監査ターゲットには、バイナリ ファイル、Windows アプリケーション イベント ログ、または Windows セキュリティ イベント ログを使用できます。 ターゲットに送信されるレコードに含まれる可能性がある要素を次の表に示します。  
   
-|列名|説明|型|常に使用可能かどうか|  
+|列名|Description|型|常に使用可能かどうか|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|はい|  
 |**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|はい|  
 |**action_id**|アクションの ID。<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|はい|  
 |**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> – 1 = 成功、 <br />0 = 失敗|はい|  
 |**permission_bitmask**|権限の許可、拒否、または取り消しを示します (該当する場合)。|**bigint**|いいえ|  
-|**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />– 1 = True、 <br />0 = False|不可|  
+|**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />– 1 = True、 <br />0 = False|いいえ|  
 |**session_id**|イベントが発生したセッションの ID。|**int**|はい|  
 |**server_principal_id**|アクションが実行されるログイン コンテキストの ID。|**int**|はい|  
 |**database_principal_id**|アクションが実行されるデータベース ユーザー コンテキストの ID。|**int**|いいえ|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |**statement**|TSQL ステートメント (あれば)|**nvarchar (4000)**|いいえ|  
 |**additional_information**|XML として格納されるイベントに関する追加情報。|**nvarchar (4000)**|いいえ|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  アクションに該当しないために列の値が設定されない場合もあります。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査は、監査レコードの文字フィールドに 4,000 文字のデータを格納します。 監査可能なアクションから返される **additional_information** と **statement** の値が 4,000 文字を超えていた場合は、そのデータを記録するために、 **sequence_no** 列を使用して 1 つの監査アクションの監査レポートに複数のレコードが書き込まれます。 このプロセスは次のとおりです。  

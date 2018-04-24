@@ -1,29 +1,29 @@
 ---
-title: "SQL Server 管理ツールのアップグレード | Microsoft Docs"
-ms.custom: 
+title: SQL Server 管理ツールのアップグレード | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c0a15d22956bc7b4076bceb2498cdaf2e5c3683
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 652b3a3567297055f4d236e4d722dcc821107848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 管理ツールのアップグレード
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアップグレード時に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の既存のインストールにコンポーネントを追加できます。 詳細については、[インストール ウィザードを使用した SQL Server 2016 のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) に関するページをご覧ください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザー、sqlcmd、osql などの  クライアント ツールは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードされません。 代わりに、クライアント ツールは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のツールとサイド バイ サイドで実行されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ツールから設定をインポートできます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザー、sqlcmd、osql などの  クライアント ツールは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードされません。 代わりに、クライアント ツールは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のツールとサイド バイ サイドで実行されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ツールから設定をインポートできます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への認証は、アップグレード時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証から Windows 認証に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ではサポートされません。  
   

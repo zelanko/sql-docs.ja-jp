@@ -2,7 +2,7 @@
 title: sqlcmd でのスクリプト変数の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -26,11 +26,12 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 14a86c83343b85df0aa3f7a16929d55b06d9ae1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - スクリプト変数の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +117,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd スクリプト変数  
  **sqlcmd** で定義される変数はスクリプト変数と呼ばれます。 次の表は、 **sqlcmd** スクリプト変数の一覧です。  
   
-|        変数         | 関連するオプション | R/W |         既定値         |
+|        変数         | 関連するオプション | R/W |         既定         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |

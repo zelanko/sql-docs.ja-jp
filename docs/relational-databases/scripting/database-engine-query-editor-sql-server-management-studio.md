@@ -1,16 +1,16 @@
 ---
-title: "データベース エンジン クエリ エディター (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: データベース エンジン クエリ エディター (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.tsqlquery.f1
@@ -25,19 +25,21 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aba0786e713acd4ec90c958e21cbe22ff421ed32
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
   
 ## <a name="transact-sql-f1-help"></a>Transact-SQL F1 ヘルプ  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは F1 ヘルプをサポートしており、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから、関連するリファレンス トピックに移動することができます。 それには、Transact-SQL ステートメントの名前を強調表示し、F1 キーを押します。 強調表示した文字列と一致する F1 ヘルプ属性を持ったトピックが、ヘルプの検索エンジンによって検索されます。  

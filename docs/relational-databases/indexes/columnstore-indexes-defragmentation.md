@@ -1,28 +1,29 @@
 ---
-title: "列ストア インデックス - 最適化 | Microsoft Docs"
-ms.custom: 
+title: 列ストア インデックス - 最適化 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283b8e0fe5173c6527e6f3708b578eca87c80ff3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7b78bf660b22fb04973a0f0494c35fe088654aac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列ストア インデックス - 最適化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 02/12/2018
   列ストア インデックスを最適化するタスク。  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>ALTER INDEX REORGANIZE を使用して、列ストア インデックスをオンラインで最適化する  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 何らかの種類の読み込みを実行した後、デルタストアに複数の小さな行グループが含まれることがあります。 `ALTER INDEX REORGANIZE` を使用して、すべての行グループを列ストアに強制的に移動し、これらの行グループを、より行数の多い少数の行グループへと結合することができます。  再構成操作では、列ストアから削除された行も削除されます。  
   

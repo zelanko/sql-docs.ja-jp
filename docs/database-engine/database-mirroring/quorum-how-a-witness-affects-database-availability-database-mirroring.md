@@ -1,15 +1,16 @@
 ---
-title: "クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング) | Microsoft Docs"
-ms.custom: 
+title: 'クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - full quorum [SQL Server]
 - high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f01ca52594ddf49dc65f48099822b2a61a92f11
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1d5c7ec832be2e7771384c5919ccd9cca06d8859
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリング セッションにミラーリング監視サーバーが設定されている場合は必ず、"*クォーラム*" が必要になります。 クォーラムとは、データベース ミラーリング セッションで複数のサーバー インスタンスが相互接続されているときに存在するリレーションシップです。 通常、クォーラムには 3 つの相互接続されたサーバー インスタンスが関係します。 ミラーリング監視サーバーが設定されている場合、データベースを使用可能にするために、クォーラムが必要になります。 クォーラムは、自動フェールオーバーを伴う高い安全性モードのために設計されています。クォーラムを使用することで、データベースを所有するパートナーが一度に 1 つのみになるように制限できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベース ミラーリング セッションにミラーリング監視サーバーが設定されている場合は必ず、 *クォーラム* が必要になります。 クォーラムとは、データベース ミラーリング セッションで複数のサーバー インスタンスが相互接続されているときに存在するリレーションシップです。 通常、クォーラムには 3 つの相互接続されたサーバー インスタンスが関係します。 ミラーリング監視サーバーが設定されている場合、データベースを使用可能にするために、クォーラムが必要になります。 クォーラムは、自動フェールオーバーを伴う高い安全性モードのために設計されています。クォーラムを使用することで、データベースを所有するパートナーが一度に 1 つのみになるように制限できます。  
   
  特定のサーバー インスタンスがミラーリング セッションから切断されると、そのインスタンスはクォーラムを失います。 接続されているサーバー インスタンスがない場合、セッションはクォーラムを失い、データベースは使用できなくなります。 次の 3 種類のクォーラムが考えられます。  
   

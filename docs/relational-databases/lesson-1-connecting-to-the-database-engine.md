@@ -1,28 +1,28 @@
 ---
-title: "レッスン 1: データベース エンジンへの接続 | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 1: データベース エンジンへの接続 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7b0242b6c69f2ecb3b9ef077eae956d3f7d3f18
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/09/2018
  - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] にはさまざまなツールが付属しています。 このトピックでは、作業に必要なツールを選択するときの参考となるよう、最初に必要となるツールについて説明します。 すべてのツールには、 **[スタート]** メニューからアクセスできます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]など、一部のツールは既定ではインストールされません。 インストールするには、セットアップ中に、クライアント コンポーネントの一部としてツールを選択する必要があります。 以下のツールの詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックで検索してください。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] には、これらのツールのサブセットのみが付属しています。  
 
 ### <a name="basic-tools"></a>基本ツール
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、[!INCLUDE[ssDE](../includes/ssde-md.md)]を管理し、[!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 SSMS は、 [Microsoft ダウンロード センター](https://msdn.microsoft.com/library/mt238290.aspx)から無料でダウンロードできます。 最新バージョンを以前のバージョンの[!INCLUDE[ssDE_md](../includes/ssde-md.md)]で使用できます。  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、 [!INCLUDE[ssDE](../includes/ssde-md.md)] を管理し、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを記述するための主要なツールです。 このツールは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] シェルでホストされます。 SSMS は、 [Microsoft ダウンロード センター](https://msdn.microsoft.com/library/mt238290.aspx)から無料でダウンロードできます。 最新バージョンを以前のバージョンの [!INCLUDE[ssDE_md](../includes/ssde-md.md)]で使用できます。  
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびクライアント ツールと共にインストールされます。 このツールを使用すると、サーバー プロトコルを有効化したり、TCP ポートなどのプロトコル オプション、サーバー サービスの自動開始、指定の方法によるクライアント コンピューターの接続などを構成することができます。 このツールはより詳細な接続要素を構成しますが、機能は有効にしません。  
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびクライアント ツールと共にインストールされます。 このツールを使用すると、サーバー プロトコルを有効化したり、TCP ポートなどのプロトコル オプション、サーバー サービスの自動開始、指定の方法によるクライアント コンピューターの接続などを構成することができます。 このツールはより詳細な接続要素を構成しますが、機能は有効にしません。  
 
 ### <a name="sample-database"></a>サンプル データベース
 サンプル データベースとサンプルは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に付属していません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックで説明されているほとんどの例では、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースを使用しています。  

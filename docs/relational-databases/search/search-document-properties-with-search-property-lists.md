@@ -1,16 +1,16 @@
 ---
-title: "検索プロパティ リストを使用したドキュメント プロパティの検索 | Microsoft Docs"
-ms.custom: 
+title: 検索プロパティ リストを使用したドキュメント プロパティの検索 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 57decf1f39f5cca3f25d4aabb1941d06295a5378
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、 **varbinary**、 **varbinary(max)** ( **FILESTREAM**を含む)、または **image** バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
+  以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、 **varbinary**、 **varbinary(max)** ( **FILESTREAM**を含む)、または **image** バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
   
  特定の種類のドキュメントでプロパティ検索が可能かどうかは、対応する [フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) によって異なります。 ドキュメントの種類によっては、ドキュメント本文の内容に加えて、そのドキュメントの種類に対して定義されている検索プロパティの一部またはすべてが、対応する IFilter によって抽出されます。 フルテキスト インデックスの作成時に IFilter によって抽出されたプロパティに対してのみプロパティ検索をサポートするように、フルテキスト インデックスを構成することができます。 さまざまなドキュメント プロパティを抽出する IFilter の一例として、Microsoft Office のドキュメントの種類 (.docx、.xlsx、.pptx など) に対応した IFilter があります。 一方、XML IFilter では、プロパティは生成されません。  
   

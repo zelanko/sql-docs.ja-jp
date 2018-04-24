@@ -1,15 +1,16 @@
 ---
-title: "データベース ミラーリングの一時停止と再開 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: データベース ミラーリングの一時停止と再開 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c4392842fd8993cf6569918a4e28f227112ad657
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>データベース ミラーリングの一時停止と再開 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベースの所有者は、データベース ミラーリング セッションを任意の時点で一時停止し、後から再開できます。 一時停止では、ミラーリングは中断しますが、セッションの状態は保たれます。 一時停止は、ボトルネックの発生中にプリンシパル サーバーのパフォーマンスを向上させる場合に役立ちます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベースの所有者は、データベース ミラーリング セッションを任意の時点で一時停止し、後から再開できます。 一時停止では、ミラーリングは中断しますが、セッションの状態は保たれます。 一時停止は、ボトルネックの発生中にプリンシパル サーバーのパフォーマンスを向上させる場合に役立ちます。  
   
  セッションが一時停止されても、プリンシパル データベースは引き続き使用できます。 一時停止によりミラーリング セッションの状態が一時中断に設定されるので、ミラー データベースがプリンシパル データベースの最新状態を反映しなくなり、プリンシパル データベースが危険に曝されることになります。  
   

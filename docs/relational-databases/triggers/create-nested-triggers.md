@@ -1,16 +1,16 @@
 ---
-title: "入れ子になったトリガーの作成 | Microsoft Docs"
-ms.custom: 
+title: 入れ子になったトリガーの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3a37b5abbf9c29dd52a94033980c5b637546487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-nested-triggers"></a>入れ子になったトリガーの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-あるトリガーが別のトリガーを起動する操作を実行するときは、DML トリガーと DDL トリガーの両方が入れ子になります。 このような操作では、他のトリガーを順次開始できます。 DML トリガーと DDL トリガーは、32 レベルまで入れ子にできます。 **nested triggers** サーバー構成オプションにより、AFTER トリガーを入れ子にできるかどうかを制御できます。 INSTEAD OF トリガーは、このサーバー オプションの設定とは無関係に入れ子にできます。INSTEAD OF トリガーにできるのは DML トリガーだけです。  
+  あるトリガーが別のトリガーを起動する操作を実行するときは、DML トリガーと DDL トリガーの両方が入れ子になります。 このような操作では、他のトリガーを順次開始できます。 DML トリガーと DDL トリガーは、32 レベルまで入れ子にできます。 **nested triggers** サーバー構成オプションにより、AFTER トリガーを入れ子にできるかどうかを制御できます。 INSTEAD OF トリガーは、このサーバー オプションの設定とは無関係に入れ子にできます。INSTEAD OF トリガーにできるのは DML トリガーだけです。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーからマネージ コードへの参照は、32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージ コード内から呼び出されたメソッドは、この制限としてはカウントされません。  

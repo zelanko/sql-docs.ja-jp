@@ -1,16 +1,16 @@
 ---
-title: "inserted テーブルと deleted テーブルの使用 | Microsoft Docs"
-ms.custom: 
+title: inserted テーブルと deleted テーブルの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserted tables
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 297a59dd264361ece94525f1f8a046a0cccf2dad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-DML トリガー ステートメントでは、deleted テーブルおよび inserted テーブルという 2 つの特殊なテーブルが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時的なメモリ常駐型のテーブルを使用して、特定のデータ変更の影響をテストしたり、DML トリガー操作に条件を設定したりできます。 これらのテーブル内のデータを直接変更したり、これらのテーブルに対して CREATE INDEX などのデータ定義言語 (DDL) 操作を実行することはできません。  
+  DML トリガー ステートメントでは、deleted テーブルおよび inserted テーブルという 2 つの特殊なテーブルが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時的なメモリ常駐型のテーブルを使用して、特定のデータ変更の影響をテストしたり、DML トリガー操作に条件を設定したりできます。 これらのテーブル内のデータを直接変更したり、これらのテーブルに対して CREATE INDEX などのデータ定義言語 (DDL) 操作を実行することはできません。  
   
  DML トリガーでは、inserted テーブルと deleted テーブルは主に次のことを実行するために使用されます。  
   

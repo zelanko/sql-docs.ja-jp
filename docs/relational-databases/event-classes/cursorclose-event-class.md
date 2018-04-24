@@ -1,34 +1,35 @@
 ---
-title: "CursorClose イベント クラス | Microsoft Docs"
-ms.custom: 
+title: CursorClose イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35763a70260b8d542ca290c91a27cb9e290ecbb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd9435c4e5eccff10877e1b645abfd96d1887520
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorclose-event-class"></a>CursorClose イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-カーソルを閉じるイベントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がカーソルを閉じて割り当てを解除したときに発生します。 **CursorClose** イベント クラスは、アプリケーション プログラミング インターフェイス (API) カーソルで発生する、カーソルを閉じるイベントを記述しています。 このイベント クラスは、ODBC、OLE DB、または DB-Library によって実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル ステートメントが終了したときに発生します。  
+  カーソルを閉じるイベントは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がカーソルを閉じて割り当てを解除したときに発生します。 **CursorClose** イベント クラスは、アプリケーション プログラミング インターフェイス (API) カーソルで発生する、カーソルを閉じるイベントを記述しています。 このイベント クラスは、ODBC、OLE DB、または DB-Library によって実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル ステートメントが終了したときに発生します。  
   
  **CursorClose** イベント クラスは、カーソルのパフォーマンスを記録しているトレース内で使用します。 発生するオーバーヘッドの量は、トレース中にデータベースに対してカーソルが使用される頻度によって異なります。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  
   

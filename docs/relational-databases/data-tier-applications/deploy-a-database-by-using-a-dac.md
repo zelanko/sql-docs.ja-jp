@@ -1,16 +1,16 @@
 ---
-title: "DAC を使用したデータベースの配置 | Microsoft Docs"
-ms.custom: 
+title: DAC を使用したデータベースの配置 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - deploy database wizard
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 576cfec0d53ea575f1a8ad70ad2b5b36dc17e5aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスと [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバー間、または 2 つの [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] サーバー間でデータベースを配置するには、**SQL Azure へのデータベースの配置**ウィザードを使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **のインスタンスと** サーバー間、または 2 つの [!INCLUDE[ssDE](../../includes/ssde-md.md)] サーバー間でデータベースを配置するには、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] SQL Azure へのデータベースの配置ウィザード [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]を使用します。  
   
 ##  <a name="BeforeBegin"></a> はじめに  
  このウィザードでは、データ層アプリケーション (DAC) の BACPAC アーカイブ ファイルを使用して、データおよびデータベース オブジェクトの定義を配置します。 ウィザードでは、ソース データベースからの DAC エクスポート操作と、配置先への DAC インポート操作を実行します。  

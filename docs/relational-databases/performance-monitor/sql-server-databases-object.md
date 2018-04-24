@@ -1,16 +1,16 @@
 ---
-title: "SQL Server、Databases オブジェクト | Microsoft Docs"
-ms.custom: 
+title: SQL Server、Databases オブジェクト | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5278e1637d118c7f1908495acd0a1ee9b7757d11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL Server の **SQLServer:Databases** オブジェクトには、一括コピー操作、バックアップと復元のスループット、およびトランザクション ログの利用状況を監視するためのカウンターがあります。 トランザクションとトランザクション ログを監視すると、データベースで発生しているユーザーの利用状況と、トランザクション ログの空き容量を調べることができます。 ユーザーの利用状況は、データベースのパフォーマンスを決定し、ログ サイズ、ロック、およびレプリケーションに影響を与えます。 下位レベルのログの利用状況を監視して、ユーザーの利用状況やリソースの利用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立ちます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL Server の **SQLServer:Databases** オブジェクトには、一括コピー操作、バックアップと復元のスループット、およびトランザクション ログの利用状況を監視するためのカウンターがあります。 トランザクションとトランザクション ログを監視すると、データベースで発生しているユーザーの利用状況と、トランザクション ログの空き容量を調べることができます。 ユーザーの利用状況は、データベースのパフォーマンスを決定し、ログ サイズ、ロック、およびレプリケーションに影響を与えます。 下位レベルのログの利用状況を監視して、ユーザーの利用状況やリソースの利用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立ちます。  
   
  **Databases** オブジェクトの複数のインスタンスは、同時に監視できます。各インスタンスは、1 つのデータベースを表します。  
   

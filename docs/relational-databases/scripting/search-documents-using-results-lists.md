@@ -1,16 +1,16 @@
 ---
-title: "結果一覧を使用してドキュメントを検索する方法 | Microsoft Docs"
-ms.custom: 
+title: 結果一覧を使用してドキュメントを検索する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - searches [SQL Server Management Studio], result lists
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0999168eac58aab6efe5888e21cd1b606904e0c
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f6352e99a18f02976a3b992e3ae77aade117ad0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  
   
 ### <a name="to-search-in-multiple-files"></a>複数のファイルで検索を実行するには  
   

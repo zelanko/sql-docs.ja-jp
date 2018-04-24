@@ -1,33 +1,35 @@
 ---
-title: "Always Encrypted で保護された機微なデータの移行 | Microsoft Docs"
-ms.custom: 
+title: Always Encrypted で保護された機微なデータの移行 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fa13b882639b0b23d937c479eec6b2a29aa34ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3e3e9a41fca762ae1303be0f451cbdc4e33e6c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Always Encrypted で保護された機微なデータの移行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、**ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ 一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
  [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) と [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) の両方に ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションがあります。 このオプションを ON に設定すると (既定値は OFF)、一括コピー操作でサーバーに対する暗号化メタデータ チェックが抑制されます。これにより、ユーザーはデータの暗号化を解除せずにテーブルまたはデータベース間で暗号化されたデータの一括コピーを行うことができます。  
@@ -40,15 +42,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="bulk-loading-of-encrypted-data"></a>暗号化されたデータの一括読み込み  
 次のプロセスを使用して、暗号化されたデータを読み込みます。  
 
-1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 例:  
+1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 例 :  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳細については、「 [Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted &#40;クライアント開発&#41;) を参照してください。  
+2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳細については、「 [Always Encrypted &amp;#40;クライアント開発&amp;#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted &#40;クライアント開発&#41;) を参照してください。  
   
-3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 例:  
+3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 例 :  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  

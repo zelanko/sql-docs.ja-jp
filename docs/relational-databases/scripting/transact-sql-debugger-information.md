@@ -1,16 +1,16 @@
 ---
-title: "Transact-SQL デバッガー情報 | Microsoft Docs"
-ms.custom: 
+title: Transact-SQL デバッガー情報 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff61f3cc84829372e305ffe40aefff870531679
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL デバッガー情報
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] デバッガーが特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止するたびに、さまざまなデバッガー ウィンドウを使用して現在の実行状態を表示できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  デバッガーが特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止するたびに、さまざまなデバッガー ウィンドウを使用して現在の実行状態を表示できます。  
   
 ## <a name="debugger-windows"></a>デバッガー ウィンドウ  
  デバッガー モードでは、デバッガーにより、メイン [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ウィンドウの下部に 2 つのウィンドウが開かれます。 デバッガーをこれら 2 つのウィンドウで、すべてその情報を表示します。 それぞれのデバッガー ウィンドウには、ウィンドウに表示される情報のセットを制御するために選択できるタブがあります。 左側のデバッガー ウィンドウには、 **[ローカル]**、 **[ウォッチ 1]**、 **[ウォッチ 2]**、 **[ウォッチ 3]**、および **[ウォッチ 4]** の各タブがあります。 右側のデバッガー ウィンドウには、 **[呼び出し履歴]**、 **[スレッド]**、 **[ブレークポイント]**、 **[コマンド ウィンドウ]**、および **[出力]** の各タブがあります。  

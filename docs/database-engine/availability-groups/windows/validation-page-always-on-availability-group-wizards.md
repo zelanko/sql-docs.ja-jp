@@ -2,7 +2,7 @@
 title: '[検証] ページ (Always On 可用性グループ ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7068522fbb73363053151da7140dcfa2ad365aef
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ff4ca56430d1d040cb7ea0870c9fcc958e7a2a3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>[検証] ページ (Always On 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/18/2018
  **結果**  
  以下のハイパーリンク テキストのいずれかが表示されます。 特定の検証手順の結果の詳細については、ハイパーリンクをクリックしてください。  
   
-|[結果]|Description|  
+|結果|Description|  
 |------------|-----------------|  
 |**[エラー]**|検証手順が失敗したことを示します。 エラー メッセージを表示するには、リンクをクリックします。|  
 |**スキップ**|不要と指定されていたため、検証手順がスキップされたことを示します。 手順がスキップされた理由を表示するには、リンクをクリックします。|  

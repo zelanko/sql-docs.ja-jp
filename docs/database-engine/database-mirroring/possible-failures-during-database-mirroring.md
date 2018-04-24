@@ -1,15 +1,16 @@
 ---
-title: "データベース ミラーリング中に発生する可能性のあるエラー | Microsoft Docs"
-ms.custom: 
+title: データベース ミラーリング中に発生する可能性のあるエラー | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time-out period [SQL Server database mirroring]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34c337fa0808e00cde09e1805983e82e2dd40977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
   
 > [!IMPORTANT]  
 >  ミラー化されたデータベース以外のデータベースで発生した障害は、データベース ミラーリング セッションでは検出されません。 さらに、データ ディスクの障害によりデータベースが再起動した場合を除き、データ ディスクの障害はほとんど検出されません。  

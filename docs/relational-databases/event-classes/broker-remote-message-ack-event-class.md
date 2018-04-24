@@ -1,34 +1,35 @@
 ---
-title: "Broker:Remote Message Ack イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Broker:Remote Message Ack イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e319ab0359c3a12d268f7fdacb6e6c4c88f645bc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a2025b324fcf8ed76163b9398b63bdbce624b21a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] がメッセージの受信確認を送信または受信するときに、**Broker:Remote Message Ack** イベントが生成されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **がメッセージの受信確認を送信または受信するときに、** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントが生成されます。  
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Broker:Remote Message Ack イベント クラスのデータ列  
   

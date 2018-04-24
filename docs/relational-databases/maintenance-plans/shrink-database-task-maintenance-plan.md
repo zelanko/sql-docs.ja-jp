@@ -1,16 +1,16 @@
 ---
-title: "[データベースの圧縮タスク] (メンテナンス プラン) | Microsoft Docs"
-ms.custom: 
+title: '[データベースの圧縮タスク] (メンテナンス プラン) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Shrink Database Task
@@ -19,19 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 14cb53bcc9022fd2b960e2a7da481a02f6092a70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>[データベースの圧縮タスク]\(メンテナンス プラン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[データベースの圧縮タスク]** ダイアログを使用すると、選択されているデータベースのサイズを小さくするタスクを作成できます。 次に示すオプションを使用して、データベースを圧縮する際に残す未使用領域の割合をパーセント比率で指定します (指定値を大きくするほど、データベースは少ししか圧縮されなくなります)。 残される未使用領域の大きさは、データベースに格納されているデータの量に対する比率で決められます。 たとえば、60 MB のデータと 40 MB の空き領域を含む 100 MB のデータベースに対して 50% の値を指定した場合、そのデータベースは、60 MB のデータと (60 MB の 50% に当たる) 30 MB の空き領域から成る 90 MB のデータベースに圧縮されます。 削除されるのは、指定の割合を超える分の未使用領域だけです。 有効値は、0 ～ 100 です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[データベースの圧縮タスク]** ダイアログを使用すると、選択されているデータベースのサイズを小さくするタスクを作成できます。 次に示すオプションを使用して、データベースを圧縮する際に残す未使用領域の割合をパーセント比率で指定します (指定値を大きくするほど、データベースは少ししか圧縮されなくなります)。 残される未使用領域の大きさは、データベースに格納されているデータの量に対する比率で決められます。 たとえば、60 MB のデータと 40 MB の空き領域を含む 100 MB のデータベースに対して 50% の値を指定した場合、そのデータベースは、60 MB のデータと (60 MB の 50% に当たる) 30 MB の空き領域から成る 90 MB のデータベースに圧縮されます。 削除されるのは、指定の割合を超える分の未使用領域だけです。 有効値は、0 ～ 100 です。  
   
  ファイルの末尾にあるデータのページを、ファイルの先頭に近い占有されていない領域に移動することにより、データ ファイルが圧縮され、領域が回復されます。 ファイル末尾に十分な空き領域が作成された場合は、ファイル末尾のデータ ページの割り当てを解除して、ファイル システムに戻すことができます。  
   

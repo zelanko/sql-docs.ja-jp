@@ -2,7 +2,7 @@
 title: データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: a8c2b7948e4a9c33e8d49c82e477d25a74752c2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 04/10/2018
   
 -   **作業を開始する準備:**  、 [前提条件](#Prerequisites)、 [推奨事項](#Recommendations)、 [権限](#Permissions)  
   
--   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
+-   **データベース メール メッセージおよびログをアーカイブする方法:**  [SQL Server エージェント](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  アーカイブ データを格納する新しいテーブルが、特別なアーカイブ データベース内にある場合があります。 代わりに、行をテキスト ファイルにエクスポートすることができます。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/10/2018
  運用環境では、詳細なエラー チェックを追加したり、ジョブが失敗した場合には電子メール メッセージをオペレーターに送信したりする必要があるでしょう。  
   
   
-###  <a name="Permissions"></a> 権限  
+###  <a name="Permissions"></a> Permissions  
  このトピックで説明したストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
   

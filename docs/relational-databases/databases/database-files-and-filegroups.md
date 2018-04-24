@@ -1,16 +1,16 @@
 ---
-title: "データベース ファイルとファイル グループ | Microsoft Docs"
-ms.custom: 
+title: データベース ファイルとファイル グループ | Microsoft Docs
+ms.custom: ''
 ms.date: 01/07/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -35,19 +35,20 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: d341ebd7425d1108e3d22129d14b0b5a81996f0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各データベースには、データ ファイルとログ ファイルという少なくとも 2 つのオペレーティング システム ファイルがあります。 データ ファイルには、テーブル、インデックス、ストアド プロシージャ、およびビューなどのデータおよびオブジェクトが含まれます。 ログ ファイルには、データベース内のすべてのトランザクションを復旧するために必要な情報が含まれます。 データ ファイルは、割り当てと管理の目的でファイル グループにまとめることができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各データベースには、データ ファイルとログ ファイルという少なくとも 2 つのオペレーティング システム ファイルがあります。 データ ファイルには、テーブル、インデックス、ストアド プロシージャ、およびビューなどのデータおよびオブジェクトが含まれます。 ログ ファイルには、データベース内のすべてのトランザクションを復旧するために必要な情報が含まれます。 データ ファイルは、割り当てと管理の目的でファイル グループにまとめることができます。  
   
 ## <a name="database-files"></a>データベース ファイル  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースには、次の表で示すように 3 種類のファイルがあります。  

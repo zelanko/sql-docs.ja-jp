@@ -1,34 +1,35 @@
 ---
-title: "差分バックアップ (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 差分バックアップ (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65c3f103ad65c9726be098dde183b1302b4e5645
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d91f6ba505e5bfc9e95086532521402691fd713e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="differential-backups-sql-server"></a>差分バックアップ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックで取り上げるバックアップと復元は、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに当てはまります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックで取り上げるバックアップと復元は、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに当てはまります。  
   
  差分バックアップは、最新の完全データ バックアップに基づいて行われます。 差分バックアップでは、その完全バックアップの作成後に変更されたデータのみがキャプチャされます。 差分バックアップの基になる完全バックアップを差分の *ベース* といいます。 完全バックアップ (コピーのみのバックアップを除く) は、データベース バックアップ、部分バックアップ、ファイル バックアップなど、一連の差分バックアップのベースとなります。 ファイルの差分バックアップのベース バックアップは、完全バックアップ、ファイル バックアップ、または部分バックアップ内に格納できます。  
   

@@ -1,30 +1,31 @@
 ---
-title: "データベース エンジンの権限の概要 | Microsoft Docs"
-ms.custom: 
+title: データベース エンジンの権限の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,9 +165,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  上に示した最初の権限 (`GRANT SELECT ON OBJECT::Region TO Ted;`) が最も詳細であり、 `SELECT`を付与する最小のステートメントです。 下位のオブジェクトに対する権限はありません。 可能な限り最小の権限を付与することをお勧めしますが、付与システムの簡略化のためには高いレベルで付与するほうが適切です。 このため、Ted がスキーマ全体への権限を必要とする場合、 `SELECT` をテーブルまたはビュー レベルで複数回付与するのではなく、 `SELECT` をスキーマ レベルで 1 回付与します。 データベースの設計は、戦略の成功に大きく関わってきます。 一意の権限を必要とするオブジェクトが単一のスキーマに含まれるようにデータベースを設計する際には、この戦略が最適です。  
   
 ## <a name="list-of-permissions"></a>権限の一覧  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] には 230 の権限があります。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には 219 の権限があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には 214 の権限があります。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] には 195 の権限があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] にはそれぞれ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に適用されない権限が含まれているものの、データベース エンジンの一部のみを公開しているため、権限の数が少なくなっています。 次の図は、権限とそれらの関連性を示します。 一部の高いレベルの許可 ( `CONTROL SERVER`など) は複数回列挙されています。 このトピックのポスターは、読み取るには小さすぎます。 画像をクリックすると、**データベース エンジンのアクセス許可ポスター**を pdf 形式でダウンロードできます。  
-  
-[![データベース エンジンの権限](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] には 230 の権限があります。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には 219 の権限があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] には 214 の権限があります。 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] には 195 の権限があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] にはそれぞれ、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に適用されない権限が含まれているものの、データベース エンジンの一部のみを公開しているため、権限の数が少なくなっています。 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] プリンシパルとサーバーおよびデータベース オブジェクト間の関係を示す図については、「[権限の階層 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)」をご覧ください。  
   

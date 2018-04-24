@@ -2,7 +2,7 @@
 title: 可用性グループの強制手動フェールオーバーの実行 (SQLServer) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae777b30e9222f32833b862bfabee2f65a5db76c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 91c5899208288042efa2a73c13bd18a463a10693
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの強制手動フェールオーバーの実行 (SQLServer)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。 強制フェールオーバーは、[計画的な手動フェールオーバー](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)を実行できない場合に、ディザスター リカバリーのみを目的として実行する手動フェールオーバーです。 非同期のセカンダリ レプリカに対して強制フェールオーバーを実行した場合、データ損失の可能性があります。 したがって、強制フェールオーバーは、データ損失のリスクを引き受けたうえで、可用性グループに対するサービスを直ちに復旧する必要がある場合のみ実行することを強くお勧めします。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。 強制フェールオーバーは、[計画的な手動フェールオーバー](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)を実行できない場合に、ディザスター リカバリーのみを目的として実行する手動フェールオーバーです。 非同期のセカンダリ レプリカに対して強制フェールオーバーを実行した場合、データ損失の可能性があります。 したがって、強制フェールオーバーは、データ損失のリスクを引き受けたうえで、可用性グループに対するサービスを直ちに復旧する必要がある場合のみ実行することを強くお勧めします。  
   
  強制フェールオーバーの実行後、可用性グループのフェールオーバー先であるフェールオーバー ターゲットが新しいプライマリ レプリカになります。 残りのセカンダリ レプリカ内のセカンダリ データベースは中断され、手動で再開する必要があります。 元のプライマリ レプリカは、使用可能になったときにセカンダリ ロールに移行し、元のプライマリ データベースがセカンダリ データベースになり、SUSPENDED 状態に移行します。 特定のセカンダリ データベースを再開する前に、そのデータベースから失われたデータを復元できる場合があります。 ただし、プライマリ データベースでは、いずれかのセカンダリ データベースが中断している間、トランザクション ログの切り捨てが遅延されることに注意してください。  
   

@@ -1,36 +1,36 @@
 ---
-title: "データベース メール | Microsoft Docs"
-ms.custom: 
+title: データベース メール | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - architecture [SQL Server], Database Mail
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 530adcf1fdc0148283f8362c790cabff82314aa0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4e6bef364e738cf644589c8a16f80c8c927d17f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mail"></a>データベース メール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-データベース メールは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から電子メールを送信するためのエンタープライズ ソリューションです。 データベース メールを使用すると、データベース アプリケーションからユーザーに電子メールを送信できます。 メッセージにはクエリ結果を含めることができ、ネットワーク上にあるリソースのファイルも含めることができます。  
+  データベース メールは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から電子メールを送信するためのエンタープライズ ソリューションです。 データベース メールを使用すると、データベース アプリケーションからユーザーに電子メールを送信できます。 メッセージにはクエリ結果を含めることができ、ネットワーク上にあるリソースのファイルも含めることができます。  
   
   
 ##  <a name="Benefits"></a>データベース メールの使用の利点  

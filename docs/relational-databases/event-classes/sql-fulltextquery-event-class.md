@@ -1,34 +1,35 @@
 ---
-title: "SQL:FullTextQuery イベント クラス | Microsoft Docs"
-ms.custom: 
+title: SQL:FullTextQuery イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:FullTextQuery event class
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae236f30c9fb0f2cc3c35e694ccab3f4f081109d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e52a1e85ae123f26631f67e5be279a78181a9a58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-SQL:FullTextQuery イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりフルテキスト クエリが実行されると発生します。 このイベント クラスは、フルテキスト カタログに関連する問題を監視するトレースに含めます。  
+  SQL:FullTextQuery イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりフルテキスト クエリが実行されると発生します。 このイベント クラスは、フルテキスト カタログに関連する問題を監視するトレースに含めます。  
   
  SQL:FullTextQuery イベント クラスを含めると、オーバーヘッドが大きくなります。 このようなイベントが頻繁に発生すると、トレースによってパフォーマンスが大きく低下することがあります。 パフォーマンスの低下を最小限に抑えるには、短期間だけ特定の問題を監視するトレースに限定してこのイベント クラスを使用するようにします。  
   

@@ -1,16 +1,16 @@
 ---
-title: "ファイルの状態 | Microsoft Docs"
-ms.custom: 
+title: ファイルの状態 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring file state [SQL Server]
@@ -31,19 +31,21 @@ helpviewer_keywords:
 - displaying filegroup states
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d7bc331185c97dc72f11de6441570a267af0157
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 31805d4e577e72a8648c3f66b8725c97c9af815a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-states"></a>ファイルの状態
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベース ファイルの状態はデータベースの状態とは別に管理されます。 ファイルは常に、ONLINE または OFFLINE などの特定の状態にあります。 ファイルの現在の状態を表示するには、 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューを使用します。 データベースがオフラインになっている場合、 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューからファイルの状態を表示できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、データベース ファイルの状態はデータベースの状態とは別に管理されます。 ファイルは常に、ONLINE または OFFLINE などの特定の状態にあります。 ファイルの現在の状態を表示するには、 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューを使用します。 データベースがオフラインになっている場合、 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューからファイルの状態を表示できます。  
   
  ファイル グループ内のファイルの状態により、ファイル グループ全体の可用性が決まります。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループの現在の状態を表示するには、 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) カタログ ビューを使用します。 ファイル グループがオフラインのときに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してファイル グループにアクセスしようとすると、エラーが発生して失敗します。 クエリ オプティマイザーで SELECT ステートメントのクエリ プランを作成すると、オフライン ファイル グループに存在する非クラスター化インデックスおよびインデックス付きビューが無視され、これらのステートメントが成功します。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する INSERT、UPDATE、または DELETE ステートメントは失敗します。  
   

@@ -1,27 +1,27 @@
 ---
-title: "SQL Server サービス更新プログラムのインストール | Microsoft Docs"
-ms.custom: 
+title: SQL Server サービス更新プログラムのインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a8f82cc7e1afa88af9a3eeb30dc2970baaa10f7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server サービス更新プログラムのインストール
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="installing-updates-for-includenoversionincludesssnoversion-mdmd-during-a-new-installation"></a>新規インストール時に [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、メインの製品とそれに適用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールが統合されています。 製品の更新プログラムでは、次の場所から適用可能な更新プログラムが検索されます。  
   
-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新  
+- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
   
 - Windows Server Update Services (WSUS)  
   

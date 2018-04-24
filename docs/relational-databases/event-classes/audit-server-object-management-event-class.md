@@ -1,34 +1,35 @@
 ---
-title: "Audit Server Object Management イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Audit Server Object Management イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Server Object Management event class
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0b72bf95b5726eb0435f176c28423b6a514d285
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b551b7bc8e18492634afd55eeec049987b5fff5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Server Object Management** イベント クラスは、サーバー オブジェクトに対して CREATE、ALTER、または DROP が実行された場合に発生します。  
+  **Audit Server Object Management** イベント クラスは、サーバー オブジェクトに対して CREATE、ALTER、または DROP が実行された場合に発生します。  
   
 ## <a name="audit-server-object-management-event-class-data-columns"></a>Audit Server Object Management イベント クラスのデータ列  
   

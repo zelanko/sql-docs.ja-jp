@@ -1,16 +1,16 @@
 ---
-title: "メモリ使用率の監視 | Microsoft Docs"
-ms.custom: 
+title: メモリ使用率の監視 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tuning databases [SQL Server], memory
@@ -26,19 +26,20 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 18061fa8a59ab5cd5d86a7505162e5148767b9c7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5e689921baee5c68ef1a1260ae6367cad5b1e6c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視し、メモリ使用率が通常の範囲内であることを確認します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視し、メモリ使用率が通常の範囲内であることを確認します。  
   
  メモリの少ない状況を監視するには、次のオブジェクト カウンターを使用します。  
   

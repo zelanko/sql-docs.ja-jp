@@ -1,15 +1,16 @@
 ---
-title: "プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], role changes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e8b432636f4a8c51e58b67e394b81d96e6ded4ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成をセカンダリ サーバーにフェールオーバーした後、プリイマリ データベースとして機能するようにセカンダリ データベースを構成できます。 その後、プライマリ データベースとセカンダリ データベースを必要に応じて切り替えることができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成をセカンダリ サーバーにフェールオーバーした後、プリイマリ データベースとして機能するようにセカンダリ データベースを構成できます。 その後、プライマリ データベースとセカンダリ データベースを必要に応じて切り替えることができます。  
   
 ## <a name="performing-the-initial-role-change"></a>初期ロール切り替えの実行  
  初めてセカンダリ データベースにフェールオーバーし、これを新しいプライマリ データベースとして使用する場合は、次の一連の手順を実行する必要があります。 この初期手順を実行した後、プライマリ データベースとセカンダリ データベース間でロールを簡単に切り替えることができるようになります。  

@@ -1,33 +1,33 @@
 ---
-title: "SQL Server 2016 の別のエディションへのアップグレード (セットアップ) | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 の別のエディションへのアップグレード (セットアップ) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 976dc265c028061ee04d8188b8de4325ba335a69
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 752c9439124331200af3ee7aeba09b4a895c7934
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>SQL Server の別のエディションへのアップグレード (セットアップ)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次の記事を確認してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次の記事を確認してください。  
 
 - [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
 - [エディションと SQL Server 2016 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md)  

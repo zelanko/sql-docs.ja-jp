@@ -2,7 +2,7 @@
 title: '[IP アドレスの追加] ダイアログ ボックス (SQL Server Management Studio) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0aa89a5d92d7a20bbc7e4daf732f8f5ce2b09f47
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bc8e04a2cd3d0e3d72d69feea7822da83c55ace
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[IP アドレスの追加] ダイアログ ボックス (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] この F1 ヘルプ トピックでは、**[IP アドレスの追加]** ダイアログ ボックスのオプションについて説明します。 このダイアログ ボックスには、 **[新しい可用性グループ リスナー]** ダイアログ ボックスと **[リスナー]** タブ ( **の** または [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [レプリカの指定] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ページ上) からアクセスできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  この F1 ヘルプ トピックでは、 **[IP アドレスの追加]** ダイアログ ボックスのオプションについて説明します。 このダイアログ ボックスには、 **[新しい可用性グループ リスナー]** ダイアログ ボックスと **[リスナー]** タブ ( **の** または [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [レプリカの指定] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ページ上) からアクセスできます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  サブネットを可用性グループ リスナーに追加するには、サブネットごとの IP アドレスと、IPv4 アドレスのサブネット マスクを把握している必要があります。  

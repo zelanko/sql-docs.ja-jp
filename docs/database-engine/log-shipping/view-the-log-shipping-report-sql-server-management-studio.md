@@ -1,15 +1,16 @@
 ---
-title: "ログ配布レポートの表示 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: ログ配布レポートの表示 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing log shipping reports
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abc94b43ffca65db5e37f32a8efd707f2b142042
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f9c4741a8e70c8e0e14ab91b05846331f627dfff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>ログ配布レポートの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
   
  このレポートには、接続先のサーバー インスタンスから使用できるログ配布の利用状況の状態が表示されます。 接続先のサーバー インスタンスが複数の構成に関与しており、それぞれ異なる役割が与えられている場合 (あるデータベースでは監視サーバーとして機能し、別のデータベースではセカンダリ サーバーとして機能する場合など) は、それぞれの役割から見た各構成の情報が表示されます。 ストアド プロシージャから特定のログ配布構成の監視サーバー インスタンスに接続できる場合、レポートにはその構成の状態がさらに多く表示されます。  
   

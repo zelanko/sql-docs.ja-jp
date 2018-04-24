@@ -1,35 +1,37 @@
 ---
-title: "Transact-SQL スニペットの挿入 | Microsoft Docs"
-ms.custom: 
+title: Transact-SQL スニペットの挿入 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IntelliSense [SQL Server], snippets
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0086861b57793457f8a8d2bd735f808b1587759e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f864b1f63aed79bc925ff061ef42b53f356bd5ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL スニペットの挿入
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターで [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを新規作成するときの開始位置として使用できるテンプレートです。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを新規作成するときの開始位置として使用できるテンプレートです。  
   
 ## <a name="inserting-snippets"></a>スニペットの挿入  
  **[スニペットの挿入]** メニューを使用して、スニペットのカテゴリ別一覧からスニペットを選択できます。  

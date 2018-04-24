@@ -1,34 +1,35 @@
 ---
-title: "Blocked Process Report イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Blocked Process Report イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 96b2dd7107ce1b7de95dd74df895d22e5dfab82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Blocked Process Report** イベント クラスは、指定された時間より長い間タスクがブロックされていることを示します。 このイベント クラスには、システム タスクやデッドロックを検出できないリソースを待機しているタスクは含まれません。  
+  **Blocked Process Report** イベント クラスは、指定された時間より長い間タスクがブロックされていることを示します。 このイベント クラスには、システム タスクやデッドロックを検出できないリソースを待機しているタスクは含まれません。  
   
  レポートが生成されるしきい値と頻度を構成するには、 **sp_configure** コマンドを使用して、 **blocked process threshold** オプションを構成します。これは秒単位で設定できます。 既定では、ブロックされているプロセスのレポートは生成されません。 **blocked process threshold** オプションの設定に関する詳細については、「[blocked process threshold サーバー構成オプション](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)」を参照してください します。  
   

@@ -1,16 +1,16 @@
 ---
-title: "suspect_pages テーブルの管理 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: suspect_pages テーブルの管理 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 824 (Database Engine error)
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e8860ca10da3f28750d62f2fb1a926069cec496c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e42b62f8732722495337f0ac18de3ddb6acc671a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で **suspect_pages** テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルは、 [msdb データベース](../../relational-databases/databases/msdb-database.md)にあります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルは、 [msdb データベース](../../relational-databases/databases/msdb-database.md)にあります。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がデータ ページの読み取りを試みたときに次のエラーのいずれかを検出すると、ページは "問題あり" と見なされます。  
   

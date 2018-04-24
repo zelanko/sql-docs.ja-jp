@@ -1,34 +1,35 @@
 ---
-title: "TM: Commit Tran Starting イベント クラス | Microsoft Docs"
-ms.custom: 
+title: 'TM: Commit Tran Starting イベント クラス | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Commit Tran Starting event class'
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afb5b51e66e06dd230419c8f73e3e574e54aa9f1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c99b3543b53de55e029f3fb211aac9aff648154d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-TM: Commit Tran Starting イベント クラスは、COMMIT TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがコミットされた後に新しいトランザクションが開始されるかどうかを示します。  
+  TM: Commit Tran Starting イベント クラスは、COMMIT TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがコミットされた後に新しいトランザクションが開始されるかどうかを示します。  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting イベント クラスのデータ列  
   

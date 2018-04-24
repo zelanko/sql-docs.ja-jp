@@ -1,16 +1,16 @@
 ---
-title: "sqlcmd によるデータベース エンジンへの接続 | Microsoft Docs"
-ms.custom: 
+title: sqlcmd によるデータベース エンジンへの接続 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
@@ -21,19 +21,21 @@ helpviewer_keywords:
 - VIA
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 855d0d261f5bf1f405adf2d0b257ce760c91b438
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 66503e8905b2a081bd1edf27d8533d4381b1e767
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - データベース エンジンへの接続
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TCP/IP ネットワーク プロトコル (既定) および名前付きパイプ プロトコルを使用したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP ネットワーク プロトコル (既定) および名前付きパイプ プロトコルを使用したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  
   
 -   **sqlcmd** では、下に示す接続文字列の一部として指定されているプロトコルが使用されます。  
   

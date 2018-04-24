@@ -1,34 +1,35 @@
 ---
-title: "SQL Server の Access Methods オブジェクト | Microsoft Docs"
-ms.custom: 
+title: SQL Server の Access Methods オブジェクト | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3629d634a0cdbf196e481be0dd3e05ac23e355df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server の Access Methods オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Access Methods** オブジェクトには、データベース内の論理データへのアクセス方法を監視するためのカウンターがあります。 ディスク上のデータベース ページへの物理アクセスは、 **Buffer Manager** カウンターを使用して監視します。 データベースに格納されているデータへのアクセス方法を監視すれば、インデックスの追加や変更、パーティションの追加や移動、ファイルまたはファイル グループの追加、インデックスのデフラグ、クエリの書き直しなど、どのような措置によってクエリ パフォーマンスが向上するかを判断する際に役立ちます。 **Access Methods** カウンターを使用して、データベース内のデータ、インデックス、および空き領域サイズを監視し、各サーバー インスタンスのデータ量と断片化状況を確認することもできます。 インデックスが過度に断片化されると、パフォーマンスの低下につながります。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **の** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、データベース内の論理データへのアクセス方法を監視するためのカウンターがあります。 ディスク上のデータベース ページへの物理アクセスは、 **Buffer Manager** カウンターを使用して監視します。 データベースに格納されているデータへのアクセス方法を監視すれば、インデックスの追加や変更、パーティションの追加や移動、ファイルまたはファイル グループの追加、インデックスのデフラグ、クエリの書き直しなど、どのような措置によってクエリ パフォーマンスが向上するかを判断する際に役立ちます。 **Access Methods** カウンターを使用して、データベース内のデータ、インデックス、および空き領域サイズを監視し、各サーバー インスタンスのデータ量と断片化状況を確認することもできます。 インデックスが過度に断片化されると、パフォーマンスの低下につながります。  
   
  データ量、断片化、および使用状況の詳細な情報を得るには、次の動的管理ビューを使用します。  
   

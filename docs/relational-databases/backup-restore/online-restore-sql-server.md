@@ -1,34 +1,35 @@
 ---
-title: "オンライン復元 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: オンライン復元 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3500b144cc3afb10c5ac12ee76e49dc11953623
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c99e77167e04e18ea19a99fb1c44d22e6f10318c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] オンライン復元は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
   
  データベースがオンラインのときにデータを復元する処理を *オンライン復元*といいます。 プライマリ ファイル グループがオンラインの場合、1 つ以上のセカンダリ ファイル グループがオフラインでも、そのデータベースはオンラインと見なされます。 どの復旧モデルでも、データベースがオンラインであれば、オフラインのファイルを復元できます。 完全復旧モデルでは、データベースがオンラインであれば、ページも復元できます。  
   

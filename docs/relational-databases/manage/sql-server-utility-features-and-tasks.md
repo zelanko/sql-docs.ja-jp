@@ -1,16 +1,16 @@
 ---
-title: "SQL Server ユーティリティの機能とタスク | Microsoft Docs"
-ms.custom: 
+title: SQL Server ユーティリティの機能とタスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2e1a99ba452c1f923cfe9ae8dfaf59b33d96ab92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境全体をまとめて管理する必要があります。このリリースでは、この管理作業に対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのアプリケーションとマルチサーバーの管理という発想で対応しています。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境全体をまとめて管理する必要があります。このリリースでは、この管理作業に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのアプリケーションとマルチサーバーの管理という発想で対応しています。  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server ユーティリティの利点  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、組織の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関連のエンティティを統合ビューでモデル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) のユーティリティ エクスプローラーと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ユーティリティのビューポイントを使用すると、管理者は、ユーティリティ コントロール ポイント (UCP) として機能する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースの正常性を総合的に確認することができます。 過小使用ポリシーと過大使用ポリシーの両方、およびさまざまな主要パラメーターについて、概要データと詳細データを組み合わせて UCP に表示すると、リソースの統合の可能性とリソースの過大使用を簡単に特定することができます。 正常性ポリシーは、構成可能なため、リソース使用率のしきい値の上限または下限を変更して調整できます。 グローバルな監視ポリシーを変更したり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理されているエンティティごとに個別の監視ポリシーを構成したりできます。  

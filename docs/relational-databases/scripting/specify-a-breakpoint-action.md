@@ -1,16 +1,16 @@
 ---
-title: "ブレークポイント アクションの指定 | Microsoft Docs"
-ms.custom: 
+title: ブレークポイント アクションの指定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug.breakpt.action
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 543b2919c801ed6af696a31114bf840eff9cae05
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc843d4ee2866eaaa90a78ce6d4141c5ba8bf400
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>ブレークポイント アクションの指定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ブレークポイント **ヒット時** アクションは、ブレークポイントに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが実行するカスタム タスクを指定します。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  ブレークポイント **ヒット時** アクションは、ブレークポイントに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが実行するカスタム タスクを指定します。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
   
 ##  <a name="BKMK_ActionConsiderations"></a> アクションに関する注意点  
  ブレークポイントの既定のアクションでは、ヒット カウントとブレークポイントの条件の両方が満たされたときに、実行が中断されます。 **デバッガーでの** ヒット時 [!INCLUDE[tsql](../../includes/tsql-md.md)] アクションの主な用途は、出力メッセージを指定して、デバッガーの **[出力]** ウィンドウに情報を出力することです。  

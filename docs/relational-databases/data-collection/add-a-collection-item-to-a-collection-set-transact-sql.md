@@ -1,35 +1,35 @@
 ---
-title: "コレクション アイテムをコレクション セットに追加する (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: コレクション アイテムをコレクション セットに追加する (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - collection items [SQL Server]
 - collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e6a3619ee81352c4345b31546599839fdb59eb2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: daef9f3a376ee0e5c1fb26cabe0321b3b33eb803
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>コレクション アイテムをコレクション セットに追加する (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-データ コレクターに備わっているストアド プロシージャを使用して、コレクション アイテムを既存のコレクション セットに追加できます。  
+  データ コレクターに備わっているストアド プロシージャを使用して、コレクション アイテムを既存のコレクション セットに追加できます。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターを使用して、次の手順を実行します。  
   

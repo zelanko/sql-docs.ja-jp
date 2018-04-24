@@ -1,31 +1,32 @@
 ---
-title: "[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ | Microsoft Docs"
-ms.custom: 
+title: '[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc54ea269d627ce3935c307ef9f5c330c603e99d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ba6a75781bfa626ab33b24bf2fd506f89499c8e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
   
 ## <a name="options"></a>および  
  **カテゴリ**  

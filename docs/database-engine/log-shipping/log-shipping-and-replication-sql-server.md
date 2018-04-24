@@ -1,33 +1,35 @@
 ---
-title: "ログ配布とレプリケーション (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: ログ配布とレプリケーション (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8f2223777608d8c4235d9d657cc94b9200a6d5c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ログ配布では単一のデータベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプライマリ データベースと呼ばれます。 クライアントがプライマリ データベースに対して加えた更新は、ログ配布によってセカンダリ データベースと呼ばれるもう一方のコピー データベースに適用されます。 プライマリ データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ログ配布によってこのトランザクション ログがセカンダリ データベースに適用されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ログ配布では単一のデータベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプライマリ データベースと呼ばれます。 クライアントがプライマリ データベースに対して加えた更新は、ログ配布によってセカンダリ データベースと呼ばれるもう一方のコピー データベースに適用されます。 プライマリ データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ログ配布によってこのトランザクション ログがセカンダリ データベースに適用されます。  
   
  ログ配布はレプリケーションと組み合わせて使用できます。ログ配布とレプリケーションを併用した場合の動作を以下に示します。  
   

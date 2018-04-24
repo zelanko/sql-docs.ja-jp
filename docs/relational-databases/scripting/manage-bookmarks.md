@@ -1,35 +1,37 @@
 ---
-title: "ブックマークの管理 | Microsoft Docs"
-ms.custom: 
+title: ブックマークの管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.BookmarkWindow
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2671d5b81a7bd99492df35047988444d420c8e4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] コード エディターでの作業中に、**[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
   
  ブックマークの作成やブックマーク間の移動は、 **[ブックマーク]** ウィンドウ上部の **[テキスト エディター]** ツール バーにあるボタンをクリックして実行します。 ブックマークの追加および削除や有効化および無効化を行ったり、ブックマークをフォルダーに構成したりできます。 また、 **[ブックマーク]** ウィンドウ ショートカット メニューから、特定のコマンドも利用できます。 ブックマークを追加または削除するには、エディターで目的の行にカーソルを置き、 **[ブックマークの設定/解除]**をクリックします。 ブックマークを有効化するには、 **[ブックマーク]** ウィンドウで対象ブックマークのチェック ボックスをオンにします。ブックマークを無効化する (ただし、削除しない) 場合は、チェック ボックスをオフにします。  
   

@@ -1,16 +1,16 @@
 ---
-title: "ユーザー定義の分類子関数の作成とテスト | Microsoft Docs"
-ms.custom: 
+title: ユーザー定義の分類子関数の作成とテスト | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: resource-governor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - classifier function [SQL Server], create
 - Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5135bcfab53fafb3ec2564f2607a64f46a61c53
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cca4d793139499715ed86829481f53a72da6b5b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>ユーザー定義の分類子関数の作成とテスト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、ユーザー定義 (UDF) の分類子関数を作成してテストする方法について説明します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ステートメントを実行します。  
   
  次の手順で紹介する例のように、ユーザー定義の分類子関数の作成はかなり複雑になる場合があります。  
   

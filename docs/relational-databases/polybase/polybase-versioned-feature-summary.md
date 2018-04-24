@@ -1,28 +1,29 @@
 ---
-title: "PolyBase のバージョン管理機能の概要 | Microsoft Docs"
-ms.custom: 
+title: PolyBase のバージョン管理機能の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff2d8cb28ff4d1ae4960d183ce73524ecf24d7d3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f1351401db725650a24e3b0c45aec327bb404c82
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase のバージョン管理機能の概要
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,7 +34,7 @@ SQL Server の製品やサービスで利用可能な PolyBase 機能の概要�
   
 ||||||
 |-|-|-|-|-|   
-|**機能**|**SQL Server 2016**|**Azure SQL データベース**|**Azure SQL データ ウェアハウス**|**Parallel Data Warehouse**| 
+|**機能**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
 |で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|いいえ|いいえ|はい|
 |Hadoop からデータをインポートする|はい|いいえ|いいえ|はい|
 |データを Hadoop にエクスポートする  |はい|いいえ|いいえ| はい|

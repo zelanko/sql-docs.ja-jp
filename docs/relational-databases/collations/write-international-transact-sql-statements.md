@@ -1,16 +1,16 @@
 ---
-title: "国際化に対応した Transact-SQL ステートメントの記述 | Microsoft Docs"
-ms.custom: 
+title: 国際化に対応した Transact-SQL ステートメントの記述 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: collations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - writing international statements
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - database international considerations [SQL Server], Transact-SQL
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6d2e5bf9dbfe8d4c40cde744ca49dcda0c1d029
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 42d1376c0f6a823741ae04878f71ca197375fd5f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
+  以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
   
 -   **char**、 **varchar**、および **text** の各データ型を使用しているすべての個所をそれぞれ **nchar**、 **nvarchar**、および **nvarchar (max)**データ型に置き換えます。 これを行うことにより、コード ページの変換の問題について考慮する必要がなくなります。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   

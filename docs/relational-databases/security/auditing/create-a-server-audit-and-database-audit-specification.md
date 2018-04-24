@@ -1,16 +1,16 @@
 ---
-title: "サーバー監査とデータベース監査の仕様を作成する方法 | Microsoft Docs"
-ms.custom: 
+title: サーバー監査とデータベース監査の仕様を作成する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlaudit.dbaudit.general.f1
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - audits [SQL Server], creating database specification
 - database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4d306c125bec9e96e82ff8629d27d82bd571bce6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d70251050dd4522a0d694598d4a763bb1dbf061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサーバー監査とデータベース監査の仕様を作成する方法について説明します。  
   
  *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 " *データベース レベルの監査の仕様* " オブジェクトも、監査に属しています。 各監査では、SQL Server データベースごとに 1 つのデータベース監査の仕様を作成できます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **サーバー監査とデータベース監査の仕様を作成する方法:**  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 作成されたデータベース監査仕様は無効な状態です。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
   
 -   ALTER ANY DATABASE AUDIT 権限を持つユーザーは、データベース監査仕様を作成し、任意の監査にバインドできます。  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]**を選択します。 詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]**を選択します。 詳しくは、「 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
   
 3.  オプションの選択が完了したら、 **[OK]**をクリックします。  
   

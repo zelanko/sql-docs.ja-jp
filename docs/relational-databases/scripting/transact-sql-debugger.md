@@ -1,33 +1,35 @@
 ---
-title: "Transact-SQL デバッガー | Microsoft Docs"
-ms.custom: 
+title: Transact-SQL デバッガー | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3c6f549295b5e97a9a6b83a9db4160934c3ff76
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e42e548f35aadcdbe3661444b6523117e6ddc047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL デバッガー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードの実行時の動作を確認してエラーを検出できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウをデバッグ モードに設定した後、特定のコード行で実行を一時停止し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用されている (またはステートメントから返される) 情報やデータを調べることができます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの実行時の動作を確認してエラーを検出できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウをデバッグ モードに設定した後、特定のコード行で実行を一時停止し、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで使用されている (またはステートメントから返される) 情報やデータを調べることができます。  
   
 ## <a name="stepping-through-transact-sql-code"></a>Transact-SQL コードのステップ実行  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディター ウィンドウがデバッグ モードのときに [!INCLUDE[ssDE](../../includes/ssde-md.md)] コードに対して次の操作を行うことができます。  

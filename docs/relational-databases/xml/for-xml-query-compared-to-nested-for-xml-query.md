@@ -1,35 +1,35 @@
 ---
-title: "FOR XML クエリと入れ子になった FOR XML クエリの比較 | Microsoft Docs"
-ms.custom: 
+title: FOR XML クエリと入れ子になった FOR XML クエリの比較 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbbc80f4b96765da5cbb2e7533d5c46e80a26935
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 32ba485944056f695ed9ad0f1ddd7de82c5a1134
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-ここでは、単一レベルの FOR XML クエリと入れ子になった FOR XML クエリを比較します。 入れ子になった FOR XML クエリを使用すると、たとえば、属性中心の XML と要素中心の XML の組み合わせをクエリの結果に指定できるなどの利点があります。 次の例はこのことを示しています。  
+  ここでは、単一レベルの FOR XML クエリと入れ子になった FOR XML クエリを比較します。 入れ子になった FOR XML クエリを使用すると、たとえば、属性中心の XML と要素中心の XML の組み合わせをクエリの結果に指定できるなどの利点があります。 次の例はこのことを示しています。  
   
 ## <a name="example"></a>例  
  次の `SELECT` クエリでは、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの製品カテゴリとサブカテゴリの情報を取得します。 このクエリには入れ子になった FOR XML はありません。  

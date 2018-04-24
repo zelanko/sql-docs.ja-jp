@@ -1,34 +1,35 @@
 ---
-title: "FT:Crawl Stopped イベント クラス | Microsoft Docs"
-ms.custom: 
+title: FT:Crawl Stopped イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Crawl Stopped event class
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ff04f354aa56481af4c8548a1fa20c3bcca5bf0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9fc6c5fd61d9e8fe867efaa6a080e8fb6f21f556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**:Crawl Stopped** イベント クラスは、フルテキスト クロール (作成) が停止されたことを示します。 クロールは、正常に完了するか、致命的なエラーが発生したときに、停止される可能性があります。  
+  **:Crawl Stopped** イベント クラスは、フルテキスト クロール (作成) が停止されたことを示します。 クロールは、正常に完了するか、致命的なエラーが発生したときに、停止される可能性があります。  
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>FT:Crawl Stopped イベント クラスのデータ列  
   

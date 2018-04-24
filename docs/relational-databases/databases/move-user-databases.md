@@ -2,7 +2,7 @@
 title: ユーザー データベースの移動 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: databases
@@ -27,19 +27,20 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb72a2d6947406c8fc14d40571ada79151668422
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ad1c38643e1717e26d36d83cc98183dd45f1742
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-user-databases"></a>ユーザー データベースの移動
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントの FILENAME 句で新しいファイルの場所を指定することで、ユーザー データベースのデータ ファイル、ログ ファイル、およびフルテキスト カタログ ファイルを新しい場所に移動することができます。 この方法は、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内でデータベース ファイルを移動する場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスや、別のサーバーにデータベースを移動する場合は、 [バックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 操作か [デタッチ操作とアタッチ操作](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)を使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントの FILENAME 句で新しいファイルの場所を指定することで、ユーザー データベースのデータ ファイル、ログ ファイル、およびフルテキスト カタログ ファイルを新しい場所に移動することができます。 この方法は、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内でデータベース ファイルを移動する場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスや、別のサーバーにデータベースを移動する場合は、 [バックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 操作か [デタッチ操作とアタッチ操作](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)を使用します。  
   
 ## <a name="considerations"></a>考慮事項  
  データベースを別のサーバー インスタンスに移動するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、データベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  

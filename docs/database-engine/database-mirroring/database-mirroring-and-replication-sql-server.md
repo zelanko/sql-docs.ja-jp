@@ -1,35 +1,35 @@
 ---
-title: "データベース ミラーリングとレプリケーション (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: データベース ミラーリングとレプリケーション (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6926dc82d79a8afb001afb9d1e9d9437d76fadc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>データベース ミラーリングとレプリケーション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  
+  データベース ミラーリングとレプリケーションを組み合わせて使用すると、パブリケーション データベースの可用性を高めることができます。 データベース ミラーリングでは単一データベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプリンシパル データベースと呼ばれます。 クライアントがプリンシパル データベースに対して加えた更新は、ミラー データベースと呼ばれるもう一方のコピー データベースに適用されます。 プリンシパル データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ミラーリングによってこのトランザクション ログがミラー データベースに適用されます。  
   
  ミラーに対するレプリケーション フェールオーバーはパブリケーション データベースでのみ完全にサポートされ、サブスクリプション データベースでは制限付きでサポートされます。 データベース ミラーリングは、ディストリビューション データベースではサポートされていません。 レプリケーションを再構成することなく、ディストリビューション データベースおよびサブスクリプション データベースを復旧する場合の詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。   
   

@@ -1,15 +1,16 @@
 ---
-title: "ミラーリング状態 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: ミラーリング状態 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - states [SQL Server], database mirroring
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - SUSPENDED state
 - database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 014784893728eb72edd754e270330e287fa8d364
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b3e6fce93fb28ab1a0323ac26d3168c44c009cbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mirroring-states-sql-server"></a>ミラーリング状態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] データベース ミラーリング セッションの間、ミラーリングされるデータベースは常に特定の状態 ("*ミラーリング状態*") になります。 データベースの状態は、通信状態、データ フロー、およびパートナー間のデータの違いを反映します。 データベース ミラーリング セッションには、プリンシパル データベースと同じ状態が採用されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベース ミラーリング セッション中、ミラー化されたデータベースは常に特定の状態 ( *ミラーリング状態*) にあります。 データベースの状態は、通信状態、データ フロー、およびパートナー間のデータの違いを反映します。 データベース ミラーリング セッションには、プリンシパル データベースと同じ状態が採用されます。  
   
  各サーバー インスタンスは、データベース ミラーリング セッション全体を通して相互に監視します。 各パートナーは、ミラーリング状態を使用してデータベースを監視します。 プリンシパル データベースとミラー データベースは、フェールオーバー保留中状態の場合を除いて常に同じ状態になります。 ミラーリング監視サーバーがセッションに対して設定されている場合、各パートナーは、それぞれの接続状態 (接続または切断) を使用してミラーリング監視サーバーを監視します。  
   

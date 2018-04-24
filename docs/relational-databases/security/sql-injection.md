@@ -1,33 +1,35 @@
 ---
-title: "SQL インジェクション | Microsoft Docs"
-ms.custom: 
+title: SQL インジェクション | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-security
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de3575bfac8b2e13e6d02835d5355b1e6b78cfa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6fc38f900f84abba5f1e5efab47772703f246317
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-injection"></a>SQL インジェクション
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL インジェクションとは、後で SQL Server のインスタンスに渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  SQL インジェクションとは、後で SQL Server のインスタンスに渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
   
 ## <a name="how-sql-injection-works"></a>SQL インジェクションのしくみ  
  SQL インジェクションは主に、SQL コマンドと連結されて実行されるユーザー入力変数にコードを直接挿入することにより行われます。 それほど直接的ではない攻撃では、悪意のあるコードが、テーブル内の記憶領域に格納される文字列に挿入されたり、メタデータとして挿入されたりします。 格納された文字列が動的な SQL コマンドに後で連結された場合、悪意のあるコードが実行されます。  

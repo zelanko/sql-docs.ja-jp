@@ -2,7 +2,7 @@
 title: フィールド ターミネータと行ターミネータの指定 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +47,13 @@ ms.lasthandoff: 03/20/2018
 |改行文字|\n<br /><br /> 既定の行ターミネータです。|  
 |キャリッジ リターン/ライン フィード|\r|  
 |円記号*|\\\|  
-|NULL ターミネータ (表示されないターミネータ)\*\*|\0|  
+|NULL ターミネータ (表示されないターミネータ)**|\0|  
 |任意の印刷可能な文字 (NULL、タブ、改行、およびキャリッジ リターンを除き、制御文字は印刷可能ではありません)|(*、A、t、l など)|  
-|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(\*\*\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
+|上に列挙したターミネータ文字の一部または全部を含む 10 文字までの印刷可能な文字列|(**\t\*\*、end、!!!!!!!!!!、\t?\n など)|  
   
  *円記号のエスケープ文字と共に制御文字として機能するのは、t、n、r、0 および '\0' だけです。  
   
- \*\*印刷時には NULL 制御文字 (\0) が表示されませんが、データ ファイルでは 1 つの文字です。 つまり、フィールド ターミネータまたは行ターミネータとして NULL 制御文字を使用することと、フィールド ターミネータまたは行ターミネータをまったく使用しないことは異なります。  
+ **印刷時には NULL 制御文字 (\0) が表示されませんが、データ ファイルでは 1 つの文字です。 つまり、フィールド ターミネータまたは行ターミネータとして NULL 制御文字を使用することと、フィールド ターミネータまたは行ターミネータをまったく使用しないことは異なります。  
   
 > [!IMPORTANT]  
 >  データ内にターミネータ文字が出現すると、データではなく、ターミネータとして解釈されます。その文字に続くデータは、次のフィールドまたは次のレコードに属すると解釈されます。 したがって、ターミネータがデータに出現することがないように、注意深くターミネータを選択してください。 たとえば、データに下位サロゲートが含まれている場合、フィールド ターミネータには下位サロゲート フィールド ターミネータは適していません。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/20/2018
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 以下に例を示します。  
+ 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例 :  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  **bcp** コマンドには、次のスイッチがあります。  
   
-|スイッチ|説明|  
+|スイッチ|Description|  
 |------------|-----------------|  
 |**-t**|データ フィールドが文字データとして読み込まれることを指定します。|  
 |**-t** `,`|コンマ (,) をフィールド ターミネータとして指定します。|  
@@ -144,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      OPENROWSET 一括行セット プロバイダーでは、ターミネータを指定できるのはフォーマット ファイルのみです (Large Object データ型を除き、これは必須です)。 文字データ ファイルで既定以外のターミネータが使用されている場合、フォーマット ファイルで定義する必要があります。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) および [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
   
-     OPENROWSET BULK 句の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
+     OPENROWSET BULK 句の詳細については、「 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)を使用) を示すことができます。  
   
 ### <a name="examples"></a>使用例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  

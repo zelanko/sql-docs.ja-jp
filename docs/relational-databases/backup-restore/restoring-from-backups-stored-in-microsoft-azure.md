@@ -1,31 +1,32 @@
 ---
-title: "Microsoft Azure に格納されたバックアップからの復元 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Azure に格納されたバックアップからの復元 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48c5dccb0f90048123c15b637374b358097a16de
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a29eee6fa9fc2b2fb9ce7558bfa871fcd781063
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Microsoft Azure に格納されたバックアップからの復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、Windows Azure BLOB ストレージ サービスに格納されたバックアップを使用してデータベースを復元する際の注意事項について概説します。 このトピックは、SQL Server Backup to URL または [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用して作成されたバックアップが対象です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、Windows Azure BLOB ストレージ サービスに格納されたバックアップを使用してデータベースを復元する際の注意事項について概説します。 このトピックは、SQL Server Backup to URL または [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用して作成されたバックアップが対象です。  
   
  Windows Azure BLOB ストレージ サービスに格納されたバックアップを復元する計画がある場合にこのトピックを確認した後、データベースの復元方法 (内部設置型バックアップと Azure バックアップでも同じ) の手順を説明するトピックを確認することをお勧めします。  
   

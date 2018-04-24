@@ -2,7 +2,7 @@
 title: 以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b80ad93883e5ef5d1fa907116e2c4fa5b4a264f5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e37b412b3cbb435c6e037472b6286ac3261039b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 03/20/2018
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
 |**varbinary(max)**|**image**|**image**|**image**|  
 |XML|**ntext**|**ntext**|**ntext**|  
-|UDT\*\*|**image**|**image**|**image**|  
+|UDT**|**image**|**image**|**image**|  
   
  * この型はネイティブでサポートされています。  
   

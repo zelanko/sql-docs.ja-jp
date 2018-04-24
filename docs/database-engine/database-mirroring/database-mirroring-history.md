@@ -2,7 +2,7 @@
 title: データベース ミラーリングの履歴 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f8d4d344a8901fcfcf6caa537d4b3fbc6b6891ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   

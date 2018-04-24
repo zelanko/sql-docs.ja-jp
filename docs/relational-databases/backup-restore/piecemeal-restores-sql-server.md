@@ -1,16 +1,16 @@
 ---
-title: "段階的な部分復元 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 段階的な部分復元 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - partial updates [SQL Server]
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ef28494008a772bfa2a444b12c76368e4c68138b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックの内容は、複数のファイルまたはファイル グループ (単純復旧モデルでは、読み取り専用ファイル グループのみ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise エディションのデータベースだけに関するものです。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックの内容は、複数のファイルまたはファイル グループ (単純復旧モデルでは、読み取り専用ファイル グループのみ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise エディションのデータベースだけに関するものです。  
   
  段階的な部分復元とメモリ最適化テーブルの詳細については、「 [メモリ最適化テーブルを持つデータベースの段階的な部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
   

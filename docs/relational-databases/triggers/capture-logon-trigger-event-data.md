@@ -1,32 +1,33 @@
 ---
-title: "ログオン トリガーのイベント データのキャプチャ | Microsoft Docs"
-ms.custom: 
+title: ログオン トリガーのイベント データのキャプチャ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
-caps.latest.revision: 
+caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97d6ddad9af98be0e5f92fb32a195c883e2c9635
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4867295e93c60372f38a28abce0aba7943a2c83b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capture-logon-trigger-event-data"></a>ログオン トリガーのイベント データのキャプチャ
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-ログオン トリガー内で使用するために LOGON イベントに関する XML データをキャプチャするには、 [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) 関数を使用します。 LOGON イベントは、次のイベントのデータ スキーマを返します。  
+  ログオン トリガー内で使用するために LOGON イベントに関する XML データをキャプチャするには、 [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) 関数を使用します。 LOGON イベントは、次のイベントのデータ スキーマを返します。  
   
  `<EVENT_INSTANCE>`  
   

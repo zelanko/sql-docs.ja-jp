@@ -2,7 +2,7 @@
 title: クラスター化インデックスの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -24,13 +24,14 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f7aa0ca2f5ea1ffe7ec54cc6279fbf5f1218f8c0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1f07f4b94d6ddc1607c70e4bf921d0986e57b99d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-clustered-indexes"></a>Create Clustered Indexes
+# <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブルにクラスター化インデックスを作成できます。 クラスター化インデックスは、いくつかの例外を除くすべてのテーブルに必要です。 クラスター化インデックスは、クエリ パフォーマンスを向上するだけではなく、必要に応じて再構築または再構成してテーブルの断片化を制御することができます。 また、クラスター化インデックスをビューに作成することもできます。 (クラスター化インデックスの定義は「 [クラスター化インデックスと非クラスター化インデックスの概念](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)」にあります。)  
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/10/2018
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **テーブルにクラスター化インデックスを作成するために使用するもの:**  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/10/2018
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Implementations"></a> 一般的な実装  
  クラスター化インデックスは、次のように実装されます。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/10/2018
   
 5.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 7.  **[新しいインデックス]** ダイアログ ボックスで、 **[OK]**をクリックします。  
   

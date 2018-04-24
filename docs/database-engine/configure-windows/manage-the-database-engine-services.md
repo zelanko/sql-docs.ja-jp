@@ -1,15 +1,16 @@
 ---
-title: "データベース エンジン サービスの管理 | Microsoft Docs"
-ms.custom: 
+title: データベース エンジン サービスの管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5de386c4e2e8525205078627bb2d3e50e0beddd3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64afcc7dc374d60460444887a762c49f778a2645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オペレーティング システム上でサービスとして動作します。 サービスとは、システムのバックグラウンドで実行されるアプリケーションの一種です。 通常は、Web サーバー、イベント ログ、ファイル サーバーなど、オペレーティング システムの中核的な機能をサービスによって提供します。 サービスは、コンピューターのデスクトップにユーザー インターフェイスを表示することなく実行できます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびその他のいくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントはサービスとして実行されます。 これらのサービスは、オペレーティング システムの起動時に開始されるのが一般的です。 起動時のサービスの状態は、セットアップ中に行った指定に依存します。一部のサービスは既定では開始されません。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスの管理について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにログインする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを開始、停止、一時停止、再開、および再起動する方法を知っておく必要があります。 ログイン後には、サーバーの管理やデータベースに対するクエリなどのタスクを実行することができます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オペレーティング システム上でサービスとして動作します。 サービスとは、システムのバックグラウンドで実行されるアプリケーションの一種です。 通常は、Web サーバー、イベント ログ、ファイル サーバーなど、オペレーティング システムの中核的な機能をサービスによって提供します。 サービスは、コンピューターのデスクトップにユーザー インターフェイスを表示することなく実行できます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびその他のいくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントはサービスとして実行されます。 これらのサービスは、オペレーティング システムの起動時に開始されるのが一般的です。 起動時のサービスの状態は、セットアップ中に行った指定に依存します。一部のサービスは既定では開始されません。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスの管理について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにログインする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを開始、停止、一時停止、再開、および再起動する方法を知っておく必要があります。 ログイン後には、サーバーの管理やデータベースに対するクエリなどのタスクを実行することができます。  
   
 ## <a name="using-the-sql-server-service"></a>SQL Server サービスの使用  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスを開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスも開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始すると、ユーザーはサーバーに対する新しい接続を確立できるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始と終了は、ローカルまたはリモートからサービスとして行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスは、既定のインスタンスの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)、名前付きインスタンスの場合は MSSQL$*\<instancename>* と呼ばれます。  

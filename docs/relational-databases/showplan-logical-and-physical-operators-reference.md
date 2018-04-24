@@ -1,16 +1,16 @@
 ---
-title: "プラン表示の論理操作と物理操作のリファレンス | Microsoft Docs"
-ms.custom: 
+title: プラン表示の論理操作と物理操作のリファレンス | Microsoft Docs
+ms.custom: ''
 ms.date: 10/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
@@ -138,20 +138,21 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 605d3ff10ac725358ec51e28357f8b03cfcee094
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9fc11ac48b6827fcf0f92ceb4ab7e05d6699f10e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-操作は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリやデータ操作言語 (DML) ステートメントを実行する方法を示します。 クエリ オプティマイザーでは、操作を使用して、クエリで指定された結果を作成するクエリ プラン、または DML ステートメントで指定された操作を実行するクエリ プランが構築されます。 クエリ プランは、物理操作をツリー構成で表現したものです。 クエリ プランを表示するには、SET SHOWPLAN ステートメント、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のグラフィカル実行プラン オプション、または SQL Server Profiler Showplan イベント クラスを使用します。  
+  操作は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリやデータ操作言語 (DML) ステートメントを実行する方法を示します。 クエリ オプティマイザーでは、操作を使用して、クエリで指定された結果を作成するクエリ プラン、または DML ステートメントで指定された操作を実行するクエリ プランが構築されます。 クエリ プランは、物理操作をツリー構成で表現したものです。 クエリ プランを表示するには、SET SHOWPLAN ステートメント、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のグラフィカル実行プラン オプション、または SQL Server Profiler Showplan イベント クラスを使用します。  
   
  操作は、論理操作と物理操作に分類されます。  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 02/09/2018
 |![Assert 操作アイコン](../relational-databases/media/assert-32x.gif "Assert 操作アイコン")|**Filter**|**Assert** 操作は、状態の検証を行います。 たとえば、参照整合性の検証や、スカラー サブクエリによって 1 行返されることの確認を行います。 入力行ごとに、 **Assert** 操作によって実行プランの **Argument** 列の式が評価されます。 この式が NULL であると評価されると、行は **Assert** 操作を通過して、クエリの実行が継続されます。 式が NULL 以外の値に評価されると、相応のエラーが発生します。 **Assert** 操作は物理操作です。|  
 |![Assign 言語要素アイコン](../relational-databases/media/assign-32.gif "Assign 言語要素アイコン")|**Assign**|**Assign** 操作は、変数に式の値または定数値を代入します。 **Assign** は言語要素です。|  
 |なし|**Async Concat**|**Async Concat** 操作は、リモート クエリ (分散クエリ) でのみ使用されます。 Async Concat には *n* 個の子ノードと 1 個の親ノードが含まれます。 通常、子ノードのいくつかはリモート コンピューターで、分散クエリに参加しています。 **Async Concat** は、すべての子ノードに同時に `open()` 呼び出しを行い、各子ノードにビットマップを適用します。 **Async Concat** では、1 に設定されているビットごとに、要求時に出力行が親ノードに送信されます。|  
-|![Bitmap 操作アイコン](../relational-databases/media/bitmap-32x.gif "Bitmap 操作アイコン")|**Bitmap**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Bitmap** 操作を使用することによって、並列クエリ プランにビットマップ フィルターを実装しています。 ビットマップ フィルターの利点は、クエリの実行速度が向上することです。行が他の操作 ( **Parallelism** 操作など) に渡される前に、結合レコードの生成に関係しないキー値を持った行が排除されます。 ビットマップ フィルターは、操作ツリーの特定の部分にあるテーブルから得られた一連の値の圧縮表現を使用して、同じツリーの別の部分にある 2 つ目のテーブルから行を抽出します。 不要な行をクエリの初期段階で排除することにより、それ以降の操作に渡される行数が減り、その結果、クエリの全体的なパフォーマンスが向上します。 オプティマイザーは、どのような場合にビットマップの選択度が効果を期待できる程度に高くなるか、また、どのような操作にフィルターを適用すべきかを判断します。 **Bitmap** は物理操作です。|  
+|![Bitmap 操作アイコン](../relational-databases/media/bitmap-32x.gif "Bitmap 操作アイコン")|**Bitmap**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**Bitmap** 操作を使用することによって、並列クエリ プランにビットマップ フィルターを実装しています。 ビットマップ フィルターの利点は、クエリの実行速度が向上することです。行が他の操作 ( **Parallelism** 操作など) に渡される前に、結合レコードの生成に関係しないキー値を持った行が排除されます。 ビットマップ フィルターは、操作ツリーの特定の部分にあるテーブルから得られた一連の値の圧縮表現を使用して、同じツリーの別の部分にある 2 つ目のテーブルから行を抽出します。 不要な行をクエリの初期段階で排除することにより、それ以降の操作に渡される行数が減り、その結果、クエリの全体的なパフォーマンスが向上します。 オプティマイザーは、どのような場合にビットマップの選択度が効果を期待できる程度に高くなるか、また、どのような操作にフィルターを適用すべきかを判断します。 **Bitmap** は物理操作です。|  
 |![Bitmap 操作アイコン](../relational-databases/media/bitmap-32x.gif "Bitmap 操作アイコン")|**Bitmap Create**|**Bitmap Create** 操作は、ビットマップが作成されるプラン表示の出力に使用されます。 **Bitmap Create** は論理操作です。|  
 |![Bookmark Lookup 操作アイコン](../relational-databases/media/bookmark-lookup-32x.gif "Bookmark Lookup 操作アイコン")|**Bookmark Lookup**|**Bookmark Lookup** 操作は、ブックマーク (行 ID またはクラスター化キー) を使用してテーブルまたはクラスター化インデックスの対応行を参照します。 **Argument** 列 (引数) には、テーブルまたはクラスター化インデックスの行の参照に使用されるブックマーク ラベルが入ります。 また、 **Argument** 列 (引数) には、参照先の行があるテーブル名またはクラスター化インデックス名も入ります。 **Argument** 列に WITH PREFETCH 句がある場合、クエリ プロセッサでは、テーブルまたはクラスター化インデックスのブックマークを参照する最適な方法として、非同期プリフェッチ (先読み) が使用されます。<br /><br /> **Bookmark Lookup** は [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では使用されません。 代わりに、 **Clustered Index Seek** および **RID Lookup** によってブックマーク参照機能が提供されます。 **Key Lookup** 操作でもこの機能が提供されます。|  
 |なし|**Branch Repartition**|並列クエリ プランでは、反復子に概念上の領域が存在する場合があります。 このような領域内にある反復子はすべて、並列スレッドにより実行できます。 領域自体は、順次実行される必要があります。 個別の領域内の **Parallelism** 反復子のいくつかは、 **Branch Repartition**と呼ばれます。 このような 2 つの領域間の境界にある **Parallelism** 反復子は、 **Segment Repartition**と呼ばれます。 **Branch Repartition** と **Segment Repartition** は論理操作です。|  
@@ -283,7 +284,7 @@ ms.lasthandoff: 02/09/2018
 |![Split 操作アイコン](../relational-databases/media/split-32x.gif "Split 操作アイコン")|**Split**|**Split** 操作は、更新処理を最適化する場合に使用します。 この操作により、各更新操作が削除操作と挿入操作に分割されます。 **Split** 操作は論理操作でもあり、物理操作でもあります。|  
 |![Spool 操作アイコン](../relational-databases/media/spool-32x.gif "Spool 操作アイコン")|**Spool**|**Spool** 操作は、クエリの途中結果を **tempdb** データベースに保存します。|  
 |![Stream Aggregate 操作アイコン](../relational-databases/media/stream-aggregate-32x.gif "Stream Aggregate 操作アイコン")|**Stream Aggregate**|**Stream Aggregate** 操作は、1 つ以上の列を基準にして行をグループ化し、クエリから返される 1 つ以上の集計式を計算します。 この操作の出力は、クエリ内のその後の操作から参照することも、クライアントに返すことも、あるいはその両方を行うこともできます。 **Stream Aggregate** 操作を使用するには、グループ内で列を基準にして入力を並べ替えておく必要があります。 並べ替えられたインデックスのシークやスキャンまたは前の **Sort** 操作が原因でデータがまだ並べ替えられていない場合は、オプティマイザーによって、この操作の前に **Sort** 操作が使用されます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の SHOWPLAN_ALL ステートメントまたはグラフィカルな実行プランで、GROUP BY 述語の列は **Argument** 列に一覧表示され、集計式は **Defined Values** 列に一覧表示されます。 **Stream Aggregate** は物理操作です。|  
-|![Switch 操作アイコン](../relational-databases/media/switch-32x.gif "Switch 操作アイコン")|**スイッチ**|**スイッチ** は、 *n* 個の入力を取得する特殊な連結反復子です。 個々の **Switch** 操作には式が 1 つ関連付けられます。 **Switch** 操作は式の戻り値 (0 から *n* -1 までの範囲) に応じて、適切な入力ストリームを出力ストリームにコピーします。 **Switch** 操作の用途の 1 つは、高速順方向専用カーソルを使用するクエリ プランに **TOP** などの特定の操作を実装することです。 **Switch** は論理操作でもあり、物理操作でもあります。|  
+|![Switch 操作アイコン](../relational-databases/media/switch-32x.gif "Switch 操作アイコン")|**スイッチ**|**Switch** は、 *n* 個の入力を取得する特殊な連結反復子です。 個々の **Switch** 操作には式が 1 つ関連付けられます。 *Switch*操作は式の戻り値 (0 から **n** -1 までの範囲) に応じて、適切な入力ストリームを出力ストリームにコピーします。 **Switch** 操作の用途の 1 つは、高速順方向専用カーソルを使用するクエリ プランに **TOP** などの特定の操作を実装することです。 **Switch** は論理操作でもあり、物理操作でもあります。|  
 |![Table Delete 操作アイコン](../relational-databases/media/table-delete-32x.gif "Table Delete 操作アイコン")|**Table Delete**|**Table Delete** 物理操作は、クエリ実行プランの **Argument** 列で指定されているテーブルから行を削除します。|  
 |![Table Insert 操作アイコン](../relational-databases/media/table-insert-32x.gif "Table Insert 操作アイコン")|**Table Insert**|**Table Insert** 操作では、クエリ実行プランの **Argument** 列で指定したテーブルに、入力からの行が挿入されます。 また、 **Argument** 列には、各列に設定する値を示す SET:() 述語も含まれます。 **Table Insert** に挿入値の子がない場合、挿入される行は、Insert 操作自体から取得されます。 **Table Insert** は物理操作です。|  
 |![Table Merge 操作アイコン](../relational-databases/media/table-merge-32x.gif "Table Merge 操作アイコン")|**Table Merge**|**Table Merge** 操作は、マージ データ ストリームをヒープに適用します。 この操作は、操作の **Argument** 列で指定されているテーブル内の行を削除、更新、または挿入します。 実際の操作は、操作の **Argument** 列に指定された **ACTION** 列のランタイム値によって異なります。 **Table Merge** は物理操作です。|  

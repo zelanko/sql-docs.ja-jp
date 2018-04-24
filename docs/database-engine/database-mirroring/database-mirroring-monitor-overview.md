@@ -1,36 +1,36 @@
 ---
-title: "データベース ミラーリング モニターの概要 | Microsoft Docs"
-ms.custom: 
+title: データベース ミラーリング モニターの概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66fcc054ffc20f45534845376c356745581db02d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3a15bc793ad97e19a80e13d6b79a74f6bf677592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-monitor-overview"></a>データベース ミラーリング モニターの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-適切な権限を持つユーザーであれば、データベース ミラーリング モニターを使用することにより、サーバー インスタンス上のミラー化されたデータベースのサブセットを監視できます。 監視を行うことにより、データベース ミラーリング セッションで適切なデータ フローが保たれているかどうかを詳細に検証できます。 データベース ミラーリング モニターは、データ フローの停滞の原因をトラブルシューティングするときにも有効に使用できます。  
+  適切な権限を持つユーザーであれば、データベース ミラーリング モニターを使用することにより、サーバー インスタンス上のミラー化されたデータベースのサブセットを監視できます。 監視を行うことにより、データベース ミラーリング セッションで適切なデータ フローが保たれているかどうかを詳細に検証できます。 データベース ミラーリング モニターは、データ フローの停滞の原因をトラブルシューティングするときにも有効に使用できます。  
   
  各フェールオーバー パートナーにおける監視の対象としては、ミラー化された任意のデータベースを登録できます。 データベースを登録すると、そのデータベースに関して、次の情報がデータベース ミラーリング モニターによってキャッシュされます。  
   

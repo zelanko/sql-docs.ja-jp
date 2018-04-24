@@ -1,34 +1,35 @@
 ---
-title: "Showplan XML イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Showplan XML イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan XML event class
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9034829fb4c0d5174cc66eff34eefe22b4adb22
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1474895d2505c18162a782073c152c9fe0e37aa3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Showplan XML イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントを実行したときに発生します。 プラン表示操作を特定する場合は、Showplan XML イベント クラスを含めます。 このイベント クラスには、各イベントが正しく定義された XML ドキュメントとして格納されます。  
+  Showplan XML イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントを実行したときに発生します。 プラン表示操作を特定する場合は、Showplan XML イベント クラスを含めます。 このイベント クラスには、各イベントが正しく定義された XML ドキュメントとして格納されます。  
   
  トレースに Showplan XML  イベント クラスを含めると、オーバーヘッドの量によって、パフォーマンスが著しく低下します。 Showplan XML は、クエリの最適化時に作成されるクエリ プランを格納します。 発生するオーバーヘッドを最小限に抑えるには、短期間だけ特定の問題を監視するトレースに限定してこのイベント クラスを使用するようにします。  
   

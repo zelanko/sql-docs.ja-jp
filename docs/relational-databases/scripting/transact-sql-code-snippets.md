@@ -1,31 +1,33 @@
 ---
-title: "Transact-SQL コード スニペット | Microsoft Docs"
-ms.custom: 
+title: Transact-SQL コード スニペット | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eee672ae46777c21a896599d4c3fbf7819e7d9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9c533ab350b4d0cc256200b7844754a7921f1c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL コード スニペット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、[!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックの基本構造を含んだテンプレートです。 スニペットは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでステートメントを追加する際のひな形として使用できます。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを作成することもできます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックの基本構造を含んだテンプレートです。 スニペットは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでステートメントを追加する際のひな形として使用できます。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを作成することもできます。  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Transact-SQL コード スニペットのタスク  
   

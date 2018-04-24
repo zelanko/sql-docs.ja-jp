@@ -1,16 +1,16 @@
 ---
-title: "データベース ユーザーの作成 | Microsoft Docs"
-ms.custom: 
+title: データベース ユーザーの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.user.securables.f1
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2fce0eac03c6b1c68d1b6bb91637135c3bf8f13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  セキュリティ プリンシパルとして、ユーザーには権限を許可することができます。 ユーザーのスコープはデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。  
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  データベースに対する **ALTER ANY USER** 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SSMS でユーザーを作成する  
@@ -134,16 +135,16 @@ ms.lasthandoff: 11/21/2017
      **データベース**  
      選択しているデータベースの名前が表示されます。 このフィールドは読み取り専用です。  
   
-     **[照合順序]**  
+     **照合順序**  
      選択されているデータベースに使用する照合順序を表示します。 このフィールドは読み取り専用です。  
   
-     **プロパティ**  
+     **[プロパティ]**  
      オブジェクトの拡張プロパティを表示または指定します。 各拡張プロパティは、オブジェクトに関連付けられたメタデータの名前/値ペアで構成されています。  
   
      **省略記号 [...]**  
      **[値]** の後ろにある省略記号 **[...]** をクリックすると、 **[拡張プロパティの値]** ダイアログ ボックスが開きます。 ここでは、より大きなテキスト ボックスを使用して拡張プロパティの値を入力または表示できます。 詳細については、「 [拡張プロパティの値ダイアログ ボックス](http://msdn.microsoft.com/library/ms189353.aspx)」を参照してください。  
   
-     **Del**  
+     **削除**  
      選択されている拡張プロパティを削除します。  
   
 ##  <a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  

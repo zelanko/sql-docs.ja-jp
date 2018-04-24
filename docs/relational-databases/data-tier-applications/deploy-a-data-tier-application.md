@@ -1,16 +1,16 @@
 ---
-title: "データ層アプリケーションの配置 | Microsoft Docs"
-ms.custom: 
+title: データ層アプリケーションの配置 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.deploydacwizard.introduction.f1
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - How to [DAC], deploy
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fc9229e01d07d9932d0ae61ad60dc06d5855141
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b2fd672802745041f161282821f21cef040c3581
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージからデータベース エンジンまたは Azure SQL Database の既存のインスタンスに DAC を配置できます。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージからデータベース エンジンまたは Azure SQL Database の既存のインスタンスに DAC を配置できます。 
   
  配置プロセスでは、**msdb** システム データベース ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] では **master** データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
  

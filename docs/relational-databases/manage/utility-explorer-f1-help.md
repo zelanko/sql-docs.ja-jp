@@ -1,16 +1,16 @@
 ---
-title: "ユーティリティ エクスプローラーの F1 ヘルプ | Microsoft Docs"
-ms.custom: 
+title: ユーティリティ エクスプローラーの F1 ヘルプ | Microsoft Docs
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 195806725d74efb689c14200529d6dafc6a17316
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  次のセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージ インスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]**をクリックします。  

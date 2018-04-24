@@ -1,16 +1,16 @@
 ---
-title: "XML データのインスタンスの作成 | Microsoft Docs"
-ms.custom: 
+title: XML データのインスタンスの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 54afef1467ec06d3ca695db00aa829fa387f6292
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-このトピックでは、XML インスタンスを生成する方法について説明します。  
+  このトピックでは、XML インスタンスを生成する方法について説明します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の方法で XML インスタンスを生成できます。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/12/2018
 -   一括読み込みを使用する。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>文字列インスタンスとバイナリ インスタンスの型キャスト  
- [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n**n**var**]**char**、**[n]text **、**[n]text **、**image **などの**の文字列データ型は、 **xml** データ型にキャスト (CAST) または変換 (CONVERT) することにより、 **xml** データ型に解析できます。 型指定されていない XML は、正しい形式かどうかが確認されます。 **xml** 型に関連付けられたスキーマがある場合は、検証も行われます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n**][**var**]**char**、**[n]text **、**varbinary **、**image **などの**の文字列データ型は、 **xml** データ型にキャスト (CAST) または変換 (CONVERT) することにより、 **xml** データ型に解析できます。 型指定されていない XML は、正しい形式かどうかが確認されます。 **xml** 型に関連付けられたスキーマがある場合は、検証も行われます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  XML ドキュメントは、UTF-8、UTF-16、windows-1252 など、さまざまなエンコードを使用してエンコードできます。 ここでは、文字列およびバイナリの元のデータ型と XML ドキュメントのエンコード間の相互作用における規則、およびパーサーの動作に関する規則を概説します。  
   
@@ -188,7 +188,7 @@ go
  FOR XML の詳細については、「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TYPE ディレクティブを使用する FOR XML クエリや、**xml** データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、**xml** データ型インスタンスをクライアントに返します。 クライアント アプリケーションのコードでは、ADO.NET プロバイダーがこの **xml** データ型情報をサーバーからバイナリ エンコード形式で送信するよう要求します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TYPE ディレクティブを使用する FOR XML クエリや、 **xml** データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、 **xml** データ型インスタンスをクライアントに返します。 クライアント アプリケーションのコードでは、ADO.NET プロバイダーがこの **xml** データ型情報をサーバーからバイナリ エンコード形式で送信するよう要求します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
   
 ## <a name="using-constant-assignments"></a>定数の代入の使用  
  **xml** データ型のインスタンスが必要な場所に、文字列定数を使用できます。 これは、文字列から XML への暗黙の CAST と同じです。 例 :  

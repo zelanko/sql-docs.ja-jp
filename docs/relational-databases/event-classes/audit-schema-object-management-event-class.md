@@ -1,34 +1,35 @@
 ---
-title: "Audit Schema Object Management イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Audit Schema Object Management イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Schema Object Management event class
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf6eccdd0117edd2c563c5ce93fcb2072a2e9427
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ee5847a1f411b4d2fad8c7c582f4afdedb4b332d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Schema Object Management** イベント クラスは、サーバー オブジェクトが作成、変更、または削除されるときに発生します。  
+  **Audit Schema Object Management** イベント クラスは、サーバー オブジェクトが作成、変更、または削除されるときに発生します。  
   
 ## <a name="audit-schema-object-management-event-class-data-columns"></a>Audit Schema Object Management イベント クラスのデータ列  
   

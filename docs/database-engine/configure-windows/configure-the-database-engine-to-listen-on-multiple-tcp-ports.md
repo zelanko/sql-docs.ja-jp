@@ -1,16 +1,16 @@
 ---
-title: "複数の TCP ポートでリッスンするデータベース エンジンの構成 | Microsoft Docs"
-ms.custom: 
+title: 複数の TCP ポートでリッスンするデータベース エンジンの構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], multiple
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7cde3b735d73b7e7a53948a67e77e7f7ca07da43
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7181881b40e7a06d8f8ef11ec7670eeec961e4b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
+  このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
   
  2 つ目の TDS エンドポイントを作成する理由として考えられる点を次に示します。  
   

@@ -1,16 +1,16 @@
 ---
-title: "サーバー ネットワーク プロトコルの有効化または無効化 | Microsoft Docs"
-ms.custom: 
+title: サーバー ネットワーク プロトコルの有効化または無効化 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
@@ -23,26 +23,26 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8245d396dac75dc09fdc3ae6bab41d582ef1c790
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-すべてのネットワーク プロトコルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってインストールされますが、必ずしも有効になっているとは限りません。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは PowerShell を使用してサーバー ネットワーク プロトコルを有効または無効にする方法について説明します。 変更を有効にするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止し、再起動する必要があります。  
+  すべてのネットワーク プロトコルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってインストールされますが、必ずしも有効になっているとは限りません。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは PowerShell を使用してサーバー ネットワーク プロトコルを有効または無効にする方法について説明します。 変更を有効にするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止し、再起動する必要があります。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のセットアップ時に、ログインは BUILTIN\Users グループに追加されます。 これにより、コンピューターの認証されたすべてのユーザーが public ロールのメンバーとして [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスにアクセスできるようになります。 BUILTIN\Users ログインを安全に削除して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] アクセスを、個別のログインを持つコンピューター ユーザーまたはログインを持つ他の Windows グループのメンバーに制限できます。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダー ([!INCLUDE[sssql14](../../includes/sssql14-md.md)] までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用) は、既定では TLS 1.0 および SSL 3.0 のみをサポートしています。 オペレーティング システムの SChannel レイヤーを変更して異なるプロトコル (TLS 1.1、TLS 1.2 など) を適用する場合、<a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">こちら</a>に記載されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 1.1 および 1.2 のサポートを追加する適切な更新プログラムをインストールしていなければ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続は失敗する可能性があります。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、SQL Server のすべてのリリース バージョンには TLS 1.2 のサポートが含まれているため、更新プログラムをさらにインストールする必要はありません。
+>  [!INCLUDE[sssql14](../../includes/sssql14-md.md)] までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーは、既定で TLS 1.0 および SSL 3.0 のみをサポートしています。 オペレーティング システムの SChannel レイヤーを変更して異なるプロトコル (TLS 1.1、TLS 1.2 など) を適用する場合、<a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">こちら</a>に記載されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 1.1 および 1.2 のサポートを追加する適切な更新プログラムをインストールしていなければ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続は失敗する可能性があります。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、SQL Server のすべてのリリース バージョンには TLS 1.2 のサポートが含まれているため、更新プログラムをさらにインストールする必要はありません。
   
  **このトピックの内容**  
   

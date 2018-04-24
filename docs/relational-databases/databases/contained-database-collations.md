@@ -1,33 +1,34 @@
 ---
-title: "包含データベースの照合順序 | Microsoft Docs"
-ms.custom: 
+title: 包含データベースの照合順序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 11828773d88f1ff303fd4e34f76ea1e2fb9ccac4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="contained-database-collations"></a>包含データベースの照合順序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 大文字と小文字の区別、アクセント記号の区別、使用されるベース言語など、さまざまなプロパティがテキスト データの並べ替え順序と等値セマンティクスに影響します。 これらの性質の指定は、データの照合順序の選択を通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されます。 照合順序の詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  大文字と小文字の区別、アクセント記号の区別、使用されるベース言語など、さまざまなプロパティがテキスト データの並べ替え順序と等値セマンティクスに影響します。 これらの性質の指定は、データの照合順序の選択を通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されます。 照合順序の詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
  照合順序は、ユーザー テーブルに格納されているデータだけでなく、メタデータ、一時オブジェクト、変数名など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって処理されるすべてのテキストに適用されます。これらの処理は、包含データベースと非包含データベースとでは異なります。 この変更は、多くのユーザーには影響しませんが、インスタンスに対する独立性と統一性を提供する助けになります。 これも、包含データベースと非包含データベースの両方にアクセスするセッションの問題と同様に、いくつかの混乱を生じさせる場合があります。  
   

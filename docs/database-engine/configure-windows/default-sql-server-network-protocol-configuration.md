@@ -1,33 +1,35 @@
 ---
-title: "SQL Server の既定のネットワーク プロトコル構成 | Microsoft Docs"
-ms.custom: 
+title: SQL Server の既定のネットワーク プロトコル構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3121357a686d3954cdf2d1fe389f40ce0015cb2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>SQL Server の既定のネットワーク プロトコル構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、セキュリティ強化のため、一部の新規インストールではネットワーク接続を無効にします。 Enterprise エディション、Standard エディション、Evaluation エディション、または Workgroup エディションを使っている場合、または以前からインストールされている [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が存在する場合は、TCP/IP を使うネットワーク接続は無効になりません。 すべてのインストールについて、サーバーへのローカル接続を許可する共有メモリ プロトコルは有効化されています。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスは、インストール状態とインストール オプションに応じて、停止される場合があります。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、セキュリティ強化のため、一部の新規インストールではネットワーク接続を無効にします。 Enterprise エディション、Standard エディション、Evaluation エディション、または Workgroup エディションを使っている場合、または以前からインストールされている [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が存在する場合は、TCP/IP を使うネットワーク接続は無効になりません。 すべてのインストールについて、サーバーへのローカル接続を許可する共有メモリ プロトコルは有効化されています。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスは、インストール状態とインストール オプションに応じて、停止される場合があります。
 
 インストール後にネットワーク プロトコルを構成するには、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ネットワークの構成ノードを使用します。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスを自動的に開始するように構成するには、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のサービス ノードを使用します。 詳細については、「 [サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。
 

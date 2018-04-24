@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_33128 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: 
+caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ce51b520a52bc799bb987a1c4e6851c75029fcf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4c05b64e4667028fef298a082e62d073cd8ae4c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 |状態|Description|  
 |---------|---------------|  
-|1|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
+|@shouldalert|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
 |2|RC4 キーは、decryptbykey() 組み込み関数で使用されます。 このメッセージは、リング バッファーにのみ表示されます。|  
 |3|非推奨の RC4 キーは、対称キーを使用して暗号化されています。 ユーザーとリング バッファーに表示されます。 非推奨の RC4 対称キーは、互換性レベル 110 では変更できません。 暗号化操作には、RC4 以外のキーを使用してください。 必要に応じて、旧バージョンとの互換性レベルを 90 または 100 に設定してください。|  
 |4|RC4 以外のキーは、非推奨の RC4 対称キーを使用して暗号化されています。 ユーザーとリング バッファーに表示されます。 RC4 以外の対称キーを使用するようにアプリケーションを変更するか、旧バージョンとの互換性レベルを 90 または 100 に設定してください。|  

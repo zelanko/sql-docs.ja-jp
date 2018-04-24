@@ -1,36 +1,36 @@
 ---
-title: "データ コレクション | Microsoft Docs"
-ms.custom: 
+title: データ コレクション | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "データ コレクション"
+- データ コレクション
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6ef12bf3c2032a47d69e3f809443bd1bde4671ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-collection"></a>データ コレクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
+  データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
   
 ## <a name="what-is-data-collector"></a>データ コレクターとは何ですか。 
  データ コレクターは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のデータ収集プラットフォームの主要なコンポーネントであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって提供されるツールです。 データ コレクターでは、中心となる 1 つのポイントでデータベース サーバーやアプリケーションのデータを収集できます。 この収集ポイントではさまざまなソースからデータを取得できます。SQL トレースとは異なり、パフォーマンス データに制限されません。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/12/2018
 ## <a name="concepts"></a>概念  
  データ コレクターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に統合されており、この 2 つを広範囲にわたって使用します。 したがって、データ コレクターを使用する前に、この 2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントのそれぞれに関連するいくつかの概念を理解しておく必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、コレクション ジョブのスケジュールおよび実行のために使用されます。 次の概念を理解しておく必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、コレクション ジョブのスケジュールおよび実行のために使用されます。 次の概念を理解しておく必要があります。  
   
 -   [ジョブ]  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/12/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ (package)  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ構成  
   

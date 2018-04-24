@@ -1,28 +1,29 @@
 ---
-title: "列ストア インデックス - 設計ガイダンス | Microsoft Docs"
-ms.custom: 
+title: 列ストア インデックス - 設計ガイダンス | Microsoft Docs
+ms.custom: ''
 ms.date: 12/1/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c2b3c604d5da223b651b8467b126878653fae294
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列ストア インデックス - 設計ガイダンス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -195,8 +196,8 @@ B ツリー インデックスは並べ替えられた順序で行を既に格�
 ## <a name="next-steps"></a>次の手順
 空の列ストア インデックスを作成するには:
 
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の場合は、「[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)」をご覧ください。
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]の場合は、「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」をご覧ください。
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。「[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」を参照してください。
 
 既存の行ストア ヒープまたは B ツリー インデックスをクラスター化列ストア インデックスに変換する方法、または非クラスター化列ストア インデックスを作成する方法の詳細については、「[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。
 

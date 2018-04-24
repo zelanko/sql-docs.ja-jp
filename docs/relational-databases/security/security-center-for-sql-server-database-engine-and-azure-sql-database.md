@@ -1,16 +1,16 @@
 ---
-title: "SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター | Microsoft Docs"
-ms.custom: 
+title: SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター | Microsoft Docs
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: security
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Security [SQL Server]
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e08477e178143b8d37a55c3e01cfc3a0c5145fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 09c051ece663a046a9286b27ddfd5356ab534e7a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |||  
 |-|-|  
 |**権限の許可、取り消し、および拒否**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") セキュリティ保護可能なクラス<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 詳細なサーバーのアクセス許可<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 詳細なデータベースのアクセス許可|[権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [権限](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [セキュリティ保護可能](../../relational-databases/security/securables.md)<br /><br /> [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
-|**ロールによるセキュリティ**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") サーバー レベルのロール<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") データベース レベルのロール|[サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)|  
+|**ロールによるセキュリティ**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") サーバー レベルのロール<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") データベース レベルのロール|[サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**選んだデータ要素へのデータ アクセスを制限する**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") ビュー/プロシージャを使用したデータ アクセスの制限<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 行レベルのセキュリティ<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 動的なデータ マスキング<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 署名済みオブジェクト|[ビュー](../../relational-databases/views/views.md) と [プロシージャ](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)を使用したデータ アクセスの制限<br /><br /> [行レベルのセキュリティ (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [行レベルのセキュリティ (Azure SQL Database)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [動的なデータ マスキング (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [動的なデータ マスキング (Azure SQL Database)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [署名済みオブジェクト](../../t-sql/statements/add-signature-transact-sql.md)|  
   
 ##  <a name="Encrypt"></a> 暗号化: 秘密データの格納  

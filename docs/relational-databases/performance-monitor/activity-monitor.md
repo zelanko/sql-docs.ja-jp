@@ -1,33 +1,34 @@
 ---
-title: "利用状況モニター | Microsoft Docs"
-ms.custom: 
+title: 利用状況モニター | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0ea6bf8c22a8315e12e8fa66e75788695499dff1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d879d8a766ec2aa368f6ab6efa9c24312d132421
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="activity-monitor"></a>利用状況モニター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 利用状況モニターには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスおよびこれらのプロセスが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに与える影響に関する情報が表示されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  利用状況モニターには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスおよびこれらのプロセスが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに与える影響に関する情報が表示されます。  
   
  利用状況モニターは、 **[概要]**、 **[アクティブなユーザー タスク]**、 **[リソースの待機]**、 **[データ ファイル I/O]**、および **[最新のコストの高いクエリ]**の展開と折りたたみが可能なペインを含むタブ付きドキュメント ウィンドウです。 ペインを展開すると、利用状況モニターによってインスタンスに対して情報のクエリが実行されます。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 1 つ以上のペインを同時に展開し、インスタンスのさまざまな利用状況を表示することができます。  
  

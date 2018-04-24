@@ -1,30 +1,31 @@
 ---
-title: "クエリ ストアの使用シナリオ | Microsoft Docs"
-ms.custom: 
+title: クエリ ストアの使用シナリオ | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0484bb78d863bbbbbb9a2ea096c858c6e3f06af
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 77edfff83e84ba0e5d54e9fc7ab1242be39a46c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,12 +38,12 @@ ms.lasthandoff: 02/03/2018
   
 -   A/B テストを実行する  
   
--   新しい にアップグレードするときにパフォーマンスの安定性を維持する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードするときにパフォーマンスの安定性を維持する  
   
 -   アドホック ワークロードを識別して改善する  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>プランの選択による後退が発生しているクエリを特定して修正する  
- 通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ量の変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが非常に難しい問題でした。その理由は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
+ 通常のクエリの実行中に、重要な入力が変わったためにクエリ オプティマイザーが別のプランを採用することを決定する場合があります (データ カーディナリティの変化やインデックスの作成、変更、破棄、統計の更新など)。選択される新しいプランの大部分は、前に使用されていたプランよりも優れているか、同程度のパフォーマンスを提供します。 ただし、新しいプランでパフォーマンスが大幅に低下することがあります。この状況をプランの選択変更による後退と呼びます。 クエリ ストアが導入される前は、これは、識別して修正することが非常に難しい問題でした。その理由は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、使用されていた実行プランをユーザーが調べるための組み込みのデータ ストアが提供されていなかったためです。  
   
  クエリ ストアを使って、次に示す操作を短時間で実行できます。  
   

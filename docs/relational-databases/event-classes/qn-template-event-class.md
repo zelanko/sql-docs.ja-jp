@@ -1,34 +1,35 @@
 ---
-title: "QN:Template イベント クラス | Microsoft Docs"
-ms.custom: 
+title: QN:Template イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2169d940b03d317493f3894c42e24307c324d952
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 343f80e278b2974afa2b252bab97bcb124de0799
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qntemplate-event-class"></a>QN:Template イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-QN:Template イベントでは、クエリ テンプレートの内部使用に関する情報が報告されます。 クエリ テンプレートは、通知用のクエリ定義を共有するために [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されるメカニズムです。 これらのテンプレートは、パラメーター テーブルと共に作成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クエリ テンプレートの作成時、使用時、または破棄時にこの型のイベントが作成されます。  
+  QN:Template イベントでは、クエリ テンプレートの内部使用に関する情報が報告されます。 クエリ テンプレートは、通知用のクエリ定義を共有するために [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されるメカニズムです。 これらのテンプレートは、パラメーター テーブルと共に作成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、クエリ テンプレートの作成時、使用時、または破棄時にこの型のイベントが作成されます。  
   
 ## <a name="qntemplate-event-class-data-columns"></a>QN:Template イベント クラスのデータ列  
   

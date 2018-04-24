@@ -1,28 +1,29 @@
 ---
-title: "Microsoft SQL リレーショナル データベースのガイダンス |Microsoft Docs"
-ms.custom: 
+title: Microsoft SQL リレーショナル データベースのガイダンス |Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
-caps.latest.revision: 
+caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a02da95146315df2b8c9026376337b8e05658798
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a0c653e22831ce0b6acba4fe381a58ecc4c2979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Microsoft SQL リレーショナル データベースを使用するためのガイダンス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,8 +32,8 @@ ms.lasthandoff: 02/09/2018
   
 - [オンプレミス SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) および [SQL Server の構成](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [SQL Server on Linux ドキュメント](../linux/sql-server-linux-overview.md)  
-- [Azure SQL データベース](https://docs.microsoft.com/azure/sql-database/)  
-- [Azure SQL データ ウェアハウス](https://docs.microsoft.com/azure/sql-data-warehouse/)  
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)  
+- [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/)  
 - [Parallel Data Warehouse](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
 
   

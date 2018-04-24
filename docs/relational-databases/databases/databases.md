@@ -1,36 +1,37 @@
 ---
-title: "データベース | Microsoft Docs"
-ms.custom: 
+title: データベース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2dd347a2f17cd4712deb64e6dcd6c9a55e7cb15
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fc7f117717cc6cc0aa43c4350caa09e01586f697
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="databases"></a>データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたは組) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたは組) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
   
 ## <a name="basic-information-about-databases"></a>データベースに関する基本情報  
  コンピューターには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 1 つまたは複数インストールできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスは、1 つまたは複数のデータベースを格納できます。  データベース内には、スキーマと呼ばれるオブジェクト所有権グループが少なくとも 1 つ存在します。 それぞれのスキーマには、テーブル、ビュー、ストアド プロシージャなどのデータベース オブジェクトが存在します。 証明書や非対称キーなど、一部のオブジェクトは、データベースに含まれていますがスキーマには含まれていません。 テーブルの作成の詳細については、「 [テーブル](../../relational-databases/tables/tables.md)」をご覧ください。  

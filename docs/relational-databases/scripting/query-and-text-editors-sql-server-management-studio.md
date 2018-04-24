@@ -1,16 +1,16 @@
 ---
-title: "クエリおよびテキスト エディター (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: クエリおよびテキスト エディター (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.TextEditor
@@ -30,19 +30,21 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e57fd3d81be5bdacbdce4d237e5240a52321e29a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75cb4e91ef8d83db92db23b732786e4a3db7220b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
   
 ## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio のエディター  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の 4 つのエディターは、共通のアーキテクチャを備えています。 テキスト エディターは基本的なレベルの機能を実装し、テキスト ファイル用の基本的なエディターとして使用できます。 それ以外の 3 つのエディター (クエリ エディター) は、SQL Server でサポートされるいずれかの言語の構文を定義する言語サービスを追加することで、この基本的な機能を拡張したものです。 クエリ エディターには、IntelliSense やデバッグなど、さまざまなエディター機能が実装されています。 クエリ エディターには、データベース エンジン クエリ エディター (Transact-SQL および XQuery ステートメントを含んだスクリプトの作成用)、MDX エディター (MDX 言語用)、DMX エディター (DMX 言語用)、および XML/A エディター (XML for Analysis 言語用) があります。  

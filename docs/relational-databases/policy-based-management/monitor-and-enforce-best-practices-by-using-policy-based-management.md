@@ -1,33 +1,34 @@
 ---
-title: "ポリシー ベースの管理を使用したベスト プラクティスの監視と実行 | Microsoft Docs"
-ms.custom: 
+title: ポリシー ベースの管理を使用したベスト プラクティスの監視と実行 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: beb9c70a9aee3dae1237fe1a1a12ebf57aa0c03f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ポリシー ベースの管理では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のベスト プラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ポリシー ベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベスト プラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  
  次の表に、インストールした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されているポリシーと、各ポリシーで評価するベスト プラクティス ルールに関する情報を示します。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)」を参照してください。  

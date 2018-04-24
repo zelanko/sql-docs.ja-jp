@@ -1,31 +1,32 @@
 ---
-title: "NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成 | Microsoft Docs"
-ms.custom: 
+title: NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f44b4ff58ecef4ea1b7da5c9ceb7673368af194
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d24f8c39d4ab76c7887fb100a6235a1a8d775279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Windows Server 2016 は、超高速の入出力 (I/O) 操作を可能にする NVDIMM-N デバイスをサポートします。 そのようなデバイスを使用する魅力的な方法の 1 つは、書き込みの低待機時間を実現するためのライトバック キャッシュです。 このトピックでは、ミラー化された NVDIMM-N ライトバック キャッシュを使用して、SQL Server トランザクション ログを格納するための仮想ドライブとしてミラー化された記憶域スペースをセットアップする方法について説明します。 この記憶域スペースをデータ テーブルまたは他のデータを格納するためにも活用する場合は、記憶域プールにディスクを追加するか、分離が重要な場合は複数のプールを作成します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Windows Server 2016 は、超高速の入出力 (I/O) 操作を可能にする NVDIMM-N デバイスをサポートします。 そのようなデバイスを使用する魅力的な方法の 1 つは、書き込みの低待機時間を実現するためのライトバック キャッシュです。 このトピックでは、ミラー化された NVDIMM-N ライトバック キャッシュを使用して、SQL Server トランザクション ログを格納するための仮想ドライブとしてミラー化された記憶域スペースをセットアップする方法について説明します。 この記憶域スペースをデータ テーブルまたは他のデータを格納するためにも活用する場合は、記憶域プールにディスクを追加するか、分離が重要な場合は複数のプールを作成します。  
   
  この手法を使用して Channel 9 のビデオを視聴するには、「 [Windows Server 2016 でブロック記憶域として不揮発性メモリ (NVDIMM-N) を使用する](https://channel9.msdn.com/Events/Build/2016/P466)」をご覧ください。  
   

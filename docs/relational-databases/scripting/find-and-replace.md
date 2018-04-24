@@ -1,16 +1,16 @@
 ---
-title: "検索と置換 | Microsoft Docs"
-ms.custom: 
+title: 検索と置換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
@@ -19,19 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9a123b056ae3e568bac5e4bf6ab7bb3dbff31066
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-and-replace"></a>[検索と置換]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[検索と置換]** ダイアログ ボックスを使用すると、ファイル内のテキストを検索し、必要に応じて置換できます。 **[検索と置換]** ダイアログ ボックスを開く方法に応じて、表示されるオプションが多少異なることがあります。 **[編集]** メニューで **[検索と置換]**をポイントし、 **[クイック検索]** をクリックすると、検索オプションがあって置換オプションがないダイアログ ボックスが開きます。 **[編集]** メニューで **[検索と置換]**をポイントし、 **[クイック置換]** をクリックすると、検索オプションと置換オプションの両方が表示されるダイアログ ボックスが開きます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **[検索と置換]** ダイアログ ボックスを使用すると、ファイル内のテキストを検索し、必要に応じて置換できます。 **[検索と置換]** ダイアログ ボックスを開く方法に応じて、表示されるオプションが多少異なることがあります。 **[編集]** メニューで **[検索と置換]**をポイントし、 **[クイック検索]** をクリックすると、検索オプションがあって置換オプションがないダイアログ ボックスが開きます。 **[編集]** メニューで **[検索と置換]**をポイントし、 **[クイック置換]** をクリックすると、検索オプションと置換オプションの両方が表示されるダイアログ ボックスが開きます。  
   
  ツール バー ボタンやショートカット キーを使用して **[検索と置換]** ダイアログ ボックスを開くこともできます。  
   

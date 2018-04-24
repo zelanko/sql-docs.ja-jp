@@ -1,34 +1,35 @@
 ---
-title: "QN:Dynamics イベント クラス | Microsoft Docs"
-ms.custom: 
+title: QN:Dynamics イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50f050d49e33951d83151ce97d6c98722aa7f7d4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 498decf6aab859ebbbf93834decc62cb05b8550d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-QN:Dynamics イベント クラスでは、クエリ通知をサポートするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行するバックグラウンドの利用状況に関する情報が報告されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]内部では、バックグラウンド スレッドでサブスクリプションのタイムアウト、実行を待機しているサブスクリプション、およびパラメーター テーブルの破棄が監視されています。  
+  QN:Dynamics イベント クラスでは、クエリ通知をサポートするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] が実行するバックグラウンドの利用状況に関する情報が報告されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]内部では、バックグラウンド スレッドでサブスクリプションのタイムアウト、実行を待機しているサブスクリプション、およびパラメーター テーブルの破棄が監視されています。  
   
 ## <a name="qndynamics-event-class-data-columns"></a>QN:Dynamics イベント クラスのデータ列  
   

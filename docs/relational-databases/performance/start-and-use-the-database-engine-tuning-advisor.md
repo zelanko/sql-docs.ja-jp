@@ -1,16 +1,16 @@
 ---
-title: "データベース エンジン チューニング アドバイザーの起動および使用 | Microsoft Docs"
-ms.custom: 
+title: データベース エンジン チューニング アドバイザーの起動および使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dta.workload.f1
@@ -22,19 +22,20 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8decab3a7a2bece72e381a2c1efc579e914df82c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
   
 ##  <a name="Initialize"></a> データベース エンジン チューニング アドバイザーを初期化する  
  初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これは、チューニング操作をサポートするには、いくつかのシステム テーブルを **msdb** データベースに作成する必要があるためです。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  

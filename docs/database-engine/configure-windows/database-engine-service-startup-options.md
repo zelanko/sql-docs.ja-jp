@@ -1,16 +1,16 @@
 ---
-title: "データベース エンジン サービスのスタートアップ オプション | Microsoft Docs"
-ms.custom: 
+title: データベース エンジン サービスのスタートアップ オプション | Microsoft Docs
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 47452c7a2f858dd72cf847f80f2352acace2d5a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] スタートアップ オプションは、起動時に必要な特定のファイルの場所およびサーバー全体の状態を指定します。 通常は、スタートアップ オプションを指定する必要はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトラブルシューティングを行う場合や、特殊な問題が発生し、スタートアップ オプションの使用を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カスタマー サポートから指示された場合のみ指定します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  スタートアップ オプションは、起動時に必要な特定のファイルの場所およびサーバー全体の状態を指定します。 通常は、スタートアップ オプションを指定する必要はありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のトラブルシューティングを行う場合や、特殊な問題が発生し、スタートアップ オプションの使用を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カスタマー サポートから指示された場合のみ指定します。  
   
 > [!WARNING]  
 >  スタートアップ オプションを不適切に使用すると、サーバー パフォーマンスの低下を招くことや、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動しなくなることがあります。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 01/18/2018
 |**-g**  *memory_to_reserve*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、[max_server_memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)サーバー設定で指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ プール外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内にメモリ割り当てに使用できる領域として残すメモリ容量を整数 (MB 単位) で指定します。 メモリ プール外のメモリは、拡張プロシージャ .dll ファイル、分散クエリによって参照される OLE DB プロバイダー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントで参照されるオートメーション オブジェクトなどのアイテムを読み込むために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] によって使用される領域です。 既定値は 256 MB です。<br /><br /> このオプションを使用すると、メモリ割り当てを調整するうえで役に立つ場合がありますが、これは、アプリケーションが使用できる仮想メモリに対してオペレーティング システムが設定する制限値よりも物理メモリが多い場合だけです。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要なメモリ容量が通常より多い大容量メモリ構成で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの仮想アドレス空間全体が使用される場合に効果があります。 このオプションを誤って使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動しないことや、実行時エラーが発生することがあります。<br /><br /> **エラー ログに次の警告が記録されない限り、** -g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーターの既定値を使用してください。<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"<br /> "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"<br /><br /> これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g** スイッチによって確保するメモリ量を増やすことを検討してください。<br /><br /> 既定値より小さい値を使用すると、SQL Server Memory Manager によって管理されるメモリ プールおよびスレッド スタックが利用できる容量が増えます。その結果、拡張ストアド プロシージャ、分散クエリ、またはオートメーション オブジェクトを多用しないシステムの、メモリ負荷の高い作業のパフォーマンスが向上することがあります。|  
 |**-m**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動する場合、接続できるユーザーは 1 ユーザーのみで、CHECKPOINT プロセスは起動されません。 CHECKPOINT は、完了したトランザクションがディスク キャッシュからデータベース デバイスに定期的に書き込まれることを保証する機能です。 一般的に、システム データベースを修復する必要がある問題が発生したときに、このオプションを使用します。sp_configure allow updates オプションが有効になります。 既定では、allow updates は無効になっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動すると、コンピューターのローカル Administrators グループのメンバーはすべて、固定サーバー ロール sysadmin のメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できるようになります。 詳細については、「 [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)」を参照してください。シングル ユーザー モードの詳細については、「 [シングル ユーザー モードでの SQL Server の起動](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)」を参照してください。|  
 |**-mClient アプリケーション名**|接続を特定のクライアント アプリケーションに限定します。 たとえば、 `-mSQLCMD`  を使用すると、接続が、SQLCMD クライアント プログラムとして識別される必要がある単一の接続に限定されます。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動するときに、その唯一の接続を不明なクライアント アプリケーションによって使用されていた場合に使用します。 `"Microsoft SQL Server Management Studio - Query" ` を使用し、SSMS クエリ エディターと接続します。 SSMS クエリ エディター オプションは、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 構成マネージャーで構成できません。ツールで拒否されるダッシュ文字が含まれているためです。<br /><br /> クライアント アプリケーション名では大文字と小文字が区別されます。 アプリケーション名にスペースや特殊文字が含まれる場合、二重引用符が必要です。<br /><br />**コマンドラインから起動した場合の例:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -mSQLCMD` <br /><br /> **セキュリティに関する注意:** このオプションをセキュリティ機能として使用しないでください。 クライアント アプリケーションの名前はクライアント アプリケーションによって接続文字列の一部として指定されるため、本当の名前が指定されるとは限りません。|  
-|**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを記録する際に、Windows アプリケーション ログを使用しません。 **-n** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動する場合は、**-e** スタートアップ オプションも使用することをお勧めします。 このオプションを指定しないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントはログに記録されません。|  
+|**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを記録する際に、Windows アプリケーション ログを使用しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **を使用して**のインスタンスを起動する場合は、 **-e** スタートアップ オプションも使用することをお勧めします。 このオプションを指定しないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントはログに記録されません。|  
 |**-s**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスの起動を可能にします。 **-s** パラメーターが設定されていない場合は、既定のインスタンスが起動されます。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に `\mssql$Instance1` を使用する場合、ユーザーは `\mssql$Instance1\binn` ディレクトリで **sqlservr.exe -s instance1** を起動する必要があります。|  
 |**-T**  *trace#*|指定された、有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。<br /><br /> **重要:** **-T** オプションと共にトレース フラグを指定するときは、大文字の "T" を使用してトレース フラグ番号を渡してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は小文字の "t" を受け付けますが、これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサポート エンジニアのみが必要とする他の内部トレース フラグを設定するためのものです。 コントロール パネルの起動ウィンドウで指定されているパラメーターは使用されません。|  
 |**-x**|次の監視機能を無効にします。<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス モニター カウンター<br /> - CPU 時間とキャッシュ ヒット率統計の管理<br /> - DBCC SQLPERF コマンドに関する情報の収集<br /> - 一部の動的管理ビューに関する情報の収集<br /> - 拡張イベントの多数のイベント ポイント<br /><br /> **警告:** **–x** スタートアップ オプションを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関するパフォーマンスや機能の問題を診断するために使用できる情報が大幅に減少されます。|  

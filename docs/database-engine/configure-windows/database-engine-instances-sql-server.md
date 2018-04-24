@@ -1,30 +1,32 @@
 ---
-title: "データベース エンジンのインスタンス (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: データベース エンジンのインスタンス (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 14c823a19e267f0e32196a1e44598fc3fa308662
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、オペレーティング システム サービスとして実行される **sqlservr.exe** 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、オペレーティング システム サービスとして実行される **sqlservr** 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
   
 ## <a name="instances"></a>インスタンス  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、そのインスタンスで管理されているいずれかのデータベースのデータを操作するすべてのアプリケーション要求を処理するサービスとして動作します。 アプリケーションからの接続要求 (ログイン) の送信先です。 アプリケーションとインスタンスが別のコンピューター上にある場合、接続はネットワーク接続を通じて確立されます。 アプリケーションとインスタンスが同じコンピューター上にある場合、SQL Server 接続はネットワーク接続としてもインメモリ接続としても確立できます。 接続が完了すると、アプリケーションは接続を通じてインスタンスに [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを送信します。 インスタンスは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをデータベース内のデータおよびオブジェクトに対する操作に解決して、必要な権限がログイン資格情報に付与されていれば、操作を実行します。 取得されたデータは、エラーなどのメッセージと共にアプリケーションに返されます。  

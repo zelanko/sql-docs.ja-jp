@@ -1,34 +1,35 @@
 ---
-title: "Audit Schema Object Take Ownership イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Audit Schema Object Take Ownership イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Schema Object Take Ownership event class
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccc4f79a96b03cc24ba62f3291893d13af3417ea
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d8021bdd9b06ebe9a50b364389b979ae238f1409
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Schema Object Take Ownership** イベント クラスは、スキーマ オブジェクト (テーブル、プロシージャ、関数など) の所有者を変更する権限について確認が行われる際に発生します。 この確認動作は、ALTER AUTHORIZATION ステートメントを使用してオブジェクトに所有者を割り当てたときに行われます。  
+  **Audit Schema Object Take Ownership** イベント クラスは、スキーマ オブジェクト (テーブル、プロシージャ、関数など) の所有者を変更する権限について確認が行われる際に発生します。 この確認動作は、ALTER AUTHORIZATION ステートメントを使用してオブジェクトに所有者を割り当てたときに行われます。  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Audit Schema Object Take Ownership イベント クラスのデータ列  
   

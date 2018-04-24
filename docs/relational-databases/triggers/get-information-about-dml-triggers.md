@@ -1,16 +1,16 @@
 ---
-title: "DML トリガーに関する情報の取得 | Microsoft Docs"
-ms.custom: 
+title: DML トリガーに関する情報の取得 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [SQL Server], triggers
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - status information [SQL Server], triggers
 - DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d9dac7711cc7eb07ce507e4749b82dcb2a1a7be
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 52545d80fd62b966ea578439271e6eccdec88e88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して DML トリガーに関する情報を取得する方法について説明します。 この情報には、テーブルに設定されたトリガーの種類、名前、所有者、および作成日または変更日を確認できます。 トリガーが作成時に暗号化されていない場合は、トリガーの定義を取得します。 定義は、トリガーを定義しているテーブルに対してそのトリガーがどのように作用するかを理解するのに役立ちます。 また、特定のトリガーが使用しているオブジェクトを見つけることもできます。 この情報を使用すると、データベースで変更または削除された場合にトリガーに影響を及ぼすオブジェクトを確認できます。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して DML トリガーに関する情報を取得する方法について説明します。 この情報には、テーブルに設定されたトリガーの種類、名前、所有者、および作成日または変更日を確認できます。 トリガーが作成時に暗号化されていない場合は、トリガーの定義を取得します。 定義は、トリガーを定義しているテーブルに対してそのトリガーがどのように作用するかを理解するのに役立ちます。 また、特定のトリガーが使用しているオブジェクトを見つけることもできます。 この情報を使用すると、データベースで変更または削除された場合にトリガーに影響を及ぼすオブジェクトを確認できます。  
   
  **このトピックの内容**  
   

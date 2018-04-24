@@ -2,7 +2,7 @@
 title: 'レッスン 1: 保存されたアクセス ポリシーと Shared Access Signature を作成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: tutorial
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86a4c906a808fcb9cf311f689ed10cd437f27123
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b387ca70fab713e7ca1f3e96dc5dff2f64c24e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>レッスン 1: 保存されたアクセス ポリシーと Shared Access Signature を作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/28/2018
   
 Shared Access Signature とは、コンテナー、BLOB、キュー、またはテーブルに対する制限付きアクセス権を付与する URI です。 格納済みアクセス ポリシーによって、取り消し、期限切れ、アクセス権の拡張などのサーバー側の Shared Access Signatures のコントロールのレベルが追加されます。 この新しい機能強化を使用する場合は、少なくとも読み取り、書き込み、一覧表示の権限のあるコンテナーに対してポリシーを作成する必要があります。  
   
-格納済みアクセス ポリシーと Shared Access Signature を作成するには、Azure PowerShell、Azure Storage SDK、Azure REST API、またはサード パーティのユーティリティを使用します。 このチュートリアルでは、Azure PowerShell スクリプトを使用して、このタスクを実行する方法について説明します。 スクリプトは、リソース マネージャー展開モデルを使用して、次の新しいリソースを作成します。  
+格納済みアクセス ポリシーと Shared Access Signature を作成するには、Azure PowerShell、Azure Storage SDK、Azure REST API、またはサード パーティのユーティリティを使用します。 このチュートリアルでは、Azure PowerShell スクリプトを使用して、このタスクを実行する方法について説明します。 スクリプトは、Resource Manager デプロイ モデル ルを使用して、次の新しいリソースを作成します  
   
 -   リソース グループ  
   
@@ -54,7 +54,7 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
 -   データ センターの場所  
   
 > [!NOTE]  
-> このスクリプトは、既存の ARM または従来の展開モデル リソースのどちらも使用できるように記述します。  
+> このスクリプトは、既存の ARM またはクラシック デプロイ モデル リソースのどちらも使用できるように記述します。  
   
 このスクリプトでは、最後に「 [レッスン 2: Shared Access Signature を使用して SQL Server 資格情報を作成する](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」で使用する適切な CREATE CREDENTIAL ステートメントを生成します。 このステートメントは、自動的にクリップボードにコピーされ、コンソールに出力されるので、確認できます。  
   

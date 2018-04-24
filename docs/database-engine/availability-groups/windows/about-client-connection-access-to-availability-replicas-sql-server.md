@@ -1,15 +1,16 @@
 ---
-title: "可用性レプリカに対するクライアント接続アクセスについて (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 可用性レプリカに対するクライアント接続アクセスについて (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a3771d3702c24a89adacc165add4f003da60bb60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>可用性レプリカに対するクライアント接続アクセスについて (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  AlwaysOn 可用性グループでは、1 つまたは複数の可用性レプリカを構成して、セカンダリ ロールで実行しているとき (つまり、セカンダリ レプリカとして実行しているとき) に読み取り専用接続を許可することができます。 各可用性レプリカをプライマリ ロールで実行しているとき (つまり、プライマリ レプリカとして実行しているとき) に、読み取り専用接続を許可または除外するように構成することもできます。  
   
  特定の可用性グループのプライマリ データベースまたはセカンダリ データベースに対するクライアント アクセスを容易にするために、可用性グループ リスナーを定義する必要があります。 既定では、可用性グループ リスナーは、着信接続をプライマリ レプリカにダイレクトします。 ただし、可用性グループは、読み取り専用ルーティングをサポートするように構成できます。これにより、可用性グループ リスナーが、読み取りを目的としたアプリケーションの接続要求を読み取り可能なセカンダリ レプリカにリダイレクトできます。 詳細については、「 [可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)」をご参照ください。  
   

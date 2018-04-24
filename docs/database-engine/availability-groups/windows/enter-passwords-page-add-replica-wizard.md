@@ -2,7 +2,7 @@
 title: '[パスワードの入力] ページ (レプリカ追加ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b782184c4efe0bfdb632a3473d8a91fb2dfac58
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9222f0b5d941cbdac38dc04afc3f770c9d487029
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enter-passwords-page-add-replica-wizard"></a>[パスワードの入力] ページ (レプリカ追加ウィザード)
-**このヘルプ トピックでは、[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][パスワードの入力]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このヘルプ トピックでは、 **[パスワードの入力]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
   
  **[レプリカの指定]** ページで選択したレプリカに、データベース マスター キーがあるデータベースが含まれている場合は、[パスワードの入力] ページが表示されます。  
   

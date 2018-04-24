@@ -2,7 +2,7 @@
 title: メンテナンス プランの作成 (メンテナンス プラン デザイン画面) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 738e4846e7dcead475b8c8b5924e7b8fb359f97a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.lasthandoff: 04/10/2018
   
  **このトピックの内容**  
   
--   **開始する前に。**  
+-   **作業を開始する準備:**  
   
-     [制限事項と制約](#Restrictions)  
+     [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [メンテナンス プラン デザイン画面を使用したメンテナンス プランの作成](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ユーザーが **sysadmin** 固定サーバー ロールのメンバーである場合のみ、オブジェクト エクスプローラーに **[メンテナンス プラン]** ノードが表示されます。  
   
 ##  <a name="SSMSProcedure"></a> メンテナンス プラン デザイン画面の使用  
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/10/2018
      **名前**  
      メンテナンス プランの名前が表示されます。 新しいメンテナンス プランの名前は、メンテナンス プラン デザイナーを開く前にダイアログ ボックスで指定します。 メンテナンス プランの名前を変更するには、オブジェクト エクスプローラーでプランを右クリックし、 **[名前の変更]**をクリックします。  
   
-     **説明**  
+     **[説明]**  
      メンテナンス プランの説明を表示または指定します。 説明の長さは最大 512 文字です。  
   
      **デザイナー画面**  
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/10/2018
      **名前**  
      サブプランの名前です。  
   
-     **Description**  
+     **[説明]**  
      サブプランの簡潔な説明です。  
   
      **スケジュール**  

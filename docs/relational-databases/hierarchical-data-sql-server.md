@@ -1,16 +1,16 @@
 ---
-title: "階層データ (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 階層データ (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9eee39caae6b780e692ed0cee3440b6cb250da9f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 33242a30d520ff42721cec074c1bd8a4b78460cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-組み込み **hierarchyid** データ型を使用すると、階層データの格納とクエリが容易になります。 **hierarchyid** は、最も一般的な階層データであるツリー構造を表すために最適化されています。  
+  組み込み **hierarchyid** データ型を使用すると、階層データの格納とクエリが容易になります。 **hierarchyid** は、最も一般的な階層データであるツリー構造を表すために最適化されています。  
   
  階層データは、階層リレーションシップで相互に関連付けられたデータ アイテムのセットとして定義されます。 あるデータ アイテムが別のアイテムの親となる場合は、そこに階層リレーションシップが存在します。 データベースに一般的に格納される階層データの例を次に示します。  
   
@@ -116,7 +117,7 @@ GO
   
 -   階層の複数セクションにわたるクエリをめったに実行しないとき。 つまり、通常のクエリが、階層内の単一ポイントのみを対象とするとき。 このようなケースでは、同じ場所への配置は重要でありません。 たとえば、個々の従業員の給与処理のみに組織テーブルを使用する場合、親/子の方が優れています。  
   
--   非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが非常に重要なとき。 親/子表現では、階層内の行の場所を変更すると、1 行のみが影響を受けます。 **hierarchyid** 使用時に行の場所を変更すると、*n* 行が影響を受けます (*n* は移動されるサブツリー内のノード数)。  
+-   非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが非常に重要なとき。 親/子表現では、階層内の行の場所を変更すると、1 行のみが影響を受けます。 **hierarchyid** 使用時に行の場所を変更すると、 *n* 行が影響を受けます ( *n* は移動されるサブツリー内のノード数)。  
   
      非リーフ サブツリーが頻繁に移動し、かつパフォーマンスが重要だが、ほとんどの移動が正しく定義された階層レベルで行われるときは、上位レベルと下位レベルを 2 つの階層に分割することを検討してください。 こうすると、すべての移動が上位階層のリーフ レベルになります。 たとえば、サービスによってホストされている Web サイトの階層があるとします。 サイトには、階層状に配置された多くのページが含まれています。 ホストされているサイトは、サイト階層内の他の場所に移動される可能性がありますが、下位ページの配置が変更されることはまれです。 これは、次のように表すことができます。  
   

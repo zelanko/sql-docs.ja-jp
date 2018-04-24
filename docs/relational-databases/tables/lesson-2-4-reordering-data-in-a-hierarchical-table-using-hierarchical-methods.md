@@ -1,35 +1,36 @@
 ---
-title: "階層的な手法を使用した階層テーブルのデータの並べ替え Methods | Microsoft Docs"
-ms.custom: 
+title: 階層的な手法を使用した階層テーブルのデータの並べ替え Methods | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3d15df3ae3bf757b54e2e4d48c55b94285540d9
-ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
+ms.openlocfilehash: 90d149080610093800061aa0107691dee1972330
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>レッスン 2-4 - 階層的な手法を使用した階層テーブルのデータの並べ替え
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
   
 `GetReparentedValue` メソッドは 2 つの引数を受け取ります。 最初の引数は、変更する階層の一部を表します。 たとえば、階層が **/1/4/2/3/** の場合に、最後の 2 つのノード ( **2/3/** ) はそのままで、 **/1/4/**セクションを変更して階層を**/2/1/2/3/**にするときは、変更するノード (**/1/4/**) を最初の引数として指定する必要があります。 2 番目の引数には、新しい階層レベルを指定します。この例では、 **/2/1/**です。 2 つの引数には、異なるレベル数を指定することもできます。  
   

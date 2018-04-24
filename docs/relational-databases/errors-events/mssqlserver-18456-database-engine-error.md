@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae32f75a30f38c3f2c86370afbb49bbf6e6031b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: da4c628ad102eb7115e0cab2e2ed7a73c7ed9c4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
 |状態|Description|  
 |---------|---------------|  
-|1|エラー情報を表示できません。 通常、この状態は、エラーの詳細情報を受け取る権限がないことを意味します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。|  
+|@shouldalert|エラー情報を表示できません。 通常、この状態は、エラーの詳細情報を受け取る権限がないことを意味します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。|  
 |2|ユーザー ID が無効です。|  
 |5|ユーザー ID が無効です。|  
 |6|SQL Server 認証で Windows ログイン名を使用しようとしました。|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>使用例  
 この例では、認証エラー状態は 8 です。 これは、パスワードが正しくないことを示します。  
   
-|日付|ソース|メッセージ|  
+|date|Source|メッセージ|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|ログオン|エラー: 18456、重大度: 14、状態: 8。|  
 |2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [CLIENT: <ip address>]|  

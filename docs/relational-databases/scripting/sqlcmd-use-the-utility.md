@@ -1,16 +1,16 @@
 ---
-title: "sqlcmd ユーティリティの使用 | Microsoft Docs"
-ms.custom: 
+title: sqlcmd ユーティリティの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
+caps.latest.revision: 50
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd** ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 **sqlcmd** を対話形式で使用したり、 **sqlcmd**を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)]を理解している必要があります。 **sqlcmd** ユーティリティは一般的に次のように使用されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlcmd** ユーティリティは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 **sqlcmd** を対話形式で使用したり、 **sqlcmd**を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)]を理解している必要があります。 **sqlcmd** ユーティリティは一般的に次のように使用されます。  
   
 -   コマンド プロンプトでの操作と同様、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、Windows の検索ボックスに「cmd」と入力し、"**コマンド プロンプト**" をクリックして開きます。 コマンド プロンプトで「 **sqlcmd** 」と入力し、その後に必要なオプションのリストを入力します。 **sqlcmd**でサポートされるオプションの一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
   

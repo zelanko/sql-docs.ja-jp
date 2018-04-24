@@ -1,27 +1,27 @@
 ---
-title: "データベース エンジンのアップグレード方法の選択 | Microsoft Docs"
-ms.custom: 
+title: データベース エンジンのアップグレード方法の選択 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9049db61b062dc9211b47094886b831bc6667890
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]  
 >  また、アップグレード計画の一環として、Azure SQL Database のアップグレードや SQL Server 環境の仮想化を考慮する場合もあります。 これらの記事はここでは範囲外ですが、いくつかのリンクを示します。
 >   - [Azure Virtual Machines における SQL Server の概要](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL データベース](https://azure.microsoft.com/en-us/services/sql-database/) 
+>   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Azure で SQL Server オプションを選択する](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ##  <a name="UpgradeInPlace"></a> インプレース アップグレード  

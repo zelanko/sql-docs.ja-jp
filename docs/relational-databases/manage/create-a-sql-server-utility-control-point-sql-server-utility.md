@@ -1,16 +1,16 @@
 ---
-title: "SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ) | Microsoft Docs"
-ms.custom: 
+title: SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.SWB.create.ucp.validation.F1
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff6b20dc866c6d4e7b7ebf9bf21ccf6ae883a474
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 10239fb4654e478daf792084bdc9241ec1260001
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージ インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージ インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
   
  UCP では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
   

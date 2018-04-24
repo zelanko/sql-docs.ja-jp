@@ -1,34 +1,35 @@
 ---
-title: "DDL トリガー | Microsoft Docs"
-ms.custom: 
+title: DDL トリガー | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ddl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe470ea983e3f397c5afdb41a3526dd87256746e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 724ca9b1262b66cb232108d7de6115b8293c7142
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して起動されます。 これらのイベントは主に、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS のいずれかのキーワードで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
+  DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して起動されます。 これらのイベントは主に、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS のいずれかのキーワードで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
   
  DDL トリガーは、次のような場合に使用します。  
   
