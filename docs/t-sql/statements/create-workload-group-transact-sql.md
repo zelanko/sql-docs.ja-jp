@@ -1,16 +1,16 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WORKLOAD GROUP
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 
+caps.latest.revision: 47
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de17c3a1d00554e36537ce76eafcebba2ac0e55d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,10 +102,10 @@ CREATE WORKLOAD GROUP group_name
  要求が使用できる最大 CPU 時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定が 0 の場合は、無制限を示します。  
   
 > [!NOTE]  
-> 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[＠CPU Threshold Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。  
+> 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。  
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降で[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。 
+> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。  
@@ -129,7 +129,7 @@ CREATE WORKLOAD GROUP group_name
 -   DOP は、構成した後、許可メモリの不足時にのみ低くすることができます。 ワークロード グループの再構成は、許可メモリ キューで待機している間は認識されません。  
   
  GROUP_MAX_REQUESTS =*value*  
- ワークロード グループで実行を許可する同時要求の最大数を指定します。 *value* には、0 または正の整数を指定する必要があります。 *value* の既定の設定である 0 では、無制限の要求が許可されます。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。  
+ ワークロード グループで実行を許可する同時要求の最大数を指定します。 *value* には、0 または正の整数を指定する必要があります。 *value* の既定の設定である 0 の場合、無制限の要求が許可されます。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。  
   
  USING { *pool_name* | **"default"** }  
  ワークロード グループを *pool_name* で識別されるユーザー定義のリソース プールに関連付けます。 実質的には、これによってワークロード グループがグループ リソースに配置されます。 *pool_name* を指定していない場合、または USING 引数を使用していない場合、ワークロード グループは事前に定義されたリソース ガバナーの既定のプールに配置されます。  

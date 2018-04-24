@@ -1,16 +1,16 @@
 ---
 title: PERCENTILE_CONT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PERCENTILE_CONT_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - analytic functions, PERCENTILE_CONT
 - PERCENTILE_CONT function
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d55a4036849fb1dfccb281956b8f9f3313a95e72
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 097a6850403b3826246bda10044bf690169b0c52
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,7 +56,7 @@ PERCENTILE_CONT ( numeric_literal )
  並べ替える数値の一覧を指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 式は、真数型 (**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money**) または概数型 (**float**、**real**) として評価される必要があります。 他のデータ型は許可されません。 既定の並べ替え順は昇順です。  
   
  OVER **(** \<partition_by_clause> **)**  
- FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。 OVER 構文の \<ORDER BY clause> と \<rows or range clause> は、PERCENTILE_CONT 関数では指定できません。  
+ FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md). OVER 構文の \<ORDER BY clause> と \<rows or range clause> は、PERCENTILE_CONT 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float(53)**  
@@ -129,7 +130,7 @@ Shipping and Receiving 9.250000      9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
+ [PERCENTILE_DISC (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
   
 

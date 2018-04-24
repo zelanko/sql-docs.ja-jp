@@ -1,16 +1,16 @@
 ---
-title: "STGeometryN (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: STGeometryN (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeometryN_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN (geometry Data Type)
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fe91369f5055d4cca0f770eb22daad4bce8ebc7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 09832ce6d8573432ae59ce04fa8eeab8cd7de428
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  パラメーターが `STNumGeometries()` の結果よりも大きい場合、このメソッドは **null** を返します。また、*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  

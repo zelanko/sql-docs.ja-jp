@@ -1,32 +1,35 @@
 ---
-title: "トランザクションの注釈を設定する (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: トランザクションの注釈を設定する (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 561b582b238247f263d0fa8c43659dbc549a31cd
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3b050b8aaeb0629e40f61e64ad0222bf5f725c70
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>トランザクションの注釈を設定する (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   履歴を参照する目的でトランザクションの詳細をサポートする場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でトランザクションの注釈を設定します。  
   
 > [!NOTE]  
@@ -44,25 +47,25 @@ ms.lasthandoff: 03/05/2018
   
 2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-3.  **[エクスプローラー]**をクリックします。  
+3.  **[エクスプローラー]** をクリックします。  
   
 4.  メニュー バーの **[エンティティ]** をポイントして、注釈を設定するトランザクションを持つメンバーを含むエンティティの名前をクリックします。  
   
 5.  グリッドで、メンバーの行をクリックします。  
   
-6.  **[トランザクションの表示]**をクリックします。  
+6.  **[トランザクションの表示]** をクリックします。  
   
 7.  **[トランザクションの表示]** ダイアログ ボックスで、注釈を設定するトランザクションをクリックします。  
   
 8.  ダイアログ ボックスの下部にあるボックスに、注釈を入力します。  
   
-9. **[注釈の追加]**をクリックします。 **[注釈]** ペインに注釈が表示されます。  
+9. **[注釈の追加]** をクリックします。 **[注釈]** ペインに注釈が表示されます。  
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>[バージョン管理] でトランザクションに注釈を設定する (管理者のみ)  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム ページで、 **[バージョン管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム ページで、 **[バージョン管理]** をクリックします。  
   
-2.  メニュー バーの **[トランザクション]**をクリックします。  
+2.  メニュー バーの **[トランザクション]** をクリックします。  
   
 3.  **[トランザクション]** ペインで、注釈を設定するトランザクションのグリッド内の行をクリックします。  
   

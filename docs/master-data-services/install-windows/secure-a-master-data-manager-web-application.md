@@ -1,30 +1,33 @@
 ---
-title: "マスター データ マネージャー Web アプリケーションのセキュリティ保護 | Microsoft Docs"
-ms.custom: 
+title: マスター データ マネージャー Web アプリケーションのセキュリティ保護 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07bcd2a3d928efcf12cf2d2077a98196e52c779a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 77c7ea1fada6374a7c413b875a9b91b0abec1ce8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   HTTPS を使用して [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをセキュリティ保護できます。  
   
 > [!NOTE]  
@@ -41,24 +44,24 @@ ms.lasthandoff: 03/05/2018
   
 1.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションが HTTP を使用して正しく構成されていることを確認した後、IIS で証明書を作成します。 詳細については、「 [IIS 7 でサーバー証明書を構成する](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx)」を参照してください。  
   
-2.  **[接続]** ペインの **[サイト]**で、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストするサイトをクリックします。  
+2.  **[接続]** ペインの **[サイト]** で、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストするサイトをクリックします。  
   
-3.  **[アクション]** ペインで、 **[バインド]**をクリックします。  
+3.  **[アクション]** ペインで、 **[バインド]** をクリックします。  
   
-4.  **[追加]**をクリックします。  
+4.  **[追加]** をクリックします。  
   
-5.  一覧から、 **[https]**を選択します。  
+5.  一覧から、 **[https]** を選択します。  
   
 6.  SSL 証明書を選択します。  
   
 7.  **[OK]** をクリックします。  
   
-8.  省略可。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]**の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]**をクリックします。  
+8.  省略可。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
   
     > [!IMPORTANT]  
     >  HTTP を削除した後に basicHttp 構成および wsHttpBinding 構成を変更する必要があります。  
   
-9. **[サイト バインド]** ダイアログ ボックスを閉じるには、 **[閉じる]**をクリックします。  
+9. **[サイト バインド]** ダイアログ ボックスを閉じるには、 **[閉じる]** をクリックします。  
   
 10. ここで、 *ドライブ*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication にある web.config ファイルを開きます。  
   

@@ -1,16 +1,16 @@
 ---
-title: "PolyBase ガイド | Microsoft Docs"
+title: PolyBase ガイド | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - PolyBase
@@ -18,24 +18,24 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 - PolyBase, overview
-- "Hadoop import ×"
+- Hadoop import ×
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 
+caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d5aa107a95505e4132f24aa2cf20952a4d7fcf10
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="polybase-guide"></a>PolyBase ガイド
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase は、t-sql 言語を使ってデータベースの外部にあるデータにアクセスするテクノロジです。  SQL Server 2016 では、Hadoop で外部データに対してクエリを実行したり、Azure Blob Storage のデータをインポート/エクスポートしたりできます。 クエリは Hadoop に計算をプッシュするように最適化されます。 Azure SQL データ ウェアハウスでは、Azure Blob Storage と Azure Data Lake Store からデータをインポート/エクスポートできます。
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+  PolyBase は、t-sql 言語を使ってデータベースの外部にあるデータにアクセスするテクノロジです。  SQL Server 2016 では、Hadoop で外部データに対してクエリを実行したり、Azure Blob Storage のデータをインポート/エクスポートしたりできます。 クエリは Hadoop に計算をプッシュするように最適化されます。 Azure SQL データ ウェアハウスでは、Azure Blob Storage と Azure Data Lake Store からデータをインポート/エクスポートできます。
   
   
  PolyBase を使用するには、「 [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  

@@ -1,16 +1,16 @@
 ---
-title: "型指定された XML と型指定されていない XML の比較 | Microsoft Docs"
-ms.custom: 
+title: 型指定された XML と型指定されていない XML の比較 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - xml data type [SQL Server], variables
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 
+caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c6cde5809ed6f9a05ac01bf517f24ec5968d53d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-**xml** 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、 **xml** 型の変数、パラメーター、または列に関連付けることができます。 XML スキーマ コレクションを関連付けた場合、この **xml** データ型のインスタンスを *型指定されている*と呼びます。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
+  **xml** 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、 **xml** 型の変数、パラメーター、または列に関連付けることができます。 XML スキーマ コレクションを関連付けた場合、この **xml** データ型のインスタンスを *型指定されている*と呼びます。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>適切な形式の XML と xml データ型  
  **xml** データ型には、ISO 標準の **xml** データ型が実装されています。 したがって、型指定されていない XML 列には、適切な形式の XML Version 1.0 ドキュメントを保存できるほか、テキスト ノードや任意の数の最上位要素が含まれた、いわゆる XML コンテンツ フラグメントを保存することもできます。 システムにより、データが適切な形式であることが確認されます。このとき XML スキーマに列をバインドする必要はなく、広義の適切な形式でないデータは拒否されます。 このことは、型指定されていない XML の変数やパラメーターにも該当します。  

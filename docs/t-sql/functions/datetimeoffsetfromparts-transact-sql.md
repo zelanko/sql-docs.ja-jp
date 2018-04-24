@@ -1,16 +1,16 @@
 ---
 title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATETIMEOFFSETFROMPARTS_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c8a5f8bea3bf6ca97e0f7b4a35f8f78315716df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2ad617b97020c23e0f3cfc2ea52da674ac380404
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -79,9 +80,9 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 **datetimeoffset(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEOFFSETFROMPARTS** 返しますが、完全に初期化された **datetimeoffset** データ型。 オフセットの引数は、タイム ゾーン オフセットを表すために使用します。 オフセット引数を省略した場合、タイム ゾーン オフセットは 00:00 と見なされ、タイム ゾーン オフセットはありません。 オフセット引数を指定する場合、両方の引数が存在し、両方とも正または負である必要があります。 場合 *minute_offset* なしで指定された *hour_offset*, 、エラーが発生します。 他の引数が有効でない場合は、エラーが発生します。 必要な引数が NULL の場合は、NULL が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。
+**DATETIMEOFFSETFROMPARTS** 返しますが、完全に初期化された **datetimeoffset** データ型。 オフセットの引数は、タイム ゾーン オフセットを表すために使用します。 オフセット引数を省略した場合、タイム ゾーン オフセットは 00:00 と見なされ、タイム ゾーン オフセットはありません。 オフセット引数を指定する場合、両方の引数が存在し、両方とも正または負である必要があります。 場合 *minute_offset* なしで指定された *hour_offset*, 、エラーが発生します。 他の引数が有効でない場合は、エラーが発生します。 必要な引数が null の場合は、null が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。
   
-*分数* 引数によって異なります、 *有効桁数 引数*。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 場合の値 *有効桁数* が 0 の場合、値の *分数* もする必要があります。 0 にするそれ以外の場合、エラーが発生します。
+*分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 場合の値 *有効桁数* が 0 の場合、値の *分数* もする必要があります。 0 にするそれ以外の場合、エラーが発生します。
   
 この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] より前のバージョンをインストールしているサーバーには、リモート処理が行われません。
   

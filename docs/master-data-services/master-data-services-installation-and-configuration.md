@@ -18,13 +18,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: debbf608daac6d95527939808b620d34fe1e4c31
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c958dfa6d3ba94a1d17835876d8de6b26dea1943
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   この記事では、Windows Server 2012 R2 コンピューターへの [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のインストール方法、MDS データベースと Web サイトの設定方法、およびサンプル モデルとデータの配置方法について説明します。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) では、組織が信頼されたバージョンのデータを管理できるようにします。   
   
 > [!NOTE] 
@@ -38,7 +41,7 @@ ms.lasthandoff: 04/06/2018
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を学習するためのビデオと他のトレーニング リソースへのリンクについては、「[マスター データ サービスについて学習する](../master-data-services/learn-sql-server-master-data-services.md)」をご覧ください。 
   
 > **ダウンロード**  
->-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**に移動してください。  
+>-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)** に移動してください。  
 >-   Azure アカウントをすでにお持ちですか?  **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** にアクセスして、SQL Server がインストール済みの仮想マシンをすぐにご利用いただけます。  
  
 > **MDS Web サイトを作成できませんか?**
@@ -47,7 +50,7 @@ ms.lasthandoff: 04/06/2018
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer と Silverlight
 - Windows Server 2012 マシンに [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] をインストールするときに、Web アプリケーション サイトでスクリプトを許可するように Internet Explorer セキュリティ強化を構成しなければならない場合があります。 そうしないと、サーバー コンピューター上のサイトの参照が失敗します。
-- Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は **[ここ](https://www.microsoft.com/silverlight/)**からインストールできます。
+- Web アプリケーションで作業するには、Silverlight 5 をクライアント コンピューターにインストールする必要があります。 Silverlight の必要なバージョンがない場合、Web アプリケーションで Silverlight を使用する部分に移動したときに、Silverlight をインストールするよう要求されます。 Silverlight 5 は **[ここ](https://www.microsoft.com/silverlight/)** からインストールできます。
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 仮想マシン上の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 既定では、[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] が既にインストールされている Azure 仮想マシンを起動すると、[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] もインストールされます。 
@@ -73,7 +76,7 @@ ms.lasthandoff: 04/06/2018
 
 ## <a name="InstallIIS"></a> IIS のインストールと構成
   
-1.  [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]で、 **デスクトップ** のタスクバーにある **[サーバー マネージャー]**アイコンをクリックします。  
+1.  [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)]で、 **デスクトップ** のタスクバーにある **[サーバー マネージャー]** アイコンをクリックします。  
   
      ![Windows Server 2012 のタスク バーのサーバー マネージャーのアイコン](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 のタスク バーのサーバー マネージャーのアイコン")  
   
@@ -81,9 +84,9 @@ ms.lasthandoff: 04/06/2018
    
      ![サーバーの管理の [役割と機能の追加] メニュー コマンド](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "サーバーの管理の [役割と機能の追加] メニュー コマンド")  
   
-6.  **役割と機能の追加ウィザード** の **[インストールの種類]**ページで、既定値 (**役割ベースまたは機能ベースのインストール**) を承諾して、 **[次へ]**をクリックします。  
+6.  **役割と機能の追加ウィザード** の **[インストールの種類]** ページで、既定値 (**役割ベースまたは機能ベースのインストール**) を承諾して、 **[次へ]** をクリックします。  
   
-7.  **[サーバー プールからサーバーを選択]**をクリックして、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]をインストールしたサーバーをクリックします。  
+7.  **[サーバー プールからサーバーを選択]** をクリックして、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]をインストールしたサーバーをクリックします。  
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
@@ -129,7 +132,7 @@ ms.lasthandoff: 04/06/2018
   
 1.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を起動して、 **[データベース構成]** をクリックします。  
   
-2.  **[データベースの作成]**をクリックして、 **データベースの作成ウィザード** で **[次へ]**をクリックします。  
+2.  **[データベースの作成]** をクリックして、 **データベースの作成ウィザード** で **[次へ]** をクリックします。  
   
 3.  **[データベース サーバー]** ページで、 **[認証の種類]** を選択して、 **[接続のテスト]** をクリックし、選択した認証の種類の資格情報を使用して、データベースに接続できることを確認します。 **[次へ]** をクリックします。
   
@@ -175,7 +178,7 @@ ms.lasthandoff: 04/06/2018
   
 11. **[アプリケーション プール]** セクションで、次のいずれかを実行します。  
   
-    -   **管理者アカウント**データベースに対して、手順 5 で入力したのと同じユーザー名を入力し、パスワードを入力して、 **[OK]**をクリックします。  
+    -   **管理者アカウント**データベースに対して、手順 5 で入力したのと同じユーザー名を入力し、パスワードを入力して、 **[OK]** をクリックします。  
   
          **- または -**  
   
@@ -189,14 +192,14 @@ ms.lasthandoff: 04/06/2018
   
 12. **[Web アプリケーション]** ボックスの **[Web 構成]** ページで、作成したアプリケーションをクリックして、**[アプリケーションとデータベースの関連付け]** セクションで **[選択]** をクリックします。  
   
-13. **[接続]**をクリックして、Web アプリケーションと関連付けする必要がある [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、 **[OK]**をクリックします。  
+13. **[接続]** をクリックして、Web アプリケーションと関連付けする必要がある [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、 **[OK]** をクリックします。  
   
      Web サイトの設定が完了しました。 **[Web の構成]** ページには、選択した Web サイト、作成した Web アプリケーション、およびアプリケーションに関連付けられた [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースが表示されます。  
 
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[適用]**をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、http://*server name*/*web application*/ です。 
+15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、http://*server name*/*web application*/ です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -276,7 +279,7 @@ ms.lasthandoff: 04/06/2018
   
          Web サイトのアドレスは、http://*server name*/*web application*/ です。  
   
-    2.  **[モデル]** リスト ボックスからモデルを選択して、 **[エクスプローラー]**をクリックします。  
+    2.  **[モデル]** リスト ボックスからモデルを選択して、 **[エクスプローラー]** をクリックします。  
   
          ![MDS Web サイト、ホーム ページ。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS Web サイト、ホーム ページ。")  
   

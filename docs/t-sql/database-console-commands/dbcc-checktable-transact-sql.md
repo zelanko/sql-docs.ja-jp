@@ -1,16 +1,16 @@
 ---
 title: DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 
+caps.latest.revision: 89
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 495a31fc5f95cd5e3a81e5c14dd6dc469de66d6a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e93755c4eda0f95cdf62add5594b66f2b5944043
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ MAXDOP
 [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット    
-DBCC CHECKTABLE は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を確保します。 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクションを参照してください。
+DBCC CHECKTABLE は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を確保します。 詳細については、次を参照してください。「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクション。
 スナップショットを作成できない場合や、TABLOCK が指定されている場合は、DBCC CHECKTABLE は共有テーブル ロックを取得して必要な一貫性を実現します。
     
 > [!NOTE]    
@@ -185,7 +185,7 @@ DBCC CHECKTABLE は、内部データベースのスナップショットを使�
 > DBCC CHECKTABLE の操作中、バイト順のユーザー定義型の列に保存されるバイトは、シリアル化されたユーザー定義型の計算値と同じである必要があります。 同じでない場合は、DBCC CHECKTABLE ルーチンで一貫性エラーが報告されます。    
     
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて    
-DBCC CHECKTABLE コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、およびコマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
+DBCC CHECKTABLE コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
     
 |状態|Description|    
 |-----------|-----------------|    

@@ -1,36 +1,36 @@
 ---
-title: "OPENXML での value() メソッドと nodes() メソッドの使用 | Microsoft Docs"
-ms.custom: 
+title: OPENXML での value() メソッドと nodes() メソッドの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OpenXML method [XML in SQL Server]
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 831efec8d02c212f5a037423c42148e0c93fd072
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bd55ee7aa1aa684ded13ab4b719b674fb0a5932b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML での value() メソッドと nodes() メソッドの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-**SELECT** 句で **xml** データ型に **value()** メソッドを複数回使用すると、抽出した値の行セットを生成できます。 **nodes()** メソッドは、追加のクエリに使用するために選択した各ノードの内部参照を生成します。 **nodes()** メソッドと **value()** メソッドを併用すると、行セットに複数の列があるとき、および行セット生成のためのパス式が複雑なときに、効率的に行セットを生成できます。  
+  **SELECT** 句で **xml** データ型に **value()** メソッドを複数回使用すると、抽出した値の行セットを生成できます。 **nodes()** メソッドは、追加のクエリに使用するために選択した各ノードの内部参照を生成します。 **nodes()** メソッドと **value()** メソッドを併用すると、行セットに複数の列があるとき、および行セット生成のためのパス式が複雑なときに、効率的に行セットを生成できます。  
   
  **nodes()** メソッドによって特別な **xml** データ型のインスタンスが生成され、それぞれのインスタンスのコンテキストは選択された個別のノードに設定されます。 このような XML インスタンスは、**query()** メソッド、**value()** メソッド、**nodes()** メソッド、および **exist()** メソッドをサポートし、**count(\*)** 集計で使用できます。 それ以外の使用方法ではエラーが発生します。  
   
@@ -46,7 +46,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  この例では、 `nodes('//author')` により各 XML インスタンスの `<author>` 要素への参照が格納された行セットが生成されます。 その参照について **value()** メソッドを評価することで、著者の姓および名を取得します。  
   
- SQL Server 2000 には、 **OpenXml()**を使用して XML インスタンスから行セットを生成する機能があります。 行セットにリレーショナル スキーマを指定し、その中の列に XML インスタンス内の値をどのようにマップするかを指定できます。  
+ SQL Server 2000 には、 **OpenXml()** を使用して XML インスタンスから行セットを生成する機能があります。 行セットにリレーショナル スキーマを指定し、その中の列に XML インスタンス内の値をどのようにマップするかを指定できます。  
   
 ## <a name="example-using-openxml-on-the-xml-data-type"></a>例 : xml データ型での OpenXml() の使用  
  上記の例のクエリは、 **OpenXml()** を使用して次のように書き換えることができます。 そのためには、各 XML インスタンスを読み取って XML 変数に代入し、OpenXML に渡すカーソルを作成します。  
@@ -77,7 +77,7 @@ CLOSE name_cursor
 DEALLOCATE name_cursor   
 ```  
   
- **OpenXml()** によりメモリ内表現が作成され、クエリ プロセッサの代わりに作業テーブルが使用されます。 この関数は XQuery エンジンではなく MSXML Version 3.0 の XPath Version 1.0 プロセッサを使用します。 同一の XML インスタンスであっても、 **OpenXml()**の複数の呼び出しで作業テーブルを共有することはありません。 このため、スケーラビリティが制限されます。 **OpenXml()** を使用すると、WITH 句を指定しない場合に XML データのエッジ テーブル形式にアクセスできます。 また、別の "オーバーフロー" 列内の残りの XML 値を使用できます。  
+ **OpenXml()** によりメモリ内表現が作成され、クエリ プロセッサの代わりに作業テーブルが使用されます。 この関数は XQuery エンジンではなく MSXML Version 3.0 の XPath Version 1.0 プロセッサを使用します。 同一の XML インスタンスであっても、 **OpenXml()** の複数の呼び出しで作業テーブルを共有することはありません。 このため、スケーラビリティが制限されます。 **OpenXml()** を使用すると、WITH 句を指定しない場合に XML データのエッジ テーブル形式にアクセスできます。 また、別の "オーバーフロー" 列内の残りの XML 値を使用できます。  
   
  **nodes()** 関数と **value()** 関数を組み合わせると、XML インデックスを効果的に使用できます。 つまり、 **OpenXml**よりもスケーラビリティに優れています。  
   

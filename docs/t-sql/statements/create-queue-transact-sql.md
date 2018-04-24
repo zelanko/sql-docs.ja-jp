@@ -1,16 +1,16 @@
 ---
 title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUEUE_TSQL
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 
+caps.latest.revision: 67
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 129670e6efbbfcf7373c9cb03112a4f404c8c46f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -165,11 +165,11 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|メッセージが属するメッセージ交換のハンドル。|  
 |message_sequence_number|**bigint**|メッセージ交換内でのメッセージのシーケンス番号。|  
 |service_name|**nvarchar(512)**|メッセージ交換の対象サービスの名前。|  
-|service_id|**int**|メッセージ交換の対象サービスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
+|service_id|**int**|メッセージ交換の対象サービスに関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
 |service_contract_name|**nvarchar (256)**|メッセージ交換が従うコントラクトの名前。|  
-|service_contract_id|**int**|メッセージ交換が従うコントラクトの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
+|service_contract_id|**int**|メッセージ交換が従うコントラクトに関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
 |message_type_name|**nvarchar (256)**|メッセージの種類を示すメッセージ型の名前。|  
-|message_type_id|**int**|メッセージの種類を示すメッセージ型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
+|message_type_id|**int**|メッセージの種類を示すメッセージ型に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト識別子。|  
 |validation|**nchar(2)**|メッセージに使用される検証。<br /><br /> E = 空<br /><br /> N = なし<br /><br /> X = XML|  
 |message_body|**varbinary(max)**|メッセージの内容。|  
 |message_id|**uniqueidentifier**|メッセージの一意識別子。|  
@@ -218,7 +218,7 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 複数のパラメーターでキューを作成する  
- 次の例では、`DEFAULT` ファイル グループにキューを作成します。 このキューは使用不可能な状態になります。 メッセージは、そのメッセージ交換が終わるまでキューに保持されます。 ALTER QUEUE を使用してキューを使用できるようにすると、キューによってストアド プロシージャ `2008R2.dbo.expense_procedure` が開始され、メッセージが処理されます。 ストアド プロシージャは、`CREATE QUEUE` ステートメントを実行したユーザーとして実行されます。 キューによって、ストアド プロシージャのインスタンスが `10` 個まで起動されます。  
+ 次の例では、`DEFAULT` ファイル グループにキューを作成します。 このキューは使用不可能な状態になります。 メッセージは、そのメッセージ交換が終わるまでキューに保持されます。 ALTER QUEUE を使用してキューを使用できるようにすると、キューによってストアド プロシージャ `2008R2.dbo.expense_procedure` が開始され、メッセージが処理されます。 このストアド プロシージャは、`CREATE QUEUE` ステートメントを実行したユーザーとして実行されます。 キューによって、ストアド プロシージャのインスタンスが `10` 個まで起動されます。  
   
 ```  
 CREATE QUEUE ExpenseQueue  

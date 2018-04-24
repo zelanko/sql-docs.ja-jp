@@ -1,16 +1,16 @@
 ---
-title: "STPointFromWKB (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: STPointFromWKB (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STPointFromWKB_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fe6278ce39724297be97eca1eefe03bcdce914e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 32f6ebe242f36826b6aab4017700926c007b893e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ STPointFromWKB ( 'WKB_point' , SRID )
  OGC の型: **Point**  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
+ このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`STPointFromWKB()` を使用して `geography` インスタンスを作成します。  
+ `STPointFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

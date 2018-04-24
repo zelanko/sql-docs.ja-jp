@@ -1,16 +1,16 @@
 ---
-title: "STContains (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: STContains (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STContains (geometry Data Type)
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - STContains (geometry Data Type)
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 369893addea2994e3f807d4191bebe2181decfd5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a7ae3154bb70f81aa87cdd41c0f16f0237bb5933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-ある **geometry** インスタンスに別の **geometry** インスタンスが完全に含まれる場合、1 を返します。 含まれない場合は 0 を返します。
+ある **geometry** インスタンスに別の **geometry** インスタンスが完全に含まれる場合、1 を返します。 そうでない場合は 0 を返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STContains()` は常に null を返します。  

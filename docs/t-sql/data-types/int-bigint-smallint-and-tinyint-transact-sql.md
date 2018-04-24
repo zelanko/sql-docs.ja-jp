@@ -1,16 +1,16 @@
 ---
-title: "int、bigint、smallint、および tinyint (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: int、bigint、smallint、および tinyint (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/8/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bigint_TSQL
@@ -30,16 +30,17 @@ helpviewer_keywords:
 - int data type
 - smallint data type
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2e99ccb97dc5c36f8b7870a042963d6302b3f1eb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 31200f2dbdb8d67176dcac450a5d638a1edcc25b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  +、-、\*、/、または % の算術演算子を使用して、**int**、**smallint**、**tinyint**、または **bigint** の定数値の暗黙的または明示的変換を実行して **float**、**real**、**decimal**、または **numeric** データ型にした場合、データ型と式の精度を計算するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が適用する規則は、クエリが自動パラメーター化されているかどうかに応じて異なります。  
 >   
->  したがって、クエリで同じ式を使用しても異なる結果が得られることがあります。 クエリが自動でないと、定数の値が最初に変換 **数値**, の有効桁数が十分な指定のデータ型に変換する前に、定数の値を保持するためにします。 定数の値 1 に変換するなど、 **numeric (1, 0)**, 、定数値 250 に変換し、 **numeric (3, 0)**です。  
+>  したがって、クエリで同じ式を使用しても異なる結果が得られることがあります。 クエリが自動でないと、定数の値が最初に変換 **数値**, の有効桁数が十分な指定のデータ型に変換する前に、定数の値を保持するためにします。 定数の値 1 に変換するなど、 **numeric (1, 0)**, 、定数値 250 に変換し、 **numeric (3, 0)** です。  
 >   
 >  クエリが自動パラメーター、定数の値が常に変換されます **numeric (10, 0)** から最終的なデータ型に変換します。 / 演算子を使用すると、同様のクエリで結果の型の有効桁数が異なるだけでなく、結果の値も異なる場合があります。 たとえば、`SELECT CAST (1.0 / 7 AS float)` という式が含まれる自動パラメーター化されたクエリの結果値と、自動パラメーター化されない同じクエリの結果値は異なります。これは、自動パラメーター化されたクエリの場合、**numeric (10, 0)** データ型に収まるように結果が切り捨てられるためです。  
   

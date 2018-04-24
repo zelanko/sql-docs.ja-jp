@@ -1,16 +1,16 @@
 ---
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetimeoffset_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time zones [SQL Server]
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9c14c09caf30e1daae5180b80fdb0518d3d76d0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +114,7 @@ ms.lasthandoff: 03/08/2018
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
-## <a name="converting-date-and-time-data"></a>日付および時刻データ型の変換
+## <a name="converting-date-and-time-data"></a>日付と時刻のデータ型の変換
 data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
   
 ### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset データ型の他の日付/時刻データ型への変換
@@ -170,7 +171,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-**smalldatetime** への変換の場合は、日付と時間がコピーされます。 分は秒の値に応じて切り上げられ、秒は 0 に設定されます。 次のコードでは、`datetimeoffset(3)` の値を `smalldatetime` の値に変換した結果を示します。  
+**smalldatetime** への変換の場合は、日付と時間がコピーされます。 分は秒の値に応じて切り上げられ、秒は 0 に設定されます。 次のコードは、`datetimeoffset(3)` 値を `smalldatetime` 値に変換した結果を示しています。  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(3) = '1912-10-25 12:24:32 +10:0';  
@@ -186,7 +187,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-**datetime2(n)** に変換する場合は、日付と時刻が **datetime2** の値にコピーされて、タイム ゾーンは切り捨てられます。 **datetime2(n)** 値の有効桁数が **datetimeoffset(n)** 値の有効桁数を超える場合、秒の小数部はその桁数に合わせて切り捨てられます。 次のコードでは、`datetimeoffset(4)` の値を `datetime2(3)` の値に変換した結果を示します。
+**datetime2(n)** に変換する場合は、日付と時刻が **datetime2** の値にコピーされて、タイム ゾーンは切り捨てられます。 **datetime2(n)** 値の有効桁数が **datetimeoffset(n)** 値の有効桁数を超える場合、秒の小数部はその桁数に合わせて切り捨てられます。 次のコードは、`datetimeoffset(4)` 値を `datetime2(3)` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  

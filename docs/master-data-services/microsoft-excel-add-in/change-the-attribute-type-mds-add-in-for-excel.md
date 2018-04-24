@@ -1,30 +1,33 @@
 ---
-title: "属性の型の変更 (Excel 用 MDS アドイン) | Microsoft Docs"
-ms.custom: 
+title: 属性の型の変更 (Excel 用 MDS アドイン) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ede0bc3fbc929686d8e1f083a1762cae6a621f5d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 7d8b92133677dc40f335951a30e8672aa038ee56
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、許可される文字のデータ型または文字数が間違っている場合に、管理者が属性の型を変更することができます。  
   
  属性の型を変更して制約リスト (ドメイン ベースの属性) を作成する場合は、「[ドメイン ベースの属性を作成する (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)」を参照してください。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 03/05/2018
   
 2.  変更する列の任意のセルをクリックします。  
   
-3.  **[モデルの構築]** グループの **[属性プロパティ]**をクリックします。  
+3.  **[モデルの構築]** グループの **[属性プロパティ]** をクリックします。  
   
 4.  **[属性プロパティ]** ダイアログ ボックスで、必要に応じて設定を更新します。  
   

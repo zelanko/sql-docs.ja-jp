@@ -1,16 +1,16 @@
 ---
 title: DBCC CHECKDB (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKDB_TSQL
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 
+caps.latest.revision: 144
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2d28362462825c1e39d0a7a41f6a57f810c107e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 545a7e012059a76e953b8cb34f275174f1b11d02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC CHECKDB
     
 ## <a name="arguments"></a>引数    
  *database_name* | *database_id* | 0  
- 整合性チェックを実行するデータベースの名前または ID です。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
+ 整合性チェックを実行するデータベースの名前または ID です。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
     
 NOINDEX  
  ユーザー テーブルの非クラスター化インデックスの集中チェックを実行しないように指定します。 これにより、全体の実行時間が短縮されます。 整合性チェックは、常にシステム テーブルのインデックスに対して実行されるため、NOINDEX はシステム テーブルに対しては無効です。  

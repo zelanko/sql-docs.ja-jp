@@ -1,33 +1,36 @@
 ---
-title: "ウィザードを使用したモデルの配置パッケージの展開 | Microsoft Docs"
-ms.custom: 
+title: ウィザードを使用したモデルの配置パッケージの展開 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-caps.latest.revision: 
+caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e5655bbf07cecd9e8d9f6a661db5f953c06ef22
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d661b7d42d08884d7908f0de36bc3efc1956998c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの展開
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   モデル オブジェクトのみが含まれているパッケージを配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のモデル配置ウィザードを使用します。 データを含むパッケージを配置する必要がある場合は、「 [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -44,21 +47,21 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>モデル オブジェクトのみのパッケージを配置するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[システム]** をポイントして **[配置]**をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[システム]** をポイントして **[配置]** をクリックします。  
   
-3.  **[モデル配置ウィザード]**で **[配置]**をクリックします。  
+3.  **[モデル配置ウィザード]** で **[配置]** をクリックします。  
   
-4.  **[参照]**をクリックします。  
+4.  **[参照]** をクリックします。  
   
-5.  配置パッケージ (.pkg ファイル) を見つけて **[開く]**をクリックします。  
+5.  配置パッケージ (.pkg ファイル) を見つけて **[開く]** をクリックします。  
   
 6.  **[次へ]** をクリックします。  
   
-7.  パッケージが読み込まれたら **[次へ]**をクリックします。  
+7.  パッケージが読み込まれたら **[次へ]** をクリックします。  
   
-8.  モデルが既に存在する場合は、 **[既存のモデルを更新する]**を選択することによって、そのモデルを更新できます。 新しいモデルを作成するには、 **[新しいモデルを作成する]** を選択し、 **[次へ]** をクリックした後に新しいモデルの名前を入力できます。  
+8.  モデルが既に存在する場合は、 **[既存のモデルを更新する]** を選択することによって、そのモデルを更新できます。 新しいモデルを作成するには、 **[新しいモデルを作成する]** を選択し、 **[次へ]** をクリックした後に新しいモデルの名前を入力できます。  
   
 9. **[完了]** をクリックして、ウィザードを終了します。  
   

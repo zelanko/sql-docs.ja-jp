@@ -1,32 +1,32 @@
 ---
-title: "MinDbCompatibilityLevel (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: MinDbCompatibilityLevel (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - MinDbCompatibilityLevel method (geometry)
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 368e8c16724fd11e5518db839966f4a598e51cba
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c3fcece0e8fa50bb0e70d8d6461b726cf5d69f27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
  CLR の戻り値の型: **int**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. 互換性レベル 110 で CircularString 型の互換性をテストする  
- 次の例では、`CircularString` インスタンスの、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性をテストします。  
+ 次の例では、`CircularString` インスタンスの、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性がテストされます。  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(3 4, 8 9, 5 6)'; 

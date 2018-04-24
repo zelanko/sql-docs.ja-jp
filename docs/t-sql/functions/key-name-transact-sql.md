@@ -1,16 +1,16 @@
 ---
 title: KEY_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - KEY_NAME_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db0ea5d34aae0bd3486bd6a143df187b9d5d7899
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2bb6f88276f7290a0eb978f28c63e536a3bfe6db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="arguments"></a>引数  
  *ciphertext*  
- 対称キーによって暗号化されたテキストを指定します。 *暗号化テキスト* は型です。 **varbinary (8000)**です。  
+ 対称キーによって暗号化されたテキストを指定します。 *暗号化テキスト* は型です。 **varbinary (8000)** です。  
   
  *key_guid*  
  対称キーの GUID を指定します。 *key_guid* は型です。 **uniqueidentifier**です。  

@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0003fa4b17f1246592bf7362dc11cf4b3bd6cab
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 00681146b4fb237686dad8d3580e079ff750b046
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインのアタッチ
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、データ品質ナレッジ ベースのドメインと複合ドメインを Windows Azure Marketplace の参照データ サービスにアタッチして、高品質参照データに対するナレッジを構築する方法について説明します。 各参照データ サービスには、スキーマ (データ列) が含まれています。 ドメインまたは複合ドメインを参照データ サービスにアタッチしたら、アタッチしたドメインまたはアタッチした複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップする必要があります。 複合ドメインを参照データ サービスにアタッチすると、参照データ サービスに 1 つだけドメインをアタッチして、複合ドメイン内の個々のドメインを参照データ サービス スキーマの適切な列にマップできます。  
   
 > [!WARNING]  
@@ -51,21 +54,21 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベース管理]**の **[新しいナレッジ ベース]**をクリックします。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベース管理]** の **[新しいナレッジ ベース]** をクリックします。  
   
-3.  **[新しいナレッジ ベース]** 画面で、新しいナレッジ ベースの名前を入力し、 **[ドメイン管理]** アクティビティをクリックして **[作成]**をクリックします。  
+3.  **[新しいナレッジ ベース]** 画面で、新しいナレッジ ベースの名前を入力し、 **[ドメイン管理]** アクティビティをクリックして **[作成]** をクリックします。  
   
 4.  **[ドメイン管理]** 画面で、 **[ドメインの作成]** アイコンをクリックしてドメインを作成します。 作成するドメインは、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つです。  
   
 5.  **[複合ドメインの作成]** アイコンをクリックして複合ドメインを作成します。 **[複合ドメインの作成]** ダイアログ ボックスで、 **[複合ドメイン名]** ボックスに「 **Address Verification** 」と入力し、手順 3. で作成したすべてのドメインを複合ドメインに含めます。 **[OK]** をクリックします。  
   
-6.  左側の **[ドメイン]** ペインで、 **[Address Verification]**をクリックして複合ドメインを選択し、右側の **[参照データ]** タブをクリックします。  
+6.  左側の **[ドメイン]** ペインで、 **[Address Verification]** をクリックして複合ドメインを選択し、右側の **[参照データ]** タブをクリックします。  
   
 7.  **[参照]** アイコンをクリックします。  
   
 8.  **[オンライン参照データ プロバイダーのカタログ]** ダイアログ ボックスで以下を行います。  
   
-    1.  **[DataMarket Data Quality Services]**で **[メリッサ データ – アドレスをチェック]** ボックスを選択します。  
+    1.  **[DataMarket Data Quality Services]** で **[メリッサ データ – アドレスをチェック]** ボックスを選択します。  
   
     2.  Melissa Data – Address Check 参照データ サービスの列を適切なドメイン (Address Line、City、State、および Zip) にマップします。 列をマップするには、 **[RDS スキーマ]** 列で参照データ サービス列を選択し、 **[ドメイン]** 列で適切なドメインを選択します。 テーブルに行を追加するには、 **[スキーマ エントリの追加]** アイコンをクリックします。  
   

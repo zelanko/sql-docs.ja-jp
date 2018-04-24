@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 684a191f93f8b83fe730dbfbd30f9874a1c0cfef
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: be9b1d3318872b1cce55b58ee6aaeaba66c6cee0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、参照データ プロバイダーから提供されるナレッジを使用してデータをクレンジングする方法について説明します。 クレンジング アクティビティを実行する手順は、参照データ プロバイダーから提供されるナレッジを使ってデータをクレンジングする場合も「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」で説明した手順とすべて同じですが、このトピックでは、[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での参照データ サービスを使ったデータ クレンジングに固有の情報を示します。  
   
  DQS の参照データ サービス機能を使用してデータをクレンジングする場合、DQS のクレンジング プロセスで、マップされたドメイン値がバッチ要求として参照データ サービス プロバイダーに送信されます。 参照データ サービスから、次の情報を含む応答が返されます。  
@@ -66,7 +69,7 @@ ms.lasthandoff: 03/22/2018
     > [!NOTE]  
     >  **Address Verification** 複合ドメイン内の 4 つのドメインをすべてマップしているため、データ クレンジングは、個々のドメイン レベルではなく、複合ドメイン レベルで実行されます。  
   
-3.  **[最適化]** ページで、 **[開始]**をクリックしてコンピューター支援型のクレンジング プロセスを実行します。 クレンジング プロセスが完了したら、 **[次へ]**をクリックします。  
+3.  **[最適化]** ページで、 **[開始]** をクリックしてコンピューター支援型のクレンジング プロセスを実行します。 クレンジング プロセスが完了したら、 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  **[最適化]** ページには、参照データ サービスにアタッチされているドメインに関する情報が次の 2 とおりの方法で表示されます。  

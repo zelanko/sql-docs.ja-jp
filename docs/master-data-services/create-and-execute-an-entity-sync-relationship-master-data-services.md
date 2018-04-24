@@ -1,30 +1,33 @@
 ---
-title: "エンティティの同期関係の作成と実行 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: エンティティの同期関係の作成と実行 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa835322bda0e98ac9059bce4612abed5c59a92
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b733f6d608cbf96433e17ca48a75a08aefcd8256
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の作成と実行 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   エンティティ同期は、エンティティのバージョン間での反復可能な一方向の同期です。 異なるモデルの間でエンティティ データを共有する方法を提供します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -64,11 +67,11 @@ ms.lasthandoff: 03/05/2018
   
  **エンティティの同期関係を作成するには**  
   
-1.  マスター データ マネージャーで、 **[システム管理]**をクリックします。  
+1.  マスター データ マネージャーで、 **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[エンティティの同期]**をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[エンティティの同期]** をクリックします。  
   
-3.  **[エンティティの同期のメンテナンス]** ページで **[追加]**をクリックします。 右側にパネルが表示されます。  
+3.  **[エンティティの同期のメンテナンス]** ページで **[追加]** をクリックします。 右側にパネルが表示されます。  
   
 4.  ソースの **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -82,19 +85,19 @@ ms.lasthandoff: 03/05/2018
   
 9. 既存のエンティティを同期する場合は、 **[既存のエンティティ]** を選択して、[エンティティ] ボックスの一覧からエンティティを選択します。新しいエンティティに同期する場合は、 **[新しいエンティティ]** を選択して、ターゲット エンティティの名前を入力します。  
   
-10. **[オンデマンドで同期]**を選択するか、 **[自動同期]** を選択して頻度を設定します。  
+10. **[オンデマンドで同期]** を選択するか、 **[自動同期]** を選択して頻度を設定します。  
   
-11. **[保存]**をクリックします。  
+11. **[保存]** をクリックします。  
   
  **エンティティの同期関係を実行するには**  
   
-1.  マスター データ マネージャーで、 **[システム管理]**をクリックします。  
+1.  マスター データ マネージャーで、 **[システム管理]** をクリックします。  
   
 2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[Entity Sync]**(エンティティの同期) をクリックします。  
   
 3.  **[エンティティの同期のメンテナンス]** ページで、グリッド内の同期関係を選択します。  
   
-4.  **[実行]**をクリックします。  
+4.  **[実行]** をクリックします。  
   
 ## <a name="sync-relationship-information"></a>同期関係の情報  
  作成された同期関係ごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  

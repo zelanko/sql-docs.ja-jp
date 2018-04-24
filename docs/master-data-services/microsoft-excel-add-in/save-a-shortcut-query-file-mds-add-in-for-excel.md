@@ -1,30 +1,33 @@
 ---
-title: "ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン) | Microsoft Docs"
-ms.custom: 
+title: ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfafab8167aa88862eadbb1c4c308acf5e1a2b0e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 1991eaec025dac386a05425495f0a1dd1ada7042
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、同じデータ セットに頻繁にアクセスする必要がある場合に、ショートカット クエリ ファイルを保存します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -34,9 +37,9 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-save-a-shortcut-query-file"></a>ショートカット クエリ ファイルを保存するには  
   
-1.  **[保存と送信]** グループで、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリとして保存]**をクリックします。  
+1.  **[保存と送信]** グループで、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリとして保存]** をクリックします。  
   
-2.  省略可。 クエリの名前を変更するには、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリの管理]**をクリックします。 クエリを選択し、 **[名前の変更]**をクリックします。  
+2.  省略可。 クエリの名前を変更するには、 **[クエリの保存]** の下の矢印をクリックし、 **[クエリの管理]** をクリックします。 クエリを選択し、 **[名前の変更]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
   

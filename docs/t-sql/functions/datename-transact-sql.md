@@ -1,16 +1,16 @@
 ---
 title: DATENAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATENAME_TSQL
@@ -27,23 +27,24 @@ helpviewer_keywords:
 - comparing dates times [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22dc10851e3185512527f82f593fdc2cdb2b765f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a8803278c567f01888b7b530885e82e4543c966a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 表す、指定された文字列を返します *datepart* の指定された *日付*
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。 [日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -67,7 +68,7 @@ DATENAME ( datepart , date )
 |**week**|**wk、ww**|  
 |**weekday**|**dw、w**|  
 |**hour**|**mm**|  
-|**minute**|**mi, n**|  
+|**minute**|**mi、n**|  
 |**second**|**ss, s**|  
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
@@ -76,7 +77,7 @@ DATENAME ( datepart , date )
 |**ISO_WEEK**|**ISOWK、ISOWW**|  
   
 *date*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式を指定します。 *日付* 、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。  
+**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *日付* 、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。  
 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 については 2 桁の年を参照してください [構成 two digit year cutoff サーバー構成オプション](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)です。
   
 ## <a name="return-type"></a>戻り値の型  
@@ -146,7 +147,7 @@ DATENAME は、選択リストのほか、WHERE 句、HAVING 句、GROUP BY 句�
 |**TZoffset、tz**|310|  
 |**ISO_WEEK、ISOWK、ISOWW**|44|  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 」および「 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 次の例は、指定された日付の日付部分を返します。
   

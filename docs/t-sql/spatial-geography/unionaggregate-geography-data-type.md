@@ -1,16 +1,16 @@
 ---
-title: "UnionAggregate (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: UnionAggregate (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UnionAggregate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - UnionAggregate method (geography)
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63299cfd3847f236f5908085b824b7b271dafc7a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3a0803f35d7d7576d3721ef9d3ae169c39f97bb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,12 +51,12 @@ UnionAggregate ( geography_operand )
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
 ## <a name="remarks"></a>Remarks  
- 入力の SRID が異なる場合、**null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
+ 入力の SRID が異なる場合、メソッドでは **null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
->  入力されたすべての値が **null** の場合、**null** が返されます。  
+>  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
  次の例は、都市内の **geography** ロケーション ポイントのセットで `UnionAggregate` を実行します。  

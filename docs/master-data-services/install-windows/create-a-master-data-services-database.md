@@ -1,30 +1,33 @@
 ---
-title: "マスター データ サービス データベースの作成 | Microsoft Docs"
-ms.custom: 
+title: マスター データ サービス データベースの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b580be2ada4c13541a9cad6eb037c62627337b1
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d0c2a175b3d3288f9673044b88e7e62ac1a94f3a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションと [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスをサポートする新しいデータベースが必要な場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -35,9 +38,9 @@ ms.lasthandoff: 03/05/2018
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
-2.  左ペインで **[データベース構成]**をクリックします。  
+2.  左ペインで **[データベース構成]** をクリックします。  
   
-3.  **[データベース構成]** ページで **[データベースの作成]**をクリックします。  
+3.  **[データベース構成]** ページで **[データベースの作成]** をクリックします。  
   
 4.  データベースを作成および構成する**データベースの作成** ウィザードを完了します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[データベースの作成ウィザード &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   

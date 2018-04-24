@@ -2,7 +2,7 @@
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 39a03b6b5f087305db6a5e795a532392bdd668a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 *Key_ID*  
 データベース内の非対称キーの Key_ID。 キー名しかわからない場合、Key_ID を調べるには、ASYMKEY_ID を使用します。 *Key_ID* は **int** データ型です。
   
-**'**algorithm_desc**'**  
+**'** algorithm_desc **'**  
 出力が非対称キーのアルゴリズムの説明を返すように指定します。 EKM モジュールから作成された非対称キーに対してのみ使用できます。
   
-**'**string_sid**'**  
+**'** string_sid **'**  
 出力で SID of the 非対称キーの SID を **nvarchar()** 形式で返すように指定します。
   
-**'**sid**'**  
+**'** sid **'**  
 出力が非対称キーの SID をバイナリ形式で返すように指定します。
   
 ## <a name="return-types"></a>戻り値の型  

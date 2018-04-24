@@ -1,30 +1,33 @@
 ---
-title: "モデルの配置パッケージの編集 | Microsoft Docs"
-ms.custom: 
+title: モデルの配置パッケージの編集 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2bdfa27750d9eaa882c70a4fcf5b13030375268
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: dfc1f6630feb4e8345ddb92291b178a19d4e47a7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="edit-a-model-deployment-package"></a>モデルの配置パッケージの編集
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、モデル全体ではなく、モデルの選択した部分を MDS に配置する方法について説明します。 これを行うには、モデル パッケージ エディターを使用して MDS モデル パッケージを編集します。  
   
  モデル パッケージ エディター ウィザードを使用すると、MDS パッケージに含めるモデル内の特定のエンティティ、派生階層、サブスクリプション ビュー、およびビジネス ルールを選択して、後で配置することができます。 配置しないモデルの部分は除外できます。 エンティティを選択すると、そのエンティティの依存オブジェクトもすべて自動的に選択されます。  
@@ -44,15 +47,15 @@ ms.lasthandoff: 03/05/2018
   
 2.  ModelPackageEditor.exe を実行します。  
   
-3.  モデル パッケージ エディター ウィザードで、 **[参照]**をクリックしてパッケージが格納されているフォルダーに移動し、パッケージを選択して **[開く]**をクリックします。 **[次へ]** をクリックします。  
+3.  モデル パッケージ エディター ウィザードで、 **[参照]** をクリックしてパッケージが格納されているフォルダーに移動し、パッケージを選択して **[開く]** をクリックします。 **[次へ]** をクリックします。  
   
 4.  配置するエンティティ、派生階層、サブスクリプション ビュー、またはビジネス ルールを選択します。 配置しない項目は選択を解除します。 **[次へ]** をクリックします。  
   
 5.  配置する選択項目の一覧を確認します。 変更するには、 **[戻る]** をクリックして手順 4 を繰り返します。  
   
-6.  **[参照]**をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[保存]**をクリックします。  
+6.  **[参照]** をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[保存]** をクリックします。  
   
-7.  **[完了]**をクリックします。  
+7.  **[完了]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
   

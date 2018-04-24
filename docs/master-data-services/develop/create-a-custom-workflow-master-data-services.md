@@ -1,31 +1,34 @@
 ---
-title: "カスタム ワークフローの作成 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: カスタム ワークフローの作成 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: e9068bb0564b0b4f0635175efb1a1805bcd2f4e5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>カスタム ワークフローの作成 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します (たとえば、指定した条件に基づいてデータを自動的に更新および検証し、電子メール通知を送信するなど)。 組み込みのワークフロー アクションよりも複雑な処理が必要な場合は、カスタム ワークフローを使用します。 カスタム ワークフローは、ユーザーが作成する .NET アセンブリです。 作成したワークフロー アセンブリが呼び出された際には、記述したコードを通じて、状況に応じた任意のアクションを実行できます。 たとえば、複数階層の承認や複雑な意思決定ツリーなど、複雑なイベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、データを分析し、データの承認のための送信先を決定するカスタム ワークフローを開始できます。  
   
 ## <a name="how-custom-workflows-are-processed"></a>カスタム ワークフローの処理方法  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-caps.latest.revision: ''
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d0052007846b4edf4a399fa831011982c344dd5
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: fdb613954e8e2aefcb4c806c3253a2a79b75da8d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインストールを完了した後で、DQSInstaller.exe ファイルを実行する必要があります。 このトピックでは、 **[スタート]** 画面、 **[スタート]** メニュー、Windows エクスプローラー、またはコマンド プロンプトから DQSInstaller.exe を実行する方法について説明します。DQSInstaller.exe ファイルの実行には、これらの方法のいずれも使用できます。  
   
 ##  <a name="Prerequisites"></a> 前提条件  
@@ -41,7 +44,7 @@ ms.lasthandoff: 03/22/2018
   
     -   **[スタート] 画面**: **[スタート]** 画面で、 **[Data Quality Server Installer]**  
   
-    -   **[スタート] メニュー**: タスク バーの **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**をポイントして、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]をクリックします。 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]で、 **[Data Quality Services]**をクリックし、 **[Data Quality Server Installer]**をクリックします。  
+    -   **[スタート] メニュー**: タスク バーの **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]をクリックします。 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]で、 **[Data Quality Services]** をクリックし、 **[Data Quality Server Installer]** をクリックします。  
   
     -   **Windows エクスプローラー**: DQSInstaller.exe ファイルを探します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
   

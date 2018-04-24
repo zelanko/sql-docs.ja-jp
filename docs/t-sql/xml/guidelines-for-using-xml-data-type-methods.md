@@ -1,16 +1,16 @@
 ---
-title: "xml データ型メソッドの使用に関するガイドライン | Microsoft Docs"
-ms.custom: 
+title: xml データ型メソッドの使用に関するガイドライン | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79f10b22ba88d6dd860c608c9468e20a27615650
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc05e3e72e1b3f542fd2b49fa9703c1f3be0196e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml データ型メソッドの使用に関するガイドライン
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ SELECT nref.value('@genre', 'varchar(max)') LastName
 FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)  
 ```  
   
- 型指定された XML の型の確認には XML スキーマが使用されます。 XML スキーマでノードがシングルトンとして指定されている場合、その情報がコンパイラで使用され、エラーは発生しません。 その指定がない場合は、単一のノードを選択する序数が必要です。 特に、/book//title のように descendant-or-self 軸 (//) を使用すると、XML スキーマでシングルトンが指定されていても \<title> 要素のシングルトンの基数の推定が厳密ではなくなります。 したがって、この部分は「(/book//title)[1]」と書き換えます。  
+ 型指定された XML の型の確認には XML スキーマが使用されます。 XML スキーマでノードがシングルトンとして指定されている場合、その情報がコンパイラで使用され、エラーは発生しません。 その指定がない場合は、単一のノードを選択する序数が必要です。 特に、/book//title のように descendant-or-self 軸 (//) を使用すると、XML スキーマでシングルトンが指定されていても \<title&gt; 要素のシングルトンのカーディナリティの推定が厳密ではなくなります。 したがって、この部分は「(/book//title)[1]」と書き換えます。  
   
  型の確認のときは、//first-name[1] と (//first-name)[1] の違いを常に認識することが重要です。 前者は兄弟の中で最も左の \<first-name> ノードのみから構成される \<first-name> ノードのシーケンスを返します。 後者は XML インスタンスのドキュメント順で最初のシングルトンの \<first-name> ノードを返します。  
   

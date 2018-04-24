@@ -2,7 +2,7 @@
 title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|functions
@@ -26,11 +26,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d946c9dc4d13e155bb7d2ccf8a86db62ae33c1c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +60,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 ## <a name="return-types"></a>戻り値の型  
  次のデータ型を返します。  
   
-|式の結果|戻り値の型|  
+|式の結果|の戻り値の型 : |  
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
@@ -69,7 +70,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money** および **smallmoney** カテゴリ|**money**|  
 |**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  ROUND は常に値を返します。 *length* が負の値で、整数部の桁数より大きい場合、ROUND は 0 を返します。  
   
 |例|結果|  

@@ -1,16 +1,16 @@
 ---
-title: "テーブル値コンストラクター (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: テーブル値コンストラクター (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - row constructor [SQL Server]
 - table value constructor [SQL Server]
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 87fc6196f740c0bf3cfd9fa1f94f73872942fa1a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f18eab77d5dde8a8c5f3a074e037c43f76708abb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="table-value-constructor-transact-sql"></a>テーブル値コンストラクター (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  定数、変数、または式を指定します。 式には EXECUTE ステートメントを含めることができません。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- テーブル値コンス トラクターは、2 つの方法のいずれかで使用できます挿入の値の一覧内で直接しています。 値ステートメント、または、派生テーブルとして任意の場所を派生テーブルは許可します。 行数が最大値を超えると、エラー 10738 が返されます。 許可される行数を超えて挿入するには、次のいずれかの方法を使用します。  
+ テーブル値コンス トラクターは、2 つの方法のいずれかで使用できます挿入の値の一覧内で直接しています.。 値ステートメント、または、派生テーブルとして任意の場所を派生テーブルは許可します。 行数が最大値を超えると、エラー 10738 が返されます。 許可される行数を超えて挿入するには、次のいずれかの方法を使用します。  
   
 -   複数の INSERT ステートメントを作成する  
   
@@ -163,7 +163,7 @@ ON a.Name = b.Name;
 ```  
   
 ### <a name="d-specifying-multiple-values-as-a-derived-source-table-in-a-merge-statement"></a>D. MERGE ステートメントで複数の行を派生ソース テーブルとして指定する  
- 次の例では、MERGE を使用し、行を更新または挿入することで `SalesReason` テーブルを変更します。 ソース テーブルの `NewName` の値が対象テーブル (`Name`) の `SalesReason` 列の値と一致すると、対象テーブルの `ReasonType` 列が更新されます。 `NewName` の値が一致しない場合は、ソース行が対象テーブルに挿入されます。 ソース テーブルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用して複数の行を指定する派生テーブルです。  
+ 次の例では、MERGE を使用し、行を更新または挿入することで `SalesReason` テーブルを変更します。 ソース テーブルの `NewName` の値が対象テーブル (`SalesReason`) の `Name` 列の値と一致すると、対象テーブルの `ReasonType` 列が更新されます。 `NewName` の値が一致しない場合は、ソース行が対象テーブルに挿入されます。 ソース テーブルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクターを使用して複数の行を指定する派生テーブルです。  
   
 ```  
 USE AdventureWorks2012;  

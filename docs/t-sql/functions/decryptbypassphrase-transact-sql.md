@@ -1,16 +1,16 @@
 ---
 title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECRYPTBYPASSPHRASE
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc2880109f8b58cc1712b58f68883cab1cace348
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8e5db318e700d42f92a58bfe1e4016f4ee4bc1ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  暗号文を含む **varbinary** 型の変数を指定します。 最大サイズは 8,000 バイトです。  
   
  *add_authenticator*  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 認証子が使用されている場合は 1 です。 **int**です。  
+ 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 認証子が使用されている場合は 1 です。 **int**.  
   
  @add_authenticator  
- 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 認証子が使用されている場合は 1 です。 **int**です。  
+ 認証子がプレーン テキストと共に暗号化されているかどうかを示します。 認証子が使用されている場合は 1 です。 **int**.  
   
  *authenticator*  
- 認証子のデータを指定します。 **sysname** です。  
+ 認証子のデータを指定します。 **sysname**.  
   
  @authenticator  
  認証子の派生元のデータを含む変数を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** (最大サイズは 8,000 バイト)。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  この関数を実行するには、権限は必要ありません。  

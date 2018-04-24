@@ -1,8 +1,8 @@
 ---
 title: SQL Server の拡張イベントのターゲット | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ CREATE EVENT SESSION [event_counter_1]
 
 - 指定したファイル名をプレフィックスとして使用し、その後に日時に基づく長い整数と、.xel 拡張子が付加されます。
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > Microsoft Azure SQL Database では、**event_file** ターゲットはサポートされていますが、Azure Storage で出力に BLOB を使用している場合にのみサポートされます。 SQL Database は、イベント出力をローカル ハード ドライブ上のファイルに格納できません。
+>
 > 特に SQL Database (および SQL Database マネージ インスタンス) の **event_file** のコード例については、「[SQL Database の拡張イベントのためのイベント ファイル ターゲット コード](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)」を参照してください。
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION と **event_file** ターゲット

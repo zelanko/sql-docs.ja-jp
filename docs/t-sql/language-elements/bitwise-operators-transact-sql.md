@@ -1,16 +1,16 @@
 ---
-title: "ビットごとの演算子 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ビットごとの演算子 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b0706080c0a878987fab8d2cc5f0c1677f43309b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc8935f0dc2d72a4cdee82e339169c0699702e8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bitwise-operators-transact-sql"></a>ビットごとの演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,9 +42,9 @@ ms.lasthandoff: 01/25/2018
 
 |演算子 (operator)|ビットごとの数値演算|
 |---- |---- |
-|AND <br> 任意の位置にあるビットが両方とも 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|OR <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
-|NOT  <br> すべてのビット位置にあるビット値を反転させます。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
+|[AND] <br> 任意の位置にあるビットが両方とも 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
+|スイッチまたは <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|[NOT]  <br> すべてのビット位置にあるビット値を反転させます。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 次のトピックを参照してください。   
 * [& &#40;ビット演算 AND&#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  

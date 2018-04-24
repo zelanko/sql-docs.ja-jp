@@ -1,16 +1,16 @@
 ---
-title: "STGeomFromWKB (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: STGeomFromWKB (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeomFromWKB (geometry Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB (geometry Data Type)
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab0d91c444abe3121675ea79c2793c766165d0d6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7693dac38047513f676a45210c9b5c129417ca9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
  返される **geometry** インスタンスの WKB 表現です。 *WKB_geometry* は、**varbinary (max)** 式です。  
   
  *SRID*  
- 返される **geometry** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
+ 返される **geography** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STGeomFromText()` によって返された **geometry** インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
   
- このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
+ このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
  `STGeomFromWKB()` を使用して **geometry** インスタンスを作成する例を次に示します。  

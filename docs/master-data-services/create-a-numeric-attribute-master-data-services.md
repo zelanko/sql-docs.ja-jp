@@ -1,33 +1,36 @@
 ---
-title: "数値属性を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 数値属性を作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 431f078425fc5881c3773ebf8cea3400640f353f
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4cf157a4194a84b20e42298b8da26b2dd6660775
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>数値属性を作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ユーザーにより属性値として数値が入力される場合は、数値属性を作成します。  
   
 > [!NOTE]  
@@ -67,15 +70,15 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-a-numeric-attribute"></a>数値属性を作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
   
 3.  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
   
-4.  **[属性]**をクリックします。  
+4.  **[属性]** をクリックします。  
   
-5.  **[属性の管理]** ページで、次のいずれかの操作を行い、 **[追加]**をクリックします。  
+5.  **[属性の管理]** ページで、次のいずれかの操作を行い、 **[追加]** をクリックします。  
   
     -   属性の対象がリーフ メンバーの場合、 **[メンバーの種類]** ボックスの一覧から **[リーフ]** を選択します。  
   
@@ -89,9 +92,9 @@ ms.lasthandoff: 03/05/2018
   
 8.  **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
-9. **[属性の種類]** リストから、 **[自由形式]**を選択します。  
+9. **[属性の種類]** リストから、 **[自由形式]** を選択します。  
   
-10. **[データ型]** ボックスの一覧から **[Number]**を選択します。  
+10. **[データ型]** ボックスの一覧から **[Number]** を選択します。  
   
 11. **[10 進]** ボックスに、小数点の後に入力できる数字の桁数を入力します。  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 03/05/2018
   
 13. 必要に応じて、 **[変更の追跡を有効化]** を選択して、属性のグループに対する変更を追跡します。 詳細については、「[変更の追跡グループに属性を追加する方法 (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)」を参照してください。  
   
-14. **[保存]**をクリックします。  
+14. **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   

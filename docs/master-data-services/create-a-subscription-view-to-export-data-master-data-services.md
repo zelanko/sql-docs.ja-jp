@@ -1,33 +1,36 @@
 ---
-title: "サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eda098f740c6ffa5bf7bbb4025b6f7d181af608d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 6b96bbab7818dcd7b9b1451907d9f4ca34cc3114
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   サブスクリプション ビューを作成して、マスター データ サービスのデータをサブスクライブ システムにエクスポートします。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース内のデータのビューを作成します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -39,9 +42,9 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>サブスクリプション ビューを作成および編集するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[統合管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[統合管理]** をクリックします。  
   
-2.  メニュー バーの **[ビューの作成]**をクリックします。  
+2.  メニュー バーの **[ビューの作成]** をクリックします。  
   
 3.  **[サブスクリプション ビュー]** ページで、ビューを作成するには **[追加]** 、ビューを編集するには **[編集]** をクリックします。 右側にパネルが表示されます。  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 03/05/2018
   
 6.  **[Include soft-deleted members]**(論理削除済みメンバーを含める) を選択して、論理削除済みメンバーをビューに含めます。  
   
-7.  **[バージョンのオプション]** で **[バージョン]** または **[バージョン フラグ]**のいずれかを選択し、対応する一覧から選択します。  
+7.  **[バージョンのオプション]** で **[バージョン]** または **[バージョン フラグ]** のいずれかを選択し、対応する一覧から選択します。  
   
     > [!TIP]  
     >  サブスクリプション ビューはバージョン フラグに基づいて作成します。 バージョンをロックするとき、サブスクリプション ビューを更新せずに未処理のバージョンにフラグを割り当て直すことができます。  
@@ -64,7 +67,7 @@ ms.lasthandoff: 03/05/2018
   
 10. **[形式]** ボックスの一覧から **[明示的レベル]** または **[派生レベル]** を選択した場合、ビューに含める階層内のレベル数を入力します。  
   
-11. **[保存]**をクリックします。  
+11. **[保存]** をクリックします。  
   
 ## <a name="view-information"></a>ビュー情報  
  作成されたビューごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  

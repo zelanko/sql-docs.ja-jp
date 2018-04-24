@@ -1,16 +1,16 @@
 ---
-title: "STAsBinary (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: STAsBinary (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STAsBinary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary method
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81277be0a4b5949df414f9b33996d646ecf3b30e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a6899931c7430e02f1370ab4b1a471d9a2da738b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR の戻り値の型: **SqlBytes**  
+ CLR 戻り値の型: **SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  

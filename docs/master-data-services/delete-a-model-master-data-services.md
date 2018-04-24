@@ -1,33 +1,36 @@
 ---
-title: "モデルを削除する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: モデルを削除する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a15f86baf249faca4a50cc5d2107c2e74832bf37
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f1ed7d476fb2fbb02502c50f4bb689a9e235b263
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-a-model-master-data-services"></a>モデルを削除する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   モデルを削除して、モデルおよびそのすべてのデータを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]から削除します。  
   
 > [!NOTE]  
@@ -42,17 +45,17 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-delete-a-model"></a>モデルを削除するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]**をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
   
 3.  **[モデルの管理]** ページで、グリッドから削除するモデルの行を選択します。  
   
-4.  **[削除]**をクリックします。  
+4.  **[削除]** をクリックします。  
   
-5.  確認のダイアログ ボックスで **[OK]**をクリックします。  
+5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-6.  追加の確認のダイアログ ボックスで **[OK]**をクリックします。  
+6.  追加の確認のダイアログ ボックスで **[OK]** をクリックします。  
   
  グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![更新中](../master-data-services/media/mds-model-status-updating.png "更新中") 画像が表示されます。 モデルの作成中または編集中にエラーが発生すると、![エラー](../master-data-services/media/mds-model-status-error.png "エラー") 画像が表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
   

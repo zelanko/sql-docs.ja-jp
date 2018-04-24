@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c50acf0eb9546a56063ed0e6732f651432d80bbd
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8d2b62c96f00c9d95ae79c9b213431061e56dbce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>ドメインへのクレンジング プロジェクトの値のインポート
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、データ品質プロジェクトのクレンジング プロセス中、または Integration Services パッケージの DQS クレンジング コンポーネントで収集されるデータ品質ナレッジをドメインにインポートできます。 これにより、信頼できるナレッジを保持し、ナレッジ ベースを継続的に改善することができます。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -50,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
 3.  既存のドメインに値を追加する場合は、ドメイン リストでドメインを選択します。  
   
-4.  **[ドメイン値]** タブをクリックし、アイコン バーの **[値をインポートします]** アイコンをクリックし、 **[プロジェクトの値のインポート]**をクリックします。 **[プロジェクトの値のインポート]** ダイアログ ボックスには、そのドメインを使用してクレンジングされたデータ品質プロジェクトおよび Integration Services パッケージのリストが表示されます。  
+4.  **[ドメイン値]** タブをクリックし、アイコン バーの **[値をインポートします]** アイコンをクリックし、 **[プロジェクトの値のインポート]** をクリックします。 **[プロジェクトの値のインポート]** ダイアログ ボックスには、そのドメインを使用してクレンジングされたデータ品質プロジェクトおよび Integration Services パッケージのリストが表示されます。  
   
     > [!NOTE]  
     >  ドメインまたはそのリンク ドメインを使用して作成されたプロジェクトがない場合、またはプロジェクトが完了しなかった場合、 **[プロジェクトの値のインポート]** オプションは使用できません。  
@@ -73,7 +76,7 @@ ms.lasthandoff: 03/22/2018
   
 9. 特定の文字列を検索するには、 **[検索]** ボックスに文字列を入力します。 検索条件を満たす値を 1 つずつ調べるには、上矢印または下矢印をクリックします。 これらのは黄色で強調表示されます。  
   
-10. **[完了]**をクリックします。  
+10. **[完了]** をクリックします。  
   
     > [!NOTE]  
     >  **[ドメイン値]** タブの値を操作する方法については、「 [Change Domain Values](../data-quality-services/change-domain-values.md)」を参照してください。  
@@ -86,7 +89,7 @@ ms.lasthandoff: 03/22/2018
   
 -   文字列値のみがドメインにインポートされます。  
   
--   **[クレンジング]**アクティビティの **[結果の管理と表示]**ページにある **[適切]** タブ、 **[修正済み]** タブ、および **[新規作成]** タブの値のみがインポートされます。 **[プロジェクトの値のインポート]** ダイアログ ボックスの **[新しいタブから値を追加します。]** チェック ボックスがオンになっている場合にのみ、 **[新規作成]** タブの値がインポートされます。  
+-   **[クレンジング]** アクティビティの **[結果の管理と表示]** ページにある **[適切]** タブ、 **[修正済み]** タブ、および **[新規作成]** タブの値のみがインポートされます。 **[プロジェクトの値のインポート]** ダイアログ ボックスの **[新しいタブから値を追加します。]** チェック ボックスがオンになっている場合にのみ、 **[新規作成]** タブの値がインポートされます。  
   
 -   値は、正しい値か、修正値を持つエラー値としてインポートされます。 エラー値は、修正値を持つもののみがインポートされます。  
   

@@ -1,16 +1,16 @@
 ---
 title: OPENJSON (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENJSON
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 32
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f79a0ffa4db3d2779eb18e28570cefb643def1cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ FROM OPENJSON(@json)
   
 **結果**  
   
-|キー|値|型|  
+|キー (key)|value|型|  
 |---------|-----------|----------|  
-|StringValue|John|1|  
+|StringValue|John|@shouldalert|  
 |IntValue|45|2|  
 |TrueValue|true|3|  
-|FalseValue|false|3|  
+|FalseValue|オプション|3|  
 |NullValue|NULL|0|  
 |ArrayValue|["a"、"r"、"r"、"「,」y"]|4|  
 |ObjectValue|{"obj":"ect"}|5|  
@@ -126,13 +126,13 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **結果**  
   
-|キー|ReplTest1|  
+|Key|ReplTest1|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en-UK|  
+|@shouldalert|en 英国|  
 |2|de AT|  
 |3|es AR|  
-|4|sr-Cyrl|  
+|4|sr という|  
  
 **OPENJSON** が JSON 配列を解析するとき、この関数は、JSON テキスト内の要素のインデックスをキーとして返します。
 
@@ -211,10 +211,10 @@ WITH (
   
 **結果**  
   
-|Number|date|Customer|Quantity|Order|  
+|数値|date|Customer|Quantity|書|  
 |------------|----------|--------------|--------------|-----------|  
-|SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
-|SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
+|SO43659|2011-05-により、|AW29825|@shouldalert|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
+|として SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
 
 ## <a name="return-value"></a>戻り値  
@@ -228,7 +228,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
         |型の列の値|JSON データ型|  
         |------------------------------|--------------------|  
         |0|null|  
-        |1|string|  
+        |@shouldalert|string|  
         |2|ssNoversion|  
         |3|true/false|  
         |4|array|  
@@ -311,7 +311,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```  
   
 > [!TIP] 
-> 通常使用順に展開するときに、JSON 配列は、個々 のフィールドに格納されているし、その親の行との結合に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CROSS APPLY 演算子。 詳細については、CROSS APPLY、を参照してください。 [FROM &#40;です。TRANSACT-SQL と #41;](../../t-sql/queries/from-transact-sql.md).  
+> 通常使用順に展開するときに、JSON 配列は、個々 のフィールドに格納されているし、その親の行との結合に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CROSS APPLY 演算子。 詳細については、CROSS APPLY、を参照してください。 [FROM & #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/from-transact-sql.md).  
   
 返される行の明示的に定義されたスキーマを指定した `OPENJSON` を使用することで、同じクエリを書き直すことができます。  
   

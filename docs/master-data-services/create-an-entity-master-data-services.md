@@ -1,33 +1,36 @@
 ---
-title: "エンティティを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: エンティティを作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6f1343fd3f55b58e7dca7b6d8381d8f7a0add9a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a4565839b72dfcc372abf3e8461740d3fc25d0f7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-an-entity-master-data-services"></a>エンティティを作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを作成して、メンバーおよびその属性を含めます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -41,11 +44,11 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-an-entity"></a>エンティティを作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[Manage Model]** (モデルの管理) ページで、エンティティを作成するモデルをグリッドから選択し、 **[エンティティ]**をクリックします。  
+2.  **[Manage Model]** (モデルの管理) ページで、エンティティを作成するモデルをグリッドから選択し、 **[エンティティ]** をクリックします。  
   
-3.  **[Manage Entity]** (管理エンティティ) ページで **[追加]**をクリックします。  
+3.  **[Manage Entity]** (管理エンティティ) ページで **[追加]** をクリックします。  
   
 4.  **[名前]** ボックスに、エンティティの名前を入力します。  
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 03/05/2018
   
 9. 省略可。 **[データ圧縮を有効にする]** チェック ボックスをオンします。 既定では、行の圧縮は有効になっています。 詳細については、「 [Data Compression](../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-10. **[保存]**をクリックします。  
+10. **[保存]** をクリックします。  
   
 ## <a name="grid-columns"></a>グリッド列  
  作成されたエンティティごとに、13 列の行がグリッドに追加されます。 その列を次に示します。  

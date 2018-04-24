@@ -1,16 +1,16 @@
 ---
 title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHOWCONTIG_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebc23e00ed03e4e4cca50b4a1655c373816d563e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ DBCC SHOWCONTIG は、テーブルに著しい断片化が生じているかど�
 -   インデックスを再構築します。  
      REBUILD を設定した ALTER INDEX を使用して、インデックスを再構築します。 詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
-結果セットの統計である**ページごとの平均空きバイト数**と**平均ページ密度 (全体)**は、インデックス ページの充填率を示します。 無作為の挿入が多くないインデックスについては、**ページごとの空きバイト数**を低くし、**平均ページ密度 (全体)** を高くしてください。 インデックスを削除し、FILLFACTOR オプションを指定して再作成を行うと、これらの統計が改善されます。 また、REORGANIZE と併用する ALTER INDEX コマンドは、インデックスの FILLFACTOR を考慮しながらインデックスを最適化するので、これらの統計が改善されます。
+無作為の挿入が多くないインデックスについては、**ページごとの平均空きバイト数**と**平均ページ密度 (全体)** は、インデックス ページの充填率を示します。 無作為の挿入が多くないインデックスについては、**ページごとの空きバイト数**を低くし、**平均ページ密度 (全体)** を高くしてください。 インデックスを削除し、FILLFACTOR オプションを指定して再作成を行うと、これらの統計が改善されます。 また、REORGANIZE と併用する ALTER INDEX コマンドは、インデックスの FILLFACTOR を考慮しながらインデックスを最適化するので、これらの統計が改善されます。
   
 > [!NOTE]  
 >  ランダム挿入が多く、ページの密度が高いインデックスは、ページ分割の数が増えます。 断片化が大きくなります。  

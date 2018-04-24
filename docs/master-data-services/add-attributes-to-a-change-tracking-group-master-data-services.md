@@ -1,34 +1,37 @@
 ---
-title: "変更の追跡グループに属性を追加する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 変更の追跡グループに属性を追加する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78aac171188b056145eb0e6eaa08a1e3153a135
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 473a77831274216a69948fef964f3199f6be5dfc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>変更の追跡グループに属性を追加する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で属性の値に対する変更を追跡する場合、変更の追跡グループに属性を追加します。  
   
 > [!NOTE]  
@@ -45,13 +48,13 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>属性を変更の追跡グループに追加するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
   
 3.  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
   
-4.  **[属性]**をクリックします。  
+4.  **[属性]** をクリックします。  
   
 5.  **[属性の管理]** ページで、次のいずれかの操作を行います。  
   
@@ -61,15 +64,15 @@ ms.lasthandoff: 03/05/2018
   
     -   属性の対象がコレクションの場合、 **[メンバーの種類]** ボックスの一覧から **[コレクション]** を選択します。  
   
-6.  編集する属性の行を選択し、 **[編集]**をクリックします。  
+6.  編集する属性の行を選択し、 **[編集]** をクリックします。  
   
 7.  **[変更の追跡の有効化]** チェック ボックスをオンにします。  
   
 8.  **[変更の追跡グループ]** ボックスにグループの番号を入力します。  
   
-9. **[属性の保存]**をクリックします。  
+9. **[属性の保存]** をクリックします。  
   
-     編集済みの属性では、グリッドの **[Enable Change Tracking Group (変更の追跡グループを有効にする)]** 列が **[はい] (グループ: 入力したグループ番号)**に変更されます。  
+     編集済みの属性では、グリッドの **[Enable Change Tracking Group (変更の追跡グループを有効にする)]** 列が **[はい] (グループ: 入力したグループ番号)** に変更されます。  
   
 10. グループに含めるすべての属性に対して、この手順を繰り返します。 グループ内の各属性に対して同じ変更の追跡グループの番号を使用します。  
   

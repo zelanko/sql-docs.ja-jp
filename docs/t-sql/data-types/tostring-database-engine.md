@@ -1,16 +1,16 @@
 ---
 title: ToString (Database Engine) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ToString
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - ToString [Database Engine]
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0bee6e9a6e06cdab3bdd54cadda7a1a7d3f66a28
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f0c02a0972657e3bf134dbf21158e604cf21f451
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tostring-database-engine"></a>ToString (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-*this* の論理的表現に基づく文字列を返します ToString から変換するとき暗黙的に呼び出されます **hierarchyid** を文字列型が発生します。 逆の役割を果たします #40 を[解析する (& a)";"データベース エンジン&#41;](../../t-sql/data-types/parse-database-engine.md).
+*this* の論理的表現に基づく文字列を返します ToString から変換するとき暗黙的に呼び出されます **hierarchyid** を文字列型が発生します。 逆の役割を果たします #40 を[解析する (& a)";"データベース エンジン"&"#41;](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>構文  
   

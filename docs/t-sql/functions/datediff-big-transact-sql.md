@@ -1,16 +1,16 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -23,23 +23,23 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c8228f0db3e37fe3bf6425d60fd4f9067e92220
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 173daacfd95ec63789dde878e960d5a8b820a27c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 *startdate* と *enddate* で指定された 2 つの日付間の差を、指定された *datepart* 境界の数 (符号付き多倍長整数) で返します。
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」をご覧ください。
+すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,25 +52,25 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 次の表は、*datepart* 引数に有効なすべての値の一覧です。 ユーザー定義変数に相当するものは無効です。
+*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 次の表に一覧のすべての有効な *datepart* 引数。 ユーザー定義変数に相当するものは無効です。
   
 |*datepart*|省略形|  
 |---|---|
-|**year**|**yy, yyyy**|  
+|**year**|**yy、yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
-|**dayofyear**|**dy, y**|  
+|**dayofyear**|**dy、y**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
 |**hour**|**mm**|  
-|**minute**|**mi, n**|  
+|**minute**|**mi、n**|  
 |**second**|**ss, s**|  
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
 *startdate*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** の値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。 *startdate* が *enddate* から減算されます。  
+**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。 *startdate* が *enddate* から減算されます。  
 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の年については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」をご覧ください。
   
 *enddate*  

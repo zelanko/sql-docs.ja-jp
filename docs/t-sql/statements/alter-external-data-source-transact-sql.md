@@ -1,16 +1,16 @@
 ---
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16ea77011039c1b48ab83bfd335028c83c6f3c3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6edc15902e73b2a45759690fbd8680fe635f96cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-external-data-source-transact-sql"></a>変更する外部データ ソース (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 TYPE = BLOB_STORAGE   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
 一括操作の場合のみ、`LOCATION` は Azure BLOB ストレージの有効な URL にする必要があります。 **/**、ファイル名、共有アクセス署名パラメーターを `LOCATION` URL の末尾に入れないでください。
-使用される資格情報は、ID として `SHARED ACCESS SIGNATURE` を使用して作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
+使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
 
   
   
@@ -82,7 +82,7 @@ TYPE = BLOB_STORAGE
 ## <a name="permissions"></a>アクセス許可  
  任意の外部データ ソースの ALTER 権限が必要です。
  > [!IMPORTANT]  
- >  ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、あらゆるデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考慮する必要があります。そのため、システム内の信頼できるプリンシパルにのみ与える必要があります。
+ >  ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考える必要があります。したがって、システム内の信頼できるプリンシパルにのみ与える必要があります。
 
   
 ## <a name="examples"></a>使用例  

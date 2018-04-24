@@ -16,25 +16,28 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d5e5885832d83f27e061f2a54987a8c8e4f8a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: a1199bd1bc03a29b5e2469b501bc2d9be7124abe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>クロス ドメイン ルールの作成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインに対するクロス ドメイン ルールを作成する方法について説明します。 クロス ドメイン ルールとは、複合ドメインに含まれる単一ドメインの値の間の関係をテストするルールです。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、クロス ドメイン ルールが複合ドメイン全体に当てはまる必要があります。 クロス ドメイン ルールは、ドメイン値の検証、修正、および標準化のために使用されます。  
   
  クロス ドメイン ルールの If 句と Then 句は、それぞれ複合ドメイン内の 1 つの単一ドメインに対して定義されます。 それぞれの句を異なる単一ドメインに対して定義する必要があります。 クロス ドメイン ルールは、複数の単一ドメインに関連付ける必要があります。複合ドメインに対して単純なドメイン ルール (単一ドメインのみに対するルール) を定義することはできません。 そのため、単一ドメインに対してドメイン ルールを定義します。 If 句と Then 句のそれぞれに 1 つ以上の条件を含めることができます。  
   
  クロス ドメイン ルールに明確な条件が含まれている場合、その条件では、特定の値だけでなくその値のシノニムにもルールのロジックが適用されます。 If 句と Then 句の明確な条件とは、"値が次の値と等しい"、"値が次の値と等しくない"、"値が次の中に存在する"、または "値が次の中に存在しない" です。 たとえば、複合ドメインに対する "For 'City', if Value is equal to 'Los Angeles', then for 'State', Value is equal to 'CA'" というクロス ドメイン ルールでは、 'Los Angeles' と 'LA' がシノニムであれば、'Los Angeles CA' と 'LA CA' は "適切" になり、'Los Angeles WA' と 'LA WA' は "エラー" になります。  
   
- クロス ドメイン ルールの明確な *Then* 句の **"値が次の値と等しい"**では、単にクロス ドメイン ルールの有効性について知らせるだけでなく、データ クレンジング アクティビティ中にデータの修正も行います。 詳細については、「 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 」の「 [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md)」を参照してください。  
+ クロス ドメイン ルールの明確な *Then* 句の **"値が次の値と等しい"** では、単にクロス ドメイン ルールの有効性について知らせるだけでなく、データ クレンジング アクティビティ中にデータの修正も行います。 詳細については、「 [Cleanse Data in a Composite Domain](../data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 」の「 [Data Correction using Definitive Cross-Domain Rules](../data-quality-services/cleanse-data-in-a-composite-domain.md)」を参照してください。  
   
  クロス ドメイン ルールは、単一ドメインのみに影響するすべての単純なルールの後に考慮されます。 値が単一ドメインのルールに適合する場合しか、クロス ドメイン ルールは適用されません。 ルールの対象となる複合ドメインと単一ドメインはすべて、ルールを実行する前に定義されている必要があります。  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  
@@ -61,7 +64,7 @@ ms.lasthandoff: 03/22/2018
   
 4.  **[CD のルール]** タブをクリックします。  
   
-5.  **[新しいドメイン ルールの追加]**をクリックし、ルールの名前と説明を入力します。  
+5.  **[新しいドメイン ルールの追加]** をクリックし、ルールの名前と説明を入力します。  
   
 6.  ルールが実行されるようにする場合は、 **[アクティブ]** を選択します (既定値)。実行されないようにする場合は選択を解除します。  
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 03/22/2018
   
     3.  条件に値が必要な場合は、条件に対応するテキスト ボックスに値を入力します。  
   
-    4.  If 句に別の条件が必要な場合は、 **[選択した句に新しい条件を追加]**をクリックします。 演算子と条件を選択し、必要に応じて条件の値を入力します。  
+    4.  If 句に別の条件が必要な場合は、 **[選択した句に新しい条件を追加]** をクリックします。 演算子と条件を選択し、必要に応じて条件の値を入力します。  
   
     5.  条件の順序を変更するには、条件の左側をクリックして選択し、上矢印または下矢印をクリックします。  
   

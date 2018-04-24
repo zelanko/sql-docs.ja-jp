@@ -1,16 +1,16 @@
 ---
-title: "属性 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 属性 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -20,18 +20,21 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5263182c1415e0c9919bee467c491e77ad3e239e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4778fd02396fa64ac8c1f0dc7eeddc289506247d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   属性とは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] エンティティに含まれるオブジェクトです。 属性値はエンティティのメンバーを表します。 属性を使用してリーフ メンバー、統合メンバー、またはコレクションを表すことができます。  
   
 ## <a name="how-attributes-relate-to-other-model-objects"></a>属性と他のモデル オブジェクトとの関連付け  

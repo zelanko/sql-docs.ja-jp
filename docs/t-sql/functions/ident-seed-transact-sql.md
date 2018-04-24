@@ -1,16 +1,16 @@
 ---
 title: IDENT_SEED (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENT_SEED_TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - seed values [SQL Server]
 - IDENT_SEED function
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba9da1edad9a97dcb0adf406e3454c352f1ce927
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee5a20cb527fbf0d617f0d147580b885b54b9338
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ IDENT_SEED ( 'table_or_view' )
   
 ## <a name="arguments"></a>引数  
  **'** *table_or_view* **'**  
- ID シード値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *されることはありません* 引用符、変数、関数の場合、または列名で囲まれた文字列定数を指定できます。 *table_or_view* は、**char**、**nchar**、**varchar**、または**nvarchar** です。  
+ ID シード値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *されることはありません* 引用符、変数、関数の場合、または列名で囲まれた文字列定数を指定できます。 *table_or_view* は **char**、**nchar**、**varchar**、または **nvarchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **numeric**  
@@ -104,6 +104,6 @@ dbo                AWBuildVersion                         1
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

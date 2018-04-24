@@ -1,36 +1,36 @@
 ---
-title: "FOR XML での EXPLICIT モードの使用 | Microsoft Docs"
-ms.custom: 
+title: FOR XML での EXPLICIT モードの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a5d96f28856360f9a57b29d28086cc487f156320
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a42dfda57ae6b7b901d8e56341bf11a8ab5e88c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-トピック「 [FOR XML を使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
+  トピック「 [FOR XML を使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
   
  ただし、必要な XML に関する追加情報 (XML 内の入れ子構造など) をクエリの一部として明示的に指定するために、EXPLICIT モードのクエリを記述する際には特殊な記述方法が必要になります。 このため、要求する XML によっては、EXPLICIT モードのクエリを記述する作業が複雑になることがあります。 EXPLICIT モードのクエリを記述するよりも、 [PATH モード](../../relational-databases/xml/use-path-mode-with-for-xml.md) で入れ子を使用する方が作業が容易になる場合もあります。  
   

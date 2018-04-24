@@ -16,18 +16,21 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2a545e26c56dac47cafbbdf3c5ff114e5ec4620
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: db40c8c5102e941bfbf7138b4c80653c6ab4feed
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS ログ ファイルの詳細設定の構成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ ファイルと [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルの詳細設定を構成する方法 (ログ ファイルのローリング ファイル サイズの制限の設定、イベントのタイム スタンプ パターンの設定など) について説明します。  
   
 > [!NOTE]  
@@ -54,7 +57,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]**をクリックします。  
+2.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
 3.  クエリ エディター ウィンドウで、SQL ステートメントをコピーします。  
   

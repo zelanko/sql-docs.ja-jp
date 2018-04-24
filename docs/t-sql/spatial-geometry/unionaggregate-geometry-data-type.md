@@ -1,32 +1,32 @@
 ---
-title: "UnionAggregate (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: UnionAggregate (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - UnionAggregate method (geometry)
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdb8e7b182f9f65d78ccfcc2da89a405397dd746
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6b942beb184ac587d14a20890bf5e2fa37690422
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ UnionAggregate ( geometry_operand )
  和集合演算を実行する **geometry** オブジェクトのセットを保持する **geometry** 型のテーブルの列です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
 ## <a name="exceptions"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- メソッドは、入力が空か、入力にさまざまな SRID が含まれているときに **null** を返します。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
+ 入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
- メソッドは、**null** 入力を無視します。  
+ メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  

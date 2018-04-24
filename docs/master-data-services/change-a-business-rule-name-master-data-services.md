@@ -1,32 +1,35 @@
 ---
-title: "ビジネス ルールの名前を変更する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ビジネス ルールの名前を変更する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b3b46c9c8c78f239314ece2b776bd941369429d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 98fec5fa6268539b486e19b8f5e5854a234168c3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>ビジネス ルールの名前を変更する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールに割り当てられている名前がビジネス ニーズに合わない場合には、名前を変更します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -40,9 +43,9 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-change-the-name-of-a-business-rule"></a>ビジネス ルールの名前を変更するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]**をクリックします。  
+2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
   
 3.  **[ビジネス ルール]** ページの **[モデル]** ドロップダウン リストから、モデルを選択します。  
   
@@ -50,15 +53,15 @@ ms.lasthandoff: 03/05/2018
   
 5.  **[メンバーの種類]** ドロップ ダウン リストから、メンバーの種類を選択します。  
   
-6.  グリッドで、名前を変更するビジネス ルールの行を選択し、 **[編集]**をクリックします。  
+6.  グリッドで、名前を変更するビジネス ルールの行を選択し、 **[編集]** をクリックします。  
   
 7.  ビジネス ルールの新しい名前を入力します。  
   
-8.  **[保存]**をクリックします。  
+8.  **[保存]** をクリックします。  
   
-9. **[すべてパブリッシュ]**をクリックします。  
+9. **[すべてパブリッシュ]** をクリックします。  
   
-10. 確認のダイアログ ボックスで **[OK]**をクリックします。 **[ビジネス ルールの状態]**列の値は **[アクティブ]**です。  
+10. 確認のダイアログ ボックスで **[OK]** をクリックします。 **[ビジネス ルールの状態]** 列の値は **[アクティブ]** です。  
   
 ## <a name="see-also"></a>参照  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  

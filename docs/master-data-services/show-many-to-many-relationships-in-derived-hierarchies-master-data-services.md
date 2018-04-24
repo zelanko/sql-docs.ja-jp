@@ -1,30 +1,33 @@
 ---
-title: "派生階層 (Master Data Services) の多対多リレーションシップを表示する | Microsoft Docs"
-ms.custom: 
+title: 派生階層 (Master Data Services) の多対多リレーションシップを表示する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: bbe98747dd35a5320ef2878a72908cae8825b595
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   派生階層 (DH) には 1 対多のリレーションシップが表示されますが、多対多のリレーションシップも表示できるようになります。  
   
 ## <a name="many-to-many-m2m-relationships"></a>多対多 (M2M) リレーションシップ  
@@ -50,13 +53,13 @@ ms.lasthandoff: 03/05/2018
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- これで、プレビューには、登録したトレーニング クラスごとにグループ化された従業員が表示されるようになります。 これは M2M リレーションシップなので、各子メンバーは複数の親を持つ可能性があります。 上の例では、従業員 **6 {Hillman, Reinout N}** は 2 つのクラス **1 {Master Data Services 101}** と 4 **{Career-Limiting Moves}**で受講者として登録されています。  
+ これで、プレビューには、登録したトレーニング クラスごとにグループ化された従業員が表示されるようになります。 これは M2M リレーションシップなので、各子メンバーは複数の親を持つ可能性があります。 上の例では、従業員 **6 {Hillman, Reinout N}** は 2 つのクラス **1 {Master Data Services 101}** と 4 **{Career-Limiting Moves}** で受講者として登録されています。  
   
  このマッピングのリレーションシップは、反転させて、受講者別にクラスをグループ化して表示することもできます。  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- ここでも、1 つの子を複数の親に表示できる方法について説明します。トレーニング クラス **1 {Master Data Services 101}** は、 **6 {Hillman, Reinout N}** と **40 {Ford, Jeffrey L}**の両方に表示されます。  
+ ここでも、1 つの子を複数の親に表示できる方法について説明します。トレーニング クラス **1 {Master Data Services 101}** は、 **6 {Hillman, Reinout N}** と **40 {Ford, Jeffrey L}** の両方に表示されます。  
   
  マッピング エンティティのメンバー **ClassRegistration** は、派生階層内のどこにも表示されません。 階層内の親と子メンバー間のリレーションシップを定義するためだけに使用されることはありません。  
   
@@ -64,7 +67,7 @@ ms.lasthandoff: 03/05/2018
   
 -   Excel 用のマスター データ サービス アドイン、またはデータ ステージングを使用して、 **[エンティティ エクスプローラー]** ページでマッピング エンティティ メンバーを変更します。  
   
--   **[派生階層エクスプローラー]**ページで、親間で子ノードをドロップ ダウンします。  
+-   **[派生階層エクスプローラー]** ページで、親間で子ノードをドロップ ダウンします。  
   
      このメソッドは、可能であれば既存のメンバーを変更し、必要に応じて新しいメンバーを追加します。 既存のメンバーは削除されません。  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 03/05/2018
 ### <a name="M2MSample"></a> サンプル モデル内の M2M リレーションシップ  
 M2M リレーションシップのデモを見るには、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]に含まれている Customer サンプル モデル内の Region Climate 派生階層を表示します。   
   
-次の画像に示すように、このリレーションシップをモデル化したレベル名は ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate です(RegionClimate.Region でマッピング)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** には、地域が、関連付けられている気候の種類によってグループ化されて表示されます。 複数の気候 (親) に関連付けられた地域 (子メンバー) が存在するため、これは M2M リレーションシップです。 たとえば、 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** は ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** と ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**に関連付けられています。  
+次の画像に示すように、このリレーションシップをモデル化したレベル名は ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate です(RegionClimate.Region でマッピング)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** には、地域が、関連付けられている気候の種類によってグループ化されて表示されます。 複数の気候 (親) に関連付けられた地域 (子メンバー) が存在するため、これは M2M リレーションシップです。 たとえば、 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** は ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** と ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** に関連付けられています。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   

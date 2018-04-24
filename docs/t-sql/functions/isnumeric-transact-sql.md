@@ -1,16 +1,16 @@
 ---
 title: ISNUMERIC (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ISNUMERIC
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 15ef4648daf6489a1224536acf5ee71250afe469
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: eb25a2dbf937c63553b1f4941de735b37abc0921
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +69,7 @@ ISNUMERIC ( expression )
 |**decimal**|**real**|  
   
 > [!NOTE]  
->  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney &#40;です。TRANSACT-SQL と #41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney & #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  

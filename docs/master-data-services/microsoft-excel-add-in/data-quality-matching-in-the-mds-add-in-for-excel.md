@@ -1,30 +1,33 @@
 ---
-title: "Excel 用 MDS アドインでのデータ品質照合 | Microsoft Docs"
-ms.custom: 
+title: Excel 用 MDS アドインでのデータ品質照合 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6630871f9fd5104db43e11017b6b14a92d1cded3
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: fbb510e5c7035a8b6247bf1098951f5dec276f26
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  
   
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Data Quality Services (DQS) 機能を使用して、類似するデータを照合します。 アドインの照合機能を使用すると、類似するレコードがグループ化され、結果の精度を表すスコアが表示されます。 DQS によって提供される照合機能の詳細については、「 [データ照合](../../data-quality-services/data-matching.md)」を参照してください。  

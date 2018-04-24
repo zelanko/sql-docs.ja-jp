@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a362ebc450559580430a952b99fb0aebe93e97a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7a8e9efc399d840f56b92162ad557863f4a4fa66
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のスペル チェックでは、ドメイン内の文字列値の構文、スペル、および文構造をチェックします。 スペル チェックは、サーバー側のエンジンと統合されないクライアント側のスタンドアロンの機能で、現在のフローや状態には影響しません。 スペル チェックで誤りの可能性がある文字列値が見つかると、対応する各ページでドメイン値に対するその他の手動の変更を行うときに、それらの文字列値が赤い下線で示されます。 対象となるページは次のとおりです。  
   
 -   **ナレッジ検出** アクティビティの **[ドメイン値の管理]** ページ  
@@ -47,7 +50,7 @@ ms.lasthandoff: 03/22/2018
   
 ##  <a name="Enable"></a> スペル チェックの有効化  
   
-1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]でスペル チェックを有効にするには、 **ドメイン管理** アクティビティでナレッジ ベースを開き、目的のドメインを選択して、 **[ドメインのプロパティ]** ページで **[スペル チェックを有効にする]** をクリックします。 **[言語]**で、スペル チェックで使用する言語を選択します。  
+1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]でスペル チェックを有効にするには、 **ドメイン管理** アクティビティでナレッジ ベースを開き、目的のドメインを選択して、 **[ドメインのプロパティ]** ページで **[スペル チェックを有効にする]** をクリックします。 **[言語]** で、スペル チェックで使用する言語を選択します。  
   
 2.  ドメインのプロパティでスペル チェックを有効にすると、 **[ドメイン値の管理]** ページ、 **[ドメイン値]** ページまたは **[用語ベースのリレーション]** ページ、および **[結果の管理と表示]** ページでスペル チェックが有効になります。 それらの各ページでスペル チェックを無効にするには、 **[スペル チェックを有効/無効にします]** アイコンをクリックします。 アイコンをクリックすると、ページのスペル チェックの状態が変わります。 同様に、ドメインの **[スペル チェックを有効にする]** プロパティが無効になっている場合は、各ページで **[スペル チェックを有効/無効にします]** アイコンをクリックするとスペル チェックが有効になります。 ページを閉じてから再度表示した場合、ボタンの状態は **[スペル チェックを有効にする]** ドメイン プロパティの設定に応じた状態に戻ります。  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 03/22/2018
   
 5.  表示された値の中に適切な候補がなく、ほかにも値があることを示す **[詳しいヒント]** ボタンが表示された場合は、そのボタンをクリックします。 追加で表示されたいずれかの値で元の値を置き換える場合は、その値をクリックします。  
   
-6.  値を辞書に追加する場合は、 **[辞書に追加]**をクリックします。 値に表示されていた赤い下線が消えます。  
+6.  値を辞書に追加する場合は、 **[辞書に追加]** をクリックします。 値に表示されていた赤い下線が消えます。  
   
 ##  <a name="FollowUp"></a> 補足情報: スペル チェックを使用した後  
  スペル チェックを実行した後、ドメインのアクティビティを完了してスペル チェックの修正案を反映します。 ナレッジ検出、ドメイン管理、または照合ポリシーのアクティビティで、スペル チェックの分析結果をナレッジ ベースで使用できるようにするには、ナレッジ ベースを発行します。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  

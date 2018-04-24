@@ -1,16 +1,16 @@
 ---
 title: UPPER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPPER_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - characters [SQL Server], uppercase
 - lowercase characters
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7fc98d515cef0d4a1f11e44ada8ff45174b8c95e
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c0aeae7dee0290930d5aa95273113369478af764
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +52,9 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- 文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* 定数、変数、または文字またはバイナリ データのいずれかの列を指定できます。  
+ 文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
   
- *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar**です。 それ以外の場合、使用して [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) に明示的に変換する *character_expression*です。  
+ *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar**です。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) を指定して明示的に *character_expression* を変換します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  

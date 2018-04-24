@@ -1,30 +1,33 @@
 ---
-title: "フィルター演算子 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: フィルター演算子 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-caps.latest.revision: 
+caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d398e710708cceea613fb5cbca0500bf5d3b8da
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: dd5db84fb0aed1f8c9edac04cb37fcf56629eb31
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-operators-master-data-services"></a>フィルター演算子 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   メンバーの一覧をフィルター処理する場合は、次の演算子を使用できます。  
   
 > [!NOTE]  
@@ -42,7 +45,7 @@ ms.lasthandoff: 03/05/2018
 |**次の値より小さい**|指定した条件より小さい属性値を返します。 たとえば、 **F**より値の小さい文字で始まる属性値を取得するには、「 **F**」と入力します。|  
 |**次の値以上**|指定した条件以上の属性値を返します。 たとえば、 **3** 以上の値で始まる属性値を取得するには、「 **3**」と入力します。|  
 |**次の値以下**|指定した条件以下の属性値を返します。 たとえば、 **3** 以下の数値で始まる属性値を返すには、「 **3**」と入力します。|  
-|**次と一致する**|あいまい参照のインデックスを使用して、結果をフィルター処理します。<br /><br /> **[類似性のレベル]** フィールドを使用して、属性値が指定したフィルター条件とどれだけ類似する必要があるかを指定します (既定値は 30%)。<br /><br /> **[アルゴリズム]** ボックスから次のいずれかを選択します。<br /><br /> **Levenshtein**: 編集回数 (たとえば、追加や削除) に基づいた距離アルゴリズムで、文字列を 1 つずつ比較します。 これは既定値です。 追加のパラメーターは必要ありません。<br /><br /> **Jaccard**: 複数の文字列を一致させる場合に最適なインデックスです。 この検索は、包含バイアス (下記参照) の追加のパラメーターをサポートします。<br /><br /> **Jaro-Winkler**: 重複する人の名前を見つけるのに最適な距離アルゴリズムです。 このメソッドは、他のメソッドよりも多くの結果を返します。 包含バイアスはサポートしていません。<br /><br /> **Longest Common Subsequence**: 文字があるパターンで順に出現する部分列に基づいて機能します。また、それらの文字が離れていても機能します (たとえば、"MSR" は "MaSteR" の部分列です)。 この検索は、包含バイアス (下記参照) の追加のパラメーターをサポートします。<br /><br /> <br /><br /> 注: **[包含バイアス]** を **[Jaccard]** または **[Longest Common Subsequence]**アルゴリズムに追加します。 これは、0 から 1 の間の小数パーセンテージで示す長さのしきい値です。既定値は .62 です。 しきい値の下限は、返される一致の数を増加します。|  
+|**次と一致する**|あいまい参照のインデックスを使用して、結果をフィルター処理します。<br /><br /> **[類似性のレベル]** フィールドを使用して、属性値が指定したフィルター条件とどれだけ類似する必要があるかを指定します (既定値は 30%)。<br /><br /> **[アルゴリズム]** ボックスから次のいずれかを選択します。<br /><br /> **Levenshtein**: 編集回数 (たとえば、追加や削除) に基づいた距離アルゴリズムで、文字列を 1 つずつ比較します。 これは既定値です。 追加のパラメーターは必要ありません。<br /><br /> **Jaccard**: 複数の文字列を一致させる場合に最適なインデックスです。 この検索は、包含バイアス (下記参照) の追加のパラメーターをサポートします。<br /><br /> **Jaro-Winkler**: 重複する人の名前を見つけるのに最適な距離アルゴリズムです。 このメソッドは、他のメソッドよりも多くの結果を返します。 包含バイアスはサポートしていません。<br /><br /> **Longest Common Subsequence**: 文字があるパターンで順に出現する部分列に基づいて機能します。また、それらの文字が離れていても機能します (たとえば、"MSR" は "MaSteR" の部分列です)。 この検索は、包含バイアス (下記参照) の追加のパラメーターをサポートします。<br /><br /> <br /><br /> 注: **[包含バイアス]** を **[Jaccard]** または **[Longest Common Subsequence]** アルゴリズムに追加します。 これは、0 から 1 の間の小数パーセンテージで示す長さのしきい値です。既定値は .62 です。 しきい値の下限は、返される一致の数を増加します。|  
 |**次と一致しない**|あいまい参照のインデックスを使用して、結果をフィルター処理します。 **[類似性のレベル]** フィールドを使用して、属性値が指定したフィルター条件とどれだけ類似していない必要があるかを指定します。|  
 |**パターンを含む**|.NET Framework 正規表現を使用して、指定したパターンの結果をフィルター処理します。 正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](http://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。|  
 |**パターンを含まない**|.NET Framework 正規表現を使用して、指定したパターンと一致しない結果をフィルター処理します。 正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](http://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。|  

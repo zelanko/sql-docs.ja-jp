@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2932ba3a3eeb2c043745486c536d4e0a04bcc496
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 624f72be359452bd80c3d68a7a8487dbe06be6b0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-cleansing"></a>Data Cleansing
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   データ クレンジングは、データ ソース内のデータの品質を分析し、システムによる推奨事項を手動で承認または拒否し、それによってデータを変更するプロセスです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのデータ クレンジングには、ナレッジ ベースのナレッジにデータがどの程度準拠しているのかを分析するコンピューター支援型のプロセスと、データ スチュワードがコンピューター支援型プロセスの結果を検討および変更してデータ クレンジングが意図したとおりに行われるようにするための対話型プロセスが含まれます。  
   
  データ スチュワードは、Integration Services パッケージ化プロセスでデータ クレンジングを実行することもできます。 この場合、データ スチュワードは [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]を使用します。このコンポーネントでは、既存のナレッジ ベースを使用してデータ クレンジングが自動的に行われます。 詳細については、「[DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)」を参照してください。  

@@ -1,16 +1,16 @@
 ---
 title: SOME | ANY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a79c7a06edb70b694481e4c30b0244ebd39e2ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>引数  
  *scalar_expression*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  有効な比較演算子です。  
@@ -70,7 +70,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- SOME または ANY は、指定された比較が (*scalar_expression***,***x*) の任意の組で TRUE の場合、**TRUE** を返します。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** を返します。  
+ SOME または ANY は、指定された比較が (*scalar_expression ***,*** x*) の任意の組で TRUE の場合、**TRUE** を返します。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** を返します。  
   
 ## <a name="remarks"></a>Remarks  
  SOME の場合、*scalar_expression* ではサブクエリによって返される 1 つ以上の値に対し肯定的な比較を行う必要があります。 サブクエリによって返されるすべての値に対し肯定的な比較を行うために *scalar_expression* を必要とするステートメントについては、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).」を参照してください。 たとえば、*scalar_express* を 2 とすると、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* = SOME (subquery) は TRUE と評価されます。 サブクエリが 2 および 3 の値を返す場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  

@@ -1,16 +1,16 @@
 ---
-title: "インデックス付きビューの作成 | Microsoft Docs"
-ms.custom: 
+title: インデックス付きビューの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 
+caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 505c016f769a76c2908f607617db99a04e857ef1
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2212ab366b387a5382b37624964b14b96ebf1de7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +95,7 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
   
 -   インデックスを作成する場合は、`IGNORE_DUP_KEY` オプションを OFF に設定する必要があります (既定の設定)。    
   
--   ビュー定義では、*schema***.***tablename* という 2 つの部分から構成される名前でテーブルが参照される必要があります。    
+-   ビュー定義では、*schema ***.*** tablename* という 2 つの部分から構成される名前でテーブルが参照される必要があります。    
   
 -   ビューで参照されるユーザー定義関数は、`WITH SCHEMABINDING` オプションを使用して作成する必要があります。    
   
@@ -170,9 +171,9 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、ビューとそのビューのインデックスを作成します。 ここでは、インデックス付きビューを使用する 2 つのクエリを実行します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、ビューとそのビューのインデックスを作成します。 ここでは、インデックス付きビューを使用する 2 つのクエリを実行します。  
   
     ```sql  
     USE AdventureWorks2012;  

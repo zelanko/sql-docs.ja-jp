@@ -1,16 +1,16 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENDPOINT
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 
+caps.latest.revision: 135
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec23f963b501a6067d7884de378eee8260ca96ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=***listenerPort*  
  Service Broker TCP/IP プロトコルによって接続を受信待ちされるポート番号を指定します。 通常は 4022 が使用されますが、1024 ～ 32767 の範囲であればどの番号でも有効です。  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
  エンドポイントが受信待ちする IP アドレスを指定します。 既定値は ALL です。 したがって、リスナーは任意の有効な IP アドレスでの接続を許可します。  
   
  完全修飾ドメイン名の代わりに IP アドレスを使用してデータベース ミラーリングを構成する (`ALTER DATABASE SET PARTNER = partner_IP_address` または `ALTER DATABASE SET WITNESS = witness_IP_address`) 場合は、ミラーリング エンドポイントの作成時に `LISTENER_IP=ALL` の代わりに `LISTENER_IP =IP_address` を指定する必要があります。  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50aa4f48ea862facd6863d59f47128f0376a4e12
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c4d005d535e73ab633b97fc7202a1ebad3817a51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースにナレッジを追加する方法について説明します。 データ品質操作を実行するには、データに関するナレッジを事前に用意しておく必要があります。 このナレッジを取得するには、データ品質ナレッジ ベースを構築および管理し、特定の種類のデータ ソースに関連するナレッジをそのナレッジベースに追加します。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  
   
  ナレッジ ベースには、データ ソースに関連するデータ ドメインが含まれています。 DQKB には、データ ドメインごとに、データ ソースに対するデータ品質操作の実行に使用できる識別された用語、スペル ミス、検証ルールとビジネス ルール、および参照データがすべて格納されます。 DQS は、正しくないデータまたは無効なデータの識別や照合の実行にこのナレッジを使用します。  

@@ -1,34 +1,37 @@
 ---
-title: "概要: データのエクスポート (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: '概要: データのエクスポート (Master Data Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d2a7c7eccfffebd6e3d4000b302c1f9241ddc9d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8ffaa16b21821ea29e7cc90e6f3cdec33255f3d6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-exporting-data-master-data-services"></a>概要: データのエクスポート (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   この記事では、サブスクリプション ビュー形式の種類と、モデル オブジェクトが変更されたためにビューを編集する必要がある場合を判断する方法について説明します。  
   
  サブスクリプション ビューを作成して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のようなサブスクライブ システムにエクスポートします。 サブスクライブ システムを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータを表示します。  サブスクライブ ビューを作成する方法については、「 [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  

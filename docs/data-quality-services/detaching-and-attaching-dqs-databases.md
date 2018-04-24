@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d2e84f851fb8fdba29424de7ee9664b4724e2ec
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: d0b805297ba84fe30dbc393dd73a968bc32f6a52
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   ここでは、DQS データベースをデタッチおよびアタッチする方法について説明します。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -49,13 +52,13 @@ ms.lasthandoff: 03/22/2018
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
 ##  <a name="Detach"></a> DQS データベースのデタッチ  
- SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの C:\Program Files\Microsoft SQL Server\MSSQL13.*<インスタンス名>*\MSSQL\DATA にあります。  
+ SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの C:\Program Files\Microsoft SQL Server\MSSQL13.*<インスタンス名>* \MSSQL\DATA にあります。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開します。  
   
-3.  **DQS_MAIN** データベースを右クリックして **[タスク]**をポイントし、 **[デタッチ]**をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
+3.  **DQS_MAIN** データベースを右クリックして **[タスク]** をポイントし、 **[デタッチ]** をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
   
 4.  **[削除]** 列の下にあるチェック ボックスをオンにし、 **[OK]** をクリックして DQS_MAIN データベースをデタッチします。  
   
@@ -68,9 +71,9 @@ ms.lasthandoff: 03/22/2018
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで、 **[データベース]**を右クリックし、 **[アタッチ]**をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
+2.  オブジェクト エクスプローラーで、 **[データベース]** を右クリックし、 **[アタッチ]** をクリックします。 **[データベースのデタッチ]** ダイアログ ボックスが表示されます。  
   
-3.  アタッチするデータベースを指定するには、 **[追加]**をクリックします。 **[データベース ファイルの検索]** ダイアログ ボックスが表示されます。  
+3.  アタッチするデータベースを指定するには、 **[追加]** をクリックします。 **[データベース ファイルの検索]** ダイアログ ボックスが表示されます。  
   
 4.  データベースが存在するディスク ドライブを選択し、ディレクトリ ツリーを展開してデータベースの .mdf ファイルを選択します。 たとえば、DQS_MAIN データベースの場合は、次のようになります。  
   
@@ -86,7 +89,7 @@ ms.lasthandoff: 03/22/2018
   
 8.  また、DQS_MAIN データベースを復元した後の次の手順で Transact-SQL ステートメントを実行する必要もあります。これを実行しない場合、Data Quality Client アプリケーションを使用して Data Quality Server に接続しようとするとエラー メッセージが表示され、接続できません。 ただし、DQS_PROJECTS データベースまたは DQS_STAGING_DATA データベースをアタッチし、DQS_MAIN をアタッチしていない場合、手順 9. と 10. を実行する必要はありません。  
   
-     Transact-SQL ステートメントを実行するには、オブジェクト エクスプローラーで、サーバーを右クリックし、 **[新しいクエリ]**をクリックします。  
+     Transact-SQL ステートメントを実行するには、オブジェクト エクスプローラーで、サーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
 9. クエリ エディター ウィンドウで、SQL ステートメントをコピーします。  
   

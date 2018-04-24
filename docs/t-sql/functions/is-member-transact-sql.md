@@ -1,16 +1,16 @@
 ---
 title: IS_MEMBER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_MEMBER
@@ -29,16 +29,17 @@ helpviewer_keywords:
 - groups [SQL Server], members
 - members [SQL Server], verifying
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e14fc4cf70066c21a8a837760d4325a19ae4ff1c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ebb422957d8b984a98fff93541f1f884e5d65536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +85,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  メンバー、 **sysadmin** を入力として、すべてのデータベースの固定サーバー ロール、 **dbo** ユーザーです。 メンバーに対するアクセス許可のチェック、 **sysadmin** 固定サーバー ロールのアクセス許可を確認する **dbo**, 、元のログインではありません。 **Dbo** データベース ロールに追加することはできずに、Windows グループが存在しない **dbo** 常に 0 (または、ロールが存在しない場合は NULL) を返します。  
   
 ## <a name="related-functions"></a>関連する関数  
- 別のかを判断する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがデータベース ロールのメンバーを [ IS_ROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-rolemember-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを[ IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ 別のかを判断する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがデータベース ロールのメンバーを [ IS_ROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-rolemember-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  次の例は、現在のユーザーがデータベース ロールまたは Windows ドメイン グループのメンバーであるかどうかを確認します。  

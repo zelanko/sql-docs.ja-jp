@@ -1,16 +1,16 @@
 ---
-title: "BufferWithTolerance (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: BufferWithTolerance (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BufferWithTolerance_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb70f24c521fd5f0325ecbb718e7d76aa43f935d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cc2b4c67d3224781e648be0615e77760dddedef3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/25/2018
  最小値は距離の 0.1% で、それより小さい許容範囲はこの最小値に切り上げられます。  
   
  *relative*  
- *tolerance* の値が相対値か絶対値かを指定する **bit** です。 'TRUE' または 1 の場合、許容範囲は相対値です。楕円の角度 \* と赤道半径と *tolerance* パラメーターの積として計算されます。 'FALSE' または 0 の場合、許容範囲は絶対値です。*tolerance* 値は、返された線形近似の理想的なバッファー距離の最大幅になります。  
+ *tolerance* の値が相対値か絶対値かを指定する **bit** です。 'TRUE' または 1 の場合、許容範囲は相対値です。楕円の角度 \* と赤道半径と *tolerance* パラメーターの積として計算されます。 'FALSE' または 0 の場合、許容範囲は絶対値であり、*tolerance* 値は、返された線形近似の理想的なバッファー距離の絶対最大幅になります。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  

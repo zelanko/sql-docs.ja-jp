@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: ''
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44c7b7392737306ffa78958d46e53f7904c688da
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 54f62f31531b6b4f24305169db5acbdf36f5cdb5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメイン ルールを作成する方法について説明します。 ドメイン ルールとは、ドメイン値の検証、修正、および標準化のために使用される条件です。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、ドメイン ルールがドメイン全体に当てはまる必要があります。 ドメイン ルールには検証規則を含めることができます。検証規則は、データ品質プロジェクトでドメイン値の検証に使用され、データの修正には使用されません。 また、標準化規則を含めることもできます。標準化規則は、有効なデータに対して適用され、データ修正で使用されます。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -44,7 +47,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 03/22/2018
   
 4.  **[ドメイン ルール]** タブをクリックします。  
   
-5.  **[新しいドメイン ルールの追加]**をクリックし、ナレッジ ベース内で一意の名前とルールの説明を入力します。  
+5.  **[新しいドメイン ルールの追加]** をクリックし、ナレッジ ベース内で一意の名前とルールの説明を入力します。  
   
 6.  ルールが実行されるようにする場合は、 **[アクティブ]** を選択します (既定値)。実行されないようにする場合は選択を解除します。  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 03/22/2018
   
 12. 一覧の句の順序を変更するには、句を選択して上下の矢印をクリックします。 句が実行される順序が変わるため、結果に影響する可能性があります。  
   
-13. 必要に応じてさらに句を追加します。 句を削除する場合は、削除する句を選択し、 **[選択した句の削除]**をクリックします。  
+13. 必要に応じてさらに句を追加します。 句を削除する場合は、削除する句を選択し、 **[選択した句の削除]** をクリックします。  
   
 14. 必要に応じて、上の手順を繰り返して新しいルールを追加します。  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 03/22/2018
   
 ##  <a name="Apply"></a> ドメイン ルールの適用  
   
-1.  **[すべてのルールを適用する]** をクリックして、ドメインの値にルールを適用します。 **[すべてのルールを適用する]**をクリックすると、ルールの影響を受ける各状態の値の数がポップアップ画面に表示されます。 そのままルールを適用する場合は **[はい]** を、ルールの適用を中止する場合は **[いいえ]** をクリックします。 **[はい]**をクリックした場合は、 **[OK]** をクリックして結果のポップアップ画面を閉じます。  
+1.  **[すべてのルールを適用する]** をクリックして、ドメインの値にルールを適用します。 **[すべてのルールを適用する]** をクリックすると、ルールの影響を受ける各状態の値の数がポップアップ画面に表示されます。 そのままルールを適用する場合は **[はい]** を、ルールの適用を中止する場合は **[いいえ]** をクリックします。 **[はい]** をクリックした場合は、 **[OK]** をクリックして結果のポップアップ画面を閉じます。  
   
     > [!NOTE]  
     >  ルールを作成または変更するときには、変更を保存する必要はありませんが、 変更を有効にするにはルールを適用する必要があります。  

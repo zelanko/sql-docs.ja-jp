@@ -1,16 +1,16 @@
 ---
 title: smalldatetime (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smalldatetime_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - date and time [SQL Server], smalldatetime
 - data types [SQL Server], date and time
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 07ab6616d91d0508c2c52f7e3b8be4e03127ecaa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf5273a362de4a4eb86f266d252fe4c853900e1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 **smalldatetime** は ANSI または ISO 8601 に準拠していません。
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータ型の変換
-日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime から他の日付/時刻データ型への変換
 ここでは、**smalldatetime** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。

@@ -1,35 +1,37 @@
 ---
-title: "テーブルのデータの挿入と更新 (チュートリアル) | Microsoft Docs"
-ms.custom: 
+title: テーブルのデータの挿入と更新 (チュートリアル) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - inserting and updating data
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c64d3f2835e7c63b8c8e86946545641015188e29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 407b1c470f691de3c6165cddfe1252afc6e44da9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>レッスン 1-3 - テーブルのデータの挿入と更新
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]**Products** テーブルを作成したので、INSERT ステートメントを使用してデータをテーブルに挿入する準備ができました。 データを挿入した後は、UPDATE ステートメントを使用して行の内容を変更します。 更新を 1 つの行に制限するには、UPDATE ステートメントの WHERE 句を使用します。 4 つのステートメントによって、次のデータが入力されます。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+**Products** テーブルを作成したので、INSERT ステートメントを使用してデータをテーブルに挿入する準備ができました。 データを挿入した後は、UPDATE ステートメントを使用して行の内容を変更します。 更新を 1 つの行に制限するには、UPDATE ステートメントの WHERE 句を使用します。 4 つのステートメントによって、次のデータが入力されます。  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  

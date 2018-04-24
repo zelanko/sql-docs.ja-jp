@@ -1,34 +1,37 @@
 ---
-title: "ドメイン ベースの属性を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ドメイン ベースの属性を作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3df3be60589fd790b4cd56c1abec5b3fcd15e1d9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 583b416b09a1c02cce3962a25c1b5f7dd4718447
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -67,15 +70,15 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-a-domain-based-attribute"></a>ドメイン ベースの属性を作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページで、モデルをクリックし、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページで、モデルをクリックし、 **[エンティティ]** をクリックします。  
   
 3.  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
   
-4.  **[属性]**をクリックします。  
+4.  **[属性]** をクリックします。  
   
-5.  **[属性の管理]** ページで、次のいずれかの操作を行い、 **[追加]**をクリックします。  
+5.  **[属性の管理]** ページで、次のいずれかの操作を行い、 **[追加]** をクリックします。  
   
     -   属性の対象がリーフ メンバーの場合、 **[メンバーの種類]** ボックスの一覧から **[リーフ]** を選択します。  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 03/05/2018
   
 8.  **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
-9. **[属性の種類]** リストから、 **[ドメイン ベース]**を選択します。  
+9. **[属性の種類]** リストから、 **[ドメイン ベース]** を選択します。  
   
 10. **[ドメイン エンティティ]** ボックスの一覧から、属性値を設定するために使用するエンティティを選択します。 
   
@@ -101,7 +104,7 @@ ms.lasthandoff: 03/05/2018
   
 12. **省略可。** **[変更の追跡を有効化]** を選択して、属性のグループに対する変更を追跡します。 詳細については、「[変更の追跡グループに属性を追加する方法 (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)」を参照してください。  
   
-13. **[保存]**をクリックします。  
+13. **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)   

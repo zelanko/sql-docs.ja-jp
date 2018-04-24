@@ -1,34 +1,35 @@
 ---
-title: "Lock:Deadlock イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Lock:Deadlock イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b4cd55a7d886e6d3eb6f979898cbf7f85d0e9a6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4a3ba6839c66cb275f48e16a0734359a6394e521
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Lock:Deadlock イベント クラスは、ロックの取得を試行したときに、その試行がデッドロックの一部になり、デッドロックの対象として選択されたために取り消す場合に生成されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lock:Deadlock イベント クラスは、ロックの取得を試行したときに、その試行がデッドロックの一部になり、デッドロックの対象として選択されたために取り消す場合に生成されます。  
   
  Lock:Deadlock イベント クラスを使用して、デッドロックがいつ発生し、どのオブジェクトが関係しているかを監視します。 この情報を使用すると、デッドロックがアプリケーションのパフォーマンスに重大な影響を及ぼしているかどうかを判断できます。 次に、アプリケーション コードを調べ、デッドロックが最小になるように変更できるかどうかを判断できます。  
   

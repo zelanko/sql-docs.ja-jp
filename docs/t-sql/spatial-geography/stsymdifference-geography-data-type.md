@@ -1,16 +1,16 @@
 ---
-title: "STSymDifference (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: STSymDifference (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STSymDifference (geography Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geography Data Type)
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7346228c27e4de0c93349d45ff7537db399ecc8c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4b8e49794af38e9c4cfa767de13155b5499200fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR 戻り値の型: **SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>A. 2 つの多角形の対称差を計算する  
- `STSymDifference()` を使用して 2 つの `Polygon` インスタンスの対称差を計算する例を次に示します。  
+ 次の例では、`STSymDifference()` を使用して 2 つの `Polygon` インスタンスの対称差を計算します。  
   
 ```  
 DECLARE @g geography;  

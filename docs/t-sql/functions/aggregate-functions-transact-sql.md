@@ -1,16 +1,16 @@
 ---
-title: "集計関数 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 集計関数 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,23 +20,24 @@ helpviewer_keywords:
 - summarizing functions
 - aggregate functions [SQL Server]
 ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 74cc3903f4d5e10718c2d4488e4c3b8da4448b80
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 750bb88b8446858f4253d072fef829623e70511f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="aggregate-functions-transact-sql"></a>集計関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 集計関数は、値の集まりに対して計算を実行し、1 つの値を返します。 COUNT を除くその他の集計関数は NULL 値を無視します。 集計関数は、SELECT ステートメントの GROUP BY 句と共に使用されることが多いです。
   
-集計関数はすべて決定的です。 つまり集計関数は、特定の入力値を使用して呼び出されたときに、必ず同じ値を返します。 関数の決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は、GROUPING と GROUPING_ID を除くすべての集計関数の後に使用できます。
+集計関数はすべて決定的です。 つまり集計関数は、特定の入力値を使用して呼び出されたときに、必ず同じ値を返します。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は、GROUPING と GROUPING_ID を除くすべての集計関数の後に使用できます。
   
 集計関数を式として使用できるのは、次の箇所に限られます。
 -   SELECT ステートメントの選択リスト (サブクエリまたは外部クエリ)  
@@ -56,6 +57,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="see-also"></a>参照
 [組み込み関数 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[句 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

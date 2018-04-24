@@ -1,33 +1,36 @@
 ---
-title: "派生階層を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 派生階層を作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d402500e440711717da7d7f58bbb1e3fb5ac413
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: cddf32aa1f8a1aa58a9e6df856e5e6293331707a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>派生階層を作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   正しいレベルにメンバーが確実に存在するレベル ベースの階層が必要な場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、派生階層を作成します。 派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップに基づきます。  
   
 > [!NOTE]  
@@ -42,26 +45,26 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-a-derived-hierarchy"></a>派生階層を作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  メニュー バーの **[管理]** をポイントして **[派生階層]**をクリックします。  
+2.  メニュー バーの **[管理]** をポイントして **[派生階層]** をクリックします。  
   
 3.  **[派生階層のメンテナンス]** ページの **[モデル]** の一覧からモデルを選択します。  
   
-4.  **[追加]**をクリックします。  
+4.  **[追加]** をクリックします。  
   
 5.  **[派生階層の追加]** ページの **[派生階層名]** ボックスに階層の名前を入力します。  
   
     > [!TIP]  
-    >  名前は、たとえば **"カテゴリに含まれるサブカテゴリに含まれる製品"**のように、階層のレベルがわかる形式にします。  
+    >  名前は、たとえば **"カテゴリに含まれるサブカテゴリに含まれる製品"** のように、階層のレベルがわかる形式にします。  
   
-6.  **[派生階層の保存]**をクリックします。  
+6.  **[派生階層の保存]** をクリックします。  
   
 7.  **[派生階層の編集]** ページの **[使用できるエンティティと階層]** ペインで、エンティティまたは階層をクリックして **[現在のレベル]** ペインの **[親をここにドロップ]** にドラッグします。  
   
 8.  その他のエンティティまたは階層をドラッグして、階層を完成させます。  
   
-9. **[戻る]**をクリックします。  
+9. **[戻る]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)   

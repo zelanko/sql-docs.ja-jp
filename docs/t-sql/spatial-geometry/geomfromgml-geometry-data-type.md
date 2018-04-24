@@ -1,16 +1,16 @@
 ---
-title: "GeomFromGml (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: GeomFromGml (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GeomFromGML_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - GeomFromGML (geometry Data Type)
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b3c279f25c0de73040d6069362f7763b5330132
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 75e4b6bdcc2843cbf550525ff7dcbccf6b5f2727
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,15 +52,15 @@ GeomFromGml ( GML_input, SRID )
  GML が返す値を含む XML 入力です。  
   
  *SRID*  
- 返される **geometry** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
+ 返される **geography** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
  CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
+ このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
  `GeomFromGml()` を使用して `geometry` インスタンスを作成する例を次に示します。  

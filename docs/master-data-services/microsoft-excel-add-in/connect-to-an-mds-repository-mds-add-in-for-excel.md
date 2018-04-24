@@ -1,30 +1,33 @@
 ---
-title: "MDS リポジトリへの接続 (Excel 用 MDS アドイン) | Microsoft Docs"
-ms.custom: 
+title: MDS リポジトリへの接続 (Excel 用 MDS アドイン) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc9e432674fe7d21e15437f9c792131b2c79308d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 23c8ccc383d048b5655ddc5662197690dfa59364
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>MDS リポジトリへの接続 (Excel 用 MDS アドイン)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、データの読み込みまたはパブリッシュの前に MDS リポジトリに接続する必要があります。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -34,11 +37,11 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-connect-to-an-mds-repository"></a>MDS リポジトリに接続するには  
   
-1.  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の **[マスター データ]** タブの **[接続と読み込み]** グループで、 **[接続]** ボタンの下の矢印をクリックし、 **[接続の管理]**をクリックします。  
+1.  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の **[マスター データ]** タブの **[接続と読み込み]** グループで、 **[接続]** ボタンの下の矢印をクリックし、 **[接続の管理]** をクリックします。  
   
-2.  **[接続の管理]** ダイアログ ボックスの **[新しい接続]** セクションで、 **[新しい接続の作成]**をクリックします。  
+2.  **[接続の管理]** ダイアログ ボックスの **[新しい接続]** セクションで、 **[新しい接続の作成]** をクリックします。  
   
-3.  **[新規作成]**をクリックします。  
+3.  **[新規作成]** をクリックします。  
   
 4.  **[新しい接続の追加]** ダイアログ ボックスの **[説明]** フィールドに、接続の説明を入力します。 この接続は、ツール バーの **[接続]** ボタンの下の矢印をクリックしたときに表示されます。  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 03/05/2018
   
 7.  必要であれば、 **[テスト]** をクリックして接続をテストします。 確認ダイアログまたはエラー ダイアログが表示されます。 **[OK]** をクリックして閉じます。  
   
-8.  **[接続]**をクリックします。 **[マスター データ サービス]** ペインが表示されます。  
+8.  **[接続]** をクリックします。 **[マスター データ サービス]** ペインが表示されます。  
   
 ## <a name="next-steps"></a>Next Steps  
   

@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3b93c059c363d1690a614c7c61e1947559580e
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7dfd8c89dc12f19a9397b3a9053e4a7c979ad12e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのメタデータを変更および拡張する方法について説明します。 ナレッジ検出でナレッジを生成したり、ナレッジ ベースまたはドメインにナレッジをインポートしたり、別のナレッジ ベースに基づいてナレッジ ベースを作成した後に、データ値を対話形式で変更することができます。 ナレッジ ベースを生成するときは、コンピューター支援型のプロセスを利用するほかに、独自のナレッジを使用してデータ値を確認したり、次のように変更したりできます。  
   
 -   値の一覧にドメイン値を追加するか、値を選択して一覧から削除します。  
@@ -62,7 +65,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  
@@ -99,9 +102,9 @@ ms.lasthandoff: 03/22/2018
   
 8.  **[新しいドメインの値を追加します]**: クリックすると、テーブルの末尾に行が追加されます。 その行に値を入力すると、行がアルファベット順に並べ替えられます。入力した値には、新しいエントリであることを示す星のマークが値の前に表示されます。  
   
-9. **[ドメインの値を Excel からインポートします]**: Excel スプレッドシートから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[ドメインの値を Excel からインポートします]**を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]**をクリックします。 詳細については、「 [値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」をご参照ください。  
+9. **[ドメインの値を Excel からインポートします]**: Excel スプレッドシートから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[ドメインの値を Excel からインポートします]** を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]** をクリックします。 詳細については、「 [値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」をご参照ください。  
   
-10. **[プロジェクトの値のインポート]**: データ品質プロジェクトから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[プロジェクトの値のインポート]**を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]**をクリックします。 値をインポートするプロジェクトを選択し、 **[OK]**をクリックします。 インポートされた値が表示されます。 **[完了]**をクリックします。 詳細については、「プロジェクトの値をドメインにインポートする」を参照してください。  
+10. **[プロジェクトの値のインポート]**: データ品質プロジェクトから新しい値を追加するには、 **[値をインポートします]** アイコンの下矢印をクリックし、 **[プロジェクトの値のインポート]** を選択します。 ファイル名を入力し、必要に応じて **[先頭の行を見出しとして使用]** を選択し、 **[OK]** をクリックします。 値をインポートするプロジェクトを選択し、 **[OK]** をクリックします。 インポートされた値が表示されます。 **[完了]** をクリックします。 詳細については、「プロジェクトの値をドメインにインポートする」を参照してください。  
   
 11. **[選択したドメインの値を削除します]**: ドメインの既存の値を削除するには、削除する値を "値" テーブルで選択し、 **[選択したドメインの値を削除します]** をクリックします。 DQS_NULL というエントリは削除できません。したがって、削除する値を複数選択した場合に、選択した値の中に DQS_NULL が含まれていると、操作が失敗します。  
   

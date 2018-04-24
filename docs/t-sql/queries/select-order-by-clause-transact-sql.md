@@ -1,16 +1,16 @@
 ---
-title: "ORDER BY 句 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: ORDER BY 句 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ORDER_TSQL
@@ -41,16 +41,17 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ef72a4ee2dd0ec18eef502820fe289696589776
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +107,7 @@ ORDER BY order_by_expression
  ORDER BY 句で参照されている列名は、選択リスト内の列か、FROM 句で指定したテーブルで定義されている列と正確に対応している必要があります。  
   
  COLLATE *collation_name*  
- テーブルまたはビューで定義した列の照合順序ではなく、*collation_name* で指定した照合順序に従って ORDER BY 操作を実行します。 *collation_name* には、Windows 照合順序名と SQL 照合順序名のいずれかを指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は、**char**、**varchar**、**nchar**、および **nvarchar** 型の列にのみ適用できます。  
+ テーブルまたはビューで定義した列の照合順序ではなく、*collation_name* で指定した照合順序に従って ORDER BY 操作を実行します。 *collation_name* には、Windows 照合順序名または SQL 照合順序名を指定できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 COLLATE は、**char**、**varchar**、**nchar**、および **nvarchar** 型の列にのみ適用できます。  
   
  **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC を指定した場合、最小値から最大値の順序で並べ替えられます。 DESC を指定した場合、最大値から最小値の順序で並べ替えられます。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
@@ -150,7 +151,7 @@ ORDER BY order_by_expression
   
  **ntext**、**text**、**image**、**geography**、**geometry**、および **xml** 型の列は、ORDER BY 句では使用できません。  
   
- 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
+ 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -318,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a> 条件に基づく順序の指定  
- 次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて、条件に応じて行の並べ替え順序を決定しています。 最初の例では、`HumanResources.Employee` テーブルの `SalariedFlag` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
+ 次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて、条件に応じて行の並べ替え順序を決定しています。 最初の例では、`SalariedFlag` テーブルの `HumanResources.Employee` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -552,10 +553,10 @@ ORDER BY LastName, FirstName;
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [順位付け関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
- [EXCEPT および INTERSECT &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT および INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   

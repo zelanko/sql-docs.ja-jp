@@ -1,32 +1,32 @@
 ---
-title: "OGC の静的なジオメトリ メソッド | Microsoft Docs"
-ms.custom: 
+title: OGC の静的なジオメトリ メソッド | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - OGC Static Geometry Methods [SQL Server]
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c3af49dd670fcda87916b3471c1d682dd381dba
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 15cee30d4ed6eeddf28d0995651671b2388a52ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC の静的なジオメトリ メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [STGeomFromWKB &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type.md)  
   
--   [STPointFromWKB &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stpointfromwkb-geometry-data-type.md)  
+-   [STPointFromWKB &#40;geometry データ型e&#41;](../../t-sql/spatial-geometry/stpointfromwkb-geometry-data-type.md)  
   
 -   [STLineFromWKB &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stlinefromwkb-geometry-data-type.md)  
   

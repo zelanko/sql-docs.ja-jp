@@ -1,16 +1,16 @@
 ---
 title: HASHBYTES (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HASHBYTES_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - hash input
 - HASHBYTES
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63552f4b6fb61b3b24d4d670b9ea255d8e417699
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2bac5b4c4a36331619752ba25e9cb11382fe4129
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +60,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  出力はアルゴリズムの標準に準拠します。MD2、MD4、および MD5 の場合は 128 ビット (16 バイト)、SHA および SHA1 の場合は 160 ビット (20 バイト)、SHA2_256 の場合は 256 ビット (32 バイト)、SHA2_512 の場合は 512 ビット (64 バイト) です。  
   
-**に適用されます**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を通じて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前の場合、指定できる入力値は 8000 バイトまでに制限されます。  
   

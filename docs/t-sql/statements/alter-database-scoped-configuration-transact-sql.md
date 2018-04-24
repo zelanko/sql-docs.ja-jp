@@ -2,7 +2,7 @@
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 2e347cc80ec70e765a59364037ace04eed1908ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/04/2018
   
 - プロシージャ キャッシュをクリアします。  
 - プライマリ データベースに対して、MAXDOP パラメーターを特定のデータベースに最適な内容に基づいて任意の値 (1、2、...) に設定し、(クエリ レポートなどに) 使用されるすべてのセカンダリ データベースに対して別の値 (0 など) を設定します。  
-- データベースに依存しないクエリ オプティマイザーの基数推定モデルを互換性レベルに設定します。  
+- データベースに依存しないクエリ オプティマイザーのカーディナリティ推定モデルを互換性レベルに設定します。  
 - データベース レベルでパラメーター スニッフィングを有効または無効にします。
 - データベース レベルでのクエリ最適化の修正プログラムを有効または無効にします。
 - データベース レベルで ID キャッシュを有効または無効にします。
@@ -99,14 +99,14 @@ PRIMARY
   
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
-データベースの互換性レベルに関係なく、クエリ オプティマイザーの基数推定モデルを SQL Server 2012 以前のバージョンに設定できます。 既定値は **OFF** であり、クエリ オプティマイザーの基数推定モデルがデータベースの互換性レベルに基づいて設定されます。 これを **ON** に設定することは、[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。 
+データベースの互換性レベルに関係なく、クエリ オプティマイザーのカーディナリティ推定モデルを SQL Server 2012 以前のバージョンに設定できます。 既定値は **OFF** であり、クエリ オプティマイザーのカーディナリティ推定モデルがデータベースの互換性レベルに基づいて設定されます。 これを **ON** に設定することは、[トレース フラグ 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にすることと同じです。 
 
 > [!TIP] 
 > これをクエリ レベルで行うには、**QUERYTRACEON** [クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を追加してください。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、トレース フラグの代わりに、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加してください。 
   
 PRIMARY  
   
-データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリのクエリ オプティマイザーの基数推定モデル設定がプライマリに設定されている値になることを示します。 クエリ オプティマイザーの基数推定モデルの構成がプライマリで変更された場合、セカンダリの値も適宜変更されます。 **PRIMARY** はセカンダリの初期設定です。  
+データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリのクエリ オプティマイザーのカーディナリティ推定モデル設定がプライマリに設定されている値になることを示します。 クエリ オプティマイザーのカーディナリティ推定モデルの構成がプライマリで変更された場合、セカンダリの値も適宜変更されます。 **PRIMARY** はセカンダリの初期設定です。  
   
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
@@ -317,8 +317,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [SQL Server の "max degree of parallelism" 構成オプションの推奨事項とガイドライン](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース    
-* [基数推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-* [SQL Server 2014 の基数推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
+* 
+  [カーディナリティ推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
+* 
+  [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING リソース    
 * [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)

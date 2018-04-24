@@ -1,30 +1,33 @@
 ---
-title: "エンティティ管理者を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: エンティティ管理者を作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be0622ceacc22ab3066efd8f9cb81f15318ef2b9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 309eb07ee3942f9aae08d34febdbc57f06cae41e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>エンティティ管理者を作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、グループまたはユーザーに 1 つ以上のエンティティのすべてのオブジェクトに対してすべての権限を付与する、待機中の変更セットを承認する権限を付与するには、エンティティ管理者を作成します。  
   
 > [!TIP]  
@@ -39,17 +42,17 @@ ms.lasthandoff: 03/05/2018
   
 ## <a name="to-create-an-entity-administrator"></a>エンティティ管理者を作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  編集するユーザーまたはグループの行を選択し、 **[選択したユーザーの編集]**をクリックします。  
+2.  編集するユーザーまたはグループの行を選択し、 **[選択したユーザーの編集]** をクリックします。  
   
-3.  **[モデル]** タブをクリックし、必要に応じて **[モデル]** の一覧からモデルを選択して、 **[編集]**をクリックします。  
+3.  **[モデル]** タブをクリックし、必要に応じて **[モデル]** の一覧からモデルを選択して、 **[編集]** をクリックします。  
   
 4.  権限を付与するエンティティをクリックし、メニューで **[管理者]** をクリックします。  
   
 5.  グループまたはユーザーを管理者にする各エンティティについて、手順 4 を実行します。  
   
-6.  **[保存]**をクリックします。  
+6.  **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)   

@@ -1,32 +1,35 @@
 ---
-title: "Web アプリケーションの要件 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: Web アプリケーションの要件 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "マスター データ サービス"
+- マスター データ サービス
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 
+caps.latest.revision: 40
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac07d3f1214c151f44e10ffafcf09159403363f0
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b2f2c480d3d600e409557d82d55ead7febfc82c1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、インターネット インフォメーション サービス (IIS) によってホストされる Web アプリケーションです。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は Internet Explorer (IE) 9 以降でのみ動作します。 IE 8 以前のバージョン、Microsoft Edge、Chrome はサポートされていません。  
 
 **IIS のインストールおよび構成方法については**、「[Installing and Configuring IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)」(IIS のインストールと構成) を参照してください。

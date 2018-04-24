@@ -1,16 +1,16 @@
 ---
 title: LEAD (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LEAD_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - LEAD function
 - analytic functions, LEAD
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b736272f07e8767840076fc69cbd5ac3d86d377d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 255f5ab3de4d7a9f045df6179f43da8b16bd6f31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,7 +58,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *offset* の *scalar_expression* が NULL の場合に返される値。 既定値を指定しない場合、NULL が返されます。 *default* には、列、サブクエリ、または式を指定できますが、分析関数は指定できません。 *default* には、*scalar_expression* の型との互換性が必要です。  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、関数を適用する前にデータの順序を決定します。 *partition_by_clause* が指定されると、各パーティションのデータの順序が決まります。 *order_by_clause* は必須です。 詳しくは、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関する記事をご覧ください。  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、関数を適用する前にデータの順序を決定します。 *partition_by_clause* が指定されると、各パーティションのデータの順序が決まります。 *order_by_clause* は必須です。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
  指定した *scalar_expression* のデータ型。 *scalar_expression* が NULL 値を許容するか *default* が NULL に設定されている場合は、NULL が返されます。  
@@ -173,7 +174,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 ```  
   
 ## <a name="see-also"></a>参照  
- [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
+ [間隔 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/lag-transact-sql.md)  
   
   
 

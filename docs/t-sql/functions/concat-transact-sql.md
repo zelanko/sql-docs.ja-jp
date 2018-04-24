@@ -1,16 +1,16 @@
 ---
 title: CONCAT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONCAT
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71f52ba08f2fd5fe94af4b16dbcac06746564e09
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -52,7 +53,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 入力に依存する文字列、長さ、および型です。
   
 ## <a name="remarks"></a>Remarks  
-**CONCAT** は、文字列引数の可変数を取得して、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が NULL の場合、**varchar(1)** 型の空の文字列が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換についての詳細については、を参照してください。 [CAST および CONVERT &#40;です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+**CONCAT** は、文字列引数の可変数を取得して、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が NULL の場合、**varchar(1)** 型の空の文字列が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換についての詳細については、を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 戻り値の型は、引数の種類によって異なります。 次の表に、マッピングを示します。
   

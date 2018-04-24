@@ -1,16 +1,16 @@
 ---
 title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECRYPTBYASYMKEY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - DECRYPTBYASYMKEY function
 - decryption [SQL Server], asymmetric keys
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c85f80e0b8df4f2e61ad0d5f20e9e5ba4d8b582
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1744860b550142f274e23ca81da7792fa478df0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
  データベース内の非対称キーを暗号化するのに使用されたパスワードを指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** (最大サイズは 8,000 バイト)。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  非対称キーでの暗号化/暗号化解除は、対称キーを使用した暗号化/暗号化解除に比べて非常に時間がかかります。 テーブル内のユーザー データのような大きなデータセットを扱う場合、非対称キーの使用は推奨されません。  

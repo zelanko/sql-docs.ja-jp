@@ -1,33 +1,36 @@
 ---
-title: "日付属性を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 日付属性を作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ffa6f6aae55ae59effcdd1ad1cb5d102d1c4274
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: af791278d6bfe2948fbbdbca79972e3ddd7a1350
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>日付属性を作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ユーザーに属性値として日付を入力させる場合、日付属性を作成します。  
   
 > [!NOTE]  
@@ -44,15 +47,15 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-a-date-attribute"></a>日付属性を作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
   
 3.  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
   
-4.  **[属性]**をクリックします。  
+4.  **[属性]** をクリックします。  
   
-5.  **[属性の管理]** ページで、次のいずれかの操作を行い、 **[追加]**をクリックします。  
+5.  **[属性の管理]** ページで、次のいずれかの操作を行い、 **[追加]** をクリックします。  
   
     -   属性の対象がリーフ メンバーの場合、 **[メンバーの種類]** ボックスの一覧から **[リーフ]** を選択します。  
   
@@ -66,15 +69,15 @@ ms.lasthandoff: 03/05/2018
   
 8.  **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
-9. **[属性の種類]** リストから、 **[自由形式]**を選択します。  
+9. **[属性の種類]** リストから、 **[自由形式]** を選択します。  
   
-10. **[データ型]** ボックスの一覧の **[DateTime]**をクリックします。  
+10. **[データ型]** ボックスの一覧の **[DateTime]** をクリックします。  
   
 11. **[定型入力]** ボックスの一覧から日付の形式を選択します。  
   
 12. 必要に応じて、 **[変更の追跡を有効化]** を選択して、属性のグループに対する変更を追跡します。 詳細については、「[変更の追跡グループに属性を追加する方法 (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)」を参照してください。  
   
-13. **[保存]**をクリックします。  
+13. **[保存]** をクリックします。  
   
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>datetime 値の時刻部分を表示するには  
  ユーザー インターフェイスに datetime 値の時刻部分を表示するには、属性に対する適切な入力マスクを選択する必要があります。 Datetime 属性にそのための組み込みのマスクは存在しませんが、時刻を表示するための新しいマスクを独自に追加することはできます。 そのためには、組み込みのマスクが格納されている MDS データベースの mdm.tblList テーブルに行を追加します。 この行には、次の値が存在する必要があります。  

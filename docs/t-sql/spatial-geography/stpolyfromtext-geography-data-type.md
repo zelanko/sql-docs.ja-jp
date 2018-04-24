@@ -1,16 +1,16 @@
 ---
-title: "STPolyFromText (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: STPolyFromText (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STPolyFromText_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 523923276b499fb1be3af1e61066ac323b3e90d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6e158acd639dddeaab7da668dd8660bbcc035429
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR 戻り値の型: **SqlGeography**  
   
- OGC の型: **多角形**  
+ OGC の型: **Polygon**  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドでは、入力が適切な形式でない場合に、**FormatException** がスローされます。  
+ このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
 ## <a name="examples"></a>使用例  
  `STPolyFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  

@@ -1,16 +1,16 @@
 ---
-title: "データ型の変換 (データベース エンジン) | Microsoft Docs"
-ms.custom: 
+title: データ型の変換 (データベース エンジン) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9443c64daa514c83e6493606f961e501b26f04f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,15 +72,15 @@ CAST ( $157.27 AS VARCHAR(10) )
   
  - [binary と varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
  - [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
- - [money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ - [money および smallmoney & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
  - [bit &#40;Transact-SQL&#41;](../../t-sql/data-types/bit-transact-sql.md)  
  - [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
  - [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
  - [char および varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
- - [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+ - [10 進数の数値と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
  - [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)  
  - [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
- - [float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+ - [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)  
  - [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)  
  - [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
  - [int、bigint、smallint、および tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
@@ -105,7 +106,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**、**smalldatetime**|**日付**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
-**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(**0 ～ *length*1**)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
+**binary**、**varbinary**、**image** の各型の値を除いて、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値はすべて 1 つの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 値に変換されます。 これらの値は [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の 1 次元 **Byte()** 配列に変換されます。 この配列の範囲は、**Byte(** 0 ～ *length*1 **)** です。*length* は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **binary**、**varbinary**、または **image** の値のバイト数です。
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   

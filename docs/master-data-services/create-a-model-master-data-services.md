@@ -1,33 +1,36 @@
 ---
-title: "モデルを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: モデルを作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e49ea38d232782f4c98e1ff5e2084daee1f39cd
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ed6a7dd3097a8bc2cb0200d0eeef840839c1a8bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -39,23 +42,23 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-a-model"></a>モデルを作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]**をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
   
-3.  **[モデルの管理]** ページで **[追加]**をクリックします。 右側にパネルが表示されます。  
+3.  **[モデルの管理]** ページで **[追加]** をクリックします。 右側にパネルが表示されます。  
   
 4.  **[名前]** ボックスに、モデルの名前を入力します。  
   
 5.  (必要に応じて) **[説明]** フィールドに、モデルの説明を入力します。  
   
-6.  **[Log Retention Days]** (ログの保持日数) フィールドで、ログ データを保持するためのオプションのいずれかを選択します。 既定値は **[システム設定]**です。これは、値が [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]のシステム設定から継承されることを示します。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
+6.  **[Log Retention Days]** (ログの保持日数) フィールドで、ログ データを保持するためのオプションのいずれかを選択します。 既定値は **[システム設定]** です。これは、値が [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]のシステム設定から継承されることを示します。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-     システム設定を上書きし、トランザクション ログ データを削除しない場合は、 **[いいえ]**を選択します。 前の日のログをすべて切り捨てて、今日のログ データのみを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに 0 を設定します。 指定した日数のログ データを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに目的の日数を設定します。  
+     システム設定を上書きし、トランザクション ログ データを削除しない場合は、 **[いいえ]** を選択します。 前の日のログをすべて切り捨てて、今日のログ データのみを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに 0 を設定します。 指定した日数のログ データを保持するには、 **[はい]** を選択し、 **[日間]** フィールドに目的の日数を設定します。  
   
 7.  (オプション) **[モデルと同じ名前のエンティティを作成する]** をクリックして、モデルと同じ名前のエンティティを作成します。  
   
-8.  **[モデルの保存]**をクリックします。  
+8.  **[モデルの保存]** をクリックします。  
   
  作成されたモデルごとに、8 列の行がグリッドに追加されます。 8 つの列は次のとおりです。  
   

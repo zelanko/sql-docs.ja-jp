@@ -1,16 +1,16 @@
 ---
-title: "STAsBinary (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: STAsBinary (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STAsBinary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary (geometry Data Type)
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9bd5de3f4edac322a01a51eb9798109ea138767
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6cf7a9c26ca18d4d8e59f7f3ed8ce1b30581cb1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
  CLR 戻り値の型: **SqlBytes**  
   

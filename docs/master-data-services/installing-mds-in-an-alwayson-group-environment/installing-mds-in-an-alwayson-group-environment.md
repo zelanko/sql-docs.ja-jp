@@ -1,30 +1,33 @@
 ---
-title: "マスター データ サービスの高可用性とディザスター リカバリー | Microsoft Docs"
-ms.custom: 
+title: マスター データ サービスの高可用性とディザスター リカバリー | Microsoft Docs
+ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: installing-mds-in-an-alwayson-group-environment
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8cd77bb7366fb1bb09d8f119a1b740bd8456344
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 2abe9f51dd271ed5524ebb7ee63475e99d0697b4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 **概要:** この記事では、AlwaysOn 可用性グループ構成でホストされているマスター データ サービス (MDS) のソリューションについて説明します。 この記事では、SQL 2016 AlwaysOn 可用性グループ (AG) で SQL 2016 マスター データ サービスをインストールして構成する方法について説明します。 このソリューションの主な目的は、SQL Server データベースでホストされている MDS バックエンド データの高可用性とディザスター リカバリーの改善です。
 

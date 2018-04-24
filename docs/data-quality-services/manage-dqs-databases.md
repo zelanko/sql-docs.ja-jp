@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 138fd9e68a665f2a0b793891c8a6b723f5d78ea7
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 13098ada58ea8ce0b055d7fedb3b90867f2599d7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   ここでは、バックアップ/復元またはデタッチ/アタッチなど DQS のデータベースに対して実行できるデータベース管理アクティビティについて説明します。  
   
 ##  <a name="BackupRestore"></a> DQS データベースのバックアップと復元  
@@ -43,7 +46,7 @@ ms.lasthandoff: 03/22/2018
   
 -   DQS データベースの既定の **[自動拡張]** のサイズを 10% に設定します。  
   
--   DQS データベースの既定の復旧モデルを、 **[単純]**に設定します。 単純復旧モデルでは、トランザクションのログへの記録は最小限になり、トランザクションの完了後にログが自動的に切り捨てられて、トランザクション ログ (.ldf ファイル) の領域が解放されます。 単純復旧モデルについて詳しくは、「[データベースの完全バックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)」をご覧ください。  
+-   DQS データベースの既定の復旧モデルを、 **[単純]** に設定します。 単純復旧モデルでは、トランザクションのログへの記録は最小限になり、トランザクションの完了後にログが自動的に切り捨てられて、トランザクション ログ (.ldf ファイル) の領域が解放されます。 単純復旧モデルについて詳しくは、「[データベースの完全バックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)」をご覧ください。  
   
 > [!IMPORTANT]  
 >  -   単純復旧モデルでは、ログ レコードが長い間アクティブなままになると (長く、時間のかかるトランザクションの場合など)、ログの切り捨てが遅れて、トランザクション ログがいっぱいになる可能性があります。 また、ログの切り捨てを行っても、物理ログ ファイル (.ldf ファイル) のサイズは縮小されません。 物理ログ ファイルのサイズを削減するには、ログ ファイルを圧縮する必要があります。 トランザクション ログに関する問題のトラブルシューティングについては、「[トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)」または Microsoft サポート技術情報 ([http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446)) をご覧ください。  

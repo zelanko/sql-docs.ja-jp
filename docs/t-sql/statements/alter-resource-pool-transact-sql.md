@@ -1,16 +1,16 @@
 ---
 title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: 
+caps.latest.revision: 47
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c6b9a6c43d61573ca5bc895ac5f9ef8d0ee9715f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  CAP_CPU_PERCENT =*value*  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- リソース プールでは、要求のターゲットの最大 CPU 容量を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
+ リソース プールでは、要求のターゲットの最大 CPU 容量を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。  
   
 > [!NOTE]  
 >  統計の性質により、CPU の管理、急増の CAP_CPU_PERCENT で指定された値を超える場合があります。  
@@ -130,7 +130,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  関連付けられた各コンポーネント (スケジューラまたは NUMA ノード) の CPU 使用率の合計が 100% を超えることはできません。  
   
- DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
+ DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
  プランを変更し、設定に影響が出るとき、新しい設定は、DBCC FREEPROCCACHE (*pool_name*) の実行後にのみ、前にキャッシュされたプランに反映されます。*pool_name* は Resource Governor リソース プールの名前です。  
   
@@ -139,7 +139,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 -   1 つのスケジューラから複数のスケジューラに AFFINITY を変更する場合、DBCC FREEPROCCACHE を実行する必要はありません。 ただし、直列プランは並列で実行できません。そのため、個々のキャッシュを消去すると、場合によっては、新しいプランを並列処理でコンパイルできます。  
   
 > [!CAUTION]  
->  複数のワークロード グループに関連付けられている理リソース プールからキャッシュされているプランを消去すると、ユーザー定義のリソース プールが *pool_name* で識別されているすべてのワークロード グループが影響を受けます。  
+>  複数のワークロード グループに関連付けられているリソース プールからキャッシュされているプランを消去すると、ユーザー定義のリソース プールが *pool_name* で識別されているすべてのワークロード グループに影響します。  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  

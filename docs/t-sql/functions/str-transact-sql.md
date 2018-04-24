@@ -1,16 +1,16 @@
 ---
 title: STR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STR
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - character data [SQL Server]
 - STR function
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4eb6ae0f5cc4a669cf69140e406ad36d4d5bf11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +62,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Remarks  
- STR で *length* パラメーターと *decimal* パラメーターを指定する場合は、正の値を指定する必要があります。 数値は、既定では整数に丸められます。小数点以下桁数に 0 が指定された場合も同様です。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い *float_expression* は、指定された長さで右揃えされ、長い *float_expression* は、指定された小数点以下桁数に切り捨てられます。 たとえば、STR(12**,**10) の結果は 12 になります。 これは結果セットの中で右揃えされます。 一方、STR(1223**,**2) と指定すると、結果は切り捨てられて ** になります。 文字列関数は入れ子にすることができます。  
+ STR で *length* パラメーターと *decimal* パラメーターを指定する場合は、正の値を指定する必要があります。 数値は、既定では整数に丸められます。小数点以下桁数に 0 が指定された場合も同様です。 指定する長さは、その数字の小数点より前の桁数に、符号があればその符号部分を加えた数以上にする必要があります。 短い *float_expression* は、指定された長さで右揃えされ、長い *float_expression* は、指定された小数点以下桁数に切り捨てられます。 たとえば、STR(12 **,** 10) の結果は 12 になります。 これは結果セットの中で右揃えされます。 一方、STR(1223 **,** 2) と指定すると、結果は切り捨てられて ** になります。 文字列関数は入れ子にすることができます。  
   
 > [!NOTE]  
 >  Unicode データに変換するには、CONVERT または [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 変換関数の中で STR を使用します。  

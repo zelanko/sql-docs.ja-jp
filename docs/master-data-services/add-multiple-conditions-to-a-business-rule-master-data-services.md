@@ -1,32 +1,35 @@
 ---
-title: "ビジネス ルールに複数の条件を追加する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ビジネス ルールに複数の条件を追加する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc94f027c82da03f549e70a5b7e6391902561a19
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 5a69cacf339b7a3b8e78fee1509e145b035206e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>ビジネス ルールに複数の条件を追加する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ではより複雑なルールが必要な場合に、複数の **AND** 条件または **OR** 条件をビジネス ルールに追加します。  
   
 > [!NOTE]  
@@ -43,9 +46,9 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-add-multiple-conditions-to-a-business-rule"></a>ビジネス ルールに複数の条件を追加するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]**をクリックします。  
+2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
   
 3.  **[ビジネス ルール]** ページの **[モデル]** ドロップダウン リストから、モデルを選択します。  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 03/05/2018
   
 6.  編集するビジネス ルールの行をクリックします。  
   
-7.  **[編集]**をクリックします。  
+7.  **[編集]** をクリックします。  
   
 8.  **If** ブロックの下で、左側にある論理演算子のドロップダウン リストから、 **AND/OR/ NOT**を選択します。  
   
-9. **[追加]**をクリックします。 パネルが表示されます。  
+9. **[追加]** をクリックします。 パネルが表示されます。  
   
 10. **[属性]** ボックスの一覧から、属性を選択します。  
   
@@ -67,12 +70,12 @@ ms.lasthandoff: 03/05/2018
   
 12. すべての必須フィールドに入力します。  
   
-13. **[保存]**をクリックします。 新しい行が **If** グリッドに追加されます。  
+13. **[保存]** をクリックします。 新しい行が **If** グリッドに追加されます。  
   
 14. 他の条件も追加する場合は、手順 8 ～ 13 を繰り返します。  
   
     > [!TIP]  
-    >  条件を削除するには、条件を選択して右クリックし、 **[削除]**をクリックします。  
+    >  条件を削除するには、条件を選択して右クリックし、 **[削除]** をクリックします。  
   
     > [!TIP]  
     >  複数の条件を選択して右クリックすると、論理演算子内で条件をグループ化したり、特定の論理演算子内の条件のグループ化を解除したりできます。  

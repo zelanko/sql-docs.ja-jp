@@ -1,16 +1,16 @@
 ---
-title: "STWithin (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: STWithin (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STWithin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77ecf242b0a29cb9129dce2d648f52daae03cbb7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 23bc3c9df39c5c8561cbf88e93f238e06b1e97ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。

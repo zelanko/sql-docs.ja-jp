@@ -1,37 +1,40 @@
 ---
-title: "モデル オブジェクト アクセス許可を割り当てる (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: モデル オブジェクト アクセス許可を割り当てる (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - models [Master Data Services], assigning object permissions
 - permissions [Master Data Services], assigning model object permissions
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03939fad90ad71e00245671d3586282a3eb8cc89
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d131ae750486e9371bc6fa56b453090c4b2a20a7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>モデル オブジェクト権限を割り当てる (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域内のデータにユーザーまたはグループがアクセスできるようにする必要があるとき、またはユーザーまたはグループを管理者にする必要があるときは、モデル オブジェクトに権限を割り当てます。  
   
 > [!NOTE]  
->  モデルに権限を割り当てると、その他のすべてのモデルへの権限は暗黙的に拒否されます。 モデル オブジェクト権限を割り当てない場合、ユーザーまたはグループは **[エクスプローラー]**のデータにアクセスできません。  
+>  モデルに権限を割り当てると、その他のすべてのモデルへの権限は暗黙的に拒否されます。 モデル オブジェクト権限を割り当てない場合、ユーザーまたはグループは **[エクスプローラー]** のデータにアクセスできません。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
@@ -42,17 +45,17 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-assign-model-object-permissions"></a>モデル オブジェクト権限を割り当てるには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
 2.  **[ユーザー]** または **[グループ]** ページで、編集するユーザーまたはグループの行を選択します。  
   
-3.  **[選択したユーザーの編集]**をクリックします。  
+3.  **[選択したユーザーの編集]** をクリックします。  
   
 4.  **[モデル]** タブをクリックします。  
   
 5.  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
   
-6.  **[編集]**をクリックします。  
+6.  **[編集]** をクリックします。  
   
 7.  ツリーを展開して、権限を割り当てるモデル オブジェクトをクリックします。  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 03/05/2018
   
 9. ユーザー モデル管理者を作成する必要がある場合、最上位のモデルで **[管理]** を選択します。  
   
-10. **[保存]**をクリックします。  
+10. **[保存]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
   

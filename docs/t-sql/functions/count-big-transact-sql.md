@@ -1,16 +1,16 @@
 ---
 title: COUNT_BIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COUNT_BIG_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad2b7e5343547bb65c6d81de8c6586ef5209e52a
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0701b86454205e9b83733f034b708bb18f45feff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,10 +82,10 @@ DISTINCT
 値の出現回数にかかわらず、各値の一意なインスタンスだけに AVG を適用することを指定します。
   
 *式 (expression)*  
-**bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
+**bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
-*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、演算が実行される論理的順序を指定します。 詳しくは、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関する記事をご覧ください。
+*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。
   
 ## <a name="return-types"></a>戻り値の型
 **bigint**
@@ -102,7 +103,7 @@ COUNT_BIG は、OVER 句や ORDER BY 句なしで使用される場合は決定�
 例については、「[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)」をご覧ください。
   
 ## <a name="see-also"></a>参照
-[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[集計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)  
 [int、bigint、smallint、および tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)

@@ -2,7 +2,7 @@
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -66,11 +66,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 41908f6d675e60fb5e188cd739f8e8833e4f4d07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -571,13 +572,13 @@ WITH CHECK | WITH NOCHECK
 > [!NOTE]  
 >  オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、「[SQL Server 2016 の各エディションでサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
- MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+ MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  現在クラスター化インデックスのリーフ レベルに格納されているデータ行を移動する場所を指定します。 テーブルは新しい位置に移動します。 このオプションは、クラスター化インデックスを作成する制約にのみ適用されます。  
   
 > [!NOTE]  
->  ここでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"**default**"** または MOVE TO **[**default**]** のように区切り記号で区切る必要があります。 **"**default**"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+>  ここでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  { CHECK | NOCHECK } CONSTRAINT  
  *constraint_name* を有効または無効にします。 このオプションは、FOREIGN KEY 制約と CHECK 制約でのみ使用できます。 NOCHECK を指定すると、制約は無効になり、今後列に行われる挿入または更新は、制約条件に対して検証されません。 DEFAULT、PRIMARY KEY、および UNIQUE 制約は無効にできません。  
@@ -637,7 +638,7 @@ WITH CHECK | WITH NOCHECK
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 用およびバージョン V12 より前の SQL Database 用に構築された非クラスター化列ストア インデックスは読み取り専用形式でした。 すべてのパーティションの操作を実行する前に、(これは更新可能な) 現在の形式に非クラスター化列ストア インデックスを再構築する必要があります。  
   
- SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**default**"** | **"**NULL**"** }**)**  
+ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  FILESTREAM データの格納場所を指定します。  
@@ -648,9 +649,9 @@ WITH CHECK | WITH NOCHECK
   
  *filestream_filegroup_name* には、FILESTREAM ファイル グループの名前を指定します。 ファイル グループには、[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイルが 1 つ定義されている必要があります。それ以外の場合は、エラーが発生します。  
   
- **"**default**"** には、DEFAULT プロパティ セットを含む FILESTREAM ファイル グループを指定します。 FILESTREAM ファイル グループがない場合は、エラーが発生します。  
+ **"** default **"** には、DEFAULT プロパティ セットを含む FILESTREAM ファイル グループを指定します。 FILESTREAM ファイル グループがない場合は、エラーが発生します。  
   
- **"**NULL**"** を指定すると、テーブルの FILESTREAM ファイル グループへの参照がすべて削除されます。 最初にすべての FILESTREAM 列を削除する必要があります。 テーブルに関連付けられている FILESTREAM データをすべて削除するには、SET FILESTREAM_ON**="**NULL**"** を使用する必要があります。  
+ **"** NULL **"** を指定すると、テーブルの FILESTREAM ファイル グループへの参照がすべて削除されます。 最初にすべての FILESTREAM 列を削除する必要があります。 テーブルに関連付けられている FILESTREAM データをすべて削除するには、SET FILESTREAM_ON **="** NULL **"** を使用する必要があります。  
   
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

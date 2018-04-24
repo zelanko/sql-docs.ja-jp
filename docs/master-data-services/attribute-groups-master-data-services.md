@@ -1,45 +1,48 @@
 ---
-title: "属性グループ (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 属性グループ (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a33d39b0feae7184eec24d0ed5735d8bf99233d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ee7e2b2b6b10d0011999045f6064c892840086d6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
   
 ## <a name="how-attribute-groups-change-the-display"></a>属性グループによる表示の変更  
  属性グループは、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域のグリッドの上部にタブとして表示されます。  
   
- 1 つのエンティティに多くの属性がある場合、 **[エクスプローラー]**のグリッド内でエンティティのすべての属性を表示するには、右にスクロールする必要があります。 このスクロールを回避するために、属性グループを作成できます。  
+ 1 つのエンティティに多くの属性がある場合、 **[エクスプローラー]** のグリッド内でエンティティのすべての属性を表示するには、右にスクロールする必要があります。 このスクロールを回避するために、属性グループを作成できます。  
   
 -   属性グループには必ず、Name 属性と Code 属性が含まれます。  
   
 -   エンティティの各属性は、1 つまたは複数の属性グループに属する場合があります。  
   
--   すべての属性が、 **エクスプローラー** の **[すべての属性]**タブに自動的に表示されます。  
+-   すべての属性が、 **エクスプローラー** の **[すべての属性]** タブに自動的に表示されます。  
   
 -   **[すべての属性]** タブを非表示にすることはできません。  
   

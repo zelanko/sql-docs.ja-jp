@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e5c9cc8937f015c5bc47c04d8def0c5f969e6dc
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 9c1f6ca2c40df7f5f3e6919f0e277be47959c5a4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Integration Services の DQS クレンジング コンポーネントを使うと、クレンジング プロジェクトをバッチ モードで実行できます。 しかし、DQS のデータ品質プロジェクト内のクレンジング アクティビティの **[結果の管理と表示]** タブでクレンジング結果を確認するのと同様の方法で、Integration Services パッケージ内でクレンジング結果を確認したい場合があります。 DQS では、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] [プロジェクトを開く] **画面から他のデータ品質プロジェクトを開くのと同様に、** で Integration Services プロジェクトを開くことができ、Integration Services プロジェクト内のクレンジング結果について、インタラクティブなクレンジングを操作できます。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -33,7 +36,7 @@ ms.lasthandoff: 03/22/2018
   
 -   完了した Integration Services プロジェクトだけが **の** [プロジェクトを開く] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]画面に表示されます。 失敗したプロジェクトや実行中のプロジェクトは **[プロジェクトを開く]** 画面に表示されません。  
   
--   Integration Services プロジェクトは、**で、インタラクティブなクレンジング ステージとして (** [管理ビューと結果] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]タブで) 開きます。 **[最適化]** タブまたは **[マップ]** タブに移動することはできません。 **[次へ]** をクリックして **[エクスポート]**タブにだけ移動できます。  
+-   Integration Services プロジェクトは、**で、インタラクティブなクレンジング ステージとして (** [管理ビューと結果] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]タブで) 開きます。 **[最適化]** タブまたは **[マップ]** タブに移動することはできません。 **[次へ]** をクリックして **[エクスポート]** タブにだけ移動できます。  
   
 -   ロックされた Integration Services プロジェクトを [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]から削除することはできません。 削除するには先にロックを解除する必要があります。  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[データ品質プロジェクトを開く]**をクリックします。 **[プロジェクトを開く]** 画面が表示されます。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[データ品質プロジェクトを開く]** をクリックします。 **[プロジェクトを開く]** 画面が表示されます。  
   
 3.  **[プロジェクトを開く]** 画面で、次のいずれかの方法で Integration Services プロジェクトを特定します。  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 03/22/2018
   
     2.  **[プロジェクトの種類]**: Integration Services プロジェクトはプロジェクトの種類が **[SSIS]** として **[プロジェクトを開く]** 画面に表示されます。  
   
-     プロジェクトを選択して **[次へ]**をクリックします。  
+     プロジェクトを選択して **[次へ]** をクリックします。  
   
 4.  Integration Services プロジェクトが、インタラクティブなクレンジング ステージとして (**[管理ビューと結果]** タブで) 開きます。 Integration Services プロジェクト内のデータに対してインタラクティブなクレンジングを実行できます。 **[結果の管理と表示]** タブについて詳しくは、「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」の「[インタラクティブなクレンジング ステージ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Interactive)」をご覧ください。  
   

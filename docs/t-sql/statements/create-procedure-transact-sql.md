@@ -1,16 +1,16 @@
 ---
 title: CREATE PROCEDURE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PROC
@@ -48,16 +48,17 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 
+caps.latest.revision: 180
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8762890c81c5ff2b03ba07a44ef6c559c6d57ab7
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 252a6808352bd919129b483101fd9e2fbf396523
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +248,7 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳細については、後で説明する「ベスト プラクティス」、「全般的な解説」、および「制限事項と制約事項」をご覧ください。  
   
-EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  CLR プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 名前空間部分を区切るためにピリオド (**.**) を使う名前空間修飾名がクラスにある場合は、クラス名をかっこ (**[ ]**) または引用符 (**""**) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
@@ -285,7 +286,7 @@ BEGIN、ROLLBACK、および COMMIT 操作は、アトミック ブロック内�
 NATIVE_COMPILATION  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- プロシージャがネイティブにコンパイルされることを示します。 NATIVE_COMPILATION、SCHEMABINDING、および EXECUTE AS は、任意の順序で指定できます。 詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
+ プロシージャがネイティブにコンパイルされることを示します。 NATIVE_COMPILATION、SCHEMABINDING、および EXECUTE AS は、任意の順序で指定できます。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
 SCHEMABINDING  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -1002,7 +1003,7 @@ EXEC Get10TopResellers;
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
  [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   

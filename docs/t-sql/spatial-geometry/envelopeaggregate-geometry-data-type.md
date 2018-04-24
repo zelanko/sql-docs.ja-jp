@@ -1,32 +1,32 @@
 ---
-title: "EnvelopeAggregate (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: EnvelopeAggregate (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - EnvelopeAggregate method (geometry)
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16c46ec5f18dde104a66d4fcf405f81ce59b2d6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 900a59691165ff9dc5a363248e6785681079bc96
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,18 +45,18 @@ EnvelopeAggregate ( geometry_operand )
  **geometry** オブジェクトのセットを表す **geometry** 型のテーブルの列を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
 ## <a name="exceptions"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- 入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
+ 入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
   
 > [!NOTE]  
->  入力されたすべての値が **null** の場合、**null** が返されます。  
+>  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
 ## <a name="examples"></a>使用例  
  次の例は、テーブル変数列のオブジェクトのセットの境界ボックスを返します。  

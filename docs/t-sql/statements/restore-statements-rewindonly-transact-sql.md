@@ -1,16 +1,16 @@
 ---
 title: RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 
+caps.latest.revision: 50
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8e1a07916c12d4043afd21daaa33cf77a222072f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメント - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ FROM <backup_device> [ ,...n ]
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Is the logical name, which must follow the rules for identifiers, of the backup devices created by **sp_addumpdevice** from which the database is restored.変数 (**@***logical_backup_device_name_var*) として指定する場合、バックアップ デバイス名は、文字列定数 (**@***logical_backup_device_name_var* = *logical_backup_device_name*) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 名前付きのディスクまたはテープ デバイスからバックアップを復元することを許可します。ディスクまたはテープを表すデバイスの種類を、完全なパスとファイル名を含む実際のデバイス名と共に指定してください。たとえば、DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0' のように指定します。変数 (**@***physical_backup_device_name_var*) として指定する場合、デバイス名は、文字列定数 (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 名前付きのディスクまたはテープ デバイスからバックアップを復元することを許可します。ディスクまたはテープを表すデバイスの種類を、完全なパスとファイル名を含む実際のデバイス名と共に指定してください。たとえば、DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0' のように指定します。変数 (**@***physical_backup_device_name_var*) として指定する場合、デバイス名は、文字列定数 (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名の使用の詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   

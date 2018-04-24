@@ -1,30 +1,33 @@
 ---
-title: "類似データの結合 (Excel 用 MDS アドイン) | Microsoft Docs"
-ms.custom: 
+title: 類似データの結合 (Excel 用 MDS アドイン) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c16f5253b70a57ec401340342261e0842bdefb1c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ec4c5c3b9e59d5611f9de0aa2b4dd628e1de92ca
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>類似データの照合 (Excel 用 MDS アドイン)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、Data Quality Services (DQS) 機能を使用してデータ内の類似性を見つけます。  
   
  この手順を実行するには、次のどちらかの操作を実行します。  
@@ -41,23 +44,23 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-find-similarities-by-using-the-default-knowledge-base"></a>既定のナレッジ ベースを使用して類似性を見つけるには  
   
-1.  MDS によって管理されるデータを含むワークシートで、 **[データ品質]** グループの **[データの照合]**をクリックします。  
+1.  MDS によって管理されるデータを含むワークシートで、 **[データ品質]** グループの **[データの照合]** をクリックします。  
   
-2.  **[データの照合]** ダイアログ ボックスで、 **[DQS 知識ベース]** の一覧から **[DQS データ (既定値)]**を選択します。  
+2.  **[データの照合]** ダイアログ ボックスで、 **[DQS 知識ベース]** の一覧から **[DQS データ (既定値)]** を選択します。  
   
 3.  照合するデータを含む各列について、ダイアログ ボックスで行を追加します。 このダイアログ ボックスのフィールドの詳細については、「 [照合ルールのパラメーターを設定する方法](../../data-quality-services/create-a-matching-policy.md#MatchingRules)」を参照してください。  
   
-4.  すべての重み値の合計が 100% になったら、 **[OK]**をクリックします。  
+4.  すべての重み値の合計が 100% になったら、 **[OK]** をクリックします。  
   
 ### <a name="to-find-similarities-by-using-a-custom-knowledge-base"></a>カスタム ナレッジ ベースを使用して類似性を見つけるには  
   
-1.  MDS によって管理されるデータを含むワークシートで、 **[データ品質]** グループの **[データの照合]**をクリックします。  
+1.  MDS によって管理されるデータを含むワークシートで、 **[データ品質]** グループの **[データの照合]** をクリックします。  
   
 2.  **[DQS 知識ベース]** の一覧から、カスタム ナレッジ ベースの名前を選択します。  
   
 3.  ワークシート内の各列について、DQS ドメインを選択します。  
   
-4.  すべての DQS ドメインがワークシート内の列にマップされたら、 **[OK]**をクリックします。  
+4.  すべての DQS ドメインがワークシート内の列にマップされたら、 **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
   

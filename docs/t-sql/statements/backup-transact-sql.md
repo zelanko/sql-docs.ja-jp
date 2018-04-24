@@ -2,7 +2,7 @@
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -53,11 +53,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49f7f6f0849382ba7558c106c339c331679a5b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -212,7 +213,7 @@ LOG **適用対象:** SQL Server
   
  詳細については、「[ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)」および「[ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)」を参照してください。  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
  部分バックアップを指定します。 部分バックアップには、データベース内のすべての読み取り/書き込みファイル (プライマリ ファイル グループ、存在する場合は読み取り/書き込みセカンダリ ファイル グループ、および指定の読み取り専用ファイルまたはファイル グループ) が含まれます。  
   
  READ_WRITE_FILEGROUPS  
@@ -233,7 +234,7 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
   
 \<backup_device> **適用対象:** SQL Server バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
- { *logical_device_name* | **@***logical_device_name_var* } **適用対象:** SQL Server データベースがバックアップされるバックアップ デバイスの論理名です。論理名は、識別子のルールに従う必要があります。変数 (@*logical_device_name_var*) として指定する場合、バックアップ デバイス名は、文字列定数 (@*logical_device_name_var***=** logical backup device name) として、または **ntext** や **text** データ型を除く、文字列データ型の変数として指定できます。  
+ { *logical_device_name* | **@***logical_device_name_var* } **適用対象:** SQL Server データベースがバックアップされるバックアップ デバイスの論理名です。論理名は、識別子のルールに従う必要があります。変数 (@* logical_device_name_var *) として指定する場合、バックアップ デバイス名は、文字列定数 (@* logical_device_name_var***=** logical backup device name) として、または **ntext** や **text** データ型を除く、文字列データ型の変数として指定できます。  
   
  { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。 URL のみ SQL Database マネージ インスタンスに適用。ディスク ファイルまたはテープ デバイス、あるいは Windows Azure BLOB ストレージ サービスを指定します。 URL の形式は、Windows Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 チュートリアルについては、「[チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)」を参照してください。 
 
@@ -358,7 +359,7 @@ NAME **=** { *backup_set_name* | **@***backup_set_var* }
 > [!IMPORTANT]  
 > これらのオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのファイルの上書きを防ぐことのみを目的としています。 テープは別の方法で消去することができ、ディスク ファイルはオペレーティング システムで削除できます。 有効期限の確認の詳細については、このトピックの「SKIP」および「FORMAT」を参照してください。  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } バックアップ セットが失効して上書きできるようになる日を指定します。変数 (@*date_var*) として指定する場合、この日付は構成されたシステムの **datetime** 形式に従い、次のいずれかとして指定する必要があります。  
+EXPIREDATE **=** { **'***date***'** | **@***date_var* } バックアップ セットが失効して上書きできるようになる日を指定します。変数 (@* date_var*) として指定する場合、この日付は構成されたシステムの **datetime** 形式に従い、次のいずれかとして指定する必要があります。  
   
 -   文字列定数 (@*date_var* **=** date)  
 -   文字列データ型 (**ntext** または **text** データ型を除く) の変数  

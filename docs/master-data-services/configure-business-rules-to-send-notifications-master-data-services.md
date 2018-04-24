@@ -1,34 +1,37 @@
 ---
-title: "通知を送信するようにビジネス ルールを構成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 通知を送信するようにビジネス ルールを構成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 407e57317e5b92ca529ce3fa4196b7d1ddafd6a7
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: fd7790eb4d1958b9291b2318baa52038c82b9489
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>通知を送信するようにビジネス ルールを構成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性値の変更をユーザーに通知する場合は、通知を送信するようにビジネス ルールを構成します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -46,9 +49,9 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-configure-business-rules-to-send-notifications"></a>通知を送信するようにビジネス ルールを構成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]**をクリックします。  
+2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
   
 3.  **[ビジネス ルール]** ページの **[モデル]** ボックスの一覧からモデルを選択します。  
   
@@ -56,15 +59,15 @@ ms.lasthandoff: 03/05/2018
   
 5.  **[メンバーの種類]** ドロップ ダウン リストから、メンバーの種類を選択します。  
   
-6.  グリッドで、編集するビジネス ルールの行を選択し、 **[編集]**をクリックします。  
+6.  グリッドで、編集するビジネス ルールの行を選択し、 **[編集]** をクリックします。  
   
 7.  **[通知を送信する]** チェックボックスをオンにし、ドロップダウン リストから、電子メール通知を送信するユーザーまたはグループを選択します。  
   
-8.  **[保存]**をクリックします。  
+8.  **[保存]** をクリックします。  
   
-9. **[すべてパブリッシュ]**をクリックします。  
+9. **[すべてパブリッシュ]** をクリックします。  
   
-10. 確認のダイアログ ボックスで **[OK]**をクリックします。 **[ビジネス ルールの状態]** 列の値が **[アクティブ]** に変わり、 **[通知]** 列に通知の送信先ユーザーまたはグループが表示されます。  
+10. 確認のダイアログ ボックスで **[OK]** をクリックします。 **[ビジネス ルールの状態]** 列の値が **[アクティブ]** に変わり、 **[通知]** 列に通知の送信先ユーザーまたはグループが表示されます。  
   
 ## <a name="next-steps"></a>Next Steps  
   

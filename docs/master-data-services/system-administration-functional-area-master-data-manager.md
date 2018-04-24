@@ -1,30 +1,33 @@
 ---
-title: "[システム管理] 機能領域 (マスター データ マネージャー) | Microsoft Docs"
-ms.custom: 
+title: '[システム管理] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72cb92630ce2777887929deaa46bfc57eecca837
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ed7a2faa6496d1f9f0a4b5a06074ca33f5996c9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>[システム管理] 機能領域 (マスター データ マネージャー)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [システム管理] 機能領域では、管理者はモデルとそのすべてのオブジェクトを作成できます。 また、ビジネス ルールを作成し、モデル パッケージを配置することも可能です。 管理者の詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ## <a name="model"></a>[モデル]  

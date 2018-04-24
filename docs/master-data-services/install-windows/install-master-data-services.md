@@ -1,30 +1,33 @@
 ---
-title: "マスター データ サービスのインストール作業 | Microsoft Docs"
-ms.custom: 
+title: マスター データ サービスのインストール作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 
+caps.latest.revision: 32
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a0b5d444d3f1f28d4453a8c266b19beaf080440
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 30435254dd2f8124098a484dd7c28d2755b11d4b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="installation-tasks-for-master-data-services"></a>マスター データ サービスのインストール作業
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   この記事では、インストール作業の概要と手順へのリンクを提供します。 インストールとマスター データ サービスの構成のチュートリアルは、「[マスター データ サービスのイントールと構成](../../master-data-services/master-data-services-installation-and-configuration.md)」を参照してください。 
   
 -   [インストール前の作業](#preinstall): [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をインストールする前に、システム要件を確認します。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 03/05/2018
   
 |操作|詳細|関連項目|  
 |------------|-------------|--------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションおよび [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスがホストされるコンピューターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップまたはコマンド プロンプトを使用して、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をインストールします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用する場合、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は **[共有機能]** の **[機能の選択]**ページから使用できるようになります。 コマンド プロンプトを使用する場合、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は機能パラメーターとして使用できるようになります。 コマンド ライン セットアップ プロセスによって [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]はインストールされますが、構成されないことに注意してください。 マスター データ サービス構成マネージャーを使用して構成する必要があります。<br /><br /> インストール プロセス:<br /><br /> 共有機能用に指定する場所に [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のフォルダーおよびファイルをインストールし、これらのオブジェクトに権限を割り当てます。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリをグローバル アセンブリ キャッシュ (GAC) に登録します。<br /><br /> [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]をインストールします。|[インストール ウィザードからの SQL Server 2016 のインストール &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションおよび [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスがホストされるコンピューターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップまたはコマンド プロンプトを使用して、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をインストールします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用する場合、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は **[共有機能]** の **[機能の選択]** ページから使用できるようになります。 コマンド プロンプトを使用する場合、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は機能パラメーターとして使用できるようになります。 コマンド ライン セットアップ プロセスによって [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]はインストールされますが、構成されないことに注意してください。 マスター データ サービス構成マネージャーを使用して構成する必要があります。<br /><br /> インストール プロセス:<br /><br /> 共有機能用に指定する場所に [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のフォルダーおよびファイルをインストールし、これらのオブジェクトに権限を割り当てます。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アセンブリをグローバル アセンブリ キャッシュ (GAC) に登録します。<br /><br /> [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]をインストールします。|[インストール ウィザードからの SQL Server 2016 のインストール &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [フォルダーとファイルの権限 &#40;マスター データ サービス&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
   
 ##  <a name="postinstall"></a> インストール後の作業  
   

@@ -1,16 +1,16 @@
 ---
 title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXTCATALOGPROPERTY_TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8517175bd7d4f44a8dc0394ea5b8ca2c73216394
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7ae96c00e4eb4c558868ebec8f939eefd777065d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (FULLTEXTCATALOGPROPERTY など) が NULL を返す可能性があります。 詳しくは、「[sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)」をご覧ください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (FULLTEXTCATALOGPROPERTY など) が NULL を返す可能性があります。 詳しくは、「[sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
  FULLTEXTCATALOGPROPERTY ('*catalog_name*','**IndexSize**') looks at only fragments with status 4 or 6 as shown in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). これらのフラグメントは、論理インデックスの一部です。 したがって、**IndexSize** プロパティは論理インデックス サイズのみを返します。 ただし、インデックス マージ中は、実際のインデックス サイズが論理サイズの 2 倍になる場合があります。 マージ中にフルテキスト インデックスが使用している実際のサイズを確認するには、[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) システム ストアド プロシージャを使用します。 このプロシージャは、フルテキスト インデックスに関連付けられているフラグメントをすべて調べます。 フルテキスト カタログ ファイルの拡張を制限し、マージ処理のための十分な領域を割り当てていない場合、フルテキストの作成に失敗する可能性があります。 この場合、FULLTEXTCATALOGPROPERTY ('catalog_name' ,'IndexSize') は 0 を返し、フルテキスト ログに次のエラーが書き込まれます。  

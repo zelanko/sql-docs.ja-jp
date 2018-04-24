@@ -1,34 +1,37 @@
 ---
-title: "統合メンバーを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 統合メンバーを作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating consolidated members [Master Data Services]
 - members [Master Data Services], creating consolidated members
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c22f62fbb00df745f75d027a756e93f4b6f1ec2
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: c392fd6bfaf31475b5f0258532bba05becfaf494
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>統合メンバーを作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で明示的階層の親ノードが必要な場合、統合メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -44,7 +47,7 @@ ms.lasthandoff: 03/05/2018
   
 2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-3.  **[エクスプローラー]**をクリックします。  
+3.  **[エクスプローラー]** をクリックします。  
   
 4.  メニュー バーの **[階層]** をポイントして、統合メンバーを追加する階層の名前をクリックします。  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 03/05/2018
   
 6.  左側のウィンドウで、統合メンバーの作成先として、ルート ノードまたは統合メンバーのいずれかを選択します。  
   
-7.  **[追加]**をクリックします。  
+7.  **[追加]** をクリックします。  
   
 8.  右側のペインのフィールドに入力します。  
   

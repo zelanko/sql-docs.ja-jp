@@ -2,7 +2,7 @@
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -36,11 +36,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 96716c0089734ddb038ae117211fcade0d810689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -173,7 +174,7 @@ ON
    *filegroup_name*  
    クラスター化列ストア インデックスを格納するファイル グループを指定します。 位置の指定がなく、テーブルがパーティション分割されていない場合は、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
 
-   **"**default**"**  
+   **"** default **"**  
    既定のファイル グループにインデックスを作成するには、"default" または [ default ] を使用します。  
   
    "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 QUOTED_IDENTIFIER は既定で ON です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
@@ -185,7 +186,7 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
    インデックスの名前を指定します。 *index_name* はテーブル内で一意にする必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
  **(** *column*  [ **,**...*n* ] **)**  
-    格納する列を指定します。 非クラスター化列ストア インデックスは、1,024 列に制限されます。  
+    格納する列を指定します。 非クラスター化列ストア インデックスは、1,024年列に制限されます。  
    各列は、列ストア インデックスでサポートされているデータ型である必要があります。 サポートされるデータ型の一覧については、「[制限事項と制約事項](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)」を参照してください。  
 
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
@@ -257,10 +258,10 @@ ON
 *filegroup_name*  
    インデックスを作成するファイル グループ名を指定します。 *filegroup_name* の指定がなく、テーブルがパーティション分割されていない場合は、基になるテーブルと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
  
-**"**default**"**  
+**"** default **"**  
 既定のファイル グループに、指定したインデックスを作成します。  
   
-この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 ##  <a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  

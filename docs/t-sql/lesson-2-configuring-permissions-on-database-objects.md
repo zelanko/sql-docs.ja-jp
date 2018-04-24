@@ -1,35 +1,37 @@
 ---
-title: "レッスン 2: データベース オブジェクトに対するアクセス許可の構成 | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 2: データベース オブジェクトに対するアクセス許可の構成 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - database permissions
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8b26ca8aa12634a5bdf0a47b1e0f6e3fc784ba0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2641d6cfdef9fa5dc2ba41c883a73235431b898
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対する権限の構成
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] データベースへのアクセス権をユーザーに付与するには、次の 3 つの手順があります。 まず、ログインを作成します。 ユーザーはこのログインを使用して、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]に接続できます。 次に、指定したデータベースでユーザーとしてログインを構成します。 最後に、データベース オブジェクトに対する権限をユーザーに付与します。 このレッスンではこれらの 3 つの手順を紹介し、ビューとストアド プロシージャをオブジェクトとして作成する方法について説明します。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+データベースへのアクセス権をユーザーに付与するには、次の 3 つの手順があります。 まず、ログインを作成します。 ユーザーはこのログインを使用して、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]に接続できます。 次に、指定したデータベースでユーザーとしてログインを構成します。 最後に、データベース オブジェクトに対する権限をユーザーに付与します。 このレッスンではこれらの 3 つの手順を紹介し、ビューとストアド プロシージャをオブジェクトとして作成する方法について説明します。  
   
 このレッスンの内容は次のとおりです。  
   

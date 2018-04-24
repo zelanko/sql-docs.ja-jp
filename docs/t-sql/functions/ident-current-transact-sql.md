@@ -1,16 +1,16 @@
 ---
 title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENT_CURRENT
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - identity columns, current value
 - IDENT_CURRENT function
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9e303b59af41301be2b171c9b6a917dfad6139dc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 07f0552417a98556efcd9f3085133f47de99121d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="identcurrent-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ IDENT_CURRENT( 'table_name' )
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  IDENT_CURRENT は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の ID 関数 SCOPE_IDENTITY および @@IDENTITY に似ています。 3 つの関数とも、最後に生成された ID 値を返します。 ただし、各関数の中で、*last* が定義されるスコープとセッションがそれぞれ異なります。  

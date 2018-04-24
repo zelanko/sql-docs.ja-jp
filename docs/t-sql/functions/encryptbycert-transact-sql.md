@@ -1,16 +1,16 @@
 ---
 title: ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYCERT
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - encryption [SQL Server], certificates
 - ENCRYPTBYCERT function
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20bb47de8ce928e623f34e4e99874f0598369729
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: de2ea71c965490320d0f238116270526a240179e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
  証明書の公開キーを使用して暗号化されるデータを含む  **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または**nchar** 型の変数。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** (最大サイズは 8,000 バイト)。  
+ **varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
  この関数では、証明書の公開キーを使ってデータを暗号化します。 この暗号文は、対応する秘密キーでのみ暗号化を解除できます。 このような非対称変換は、対称キーを使用する暗号化および暗号化解除と比較して、非常にコストがかかります。 したがって、非対称暗号化は、テーブル内のユーザー データなど、大きなデータセットを処理する場合は推奨されません。  

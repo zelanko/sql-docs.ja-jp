@@ -1,16 +1,16 @@
 ---
-title: "STMPointFromText (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: STMPointFromText (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STMPointFromText (geography Data Type)
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromText method
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d3d98c1324db738e45a48961f715c6f798f4ef2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9bce88504ef8cfa51d5d8b791ad41d9066bbc80e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-インスタンスに格納されている Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。
+Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完されています。
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
  OGC の型: **MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドでは、入力が適切な形式でない場合に、**FormatException** がスローされます。  
+ このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
 ## <a name="examples"></a>使用例  
  `STMPointFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  

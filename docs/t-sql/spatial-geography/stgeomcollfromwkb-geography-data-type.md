@@ -1,16 +1,16 @@
 ---
-title: "STGeomCollFromWKB (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: STGeomCollFromWKB (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeomCollFromWKB (geography Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMGeomCollFromWKB method
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b11823d7be29be6187b50d9806364bde0381d294
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e207a7712f0bacead237079f575b1cd719c12284
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  このメソッドでは、入力が適切な形式でない場合に、**FormatException** 例外がスローされます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`STGeomCollFromWKB()` を使用して `geography` インスタンスを作成します。  
+ `STGeomCollFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

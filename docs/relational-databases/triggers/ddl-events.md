@@ -1,36 +1,37 @@
 ---
-title: "DDL イベント | Microsoft Docs"
-ms.custom: 
+title: DDL イベント | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ddl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DDL events
 - DDL triggers, events
 - events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ab16db537c4033f0dd68ddd457e9e1a341a7449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3f65b5b259ef635f1b77932bec9e01decca58fcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ddl-events"></a>DDL イベント
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-次の表は、DDL トリガーまたはイベント通知を起動するために使用できる DDL イベントの一覧です。 各イベントは、キーワード間にアンダースコア文字 (_) を含めるように変更されたステートメント構文を備えた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはストアド プロシージャに対応しています。  
+  次の表は、DDL トリガーまたはイベント通知を起動するために使用できる DDL イベントの一覧です。 各イベントは、キーワード間にアンダースコア文字 (_) を含めるように変更されたステートメント構文を備えた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはストアド プロシージャに対応しています。  
   
 > [!IMPORTANT]  
 >  DDL と同様の操作を実行するシステム ストアド プロシージャも、DDL トリガーとイベント通知を起動します。 実行されるシステム ストアド プロシージャへの応答を判断するために、DDL トリガーおよびイベント通知をテストしてください。 たとえば、CREATE TYPE ステートメントおよび **sp_addtype** ストアド プロシージャはどちらも、CREATE_TYPE イベントで作成される DDL トリガーおよびイベント通知を起動します。  

@@ -1,16 +1,16 @@
 ---
-title: "Microsoft SQL データベース関数とは | Microsoft Docs"
-ms.custom: 
+title: Microsoft SQL データベース関数とは | Microsoft Docs
+ms.custom: ''
 ms.date: 06/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fa55a0b066db617ef0d6f2f0471ad6866cac2d73
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2d0e8115debf9d29ac57876381ef3052ca057157
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-are-the-sql-database-functions"></a>Microsoft SQL データベース関数とは
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -82,7 +83,7 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
   
  入力に文字列以外を使用し、文字列を返す関数の場合は、現在のデータベースの既定の照合順序が出力に適用されます。  
   
- 入力に複数の文字列を使用し、単一の文字列を返す関数の場合は、照合順序の優先順位ルールによって出力文字列の照合順序が設定されます。 詳しくは、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」をご覧ください。  
+ 入力に複数の文字列を使用し、単一の文字列を返す関数の場合は、照合順序の優先順位ルールによって出力文字列の照合順序が設定されます。 詳細については、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   

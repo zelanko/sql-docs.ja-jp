@@ -1,16 +1,16 @@
 ---
 title: UPDATETEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATETEXT
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4d7c7a51daeba116e695ba9cae797f0d69c70cf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: be77fa4aba2ef2a6fb45ce209846b825a487e837
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   既存の **text**、**ntext**、または **image** フィールドを更新します。 **text**、**ntext**、または **image** 型の列の一部だけを適切に変更するには、UPDATETEXT を使用します。 **text**、**ntext**、または **image** 型のフィールド全体を更新して置き換えるには、WRITETEXT を使用します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、大きな値のデータ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.**WRITE 句を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.** WRITE 句を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  更新するテーブルと **text**、**ntext**、または **image** 型の列の名前。 テーブル名と列名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 データベース名と所有者名の指定は省略可能です。  
   
  *dest_text_ptr*  
- 更新する **text**、**ntext**、または **image** 型のデータを指す、テキスト ポインター値を指定します。テキスト ポインター値は TEXTPTR 関数から返されます。 *dest_text_ptr* は、 **binary(**16**)** にする必要があります。  
+ 更新する **text**、**ntext**、または **image** 型のデータを指す、テキスト ポインター値を指定します。テキスト ポインター値は TEXTPTR 関数から返されます。 *dest_text_ptr* は、 **binary(** 16 **)** にする必要があります。  
   
  *insert_offset*  
  更新の開始位置を 0 を起点として指定します。 **text** または **image** 型の列の場合、*insert_offset* には、既存の列の開始位置から新しいデータの開始位置までにスキップするバイト数を指定します。 **Ntext** 列の場合、*insert_offset* は文字数です (各 **ntext** 文字は 2 バイトを使用します)。 この 0 を起点とした開始位置から始まる既存の **text**、**ntext**、または **image** 型の各データは、新しいデータの分だけ右に移動します。 値 0 を指定した場合、新しいデータは既存のデータの先頭に挿入されます。 NULL の場合、新しいデータは既存のデータの最後に追加されます。  

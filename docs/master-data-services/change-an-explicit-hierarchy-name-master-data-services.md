@@ -1,32 +1,35 @@
 ---
-title: "明示的階層名を変更する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 明示的階層名を変更する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df004b85314af154fc06c264e592ee7fc3f89ba7
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: aa4835113886095c1fbad49fd92b5c9945e769ea
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>明示的階層名を変更する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、明示的階層の名前を変更できます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -38,19 +41,19 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>明示的階層の名前を変更するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
   
 3.  **[エンティティの管理]** ページで、編集する明示的階層を含むエンティティの行をグリッドから選択します。  
   
-4.  **[明示的階層]**をクリックします。  
+4.  **[明示的階層]** をクリックします。  
   
-5.  **[明示的階層の管理]** ページで、名前を変更する明示的階層を選択して、 **[編集]**をクリックします。  
+5.  **[明示的階層の管理]** ページで、名前を変更する明示的階層を選択して、 **[編集]** をクリックします。  
   
 6.  **[名前]** ボックスに、階層の新しい名前を入力します。  
   
-7.  **[保存]**をクリックします。  
+7.  **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)   

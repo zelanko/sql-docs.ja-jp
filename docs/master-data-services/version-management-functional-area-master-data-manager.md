@@ -1,30 +1,33 @@
 ---
-title: "[バージョン管理] 機能領域 (マスター データ マネージャー) | Microsoft Docs"
-ms.custom: 
+title: '[バージョン管理] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a70550d847315ed79a90c4ede4c3b91d9458957f
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f102d3297b1c64a48befcca8dd7d9931eefe35fc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>[バージョン管理] 機能領域 (マスター データ マネージャー)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [バージョン管理] 機能領域では、管理者はデータの検証、トランザクションの確認と破棄、データのバージョン管理対象コピーの作成、およびシステムをサブスクライブする場合のデータのバージョンへのフラグ設定を実行できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ## <a name="versions"></a>バージョン  

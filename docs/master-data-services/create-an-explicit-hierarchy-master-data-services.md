@@ -1,33 +1,36 @@
 ---
-title: "明示的階層を作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 明示的階層を作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 230026427809dfbd17228bc07259a972e8a7884c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b35af751769b07aba9a30c7a32cb2a452c44965c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>明示的階層を作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で任意のレベルでメンバーが存在できる不規則階層が必要な場合、明示的階層を作成します。 明示的階層には、1 つのエンティティのメンバーが含まれています。  
   
  明示的階層を作成したら、 **[エクスプローラー]** 機能領域で明示的階層にメンバーを追加できます。  
@@ -43,21 +46,21 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-an-explicit-hierarchy"></a>明示的階層を作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
   
 3.  **[Manage Entity]** (エンティティの管理) ページで、明示的階層を作成するエンティティの行をグリッドから選択します。  
   
-4.  **[明示的階層]**をクリックします。  
+4.  **[明示的階層]** をクリックします。  
   
-5.  **[Manage Explicit Hierarchy]** (明示的階層の管理) ページで、 **[追加]**をクリックします。  
+5.  **[Manage Explicit Hierarchy]** (明示的階層の管理) ページで、 **[追加]** をクリックします。  
   
 6.  **[名前]** ボックスに階層の名前を入力します。  
   
 7.  必要に応じて、 **[必須階層]** チェック ボックスをオフにして、任意の階層として明示的階層を作成します。 階層の種類の詳細については、「 [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)」を参照してください。  
   
-8.  **[保存]**をクリックします。  
+8.  **[保存]** をクリックします。  
   
 ## <a name="grid-columns"></a>グリッド列  
  作成する各明示的階層で、グリッドに 7 列の行が追加されます。 次に、各列について説明します。  

@@ -1,32 +1,35 @@
 ---
-title: "データベースの作成ウィザード (マスター データ サービス構成マネージャー) | Microsoft Docs"
-ms.custom: 
+title: データベースの作成ウィザード (マスター データ サービス構成マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a788de09b69515f8313fc20a6b5953312feec611
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0af64bce7d8afc29fc9187d617351f62e550c610
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>データベースの作成ウィザード (マスター データ サービス構成マネージャー)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   **データベースの作成** ウィザードを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成します。  
   
 ## <a name="database-server"></a>[データベース サーバー]  
@@ -36,9 +39,9 @@ ms.lasthandoff: 03/05/2018
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストするために必要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス名を指定します。 ここには、ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを指定できます。 次のように入力して、情報を指定します。<br /><br /> ローカル コンピューター上の既定のインスタンスに接続するには、ピリオド (.) を入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の既定のインスタンスに接続するには、サーバー名または IP アドレスを入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の名前付きインスタンスに接続するには、サーバー名または IP アドレスと、インスタンス名を入力します。 この情報は、 *server_name*\\*instance_name*の形式で指定します。|  
 |**認証の種類**|指定した SQL Server インスタンスへの接続時に使用する認証の種類を選択します。 接続に使用する資格情報は、指定した **インスタンスの** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サーバー ロールに含まれている必要があります。 sysadmin ロールの詳細については、「 [サーバー レベルのロール](../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。<br /><br /> 認証の種類は次のとおりです。<br /><br /> **[現在のユーザー – 統合セキュリティ]**: 現在の Windows ユーザー アカウントの資格情報を使用して接続するときに、統合 Windows 認証を使用します。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] では、コンピューターにログオンしてアプリケーションを開いたユーザーの Windows 資格情報が使用されます。 アプリケーションで別の Windows 資格情報を指定することはできません。 別の Windows 資格情報を使用して接続する場合は、そのユーザーとしてコンピューターにログオンし、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を開く必要があります。<br /><br /> **[SQL Server アカウント]**: 接続する際に SQL Server アカウントを使用します。 このオプションを選択すると、 **[ユーザー名]** フィールドと **[パスワード]** フィールドが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
-|**User name**|指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスへの接続に使用されるユーザー アカウントの名前を指定します。 アカウントは、指定した **インスタンスの** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ロールに属している必要があります。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]** の場合、**[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]**の場合、 **[ユーザー名]** ボックスが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
-|**Password**|ユーザー アカウントに関連付けられているパスワードを指定します。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]**の場合、 **[パスワード]** ボックスは読み取り専用で、指定した Windows ユーザー アカウントの資格情報が接続に使用されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]**の場合、 **[パスワード]** ボックスが有効になり、指定したユーザー アカウントに関連付けられているパスワードを指定する必要があります。|  
-|**[接続テスト]**|指定したユーザー アカウントで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続でき、そのインスタンスの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成する権限がアカウントに与えられていることを確認します。 **[接続テスト]**をクリックしなかった場合、 **[次へ]**をクリックしたときに接続がテストされます。|  
+|**User name**|指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスへの接続に使用されるユーザー アカウントの名前を指定します。 アカウントは、指定した **インスタンスの** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ロールに属している必要があります。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]** の場合、**[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[ユーザー名]** ボックスが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
+|**Password**|ユーザー アカウントに関連付けられているパスワードを指定します。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]** の場合、 **[パスワード]** ボックスは読み取り専用で、指定した Windows ユーザー アカウントの資格情報が接続に使用されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[パスワード]** ボックスが有効になり、指定したユーザー アカウントに関連付けられているパスワードを指定する必要があります。|  
+|**[接続テスト]**|指定したユーザー アカウントで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続でき、そのインスタンスの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成する権限がアカウントに与えられていることを確認します。 **[接続テスト]** をクリックしなかった場合、 **[次へ]** をクリックしたときに接続がテストされます。|  
   
 ## <a name="database"></a>[データベース]  
  新しいデータベースのデータベース名と照合順序のオプションを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 char や varchar などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 照合順序の詳細については、「 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  

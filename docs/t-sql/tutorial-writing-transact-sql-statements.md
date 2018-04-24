@@ -1,35 +1,37 @@
 ---
-title: "チュートリアル: Transact-SQL ステートメントの作成 | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル: Transact-SQL ステートメントの作成 | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 65cb72c3cac7c51c702b97c2bcdbb8a793a818de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>チュートリアル: Transact-SQL ステートメントの作成
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの作成チュートリアルへようこそ。 このチュートリアルは、SQL ステートメントを初めて作成するユーザーを対象としています。 ここでは初心者のユーザーを対象に、テーブルを作成し、データを挿入するための基本的なステートメントを紹介します。 このチュートリアルでは、 [!INCLUDE[tsql](../includes/tsql-md.md)]製品に実装されている SQL 規格の [!INCLUDE[msCoName](../includes/msconame-md.md)] を使用します。 このチュートリアルは、 [!INCLUDE[tsql](../includes/tsql-md.md)] 言語を簡単に紹介することを目的としています。 [!INCLUDE[tsql](../includes/tsql-md.md)] クラスの代わりとなるものではありません。 このチュートリアルで使用するステートメントは意図的に簡潔化されており、通常の実稼働データベースに見られる複雑性を表すものではありません。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの作成チュートリアルへようこそ。 このチュートリアルは、SQL ステートメントを初めて作成するユーザーを対象としています。 ここでは初心者のユーザーを対象に、テーブルを作成し、データを挿入するための基本的なステートメントを紹介します。 このチュートリアルでは、 [!INCLUDE[tsql](../includes/tsql-md.md)]製品に実装されている SQL 規格の [!INCLUDE[msCoName](../includes/msconame-md.md)] を使用します。 このチュートリアルは、 [!INCLUDE[tsql](../includes/tsql-md.md)] 言語を簡単に紹介することを目的としています。 [!INCLUDE[tsql](../includes/tsql-md.md)] クラスの代わりとなるものではありません。 このチュートリアルで使用するステートメントは意図的に簡潔化されており、通常の実稼働データベースに見られる複雑性を表すものではありません。  
   
 >**注:** 初心者の方には、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ステートメントを記述するのでなく、 [!INCLUDE[tsql](../includes/tsql-md.md)] の使用をお勧めします。  
   

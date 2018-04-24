@@ -1,16 +1,16 @@
 ---
-title: "STMPointFromWKB (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: STMPointFromWKB (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STMPointFromWKB (geometry Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromWKB (geometry Data Type)
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 927d87e812bfec327dee6a477757587b026432ef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1ccf48aaf694bae3e19fd9639ddfa4a5ff011c80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
  返される **geometryMultiPoint** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geometry**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型: **SqlGeometry**  
   
  OGC の型: **MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
+ このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
 ## <a name="examples"></a>使用例  
  `STMPointFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  

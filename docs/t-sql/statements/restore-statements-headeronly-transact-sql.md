@@ -2,7 +2,7 @@
 title: RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -30,11 +30,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6cf34895c1e60ea81f75c4920e5abf235608bf66
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: be6d71e46e6e69491f82d1dc97ef26ff209f774c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -131,7 +132,7 @@ FROM <backup_device>
 |**フラグ**|**int**|**1** に設定されている場合の個々のフラグ ビットの意味は次のとおりです。<br /><br /> **1** = ログ バックアップに一括ログ操作が含まれている。<br /><br /> **2** = スナップショット バックアップ。<br /><br /> **4** = データベースがバックアップ時に読み取り専用だった。<br /><br /> **8** = データベースがバックアップ時にシングル ユーザー モードだった。<br /><br /> **16** = バックアップにバックアップ チェックサムが含まれている。<br /><br /> **32** = データベースがバックアップ時に損傷したが、エラーに関係なくバックアップ操作の続行が要求された。<br /><br /> **64** = ログ末尾のバックアップ。<br /><br /> **128** = 不完全なメタデータでのログ末尾のバックアップ。<br /><br /> **256** = NORECOVERY でのログ末尾のバックアップ。<br /><br /> **重要:** **Flags** ではなく、(下にリストされている **HasBulkLoggedData** から **IsCopyOnly** までの) ブール値の各列を使用することをお勧めします。|  
 |**BindingID**|**uniqueidentifier**|データベースに割り当てられたバインド ID。 これは、**sys.database_recovery_status****database_guid** に対応します。 データベースが復元されると、新しい値が割り当てられます。 **FamilyGUID** (下記) も参照してください。|  
 |**RecoveryForkID**|**uniqueidentifier**|最後の復旧分岐の ID。 この列は、[backupset](../../relational-databases/system-tables/backupset-transact-sql.md) テーブル内の **last_recovery_fork_guid** に対応します。<br /><br /> データのバックアップでは、**RecoveryForkID** は **FirstRecoveryForkID** と同じです。|  
-|**照合順序**|**nvarchar(128)**|データベースで使用されている照合順序。|  
+|**[照合順序]**|**nvarchar(128)**|データベースで使用されている照合順序。|  
 |**FamilyGUID**|**uniqueidentifier**|元のデータベースに関する作成時の ID。 この値は、データベースが復元されても変わりません。|  
 |**HasBulkLoggedData**|**bit**|**1** = 一括ログ記録操作を含むログ バッグアップ。|  
 |**IsSnapshot**|**bit**|**1** = スナップショット バックアップ。|  

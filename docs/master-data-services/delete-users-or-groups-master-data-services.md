@@ -1,16 +1,16 @@
 ---
-title: "ユーザーまたはグループを削除する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ユーザーまたはグループを削除する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting groups [Master Data Services]
@@ -18,18 +18,21 @@ helpviewer_keywords:
 - users [Master Data Services], deleting
 - deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23f33792f899a61c95f2fd05e1875facfe27690d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 71ff251f225794c383a5c1d2406f80d422891dea
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>ユーザーまたはグループを削除する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスする必要のなくなったユーザーまたはグループを削除します。  
   
  ユーザーおよびグループを削除する場合、次の点に注意してください。  
@@ -47,15 +50,15 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-delete-users-or-groups"></a>ユーザーまたはグループを削除するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[ユーザー/グループの権限]** をクリックします。  
   
-2.  ユーザーを削除するには、 **[ユーザー]** ページを表示します。 グループを削除するには、メニュー バーの **[グループの管理]**をクリックします。  
+2.  ユーザーを削除するには、 **[ユーザー]** ページを表示します。 グループを削除するには、メニュー バーの **[グループの管理]** をクリックします。  
   
 3.  グリッドで、削除するユーザーまたはグループの行を選択します。  
   
-4.  **[選択したユーザーの削除]** または **[選択したグループの削除]**をクリックします。  
+4.  **[選択したユーザーの削除]** または **[選択したグループの削除]** をクリックします。  
   
-5.  確認のダイアログ ボックスで **[OK]**をクリックします。  
+5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  

@@ -1,35 +1,35 @@
 ---
-title: "計算列での XML の使用 | Microsoft Docs"
-ms.custom: 
+title: 計算列での XML の使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb0cca121576000f3f7c5ba42eb4161c7d38f207
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 230255a725765d17a127d0f3e3332b71365fa8ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-xml-in-computed-columns"></a>計算列での XML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-XML インスタンスは、計算列のソースとして、または計算列の一種として使用できます。 このトピックでは、計算列で XML を使用する方法を示す例を紹介します。  
+  XML インスタンスは、計算列のソースとして、または計算列の一種として使用できます。 このトピックでは、計算列で XML を使用する方法を示す例を紹介します。  
   
 ## <a name="creating-computed-columns-from-xml-columns"></a>XML 列から計算列を作成する  
  次の `CREATE TABLE` ステートメントでは、 `xml` から`col2`型の列 ( `col1`) を計算しています。  

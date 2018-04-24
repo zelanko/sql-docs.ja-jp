@@ -1,33 +1,36 @@
 ---
-title: "ビジネス ルール (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ビジネス ルール (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 485f2694fe54000fc5784fdee26012de217ffd39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 76db0aa6de67cf1adaf21b4aa7024f7db4dc4a7d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="business-rules-master-data-services"></a>ビジネス ルール (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のビジネス ルールは、マスター データの品質と精度を保証するために使用するルールです。 ビジネス ルールを使用して自動的にデータを更新したり、電子メールを送信したり、ビジネス プロセスまたはワークフローを開始したりできます。  
   
  ビジネス ルールの例を表示する場合は、「[ビジネス ルールの例 &#40;マスター データ サービス&#41;](../master-data-services/business-rule-examples-master-data-services.md)」を参照してください。  
@@ -62,11 +65,11 @@ ms.lasthandoff: 03/05/2018
   
  ルールの適用については、次の点についても注意してください。  
   
--   ビジネス ルールが除外された場合、または **[アクティブ]**の状態でパブリッシュされていない場合、そのルールは使用可能ですが、ビジネス ルールが適用されるときには対象となりません。  
+-   ビジネス ルールが除外された場合、または **[アクティブ]** の状態でパブリッシュされていない場合、そのルールは使用可能ですが、ビジネス ルールが適用されるときには対象となりません。  
   
 -   ビジネス ルールは、すべてのリーフ メンバーまたはすべての統合メンバーのいずれかの属性値に適用されます。  
   
--   ビジネス ルールは、 **[未処理]** または **[ロック済み]**である、任意のバージョンのモデルに適用できます。  
+-   ビジネス ルールは、 **[未処理]** または **[ロック済み]** である、任意のバージョンのモデルに適用できます。  
   
 -   ビジネス ルールに適用するときにデータに加えられた変更は、トランザクションとしては記録されません。  
   

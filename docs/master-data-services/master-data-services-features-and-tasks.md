@@ -1,30 +1,33 @@
 ---
-title: "マスター データ サービスの機能とタスク | Microsoft Docs"
-ms.custom: 
+title: マスター データ サービスの機能とタスク | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a64d484a0739e17e947370d2760886bcbac7dd90
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a85118fdc5499a47a491ae1229713a4d58d87451
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-features-and-tasks"></a>マスター データ サービスの機能とタスク
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を使用して組織のマスター データを管理する方法について説明します。 データのコンテナーとなるモデル プロジェクトを作成し操作する方法を説明します。 マスター データ自体を編成して管理する方法を説明します。 マスター データおよび、テスト環境と運用環境間の共有モデルをインポートおよびエクスポートする方法を説明します。 最後に、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスにアクセスするカスタム アプリケーションを開発する方法を説明します。  
   
 ## <a name="create-structures-to-contain-data"></a>データを格納する構造体を作成します。  

@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e8894e78e95eb69cba639b4d60825982244ab9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 94db4c27897da2ebbd399d7946085b15f5f7b68d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインの用語ベースのリレーションを作成する方法について説明します。 用語ベースのリレーション (TBR) を使用して、ドメインの値の一部になっている用語を修正できます。 用語ベースのリレーションでは、共通する部分のスペルを除いても同一である複数の値は同一のシノニムと見なすことができます。 たとえば、"Inc." という用語を "Incorporated" に変更する用語ベースのリレーションを設定できます。 という用語を “Incorporated” に変更する用語ベースのリレーションを設定できます。 "Inc." という用語は、ドメインで発生するたびに変更されます。 "Contoso, Inc." のインスタンスは "Contoso, Incorporated" に変更され、2 つの値はまったく同じシノニムと見なされます。  
   
  用語ベースのリレーションを使用するには、"Inc." と "Incorporated" や "Senior" と "Sr." など、[値] と [次に修正] のペアのリストを作成します。 “Inc.” と “Incorporated” または “Senior” と “Sr.” など、[値] と [次に修正] のペアのリストを作成します。 用語ベースのリレーションを使用すると、個々のドメイン値をシノニムとして手動で設定しなくても、ドメイン全体で用語を変更できます。 以前にナレッジ検出で値が検出されていない場合でも値を修正することを指定できます。 用語ベースのリレーション変換により 2 つの値が同じになる場合、DQS ではそれらの用語間のシノニム リレーションシップ (ナレッジ検索)、それらの用語間の修正リレーションシップ (データ修正)、または完全一致 (照合) が作成されます。  
@@ -71,7 +74,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
     > [!NOTE]  
     >  Data Quality Service クライアントのドメイン管理用のページには、それぞれ異なるドメイン管理操作に対応する 5 つのタブが含まれています。 ウィザード ベースのプロセスではないため、任意の管理操作を個別に実行することができます。  

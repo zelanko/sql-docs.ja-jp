@@ -1,32 +1,32 @@
 ---
-title: "選択的 XML インデックスのパスと最適化ヒントの指定 | Microsoft Docs"
-ms.custom: 
+title: 選択的 XML インデックスのパスと最適化ヒントの指定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf2e9bf99c208efeb26fe0a2b87b6a7bab964dd2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bf5afdd80580bb3dde89a7f372b34b4ac7a67d11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  
+  このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  
   
  ノード パスと最適化ヒントは、次のいずれかのステートメントで同時に指定します。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/12/2018
   
  既定のマッピング モードは、常に安全で一般的なストレージ オプションを使用します。 任意の型の式と一致させることができます。 既定のマッピング モードの限界は、最適化されたパフォーマンスよりも小さくなります。これは、実行時に多数のキャストが必要であり、セカンダリ インデックスを使用できないためです。  
   
- 既定のマッピングで作成される選択的 XML インデックスの例を次に示します。 3 つのパスのすべてで、既定のノード型 (**xs:untypedAtomic**) と基数が使用されます。  
+ 既定のマッピングで作成される選択的 XML インデックスの例を次に示します。 3 つのパスのすべてで、既定のノード型 (**xs:untypedAtomic**) とカーディナリティが使用されます。  
   
 ```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
@@ -80,7 +80,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- ユーザー指定のマッピング モードでは、ノードの型と基数を指定することで、パフォーマンスを向上させることができます。 ただし、このパフォーマンスの向上は、安全性の放棄 (キャストが失敗する可能性があります) と汎用性の放棄 (指定した型のみが選択的 XML インデックスと一致します) によって実現されます。  
+ ユーザー指定のマッピング モードでは、ノードの型とカーディナリティを指定することで、パフォーマンスを向上させることができます。 ただし、このパフォーマンスの向上は、安全性の放棄 (キャストが失敗する可能性があります) と汎用性の放棄 (指定した型のみが選択的 XML インデックスと一致します) によって実現されます。  
   
  型指定されていない XML でサポートされる XQuery の型を次に示します。  
   
@@ -130,7 +130,7 @@ SELECT T.record,
 FROM myXMLTable T  
 ```  
   
- 指定されたクエリは、NVARCHAR(200) データ型にパックされたパス `/a/b/d` の値を返すため、ノード用に指定するデータ型は明白です。 ただし、ノードの基数を型指定されていない XML で指定するスキーマはありません。 ノード `d` を親ノード `b`の下に最大で 1 つ表示するには、次に示すように、SINGLETON 最適化ヒントを使用する XML インデックスを作成します。  
+ 指定されたクエリは、NVARCHAR(200) データ型にパックされたパス `/a/b/d` の値を返すため、ノード用に指定するデータ型は明白です。 ただし、ノードのカーディナリティを型指定されていない XML で指定するスキーマはありません。 ノード `d` を親ノード `b`の下に最大で 1 つ表示するには、次に示すように、SINGLETON 最適化ヒントを使用する XML インデックスを作成します。  
   
 ```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
@@ -353,7 +353,7 @@ WHERE T.xmldata.exist('
   
   
 ##  <a name="hints"></a> 最適化ヒントの指定  
- 省略可能な最適化ヒントを使用して、選択的 XML インデックスによってインデックス設定されるノードのマッピングの詳細を指定できます。 たとえば、ノードのデータ型、基数、およびデータの構造に関する特定の情報を指定できます。 この追加情報により、マッピングに対するサポートが向上します。 さらに、パフォーマンスの向上またはストレージの節約、あるいはその両方が実現します。  
+ 省略可能な最適化ヒントを使用して、選択的 XML インデックスによってインデックス設定されるノードのマッピングの詳細を指定できます。 たとえば、ノードのデータ型とカーディナリティ、およびデータの構造に関する特定の情報を指定できます。 この追加情報により、マッピングに対するサポートが向上します。 さらに、パフォーマンスの向上またはストレージの節約、あるいはその両方が実現します。  
   
  最適化ヒントの使用は任意です。 常に既定のマッピングをそのまま使用できます。これらは信頼できますが、最適化されたパフォーマンスとストレージを提供しない場合があります。  
   
@@ -400,7 +400,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最適化ヒント  
  適用先: XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
   
- SINGLETON 最適化ヒントは、ノードの基数を指定します。 このヒントは、ノードが親または先祖の中で最大で 1 回出現することを事前に通知するため、クエリのパフォーマンスが向上します。  
+ SINGLETON 最適化ヒントは、ノードのカーディナリティを指定します。 このヒントは、ノードが親または先祖の中で最大で 1 回出現することを事前に通知するため、クエリのパフォーマンスが向上します。  
   
  このトピックの [サンプル XML ドキュメント](#sample) を参考にしてください。  
   

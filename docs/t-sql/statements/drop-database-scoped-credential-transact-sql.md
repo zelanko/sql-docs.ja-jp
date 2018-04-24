@@ -1,16 +1,16 @@
 ---
 title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE SCOPED CREDENTIAL
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - DROP DATABASE SCOPED CREDENTIAL statement
 - credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96016adf491a2869054068339a7fba64f8e7fedb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 8ffeb55520f8a759b141229c46c291c32ee81b4d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>データベース スコープ ベースの資格情報 (TRANSACT-SQL) を削除します。
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,10 +52,10 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
 ## <a name="remarks"></a>Remarks  
  データベース スコープの資格情報自体を削除せずに、データベース スコープの資格情報に関連付けられているシークレットを削除するには、次のように使用します。 [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) です。  
   
- データベース スコープ資格情報に関する情報は、[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) カタログ ビューで確認できます。  
+ データベース スコープの資格情報に関する情報は、[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) カタログ ビューで確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 資格情報に対する `ALTER` 権限が必要です。  
+ 資格情報に対する `ALTER` 権限が必須です。  
   
 ## <a name="examples"></a>使用例  
  次の例と呼ばれるデータベース スコープの資格情報を削除する `SalesAccess`です。  

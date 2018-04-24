@@ -1,16 +1,16 @@
 ---
 title: DECLARE @local_variable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: 
+caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e56a4895dc5ec1ba03489ffc60e9f9e7b441d18
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 787aca04c84d9f88eee456e92d93753356709cba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +248,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ```  
   
 ### <a name="c-declaring-a-variable-of-type-table"></a>C. table 型の変数を宣言する  
- 次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`Employee` テーブルの `ModifiedDate` 列の値と異なることに注意してください。 これは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが、`Employee` テーブルで定義されるためです。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。  
+ 次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`Employee` テーブルの `ModifiedDate` 列の値と異なることに注意してください。 これは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが、`Employee` テーブルで定義されるためです。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

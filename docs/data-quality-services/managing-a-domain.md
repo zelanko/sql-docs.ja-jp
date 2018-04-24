@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 53bd688bc68e8715409e663c7e2977a74e891989
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのドメインの使用について説明します。 ドメインは、分析対象のデータ ソースの特定のフィールドに含まれているデータのセマンティック表現です。 ドメインは、データ ソースに対して作成するナレッジ ベースの一部で、サンプル データ ソースを分析するか、データをインポートして構築するナレッジは、ナレッジ ベースで定義されたドメインに追加されます。 これらのドメインのナレッジは、データ品質プロジェクトでクレンジングおよび照合を実行するために後で使用されます。 ドメインは、Data Quality Services のすべてのアクティビティの中核になります。  
   
  ドメインは、データ ソース フィールドにマップされ、ナレッジ検出、ドメイン管理、および照合の各アクティビティで作成されます。 データ ソースからデータを読み込む方法とレポートにデータを出力する方法は、ドメインのプロパティで定義します。 参照データ プロバイダーを使用してデータをクレンジングする場合は、参照データ サービスを単一または複合ドメインにアタッチします。 ドメインのデータに適用されるルールを作成すると、ドメインに対する用語ベースのリレーションを作成できます。 ドメインのデータを表示および修正できます。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 03/22/2018
   
 -   データ型が文字列の場合は、文字列がデータ ソースからドメインに読み込まれるときに特殊文字を削除することによって文字列を正規化します。  
   
--   データ型が文字列の場合は、DQS スペル チェックを実行して文字列の構文、スペル、および文構造をチェックし、発生する可能性があるエラーを **[ドメイン管理]** の **[ドメイン値]**ページに表示することができます。 これには、スペル チェックを実行する言語の指定が含まれます。  
+-   データ型が文字列の場合は、DQS スペル チェックを実行して文字列の構文、スペル、および文構造をチェックし、発生する可能性があるエラーを **[ドメイン管理]** の **[ドメイン値]** ページに表示することができます。 これには、スペル チェックを実行する言語の指定が含まれます。  
   
 -   データ型が文字列で、構文エラーが文字列で発生しないことがわかっている場合は、DQS が構文エラーを識別しないように指定できます。  
   

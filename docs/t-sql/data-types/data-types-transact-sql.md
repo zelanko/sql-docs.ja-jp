@@ -1,15 +1,15 @@
 ---
-title: "データ型 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: データ型 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data types [SQL Server]
 - data types [SQL Server], about data types
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 397d96212851ed52020a0ac0e951e282edf6c087
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c22a3218cf55ff934a0b74abd6e21dbb9012231e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-transact-sql"></a>データ型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 データ型、照合順序、有効桁数、小数点以下桁数、または長さが異なる 2 つの式を演算子で結合する場合、結果の特性は次のように決まります。
 -   結果のデータ型は、入力式のデータ型のうち優先順位が高いほうになります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
--   結果の照合順序は、データ型が **char**、**varchar**、**text**、**nchar**、**nvarchar**、または **ntext** の場合は、照合順序の優先順位の規則によって決まります。 詳しくは、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」をご覧ください。  
+-   結果の照合順序は、データ型が **char**、**varchar**、**text**、**nchar**、**nvarchar**、または **ntext** の場合は、照合順序の優先順位の規則によって決まります。 詳細については、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。  
 -   結果の有効桁数、小数点以下桁数、長さは、入力式の精度、桁数、長さによって決まります。 詳しくは、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ISO との互換性を保つためにデータ型のシノニムが用意されています。 詳しくは、「[データ型のシノニム &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)」をご覧ください。

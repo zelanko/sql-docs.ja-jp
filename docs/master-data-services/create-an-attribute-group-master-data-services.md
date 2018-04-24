@@ -1,33 +1,36 @@
 ---
-title: "属性グループを作成する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 属性グループを作成する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
 - creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bc3cfb09ed11e1bd0c39932f6cb6e7bcb48d557
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d7abb921a7d69795ab9af562702f02c1ff4fb48e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -41,15 +44,15 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-create-an-attribute-group"></a>属性グループを作成するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]**をクリックします。  
+2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
   
 3.  **[Manage Entity]** (エンティティの管理) ページで、属性グループを作成するエンティティの行をグリッドから選択します。  
   
-4.  **[属性グループ]**をクリックします。  
+4.  **[属性グループ]** をクリックします。  
   
-5.  [属性グループの管理] ページで、次のいずれかの操作を行い、 **[追加]**をクリックします。  
+5.  [属性グループの管理] ページで、次のいずれかの操作を行い、 **[追加]** をクリックします。  
   
      対象の属性グループがリーフ メンバーの属性グループの場合は、ページの上部にある **[メンバーの種類]** ドロップダウン リストの **[リーフ]** を選択します。  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 03/05/2018
   
 11. **[使用できるグループ]** ボックスのグループをクリックし、 **[追加]** 矢印をクリックします。 すべてのグループを追加するには、 **[すべて追加]** 矢印をクリックします。  
   
-12. **[保存]**をクリックします。  
+12. **[保存]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
   

@@ -1,16 +1,16 @@
 ---
 title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DISTRIBUTED
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba68a3a1a4cde26a94acd47000f46d1a0ceb40ef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2a207e42d116642e26d6b2902c703bcaa1c7b876
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  MS DTC ユーティリティ内で分散管理トランザクションの追跡に使用する、ユーザー定義のトランザクション名を指定します。 *transaction_name* は識別子の規則に従っている必要があり、\<= 32 文字で指定する必要があります。  
   
  @*tran_name_variable*  
- MS DTC ユーティリティ内で分散管理トランザクションの追跡に使用するトランザクション名を含む、ユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar** または **nvarchar** データ型を使用して宣言する必要があります。  
+ MS DTC ユーティリティ内で分散管理トランザクションの追跡に使用するトランザクション名を含む、ユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
  BEGIN DISTRIBUTED TRANSACTION ステートメントを実行する [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスは、トランザクションの発行元となり、トランザクションの完了を制御します。 このセッションで後続の COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントを実行すると、制御側のインスタンスから MS DTC に対して、関係する全インスタンス間の分散トランザクションの完了を管理するように要求されます。  

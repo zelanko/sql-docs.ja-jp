@@ -1,30 +1,33 @@
 ---
-title: "マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 475d655c3accf4c25afe13c615adc210575e2975
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ab2fecc429230fa335be0961f8d517b218ac96cb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、マスター データを操作するためのユーザー用インターフェイスと、MDS を構成および管理するための管理者用インターフェイスを提供します。  
   
  Web アプリケーションは、必ず Web サイトに含める必要があります。 Web アプリケーションを作成するには、次のいずれかを実行する必要があります。  
@@ -53,9 +56,9 @@ ms.lasthandoff: 03/05/2018
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
-2.  左ペインで **[Web の構成]**をクリックします。  
+2.  左ペインで **[Web の構成]** をクリックします。  
   
-3.  **[Web の構成]** ページにある Web サイトの一覧で、 **[新規 Web サイトの作成]**を選択します。  
+3.  **[Web の構成]** ページにある Web サイトの一覧で、 **[新規 Web サイトの作成]** を選択します。  
   
 4.  **[Web サイトの作成]** ダイアログ ボックスで、新しい Web サイトの情報を指定します。 ダイアログ ボックスのユーザー インターフェイス (UI) オプションの詳細については、「[[Web サイトの作成] ダイアログ ボックス &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
   
@@ -68,11 +71,11 @@ ms.lasthandoff: 03/05/2018
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
-2.  左ペインで **[Web の構成]**をクリックします。  
+2.  左ペインで **[Web の構成]** をクリックします。  
   
 3.  **[Web の構成]** ページで、 **[Web サイト]** ボックスの一覧から、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを作成する Web サイトを選択します。  
   
-4.  **[アプリケーションの作成]**をクリックします。  
+4.  **[アプリケーションの作成]** をクリックします。  
   
 5.  **[Web アプリケーションの作成]** ダイアログ ボックスで、新しい Web アプリケーションの情報を指定します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[[Web アプリケーションの作成] ダイアログ ボックス &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
   

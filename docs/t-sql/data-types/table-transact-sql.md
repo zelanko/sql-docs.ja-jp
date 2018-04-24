@@ -1,16 +1,16 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - table data type [SQL Server]
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 90f8db8df144113d47543ff50c321baed61fba37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c36bc6a6cf7b1d44dfa480932d850b945b1d7056
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ SELECT select_list INTO table_variable;
 -   使用するトランザクション **テーブル** で変数が最後の更新の間のみ、 **テーブル** 変数です。 そのため、 **テーブル** 変数が小さいと、ロックとログ記録のリソースを必要とします。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
-**テーブル** 変数には、分布統計情報はありません、ために再コンパイルがトリガーされません。 したがって、多くの場合、オプティマイザーはテーブル変数に行がないことを前提としてクエリ プランを構築します。 このため、多数の行 (100 行を超える行) を使用する可能性がある場合は、テーブル変数を慎重に使用する必要があります。 このような場合、一時テーブルによって問題が解決することがあります。 または、テーブル変数を他のテーブルに結合するクエリの場合は、RECOMPILE ヒントを使用します。このヒントを使用すると、オプティマイザーがテーブル変数に適切な基数を使用するようになります。
+**テーブル** 変数には、分布統計情報はありません、ために再コンパイルがトリガーされません。 したがって、多くの場合、オプティマイザーはテーブル変数に行がないことを前提としてクエリ プランを構築します。 このため、多数の行 (100 行を超える行) を使用する可能性がある場合は、テーブル変数を慎重に使用する必要があります。 このような場合、一時テーブルによって問題が解決することがあります。 または、テーブル変数を他のテーブルに結合するクエリの場合は、RECOMPILE ヒントを使用します。このヒントを使用すると、オプティマイザーがテーブル変数に適切なカーディナリティを使用するようになります。
   
 **テーブル** では、変数はサポートされていない、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプティマイザーのコストベースの推論のモデルです。 したがって、効果的なクエリ プランを実現するためにコストベースの選択が必要な場合は、使用しないでください。 コストベースの選択が必要な場合は、一時テーブルが推奨されます。 これには、通常、結合、並列処理の決定、およびインデックス選択を含むクエリが含まれます。
   

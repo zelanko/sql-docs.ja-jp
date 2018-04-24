@@ -1,33 +1,36 @@
 ---
-title: "属性値を要求する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 属性値を要求する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b794530fd078e58fab257f8f31557055e4ce534b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 24a5223d6a47c25f242474e5fc14b49014613da6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="require-attribute-values-master-data-services"></a>属性値を要求する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データが完全であることを保証するために属性値を要求します。  
   
 > [!NOTE]  
@@ -42,9 +45,9 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-require-attribute-values"></a>属性値を要求するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]**をクリックします。  
+2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
   
 3.  **[ビジネス ルール]** ページの **[モデル]** ドロップダウン リストから、モデルを選択します。  
   
@@ -52,25 +55,25 @@ ms.lasthandoff: 03/05/2018
   
 5.  **[メンバーの種類]** ボックスの一覧から、適用するビジネス ルールのメンバーの種類を選択します。  
   
-6.  **[追加]**をクリックします。  
+6.  **[追加]** をクリックします。  
   
 7.  **[名前]** ボックスにビジネス ルールの名前を入力します。  
   
 8.  必要に応じて、 **[説明]** フィールドに、ビジネス ルールの説明を入力します。  
   
-9. **Then** ブロックの下で **[追加]**をクリックします。 パネルが表示されます。  
+9. **Then** ブロックの下で **[追加]** をクリックします。 パネルが表示されます。  
   
 10. **[演算子]** ボックスの一覧から、 **必要なアクション**を選択します。  
   
 11. **[属性]** ボックスの一覧から、属性を選択します。  
   
-12. **[保存]**をクリックします。 新しい行が **Then** グリッドに追加されます。  
+12. **[保存]** をクリックします。 新しい行が **Then** グリッドに追加されます。  
   
-13. **[保存]**をクリックします。  
+13. **[保存]** をクリックします。  
   
-14. **[すべてパブリッシュ]**をクリックします。  
+14. **[すべてパブリッシュ]** をクリックします。  
   
-15. 確認のダイアログ ボックスで **[OK]**をクリックします。 **[ビジネス ルールの状態]** 列の値は **[アクティブ]**です。  
+15. 確認のダイアログ ボックスで **[OK]** をクリックします。 **[ビジネス ルールの状態]** 列の値は **[アクティブ]** です。  
   
 ## <a name="next-steps"></a>Next Steps  
   

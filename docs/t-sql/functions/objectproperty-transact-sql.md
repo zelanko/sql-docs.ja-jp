@@ -1,16 +1,16 @@
 ---
 title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OBJECTPROPERTY
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-caps.latest.revision: 
+caps.latest.revision: 81
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34a522a15c9069ddf0da083ad107ea464b0587a1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3bbf6ff574ffe6c9f538b47d87664889b36665d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +85,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|トリガー|トリガーの無効化。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|トリガー|NOT FOR REPLICATION として定義されているトリガー。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|トリガー|UPDATE トリガー。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プロシージャはネイティブでコンパイルされます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**|  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プロシージャはネイティブでコンパイルされます。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: * * **int** * *|  
 |HasAfterTrigger|テーブル、ビュー|テーブルまたはビューに AFTER トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|テーブル、ビュー|テーブルまたはビューに DELETE トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|テーブル、ビュー|テーブルまたはビューに INSERT トリガーがあります。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -96,7 +97,7 @@ OBJECTPROPERTY ( id , property )
 |IsDefault|任意のスキーマ スコープ オブジェクト|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 既定のバインド。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|任意のスキーマ スコープ オブジェクト|DEFAULT 制約。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|関数、ビュー|関数またはビューの決定性を示すプロパティ。<br /><br /> 1 = 決定的<br /><br /> 0 = 非決定的|  
-|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|モジュール ステートメントの元のテキストが、暗号化した形式に変換されたことを示します。 暗号化した形式の出力は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。<br /><br /> 1 = 暗号化<br /><br /> 0 = 暗号化なし<br /><br /> 基本データ型: **int**|  
+|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ、テーブル、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガー、ビュー|モジュール ステートメントの元のテキストが、暗号化した形式に変換されたことを示します。 暗号化した形式の出力は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。<br /><br /> 1 = 暗号化<br /><br /> 0 = 暗号化なし<br /><br /> 基本データ型: * * **int** * *|  
 |IsExecuted|任意のスキーマ スコープ オブジェクト|オブジェクトが実行可能かどうかを示します (ビュー、プロシージャ、関数、またはトリガー)。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsExtendedProc|任意のスキーマ スコープ オブジェクト|拡張プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsForeignKey|任意のスキーマ スコープ オブジェクト|FOREIGN KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -154,7 +155,7 @@ OBJECTPROPERTY ( id , property )
 |TableInsertTriggerCount|テーブル|テーブルには指定された数の INSERT トリガーがあります。<br /><br /> >0 = INSERT トリガーの数|  
 |TableIsFake|テーブル|テーブルは実在せず、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって、要求時に実際の領域が内部で確保されます。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|テーブル|**bcp** または BULK INSERT ジョブによってテーブルがロックされています。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|テーブル|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルはメモリ最適化されています<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: **int**<br /><br /> 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。|  
+|TableIsMemoryOptimized|テーブル|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> テーブルはメモリ最適化されています<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基本データ型: * * **int** * *<br /><br /> 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。|  
 |TableIsPinned|テーブル|テーブルは固定され、データ キャッシュに確保されています。<br /><br /> 0 = False<br /><br /> この機能は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降ではサポートされていません。|  
 |TableTextInRowLimit|テーブル|text in row に許可されている最大バイト数。<br /><br /> text in row オプションが設定されていない場合は 0 です。|  
 |TableUpdateTrigger|テーブル|テーブルに UPDATE トリガーがあります。<br /><br /> > 1 = 指定された種類の最初のトリガーの ID|  
@@ -171,7 +172,7 @@ OBJECTPROPERTY ( id , property )
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECTPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、*object_id* が現在のデータベース コンテキスト内にあることが前提となっています。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベース コンテキストは master データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリ内で指定されたデータベースではなく、このデータベースの指定された *object_id* のプロパティ値を返します。 ビュー `vEmployee` は master データベース内にないため、このクエリでは正しくない結果が返されます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベース コンテキストは master データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリ内で指定されたデータベースではなく、このデータベースの指定された *object_id* のプロパティ値を返します。 ビュー `vEmployee` は master データベース内にないため、このクエリでは正しくない結果が返されます。  
   
 ```  
 USE master;  

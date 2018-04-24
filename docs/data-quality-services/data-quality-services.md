@@ -13,19 +13,22 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: ''
+caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 648620fc2da4fd3e033feec89531fea3ec7dceae
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 0322456ec2158fe673b59141f6ce66e4a9a3d2d6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="data-quality-services"></a>[データベース エンジン サービス]
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) は、ナレッジ ドリブンのデータ品質製品です。 DQS を使用すると、ナレッジ ベースを構築し、それを使用して、データの修正、強化、標準化、重複除去などの多くの重要なデータ品質タスクを実行できます。 DQS では、参照データ プロバイダーによって提供されるクラウド ベースの参照データ サービスを使用して、データのクレンジングを実行できます。 また、DQS はデータ品質タスクに統合されたプロファイリング機能を備えており、データの整合性を分析できます。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) は、ナレッジ ドリブンのデータ品質製品です。 DQS を使用すると、ナレッジ ベースを構築し、それを使用して、データの修正、強化、標準化、重複除去などの多くの重要なデータ品質タスクを実行できます。 DQS では、参照データ プロバイダーによって提供されるクラウド ベースの参照データ サービスを使用して、データのクレンジングを実行できます。 また、DQS はデータ品質タスクに統合されたプロファイリング機能を備えており、データの整合性を分析できます。  
   
  DQS は [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]で構成され、どちらも [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の一部としてインストールされます。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] は、データ品質の機能とストレージを備えた 3 つの SQL Server カタログで構成される SQL Server インスタンス機能です。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] は SQL Server の共有機能であり、ビジネス ユーザー、インフォメーション ワーカー、IT プロフェッショナルはそれを使用してコンピューター支援型のデータ品質分析を実行し、対話形式でデータ品質を管理できます。 また、どちらも DQS に基づくデータ品質機能である [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] およびマスター データ サービス (MDS) を使用して、データ品質プロセスを実行することもできます。  
   

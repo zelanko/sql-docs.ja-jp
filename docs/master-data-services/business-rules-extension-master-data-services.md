@@ -1,30 +1,33 @@
 ---
-title: "ビジネス ルールの拡張機能 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ビジネス ルールの拡張機能 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a6de9fcabc39738fc2be3a76389ef16398f8c1f
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8b93f9dc688a2674396ec0d069339c8a8ada9fbf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="business-rules-extension-master-data-services"></a>ビジネス ルールの拡張機能 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
   
 > [!NOTE]  
@@ -85,9 +88,9 @@ CREATE PROCEDURE [usr].[YourAction]
   
 ## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>ユーザー定義のスクリプトを条件またはアクションとして実行するビジネス ルールを作成する  
   
-1.  マスター データ マネージャーで、 **[システム管理]**をクリックします。  
+1.  マスター データ マネージャーで、 **[システム管理]** をクリックします。  
   
-2.  メニュー バーの **[管理]** をポイントし、 **[ビジネス ルール]**をクリックします。  
+2.  メニュー バーの **[管理]** をポイントし、 **[ビジネス ルール]** をクリックします。  
   
 3.  **[ビジネス ルール]** ページで、 **[モデル]** ドロップダウン リストからモデルを選択します。  
   
@@ -95,7 +98,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  **[メンバーの種類]** ボックスの一覧から、適用するビジネス ルールのメンバーの種類を選択します。  
   
-6.  **[追加]**をクリックします。  
+6.  **[追加]** をクリックします。  
   
 7.  ユーザー定義のスクリプトを条件として作成するには、次の操作を行います。  
   
@@ -107,7 +110,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  各パラメーターに値を割り当てます。  
   
-    5.  **[保存]**をクリックします。  
+    5.  **[保存]** をクリックします。  
   
 8.  ユーザー定義のスクリプトをアクションとして作成するには、次の操作を行います。  
   
@@ -115,7 +118,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  **[演算子]** ドロップダウン リストで、 **[ユーザー定義スクリプト]** の下にある目的のユーザー定義関数を選択します。  
   
-    3.  **[保存]**をクリックします。  
+    3.  **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   

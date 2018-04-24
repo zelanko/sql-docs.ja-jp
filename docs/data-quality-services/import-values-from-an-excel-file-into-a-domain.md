@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ba76c282306b5d31bf15ceee7c0ab225ff55941a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジ ベースへのドメインのインポートについて詳しくは、「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください)。Excel ファイルへのエクスポートはサポートされていません。  
   
  データ値は、次の 2 とおりの方法でインポートできます。  
@@ -57,11 +60,11 @@ ms.lasthandoff: 03/22/2018
   
 4.  既存のドメインに値を追加する場合は、ドメイン リストでドメインを選択します。  
   
-5.  **[ドメイン値]** タブをクリックし、アイコン バーの **[値をインポートします]** アイコンをクリックし、 **[Excel から有効な値をインポートします]**をクリックします。  
+5.  **[ドメイン値]** タブをクリックし、アイコン バーの **[値をインポートします]** アイコンをクリックし、 **[Excel から有効な値をインポートします]** をクリックします。  
   
-6.  **[ドメイン値のインポート]** ダイアログ ボックスで、 **[参照]**をクリックします。  
+6.  **[ドメイン値のインポート]** ダイアログ ボックスで、 **[参照]** をクリックします。  
   
-7.  **[ファイルを選択します]** ダイアログ ボックスで、ドメイン値のインポート元の Excel ファイルが格納されているフォルダーに移動し、ファイル (拡張子が .xlsx、.xls、または .csv のファイル) を選択して **[開く]**をクリックします。 選択するファイルは、DQS を実行しているクライアント上のファイルか、ユーザーがアクセスできる共有ファイルでなければなりません。  
+7.  **[ファイルを選択します]** ダイアログ ボックスで、ドメイン値のインポート元の Excel ファイルが格納されているフォルダーに移動し、ファイル (拡張子が .xlsx、.xls、または .csv のファイル) を選択して **[開く]** をクリックします。 選択するファイルは、DQS を実行しているクライアント上のファイルか、ユーザーがアクセスできる共有ファイルでなければなりません。  
   
 8.  **[ワークシート]** ボックスの一覧で、インポートするワークシートを選択します。  
   

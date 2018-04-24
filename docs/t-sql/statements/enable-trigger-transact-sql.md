@@ -1,16 +1,16 @@
 ---
 title: ENABLE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENABLE TRIGGER
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - DML triggers, enabling
 - ENABLE TRIGGER statement
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7627fdb66a091d5add30a8384861d9b6b03b82b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39df2d2aab7715a7a222a67d683d7b26958ca224
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 >  このオプションは、包含データベースでは使用できません。  
   
 ## <a name="remarks"></a>Remarks  
- トリガーを有効化しても、トリガーが再作成されるわけではありません。 無効化されたトリガーは、引き続き現在のデータベースのオブジェクトとして残りますが、起動されることはありません。 トリガーを有効化すると、そのトリガーがプログラムされている [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されたときに起動されます。 トリガーを無効化するには、[DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) を使います。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使って無効または有効にできます。  
+ トリガーを有効化しても、トリガーが再作成されるわけではありません。 無効化されたトリガーは、引き続き現在のデータベースのオブジェクトとして残りますが、起動されることはありません。 トリガーを有効化すると、そのトリガーがプログラムされている [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されたときに起動されます。 トリガーを無効化するには、[DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) を使います。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用して無効または有効にできます。  
   
 ## <a name="permissions"></a>アクセス許可  
  DML トリガーを有効化するには、少なくとも、そのトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  

@@ -1,33 +1,36 @@
 ---
-title: "システム設定 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: システム設定 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 
+caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f82834be298872df88b00bda5d8184d179ab2a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b986b4472b882b2dcd9c9e589cfa17372694d72b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   任意の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられているすべての Web アプリケーションおよび Web サービスについて、システム設定を構成できます。  
   
  これらの設定の多くは、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] の **[データベース]** ページで構成できます。 その他の設定は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの System Settings テーブル (mdm.tblSystemSetting) で構成できます。  
@@ -62,14 +65,14 @@ ms.lasthandoff: 03/05/2018
 |**[クライアントのタイムアウト]**|**ClientTimeOut**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] がホーム ページに戻るまでの非アクティブ期間 (秒数)。 既定値は **300** 秒 (5 分) です。|  
 |**[バッチごとの行数]**|**RowsPerBatch**|Web サービスによって各バッチで取得するレコード数。 既定値は **50**です。|  
 ||**ApplicationName**|イベント ログに表示されるテキスト。 既定値は **MDM**です。|  
-||**SiteTitle**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web ブラウザーのタイトル バーに表示されるテキスト。 既定値は **[マスター データ マネージャー]**です。|  
+||**SiteTitle**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web ブラウザーのタイトル バーに表示されるテキスト。 既定値は **[マスター データ マネージャー]** です。|  
 |**[ログ保有期間日数]**|**LogRentionDays**|ログが削除されるまでの日数。 既定値は -1 で、ログ テーブルが消去されないことを示します。<br /><br /> 値が 0 の場合、ログ テーブルには当日のデータのみが保持されます。 前の日のデータのログは切り捨てられます。<br /><br /> 値が 0 より大きい場合、ログ データは値で指定した日数保持されます。|  
   
 ##  <a name="Versions"></a> バージョン管理設定  
   
 |構成マネージャーの設定|システム設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**[コミット済みのバージョンだけをコピーする]**|**CopyOnlyCommittedVersion**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーがコピーできるモデル バージョンは、状態が **[コミット済み]**のバージョンであるか、またはすべての状態のバージョンであるかを示します。 既定値は **[はい]** または **1**で、ユーザーが **[コミット済み]** バージョンのみをコピーできることを示します。 値を **[いいえ]** または **2** に変更すると、ユーザーはすべてのバージョンをコピーできます。|  
+|**[コミット済みのバージョンだけをコピーする]**|**CopyOnlyCommittedVersion**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーがコピーできるモデル バージョンは、状態が **[コミット済み]** のバージョンであるか、またはすべての状態のバージョンであるかを示します。 既定値は **[はい]** または **1**で、ユーザーが **[コミット済み]** バージョンのみをコピーできることを示します。 値を **[いいえ]** または **2** に変更すると、ユーザーはすべてのバージョンをコピーできます。|  
   
  詳細については、「[バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)」を参照してください。  
   

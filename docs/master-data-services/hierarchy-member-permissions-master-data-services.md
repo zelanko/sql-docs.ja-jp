@@ -1,33 +1,36 @@
 ---
-title: "階層メンバーのアクセス許可 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 階層メンバーのアクセス許可 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-caps.latest.revision: 
+caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40b02314019015dcc6a348dcc7569c72fe098f98
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4ee1cdf8274019d8ead95a357ceeee1426cc0b0d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   階層メンバーの権限はオプションであり、特定のメンバーに対するユーザーのアクセスを制限する場合にのみ使用します。 **[階層メンバー]** タブで権限を割り当てていなければ、ユーザーの権限は、 **[モデル]** タブで割り当てられた権限のみに基づいて決定されます。  
   
  階層メンバーの権限は、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のユーザー インターフェイス (UI) を使用して、 **[ユーザー/グループの権限]** 機能領域の **[階層メンバー]** タブで割り当てられます。これらの権限によって、UI の **[エクスプローラー]** 機能領域でユーザーがアクセスできるメンバーが決まります。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 03/05/2018
 > [!NOTE]  
 >  階層内のいずれかのノードに権限を割り当てると、同じレベル以上にある、それ以外のノード内のメンバーはすべて暗黙的に拒否されます。  
   
- **[エクスプローラー]**では、メンバーが表示されるすべての領域にメンバー権限が適用されます。 たとえば、 **Read** 権限が与えられているメンバーは、属しているすべてのエンティティ、階層、コレクションを読み取ることができます。  
+ **[エクスプローラー]** では、メンバーが表示されるすべての領域にメンバー権限が適用されます。 たとえば、 **Read** 権限が与えられているメンバーは、属しているすべてのエンティティ、階層、コレクションを読み取ることができます。  
   
  階層メンバーの権限は、それらを割り当てたモデル バージョンと、そのバージョンの以降のコピーに適用されます。 割り当てたバージョンよりも前のバージョンには適用されません。  
   

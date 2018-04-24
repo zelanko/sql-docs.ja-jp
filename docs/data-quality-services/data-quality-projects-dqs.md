@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97ee117319697d817f760a25332728648fa565f9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 9a3de4de88c543c4d20cfa05cf07e85fa72eb6b3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ品質プロジェクトは、ナレッジ ベースを使用してソース データの品質を改善する手段になります。 *データ クレンジング* アクティビティおよび *データ照合* アクティビティを実行して、その結果データを SQL Server データベースや .csv ファイルにエクスポートします。 データ品質プロジェクトをクレンジング プロジェクトまたは照合プロジェクトとして作成し、それぞれのアクティビティを実行できます。 データ クレンジングと照合のナレッジは同じナレッジ ベースに組み込むことができるため、クレンジング プロジェクトと照合プロジェクトは同じナレッジ ベースを使用して実行できます。  
   
  データ品質プロジェクトには次の利点があります。  

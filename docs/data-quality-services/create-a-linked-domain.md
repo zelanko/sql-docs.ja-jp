@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1df4d63e629778e5665dd87ea69ffec0dbcbbaa
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: bf64412469d52d5580d0f83d353b6c6676c81ef5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのリンク ドメインを作成する方法について説明します。 リンク ドメインとは、既存の別のドメインから作成されるドメインで、リンク先のドメインから値、ルール、およびプロパティ (名前と説明を除く) をすべて継承します。 リンク ドメインは 1 つのセットとしてまとめて管理できます。 ドメインを別のドメインにリンクすることで、他のドメインの内容を継承するドメインを作成することができます。  
   
 ## <a name="scenarios"></a>シナリオ  
@@ -54,9 +57,9 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]**をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
-3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、新しいドメインをリンクするドメインを右クリックし、 **[リンク ドメインの作成]**をクリックします。  
+3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、新しいドメインをリンクするドメインを右クリックし、 **[リンク ドメインの作成]** をクリックします。  
   
     > [!NOTE]  
     >  リンク ドメインを作成するための専用のアイコンはありません。 この操作は、コンテキスト メニューのコマンドでのみ実行できます。  
@@ -89,7 +92,7 @@ ms.lasthandoff: 03/22/2018
   
 -   ドメインの **[データ型]**、 **[先頭の値を使用]**、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
   
--   [ドメイン管理] ページの **[参照データ]**タブ、 **[ドメイン ルール]**タブ、 **[ドメイン値]**タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
+-   [ドメイン管理] ページの **[参照データ]** タブ、 **[ドメイン ルール]** タブ、 **[ドメイン値]** タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
   
  リンク ドメインには次の特性があります。  
   

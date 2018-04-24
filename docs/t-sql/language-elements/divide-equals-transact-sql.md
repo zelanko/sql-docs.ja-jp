@@ -1,16 +1,16 @@
 ---
-title: "(除算代入) (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: (除算代入) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - /=_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - augmented operators, /=
 - /= (divide equals)
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b32481d1595c7414ca3a364e2cd3984d39c69cc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 602c2a5b1c2e8da56246d79d281b2911da380e68
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (除算代入) (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ expression /= expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** 型は除きます。  
+ 数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。  
   
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  

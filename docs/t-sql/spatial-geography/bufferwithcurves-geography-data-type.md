@@ -1,16 +1,16 @@
 ---
-title: "BufferWithCurves (geography データ型) | Microsoft Docs"
-ms.custom: 
+title: BufferWithCurves (geography データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BufferWithCurves
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4303dcae1e09d1bb7c1b6d978fb67a75ca38bf2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR 戻り値の型: **SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  次の条件を満たす場合、**ArgumentException** がスローされます。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
 |distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
-|distance \< 0|2 以上|バッファーが負の **CurvePolygon** または **GeometryCollection** インスタンス。<br /><br /> 注: 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります。|
+|distance \< 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス<br /><br /> 注: 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります。|
 |distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
 |distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   

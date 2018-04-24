@@ -1,16 +1,16 @@
 ---
 title: CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE RESOURCE POOL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: 
+caps.latest.revision: 42
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f5465b6b39415abf7cccc09f082406ce4958a9d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,10 +74,10 @@ CREATE RESOURCE POOL pool_name
  リソース プールのユーザー定義名を指定します。 *pool_name* には英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
  MIN_CPU_PERCENT =*value*  
- CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 です。  
+ CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 までです。  
   
  MAX_CPU_PERCENT =*value*  
- CPU の競合がある場合に、リソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 です。  
+ CPU の競合がある場合に、リソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
   
  CAP_CPU_PERCENT =*value*  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -104,17 +104,17 @@ INNER JOIN sys.dm_os_schedulers AS sc
  このリソース プール用に確保され、他のリソース プールとは共有できないメモリ量の最小値を指定します。 *value* は整数で、既定の設定は 0 です。*value* の許容範囲は 0 から 100 です。  
   
  MAX_MEMORY_PERCENT =*value*  
- このリソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 です。  
+ このリソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- リソース プール用に確保するために、ディスク ボリュームごとに、1 秒あたりの最小 I/O 操作 (IOPS) を指定します。 *value* の許容範囲は 0 から 2^31-1 (2,147,483,647) です。 プールに最小しきい値を指定しない場合は 0 を指定します。 既定値は 0 です。  
+ リソース プール用に確保するために、ディスク ボリュームごとに、1 秒あたりの最小 I/O 操作 (IOPS) を指定します。 *value* の許容範囲は 0 から 2^31-1 (2,147,483,647) までです。 プールに最小しきい値を指定しない場合は 0 を指定します。 既定値は 0 です。  
   
  MAX_IOPS_PER_VOLUME =*value*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- リソース プールに許された、ディスク ボリュームごとの 1 秒あたりの最大 I/O 操作 (IOPS) 回数を指定します。 *value* の許容範囲は 0 から 2^31-1 (2,147,483,647) です。 プールに無制限のしきい値を設定する場合は 0 を指定します。 既定値は 0 です。  
+ リソース プールに許された、ディスク ボリュームごとの 1 秒あたりの最大 I/O 操作 (IOPS) 回数を指定します。 *value* の許容範囲は 0 から 2^31-1 (2,147,483,647) までです。 プールに無制限のしきい値を設定する場合は 0 を指定します。 既定値は 0 です。  
   
  プールの MAX_IOPS_PER_VOLUME を 0 に設定した場合、プールは管理されなくなり、他のプールで MIN_IOPS_PER_VOLUME が設定されていても、システムですべての IOPS を行うことがあります。 この場合、IO についてこのプールが管理されるようにするには、このプールの MAX_IOPS_PER_VOLUME の値をより大きな数値 (たとえば、最大値 2^31-1) に設定することをお勧めします。  
   

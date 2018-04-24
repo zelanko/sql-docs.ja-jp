@@ -1,30 +1,33 @@
 ---
-title: "セキュリティ (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: セキュリティ (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0768294a9e8d555e8405e642c7cda3ecc639c5b2
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 200e7f97e0356fae1505bf3786ab11e483f839f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、セキュリティを使用して、仕事を行うのに必要な特定のマスター データにユーザーがアクセスできるようにすると同時に、利用を許可しないデータにはアクセスできないようにします。  
   
  また、セキュリティを使用して、任意のユーザーを特定のモデルおよび機能領域の管理者にすることも可能です (任意のユーザーに Customer モデルのバージョンの作成を許可したり、セキュリティ権限の設定資格を与えたりするなど)。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 03/05/2018
   
 -   **[エクスプローラー]** 機能領域でデータにアクセスするユーザー。  
   
--   **[エクスプローラー]**以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ## <a name="how-to-set-security"></a>セキュリティの設定方法  
  MDS のデータまたは機能にアクセスする権限をユーザーまたはグループに付与するには、次の設定を割り当てる必要があります。  

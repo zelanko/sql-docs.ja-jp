@@ -1,16 +1,16 @@
 ---
 title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_XML
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - SHOWPLAN_XML option
 - estimated execution information [SQL Server]
 ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80a04971bb82b1d4857eb08e7ff65083855ed7b3
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 14c97fab384138c293fcc07af90039e8e77b625f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -77,13 +78,13 @@ SET SHOWPLAN_XML { ON | OFF }
 ## <a name="permissions"></a>アクセス許可  
  SET SHOWPLAN_XML を使用するには、SET SHOWPLAN_XML の実行ステートメントを実行するための適切な権限が与えられている必要があります。また、参照されるオブジェクトを含むすべてのデータベースに対して、SHOWPLAN 権限が必要です。  
   
- SELECT、INSERT、UPDATE、DELETE、EXEC <*ストアド プロシージャ*>、EXEC <*ユーザー定義関数*> の各ステートメントの場合、プラン表示を作成するには、ユーザーに次の権限が必要です。  
+ SELECT、INSERT、UPDATE、DELETE、EXEC "*ストアド プロシージャ*"、EXEC "*ユーザー定義関数*" の各ステートメントの場合、プラン表示を作成するには、ユーザーに次の権限が必要です。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照されるテーブルやビューなどのオブジェクトを含んでいるすべてのデータベースでの SHOWPLAN 権限。  
   
- DDL、USE <*データベース名*>、SET、DECLARE、動的 SQL など、その他すべてのステートメントでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限だけが必要です。  
+ DDL、USE "*データベース名*"、SET、DECLARE、動的 SQL など、その他すべてのステートメントでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限だけが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の 2 つのステートメントは、SET SHOWPLAN_XML の設定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリ内のインデックスの使用状況を分析し最適化する方法を示しています。  

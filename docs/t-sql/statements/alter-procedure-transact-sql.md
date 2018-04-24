@@ -1,16 +1,16 @@
 ---
 title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_PROCEDURE_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e37551d9e5a2d33a7b5ab3a4ab29c028cce0d2c4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c07ffc325c78302ac3cc2098f37dc7cf07a5add4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +124,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  ENCRYPTION  
  **適用対象**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、ALTER PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、カタログ ビューのいずれかで直接表示することがない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、ALTER PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
  このオプションを使って作成したプロシージャを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションの一部として発行することはできません。  
   
@@ -148,7 +149,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳しくは、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」の「ベスト プラクティス」、「全般的な解説」、「制限事項と制約事項」をご覧ください。  
   
- EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
+ EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  CLR ストアド プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 クラス名に名前空間とその区切り文字のピリオド (**.**) が含まれる場合は、クラス名をかっこ (**[ ]**) または引用符 (**""**) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
@@ -244,7 +245,7 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  

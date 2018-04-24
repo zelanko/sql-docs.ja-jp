@@ -1,16 +1,16 @@
 ---
 title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SCOPE_IDENTITY
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - last-inserted identity values
 - identity values [SQL Server], last-inserted
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f566fba44cce8d942bd28d13001d2778f9976578
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7b202e6ea16d72c0fa3c2a15ae24362f342a8719
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SCOPE_IDENTITY()
 ## <a name="remarks"></a>Remarks  
  SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY は、ID 列に挿入された値を返すという点で似ています。  
   
- IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳しくは、「[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)」をご覧ください。  
+ IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳細については、を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
  SCOPE_IDENTITY と @@IDENTITY では、現在のセッション内の任意のテーブルで生成された最後の ID 値が返されます。 ただし、SCOPE_IDENTITY で返される値は、現在のスコープ内で挿入された値に限られます。@@IDENTITY の場合は、特定のスコープに限定されません。  
   

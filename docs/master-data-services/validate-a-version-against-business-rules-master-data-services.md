@@ -1,16 +1,16 @@
 ---
-title: "ビジネス ルールに対してバージョンを検証する (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: ビジネス ルールに対してバージョンを検証する (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - validating versions [Master Data Services]
@@ -18,18 +18,21 @@ helpviewer_keywords:
 - versions [Master Data Services], validating
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f916ec589ce3e5f8c4a071342c59e30ab6261191
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 5b606e815107bcaf30365c9656d6b3bf123d3012
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールをモデル バージョンのすべてのメンバーに適用するためにバージョンが検証されます。  
   
  この手順では、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを使用してデータを検証する方法について説明します。 MDS データベースの権限がある場合は、代わりにストアド プロシージャを使用することができます。 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
@@ -46,19 +49,19 @@ ms.lasthandoff: 03/05/2018
   
 -   バージョンの状態は、**[未処理]** または **[ロック済み]** である必要があります。  
   
--   **[バージョンの検証]** ページに **[検証成功]**以外の状態のメンバーが存在する必要があります。  
+-   **[バージョンの検証]** ページに **[検証成功]** 以外の状態のメンバーが存在する必要があります。  
   
 ### <a name="to-validate-a-version"></a>バージョンを検証するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[バージョン管理]** をクリックします。  
   
-2.  **[バージョンの管理]** ページのメニュー バーから **[バージョンの検証]**をクリックします。  
+2.  **[バージョンの管理]** ページのメニュー バーから **[バージョンの検証]** をクリックします。  
   
 3.  **[バージョンの検証]** ページで、検証するモデルおよびバージョンを選択します。  
   
-4.  **[検証]**をクリックします。  
+4.  **[検証]** をクリックします。  
   
-5.  確認のダイアログ ボックスで **[OK]**をクリックします。  
+5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  バージョンの検証が完了すると、進行状況インジケーターが表示されなくなります。  

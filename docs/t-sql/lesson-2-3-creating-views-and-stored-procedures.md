@@ -1,35 +1,37 @@
 ---
-title: "ビューとストアド プロシージャの作成 | Microsoft Docs"
-ms.custom: 
+title: ビューとストアド プロシージャの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b246171441ba9eedb213fd2baef55d8dc7668d26
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e817319391983356c52b63f76b99e1228aa69f45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-3---creating-views-and-stored-procedures"></a>レッスン 2-3 - ビューとストアド プロシージャの作成
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Mary が **TestData** データベースにアクセスできるようになったので、ビューやストアド プロシージャのようなデータベース オブジェクトを作成し、Mary にこれらのオブジェクトへのアクセス権を付与できます。 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+Mary が **TestData** データベースにアクセスできるようになったので、ビューやストアド プロシージャのようなデータベース オブジェクトを作成し、Mary にこれらのオブジェクトへのアクセス権を付与できます。 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
   
 ビューに対しては、テーブルと同じようにクエリが実行されます。パラメーターは使用できません。 ストアド プロシージャは、ビューよりも複雑です。 ストアド プロシージャは、入力と出力のパラメーターを指定でき、IF ステートメントや WHILE ステートメントなどの、コードの流れを制御するステートメントを含めることができます。 データベース内でのすべての繰り返し操作には、ストアド プロシージャを使用することをお勧めします。  
   

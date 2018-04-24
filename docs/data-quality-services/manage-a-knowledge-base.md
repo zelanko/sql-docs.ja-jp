@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e43c802e842befbefa517afe79f2cb88e5d20be6
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 64d6dd124b28928d72ac4fd19be9d18db84327d4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-a-knowledge-base"></a>ナレッジ ベースの管理
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ ベースに対して管理機能を実行する方法について説明します。 ナレッジ ベースの削除、ロック解除、作業の破棄、名前の変更、およびプロパティの表示を行うことができます。  
   
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
@@ -41,7 +44,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[ナレッジ ベースを開く]**をクリックします。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[ナレッジ ベースを開く]** をクリックします。  
   
 3.  ナレッジ ベース テーブル内のナレッジ ベースを右クリックします。  
   

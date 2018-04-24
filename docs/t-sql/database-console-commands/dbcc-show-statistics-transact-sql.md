@@ -1,16 +1,16 @@
 ---
 title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHOW_STATISTICS_TSQL
@@ -35,23 +35,25 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 
+caps.latest.revision: 75
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6395a1e6945c84db9a37a52ae1773581a730da89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 クエリ オプティマイザーでは、統計を使用してクエリ結果の基数や行数を推定することで、高品質のクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、基数の推定に基づいて、クエリ プランで Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、リソースを大量に消費する Index Scan 操作を使用しないようにすることでパフォーマンスが向上します。
+DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 クエリ オプティマイザーでは、統計を使用してクエリ結果のカーディナリティや行数を推定することで、高品質のクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、カーディナリティの推定に基づいて、クエリ プランで Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、リソースを大量に消費する Index Scan 操作を使用しないようにすることでパフォーマンスが向上します。
   
-クエリ オプティマイザーでは、テーブルまたはインデックス付きビューの統計を統計オブジェクトに格納します。 テーブルの場合、インデックスまたはテーブル列のリストに関する統計オブジェクトが作成されます。 統計オブジェクトには、統計に関するメタデータが含まれるヘッダー、統計オブジェクトの最初のキー列の値の分布が含まれるヒストグラム、および列間の相関関係を測定する密度ベクトルが格納されています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、統計オブジェクトの任意のデータを使用して基数の推定を計算できます。
+クエリ オプティマイザーでは、テーブルまたはインデックス付きビューの統計を統計オブジェクトに格納します。 テーブルの場合、インデックスまたはテーブル列のリストに関する統計オブジェクトが作成されます。 統計オブジェクトには、統計に関するメタデータが含まれるヘッダー、統計オブジェクトの最初のキー列の値の分布が含まれるヒストグラム、および列間の相関関係を測定する密度ベクトルが格納されています。 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、統計オブジェクトの任意のデータを使用してカーディナリティの推定を計算できます。
   
 DBCC SHOW_STATISTICS では、統計オブジェクトに格納されたデータに基づくヘッダー、ヒストグラム、および密度ベクトルを表示します。 この構文では、テーブルまたはインデックス付きビューを指定するときに、対象のインデックス名、統計名、または列名も指定することができます。 このトピックでは、統計の表示方法と表示される結果の意味について説明します。
   
@@ -109,7 +111,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |手順|ヒストグラムの区間の数。 各区間の範囲には、上限の列値までの列値の範囲が含まれます。 ヒストグラムの区間は、統計の最初のキー列に基づいて定義されます。 区間の最大数は 200 です。|  
 |[密度]|ヒストグラムの境界値を除く、統計オブジェクトの最初のキー列のすべての値について、"1 / *distinct values* " として計算されます。 この Density の値はクエリ オプティマイザーでは使用されません。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンとの互換性を維持するために表示されます。|  
 |[キーの平均の長さ]|統計オブジェクトのすべてのキー列の、値ごとの平均バイト数。|  
-|String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 ( `WHERE ProductName LIKE '%Bike'`など) に対する基数の推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text**、**ntext** である場合に作成されます。|  
+|String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text**、**ntext** である場合に作成されます。|  
 |[フィルター式]|統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。 フィルター選択された述語の詳細については、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。 フィルター選択された統計情報の詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[フィルター処理なしの行数]|フィルター式を適用する前のテーブル内の行の合計数。 [フィルター式] が NULL の場合、[フィルター処理なしの行数] は [行数] と同じになります。|  
 |永続化されたサンプルのパーセンテージ|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 **に適用されます**。| 
@@ -134,7 +136,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 ## <a name="Remarks"></a> 解説 
 
-統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](#histogram)および[密度ベクトル](#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できず、*updated* 列は NULL になります。 これは、述語が行を返さないフィルターされた統計や、新しい空のテーブルの場合です。
+統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](#histogram)および[密度ベクトル](#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できず、*updated* 列は NULL になります。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
   
 ## <a name="histogram"></a> ヒストグラム  
 ヒストグラムでは、データセットの個別の値ごとに出現頻度を測定します。 クエリ オプティマイザーでは、統計オブジェクトの最初のキー列の列値に基づいてヒストグラムを計算し、行を統計的にサンプリングするかテーブルまたはビュー内のすべての行でフル スキャンを実行することによって列値を選択します。 サンプリングされた行のセットからヒストグラムを作成する場合、格納される行の総数および個別の値の数は推定値であり、必ずしも整数にはなりません。
@@ -153,7 +155,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 クエリ オプティマイザーでは、統計的有意性に応じてヒストグラム区間を定義します。 区間幅を最大にするアルゴリズムを使用して境界値の差を最大にし、ヒストグラムの区間の数を最小限に抑えます。 区間の最大数は 200 です。 ヒストグラムの区間の数は、境界点が 200 より少ない列でも、個別の値の数より少なくなることがあります。 たとえば、個別の値が 100 個ある列のヒストグラムの境界点が 100 より少なくなる場合もあります。
   
 ## <a name="density"></a> 密度ベクトル  
-クエリ オプティマイザーでは、同一のテーブルまたはインデックス付きビューから複数の列を返すクエリに対する基数の推定を向上させるために密度を使用します。 密度ベクトルには、統計オブジェクトの列のプレフィックスごとに 1 つの密度が格納されます。 たとえば、統計オブジェクトに `CustomerId`、`ItemId`、`Price` というキー列がある場合、以下の列プレフィックスごとに密度が計算されます。
+クエリ オプティマイザーでは、同一のテーブルまたはインデックス付きビューから複数の列を返すクエリに対するカーディナリティの推定を向上させるために密度を使用します。 密度ベクトルには、統計オブジェクトの列のプレフィックスごとに 1 つの密度が格納されます。 たとえば、統計オブジェクトに `CustomerId`、`ItemId`、`Price` というキー列がある場合、以下の列プレフィックスごとに密度が計算されます。
   
 |列プレフィックス|密度の計算対象|  
 |---|---|

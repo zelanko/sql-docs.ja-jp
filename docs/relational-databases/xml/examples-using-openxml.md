@@ -1,16 +1,16 @@
 ---
-title: "例: OPENXML の使用 | Microsoft Docs"
-ms.custom: 
+title: '例: OPENXML の使用 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>例: OPENXML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
+  このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  データを取得する際に、 *rowpattern* を使用して、XML ドキュメント内の行を決定するノードを識別します。 また、 *rowpattern* は、MSXML XPath の実装で使用される XPath パターン言語で表現されます。 たとえば、パターンが要素や属性になる場合、 *rowpattern*で選択される要素や属性のノードごとに行が作成されます。  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration*で定義される行セットの列にマップされます。  
   
--   WITH 句の *SchemaDeclaration* では、行セットの列名である **oid** と **amount** が対応する XML 属性の名前と一致します。 したがって、 *ColPattern* パラメーターは指定されません。 行セット内の **comment** 列では、XPath 関数 **text()**が *ColPattern*に指定されています。 これにより、 *flags*に指定された属性中心のマッピングが上書きされ、列には要素コンテンツのリーフ値の文字列が含まれます。  
+-   WITH 句の *SchemaDeclaration* では、行セットの列名である **oid** と **amount** が対応する XML 属性の名前と一致します。 したがって、 *ColPattern* パラメーターは指定されません。 行セット内の **comment** 列では、XPath 関数 **text()** が *ColPattern*に指定されています。 これにより、 *flags*に指定された属性中心のマッピングが上書きされ、列には要素コンテンツのリーフ値の文字列が含まれます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -531,7 +531,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()**が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例 :  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例 :  
   
 ```  
 DECLARE @h int  

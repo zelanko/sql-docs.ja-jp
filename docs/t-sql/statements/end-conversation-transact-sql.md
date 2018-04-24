@@ -1,16 +1,16 @@
 ---
 title: END CONVERSATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - END DIALOG
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - conversations [Service Broker], ending
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: 
+caps.latest.revision: 35
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 46f855ac6de21e88eb6ce1f1abb2ba8c3d0237a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ END CONVERSATION conversation_handle
  エラー コードを指定します。 *Failure_code* のデータ型は **int**です。このエラー コードはユーザー定義のコードで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
   
  DESCRIPTION =*failure_text*  
- エラー メッセージです。 *Failure_text* のデータ型は **nvarchar (3000)**です。 このエラー テキストはユーザー定義のテキストで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
+ エラー メッセージです。 *Failure_text* のデータ型は **nvarchar (3000)** です。 このエラー テキストはユーザー定義のテキストで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
   
  WITH CLEANUP  
  正常に完了できなかったメッセージ交換の一方の側のメッセージとカタログ ビュー エントリをすべて削除します。 メッセージ交換の相手側にはクリーンアップは通知されません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メッセージ交換のエンドポイントが削除され、転送キューおよびサービス キューにあるメッセージ交換のすべてのメッセージも削除されます。 管理者は、このオプションを使用して、正常に完了できなかったメッセージ交換のメッセージを削除できます。 たとえば、リモート サービスが永久的に削除された場合、管理者は WITH CLEANUP を使ってこのサービスに対するメッセージを削除できます。 WITH CLEANUP は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションのコードでは使用しないでください。 受信エンドポイントでメッセージの受信を確認する前に END CONVERSATION WITH CLEANUP が実行されると、送信エンドポイントからそのメッセージが再び送信されます。 これにより、ダイアログが再実行される可能性があります。  

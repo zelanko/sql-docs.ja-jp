@@ -1,30 +1,33 @@
 ---
-title: "Master Data Services データベースと Web アプリケーションの関連付け | Microsoft Docs"
-ms.custom: 
+title: Master Data Services データベースと Web アプリケーションの関連付け | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83b5d024daced59d58c153140a53ced006f01e5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8a404a87225244379053bd9d76d6573ca1f005d0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services データベースと Web アプリケーションの関連付け
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースに関連付け、Web 操作に使用するデータベースを指定します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -39,19 +42,19 @@ ms.lasthandoff: 03/05/2018
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
-2.  左ペインで **[Web の構成]**をクリックします。  
+2.  左ペインで **[Web の構成]** をクリックします。  
   
-3.  **[Web の構成]** ページで、 **[Web アプリケーション]**の下の **[Web サイト]** ボックスの一覧から [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを含む Web サイトを選択します。  
+3.  **[Web の構成]** ページで、 **[Web アプリケーション]** の下の **[Web サイト]** ボックスの一覧から [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを含む Web サイトを選択します。  
   
 4.  **[Web アプリケーション]** ボックスで、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]をホストする Web アプリケーションを選択します。  
   
-5.  **[アプリケーションとデータベースの関連付け]**で、 **[選択]**をクリックします。 **[データベースへの接続]** ダイアログ ボックスが開きます。  
+5.  **[アプリケーションとデータベースの関連付け]** で、 **[選択]** をクリックします。 **[データベースへの接続]** ダイアログ ボックスが開きます。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをホストする [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のインスタンスの接続情報を指定し、 **[接続]**をクリックします。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをホストする [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のインスタンスの接続情報を指定し、 **[接続]** をクリックします。  
   
-7.  **[Master Data Services データベース]** ボックスの一覧から、Web アプリケーションに関連付けるデータベースを選択し、 **[OK]**をクリックします。  
+7.  **[Master Data Services データベース]** ボックスの一覧から、Web アプリケーションに関連付けるデータベースを選択し、 **[OK]** をクリックします。  
   
-8.  **[アプリケーションとデータベースの関連付け]**で、インスタンスおよびデータベースの情報が正しいことを確認し、 **[適用]**をクリックします。  
+8.  **[アプリケーションとデータベースの関連付け]** で、インスタンスおよびデータベースの情報が正しいことを確認し、 **[適用]** をクリックします。  
   
 ## <a name="next-steps"></a>Next Steps  
   

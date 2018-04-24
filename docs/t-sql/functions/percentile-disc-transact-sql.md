@@ -1,16 +1,16 @@
 ---
 title: PERCENTILE_DISC (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PERCENTILE_DISC
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - PERCENTILE_DISC function
 - analytic functions,PERCENTILE_DISC
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1e7ebdd2303108fbf63578a288d95eb2f3f7fe4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ae91ec5eba905e7ffd2b991bb8df7c26548d1bfc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -54,7 +55,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  並べ替える値のリストを指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 既定の並べ替え順は昇順です。 値のリストは、並べ替え操作に対して有効な任意のデータ型を指定できます。  
   
  OVER **(** \<partition_by_clause> **)**  
- FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。 \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
+ FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は *order_by_expression* の型によって決まります。  
@@ -128,7 +129,7 @@ Shipping and Receiving  9.250000     9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
+ [PERCENTILE_CONT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
 

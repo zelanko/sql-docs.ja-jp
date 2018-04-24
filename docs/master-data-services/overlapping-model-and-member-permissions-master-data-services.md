@@ -1,34 +1,37 @@
 ---
-title: "モデル アクセス許可とメンバー アクセス許可の重複 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: モデル アクセス許可とメンバー アクセス許可の重複 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0357242cdc87476bfc4e2f0b98bed363046a3ed
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 21a94b8ac8fdfe30db0900176f7c13305471f7e9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>モデル権限とメンバー権限の重複 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   メンバーに割り当てられている権限は、モデル オブジェクトに割り当てられている権限と重複している可能性があります。 重複が発生すると、より制限の厳しい権限が有効になります。  
   
  メンバーに割り当てられている権限が、対応するモデル オブジェクトの権限とは異なる場合、次のルールが適用されます。  
@@ -52,7 +55,7 @@ ms.lasthandoff: 03/05/2018
   
  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリ ノードに **更新** 権限が割り当てられています。  
   
- 結果: **[エクスプローラー]**で、Mountain Bikes ノード内のすべてのメンバーについて、すべての属性値に対する **更新** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
+ 結果: **[エクスプローラー]** で、Mountain Bikes ノード内のすべてのメンバーについて、すべての属性値に対する **更新** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 03/05/2018
   
  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリ ノードに **読み取り** 権限が明示的に割り当てられています。  
   
- 結果: **[エクスプローラー]**で、Mountain Bikes ノード内のメンバーについて、Subcategory 属性値に対する **読み取り** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
+ 結果: **[エクスプローラー]** で、Mountain Bikes ノード内のメンバーについて、Subcategory 属性値に対する **読み取り** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 03/05/2018
   
  **[階層メンバー]** タブで、派生階層の Mountain Bikes サブカテゴリに **更新** 権限が明示的に割り当てられています。  
   
- 結果: **[エクスプローラー]**で、属性値に対する **読み取り** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
+ 結果: **[エクスプローラー]** で、属性値に対する **読み取り** 権限がユーザーに与えられます。 その他のメンバーと属性は、すべて非表示になります。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

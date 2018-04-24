@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b64dc761f5af95ab913291d6aa488ced8fba8cf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: bce737da85a1122f7a4c0fd53c01e14e1188a24a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER データベース スコープ ベースの資格情報 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -50,7 +51,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  変更対象のデータベース スコープの資格情報の名前を指定します。  
   
  IDENTITY **='***identity_name***'**  
- サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure BLOB ストレージからファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
+ サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
     
   
  SECRET **='***secret***'**  
@@ -88,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [データベース スコープの資格情報の作成 (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [データベース スコープの資格情報の削除 (Transact-SQL)](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

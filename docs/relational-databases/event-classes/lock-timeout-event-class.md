@@ -1,34 +1,35 @@
 ---
-title: "Lock:Timeout イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Lock:Timeout イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50705fbc3639cc5301a1c2c4c621cff1e14ef94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 65d461f49ea49245fd050a004162f1c3dafb36f1
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Lock:Timeout イベント クラスは、要求したリソースで別のトランザクションがブロッキング ロックを保持しているために、ページなどのリソースのロック要求がタイムアウトしたことを示します。 タイムアウトは @@LOCK_TIMEOUT システム関数で判定され、SET LOCK_TIMEOUT ステートメントで設定できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lock:Timeout イベント クラスは、要求したリソースで別のトランザクションがブロッキング ロックを保持しているために、ページなどのリソースのロック要求がタイムアウトしたことを示します。 タイムアウトは @@LOCK_TIMEOUT システム関数で判定され、SET LOCK_TIMEOUT ステートメントで設定できます。  
   
  Lock:Timeout イベント クラスを使用すると、タイムアウト状態がいつ発生するかを監視できます。 この情報は、タイムアウトがアプリケーションのパフォーマンスに重大な影響を与えるかどうかの判断と、関係しているオブジェクトの特定に役立ちます。 これらのオブジェクトを変更するアプリケーション コードを調べて、タイムアウトを最小限に抑える変更を行えるかどうかを判断できます。  
   

@@ -1,16 +1,16 @@
 ---
-title: "文字列関数 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 文字列関数 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - string functions
 - strings [SQL Server]
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7cf1c000411dd8971621447e1202fe7400b69560
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 77622e7a034cbae5f49c3128e73c6cede82eb34f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-functions-transact-sql"></a>文字列関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  `FORMAT` 以外の組み込みの文字列関数はすべて、決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ値を返します。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
- 文字列関数に文字列値以外の引数を渡すと、暗黙的に入力型が text データ型に変換されます。 詳細については、次を参照してください[ データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+ 文字列関数に文字列値以外の引数を渡すと、暗黙的に入力型が text データ型に変換されます。 詳細については、次を参照してください[ データ型の変換 (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

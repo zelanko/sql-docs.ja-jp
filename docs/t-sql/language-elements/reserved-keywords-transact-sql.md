@@ -1,16 +1,16 @@
 ---
-title: "予約済みキーワード (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 予約済みキーワード (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a7a09198a79628192dc3987ff79cd057651ae044
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 |ADD|EXTERNAL|PROCEDURE|  
 |ALL|FETCH|PUBLIC|  
 |ALTER|FILE|RAISERROR|  
-|AND|FILLFACTOR|READ|  
+|[AND]|FILLFACTOR|READ|  
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/25/2018
 |CURRENT_TIME|NATIONAL|THEN|  
 |CURRENT_TIMESTAMP|NOCHECK|TO|  
 |CURRENT_USER|NONCLUSTERED|先頭に戻る|  
-|CURSOR|NOT|TRAN|  
+|CURSOR|[NOT]|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
 |DEALLOCATE|OF|TRUNCATE|  
@@ -91,14 +92,14 @@ ms.lasthandoff: 01/25/2018
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|USER|  
-|DROP|OR|VALUES|  
+|DROP|スイッチまたは|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
 |END|OVER|WAITFOR|  
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|WITH|  
+|EXEC|PRECISION|のすべてのメンションを|  
 |EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
@@ -255,14 +256,14 @@ ms.lasthandoff: 01/25/2018
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
 |CYCLE|OCCURRENCES_REGEX|TRUE|  
 |DATA|OLD|UESCAPE|  
-|DATE|ONLY|UNDER|  
-|DAY|OPERATION|UNKNOWN|  
+|[DATE]|ONLY|UNDER|  
+|[DAY]|OPERATION|UNKNOWN|  
 |DEC|ORDINALITY|UNNEST|  
-|DECIMAL|OUT|USAGE|  
+|[DECIMAL]|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
 |DEFERRED|OUTPUT|Value|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|PARAMETER|VAR_SAMP|  
+|DEREF|パラメーター|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  
@@ -282,7 +283,7 @@ ms.lasthandoff: 01/25/2018
 |FALSE|READS|XMLELEMENT|  
 |FILTER|real|XMLEXISTS|  
 |FIRST|RECURSIVE|XMLFOREST|  
-|FLOAT|REF|XMLITERATE|  
+|[FLOAT]|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
 |FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  

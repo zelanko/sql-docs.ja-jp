@@ -1,16 +1,16 @@
 ---
-title: "ユーザー定義関数の表示 | Microsoft Docs"
-ms.custom: 
+title: ユーザー定義関数の表示 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: udf
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.udfproperties.general.f1
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], viewing
 - status information [SQL Server], user-defined functions
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee41a96246e6808d214b4d421401bd2dff6c6718
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c28f6cb503134ce4d1d52abeaecaad3d48663594
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
 >  関数から参照しているオブジェクトの名前を変更する場合は、関数のテキストに新しいオブジェクト名が反映されるように関数を変更する必要があります。 したがって、オブジェクトの名前を変更する前に、まずオブジェクトの依存関係を表示して、オブジェクト名の変更により影響を受ける関数があるかどうかを確認してください。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/09/2018
   
     -   集計関数  
   
-4.  プロパティを表示する関数を右クリックし、 **[プロパティ]**を選択します。  
+4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
   
      **[関数のプロパティ –** *function_name* ] ダイアログ ボックスに、次のプロパティが表示されます。  
   
@@ -123,9 +124,9 @@ ms.lasthandoff: 02/09/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -164,9 +165,9 @@ ms.lasthandoff: 02/09/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  

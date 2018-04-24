@@ -21,18 +21,21 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51bcf4a7d0654cd0fc6c665e0614e4ceb21e83d2
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 3e05246f4d15335333a2e43b95a85a2b9e3d3abf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS ログ ファイルの重大度レベルの構成
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] を使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)](DQS) の各種のアクティビティやモジュールの重大度レベルを構成する方法について説明します。 重大度レベルとは、DQS で発生するイベントの重大度を定義したものです。 DQS のイベントの重大度レベルは次のとおりです。ここでは、重大度が高いものから順に示しています。  
   
 -   **Fatal**: 予期しない深刻な結果を引き起こす可能性がある重大な実行時エラー。  
@@ -59,16 +62,16 @@ ms.lasthandoff: 03/22/2018
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[構成]**をクリックします。  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[構成]** をクリックします。  
   
 3.  次に **[ログの設定]** タブをクリックします。重大度レベルを選択できる DQS のアクティビティ (**[ドメイン管理]**、**[ナレッジ検出]**、**[プロジェクトのクレンジング (例: RDS)]**、**[一致するポリシーと一致するプロジェクト]**、および **[RDS]**) が表示されます。  
   
-4.  DQS のアクティビティについて、ログに記録する重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]**のいずれかを選択できます。 たとえば、ナレッジ検出アクティビティに対する重大なメッセージだけを DQS ログ ファイルに書き込む場合は、 **[ナレッジ検出]** アクティビティのドロップダウン リストで **[Fatal]** を選択します。  
+4.  DQS のアクティビティについて、ログに記録する重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]** のいずれかを選択できます。 たとえば、ナレッジ検出アクティビティに対する重大なメッセージだけを DQS ログ ファイルに書き込む場合は、 **[ナレッジ検出]** アクティビティのドロップダウン リストで **[Fatal]** を選択します。  
   
     > [!NOTE]  
     >  既定では、各アクティビティについて **[Error]** が選択されています。 つまり、既定では、各アクティビティのエラー メッセージと重大なメッセージが DQS ログ ファイルに書き込まれます。  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 ##  <a name="ConfigureModule"></a> モジュール レベルでの重大度レベルの構成 (上級者向け)  
  **[ログの設定]** タブの **[詳細設定]** セクションでは、モジュール レベルでログの重大度設定を構成することができます。 モジュールとは、DQS の機能に含まれる個々の機能を実装する DQS システムのアセンブリです。 たとえば、ドメイン管理アクティビティには、ドメイン ルールの定義、ルールの条件の定義、複合ドメインのクロス ドメイン ルールの定義など、さまざまな機能が含まれています。  
@@ -78,7 +81,7 @@ ms.lasthandoff: 03/22/2018
  アクティビティ レベルで指定したログの重大度設定によって、そのアクティビティを構成するすべてのモジュールのログの重大度設定が決まります。 ただし、アクティビティ レベルとモジュール レベルでログの重大度設定が異なる場合は、モジュール レベルの重大度設定が使用されます。  
   
 > [!NOTE]  
->  -   既定では、 **[詳細設定]** セクションで **Microsoft.Ssdqs.Core.Startup** モジュールが事前に構成されており、重大度レベルは **[Info]**に設定されています。 この設定により、DQS のサービスの開始と終了に関するイベントのうち、重大度が Info のイベントとそれよりも重大度が高いイベント (Warn、Error、および Fatal) がログに記録されます。  
+>  -   既定では、 **[詳細設定]** セクションで **Microsoft.Ssdqs.Core.Startup** モジュールが事前に構成されており、重大度レベルは **[Info]** に設定されています。 この設定により、DQS のサービスの開始と終了に関するイベントのうち、重大度が Info のイベントとそれよりも重大度が高いイベント (Warn、Error、および Fatal) がログに記録されます。  
 > -   モジュール レベルでのログの重大度レベルの構成は、DQS システムのアセンブリについて理解している DQS の上級ユーザー以外にはお勧めしません。  
   
  モジュール レベルでログの重大度レベルを構成するには、次の手順を実行します。  
@@ -87,13 +90,13 @@ ms.lasthandoff: 03/22/2018
   
 2.  表示されたグリッドで、 **[モジュール]** 列のドロップダウン リストからモジュール名を選択します。  
   
-3.  次に、 **[重大度]** 列のドロップダウン リストからモジュールの重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]**のいずれかを選択できます。  
+3.  次に、 **[重大度]** 列のドロップダウン リストからモジュールの重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]** のいずれかを選択できます。  
   
      たとえば、ドメイン管理アクティビティに含まれるドメイン ルールの定義機能に対してドメイン管理アクティビティとは異なる粒度を設定するには、 **[Microsoft.Ssdqs.DomainRules.Define]** モジュールを選択し、別の重大度レベルを選択します。 同様に、クロス ドメイン ルール機能に対して異なる粒度を設定するには、 **[Microsoft.Ssdqs.DomainRules.Condition.CrossDomain]** モジュールを選択し、別の重大度レベルを選択します。  
   
 4.  必要に応じて、他のモジュールに対して手順 2. および 3. を繰り返します。 **[モジュールを追加します]** アイコンと **[モジュールを削除します]** アイコンをクリックして、グリッドの行を追加したり削除したりすることもできます。  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [DQS ログ ファイルの詳細設定の構成](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  

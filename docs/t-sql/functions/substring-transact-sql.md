@@ -1,16 +1,16 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUBSTRING
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75aab8f9b1035e94b65d96319f8589b11e032ecb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +64,7 @@ SUBSTRING ( expression ,start , length )
 ## <a name="return-types"></a>戻り値の型  
  *expression* が、サポートされている文字データ型の 1 つである場合は、文字データが返されます。 *expression* が、サポートされている **binary** データ型の 1 つである場合は、binary データが返されます。 返される文字列のデータ型は、指定した式のデータ型と同じです。ただし、次の表の場合は例外です。  
   
-|指定した式|戻り値の型|  
+|指定した式|の戻り値の型 : |  
 |--------------------------|-----------------|  
 |**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
@@ -72,7 +73,7 @@ SUBSTRING ( expression ,start , length )
 ## <a name="remarks"></a>Remarks  
  値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**, 、**char**, 、または **varchar** データ型とのバイト **テキスト**, 、**イメージ**, 、**バイナリ**, 、または **varbinary** データ型。  
   
- *式* する必要があります **varchar (max)** または **varbinary (max)**ときに、 *開始* または *長さ* 2,147, 483,647 を超える値が含まれています。  
+ *式* する必要があります **varchar (max)** または **varbinary (max)** ときに、 *開始* または *長さ* 2,147, 483,647 を超える値が含まれています。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  補助文字 (SC) の照合順序を使用する場合、*start* と *length* では、*expression* の各サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  

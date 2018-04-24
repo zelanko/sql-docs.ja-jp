@@ -15,18 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: ''
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2b0004068581d06c516c711565d811cc1736b55
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 84373ec49b5342a4e975f26ab474d4420190a686
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で提供されているデータ品質ソリューションを使用すると、データ スチュワードまたは IT プロフェッショナルは、データの品質を維持し、データをビジネス使用に適したものにすることができます。 DQS は、データ ソースの整合性と品質を管理する、コンピューター支援型のインタラクティブなナレッジ ドリブン ソリューションです。 DQS を利用すると、データについてのナレッジを発見し、構築して、管理できます。 その後、そのナレッジを使用して、データのクレンジング、マッチング、プロファイリングを実行できます。 また、DQS データ品質プロジェクトに含まれる参照データ プロバイダーのクラウド ベースのサービスを利用することもできます。  
   
 ##  <a name="BusinessNeed"></a> DQS に関するビジネス ニーズ  

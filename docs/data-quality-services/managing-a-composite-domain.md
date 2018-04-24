@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67a253241fff3c1391fba522d6b3b659d03272bb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 30940f751b646723e6cac7565b468a54a26bb1ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-a-composite-domain"></a>複合ドメインの管理
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) での複合ドメインの使用について説明します。 単一ドメインでは 1 つのフィールド内のデータを十分に表せないことがあります。また、単一ドメインをグループ化しないとデータを表すことはできません。 これを行うには、複合ドメインを作成します。 複合ドメインは 2 つ以上の単一ドメインで構成され、解析されないが単一の複合値に含まれる複数の関連用語で構成されるデータ フィールドにマップされます。 値の各用語は、それぞれ異なる単一ドメインで表されます。 単一ドメインを複合ドメインに含めた後に、複合ドメインをデータ フィールドにマップすると、単一ドメインでナレッジを構築して、そのフィールド内のデータに関するナレッジ ベースにナレッジを構築できます。 複合ドメインは、単一ドメインと同様に、1 つのデータ フィールド内のデータのセマンティック表現です。  
   
  複合ドメイン内の単一のドメインには、ナレッジの共通領域が必要です。 たとえば、番地、市区町村、都道府県、国、および郵便番号データを含む住所フィールドがあります。 このフィールドの各用語はそれぞれデータ型が異なる場合があります。 この場合は、これらの用語を複数の異なる単一ドメインにマップします。 また、名前、ミドル ネーム、および姓のデータを含む氏名フィールドもあります。 複合ドメインを使用するには、フィールド内のデータを複数の異なる単一ドメインに解析し、フィールドの複合ドメインとフィールドの一部に対する単一ドメインを作成できる必要があります。  

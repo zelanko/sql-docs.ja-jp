@@ -1,30 +1,33 @@
 ---
-title: "テーブルからのデータのインポート (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: テーブルからのデータのインポート (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 741f5573072865756a9ba0bf1cc7090839fbeee7
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 5e512f1be655b9ab51bbbc64c7756540aa505b57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-data-from-tables-master-data-services"></a>テーブルからのデータのインポート (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のモデルに一括でデータの追加および変更を行えます。  
   
  **前提条件**  
@@ -33,7 +36,7 @@ ms.lasthandoff: 03/05/2018
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの stg.udp_\<名前>_Leaf、stg.udp\_\<名前>_Consolidated、または the stg.udp\_\<名前>_Relationship の各ストアド プロシージャのいずれかを実行するアクセス許可が必要です。  
   
--   モデルのステータスが **[コミット済み]**でないことが必須です。  
+-   モデルのステータスが **[コミット済み]** でないことが必須です。  
   
  **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに対してデータの追加、更新、および削除を行うには**  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 03/05/2018
   
     -   マスター データ管理の **[統合管理]** 機能領域 を使用します。  
   
-         **[ステージング バッチ]** ページで、ドロップダウン リストでデータの追加先のモデルを選択してから、 **[バッチの開始]**をクリックします。 バッチ処理の状態が、 **[状態]** フィールドに示されます。 状態の詳細については、「[インポート状態 (マスター データ サービス)](../master-data-services/import-statuses-master-data-services.md)」を参照してください。  
+         **[ステージング バッチ]** ページで、ドロップダウン リストでデータの追加先のモデルを選択してから、 **[バッチの開始]** をクリックします。 バッチ処理の状態が、 **[状態]** フィールドに示されます。 状態の詳細については、「[インポート状態 (マスター データ サービス)](../master-data-services/import-statuses-master-data-services.md)」を参照してください。  
   
          ![マスター データ マネージャーでの [ステージング バッチ] ページ](../master-data-services/media/mds-stagingbatchespage.png "マスター データ マネージャーでの [ステージング バッチ] ページ")  
   

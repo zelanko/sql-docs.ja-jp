@@ -2,7 +2,7 @@
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -54,11 +54,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e2018a6e0975c739a3d796cb1f0bdf6a0b392584
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 9f0a96fb3d9ffabc97ae32afbaa2462a34ec14e3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -391,22 +391,22 @@ column_name <data_type>
  PERSISTED  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で、計算値をテーブルに物理的に保存し、依存する計算列のいずれかが更新された場合にその値を更新するように指定します。 計算列に PERSISTED とマークすることで、計算列に対し、決定的ではあるが正確ではないインデックスを作成することができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用される計算列は、明示的に PERSISTED に設定する必要があります。 PERSISTED が指定されている場合、*computed_column_expression* は決定的である必要があります。  
   
- ON { *partition_scheme* | *filegroup* | **"**default**"** }  
+ ON { *partition_scheme* | *filegroup* | **"** default **"** }  
 
- テーブルが格納されるパーティション構成またはファイル グループを指定します。 *partition_scheme* を指定すると、テーブルはパーティション テーブルとなり、各パーティションは *partition_scheme* で指定した 1 つ以上のファイル グループに格納されます。 *filegroup* を指定すると、テーブルは指定されたファイル グループに格納されます。 ファイル グループはデータベース内に存在している必要があります。 **"**default**"** を指定するか、ON をまったく指定しないと、テーブルは既定のファイル グループに格納されます。 CREATE TABLE で指定したテーブルの格納方法を後から変更することはできません。  
+ テーブルが格納されるパーティション構成またはファイル グループを指定します。 *partition_scheme* を指定すると、テーブルはパーティション テーブルとなり、各パーティションは *partition_scheme* で指定した 1 つ以上のファイル グループに格納されます。 *filegroup* を指定すると、テーブルは指定されたファイル グループに格納されます。 ファイル グループはデータベース内に存在している必要があります。 **"** default **"** を指定するか、ON をまったく指定しないと、テーブルは既定のファイル グループに格納されます。 CREATE TABLE で指定したテーブルの格納方法を後から変更することはできません。  
   
- ON {*partition_scheme* | *filegroup* | **"**default**"**} は、PRIMARY KEY 制約または UNIQUE 制約で指定することもできます。 これらの制約はインデックスを作成します。 *filegroup* を指定すると、インデックスは指定されたファイル グループに格納されます。 **"**default**"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 PRIMARY KEY 制約または UNIQUE 制約がクラスター化インデックスを作成する場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 CLUSTERED を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の *partition_scheme* または *filegroup* とは異なる *partition_scheme* (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。  
+ ON {*partition_scheme* | *filegroup* | **"** default **"**} は、PRIMARY KEY 制約または UNIQUE 制約で指定することもできます。 これらの制約はインデックスを作成します。 *filegroup* を指定すると、インデックスは指定されたファイル グループに格納されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 PRIMARY KEY 制約または UNIQUE 制約がクラスター化インデックスを作成する場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 CLUSTERED を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の *partition_scheme* または *filegroup* とは異なる *partition_scheme* (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。  
   
 > [!NOTE]  
->  ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 **"**default**"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+>  ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 > [!NOTE]  
 >  パーティション テーブルを作成した後、テーブルの LOCK_ESCALATION オプションを AUTO に設定することを検討してください。 テーブルではなくパーティション (HoBT) レベルにロックをエスカレートできるようにすることで、同時実行性が向上します。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
- TEXTIMAGE_ON { *filegroup*| **"**default**"** }  
+ TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
  **text** 列、**ntext** 列、**image** 列、**xml** 列、**varchar(max)** 列、**nvarchar(max)** 列、**varbinary(max)**、および CLR ユーザー定義型の列 (geometry 型や geography 型など) が、指定したファイル グループに格納されることを示します。  
   
- テーブル内に値の大きな列がない場合は、TEXTIMAGE_ON は指定できません。 *partition_scheme* を指定した場合は、TEXTIMAGE_ON を指定できません。 **"**default**"** を指定するか、TEXTIMAGE_ON をまったく指定しないと、値の大きな列は既定のファイル グループに格納されます。 CREATE TABLE で指定した値の大きな列のデータの格納方法を、後から変更することはできません。  
+ テーブル内に値の大きな列がない場合は、TEXTIMAGE_ON は指定できません。 *partition_scheme* を指定した場合は、TEXTIMAGE_ON を指定できません。 **"** default **"** を指定するか、TEXTIMAGE_ON をまったく指定しないと、値の大きな列は既定のファイル グループに格納されます。 CREATE TABLE で指定した値の大きな列のデータの格納方法を、後から変更することはできません。  
 
 > [!NOTE]  
 > Varchar(max)、nvarchar(max)、varbinary(max)、xml および大きな UDT 値は、データ行に直接格納されます。レコードのサイズまで値を格納できますが、サイズの上限は 8,000 バイトです。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 0 が既定値です。
@@ -414,9 +414,9 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
 
 
 > [!NOTE]  
->  ここでは、default はキーワードではありません。 default は、既定のファイル グループの識別子のため、TEXTIMAGE_ON **"**default**"** または TEXTIMAGE_ON **[**default**]** のように区切る必要があります。 **"**default**"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+>  ここでは、default はキーワードではありません。 default は、既定のファイル グループの識別子のため、TEXTIMAGE_ON **"** default **"** または TEXTIMAGE_ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
- FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  FILESTREAM データのファイル グループを指定します。  
   
@@ -430,7 +430,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
 -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) ステートメントでヒープをクラスター化インデックスに変換する。 この場合は、異なる FILESTREAM ファイル グループ、パーティション構成、または NULL を指定できます。  
   
--   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) ステートメントでクラスター化インデックスをヒープに変換する。 この場合は、異なる FILESTREAM ファイル グループ、パーティション構成、または **"**default**"** を指定できます。  
+-   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) ステートメントでクラスター化インデックスをヒープに変換する。 この場合は、異なる FILESTREAM ファイル グループ、パーティション構成、または **"** default **"** を指定できます。  
   
  `FILESTREAM_ON <filegroup>` 句のファイル グループ、またはパーティション構成で指定されている各 FILESTREAM ファイル グループには、ファイルが 1 つ定義されている必要があります。 このファイルは、[CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントまたは [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用して定義する必要があります。それ以外の場合は、エラーが発生します。  
   
@@ -525,7 +525,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
   
  非クラスター化列ストア インデックスが格納され、クラスター化列ストア インデックスとして管理します。 非クラスター化列ストア インデックスは、列が制限されることがあり、テーブルのセカンダリ インデックスとして存在しているために呼び出されます。  
   
- ON *partition_scheme_name***(***column_name***)**  
+ ON *partition_scheme_name ***(*** column_name***)**  
  ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。  
   
 > [!NOTE]  
@@ -541,10 +541,10 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  ON *filegroup_name*  
  指定したファイル グループに、指定したインデックスを作成します。 位置の指定がなく、テーブルまたはビューがパーティション分割されていない場合、インデックスには、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
   
- ON **"**default**"**  
+ ON **"** default **"**  
  既定のファイル グループに、指定したインデックスを作成します。  
   
- この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+ この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
@@ -583,7 +583,7 @@ TEXTIMAGE_ON では、"LOB ストレージ領域" の場所のみが変更され
  列は、該当するデータ型である必要があります。  
   
  ALGORITHM  
- 必要があります **'AEAD_AES_256_CBC_HMAC_SHA_256'**です。  
+ 必要があります **'AEAD_AES_256_CBC_HMAC_SHA_256'** です。  
   
  機能の制約などについて詳しくは、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」をご覧ください。  
   

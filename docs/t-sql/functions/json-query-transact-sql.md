@@ -1,16 +1,16 @@
 ---
 title: JSON_QUERY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JSON_QUERY
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - JSON, querying
 - JSON_QUERY function
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 19
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 310d85e26226cd54eff5d1c99e94b235348a90f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b748e8828acff771039095070a74f1ade3b39f3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ JSON のパスを解析するための厳密でないまたは strict モード�
 } 
 ```  
   
- 次の表は、lax モードと strict モードでの **JSON_MODIFY** の動作を比較します。 省略可能なパス モード (lax または strict) の指定の詳細については、「[JSON パス式 Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
+ 次の表は、lax モードと strict モードでの **JSON_MODIFY** の動作を比較します。 省略可能なパス モード (厳密でない、または厳格) の指定について詳しくは、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
   
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  

@@ -1,16 +1,16 @@
 ---
 title: DAY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DAY_TSQL
@@ -25,23 +25,24 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 444df60a2cfe3adae045020b3db8d673946dccb1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 471aee08a98273f8fe44b599de4c877d40226d16
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定した日 (月の日) を表す整数を返します *日付*です。
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] [日付と時刻のデータ型および関数、を参照してください。 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;.](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)
+すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +54,7 @@ DAY ( date )
   
 ## <a name="arguments"></a>引数  
 *date*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** の値に解決できる式です。  *日付* 引数は、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。
+**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* 引数には、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。
   
 ## <a name="return-type"></a>戻り値の型  
 **int**

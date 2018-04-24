@@ -1,16 +1,16 @@
 ---
 title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYPASSPHRASE
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - encryption [SQL Server], symmetric keys
 - symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0fa00253d9f707e844baca9dc1baa807533ba2ed
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bf177ff86bbf3fc9f239d9719c956ee5c05a4200
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  クリア テキストを含む **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数です。 最大サイズは 8,000 バイトです。  
   
  *add_authenticator*  
- クリア テキストと共に認証子を暗号化するかどうかを指定します。 認証子を追加する場合は 1 を指定します。 **ssNoversion**  
+ クリア テキストと共に認証子を暗号化するかどうかを指定します。 認証子を追加する場合は 1 を指定します。 **int**.  
   
  @add_authenticator  
  クリア テキストと共にハッシュを暗号化するかどうかを指定します。  
   
  *authenticator*  
- 認証子の取得元となるデータを指定します。 **sysname**  
+ 認証子の取得元となるデータを指定します。 **sysname**.  
   
  @authenticator  
  認証子の取得元となるデータを含む変数を指定します。  

@@ -1,16 +1,16 @@
 ---
 title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_SRVROLEMEMBER_TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 342eadd8e537611cc292c95ebfa41b98c222c920
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1ae1dac9be576e6f1c6c2c83164bd83e2716d658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 ## <a name="arguments"></a>引数  
  **'** *role* **'**  
- 確認するサーバー ロールの名前です。 *role* は **sysname** です。  
+ 確認するサーバー ロールの名前です。 *role* は **sysname**です。  
   
  *role* の有効な値は、ユーザー定義サーバー ロールと、次の固定サーバー ロールです。  
   
@@ -93,7 +93,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、**sysadmin** 固定サーバー ロールには **CONTROL SERVER** 権限があります。 **CONTROL SERVER** 権限を持っていても、**sysadmin** ロールに所属していなければ、そのユーザーはロールのメンバーではないと、この関数によって正確に報告されます。そのロールと同じ権限をユーザーが持っているとしても結果は変わりません。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを判断するには、[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md) を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
+ 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは  を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを [IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-member-transact-sql.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する VIEW DEFINITION 権限が必要です。  

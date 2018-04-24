@@ -1,32 +1,32 @@
 ---
-title: "IsValidDetailed (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: IsValidDetailed (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f7531e9b692db3a026e4697e502f3d10e39cfa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 285833fd707c524f3912fa68ca7e44878417f788
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/25/2018
 |24416|曲線 {0} のポイント {1} から開始するエッジが直線または対蹠エンドポイントを含む逆円弧であるため無効です。|  
   
 ## <a name="examples"></a>使用例  
- 次は、**IsValidDetailed()** メソッドの動作方法を示す、無効な空間オブジェクトの例です。  
+ 次の例は、**IsValidDetailed()** メソッドの動作方法を示す、無効な空間オブジェクトの例です。  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

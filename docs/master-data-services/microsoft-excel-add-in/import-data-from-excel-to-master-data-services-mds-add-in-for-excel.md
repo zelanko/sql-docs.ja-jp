@@ -1,30 +1,33 @@
 ---
-title: "Excel からマスター データ サービスにデータをインポートする (Excel 用 MDS アドイン) | Microsoft Docs"
-ms.custom: 
+title: Excel からマスター データ サービスにデータをインポートする (Excel 用 MDS アドイン) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be116223907a5237145c9bd69ae3680ceef2c408
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 28ad12616ca5e58dce0a477cec9f20bbb1ec8ceb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel からマスター データ サービスにデータをインポートする (Excel 用 MDS アドイン)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、Excel での作業が終わったときに、変更を保存して他のユーザーがアクセスできるようにするには、MDS リポジトリにデータをパブリッシュします。  
   
 > [!NOTE]  
@@ -42,13 +45,13 @@ ms.lasthandoff: 03/05/2018
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>MDS リポジトリにデータをパブリッシュするには  
   
-1.  **[パブリッシュと検証]** グループの **[パブリッシュ]**をクリックします。  
+1.  **[パブリッシュと検証]** グループの **[パブリッシュ]** をクリックします。  
   
 2.  省略可。 **[パブリッシュと注釈設定]** ダイアログ ボックスが表示された場合は、すべての更新で同じ注釈 (コメント) を共有するか、各変更の注釈を個別に設定するかを選択します。  
   
 3.  省略可。 **[今後、このダイアログ ボックスを表示しない]** チェック ボックスをオンにします。 後で、このダイアログ ボックスが常に表示されるようにするには、 **[設定]** をクリックして **[パブリッシュ時に [パブリッシュと注釈設定] ダイアログ ボックスを表示する]** チェック ボックスをオンにします。  
   
-4.  **[パブリッシュ]**をクリックします。  
+4.  **[パブリッシュ]** をクリックします。  
   
 > [!NOTE]  
 >  新しいメンバー (行) をワークシートに追加する場合、MDS リポジトリに正常にパブリッシュできないときは、ワークシートのすべての属性に対する **更新** 権限がない可能性があります。 **[校閲]** タブの **[変更]** グループの **[シート保護の解除]** をクリックし、再度パブリッシュしてください。  

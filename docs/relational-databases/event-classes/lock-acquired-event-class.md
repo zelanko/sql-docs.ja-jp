@@ -1,34 +1,35 @@
 ---
-title: "Lock:Acquired イベント クラス | Microsoft Docs"
-ms.custom: 
+title: Lock:Acquired イベント クラス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Acquired event class
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c2afa0dfd180073e91cbe541ae25687448ccaa1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17b1ccc7a297560d2e0d9dc94f12fdb7ec3011e8
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Lock:Acquired イベント クラスは、データ ページなどのリソースのロックの取得を示します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Lock:Acquired イベント クラスは、データ ページなどのリソースのロックの取得を示します。  
   
  Lock:Acquired イベント クラスおよび Lock:Released イベント クラスを使用すると、オブジェクトがロックされている時点、取得するロックの種類、およびロックが保持されていた期間を監視できます。 長時間ロックが保持されると、競合の問題が発生する原因となり、調査が必要になることがあります。 たとえば、アプリケーションでは、テーブルの行のロックを取得して、ユーザー入力を待機できます。 ユーザー入力は行われるまでに長時間かかることがあるので、ロックによって他のユーザーがブロックされることがあります。 この場合、アプリケーションは、必要なときにだけロックを要求し、ロックが取得されている場合はユーザー入力を要求しないように再設計する必要があります。  
   

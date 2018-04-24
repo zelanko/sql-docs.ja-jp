@@ -1,16 +1,16 @@
 ---
-title: "GRANT (データベース プリンシパルの権限の許可) (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT (データベース プリンシパルの権限の許可) (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - GRANT statement, roles
 - application roles [SQL Server], permissions
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58f66a871299d85c8ee9bce59b696cec2668ae9f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 270657334dde065c2561f13db181e3cfc84dd1ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (データベース プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +98,7 @@ GRANT permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  アプリケーション ロールを指定します。  
   
@@ -193,7 +194,7 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールに許可する  
  次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

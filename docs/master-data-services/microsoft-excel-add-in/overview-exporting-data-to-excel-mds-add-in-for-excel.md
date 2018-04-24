@@ -1,35 +1,38 @@
 ---
-title: "概要: Excel へのデータのエクスポート (Excel 用 MDS アドイン) | Microsoft Docs"
-ms.custom: 
+title: '概要: Excel へのデータのエクスポート (Excel 用 MDS アドイン) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d084ce76ed1dd535575caa2d43ccb43e64fd3a2
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: fc716c86223244bb08ad3b0e94192319dbfc1240
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概要: Excel へのデータのエクスポート (Excel 用 MDS アドイン)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、データを使用する前に、MDS リポジトリから Excel ワークシートにデータをエクスポートする必要があります。 データの操作が完了したら、そのデータを他のユーザーが共有できるように MDS リポジトリにインポートします。  
   
  エクスポートできるデータは、アクセスする権限があるデータに限定されます。 データにアクセスする権限は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで設定するか、プログラムによって設定します。  
   
- 大量のデータをエクスポートする場合は、読み込みに長時間かかる可能性があるデータのときに表示される警告を設定できます。 この操作を行うには、 **[オプション]** グループの **[設定]**をクリックします。 **[データ]** タブで、 **[大きなデータ セットの場合にフィルター警告を表示する]**を選択します。  
+ 大量のデータをエクスポートする場合は、読み込みに長時間かかる可能性があるデータのときに表示される警告を設定できます。 この操作を行うには、 **[オプション]** グループの **[設定]** をクリックします。 **[データ]** タブで、 **[大きなデータ セットの場合にフィルター警告を表示する]** を選択します。  
   
 > [!WARNING]  
 >  MDS が有効なブックは、Excel 用 MDS アドインを使用している Excel でのみ開き、更新する必要があります。 MDS Excel アドインがインストールされていないコンピューター上の Excel で、MDS が有効なブックを開くことはサポートされていませんし、ブック ファイルを破損する可能性があります。 他のユーザーとデータを共有したい場合は、ワークシートを保存して電子メールで送信するのではなく、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 クエリの詳細については、「[ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)」を参照してください。  

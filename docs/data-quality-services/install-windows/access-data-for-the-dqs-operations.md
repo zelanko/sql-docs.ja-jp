@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8da32d9464294466e93a9d7a42094709da7dbade
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: dac1d338d8a4a835099de086be4c162fdadafb0e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
   
 -   ソース データを DQS_STAGING_DATA データベース内のテーブル/ビューにコピーし、その後、それを DQS 操作に使用する。 処理後のデータを、DQS_STAGING_DATA データベース内の新しいテーブルにエクスポートすることもできます。 これを行うには、Windows ユーザー アカウントに DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権を与える必要があります。  
@@ -41,9 +44,9 @@ ms.lasthandoff: 03/22/2018
   
 1.  Microsoft SQL Server Management Studio を起動します。  
   
-2.  Microsoft SQL Server Management Studio で、SQL Server インスタンスを展開し、 **[セキュリティ]**を展開し、 **[ログイン]**を展開します。  
+2.  Microsoft SQL Server Management Studio で、SQL Server インスタンスを展開し、 **[セキュリティ]** を展開し、 **[ログイン]** を展開します。  
   
-3.  SQL ログインを右クリックし、 **[プロパティ]**をクリックします。  
+3.  SQL ログインを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   

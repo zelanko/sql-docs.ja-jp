@@ -1,34 +1,34 @@
 ---
-title: "&lt;xsd:redefine&gt; 要素 | Microsoft Docs"
-ms.custom: 
+title: '&lt;xsd:redefine&gt; 要素 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3865dc2690b6d78acb0d24fc5190ab394dfc0a83
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a769ee3a71c33ee94614c1d242ea264a7207fd3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 要素
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブのサポートはパフォーマンスの点で高コストになる可能性があるうえ、再定義したスキーマに関連付けられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml **データ型のインスタンスはすべて** で再検証する必要があります。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  
+  W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブのサポートはパフォーマンスの点で高コストになる可能性があるうえ、再定義したスキーマに関連付けられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml **データ型のインスタンスはすべて** で再検証する必要があります。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  
   
  スキーマまたはスキーマ コンポーネントを更新するには、代わりに次の方法を使用できます。  
   

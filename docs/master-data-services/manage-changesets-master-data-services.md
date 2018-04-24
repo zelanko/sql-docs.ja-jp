@@ -1,30 +1,33 @@
 ---
-title: "変更セットの管理 (マスター データ サービス) | Microsoft Docs"
-ms.custom: 
+title: 変更セットの管理 (マスター データ サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
-caps.latest.revision: 
+caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fd88978e97aa9a10418a6830f9279110a5ea251
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3fb3f0cb84249a4132b0b14b24d39e2087671d7e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-changesets-master-data-services"></a>変更セットの管理 (マスター データ サービス)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、すべての変更をモデルとバージョンごとに管理できます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -39,9 +42,9 @@ ms.lasthandoff: 03/05/2018
   
 ## <a name="to-manage-the-changesets"></a>変更セットを管理するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、モデルとバージョンを選択し、 **[エクスプローラー]**をクリックします。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、モデルとバージョンを選択し、 **[エクスプローラー]** をクリックします。  
   
-2.  **[変更セット]**をクリックします。 選択したモデルとバージョンで管理できるすべての変更セットが表示されます。  
+2.  **[変更セット]** をクリックします。 選択したモデルとバージョンで管理できるすべての変更セットが表示されます。  
   
 3.  変更セットの詳細を表示するには、 **[適用]** をクリックします。  
   

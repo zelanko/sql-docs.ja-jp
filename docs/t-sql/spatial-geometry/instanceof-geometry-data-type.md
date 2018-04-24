@@ -1,16 +1,16 @@
 ---
-title: "InstanceOf (geometry データ型) | Microsoft Docs"
-ms.custom: 
+title: InstanceOf (geometry データ型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - InstanceOf
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - InstanceOf (geometry Data Type)
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c53e66f85d614b79e51312dc4404fd19acd69fed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 809a8147033c22f59e9dd39a850c2270c0352d9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  メソッドの入力は、**Geometry**、**Point**、**Curve**、**LineString**、**CircularString**、**CompoundCurve**、**Surface**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiSurface**、**MultiPolygon**、**MultiCurve**、**MultiLineString**、**MultiPoint** のうちのいずれかにする必要があります。 このメソッドは、上記以外の文字列が入力に使用された場合、**ArgumentException** をスローします。  
