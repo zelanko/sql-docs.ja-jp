@@ -2,7 +2,7 @@
 title: 修正されたバグのリスト |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2018
 - SQLGetData で渡されたバッファーのサイズが小さいときに取得されるデータ (Windows) に、エラー 22003 クラッシュを修正
 - 切り捨てられた ADAL エラー メッセージを修正
 - 整数を小数点の数を浮動小数点に変換するときに、32 ビット Windows でまれなバグを修正
-- 問題を修正、ここでは Always Encrypted での 10 進数のフィールドに倍精度浮動小数点を挿入戻り値のデータの切り捨てエラー
+- ここで、データの切り捨てエラーを返す二重で Always Encrypted で 10 進数のフィールドへの挿入は問題を修正しました
 - MacOS インストーラーに、警告を修正
 - 固定接続の回復との接続プール両方が有効な場合、サーバーから削除するセッションの原因は、セッション復旧試行中に SQL Server に無効な状態を送信
 

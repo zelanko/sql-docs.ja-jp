@@ -1,44 +1,44 @@
 ---
-title: "SQL Server のプロパティ (起動パラメーター タブ) |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server のプロパティ (起動パラメーター タブ) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-このダイアログ ボックスを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の起動時のパラメーターを追加または削除できます。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
+このダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の起動時のパラメーターを追加または削除できます。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[起動時のパラメーターの指定]**  
- パラメーターを追加するには、パラメーターを入力し、 **[追加]**をクリックします。  
+ パラメーターを追加するには、パラメーターを入力し、 **[追加]** をクリックします。  
   
- 必要なパラメーターのいずれかを変更するには、 **[既存のパラメーター]** ボックスのパラメーターを選択し、 **[起動時のパラメーターの指定]** ボックスの値を変更して、 **[更新]**をクリックします。  
+ 必要なパラメーターのいずれかを変更するには、 **[既存のパラメーター]** ボックスのパラメーターを選択し、 **[起動時のパラメーターの指定]** ボックスの値を変更して、 **[更新]** をクリックします。  
   
  **[既存のパラメーター]**  
- パラメーターを削除するには、パラメーターを選択し、 **[削除]**をクリックします。  
+ パラメーターを削除するには、パラメーターを選択し、 **[削除]** をクリックします。  
   
 ## <a name="parameter-format"></a>パラメーターの形式  
- パラメーターの間に区切り記号を入力しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって自動的に区切り記号が追加されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager では、次のパラメーターの要件を強制します。  
+ パラメーターの間に区切り記号を入力しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって自動的に区切り記号が追加されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーによって、次のパラメーターの要件が適用されます。  
   
 -   先頭および末尾のスペースは、すべての起動時のパラメーターから削除します。  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
   
 |パラメーター|簡単な説明|  
 |---------------|-----------------------|  
-|-m|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。|  
+|-M|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをシングル ユーザー モードで起動します。|  
 |-T1204|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを返します。|  
 |-T1224|ロック数に基づいてロックのエスカレーションを無効にします。|  
 |-T3608|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、master データベース以外のすべてのデータベースを自動的に開始および復旧しないようにします。|  
