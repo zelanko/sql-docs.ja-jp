@@ -1,5 +1,5 @@
 ---
-title: '[ジョブのプロパティ] - [新しいジョブ]([対象サーバー] ページ) | Microsoft Docs'
+title: ジョブのプロパティ - [新しいジョブ]([対象サーバー] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,13 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1002269c653255edeb1c0912202fe943a3477bfa
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a8e1cc7fdddc6ef0859137b2a7cbb193b9d09565
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="job-properties---new-job-targets-page"></a>[ジョブのプロパティ] - [新しいジョブ] \([対象サーバー] ページ)
+# <a name="job-properties---new-job-targets-page"></a>ジョブのプロパティ - [新しいジョブ] \([対象サーバー] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

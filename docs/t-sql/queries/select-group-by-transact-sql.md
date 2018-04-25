@@ -1,16 +1,16 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f83c1fa093977eb77fec9f58c0f02223ce581212
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -349,7 +350,7 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
 |機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
-|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(***arg1***,***...argN***)** または **dbo.rollup(***arg1***,**...*argN***)* が使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (***arg1***,**...argN**)** または **dbo.rollup(**arg1**,***...argN***)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 「キーワード 'cube'&#124;'rollup' の周辺に正しくない構文があります」というエラー メッセージが返されます。<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (***arg1***,***...argN*) または **dbo.rollup(***arg1***,***...argN***)** が使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(***arg1***,***...argN***)** または **dbo.rollup(***arg1***,**...*argN***)* が使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (***arg1***,**...argN **)** または **dbo.rollup(** arg1 **,***...argN***)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 「キーワード 'cube'&#124;'rollup' の周辺に正しくない構文があります」というエラー メッセージが返されます。<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (***arg1***,***...argN*) または **dbo.rollup(***arg1***,***...argN***)** が使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|サポートされていません|Supported|Supported|  
 |CUBE|サポートされていません|Supported|サポートされていません|  
 |ROLLUP|サポートされていません|Supported|サポートされていません|  

@@ -1,37 +1,38 @@
 ---
-title: "[列のプロパティ]([全般] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[列のプロパティ]([全般] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3087497e8c3757002bc6b80556499ad7c096d51c
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0bf90973ad2a99e415f23d62fd4ad047f881f2a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このページを使用すると、選択されている列のプロパティを表示できます。  
   
- このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]**をクリックします。  
+ このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]** をクリックします。  
   
 ## <a name="options"></a>および  
  **名前**  
@@ -44,10 +45,10 @@ ms.lasthandoff: 01/18/2018
  列が保持できるデータ型です。 データ型がシステム データ型である場合は、システム データ型が表示されます。 データ型がユーザー定義型である場合は、ユーザー定義データ型を形成するシステム データ型が表示されます。  
   
  **主キー**  
- 列が主キーであるかどうかを示します。 指定できる値は、 **[True]**および **[False]**です。  
+ 列が主キーであるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **Null を許容**  
- 列が NULL 値を許容するかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。  
+ 列が NULL 値を許容するかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **[計算値]**  
  列の値が、計算された式の結果であるかどうかを示します。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/18/2018
  列テキストの計算に使用されたステートメントを示します。 詳細については、「 [テーブルの計算列の指定](../../relational-databases/tables/specify-computed-columns-in-a-table.md)」を参照してください。  
   
  **Identity**  
- 列がテーブルの ID 列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。  
+ 列がテーブルの ID 列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **[IDENTITY シード]**  
  ID 列の最初の行の値を示します。  
@@ -98,10 +99,10 @@ ms.lasthandoff: 01/18/2018
 >  一般にスキーマという語にはいくつかの異なる意味があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベース オブジェクトを編成する場合にスキーマを使用します。 これは所有権に似ています。 XML は、スキーマを使用して XML 情報の編成を一連の名前空間に定義します。 このスキーマは、XML コードをまとめてグループ化する方法です。  
   
  **[スパース]**  
- 列がスパース列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
+ 列がスパース列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
   
  **[列セット]**  
- 列が列セットであるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
+ 列が列セットであるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。  
   
  **[ANSI PADDING の状態]**  
  ANSI PADDING が有効かどうかを示します。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
@@ -113,6 +114,6 @@ ms.lasthandoff: 01/18/2018
  列に対する統計的セマンティック検索を有効にするかどうかを示します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
  **[レプリケーションでは使用しない]**  
- 列をレプリケーションに使用できるかどうかを示します。 指定できる値は、 **[True]** および **[False]**です。  
+ 列をレプリケーションに使用できるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
   

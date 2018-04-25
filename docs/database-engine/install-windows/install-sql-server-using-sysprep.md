@@ -1,27 +1,27 @@
 ---
-title: "SysPrep を使用して SQL Server をインストールする | Microsoft Docs"
-ms.custom: 
+title: SysPrep を使用して SQL Server をインストールする | Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d85f3803d2ed3ba4df875edbae9eee1d9d29cadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep を使用して SQL Server をインストールする
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 02/09/2018
   
 2. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、**[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。 
   
-3. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]**をクリックします。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
+3. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
 4. [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。 
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 02/09/2018
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレプリケーション<br /><br /> フルテキスト機能<br /><br /> [データベース エンジン サービス]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 再頒布可能な機能<br /><br /> 共有機能|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション<br /><br /> フルテキスト機能<br /><br /> [データベース エンジン サービス]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 再頒布可能な機能<br /><br /> 共有機能|  
   
      機能名を強調表示すると、右側のペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳しくは、「[SQL Server の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。 
   
@@ -131,11 +131,11 @@ ms.lasthandoff: 02/09/2018
   
 13. システム構成チェッカーによってイメージの準備のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
-14. **[イメージの準備の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは製品の更新プログラム機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。 続行するには、 **[準備]**をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、選択した機能の必須コンポーネントを最初にインストールし、その後で機能をインストールします。 
+14. **[イメージの準備の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 このページで、セットアップは製品の更新プログラム機能が有効/無効であるか、および最終バージョンの更新プログラムであるかどうかを示します。 続行するには、 **[準備]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、選択した機能の必須コンポーネントを最初にインストールし、その後で機能をインストールします。 
   
 15. インストール中は、セットアップの進行に合わせてインストールの進行状況を監視できるように、 **[イメージの準備の進行状況]** ページに状態が表示されます。 
   
-16. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]**をクリックします。 
+16. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]** をクリックします。 
   
 17. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。 
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 02/09/2018
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスをコンピューターのイメージに含めた場合は、[スタート] メニューにショートカットが表示されます。 インストール センターを起動して、 **[詳細設定]** ページの **[準備済みスタンドアロン インスタンスのイメージの完了]** をクリックすることもできます。 
   
-2. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]**をクリックします。 画面に詳細を表示するには、 **[詳細の表示]**をクリックするか、または **[詳細レポートの表示]**をクリックして HTML レポートを表示します。 
+2. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、 **[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
 3. **[セットアップ サポート ファイル]** ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。 
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/09/2018
   
      **[インストール済みのインスタンス]:** このコンピューター上の準備済みインスタンスを含むすべてのインスタンスがグリッドに表示されます。 
   
-8. **[機能の確認]** ページには、準備手順で選択したインストールに含まれる機能とコンポーネントが表示されます。 準備済みインスタンスに含まれていない機能を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに追加する場合は、まずこの手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させてから、 **[インストール センター]** の **[機能の追加]**から機能を追加します。 
+8. **[機能の確認]** ページには、準備手順で選択したインストールに含まれる機能とコンポーネントが表示されます。 準備済みインスタンスに含まれていない機能を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに追加する場合は、まずこの手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させてから、 **[インストール センター]** の **[機能の追加]** から機能を追加します。 
   
     > [!NOTE]  
     >  インストールする製品バージョンで利用可能な機能を追加できます。 詳しくは、「[SQL Server の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
@@ -186,7 +186,7 @@ ms.lasthandoff: 02/09/2018
   
      **セキュリティに関する注意** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]**をクリックします。 
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。 
   
 12. **[サーバーの構成 - 照合順序]** タブを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に既定以外の照合順序を指定します。 詳細については、「 [サーバー構成 - 照会順序](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)」を参照してください。 
   
@@ -196,11 +196,11 @@ ms.lasthandoff: 02/09/2018
   
          デバイスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]との接続を正常に確立した後のセキュリティ メカニズムは Windows 認証モード、混合モードのどちらの場合も同じです。 詳細については、「 [データベース エンジンの構成 - サーバー構成](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]**をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]**をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、「 [データベース エンジンの構成 - サーバー構成](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [管理者] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの 1 人以上のシステム管理者を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。 詳細については、「 [データベース エンジンの構成 - サーバー構成](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)」を参照してください。 
   
-     一覧の編集が完了したら、 **[OK]**をクリックします。 構成ダイアログ ボックスの管理者の一覧を確認します。 一覧が完成したら、 **[次へ]**をクリックします。 
+     一覧の編集が完了したら、 **[OK]** をクリックします。 構成ダイアログ ボックスの管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** をクリックします。 
   
-14. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]**をクリックします。 
+14. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]** をクリックします。 
   
     > [!IMPORTANT]  
     >  既定以外のインストール ディレクトリを指定する場合は、インストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 
@@ -215,11 +215,11 @@ ms.lasthandoff: 02/09/2018
   
 18. **[イメージの完了ルール]** ページで、システム構成チェッカーによってイメージの完了のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成が検証されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
-19. **[イメージの完了の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[インストール]**をクリックします。 
+19. **[イメージの完了の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[インストール]** をクリックします。 
   
 20. インストール中は、セットアップの進行に合わせてインストールの進行状況を監視できるように、 **[イメージの完了の進行状況]** ページに状態が表示されます。 
   
-21. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]**をクリックします。 
+21. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]** をクリックします。 
   
 22. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。 
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 02/09/2018
   
 2. インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスに機能を追加するには、**[詳細設定]** ページの **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [のスタンドアロン インスタンスのイメージの準備]** をクリックします。 
   
-3. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]**をクリックします。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
+3. システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
 4. [セットアップ サポート ファイル] ページで **[インストール]** をクリックして、セットアップ サポート ファイルをインストールします。 
   
@@ -249,11 +249,11 @@ ms.lasthandoff: 02/09/2018
   
 9. **[イメージの準備ルール]** ページで、システム構成チェッカーによってイメージの準備のルールが実行され、コンピューターの構成と指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能が検証されます。 画面に詳細を表示するには、**[詳細の表示]** をクリックするか、または **[詳細レポートの表示]** をクリックして HTML レポートを表示します。 
   
-10. **[イメージの準備の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[インストール]**をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、選択した機能の必須コンポーネントを最初にインストールし、その後で機能をインストールします。 
+10. **[イメージの準備の準備完了]** ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[インストール]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、選択した機能の必須コンポーネントを最初にインストールし、その後で機能をインストールします。 
   
 11. インストール中は、セットアップの進行に合わせてインストールの進行状況を監視できるように、 **[イメージの準備の進行状況]** ページに状態が表示されます。 
   
-12. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]**をクリックします。 
+12. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]** をクリックします。 
   
 13. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。 
   
@@ -261,9 +261,9 @@ ms.lasthandoff: 02/09/2018
   
 ### <a name="removing-features-from-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>準備済みインスタンスからの機能の削除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. アンインストール プロセスを開始するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックして、 **[プログラムと機能]**をダブルクリックします。 
+1. アンインストール プロセスを開始するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックして、 **[プログラムと機能]** をダブルクリックします。 
   
-2. アンインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをダブルクリックして、 **[削除]**をクリックします。 
+2. アンインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをダブルクリックして、 **[削除]** をクリックします。 
   
 3. セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[OK]** をクリックします。 
   
@@ -283,9 +283,9 @@ ms.lasthandoff: 02/09/2018
   
 ### <a name="uninstall-a-prepared-instance-of-includessnoversionincludesssnoversion-mdmd"></a>準備済みインスタンスのアンインストール [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. アンインストール プロセスを開始するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックして、 **[プログラムと機能]**をダブルクリックします。 
+1. アンインストール プロセスを開始するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックして、 **[プログラムと機能]** をダブルクリックします。 
   
-2. アンインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをダブルクリックして、 **[削除]**をクリックします。 
+2. アンインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをダブルクリックして、 **[削除]** をクリックします。 
   
 3. セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[OK]** をクリックします。 
   

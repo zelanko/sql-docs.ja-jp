@@ -1,34 +1,35 @@
 ---
-title: "[データベースのバックアップ]([バックアップ オプション] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[データベースのバックアップ]([バックアップ オプション] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.backupdatabase.options.f1
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 17db454343bb9af8558db1f6c24f9073fc9ddf80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] \([バックアップ オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[データベースのバックアップ]** ダイアログ ボックスの **[バックアップ オプション]** ページを使用すると、データベースのバックアップのオプションを表示または変更できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[データベースのバックアップ]** ダイアログ ボックスの **[バックアップ オプション]** ページを使用すると、データベースのバックアップのオプションを表示または変更できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 01/18/2018
   
 |||  
 |-|-|  
-|**After**|このバックアップ セットが失効して上書きできるようになるまでの経過日数を指定します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。<br /><br /> バックアップの有効期限の既定値は、 **[バックアップ メディアの既定の保有期間 (日)]** オプションの値のセットです。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]**を選択した後、 **[サーバーのプロパティ]** ダイアログ ボックスの **[データベースの設定]** ページをクリックします。|  
+|**After**|このバックアップ セットが失効して上書きできるようになるまでの経過日数を指定します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。<br /><br /> バックアップの有効期限の既定値は、 **[バックアップ メディアの既定の保有期間 (日)]** オプションの値のセットです。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** を選択した後、 **[サーバーのプロパティ]** ダイアログ ボックスの **[データベースの設定]** ページをクリックします。|  
 |**基準**|バックアップ セットが失効して上書きできるようになる特定の日を指定します。|  
   
 ### <a name="compression"></a>圧縮  

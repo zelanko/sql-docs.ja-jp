@@ -1,30 +1,30 @@
 ---
-title: "[Microsoft レプリケーション競合表示モジュール](マージ レプリケーション) | Microsoft Docs"
-ms.custom: 
+title: '[Microsoft レプリケーション競合表示モジュール](マージ レプリケーション) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4fbbfbe441da04c73f39e653fc9b12a6169eaea3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 8835a4aa6a8e9b58f4b984a90c755f59e343936f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>[Microsoft レプリケーション競合表示モジュール] \(マージ レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.lasthandoff: 03/08/2018
  最初の 5 列および競合データが含まれている列を表示します。 これは、テーブルに多数の列があり、競合を解決するのに最も関連する列のみを表示する場合に便利です。 主キーや名前フィールドなど、行を識別するフィールドはテーブルの最初の列にある場合が多いため、このビューでは最初の 5 列が必ず表示されます。  
   
  **列情報の表示** (**[...]**)  
- 列の情報である **[テーブル名]**、 **[列名]**、 **[データ型]**、および **[列の値]**を表示します。 **[列の値]** は、値が読み取り専用と表示されている場合を除いて編集可能です。  
+ 列の情報である **[テーブル名]**、 **[列名]**、 **[データ型]**、および **[列の値]** を表示します。 **[列の値]** は、値が読み取り専用と表示されている場合を除いて編集可能です。  
   
  **[優先されたデータの送信]**  
  競合回避モジュールによって優先データと見なされた行をそのまま使用します。 読み取り専用と表示されていない列の値は、このボタンをクリックする前に変更することができます。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 03/08/2018
  競合回避モジュールによって非優先データと見なされた行を受け入れます。 読み取り専用と表示されていない列の値は、このボタンをクリックする前に変更することができます。  
   
  **[競合の詳細をログに記録]**  
- このボックスをオンにすると、競合の詳細がファイルに記録されます。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]**をクリックします。 値を入力するか、参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  
+ このボックスをオンにすると、競合の詳細がファイルに記録されます。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  
   
 ## <a name="see-also"></a>参照  
  [マージ パブリケーションでのデータの競合の表示および解決 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   

@@ -1,33 +1,34 @@
 ---
-title: "[データベースのプロパティ]([トランザクション ログの配布] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[データベースのプロパティ]([トランザクション ログの配布] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1016bfa1e560c6ec9b4db1db393e4c44366cae16
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3d789a576c56808a56830bcf23455b9df30e0de9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] ([トランザクション ログの配布] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、データベースのログ配布のプロパティを構成および変更できます。  
+# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] \([トランザクション ログの配布] ページ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このページを使用すると、データベースのログ配布のプロパティを構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/18/2018
  このプライマリ データベースのログ配布構成にセカンダリ データベースを追加するには、 **[追加]** をクリックします。  
   
  **[削除]**  
- 選択されているデータベースをこのログ配布構成から削除します。 データベースを選択してから、 **[削除]**をクリックします。  
+ 選択されているデータベースをこのログ配布構成から削除します。 データベースを選択してから、 **[削除]** をクリックします。  
   
  **[監視サーバー インスタンスを使用する]**  
  このログ配布構成に対して監視サーバー インスタンスを設定します。 監視サーバー インスタンスを指定するには、 **[監視サーバー インスタンスを使用する]** チェック ボックスをオンにし、 **[設定]** をクリックします。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/18/2018
  ログ配布構成に対して監視サーバー インスタンスを構成します。 この監視サーバー インスタンスを構成するには、 **[設定]** をクリックします。  
   
  **[スクリプトの構成]**  
- 選択されているパラメーターを使用して、ログ配布を構成するためのスクリプトを生成します。 **[スクリプトの構成]**をクリックし、スクリプトの出力先を選択します。  
+ 選択されているパラメーターを使用して、ログ配布を構成するためのスクリプトを生成します。 **[スクリプトの構成]** をクリックし、スクリプトの出力先を選択します。  
   
 > [!IMPORTANT]  
 >  セカンダリ データベースの設定スクリプトを生成するには、 **[セカンダリ データベースの設定]** ダイアログ ボックスを呼び出す必要があります。 このダイアログ ボックスを呼び出すことにより、セカンダリ サーバーに接続して、スクリプトの生成に必要なセカンダリ データベースの現在の設定を取得できます。  

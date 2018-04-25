@@ -1,37 +1,38 @@
 ---
-title: "[高度な編集](条件) ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[高度な編集](条件) ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] \(条件) ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **[高度な編集]** ダイアログ ボックスでは、ポリシー ベースの管理条件に使用する複雑な式を作成できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **[高度な編集]** ダイアログ ボックスでは、ポリシー ベースの管理条件に使用する複雑な式を作成できます。  
   
 ## <a name="options"></a>および  
  **[セル値]**  
- セル値に使用するために作成した関数または式が表示されます。 **[OK]**をクリックすると、 **[新しい条件の作成]** ダイアログ ボックスまたは **[条件を開く]** ダイアログ ボックスの **[全般]** ページにある条件式ボックスの **[フィールド]** セルまたは **[値]** セルにセル値が表示されます。  
+ セル値に使用するために作成した関数または式が表示されます。 **[OK]** をクリックすると、 **[新しい条件の作成]** ダイアログ ボックスまたは **[条件を開く]** ダイアログ ボックスの **[全般]** ページにある条件式ボックスの **[フィールド]** セルまたは **[値]** セルにセル値が表示されます。  
   
  **[関数とプロパティ]**  
  使用可能な関数とプロパティが表示されます。  
@@ -92,15 +93,15 @@ ms.lasthandoff: 01/18/2018
 |**Guid()**|Guid Guid(String *guidString*)|文字列から GUID を返します。|*guidString* - 作成される GUID の文字列表記です。|文字列から作成された GUID を返します。|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|*check_expression* の値が NULL でない場合、その値が返されます。それ以外の場合は、 *replacement_value* が返されます。 型が異なる場合、 *replacement_value* は *check_expression*の型に暗黙的に変換されます。|*check_expression* - NULL かどうかを調べる式です。 *check_expression* には、ポリシー ベースの管理でサポートされる型 (Numeric、String、Bool、DateTime、Array、および Guid) を指定できます。<br /><br /> *replacement_value* - *check_expression* が NULL の場合に返される式です。 *replacement_value* は、暗黙的に *check_expression*の型に変換される型である必要があります。|戻り値の型は、 *check_expression* が NULL 以外の場合は *check_expression* の型です。それ以外の場合は *replacement_value* の型が返されます。||  
 |**Len()**|Numeric Len (*string_expression*)|指定された文字列式の文字数 (末尾の空白文字を除く) を返します。|*string_expression* - 評価する文字列式です。|整数のデータ型カテゴリの値を返します。|`Len('Hello')` は `5` を返します。|  
-|**Lower()**|String Lower (String*_expression*)|文字列の大文字をすべて小文字に変換して返します。|*expression* - 変換対象の文字列式です。|大文字をすべて小文字に変換した後のソース文字列式を表す文字列を返します。|`Len('HeLlO')` は `'hello'` を返します。|  
+|**Lower()**|String Lower (String *_expression*)|文字列の大文字をすべて小文字に変換して返します。|*expression* - 変換対象の文字列式です。|大文字をすべて小文字に変換した後のソース文字列式を表す文字列を返します。|`Len('HeLlO')` は `'hello'` を返します。|  
 |**Mod()**|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)|最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。|*expression_dividend* - 除算される数値式です。 *expression_dividend* には、整数または数値に分類されるデータ型の有効な式を指定する必要があります。<br /><br /> *expression_divisor* - 被除数を除算する数値式です。 *expression_divisor* には、整数または数値に分類されるデータ型の有効な式を指定する必要があります。|整数のデータ型カテゴリの値を返します。|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply (Numeric *expression1*, Numeric *expression2*)|2 つの式を乗算します。|*expression1* および *expression2* - **datetime** データ型を除く、数値カテゴリのデータ型のいずれかに属する任意の有効な式です。|最も優先順位の高い引数のデータ型を返します。|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power (Numeric *numeric_expression*, Numeric *expression_power*)|指定された式の指定されたべき乗値を返します。|*numeric_expression* - bit データ型を除く、真数データ型または概数データ型の式です。<br /><br /> *expression_power* - *numeric_expression*のべき乗値です。 *expression_power* には、 **bit** データ型を除く、真数または概数のデータ型カテゴリの式を指定できます。|戻り値の型は *numeric_expression*と同じです。|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round (Numeric *expression*, Numeric *expression_precision*)|指定された長さまたは有効桁数に丸めた数値式を返します。|*expression* - **bit** データ型を除く、真数データ型または概数データ型の式です。<br /><br /> *expression_precision* - 式の丸め結果とする有効桁数です。 *expression_precision* に正の値を指定した場合、 *numeric_expression* は length で指定した小数点以下桁数に丸められます。 *expression_precision* に負の値を指定した場合、 *numeric_expression* は *expression_precision*で指定した小数点の左側の位置で丸められます。|*numeric_expression*と同じ型を返します。|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_expression*)|バリアントを文字列に変換します。|*expression* - 文字列に変換するバリアントの式です。|バリアントの式の文字列値を返します。|`String(4)`|  
+|**String()**|String String (Variant *_expression*)|バリアントを文字列に変換します。|*expression* - 文字列に変換するバリアントの式です。|バリアントの式の文字列値を返します。|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|引数リスト内のすべての値の合計を返します。 Sum は、数値と共に使用できます。|*VarArgs*- **bit** データ型を除く、真数または概数のデータ型カテゴリに属するバリアント型の式のリストです。|最も正確な式のデータ型ですべての式の値の合計を返します。<br /><br /> 式の結果が **integer**、 **numeric**、 **money** / **small money**、および **float** / **real** カテゴリである場合は、戻り値の型はそれぞれ **int**、 **numeric**、 **money**、および **float**になります。|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` は `15` を返します。|  
 |**True()**|Bool TRUE()|ブール値 TRUE を返します。||ブール値 TRUE を返します。|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_expression*)|文字列の小文字をすべて大文字に変換して返します。|*expression* - 変換対象の文字列式です。|小文字をすべて大文字に変換した後のソース文字列式を表す文字列を返します。|`Upper('HeLlO')` は `'HELLO'` を返します。|  
+|**Upper()**|String Upper (String *_expression*)|文字列の小文字をすべて大文字に変換して返します。|*expression* - 変換対象の文字列式です。|小文字をすべて大文字に変換した後のソース文字列式を表す文字列を返します。|`Upper('HeLlO')` は `'HELLO'` を返します。|  
   
 ## <a name="see-also"></a>参照  
  [[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

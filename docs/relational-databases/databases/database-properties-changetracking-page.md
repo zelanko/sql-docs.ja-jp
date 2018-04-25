@@ -1,33 +1,35 @@
 ---
-title: "[データベースのプロパティ]([変更の追跡] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[データベースのプロパティ]([変更の追跡] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.changetracking.f1
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 861761574f6ff2b4e803bf64a9c929642dfddf6a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d6190dde5cacb135e923684cdb5866525298c08b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] \([変更の追跡] ページ)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] このページを使用すると、選択されているデータベースの変更の追跡設定を表示または変更できます。 このページで使用可能なオプションの詳細については、「[変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  このページを使用すると、選択されているデータベースの変更の追跡設定を表示または変更できます。 このページで使用可能なオプションの詳細については、「[変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **変更の追跡**  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/18/2018
  既定値は 2 です。  
   
  **[保有期間の単位]**  
- 保有期間の値の単位を指定します。 **[日]**、 **[時間]**、または **[分]**を選択できます。 既定値は **[日]**です。  
+ 保有期間の値の単位を指定します。 **[日]**、 **[時間]**、または **[分]** を選択できます。 既定値は **[日]** です。  
   
  最小保有期間は 1 分です。 最大保有期間はありません。  
   

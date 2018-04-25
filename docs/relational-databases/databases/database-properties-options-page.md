@@ -1,30 +1,30 @@
 ---
-title: "[データベースのプロパティ]([オプション] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[データベースのプロパティ]([オプション] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 
+caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1bdd619396559b33bb624efec7e916c4dfc2c504
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
- データベースの復旧に対して、 **[完全]**、 **[一括ログ]**、または **[単純]**のいずれかのモデルを指定します。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
+ データベースの復旧に対して、 **[完全]**、 **[一括ログ]**、または **[単純]** のいずれかのモデルを指定します。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」をご覧ください。  
   
  **互換性レベル**  
  データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 使用可能な値については、「[ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」 (ALTER DATABASE (TRANSACT-SQL) 互換性レベル) を参照してください。 SQL Server データベースがアップグレードされると、そのデータベースの互換性レベルが保持される (可能な場合) か、新しいサポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最小レベルに変更されます。 
@@ -49,26 +49,26 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="automatic"></a>自動  
  **[自動終了]**  
- 最後のユーザーが終了した後で、データベースを即座にシャットダウンしてリソースを解放するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、最後のユーザーがログオフした後でデータベースは正常にシャットダウンされてリソースが解放されます。  
+ 最後のユーザーが終了した後で、データベースを即座にシャットダウンしてリソースを解放するかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、最後のユーザーがログオフした後でデータベースは正常にシャットダウンされてリソースが解放されます。  
   
  **[増分統計の自動作成]**  
  パーティションごとの統計を作成するときに増分オプションを使用するかどうかを指定します。 増分統計の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。  
   
  **[統計の自動作成]**  
- 不足している最適化統計をデータベースで自動的に作成するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、クエリの最適化に必要な統計が不足している場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
+ 不足している最適化統計をデータベースで自動的に作成するかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、クエリの最適化に必要な統計が不足している場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
   
  **[自動圧縮]**  
- データベース ファイルを定期的な圧縮に使用できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「 [Shrink a Database](../../relational-databases/databases/shrink-a-database.md)」を参照してください。  
+ データベース ファイルを定期的な圧縮に使用できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 詳細については、「 [Shrink a Database](../../relational-databases/databases/shrink-a-database.md)」を参照してください。  
   
  **[統計の自動更新]**  
- データベースで古い最適化統計を自動的に更新するかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]** を指定すると、クエリの最適化に必要な統計が期限切れの場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
+ データベースで古い最適化統計を自動的に更新するかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、クエリの最適化に必要な統計が期限切れの場合、最適化時に自動的に構築されます。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
   
  **[統計の非同期的自動更新]**  
  **[True]** が指定された場合、古い統計の自動更新を開始するクエリは、統計が更新されるのを待たずにコンパイルを開始します。 後続のクエリは、更新された統計が使用可能になった時点で、その統計を使用します。  
   
- **[False]**が指定された場合、古い統計の自動更新を開始するクエリは、更新された統計をクエリ最適化プランで使用できるようになるまで待機します。  
+ **[False]** が指定された場合、古い統計の自動更新を開始するクエリは、更新された統計をクエリ最適化プランで使用できるようになるまで待機します。  
   
- このオプションを **[True]** に設定しても、 **[統計の自動更新]** も **[True]**に設定しない限り、効力はありません。  
+ このオプションを **[True]** に設定しても、 **[統計の自動更新]** も **[True]** に設定しない限り、効力はありません。  
   
 ## <a name="containment"></a>Containment  
  包含データベースでは、通常サーバー レベルで構成する設定の一部をデータベース レベルで構成できます。  
@@ -92,19 +92,21 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="cursor"></a>カーソル  
  **[コミットでカーソルを閉じる]**  
- カーソルを開くトランザクションがコミットされた後で、カーソルを閉じるかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、トランザクションのコミットまたはロールバック時に開いていたカーソルが閉じます。 **[False]**を指定すると、カーソルはトランザクションのコミット時も開いたままです。 **[False]**の場合、トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除いて、すべてのカーソルが閉じます。 詳細については、「[SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。  
+ カーソルを開くトランザクションがコミットされた後で、カーソルを閉じるかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、トランザクションのコミットまたはロールバック時に開いていたカーソルが閉じます。 **[False]** を指定すると、カーソルはトランザクションのコミット時も開いたままです。 **[False]** の場合、トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除いて、すべてのカーソルが閉じます。 詳細については、「[SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。  
   
  **[既定のカーソル]**  
- 既定のカーソルの動作を指定します。 **[True]**を指定すると、カーソルの既定の宣言は LOCAL になります。 **[False]**を指定すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルは既定で GLOBAL になります。  
+ 既定のカーソルの動作を指定します。 **[True]** を指定すると、カーソルの既定の宣言は LOCAL になります。 **[False]** を指定すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルは既定で GLOBAL になります。  
   
 ## <a name="database-scoped-configurations"></a>データベース スコープ構成  
  SQL Server 2016 と Azure SQL Database には、スコープをデータベース レベルに設定できるさまざまな構成プロパティがあります。 これらのすべての設定について詳しくは、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
   
- **レガシ基数推定**  
- データベースの互換性レベルに依存しない、プライマリのクエリ オプティマイザーの基数推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
+ 
+  **レガシカーディナリティ推定**  
+ データベースの互換性レベルに依存しない、プライマリのクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
   
- **セカンダリのレガシ基数推定**  
- データベースの互換性レベルに依存しない、セカンダリ (存在する場合) のクエリ オプティマイザーの基数推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
+ 
+  **セカンダリのレガシカーディナリティ推定**  
+ データベースの互換性レベルに依存しない、セカンダリ (存在する場合) のクエリ オプティマイザーのカーディナリティ推定モデルを指定します。 これは、 [トレース フラグ 9481](https://support.microsoft.com/en-us/kb/2801413)を指定した場合と同じです。  
   
  **最大 DOP**  
  ステートメントで使用される、プライマリの [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定の既定値を指定します。  
@@ -139,27 +141,27 @@ ms.lasthandoff: 01/18/2018
  **CREATE TABLE** または **ALTER TABLE** ステートメントの実行中に、 **NOT NULL** が明示的に定義されていないすべてのユーザー定義データ型または列に対して、NULL 値を許容します (既定の状態)。 詳細については、「[SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」と「[SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)」をご覧ください。  
   
  **[ANSI NULL 有効]**  
- `=`(等号) 比較演算子と`<>`(不等号) 比較演算子を NULL 値に対して使用した場合の動作を指定します。 指定できる値は、 **[True]** (オン) および **[False]** (オフ) です。 **[True]**を指定すると、NULL 値との比較結果はすべて UNKNOWN になります。 **[False]** を指定すると、UNICODE 以外の値と NULL 値の比較結果は、両方の値が NULL 値の場合に **[True]** になります。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。  
+ `=`(等号) 比較演算子と`<>`(不等号) 比較演算子を NULL 値に対して使用した場合の動作を指定します。 指定できる値は、 **[True]** (オン) および **[False]** (オフ) です。 **[True]** を指定すると、NULL 値との比較結果はすべて UNKNOWN になります。 **[False]** を指定すると、UNICODE 以外の値と NULL 値の比較結果は、両方の値が NULL 値の場合に **[True]** になります。 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。  
   
  **[ANSI PADDING 有効]**  
  ANSI による埋め込みが有効かどうかを指定します。 指定できる値は、**[True]** (オン) および **[False]** (オフ) です。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
   
  **[ANSI 警告有効]**  
- 複数のエラー条件に対する ISO の標準動作を指定します。 **[True]**のときに NULL 値が集計関数 (SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP、COUNT など) で使用されると、警告メッセージが生成されます。 **[False]**の場合は、警告メッセージは生成されません。 詳細については、「[SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)」をご覧ください。  
+ 複数のエラー条件に対する ISO の標準動作を指定します。 **[True]** のときに NULL 値が集計関数 (SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP、COUNT など) で使用されると、警告メッセージが生成されます。 **[False]** の場合は、警告メッセージは生成されません。 詳細については、「[SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)」をご覧ください。  
   
  **[算術アボート有効]**  
- 算術アボートのデータベース オプションが有効かどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、オーバーフローまたは 0 除算エラーが発生したときにクエリまたはバッチが終了します。 エラーがトランザクションの内部で発生した場合には、トランザクションはロールバックされます。 **[False]**を指定すると、警告メッセージが表示されますが、クエリ、バッチ、トランザクションは、エラーが発生しなかったときのように処理を続行します。 詳細については、「[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)」をご覧ください。  
+ 算術アボートのデータベース オプションが有効かどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、オーバーフローまたは 0 除算エラーが発生したときにクエリまたはバッチが終了します。 エラーがトランザクションの内部で発生した場合には、トランザクションはロールバックされます。 **[False]** を指定すると、警告メッセージが表示されますが、クエリ、バッチ、トランザクションは、エラーが発生しなかったときのように処理を続行します。 詳細については、「[SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)」をご覧ください。  
   
  **[NULL との連結で NULL を使用]**  
- NULL 値が連結された場合の動作を指定します。 プロパティ値が **[True]**の場合、 **string** + NULL は NULL を返します。 **[False]**の場合、結果は **string**です。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
+ NULL 値が連結された場合の動作を指定します。 プロパティ値が **[True]** の場合、 **string** + NULL は NULL を返します。 **[False]** の場合、結果は **string**です。 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。  
   
  **[複数データベースの組み合わせ所有権有効]**  
- 複数データベースの組み合わせ所有権が有効になっているかどうかを示す、読み取り専用の値です。 **[True]**を指定した場合、複数データベースの組み合わせ所有権のソース データベースまたは対象データベースとしてこのデータベースを使用できます。 このプロパティを設定するには、ALTER DATABASE ステートメントを使用します。  
+ 複数データベースの組み合わせ所有権が有効になっているかどうかを示す、読み取り専用の値です。 **[True]** を指定した場合、複数データベースの組み合わせ所有権のソース データベースまたは対象データベースとしてこのデータベースを使用できます。 このプロパティを設定するには、ALTER DATABASE ステートメントを使用します。  
   
  **[日付の相関関係の最適化有効]**  
- **[True]**を指定すると、データベース内にある FOREIGN KEY 制約でリンクされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime **列を含んでいる 2 つのテーブル間の相関関係に関する統計が** によって保持されます。  
+ **[True]** を指定すると、データベース内にある FOREIGN KEY 制約でリンクされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime **列を含んでいる 2 つのテーブル間の相関関係に関する統計が** によって保持されます。  
   
- **[False]**を指定すると、相関関係の統計は保持されません。  
+ **[False]** を指定すると、相関関係の統計は保持されません。  
  
  **[遅延持続性]**  
  この機能を有効にします。  
@@ -168,16 +170,16 @@ ms.lasthandoff: 01/18/2018
  この機能を有効にします。  
  
  **[数値丸め処理アボート]**  
- データベースが丸めエラーを処理する方法を指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、式の精度が低下したときにエラーが生成されます。 **[False]**を指定すると、精度が低下してもエラー メッセージは生成されず、結果はそれを格納する列または変数の精度まで丸められます。 詳細については、「[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)」をご覧ください。  
+ データベースが丸めエラーを処理する方法を指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、式の精度が低下したときにエラーが生成されます。 **[False]** を指定すると、精度が低下してもエラー メッセージは生成されず、結果はそれを格納する列または変数の精度まで丸められます。 詳細については、「[SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)」をご覧ください。  
   
  **[パラメーター化]**  
- **[単純]**を指定すると、データベースの既定の動作に基づいてクエリがパラメーター化されます。 **[強制]**を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、データベースのすべてのクエリがパラメーター化されます。  
+ **[単純]** を指定すると、データベースの既定の動作に基づいてクエリがパラメーター化されます。 **[強制]** を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、データベースのすべてのクエリがパラメーター化されます。  
   
  **[引用符で囲まれた識別子有効]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キーワードを引用符で囲んで識別子 (オブジェクト名または変数名) として使用できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キーワードを引用符で囲んで識別子 (オブジェクト名または変数名) として使用できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  **[再帰トリガー有効]**  
- トリガーを他のトリガーによって起動できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、トリガーを再帰的に起動できます。 **[False]**を指定すると、直接再帰のみが回避されます。 間接再帰を無効にするには、sp_configure を使用して nested triggers サーバー オプションを 0 に設定します。 詳しくは、「 [入れ子になったトリガーの作成](../../relational-databases/triggers/create-nested-triggers.md)」をご覧ください。  
+ トリガーを他のトリガーによって起動できるかどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、トリガーを再帰的に起動できます。 **[False]** を指定すると、直接再帰のみが回避されます。 間接再帰を無効にするには、sp_configure を使用して nested triggers サーバー オプションを 0 に設定します。 詳しくは、「 [入れ子になったトリガーの作成](../../relational-databases/triggers/create-nested-triggers.md)」をご覧ください。  
   
  **信頼可能**  
  読み取り専用オプションです。 **True**が表示されていれば、データベース内に確立された権限借用コンテキストでデータベース外部のリソースにアクセスすることが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により許可されることを示します。 権限借用コンテキストは、EXECUTE AS ユーザー ステートメントまたはデータベース モジュールの EXECUTE AS 句を使用して、データベース内に確立できます。  
@@ -195,11 +197,11 @@ ms.lasthandoff: 01/18/2018
  このプロパティを設定するには、ALTER DATABASE ステートメントを使用します。  
   
  **[VarDecimal ストレージ形式有効]**  
- このオプションは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では読み取り専用です。 **[True]**の場合、このデータベースは vardecimal ストレージ形式に対応しています。 データベースのいずれかのテーブルで vardecimal ストレージ形式を使用している場合、vardecimal ストレージ形式を無効にすることはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、すべてのデータベースが vardecimal ストレージ形式に対応します。 このオプションでは、 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)が使用されます。  
+ このオプションは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では読み取り専用です。 **[True]** の場合、このデータベースは vardecimal ストレージ形式に対応しています。 データベースのいずれかのテーブルで vardecimal ストレージ形式を使用している場合、vardecimal ストレージ形式を無効にすることはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、すべてのデータベースが vardecimal ストレージ形式に対応します。 このオプションでは、 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)が使用されます。  
   
 ## <a name="recovery"></a>復旧  
  **[ページ確認]**  
- ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]**、 **[TornPageDetection]**、および **[Checksum]**です。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
+ ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]**、 **[TornPageDetection]**、および **[Checksum]** です。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
   
  **[ターゲットの復旧時間 (秒)]**  
  クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を秒単位で指定します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
@@ -216,13 +218,13 @@ Service Broker の読み取り専用プロパティです。
 
 ## <a name="state"></a>状態  
  **[読み取り専用データベース]**  
- データベースが読み取り専用かどうかを指定します。 指定できる値は、 **[True]** および **[False]**です。 **[True]**を指定すると、ユーザーはデータベースのデータの読み取りのみを実行できます。 データまたはデータベース オブジェクトは変更できませんが、`DROP DATABASE` ステートメントを使用してデータベース自体を削除することはできます。 データベースの使用中には、 **[読み取り専用データベース]** オプションに新しい値を設定することができできません。 master データベースは例外です。このオプションが設定されていても、システム管理者だけは master データベースを使用できます。  
+ データベースが読み取り専用かどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、ユーザーはデータベースのデータの読み取りのみを実行できます。 データまたはデータベース オブジェクトは変更できませんが、`DROP DATABASE` ステートメントを使用してデータベース自体を削除することはできます。 データベースの使用中には、 **[読み取り専用データベース]** オプションに新しい値を設定することができできません。 master データベースは例外です。このオプションが設定されていても、システム管理者だけは master データベースを使用できます。  
   
  **データベース状態**  
- データベースの現在の状態を表示します。 編集することはできません。 **[データベース状態]**の詳細については、「 [Database States](../../relational-databases/databases/database-states.md)」を参照してください。  
+ データベースの現在の状態を表示します。 編集することはできません。 **[データベース状態]** の詳細については、「 [Database States](../../relational-databases/databases/database-states.md)」を参照してください。  
 
  **[暗号化有効]**  
- **[True]**の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
+ **[True]** の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
  
  **[アクセスの制限]**  
  データベースにアクセスできるユーザーを指定します。 有効な値は次のとおりです。  

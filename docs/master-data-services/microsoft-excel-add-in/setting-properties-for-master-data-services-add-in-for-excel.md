@@ -1,40 +1,43 @@
 ---
-title: "Excel 用マスター データ サービス アドインのプロパティの設定 | Microsoft Docs"
-ms.custom: 
+title: Excel 用マスター データ サービス アドインのプロパティの設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f04c236ea1534ce5f2d33313117dd082cb75bd6c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 52aea28e23773a8b419497f7a211d8738ddbc07d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel 用マスター データ サービス アドインのプロパティの設定
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Excel 用マスター データ サービス アドインの設定では、MDS から Excel アドインにデータを読み込む方法と Excel アドインから MDS にデータをパブリッシュする方法を指定します。  
   
- Excel アドインの設定を行うには、 **Excel**を開き、 **[マスター データ]** メニューをクリックして **[設定]**をクリックします。 Excel にアクセスできるユーザーならだれでもこれらの設定を変更できます。 この設定は、Excel が開いているコンピューターに適用されます。  
+ Excel アドインの設定を行うには、 **Excel**を開き、 **[マスター データ]** メニューをクリックして **[設定]** をクリックします。 Excel にアクセスできるユーザーならだれでもこれらの設定を変更できます。 この設定は、Excel が開いているコンピューターに適用されます。  
   
 ## <a name="excel-add-in-settings"></a>Excel アドインの設定  
   
 ||||  
 |-|-|-|  
 |タブとセクション|設定|Description|  
-|[設定]: [パブリッシュ]|[パブリッシュ時に **[パブリッシュと注釈設定]** ダイアログ ボックスを表示する]|**[パブリッシュ]** をクリックした後に **[パブリッシュと注釈設定]**ダイアログ ボックスが表示されるようにする場合はオンにします。こうすると、すべての変更についての単一の注釈を入力したり、各変更の注釈を個別に入力することができます。<br /><br /> **[パブリッシュと注釈設定]** ダイアログ ボックスを表示せずにパブリッシュ プロセスが開始されるようにする場合はオフにします。 注釈を入力する機会はありません。|  
+|[設定]: [パブリッシュ]|[パブリッシュ時に **[パブリッシュと注釈設定]** ダイアログ ボックスを表示する]|**[パブリッシュ]** をクリックした後に **[パブリッシュと注釈設定]** ダイアログ ボックスが表示されるようにする場合はオンにします。こうすると、すべての変更についての単一の注釈を入力したり、各変更の注釈を個別に入力することができます。<br /><br /> **[パブリッシュと注釈設定]** ダイアログ ボックスを表示せずにパブリッシュ プロセスが開始されるようにする場合はオフにします。 注釈を入力する機会はありません。|  
 |[設定]: [バージョン]|[バージョンの選択]|Excel アドインに読み込まれるマスター データのバージョンを選択します。 次の値をとります。<br /><br /> **[なし]** : どのバージョンも既定のバージョンにしない場合に選択します。<br /><br /> **[最も古い]** : 最も古いバージョンを既定のバージョンにする場合に選択します。 **[最も新しい]** : 最も新しいバージョンを既定のバージョンにする場合に選択します。|  
 |[設定]: [ログ記録]|[詳細なログ記録を有効にする]|MDS から Excel アドインへのマスター データの読み込みプロセスのログ記録を有効にして、サービスのすべてのコマンドの結果がログに記録されるようにします。|  
 |[設定]: [テレメトリ]|[テレメトリ データの収集をオンにする]|テレメトリを有効にして、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Excel アドインの質、信頼性、およびパフォーマンスを向上させます。|  

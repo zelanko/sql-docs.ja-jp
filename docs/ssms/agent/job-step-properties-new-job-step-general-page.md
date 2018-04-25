@@ -1,5 +1,5 @@
 ---
-title: '[ジョブ ステップのプロパティ] - [新しいジョブ ステップ]([全般] ページ) | Microsoft Docs'
+title: ジョブ ステップのプロパティ - [新しいジョブ ステップ]([全般] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -20,13 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcdf8a1b07293b6d468ded316fb753a873349e74
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cac9488309c176db78e213613785f8f070b15d48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="job-step-properties---new-job-step-general-page"></a>[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)
+# <a name="job-step-properties---new-job-step-general-page"></a>ジョブ ステップのプロパティ - [新しいジョブ ステップ] ([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 
 このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
-このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを展開します。次に **[ジョブ]**を右クリックし、 **[新しいジョブ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]**をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]**をクリックします。  
+このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
   
 ## <a name="options"></a>および  
 **[ステップ名]**  
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/22/2018
 ジョブ ステップが使用するサブシステムを設定します。 選択したサブシステムに基づいて、ジョブ ステップを定義するために表示されるオプションが変更されます。  
   
 **[実行するアカウント名]**  
-ジョブ ステップのプロキシ アカウントを設定します。 sysadmin 固定サーバー ロールのメンバーは、 **[SQL Server エージェント サービスのアカウント]**を指定することもできます。  
+ジョブ ステップのプロキシ アカウントを設定します。 sysadmin 固定サーバー ロールのメンバーは、 **[SQL Server エージェント サービスのアカウント]** を指定することもできます。  
   
 **[データベース]**  
 ジョブ ステップを実行するデータベースを設定します。 このオプションは、すべてのジョブ ステップの種類で使用できるとは限りません。  
@@ -213,7 +214,7 @@ JScript をジョブ ステップの言語として指定します。
   
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services パッケージ実行ジョブ ステップのオプション  
   
-### <a name="general-tab"></a>[全般] タブ  
+### <a name="general-tab"></a>全般タブ  
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) パッケージの場所と、使用する認証方法を指定します。 このタブを選択するとき、次のオプションを利用できます。  
   
 **[パッケージ ソース]**  
@@ -226,13 +227,13 @@ JScript をジョブ ステップの言語として指定します。
 -   **[SSIS パッケージ ストア]**  
   
 **[サーバー]**  
-[!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージが格納されているサーバーの名前を入力します。 このオプションは、 **[パッケージ ソース]** に **[SQL Server]** または **[SSIS パッケージ ストア]**が指定されている場合のみ使用できます。  
+[!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージが格納されているサーバーの名前を入力します。 このオプションは、 **[パッケージ ソース]** に **[SQL Server]** または **[SSIS パッケージ ストア]** が指定されている場合のみ使用できます。  
   
 **[Windows 認証を使用する]**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] へのログインに [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証を使用します。  
   
 **[SQL Server 認証を使用する]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] へのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用します。 この認証方法を選択した場合は、適切な **[ユーザー名]** および **[パスワード]**を入力してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] へのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を使用します。 この認証方法を選択した場合は、適切な **[ユーザー名]** および **[パスワード]** を入力してください。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証は旧バージョンとの互換性を維持するために提供されます。 セキュリティを向上させるためには、可能な限り、Windows 認証を使用してください。  
@@ -243,7 +244,7 @@ JScript をジョブ ステップの言語として指定します。
 > [!IMPORTANT]  
 > パスワードで保護された [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージについては、 **[構成]** タブをクリックし、 **[パッケージ パスワード]** ダイアログ ボックスにパスワードを入力します。 入力しないと、パスワードで保護されたパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブは失敗します。  
   
-### <a name="configurations-tab"></a>[構成] タブ  
+### <a name="configurations-tab"></a>構成タブ  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージの構成オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
 **[構成ファイル]**  
@@ -261,7 +262,7 @@ JScript をジョブ ステップの言語として指定します。
 **[下へ移動]**  
 選択された構成ファイルを下へ移動します。  
   
-### <a name="command-files-tab"></a>[コマンド ファイル] タブ  
+### <a name="command-files-tab"></a>コマンド ファイルタブ  
 パッケージのコマンド ファイルを選択します。 コマンド ファイルは、一覧に表示されている順番で処理されます。 このタブを選択するとき、次のオプションを利用できます。  
   
 **[コマンド ファイル]**  
@@ -279,7 +280,7 @@ JScript をジョブ ステップの言語として指定します。
 **[下へ移動]**  
 選択されたコマンド ファイルを下へ移動します。  
   
-### <a name="data-sources-tab"></a>[データ ソース] タブ  
+### <a name="data-sources-tab"></a>データ ソースタブ  
 パッケージの指定されたデータ ソースを表示します。  
   
 **接続マネージャー**  
@@ -291,7 +292,7 @@ JScript をジョブ ステップの言語として指定します。
 **接続文字列**  
 データ ソースの接続文字列を表示します。  
   
-### <a name="execution-options-tab"></a>[実行オプション] タブ  
+### <a name="execution-options-tab"></a>実行オプションタブ  
 パッケージの実行オプションを表示または変更します。  
   
 **[検証時に警告が発生したらパッケージを失敗とする]**  
@@ -318,7 +319,7 @@ JScript をジョブ ステップの言語として指定します。
 **[再開オプション]**  
 パッケージを再開するときに実行するアクションを選択します。  
   
-### <a name="logging-tab"></a>[ログ記録] タブ  
+### <a name="logging-tab"></a>ログ記録タブ  
 パッケージのログ プロバイダーを表示または変更します。  
   
 **[ログ プロバイダー]**  
@@ -330,7 +331,7 @@ JScript をジョブ ステップの言語として指定します。
 **[削除]**  
 ログ プロバイダーを削除します。  
   
-### <a name="set-values-tab"></a>[値の設定] タブ  
+### <a name="set-values-tab"></a>値の設定タブ  
 パッケージのプロパティ値を表示または変更します。  
   
 **[プロパティのパス]**  
@@ -342,7 +343,7 @@ JScript をジョブ ステップの言語として指定します。
 **[削除]**  
 プロパティを削除します。  
   
-### <a name="verification-tab"></a>[検証] タブ  
+### <a name="verification-tab"></a>検証タブ  
 ジョブ ステップの検証オプションを選択します。  
   
 **[署名付きパッケージのみ実行する]**  
@@ -366,7 +367,7 @@ JScript をジョブ ステップの言語として指定します。
 **[バージョン ID]**  
 バージョン ID を入力します。  
   
-### <a name="command-line-tab"></a>[コマンド ライン] タブ  
+### <a name="command-line-tab"></a>コマンド ラインタブ  
 パッケージのコマンド ライン オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
 **[元のオプションを復元する]**  
