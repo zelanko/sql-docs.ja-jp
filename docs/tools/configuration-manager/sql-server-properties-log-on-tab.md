@@ -1,26 +1,26 @@
 ---
-title: "SQL Server のプロパティ ([ログオン] タブ) |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server のプロパティ ([ログオン] タブ) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8e12e87d3135f88e04dc159e7433ade959625daf
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/03/2018
 ---
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/03/2018
 >   
 >  サービスを実行するアカウントの選択の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「Windows サービス アカウントの設定」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[ビルトイン アカウント]**  
  **Local System**  
  -   ローカル システム アカウントを指定します。 このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスが他のサーバーと対話できないこともあります。  
