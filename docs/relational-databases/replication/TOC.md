@@ -29,8 +29,10 @@
 #### [Web 同期トポロジ](topologies-for-web-synchronization.md)  
 ### [Web 同期用の IIS の構成](configure-iis-for-web-synchronization.md)  
 ### [Web 同期用の IIS 7 の構成](configure-iis-7-for-web-synchronization.md)  
+
 ## [ディストリビューションの構成](configure-distribution.md)  
 ### [パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)  
+### [AG のディストリビューションの構成](configure-distribution-availability-group.md)
 ### [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)  
 ### [パブリッシングおよびディストリビューションの無効化](disable-publishing-and-distribution.md)  
 ### [レプリケーションのデータベースの有効化 (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [既定のスナップショットの場所の指定 (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [トランザクション パブリケーションのディストリビューションの保有期間の設定 (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [履歴の保有期間の設定 (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
 ### [Create a Pull Subscription](create-a-pull-subscription.md)  
 ### [Create a Push Subscription](create-a-push-subscription.md)  

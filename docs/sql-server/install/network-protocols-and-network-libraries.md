@@ -1,16 +1,16 @@
 ---
-title: "ネットワーク プロトコルとネットワーク ライブラリ | Microsoft Docs"
-ms.custom: 
+title: ネットワーク プロトコルとネットワーク ライブラリ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fcbdda587d73eb7797f3f9f2b8e0b3621cca33c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="default-sql-server-network-configuration"></a>SQL Server の既定のネットワーク構成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスは、TCP/IP ポート 1433 と名前付きパイプ \\\\.\pipe\sql\query です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスは TCP 動的ポートに構成され、ポート番号がオペレーティング システムによって割り当てられます。  
   
- 動的ポート アドレスを使用できない場合 (たとえば、特定のポート アドレスを通過するように構成されたファイアウォール サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続が通過する必要がある場合) は、 未割り当てのポート番号を選択してください。 ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)に一覧が掲載されています。  
+ 動的ポート アドレスを使用できない場合 (たとえば、特定のポート アドレスを通過するように構成されたファイアウォール サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続が通過する必要がある場合) は、 未割り当てのポート番号を選択してください。 ポート番号の割り当ては、Internet Assigned Numbers Authority によって管理され、 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) に一覧が掲載されています。  
   
  セキュリティを強化するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にネットワーク接続は完全には有効になっていません。 セットアップの完了後にネットワーク プロトコルを有効化、無効化、または構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワークの構成領域を使用します。  
   
@@ -59,21 +59,21 @@ ms.lasthandoff: 02/09/2018
   
 #### <a name="to-disable-smb"></a>SMB を無効にするには  
   
-1.  **[スタート]** ボタンをクリックし、 **[設定]**をポイントして、 **[ネットワークとダイヤルアップ接続]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[設定]** をポイントして、 **[ネットワークとダイヤルアップ接続]** をクリックします。  
   
-     インターネットに直接つながっている接続を右クリックし、 **[プロパティ]**をクリックします。  
+     インターネットに直接つながっている接続を右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[Microsoft ネットワーク用クライアント]** チェック ボックスをオンにして、 **[アンインストール]**をクリックします。  
+2.  **[Microsoft ネットワーク用クライアント]** チェック ボックスをオンにして、 **[アンインストール]** をクリックします。  
   
 3.  アンインストールの手順に従います。  
   
-4.  **[Microsoft ネットワーク用ファイルとプリンター共有]**チェック ボックスをオンにして、 **[アンインストール]**をクリックします。  
+4.  **[Microsoft ネットワーク用ファイルとプリンター共有]** チェック ボックスをオンにして、 **[アンインストール]** をクリックします。  
   
 5.  アンインストールの手順に従います。  
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>インターネットからアクセス可能なサーバーで SMB を無効にするには  
   
--   [ローカル エリア接続のプロパティ] で、 **[インターネット プロトコル (TCP/IP) のプロパティ]** ダイアログ ボックスを使用して、 **[Microsoft ネットワーク用ファイルとプリンター共有]** と **[Microsoft ネットワーク用クライアント]**を削除します。  
+-   [ローカル エリア接続のプロパティ] で、 **[インターネット プロトコル (TCP/IP) のプロパティ]** ダイアログ ボックスを使用して、 **[Microsoft ネットワーク用ファイルとプリンター共有]** と **[Microsoft ネットワーク用クライアント]** を削除します。  
   
 ## <a name="endpoints"></a>エンドポイント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続に関して新しい概念が導入されました。接続は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]*エンドポイント*によりサーバー エンドで表されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] エンドポイントに対して、権限の許可、取り消し、および拒否が行われます。 既定では、sysadmin グループのメンバーまたはエンドポイント所有者によって拒否または取り消しが行われない限り、エンドポイントへアクセスする権限はすべてのユーザーにあります。 GRANT、REVOKE、および DENY ENDPOINT 構文では、管理者がエンドポイントのカタログ ビューから取得する必要があるエンドポイント ID を使用します。  

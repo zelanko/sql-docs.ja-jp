@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,6 @@ SQL Database マネージ インスタンス:
    - SQL エージェント ジョブのサポート。
    - リンク サーバーのサポート。
 - マネージ インスタンスの詳細については、[こちら](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)を参照してください。
-
 
 オブジェクト エクスプローラー:
 - オブジェクト エクスプローラーからクエリ ウィンドウにドラッグ アンド ドロップするときに、名前を角かっこで囲むことを強制しない設定が追加されました。 (ユーザー提案 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) および [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051))
@@ -109,7 +108,8 @@ SMO:
 
 ### <a name="known-issues"></a>既知の問題
 
-- メンテナンス プランのスケジュールを構成するときに SSMS 17.6 がクラッシュする、という現在既知の問題があります。
+> [!WARNING]
+> [メンテナンス プラン](../relational-databases/maintenance-plans/maintenance-plans.md)の使用中に SSMS 17.6 が不安定になりクラッシュするという既知の問題があります。 メンテナンス プランを使用する場合は、SSMS 17.6 をインストールしないでください。 17.6 を既にインストールしていて、この問題の影響を受けている場合は、SSMS 17.5 にダウングレードしてください。 
 
 ## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
 

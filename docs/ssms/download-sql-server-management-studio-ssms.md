@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4343fe350d541a04b5aad44df457d09f69af3bcb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,6 +50,9 @@ SSMS 17.x は、*SQL Server Management Studio* の最新世代であり、SQL Se
 **[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.6 のダウンロード](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.6 アップグレード パッケージのダウンロード (17.x から 17.6 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> [メンテナンス プラン](../relational-databases/maintenance-plans/maintenance-plans.md)の使用中に SSMS 17.6 が不安定になりクラッシュするという既知の問題があります。 メンテナンス プランを使用する場合は、SSMS 17.6 をインストールしないでください。 17.6 を既にインストールしていて、この問題の影響を受けている場合は、SSMS 17.5 にダウングレードしてください。 
 
 **バージョン情報**
 
@@ -161,13 +164,9 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="feedback"></a>フィードバック
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## <a name="see-also"></a>参照
 
@@ -175,3 +174,5 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 - [SQL Server Management Studio のドキュメント](sql-server-management-studio-ssms.md)
 - [追加の更新プログラムとサービス パック](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

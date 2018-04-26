@@ -1,34 +1,66 @@
 ---
-title: "SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs"
-ms.custom: 
-ms.date: 02/09/2018
+title: SQL Server Data Tools (SSDT) の変更ログ | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) の変更ログ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この変更ログは、[SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) のものです。  
   
 新機能および変更点の詳細については、[SSDT チーム ブログ](https://blogs.msdn.microsoft.com/ssdt/)をご覧ください。
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
+ビルド番号: 14.0.16162.0  
+リリース日: 2018 年 4 月 10 日
+  
+### <a name="whats-new"></a>新機能
+
+**SSIS:**
+
+1.  SQLServer2016 と SQLServer2017 を対象とする AS の処理タスクで処理手順のログが記録されない問題を修正しました
+2.  SSDT で英語以外の非常に長いタスク名の dtsx を開くとアクセス違反が発生する問題を修正しました
+3.  ScriptTask の変数一覧がタスク UI に時々表示されなくなる問題を修正しました
+4.  パッケージの場所が SQL Server である場合に既存のパッケージのコピーの追加が失敗する問題を修正しました
+5.  一部のエディターのダイアログ ボックスでコンボ ボックスにアクセスするとフォーカスがスタックする問題を修正しました。
+6.  VS のテーマの切り替え中に背景が変化しない問題を修正しました。
+7.  ダーク テーマで注釈と読み込み中のラベルが表示されない問題を修正しました。
+8.  SSIS ツールボックスが無効なアイテムで状態プロパティが正しく定義されない問題を修正しました。
+9.  WebServiceTask の実行が常に失敗する問題を修正しました。
+10. 接続文字列を式がプロジェクト パラメータに依存するように可変に設定すると、パッケージの展開が失敗する問題を修正しました。
+
+**インストーラー:**
+
+1.  プライバシーに関する免責事項に “SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム“ のリンクを追加します。
+2.  [Install new SQL Server Data Tools for Visual Studio 2017 instance]\(Visual Studio 2017 インスタンス用の新しい SQL Server Data Tools のインストール\) を選択すると VS インストーラー ウィンドウが開く問題を修正しました
+
+### <a name="known-issues"></a>既知の問題:
+1.  ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
 ビルド番号: 14.0.16156.0
@@ -49,7 +81,7 @@ ms.lasthandoff: 02/11/2018
 - ペイロードのダウンロードが "指定されたファイルが見つかりません (0x80070002)" というエラーで失敗することがある問題を修正しました。  
 
 ### <a name="known-issues"></a>既知の問題
-- ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
+- *ExecuteOutOfProcess* が *True* に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
 
 
 
@@ -569,7 +601,7 @@ SqlPackage.exe および Data-Tier Application Framework (DacFx) API でスキ�
 SSDT テーブルに内部 SSAS インスタンスが含まれるようになりました。これにより、統合ワークスペース モードが有効な場合は、SSDT テーブルがバックグラウンドで自動的に起動するため、テーブル、列、データをモデル デザイナーで追加および表示できます。外部のワークスペース サーバー インスタンスを指定する必要はありません。 統合ワークスペース モードを使用しても、SSDT テーブルがワークスペース サーバーおよびデータベースと連動するしくみは変わりません。 変わるのは、SSDT テーブルがワークスペース データベースをホストする場所です。 統合ワークスペース モードを有効にするには、新しい表形式プロジェクトの作成時に表示される [テーブル モデル デザイナー] ダイアログ ボックスの [統合ワークスペース] オプションを選択します。 明示的なワークスペース サーバーを現在使用している既存の表形式プロジェクトの場合は、[プロパティ] ウィンドウで [統合ワークスペース モード] パラメーターを True に設定して統合ワークスペース モードに切り替えることができます。このパラメーターは、ソリューション エクスプローラーで Model.bim ファイルを選択すると表示されます。 詳しくは、[Analysis Services に関するブログ記事](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)をご覧ください。
 
 **データベース ツールの更新および修正点**
-**:**
+ **:**
 
 - [接続の問題 3087775](https://connect.microsoft.com/SQLServer/feedback/details/3087775): VS データ ツールの 7 月の更新 14.0.60629.0 では、テンポラル テーブルが破損していました ("値を null にすることはできません。 パラメーター名: reportedElement")。
 - [接続の問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648): SSDT 比較では IsPersistedNullable が異なるものとして表示されます。

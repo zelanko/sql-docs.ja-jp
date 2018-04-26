@@ -1,26 +1,27 @@
 ---
-title: "SQL Server Data Tools (SSDT) での Azure Active Directory のサポート| Microsoft Docs"
-ms.custom: 
+title: SQL Server Data Tools (SSDT) での Azure Active Directory のサポート| Microsoft Docs
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -64,7 +65,7 @@ MFA の実施は、Azure AD によって、認証プロセス中のこの追加�
 - *Active Directory 対話型認証*がサポートされるのは、Azure SQL データベースに接続するときのみです。 SQL Server (オンプレミスまたは VM 上) や Azure SQL Data Warehouse に対しては、この認証はサポートされていません。
 - *Active Directory 対話型認証*は、*サーバー エクスプローラー*の接続ダイアログではサポートされません。*SQL Server オブジェクト エクスプローラー*で SSDT を使用して接続する必要があります。
 - 現在ログインしている Visual Studio アカウントとのシングル サインオン統合は、SSDT ではサポートされません。
-- Visual Studio のインストール中に Extensions ディレクトリにインストールされる SQLPackage.exe は、その場所から使用するためのものではありません。 AAD での SQLpackage.exe の使用については、https://www.microsoft.com/ja-jp/download/details.aspx?id=55088 を参照してください。 
+- Visual Studio のインストール中に Extensions ディレクトリにインストールされる SQLPackage.exe は、その場所から使用するためのものではありません。 AAD で SQLpackage.exe を使用する場合は、https://www.microsoft.com/en-us/download/details.aspx?id=55088 を参照してください 
 - SSDT のデータ比較は、新しい認証方法を含む AAD 認証ではサポートされません。  
 
 

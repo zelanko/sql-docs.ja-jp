@@ -1,24 +1,19 @@
 ---
-title: 製品ドキュメント (Analytics Platform System)
+title: Analytics Platform System のドキュメント | Microsoft Docs
 description: データ ウェアハウジングとビッグ データの分析用に設計されたデータ プラットフォームである Microsoft Analytics Platform System (APS) では、データの密な統合、クエリの高速処理、非常に拡張性の高い記憶域が提供され、エンド ツー エンドのビジネス インテリジェンス ソリューションを簡単にメンテナンスできます。
-author: barbkess
-ms.author: barbkess
+author: mzaman1
 manager: craigg
-ms.suite: sql
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 713516fc-3101-4a03-a331-d817c29c7703
-caps.latest.revision: 49
-ms.openlocfilehash: 15fa4f0cf02565510ea888183feec52bf640aa36
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 26c59dc36d0ba3714dca4dbca10e8ec7b09b9235
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 データ ウェアハウジングとビッグ データの分析用に設計されたデータ プラットフォームである Microsoft Analytics Platform System (APS) では、データの密な統合、クエリの高速処理、非常に拡張性の高い記憶域が提供され、エンド ツー エンドのビジネス インテリジェンス ソリューションを簡単にメンテナンスできます。  

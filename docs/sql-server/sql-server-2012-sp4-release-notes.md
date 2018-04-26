@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 2012 Service Pack のリリース ノート | Microsoft Docs"
-ms.prod: sql-non-specified
+title: SQL Server 2012 Service Pack のリリース ノート | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 2/26/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0aa6379b2d0a0675c0ebc999e3fcee603d5b5fb
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: c89264e120ce67a814d102f0306f74e06c3d79f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -147,14 +145,14 @@ Service Pack は、インストール メディアではなくオンラインで
   
 1.  サイト コレクション機能の **[サイト コレクションの PowerPivot 機能の統合]** がアクティブになっていることを確認します。  
   
-2.  既存のサイトの **[サイト コンテンツ]** ページで、 **[アプリの追加]**をクリックします。  
+2.  既存のサイトの **[サイト コンテンツ]** ページで、 **[アプリの追加]** をクリックします。  
   
-3.  **[PowerPivot ギャラリー]**をクリックします。  
+3.  **[PowerPivot ギャラリー]** をクリックします。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013 で PowerPivot for Excel を使用する場合は Excel と一緒にインストールされたアドインを使用する必要がある  
-**問題点:** Office 2010 では、PowerPivot for Excel は [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx)からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 ダウンロードできる PowerPivot アドインの 2 つのバージョンがあることに注意してください。1つは SQL Server 2008 R2 に、もう 1 つは SQL Server 2012 にそれぞれ付属しています。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
+**問題点:** Office 2010 では、PowerPivot for Excel は [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx) からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](http://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 ダウンロードできる PowerPivot アドインの 2 つのバージョンがあることに注意してください。1つは SQL Server 2008 R2 に、もう 1 つは SQL Server 2012 にそれぞれ付属しています。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
   
-**回避策:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]** | **[オプション]** | **[アドイン]**の順にクリックします。**[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]**をクリックします。 **[COM アドイン]**で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]**をクリックします。  
+**回避策:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]** | **[オプション]** | **[アドイン]** の順にクリックします。**[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]** をクリックします。 **[COM アドイン]** で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]** をクリックします。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   

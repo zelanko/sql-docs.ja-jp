@@ -1,43 +1,45 @@
 ---
-title: "SQL Server のエディション別の計算容量制限 | Microsoft Docs"
-ms.custom: 
+title: SQL Server のエディション別の計算容量制限 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server のエディション別の計算容量制限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
   
  ![容量制限計算のためのマッピング](../sql-server/media/compute-capacity-limits.gif "容量制限計算のためのマッピング")  
   
  このテーブルでは、前の図の表記について説明します。  
   
-|値|説明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0..1|0 個または 1 個|  
-|1|1 個|  
+|@shouldalert|1 個|  
 |1..\*|1 個以上|  
 |0..\*|0 個以上|  
 |1..2|1 個または 2 個|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/05/2017
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|1 つのインスタンスの最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|1 つのインスタンスの最大計算容量 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: コアベース ライセンス\*|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
-|開発者|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
+|Developer|オペレーティング システムの最大容量|オペレーティング システムの最大容量|  
 |Standard|4 ソケットまたは 24 コアのいずれか小さいほうに制限|4 ソケットまたは 24 コアのいずれか小さいほうに制限|  
 |Express|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 
@@ -103,6 +105,7 @@ ms.lasthandoff: 12/05/2017
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2016 のクイックスタート インストール](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

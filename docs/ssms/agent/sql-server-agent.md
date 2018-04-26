@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,7 @@ ms.lasthandoff: 03/22/2018
 **msdb**の **SQLAgentUserRole**、 **SQLAgentReaderRole** 、 **SQLAgentOperatorRole**の各固定データベース ロールのメンバーと **sysadmin** 固定サーバー ロールのメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントにアクセスできます。 どのロールのメンバーでもないユーザーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントを使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントによって使用されるロールの詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」を参照してください。  
   
 ### <a name="subsystems"></a>サブシステム  
-サブシステムは事前に定義されたオブジェクトで、任意のジョブ ステップで使用できる機能を表します。 各プロキシは 1 つ以上のサブシステムにアクセスできます。 サブシステムはプロキシで使用できる機能へのアクセスを制限することによりセキュリティを提供します。 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ以外の各ジョブ ステップは、プロキシのコンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップでは、EXECUTE AS コマンドを使用してセキュリティ コンテキストが設定されます。  
+サブシステムは事前に定義されたオブジェクトで、任意のジョブ ステップで使用できる機能を表します。 各プロキシは 1 つ以上のサブシステムにアクセスできます。 サブシステムはプロキシで使用できる機能へのアクセスを制限することによりセキュリティを提供します。 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップ以外の各ジョブ ステップは、プロキシのコンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql_md.md)] ジョブ ステップでは、EXECUTE AS コマンドを使用してセキュリティ コンテキストをジョブの所有者に設定します。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、次の表に示すサブシステムを定義しています。  
   

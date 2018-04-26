@@ -30,11 +30,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のチュートリアル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的
   
 - [チュートリアル: SSMS を使用した SQL Server に対する接続およびクエリ](connect-query-sql-server.md)
 
-    このセクションでは、SQL Server インスタンスに接続する方法を学習します。 新しいデータベースを作成してクエリを実行するための基本的な Transact-SQL (T-SQL) コマンドについても学習します。 
+    このチュートリアルでは、SQL Server インスタンスに接続する方法を学習します。 新しいデータベースを作成してクエリを実行するための基本的な Transact-SQL (T-SQL) コマンドについても学習します。 
 
 - [チュートリアル: SSMS でオブジェクトのスクリプトを作成する](scripting-ssms.md)
 
-    このセクションでは、データベースやクエリなどのさまざまなオブジェクトのスクリプトを SSMS で作成する方法を学習します。 
+    このチュートリアルでは、データベースやクエリなどのさまざまなオブジェクトのスクリプトを SSMS で作成する方法を学習します。 
 
 - [チュートリアル: SSMS でテンプレートを使用する](templates-ssms.md)
    
-    このセクションでは、SSMS で構築済みのテンプレートを使う方法を学習します。 
+    このチュートリアルでは、SSMS で構築済みのテンプレートを使う方法を学習します。 テンプレートは、さまざまなデータベース管理タスクの Transact-SQL コード スニペットを格納する機能ですが、あまり知られていません。 
 
 - [チュートリアル: SSMS を構成する](ssms-configuration.md)
 
-    このセクションでは、SSMS 環境の構成の基礎について学習します。 
+    このチュートリアルでは、環境レイアウトの変更など、SSMS 環境の構成の基本を学習します。 このチュートリアルでは、さまざまな SSMS コンポーネントについても説明します。 
   
 
 - [チュートリアル: SSMS を使用するためのヒントとテクニック](ssms-tricks.md)
 
-    このセクションでは、SSMS の使用に関するその他のヒントとテクニックを学習します。 このチュートリアルは次のような内容です。
+    このチュートリアルでは、SSMS の使用に関するその他のヒントとテクニックを学習します。 チュートリアルは次のような内容です。
     - テキストのコメント化とコメント解除
     - テキストのインデント
     - オブジェクト エクスプローラーでのオブジェクトのフィルター
