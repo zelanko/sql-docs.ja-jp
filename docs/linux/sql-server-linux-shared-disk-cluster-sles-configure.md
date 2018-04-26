@@ -1,25 +1,25 @@
 ---
-title: "SQL Server の SLES 共有ディスク クラスターの構成 |Microsoft ドキュメント"
-description: "SQL Server の SUSE Linux Enterprise Server (SLES) 共有ディスク クラスターを構成することによって高可用性を実装します。"
+title: SQL Server の SLES 共有ディスク クラスターの構成 |Microsoft ドキュメント
+description: SQL Server の SUSE Linux Enterprise Server (SLES) 共有ディスク クラスターを構成することによって高可用性を実装します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ce4bc0cec8e235abfde581a3e78b79eeee6740f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
 
@@ -33,15 +33,15 @@ ms.lasthandoff: 02/13/2018
 
 次のエンド ツー エンドのシナリオを完了するには、2 つのマシンを 2 つのノードのクラスターと NFS 共有を構成する別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>セットアップし、各クラスター ノードで、オペレーティング システムを構成します。
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>各クラスター ノードで、オペレーティング システムのセットアップと構成をする
 
 最初の手順では、クラスター ノードで、オペレーティング システムを構成します。 このチュートリアルで、有効なサブスクリプションでの HA アドオン SLES を使用します。
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>インストールし、各クラスター ノードに SQL Server の構成
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードで、SQL Server のインストールと構成をする
 
-1. インストールし、両方のノード上に SQL Server をセットアップします。 詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
-2. プライマリ サーバーと、他の構成のために、セカンダリとして 1 つのノードを指定します。 これらの用語を使用して、次のこのガイドです。 
-3. セカンダリ ノードで停止し、SQL Server を無効にします。 次の例では、停止して、SQL Server を無効にします。
+1. 両方のノード上に SQL Server をインストールし、セットアップします。 詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
+2. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。 
+3. セカンダリ ノードでSQL Server を停止し無効にします。 次の例では、SQL Server を停止して無効にします。
 
     ```bash
     sudo systemctl stop mssql-server
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/13/2018
     ```
 
     > [!NOTE]
-    > Server マスター_キーの SQL Server インスタンスの生成し、に配置され、セットアップ時に`/var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント アクセスできるように、サーバーのマスター _ キーの暗号化を解除するは、各セカンダリ ノードにプライマリ ノードから、暗号化キーをコピーする必要があります。
+    > セットアップ時に、SQL Server インスタンスのためにサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるため、その id はノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。
 4. プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。
 
     ```bash
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/13/2018
     CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
     GRANT VIEW SERVER STATE TO <loginName>
     ```
-5. プライマリ ノードで、停止し、SQL Server を無効にします。
+5. プライマリ ノードで、SQL Server を停止し無効にします。
 6. 指示に従い[SUSE ドキュメント](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)を構成し、各クラスター ノードの hosts ファイルを更新します。 'Hosts' ファイルには、すべてのクラスター ノードの名前と IP アドレスを含める必要があります。
 
     実行する現在のノードの IP アドレスを確認してください。
@@ -72,9 +72,9 @@ ms.lasthandoff: 02/13/2018
     sudo ip addr show
     ```
 
-    各ノードで、コンピューター名を設定します。 各ノード一意の名前は 15 文字以下です。 追加することによって、コンピューター名を設定`/etc/hostname`を使用して[yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)または[手動で](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)です。
+    各ノードで、コンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 追加することによって、コンピューター名を設定`/etc/hostname`を使用して[yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html)または[手動で](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)です。
 
-    次の例は`/etc/hosts`という 2 つのノードの追加と`SLES1`と`SLES2`です。
+    次の`/etc/hosts`の例は`SLES1`と`SLES2`という名前の 2 つのノードの追加します。
 
     ```
     127.0.0.1   localhost
@@ -92,13 +92,13 @@ ms.lasthandoff: 02/13/2018
 
 次のセクションでは、共有記憶域を構成し、そのストレージにデータベース ファイルを移動します。  
 
-## <a name="configure-shared-storage-and-move-database-files"></a>共有記憶域を構成して、データベース ファイルの移動
+## <a name="configure-shared-storage-and-move-database-files"></a>共有記憶域を構成して、データベース ファイルを移動する
 
-さまざまな共有記憶域を提供するためのソリューションがあります。 このチュートリアルでは、NFS で共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して NFS を保護することをお勧めします。 
+共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して NFS を保護することをお勧めします。 
 
 - [ファイル システムと NFS 共有](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
 
-このガイダンスに従っていない場合は、データ ファイルにアクセスすること、ネットワークにアクセスおよび SQL ノードの IP アドレスを偽装できるすべてのユーザーができます。 いつものように、脅威モデルの実稼働環境で使用する前に、システムを確認します。 
+このガイダンスに従っていない場合は、データ ファイルにアクセスすること、ネットワークにアクセスおよび SQL ノードの IP アドレスを偽装できるすべてのユーザーができます。 通常どおり、実稼働環境で使用する前にお使いのシステムの脅威モデルを確認してください。 
 
 別の記憶域オプションでは、SMB ファイル共有を使用します。
 
@@ -112,7 +112,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
 
 共有記憶域の場所を指す SQL Server データベース ファイルのパスにマウントするように NFS クライアントを構成する前にデータベース ファイルにコピーして後で、共有できるように一時的な場所に保存するになっていることを確認します。
 
-1. **プライマリ ノードのみで**、一時的な場所にデータベース ファイルを保存します。 次のスクリプトでは、新しい一時ディレクトリを作成するには、データベース ファイルを新しいディレクトリにコピーおよび古いデータベース ファイルを削除します。 ローカル ユーザー mssql として SQL Server を実行すると、マウントされた共有へのデータ転送、後にローカル ユーザーが共有への読み取り/書き込みアクセスを持っているかどうかを確認する必要があります。 
+1. **プライマリ ノードのみで**、一時的な場所にデータベース ファイルを保存します。 次のスクリプトでは、新しい一時ディレクトリを作成するには、データベース ファイルを新しいディレクトリにコピーおよび古いデータベース ファイルを削除します。 SQL Server はローカル ユーザー mssql として実行されるため、マウントされた共有へのデータ転送後に、ローカル ユーザーが共有への読み取り/書き込みアクセスを持っているかどうかを確認する必要があります。 
 
     ```bash
     su mssql
@@ -129,7 +129,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
     > [!NOTE]
     > SUSE のベスト プラクティスと使用できる NFS 高の記憶域に関する推奨事項に従うことをお勧めします。[高使用できる NFS および記憶域を DRBD ペース](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)です。
 
-2. 新しいファイル パスで SQL Server が正常に開始するかを検証します。 これは、各ノードで行います。 この時点で 1 つのノードでは、一度に SQL Server を実行する必要があります。 これら両方ために実行できません同時に両方同時に (に両方のノードに SQL Server を誤って開始しないように、ファイル システムのクラスター リソースを使用して、共有が別々 のノードによって 2 回マウントされていないかどうかを確認) データ ファイルにアクセスする再試行されます。 次のコマンドは、SQL Server の起動、状態を確認し、SQL Server を停止します。
+2. 新しいファイル パスで SQL Server が正常に開始するかを検証します。 これは、各ノードで行います。 この時点で 一度に1 つのノードのみで SQL Server を実行する必要があります。 各ノードが同時にデータベースファイルにアクセスしようとするため(両方のノードで SQL Server が誤って開始しないように、ファイル システムのクラスター リソースを使用して、ファイル共有が別々 のノードによって 2 回マウントされていないようにします) 各ノードで同時に実行することはできません。 次のコマンドは、SQL Server を起動し、状態を確認し、SQL Server を停止します。 
 
     ```bash
     sudo systemctl start mssql-server
@@ -139,7 +139,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
 
 この時点で、共有記憶域上のデータベース ファイルを使用して実行する SQL Server の両方のインスタンスが構成されます。 次の手順では、ペースの SQL Server を構成します。 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>インストールし、ペースを各クラスター ノードの構成
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードでPacemakerインストールして構成する
 
 1. **両方のクラスター ノードで、Pacemaker にログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します**。 次のコマンドは、このファイルを作成および設定します。
 
@@ -203,7 +203,7 @@ NFS サーバーを構成するのには、SUSE ドキュメントでは、次�
 - **SQL Server リソース名**: SQL Server のクラスター化リソースの名前。 
 - **タイムアウト値**: タイムアウトの値は、クラスターが、リソースがオンラインにしている間に待機する時間。 SQL Server では、これは、時間を表示するために SQL Server、`master`データベースがオンラインです。 
 
-次のスクリプトを環境から値を更新します。 構成およびクラスター化されたサービスを開始する 1 つのノード上で実行します。
+次のスクリプトを環境から値を更新します。 クラスター化されたサービスを構成および開始するために 1 つのノード上で実行します。
 
 ```bash
 sudo crm configure

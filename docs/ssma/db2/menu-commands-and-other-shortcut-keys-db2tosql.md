@@ -1,6 +1,6 @@
 ---
 title: メニュー コマンドやその他のショートカット キー (DB2ToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b81e9aae756b94302d2a70db4b66a2c3933e10c7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 43b92985f3423defe6ef2c5a2e6a62d032474829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>メニュー コマンドやその他のショートカット キー (DB2ToSQL)
 次のセクションでは、メニュー コマンドと DB2 アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/06/2018
 |--------------|---------|  
 |メタデータ エクスプ ローラーを同期します。|ALT + V + Z|  
 |ツリーを表示します。|ALT + V + H または CTRL + T|  
-|ソースの一部を示してください。|ALT + V + S|  
+|ソースの一部を示してください。|ALT + V、S|  
 |ターゲットの一部を示してください。|ALT + V + T|  
 |エラー一覧ウィンドウを表示します。|ALT + V + E または CTRL + E|  
 |出力ウィンドウを表示します。|ALT + V + O または CTRL + O|  

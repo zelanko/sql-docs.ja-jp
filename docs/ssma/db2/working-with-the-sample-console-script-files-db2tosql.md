@@ -1,6 +1,6 @@
 ---
 title: サンプルのコンソール スクリプト ファイル (DB2ToSQL) の操作 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5d7a127cb350c8cb95c84ebe43795212986274b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 209333cfd06ae2049865a9ebf1494c6eacafc591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>サンプルのコンソール スクリプト ファイル (DB2ToSQL) の操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用法について、製品と共に用意されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -51,11 +51,11 @@ ms.lasthandoff: 04/06/2018
   
     -   ソースとターゲット サーバーへの接続の詳細については、次を参照してください。[サーバー接続ファイルを作成する&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)です。  
   
-2.  **VariableValueFileSample.xml:**スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーが単純に置き換えます。 サンプル変数にサンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものと、このファイルをスクリプト ファイルと共に追加のコマンドライン引数として渡します。  
+2.  **VariableValueFileSample.xml:** スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーが単純に置き換えます。 サンプル変数にサンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものと、このファイルをスクリプト ファイルと共に追加のコマンドライン引数として渡します。  
   
     値のさまざまなファイルの詳細については、次を参照してください。[変数値のファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)です。  
   
-3.  **AssessmentReportGenerationSample.xml:**このサンプルには、ユーザーが使用できる、ユーザーが分析のために変換し、データの移行は開始する前に xml 評価レポートの生成ができるようにします。  
+3.  **AssessmentReportGenerationSample.xml:** このサンプルには、ユーザーが使用できる、ユーザーが分析のために変換し、データの移行は開始する前に xml 評価レポートの生成ができるようにします。  
   
     `generate-assessment-report` Mandatorily 変数の値を変更するユーザーが持ってコマンド (を参照してください**VariableValueFileSample.xml**) で、`object-name`属性をユーザーによって使用されているデータベース名。 指定された、オブジェクトの種類に応じて、`object-type`値を変更する必要があります。  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/06/2018
   
     コンソール アプリケーションにサーバー接続ファイルのコマンドライン引数が渡されるパラメーター値が適切なサーバー、ServersConnectionFileSample.xml が更新されることを確認します。  
   
-4.  **SqlStatementConversionSample.xml:**このサンプルでは、対応するを生成するユーザー`t-sql`ソース データベースのスクリプトを`sql`コマンドの入力として指定します。  
+4.  **SqlStatementConversionSample.xml:** このサンプルでは、対応するを生成するユーザー`t-sql`ソース データベースのスクリプトを`sql`コマンドの入力として指定します。  
   
     `convert-sql-statement` Mandatorily 変数の値を変更するユーザーが持ってコマンド (を参照してください**VariableValueFileSample.xml**) で、`context`属性をユーザーによって使用されているデータベースの名前にします。 ユーザーを変更する必要もあります、`sql`属性値をソース データベースに`sql`を変換するにより必要とするコマンド。  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/06/2018
     > [!NOTE]  
     > コンソール アプリケーションに渡される変数の値ファイルのコマンドライン引数を使用すると、VariableValueFileSample.xml が指定したユーザーに更新されることを確認して値。  
   
-5.  **ConversionAndDataMigrationSample.xml:**このサンプルには、データの移行への変換から、エンド ツー エンドな移行を実行するユーザーができるようにします。 変更する必要が必須の属性値の一覧は次のとおりです。  
+5.  **ConversionAndDataMigrationSample.xml:** このサンプルには、データの移行への変換から、エンド ツー エンドな移行を実行するユーザーができるようにします。 変更する必要が必須の属性値の一覧は次のとおりです。  
   
     |コマンド名|Description|属性|  
     |----------------|---------------|-------------|  

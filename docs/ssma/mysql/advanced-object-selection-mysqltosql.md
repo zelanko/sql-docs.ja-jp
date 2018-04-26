@@ -1,6 +1,6 @@
 ---
 title: オブジェクトの選択 (MySQLToSQL) 高度な |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d12981f71960a727557247daafc8f098c061ed2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: fc89e8ef8a6e0bf8d1157bbfae42f9bccf05d49d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>高度なオブジェクトの選択 (MySQLToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  

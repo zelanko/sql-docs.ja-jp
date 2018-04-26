@@ -1,9 +1,9 @@
 ---
-title: 'チュートリアル: SQL Operations Studio (preview) により、TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成 |Microsoft ドキュメント'
-description: このチュートリアルでは、SQL Operations Studio (preview) で T-SQL を使用して簡略化する主要な機能について説明します。
+title: 'チュートリアル: SQL 操作 Studio (プレビュー) により、TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成 |Microsoft ドキュメント'
+description: このチュートリアルでは、SQL 操作 Studio (プレビュー) で T-SQL を使用して簡略化する主要な機能について説明します。
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL スニペットを使用してストアド プロシージャを作成するには
 
-SQL Operations Studio は、ステートメントをすばやく作成するため、多くの組み込みの T-SQL でスニペットを提供します。
+SQL 操作 Studio は、ステートメントをすばやく作成するため、多くの組み込みの T-SQL でスニペットを提供します。
 
 
 1. キーを押して新しいクエリ エディターを開く**Ctrl + N**です。
@@ -117,7 +117,7 @@ SQL Operations Studio は、ステートメントをすばやく作成するた�
 
 ## <a name="use-peek-definition"></a>ピークの定義を使用 
 
-SQL Operations Studio には、ピークの定義機能を使用して、オブジェクト定義を表示する機能が用意されています。 このセクションでは、2 番目のストアド プロシージャを作成し、ピークの定義が使用すると、どのような列は、テーブル、ストアド プロシージャの本体をすばやく作成します。
+SQL 操作 Studio には、ピークの定義機能を使用して、オブジェクト定義を表示する機能が用意されています。 このセクションでは、2 番目のストアド プロシージャを作成し、ピークの定義が使用すると、どのような列は、テーブル、ストアド プロシージャの本体をすばやく作成します。
 
 1. キーを押して新しいエディターを開きます**Ctrl + N**です。 
 

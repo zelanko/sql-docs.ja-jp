@@ -1,16 +1,16 @@
 ---
-title: "string 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: string 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - string function
 - fn:string function
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cb540206adb2878f78874c7188acaa5c3f17b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c4942413480f2d00f2d3a247fe8367c9e0a79341
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数の文字列 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  値を返します*$arg*を文字列として表されます。  
+  値を返します *$arg*を文字列として表されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,15 +50,15 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>解説  
   
--   場合*$arg*空のシーケンスでは、長さゼロの文字列が返されます。  
+-   場合 *$arg*空のシーケンスでは、長さゼロの文字列が返されます。  
   
--   場合*$arg*ノードの場合、string-value アクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 Data Model 仕様で定義されています。  
+-   場合 *$arg*ノードの場合、string-value アクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 Data Model 仕様で定義されています。  
   
--   場合*$arg*は、アトミック値としてキャスト式によって返されるのと同じ文字列を返します**xs:string**、 *$arg*、以外の場合に特に記載します。  
+-   場合 *$arg*は、アトミック値としてキャスト式によって返されるのと同じ文字列を返します**xs:string**、 *$arg*、以外の場合に特に記載します。  
   
--   場合の種類*$arg*は**xs:anyURI**、特殊文字をエスケープせず、URI を文字列に変換します。  
+-   場合の種類 *$arg*は**xs:anyURI**、特殊文字をエスケープせず、URI を文字列に変換します。  
   
--   この実装で**fn:string()**せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。  
+-   この実装で**fn:string()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
@@ -88,7 +88,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 指定した場合、 **string()**関数の場合、指定したノードの文字列値を表示します。  
+ 指定した場合、 **string()** 関数の場合、指定したノードの文字列値を表示します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -107,7 +107,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. 異なるノードに対する string 関数の使用  
- 次の例では、XML インスタンスが xml 型の変数に割り当てられています。 クエリが適用した結果を示すために指定された**string()**さまざまなノードにします。  
+ 次の例では、XML インスタンスが xml 型の変数に割り当てられています。 クエリが適用した結果を示すために指定された**string()** さまざまなノードにします。  
   
 ```  
 declare @x xml  

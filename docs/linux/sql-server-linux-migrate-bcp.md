@@ -1,25 +1,25 @@
 ---
-title: "データを一括コピーする SQL Server on Linux |Microsoft ドキュメント"
-description: 
+title: データを一括コピーする SQL Server on Linux |Microsoft ドキュメント
+description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.workload: On Demand
-ms.openlocfilehash: a7cc0015af2ca7af7821175cdb836f71ba0ac6f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b5e7b92730582e7657e1ba6be7bbcaeda01dc18f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
 
@@ -62,7 +62,7 @@ sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>元のデータ ファイルを作成します。
-コピーし、次のコマンドをターミナル ウィンドウに貼り付けます。 組み込みを使用してお`cat`3 つのレコードでサンプル テキスト データ ファイルを作成するコマンドと、ホーム ディレクトリにファイルを保存する**~/test_data.txt**です。 レコードのフィールドはコンマで区切られます。
+コピーし、次のコマンドをターミナル ウィンドウに貼り付けます。 組み込みを使用してお`cat`3 つのレコードでサンプル テキスト データ ファイルを作成するコマンドと、ホーム ディレクトリにファイルを保存する **~/test_data.txt**です。 レコードのフィールドはコンマで区切られます。
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -122,7 +122,7 @@ Id          Name                Location
 
 このチュートリアルで使用して`bcp`を新しいデータ ファイルに以前に作成したサンプル テーブルからデータをエクスポートします。
 
-コピーし、ターミナル ウィンドウに followikng コマンドを貼り付けます。 これらのコマンドを使用して、`bcp`テーブルからデータをエクスポートするコマンド ライン ユーティリティ**TestEmployees**データベース**BcpSampleDB**と呼ばれる新しいデータ ファイルに**~/test_export.txt**.  ユーザー名を置き換えますと`<your_password>`コマンドを実行する前に必要に応じて。
+コピーし、ターミナル ウィンドウに followikng コマンドを貼り付けます。 これらのコマンドを使用して、`bcp`テーブルからデータをエクスポートするコマンド ライン ユーティリティ**TestEmployees**データベース**BcpSampleDB**と呼ばれる新しいデータ ファイルに **~/test_export.txt**.  ユーザー名を置き換えますと`<your_password>`コマンドを実行する前に必要に応じて。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','
@@ -144,4 +144,4 @@ cat ~/test_export.txt
 - [bcp ユーティリティ](../tools/bcp-utility.md)
 - [Bcp を使用した互換性のためのデータの形式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [BULK INSERT を使用してデータを一括インポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+- [一括挿入 (TRANSACT-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

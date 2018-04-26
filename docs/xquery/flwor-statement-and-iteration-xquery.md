@@ -1,16 +1,16 @@
 ---
-title: "FLWOR ステートメントと繰り返し (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: FLWOR ステートメントと繰り返し (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: 
+caps.latest.revision: 44
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc15902b85eb44c0341fc29389699d2eed43e875
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3eaf7ee7ebc5cae472a2e1e8a8273eacf840d6ce
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR ステートメントと繰り返し (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ ms.lasthandoff: 02/09/2018
   
      入力シーケンスは、XPath 式などの他の XQuery 式でもかまいません。 その場合、ノードのシーケンス、またはアトミック値のシーケンスのいずれかを指定します。 アトミック値のシーケンスは、リテラルまたはコンス トラクター関数を使用して作成できます。 構築された XML ノードには、入力シーケンスとしてではできません。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。  
   
--   省略可能な`let`句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てる式として XPath 式などの XQuery 式を指定でき、ノードのシーケンスまたはアトミック値のシーケンスを返すことができます。 アトミック値のシーケンスを構成するには、リテラルまたはコンストラクター関数を使用できます。 構築された XML ノードには、入力シーケンスとしてではできません。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。  
+-   省略可能な `let` 句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てる式として XPath 式などの XQuery 式を指定でき、ノードのシーケンスまたはアトミック値のシーケンスを返すことができます。 アトミック値のシーケンスを構成するには、リテラルまたはコンストラクター関数を使用できます。 構築された XML ノードには、入力シーケンスとしてではできません。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]です。  
   
 -   反復子変数。 この変数を使用して型アサーションをオプションを持つことができます、`as`キーワード。  
   
--   省略可能な`where`句。 繰り返しにフィルター述語を適用します。  
+-   省略可能な `where` 句。 繰り返しにフィルター述語を適用します。  
   
--   省略可能な`order by`句。  
+-   省略可能な `order by` 句。  
   
 -   `return` 式。 内の式、`return`句は、FLWOR ステートメントの結果を構築します。  
   
@@ -255,7 +255,7 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   `where`キーワードを使用して、 **count()**関数の数をカウント <`step`> 子要素で、各ワーク センターの場所。  
+-   `where`キーワードを使用して、 **count()** 関数の数をカウント <`step`> 子要素で、各ワーク センターの場所。  
   
 -   `return`式は、繰り返しの結果から使用する XML を構築します。  
   
@@ -308,7 +308,7 @@ SELECT @x.query('
   
 -   `$Loc` に関連付けられた式により、<`Location`> 要素のシーケンスが生成されます。 各 <`Location`> 要素、 `$FirstStep` 1 つのシーケンスを生成 <`Step`> 要素では、シングルトンです。  
   
--   `$Loc`関連付けられている式で指定されて、`$FirstStep`変数。  
+-   `$Loc` 関連付けられている式で指定されて、`$FirstStep`変数。  
   
  結果を次に示します。  
   
@@ -382,7 +382,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- なお、[アトミック化 (XQuery)](../xquery/atomization-xquery.md)のアトミック値を取得するプロセス、<`number`> 要素に渡す前に`order by`です。 使用して、式を記述することができます、 **data()**関数の場合、それは必要ありません。  
+ なお、[アトミック化 (XQuery)](../xquery/atomization-xquery.md)のアトミック値を取得するプロセス、<`number`> 要素に渡す前に`order by`です。 使用して、式を記述することができます、 **data()** 関数の場合、それは必要ありません。  
   
 ```  
 order by data($a/act:number[1]) descending  

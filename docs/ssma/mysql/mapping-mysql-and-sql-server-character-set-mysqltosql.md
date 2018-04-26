@@ -1,6 +1,6 @@
 ---
 title: MySQL および SQL Server の文字のマッピング (MySQLToSQL) を設定 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>(MySQLToSQL) を設定する MySQL および SQL Server の文字のマッピング
 MySQL の文字データ型、式およびリテラルの文字セット (文字セット) を指定できます。  
@@ -67,8 +67,8 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
 > これらは次のとおりです。  
 >   
 > 1.  **適用されます。** charset マッピングの編集と保存されていない場合にのみ有効になっている、ユーザーによって行われた変更を適用します。  
-> 2.  **[キャンセル]:**ユーザーによって行われた変更を取り消します。 ボタンは、文字セットのマッピングの編集が保存されない場合に有効に取得します。  
-> 3.  **既定値にリセット:**すべてのマッピングを既定値にリセットします。  
+> 2.  **[キャンセル]:** ユーザーによって行われた変更を取り消します。 ボタンは、文字セットのマッピングの編集が保存されない場合に有効に取得します。  
+> 3.  **既定値にリセット:** すべてのマッピングを既定値にリセットします。  
   
 1.  **ルート メタデータ ノード レベル:** Charset マッピング グリッドには、列は、各文字セットを別の文字セットのグリッドが含まれています。 グリッドの列は次のとおりです。  
   
@@ -93,7 +93,7 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |big5|Big5 繁体字中国語|NCHAR と NVARCHAR (既定値)|  
     |dec8|DEC 西ヨーロッパ|CHAR と VARCHAR (既定値)|  
     |cp850|DOS 西ヨーロッパ|CHAR と VARCHAR (既定値)|  
-    |hp8|HP West European|CHAR と VARCHAR (既定値)|  
+    |hp8|HP 西ヨーロッパ|CHAR と VARCHAR (既定値)|  
     |koi8r|KOI8 R Relcom ロシア語|CHAR と VARCHAR (既定値)|  
     |ラテン 1|cp1252 西ヨーロッパ|CHAR と VARCHAR (既定値)|  
     |latin2|ISO 8859-2 中央ヨーロッパ言語|CHAR と VARCHAR (既定値)|  
@@ -109,7 +109,7 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |ギリシャ語|ISO 8859-7 ギリシャ語|CHAR と VARCHAR (既定値)|  
     |cp 1250|Windows の中央ヨーロッパ言語|CHAR と VARCHAR (既定値)|  
     |gbk|GBK 簡体字中国語|NCHAR と NVARCHAR (既定値)|  
-    |latin5|ISO 8859-3 トルコ語|CHAR と VARCHAR (既定値)|  
+    |ラテン 5|ISO 8859-3 トルコ語|CHAR と VARCHAR (既定値)|  
     |armscii8|ARMSCII 8 アルメニア語|CHAR と VARCHAR (既定値)|  
     |utf8|Utf-8 Unicode|NCHAR と NVARCHAR (既定値)|  
     |ucs2|Unicode の ucs-2|NCHAR と NVARCHAR (既定値)|  
@@ -123,11 +123,11 @@ MySQL の文字データ型、式およびリテラルの文字セット (文字
     |cp 1256|Windows アラビア語|CHAR と VARCHAR (既定値)|  
     |cp 1257|Windows バルト言語|CHAR と VARCHAR (既定値)|  
     |binary|バイナリの擬似文字セット|CHAR と VARCHAR (既定値)|  
-    |geostd8|GEOSTD8 Georgian|CHAR と VARCHAR (既定値)|  
+    |geostd8|GEOSTD8 グルジア語|CHAR と VARCHAR (既定値)|  
     |cp932|Windows 日本語の SJIS|NCHAR と NVARCHAR (既定値)|  
     |eucjpms|Windows 日本語の UJIS|NCHAR と NVARCHAR (既定値)|  
   
-2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:**データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。:  
+2.  **データベース、カテゴリ、またはオブジェクト ノード レベルで:** データベース、カテゴリ、またはオブジェクトのノード レベルで、文字セットのマッピング グリッドに含まれるメタデータのルート ノード レベル、上の 1 つと同じ行 viz。:  
   
     1.  タイトル、グリッドの最初の列**文字セット名**文字セットの名前が含まれています。  
   

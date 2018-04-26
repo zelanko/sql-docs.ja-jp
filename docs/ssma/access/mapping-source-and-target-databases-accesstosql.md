@@ -1,6 +1,6 @@
 ---
 title: マッピングのソースとターゲット データベース (AccessToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 77266085cf8a55322abf184fb18c5be26af95939
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースとターゲット データベース (AccessToSQL) とのマッピング
 接続すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure 移行のターゲット データベースを指定する必要があります。 複数データベースにアクセスした場合に割り当てることに複数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース (またはスキーマ) または接続されている SQL Azure データベースの下にある複数のスキーマにします。  
@@ -68,7 +68,7 @@ SSMA では、各 Access データベースをマップできます。[!INCLUDE[
   
 -   SQL Azure へのマッピング  
   
-ソース データベースをマップするには接続されているターゲットに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースか、いずれのスキーマに接続されているターゲットの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 ソース スキーマ 接続されているターゲット データベースの任意の存在しないスキーマをマップするかどうかは、メッセージが求められます**"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"**はい をクリックします。  
+ソース データベースをマップするには接続されているターゲットに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースか、いずれのスキーマに接続されているターゲットの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 ソース スキーマ 接続されているターゲット データベースの任意の存在しないスキーマをマップするかどうかは、メッセージが求められます **"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"** はい をクリックします。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>最初のデータベースとスキーマを元に戻す  
 Access データベースの間のマッピングをカスタマイズする場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]や SQL Azure データベース、スキーマに接続するときに指定したデータベースにマッピングを戻すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。  

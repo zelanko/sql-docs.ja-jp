@@ -2,8 +2,8 @@
 title: sql:column() 関数 (XQuery) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -25,18 +25,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4d68443b225f0b24a69ac4bd310a58a2d6a2991c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery Extension Functions - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  」の説明に従って[XML 内リレーショナル データのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)、使用することができます、 **sql:column()**関数を使用するときに[XML データ型メソッド](../t-sql/xml/xml-data-type-methods.md)リレーショナル値を公開するにはXQuery 内部です。  
+  」の説明に従って[XML 内リレーショナル データのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)、使用することができます、 **sql:column()** 関数を使用するときに[XML データ型メソッド](../t-sql/xml/xml-data-type-methods.md)リレーショナル値を公開するにはXQuery 内部です。  
   
- たとえば、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)変数またはの列に格納されている XML インスタンスに対してクエリを指定するために使用**xml**型です。 場合によっては、クエリで XML 型ではない別の列の値を使用して、リレーショナル データと XML データを結合することもできます。 これを行うには、使用する、 **sql:column()**関数。  
+ たとえば、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)変数またはの列に格納されている XML インスタンスに対してクエリを指定するために使用**xml**型です。 場合によっては、クエリで XML 型ではない別の列の値を使用して、リレーショナル データと XML データを結合することもできます。 これを行うには、使用する、 **sql:column()** 関数。  
   
  SQL 値は、対応する XQuery 値にマップされ、その型は対応する SQL 型に相当する XQuery 基本データ型になります。  
   
@@ -52,7 +52,7 @@ sql:column("columnName")
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、のみを参照することができます、 **xml**インスタンス コンテキスト、ソースの式の XML DML 挿入ステートメントで、それ以外の場合は型の列を参照することはできません**xml**または CLR。ユーザー定義型です。  
   
- **Sql:column()**結合操作では、関数はサポートされていません。 代わりに、APPLY 操作を使用できます。  
+ **Sql:column()** 結合操作では、関数はサポートされていません。 代わりに、APPLY 操作を使用できます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -101,7 +101,7 @@ sql:column("columnName")
   
 -   **名前空間**キーワード、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)XML 名前空間プレフィックス"pd"、クエリ本文で使用されるを定義します。 テーブルの別名 "P" および "PM" は、クエリ自体の FROM 句に定義されていることに注意してください。  
   
--   **Sql:column()**関数を使用して XML 内部の XML 以外の値をします。  
+-   **Sql:column()** 関数を使用して XML 内部の XML 以外の値をします。  
   
  結果の一部を次に示します。  
   

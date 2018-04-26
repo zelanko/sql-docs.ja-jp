@@ -1,24 +1,24 @@
 ---
-title: "Linux での SQL Server カスタマー フィードバック |Microsoft ドキュメント"
-description: "SQL Server カスタマー フィードバックの収集方法と Linux のように構成する方法について説明します。"
+title: Linux での SQL Server カスタマー フィードバック |Microsoft ドキュメント
+description: SQL Server カスタマー フィードバックの収集方法と Linux のように構成する方法について説明します。
 author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25772bd0ad7b2994e732e97fd264bef0e951eea9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 0cc16f093a04876a07cbc4566138861f268453ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux での SQL Server カスタマー フィードバック
 
@@ -116,7 +116,7 @@ Linux 上の SQL server ではローカルの監査は SQL Server データベ�
 ### <a name="on-docker"></a>Docker で
 Docker でローカルの監査を有効にする必要があります Docker [、データを永続化](sql-server-linux-configure-docker.md)です。 
 
-1. 新しいローカルの監査ログのターゲット ディレクトリをコンテナーになります。 コンピューターにホスト ディレクトリ内には、新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例は、新しい作成**監査/**ディレクトリ。
+1. 新しいローカルの監査ログのターゲット ディレクトリをコンテナーになります。 コンピューターにホスト ディレクトリ内には、新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例は、新しい作成**監査/** ディレクトリ。
 
    ```bash
    sudo mkdir <host directory>/audit

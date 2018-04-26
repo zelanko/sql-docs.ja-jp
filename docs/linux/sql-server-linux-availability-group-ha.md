@@ -1,27 +1,27 @@
 ---
-title: "SQL Server Always On 可用性グループ配置のパターン |Microsoft ドキュメント"
+title: SQL Server Always On 可用性グループ配置のパターン |Microsoft ドキュメント
 ms.custom: sql-linux
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: f94214f44e7edc95097f3d5c8774fd8e8421a935
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループの構成の高可用性とデータの保護
 
@@ -65,7 +65,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 
 次の 3 つの同期レプリカがある可用性グループには、読み取りのスケール、高可用性、およびデータ保護を提供できます。 次の表では、可用性の動作について説明します。 
 
-| |read-scale|高可用性 (& a) </br> データの保護 | データの保護
+| |読み取りのスケール|高可用性 (& a) </br> データの保護 | データの保護
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリが R が付けられます。 |自動フェールオーバー。 新しいプライマリが R が付けられます。 |自動フェールオーバー。 前のプライマリが復旧し、セカンダリとして可用性グループに参加するまでは、新しいプライマリをユーザー トランザクションで使用できません。 
@@ -82,7 +82,7 @@ SQL Server 2017 が導入されています、`REQUIRED_SYNCHRONIZED_SECONDARIES
 
 2 つの同期レプリカがある可用性グループは、読み取りのスケールとデータ保護を提供します。 次の表では、可用性の動作について説明します。 
 
-| |read-scale |データの保護
+| |読み取りのスケール |データの保護
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリが R が付けられます。| 自動フェールオーバー。 前のプライマリが復旧し、セカンダリとして可用性グループに参加するまでは、新しいプライマリをユーザー トランザクションで使用できません。

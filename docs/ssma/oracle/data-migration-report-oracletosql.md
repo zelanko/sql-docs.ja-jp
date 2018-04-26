@@ -1,33 +1,34 @@
 ---
-title: "データ移行レポート (OracleToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: データ移行レポート (OracleToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: d88f1451ec5253e097c9f96691c5b22b3eae896a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 51fc0f6d9866f1bfe70087c34048e12fd8ab304e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-migration-report--oracletosql"></a>データ移行レポート (OracleToSQL)
 **データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-## <a name="options"></a>および  
-**ステータス**  
+## <a name="options"></a>オプション  
+**[状態]**  
 ソースからターゲット データベースへのデータ移行の状態を示しています。  
   
 **From**  

@@ -1,31 +1,31 @@
 ---
-title: "Ubuntu クラスターは、SQL Server 可用性グループを構成する |Microsoft ドキュメント"
-description: 
+title: Ubuntu クラスターは、SQL Server 可用性グループを構成する |Microsoft ドキュメント
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 842e09ffd1a9d219f3d39362f51f18187446a9b2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このドキュメントでは、Ubuntu で 3 つのノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 Linux 上の可用性グループ、可用性を高めるためには 3 つのノードが必要です - 参照[可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)です。
+このドキュメントでは、Ubuntu で 3 つのノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。
 
 > [!NOTE] 
 > この時点では、Linux 上のペースで SQL Server の統合は Windows での WSFC でとして結合します。 SQL 内ではありません、クラスターの存在についてのナレッジ、すべてのオーケストレーションの外部には、およびサービスが、スタンドアロン インスタンスとしてペースで制御されます。 また、仮想ネットワーク名は、WSFC を特定、相当するのと同じペースではありません。 Always On の動的管理ビューのクラスター情報を照会するには、空の行が返されます。 フェールオーバー後は、透過的な再接続に使用するリスナーを作成できますが、仮想 IP リソース (次のセクションで説明されている) を作成するために使用する ip アドレス、DNS サーバーで、リスナー名を手動で登録する必要があります。
@@ -34,13 +34,13 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="roadmap"></a>ロードマップ
 
-高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 次に、手順の概要を説明します。 
+高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスターの手順と異なります。 手順の概要を以下に説明します。  
 
 1. [クラスター ノードの SQL Server を構成する](sql-server-linux-setup.md)です。
 
 2. [可用性グループの作成](sql-server-linux-availability-group-configure-ha.md)です。 
 
-3. ペースのように、クラスター リソース マネージャーを構成します。 これらの手順は、このドキュメントではします。
+3. Pacemaker のように、クラスター リソース マネージャーを構成します。  これらの手順は、このドキュメントに記載されています。
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションに依存します。 
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/13/2018
 
 5.  [可用性グループ、クラスター内のリソースとして追加](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)です。 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>インストールし、ペースを各クラスター ノードの構成
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードでPacemakerインストールして構成する
 
 1. すべてのノードでファイアウォール ポートを開きます。 ペースの高可用性サービス、SQL Server インスタンス、および可用性グループのエンドポイントのポートを開きます。 SQL Server を実行しているサーバーの既定の TCP ポートは 1433 です。  
 
@@ -101,7 +101,7 @@ sudo systemctl enable pacemaker
 
 1. すべてのノードから、既存のクラスター構成を削除します。 
 
-   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  テンプレートが生成される開始 corosync '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを正常に存在してはいけません – 回避ペースを停止するには、/corosync および削除 '/etc/cluster/corosync.conf' とし、次の手順が正常に完了します。 'pc クラスターを破棄' 同じ操作を実行し、1 つとして使用することができますに初期クラスター セットアップの手順です。
+   実行中の 'sudo apt get インストール pc' は、ペース、corosync、および pc を同時にインストールし、サービスのすべての 3 を実行を開始します。  テンプレートが生成される開始 corosync '/etc/cluster/corosync.conf' ファイル。  次の手順をこのファイルを正常に存在してはいけません – 回避ペースを停止するには、/corosync および削除 '/etc/cluster/corosync.conf' とし、次の手順が正常に完了します。 'pc クラスターを破棄' 同じ操作を実行し、1 つとして使用することができますに初期クラスター セットアップの手順です。
    
    次のコマンドは、既存のクラスターの構成ファイルを削除し、すべてのクラスター サービスを停止します。 クラスターが完全に破棄します。 実稼働前環境の最初の手順として実行します。 注 'pc クラスターを破棄こと' は無効、ペースのサービスに再度有効にする必要があります。 すべてのノードで次のコマンドを実行します。
    
@@ -137,7 +137,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>フェンス操作 (STONITH) を構成します。
 
-ペース クラスターのベンダーは、STONITH を有効にして、サポートされているクラスターのセットアップ用に構成されたフェンス操作デバイスが必要です。 ノードまたはノード上のリソースの状態を判断できないのは、クラスター リソース マネージャー、既知の状態をクラスターに戻すにフェンス操作が使用されます。 主ににより、リソース レベルのフェンス操作はリソースを構成することにより、障害が発生した場合、データの破損がないことです。 リソース レベルのフェンス操作を使用するインスタンスのように古くなった場合に、ノード上のディスクをマークする DRBD (レプリケート ブロック デバイスの分散) との通信リンクがダウンしました。 ノード レベルのフェンス操作により、ノードがすべてのリソースを実行できません。 ノードをリセットすることによってこれし、ペース実装は STONITH (これは、「head で、他のノードを撮影」の略) と呼ばれます。 例: 無停電電源装置または管理インターフェイスのサーバーのカードをペースがさまざまなデバイスのフェンス操作をサポートします。 詳細については、次を参照してください[を最初からペース クラスター](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)と[フェンス操作と Stonith。](http://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスターのセットアップ用に構成されたフェンス操作デバイスを必要としています。 ノードまたはノード上のリソースの状態を判断できないのは、クラスター リソース マネージャー、既知の状態をクラスターに戻すにフェンス操作が使用されます。 主ににより、リソース レベルのフェンス操作はリソースを構成することにより、障害が発生した場合、データの破損がないことです。 リソース レベルのフェンス操作を使用するインスタンスのように古くなった場合に、ノード上のディスクをマークする DRBD (レプリケート ブロック デバイスの分散) との通信リンクがダウンしました。 ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 ノードをリセットすることによってこれし、ペース実装は STONITH (これは、「head で、他のノードを撮影」の略) と呼ばれます。 例: 無停電電源装置または管理インターフェイスのサーバーのカードをペースがさまざまなデバイスのフェンス操作をサポートします。 詳細については、次を参照してください[を最初からペース クラスター](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)と[フェンス操作と Stonith。](http://clusterlabs.org/doc/crm_fencing.html) 
 
 フェンス構成ノードのレベルは、環境内に大きく依存するため無効に、このチュートリアルでは (後で、構成できます)。 プライマリ ノードで、次のスクリプトを実行します。 
 
@@ -146,7 +146,7 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->テストのためだけには STONITH を無効にします。 実稼働環境でペースを使用する場合は、環境に応じて STONITH 実装を計画して有効にしておいてください。 この時点でがないことにクラウド環境でも (Azure を含む) や HYPER-V フェンス操作エージェントに注意してください。 ので、クラスターのベンダーでは、これらの環境で運用クラスターを実行するためのサポートは提供しません。 
+>STONITH を無効にするのはテスト目的のみです。 実稼働環境で Pacemaker を使用する場合は、環境に応じて STONITH 実装を計画して有効にしておいてください。 この時点でがないことにクラウド環境でも (Azure を含む) や HYPER-V フェンス操作エージェントに注意してください。 このため、クラスターのベンダーでは、これらの環境で運用のためにクラスターを実行するサポートは提供していません。 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始-障害が-致命的でクラスターのプロパティが false に設定します。
 
@@ -176,7 +176,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>可用性グループ リソースを作成します。
 
-可用性グループ リソースを作成するには使用`pcs resource create`コマンドおよびリソース プロパティを設定します。 次のコマンドを作成、`ocf:mssql:ag`型のリソースの名前を持つ可用性グループのマスター/スレーブ`ag1`です。 
+可用性グループ リソースを作成するには、`pcs resource create`コマンドを使用し、リソース プロパティを設定します。 次のコマンドを作成、`ocf:mssql:ag`型のリソースの名前を持つ可用性グループのマスター/スレーブ`ag1`です。 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
@@ -205,7 +205,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## <a name="add-ordering-constraint"></a>順序付けの制約を追加します。
 
-コロケーションの制約には、暗黙的な順序付け制約があります。 可用性グループ リソースを移動する前に、仮想 IP リソースを移動します。 既定で、一連のイベントは次のとおりです。
+コロケーションの制約には、暗黙的な順序付け制約があります。 可用性グループ リソースを移動する前に、仮想 IP リソースを移動します。 既定では一連のイベントは次のとおりです。 
 
 1. ユーザーの問題`pcs resource move`可用性グループにプライマリ node1 から node2 にします。
 1. 仮想 IP リソースは、node1 を停止します。
@@ -217,7 +217,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 1. Node1 でプライマリ可用性グループは、セカンダリに降格されます。
 1. Node2 でセカンダリ可用性グループがプライマリに昇格します。 
 
-IP アドレスが一時的にフェイル オーバー前のセカンダリを持つノードを指すようにするのには、順序付けの制約を追加します。 
+IP アドレスが一時的にフェイル オーバー前のセカンダリのノードを指すことを防ぐために、順序付けの制約を追加します。 
 
 順序付けの制約を追加するには、1 つのノードで次のコマンドを実行します。
 

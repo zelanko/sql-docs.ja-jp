@@ -1,16 +1,16 @@
 ---
-title: "空の関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: 空の関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - empty function
 - fn:empty function
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 433edf397acdb7a49371c80bffb562f7c27bf125
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5e487f679115407c5e15afa8040a1ff21851201f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの空の関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  True の場合の値*$arg*は空のシーケンス。 それ以外の場合は False を返します。  
+  True の場合の値 *$arg*は空のシーケンス。 それ以外の場合は False を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +48,7 @@ fn:empty($arg as item()*) as xs:boolean
  アイテムのシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合は False を返します。  
   
 ## <a name="remarks"></a>解説  
- **Fn:exists()**関数はサポートされていません。 別の方法として、 **not()**関数を使用できます。  
+ **Fn:exists()** 関数はサポートされていません。 別の方法として、 **not()** 関数を使用できます。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
@@ -121,6 +121,6 @@ ProductModelID Result
   
 ## <a name="see-also"></a>参照  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [存在 (& m); #40&#41;メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
+ [exist&#40;&#41; メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

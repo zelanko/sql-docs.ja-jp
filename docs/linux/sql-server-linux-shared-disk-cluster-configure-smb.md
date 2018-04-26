@@ -1,24 +1,24 @@
 ---
-title: "フェールオーバー クラスター インスタンスの記憶域構成 SMB - SQL Server on Linux |Microsoft ドキュメント"
-description: 
+title: フェールオーバー クラスター インスタンスの記憶域構成 SMB - SQL Server on Linux |Microsoft ドキュメント
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 1b40cc86899042ca86156986080595370b24bf58
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/13/2018
 - SMB 共有は、高可用性にする必要があります。
 - セキュリティを設定する必要があります、SMB 共有に対する適切です。 次に、例から/etc/samba/smb.conf、SQLData1 は共有の名前を指定します。
 
-![05-smbsource][1]
+![05 smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 

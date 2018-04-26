@@ -1,6 +1,6 @@
 ---
 title: マッピング DB2 と SQL Server データ型 (DB2ToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb4f2a1e09861a701a83ef4cd66c6a5e979bc0fa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ceea978b85ee0a914a963a793f6d328a2bba3337
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 と SQL Server データ型 (DB2ToSQL) とのマッピング
 DB2 データベースの種類が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの型。 DB2 データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト、DB2 からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 既定のデータ型マッピングを受け入れることができますか、マップをカスタマイズするには、次のセクションで示すようにします。  
@@ -59,7 +59,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
 2.  新しいマッピングを追加するには、次の操作を行います。  
   
-    1.  **[追加]**をクリックします。  
+    1.  **[追加]** をクリックします。  
   
     2.  **ソースの種類**、DB2 データ型にマップを選択します。  
   
@@ -75,7 +75,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
 3.  データ型マッピングを変更するには、次の操作を行います。  
   
-    1.  **[編集]**をクリックします。  
+    1.  **[編集]** をクリックします。  
   
     2.  **ソースの種類**、DB2 データ型にマップを選択します。  
   
@@ -91,7 +91,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
     1.  削除するデータ型のマッピングを含んだ型マッピングの一覧で、行を選択します。  
   
-    2.  **[削除]**をクリックします。  
+    2.  **[削除]** をクリックします。  
   
         継承されたマッピングを削除することはできません。 ただし、継承されたマッピングは、特定のオブジェクトまたはオブジェクト カテゴリにカスタムへのマッピングによって上書きされます。  
   

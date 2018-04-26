@@ -1,16 +1,16 @@
 ---
-title: "パス式のステップで述語の指定 |Microsoft ドキュメント"
-ms.custom: 
+title: パス式のステップで述語の指定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - qualifiers [XQuery]
 - path expressions [XQuery]
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9eafae8a2834073ef6e6db380d074b7e0290f1ee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b44c3202e4e64f96ded4a615232405ab8d5bc4cc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-predicates"></a>パス式で述語の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ WHERE ProductModelID=7
   
 1.  述語式の値が空のシーケンスの場合、述語の真偽値は False になります。  
   
-     例:  
+     以下に例を示します。  
   
     ```  
     SELECT Instructions.query('  
@@ -145,7 +145,7 @@ WHERE ProductModelID=7
   
      この式のパス式は、LotSize 属性が指定されている <`Location`> 要素ノードのみを返します。 述語が、特定の空のシーケンスを返すかどうかは <`Location`>、ワーク センターの場所が結果に返されません。  
   
-2.  値のみできます xs:integer、xs:Boolean、またはノードの述語\*です。 ノードの\*述語を任意のノードがある場合は True および False 空のシーケンスを評価します。 double 型や float 型など、他の数値型では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果の整数がコンテキストの位置の値と同じ場合にのみ、True になります。 唯一の整数リテラル値も、および**last()**関数が 1 にフィルター処理されたステップ式の基数を減らします。  
+2.  値のみできます xs:integer、xs:Boolean、またはノードの述語\*です。 ノードの\*述語を任意のノードがある場合は True および False 空のシーケンスを評価します。 double 型や float 型など、他の数値型では、静的な型指定エラーが生成されます。 式の述語の真偽値は、結果の整数がコンテキストの位置の値と同じ場合にのみ、True になります。 唯一の整数リテラル値も、および**last()** 関数が 1 にフィルター処理されたステップ式の基数を減らします。  
   
      たとえば、次のクエリは、3 番目の子要素ノードを取得します。、<`Features`> 要素。  
   
@@ -226,9 +226,9 @@ WHERE CatalogDescription.exist('
   
 -   WHERE 句を指定します、 [exist() メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)です。  
   
--   内のパス式、 **exist()**メソッドは、2 番目のステップで述語を指定します。 述語式が少なくとも 1 つの機能のシーケンスを返す場合、この述語式の真偽値は True になります。 この場合、ため、 **exist()**メソッドが True を返す、ProductModelID が返されます。  
+-   内のパス式、 **exist()** メソッドは、2 番目のステップで述語を指定します。 述語式が少なくとも 1 つの機能のシーケンスを返す場合、この述語式の真偽値は True になります。 この場合、ため、 **exist()** メソッドが True を返す、ProductModelID が返されます。  
   
 ## <a name="static-typing-and-predicate-filters"></a>静的な型指定フィルターおよび述語フィルター  
- 述語は、静的に推定される式の型にも影響する場合があります。 整数リテラル値、および**last()**関数は、多くても 1 つのフィルター処理されたステップ式の基数を減らします。  
+ 述語は、静的に推定される式の型にも影響する場合があります。 整数リテラル値、および**last()** 関数は、多くても 1 つのフィルター処理されたステップ式の基数を減らします。  
   
   

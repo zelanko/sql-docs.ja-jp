@@ -2,7 +2,7 @@
 title: 選択して、テスト (SybaseToSQL) にオブジェクトの構成 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 26d6e9d0a07ddc32f20c80f3d0d476131721d969
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>選択して、テスト (SybaseToSQL) にオブジェクトの構成
 この手順では、テスト、およびプロシージャの関数の出力パラメーターと関数の戻り値を比較するための設定を構成するオブジェクトを選択します。  
@@ -69,7 +69,7 @@ SSMA テスターによってサポートされないテスト用に選択され
   
 -   選択した場合**時刻のみを比較**日付の部分は無視されます。  
   
--   選択した場合**(ミリ秒) を無視する**結果は、秒までと比較されます。  
+-   選択した場合 **(ミリ秒) を無視する**結果は、秒までと比較されます。  
   
 -   選択した場合**無視日時 (ミリ秒)**、1 秒あたりの時間部分でのみ比較し、無視の小数部になります。  
   

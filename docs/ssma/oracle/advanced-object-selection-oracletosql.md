@@ -1,27 +1,28 @@
 ---
-title: "オブジェクトの選択 (OracleToSQL) 高度な |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: オブジェクトの選択 (OracleToSQL) 高度な |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: 967e803d7827b987cd6b457b9e6737138fec144d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6c68f7a3442e0f53aa688f9695e62e73d00f22a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高度なオブジェクトの選択 (OracleToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 このダイアログ ボックスを使用する前に、スキーマを変換するか、プロジェクトを保存してすべてのメタデータを読み込む SSMA を強制することができます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **すべての項目をチェックします。**  
 すべての項目の横にあるチェック マークを追加します。 これらの項目は、メタデータ エクスプ ローラーで、すぐに選択されます。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 **読み込まれただけの項目が表示されます。**  
 カテゴリまたは項目の表示を切り替えます。 このボタンを選択すると、SSMA は、フィルター条件や以前に読み込まれたものと一致するすべての項目を示します。 このボタンを選択しない場合は、SSMA はカテゴリ フォルダーを示しています。  
   
-**Assert**  
+**フィルター**  
 項目をフィルター処理に使用する文字列を入力します。 たとえば、項目名に、"ID"、文字列が含まれる使用可能なすべての項目を検索を入力文字列"ID"、**フィルター**ボックス。  
   
 項目がフィルター条件に一致する場合は、文字列を入力すると、カテゴリまたは項目は表示されます。 一致する項目を表示するには、ことをお勧めをクリックすること、**読み込まれた項目のみを表示**ボタンをクリックします。  

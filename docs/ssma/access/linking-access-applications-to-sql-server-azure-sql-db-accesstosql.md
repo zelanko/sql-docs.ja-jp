@@ -1,15 +1,16 @@
 ---
-title: "SQL Server - Azure SQL DB への Access アプリケーションのリンク |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: SQL Server - Azure SQL DB への Access アプリケーションのリンク |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server - Azure SQL DB (AccessToSQL) へのリンクの Access アプリケーション
 既存の Access アプリケーションを使用するかどうかは[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行後に元の Access テーブルをリンクすることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のテーブルです。 Access データベースが変更のリンクのクエリ、フォーム、レポート、およびデータ アクセス ページ内のデータを使用するように、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Access データベース内のデータではなく SQL Azure データベース。  
@@ -57,7 +58,7 @@ Access テーブルをリンクすると、[!INCLUDE[ssNoVersion](../../includes
   
 2.  右クリック**テーブル**、し、**リンク**です。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) のアクセスは、元の Access テーブルをバックアップし、リンク テーブルを作成します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) のアクセスは、元の Access テーブルをバックアップし、リンク テーブルを作成します。  
   
 テーブルをリンクした後に小さなリンク アイコンが SSMA 内のテーブルが表示されます。 Access では、テーブルは「リンク」アイコンが含まれ、それを指す矢印の付いた地球が表示されます。  
   
@@ -110,13 +111,13 @@ Access のテーブルからのリンクを解除するときに、[!INCLUDE[ssN
 次のセクションへのアクセスからデータベースを移行した後に既存の Access アプリケーションで発生したリストの問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure し、その原因と解決策と共に、テーブルをリンクします。  
   
 ### <a name="slow-performance-with-linked-tables"></a>リンク テーブルのパフォーマンスの低下  
-**原因:**いくつかのクエリ遅くなる可能性がアップサイジング後に、次の理由。  
+**原因:** いくつかのクエリ遅くなる可能性がアップサイジング後に、次の理由。  
   
 -   アプリケーションに存在しない機能に依存して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure は、これにより、SELECT クエリを実行するには、ローカル テーブルのプルダウン Jet します。  
   
 -   更新または多くの行を削除するクエリは、行ごとに、Jet によって、パラメーター化されたクエリとして送信されます。  
   
-**解決方法:**パススルー クエリ、ストアド プロシージャ、またはビューに、実行速度の遅いクエリを変換します。 パススルー クエリに変換するには、次の問題があります。  
+**解決方法:** パススルー クエリ、ストアド プロシージャ、またはビューに、実行速度の遅いクエリを変換します。 パススルー クエリに変換するには、次の問題があります。  
   
 -   パススルー クエリを変更することはできません。 クエリの結果を変更または新しいレコードを追加する行う必要があります、別の方法でなど、明示的な**変更**または**追加**クエリにバインドされているフォームのボタンです。  
   
@@ -134,33 +135,33 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>新しいレコードは使用できません。  
-**原因:**にレコードを追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または VBA を使用して、テーブルの一意のインデックスのフィールドには既定値とを割り当てない値のフィールドに新しいレコードが表示されない内のテーブルを再び開くまで SQL Azure テーブル[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 新しいレコードから値を取得しようとすると、次のエラー メッセージが表示されます。  
+**原因:** にレコードを追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または VBA を使用して、テーブルの一意のインデックスのフィールドには既定値とを割り当てない値のフィールドに新しいレコードが表示されない内のテーブルを再び開くまで SQL Azure テーブル[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 新しいレコードから値を取得しようとすると、次のエラー メッセージが表示されます。  
   
 `Run-time error '3167' Record is deleted.`  
   
-**解決方法:**を開いたとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または VBA コードを使用してテーブルでは、SQL Azure、`dbSeeChanges`例を次のオプション。  
+**解決方法:** を開いたとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または VBA コードを使用してテーブルでは、SQL Azure、`dbSeeChanges`例を次のオプション。  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>移行後に、いくつかのクエリはユーザー許可しない、新しいレコードを追加するには  
-**原因:**クエリに一意のインデックスに含まれているすべての列が含まれていない場合、クエリを使用して新しい値を追加することはできません。  
+**原因:** クエリに一意のインデックスに含まれているすべての列が含まれていない場合、クエリを使用して新しい値を追加することはできません。  
   
-**解決方法:**に少なくとも 1 つの一意なインデックスに含まれるすべての列がクエリの一部であることを確認します。  
+**解決方法:** に少なくとも 1 つの一意なインデックスに含まれるすべての列がクエリの一部であることを確認します。  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>アクセス権を持つリンク テーブルのスキーマを変更することはできません。  
-**原因:**後のデータの移行とリンク テーブルの場合は、ユーザーがアクセスにあるテーブルのスキーマを変更できません。  
+**原因:** 後のデータの移行とリンク テーブルの場合は、ユーザーがアクセスにあるテーブルのスキーマを変更できません。  
   
-**解決方法:**を使用して、テーブル スキーマを変更[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、および Access でのリンクを更新します。  
+**解決方法:** を使用して、テーブル スキーマを変更[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、および Access でのリンクを更新します。  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>移行した後、ハイパーリンク機能が失われたデータ  
-**原因:**移行した後、データ列内のハイパーリンクが機能しなくなり、単純な**nvarchar (max)**列です。  
+**原因:** 移行した後、データ列内のハイパーリンクが機能しなくなり、単純な**nvarchar (max)** 列です。  
   
-**解決方法:**なし。  
+**解決方法:** なし。  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>アクセスでは、一部の SQL Server データ型はサポートされていません。  
-**原因:**後で更新する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Access によってサポートされていないデータ型を格納する SQL Azure のテーブル アクセスで、テーブルを開くことはできません。  
+**原因:** 後で更新する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Access によってサポートされていないデータ型を格納する SQL Azure のテーブル アクセスで、テーブルを開くことはできません。  
   
-**解決方法:**サポートされているデータ型を持つ行のみを返すアクセス クエリを定義することができます。  
+**解決方法:** サポートされているデータ型を持つ行のみを返すアクセス クエリを定義することができます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server へのアクセス データベースの移行](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  

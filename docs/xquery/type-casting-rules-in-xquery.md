@@ -1,16 +1,16 @@
 ---
-title: "XQuery のキャストの規則の種類 |Microsoft ドキュメント"
-ms.custom: 
+title: XQuery のキャストの規則の種類 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - cast as operator
 - implicit casting
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6c4ea6e7fc0089fa711f3fd0e6db0ed5088b0d2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8770344d83484dc8d515b9a6576bdf83cb3aec98
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,13 +143,13 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>暗黙のキャスト  
- 暗黙のキャストを使用できるのは、数値型と型指定されていないアトミック型だけです。 たとえば、次**min()**関数が 2 つの値の最小値を返します。  
+ 暗黙のキャストを使用できるのは、数値型と型指定されていないアトミック型だけです。 たとえば、次**min()** 関数が 2 つの値の最小値を返します。  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- この例では、2 つの値に渡して、XQuery **min()**関数型が異なります。 暗黙的な変換が実行されるため、ここで**整数**に型が昇格**二重**と 2 つの**二重**値と比較されます。  
+ この例では、2 つの値に渡して、XQuery **min()** 関数型が異なります。 暗黙的な変換が実行されるため、ここで**整数**に型が昇格**二重**と 2 つの**二重**値と比較されます。  
   
  この例のような型の上位変換は、次の規則に従って行われます。  
   

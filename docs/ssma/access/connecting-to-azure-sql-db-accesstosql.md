@@ -1,6 +1,6 @@
 ---
 title: Azure SQL DB (AccessToSQL) への接続 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5bf0afdc08b67a73bc4972ce3d01ee79ebdd925
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c78aa196d878274d2071a731ada132cb47ff9d0d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL) に接続します。
 Access データベースを SQL Azure に移行するには、SQL Azure のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Azure のインスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA では、SQL Azure のインスタンスについてに接続しているがパスワードを保存しない情報を格納します。  
@@ -74,7 +74,7 @@ SQL Azure への接続に使用されるアカウントには、アカウント�
   
 6.  SSMA は、SQL Azure に暗号化された接続をお勧めします。  
   
-7.  **[接続]**をクリックします。  
+7.  **[接続]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA のアクセスがへの接続をサポートしていません**マスター** SQL Azure でのデータベースです。  

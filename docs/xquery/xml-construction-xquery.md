@@ -2,8 +2,8 @@
 title: XML の構築 (XQuery) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 542ab45094806cd59c6f80038e38b73c1efa338f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 次に示すクエリは先ほどのクエリと似ています。 ただし、中かっこで式を指定します、 **data()**のアトミック値を取得する関数、<`root`> 要素では、構築された要素に代入し、<`e`>。  
+ 次に示すクエリは先ほどのクエリと似ています。 ただし、中かっこで式を指定します、 **data()** のアトミック値を取得する関数、<`root`> 要素では、構築された要素に代入し、<`e`>。  
   
 ```  
 DECLARE @x xml;  
@@ -251,7 +251,7 @@ This is product model catalog description.
   
  属性を構築するときに、中かっこ内で式を使用して属性値を指定できます。 この場合、式の結果が属性値として返されます。  
   
- 次の例で、 **data()**関数は必須ではありません。 式の値は、属性に割り当てているので**data()**が指定された式の型指定された値を取得する暗黙的に適用します。  
+ 次の例で、 **data()** 関数は必須ではありません。 式の値は、属性に割り当てているので**data()** が指定された式の型指定された値を取得する暗黙的に適用します。  
   
 ```  
 DECLARE @x xml;  
@@ -353,7 +353,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     適用する場合、 **data()**関数、クエリは、式のアトミック値を取得するので`/x`、これは、文字列と連結されします。 アトミック値のシーケンスを次に示します。  
+     適用する場合、 **data()** 関数、クエリは、式のアトミック値を取得するので`/x`、これは、文字列と連結されします。 アトミック値のシーケンスを次に示します。  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   

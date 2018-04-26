@@ -1,16 +1,16 @@
 ---
-title: "パス式の構文の省略形を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: パス式の構文の省略形を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - axis step [XQuery]
 - abbreviated syntax [XQuery]
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2882ee4082e29ce4d4ad41f3347feb7eca4a0a46
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 214adb3b2c59faafb2ac3734c79a1f3a00c30259
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>パス式の省略構文の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   すべての例で[xquery パス式について](../xquery/path-expressions-xquery.md)パス式の省略構文を使用します。 パス式の軸ステップの省略構文では、軸名とノード テストを 2 つのコロン (::) で区切り、その後にステップ修飾子を指定します。ステップ修飾子は、指定しなくてもかまいません。  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 child::ProductDescription[attribute::ProductModelID=19]  
@@ -42,11 +42,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  XQuery は、パス式で次の省略をサポートしています。  
   
--   **子**軸は既定の軸です。 したがって、**子::**軸は、式のステップから省略できます。 たとえば、`/child::ProductDescription/child::Summary`として記述できます`/ProductDescription/Summary`です。  
+-   **子**軸は既定の軸です。 したがって、**子::** 軸は、式のステップから省略できます。 たとえば、`/child::ProductDescription/child::Summary`として記述できます`/ProductDescription/Summary`です。  
   
 -   **属性**と軸を短縮できる@です。 たとえば、`/child::ProductDescription[attribute::ProductModelID=10]`として記述できます`/ProudctDescription[@ProductModelID=10]`です。  
   
--   A **/descendant-or-self::node()/**と短縮できる//です。 たとえば、`/descendant-or-self::node()/child::act:telephoneNumber`として記述できます`//act:telephoneNumber`です。  
+-   A **/descendant-or-self::node()/** と短縮できる//です。 たとえば、`/descendant-or-self::node()/child::act:telephoneNumber`として記述できます`//act:telephoneNumber`です。  
   
      上記のクエリは、Contact テーブルの AdditionalContactInfo 列に格納されているすべての電話番号を取得しています。 AdditionalContactInfo のスキーマが方法で定義されている、 \<telephoneNumber > 要素は、ドキュメントのどこに表示できます。 したがって、すべての電話番号を取得するには、ドキュメント内のすべてのノードを検索する必要があります。 検索は、ドキュメントのルートから開始され、続いてすべての子孫ノードが検索されます。  
   
@@ -65,7 +65,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      省略形の構文では、パス式に置き換えた場合`//act:telephoneNumber`、同じ結果を受信します。  
   
--   **Self::node()**の手順では、1 つのドット (.) を省略できます。 ただし、ドットは同等またはで交換可能で、 **self::node()**です。  
+-   **Self::node()** の手順では、1 つのドット (.) を省略できます。 ただし、ドットは同等またはで交換可能で、 **self::node()** です。  
   
      たとえば、次のクエリでは、ドットを使用して、ノードではなく値を表しています。  
   
@@ -73,6 +73,6 @@ child::ProductDescription[attribute::ProductModelID=19]
     ("abc", "cde")[. > "b"]  
     ```  
   
--   **Parent::node()**の手順では、2 つのドット (.) を省略できます。  
+-   **Parent::node()** の手順では、2 つのドット (.) を省略できます。  
   
   

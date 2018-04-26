@@ -1,24 +1,24 @@
 ---
-title: "Linux 環境の SQL Server 可用性の基本 |Microsoft ドキュメント"
-description: 
+title: Linux 環境の SQL Server 可用性の基本 |Microsoft ドキュメント
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e5dfaf9932664ec06d6c3554e42c2f7d3fe1bfff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 展開用の SQL Server 可用性の基礎
 
@@ -102,7 +102,7 @@ Windows と同様に、Linux ディストリビューション組み込みのフ
 | 3121        | TCP      | ペース – ペース リモート ノードがあるかどうかに必要な                                                                    |
 | 3260        | TCP      | iSCSI イニシエーター (使用する場合) – は内で変更されることができます`/etc/iscsi/iscsid.config`(RHEL)、iSCSI ターゲットのポートに一致する必要がありますが、 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -既定のポートは、AG エンドポイントの使用エンドポイントを作成するときに変更することができます。                                |
-| 5403        | TCP      | ペース                                                                                                                   |
+| 5403        | TCP      | Pacemaker                                                                                                                   |
 | 5404        | UDP      | UDP マルチキャストを使用する場合、Corosync によって必要 – ペース                                                                     |
 | 5405        | UDP      | ペース – Corosync で必要                                                                                            |
 | 21064       | TCP      | DLM を使用してリソースに必要な – ペース                                                                                 |

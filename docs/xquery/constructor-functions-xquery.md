@@ -1,16 +1,16 @@
 ---
-title: "コンス トラクター関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: コンス トラクター関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1550a35b87b3895f6d9e8074ede8ff78a9b9ef7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constructor-functions-xquery"></a>コンストラクター関数 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  
  この例ではサンプルの XML ドキュメントが最初に割り当てられた、 **xml**型の変数です。 このドキュメントには 3 つのサンプル <`ProductDescription`> 要素が含まれます。各要素には <`DateCreated`> 子要素が含まれています。  
   
- 次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較の目的で、クエリを使用して、 **xs:dateTime()**コンス トラクター関数を日付を入力します。  
+ 次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較の目的で、クエリを使用して、 **xs:dateTime()** コンス トラクター関数を日付を入力します。  
   
 ```  
 declare @x xml  
@@ -184,7 +184,7 @@ select @x.query('
   
 -   FOR ... WHERE ループ構造を使用して、取得、 \<ProductDescription > WHERE 句で指定された条件を満たす要素。  
   
--   **DateTime()**コンス トラクター関数を構築するために使用**dateTime**適切に比較できるように、値を入力します。  
+-   **DateTime()** コンス トラクター関数を構築するために使用**dateTime**適切に比較できるように、値を入力します。  
   
 -   この後、クエリは結果の XML を出力します。 一連の属性を構成しているため、XML の構造にコンマとかっこが使用されています。  
   
@@ -197,7 +197,7 @@ select @x.query('
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)   
+ [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

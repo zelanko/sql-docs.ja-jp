@@ -2,7 +2,7 @@
 title: プロジェクトの設定 (変換) (SybaseToSQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ffffc3badb8d65d5809e293e0c1ffb526409e4a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の構文。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/06/2018
 **@@ERROR**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure と ASE、別のエラー コードを使用します。  
   
-参照を検出したときに、SSMA が出力またはエラー一覧 ペインに表示されるメッセージ (警告またはエラー) の種類を指定するこの設定を使用して**@@ERROR**  ASE コードにします。  
+参照を検出したときに、SSMA が出力またはエラー一覧 ペインに表示されるメッセージ (警告またはエラー) の種類を指定するこの設定を使用して **@@ERROR**  ASE コードにします。  
   
 -   選択した場合**変換し、警告マーク**SSMA は、ステートメントに変換され、警告のコメントでマークを付けます。  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 04/06/2018
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**変換し、警告マーク  
+**既定/Optimistic モード:** 変換し、警告マーク  
   
-**フル モード:**エラーでマーク  
+**フル モード:** エラーでマーク  
   
 **LIKE 演算子の変換**  
 Sybase ASE 動作と一致するオペランドと同様に変換するかどうかを指定します。 Sybase が like パターンの末尾の空白をトリミングすることです。 回避策では、最大有効桁数を持つ固定長データ型に右の式のキャストを作成します。  
@@ -81,13 +81,13 @@ Sybase ASE 動作と一致するオペランドと同様に変換するかどう
 **NULL の連結**  
 この設定は、文字列の連結で NULL に変換する方法を指定します。 この特定の設定には、次のオプションを設定できます。  
   
--   **ISNULL 関数でラップ:**かどうかは、このオプションが設定されている ISNULL(string_expression) ですべての非定数の連結で ' string_expression' をラップするは、null 値は空の文字列に置き換えられます。  
+-   **ISNULL 関数でラップ:** かどうかは、このオプションが設定されている ISNULL(string_expression) ですべての非定数の連結で ' string_expression' をラップするは、null 値は空の文字列に置き換えられます。  
   
 -   **現在の構文を保持します。**  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**現在の構文を保持  
+**既定/Optimistic モード:** 現在の構文を保持  
   
 **フル モード:** ISNULL 関数でラップ  
   
@@ -102,9 +102,9 @@ Sybase ASE 動作と一致するオペランドと同様に変換するかどう
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**現在の構文を保持  
+**既定/Optimistic モード:** 現在の構文を保持  
   
-**フル モード:**領域を持つすべての文字列式を置換  
+**フル モード:** 領域を持つすべての文字列式を置換  
   
 **変換とキャストのバイナリ文字列変換**  
 バイナリ値の数値への変換は、さまざまなプラットフォームで異なる値を返すことができます。 たとえば、x86 のプロセッサ、変換 (整数、0x00000100) を返します 65536 ASE 内およびで 256[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 ASE には、バイト順序に応じて異なる値も返されます。  
@@ -119,11 +119,11 @@ Sybase ASE 動作と一致するオペランドと同様に変換するかどう
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定のモード:**変換し、警告マーク  
+**既定のモード:** 変換し、警告マーク  
   
-**オプティミスティック モード:**単純変換  
+**オプティミスティック モード:** 単純変換  
   
-**フル モード:**変換し、修正  
+**フル モード:** 変換し、修正  
   
 **動的 SQL**  
 この設定を使用すると、ASE コードで動的な SQL を検出したときに、SSMA が出力またはエラー一覧 ペインに表示されるメッセージ (警告またはエラー) の種類を指定します。  
@@ -134,9 +134,9 @@ Sybase ASE 動作と一致するオペランドと同様に変換するかどう
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**変換し、警告マーク  
+**既定/Optimistic モード:** 変換し、警告マーク  
   
-**フル モード:**エラーでマーク  
+**フル モード:** エラーでマーク  
   
 **等しいかどうかチェック変換**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/場合は、ANSI_NULLS の設定では、SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/等値比較に null 値が含まれている場合、SQL Azure は UNKNOWN を返します。 ANSI_NULLS がの場合は、null 値が格納された等価比較 true を返します比較対象の列と式、または 2 つの式の両方が null です。 同様に動作する比較 (ANSINULL OFF) の既定 Sybase ASE 等値による[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ANSI_NULLS OFF を使用した SQL Azure です。  
@@ -147,9 +147,9 @@ Sybase ASE 動作と一致するオペランドと同様に変換するかどう
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**単純変換  
+**既定/Optimistic モード:** 単純変換  
   
-**フル モード:**検討する NULL 値  
+**フル モード:** 検討する NULL 値  
   
 **書式指定文字列**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure をサポートしていません、 *format_string* PRINT ステートメントおよび RAISERROR ステートメントの引数。 *Format_string*文字列に直接置き換え可能パラメーターを設定し、実行時にパラメーターを置換変数がサポートされています。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]文字列リテラル、または変数を使用して構築された文字列を使用して、完全な文字列が必要です。 詳細については、次を参照してください。、"印刷 ([!INCLUDE[tsql](../../includes/tsql_md.md)])」の「[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
@@ -232,9 +232,9 @@ SSMA を検出した場合、 *format_string*引数か、変数を使用して�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**新しい文字列を作成します。  
+**既定/Optimistic モード:** 新しい文字列を作成します。  
   
-**フル モード:**新しい変数を作成します。  
+**フル モード:** 新しい変数を作成します。  
   
 **Timestamp 列に明示的な値を挿入します。**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure では、timestamp 列に明示的な値を挿入することはできません。  
@@ -247,7 +247,7 @@ SSMA を検出した場合、 *format_string*引数か、変数を使用して�
   
 **既定/Optimistic モード:** [除外] 列  
   
-**フル モード:**エラーでマーク  
+**フル モード:** エラーでマーク  
   
 **プロシージャで定義されている一時オブジェクトの保存**  
 この設定は、変換中に、手順で表示される一時的なオブジェクトの定義を基になるメタデータに保存するかかどうかを指定します。  
@@ -258,7 +258,7 @@ SSMA を検出した場合、 *format_string*引数か、変数を使用して�
   
 **既定/オプティミスティック モード:** [はい]  
   
-**フル モード:**なし  
+**フル モード:** なし  
   
 **プロキシ テーブルの変換**  
 ASE プロキシ テーブルに変換されますを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/または SQL Azure テーブルは変換されないと、コードのエラーのコメントが付いています。  
@@ -269,7 +269,7 @@ ASE プロキシ テーブルに変換されますを指定します[!INCLUDE[ss
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:**エラーでマーク  
+**既定/Optimistic/フル モード:** エラーでマーク  
   
 **RAISERROR の基本メッセージ数**  
 ASE ユーザー メッセージは、各データベースに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ユーザー メッセージが集中的に格納されで利用できる、 **sys.messages**カタログ ビューです。 さらに ASE ユーザー メッセージ開始 20000 が[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エラー メッセージが 50001 から開始します。  
@@ -303,9 +303,9 @@ ASE ユーザー メッセージは、各データベースに格納されます
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**変換し、警告マーク  
+**既定/Optimistic モード:** 変換し、警告マーク  
   
-**フル モード:**エラーでマーク  
+**フル モード:** エラーでマーク  
   
 **未解決の識別子**  
 この設定を使用すると、識別子を解決できない場合に、SSMA が出力またはエラー一覧 ペインに表示されるメッセージ (警告またはエラー) の種類を指定します。  
@@ -316,9 +316,9 @@ ASE ユーザー メッセージは、各データベースに格納されます
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**変換し、警告マーク  
+**既定/Optimistic モード:** 変換し、警告マーク  
   
-**フル モード:**エラーでマーク  
+**フル モード:** エラーでマーク  
   
 ## <a name="system-function-options"></a>システム関数のオプション  
 **CHARINDEX 関数**  
@@ -330,7 +330,7 @@ ASE のすべての入力式が NULL である場合にのみ、CHARINDEX は NU
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**現在の構文を保持  
+**既定/Optimistic モード:** 現在の構文を保持  
   
 **フル モード:** Replace 関数  
   
@@ -343,7 +343,7 @@ ASE のすべての入力式が NULL である場合にのみ、CHARINDEX は NU
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**現在の構文を保持  
+**既定/Optimistic モード:** 現在の構文を保持  
   
 **フル モード:** Replace 関数  
   
@@ -354,7 +354,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
   
 -   その INDEX_COL が発生するたびに、エラー メッセージを表示する **エラーでマーク**です。 SSMA は、関数への参照は変換されませんし、エラー コメントを指定してステートメントをマークします。  
   
-**既定/Optimistic/フル モード:**エラーでマーク  
+**既定/Optimistic/フル モード:** エラーでマーク  
   
 **INDEX_COLORDER 関数**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure の INDEX_COLORDER システム関数ではありません。  
@@ -365,7 +365,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:**エラーでマーク  
+**既定/Optimistic/フル モード:** エラーでマーク  
   
 **LEFT と RIGHT 関数**  
 左と右関数 Sybase 内が負の値の長さのパラメーターの動作が異なる。  
@@ -376,7 +376,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**現在の構文を保持  
+**既定/Optimistic モード:** 現在の構文を保持  
   
 **フル モード:** Replace 関数  
   
@@ -392,7 +392,7 @@ ASE を省略可能なサポート*user_id* INDEX_COL 関数に渡す引数た�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:**エラーでマーク  
+**既定/Optimistic/フル モード:** エラーでマーク  
   
 **PATINDEX 関数**  
 Sybase ASE 動作と一致する PATINDEX 関数に変換するかどうかを指定します。 Sybase が、検索パターンに末尾の空白をトリミングすることです。 回避策では、固定長データが最大有効桁数を持つ型し、パターンを検索する rtrim 関数を適用する値の式のキャストを作成します。  
@@ -403,9 +403,9 @@ Sybase ASE 動作と一致する PATINDEX 関数に変換するかどうかを�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**使用しないでください  
+**既定/Optimistic モード:** 使用しないでください  
   
-**フル モード:**使用  
+**フル モード:** 使用  
   
 **REPLICATE 関数**  
 REPLICATE 関数では、文字列の指定した回数だけ繰り返されます。 文字列、ゼロ回繰り返し、指定した場合は ASE で、結果が null です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/SQL Azure、結果は、空の文字列。  
@@ -438,7 +438,7 @@ ASE、関数で`SUBSTRING(expression, start, length)`式の文字数より大き
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**現在の構文を保持  
+**既定/Optimistic モード:** 現在の構文を保持  
   
 **フル モード:** Replace 関数  
   

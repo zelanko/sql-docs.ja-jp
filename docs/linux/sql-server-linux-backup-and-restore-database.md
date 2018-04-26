@@ -1,25 +1,25 @@
 ---
-title: "バックアップし、Linux 上の SQL Server データベースを復元 |Microsoft ドキュメント"
-description: "バックアップおよび、Linux 上の SQL Server データベースを復元する方法を説明します。"
+title: バックアップし、Linux 上の SQL Server データベースを復元 |Microsoft ドキュメント
+description: バックアップおよび、Linux 上の SQL Server データベースを復元する方法を説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e46a11d935b06f7b2d491c716aa6119dc08f19dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux 上のバックアップと復元の SQL Server データベース
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/13/2018
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-コマンドを実行するときに、SQL Server は、パスワードを求められます。 パスワードを入力した後は、シェルがバックアップの進行状況の結果を返します。 例:
+コマンドを実行するときに、SQL Server は、パスワードを求められます。 パスワードを入力した後は、シェルがバックアップの進行状況の結果を返します。 以下に例を示します。
 
 ```
 Password:
@@ -104,11 +104,11 @@ SQL Server では、データベースのバックアップを完了します。
 
 1. SSMS で、右クリック**データベース** をクリック**データベースの復元しています.**. 
 
-1. **[ソース]** をクリックして**デバイス:**省略記号 (...) をクリックします。
+1. **[ソース]** をクリックして**デバイス:** 省略記号 (...) をクリックします。
 
 1. データベースのバックアップ ファイルを見つけてクリックして**OK**です。 
 
-1. **復元プラン**、バックアップ ファイルと設定を確認します。 **[OK]**をクリックします。 
+1. **復元プラン**、バックアップ ファイルと設定を確認します。 **[OK]** をクリックします。 
 
 1. SQL Server では、データベースを復元します。 
 

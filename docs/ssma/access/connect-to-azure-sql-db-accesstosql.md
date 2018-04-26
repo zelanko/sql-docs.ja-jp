@@ -1,6 +1,6 @@
 ---
 title: Azure SQL DB (AccessToSQL) への接続 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 511c652a221ffb3fe4392dd8f4c365de129efe13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 1b41cc259bb6c25ad4aa9dcea91e98633d9dfdfb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL) への接続します。
 SQL Azure ダイアログ ボックスに接続を使用すると、移行する SQL Azure データベースへの接続します。  
@@ -65,13 +65,13 @@ SSMA は、SQL Azure に暗号化された接続をお勧めします。
   
 2.  データベースが存在しない場合は、次の 2 つのメニュー項目が表示されます。  
   
-    1.  **(データベースが見つかりません)**は無効になっているし、すべての時間がグレーで表示されます。  
+    1.  **(データベースが見つかりません)** は無効になっているし、すべての時間がグレーで表示されます。  
   
     2.  **新しいデータベースを作成**を常が有効な SQL Azure アカウントに新しい azure データベースを作成するユーザーを有効にするとします。 このメニュー項目をクリックすると、次のように作成します。 azure データベース ダイアログ ボックスがデータベースの名前とサイズが存在します。  
   
 3.  データベースの作成時に、これら 2 つのパラメーターを入力として指定します。  
   
-    1.  **データベース名:**データベース名を入力します。  
+    1.  **データベース名:** データベース名を入力します。  
   
     2.  **データベース サイズ:** SQL Azure アカウントで作成する必要のあるデータベースのサイズを選択します。  
   

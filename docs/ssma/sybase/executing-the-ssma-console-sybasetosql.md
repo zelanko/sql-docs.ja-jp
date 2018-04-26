@@ -2,7 +2,7 @@
 title: SSMA コンソール (SybaseToSQL) を実行 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソール (SybaseToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 次のセクションでは、同じを詳しく説明します。  
@@ -123,7 +123,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 > - **参照**コンソールで、UI の機能がサポートされていません。  
 > - 'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)です。  
   
-### <a name="connect-source-database"></a>connect-source-database  
+### <a name="connect-source-database"></a>接続ソース データベース  
 このコマンドは、ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。
   
 ソースへの接続を確立できない場合は、エラーが生成され、さらに実行を停止するコンソール アプリケーション。
@@ -136,7 +136,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
+### <a name="force-load-sourcetarget-database"></a>強制読み込み-ソース/ターゲット-データベース  
 このコマンドは、ソースのメタデータを読み込みますあり、移行プロジェクトをオフラインで作業するために役立ちます。  
   
 ソース/ターゲットへの接続を確立できない場合は、エラーが生成され、さらに実行を停止するコンソール アプリケーション。  
@@ -153,7 +153,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>reconnect-source-database  
+### <a name="reconnect-source-database"></a>再接続ソース データベース  
 このコマンドは、ソース データベースへの再接続が、ソース データベースの接続のコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
 (Re)、ソースとの接続を確立できない場合、エラーが発生し、さらに実行を停止するコンソール アプリケーションです。  
@@ -261,7 +261,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 ## <a name="migration-commands"></a>移行コマンド  
 移行コマンドでは、ターゲット データベース スキーマを送信元スキーマに変換し、対象サーバーにデータを移行します。  
   
-### <a name="convert-schema"></a>convert-schema  
+### <a name="convert-schema"></a>変換とスキーマ  
 このコマンドでは、ソースからターゲット スキーマへのスキーマの変換を実行します。  
   
 このコマンドを実行する前に、ソースまたはターゲット データベースの接続を行わないか、コマンドの実行中にソースまたはターゲットのデータベース サーバーへの接続が失敗する場合、エラーが生成され、コンソール アプリケーションの終了します。  
@@ -382,7 +382,7 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
 > [!NOTE]  
 > 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクト ツリーのルート ノードで概要のみです。  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>マップとスキーマ  
 このコマンドは、ターゲット スキーマへのソース データベースのスキーマのマッピングを提供します。  
   
 -   `source-schema` 移行する送信元スキーマを指定します。  
@@ -403,7 +403,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > 設定の移行コマンドの既定のコンソール出力は、詳細なエラー レポートを作成しないとレポートを 'Full' の出力: ソース オブジェクト ツリーのルート ノードで概要のみです。  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>同期ターゲット  
 このコマンドは、ターゲット データベースで、対象オブジェクトを同期します。  
  
 ソース データベースに対しては、このコマンドを実行する場合は、エラーが発生しました。  
@@ -420,7 +420,7 @@ sql-server-schema="<target-schema>"/>
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗するスクリプト  
   
 -   `report-errors-to:` (省略可能な属性) の同期操作のエラー レポートの場所を指定します。 だけフォルダーのパスを指定すると、ファイル名で**TargetSynchronizationReport.XML**を作成します。  
   
@@ -464,7 +464,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>refresh-from-database  
+### <a name="refresh-from-database"></a>データベースからの更新  
 このコマンドは、データベースからのソース オブジェクトを更新します。  
   
 ターゲット データベースに対してこのコマンドを実行すると、エラーが生成されます。  
@@ -481,7 +481,7 @@ fail-script>" (optional)
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗するスクリプト  
   
 -   `report-errors-to:` 更新操作 (省略可能な属性) のエラー レポートの場所を指定します。 だけフォルダーのパスを指定すると、ファイル名で**SourceDBRefreshReport.XML**を作成します。  
   

@@ -1,32 +1,34 @@
 ---
-title: "SSMA コンソール (OracleToSQL) を実行 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: SSMA コンソール (OracleToSQL) を実行 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54055f1eb840d6c2160ac04f7713e86f05859a28
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA コンソール (OracleToSQL) を実行します。
 Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実行し、SSMA 動作を制御できます。 コンソール アプリケーションは、このセクションで、列挙型として特定の標準的なスクリプト ファイルのコマンドを使用します。  
@@ -36,16 +38,16 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **Command**  
   
---プロジェクトの新規作成  
+create-new-project  
                   : 新しい SSMA プロジェクトを作成します。  
   
 **[スクリプト]**  
   
--   `project-folder`プロジェクトの作成中のフォルダーを示します。  
+-   `project-folder` プロジェクトの作成中のフォルダーを示します。  
   
--   `project-name`プロジェクトの名前を示します。 {文字列}  
+-   `project-name` プロジェクトの名前を示します。 {string}  
   
--   `overwrite-if-exists`省略可能な属性は、既存のプロジェクトを上書きするかかどうかを示します。 {ブール}  
+-   `overwrite-if-exists`省略可能な属性は、既存のプロジェクトを上書きするかかどうかを示します。 {boolean}  
   
 -   `project-type:`省略可能な属性です。 プロジェクトの種類「sql server 2005」プロジェクトつまりまたは「sql server 2008」のプロジェクトまたはプロジェクトの「sql server 2012」または「sql server 2014」プロジェクトまたは"sql azure"を示します。 既定値は、「sql server 2014」です。  
   
@@ -74,9 +76,9 @@ Microsoft で堅牢な一連のスクリプト ファイルのコマンドを実
   
 **[スクリプト]**  
   
--   `project-folder`プロジェクトの作成中のフォルダーを示します。 指定したフォルダーが存在しない場合、コマンドが失敗します。  {文字列}  
+-   `project-folder` プロジェクトの作成中のフォルダーを示します。 指定したフォルダーが存在しない場合、コマンドが失敗します。  {string}  
   
--   `project-name`プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドが失敗します。  {文字列}  
+-   `project-name` プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドが失敗します。  {string}  
   
 **構文例:**  
   
@@ -93,7 +95,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **Command**  
   
-プロジェクトの保存  
+save-project  
   
 移行プロジェクトを保存します。  
   
@@ -106,7 +108,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
 ```  
 **Command**  
   
-閉じるプロジェクト  
+close-project  
   
 移行プロジェクトを閉じます。  
   
@@ -127,7 +129,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 -   **参照**コンソールで、UI の機能がサポートされていません。  
   
--   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
+-   'を作成するスクリプト ファイル' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
   
 **Command**  
   
@@ -167,7 +169,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
   metabase="<source/target>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <force-load>  
@@ -193,7 +195,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
 ```  
 **Command**  
   
-接続先データベース  
+connect-target-database  
   
 -   対象の SQL Server データベースに接続して、メタデータではありませんが、ターゲット データベースの高レベルのメタデータを完全に読み込みます。  
   
@@ -210,7 +212,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
 ```  
 **Command**  
   
-再接続ターゲット データベース  
+reconnect-target-database  
   
 -   ターゲット データベースへの再接続が、接続先データベースのコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
@@ -229,7 +231,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **Command**  
   
--評価-レポートの生成  
+generate-assessment-report  
   
 -   元のデータベースに対して評価レポートを生成します。  
   
@@ -239,25 +241,25 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **[スクリプト]**  
   
--   `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `object-name:`評価レポートの生成 (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) の対象オブジェクトを指定します。  
+-   `object-name:` 評価レポートの生成 (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) の対象オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+-   `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**AssessmentReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -280,7 +282,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <generate-assessment-report  
@@ -313,25 +315,25 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **[スクリプト]**  
   
--   `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `object-name:`スキーマ (持てる indivdual オブジェクト名またはグループのオブジェクト名) に変換する対象とソース オブジェクトを指定します。  
+-   `object-name:` スキーマ (持てる indivdual オブジェクト名またはグループのオブジェクト名) に変換する対象とソース オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+-   `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**SchemaConversionReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -354,7 +356,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <convert-schema  
@@ -377,25 +379,25 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **[スクリプト]**  
   
--   `conversion-report-folder:`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `object-name:`移行すると見なされるソース オブジェクトを指定します (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) データ。  
+-   `object-name:` 移行すると見なされるソース オブジェクトを指定します (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) データ。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `conversion-report-overwrite:`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートを生成するパスを指定します。  
+-   `write-summary-report-to:` 概要レポートを生成するパスを指定します。  
   
     フォルダー パスが示されているだけの場合、ファイルの名前で**DataMigrationReport&lt;n&gt;です。XML**を作成します。 (省略可能な属性)  
   
     レポートの作成には、さらに 2 つのサブ カテゴリがあります。  
   
-    -   `report-errors`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `report-errors` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
-    -   `verbose`("true または false"、既定値は"false"(省略可能な属性) として = =)  
+    -   `verbose` ("true または false"、既定値は"false"(省略可能な属性) として = =)  
   
 **構文例:**  
   
@@ -422,7 +424,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 </migrate-data>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <migrate-data  
@@ -451,9 +453,9 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **[スクリプト]**  
   
--   `source-schema`移行する送信元スキーマを指定します。  
+-   `source-schema` 移行する送信元スキーマを指定します。  
   
--   `sql-server-schema`移行させたい場所、ターゲット スキーマを指定します。  
+-   `sql-server-schema` 移行させたい場所、ターゲット スキーマを指定します。  
   
 **構文例:**  
   
@@ -480,19 +482,19 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **[スクリプト]**  
   
--   `object-name:`ターゲット データベース (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) と同期するためと見なされるターゲット オブジェクトを指定します。  
+-   `object-name:` ターゲット データベース (持てる indivdual オブジェクト名またはグループ オブジェクトの名前) と同期するためと見なされるターゲット オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `on-error:`同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
+-   `on-error:` 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
   
-    -   警告としてレポートの合計  
+    -   report-total-as-warning  
   
-    -   レポートの各-として-警告  
+    -   report-each-as-warning  
   
     -   失敗するスクリプト  
   
--   `report-errors-to:`(省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
+-   `report-errors-to:` (省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
   
 **構文例:**  
   
@@ -511,7 +513,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +522,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
    object-type="<object-category>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <synchronize-target>  
@@ -545,19 +547,19 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 コマンド ライン パラメーターとして 1 つまたはいくつかのメタベース ノードが必要です。  
   
--   `object-name:`(そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前)、転送元データベースから更新する場合と見なされるソース オブジェクトを指定します。  
+-   `object-name:` (そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前)、転送元データベースから更新する場合と見なされるソース オブジェクトを指定します。  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `on-error:`更新エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
+-   `on-error:` 更新エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時に使用できるオプションは:  
   
-    -   警告としてレポートの合計  
+    -   report-total-as-warning  
   
-    -   レポートの各-として-警告  
+    -   report-each-as-warning  
   
     -   失敗するスクリプト  
   
--   `report-errors-to:`エラー レポートの場所を指定します (省略可能な属性) の更新操作だけフォルダーのパスを指定すると、し、ファイル名で**SourceDBRefreshReport.XML**を作成します。  
+-   `report-errors-to:` エラー レポートの場所を指定します (省略可能な属性) の更新操作だけフォルダーのパスを指定すると、し、ファイル名で**SourceDBRefreshReport.XML**を作成します。  
   
 **構文例:**  
   
@@ -576,7 +578,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +587,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
    object-type="<object-category>"/>  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <refresh-from-database>  
@@ -600,7 +602,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 **Command**  
   
--スクリプトとして保存  
+save-as-script  
   
 オブジェクトのスクリプトと示されているファイルを保存するために使用メタベース = target、どこでおスクリプトを取得し、実行、同じ対象のデータベースに同期コマンドには、このです。  
   
@@ -608,15 +610,15 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 コマンド ライン パラメーターとして 1 つまたはいくつかのメタベース ノードが必要です。  
   
--   `object-name:`あるスクリプトが保存されるオブジェクトを指定します。 (そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前)  
+-   `object-name:` あるスクリプトが保存されるオブジェクトを指定します。 (そのことがある個々 のオブジェクト名またはグループ オブジェクトの名前)  
   
--   `object-type:`(オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
+-   `object-type:` (オブジェクトのカテゴリが指定した場合、オブジェクトの種類は"category")、オブジェクト名属性で指定されたオブジェクトの種類を指定します。  
   
--   `metabase:`指定するかどうか、このソースか、メタベースを対象します。  
+-   `metabase:` 指定するかどうか、このソースか、メタベースを対象します。  
   
--   `destination:`パスまたはスクリプトが保存されるファイル名が指定されていない場合、ファイル名形式 (object_name 属性値) .out でフォルダーを指定します  
+-   `destination:` パスまたはスクリプトが保存されるファイル名が指定されていない場合、ファイル名形式 (object_name 属性値) .out でフォルダーを指定します  
   
--   `overwrite:`true の場合、上書きされます同じファイル名が存在しない場合。 値 (真/偽) 持つことができます。  
+-   `overwrite:` true の場合、上書きされます同じファイル名が存在しない場合。 値 (真/偽) 持つことができます。  
   
 **構文例:**  
   
@@ -635,7 +637,7 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
   
 />  
 ```  
-内の複数の  
+または  
   
 ```xml  
 <save-as-script  
@@ -652,27 +654,27 @@ Oracle のコンソール アプリケーションの SSMA では、旧バージ
 ```  
 **Command**  
   
-sql ステートメントの変換  
+convert-sql-statement  
   
--   `context`スキーマ名を指定します。  
+-   `context` スキーマ名を指定します。  
   
--   `destination`ファイルに出力を保存するかどうかを指定します。  
+-   `destination` ファイルに出力を保存するかどうかを指定します。  
   
     この属性が指定されていない場合、変換された T-SQL ステートメントは、コンソールに表示されます。 (省略可能な属性)  
   
--   `conversion-report-folder`評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
+-   `conversion-report-folder` 評価レポートを格納することができます、フォルダーを指定します。(省略可能な属性)  
   
--   `conversion-report-overwrite`既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
+-   `conversion-report-overwrite` 既に存在する場合は、評価レポート フォルダーを上書きするかどうかを指定します。  
   
     **既定値:** false を指定します。 (省略可能な属性)  
   
--   `write-converted-sql-to`ファイル (または)、変換された T-SQL が格納されるフォルダーのパスを指定します。 組み合わせて、フォルダー パスが指定されている場合、`sql-files`属性に、各ソース ファイルが対応するターゲットの T-SQL でファイルを指定したフォルダーの下に作成します。 組み合わせて、フォルダー パスが指定されている場合、`sql`属性に、変換後の T-SQL はという名前のファイルに書き込まれます。 **Result.out**指定したフォルダーの下。  
+-   `write-converted-sql-to` ファイル (または)、変換された T-SQL が格納されるフォルダーのパスを指定します。 組み合わせて、フォルダー パスが指定されている場合、`sql-files`属性に、各ソース ファイルが対応するターゲットの T-SQL でファイルを指定したフォルダーの下に作成します。 組み合わせて、フォルダー パスが指定されている場合、`sql`属性に、変換後の T-SQL はという名前のファイルに書き込まれます。 **Result.out**指定したフォルダーの下。  
   
--   `sql`変換する、1 つまたは複数のステートメントに Oracle sql ステートメントを指定できる区切りを使用する、「;」  
+-   `sql` 変換する、1 つまたは複数のステートメントに Oracle sql ステートメントを指定できる区切りを使用する、「;」  
   
--   `sql-files`T-SQL コードに変換する必要がある sql ファイルのパスを指定します。  
+-   `sql-files` T-SQL コードに変換する必要がある sql ファイルのパスを指定します。  
   
--   `write-summary-report-to`レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
+-   `write-summary-report-to` レポートを生成するパスを指定します。 フォルダー パスが示されているだけの場合、ファイルの名前で**ConvertSQLReport.XML**を作成します。 (省略可能な属性)  
   
     レポートの作成が viz サブカテゴリの一覧をさらに 2 です。 します。  
   
@@ -711,7 +713,7 @@ sql ステートメントの変換
   
 </convert-sql-statement>  
 ```  
-内の複数の  
+または  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +736,7 @@ sql ステートメントの変換
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-内の複数の  
+または  
   
 ```  
 <convert-sql-statement  
@@ -749,15 +751,15 @@ sql ステートメントの変換
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、次を参照してください。 [SSMA コンソール &#40;OracleToSQL&#41; でのコマンド ライン オプション](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)です。  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールでのコマンド ライン オプション&#40;OracleToSQL&#41; ](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)です。  
   
-サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイル &#40;OracleToSQL&#41; の操作。](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
+サンプル コンソール スクリプト ファイルについては、次を参照してください[サンプル コンソール スクリプト ファイルで作業&#40;OracleToSQL。&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードを管理する &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)です。  
+-   パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)です。  
   
--   レポートの生成に、次を参照してください。[レポートを生成する &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)です。  
+-   レポートの生成に、次を参照してください。[を生成するレポート&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)です。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)です。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)です。  
   

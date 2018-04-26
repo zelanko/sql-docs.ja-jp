@@ -1,25 +1,25 @@
 ---
-title: "構成する SQL Server Always On 可用性グループ Linux での高可用性の |Microsoft ドキュメント"
-description: 
+title: 構成する SQL Server Always On 可用性グループ Linux での高可用性の |Microsoft ドキュメント
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: 90bd5cfea78adc5f73c4f95af34a108d6b953587
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 13d7020ca62a0dc9e81eab8336da86f9e3be7bb7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループ Linux 上の高可用性
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/15/2018
 
 ## <a name="roadmap"></a>ロードマップ
 
-高可用性の Linux サーバーで、可用性グループを作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 次に、手順の概要を説明します。 
+高可用性の Linux サーバーで、可用性グループを作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 手順の概要を以下に説明します。  
 
 1. [次の 3 つのクラスター サーバーで SQL Server を構成する](sql-server-linux-setup.md)です。
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 
 2. 可用性グループを作成します。 この手順は、現在この記事の内容について説明します。 
 
-3. ペースのように、クラスター リソース マネージャーを構成します。
+3. Pacemaker のように、クラスター リソース マネージャーを構成します。 
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションに依存します。 配布の具体的な手順については、次のリンクを参照してください。 
 

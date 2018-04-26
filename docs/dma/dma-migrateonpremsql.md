@@ -2,7 +2,7 @@
 title: 内部設置型 SQL サーバー (データ Migration Assistant) の移行 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666236842318cfba0cee38f71ac694eef86cdbf5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c578625f9dac8b242dcd6d06fcf60925dd5b02c2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>データ Migration Assistant を使用して、内部設置型 SQL サーバーの移行します。
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 
 1. ソースとターゲット サーバーの種類を設定**SQL Server**を内部設置型 SQL サーバーをアップグレードする場合に、モダン内部設置型 SQL Server。
 
-1. **[作成]**をクリックします。
+1. **[作成]** をクリックします。
 
    ![移行プロジェクトを作成します。](../dma/media/NewCreate.png)
 

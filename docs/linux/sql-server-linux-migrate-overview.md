@@ -1,25 +1,25 @@
-﻿---
-title: "Linux 上の SQL Server にデータベースの移行 |Microsoft ドキュメント"
-description: "この記事では、Linux 上のデータベースの移行とデータを SQL Server のさまざまなオプションについて説明します。"
+---
+title: Linux 上の SQL Server にデータベースの移行 |Microsoft ドキュメント
+description: この記事では、Linux 上のデータベースの移行とデータを SQL Server のさまざまなオプションについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 18970e7a18f635dbceac9fbbaa8b2d26aef7df94
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: aaca1c80780895369a3d2fafa3531a3b33223c6b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux 上の SQL Server にデータベースと構造化データを移行する 
 
@@ -31,7 +31,7 @@ Linux で実行されている SQL Server 2017 に、データベースとデー
 Linux 上の SQL Server 2017 に Windows 上の SQL Server データベースを移行する場合は、SQL Server のバックアップと復元を使用した手法をお勧めします。
 
 1. Windows コンピューターで、データベースのバックアップを作成します。
-2. バックアップ ファイルをターゲットの SQL Server の Linux コンピューターに転送します。
+2. バックアップ ファイルをターゲット SQL Server の Linux コンピューターに転送します。
 3. Linux コンピューター上のバックアップを復元します。 
 
 バックアップと復元によりデータベースを移行する方法のチュートリアルについては、次のトピックを参照してください。

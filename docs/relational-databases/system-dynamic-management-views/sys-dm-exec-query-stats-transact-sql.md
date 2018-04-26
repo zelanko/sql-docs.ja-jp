@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02fec5c45a9cc4e928a5f2f9074d7e520aefd605
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0118022e8e9c24e2e26c4a559068fc02aaef79e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,18 +111,18 @@ ms.lasthandoff: 04/16/2018
 |**last_used_threads**|**bigint**|このプランが最後に実行されたときに使用される並列スレッドの数。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**min_used_threads**|**bigint**|最小数は、このプランの 1 つの実行中に使用することの並列スレッドを使用します。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**max_used_threads**|**bigint**|最大数は、このプランの 1 回の実行中に使用される並列スレッドを使用します。 これは常に、メモリ最適化テーブルのクエリを実行する場合は 0 です。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|**total_columnstore_segment_reads**|**bigint**|列ストア セグメントが、クエリで読み取りの合計。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**last_columnstore_segment_reads**|**bigint**|クエリの前回の実行によって読み取られた列ストア セグメントの数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**min_columnstore_segment_reads**|**bigint**|1 つの実行中に、クエリによって読み取られた列ストア セグメントの最小数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**max_columnstore_segment_reads**|**bigint**|1 つの実行中に、クエリによって読み取られた列ストア セグメントの最大数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**total_columnstore_segment_skips**|**bigint**|クエリによってスキップされた列ストア セグメントの合計。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**last_columnstore_segment_skips**|**bigint**|クエリの前回の実行によってスキップされた列ストア セグメントの数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**min_columnstore_segment_skips**|**bigint**|1 つの実行中に、クエリによってこれまでスキップ列ストア セグメントの最小数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
-|**max_columnstore_segment_skips**|**bigint**|1 つの実行中に、クエリによってこれまでスキップ列ストア セグメントの最大数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
-|**total_spills**|**bigint**|コンパイルされた後に、このクエリの実行によって書き込まれたページの合計数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|ページの数には、クエリが実行された最終時刻が書き込まれました。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最小数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最大数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_columnstore_segment_reads**|**bigint**|列ストア セグメントが、クエリで読み取りの合計。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_reads**|**bigint**|クエリの前回の実行によって読み取られた列ストア セグメントの数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_reads**|**bigint**|1 つの実行中に、クエリによって読み取られた列ストア セグメントの最小数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_reads**|**bigint**|1 つの実行中に、クエリによって読み取られた列ストア セグメントの最大数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**total_columnstore_segment_skips**|**bigint**|クエリによってスキップされた列ストア セグメントの合計。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**last_columnstore_segment_skips**|**bigint**|クエリの前回の実行によってスキップされた列ストア セグメントの数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**min_columnstore_segment_skips**|**bigint**|1 つの実行中に、クエリによってこれまでスキップ列ストア セグメントの最小数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|    
+|**max_columnstore_segment_skips**|**bigint**|1 つの実行中に、クエリによってこれまでスキップ列ストア セグメントの最大数。 null にすることはできません。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|
+|**total_spills**|**bigint**|コンパイルされた後に、このクエリの実行によって書き込まれたページの合計数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|ページの数には、クエリが実行された最終時刻が書き込まれました。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最小数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|このクエリ 1 回の実行中に書き込まれたページの最大数。<br /><br /> **適用されます**: で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 および[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|この分布はでは、ノードの識別子。<br /><br /> **適用されます**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]

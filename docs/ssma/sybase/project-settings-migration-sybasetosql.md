@@ -2,7 +2,7 @@
 title: プロジェクトの設定 (移行) (SybaseToSQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 834c6559987a441dd4b8122673029802a92bc86a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>プロジェクトの設定 (移行) (SybaseToSQL)
 [移行] ページ、**プロジェクト設定** ダイアログ ボックスには、どのように SSMA はデータ移行から Sybase Adaptive Server Enterprise (ASE) をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 04/06/2018
 |**[トリガーを起動する]**|SQL Server テーブルにデータを追加する場合に、SSMA が挿入トリガーを起動するかどうかを指定します。<br /><br />**既定のモード**: False<br /><br />**オプティミスティック モード**: False<br /><br />**Full モード**: False|  
 |**[ID を保持する]**|SSMA では、SQL Server にデータを追加する場合に、Sybase id 値が保持されるかどうかを指定します。 値 False の場合、変換先で割り当てられる id 値です。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  
 |**[NULL を保持する]**|SSMA では、SQL Server で指定されている既定値に関係なく、SQL Server にデータを追加する場合に、ソース データ内の null 値が保持されるかどうかを指定します。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  
-|**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:**現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:**現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
+|**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:** 現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:** 現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
 |**数値の小数部の round**|整数型への移行中の decimal および numeric のデータの小数部のトリミングまたは小数部分は重要な場合は、エラー メッセージを表示するかどうかを指定します<br /><br />**既定のモード**: いいえ<br /><br />**オプティミスティック モード**: いいえ<br /><br />**Full モード**: いいえ|  
 |**Sybase Unicode エンディアン**|Sybase Unicode 文字列のエンディアンの種類を指定します。 この特定の設定には、次のオプションを設定できます。<br /><br />リトル エンディアン<br /><br />ビッグ エンディアン<br /><br />**既定のモード**: リトル エンディアン<br /><br />**オプティミスティック モード**: リトル エンディアン<br /><br />**Full モード**: リトル エンディアン|  
 |**[テーブル ロック]**|SSMA がデータの移行中のテーブルにデータを追加する場合に、テーブルをロックするかどうかを指定します。 一括コピー操作の間で一括更新ロックを取得します。 値が False の場合は、ロックは行レベルで設定されます。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  

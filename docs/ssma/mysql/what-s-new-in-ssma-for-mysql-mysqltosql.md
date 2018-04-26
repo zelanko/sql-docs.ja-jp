@@ -1,31 +1,31 @@
 ---
-title: "SSMA for MySQL (MySQLToSql) の新機能 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: SSMA for MySQL (MySQLToSql) の新機能 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 503e6c5a6c2d06a5c6a98ae1e9f45faebc40ae34
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: dc25a8b1b0c83ae5322aec85c000cb48b560a7f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL (MySQLToSql) の新機能
 このトピックでは、MySQL での変更の各リリース SSMA が一覧表示します。 
@@ -87,7 +87,7 @@ SSMA for Access の v7.1 リリースには、次の変更が含まれていま�
 
 [SQL Server Migration Assistant の変換機能を拡張します。](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
 
-[評価し、Microsoft 以外のデータ プラットフォームから SQL Server にデータを移行*(Oracle など) の*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
+[評価し、Microsoft 以外のデータ プラットフォームから SQL Server にデータを移行 *(Oracle など) の*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
 
 ## <a name="may-2016"></a>2016 年 5 月  
 MySQL SSMA の 2016 年 5 月のリリースには、次の変更が含まれています: です。
@@ -193,4 +193,4 @@ MySQL SSMA の 2010 年 1 月のリリースでは、最初のリリースをで
   
 -   両方への移行のサポートが追加のオンプレミス SQL Server および Azure SQL します。  
   
--   **機能のスナップショット:**スキーマとデータの移行の MySQL テーブル/インデックス/の制約。
+-   **機能のスナップショット:** スキーマとデータの移行の MySQL テーブル/インデックス/の制約。

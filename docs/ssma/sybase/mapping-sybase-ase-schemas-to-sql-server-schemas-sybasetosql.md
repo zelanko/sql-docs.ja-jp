@@ -2,7 +2,7 @@
 title: SQL Server スキーマ (SybaseToSQL) にマッピング Sybase ASE スキーマ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e06a6710b85621f9b0df66f38c42a0b8ebc05ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: fd5d975a3dced6f19cf867c453469d25f727912a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>SQL Server スキーマ (SybaseToSQL) にマッピング Sybase ASE スキーマ
 Sybase Adaptive Server Enterprise (ASE)、各データベースは、1 つまたは複数のスキーマを持っています。 既定では、SSMA は、同じデータベースおよびスキーマ内にデータベースおよびスキーマ内のすべてのオブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 ただし、ASE 間のマッピングをカスタマイズすることができ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースとスキーマです。  
@@ -62,7 +62,7 @@ SSMA をマップする ASE スキーマに、使用可能な[!INCLUDE[ssNoVersi
   
 -   SQL Azure へのマッピング  
   
-接続されているターゲット SQL Azure データベースへ、または接続されているターゲット SQL Azure データベース内の任意のスキーマには、ソース データベースをマップできます。 ソース スキーマ 接続されているターゲット データベースの任意の存在しないスキーマをマップするかどうかは、メッセージが求められます**"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"**はい をクリックします。  
+接続されているターゲット SQL Azure データベースへ、または接続されているターゲット SQL Azure データベース内の任意のスキーマには、ソース データベースをマップできます。 ソース スキーマ 接続されているターゲット データベースの任意の存在しないスキーマをマップするかどうかは、メッセージが求められます **"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"** はい をクリックします。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマを元に戻す  
 ASE スキーマ間のマッピングをカスタマイズする場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure のスキーマを既定値に戻して、マッピングを戻すことができます。  

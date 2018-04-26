@@ -1,16 +1,16 @@
 ---
-title: "パス式のステップで軸を指定する |Microsoft ドキュメント"
-ms.custom: 
+title: パス式のステップで軸を指定する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cf4ee579274a503d72a0774ec08cd4adb0a4a6ee
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式の軸の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [(省略可能) 0 個以上のステップ修飾子](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です](../xquery/path-expressions-xquery.md)。  
+ 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)です。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
   
@@ -195,7 +195,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- クエリは、反復子変数を設定`$f`の要素の子を返します FLWOR ステートメントで、`<Features>`要素。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション &#40;です。XQuery と #41 です](../xquery/flwor-statement-and-iteration-xquery.md)。 各機能に対して、`return`句には、次の形式で XML が構築されます。  
+ クエリは、反復子変数を設定`$f`の要素の子を返します FLWOR ステートメントで、`<Features>`要素。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)です。 各機能に対して、`return`句には、次の形式で XML が構築されます。  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

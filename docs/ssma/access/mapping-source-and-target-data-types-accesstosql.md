@@ -1,6 +1,6 @@
 ---
 title: マッピングのソースとターゲットのデータ型 (AccessToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -27,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a76e26e753ae431d1f4649b05c159d4526358d4a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c7068a0827cb054242e0427c239b76e728c6bba0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>マップ元と対象のデータ型 (AccessToSQL)
 Access データベースの種類が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの型。 データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクトへのアクセスからのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 既定のデータ型マッピングを受け入れることができますか、マップをカスタマイズするには、次の手順で示すようにします。  
@@ -96,7 +96,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
     1.  ウィンドウで、型マッピングを削除するデータ型のマッピングを含む型マッピングのリスト内の行を選択します。  
   
-    2.  **[削除]**をクリックします。  
+    2.  **[削除]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
 移行プロセスの次の手順は[データベース オブジェクトへのアクセスを SQL Server オブジェクトに変換します。](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  

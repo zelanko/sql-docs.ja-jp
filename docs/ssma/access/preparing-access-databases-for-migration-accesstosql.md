@@ -1,15 +1,16 @@
 ---
-title: "Access データベース移行の準備 (AccessToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Access データベース移行の準備 (AccessToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>移行 (AccessToSQL) を Access データベースを準備します。
 Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、どのデータベースを移行し、これらのデータベースが移行の準備ができていることを確認するを指定する必要があります。  
@@ -46,7 +47,7 @@ Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../inclu
 データベースを移行した後に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]リンク テーブルを使用してアクセスを使用するを続けるか、アプリケーションを手動で移行することができます、[!INCLUDE[msCoName](../../includes/msconame_md.md)]と直接やり取りする .NET Framework ベースのコード[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
 ## <a name="determining-which-databases-to-migrate"></a>移行対象のデータベースを決定します。  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) のアクセスは、の Access データベースを見つけることができます。 それらのデータベースに関するメタデータをエクスポートすることができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 エクスポートおよびメタデータをクエリする方法の詳細については、次を参照してください。[アクセス インベントリをエクスポートする](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed)です。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) のアクセスは、の Access データベースを見つけることができます。 それらのデータベースに関するメタデータをエクスポートすることができますし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 エクスポートおよびメタデータをクエリする方法の詳細については、次を参照してください。[アクセス インベントリをエクスポートする](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed)です。  
 
    > [!NOTE]
    > すべてのアクセス機能と設定で、サポートされるまたはに、簡単に変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 データベースの移行を開始する前に、次を参照してください。[互換性のないアクセス機能](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1)します。

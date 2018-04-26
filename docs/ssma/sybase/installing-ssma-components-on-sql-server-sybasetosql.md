@@ -2,7 +2,7 @@
 title: SQL Server (SybaseToSQL) へ SSMA コンポーネントのインストール |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2532575dcfeaff0b75520ef1a104db0281bbc9b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL server (SybaseToSQL) SSMA コンポーネントのインストール
 サーバー側のデータ移行を使用するためには、SSMA をインストール、に加えて必要がありますもコンポーネントをインストールするを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、SSMA 拡張機能パックには、データの移行、および Sybase のプロバイダーをサーバーからサーバーへの接続を有効にするサポートが含まれます。  
@@ -73,7 +73,7 @@ SSMA 拡張機能パックには、データベースが追加されて**sysdb**
   
     場合**Tester データベースのインストール**オプションがオンになって、テスター **ssmatesterdb_syb**データベースが作成されます。  
   
-11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**インスタンスに戻る**、順にクリック**[次へ]**です。 またはをクリックしてウィザードを終了するには、**終了**です。  
+11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**インスタンスに戻る**、順にクリック **[次へ]** です。 またはをクリックしてウィザードを終了するには、**終了**です。  
   
 ### <a name="sql-server-database-objects"></a>SQL Server データベース オブジェクト  
 「」を参照は、拡張機能パックをインストールした後、 **ssma_syb.bcp_migration_packages**テーブルに、 **sysdb**データベース。 次のストアド プロシージャも表示されます。  
@@ -98,7 +98,7 @@ SSMA 拡張機能パックには、データベースが追加されて**sysdb**
   
 -   **stop_agent_process**  
   
-データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_syb データ移行パッケージ {GUID}**に表示されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs フォルダーでします。  
+データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_syb データ移行パッケージ {GUID}** に表示されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs フォルダーでします。  
   
 ## <a name="sybase-providers"></a>Sybase プロバイダー  
 ASE からデータを移行する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ASE 間で直接 SQL Azure データの移行と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure です。 これを経由しない SSMA データ移行の速度が低下はこのためです。  

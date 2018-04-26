@@ -1,16 +1,16 @@
 ---
-title: "position 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: position 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - position function
 - fn:position function
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00ac65b0e0468cb1b4985af92e29cdd0376ea250
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6c7ec3c4bcd0d330d69956d47f3a92c30ed4957
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="context-functions---position-xquery"></a>コンテキスト関数の位置 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 **Fn:position()**コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。この関数との比較を行っても、静的な型の推定中に基数が減少することはありません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 **Fn:position()** コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。この関数との比較を行っても、静的な型の推定中にカーディナリティが減少することはありません。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
@@ -78,7 +78,7 @@ WHERE CatalogDescription is not null
   
 -   クエリ本文が XML を構築します、\<製品 > を持つ要素**ProductModelID**と**ProductModelName**子要素として返された製品の機能があり、します。  
   
--   **Position()**の位置を決定する、述語で使用される関数、\<機能 > 子要素のコンテキストでします。 最初または 2 番目の特徴の場合は、これが返されます。  
+-   **Position()** の位置を決定する、述語で使用される関数、\<機能 > 子要素のコンテキストでします。 最初または 2 番目の特徴の場合は、これが返されます。  
   
 -   IF ステートメントを追加、\<そこがより/> 製品カタログに 3 つ以上の特徴がある場合、結果の要素。  
   

@@ -1,6 +1,6 @@
 ---
 title: 型のマッピング (AccessToSQL) は編集 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f3105d07006b6d7f04c5593e59010a295ab1824
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 199ce1971b4a4f4e68d6a80388015da6d10dfcf3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-type-mapping-accesstosql"></a>型のマッピング (AccessToSQL) の編集します。
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクト間の種類をマップする方法を指定することができます。  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/06/2018
 次のフィールドが表示されます、データ型が可変長の場合は、**ソースの種類**:  
   
 **From**  
-このマッピングの最小の長さを指定します。 たとえば、**テキスト**データ型を開始位置として、範囲のこのマッピングであることを指定する 10」と入力することができます**text(10)**です。  
+このマッピングの最小の長さを指定します。 たとえば、**テキスト**データ型を開始位置として、範囲のこのマッピングであることを指定する 10」と入力することができます**text(10)** です。  
   
 **変換先**  
-このマッピングの最大長を指定します。 たとえば、**テキスト**データ型で終わる範囲のこのマッピングであることを指定する 20」と入力することができます**text(20)**です。  
+このマッピングの最大長を指定します。 たとえば、**テキスト**データ型で終わる範囲のこのマッピングであることを指定する 20」と入力することができます**text(20)** です。  
   
 **ターゲットの種類**  
 選択、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ソースのデータ型がマップされているデータ型。 SSMA がテーブルまたはストアド プロシージャを作成すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ソースのデータ型は、このデータ型に変更されます。  
@@ -56,5 +56,5 @@ ms.lasthandoff: 04/06/2018
 次のフィールドを下に表示されます、データ型が可変長の場合は、**ターゲット型**:  
   
 **Replace with**  
-このマッピングのターゲットの長さを指定します。 たとえば、 **nvarchar**データ型に指定したソースのデータ型をマップする必要がありますを指定する 20」と入力することができます**nvarchar (20)**です。  
+このマッピングのターゲットの長さを指定します。 たとえば、 **nvarchar**データ型に指定したソースのデータ型をマップする必要がありますを指定する 20」と入力することができます**nvarchar (20)** です。  
   

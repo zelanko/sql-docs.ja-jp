@@ -1,16 +1,16 @@
 ---
-title: "sum 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: sum 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 599080605291b48f30a40c85354ea5bb2f2320c6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 87f8e3859f8a487a56ff9c1874ad98772af210b8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---sum"></a>集計関数: sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  合計が計算される、一連のアトミック値。  
   
 ## <a name="remarks"></a>解説  
- すべての種類に渡されるアトミック値の**sum()**同じ基本型のサブタイプである必要があります。 使用できる基本データ型は、3 つの組み込みの数値基本データ型または xdt:untypedAtomic です。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+ すべての種類に渡されるアトミック値の**sum()** 同じ基本型のサブタイプである必要があります。 使用できる基本データ型は、3 つの組み込みの数値基本データ型または xdt:untypedAtomic です。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
   
- 結果**sum()**入力が空のシーケンスで必要に応じて場合でも、xs:double xdt:untypedAtomic の場合などに渡された型の基本型を受け取ります。 入力が静的に空の場合、結果は静的な型および動的な型 xs:integer の 0 になります。  
+ 結果**sum()** 入力が空のシーケンスで必要に応じて場合でも、xs:double xdt:untypedAtomic の場合などに渡された型の基本型を受け取ります。 入力が静的に空の場合、結果は静的な型および動的な型 xs:integer の 0 になります。  
   
- **Sum()**関数、数値の合計を返します。 If an xdt:untypedAtomic value cannot be cast to xs:double, the value is ignored in the input sequence, *$arg*. 入力が動的に計算された空のシーケンスの場合、使用されている基本データ型の値 0 が返されます。  
+ **Sum()** 関数、数値の合計を返します。 Xdt:untypedAtomic 値は、xs:double にキャストすることはできない場合、入力シーケンスで値が無視されます。 *$arg*です。 入力が動的に計算された空のシーケンスの場合、使用されている基本データ型の値 0 が返されます。  
   
  オーバーフローまたは範囲外の例外が発生したとき、関数は実行時エラーを返します。  
   
@@ -114,11 +114,11 @@ ProductModelID Name                 TotalLaborHours
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   引数を 1 つのバージョンのみ**sum()**はサポートされています。  
+-   引数を 1 つのバージョンのみ**sum()** はサポートされています。  
   
 -   入力が動的に計算された空のシーケンスである場合、xs:integer 型ではなく、使用されている基本データ型の値 0 が返されます。  
   
--   **Sum()**関数では、すべての整数値を xs:decimal にマップします。  
+-   **Sum()** 関数では、すべての整数値を xs:decimal にマップします。  
   
 -   **Sum()** xs:duration 型の値に対して関数がサポートされていません。  
   

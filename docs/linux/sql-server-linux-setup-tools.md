@@ -1,25 +1,25 @@
 ---
-title: "Linux 上の SQL Server コマンド ライン ツールのインストール |Microsoft ドキュメント"
-description: "この記事では、Linux に SQL Server ツールをインストールする方法について説明します。"
+title: Linux 上の SQL Server コマンド ライン ツールのインストール |Microsoft ドキュメント
+description: この記事では、Linux に SQL Server ツールをインストールする方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c64ea611cabe9169b5073d20b47f5f5235174608
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/23/2018
    sudo su
    ```
 
-1. Microsoft Red Hat リポジトリの構成ファイルをダウンロードします。
+1. Microsoft の Red Hat リポジトリの構成ファイルをダウンロードします。
 
    ```bash
    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
@@ -62,13 +62,13 @@ ms.lasthandoff: 02/23/2018
    exit
    ```
 
-1. 以前のバージョンがあれば**mssql ツール**インストールされている、古い unixODBC パッケージを削除します。
+1. インストールされている **mssql ツール** の以前のバージョンがあれば、古い unixODBC パッケージを削除します。
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. インストールする次のコマンド実行**mssql ツール**unixODBC 開発者パッケージにします。
+1. 次のコマンドを実行して **mssql-tools** を unixODBC 開発者パッケージとともにインストールします。
 
    ```bash
    sudo yum install mssql-tools unixODBC-devel
@@ -211,14 +211,14 @@ SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツー�
 
 | ツール パッケージ | バージョン | ダウンロード |
 |-----|-----|-----|
-| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian ツール パッケージ | 14.0.5.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian ツール パッケージ | 14.0.5.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql ツール RPM パッケージ](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+| Ubuntu 16.10 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
 
 これらのパッケージに依存**移動**を最初にインストールする必要があります。 **移動**パッケージもいずれかに依存している**unixODBC devel** (RPM) または**unixodbc デベロッパー** (Debian)。 場所、**移動**パッケージは、次の表に一覧表示されます。
 
-| msodbcsql package | バージョン | ダウンロード |
+| パッケージの移動 | バージョン | ダウンロード |
 |-----|-----|-----|
 | Red Hat RPM 移動パッケージ | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM 移動パッケージ | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -267,8 +267,8 @@ SQL Server 2017 CTP 2.0 以降では、SQL Server コマンド ライン ツー�
 使用する方法の例については**sqlcmd**を SQL Server に接続し、データベースを作成には、次のクイック スタートのいずれかを表示します。
 
 - [Red Hat Enterprise Linux にインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server をインストールします。](quickstart-install-connect-suse.md)
-- [Ubuntu をインストールします。](quickstart-install-connect-ubuntu.md)
+- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
+- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-ubuntu.md)
 
 使用する方法の例については**bcp**データを一括インポートおよびエクスポートを参照してください。 [Linux に SQL Server にデータの一括コピー](sql-server-linux-migrate-bcp.md)です。

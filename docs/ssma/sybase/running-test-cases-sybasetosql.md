@@ -2,7 +2,7 @@
 title: テスト_ケース (SybaseToSQL) を実行している |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 321a4f0dfdadc1209cf480448e72d68cfa4fe7ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト_ケース (SybaseToSQL) を実行します。
 SSMA テスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストが成功しました。 Sybase 間のオブジェクトの対応付けと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -57,8 +57,8 @@ SSMATESTER2005db または SSMATESTER2008db データベース中および、Syb
   
 |名前|型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
-|USER_TABLE$Aud|Table|テーブルな行が削除され、上書きを保存します。|  
+|USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
+|USER_TABLE$ Aud|Table|テーブルな行が削除され、上書きを保存します。|  
 |USER_TABLE$AudID|Table|追加または変更された行が保存されているテーブルです。|  
 |USER_TABLE|表示|テーブルの変更の簡略化された表現。|  
 |USER_TABLE$new|表示|挿入、および上書きされた行の簡略化された表現。|  
@@ -69,7 +69,7 @@ Sybase で検証済みのテーブルのデータベースで次のオブジェ�
   
 |名前|型|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
+|USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
   
 ### <a name="test-object-calls"></a>テスト オブジェクトを呼び出し、  
 この手順で、SSMA テスター、テスト用に選択した各オブジェクトを呼び出します、した結果を比較およびレポートを示しています。  

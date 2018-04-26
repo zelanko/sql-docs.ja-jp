@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) を使用してデータベース バックアップおよび復元 |Microsoft ドキュメント
-description: SQL Operations Studio (preview) を使用してデータベース バックアップおよび復元する方法をについてください。
+title: SQL 操作 Studio (プレビュー) を使用してデータベース バックアップおよび復元 |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) を使用してデータベース バックアップおよび復元する方法をについてください。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>バックアップと復元を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>バックアップと復元を使用して [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 このチュートリアルで使用する方法を学びます[!INCLUDE[name-sos](../includes/name-sos-short.md)]に。
 > [!div class="checklist"]
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 
 このチュートリアルには、SQL Server が必要です。 *TutorialDB*です。 作成する、 *TutorialDB*データベースで、次のクイック スタートのいずれかを行います。
 
-- [接続してクエリを使用して SQL サーバー[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [接続してクエリを使用して SQL サーバー [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>データベースのバックアップ

@@ -1,10 +1,10 @@
 ---
-title: SQL Operations Studio (preview) でコード スニペットを作成 |Microsoft ドキュメント
-description: 作成して、SQL Operations Studio (preview) で SQL コード スニペットを使用する方法をについてください。
+title: SQL 操作 Studio (プレビュー) でコード スニペットを作成 |Microsoft ドキュメント
+description: 作成して、SQL 操作 Studio (プレビュー) で SQL コード スニペットを使用する方法をについてください。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>作成し、迅速で TRANSACT-SQL (T-SQL) スクリプトを作成するコード スニペットを使用します。[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>作成し、迅速で TRANSACT-SQL (T-SQL) スクリプトを作成するコード スニペットを使用します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 コード スニペットで[!INCLUDE[name-sos](../includes/name-sos-short.md)]はデータベースとデータベース オブジェクトを作成するテンプレートをより簡単にします。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]適切な構文をすばやく生成するに役立ついくつかの T-SQL でスニペットを提供します。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 適切な構文をすばやく生成するに役立ついくつかの T-SQL でスニペットを提供します。 
 
 ユーザー定義のコード スニペットを作成することもできます。
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 1. 選択**SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]具体的にはこの記事では SQL スニペットの使用について説明しますので、Visual Studio のコードからそのコード スニペットの機能を継承します。 詳細についてを参照してください。 [、独自のスニペットを作成する](https://code.visualstudio.com/docs/editor/userdefinedsnippets)、Visual Studio Code マニュアルを参照します。 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 具体的にはこの記事では SQL スニペットの使用について説明しますので、Visual Studio のコードからそのコード スニペットの機能を継承します。 詳細についてを参照してください。 [、独自のスニペットを作成する](https://code.visualstudio.com/docs/editor/userdefinedsnippets)、Visual Studio Code マニュアルを参照します。 
 
    ![テンプレートのフィールドを置き換えます](media/code-snippets/select-sql.png)
 

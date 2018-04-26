@@ -1,16 +1,16 @@
 ---
-title: "concat 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: concat 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f7d63904e613f399e4f66b9fcd3547f57a0e5175
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---concat"></a>文字列値 - concat に関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ fn:concat ($string as xs:string?
  この関数には少なくとも 2 つの引数が必要です。 空のシーケンスを引数として渡した場合、長さゼロの文字列として処理されます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照して[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。 参照してください[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
+ XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照して[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks サンプル データベース内の列を入力します。  
@@ -92,7 +92,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 上のクエリでは、特定の製品の情報を取得しました。 次のクエリは、XML のカタログの説明が保存されているすべての製品について同じ情報を取得します。 **Exist()**のメソッド、 **xml**データ型の場合は、行に XML ドキュメントには、WHERE 句が True を返しますで、<`ProductDescription`> 要素。  
+ 上のクエリでは、特定の製品の情報を取得しました。 次のクエリは、XML のカタログの説明が保存されているすべての製品について同じ情報を取得します。 **Exist()** のメソッド、 **xml**データ型の場合は、行に XML ドキュメントには、WHERE 句が True を返しますで、<`ProductDescription`> 要素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -114,7 +114,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- によって返されるブール値を**exist()**のメソッド、 **xml**型が 1 と比較されます。  
+ によって返されるブール値を**exist()** のメソッド、 **xml**型が 1 と比較されます。  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  

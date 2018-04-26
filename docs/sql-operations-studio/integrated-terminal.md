@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) で統合ターミナル |Microsoft ドキュメント
-description: SQL Operations Studio (preview) で統合ターミナルについて説明します。
+title: SQL 操作 Studio (プレビュー) で統合ターミナル |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) で統合ターミナルについて説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55e86314dd075b61dac5751b29fc541fdf1e2c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61d74e7d8818391ca01c45ad8f9a7b2897751712
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 
 ターミナルで開きます。
 
-* 使用して、 **Ctrl +'**アクサン グラーブ文字でキーボード ショートカット。
+* 使用して、 **Ctrl +'** アクサン グラーブ文字でキーボード ショートカット。
 * 使用して、**ビュー** | **統合ターミナル**メニュー コマンド。
 * **コマンド パレット**(**Ctrl + Shift + P**)、使用して、**ビュー: トグル統合ターミナル**コマンド。
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="managing-multiple-terminals"></a>複数の端末を管理します。
 
-複数の端末に開かれている別の場所を作成し、それらの間を簡単に移動できます。 右上で、プラス アイコンをクリックしてターミナル インスタンスを追加することができます、**ターミナル**パネルまたはでトリガーする、 **Ctrl + Shift +'**コマンド。 これには、両者を切り替えるに使用できるドロップダウン リストで別のエントリが作成されます。
+複数の端末に開かれている別の場所を作成し、それらの間を簡単に移動できます。 右上で、プラス アイコンをクリックしてターミナル インスタンスを追加することができます、**ターミナル**パネルまたはでトリガーする、 **Ctrl + Shift +'** コマンド。 これには、両者を切り替えるに使用できるドロップダウン リストで別のエントリが作成されます。
 
 ![複数の端末](media/integrated-terminal/terminal-multiple-instances.png)
 
@@ -92,7 +92,7 @@ Windows 上のシェルを適切に構成するには右側の実行可能ファ
 
 ## <a id="key-bindings"></a>ターミナル ショートカット キー
 
-**ビュー: トグル統合ターミナル**にコマンドがバインドされている**Ctrl +'**ビューとの間の統合のターミナル パネルを簡単に切り替えるにします。
+**ビュー: トグル統合ターミナル**にコマンドがバインドされている**Ctrl +'** ビューとの間の統合のターミナル パネルを簡単に切り替えるにします。
 
 統合ターミナル内をすばやく移動するキーボード ショートカットを次に示します。
 

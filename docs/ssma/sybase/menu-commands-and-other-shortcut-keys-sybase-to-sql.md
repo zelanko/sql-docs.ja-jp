@@ -2,7 +2,7 @@
 title: メニュー コマンドやその他のショートカット キー (Sybase SQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0d4a6d5e9275c9d6f62b6ebe06b950f5600b4ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f076131ed31fbd9e7d132291b25b177fbc8a2793
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>メニュー コマンドやその他のショートカット キー (Sybase SQL)
 次のセクションでは、メニュー コマンド、および Sybase のアプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/06/2018
 |--------------|---------|  
 |メタデータ エクスプ ローラーを同期します。|ALT + V + Z|  
 |ツリーを表示します。|ALT + V + H または CTRL + T|  
-|ソースの一部を示してください。|ALT + V + S|  
+|ソースの一部を示してください。|ALT + V、S|  
 |ターゲットの一部を示してください。|ALT + V + T|  
 |エラー一覧ウィンドウを表示します。|ALT + V + E または CTRL + E|  
 |出力ウィンドウを表示します。|ALT + V + O または CTRL + O|  

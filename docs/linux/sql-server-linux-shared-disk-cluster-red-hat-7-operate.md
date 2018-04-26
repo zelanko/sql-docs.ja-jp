@@ -1,25 +1,25 @@
-﻿---
-title: "SQL Server の Red Hat Enterprise Linux 共有クラスターを運用 |Microsoft ドキュメント"
-description: "SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。"
+---
+title: SQL Server の Red Hat Enterprise Linux 共有クラスターを運用 |Microsoft ドキュメント
+description: SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 9a879ea8b915ef75c683e62bc80fcadde114b21a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを運用します。
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタ リングの層は [Pacemaker](http://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)をベースにしています。Corosync と Pacemaker はクラスター通信およびリソース管理を調整します。SQL Server のインスタンスはいずれかのノードでアクティブです。
+クラスタ リングの層は、[Pacemaker](http://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。  Corosync とペースのクラスター ネットワーク通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
 
 次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
@@ -43,9 +43,9 @@ ms.lasthandoff: 02/13/2018
 
 クラスターの構成、リソース エージェント オプション、および管理の詳細については、[RHEL リファレンス ドキュメント](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html) を参照してください。
 
-## <a name = "failManual"></a>手動によるクラスターのフェールオーバします
+## <a name = "failManual"></a>フェールオーバー クラスターを手動で
 
-`resource move`コマンドは、ターゲット ノードで起動するリソースを強制する制約を作成します。 `move`コマンドを実行した後、リソースをもう一度移動したり、リソースを自動的にフェールオーバーしたりすることを可能にするために、リソースの`clear`を実行して制約を削除します。
+`resource move`コマンドは、ターゲット ノードで起動するリソースを強制する制約を作成します。  実行した後、`move`リソースを実行したコマンド`clear`のため、リソースをもう一度移動したり、リソースを自動的にフェールオーバーすることは、制約が削除されます。 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
@@ -83,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. 新しいノードには 15 文字以下の一意の名前が必要です。 Red Hat Enterprise Linuxの既定では、コンピューター名は`localhost.localdomain`です。 この既定の名前は一意でなく、長すぎます。 コンピューター名を新しいノードに設定します。 `/etc/hosts`に追加することによって、コンピューター名を設定です。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+3. 新しいノードに必要な一意の名前は 15 文字以下です。 コンピューター名は、既定では、Red Hat Linux`localhost.localdomain`です。 この既定の名前が一意でないが長すぎます。 新しいノードにコンピューター名を設定します。 そのコンピューター名を`/etc/hosts`に追加することにより設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
@@ -265,7 +265,7 @@ pacemaker: active/enabled
 
     Pacemaker ですべてのノードが通信できるように、で次のポートが開かれている必要があります。
     
-    - **TCP: 2224, 3121, 21064
+    - * * TCP: 2224 3121、21064
 
 - **Pacemaker および Corosync サービスが実行されているか**
 

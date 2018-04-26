@@ -1,16 +1,16 @@
 ---
-title: "SequenceType 式 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: SequenceType 式 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0885694aa774a74d694742bf62e32efdcf3a7552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.lasthandoff: 02/09/2018
  アトミック型の名前はでも使用できます、**としてキャスト**XQuery 式です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、**のインスタンス**と**としてキャスト**Sequencetype での XQuery 式が部分的にサポートします。  
   
 ## <a name="instance-of-operator"></a>instance of 演算子  
- **のインスタンス**指定された式の値の動的なまたは実行時に、型を決定する演算子を使用できます。 例:  
+ **のインスタンス**指定された式の値の動的なまたは実行時に、型を決定する演算子を使用できます。 以下に例を示します。  
   
 ```  
   
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- なお、`instance of`演算子を`Occurrence indicator`基数、結果として得られるシーケンス内の項目の数を指定します。 この値を指定しないと、基数は 1 と想定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、疑問符 () のみ (**?)**出現インジケーターはサポートされています。 **しますか?** 出現インジケーターが示す`Expression`0 個または 1 つの項目を返すことができます。 場合、**しますか?** 出現インジケーターを指定すると、 `instance of` True が返されます、`Expression`型は、指定された一致`SequenceType`かどうかに関係なく、`Expression`シングルトンまたは空のシーケンスを返します。  
+ なお、`instance of`演算子を`Occurrence indicator`基数、結果として得られるシーケンス内の項目の数を指定します。 この値を指定しないと、カーディナリティは 1 と想定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、疑問符 () のみ (**?)** 出現インジケーターはサポートされています。 **しますか?** 出現インジケーターが示す`Expression`0 個または 1 つの項目を返すことができます。 場合、**しますか?** 出現インジケーターを指定すると、 `instance of` True が返されます、`Expression`型は、指定された一致`SequenceType`かどうかに関係なく、`Expression`シングルトンまたは空のシーケンスを返します。  
   
  場合、**しますか?** 出現インジケーターが指定されていない`sequence of`される場合にのみ、True を返します、`Expression`一致を入力、`Type`指定と`Expression`シングルトンを返します。  
   
@@ -107,7 +107,7 @@ go
 ### <a name="example-b"></a>例 B  
  この例では、AdventureWorks サンプル データベース内の、型指定された XML 列に対してクエリを実行しています。 クエリ対象の列に関連付けられた XML スキーマ コレクションにより、型指定情報が提供されます。  
   
- 式では、 **data()**の型が列に関連付けられたスキーマに従って xs:string ProductModelID 属性の型指定された値を返します。 したがって、 `instance of` True を返します。  
+ 式では、 **data()** の型が列に関連付けられたスキーマに従って xs:string ProductModelID 属性の型指定された値を返します。 したがって、 `instance of` True を返します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -317,11 +317,11 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Schema-element()**と**schema-attribute()**の比較には、シーケンスの種類はサポートされていません、`instance of`演算子。  
+-   **Schema-element()** と**schema-attribute()** の比較には、シーケンスの種類はサポートされていません、`instance of`演算子。  
   
 -   たとえば、完全なシーケンス`(1,2) instance of xs:integer*`はサポートされていません。  
   
--   形式を使用する場合、 **element()**などの型の名前を指定する型をシーケンス`element(ElementName, TypeName)`疑問符 (?) で型を修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]実行時に検出をサポートしていません、 **xsi:nil**プロパティを使用して`instance of`です。  
+-   形式を使用する場合、 **element()** などの型の名前を指定する型をシーケンス`element(ElementName, TypeName)`疑問符 (?) で型を修飾する必要があります。 たとえば、`element(Title, xs:string?)` は要素が NULL であることを示します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 実行時に検出をサポートしていません、 **xsi:nil**プロパティを使用して`instance of`です。  
   
 -   `Expression` の値が共用体型として型指定された要素または属性の値である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、派生された型ではなく、値の型の派生元のプリミティブ型しか識別できません。 たとえば、<`e1`> が (xs:integer | xs:string) の静的な型を持つように定義されている場合、次の式では False が返されます。  
   
@@ -331,10 +331,10 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      ただし、`data(<e1>123</e1>) instance of xs:decimal`は True を返します。  
   
--   **Processing-instruction()**と**document-node()** sequence 型、引数を使用しない形式のみが許可されています。 たとえば、`processing-instruction()` は使用できますが、`processing-instruction('abc')` は使用できません。  
+-   **Processing-instruction()** と**document-node()** sequence 型、引数を使用しない形式のみが許可されています。 たとえば、`processing-instruction()` は使用できますが、`processing-instruction('abc')` は使用できません。  
   
 ## <a name="cast-as-operator"></a>cast as 演算子  
- **としてキャスト**値を特定のデータ型に変換する式を使用できます。 例:  
+ **としてキャスト**値を特定のデータ型に変換する式を使用できます。 以下に例を示します。  
   
 ```  
   
@@ -349,7 +349,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- 次のクエリで**data()**文字列型である ProductModelID 属性の型指定された値を返します。 `cast as`演算子は、値を xs:integer に変換します。  
+ 次のクエリで**data()** 文字列型である ProductModelID 属性の型指定された値を返します。 `cast as`演算子は、値を xs:integer に変換します。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -360,10 +360,10 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 明示的な使用**data()**このクエリでは必要ありません。 `cast as`式で、入力式で暗黙のアトミック化を実行します。  
+ 明示的な使用**data()** このクエリでは必要ありません。 `cast as`式で、入力式で暗黙のアトミック化を実行します。  
   
 ### <a name="constructor-functions"></a>コンストラクター関数  
- アトミック型のコンストラクター関数を使用できます。 使用する代わりに、たとえば、`cast as`演算子、 `"2" cast as xs:integer?`、使用することができます、 **xs:integer()**次の例のように、コンス トラクター関数。  
+ アトミック型のコンストラクター関数を使用できます。 使用する代わりに、たとえば、`cast as`演算子、 `"2" cast as xs:integer?`、使用することができます、 **xs:integer()** 次の例のように、コンス トラクター関数。  
   
 ```  
 declare @x xml  
@@ -379,7 +379,7 @@ set @x=''
 select @x.query('xs:date("2000-01-01Z")')  
 ```  
   
- また、ユーザー定義アトミック型のコンストラクターを使用することもできます。 たとえば、XML スキーマ コレクションに関連付けられている XML データ型は 単純型を定義、 **myType()**コンス トラクターは、その型の値を返すに使用できます。  
+ また、ユーザー定義アトミック型のコンストラクターを使用することもできます。 たとえば、XML スキーマ コレクションに関連付けられている XML データ型は 単純型を定義、 **myType()** コンス トラクターは、その型の値を返すに使用できます。  
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
   
@@ -417,6 +417,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)   
- [型システムと #40 です。XQuery と #41 です。](../xquery/type-system-xquery.md)  
+ [システム入力&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

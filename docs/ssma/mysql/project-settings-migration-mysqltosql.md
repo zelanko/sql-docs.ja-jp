@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの設定 (移行) (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6616502c370733bf0efa19eed97e6e2f022c5a0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ead554bd5c15dbd099fed6ce0bd5745e79b5308d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-mysqltosql"></a>プロジェクトの設定 (移行) (MySQLToSQL)
 移行 ページ、**プロジェクト設定** ダイアログ ボックスには、どのように SSMA データが移行 MySQL から SQL Server をカスタマイズする設定が含まれています。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/06/2018
 |項目|定義|  
 |--------|--------------|  
 |**拡張データの移行オプション**|個別詳細 タブで、各テーブルに余分なデータ移行のオプションを示します。<br /><br />**既定のモード**: 非表示にします。<br /><br />**オプティミスティック モード**: 非表示にします。<br /><br />**Full モード**: 非表示にします。|  
-|**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:**現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:**現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
+|**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:** 現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:** 現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
   
 ### <a name="parallel-data-migration"></a>並列データの移行  
   

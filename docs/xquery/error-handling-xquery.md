@@ -1,16 +1,16 @@
 ---
-title: "エラー処理 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: エラー処理 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76839b7a31bc6468cc397c9d6255af5660bcfcd5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0eef94efe7f4414747be9dffb8ba6512aee47bda
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-handling-xquery"></a>エラー処理 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  () は False にマップされています。そのため、多くの場合、述語内で動的エラーが発生する状況では、エラーが発生しないとセマンティクスは変更されません。 ただし、動的エラーではなく () を返すと予期しない結果が生じることがあります。 このことを示す例を次に挙げます。  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>例 : 文字列に対する avg() 関数の使用  
- 次の例で、 [avg 関数](../xquery/aggregate-functions-avg.md)が呼び出され、3 つの値の平均を計算します。 これらの値の 1 つは文字列です。 この XML インスタンスは型指定されていないので、XML インスタンス内のすべてのデータは型指定されていないアトミック型になります。 **Avg()**関数では、これらの値を最初はキャスト**xs:double**平均を計算する前にします。 ただし、値、`"Hello"`にキャストできません**xs:double**動的エラーが生成されます。 キャスト、動的なエラーを返す代わりに、この場合、`"Hello"`に**xs:double**空のシーケンスが発生します。 **Avg()**関数がこの値は無視し、他の 2 つの値の平均を計算および 150 が返されます。  
+ 次の例で、 [avg 関数](../xquery/aggregate-functions-avg.md)が呼び出され、3 つの値の平均を計算します。 これらの値の 1 つは文字列です。 この XML インスタンスは型指定されていないので、XML インスタンス内のすべてのデータは型指定されていないアトミック型になります。 **Avg()** 関数では、これらの値を最初はキャスト**xs:double**平均を計算する前にします。 ただし、値、`"Hello"`にキャストできません**xs:double**動的エラーが生成されます。 キャスト、動的なエラーを返す代わりに、この場合、`"Hello"`に**xs:double**空のシーケンスが発生します。 **Avg()** 関数がこの値は無視し、他の 2 つの値の平均を計算および 150 が返されます。  
   
 ```  
 DECLARE @x xml  
@@ -67,7 +67,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>例 : not 関数の使用  
- 使用する場合、[機能しない](../xquery/functions-on-boolean-values-not-function.md)、述語で、たとえば、`/SomeNode[not(Expression)]`式には、動的エラーが発生、空のシーケンスが返されますエラーではなく、します。 適用する**not()**空のシーケンスに、エラーの代わりに True を返します。  
+ 使用する場合、[機能しない](../xquery/functions-on-boolean-values-not-function.md)、述語で、たとえば、`/SomeNode[not(Expression)]`式には、動的エラーが発生、空のシーケンスが返されますエラーではなく、します。 適用する**not()** 空のシーケンスに、エラーの代わりに True を返します。  
   
 ### <a name="example-casting-a-string"></a>例 : 文字列のキャスト  
  次の例では、リテラル文字列 "NaN" を xs:string にキャストしてから、xs:double にキャストします。 その結果、空の行セットが返されます。 文字列 "NaN" は xs:double に正しくキャストすることはできません。ただし、この文字列は最初に xs:string にキャストされているため、このことは実行時まで判断できません。  
@@ -89,7 +89,7 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
- **Fn:error()**関数はサポートされていません。  
+ **Fn:error()** 関数はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   

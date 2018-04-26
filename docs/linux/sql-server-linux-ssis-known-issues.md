@@ -1,25 +1,25 @@
 ---
-title: "制限事項と既知の問題を Linux 上の SSIS の |Microsoft ドキュメント"
-description: "この記事の内容について説明します制限事項と既知の問題 SQL Server Integration Services (SSIS) を Linux コンピューター上"
+title: 制限事項と既知の問題を Linux 上の SSIS の |Microsoft ドキュメント
+description: この記事の内容について説明します制限事項と既知の問題 SQL Server Integration Services (SSIS) を Linux コンピューター上
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 708d0e036cb4d861503ddf2cc09c8693fe8cbe29
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>制限事項と Linux の SSIS の既知の問題
 

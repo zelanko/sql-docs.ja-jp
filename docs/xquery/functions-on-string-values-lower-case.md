@@ -1,16 +1,16 @@
 ---
-title: "lower-case 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: lower-case 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - lower-case Function (XQuery)
 - lower-case
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03fbc55fbcf7d49e318480ab42af1339aac1be0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 85b97ecfd9bd84eae0dc617f0e019b354d8fea72
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---lower-case"></a>文字列値 - 小文字に関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Lower-case 関数内の各文字を変換する*$arg*小文字にします。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を小文字に変換する方法が指定されています。 この標準は、Unicode コード ポイントのマップの標準とは異なります。  
+  Lower-case 関数内の各文字を変換する *$arg*小文字にします。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を小文字に変換する方法が指定されています。 この標準は、Unicode コード ポイントのマップの標準とは異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 |*$arg*|小文字に変換する文字列値。|  
   
 ## <a name="remarks"></a>解説  
- 場合の値*$arg*が空、長さ 0 の文字列が返されます。  
+ 場合の値 *$arg*が空、長さ 0 の文字列が返されます。  
   
 ## <a name="examples"></a>使用例  
   

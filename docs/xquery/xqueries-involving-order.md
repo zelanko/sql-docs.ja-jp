@@ -1,16 +1,16 @@
 ---
-title: "注文に関連する XQueries |Microsoft ドキュメント"
-ms.custom: 
+title: 注文に関連する XQueries |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - XQuery, sequence
 - ordered expressions [XQuery]
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ade45beb1eed3079937b6d9302500b10adcca162
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cfc417e80b51f9b7ed4103594d2302d441e38d20
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ WHERE ProductModelID=7
   
 -   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)  
   
--   **@\***2 番目のワーク センターの場所のすべての属性を取得します。  
+-   **@\*** 2 番目のワーク センターの場所のすべての属性を取得します。  
   
 -   FLWOR の繰り返し (FOR ...戻り値) には、すべてを取得、<`step`> 子要素の 2 番目のワーク センターの場所。  
   
@@ -90,7 +90,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上記のクエリでは、テキスト ノードだけを取得します。 全体をする場合は、<`step`> 代わりに、返された要素を削除、 **string()**クエリから関数。  
+ 上記のクエリでは、テキスト ノードだけを取得します。 全体をする場合は、<`step`> 代わりに、返された要素を削除、 **string()** クエリから関数。  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品を製造する際の 2 番目のワーク センターの場所で使用されるすべての材料とツールの検索  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で使用されるツールと材料が取得されます。  
@@ -168,7 +168,7 @@ where ProductModelID=19
   
  クエリ本文が含まれる XML の構築、<`ProductModel`> を ProductModelID 属性と ProductModelName 属性を持つ要素。  
   
--   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()**関数を使用して、最初の 2 つの特徴を取得します。  
+-   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()** 関数を使用して、最初の 2 つの特徴を取得します。  
   
  結果を次に示します。  
   
@@ -226,7 +226,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 特定の製品を製造する際の最初のワーク センターの場所で最後の 2 つの製造手順の検索  
- クエリを使用して、 **last()**最後の 2 つの製造ステップを取得します。  
+ クエリを使用して、 **last()** 最後の 2 つの製造ステップを取得します。  
   
 ```  
 SELECT Instructions.query('   
@@ -257,6 +257,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)  
+ [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

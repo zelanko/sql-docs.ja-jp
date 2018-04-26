@@ -1,25 +1,25 @@
 ---
-title: "Linux 上の SQL Server フルテキスト検索のインストール |Microsoft ドキュメント"
-description: "この記事では、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。"
+title: Linux 上の SQL Server フルテキスト検索のインストール |Microsoft ドキュメント
+description: この記事では、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 13252803c749753d562214e1675b7f68c824cd7e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
 
@@ -53,7 +53,7 @@ sudo yum update mssql-server-fts
 
 オフラインでインストールする場合は、検索で、フルテキスト検索のパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
-## <a name="ubuntu">Ubuntu をインストールします。</a>
+## <a name="ubuntu">Ubuntu にインストールします</a>
 
 インストールする次のコマンドを使用して、 **mssql サーバー-fts** Ubuntu でします。 
 
@@ -98,7 +98,7 @@ sudo zypper update mssql-server-fts
 | アラビア語 | 1025 |
 | ベンガル語 (インド) | 1093 |
 | ブークモール | 1044 |
-| (ブラジル) | 1046 |
+| ブラジル | 1046 |
 | 英語 (U.K.) | 2057 |
 | ブルガリア語 | 1026 |
 | カタロニア語 | 1027 |
@@ -152,7 +152,7 @@ sudo zypper update mssql-server-fts
 
 フルテキスト検索は、バイナリ ファイルに格納されているテキストのでも動作します。 必須でここでは、インストールされているフィルターは、ファイルを処理します。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)です。
 
-呼び出すことによってインストールされているフィルターの一覧を表示できる**sp_help_fulltext_system_components 'filter'**です。 SQL Server 2017 年 1、次のフィルターがインストールされます。
+呼び出すことによってインストールされているフィルターの一覧を表示できる**sp_help_fulltext_system_components 'filter'** です。 SQL Server 2017 年 1、次のフィルターがインストールされます。
 
 | [コンポーネント名] | クラス ID | バージョン |
 |---|---|---|

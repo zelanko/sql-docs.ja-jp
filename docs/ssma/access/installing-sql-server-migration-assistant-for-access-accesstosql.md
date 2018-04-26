@@ -1,6 +1,6 @@
 ---
 title: SQL Server Migration Assistant for Access (AccessToSQL) をインストールする |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -34,11 +34,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b60003c1d9c7c266d57f6c0fc583b977561be72
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 73de7050a3a27efd8a7b42e8df053ee6069a0f27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) をインストールします。
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) のアクセスは、Windows インストーラー ベースのウィザードを使用してインストールされます。 このトピックでは、インストール前提条件については、SSMA の最新バージョンへのリンクとインストール、ライセンス、アンインストール、および SSMA をアップグレードするための手順を提供します。  
@@ -76,11 +76,11 @@ SSMA は Web からダウンロードします。 最新バージョンをダウ
   
     インストールの前提条件がない、必要なコンポーネントをインストールする必要があります最初を示すメッセージが表示されます。 すべての前提条件がインストールされているし、インストール プログラムをもう一度実行していることを確認してください。  
   
-3.  読み取り、使用許諾契約書です。同意する場合は、選択**同意**、順にクリック**[次へ]**です。  
+3.  読み取り、使用許諾契約書です。同意する場合は、選択**同意**、順にクリック **[次へ]** です。  
   
 4.  セットアップの種類の選択 ページで、をクリックして**標準**です。  
   
-5.  **[インストール]**をクリックします。  
+5.  **[インストール]** をクリックします。  
   
 既定のインストール場所は C:\Program files \microsoft SQL Server Migration Assistant for Access です。  
   

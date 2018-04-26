@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの設定 (型のマッピング) (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f184eda88079ddcee91f93f0c34f43c4c2062ec
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b7db7307f7266bb49483d00a370c712c138b5c6f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 プロジェクトの種類のマッピング設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -66,35 +66,35 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |bigint [*..255]|bigint|  
 |binary|バイナリ [1]|  
 |バイナリ [0..1]|バイナリ [1]|  
-|binary[2..255]|binary[*]|  
+|バイナリ [2..255]|バイナリ [*]|  
 |bit|バイナリ [1]|  
 |ビット [0..8]|バイナリ [1]|  
-|ビット [17..24]|binary[3]|  
+|ビット [17..24]|バイナリ [3]|  
 |ビット [25..32]|バイナリ [4]|  
-|ビット [33..40]|binary[5]|  
-|bit[41..48]|バイナリ [6]|  
+|ビット [33..40]|バイナリ [5]|  
+|ビット [41..48]|バイナリ [6]|  
 |ビット [49..56]|バイナリ [7]|  
-|ビット [57..64]|binary[8]|  
-|ビット [9..16]|binary[2]|  
+|ビット [57..64]|バイナリ [8]|  
+|ビット [9..16]|[2]|  
 |blob (blob)|varbinary(max)|  
-|blob[0..1]|varbinary[1]|  
-|blob[2..8000]|varbinary[*]|  
-|blob[8001..*]|varbinary(max)|  
+|blob [0..1]|varbinary [1]|  
+|blob[2..8000]|varbinary [*]|  
+|blob [8001.. *]|varbinary(max)|  
 |[bool]|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char バイト|バイナリ [1]|  
 |char バイト [0..1]|バイナリ [1]|  
-|char byte[2..255]|binary[*]|  
+|char バイト [2..255]|バイナリ [*]|  
 |char [0..1]|nchar [1]|  
-|char [2..255]|nchar[*]|  
+|char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |文字のさまざまな [0..1]|nvarchar [1]|  
 |文字のさまざまな [2..255]|nvarchar|  
 |文字 [0..1]|nchar [1]|  
-|文字 [2..255]|nchar[*]|  
+|文字 [2..255]|nchar [*]|  
 |date|date|  
-|datetime|datetime2[0]|  
+|datetime|datetime2 [0]|  
 |dec|decimal|  
 |dec [*..65]|decimal [*] [0]|  
 |dec [*..65][\*..30]|decimal [*] [\*]|  
@@ -104,62 +104,62 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |double|float [53]|  
 |倍精度|float [53]|  
 |倍精度 [*..255][\*..30]|数値 [*] [\*]|  
-|double[*..255][\*..30]|数値 [*] [\*]|  
+|二重 [*..255][\*..30]|数値 [*] [\*]|  
 |固定|numeric|  
 |固定 [*..65][\*..30]|数値 [*] [\*]|  
 |float|float [24]|  
 |float [*..255][\*..30]|数値 [*] [\*]|  
 |float [*..53]|float [53]|  
 |int|int|  
-|int[*..255]|int|  
+|int [*..255]|int|  
 |整数 (integer)|int|  
 |整数 [*..255]|int|  
 |longblob|varbinary(max)|  
-|longtext|nvarchar(max)|  
+|長いテキスト|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|int|  
 |mediumint [*..255]|int|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
 |national char [0..1]|nchar [1]|  
-|national char [2..255]|nchar[*]|  
+|national char [2..255]|nchar [*]|  
 |各国語文字|nchar [1]|  
 |各国語文字 varying|nvarchar [1]|  
 |各国語文字がさまざまな [0..1]|nvarchar [1]|  
-|各国語文字がさまざまな [2..4000]|nvarchar[*]|  
+|各国語文字がさまざまな [2..4000]|nvarchar [*]|  
 |各国語文字 varying [4001.. *]|nvarchar(max)|  
 |各国語文字 [0..1]|nchar [1]|  
-|各国語文字 [2..255]|nchar[*]|  
+|各国語文字 [2..255]|nchar [*]|  
 |各国語 varchar|nvarchar [1]|  
 |各国語 varchar [0..1]|nvarchar [1]|  
-|各国語 varchar [2..4000]|nvarchar[*]|  
+|各国語 varchar [2..4000]|nvarchar [*]|  
 |各国語 varchar [4001.. *]|nvarchar(max)|  
 |NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
-|nchar varchar [2..4000]|nvarchar[*]|  
+|nchar varchar [2..4000]|nvarchar [*]|  
 |nchar varchar [4001.. *]|nvarchar(max)|  
 |nchar [0..1]|nchar [1]|  
-|nchar [2..255]|nchar[*]|  
+|nchar [2..255]|nchar [*]|  
 |numeric|numeric|  
 |数値 [*..65]|数値 [*] [0]|  
 |数値 [*..65][\*..30]|数値 [*] [\*]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0..1]|nvarchar [1]|  
-|nvarchar [2..4000]|nvarchar[*]|  
+|nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|real[*..255][\*..30]|数値 [*] [\*]|  
+|real [*..255][\*..30]|数値 [*] [\*]|  
 |シリアル|bigint|  
 |smallint|smallint|  
-|smallint[*..255]|smallint|  
+|smallint [*..255]|smallint|  
 |text|nvarchar(max)|  
-|text[0..1]|nvarchar [1]|  
-|text[2..4000]|nvarchar[*]|  
-|text[4001..*]|nvarchar(max)|  
+|テキスト [0..1]|nvarchar [1]|  
+|text[2..4000]|nvarchar [*]|  
+|テキスト [4001.. *]|nvarchar(max)|  
 |time|time|  
 |timestamp|datetime|  
-|tinyblob|varbinary[255]|  
+|tinyblob|varbinary [255]|  
 |tinyint|smallint|  
 |tinyint [*..255]|smallint|  
 |tinytext|nvarchar [255]|  
@@ -195,11 +195,11 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |符号なし smallint [*..255]|int|  
 |符号なし tinyint|tinyint|  
 |符号なし tinyint [*..255]|tinyint|  
-|varbinary [0..1]|varbinary[1]|  
-|varbinary[2..8000]|varbinary[*]|  
-|varbinary[8001..*]|varbinary(max)|  
+|varbinary [0..1]|varbinary [1]|  
+|varbinary [2..8000]|varbinary [*]|  
+|varbinary [8001.. *]|varbinary(max)|  
 |varchar [0..1]|nvarchar [1]|  
-|varchar [2..4000]|nvarchar[*]|  
+|varchar [2..4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
 |year|smallint|  
 |year [2..2]|smallint|  

@@ -1,16 +1,16 @@
 ---
-title: "データ アクセサー関数 |Microsoft ドキュメント"
-ms.custom: 
+title: データ アクセサー関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - data-accessor functions [XQuery]
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a6b3cc974ae32047d88e1355a870cc97806c22d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f70f14b553182c4f52d9c27ec0972fd3d5978026
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-accessor-functions"></a>データ アクセサー関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   このセクションのトピックでは、データ アクセサー関数のサンプル コードについて説明し、そのコードを提供します。  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>fn:data()、fn:string()、text() について  
- XQuery 関数を持つ**fn:data()**値を抽出するスカラー、型指定されたノード、ノード テストから**text()**テキスト ノード、および関数を返す**fn:string()**を返す、ノードの文字列値です。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 XML インスタンス\<age > 12 \< /有効期間の > は、わかりやすくするために使用します。  
+ XQuery 関数を持つ**fn:data()** 値を抽出するスカラー、型指定されたノード、ノード テストから**text()** テキスト ノード、および関数を返す**fn:string()** を返す、ノードの文字列値です。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 XML インスタンス\<age > 12 \< /有効期間の > は、わかりやすくするために使用します。  
   
 -   型指定されていない XML : パス式 /age/text() はテキスト ノード "12" を返します。 関数 fn:data(/age) および fn:string(/age) は文字列値 "12" を返します。  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [文字列関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-string-xquery.md)  
+-   [string 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   
--   [data 関数 &#40;です。XQuery と #41 です。](../xquery/data-accessor-functions-data-xquery.md)  
+-   [data 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
 ## <a name="see-also"></a>参照  
- [パス式 &#40;です。XQuery と #41 です。](../xquery/path-expressions-xquery.md)  
+ [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

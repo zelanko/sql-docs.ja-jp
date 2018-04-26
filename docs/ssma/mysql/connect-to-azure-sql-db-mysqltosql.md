@@ -1,6 +1,6 @@
 ---
 title: Azure SQL DB (MySQLToSQL) への接続 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21b24f9b46490f0eb83a0b9508b8b5b2213cd7a9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2a751393b334aadda1a63bab5752059e92d12325
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB (MySQLToSQL) への接続します。
 SQL Azure ダイアログ ボックスに接続を使用すると、移行する SQL Azure データベースへの接続します。  
@@ -65,13 +65,13 @@ SQL Azure アカウントでにデータベースがない場合は、最初の�
   
 2.  データベースが存在しない場合は、次の 2 つのメニュー項目が表示されます。  
   
-    1.  **(データベースが見つかりません)**は無効になっているし、すべての時間がグレーで表示されます。  
+    1.  **(データベースが見つかりません)** は無効になっているし、すべての時間がグレーで表示されます。  
   
     2.  **新しいデータベースを作成**SQL Azure アカウントにデータベースがない場合にのみこれを有効にします。 このメニュー項目をクリックすると、Azure データベースの作成 ダイアログ ボックスがあるデータベースの名前とサイズを使用します。  
   
 3.  データベースの作成時に、次の 2 つのパラメーターは入力として指定します。  
   
-    1.  **データベース名:**データベース名を入力します。  
+    1.  **データベース名:** データベース名を入力します。  
   
     2.  **データベース サイズ:** SQL Azure アカウントで作成する必要のあるデータベースのサイズを選択します。  
   

@@ -1,7 +1,7 @@
 ---
 title: WideWorldImporters OLTP データベース カタログ - SQL |Microsoft ドキュメント
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 9f4cabeaa5dafe2de26d760b1c03377ba10c2890
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7240025e36f64ac6a11194d81ba563d4e7c49b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベース カタログ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |Suppliers|仕入先 (組織) のメイン エンティティ テーブル|
 |SupplierCategories|Suppliers (例: novelties、toys、clothing、パッケージ化など) のカテゴリ|
 |SupplierTransactions|供給業者に関連する (請求書払い) は、すべての財務トランザクション|
-|PurchaseOrders|供給業者の注文書の詳細|
+|次の使用|供給業者の注文書の詳細|
 |PurchaseOrderLines|発注書を業者から詳細行|
 
  
@@ -107,7 +107,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |CustomerTransactions|顧客に関連する (請求書払い) は、すべての財務トランザクション|
 |SpecialDeals|特別な価格設定です。 これにより、固定価格を含めることができます、割引ドル、割引率。|
 |Orders|顧客の注文の詳細|
-|OrderLines|顧客の注文からの詳細行|
+|Orderlines を追加|顧客の注文からの詳細行|
 |請求書|顧客の請求書の詳細|
 |InvoiceLines|顧客の請求書から詳細行|
 
@@ -170,7 +170,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |手順|用途|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|使用すると (から`Application.People`) が、web サイトにアクセスします。|
-|ChangePassword|(外部の認証メカニズムを使用していないユーザー) 用のユーザーのパスワードを変更します。|
+|パスワードの変更|(外部の認証メカニズムを使用していないユーザー) 用のユーザーのパスワードを変更します。|
 |InsertCustomerOrders|(注文明細行を含む) 1 つまたは複数の顧客注文の挿入を許可します。|
 |InvoiceCustomerOrders|請求される注文の一覧を取得し、請求書を処理します。|
 |RecordColdRoomTemperatures|リストを受け取り、センサー データ、テーブル値パラメーター (TVP) としてし、データの適用、`Warehouse.ColdRoomTemperatures`テンポラル テーブルです。|

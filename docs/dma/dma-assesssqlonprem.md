@@ -2,7 +2,7 @@
 title: (データ Migration Assistant) の SQL Server の移行の評価を実行して |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c23f8d37e7af9daad2af78164a21adbe8c613a3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe0447cf841eb5b45526d3a8fd1099c84ad4113c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>SQL Server の移行の評価を実行します。
 次の手順では、内部設置型 SQL Server, データ Migration Assistant を使用して、Azure の仮想マシン、または Azure SQL データベースで実行されている SQL Server に移行するため、最初の評価を実行できます。
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 
     最近、内部設置型 SQL Server インスタンスに、または Azure VM でホストされている SQL Server に、内部設置型 SQL Server インスタンスをアップグレードする場合に、ソースとターゲット サーバーの種類を設定**SQL Server**です。 Azure SQL Database に移行する場合は、代わりに、ターゲット サーバーの種類に設定**Azure SQL Database**です。
 
-3.  **[作成]**をクリックします。
+3.  **[作成]** をクリックします。
 
     ![評価を作成します。](../dma/media/NewAssessment.png)
 

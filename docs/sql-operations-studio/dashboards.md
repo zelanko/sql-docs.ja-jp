@@ -1,9 +1,9 @@
 ---
-title: Insights と SQL Operations Studio (preview) での一般的なタスクを簡単にアクセス |Microsoft ドキュメント
-description: SQL Operations Studio (preview) で洞察に富んだウィジェットを表示する方法について説明します。
+title: Insights と SQL 操作 Studio (プレビュー) での一般的なタスクを簡単にアクセス |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) で洞察に富んだウィジェットを表示する方法について説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>ダッシュ ボード[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>ダッシュ ボード [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 ダッシュ ボード、右クリックし、サーバーまたはデータベースを表示および選択**管理**です。
 
@@ -107,11 +107,11 @@ Insight ウィジェットと洞察の詳細については、問題を軽減ま
 
 ## <a name="sample-insight-action-definition"></a>サンプル Insight アクションの定義
 
-```"actions"{}```insight アクションを定義します。 アクションをなど、特定のスコープを定義できる```"server"```、```"database"```などと[!INCLUDE[name-sos](../includes/name-sos-short.md)]アクションに現在の接続コンテキスト情報を渡します。 
+```"actions"{}``` insight アクションを定義します。 アクションをなど、特定のスコープを定義できる```"server"```、```"database"```などと[!INCLUDE[name-sos](../includes/name-sos-short.md)]アクションに現在の接続コンテキスト情報を渡します。 
 
-WideWorldImporters データベースの復元アクションが起動した場合に、```"database": "${Database}"```を渡すことを示します定義```Database```が復元アクションをクエリの結果の列の値。 データベースの復元アクションを開始します。 ```"types"```json 配列は、配列に複数のアクションを指定できます。 コンテキスト メニューを基本的になる情報の詳細 ダイアログでそのユーザーをクリックして、操作を実行します。 
+WideWorldImporters データベースの復元アクションが起動した場合に、```"database": "${Database}"```を渡すことを示します定義```Database```が復元アクションをクエリの結果の列の値。 データベースの復元アクションを開始します。 ```"types"``` json 配列は、配列に複数のアクションを指定できます。 コンテキスト メニューを基本的になる情報の詳細 ダイアログでそのユーザーをクリックして、操作を実行します。 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]「のバックアップ」、「復元中」、「新しいクエリ」および「新しいデータベース」のアクションの種類として、プレビュー 0.17.1 が有効にします。
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] 「のバックアップ」、「復元中」、「新しいクエリ」および「新しいデータベース」のアクションの種類として、プレビュー 0.17.1 が有効にします。
 
 ```json
 "details": {

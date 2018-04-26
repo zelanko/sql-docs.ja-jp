@@ -1,39 +1,39 @@
 ---
-title: "Linux 上の SQL Server のセキュリティの概要 |Microsoft ドキュメント"
-description: "この記事では、セキュリティの一般的なアクションを説明します。"
+title: Linux 上の SQL Server のセキュリティの概要 |Microsoft ドキュメント
+description: この記事では、セキュリティの一般的なアクションを説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: 0868aeaec180999590a06f8012a89addb64d1ce1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux のセキュリティ機能のチュートリアル
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server に新しい Linux ユーザーの場合は、次のタスクはセキュリティ タスクの一部を説明します。 これらは一意または Linux に固有でないですがさらに詳しく調査するには、領域の概念を付けると便利です。 各例では、リンクは、その領域の詳細なドキュメントに提供されます。
+SQL Server に新しい Linux ユーザーの場合は、次のタスクはセキュリティ タスクの一部を説明します。 これらは Linux に固有のものではありませんが、より詳しく調べたい領域を知るのに役立ちます。 各例では、リンクは、その領域の詳細なドキュメントに提供されます。
 
 >  [!NOTE]
->  次の例を使用して、 **AdventureWorks2014**サンプル データベース。 手順を取得して、このサンプル データベースをインストールする方法については、次を参照してください。 [Windows から Linux に SQL Server データベースを復元](sql-server-linux-migrate-restore-database.md)です。
+>  次の例を使用して、 **AdventureWorks2014**サンプル データベース。 このサンプル データベースを入手し、インストールする方法については、次を参照してください。 [Windows から Linux に SQL Server のデータベースを復元](sql-server-linux-migrate-restore-database.md)。
 
 
 ## <a name="create-a-login-and-a-database-user"></a>ログインとデータベース ユーザーを作成します。 
 
-使用して、master データベースでログインを作成して SQL Server へのアクセスを与える他のユーザー、 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)ステートメントです。 例:
+使用して、master データベースでログインを作成して SQL Server へのアクセスを与える他のユーザー、 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)ステートメントです。 以下に例を示します。
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -54,7 +54,7 @@ GO
 - SQL Server の管理者アカウントは、任意のデータベースに接続できるし、任意のデータベースで複数のログインとユーザーを作成できます。  
 - データベースを作成するとき、データベース所有者は、そのデータベースに接続可能になります。 データベース所有者より多くのユーザーを作成できます。
 
-後でそれらを付与することで複数のログインを作成するには、他のログインを承認できる、`ALTER ANY LOGIN`権限です。 データベース内に付与することでより多くのユーザーを作成するには、他のユーザーを承認することができます、`ALTER ANY USER`権限です。 例:   
+後でそれらを付与することで複数のログインを作成するには、他のログインを承認できる、`ALTER ANY LOGIN`権限です。 データベース内に付与することでより多くのユーザーを作成するには、他のユーザーを承認することができます、`ALTER ANY USER`権限です。 以下に例を示します。   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   

@@ -1,9 +1,9 @@
 ---
-title: Insight ウィジェットを使用して、サーバーと SQL Operations Studio (preview) でデータベースを監視する |Microsoft ドキュメント
-description: SQL Operations Studio (preview) で洞察ウィジェットについて説明します。
+title: Insight ウィジェットを使用して、サーバーと SQL 操作 Studio (プレビュー) でデータベースを監視する |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) で洞察ウィジェットについて説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d810e0b5ed89b93ac3d56a12758285fbd297092b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 076bca7864a6111a5fa4758d5ecd074b01812d65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察ウィジェットを持つデータベースを管理します。[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察ウィジェットを持つデータベースを管理します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Insight ウィジェットがサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察の視覚エフェクトに変えます。 
 
@@ -41,7 +41,7 @@ Insight ウィジェットがサーバーとデータベースの監視に使用
 
 ## <a name="sql-queries"></a>SQL クエリ 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]別の言語または高負荷のユーザー インターフェイスの JSON の最小構成でできるだけ多く T-SQL を使用するようにまだを行わずに済みますしようとしています。 T-SQL で洞察ウィジェットを構成するには、洞察に富んだウィジェットに変換できる便利なの T-SQL クエリの既存のソースの膨大な数は活用します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 別の言語または高負荷のユーザー インターフェイスの JSON の最小構成でできるだけ多く T-SQL を使用するようにまだを行わずに済みますしようとしています。 T-SQL で洞察ウィジェットを構成するには、洞察に富んだウィジェットに変換できる便利なの T-SQL クエリの既存のソースの膨大な数は活用します。
 
 Insight ウィジェットは、1 つまたは 2 つの T-SQL クエリから構成されます。
 * *Insight ウィジェットのクエリ*必須であり、ウィジェットで表示されるデータを返すクエリです。
@@ -49,7 +49,7 @@ Insight ウィジェットは、1 つまたは 2 つの T-SQL クエリから構
 
 Insight ウィジェットのクエリでは、数、グラフ、またはグラフを表示するデータセットを定義します。 インサイトの詳細のクエリを使用すると、洞察の詳細 パネルで、表形式で関連するインサイトの詳細情報を一覧表示されます。 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]insight ウィジェットのクエリを実行し、グラフのデータセットにクエリの結果セットをマップし、それを表示します。 ユーザー情報の詳細を開くと、insight 詳細クエリが実行され、ダイアログ ボックス内のグリッド ビューで、結果を出力します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] insight ウィジェットのクエリを実行し、グラフのデータセットにクエリの結果セットをマップし、それを表示します。 ユーザー情報の詳細を開くと、insight 詳細クエリが実行され、ダイアログ ボックス内のグリッド ビューで、結果を出力します。
 
 基本的な概念では、T-SQL クエリを記述する方法の数、グラフ、およびグラフ ウィジェットのデータセットとして使用できるようにします。 
 

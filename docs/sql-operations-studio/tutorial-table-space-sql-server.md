@@ -1,9 +1,9 @@
 ---
-title: 'チュートリアル: SQL Operations Studio (preview) のテーブル領域使用状況のサンプル insight ウィジェットを有効にする |Microsoft ドキュメント'
-description: このチュートリアルでは、SQL Operations Studio (preview) の データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
+title: 'チュートリアル: SQL 操作 Studio (プレビュー) のテーブル領域使用状況のサンプル insight ウィジェットを有効にする |Microsoft ドキュメント'
+description: このチュートリアルでは、SQL 操作 Studio (プレビュー) の データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
 ms.custom: tools|sos
 ms.date: 03/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a1ebe6fda1baf546923887f28b51d416a80b59
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 6ec260eb6c82bfcac0e38251375fc9b58af55db1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル: 領域使用状況サンプル insight ウィジェットを使用してテーブルを有効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -1,6 +1,6 @@
 ---
 title: Oracle データベース (OracleToSQL) への接続 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c0c85182da6de1e2cb80cda8c628788651e89ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Oracle データベース (OracleToSQL) に接続します。
 Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、移行する Oracle データベースに接続する必要があります。 接続すると、SSMA は、すべての Oracle スキーマに関するメタデータを取得し、Oracle メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -98,7 +98,7 @@ Oracle データベースへの接続に使用されるアカウントが少な�
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    詳細については、次を参照してください。 [Oracle に接続 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
+    詳細については、次を参照してください。 [Oracle に接続&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)です。  
   
 ## <a name="reconnecting-to-oracle"></a>Oracle への再接続  
 プロジェクトを終了するまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くと、データベースにアクティブに接続する場合を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要がなくなるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データを移行します。  
@@ -133,5 +133,5 @@ Oracle データベースについてのメタデータは、自動的に更新�
 -   移行プロセスの次の手順が、 [SQL Server のインスタンスへの接続](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f)です。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

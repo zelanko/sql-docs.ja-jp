@@ -1,16 +1,16 @@
 ---
-title: "max 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: max 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - max function [XQuery]
 - fn:max function
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a182af7c1a3bce843df67246c7180d012e0402e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b04741b79c65e2fd698d211129d22f5463261c79
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---max"></a>集計関数の max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  アトミック値のシーケンスを返します*$arg*値を持つしたよりも大きい他のすべての項目を 1 つです。  
+  アトミック値のシーケンスを返します *$arg*値を持つしたよりも大きい他のすべての項目を 1 つです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,17 +48,17 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  最大値の取得元になるアトミック値のシーケンス。  
   
 ## <a name="remarks"></a>解説  
- すべての種類に渡されるアトミック値の**max()**同じ基本型のサブタイプである必要があります。 受け付けられるベースの型をサポートする型は、 **gt**操作します。 この型には、3 つの組み込み数値基本データ型、date/time 基本データ型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+ すべての種類に渡されるアトミック値の**max()** 同じ基本型のサブタイプである必要があります。 受け付けられるベースの型をサポートする型は、 **gt**操作します。 この型には、3 つの組み込み数値基本データ型、date/time 基本データ型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
   
  結果**max()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。 入力が静的に空の場合は、結果が暗黙的に空になり、静的エラーが生成されます。  
   
- **Max()**関数が入力シーケンス内の他のよりも大きいシーケンス内の 1 つの値を返します。 xs:string 値の場合は、既定の Unicode コードポイント照合順序が使用されます。 If an xdt:untypedAtomic value cannot be cast to xs:double, the value is ignored in the input sequence, *$arg*. 入力が、動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
+ **Max()** 関数が入力シーケンス内の他のよりも大きいシーケンス内の 1 つの値を返します。 xs:string 値の場合は、既定の Unicode コードポイント照合順序が使用されます。 Xdt:untypedAtomic 値は、xs:double にキャストすることはできない場合、入力シーケンスで値が無視されます。 *$arg*です。 入力が、動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. max() XQuery 関数を使用した、製造プロセス内で労働時間が最も長いワーク センターの場所の検索  
- 指定したクエリ[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用して書き換えることができます、 **max()**関数。  
+ 指定したクエリ[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用して書き換えることができます、 **max()** 関数。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  

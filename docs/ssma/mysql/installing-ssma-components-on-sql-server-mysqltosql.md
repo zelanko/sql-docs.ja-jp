@@ -1,6 +1,6 @@
 ---
 title: SQL Server (MySQLToSql) へ SSMA コンポーネントのインストール |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4d55b216e149384c38477f684f3bdddfb812141f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>SQL server (MySQLToSql) SSMA コンポーネントのインストール
 SSMA をインストールするだけでなくする必要がありますコンポーネントもインストールを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントには、データの移行、およびサーバーからサーバーへの接続を有効にする MySQL プロバイダーをサポートする、SSMA 拡張機能パックが含まれます。  
@@ -85,7 +85,7 @@ SSMA for MySQL server のコンポーネントをインストールする前に[
   
     **Sysdb**テーブルを持つデータベースが作成され (エンジンを使用してサーバー側のデータの移行) データの移行に必要なストアド プロシージャは、そのデータベースに作成されます。  
   
-11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **[はい]**、順にクリック**[次へ]**です。 またはをクリックしてウィザードを終了するには、**いいえ**です。  
+11. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **[はい]**、順にクリック **[次へ]** です。 またはをクリックしてウィザードを終了するには、**いいえ**です。  
   
 ## <a name="see-also"></a>参照  
 [SSMA の MySQL クライアントのインストール&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

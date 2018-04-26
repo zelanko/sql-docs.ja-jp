@@ -1,27 +1,28 @@
 ---
-title: "更新からのデータベース (OracleToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 更新からのデータベース (OracleToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d37a01129f273611a0502c14ea6caa44f8f90ad3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="refresh-from-database-oracletosql"></a>データベース (OracleToSQL) からの更新します。
 **データベースから更新** ダイアログ ボックスでは、Oracle データベースから更新するには、どのオブジェクトを選択することができます。 ダイアログ ボックス内の行が色分けされるメタデータの状態に基づいて。  
@@ -34,11 +35,11 @@ ms.lasthandoff: 12/21/2017
   
 -   オブジェクトが、Oracle データベースで新しい場合、行がピンク色です。  
   
-オブジェクトの更新の設定を既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください。[プロジェクトの設定 &#40;です。同期 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+オブジェクトの更新の設定を既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください。[プロジェクト設定&#40;同期&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)です。  
   
 アクセスする、**データベースから更新**ダイアログ ボックスで、クリックすると Oracle メタデータ エクスプ ローラー オブジェクトを右クリック**データベースから更新**です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **折りたたみ (-)**  
 個々 のオブジェクトを非表示にするすべてのオブジェクト グループを折りたたみます。  
   

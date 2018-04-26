@@ -1,6 +1,6 @@
 ---
 title: MySQL (MySQLToSQL) への接続 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5ed12698026172f7ef2ef080fd8e68d64cf51c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 4b0a3565b466d132f829000d519195d2fedb27dc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL (MySQLToSQL) への接続します。
 使用して、 **MySQL への接続**を移行する MySQL データベースに接続する ダイアログ ボックス。  
@@ -70,11 +70,11 @@ MySQL Secure Socket Layer (SSL) を介してへの接続を構成するオプシ
   
 [構成] ボタンをクリックすると、ダイアログ ボックスが表示されます。 MySQL データベースを次の 3 つの証明書ファイル ダイアログ ボックス内に存在するパスに接続する必要があります中に暗号化を使用するには、[プライバシー強化メール証明書 (PEM)] に定義されています。  
   
--   **SSL 証明機関:**信頼の SSL の Ca の一覧で、ファイルへのパスを指定します。  
+-   **SSL 証明機関:** 信頼の SSL の Ca の一覧で、ファイルへのパスを指定します。  
   
--   **SSL 証明書:**をセキュリティで保護された接続の確立に使用する SSL 証明書ファイルの名前を指定します。  
+-   **SSL 証明書:** をセキュリティで保護された接続の確立に使用する SSL 証明書ファイルの名前を指定します。  
   
--   **SSL キー:**セキュリティで保護された接続の確立に使用する SSL のキー ファイルの名前を指定します。  
+-   **SSL キー:** セキュリティで保護された接続の確立に使用する SSL のキー ファイルの名前を指定します。  
   
 > [!NOTE]  
 > -   **OK**必要な情報が提供されているときにボタンが有効にします。 ファイルのパスのいずれかの情報が有効でない場合は、[OK] ボタンが無効になります。  

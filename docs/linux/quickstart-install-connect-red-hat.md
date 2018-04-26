@@ -1,31 +1,31 @@
-﻿---
-title: "Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント"
-description: "このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。"
+---
+title: Red Hat Enterprise Linux に SQL Server 2017 の概要 |Microsoft ドキュメント
+description: このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 をインストールし、作成し、sqlcmd によるデータベースのクエリを実行する方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 145f829b3baf5392ed3d6ed93db43b01603b9b8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート: SQL Server をインストールし、Red hat でデータベースを作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このクイック スタートの最初をインストールする SQL Server 2017 に Red Hat Enterprise Linux (RHEL) 7.3 以降。 その後 **sqlcmd** で接続して最初のデータベースを作成し、クエリを実行します。
+このクイック スタートの最初をインストールする SQL Server 2017 に Red Hat Enterprise Linux (RHEL) 7.3 以降。 その次に **sqlcmd** を使用して、最初のデータベースへ接続し、クエリを実行します。
 
 > [!TIP]
 > このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/24/2018
 
 RHEL 7.3 または 7.4 マシンで **少なくとも 2 GB** のメモリが必要です。
 
-自分のコンピューター上に Red Hat Enterprise Linux をインストールする場合は[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation) を参照してください。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[作成と Azure CLI を使用して Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`です。
+自分のコンピューター上の Red Hat Enterprise Linux をインストールするに移動[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)です。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[作成と Azure CLI を使用して Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`です。
 
 その他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system) を参照してください。
 
@@ -60,16 +60,16 @@ RHEL で SQL Server を構成するためには、ターミナルで次のコマ
    sudo yum install -y mssql-server
    ```
 
-1. パッケージのインストールが完了した後、**mssql-conf setup** を実行し、プロンプトに従って SA パスワードを設定し、エディションを選択します。
+1. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションのライセンスはフリーです: Evaluation、Developer、およびExpress。
+   > このチュートリアルで SQL Server 2017 を試す場合、次のエディションはライセンスフリーです: Evaluation、Developer、および Express
 
    > [!NOTE]
-   > SA アカウントのパスワードは十分に強力なもの(大文字と小文字のアルファベット、十進数の数字および／もしくは英数字以外の記号を含む、8文字以上の文字列)を指定するようにしてください。
+   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
 
 1. 構成を完了したら、サービスが実行されていることを確認します。
 

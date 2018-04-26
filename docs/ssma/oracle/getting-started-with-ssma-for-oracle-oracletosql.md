@@ -1,38 +1,39 @@
 ---
-title: "入門 SSMA for Oracle (OracleToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: 入門 SSMA for Oracle (OracleToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 1765ceb5cb1f4100d60a0f429635f9fc80d14e82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 761afabb604025c7c1f6472d09c8b3acf630915c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>入門 SSMA for Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) の Oracle できます迅速に変換する Oracle データベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]スキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に Oracle からデータを移行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) の Oracle できます迅速に変換する Oracle データベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]スキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に Oracle からデータを移行し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
 このトピックでは、インストール プロセスを導入し、し SSMA ユーザー インターフェイスを理解するために役立ちます。  
   
 ## <a name="installing-ssma"></a>SSMA のインストール  
-SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラム ソース Oracle データベースとのターゲット インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 必要がありますをインストールする拡張機能パックと少なくとも 1 つの Oracle プロバイダー (OLE DB または[!INCLUDE[vstecado](../../includes/vstecado_md.md)]) を実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントは、データの移行と Oracle システム関数のエミュレーションをサポートします。 インストール手順については、次を参照してください。 [SSMA for Oracle &#40;OracleToSQL&#41; にインストールする](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)です。  
+SSMA を使用する必要がありますに初めてインストールする SSMA クライアント プログラム ソース Oracle データベースとのターゲット インスタンスの両方にアクセスできるコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 必要がありますをインストールする拡張機能パックと少なくとも 1 つの Oracle プロバイダー (OLE DB または[!INCLUDE[vstecado](../../includes/vstecado_md.md)]) を実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 これらのコンポーネントは、データの移行と Oracle システム関数のエミュレーションをサポートします。 インストール手順については、次を参照してください。 [SSMA for Oracle をインストールする&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)です。  
   
 SSMA を起動する をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle**、クリックして **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle**です。  
   
@@ -47,7 +48,7 @@ SSMA をインストールした後に Oracle データベースを移行 SSMA �
   
 使用するスキーマの変換後の同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、Oracle メタデータ エクスプ ローラーに戻るしへの Oracle スキーマからデータを移行できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。  
   
-これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server &#40;OracleToSQL&#41; への Oracle データベースの移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)です。  
+これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server への Oracle データベースの移行&#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)です。  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能を説明します。  
   
@@ -59,16 +60,16 @@ Oracle メタデータ エクスプ ローラーでは、Oracle スキーマに�
   
 -   各スキーマ内のオブジェクトを参照します。  
   
--   変換に、オブジェクトを選択し、オブジェクトに変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。 詳細については、次を参照してください。 [Oracle スキーマを変換する &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)です。  
+-   変換に、オブジェクトを選択し、オブジェクトに変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。 詳細については、次を参照してください。 [Oracle スキーマを変換する&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)です。  
   
--   データ移行のためのテーブルを選択し、これらのテーブルからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server &#40;OracleToSQL&#41; への Oracle データの移行](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)です。  
+-   データ移行のためのテーブルを選択し、これらのテーブルからデータを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 詳細については、次を参照してください。 [SQL Server への Oracle データの移行&#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)です。  
   
 #### <a name="sql-server-metadata-explorer"></a>SQL Server メタデータ エクスプ ローラー  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーのインスタンスに関する情報が表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 インスタンスに接続する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA は、そのインスタンスに関するメタデータを取得し、プロジェクト ファイルに格納します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] メタデータ エクスプ ローラーのインスタンスに関する情報が表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 インスタンスに接続する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSMA は、そのインスタンスに関するメタデータを取得し、プロジェクト ファイルに格納します。  
   
 使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーを変換後の Oracle データベース オブジェクトを選択し、それらのオブジェクトのインスタンスと同期して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
   
-詳細については、次を参照してください。[に SQL Server &#40;OracleToSQL"&"#41 です。 変換されたデータベース オブジェクトの読み込み](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)です。  
+詳細については、次を参照してください。 [SQL Server に変換されたデータベース オブジェクトの読み込み&#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)です。  
   
 ### <a name="metadata"></a>メタデータ  
 各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、Oracle メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブは表示:**テーブル**、 **SQL**、**の種類のマッピング、レポート**、**プロパティ**、および**データ**です。 **レポート** タブは、選択したオブジェクトを格納しているレポートを作成した後のみに情報を格納します。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラーで、3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**です。  
@@ -90,7 +91,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 #### <a name="migration-toolbar"></a>移行のツールバー  
 次の表は、移行のツール バー コマンドを示しています。  
   
-|ボタン|機能|  
+|ボタン|関数|  
 |------|--------|  
 |**レポートを作成します。**|選択した Oracle オブジェクトに変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文、し成功に変換されたを示すレポートを作成します。<br /><br />このコマンドは、オブジェクトが Oracle メタデータ エクスプ ローラーで選択されていない場合は無効です。|  
 |**スキーマを変換します。**|選択した Oracle オブジェクトに変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オブジェクト。<br /><br />このコマンドは、オブジェクトが Oracle メタデータ エクスプ ローラーで選択されていない場合は無効です。|  
@@ -102,7 +103,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
   
 |メニュー|Description|  
 |----|-----------|  
-|**[最近使ったファイル]**|プロジェクトで作業し、Oracle に接続しに接続するためのコマンドを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
+|**ファイル**|プロジェクトで作業し、Oracle に接続しに接続するためのコマンドを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。|  
 |**[編集]**|検索して、詳細ページで、コピーするなどのテキストの操作用のコマンドを含む[!INCLUDE[tsql](../../includes/tsql_md.md)]SQL の詳細ウィンドウ。 含まれています、**管理ブックマーク**オプション、いることができますを既存のブックマークの一覧を表示します。 ダイアログ ボックスの右側にあるボタンを使用するには、それらのブックマークを管理します。|  
 |**[表示]**|含まれています、**メタデータ エクスプ ローラーの同期**コマンド。 Oracle メタデータ エクスプ ローラーの間でオブジェクトを同期して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 コマンドを表示/非表示を含む、**出力**と**エラー一覧**ペインおよびオプション**レイアウト**レイアウトを管理します。|  
 |**ツール**|レポートを作成し、オブジェクトとデータを移行するためのコマンドが含まれています。 アクセスする、**グローバル設定**と**プロジェクト設定** ダイアログ ボックス。|  
@@ -117,6 +118,6 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
 -   エラー一覧 ウィンドウは、並べ替え可能な一覧で、エラー、警告、および情報メッセージを示します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server &#40;OracleToSQL&#41; への Oracle データの移行](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
-[ユーザー インターフェイス リファレンス &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[SQL Server への Oracle データの移行&#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md)  
+[ユーザー インターフェイス リファレンス&#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

@@ -1,16 +1,16 @@
 ---
-title: "ceiling 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: ceiling 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - fn:ceiling function
 - ceiling function [XQuery]
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50d1816ea6adb7e11bbf583f37ca8e8b9176223
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c706be1d79119a28f86a389e82e42416b0b3b552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---ceiling"></a>Ceiling の数値の値関数 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ fn:ceiling ( $arg as numeric?) as numeric?
  関数を適用する数値。  
   
 ## <a name="remarks"></a>解説  
- 場合の種類*$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**と同じ戻り値の型です*$arg*型です。  
+ 場合の種類 *$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**と同じ戻り値の型です *$arg*型です。  
   
- 場合の種類*$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
+ 場合の種類 *$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
   
  Fn:floor、fn:ceiling、または fn:round 関数への入力が場合**xdt:untypedAtomic**に暗黙的にキャスト**xs:double**です。  
   
@@ -106,10 +106,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Ceiling()**関数では、すべての整数値を xs:decimal にマップします。  
+-   **Ceiling()** 関数では、すべての整数値を xs:decimal にマップします。  
   
 ## <a name="see-also"></a>参照  
- [floor 関数と #40 です。XQuery と #41 です。](../xquery/numeric-values-functions-floor.md)   
- [round 関数 &#40;です。XQuery と #41 です。](../xquery/numeric-values-functions-round.md)  
+ [floor 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [round 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   
   

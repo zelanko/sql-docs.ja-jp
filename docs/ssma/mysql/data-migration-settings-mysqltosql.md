@@ -1,6 +1,6 @@
 ---
 title: データ移行の設定 (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04437d720ebefc28427d2af24796926b5e4ac4cf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 94c6d0161226ec427706a7aa595f22eb3fe53406
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-migration-settings-mysqltosql"></a>データ移行の設定 (MySQLToSQL)
   
@@ -58,9 +58,9 @@ ms.lasthandoff: 04/06/2018
   
 存在する 2 つのボタンを viz。  
   
--   **適用:**クリックして**適用**変更されている設定を適用します。  
+-   **適用:** クリックして**適用**変更されている設定を適用します。  
   
--   **キャンセル:**クリックして**キャンセル**変更が加えの前に存在する設定を復元します。  
+-   **キャンセル:** クリックして**キャンセル**変更が加えの前に存在する設定を復元します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server または SQL azure の MySQL データの移行](http://msdn.microsoft.com/en-us/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  

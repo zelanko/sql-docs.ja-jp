@@ -1,16 +1,16 @@
 ---
-title: "floor 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: floor 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - floor function [XQuery]
 - fn:floor function
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54241fde9a0c97fe66687c88d82812c7ce0d5eb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 718d95f84d7fde816b243de61ea21122e21294c1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---floor"></a>数値の値関数、floor します。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ fn:floor ($arg as numeric?) as numeric?
  関数を適用する数値。  
   
 ## <a name="remarks"></a>解説  
- 場合の種類*$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型と同じ、*$arg*型です。 場合の種類*$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
+ 場合の種類 *$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型と同じ、*$arg*型です。 場合の種類 *$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
   
  Fn:floor、fn:ceiling、または fn:round 関数への入力が場合**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされた**xs:double**です。 その他の型のデータが入力されると、静的エラーが生成されます。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks サンプル データベース内の列を入力します。  
   
- 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**floor()** XQuery 関数。 置換を行うには必要なは、 **ceiling()**と、クエリの関数、 **floor()**関数。  
+ 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**floor()** XQuery 関数。 置換を行うには必要なは、 **ceiling()** と、クエリの関数、 **floor()** 関数。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Floor()**関数では、すべての整数値を xs:decimal にマップします。  
+-   **Floor()** 関数では、すべての整数値を xs:decimal にマップします。  
   
 ## <a name="see-also"></a>参照  
- [ceiling 関数と #40 です。XQuery と #41 です。](../xquery/numeric-values-functions-ceiling.md)   
- [round 関数 &#40;です。XQuery と #41 です。](../xquery/numeric-values-functions-round.md)   
+ [ceiling 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
+ [round 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

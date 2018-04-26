@@ -1,16 +1,16 @@
 ---
-title: "比較式 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: 比較式 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 361a600ec8033cbd0e10af75e7782b1b86b343cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-expressions-xquery"></a>比較式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -174,11 +174,11 @@ WHERE ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   `declare namespace`クエリでは、使用する名前空間プレフィックスを定義します。  
+-   `declare namespace` クエリでは、使用する名前空間プレフィックスを定義します。  
   
 -   \<サイズ > 要素の値が、指定したアトミック値"small"と比較します。  
   
--   値の演算子がアトミック値でのみ機能するため、 **data()**関数が暗黙的に使用をノードの値を取得します。 つまり、`data($P/PD:Size) eq "small"` も同じ結果になります。  
+-   値の演算子がアトミック値でのみ機能するため、 **data()** 関数が暗黙的に使用をノードの値を取得します。 つまり、`data($P/PD:Size) eq "small"` も同じ結果になります。  
   
  結果を次に示します。  
   
@@ -227,9 +227,9 @@ ProductModelID       Result
   
  ドキュメント内の表示順に基づいて行われる比較は次のようになります。  
   
--   `<<`: は**オペランド 1**前**オペランド 2**ドキュメント順でします。  
+-   `<<` : は**オペランド 1**前**オペランド 2**ドキュメント順でします。  
   
--   `>>`: は**オペランド 1**に従って**オペランド 2**ドキュメント順でします。  
+-   `>>` : は**オペランド 1**に従って**オペランド 2**ドキュメント順でします。  
   
  次のクエリは、製品カタログの説明がある場合に True を返します、\<保証 > 要素の前に、\<メンテナンス > 特定の製品ドキュメント順で要素です。  
   
@@ -247,14 +247,14 @@ where ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
--   **Value()**のメソッド、 **xml**データ型は、クエリで使用します。  
+-   **Value()** のメソッド、 **xml**データ型は、クエリで使用します。  
   
--   クエリのブール型の結果に変換される**nvarchar (10)**返されるとします。  
+-   クエリのブール型の結果に変換される**nvarchar (10)** 返されるとします。  
   
 -   クエリから True が返されます。  
   
 ## <a name="see-also"></a>参照  
- [型システムと #40 です。XQuery と #41 です。](../xquery/type-system-xquery.md)   
+ [システム入力&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

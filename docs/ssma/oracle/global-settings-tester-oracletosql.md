@@ -1,42 +1,43 @@
 ---
-title: "グローバル設定 (テスト担当者) (OracleToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: グローバル設定 (テスト担当者) (OracleToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 925bc59b0dfbef77cb7b5c17d011078a7d6316ac
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-tester-oracletosql"></a>グローバル設定 (テスト担当者) (OracleToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスターの設定を指定 ダイアログ ボックス。  
   
 テスト担当者の設定にアクセスする、**ツール**メニューの [**グローバル設定**、] をクリック**Tester**左側のウィンドウの下部にあります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **テストが容易なオブジェクトの分析**  
 この設定では、テスト可能なオブジェクトの分析を実行するかどうかを指定します。 選択**はい**SSMA Tester を分析し、依存オブジェクトを自動的にチェックする場合。 既定のオプション セットが**はい**です。  
   
 次のオプションは、この設定に使用されます。  
   
-1.  可  
+1.  はい  
   
-2.  不可  
+2.  いいえ  
   
 **補助テーブルの保存モード**  
 この設定は、テスト_ケースの実行中に作成された内部の補助テーブルを保存する方法を指定します。 この特定の設定には、次のオプションを設定できます。  
@@ -56,19 +57,19 @@ ms.lasthandoff: 12/21/2017
   
 次のオプションは、この設定に使用されます。  
   
-1.  可  
+1.  はい  
   
-2.  不可  
+2.  いいえ  
   
 **最初のエラーの後にテストの実行を停止します。**  
 実行中にエラーが発生した場合、この設定は現在実行中のテスト ケースを停止するかどうかを指定します。 既定のオプション セットが**はい**です。  
   
 次のオプションは、この設定に使用されます。  
   
-1.  可  
+1.  はい  
   
-2.  不可  
+2.  いいえ  
   
 ## <a name="see-also"></a>参照  
-[フィニッシュのテスト_ケース準備 &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[テスト_ケース準備を完了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

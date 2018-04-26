@@ -1,30 +1,31 @@
 ---
-title: "SSMA コンソール (AccessToSQL) でのコマンド ライン オプション |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: SSMA コンソール (AccessToSQL) でのコマンド ライン オプション |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f1e71cefafab7e905b83b66c87eebbc88dc852c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) でのコマンド ライン オプション
 Microsoft は、堅牢な一連の実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、追加の詳細情報を提供します。  
@@ -166,21 +167,21 @@ SSMA コンソールのオプションの構文の概要が表示されます。
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-SSMA コンソールのコマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;です。AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md).  
+SSMA コンソールのコマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)です。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword ヘルプ オプション: – securepassword-?/help  
 SSMA コンソールのオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-SSMA コンソールのコマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;です。AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+SSMA コンソールのコマンド ライン オプションの表形式の表示を参照してください[付録 - 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
-1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[パスワードの管理 &#40;です。AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  パスワードまたはエクスポートを指定する/パスワードのインポートを参照してください[管理パスワード&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)です。  
   
-2.  レポートの生成に、次を参照してください。[レポートの生成 &#40;です。AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md).  
+2.  レポートの生成に、次を参照してください。[を生成するレポート&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)です。  
   
-3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング &#40;です。AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
+3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)です。  
   

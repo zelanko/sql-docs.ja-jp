@@ -1,16 +1,16 @@
 ---
-title: "一次式 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: 一次式 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6ee901d54e5cf68eb5de1e20c448289eab83dbfb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="literals"></a>リテラル  
  XQuery リテラルには、数値型または文字列型のリテラルを使用できます。 文字列リテラルには、定義済みのエンティティ参照を含めることができます。エンティティ参照は文字のシーケンスです。 シーケンスは、構文上意味を持つことも考えられる 1 文字を表すアンパサンドで始まります。 XQuery の定義済みエンティティ参照を次に示します。  
   
-|エンティティ参照|表します|  
+|エンティティ参照|表す内容|  
 |----------------------|----------------|  
 |&lt;|\<|  
 |&gt;|>|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  文字列リテラルには、10 進または 16 進のコード ポイントで識別される文字参照 (Unicode 文字への XML 形式の参照) を含めることもできます。 たとえば、文字参照でユーロの通貨記号を表すことができます"&\#8364;"です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解析するための基準として XML version 1.0 を使用します。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、XML Version 1.0 が解析の基準として使用されます。  
   
 ### <a name="examples"></a>使用例  
  リテラル、エンティティ参照、および文字参照の使用方法を次の例に示します。  
@@ -102,7 +102,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 組み込みの Boolean 関数**true()**と**false()**、次の例のようにを表すブール値を使用できます。  
+ 組み込みの Boolean 関数**true()** と**false()**、次の例のようにを表すブール値を使用できます。  
   
 ```  
 DECLARE @var XML  
@@ -191,6 +191,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   関数のインポートはサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)  
+ [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "シーケンス型の照合 |Microsoft ドキュメント"
-ms.custom: 
+title: シーケンス型の照合 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>システム - 入力シーケンス型の照合
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 式の値は必ず 0 個以上のアイテムのシーケンスになります。 アイテムはアトミック値またはノードのいずれかです。 シーケンス型とは、クエリ式から返されたシーケンス型を特定の型と照合する機能のことです。 例:  
+  XQuery 式の値は必ず 0 個以上のアイテムのシーケンスになります。 アイテムはアトミック値またはノードのいずれかです。 シーケンス型とは、クエリ式から返されたシーケンス型を特定の型と照合する機能のことです。 以下に例を示します。  
   
 -   式の値がアトミックの場合、その値が整数型、小数型、または文字列型であるかどうかを確認できます。  
   
@@ -42,13 +42,13 @@ ms.lasthandoff: 02/09/2018
   
 -   式から特定の名前や型の XML 要素または属性ノードが返されるかどうかを確認できます。  
   
- 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式 &#40;です。XQuery と #41 です](../xquery/sequencetype-expressions-xquery.md)。  
+ 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)です。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>式から返されるアトミック値の型の比較  
  式からアトミック値のシーケンスが返される場合、シーケンス内の値の型を確認することが必要な場合があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>例 : シーケンスが空であるかどうかの判断  
- **Empty()**シーケンス型は、指定された式で返されるシーケンスが空のシーケンスであるかどうかを判別シーケンス型の式で使用できます。  
+ **Empty()** シーケンス型は、指定された式で返されるシーケンスが空のシーケンスであるかどうかを判別シーケンス型の式で使用できます。  
   
  次の例の XML スキーマでは、<`root`> 要素を NULL にできます。  
   
@@ -120,8 +120,8 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>例 : シーケンス式の基数  
- この例は、シーケンス式の基数の効果を示しています。 次の XML スキーマ定義、<`root`> のバイト型では、nillable 要素。  
+### <a name="example-cardinality-in-sequence-expressions"></a>例 : シーケンス式のカーディナリティ  
+ この例は、シーケンス式のカーディナリティの効果を示しています。 次の XML スキーマ定義、<`root`> のバイト型では、nillable 要素。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -140,7 +140,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- 加えた場合は、<`root`> 要素 nil、値は空のシーケンス。 つまり、式 `/root[1]` から空のシーケンスが返されます。 したがって、 `instance of xs:byte` False を返します。 この場合の既定の基数は 1 であることに注意してください。  
+ 加えた場合は、<`root`> 要素 nil、値は空のシーケンス。 つまり、式 `/root[1]` から空のシーケンスが返されます。 したがって、 `instance of xs:byte` False を返します。 この場合の既定のカーディナリティは 1 であることに注意してください。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -150,7 +150,7 @@ GO
 -- result = false  
 ```  
   
- 出現インジケーター (`?`) を追加して基数を指定すると、シーケンス式から True が返されます。  
+ 出現インジケーター (`?`) を追加してカーディナリティを指定すると、シーケンス式から True が返されます。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -237,9 +237,9 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>実装の制限事項  
  これらは、特定の制限事項です。  
   
--   **document-node()** with content type syntax is not supported.  
+-   **document-node()** コンテンツの種類の構文はサポートされていません。  
   
--   **processing-instruction (name)**構文がサポートされていません。  
+-   **processing-instruction (name)** 構文がサポートされていません。  
   
 ## <a name="element-tests"></a>要素のテスト  
  要素のテストは、式から返された要素ノードと特定の名前や型を持つ要素ノードを照合する場合に使用します。 次のような要素のテストを使用できます。  
@@ -315,7 +315,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>例 B  
- 次の例は、式から返されたノードが特定の名前の要素ノードかどうかを判断する方法を示しています。 使用して、 **element()**をテストします。  
+ 次の例は、式から返されたノードが特定の名前の要素ノードかどうかを判断する方法を示しています。 使用して、 **element()** をテストします。  
   
  次の例では、クエリ対象の XML インスタンス内にある 2 つの <`Customer`> 要素の型は、それぞれ `CustomerType` と `SpecialCustomerType` という異なる型です。 式から返される <`Customer`> 要素の型を確認するとします。 次の XML スキーマ コレクションでは、`CustomerType` 型と `SpecialCustomerType` 型を定義しています。  
   
@@ -431,17 +431,17 @@ RETURN
   
 -   要素のテストでは、型名が続かなければなりません出現インジケーター (**?**)。  
   
--   **element (ElementName, TypeName)**はサポートされていません。  
+-   **element (ElementName, TypeName)** はサポートされていません。  
   
--   **element(\*, TypeName)** is not supported.  
+-   **要素 (\*、TypeName)** はサポートされていません。  
   
--   **schema-element()**はサポートされていません。  
+-   **schema-element()** はサポートされていません。  
   
--   **schema-attribute (attributename)**はサポートされていません。  
+-   **schema-attribute (attributename)** はサポートされていません。  
   
 -   明示的に照会する**xsi:type**または**xsi:nil**はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [型システムと #40 です。XQuery と #41 です。](../xquery/type-system-xquery.md)  
+ [システム入力&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

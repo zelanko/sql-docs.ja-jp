@@ -1,25 +1,25 @@
 ---
-title: "SSMS での Linux に SQL Server の管理 |Microsoft ドキュメント"
-description: "このチュートリアルでは、Linux で実行されている Windows 上で SQL Server Management Studio を使用して SQL Server に接続する方法を示します。"
+title: SSMS での Linux に SQL Server の管理 |Microsoft ドキュメント
+description: このチュートリアルでは、Linux で実行されている Windows 上で SQL Server Management Studio を使用して SQL Server に接続する方法を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 30fbd98bc8255bc616414f9926ce9e9e9a0bbea6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio (SSMS) を使用して、Linux 上の SQL Server を管理するには
 
@@ -53,7 +53,7 @@ SQL Server を使用する場合は、常に最新バージョンの SQL Server 
 
     ![SQL Server Management Studio: SQL データベース サーバーへの接続します。](./media/sql-server-linux-develop-use-ssms/connect.png)
 
-3. **[接続]**をクリックします。
+3. **[接続]** をクリックします。
 
     > [!TIP]
     > 接続エラーが発生した場合は、まずエラー メッセージから問題を診断します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。

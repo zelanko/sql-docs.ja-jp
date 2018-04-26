@@ -1,24 +1,24 @@
 ---
-title: "SQL Server on Linux のペース クラスターの展開 |Microsoft ドキュメント"
-description: "このチュートリアルでは、SQL Server on Linux のペース クラスターを展開する方法を示します。"
+title: SQL Server on Linux のペース クラスターの展開 |Microsoft ドキュメント
+description: このチュートリアルでは、SQL Server on Linux のペース クラスターを展開する方法を示します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 10560a49c334f1b65800fb9a21ce4f0116a42536
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux のペース クラスターを展開します。
 
@@ -47,7 +47,7 @@ Linux の各配布用の高可用性 (HA) アドオンを構成するパッケ�
     sudo subscription-manager register
     ```
     
-2.  登録の使用可能なプールの一覧を表示します。
+2.  登録に使用可能なプールの一覧を表示します。
     
     ```bash
     sudo subscription-manager list --available
@@ -132,7 +132,7 @@ YaST で高可用性のパターンをインストールまたはサーバーの
    ```
    
    ここで*NodeX*ノードの名前を指定します。
-2. クラスターを作成します。
+2. クラスターを作成する。
    
    ```bash
    sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable

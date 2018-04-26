@@ -1,30 +1,31 @@
 ---
-title: "パスワード (OracleToSQL) を管理する |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: パスワード (OracleToSQL) を管理する |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6f4203119231c6792d46d3287394dd3bab1b46a1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5239faddefa9925e0c8b3a938fc968c5a03855c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-passwords-oracletosql"></a>パスワード (OracleToSQL) を管理します。
 このセクションでは、データベースのパスワードとをインポートまたはサーバー間でそれらをエクスポートする手順のセキュリティ保護については。  
@@ -42,7 +43,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
 1.  **クリア テキスト:** 'password' のノードの value 属性に、データベースのパスワードを入力します。 スクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義ノードがあります。  
   
-    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージが発生: *"サーバー&lt;サーバー id&gt;パスワードが SSMA コンソール アプリケーションが暗号化によるパスワードの保護、詳細についてはヘルプ ファイルを SSMA で – securepassword オプションを参照してくださいするオプションを提供するクリア テキストのセキュリティ保護されていない形式で指定します"。*  
+    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージが発生: *"サーバー&lt;サーバー id&gt;パスワード SSMA コンソール アプリケーションが保護する オプションを提供するクリア テキストのセキュリティ保護されていない形式で提供されるは、暗号化を使用してパスワードを参照してください SSMA で – securepassword オプションの詳細についてはヘルプ ファイルです。"*  
   
     **暗号化されたパスワードは、**この場合、指定したパスワードが ProtectedStorage.ssma でローカル コンピューター上の暗号化された形式で保存はできます。  
   

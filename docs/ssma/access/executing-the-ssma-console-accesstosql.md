@@ -1,6 +1,6 @@
 ---
 title: SSMA コンソール (AccessToSQL) を実行 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4400ab959c61b23c3a98c817c03506631a4d61af
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5f754441a32346c616e381f8d7f8929354589dcf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) を実行します。
 Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと実行および SSMA アクティビティを制御するコマンド ライン オプションを提供します。 次のセクションでは、同じを詳しく説明します。  
@@ -55,7 +55,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
     -   sql-server-2014  
   
-    -   sql-server-2016  
+    -   sql server 2016  
   
     -   sql-azure  
   
@@ -142,7 +142,7 @@ Microsoft は、堅牢な一連のスクリプト ファイルのコマンドと
   
 **Command**  
   
-connect-source-database  
+接続ソース データベース  
   
 -   ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。  
   
@@ -181,7 +181,7 @@ connect-source-database
 ```  
 **Command**  
   
-force-load-source/target-database  
+強制読み込み-ソース/ターゲット-データベース  
   
 -   ソースのメタデータを読み込みます。  
   
@@ -213,7 +213,7 @@ force-load-source/target-database
 ```  
 **Command**  
   
-reconnect-source-database  
+再接続ソース データベース  
   
 -   ソース データベースへの再接続がソース データベースの接続のコマンドとは異なり、すべてのメタデータが読み込まれない。  
   
@@ -339,7 +339,7 @@ generate-assessment-report
   
 **Command**  
   
-convert-schema  
+変換とスキーマ  
   
 -   ソースからターゲット スキーマへのスキーマの変換を実行します。  
   
@@ -541,7 +541,7 @@ convert-schema
   
 **Command**  
   
-synchronize-target  
+同期ターゲット  
   
 1.  ターゲット データベースと、対象オブジェクトを同期します。  
   
@@ -561,7 +561,7 @@ synchronize-target
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗するスクリプト  
   
 4.  `report-errors-to:` (省略可能な属性) の同期操作だけフォルダーのパスを指定すると、し、ファイル名では、エラー レポートの場所を指定**TargetSynchronizationReport.XML**を作成します。  
   
@@ -606,7 +606,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+データベースからの更新  
   
 -   データベースからのソース オブジェクトを更新します。  
   
@@ -626,7 +626,7 @@ refresh-from-database
   
     -   report-each-as-warning  
   
-    -   fail-script  
+    -   失敗するスクリプト  
   
 4.  `report-errors-to:` エラー レポートの場所を指定します (省略可能な属性) の更新操作だけフォルダーのパスを指定すると、し、ファイル名で**SourceDBRefreshReport.XML**を作成します。  
   

@@ -1,6 +1,6 @@
 ---
 title: SSMA の DB2 クライアント (DB2ToSQL) のインストール |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eca6ea25d2f8518c1414dd2d6e41464d87828d16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f93f2b5fd6c1d61b95230388be7ee0df56cbdbe1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>SSMA の DB2 クライアント (DB2ToSQL) のインストール
 SSMA クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  
@@ -78,7 +78,7 @@ SSMA は Web からダウンロードします。 最新バージョンをダウ
   
 4.  セットアップの種類の選択 ページで、をクリックして**標準**です。  
   
-5.  **[インストール]**をクリックします。  
+5.  **[インストール]** をクリックします。  
   
 > [!IMPORTANT]  
 > 1.  新しいバージョンをインストールする前に、DB2 用 SSMA のすべての以前のバージョンをアンインストールしてください。  

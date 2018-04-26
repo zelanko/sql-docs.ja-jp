@@ -1,6 +1,6 @@
 ---
 title: MySQL データベースを SQL Server スキーマ (MySQLToSQL) にマッピング |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1369b509f815950fb1d6401e0b835a55d6263f19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 79cbcae3c7c272f871b18ff0fc9b5a5c1acce57f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL データベースを SQL Server スキーマ (MySQLToSQL) にマッピング
 SSMA for MySQL は既定では、MySQL スキーマ内のすべてのオブジェクトを移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースのスキーマの名前します。 ただし、MySQL スキーマ間のマッピングをカスタマイズすることができ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベース。  
@@ -67,7 +67,7 @@ SSMA をマップする MySQL スキーマを使用可能な[!INCLUDE[ssNoVersio
   
 -   SQL Azure へのマッピング  
   
-ソース データベースをマップするには接続されているターゲットに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースか、いずれのスキーマに接続されているターゲットの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 ソース スキーマ 接続されているターゲット データベースの任意の存在しないスキーマをマップするかどうかは、メッセージが求められます**"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"**はい をクリックします。  
+ソース データベースをマップするには接続されているターゲットに[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースか、いずれのスキーマに接続されているターゲットの[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。 ソース スキーマ 接続されているターゲット データベースの任意の存在しないスキーマをマップするかどうかは、メッセージが求められます **"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"** はい をクリックします。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマを元に戻す  
 MySQL スキーマと SQL Server スキーマ間のマッピングをカスタマイズする場合は、既定値に戻すマッピングを戻すことができます。  

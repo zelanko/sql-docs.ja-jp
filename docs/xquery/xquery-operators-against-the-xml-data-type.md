@@ -2,8 +2,8 @@
 title: Xml データ型に対しての XQuery 演算子 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a4af87b91b32142d4b4266af5b10fa54e80eae7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml データ型に対する XQuery の演算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-using-general-operators"></a>A. 一般的な演算子の使用  
  次のクエリでは、シーケンスおよびシーケンスの比較に適用される一般的な演算子の用途について説明します。 クエリは、各顧客からの電話番号のシーケンスを取得する、 **AdditionalContactInfo**の列、**連絡先**テーブル。 取得されたシーケンスは、2 つの電話番号 ("111-111-1111"、"222-2222") のシーケンスと比較されます。  
   
- クエリを使用して、 **=**比較演算子です。 右側にあるシーケンス内の各ノード、 **=**演算子は、左側にあるシーケンス内の各ノードと比較されます。 ノードが一致する場合、ノード比較は**TRUE**です。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
+ クエリを使用して、 **=** 比較演算子です。 右側にあるシーケンス内の各ノード、 **=** 演算子は、左側にあるシーケンス内の各ノードと比較されます。 ノードが一致する場合、ノード比較は**TRUE**です。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
   
 ```  
 WITH XMLNAMESPACES (  

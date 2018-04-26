@@ -1,24 +1,24 @@
 ---
-title: "フェールオーバー クラスター インスタンス記憶域 iSCSI: Linux 上の SQL Server の構成 |Microsoft ドキュメント"
-description: 
+title: 'フェールオーバー クラスター インスタンス記憶域 iSCSI: Linux 上の SQL Server の構成 |Microsoft ドキュメント'
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 4033289cb388e9ba06260b482af613054e70760c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - iSCSI: Linux 上の SQL Server を構成します。
 
@@ -324,7 +324,7 @@ iSCSI では、ネットワークを使用して、サーバーをターゲッ�
 
    *    テストするには、そのフォルダーにデータベースを作成します。 次に示す例では、sqlcmd を使用してデータベースを作成、コンテキストを切り替える、ファイルが、OS レベルが存在し、一時的な場所を削除します。 SSMS を使用することができます。
   
-    ![50-ExampleCreateSSMS][9]
+    ![50 ExampleCreateSSMS][9]
 
    *    共有のマウントを解除します。 
 

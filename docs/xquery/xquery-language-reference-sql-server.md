@@ -2,8 +2,8 @@
 title: XQuery 言語リファレンス (SQL Server) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e9ac63fb610743e540979271dd9ebac32fd6c873
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   
  XQuery は既存の XPath クエリ言語に基づいており、優れた反復処理や結果の並べ替え、必要な XML を構築する機能を実現するためのサポートが追加されています。 XQuery は XQuery データ モデルで動作します。 これは XML ドキュメントおよび XQuery の結果を抽象化したモデルで、XQuery の結果は型指定することも、型指定しないこともできます。 型情報は W3C XML Schema 言語によって提供される型に基づきます。 型指定情報を使用できない場合は、XQuery によりデータが型指定されていないものとして処理されます。 この処理方法は、XPath Version 1.0 で XML が処理される方法と同様です。  
   
- 変数またはの列に格納されている XML インスタンスを照会する**xml**種類を使用する、 [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)です。 変数を宣言するなど、 **xml**入力を使用してクエリを実行したり、 **query()**のメソッド、 **xml**データ型。  
+ 変数またはの列に格納されている XML インスタンスを照会する**xml**種類を使用する、 [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)です。 変数を宣言するなど、 **xml**入力を使用してクエリを実行したり、 **query()** のメソッド、 **xml**データ型。  
   
 ```  
 DECLARE @x xml  
@@ -74,7 +74,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)です。  
+>  このセクションの構成は、W3C (World Wide Web Consortium) XQuery ワーキング ドラフト仕様に基づいています。 このセクションで提供する図の一部は、その仕様から引用したものです。 ここでは、Microsoft XQuery の実装と W3C 仕様を比較し、Microsoft XQuery と W3C がどのように異なるかを説明し、サポートしていない W3C 機能を示します。 W3C の仕様は[ http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -2,7 +2,7 @@
 title: Azure SQL DB (SybaseToSQL) への接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 823532a0107db9bcbc6781f25466fb135ffeeefe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 93cb125bf4571697cb9c7a687b2dd2702301f86d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB (SybaseToSQL) に接続します。
 Sybase データベースを Azure SQL DB を移行するには、Azure SQL DB のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は Azure SQL DB のインスタンス内のすべてのデータベースに関するメタデータを取得し、Azure SQL DB メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA は、Azure SQL DB に、接続しているが、パスワードを保存しないのインスタンスの情報を格納します。  
@@ -65,7 +65,7 @@ Sybase データベース オブジェクトを Azure SQL DB の構文に変換�
   
 6.  SSMA は、Azure SQL DB に、暗号化された接続をお勧めします。  
   
-7.  **[接続]**をクリックします。  
+7.  **[接続]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase はへの接続をサポートしていません**マスター** Azure SQL データベース内のデータベースです。  

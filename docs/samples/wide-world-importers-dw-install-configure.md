@@ -1,7 +1,7 @@
 ---
 title: WideWorldImporters OLAP サンプル データベースのインストールし、構成の SQL |Microsoft ドキュメント
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -18,11 +18,11 @@ manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 69eee1a6460509e70b061583d7a096c2b8293294
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW インストールと構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
 2. 右クリックし、**データベース**ノード、および選択**Restore Database**です。
 3. 選択**デバイス**、ボタンをクリック**しています.**
-4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**データベースのバックアップをサーバーのファイル システムに移動し、バックアップを選択します。 **[OK]**をクリックします。
+4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**データベースのバックアップをサーバーのファイル システムに移動し、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要な場合は、データのターゲットの場所を変更し、で、ログ ファイル、**ファイル**ウィンドウです。 ベスト プラクティスにデータを配置し、ログ ファイルを別のドライブにあることに注意してください。
-6. **[OK]**をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
+6. **[OK]** をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -67,7 +67,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 3. 右クリックし、**データベース**ノード、および選択**データ層アプリケーションのインポート**です。
 4. **設定のインポート**選択**ローカル ディスクからインポート**し、ファイル システムから、サンプル データベースの bacpac を選択します。
 5. **データベース設定**するデータベースの名前を変更*WideWorldImportersDW*しを使用するターゲットのエディションやサービスの目標を選択します。
-6. をクリックして**[次へ]**と**完了**展開を開始します。 完了するまで数分をかかります。 S2 より低いサービス目標を指定する場合は長くかかる場合があります。
+6. をクリックして **[次へ]** と**完了**展開を開始します。 完了するまで数分をかかります。 S2 より低いサービス目標を指定する場合は長くかかる場合があります。
 
 ## <a name="configuration"></a>構成
 

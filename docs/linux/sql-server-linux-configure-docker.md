@@ -1,31 +1,31 @@
 ---
-title: "Docker では、SQL Server 2017 の構成オプション |Microsoft ドキュメント"
-description: "使用して、Docker でコンテナー イメージの SQL Server 2017 やり取りのさまざまな方法について説明します。 これには、データ永続化ファイルのコピー、トラブルシューティングにはが含まれます。"
+title: Docker では、SQL Server 2017 の構成オプション |Microsoft ドキュメント
+description: 使用して、Docker でコンテナー イメージの SQL Server 2017 やり取りのさまざまな方法について説明します。 これには、データ永続化ファイルのコピー、トラブルシューティングにはが含まれます。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: 7212b1a0a5e6322a33046d09edd091c257ff6b44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker でコンテナー イメージの SQL Server 2017 を構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事は、構成および使用する方法を説明します、 [mssql サーバー linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)docker です。 このイメージは Ubuntu 16.04 に基づく Linux で実行されている SQL Server で構成されます。 イメージは Linux の Docker エンジン 1.8+ または Mac/Windows 用 Docker で使用することができます。
+この記事は、構成および使用する方法を説明します、 [mssql サーバー linux コンテナー イメージ](https://hub.docker.com/r/microsoft/mssql-server-linux/)docker です。 このイメージは、Ubuntu 16.04 の Linux で動作する SQL Server で構成されます。 Linux の Docker エンジン 1.8 + または Docker for Mac/Windows から使用できます。
 
 > [!NOTE]
 > この記事は、mssql サーバー linux イメージを使用して上に特に注目します。 Windows イメージが含まれていないが、詳細情報を入手するには上、 [mssql server windows Docker Hub ページ](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)です。
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/27/2018
       docker login
       ```
 
-   1. 次に、無料の開発者用 Docker ストアにコンテナーのイメージを取得する必要があります。 移動して[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)をクリックして**チェック アウトを続行**、し、指示に従います。
+   1. 次に、無料の開発者用 Docker ストアにコンテナーのイメージを取得する必要があります。 移動して[ https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)をクリックして**チェック アウトを続行**、し、指示に従います。
 
    1. プロシージャを実行し、要件を確認、[クイック スタート](quickstart-install-connect-docker.md)です。 2 つの違いがあります。 イメージをプルする必要があります**ストアまたは microsoft/mssql-サーバー-linux:\<タグ名\>** Docker ストアからです。 実稼働のエディションを指定する必要がありますと、 **MSSQL_PID**環境変数。 次の例では、Enterprise Edition 用の最新の SQL Server 2017 コンテナー イメージを実行する方法を示します。
 
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/27/2018
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [Windows の SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
 
 次の例で**sqlcmd** Docker コンテナーで実行されている SQL Server に接続します。 接続文字列で IP アドレスは、コンテナーが実行されているホスト コンピューターの IP アドレスです。
 
@@ -114,7 +114,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 SQL Server 2017 CTP 2.0 以降で、 [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)コンテナー イメージに含まれています。 対話型のコマンド プロンプトで、イメージをアタッチする場合は、ツールをローカルで実行することができます。
 
-1. 実行中のコンテナー内で対話型の Bash シェルを開始するには、`docker exec -it` コマンドを使用します。 次の例で`e69e056c702d`コンテナー ID です。
+1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例で`e69e056c702d`コンテナー ID です。
 
     ```bash
     docker exec -it e69e056c702d "bash"
@@ -131,7 +131,7 @@ SQL Server 2017 CTP 2.0 以降で、 [SQL Server コマンド ライン ツー�
 
 3. 終了したら、sqlcmd で、入力`exit`です。
 
-4. 終了したら、対話型のコマンド プロンプトで、入力`exit`です。 コンテナーは、対話型の Bash シェルを終了した後も引き続き実行されます。
+4. 終了したら、対話型のコマンド プロンプトで、入力`exit`です。 コンテナーは、対話型 bash シェルを終了した後に実行を続けます。
 
 ## <a name="run-multiple-sql-server-containers"></a>複数の SQL Server のコンテナーを実行します。
 
@@ -236,7 +236,7 @@ docker ps
 docker exec -ti <Container ID> /bin/bash
 ```
 
-今すぐ端末、コンテナー内で実行しているかのように、コマンドを実行できます。 終わったら、`exit` と入力します。 対話型コマンド セッションで、これが終了したが、コンテナーが実行し続けます。
+今すぐ端末、コンテナー内で実行しているかのように、コマンドを実行できます。 終了したら `exit` を入力します。 対話型コマンド セッションで、これが終了したが、コンテナーが実行し続けます。
 
 ## <a name="copy-files-from-a-container"></a>コンテナーからファイルをコピー
 
@@ -351,7 +351,7 @@ Windows では、PowerShell、または、管理者としてコマンド プロ�
 
 実行する、SQL Server のコンテナーが失敗した場合は、次のテストを試してください。
 
-- など、エラーが発生した場合**' をネットワーク ブリッジ エンドポイント CONTAINER_NAME を作成できませんでした。プロキシを開始中にエラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターに SQL Server をローカルで実行している場合に発生することができます。 また、2 つの SQL Server のコンテナーを開始して、これらの両方を同じホスト ポートにマップしようとした場合も発生することができます。 この場合を使用して、`-p`コンテナー ポート 1433 を別のホストのポートにマップするパラメーターです。 例: 
+- など、エラーが発生した場合 **' をネットワーク ブリッジ エンドポイント CONTAINER_NAME を作成できませんでした。プロキシを開始中にエラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターに SQL Server をローカルで実行している場合に発生することができます。 また、2 つの SQL Server のコンテナーを開始して、これらの両方を同じホスト ポートにマップしようとした場合も発生することができます。 この場合を使用して、`-p`コンテナー ポート 1433 を別のホストのポートにマップするパラメーターです。 以下に例を示します。 
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux:2017-latest`.
@@ -411,7 +411,7 @@ Docker と SQL Server 可用性グループを使用している場合は、次�
 
 ### <a id="errorlogs"></a> SQL Server のセットアップとエラーのログ
 
-SQL Server セットアップを確認できのエラー ログの**/var/opt/mssql/log**です。 コンテナーが実行されていない場合は、まず、コンテナーを開始します。 対話型のコマンド プロンプトを使用して、ログを検査します。
+SQL Server セットアップを確認できのエラー ログの **/var/opt/mssql/log**です。 コンテナーが実行されていない場合は、まず、コンテナーを開始します。 対話型のコマンド プロンプトを使用して、ログを検査します。
 
 ```bash
 docker start e69e056c702d
@@ -427,7 +427,7 @@ cat errorlog
 ```
 
 > [!TIP]
-> ホストのディレクトリをマウントした場合**/var/opt/mssql**に確認できる代わりに、コンテナーを作成したときに、**ログ**ホスト上のマップされたパスのサブディレクトリ。
+> ホストのディレクトリをマウントした場合 **/var/opt/mssql**に確認できる代わりに、コンテナーを作成したときに、**ログ**ホスト上のマップされたパスのサブディレクトリ。
 
 ## <a name="next-steps"></a>次の手順
 

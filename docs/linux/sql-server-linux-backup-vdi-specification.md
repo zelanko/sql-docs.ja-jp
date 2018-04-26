@@ -1,25 +1,25 @@
 ---
-title: "VDI のバックアップ Specification - SQL Server on Linux |Microsoft ドキュメント"
-description: "SQL Server のバックアップの仮想デバイス インターフェイス仕様です。"
+title: VDI のバックアップ Specification - SQL Server on Linux |Microsoft ドキュメント
+description: SQL Server のバックアップの仮想デバイス インターフェイス仕様です。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 52792f4ef8734afbc45d491277e8671af19b234c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI クライアント SDK 仕様 SQL Server
 
@@ -146,7 +146,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**VD_E_INVALID** |デバイス名が正しくありません。 できませんのセットを構成する既知の名前。
 
 **「解説」** VD_E_OPEN を問題なく返すことができます。 クライアントは、このコードが返されるまで、ループを使用して OpenDevice を呼び出すことがあります。
-かどうか 1 つ以上のデバイスが構成されている、たとえば *n* デバイス、仮想デバイス セットが返されます *n* 一意のデバイスのインターフェイスです。
+かどうか 1 つ以上のデバイスが構成されている、たとえば*n*デバイス、仮想デバイス セットが返されます*n*一意のデバイスのインターフェイスです。
 
 `GetConfiguration`デバイスを開くことができるまで待機する関数を使用できます。
 この関数が成功しなかった場合、null 値が、ppVirtualDevice を介して返されます。

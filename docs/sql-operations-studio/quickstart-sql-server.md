@@ -1,9 +1,9 @@
 ---
-title: 'クイック スタート: 接続し、クエリの SQL Operations Studio (preview) を使用して SQL Server |Microsoft ドキュメント'
-description: このクイック スタートは、を使用して SQL Operations Studio (preview) を SQL Server に接続してクエリを実行する方法を示しています。
+title: 'クイック スタート: 接続し、クエリの SQL 操作 Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント'
+description: このクイック スタートは、Studio を使用して SQL の操作 (プレビュー) を SQL Server に接続してクエリを実行する方法を示しています。
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: に接続してクエリを使用して SQL サーバー [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートの使用方法を示しています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
@@ -30,15 +30,15 @@ ms.lasthandoff: 03/09/2018
 - [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
 
 SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択 (SQL ログインとパスワードを保存することを確認してください!)。
-- [Windows - ダウンロード SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - Docker での SQL Server 2017 のダウンロード](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Windows - SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux のダウンロードの SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -だけ手順を最大にする必要があります*データのクエリの作成と*です。
 
 
-## <a name="connect-to-a-sql-server"></a>SQL Server に接続します。
+## <a name="connect-to-a-sql-server"></a>SQL Server に接続する
 
    
-1. 開始 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**です。
+1. 開始 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** です。
 1. 初めて実行する*[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 、**接続**ダイアログ ボックスが開きます。 場合、**接続**ダイアログが開き、、**新しい接続**のアイコン、**サーバー**ページ。
    
    ![新しい接続のアイコン](media/quickstart-sql-server/new-connection-icon.png)
@@ -49,14 +49,14 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
     - **認証の種類:** SQL ログイン  
     - **ユーザー名:** SQL Server のユーザー名  
     - **パスワード:** SQL サーバーのパスワード  
-    - **データベース名:**このフィールドは空白 
+    - **データベース名:** このフィールドは空白 
     - **サーバー グループ:** \<既定\>  
 
    ![新しい接続 画面](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
-## <a name="create-a-database"></a>データベースを作成します。
+## <a name="create-a-database"></a>データベースの作成
 
 次の手順がという名前のデータベースを作成する**TutorialDB**:
 
@@ -116,7 +116,7 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
 
 クエリが完了したら、新しい**顧客**テーブルのテーブルの一覧に表示されます。 右クリックする必要があります、 **TutorialDB > テーブル**ノード**更新**です。
 
-## <a name="insert-rows"></a>行を挿入します。
+## <a name="insert-rows"></a>行を挿入する
 
 - クエリ ウィンドウに次のスニペットを貼り付けるし、をクリックして**実行**:
 

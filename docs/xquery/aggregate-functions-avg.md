@@ -1,16 +1,16 @@
 ---
-title: "avg 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: avg 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - fn:avg function
 - avg function [XQuery]
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee1d24bc4b28b7a041baa42ac829424e5daa6f8b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0fb88fcfcb54ac493f161ce58284978986d741af
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---avg"></a>集計関数の avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  入力が静的に空の場合、空になることが暗黙に示され、静的エラーが発生します。  
   
- **Avg()**関数を計算する数値の平均値を返します。 例:  
+ **Avg()** 関数を計算する数値の平均値を返します。 以下に例を示します。  
   
- **sum(** *$arg* **) div count(** *$arg* **)**  
+ **sum (** *$arg* **) div カウント (** *$arg* **)**  
   
- 場合*$arg* 、空のシーケンスは、空のシーケンスが返されます。  
+ 場合 *$arg* 、空のシーケンスは、空のシーケンスが返されます。  
   
- If an xdt:untypedAtomic value cannot be cast to xs:double, the value is disregarded in the input sequence, *$arg*.  
+ Xdt:untypedAtomic 値は、xs:double にキャストすることはできない場合、入力シーケンスで値が無視されます。 *$arg*です。  
   
  他のすべての場合は、関数から静的エラーが返されます。  
   
@@ -64,12 +64,12 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. avg() XQuery 関数を使用した、製造プロセス中のワーク センターの場所全体での平均労働時間よりも長いワーク センターの検索  
- 指定したクエリを書き直すことができます[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用する、 **avg()**関数。  
+ 指定したクエリを書き直すことができます[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用する、 **avg()** 関数。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Avg()**関数では、すべての整数値を xs:decimal にマップします。  
+-   **Avg()** 関数では、すべての整数値を xs:decimal にマップします。  
   
 -   **Avg()** xs:duration 型の値に対して関数がサポートされていません。  
   

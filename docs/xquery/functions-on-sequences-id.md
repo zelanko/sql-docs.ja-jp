@@ -1,16 +1,16 @@
 ---
-title: "id 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: id 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8f1b577cc16d7688eca03ce5c02e239bedab3957
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-sequences---id"></a>シーケンスの機能 id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  提供された xs:IDREF 値の 1 つ以上の値と一致する xs:ID 値を持つ要素ノードのシーケンスを返します*$arg*です。  
+  提供された xs:IDREF 値の 1 つ以上の値と一致する xs:ID 値を持つ要素ノードのシーケンスを返します *$arg*です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づいて要素を取得する  
  次の例では、fn:id を使用し、IDREF マネージャー属性に基づいて <`employee`> 要素を取得します。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
   
- 特定のマネージャー属性値に対して、 **id()**検索の機能、<`employee`> ID 型属性の値が入力の IDREF 値に一致する要素。 つまり、特定の従業員、 **id()**関数は、従業員のマネージャーを返します。  
+ 特定のマネージャー属性値に対して、 **id()** 検索の機能、<`employee`> ID 型属性の値が入力の IDREF 値に一致する要素。 つまり、特定の従業員、 **id()** 関数は、従業員のマネージャーを返します。  
   
  この例では次のことが行われます。  
   
@@ -109,7 +109,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. OrderList IDREFS 属性値に基づいて要素を取得する  
  次の例では、OrderList 属性では、<`Customer`> 要素属性は IDREFS 型属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 各注文 id の場合は、<`Order`> 下の子要素、<`Customer`> 順序の値を指定します。  
   
- クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値に渡され、 **id()**関数。 関数で検索し、<`Order`> 要素の OrderID 属性値に一致する入力、 **id()**関数。  
+ クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値に渡され、 **id()** 関数。 関数で検索し、<`Order`> 要素の OrderID 属性値に一致する入力、 **id()** 関数。  
   
 ```  
 drop xml schema collection SC  
@@ -185,7 +185,7 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2 つの引数バージョンをサポートしていない**id()**です。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2 つの引数バージョンをサポートしていない**id()** です。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 引数の型を必要と**id()** xs:idref のサブタイプであります。  
   

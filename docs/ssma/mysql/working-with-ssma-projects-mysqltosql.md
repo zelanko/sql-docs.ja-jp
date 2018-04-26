@@ -1,6 +1,6 @@
 ---
 title: SSMA プロジェクト (MySQLToSQL) の使用 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -26,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04c7be6a8dd46d0f35b14eb66eb1c244a5abe5cc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 32018a99e3bd376aa5d80df2c24c27a1aa341ec9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクト (MySQLToSQL) での作業
 MySQL データベースを SQL Server または SQL Azure を移行するには、まず SSMA プロジェクトを作成する必要があります。 プロジェクトは、次の情報を含むファイルです。  
@@ -116,7 +116,7 @@ SSMA では、プロジェクト ファイルを作成します。
   
 1.  各データベースの状態を示す**メタデータがありません**データベース名の横にあるチェック ボックスをオンにします。 メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存したくない場合は、チェック ボックスをオンされません。  
   
-2.  **[保存]**をクリックします。  
+2.  **[保存]** をクリックします。  
   
 SSMA は、MySQL スキーマが解析され、プロジェクト ファイルにメタデータを保存します。  
   

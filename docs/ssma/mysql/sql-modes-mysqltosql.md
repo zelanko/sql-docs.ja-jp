@@ -1,6 +1,6 @@
 ---
 title: SQL モード (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8687edb508bdf0020554d267a1947abe843cd0e2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 12dbdec5d9c56f70e44933a4031c55c5e0b518a1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL モード (MySQLToSQL)
 SSMA for MySQL は別の SQL モードで動作し、さまざまなクライアントの異なる方法でこれらのモードを適用できます。  

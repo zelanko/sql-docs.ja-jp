@@ -1,6 +1,6 @@
 ---
 title: 変換の設定 (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a37482bec4c033c9098d3ae285ee3f7598baaaf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 9284ccc7adab73068bc615bf6f294a23c59c42cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conversion-settings-mysqltosql"></a>変換の設定 (MySQLToSQL)
 **'設定'**  タブでは、ユーザーをノード レベルの設定を設定します。 タブは、次のメタベース ノードで使用可能なになります。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/06/2018
   
 1.  **関数の変換の設定:**  
   
-    1.  このタブには**'関数の変換を Force'**オプション。 オプションは、次の 4 つの値のいずれかを持つことができます。  
+    1.  このタブには **'関数の変換を Force'** オプション。 オプションは、次の 4 つの値のいずれかを持つことができます。  
   
         -   [継承] プロジェクト設定に従って変換します。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/06/2018
   
 2.  **テーブルの変換の設定:**  
   
-    1.  このタブには**'抑制 ROWID 補助列の生成'**オプション。 オプションは、次の 4 つの値のいずれかを持つことができます。  
+    1.  このタブには **'抑制 ROWID 補助列の生成'** オプション。 オプションは、次の 4 つの値のいずれかを持つことができます。  
   
         -   [継承] プロジェクト設定に従って変換します。  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 04/06/2018
   
         -   プロジェクトの設定に応じて変換します。  
   
-    2.  場合**'Yes'**、この設定は、ROWID 補助型の列の作成対象になるテーブルの作成を禁止します。  
+    2.  場合 **'Yes'**、この設定は、ROWID 補助型の列の作成対象になるテーブルの作成を禁止します。  
   
     3.  ユーザーが行った設定をクリックするカスケード設定ファイルに保存されます**適用**ボタンをクリックします。  
   

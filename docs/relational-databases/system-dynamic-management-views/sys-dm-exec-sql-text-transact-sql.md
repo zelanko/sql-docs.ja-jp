@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa92fecfa13610fb5e8720238629321bfb6c62c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 727a7752eea98f778780056c0940873580e6682c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>引数  
 *sql_handle*  
-検索するバッチの SQL ハンドルを指定します。 *sql_handle*は**varbinary (64)**です。 *sql_handle*次の動的管理オブジェクトから取得できます。  
+検索するバッチの SQL ハンドルを指定します。 *sql_handle*は**varbinary (64)** です。 *sql_handle*次の動的管理オブジェクトから取得できます。  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-キャッシュ内または現在実行中のバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)**です。 *plan_handle*次の動的管理オブジェクトから取得できます。  
+キャッシュ内または現在実行中のバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)** です。 *plan_handle*次の動的管理オブジェクトから取得できます。  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -82,7 +82,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |**text**|**nvarchar(max** **)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
   
 ## <a name="permissions"></a>権限  
- サーバーに対する VIEW SERVER STATE 権限が必要です。  
+ サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
 アドホック クエリでは、SQL ハンドルは、サーバーに送信されている SQL テキストに基づくハッシュ値は、任意のデータベースから取得できます。 

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |COUNTRECOVERYMGR |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |CREATE_DATINISERVICE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|CXCONSUMER |行を送信する、producer スレッド consumer スレッドが待機したときに、並列クエリ プランで発生します。 これは、並列クエリの実行の通常の一部です。 <br /> **適用されます**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |クエリ プロセッサ交換反復子を同期するときに、および生成および行を使用する場合は、並列クエリ プランで発生します。 待機時間が長すぎて、クエリのチューニング (インデックスの追加など) を実行しても短くできない場合は、並列処理のコストしきい値を調整したり並列処理の次数を下げたりすることを検討してください。<br /> **注:**で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3 および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、クエリ プロセッサ交換反復子を同期するように、コンシューマーのスレッドの行を作成できるようにのみ CXPACKET を参照します。 コンシューマーのスレッドは、CXCONSUMER 待機の種類で個別に追跡されます。| 
+|CXCONSUMER |行を送信する、producer スレッド consumer スレッドが待機したときに、並列クエリ プランで発生します。 これは、並列クエリの実行の通常の一部です。 <br /> **適用されます**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |クエリ プロセッサ交換反復子を同期するときに、および生成および行を使用する場合は、並列クエリ プランで発生します。 待機時間が長すぎて、クエリのチューニング (インデックスの追加など) を実行しても短くできない場合は、並列処理のコストしきい値を調整したり並列処理の次数を下げたりすることを検討してください。<br /> **注:** で始まる[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3、および[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、クエリ プロセッサ交換反復子を同期するように、コンシューマーのスレッドの行を作成できるようにのみ CXPACKET を参照します。 コンシューマーのスレッドは、CXCONSUMER 待機の種類で個別に追跡されます。| 
 |CXROWSET_SYNC |範囲の並列スキャン中に発生します。| 
 |DAC_INIT |専用管理者接続の初期化中に発生します。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

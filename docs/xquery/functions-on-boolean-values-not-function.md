@@ -1,16 +1,16 @@
 ---
-title: "not 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: not 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - not function [XQuery]
 - EBV
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0a104fb4904e5df5433de3505cdd8c4e8cf2c4b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e30edaba23aea28806e70824684f0fe332c85c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-boolean-values---not-function"></a>ブール値の not 関数に対する関数 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  True の場合の有効なブール値*$arg*が false になり、FALSE を返しますの有効なブール値*$arg*は true です。  
+  True の場合の有効なブール値 *$arg*が false になり、FALSE を返しますの有効なブール値 *$arg*は true です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +74,7 @@ WHERE CatalogDescription.exist('
   
 -   クエリを含む XML を構築し、<`Product`> 要素とその**ProductModelID**属性。  
   
--   WHERE 句を使用して、 [exist() メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)行をフィルター選択します。 **Exist()**メソッドがある場合、True を返します\<ProductDescription > 要素を持たない\<Specification > 子要素です。 使用に注意してください、 **not()**関数。  
+-   WHERE 句を使用して、 [exist() メソッド (XML データ型)](../t-sql/xml/exist-method-xml-data-type.md)行をフィルター選択します。 **Exist()** メソッドがある場合、True を返します\<ProductDescription > 要素を持たない\<Specification > 子要素です。 使用に注意してください、 **not()** 関数。  
   
  各製品モデル カタログの説明が含まれているために、この結果セットが空では、\<仕様 > 要素。  
   
@@ -100,7 +100,7 @@ WHERE ProductModelID=7
   
 -   **Declarenamespace**で[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)Adventure Works の製造手順の名前空間プレフィックスを定義します。 この定義は、製造手順ドキュメントで使用されているのと同じ名前空間を表しています。  
   
--   クエリで、**されません (@MachineHours)**述語がある場合、True を返しますありません**MachineHours**属性。  
+-   クエリで、**されません (@MachineHours)** 述語がある場合、True を返しますありません**MachineHours**属性。  
   
  結果を次に示します。  
   
@@ -115,7 +115,7 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Not()**関数では、xs:boolean 型、node() *、または空のシーケンスの引数のみがサポートされます。  
+-   **Not()** 関数では、xs:boolean 型、node() *、または空のシーケンスの引数のみがサポートされます。  
   
 ## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  

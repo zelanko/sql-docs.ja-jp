@@ -1,6 +1,6 @@
 ---
 title: サーバー接続ファイル (AccessToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10cdd1a711d23d8934631c30a317aca4ca247a10
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 02a337c32f3dcea132edb7ae60559b7edfd467d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>接続ファイル (AccessToSQL) サーバーを作成します。
 サーバーの情報は、スクリプト ファイルの [サーバー] セクションのいずれかを指定します。 サーバーの情報は、別のサーバー接続ファイルにも指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターが`-c <serverconnectionfile>`です。 サーバーと同じ id がスクリプトとサーバーの両方の接続ファイルに存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/06/2018
 ```  
   
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
-ユーザーが、スキーマ定義ファイルに対する自分のサーバー接続ファイルを簡単に検証**'A2SSConsoleScriptServersSchema.xsd'** 'スキーマ' フォルダー内にあります。  
+ユーザーが、スキーマ定義ファイルに対する自分のサーバー接続ファイルを簡単に検証 **'A2SSConsoleScriptServersSchema.xsd'** 'スキーマ' フォルダー内にあります。  
   
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[SSMA コンソールを実行する&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  

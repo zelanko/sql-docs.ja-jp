@@ -1,25 +1,25 @@
 ---
-title: "PowerShell を使用した Linux に SQL Server の管理 |Microsoft ドキュメント"
-description: "この記事では、SQL Server on Linux での windows PowerShell の使用の概要を示します。"
+title: PowerShell を使用した Linux に SQL Server の管理 |Microsoft ドキュメント
+description: この記事では、SQL Server on Linux での windows PowerShell の使用の概要を示します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell を使用して、Linux 上の SQL Server を管理するには
 
@@ -76,7 +76,7 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 - インスタンスを作成、[サーバー](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx)オブジェクト
 - 接続、**サーバー**といくつかのプロパティを表示
 
-置き換えます **\<your_server_instance\>**  IP アドレスまたは Linux に SQL Server 2017 インスタンスのホスト名です。
+置き換えます**\<your_server_instance\>** IP アドレスまたは Linux に SQL Server 2017 インスタンスのホスト名です。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ HostDistribution : Ubuntu
 - 使用して、 **Get SqlErrorLog** Linux 上の SQL Server 2017 インスタンスに接続し、エラーを取得するコマンドレットをログに記録されてから**昨日**
 - 出力をパイプ処理、 **Out-gridview**コマンドレット
 
-置き換えます **\<your_server_instance\>**  IP アドレスまたは Linux に SQL Server 2017 インスタンスのホスト名です。
+置き換えます**\<your_server_instance\>** IP アドレスまたは Linux に SQL Server 2017 インスタンスのホスト名です。
 
 ```powershell
 # Prompt for credentials to login into SQL Server

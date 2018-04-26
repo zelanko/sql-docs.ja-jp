@@ -1,16 +1,16 @@
 ---
-title: "substring 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: substring 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - substring function [XQuery]
 - fn:substring function
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ae71eb26e93c65f853c5d1c842a1835cf40d866
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 388fe297f0dc74ce5641768fef8b531c72a98bb1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値の部分文字列に関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  値の一部を返します*$sourceString*の値で示される位置から*$startingLoc、*しの値で示される文字数の続行*$長さ*です。  
+  値の一部を返します *$sourceString*の値で示される位置から *$startingLoc、*しの値で示される文字数の続行 *$長さ*です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,19 +63,19 @@ fn:substring($sourceString as xs:string?,
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
   
- 値*$length*の値の文字数よりも大きくすることは*$sourceString*開始位置以降します。 この場合、部分文字列がの末尾までの文字を返します*$sourceString*です。  
+ 値 *$length*の値の文字数よりも大きくすることは *$sourceString*開始位置以降します。 この場合、部分文字列がの末尾までの文字を返します *$sourceString*です。  
   
  文字列の最初の文字の位置は 1 です。  
   
- 場合の値*$sourceString*空のシーケンスでは、長さゼロの文字列として扱われます。 それ以外の場合は、いずれか*$startingLoc*または*$length*空のシーケンスでは、空のシーケンスが返されます。  
+ 場合の値 *$sourceString*空のシーケンスでは、長さゼロの文字列として扱われます。 それ以外の場合は、いずれか *$startingLoc*または *$length*空のシーケンスでは、空のシーケンスが返されます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照して[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。 参照してください[ALTER DATABASE 互換性レベル &#40;です。TRANSACT-SQL と #41 です。](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
+ XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照して[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)です。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)です。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
- SQL Server が必要です、 *$startingLoc*と*$length パラメーター*型が xs:double ではなく xs:decimal であります。  
+ SQL Server が必要です、 *$startingLoc*と *$length パラメーター*型が xs:double ではなく xs:decimal であります。  
   
- SQL Server では*$startingLoc*と*$length*空のシーケンスが () にマップされる動的エラーの結果として使用可能な値であるため、空のシーケンスであります。  
+ SQL Server では *$startingLoc*と *$length*空のシーケンスが () にマップされる動的エラーの結果として使用可能な値であるため、空のシーケンスであります。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
@@ -94,9 +94,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  上のクエリに関して、次の点に注意してください。  
   
--   **String()**関数の文字列値を返します、<`Summary`> 要素。 この関数を使用、<`Summary`> 要素には、テキストとサブ要素 (html 要素を書式設定、) の両方が含まれています。 これらの要素をスキップし、すべてのテキストを取得するためです。  
+-   **String()** 関数の文字列値を返します、<`Summary`> 要素。 この関数を使用、<`Summary`> 要素には、テキストとサブ要素 (html 要素を書式設定、) の両方が含まれています。 これらの要素をスキップし、すべてのテキストを取得するためです。  
   
--   **Substring()**関数によって取得された文字列値からの最初の 50 文字の取得、 **string()**です。  
+-   **Substring()** 関数によって取得された文字列値からの最初の 50 文字の取得、 **string()** です。  
   
  これは、結果の一部です。  
   

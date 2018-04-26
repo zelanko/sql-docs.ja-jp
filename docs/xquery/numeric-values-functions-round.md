@@ -1,16 +1,16 @@
 ---
-title: "round 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: round 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:round function
 - round function [XQuery]
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85be02ca3d43acee4972eab8efc4b9ec88fd3b49
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cd4fa2060667fc914e8ef52f998f162bb8b27976
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-values-functions---round"></a>数値の値関数の round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  引数に最も近く、小数部分を持たない数値を返します。 そのような数値が複数ある場合、正の無限大に最も近い数値が返されます。 例:  
+  引数に最も近く、小数部分を持たない数値を返します。 そのような数値が複数ある場合、正の無限大に最も近い数値が返されます。 以下に例を示します。  
   
  引数が 2.5 の場合**round()** 3 が返されます。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
  場合は、引数が-2.5、 **round()** -2 を返します。  
   
- 引数が空のシーケンスの場合**round()**空のシーケンスを返します。  
+ 引数が空のシーケンスの場合**round()** 空のシーケンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,7 +56,7 @@ fn:round ( $arg as numeric?) as numeric?
  関数を適用する数値。  
   
 ## <a name="remarks"></a>解説  
- 場合の種類*$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型と同じ、*$arg*型です。 場合の種類*$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
+ 場合の種類 *$arg*は 3 つの数値基本型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型と同じ、*$arg*型です。 場合の種類 *$arg*数値型のいずれかから派生した型は、戻り値の型は、基本の数値型。  
   
  場合に入力する、 **fn:floor**、 **fn:ceiling**、または**fn:round**関数は**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされます**xs:double**です。  
   
@@ -65,17 +65,17 @@ fn:round ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例**xml** AdventureWorks データベース内の列を入力します。  
   
- 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**round()** XQuery 関数。 置換を行うには必要なは、 **ceiling()**と、クエリの関数、 **round()**関数。  
+ 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**round()** XQuery 関数。 置換を行うには必要なは、 **ceiling()** と、クエリの関数、 **round()** 関数。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Round()**関数では、整数値を xs:decimal にマップします。  
+-   **Round()** 関数では、整数値を xs:decimal にマップします。  
   
 -   **Round()** xs:double 値および xs:float 値 - 0.5e0 と 0e0 の関数ではなく - 0e0 0e0 にマップされます。  
   
 ## <a name="see-also"></a>参照  
- [floor 関数と #40 です。XQuery と #41 です。](../xquery/numeric-values-functions-floor.md)   
- [ceiling 関数と #40 です。XQuery と #41 です。](../xquery/numeric-values-functions-ceiling.md)  
+ [floor 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [ceiling 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   

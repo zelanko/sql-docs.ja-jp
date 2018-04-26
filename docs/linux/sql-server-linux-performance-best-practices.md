@@ -1,24 +1,24 @@
-﻿---
-title: "Linux 上の SQL Server のパフォーマンスのベスト プラクティス |Microsoft ドキュメント"
-description: "このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。"
+---
+title: Linux 上の SQL Server のパフォーマンスのベスト プラクティス |Microsoft ドキュメント
+description: このトピックでは、Linux で SQL Server 2017 を実行する場合の、パフォーマンスのベスト プラクティスとガイドラインを提供します。
 author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0e9c5dde8f5bc9ef2e8a7ac285a8152b0c34e9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のパフォーマンスについてのベスト プラクティスと構成ガイドライン
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/13/2018
 
 次の表は、CPU の設定に関する推奨事項を示します。
 
-| 設定 | [値] | 詳細情報 |
+| 設定 | 値 | 詳細情報 |
 |---|---|---|
 | CPU 周波数ガバナー | パフォーマンス | **cpupower**コマンドを参照してください |
 | ENERGY_PERF_BIAS | パフォーマンス | **x86_energy_perf_policy**コマンドを参照してください |
@@ -75,10 +75,10 @@ ms.lasthandoff: 02/13/2018
 
 次の表は、ディスクの設定に関する推奨事項を示します。
 
-| 設定 | [値] | 詳細情報 |
+| 設定 | 値 | 詳細情報 |
 |---|---|---|
 | ディスクの先行読み込み | 4096 | **blockdev**コマンドを参照してください |
-| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | **sysctl**コマンドを参照してください |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns 15000000 を =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | **sysctl**コマンドを参照してください |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>マルチノード NUMA システムの自動 NUMA バランシングのカーネル設定
 
@@ -114,6 +114,6 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 ## <a name="next-steps"></a>次の手順
 
-パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。 
+パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)です。
 
 Linux 上の SQL Server に関する詳細については、次を参照してください。 [Linux の SQL Server の概要](sql-server-linux-overview.md)です。

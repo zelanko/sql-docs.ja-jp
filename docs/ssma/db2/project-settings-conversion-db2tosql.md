@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの設定 (変換) (DB2ToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA が DB2 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]構文です。  
@@ -43,9 +43,9 @@ SSMA に変換中に情報メッセージを生成し、出力ウィンドウに
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:**なし  
+**既定/オプティミスティック モード:** なし  
   
-**フル モード:**なし  
+**フル モード:** なし  
   
 ## <a name="miscellaneous-options"></a>その他のオプション  
   
@@ -72,7 +72,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句は、後に、式に、式�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/フル モード:**なし  
+**既定/フル モード:** なし  
   
 **オプティミスティック モード:** [はい]  
   
@@ -81,11 +81,11 @@ SSMA ROWNUM 式が変換されるときに、TOP 句は、後に、式に、式�
   
 1.  **データベースにスキーマ:** DB2 このモードで 'sch1' のスキーマを既定では 'dbo' SQL Server データベースのスキーマを SQL Server 'sch1' にマップされます。  
   
-2.  **スキーマをスキーマ:**DB2 このモードで 'sch1' のスキーマを既定では、接続ダイアログで提供される既定の SQL Server データベース内の 'sch1' SQL Server スキーマにマップされます。  
+2.  **スキーマをスキーマ:** DB2 このモードで 'sch1' のスキーマを既定では、接続ダイアログで提供される既定の SQL Server データベース内の 'sch1' SQL Server スキーマにマップされます。  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:**データベースにスキーマ  
+**既定/Optimistic/フル モード:** データベースにスキーマ  
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE ステートメントの変換方法  
   
@@ -103,7 +103,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句は、後に、式に、式�
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>既定の引数を使用してサブプログラムへの呼び出しに変換します。  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 関数は、関数呼び出しでパラメーターの省略をサポートしていません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]関数およびプロシージャ パラメーターの既定値として式をサポートしています。  
   
--   選択した場合**[はい]**関数呼び出しのパラメーターを省略して、SSMA は、キーワードを挿入する**既定**関数と、正しい場所に呼び出しにします。 次に、警告の呼び出しを設定します。  
+-   選択した場合 **[はい]** 関数呼び出しのパラメーターを省略して、SSMA は、キーワードを挿入する**既定**関数と、正しい場所に呼び出しにします。 次に、警告の呼び出しを設定します。  
   
 -   選択した場合**いいえ**SSMA はエラーとして関数呼び出しとしてマークされます。  
   
@@ -122,7 +122,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句は、後に、式に、式�
   
 **既定/フル モード:** [はい]  
   
-**オプティミスティック モード:**なし  
+**オプティミスティック モード:** なし  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>FORALL ステートメント間に変換ステートメント  
 SSMA PL/SQL コレクション要素に対して FORALL ループを処理できる方法を定義します。  
@@ -133,7 +133,7 @@ SSMA PL/SQL コレクション要素に対して FORALL ループを処理でき
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:**なし  
+**既定/オプティミスティック モード:** なし  
   
 **フル モード:** [はい]  
   
@@ -146,7 +146,7 @@ DB2 は、ここで、SET NULL 操作可能性のある実行できませんで�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/全モード:**なし  
+**既定/オプティミスティック/全モード:** なし  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>プロシージャ呼び出しの関数呼び出しに変換します。  
 DB2 の一部の関数が自律的なトランザクションとして定義されますまたは有効ではありませんステートメントを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 このような場合は、SSMA は、手順と、プロシージャのラッパーである関数を作成します。 変換後の関数は、実装するプロシージャを呼び出します。  
@@ -161,7 +161,7 @@ SSMA は、プロシージャの呼び出しにラッパー関数の呼び出し
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic/フル モード:**可能な場合  
+**既定/Optimistic/フル モード:** 可能な場合  
   
 ### <a name="convert-lock-table-statements"></a>LOCK ステートメントを変換します。  
 SSMA は、テーブル ヒントに多くのロック TABLE ステートメントを変換できます。 SSMA は、パーティション、副区分が含まれているすべてのロック テーブル ステートメントを変換できません@dblinkNOWAIT 句、および変換エラー メッセージでは、このようなステートメントをマークします。  
@@ -177,7 +177,7 @@ SSMA は、テーブル ヒントに多くのロック TABLE ステートメン�
 |DB2 ロック モード|SQL Server のテーブル ヒント|  
 |行の共有|ROWLOCK、HOLDLOCK|  
 |排他行|ROWLOCK、XLOCK、HOLDLOCK|  
-|SHARE UPDATE = ROW SHARE|ROWLOCK、HOLDLOCK|  
+|共有の更新プログラムの行の共有を =|ROWLOCK、HOLDLOCK|  
 |共有|TABLOCK、HOLDLOCK|  
 |共有行の排他|TABLOCK、XLOCK、HOLDLOCK|  
 |排他的|TABLOCKX、HOLDLOCK|  
@@ -221,7 +221,7 @@ SSMA は DB2 SUBSTR 関数呼び出しに変換できる[!INCLUDE[ssNoVersion](.
   
 **既定/オプティミスティック モード:** [はい]  
   
-**フル モード:**なし  
+**フル モード:** なし  
   
 ### <a name="convert-subtypes"></a>サブタイプに変換します。  
 SSMA は、2 つの方法で PL/SQL サブタイプに変換できます。  
@@ -232,7 +232,7 @@ SSMA は、2 つの方法で PL/SQL サブタイプに変換できます。
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/全モード:**なし  
+**既定/オプティミスティック/全モード:** なし  
   
 ### <a name="convert-synonyms"></a>シノニムを変換します。  
 次の DB2 オブジェクトに対してシノニムに移行できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
@@ -309,7 +309,7 @@ SSMA は、NULL 値を確認する DB2 ORDER BY の動作をエミュレート�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:**なし  
+**既定/オプティミスティック モード:** なし  
   
 **フル モード:** [はい]  
   
@@ -332,12 +332,12 @@ INTO 句を伴う SELECT ステートメントがすべての行を返さない�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/全モード:**エラー  
+**既定/オプティミスティック/全モード:** エラー  
   
 ### <a name="generate-rowid-column"></a>ROWID の列を生成します。  
 SSMA を内のテーブルを作成すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ROWID 列を作成できます。 データを移行すると、各行は、newid() 関数によって生成される新しい UNIQUEIDENTIFIER 値を取得します。  
   
--   選択した場合**[はい]**、ROWID 列のすべてのテーブルの作成と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]値を挿入するように Guid を生成します。 常に選択する**はい**SSMA Tester を使用する予定の場合。  
+-   選択した場合 **[はい]**、ROWID 列のすべてのテーブルの作成と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]値を挿入するように Guid を生成します。 常に選択する**はい**SSMA Tester を使用する予定の場合。  
   
 -   選択した場合**いいえ**ROWID 列はテーブルに追加されません。  
   
@@ -348,7 +348,7 @@ SSMA を内のテーブルを作成すると[!INCLUDE[ssNoVersion](../../include
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/Optimistic モード:**トリガーを持つテーブルに対して ROWID 列を追加します。  
+**既定/Optimistic モード:** トリガーを持つテーブルに対して ROWID 列を追加します。  
   
 **フル モード:** [はい]  
   
@@ -368,10 +368,10 @@ SSMA に ROWID が生成される列に一意のインデックス列が生成�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/全モード:**インライン  
+**既定/オプティミスティック/全モード:** インライン  
   
 ### <a name="use-isnull-in-string-concatenation"></a>文字列の連結で ISNULL を使用します。  
-DB2 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]文字列連結で NULL 値を含める場合は、異なる結果を返します。 DB2 treats the NULL value like an empty character set. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] NULL を返します。  
+DB2 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]文字列連結で NULL 値を含める場合は、異なる結果を返します。 DB2 では、NULL 値は、空の文字セットと同様に扱われます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] NULL を返します。  
   
 -   選択した場合**はい**、SSMA は、DB2 の連結文字 (|) を置き換えます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]連結文字 (+) です。 SSMA では、NULL 値を連結したものの両方の側の式も確認します。  
   
@@ -388,7 +388,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートするため
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:**なし  
+**既定/オプティミスティック モード:** なし  
   
 **フル モード:** [はい]  
   
@@ -401,7 +401,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートする CONCA
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック モード:**なし  
+**既定/オプティミスティック モード:** なし  
   
 **フル モード:** [はい]  
   
@@ -415,7 +415,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートする CONCA
   
 **既定/オプティミスティック モード:** [はい]  
   
-**フル モード:**なし  
+**フル モード:** なし  
   
 ### <a name="use-selectfor-xml-when-converting-selectinto-for-record-variable"></a>選択を使用してください.FOR XML 変換するときに次のように選択してください.レコードの変数の INTO  
 レコードの変数を選択すると設定 XML 結果を生成するかどうかを指定します。  
@@ -426,7 +426,7 @@ ISNULL ステートメントは、DB2 の動作をエミュレートする CONCA
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/全モード:**なし  
+**既定/オプティミスティック/全モード:** なし  
   
 ## <a name="returning-clause-conversion"></a>句の変換を返す  
   

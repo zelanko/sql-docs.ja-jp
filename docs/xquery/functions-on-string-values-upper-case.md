@@ -1,16 +1,16 @@
 ---
-title: "upper-case 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: upper-case 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - upper-case
 - upper-case Function (XQuery)
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 885c66230a2a29b204e60b310bf50fd426db848c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1c444ef705e7e806e7941aa01311691f80d884a2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値 - 大文字に関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  この関数では、各文字に変換*$arg*大文字にします。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を大文字に変換する方法が指定されています。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
+  この関数では、各文字に変換 *$arg*大文字にします。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を大文字に変換する方法が指定されています。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|大文字に変換する文字列値。|  
   
 ## <a name="remarks"></a>解説  
- 場合の値*$arg*が空、長さ 0 の文字列が返されます。  
+ 場合の値 *$arg*が空、長さ 0 の文字列が返されます。  
   
 ## <a name="examples"></a>使用例  
   

@@ -1,16 +1,16 @@
 ---
-title: "シーケンス式 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: シーケンス式 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8bed36d0c784da74731e92404d5849386ec8756d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequence-expressions-xquery"></a>シーケンス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構築、フィルター、および項目のシーケンスを結合に使用される XQuery 演算子をサポートしています。 項目には、アトミック値またはノードを指定できます。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、アイテムのシーケンスの構築、フィルター処理、および組み合わせに使用される、XQuery 演算子がサポートされます。 項目には、アトミック値またはノードを指定できます。  
   
 ## <a name="constructing-sequences"></a>シーケンスの構築  
  コンマ演算子を使用して、複数のアイテムを 1 つのシーケンスに連結するシーケンスを構築できます。  
@@ -95,7 +95,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- 使用して、シーケンス内の項目をカウントすることができます、 **fn:count()**関数。  
+ 使用して、シーケンス内の項目をカウントすることができます、 **fn:count()** 関数。  
   
 ```  
 declare @x xml  
@@ -138,7 +138,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>シーケンスのフィルター処理  
- 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です](../xquery/path-expressions-xquery.md)。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
+ 式に述語を追加することにより、式で返されるシーケンスをフィルター処理できます。 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)です。 たとえば次のクエリは、3 つの <`a`> 要素ノードのシーケンスを返します。  
   
 ```  
 declare @x xml  

@@ -1,6 +1,6 @@
 ---
 title: 変換する DB2 スキーマ (DB2ToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ef7efc485836b6b65b6f2236bd2a7682422b78e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 接続されている DB2 に接続すると後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、DB2 データベース オブジェクトに変換するにはプロジェクトの設定とデータのマッピング オプションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース オブジェクトです。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/06/2018
 |-----------|----------------------------|  
 |データ型|**SSMA は、以下に、次を除くすべての型をマップします。**<br /><br />CLOB: この種類の作業の一部のネイティブ関数はありません (例: CLOB_EMPTY()) のサポート<br /><br />BLOB: この種類の作業の一部のネイティブ関数はありません (例: BLOB_EMPTY()) のサポート<br /><br />DBLOB: この種類の作業の一部のネイティブ関数はありません (例: DBLOB_EMPTY()) のサポート|  
 |ユーザー定義型|**SSMA は、次をマップ ユーザー定義します。**<br /><br />別個の型<br /><br />構造化型<br /><br />SQL PL データ型: 注: 脆弱なカーソルの種類はサポートされていません。|  
-|特別なレジスタ|**SSMA のみ以下に示すレジスタにマップします。**<br /><br />現在のタイムスタンプ<br /><br />現在の日付<br /><br />現在の時刻<br /><br />現在のタイム ゾーン<br /><br />現在のユーザー<br /><br />SESSION_USER とユーザー<br /><br />SYSTEM_USER<br /><br />現在 CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />現在のロックのタイムアウト<br /><br />現在のスキーマ<br /><br />現在のサーバー<br /><br />現在の分離<br /><br />SQL server のセマンティクスには、他の特別な登録はマップされていません。|  
+|特別なレジスタ|**SSMA のみ以下に示すレジスタにマップします。**<br /><br />現在のタイムスタンプ<br /><br />現在の日付<br /><br />現在の時刻<br /><br />現在のタイム ゾーン<br /><br />現在のユーザー<br /><br />SESSION_USER とユーザー<br /><br />SYSTEM_USER<br /><br />現在 CLIENT_APPLNAME<br /><br />現在 CLIENT_WRKSTNNAME<br /><br />現在のロックのタイムアウト<br /><br />現在のスキーマ<br /><br />現在のサーバー<br /><br />現在の分離<br /><br />SQL server のセマンティクスには、他の特別な登録はマップされていません。|  
 |CREATE TABLE|**SSMA は、次の例外が CREATE TABLE を割り当てます。**<br /><br />多次元のクラスタ リング (MDC) テーブル<br /><br />範囲-クラスター化テーブル (RCT)<br /><br />パーティション テーブル<br /><br />デタッチされたテーブル<br /><br />データのキャプチャ句<br /><br />非表示に IMPLICITLY オプション<br /><br />揮発性のオプション|  
 |CREATE VIEW|SSMA は、' WITH ローカル CHECK OPTION' をビューの作成をマップしますが、その他のオプションは、SQL server のセマンティクスにマップされていません|  
 |CREATE INDEX|**SSMA は、次の例外がインデックスの作成を割り当てます。**<br /><br />XML インデックス<br /><br />オーバー ラップせず BUSINESS_TIME オプション<br /><br />パーティション分割された句<br /><br />オプションの指定のみ<br /><br />オプションの拡張を使用します。<br /><br />MINPCTUSED オプション<br /><br />ページ分割オプション|  

@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの設定 (変換) (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>プロジェクトの設定 (変換) (MySQLToSQL)
 変換 ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に SQL Server または SQL Azure の構文に MySQL 構文を変換する方法をカスタマイズする設定が含まれています。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
 |||  
 |-|-|  
 |**項目**|**[定義]**|  
-|**境界ボックスの既定 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の空間インデックス**|既定値を定義 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の境界ボックスの空間インデックスで使用されるパラメーター。<br /><br />**既定のモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**オプティミスティック モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**フル モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**境界ボックスの既定 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の空間インデックス**|既定値を定義 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の境界ボックスの空間インデックスで使用されるパラメーター。<br /><br />**既定のモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**オプティミスティック モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**フル モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**空間インデックスのグリッド密度の既定値**|LEVEL_1、LEVEL_2、LEVEL_3、および空間インデックスで使用されるグリッド密度の LEVEL_4 を既定値を定義します。<br /><br />**既定のモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**オプティミスティック モード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**フル モード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定|  
   
 ### <a name="transactions"></a>トランザクション  

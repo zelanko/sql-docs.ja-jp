@@ -1,28 +1,28 @@
 ---
-title: "プロジェクトの設定 (型のマッピング) (OracleToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: プロジェクトの設定 (型のマッピング) (OracleToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f4be0d12ce3067f46c934cfa7e053ddd1779ac9f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 84d47276324b7616a30aff3d14949230595194c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>プロジェクトの設定 (型のマッピング) (OracleToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Oracle データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -77,7 +77,7 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|date|datetime2 [0]|  
 |dec|dec [38] [0]|  
 |decimal|float [53]|  
 |倍精度|float [53]|  
@@ -86,8 +86,8 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |整数 (integer)|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw[\*..8000]<sup>*</sup>|varbinary[*]|  
-|long raw[8001..\*]<sup>*</sup>|varbinary(max)|  
+|long raw [\*..8000]<sup>*</sup>|varbinary [*]|  
+|long raw [8001..\*]<sup>*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |varying、national char|nvarchar(max)|  
 |各国語文字|nvarchar(max)|  
@@ -101,7 +101,7 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |pls_integer|int|  
 |raw|varbinary(max)|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |signtype|smallint|  
 |smallint|smallint|  
 |string|varchar(max)|  
@@ -127,19 +127,19 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |binary_float|float [53]|  
 |blob (blob)|varbinary(max)|  
 |char|char|  
-|char のさまざまな [*..\*]|varchar[*]|  
+|char のさまざまな [*..\*]|varchar [*]|  
 |char [*..\*]|char [*]|  
 |character|char|  
-|文字がさまざまな [*..\*]|varchar[*]|  
+|文字がさまざまな [*..\*]|varchar [*]|  
 |文字 [*..\*]|char [*]|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec[*..\*]|dec [*] [0]|  
-|dec[*..\*][\*..\*]|dec[*][\*]|  
+|dec [*..\*]|dec [*] [0]|  
+|dec [*..\*][\*..\*]|dec[*][\*]|  
 |decimal|[38] [0] の 10 進数|  
-|decimal[*..\*]|decimal [*] [0]|  
-|decimal[*..\*][\*..\*]|decimal [*] [\*]|  
+|decimal [*..\*]|decimal [*] [0]|  
+|decimal [*..\*][\*..\*]|decimal [*] [\*]|  
 |倍精度|float [53]|  
 |float|float [53]|  
 |float [*..53]|float [*]|  
@@ -148,41 +148,41 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |整数 (integer)|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw [*..8000]|varbinary[*]|  
+|long raw [*..8000]|varbinary [*]|  
 |long raw [8001.. *]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|長い [*..8000]|varchar[*]|  
+|長い [*..8000]|varchar [*]|  
 |長い [8001.. *]|varchar(max)|  
 |national char|NCHAR|  
-|varying、national char [*..\*]|nvarchar[*]|  
-|national char [*..\*]|nchar[*]|  
+|varying、national char [*..\*]|nvarchar [*]|  
+|national char [*..\*]|nchar [*]|  
 |各国語文字|NCHAR|  
-|各国語文字 varying [*..\*]|nvarchar[*]|  
-|各国語文字 [*..\*]|nchar[*]|  
+|各国語文字 varying [*..\*]|nvarchar [*]|  
+|各国語文字 [*..\*]|nchar [*]|  
 |NCHAR|NCHAR|  
-|nchar[*]|nchar[*]|  
+|nchar [*]|nchar [*]|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
 |数値 [*..\*]|数値 [*]|  
-|number[*..\*][\*..\*]|数値 [*] [\*]|  
+|数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |numeric|numeric|  
-|numeric[*..\*]|数値 [*]|  
-|numeric[*..\*][\*..\*]|数値 [*] [\*]|  
-|nvarchar2[*..\*]|nvarchar[*]|  
-|raw[*..\*]|varbinary[*]|  
+|数値 [*..\*]|数値 [*]|  
+|数値 [*..\*][\*..\*]|数値 [*] [\*]|  
+|nvarchar2[*..\*]|nvarchar [*]|  
+|生 [*..\*]|varbinary [*]|  
 |real|float [53]|  
-|rowid|uniqueidentifier|  
+|Rowid|uniqueidentifier|  
 |smallint|smallint|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
-|ローカルのタイム ゾーンのタイムスタンプ [*..\*]|datetimeoffset[*]|  
+|ローカルのタイム ゾーンのタイムスタンプ [*..\*]|datetimeoffset [*]|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
-|タイムスタンプのタイム ゾーン [*..\*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2 [*]|  
+|タイムスタンプのタイム ゾーン [*..\*]|datetimeoffset [*]|  
+|タイムスタンプ [*..\*]|datetime2 [*]|  
 |Urowid|uniqueidentifier|  
-|urowid[*..\*]|uniqueidentifier|  
-|varchar[*..\*]|varchar[*]|  
-|varchar2[*..\*]|varchar[*]|  
+|urowid [*..\*]|uniqueidentifier|  
+|varchar [*..\*]|varchar [*]|  
+|varchar2 [*..\*]|varchar [*]|  
 |Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>既定のローカル変数の型マッピング  
@@ -197,81 +197,81 @@ SSMA for Oracle には、引数、列、ローカル変数、および戻り値�
 |Blob|varbinary(max)|  
 |ブール値|bit|  
 |Char|char|  
-|char のさまざまな [*..8000]|varchar[*]|  
+|char のさまざまな [*..8000]|varchar [*]|  
 |char のさまざまな [8001.. *]|varchar(max)|  
 |char [*..8000]|char [*]|  
 |char [8001.. *]|varchar(max)|  
 |文字|char|  
-|文字がさまざまな [*..8000]|varchar[*]|  
+|文字がさまざまな [*..8000]|varchar [*]|  
 |文字がさまざまな [8001.. *]|varchar(max)|  
 |文字 [*..8000]|char [*]|  
 |文字 [8001.. *]|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|date|datetime2 [0]|  
 |dec|dec [38] [0]|  
-|dec[*..\*]|dec [*] [0]|  
-|dec[*..\*][\*..\*]|dec[*][\*]|  
+|dec [*..\*]|dec [*] [0]|  
+|dec [*..\*][\*..\*]|dec[*][\*]|  
 |decimal|[38] [0] の 10 進数|  
-|decimal[*..\*]|decimal [*] [0]|  
-|decimal[*..\*][\*..\*]|decimal [*] [\*]|  
+|decimal [*..\*]|decimal [*] [0]|  
+|decimal [*..\*][\*..\*]|decimal [*] [\*]|  
 |倍精度|float [53]|  
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
 |Int|int|  
 |Integer|int|  
-|integer[*..\*]|数値 [*] [0]|  
+|整数 [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw [*..8000]|varbinary[*]|  
+|long raw [*..8000]|varbinary [*]|  
 |long raw [8001.. *]|varbinary(max)|  
 |national char|NCHAR|  
-|varying、national char [*..4000]|nvarchar[*]|  
+|varying、national char [*..4000]|nvarchar [*]|  
 |varying、national char [4001.. *]|nvarchar(max)|  
-|national char [*..4000]|nchar[*]|  
+|national char [*..4000]|nchar [*]|  
 |national char [4001.. *]|nvarchar(max)|  
 |各国語文字|NCHAR|  
-|各国語文字 [*..4000]|nvarchar[*]|  
+|各国語文字 [*..4000]|nvarchar [*]|  
 |各国語文字 [4001.. *]|nvarchar(max)|  
-|各国語文字 varying [*..4000]|nvarchar[*]|  
+|各国語文字 varying [*..4000]|nvarchar [*]|  
 |各国語文字 varying [4001.. *]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|nchar [*..4000]|nchar[*]|  
+|nchar [*..4000]|nchar [*]|  
 |nchar [4001.. *]|nvarchar(max)|  
-|nchar varying [*..4000]|nvarchar[*]|  
+|nchar varying [*..4000]|nvarchar [*]|  
 |nchar varying [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |数値|float [53]|  
 |数値 [*..\*]|数値 [*]|  
-|number[*..\*][\*..\*]|数値 [*] [\*]|  
+|数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |数値|数値 [38] [0]|  
-|numeric[*..\*]|数値 [*]|  
-|numeric[*..\*][\*..\*]|数値 [*] [\*]|  
-|nvarchar2 [*..4000]|nvarchar[*]|  
-|nvarchar2[4001..*]|nvarchar(max)|  
+|数値 [*..\*]|数値 [*]|  
+|数値 [*..\*][\*..\*]|数値 [*] [\*]|  
+|nvarchar2 [*..4000]|nvarchar [*]|  
+|nvarchar2 [4001.. *]|nvarchar(max)|  
 |pls_integer|int|  
-|生 [*..8000]|varbinary[*]|  
+|生 [*..8000]|varbinary [*]|  
 |生 [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
 |Rowid|uniqueidentifier|  
 |Signtype|smallint|  
 |Smallint|smallint|  
-|文字列 [*..8000]|varchar[*]|  
+|文字列 [*..8000]|varchar [*]|  
 |文字列 [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  
 |ローカルのタイム ゾーンのタイムスタンプ|datetimeoffset|  
 |タイム ゾーンのタイムスタンプ|datetimeoffset|  
-|ローカルのタイム ゾーンのタイムスタンプ [*..\*]|datetimeoffset[*]|  
-|タイムスタンプのタイム ゾーン [*..\*]|datetimeoffset[*]|  
-|timestamp[*..\*]|datetime2 [*]|  
+|ローカルのタイム ゾーンのタイムスタンプ [*..\*]|datetimeoffset [*]|  
+|タイムスタンプのタイム ゾーン [*..\*]|datetimeoffset [*]|  
+|タイムスタンプ [*..\*]|datetime2 [*]|  
 |Urowid|uniqueidentifier|  
-|urowid[*..\*]|uniqueidentifier|  
-|varchar [*..8000]|varchar[*]|  
+|urowid [*..\*]|uniqueidentifier|  
+|varchar [*..8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
-|varchar2 [*..8000]|varchar[*]|  
-|varchar2[8001..*]|varcha(max)|  
+|varchar2 [*..8000]|varchar [*]|  
+|varchar2 [8001.. *]|varcha(max)|  
 |Xmltype|xml|  
   
 ## <a name="see-also"></a>参照  
-[ユーザー インターフェイス リファレンス &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[ユーザー インターフェイス リファレンス&#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

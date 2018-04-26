@@ -2,7 +2,7 @@
 title: SSMA の Sybase クライアント (SybaseToSQL) のインストール |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96c227a0bff583c9cc399e2ec453f708bbb4c9b4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5757f632e7e1c784be35a682f25a49a28aa0e200
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>インストールの SSMA for Sybase クライアント (SybaseToSQL)
 SSMA クライアントは、Sybase Adaptive Server Enterprise (ASE) データベース サーバーとのインスタンスへの接続に使用されるプログラム ファイルで構成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または ASE データベース オブジェクトに変換、Azure SQL DB[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB の構文にオブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB へのデータを移行してから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQLDB です。  
@@ -66,7 +66,7 @@ SSMA は Web からダウンロードします。 最新バージョンをダウ
   
 4.  セットアップの種類の選択 ページで、をクリックして**標準**です。  
   
-5.  **[インストール]**をクリックします。  
+5.  **[インストール]** をクリックします。  
   
 > [!IMPORTANT]  
 > 1.  新しいバージョンをインストールする前に、for Sybase SSMA のすべての以前のバージョンをアンインストールしてください。  

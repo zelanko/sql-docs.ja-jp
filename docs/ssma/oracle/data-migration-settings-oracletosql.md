@@ -1,27 +1,28 @@
 ---
-title: "データ移行の設定 (OracleToSQL) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: データ移行の設定 (OracleToSQL) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: b75d8a1f6453e5cbb33b1c60f948e5425f173eff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 38f4de40b7d581f33c2fe5bce4211d5c7873f900
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-migration-settings-oracletosql"></a>データ移行の設定 (OracleToSQL)
   
@@ -54,9 +55,9 @@ ms.lasthandoff: 12/21/2017
   
 存在する 2 つのボタンを viz。  
   
--   **適用:**クリックして**適用**変更されている設定を適用します。  
+-   **適用:** クリックして**適用**変更されている設定を適用します。  
   
--   **キャンセル:**クリックして**キャンセル**変更が加えの前に存在する設定を復元します。  
+-   **キャンセル:** クリックして**キャンセル**変更が加えの前に存在する設定を復元します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server への Oracle データの移行](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  

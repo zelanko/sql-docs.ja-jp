@@ -1,16 +1,16 @@
 ---
-title: "パス式のステップでノード テストの指定 |Microsoft ドキュメント"
-ms.custom: 
+title: パス式のステップでノード テストの指定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ff610c579553847dc82193cff9a28b474f0b433
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式でノード テストの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [(省略可能) 0 個以上のステップ修飾子](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、次を参照してください。[パス式 &#40;です。XQuery と #41 です](../xquery/path-expressions-xquery.md)。  
+ 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)です。  
   
  ノード テストとは条件で、パス式の軸ステップの 2 番目のコンポーネントです。 ステップで選択されるすべてのノードは、この条件を満たす必要があります。 パス式 `/child::ProductDescription` の場合、ノード テストは `ProductDescription` です。 このステップでは、ProductDescription という名前の子要素ノードのみが取得されます。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
 >  XQuery パス式で指定されるノード名には、Transact-SQL クエリと同じ照合順序依存の規則は適用されません。常に大文字と小文字が区別されます。  
   
 ## <a name="node-name-as-node-test"></a>ノード テストとしてのノード名  
- パス式のステップでノード名をノード テストとして指定する場合は、主ノード種別の概念を理解しておく必要があります。 すべての軸 (child、parent、attribute) には、主ノード種別があります。 例:  
+ パス式のステップでノード名をノード テストとして指定する場合は、主ノード種別の概念を理解しておく必要があります。 すべての軸 (child、parent、attribute) には、主ノード種別があります。 以下に例を示します。  
   
 -   attribute 軸には、属性のみを含めることができます。 したがって、属性ノードが attribute 軸の主ノード種別になります。  
   
@@ -101,10 +101,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |ノード型|返します。|例|  
 |---------------|-------------|-------------|  
-|`comment()`|コメント ノードの場合に True を返します。|`following::comment()`コンテキスト ノードの後に表示されるすべてのコメント ノードを選択します。|  
-|`node()`|ノードの種類に関係なく True を返します。|`preceding::node()`コンテキスト ノードの前に表示されるすべてのノードを選択します。|  
-|`processing-instruction()`|処理命令ノードの場合は True を返します。|`self::processing instruction()`コンテキスト ノード内のすべての処理命令ノードを選択します。|  
-|`text()`|テキスト ノードの場合は True を返します。|`child::text()`コンテキスト ノードの子テキスト ノードを選択します。|  
+|`comment()`|コメント ノードの場合に True を返します。|`following::comment()` コンテキスト ノードの後に表示されるすべてのコメント ノードを選択します。|  
+|`node()`|ノードの種類に関係なく True を返します。|`preceding::node()` コンテキスト ノードの前に表示されるすべてのノードを選択します。|  
+|`processing-instruction()`|処理命令ノードの場合は True を返します。|`self::processing instruction()` コンテキスト ノード内のすべての処理命令ノードを選択します。|  
+|`text()`|テキスト ノードの場合は True を返します。|`child::text()` コンテキスト ノードの子テキスト ノードを選択します。|  
   
  text() や comment() などのノード型がノード テストに指定された場合は、軸の主ノード種別にかかわらず、ステップでは指定された種類のノードが返されます。 たとえば、次のパス式は、コンテキスト ノードの子にあたるコメント ノードのみを返します。  
   

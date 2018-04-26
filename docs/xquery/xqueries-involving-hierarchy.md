@@ -1,16 +1,16 @@
 ---
-title: "階層に関連する XQueries |Microsoft ドキュメント"
-ms.custom: 
+title: 階層に関連する XQueries |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - hierarchies [XQuery]
 - XQuery, hierarchies
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c77b4dfc656ad55f6ca36301df04d65c506f3434
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6f485b974ceaac492f8dc611dd2fe0c139426139
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xqueries-involving-hierarchy"></a>階層に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ WHERE ProductModelID=7
   
 -   XML 構築からクエリ評価にクエリを切り替えるために、コンテキスト切り替えトークンの {) と (} が使用されます。  
   
--   **Sql:column()**構築される XML にリレーショナル値を含めるために使用します。  
+-   **Sql:column()** 構築される XML にリレーショナル値を含めるために使用します。  
   
 -   <`Location`> 要素を構築する際に、$wc/@* でそのワーク センターの場所のすべての属性が取得されます。  
   
--   **String()**関数から文字列値を返します、<`step`> 要素。  
+-   **String()** 関数から文字列値を返します、<`step`> 要素。  
   
  これは、結果の一部です。  
   
@@ -126,7 +126,7 @@ WHERE ContactID = 1
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)   
- [XML の構築と #40 です。XQuery と #41 です。](../xquery/xml-construction-xquery.md)   
+ [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

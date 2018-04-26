@@ -1,16 +1,16 @@
 ---
-title: "last 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: last 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - last function [XQuery]
 - fn:last function
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c42eec0fbfe511613dbb7b1d5a7b5cf0178a391c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c461c100d9b282158c4ca7379d78ecb88de84bf1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="context-functions---last-xquery"></a>コンテキスト関数の最後 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>解説  
- SQL Server で**fn:last()**コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、この属性は角かっこ内にのみ使用できます (`[ ]`)。  
+ SQL Server で**fn:last()** コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、この属性は角かっこ内にのみ使用できます (`[ ]`)。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. last() XQuery 関数を使用して、最後の 2 つの製造ステップを取得する  
- 次のクエリでは、特定の製品モデルの最後の 2 つの製造ステップを取得します。 値、によって返される製造ステップの数、 **last()**最後の 2 つの製造手順の取得に、このクエリで使用される関数。  
+ 次のクエリでは、特定の製品モデルの最後の 2 つの製造ステップを取得します。 値、によって返される製造ステップの数、 **last()** 最後の 2 つの製造手順の取得に、このクエリで使用される関数。  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -68,7 +68,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 上記のクエリで、 **last()**関数/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`製造手順の数を返します。 この値は、ワーク センター拠点で最後の製造ステップを取得するために使用されます。  
+ 上記のクエリで、 **last()** 関数/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]`製造手順の数を返します。 この値は、ワーク センター拠点で最後の製造ステップを取得するために使用されます。  
   
  結果を次に示します。  
   

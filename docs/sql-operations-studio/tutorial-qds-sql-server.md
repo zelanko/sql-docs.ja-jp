@@ -1,9 +1,9 @@
 ---
-title: 'チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - SQL Operations Studio (preview) |Microsoft ドキュメント'
+title: 'チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - SQL 操作 Studio (プレビュー) |Microsoft ドキュメント'
 description: このチュートリアルは、5 つ最も低速なクエリのサンプル ダッシュ ボードのウィジェット、データベースを有効にする方法を示します。
 ms.custom: tools|sos
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78c6ad929a3eea55669e9ebdcef149e605d594ef
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4c0597adca9897d69503bba3d08d9cdafd859c1c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル: 追加、 *5 速度が遅かったクエリ*データベース ダッシュ ボードにウィジェットをサンプル
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 03/17/2018
 
 3. をクリックして**説明**です。
 
-   ![Insight QDS Explain](./media/tutorial-qds-sql-server/insight-qds-explain.png)
+   ![Insight QDS の説明](./media/tutorial-qds-sql-server/insight-qds-explain.png)
 
 4. クエリの実行プランを表示します。
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 03/17/2018
 
 4. コピー元の計画をエディターに貼り付けます。
 
-5. キーを押して**Ctrl + S**ファイルを保存するファイル拡張子を変更して*.sqlplan*です。 *.sqlplan*されていません、ファイル拡張子のドロップダウン リストに表示される、ためだけに入力します。 このチュートリアルでは、ファイルに名前*slowquery.sqlplan*です。
+5. キーを押して**Ctrl + S**ファイルを保存するファイル拡張子を変更して *.sqlplan*です。 *.sqlplan*されていません、ファイル拡張子のドロップダウン リストに表示される、ためだけに入力します。 このチュートリアルでは、ファイルに名前*slowquery.sqlplan*です。
 
 6. クエリ プランを開きます[!INCLUDE[name-sos](../includes/name-sos-short.md)]のクエリ プランのビューアー。
 

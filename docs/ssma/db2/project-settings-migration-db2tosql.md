@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの設定 (移行) (DB2ToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 20c89f448c30a3a09fa3f4b2806e91d68ac7c479
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>プロジェクトの設定 (移行) (DB2ToSQL)
 [移行] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA は DB2 からからデータを移行する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/06/2018
 |**[ID を保持する]**|SSMA では、SQL Server で指定されている既定値に関係なく、SQL Server にデータを追加する場合に、ソース データ内の null 値が保持されるかどうかを指定します。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: False|  
 |**[NULL を保持する]**|SSMA では、SQL Server で指定されている既定値に関係なく、SQL Server にデータを追加する場合に、ソース データ内の null 値が保持されるかどうかを指定します。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  
 |**エラーのため、文字列のトリム操作にマークを付ける**|ターゲット列のサイズがソース文字列の長さよりも小さい場合は、値がトリミングされ、エラーとしてマークされています。<br /><br />**既定のモード**: はい<br /><br />**オプティミスティック モード**: はい<br /><br />**Full モード**: はい|  
-|**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:**現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:**現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
+|**エラー時**|エラーが発生したときに、データの移行を停止します。 3 つのオプションがあります。<br /><br />**移行を停止します**データ移行操作を停止する。<br /><br />**次の表に進みます:** 現在のテーブルへのデータ移行を停止し、次に進みます<br /><br />**次のバッチに進みます:** 現在のバッチへのデータ移行を停止し、次に進みます<br /><br />**既定のモード**: 次のバッチに進む<br /><br />**オプティミスティック モード**: 次のバッチに進む<br /><br />**Full モード**: 次のバッチに進む|  
 |**サポートされていない日付を置き換えます**|SSMA では、できるだけ早くより前の日付を修正する必要があるかどうかを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime**日付 (1753 年 1 月 01日)。<br /><br />現在の日付値を保持する次のように選択します。**何もしない**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime 列には、01 1753 年 1 月より前に、の日付を受け入れません。 古い日付を使用する場合は、datetime 値を文字の値に変換する必要があります。<br /><br />01 1753 年 1 月より前に、の日付を NULL に変換する選択**NULL 置き換えます**です。<br /><br />サポートされている日付の 01 1753 年 1 月より前に、の日付を置き換えるには選択**でサポートされる日付に最も近い置き換えます**です。<br /><br />**既定のモード**: 何もしません。<br /><br />**オプティミスティック モード**: 何もしません。<br /><br />**Full モード**: サポートされる日付に最も近いで置き換えます|  
 |**[テーブル ロック]**|SSMA がデータの移行中のテーブルにデータを追加する場合に、テーブルをロックするかどうかを指定します。 一括コピー操作の間で一括更新ロックを取得します。 値が False の場合は、ロックは行レベルで設定されます。<br /><br />**既定のモード**: True<br /><br />**オプティミスティック モード**: True<br /><br />**Full モード**: True|  
   

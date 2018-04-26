@@ -1,16 +1,16 @@
 ---
-title: "式のコンテキストとクエリの評価 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: 式のコンテキストとクエリの評価 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aa51ff95256dde4ed6d750a2dbfab5c2c44c2d41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="static-context"></a>静的コンテキスト  
  静的コンテキストの初期化とは、式の静的分析向けに、すべての情報をまとめるプロセスのことです。 静的コンテキストの初期化の一環として、次のことが行われます。  
   
--   **境界空白文字** 分離にポリシーを設定します。 そのため、境界の空白文字は失われます、**いずれかの要素**と**属性**クエリでコンス トラクターです。 例:  
+-   **境界空白文字** 分離にポリシーを設定します。 そのため、境界の空白文字は失われます、**いずれかの要素**と**属性**クエリでコンス トラクターです。 以下に例を示します。  
   
     ```  
     declare @x xml  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/09/2018
   
 -   型指定されたクエリを実行する場合**xml**列または変数に関連付けられている XML スキーマ コレクションのコンポーネントが静的コンテキストにインポートされていない列または変数です。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
--   インポートされたスキーマ内のすべてのアトミック型では、静的コンテキストでキャスト関数も使用できます。 この例を次に示します。 この例では、クエリが指定された、型指定されたに対して**xml**変数。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 キャスト関数は、この型に対応する**myType()**は、静的分析中に使用できます。 クエリ式 (`ns:myType(0)`) myType の値を返します。  
+-   インポートされたスキーマ内のすべてのアトミック型では、静的コンテキストでキャスト関数も使用できます。 この例を次に示します。 この例では、クエリが指定された、型指定されたに対して**xml**変数。 この変数に関連付けられている XML スキーマ コレクションでは、アトミック型である myType が定義されています。 キャスト関数は、この型に対応する**myType()** は、静的分析中に使用できます。 クエリ式 (`ns:myType(0)`) myType の値を返します。  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  式で指定された関数名や型名の解決。  
   
-3.  クエリの静的な型指定。 これにより、クエリがタイプ セーフであることを確認できます。 たとえば、次のクエリは、静的なエラーを返しますのため、  **+** 演算子には、数値のプリミティブ型の引数が必要です。  
+3.  クエリの静的な型指定。 これにより、クエリがタイプ セーフであることを確認できます。 たとえば、次のクエリは、静的なエラーを返しますのため、 **+** 演算子には、数値のプリミティブ型の引数が必要です。  
   
     ```  
     declare @x xml  
@@ -136,7 +136,7 @@ ms.lasthandoff: 02/09/2018
     SELECT @x.query('"x" + 4')  
     ```  
   
-     次の例で、 **value()**演算子がシングルトンを必要とします。 指定されている XML スキーマがあります複数\<Elem > 要素。 式を静的に分析することでタイプ セーフではないと判断され、静的エラーが返されます。 エラーを解決するには、単一の結果になることを明示的に指定するように (`data(/x:Elem)[1]`)、式を書き直す必要があります。  
+     次の例で、 **value()** 演算子がシングルトンを必要とします。 指定されている XML スキーマがあります複数\<Elem > 要素。 式を静的に分析することでタイプ セーフではないと判断され、静的エラーが返されます。 エラーを解決するには、単一の結果になることを明示的に指定するように (`data(/x:Elem)[1]`)、式を書き直す必要があります。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  
@@ -169,9 +169,9 @@ ms.lasthandoff: 02/09/2018
   
 -   基本 URI 機能はサポートされません。  
   
--   **fn:doc()**はサポートされていません。  
+-   **fn:doc()** はサポートされていません。  
   
--   **fn:collection()**はサポートされていません。  
+-   **fn:collection()** はサポートされていません。  
   
 -   XQuery の静的フラッガは提供されません。  
   
@@ -195,9 +195,9 @@ ms.lasthandoff: 02/09/2018
   
 -   **暗黙のタイム ゾーン**は utc+0 に固定され、変更できません。  
   
--   **Fn:doc()**関数はサポートされていません。 すべてのクエリに対して実行されます**xml**列または変数を入力します。  
+-   **Fn:doc()** 関数はサポートされていません。 すべてのクエリに対して実行されます**xml**列または変数を入力します。  
   
--   **Fn:collection()**関数はサポートされていません。  
+-   **Fn:collection()** 関数はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)   

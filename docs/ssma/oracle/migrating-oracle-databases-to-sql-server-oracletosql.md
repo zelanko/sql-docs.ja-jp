@@ -1,37 +1,38 @@
 ---
-title: "SQL Server (OracleToSQL) にデータベースを移行する Oracle |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: SQL Server (OracleToSQL) にデータベースを移行する Oracle |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 04/22/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Active
-ms.openlocfilehash: c3b6bc1f359cd54c1380fbe193fb007e1e337a3d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09fe8820413108e4df6479b0a7c2bd95f1f84741
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>SQL Server (OracleToSQL) への Oracle データベースの移行
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for Oracle は Oracle データベースを簡単に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 SSMA for Oracle を使用することができます、確認するデータベース オブジェクトとデータ、移行対象のデータベースを評価するデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB へのデータを移行してから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB します。 SYS および Oracle のシステム スキーマを移行することはできませんに注意してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle は Oracle データベースを簡単に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、Azure SQL DB、または Azure SQL Data Warehouse です。 SSMA for Oracle を使用することができます、確認するデータベース オブジェクトとデータ、移行対象のデータベースを評価するデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、Azure SQL DB、または Azure SQL データ ウェアハウスにデータを移行してから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、Azure SQL DB、または Azure SQL データウェアハウスです。 SYS および Oracle のシステム スキーマを移行することはできませんに注意してください。
   
 ## <a name="recommended-migration-process"></a>移行プロセスを推奨  
-正常に移行するオブジェクトとデータへの Oracle データベースから[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または Azure SQL DB は、次の手順します。  
+正常に移行するオブジェクトとデータへの Oracle データベースから[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、Azure SQL DB、または Azure SQL Data Warehouse では、次のプロセスを使用します。
   
 1.  [新しい SSMA プロジェクトを作成](http://msdn.microsoft.com/en-us/ee5d94c0-c7a6-4779-bd32-729bdaf61e1b)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)です。 データ型マッピングをカスタマイズする方法については、次を参照してください。[マッピング Oracle と SQL Server データ型 &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)です。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、および種類のマッピング オプションを設定できます。 プロジェクト設定については、次を参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)です。 データ型マッピングをカスタマイズする方法については、次を参照してください。[マッピング Oracle と SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)です。  
   
 2.  [Oracle データベース サーバーに接続](http://msdn.microsoft.com/en-us/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)です。  
   
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/21/2017
 9. 必要に応じて、データベース アプリケーションを更新します。  
   
 ## <a name="see-also"></a>参照  
-[Oracle &#40;OracleToSQL"&"#41 です。 SSMA をインストールします。](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
+[Oracle 用 SSMA をインストールする&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)  
 [入門 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

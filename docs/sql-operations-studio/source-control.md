@@ -1,9 +1,9 @@
 ---
-title: ソース SQL Operations Studio (preview) の管理 |Microsoft ドキュメント
-description: SQL Operations Studio (preview) でソース管理を構成する方法を説明します。
+title: ソース SQL 操作 Studio (プレビュー) の管理 |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) でソース管理を構成する方法を説明します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f28199262b087ad5362da0ddf56827216aec748
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 73fec13868004469b02f3117b9b8d70e1ec26ff3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>ソース管理での使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>ソース管理での使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]バージョン/ソース管理に Git をサポートしています。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] バージョン/ソース管理に Git をサポートしています。
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Git のサポート[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Git のサポート [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]Git ソース コントロール マネージャー (SCM) は同梱する必要があります[Git のインストール (version 2.0.0 またはそれ以降)](https://git-scm.com/download)前に、これらの機能を利用できます。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] Git ソース コントロール マネージャー (SCM) は同梱する必要があります[Git のインストール (version 2.0.0 またはそれ以降)](https://git-scm.com/download)前に、これらの機能を利用できます。 
 
 
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="working-with-git-repositories"></a>Git リポジトリの操作
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]VS Code からその Git 実装を継承しますが、現在 SCM プロバイダーの追加をサポートしていません。 開くまたはリポジトリを初期化した後、Git の操作に関する詳細については、次を参照してください。 [VS コードでの Git サポート](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)です。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code からその Git 実装を継承しますが、現在 SCM プロバイダーの追加をサポートしていません。 開くまたはリポジトリを初期化した後、Git の操作に関する詳細については、次を参照してください。 [VS コードでの Git サポート](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)です。
 
 
 ## <a name="additional-resources"></a>その他のリソース

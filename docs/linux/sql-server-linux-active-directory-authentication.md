@@ -6,7 +6,7 @@ ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -16,11 +16,11 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: f6acfbf1138507100a0b5b5a486d0e6288f8b372
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 7816293d595b5231fe19ea464c4b099495c3d2c6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>SQL Server on Linux でのチュートリアル: を使用して Active Directory 認証
 
@@ -51,7 +51,7 @@ AD の認証を構成する前にする必要があります。
 
 参加を次の手順を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory ドメインにホストします。
 
-1. 使用して**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**ホスト コンピューターを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
+1. 使用して**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** ホスト コンピューターを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
 
    ```bash
    # RHEL
@@ -147,7 +147,7 @@ AD の認証を構成する前にする必要があります。
   
 5. ドメインからユーザーに関する情報を収集できるようになりましたことと、そのユーザーとして Kerberos チケットを取得することを確認します。
 
-   次の例で**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**このコマンド。
+   次の例で**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** このコマンド。
 
    ```bash
    id user@contoso.com
@@ -172,7 +172,7 @@ AD の認証を構成する前にする必要があります。
 ## <a id="createuser"></a> AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、
 
   > [!NOTE]
-  > 次のステップを使用して、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**続行する前にします。
+  > 次のステップを使用して、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)です。 表示されている場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** 続行する前にします。
 
 1. 、ドメイン コント ローラーで実行、 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx)パスワードを無期限にすると、新しい AD ユーザーを作成する PowerShell コマンド。 この例で、アカウント"mssql"は名前が、アカウント名には、どのようなを指定できます。 アカウントの新しいパスワードを入力が求められます。
 
@@ -208,7 +208,7 @@ AD の認証を構成する前にする必要があります。
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Keytab ファイルを作成**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**前の手順で作成した AD ユーザー用です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
+2. Keytab ファイルを作成**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 前の手順で作成した AD ユーザー用です。 メッセージが表示されたらは、その AD アカウントのパスワードを入力します。
 
    ```bash
    sudo ktutil

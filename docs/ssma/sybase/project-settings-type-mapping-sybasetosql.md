@@ -2,7 +2,7 @@
 title: プロジェクトの設定 (型のマッピング) (SybaseToSQL) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Sybase Adaptive Server Enterprise (ASE) データ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ型。  
@@ -71,25 +71,25 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**char varying**|**varchar**|  
 |**char のさまざまな [\*..8000]**|**varchar[\*]**|  
 |**char のさまざまな [8001..\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
+|**char [\*..8000]**|**char[\*]**|  
 |**char [8001..\*です]。**|**varchar(max)**|  
 |**character**|**char**|  
 |**可変の文字**|**varchar**|  
 |**文字がさまざまな [\*..8000]**|**varchar[\*]**|  
 |**文字がさまざまな [8001..\*]**|**varchar(max)**|  
-|**character[\*..8000]**|**char[\*]**|  
+|**文字 [\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
 |**dec**|**decimal**|  
 |**dec[\*..\*]**|**decimal[\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**dec [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
 |**decimal[\*..\*]**|**decimal[\*]**|  
-|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**decimal [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**倍精度**|**float[53]**|  
 |**float**|**float[53]**|  
-|**float[\*..15]**|**float[24]**|  
+|**float [\*..15]**|**float[24]**|  
 |**float [16..\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
@@ -104,17 +104,17 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**national char [4001..\*]**|**nvarchar(max)**|  
 |**各国語文字**|**nchar**|  
 |**各国語文字 [\*..4000]**|**nchar[\*]**|  
-|**national character[4001..\*]**|**nvarchar(max)**|  
+|**各国語文字 [4001..\*]**|**nvarchar(max)**|  
 |**各国語文字 varying**|**nvarchar**|  
 |**各国語文字 varying [\*..4000]**|**nvarchar[\*]**|  
 |**各国語文字 varying [4001..\*]**|**nvarchar(max)**|  
 |**各国語 varchar**|**nvarchar**|  
 |**各国語 varchar [\*..4000]**|**nvarchar[\*]**|  
-|**national varchar[4001..\*]**|**nvarchar(max)**|  
+|**各国語 varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar varying**|**nvarchar**|  
 |**nchar varying [\*..4000]**|**nvarchar[\*]**|  
-|**nchar varying[4001..\*]**|**nvarchar(max)**|  
+|**nchar varying [4001..\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -127,7 +127,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar[128]**|  
+|**sysname**|**nvarchar [128]**|  
 |**sysname[\*..\*]**|**nvarchar[255]**|  
 |**text**|**text**|  
 |**time**|**time[3]**|  
@@ -143,10 +143,10 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**unsigned bigint**|**numeric[20][0]**|  
+|**符号なしの bigint**|**numeric[20][0]**|  
 |**unsigned int**|**bigint**|  
 |**unsigned smallint**|**int**|  
-|**unsigned tinyint**|**tinyint**|  
+|**符号なし tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary[\*..8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  

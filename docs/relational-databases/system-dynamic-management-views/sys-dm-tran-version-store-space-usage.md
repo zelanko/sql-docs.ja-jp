@@ -1,7 +1,7 @@
 ---
 title: sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 04/30/2017
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -28,14 +28,14 @@ ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f46c84abe0c62c36f76a3bc8d02576d30357e19
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1459dd2b98ed9579bc1939c60c1e74e14157d0b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 データベースごとにバージョン ストア レコードで使用する tempdb の領域の合計を表示するテーブルを返します。 **sys.dm_tran_version_store_space_usage**は効率的かつ実行するには、個々 のバージョン ストア レコードから移動しないを返しますが tempdb データベースごとに使用されるバージョン ストアの領域を集計できません高価です。
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]が必要です`VIEW SERVER STATE`権限です。   
 
 ## <a name="examples"></a>使用例  
- 内の各データベースのバージョン ストアによって、tempdb で使用される領域を判断する次のクエリを使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 
+内の各データベースのバージョン ストアによって、tempdb で使用される領域を判断する次のクエリを使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 
   
 ```sql  
 SELECT 

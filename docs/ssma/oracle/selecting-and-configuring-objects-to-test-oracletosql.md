@@ -1,6 +1,6 @@
 ---
 title: 選択して、テスト (OracleToSQL) にオブジェクトの構成 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2186b7c2e52cbba438dd48b32a2f884e3ccf04fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選択して、テスト (OracleToSQL) にオブジェクトの構成
 この手順では、テスト、およびプロシージャの関数の出力パラメーターと関数の戻り値を比較するための設定を構成するオブジェクトを選択します。  
   
 ## <a name="selection-of-objects-to-test"></a>テストするオブジェクトの選択  
-Oracle オブジェクト ツリーで、ウィンドウの左側にある、テスト プロセス中に、呼び出し先のオブジェクトを確認してください。 内のテストが容易なオブジェクトの完全な一覧を参照してください、[移行対象のデータベース オブジェクトのテスト &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)トピックです。  
+Oracle オブジェクト ツリーで、ウィンドウの左側にある、テスト プロセス中に、呼び出し先のオブジェクトを確認してください。 内のテストが容易なオブジェクトの完全な一覧を参照してください、[移行対象のデータベース オブジェクトのテスト&#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)トピックです。  
   
 SSMA テスターによってサポートされないテスト用に選択されたオブジェクトのいずれかの場合は、ラベルの付いたリンクが表示されます**によって選択したオブジェクトには、エラーが含まれている**[オブジェクト] ツリー。 なぜこれらのオブジェクトをテストすることはできません、上の理由からや不適切なオブジェクトの選択を解除するは、このリンクをクリックします。  
   
@@ -65,7 +65,7 @@ SSMA テスターによってサポートされないテスト用に選択され
   
 -   選択した場合**時刻のみを比較**日付の部分は無視されます。  
   
--   選択した場合**(ミリ秒) を無視する**結果は、秒までと比較されます。  
+-   選択した場合 **(ミリ秒) を無視する**結果は、秒までと比較されます。  
   
 -   選択した場合**無視日時 (ミリ秒)**、1 秒あたりの時間部分でのみ比較し、無視の小数部になります。  
   
@@ -87,8 +87,8 @@ SSMA テスターによってサポートされないテスト用に選択され
 入力パラメーター値を指定することができます、**呼び出す値**ページ。 **の呼び出しの追加**ボタンは、空のパラメーター値を持つ新しい呼び出しを追加します。 **削除呼び出し**ボタンは、現在の呼び出しを削除します。  
   
 ## <a name="next-step"></a>次の手順  
-[選択と構成を受けるオブジェクト &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[影響を受けたオブジェクトの選択と構成&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[データベース オブジェクト &#40;OracleToSQL&#41; 移行テスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[データベース オブジェクトを移行テスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

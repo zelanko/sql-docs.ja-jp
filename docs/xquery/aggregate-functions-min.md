@@ -1,16 +1,16 @@
 ---
-title: "min 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: min 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:min function
 - min function [XQuery]
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 113ef17b789527104d0b79e4521de14a8703c029
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1e7532594194d0620ecc52c24c57c9bae705f68a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions---min"></a>集計関数の最小値
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  アトミック値のシーケンスを返します*$arg*、1 つの項目の値が他のすべての場合よりも小さいです。  
+  アトミック値のシーケンスを返します *$arg*、1 つの項目の値が他のすべての場合よりも小さいです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,11 +48,11 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  最小値の取得元になるアイテムのシーケンス。  
   
 ## <a name="remarks"></a>解説  
- すべての種類に渡されるアトミック値の**min()**同じ基本型のサブタイプである必要があります。 受け付けられるベースの型をサポートする型は、 **gt**操作します。 この型には、3 つの組み込み数値基本データ型、date/time 基本データ型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+ すべての種類に渡されるアトミック値の**min()** 同じ基本型のサブタイプである必要があります。 受け付けられるベースの型をサポートする型は、 **gt**操作します。 この型には、3 つの組み込み数値基本データ型、date/time 基本データ型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
   
  結果**min()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。 入力が静的に空の場合は、結果が暗黙的に空になり、静的エラーが返されます。  
   
- **Min()**関数は、入力シーケンス内の他のよりも小さいする、シーケンスの 1 つの値を返します。 xs:string 値の場合は、既定の Unicode コードポイント照合順序が使用されます。 If an xdt:untypedAtomic value cannot be cast to xs:double, the value is ignored in the input sequence, *$arg*. 入力が、動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
+ **Min()** 関数は、入力シーケンス内の他のよりも小さいする、シーケンスの 1 つの値を返します。 xs:string 値の場合は、既定の Unicode コードポイント照合順序が使用されます。 Xdt:untypedAtomic 値は、xs:double にキャストすることはできない場合、入力シーケンスで値が無視されます。 *$arg*です。 入力が、動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
 ## <a name="examples"></a>使用例  
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
@@ -94,7 +94,7 @@ ProductModelID   Name              Result
 ## <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
--   **Min()**関数では、すべての整数値を xs:decimal にマップします。  
+-   **Min()** 関数では、すべての整数値を xs:decimal にマップします。  
   
 -   **Min()** xs:duration 型の値に対して関数がサポートされていません。  
   

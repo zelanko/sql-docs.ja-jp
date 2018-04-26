@@ -1,25 +1,25 @@
 ---
-title: "Linux 上の SQL Server エージェントのインストール |Microsoft ドキュメント"
-description: "この記事では、Linux に SQL Server エージェントをインストールする方法について説明します。"
+title: Linux 上の SQL Server エージェントのインストール |Microsoft ドキュメント
+description: この記事では、Linux に SQL Server エージェントをインストールする方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: bec1837a2e4084d01858815346c5a7563199a220
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 1135e7844515ffd051e937c7804c654b3143ac36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux 上の SQL Server エージェントをインストールします。
 
@@ -73,7 +73,7 @@ sudo systemctl restart mssql-server
 
 オフラインでインストールする場合は、検索で SQL Server エージェントのパッケージのダウンロード、[リリース ノート](sql-server-linux-release-notes.md)です。 記事で説明されている同じ、オフライン インストール手順に従って[SQL Server のインストール](sql-server-linux-setup.md#offline)です。
 
-### <a name="ubuntu">Ubuntu をインストールします。</a>
+### <a name="ubuntu">Ubuntu にインストールします</a>
 
 インストールする次の手順を使用して、 **mssql server エージェント**Ubuntu でします。 
 

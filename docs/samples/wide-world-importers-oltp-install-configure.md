@@ -1,7 +1,7 @@
 ---
 title: インストールし、WideWorldImporters サンプル データベースの SQL の構成 |Microsoft ドキュメント
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 3b2a1c4f6fc6045a25a86ea8d49290fafbc29b57
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 04fe03ecffa717de838642006764c9b82f2341d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
 2. 右クリックし、**データベース**ノード、および選択**Restore Database**です。
 3. 選択**デバイス**、ボタンをクリック**しています.**
-4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**データベースのバックアップをサーバーのファイル システムに移動し、バックアップを選択します。 **[OK]**をクリックします。
+4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**データベースのバックアップをサーバーのファイル システムに移動し、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要な場合は、データのターゲットの場所を変更し、で、ログ ファイル、**ファイル**ウィンドウです。 ベスト プラクティスにデータを配置し、ログ ファイルを別のドライブにあることに注意してください。
-6. **[OK]**をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
+6. **[OK]** をクリックします。 データベースの復元が開始されます。 それが完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters があります。
 
 ### <a name="azure-sql-database"></a>Azure SQL Database
 
@@ -68,7 +68,7 @@ SQL Server インスタンスにバックアップを復元するには、Manage
 3. 右クリックし、**データベース**ノード、および選択**データ層アプリケーションのインポート**です。
 4. **設定のインポート**選択**ローカル ディスクからインポート**し、ファイル システムから、サンプル データベースの bacpac を選択します。
 5. **データベース設定**するデータベースの名前を変更*WideWorldImporters*しを使用するターゲットのエディションやサービスの目標を選択します。
-6. をクリックして**[次へ]**と**完了**展開を開始します。 P1 を完了するまで数分が行われます。 低い料金する場合は、階層が必要に応じて、P1 の新しいデータベースにインポートし、目的のレベルには価格レベルを変更することをお勧めします。
+6. をクリックして **[次へ]** と**完了**展開を開始します。 P1 を完了するまで数分が行われます。 低い料金する場合は、階層が必要に応じて、P1 の新しいデータベースにインポートし、目的のレベルには価格レベルを変更することをお勧めします。
 
 ## <a name="configuration"></a>構成
 

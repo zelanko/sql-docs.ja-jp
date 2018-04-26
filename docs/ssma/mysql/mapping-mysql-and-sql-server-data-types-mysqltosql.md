@@ -1,6 +1,6 @@
 ---
 title: マッピングの MySQL および SQL Server データ型 (MySQLToSQL) |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee34e34e1b0048fd1cb15744cc215962e5a563e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 67a23e286e6d3a7c125d37e5f5cb68f01751fba0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL および SQL Server データ型 (MySQLToSQL) のマッピング
 MySQL データベースの種類が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure データベースの種類。 MySQL のデータベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure オブジェクトに MySQL からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]または SQL Azure です。 既定のデータ型マッピングを受け入れることができますか、マップをカスタマイズするには、次の手順で示すようにします。  
@@ -65,7 +65,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
     4.  これにより、同じデータ型の値より小さいとより大きな値のデータ マッピングをカスタマイズできます。 **ターゲット型**対象の SQL Server または SQL Azure のデータの種類を選択します。  
   
-        1.  一部の種類では、対象のデータ型の長さが必要です。 必要に応じて、入力で新しいデータの長さ、**置換**ボックスし、をクリックして**[ok]**です。  
+        1.  一部の種類では、対象のデータ型の長さが必要です。 必要に応じて、入力で新しいデータの長さ、**置換**ボックスし、をクリックして **[ok]** です。  
   
         2.  一部の種類が対象のデータ型を必要と**精度**と**スケール**です。 必要に応じて、新しい有効桁数を入力しのスケールを**置換**ボックスし、をクリックして**OK**です。  
   
@@ -79,7 +79,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
     これにより、同じデータ型の値より小さいとより大きな値のデータ マッピングをカスタマイズできます。 **ターゲット型**対象の SQL Server または SQL Azure のデータの種類を選択します。  
   
-    1.  一部の種類では、対象のデータ型の長さが必要です。 必要に応じて、入力で新しいデータの長さ、**置換**ボックスし、をクリックして**[ok]**です。  
+    1.  一部の種類では、対象のデータ型の長さが必要です。 必要に応じて、入力で新しいデータの長さ、**置換**ボックスし、をクリックして **[ok]** です。  
   
     2.  一部の種類が対象のデータ型を必要と**精度**と**スケール**です。 必要に応じて、新しい有効桁数を入力しのスケールを**置換**ボックスし、をクリックして**OK**です。  
   
@@ -87,7 +87,7 @@ SSMA では、データ型マッピングの既定のセットがあります。
   
     1.  ウィンドウで、型マッピングを削除するデータ型のマッピングを含む型マッピングのリスト内の行を選択します。  
   
-    2.  **[削除]**をクリックします。  
+    2.  **[削除]** をクリックします。  
   
 ## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順は、いずれかに[評価レポートを作成する](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)または[変換の MySQL データベースのオブジェクトを SQL Server または SQL Azure の構文に](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)です。 レポートを作成する場合、MySQL オブジェクトは、評価時に自動的に変換されます。  

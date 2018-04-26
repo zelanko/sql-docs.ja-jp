@@ -1,16 +1,16 @@
 ---
-title: "[全般] の XQuery のユース ケース |Microsoft ドキュメント"
-ms.custom: 
+title: '[全般] の XQuery のユース ケース |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - XQuery, general usage cases
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13b88814a7d0d9b0d0154b8e010b6aa76c85c6e6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 33527421daf7f474615f29b905921d7526a6483b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="general-xquery-use-cases"></a>XQuery の一般的な使用例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ WHERE CatalogDescription is not null
   
 -   クエリ本文で、必要な XML が構築されます。  
   
--   WHERE 句で、 **exist()**製品カタログの説明を含む行のみを検索するメソッドを使用します。 つまり、<`ProductDescription`> 要素が含まれる XML です。  
+-   WHERE 句で、 **exist()** 製品カタログの説明を含む行のみを検索するメソッドを使用します。 つまり、<`ProductDescription`> 要素が含まれる XML です。  
   
  結果を次に示します。  
   
@@ -80,7 +80,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 次のクエリは、同じ情報を取得、製品モデルに対してのみカタログの説明には、重みが含まれますが、<`Weight`>、仕様内の要素、<`Specifications`> 要素。 この例では、WITH XMLNAMESPACES を使用して pd プレフィックスとこれにバインドされる名前空間を定義しています。 これにより、バインディングに記述されていない両方、 **query()**メソッドと、 **exist()**メソッドです。  
+ 次のクエリは、同じ情報を取得、製品モデルに対してのみカタログの説明には、重みが含まれますが、<`Weight`>、仕様内の要素、<`Specifications`> 要素。 この例では、WITH XMLNAMESPACES を使用して pd プレフィックスとこれにバインドされる名前空間を定義しています。 これにより、バインディングに記述されていない両方、 **query()** メソッドと、 **exist()** メソッドです。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -95,7 +95,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 前のクエリで、 **exist()**のメソッド、 **xml**データ型の WHERE 句があるかどうかを確認することで、<`Weight`> 内の要素、<`Specifications`> 要素。  
+ 前のクエリで、 **exist()** のメソッド、 **xml**データ型の WHERE 句があるかどうかを確認することで、<`Weight`> 内の要素、<`Specifications`> 要素。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. カタログの説明に正面からの小さな製品写真が含まれる製品モデルの製品モデル ID の検索  
  XML 製品カタログの説明には、製品の写真が含まれています、<`Picture`> 要素。 各写真には、いくつかのプロパティがあります。 画像の角度のように、<`Angle`> 要素、および、サイズ、<`Size`> 要素。  
@@ -126,9 +126,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  上のクエリに関して、次の点に注意してください。  
   
--   WHERE 句で、 **exist()**を製品カタログの説明を持つ行のみを取得するメソッドが使用される、<`Picture`> 要素。  
+-   WHERE 句で、 **exist()** を製品カタログの説明を持つ行のみを取得するメソッドが使用される、<`Picture`> 要素。  
   
--   WHERE 句を使用して、 **value()**の値を比較のメソッドを 2 回、<`Size`> と <`Angle`> 要素。  
+-   WHERE 句を使用して、 **value()** の値を比較のメソッドを 2 回、<`Size`> と <`Angle`> 要素。  
   
  これは、結果の一部です。  
   
@@ -258,7 +258,7 @@ WHERE CatalogDescription is not NULL
   
  上のクエリに関して、次の点に注意してください。  
   
--   FOR ... RETURN ループ部分により、最初の 2 つの製品の特徴情報が取得されます。 **Position()**関数は、シーケンス内の要素の位置を検索に使用します。  
+-   FOR ... RETURN ループ部分により、最初の 2 つの製品の特徴情報が取得されます。 **Position()** 関数は、シーケンス内の要素の位置を検索に使用します。  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. 製品カタログの説明からの "ons" で終わる要素名の検索  
  次のクエリは、カタログの説明を検索し、内のすべての要素を返します、<`ProductDescription`>"ons"で終わる名前を持つ要素。  
@@ -304,15 +304,15 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- SELECT クエリを指定する注**query()**と**value()**のメソッド、 **xml**データ型。 このため、2 つの異なるクエリ プロローグ内でそれぞれ名前空間の宣言を繰り返す手間を省き、クエリ内で使用されるプレフィックス pd を WITH XMLNAMESPACES を使用して一度だけ定義しています。  
+ SELECT クエリを指定する注**query()** と**value()** のメソッド、 **xml**データ型。 このため、2 つの異なるクエリ プロローグ内でそれぞれ名前空間の宣言を繰り返す手間を省き、クエリ内で使用されるプレフィックス pd を WITH XMLNAMESPACES を使用して一度だけ定義しています。  
   
  上のクエリに関して、次の点に注意してください。  
   
 -   WHERE 句を使用して、カタログの説明の <`Summary`> に "Aerodynamic" という語が含まれる行のみを取得しています。  
   
--   **Contains()**関数を使用して、単語がテキストに含まれるかどうかを参照してください。  
+-   **Contains()** 関数を使用して、単語がテキストに含まれるかどうかを参照してください。  
   
--   **Value()**のメソッド、 **xml**データ型によって返される値を比較し**contains()**を 1 にします。  
+-   **Value()** のメソッド、 **xml**データ型によって返される値を比較し**contains()** を 1 にします。  
   
  結果を次に示します。  
   

@@ -1,30 +1,31 @@
 ---
-title: "SQL Server Migration Assistant |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server Migration Assistant |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1003d5250c2d1e2cc9816fa50ea8f11bdd3a8b29
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server にデータベースの移行を自動化するためのツールです。  
@@ -51,7 +52,7 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL データベース
+- Azure SQL Database
 - Windows および Linux (Preview) で SQL Server 2017
 - * * Azure SQL Data Warehouse
 
@@ -75,7 +76,7 @@ Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、M
   
     -   [SQL Server デベロッパー センター コミュニティ](http://go.microsoft.com/fwlink/?LinkId=42456)-ニュースグループ、フォーラム、および SQL Server の開発者に役立つその他のコミュニティ リソース  
   
--   サポート - へ移動[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) ' SQL Server Migration Assistant' を検索します。  バージョンを選択し、「要求を開始します」を選択  サポートは、SQL Server 移行アシスタント ツールに付属します。  
+-   サポート - へ移動[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ' SQL Server Migration Assistant' を検索します。  バージョンを選択し、「要求を開始します」を選択  サポートは、SQL Server 移行アシスタント ツールに付属します。  
   
 -   プレミア サポート - Premier 契約があれば取得できますプレミア サポートで、 [Premier Online のポータル](https://premier.microsoft.com/)です。  
   

@@ -1,30 +1,31 @@
 ---
-title: "Oracle コンソール (OracleToSQL) for SSMA の概要 |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Oracle コンソール (OracleToSQL) for SSMA の概要 |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8fb5dc2f2bc16f531ffebef7a4e908fe6260b7a3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Oracle コンソール (OracleToSQL) for SSMA の概要
 このセクションを起動し、[Oracle] コンソール アプリケーションで作業を開始する手順について説明します。 一覧表示、ここで、規則ウィンドウで使用される、一般的な SSMA コンソール出力。  
@@ -41,13 +42,13 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムで、コンソールを正常に起動した後、次の手順を使用して作業する可能性があります。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの内容の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md)です。  
   
-2.  [変数値ファイル &#40;OracleToSQL&#41; の作成](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [変数の値のファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [サーバーの接続ファイル &#40;OracleToSQL&#41; の作成](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [サーバー接続ファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [SSMA コンソール &#40;OracleToSQL&#41; の実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)プロジェクトのニーズに基づく  
+4.  [SSMA コンソールを実行する&#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)プロジェクトのニーズに基づく  
   
 追加機能:  
   

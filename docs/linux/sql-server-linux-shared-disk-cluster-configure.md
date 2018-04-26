@@ -1,25 +1,25 @@
 ---
-title: "SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスの構成 |Microsoft ドキュメント"
-description: 
+title: SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスの構成 |Microsoft ドキュメント
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 57f8f5d3881262ed96dcf84295b6c2a21dddc35d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスを構成します。
 
@@ -32,7 +32,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 > * SQL サーバー インストールし、構成
 > * Hosts ファイルを構成します。
 > * 共有記憶域を構成して、データベース ファイルの移動
-> * インストールし、ペースを各クラスター ノードの構成
+> * 各クラスター ノードでPacemakerインストールして構成する
 > * フェールオーバー クラスター インスタンスを構成します。
 
 この記事では、SQL Server の 2 つのノードの共有ディスク フェールオーバー クラスター インスタンス (FCI) を作成する方法について説明します。 アーティクルには Red Hat Enterprise Linux (RHEL) の手順とスクリプトの例が含まれています。 Ubuntu 中の配布 RHEL のようなスクリプトの例は、通常されます Ubuntu でも機能します。 
@@ -52,16 +52,16 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 ## <a name="install-and-configure-sql-server"></a>SQL サーバー インストールし、構成
 
 1. インストールし、両方のノードに SQL Server をセットアップします。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)です。
-1. プライマリ サーバーと、他の構成のために、セカンダリとして 1 つのノードを指定します。 これらの用語を使用して、次のこのガイドです。  
-1. セカンダリ ノードで停止し、SQL Server を無効にします。
-    次の例では、停止して、SQL Server を無効にします。 
+1. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。  
+1. セカンダリ ノードでSQL Server を停止し無効にします。
+    次の例では、SQL Server を停止して無効にします。 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > サーバーのマスター _ キーの SQL Server インスタンスの生成し、に配置時のセットアップで`var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント アクセスできるように、サーバーのマスター _ キーの暗号化を解除するは、各セカンダリ ノードにプライマリ ノードから、暗号化キーをコピーする必要があります。 
+    > サーバーのマスター _ キーの SQL Server インスタンスの生成し、に配置時のセットアップで`var/opt/mssql/secrets/machine-key`です。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるため、その id はノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。 
 
 1.  プライマリ ノードで、ペースの SQL server ログインの作成および実行する権限をログイン`sp_server_diagnostics`です。 ペースでは、このアカウントを使用して、どのノードが SQL Server を実行していることを確認します。 
 
@@ -69,7 +69,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
     sudo systemctl start mssql-server
     ```
    
-   SQL Server に接続`master`sa アカウントを使用してデータベースにあり、次を実行します。
+   SQL Server の`master`データベースに sa アカウントを使用して接続し、次のスクリプトを実行します。
 
    ```sql
    USE [master]
@@ -78,9 +78,9 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   または、より細かなレベルでアクセス許可を設定することもできます。 ペース ログインが必要です`VIEW SERVER STATE`sp_server_diagnostics でヘルス状態を照会`setupadmin`と`ALTER ANY LINKED SERVER`sp_dropserver と sp_addserver を実行して、リソース名を持つ FCI インスタンス名を更新します。 
+   このスクリプトの代わりに、より細かなレベルでアクセス許可を設定することもできます。 ペース ログインが必要です`VIEW SERVER STATE`sp_server_diagnostics でヘルス状態を照会`setupadmin`と`ALTER ANY LINKED SERVER`sp_dropserver と sp_addserver を実行して、リソース名を持つ FCI インスタンス名を更新します。 
 
-1. プライマリ ノードで、停止し、SQL Server を無効にします。 
+1. プライマリ ノードで、SQL Server を停止し無効にします。 
 
 ## <a name="configure-the-hosts-file"></a>Hosts ファイルを構成します。
 
@@ -92,12 +92,12 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
     sudo ip addr show
     ```
 
-1. 各ノードで、コンピューター名を設定します。 各ノード一意の名前は 15 文字以下です。 追加することによって、コンピューター名を設定`/etc/hosts`です。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+1. 各ノードで、コンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 そのコンピューター名を`/etc/hosts`に追加することにより設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   次の例は`/etc/hosts`という 2 つのノードの追加と`sqlfcivm1`と`sqlfcivm2`です。
+   次の`/etc/hosts`の例は`sqlfcivm1`と`sqlfcivm2`という名前の 2 つのノードの追加します。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -114,9 +114,9 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 - [フェールオーバー クラスター インスタンス: NFS - Linux に SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [フェールオーバー クラスター インスタンス: SMB - Linux に SQL Server を構成します。](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>インストールし、ペースを各クラスター ノードの構成
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードでPacemakerインストールして構成する
 
-1. 両方のクラスター ノードで、Pacemaker にログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 
+1. 両方のクラスター ノードで、Pacemaker がログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 
 
     次のコマンドは、このファイルを作成および設定します。
 
@@ -281,7 +281,7 @@ FCI は、リソース グループに作成されます。 これは、機能�
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 -->
-## <a name="summary"></a>概要
+## <a name="summary"></a>[概要]
 
 このチュートリアルでは、次のタスクを完了しました。
 
@@ -290,7 +290,7 @@ FCI は、リソース グループに作成されます。 これは、機能�
 > * SQL サーバー インストールし、構成
 > * Hosts ファイルを構成します。
 > * 共有記憶域を構成して、データベース ファイルの移動
-> * インストールし、ペースを各クラスター ノードの構成
+> * 各クラスター ノードでPacemakerインストールして構成する
 > * フェールオーバー クラスター インスタンスを構成します。
 
 ## <a name="next-steps"></a>次の手順

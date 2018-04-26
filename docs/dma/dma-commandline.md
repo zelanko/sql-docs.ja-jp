@@ -2,7 +2,7 @@
 title: (SQL Server データ Migration Assistant) コマンドラインから実行 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,14 +21,14 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6147d01802a363082baf27d6b909e2c98f9afef2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bf0437354f90a03f1d1cf68be074df3f4234676
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインからのデータ移行アシスタントを実行します。
-データ移行のアシスタントをインストールするバージョン 2.1 以降と、ときで dmacmd.exe もインストールされます*%programfiles%\\Microsoft データ Migration Assistant\\*です。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 これは、いくつかのデータベースまたは巨大なデータベースを評価するときに特に便利です。 
+データ移行のアシスタントをインストールするバージョン 2.1 以降と、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft データ Migration Assistant\\* です。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 これは、いくつかのデータベースまたは巨大なデータベースを評価するときに特に便利です。 
 
 > [!NOTE]
 > 評価のみを実行している Dmacmd.exe をサポートします。 この時点では、移行はサポートされていません。

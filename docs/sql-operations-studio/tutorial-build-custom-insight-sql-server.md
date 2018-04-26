@@ -1,9 +1,9 @@
 ---
-title: 'チュートリアル: SQL Operations Studio (preview) でカスタム インサイト ウィジェットの構築 |Microsoft ドキュメント'
-description: このチュートリアルでは、カスタム インサイト ウィジェットを構築し、SQL Operations Studio (preview) でのデータベースとサーバーのダッシュ ボードに追加する方法を示します。
+title: 'チュートリアル: SQL 操作 Studio (プレビュー) でカスタム インサイト ウィジェットの構築 |Microsoft ドキュメント'
+description: このチュートリアルでは、カスタム インサイト ウィジェットを構築し、SQL 操作 Studio (プレビュー) でのデータベースとサーバーのダッシュ ボードに追加する方法を示します。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 344cf021a4a0abc13fc8c531875c604095c8c0d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル: カスタム インサイト ウィジェットを構築します。
 
@@ -35,8 +35,8 @@ ms.lasthandoff: 12/21/2017
 
 このチュートリアルは、SQL Server または Azure SQL データベースが必要です。 *TutorialDB*です。 作成する、 *TutorialDB*データベースで、次のクイック スタートのいずれかを行います。
 
-- [接続してクエリを使用して SQL サーバー[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [接続してクエリを使用して Azure SQL データベース[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [接続してクエリを使用して SQL サーバー [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [接続してクエリを使用して Azure SQL データベース [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>独自のクエリを実行し、結果をグラフ ビューで表示

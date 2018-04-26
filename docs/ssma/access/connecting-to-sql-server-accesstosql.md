@@ -1,6 +1,6 @@
 ---
 title: SQL Server (AccessToSQL) への接続 |Microsoft ドキュメント
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -33,11 +33,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 572c516cfac93f3122814cdc93a3eed4f2b9c291
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 24302622edd46cc36a9581822f488c6978b91656
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL) に接続します。
 Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のターゲット インスタンスに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]です。 SSMA がのインスタンス内のデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]でデータベースのメタデータを表示および[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続しているが、パスワードは保存されません。  
@@ -91,7 +91,7 @@ SQL Server のインスタンスに関するメタデータが自動的に同期
   
 6.  セキュリティで保護された接続の場合は、2 つのコントロールが追加、**暗号化接続** チェック ボックスと**TrustServerCertificate**チェック ボックスをオンします。 場合にのみ**暗号化接続**チェック ボックスをオン**TrustServerCertificate**  チェック ボックスが表示されます。 ときに**暗号化接続**は checked(true) と**TrustServerCertificate** unchecked(false) は、SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するのには、証明書をクライアント側およびサーバー側でにインストールする必要があります。  
   
-7.  **[接続]**をクリックします。  
+7.  **[接続]** をクリックします。  
   
 **高いバージョンの互換性**  
   

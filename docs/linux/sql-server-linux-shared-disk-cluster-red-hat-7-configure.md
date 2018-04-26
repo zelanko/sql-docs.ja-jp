@@ -1,25 +1,25 @@
-﻿---
-title: "SQL Server 用の Red Hat Enterprise Linux 共有クラスターの構成 |Microsoft ドキュメント"
-description: "SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。"
+---
+title: SQL Server 用の Red Hat Enterprise Linux 共有クラスターの構成 |Microsoft ドキュメント
+description: SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成することによって高可用性を実装します。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 69f0953d6a03231b86ba9fb7a13bbddea2a48a22
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux 共有ディスク クラスターを構成します。
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>共有記憶域を構成して、データベース ファイルを移動する 
 
-共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベストプラクティスに従い、Kerberos を使用して NFS を保護することを推奨します (例については https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/ を参照してください)。 
+共有記憶域を提供するためのさまざまなソリューションがあります。 このチュートリアルでは、NFS を使った共有記憶域の構成について説明します。 ベスト プラクティスに従うし、Kerberos を使用して NFS を保護することをお勧め (次に例を見つけることができます:https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)です。 
 
 >[!Warning]
 >NFS を保護していない場合、ネットワークにアクセスして SQL ノードの IP アドレスを偽装できるすべてのユーザーがデータ ファイルにアクセスできます。 通常どおり、実稼働環境で使用する前にお使いのシステムの脅威モデルを確認してください。 別の記憶域オプションとして、SMB ファイル共有を使用できます。
@@ -143,7 +143,7 @@ NFS サーバー上で、次の操作を行います。
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要とします。 例: 
+1.  編集`/etc/exports`を共有するディレクトリをエクスポートします。 必要な共有フォルダーごとに 1 行を必要とします。 以下に例を示します。 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -221,7 +221,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    $ exit
    ``` 
 
-1. すべてのクラスター ノードで編集`/etc/fstab`mount コマンドを追加するファイル。  
+1.  すべてのクラスター ノードで編集`/etc/fstab`mount コマンドを追加するファイル。  
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
@@ -235,7 +235,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 > [!NOTE] 
 >以下を使用してファイル システム (FS) のリソースの指定どおり場合、/etc/fstab にコマンドのマウントを保持する必要はありません。 FS クラスター化されたリソースを開始するときに、フォルダーをマウント ペースくれます。 フェンス操作のヘルプでは、FS が 2 回マウントされていることを確認します。 
 
-1. 実行`mount -a`マウントされているパスを更新するシステムのコマンド。  
+1.  実行`mount -a`マウントされているパスを更新するシステムのコマンド。  
 
 1.  `/var/opt/mssql/tmp`に保存したデータベースとログ ファイルを新しくマウントされた共有`/var/opt/mssql/data`にコピーします。 これは、**プライマリ ノード上**でのみ行います。 'mssql' ローカル ユーザーに読み取り/書き込み権限を付与してください。
 
@@ -323,7 +323,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA アドオンは、VMWare と KVM エージェントをフェンスがします。 フェンス操作は、他のすべてのハイパーバイザーで無効にする必要があります。 実稼働環境では、フェンス操作エージェントを無効にしないでください。 時間帯、時点では、HyperV またはクラウド環境のフェンス操作エージェントがありません。 これらの構成を実行している場合は、フェンス操作を無効にする必要があります。 \**これは、説明は、実稼働システムでは推奨されません。** 
+   > RHEL HA アドオンは、VMWare と KVM エージェントをフェンスがします。 フェンス操作は、他のすべてのハイパーバイザーで無効にする必要があります。 実稼働環境では、フェンス操作エージェントを無効にしないでください。 時間帯、時点では、HyperV またはクラウド環境のフェンス操作エージェントがありません。 これらの構成を実行している場合は、フェンス操作を無効にする必要があります。 \**これは、説明は、実稼働システムでは推奨されません。**
 
    次のコマンドで、フェンス操作エージェントを無効にします。
 
@@ -393,7 +393,7 @@ NFS の使用に関する詳細については、次のリソースを参照し�
 
 ## <a name="additional-resources"></a>その他のリソース
 
-* [クラスターの最初から](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)ペースからガイド
+* Pacemaker の [クラスター入門](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 
 ## <a name="next-steps"></a>次の手順
 

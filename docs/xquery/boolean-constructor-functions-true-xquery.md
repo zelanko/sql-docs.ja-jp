@@ -1,16 +1,16 @@
 ---
-title: "true 関数 (XQuery) |Microsoft ドキュメント"
-ms.custom: 
+title: true 関数 (XQuery) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - fn:true function
 - true function
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d999985289369a7182fd8a0dcb019e9e3877a69
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8085947589d8a6b86b444fedd6a25f15a512c53
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンス トラクター関数の true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  xs:boolean 値 True を返します。 これに相当`xs:boolean("1")`です。  
+  xs:boolean 値 True を返します。 これは、`xs:boolean("1")` と同じです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ fn:true() as xs:boolean
  このトピックでは、さまざまなに格納されている XML インスタンスに対して XQuery の例は、 **xml** AdventureWorks データベース内の列を入力します。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. XQuery 論理関数 true() の使用  
- 次の例は、型指定されていないクエリ**xml**変数。 内の式、 **value()**メソッドは、ブール値を返します**true()** "aaa"属性値である場合。 **Value()**のメソッド、 **xml**データ型がブール値、ビットに変換し、それを取得します。  
+ 次の例は、型指定されていないクエリ**xml**変数。 内の式、 **value()** メソッドは、ブール値を返します**true()** "aaa"属性値である場合。 **Value()** のメソッド、 **xml**データ型がブール値、ビットに変換し、それを取得します。  
   
 ```  
 DECLARE @x XML  
@@ -98,6 +98,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [ブール値コンス トラクター関数 &#40;です。XQuery と #41 です。](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [ブール値コンス トラクター関数&#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   
