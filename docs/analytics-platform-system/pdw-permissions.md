@@ -1,29 +1,22 @@
 ---
-title: PDW のアクセス許可 (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 並列データ ウェアハウスでのアクセス許可 |Microsoft ドキュメント
+description: この記事では、要件と並列データ ウェアハウスのデータベース アクセス許可を管理するためのオプションについて説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>PDW のアクセス許可
-このトピックでは、要件と SQL Server PDW のデータベース アクセス許可を管理するためのオプションについて説明します。  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのアクセス許可の管理
+この記事では、要件と SQL Server PDW のデータベース アクセス許可を管理するためのオプションについて説明します。  
   
 ## <a name="BackupRestoreBasics"></a>データベース エンジンの権限の基本  
 SQL Server PDW のデータベース エンジンの権限は、ログイン、サーバー レベルでは、データベース ユーザーとユーザー定義データベース ロール、データベース レベルで管理されます。  
@@ -68,7 +61,7 @@ SQL Server PDW のデータベース エンジンの権限は、ログイン、�
   
 -   Using してログインを作成するときに**CREATE LOGIN**ステートメントでは、ログインを受け取る、 **CONNECT SQL** SQL Server PDW に接続するログインを許可する権限です。  
   
--   使用して、データベース ユーザーを作成するときに、 **CREATE USER**ステートメントでは、ユーザーの受信、**ON DATABASE の接続:: * * * < database_name >*権限、そのデータベースに接続するログインを許可します。ユーザーです。  
+-   使用して、データベース ユーザーを作成するときに、 **CREATE USER**ステートメントでは、ユーザーの受信、**ON DATABASE の接続:: * * * < database_name >* 権限、そのデータベースに接続するログインを許可します。ユーザーです。  
   
 -   パブリックのロールを含む、すべてのプリンシパルない明示的または暗黙的なアクセス許可を持って既定では暗黙の権限は明示的なアクセス許可から継承されるためです。 そのため、明示的なアクセス許可が存在しない場合があることができますありません暗黙的なアクセス許可です。  
   

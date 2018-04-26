@@ -1,29 +1,22 @@
 ---
-title: アプライアンスのインストールと構成の概要 (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: アプライアンスのインストールし、構成の分析プラットフォーム システム |Microsoft ドキュメント
+description: Analytics Platform System (APS) アプライアンス管理者を設定し、新しいアプライアンスの使用を開始する初期手順について説明します。
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
-caps.latest.revision: 23
-ms.openlocfilehash: df27bb16f24e313f7cb1d7c7f5ced912c0a09e1d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-installation-and-configuration-overview"></a>アプライアンスのインストールと構成の概要
-SQL Server PDW アプライアンス管理者を設定し、新しい SQL Server PDW アプライアンスの使用を開始する初期手順について説明します。  
+# <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスのインストールと構成
+Analytics Platform System (APS) アプライアンス管理者を設定し、新しいアプライアンスの使用を開始する初期手順について説明します。  
   
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin  
 Before you begin to install, configure, and use your new appliance, we recommend reviewing information about the appliance components. Review the following to familiarize yourself with the appliance:  
