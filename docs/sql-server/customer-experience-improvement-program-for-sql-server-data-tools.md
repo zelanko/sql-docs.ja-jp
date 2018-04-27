@@ -2,8 +2,8 @@
 title: SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58e671eb7e69bbc0487065342b141a5c5bfb1e9a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: beae11de576f8f6c413271ee2b532454d03613fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools のカスタマー エクスペリエンス向上プログラム
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio を起動します。  
   
-2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]**を選択します。  
+2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]** を選択します。  
   
-3.  CEIP をオフにするには、 **[いいえ、協力しません]**をクリックし、 **[OK]**をクリックします。  
+3.  CEIP をオフにするには、 **[いいえ、協力しません]** をクリックし、 **[OK]** をクリックします。  
   
-     CEIP をオンにするには、 **[はい、協力します]**をクリックし、 **[OK]**をクリックします。  
+     CEIP をオンにするには、 **[はい、協力します]** をクリックし、 **[OK]** をクリックします。  
   
 
   
@@ -88,11 +88,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio を起動します。  
   
-2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]**を選択します。  
+2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]** を選択します。  
   
-3.  CEIP をオフにするには、 **[いいえ、協力しません]**をクリックし、 **[OK]**をクリックします。  
+3.  CEIP をオフにするには、 **[いいえ、協力しません]** をクリックし、 **[OK]** をクリックします。  
   
-     CEIP をオンにするには、 **[はい、協力します]**をクリックし、 **[OK]**をクリックします。  
+     CEIP をオンにするには、 **[はい、協力します]** をクリックし、 **[OK]** をクリックします。  
   
 
   
@@ -126,11 +126,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  ツールを起動し、Analysis Services または Integration Services の新規または既存プロジェクトを開きます。  
   
-2.  [ヘルプ] メニューから **[Microsoft SQL Server カスタマー フィードバックのオプション]**を選択します。  
+2.  [ヘルプ] メニューから **[Microsoft SQL Server カスタマー フィードバックのオプション]** を選択します。  
   
-3.  CEIP を無効にするには、 **[参加しない]**をクリックします。  
+3.  CEIP を無効にするには、 **[参加しない]** をクリックします。  
   
-     CEIP を有効にするには、 **[参加する (推奨)]**をクリックします。  
+     CEIP を有効にするには、 **[参加する (推奨)]** をクリックします。  
   
 4.  **[OK]** をクリックします。  
   

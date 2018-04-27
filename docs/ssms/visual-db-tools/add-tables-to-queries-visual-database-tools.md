@@ -1,34 +1,36 @@
 ---
-title: "クエリへのテーブルの追加 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: クエリへのテーブルの追加 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inserting tables
 - adding tables
 - queries [SQL Server], tables
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f19aca315ef01bc4a329d6b03ca9c07b6f2a52f6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: af3ed766597a094eff2424078c23d45189473528
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>クエリへのテーブルの追加 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリを作成するとき、データを取得する基となるのは、テーブルまたはテーブル構造オブジェクト (ビューおよび特定のユーザー定義関数など) です。 クエリでこれらのオブジェクトを処理するには、 **ダイアグラム ペイン**にオブジェクトを追加します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリを作成するとき、データを取得する基となるのは、テーブルまたはテーブル構造オブジェクト (ビューおよび特定のユーザー定義関数など) です。 クエリでこれらのオブジェクトを処理するには、 **ダイアグラム ペイン**にオブジェクトを追加します。  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>テーブルまたはテーブル値オブジェクトをクエリに追加するには  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/17/2018
   
 3.  アイテムのリストで、追加する各アイテムをダブルクリックします。  
   
-4.  アイテムの追加が完了したら、 **[閉じる]**をクリックします。  
+4.  アイテムの追加が完了したら、 **[閉じる]** をクリックします。  
   
     クエリおよびビュー デザイナーによって、 **ダイアグラム ペイン**、 **抽出条件ペイン**、および **SQL ペイン** が適宜更新されます。  
   

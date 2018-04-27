@@ -2,7 +2,7 @@
 title: フェールオーバー クラスター インスタンスの診断ログを表示して読む方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda925a4330ccd5a53e6176d8aaae4ca74c04412
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0bc941b9bf25dd263f247b15d6c559e709a58eb1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **診断ログ ファイルを表示するには**  
   
-1.  **[ファイル]** メニューから、 **[開く]**、 **[ファイル]**を選択し、表示する診断ログ ファイルを選択します。  
+1.  **[ファイル]** メニューから、 **[開く]**、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
   
 2.  イベントは、右ペインに行として表示されます。既定では、 **名前**と **タイムスタンプ** の 2 つの列だけが表示されます。  
   
      また、 **[ExtendedEvents]** メニューがアクティブ化されます。  
   
-3.  他の列を表示するには、 **[ExtendedEvents]** メニューにアクセスし、 **[列の選択]**を選択します。  
+3.  他の列を表示するには、 **[ExtendedEvents]** メニューにアクセスし、 **[列の選択]** を選択します。  
   
      ダイアログ ボックスが開き、表示対象として選択できる列が表示されます。  
   

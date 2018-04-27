@@ -2,7 +2,7 @@
 title: 新しい登録済みサーバーの作成 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-registration
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 868fb4c21b994e1cdccc1a9dda60d2844c613996
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このトピックでは、サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
   
  登録済みサーバーには、次の 2 種類があります。  
   
@@ -49,14 +50,14 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>ローカル サーバー インスタンスを自動的に登録するには  
   
--   [登録済みサーバー] で、[登録済みサーバー] ツリーの任意のノードを右クリックし、 **[ローカル サーバーの登録情報を更新]**をクリックします。  
+-   [登録済みサーバー] で、[登録済みサーバー] ツリーの任意のノードを右クリックし、 **[ローカル サーバーの登録情報を更新]** をクリックします。  
   
 #### <a name="to-create-a-new-registered-server"></a>新しい登録済みサーバーを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
      **サーバーの種類**  
-     [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]**ツール バーの **[データベース エンジン]**、 **[分析サーバー]**、 **[Reporting Services]** 、または **[Integration Services]** をクリックします。  
+     [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** ツール バーの **[データベース エンジン]**、 **[分析サーバー]**、 **[Reporting Services]** 、または **[Integration Services]** をクリックします。  
   
      **サーバー名**  
      登録するサーバー インスタンスを、*\<servername>*[\\*\<instancename>*] という形式で選択します。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/17/2018
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 詳細については、「 [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
   
      **User name**  
-     接続に使用されている、現在のユーザー名を表示します。 この読み取り専用オプションは、Windows 認証を使用した接続が指定されている場合にのみ使用できます。 **[ユーザー名]**を変更するには、別のユーザーとしてコンピューターにログインします。  
+     接続に使用されている、現在のユーザー名を表示します。 この読み取り専用オプションは、Windows 認証を使用した接続が指定されている場合にのみ使用できます。 **[ユーザー名]** を変更するには、別のユーザーとしてコンピューターにログインします。  
   
      **Login**  
      接続に使用するログインを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ使用できます。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 01/17/2018
      入力したパスワードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で暗号化して保存する場合に選択します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ表示されます。  
   
     > [!NOTE]  
-    >  パスワードの保存を止めるには、このチェック ボックスをオフにして **[保存]**をクリックします。  
+    >  パスワードの保存を止めるには、このチェック ボックスをオフにして **[保存]** をクリックします。  
   
      **[登録済みサーバーの名前]**  
      [登録済みサーバー] に表示する名前です。 この名前は、 **[サーバー名]** ボックスの名前と一致する必要はありません。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 01/17/2018
      サーバーの説明をオプションで入力します。  
   
      **テスト**  
-     クリックすると、 **[サーバー名]**で選択されたサーバーへの接続をテストします。  
+     クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
      **[保存]**  
      クリックすると、登録済みサーバーの設定を保存します。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 01/17/2018
   
  ローカル サーバー グループ内のすべてのサーバーに対してクエリを実行するには、サーバー グループを右クリックし、**[接続]** をポイントして、**[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、ユーザー認証コンテキストなど保存されている接続情報を使用して、グループ内のすべてのサーバーに対して実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録されていても、パスワードが保存されていないサーバーは接続できません。  
   
- 中央管理サーバーに登録されているすべてのサーバーに対してクエリを実行するには、中央管理サーバーを展開し、サーバー グループを右クリックして、 **[接続]**をポイントし、 **[新しいクエリ]**をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、保存されている接続情報およびユーザーの Windows 認証コンテキストを使用して、サーバー グループ内のすべてのサーバーに対して実行されます。  
+ 中央管理サーバーに登録されているすべてのサーバーに対してクエリを実行するには、中央管理サーバーを展開し、サーバー グループを右クリックして、 **[接続]** をポイントし、 **[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、保存されている接続情報およびユーザーの Windows 認証コンテキストを使用して、サーバー グループ内のすべてのサーバーに対して実行されます。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト エクスプローラーのシステム オブジェクトの非表示](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   

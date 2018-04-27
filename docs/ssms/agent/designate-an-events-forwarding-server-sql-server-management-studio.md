@@ -2,7 +2,7 @@
 title: イベントの転送先サーバーを指定する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6a204a92259fa97fdb5324353ed3266ed3389567
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7995d03fa1c20b79197b941f9235890759ee941c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプ ローラー** で、プラス記号をクリックして、別のサーバーにイベントを転送するサーバーを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]**を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
 3.  *[SQL Server エージェントのプロパティ - <サーバー名>]* ダイアログ ボックスの **[ページの選択]** で **[詳細設定]** を選択します。  
   
-4.  **[SQL Server イベントの転送]**で、 **[イベントを別のサーバーに転送する]** チェック ボックスをオンにします。  
+4.  **[SQL Server イベントの転送]** で、 **[イベントを別のサーバーに転送する]** チェック ボックスをオンにします。  
   
-5.  **[サーバー]** ボックスの一覧でサーバーを選択し、 **[イベント]**で次のいずれかの操作を行います。  
+5.  **[サーバー]** ボックスの一覧でサーバーを選択し、 **[イベント]** で次のいずれかの操作を行います。  
   
     -   ローカルの警告で処理されていないイベントのみを転送する場合は、 **[未処理のイベント]** をクリックします。  
   
@@ -74,5 +74,5 @@ ms.lasthandoff: 04/16/2018
   
 6.  **[次のレベル以上のイベント発生時]** ボックスの一覧で、選択したサーバーにイベントを転送するときの重大度レベルをクリックします。  
   
-7.  完了したら、 **[OK]**をクリックします。  
+7.  完了したら、 **[OK]** をクリックします。  
   

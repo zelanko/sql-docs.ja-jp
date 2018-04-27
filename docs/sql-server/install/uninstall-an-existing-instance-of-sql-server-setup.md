@@ -2,7 +2,7 @@
 title: SQL Server の既存のインスタンスのアンインストール (セットアップ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 10072edb413c472780b714ca8241703557058265
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: b437615e33ff0a30a253c399ad9d8473e85dfd66
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,13 +88,13 @@ ms.lasthandoff: 04/06/2018
   
 ### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスをアンインストールするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]**をクリックします。  
+1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]** をクリックします。  
   
-2.  **[SQL Server 2016]** を右クリックし、**[アンインストール]** を選択します。 次に、 **[削除]**をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
+2.  **[SQL Server 2016]** を右クリックし、**[アンインストール]** を選択します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
   
-     セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[次へ]**をクリックします。  
+     セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[次へ]** をクリックします。  
   
-3.  [インスタンスの選択] ページのドロップダウン ボックスを使用して、削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共有機能と管理ツールだけを削除するオプションを指定します。 続行するには、 **[次へ]**をクリックします。  
+3.  [インスタンスの選択] ページのドロップダウン ボックスを使用して、削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定するか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の共有機能と管理ツールだけを削除するオプションを指定します。 続行するには、 **[次へ]** をクリックします。  
   
 4.  [機能の選択] ページで、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスから削除する機能を指定します。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/06/2018
   
 5.  **[削除の準備完了]** ページで、アンインストールされるコンポーネントおよび機能の一覧を確認します。 **[削除]** をクリックしてアンインストールを開始します。  
   
-6.  最後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをアンインストールした直後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連付けられたその他のプログラムがまだ **[プログラムと機能]**のプログラムの一覧に表示されています。 ただし、 **[プログラムと機能]**を閉じ、次に **[プログラムと機能]**を開いたときには、プログラムの一覧は更新され、実際にインストールされているプログラムのみが表示されます。  
+6.  最後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをアンインストールした直後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連付けられたその他のプログラムがまだ **[プログラムと機能]** のプログラムの一覧に表示されています。 ただし、 **[プログラムと機能]** を閉じ、次に **[プログラムと機能]** を開いたときには、プログラムの一覧は更新され、実際にインストールされているプログラムのみが表示されます。  
   
 ### <a name="if-the-uninstallation-fails"></a>アンインストールが失敗した場合  
   

@@ -2,7 +2,7 @@
 title: クエリの作成 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,29 +20,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 11e7ac99b1d9f54c6ed16e58fba7572f3a04d39b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>クエリの作成 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリを使用すると、データベース内のテーブルおよびビューからデータを取得できます。 クエリの作成と処理には、 **クエリおよびビュー デザイナー**を使用します。クエリおよびビュー デザイナーは、 [ダイアグラム ペイン](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、 [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、 [抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)、および [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)の 4 つのペインで構成されています。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリを使用すると、データベース内のテーブルおよびビューからデータを取得できます。 クエリの作成と処理には、 **クエリおよびビュー デザイナー**を使用します。クエリおよびビュー デザイナーは、 [ダイアグラム ペイン](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、 [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、 [抽出条件ペイン](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)、および [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)の 4 つのペインで構成されています。  
   
 ### <a name="to-create-a-new-query"></a>新しいクエリを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、問い合わせるデータベースの **[テーブル]** ノードを展開し、 問い合わせるテーブルを右クリックして、 **[テーブルを開く]**をクリックします。  
+1.  **オブジェクト エクスプローラー**で、問い合わせるデータベースの **[テーブル]** ノードを展開し、 問い合わせるテーブルを右クリックして、 **[テーブルを開く]** をクリックします。  
   
-2.  クエリにテーブルを追加するには、[クエリ デザイナー] メニューの **[テーブルの追加]**をクリックします。  
+2.  クエリにテーブルを追加するには、[クエリ デザイナー] メニューの **[テーブルの追加]** をクリックします。  
   
     > [!NOTE]  
     > **ダイアグラム**ペイン、 **SQL**ペイン、 **抽出条件**ペイン、または **結果ペイン** が表示されない場合は、[クエリ デザイナー] メニューの **[ペイン]** をポイントして、開くペインをクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、問い合わせるテーブルを選択し、テーブルごとに **[追加]** をクリックします。  
   
-4.  問い合わせるすべてのテーブルを追加したら、 **[閉じる]**をクリックします。  
+4.  問い合わせるすべてのテーブルを追加したら、 **[閉じる]** をクリックします。  
   
-    後でテーブルを追加するには、 **ダイアグラム** ペインの空の領域を右クリックし、ショートカット メニューの **[テーブルの追加]**をクリックします。  
+    後でテーブルを追加するには、 **ダイアグラム** ペインの空の領域を右クリックし、ショートカット メニューの **[テーブルの追加]** をクリックします。  
   
 5.  **ダイアグラム ペイン**で、問い合わせる各列のテーブル値オブジェクトのボックスをオンにします。  
   

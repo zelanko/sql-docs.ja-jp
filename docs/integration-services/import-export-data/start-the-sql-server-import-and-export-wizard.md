@@ -1,16 +1,16 @@
 ---
-title: "SQL Server インポートおよびエクスポート ウィザードを起動する | Microsoft Docs"
-ms.custom: 
+title: SQL Server インポートおよびエクスポート ウィザードを起動する | Microsoft Docs
+ms.custom: ''
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 
+caps.latest.revision: 130
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6e1016714fa05b35e4a762cb162fce7ce1a34305
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動する
 
@@ -79,9 +79,9 @@ ms.lasthandoff: 01/25/2018
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) から SQL Server インポートおよびエクスポート ウィザードを起動する    
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
     
-2.  **[データベース]**を展開します。
+2.  **[データベース]** を展開します。
 3.  データベースを右クリックします。
-4.  **[タスク]**にカーソルを合わせます。
+4.  **[タスク]** にカーソルを合わせます。
 5.  以下のいずれかのオプションをクリックします。
   
     -   **データのインポート**
@@ -96,13 +96,13 @@ SQL Server をインストールしていない場合、あるいは SQL Server 
 ### <a name="start-the-sql-server-import-and-export-wizard-from-visual-studio-with-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) で Visual Studio から SQL Server インポートおよびエクスポート ウィザードを起動する 
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]がインストールされている Visual Studio で、Integration Services プロジェクトを開いている状態で、次のいずれかを実行します。 
   
--   **[プロジェクト]** メニューの **[SSIS インポートおよびエクスポート ウィザード]**をクリックします。 
+-   **[プロジェクト]** メニューの **[SSIS インポートおよびエクスポート ウィザード]** をクリックします。 
 
     ![ウィザードの起動 (プロジェクト)](../../integration-services/import-export-data/media/start-wizard-project.jpg) 
     
     \- または -
     
--   ソリューション エクスプローラーで、 **[SSIS パッケージ]** フォルダーを右クリックし、 **[SSIS インポートおよびエクスポート ウィザード]**をクリックします。
+-   ソリューション エクスプローラーで、 **[SSIS パッケージ]** フォルダーを右クリックし、 **[SSIS インポートおよびエクスポート ウィザード]** をクリックします。
 
     ![ウィザードの起動 (パッケージ)](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
@@ -116,7 +116,7 @@ Visual Studio がインストールされていない場合、あるいは Visua
 > ウィザードのページまたはダイアログ ボックスで F1 キーをタップすると、現在のページの文書が表示されます。   
 
  ## <a name="whats-next"></a>次の操作  
- ウィザードを起動すると、最初のページは **[SQL Server インポートおよびエクスポート ウィザードへようこそ]**になります。 このページでいかなる操作も必要はありません。 詳細については、「 [SQL Server インポートおよびエクスポート ウィザードへようこそ](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)」を参照してください。  
+ ウィザードを起動すると、最初のページは **[SQL Server インポートおよびエクスポート ウィザードへようこそ]** になります。 このページでいかなる操作も必要はありません。 詳細については、「 [SQL Server インポートおよびエクスポート ウィザードへようこそ](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)」を参照してください。  
   
 ## <a name="related"></a> 関連タスクとコンテンツ  
  その他の基本的なタスクは次のとおりです。

@@ -2,7 +2,7 @@
 title: ジョブ履歴ログのセットアップ | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139ffb2446f05db678b9ca57e9a86ba79991100a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47a1e11e4d8d2568c0f0a0f5e8c4f2fd5ffb6cd8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,15 +52,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**を右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[SQL Server エージェントのプロパティ]** ダイアログ ボックスで **[履歴]** ページをクリックします。  
   
 4.  次のいずれかのオプションを選択します。  
   
-    1.  **[ジョブ履歴ログのサイズを制限する]**チェック ボックスをオンにして、ジョブ履歴ログの最大行数と、ジョブあたりの最大行数を入力します。  
+    1.  **[ジョブ履歴ログのサイズを制限する]** チェック ボックスをオンにして、ジョブ履歴ログの最大行数と、ジョブあたりの最大行数を入力します。  
   
-    2.  **[自動的にエージェントの履歴を削除する]**チェック ボックスをオンにして、期間を指定します。この期間を過ぎると、履歴がログから削除されます。  
+    2.  **[自動的にエージェントの履歴を削除する]** チェック ボックスをオンにして、期間を指定します。この期間を過ぎると、履歴がログから削除されます。  
   
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  

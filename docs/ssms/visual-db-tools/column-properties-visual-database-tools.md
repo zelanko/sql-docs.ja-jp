@@ -1,16 +1,16 @@
 ---
-title: "[列のプロパティ] (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: '[列のプロパティ] (Visual Database Tools) | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -19,19 +19,20 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3605540ac694a2597e607428d5928d42f42ce14b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1da9055fcd5d40f937c15f400b080fd3dc302333
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ( [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
   
 > [!NOTE]  
 > このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
@@ -82,13 +83,13 @@ ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値
 数値データ型の小数点の右側にある桁数の最大数が表示されます。 この値は、有効桁数以下である必要があります。 数値データ型でないデータ型の場合、このプロパティには **0** と表示されます。  
   
 ## <a name="column-properties-tab"></a>[列のプロパティ] タブ  
-これらのプロパティにアクセスするには、サーバー エクスプローラーで列が属しているテーブルを右クリックした後、 **[テーブル定義を開く]**を選択し、テーブル デザイナーの [テーブル] グリッドで行を選択します。  
+これらのプロパティにアクセスするには、サーバー エクスプローラーで列が属しているテーブルを右クリックした後、 **[テーブル定義を開く]** を選択し、テーブル デザイナーの [テーブル] グリッドで行を選択します。  
   
 > [!NOTE]  
 > これらのプロパティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]のみに適用されます。  
   
 **[全般] カテゴリ**  
-展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]**が表示されます。  
+展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]** が表示されます。  
   
 **[オブジェクト名]**  
 列の名前が表示されます。 名前を編集するには、テキスト ボックスに入力します。  
@@ -117,11 +118,11 @@ ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値
 **[テーブル デザイナー] カテゴリ**  
 展開すると、その他のプロパティが表示されます。  
   
-**照合順序**  
+**[照合順序]**  
 選択した列における照合順序の設定が表示されます。 この設定を変更するには、 **[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
   
 **[計算列の指定] カテゴリ**  
-展開すると、 **[式]** と **[永続化されている]**のプロパティが表示されます。 列が計算列である場合、式も表示されます。 式を編集するには、このカテゴリを展開して、 **[式]** プロパティで式を編集します。  
+展開すると、 **[式]** と **[永続化されている]** のプロパティが表示されます。 列が計算列である場合、式も表示されます。 式を編集するには、このカテゴリを展開して、 **[式]** プロパティで式を編集します。  
   
 **[式]**  
 選択した列が計算列の場合に、列で使用される式が表示されます。 このフィールドで式を入力したり、変更したりできます。  
@@ -150,13 +151,13 @@ image 型の列のドキュメントの種類を定義するために使用さ�
 **[統計的セマンティクス]**  
 選択されている列に対する統計的セマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97)に関する記述を参照してください。  
   
-**[統計的セマンティクス]** を選択する前に **[言語]**を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** オプションは **[いいえ]** に設定され、変更できません。 **[言語]** を選択する前に **[統計的セマンティクス]** オプションで **[はい]**を選択した場合、 **[言語]** 列で使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
+**[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** オプションは **[いいえ]** に設定され、変更できません。 **[言語]** を選択する前に **[統計的セマンティクス]** オプションで **[はい]** を選択した場合、 **[言語]** 列で使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
   
 **[SQL Server 以外のサブスクライバーがある]**  
 列に Microsoft SQL Server 以外のサブスクライバーが含まれているかどうかが表示されます  
   
 **[IDENTITY の指定] カテゴリ**  
-展開すると、 **[ID]**、 **[ID の増分値]**、 **[IDENTITY シード]**のプロパティが表示されます。  
+展開すると、 **[ID]**、 **[ID の増分値]**、 **[IDENTITY シード]** のプロパティが表示されます。  
   
 **[Is Identity]**  
 選択されている列がテーブルの ID 列であるかどうかを示します。 プロパティを変更するには、テーブル デザイナーでテーブルを開き、 **[プロパティ]** ウィンドウでプロパティを編集します。 この設定は、 *int*などの数値に基づくデータ型の列にのみ適用されます。  
@@ -186,7 +187,7 @@ image 型の列のドキュメントの種類を定義するために使用さ�
 この列を別の場所にレプリケートされるかどうかを示します。  
   
 **[RowGuid]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] でこの列が ROWGUID として使用されるかどうかが示されます。 データ型が **uniqueidentifier** の列でのみ、この値を **[はい]**に設定できます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] でこの列が ROWGUID として使用されるかどうかが示されます。 データ型が **uniqueidentifier** の列でのみ、この値を **[はい]** に設定できます。 このプロパティを編集するには、値をクリックしてドロップダウン リストを展開し、別の値を選択します。  
   
 **サイズ**  
 列のデータ型で許容されるサイズがバイト単位で表示されます。 たとえば、 **nchar** データ型の長さが 10 (文字数) でも、Unicode 文字セットの場合のサイズは 20 になります。  

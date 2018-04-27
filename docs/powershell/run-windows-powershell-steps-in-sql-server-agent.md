@@ -1,27 +1,28 @@
 ---
-title: "SQL Server エージェントでの Windows PowerShell ステップの実行 | Microsoft Docs"
-ms.custom: 
+title: SQL Server エージェントでの Windows PowerShell ステップの実行 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0e3a5a64d8c65a722e0c235bed60daa4a9872b60
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 29d0a509d4e022772537b53b69fa1f3358c0824f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,13 +51,13 @@ SQL Server エージェントを使用して、スケジュールされた時刻
 ##  <a name="PShellJob"></a> PowerShell ジョブ ステップの作成  
  **PowerShell ジョブ ステップを作成するには**  
   
-1.  **[SQL Server エージェント]**を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]**をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)」を参照してください。  
+1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)」を参照してください。  
   
-2.  **[ジョブのプロパティ]** ダイアログで **[ステップ]** ページをクリックし、 **[新規作成]**をクリックします。  
+2.  **[ジョブのプロパティ]** ダイアログで **[ステップ]** ページをクリックし、 **[新規作成]** をクリックします。  
   
-3.  **[新しいジョブ ステップ]** ダイアログの **[ステップ名]**ボックスにジョブ ステップ名を入力します。  
+3.  **[新しいジョブ ステップ]** ダイアログの **[ステップ名]** ボックスにジョブ ステップ名を入力します。  
   
-4.  **[種類]** ボックスの一覧で **[PowerShell]**をクリックします。  
+4.  **[種類]** ボックスの一覧で **[PowerShell]** をクリックします。  
   
 5.  **[実行するアカウント名]** ボックスの一覧で、ジョブで使用する資格情報を備えたプロキシ アカウントをクリックします。  
   
@@ -67,13 +68,13 @@ SQL Server エージェントを使用して、スケジュールされた時刻
 ##  <a name="CmdExecJob"></a> コマンド プロンプト ジョブ ステップの作成  
  **CmdExec ジョブ ステップを作成するには**  
   
-1.  **[SQL Server エージェント]**を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]**をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)」を参照してください。  
+1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)」を参照してください。  
   
-2.  **[ジョブのプロパティ]** ダイアログで **[ステップ]** ページをクリックし、 **[新規作成]**をクリックします。  
+2.  **[ジョブのプロパティ]** ダイアログで **[ステップ]** ページをクリックし、 **[新規作成]** をクリックします。  
   
-3.  **[新しいジョブ ステップ]** ダイアログの **[ステップ名]**ボックスにジョブ ステップ名を入力します。  
+3.  **[新しいジョブ ステップ]** ダイアログの **[ステップ名]** ボックスにジョブ ステップ名を入力します。  
   
-4.  **[種類]** ボックスの一覧の **[オペレーティング システム (CmdExec)]**をクリックします。  
+4.  **[種類]** ボックスの一覧の **[オペレーティング システム (CmdExec)]** をクリックします。  
   
 5.  **[実行するアカウント名]** ボックスの一覧で、ジョブで使用する資格情報を備えたプロキシ アカウントをクリックします。 既定では、CmdExec ジョブ ステップは SQL Server エージェント サービス アカウントのコンテキストで実行されます。  
   

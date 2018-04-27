@@ -1,16 +1,16 @@
 ---
-title: "パッケージでプロパティ式を使用する | Microsoft Docs"
-ms.custom: 
+title: パッケージでプロパティ式を使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df3d79297b56c02f4aff107349cb8dce5c75d4da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c3515ee8c083a07afc501c4494a25d76f267e5e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/25/2018
 -   [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>データ フロー コンポーネントのプロパティ式の設定  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを構築すると、プロパティ式をサポートするデータ フロー コンポーネントのプロパティが、そのデータ フロー コンポーネントが属するデータ フロー タスクに表示されます。 データ フロー コンポーネントのプロパティ式を追加、変更、および削除するには、データ フロー コンポーネントが属するデータ フローのデータ フロー タスクを右クリックし、 **[プロパティ]**をクリックします。 [プロパティ] ウィンドウに、プロパティ式を使用できるデータ フロー コンポーネントのプロパティが一覧表示されます。 たとえば、SampleCustomer という名前のデータ フローで行サンプリング変換の SamplingValue プロパティのプロパティ式を作成または変更するには、行サンプリング変換が属するデータ フローのデータ フロー タスクを右クリックし、 **[プロパティ]**をクリックします。 [プロパティ] ウィンドウに、SamplingValue プロパティが [SampleCustomer].[SamplingValue] の形式で一覧表示されます。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを構築すると、プロパティ式をサポートするデータ フロー コンポーネントのプロパティが、そのデータ フロー コンポーネントが属するデータ フロー タスクに表示されます。 データ フロー コンポーネントのプロパティ式を追加、変更、および削除するには、データ フロー コンポーネントが属するデータ フローのデータ フロー タスクを右クリックし、 **[プロパティ]** をクリックします。 [プロパティ] ウィンドウに、プロパティ式を使用できるデータ フロー コンポーネントのプロパティが一覧表示されます。 たとえば、SampleCustomer という名前のデータ フローで行サンプリング変換の SamplingValue プロパティのプロパティ式を作成または変更するには、行サンプリング変換が属するデータ フローのデータ フロー タスクを右クリックし、 **[プロパティ]** をクリックします。 [プロパティ] ウィンドウに、SamplingValue プロパティが [SampleCustomer].[SamplingValue] の形式で一覧表示されます。  
   
  [プロパティ] ウィンドウで、データ フロー コンポーネントのプロパティ式を他の種類の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクトのプロパティ式と同じ方法で追加、変更、および削除します。 また、[プロパティ] ウィンドウから、データ フロー コンポーネントのプロパティ式を追加、変更、または削除するために使用するさまざまなダイアログ ボックスやビルダーにアクセスすることもできます。 プロパティ式で更新できるデータ フロー コンポーネントのプロパティの詳細については、「 [Transformation Custom Properties](../../integration-services/data-flow/transformations/transformation-custom-properties.md)」(変換のカスタム プロパティ) を参照してください。  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 01/25/2018
  `@[User::myfilenamefull]`  
   
 > [!NOTE]  
->  接続マネージャー用のプロパティ式には、[プロパティ] ウィンドウからのみアクセスできます。 接続マネージャーのプロパティを表示するには、[プロパティ] ウィンドウが開いているときに **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域で接続マネージャーを選択するか、接続マネージャーを右クリックして **[プロパティ]**を選択する必要があります。  
+>  接続マネージャー用のプロパティ式には、[プロパティ] ウィンドウからのみアクセスできます。 接続マネージャーのプロパティを表示するには、[プロパティ] ウィンドウが開いているときに **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域で接続マネージャーを選択するか、接続マネージャーを右クリックして **[プロパティ]** を選択する必要があります。  
   
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>テキスト ファイル ログ プロバイダーの ConfigString プロパティ用のプロパティ式  
  次のプロパティ式を使用すると、テキスト ファイル ログ プロバイダーの ConfigString プロパティを設定できます。 この式では、使用するファイル接続マネージャーの名前を格納するユーザー定義変数 `varConfigString`を 1 つだけ使用しています。 ファイル接続マネージャーにより、ログ エントリの書き込み先のテキスト ファイルのパスが指定されます。  
@@ -170,7 +170,7 @@ ms.lasthandoff: 01/25/2018
  `@[User::varConfigString]`  
   
 > [!NOTE]  
->  ログ プロバイダー用のプロパティ式には、[プロパティ] ウィンドウからのみアクセスできます。 ログ プロバイダーのプロパティを表示するには、[プロパティ] ウィンドウが開いているときに **デザイナーの** [パッケージ エクスプローラー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブでログ プロバイダーを選択するか、パッケージ エクスプローラーでログ プロバイダーを右クリックし、 **[プロパティ]**をクリックする必要があります。  
+>  ログ プロバイダー用のプロパティ式には、[プロパティ] ウィンドウからのみアクセスできます。 ログ プロバイダーのプロパティを表示するには、[プロパティ] ウィンドウが開いているときに **デザイナーの** [パッケージ エクスプローラー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブでログ プロバイダーを選択するか、パッケージ エクスプローラーでログ プロバイダーを右クリックし、 **[プロパティ]** をクリックする必要があります。  
   
 ## <a name="external-resources"></a>外部リソース  
   

@@ -1,31 +1,31 @@
 ---
-title: "SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード | Microsoft Docs"
-ms.custom: 
+title: SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27411b3f61efd0474313ce8de98b28fa3ebd51b1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1ac83c874d6acd08fce41b4020009b58621ff171
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
   以前のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で作成したパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用される [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 形式にアップグレードできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、このプロセスを容易に行うための [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードが用意されています。 このウィザードは元のパッケージをバックアップするように構成できるため、アップグレードが難しい場合は、元のパッケージを引き続き使用できます。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>SQL Server Management Studio からウィザードを実行するには  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続し、 **[格納されたパッケージ]** ノードを展開して **[ファイル システム]** ノードまたは **[MSDB]** ノードを右クリックし、 **[パッケージのアップグレード]**をクリックします。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続し、 **[格納されたパッケージ]** ノードを展開して **[ファイル システム]** ノードまたは **[MSDB]** ノードを右クリックし、 **[パッケージのアップグレード]** をクリックします。  
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>コマンド プロンプトでウィザードを実行するには  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはコマンド プロンプトで、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを実行します。  
   
-3.  ウィザードの **[アップグレード元の場所の選択]** ページで、 **[パッケージのアップグレード元]** プロパティを **[ファイル システム]**に設定します。  
+3.  ウィザードの **[アップグレード元の場所の選択]** ページで、 **[パッケージのアップグレード元]** プロパティを **[ファイル システム]** に設定します。  
   
 4.  ウィザードの **[アップグレード先の場所の選択]** ページで、 **[アップグレード元の場所に保存する]** をクリックして、アップグレードされたパッケージを、元のパッケージと同じ場所に保存します。  
   

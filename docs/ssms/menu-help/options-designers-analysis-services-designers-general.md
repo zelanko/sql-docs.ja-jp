@@ -2,7 +2,7 @@
 title: オプション (デザイナー - Analysis Services デザイナー - 全般) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e28ee8cda5ac45f6c34f3d6229b07505e066de5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 32871226b3dd4123942b5596145c2c1171e2bec1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>オプション (デザイナー - Analysis Services デザイナー - 全般)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[デザイナー]**、**[メンテナンス プラン]**、**[Analysis Services]**、**[全般]** ページでは、Analysis Services デザイナーの既定の動作を決定します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**[デザイナー]**、**[メンテナンス プラン]**、**[Analysis Services]**、**[全般]** ページでは、Analysis Services デザイナーの既定の動作を決定します。  
   
 ## <a name="connectivity"></a>接続  
 [クエリ タイムアウト]  

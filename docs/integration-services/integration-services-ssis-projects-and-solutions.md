@@ -1,16 +1,16 @@
 ---
-title: "Integration Services (SSIS) プロジェクトとソリューション | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) プロジェクトとソリューション | Microsoft Docs
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.importprojectwizard.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1d5948bbcd6531b5a69cc85699cbdf06d87c662
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 57dd62cdd59b3ec571f2e9705e15ca64f3f18124
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) プロジェクトとソリューション
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] パッケージを開発するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が用意されています。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
  プロジェクトはソリューション内に保存されます。 最初にソリューションを作成し、次に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをそのソリューションに追加できます。 既存のソリューションがない場合、最初にプロジェクトを作成したときに [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] は自動的にソリューションを作成します。 1 つのソリューションにさまざまな種類の複数のプロジェクトを含めることができます。  
   
 > [!TIP]  
->  既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で新しいプロジェクトを作成すると、そのソリューションは**ソリューション エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]**をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]**を展開し、 **[全般]**をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]**を選択します。  
+>  既定では、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で新しいプロジェクトを作成すると、そのソリューションは**ソリューション エクスプローラー** ペインに表示されません。 既定の動作を変更するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[オプション]** ダイアログ ボックスで、 **[プロジェクトおよびソリューション]** を展開し、 **[全般]** をクリックします。 **[全般]** ページで、 **[常にソリューションを表示]** を選択します。  
 
 ## <a name="solutions-contain-projects"></a>プロジェクトを格納するソリューション  
  ソリューションとは、エンド ツー エンドのビジネス ソリューションを開発するときに使用するプロジェクトを、グループ化して管理するコンテナーのことです。 ソリューションを使用すると、複数のプロジェクトを 1 単位として処理し、ビジネス ソリューションに役立つ 1 つ以上の関連プロジェクトをまとめることができます。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services プロジェクトの対象バージョン  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
   
- ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、**[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+ ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、**[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
  ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
  
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を開きます。  
   
-2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
 3.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** ペインで、**[Integration Services プロジェクト]** テンプレートを選択します。  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。  
   
-2.  **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+2.  **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
      ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]** > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクト]** ウィンドウの **[インストールされているテンプレート]** 領域で **[ビジネス インテリジェンス]**を展開し、 **[Integration Services]**をクリックします。  
+2.  **[新しいプロジェクト]** ウィンドウの **[インストールされているテンプレート]** 領域で **[ビジネス インテリジェンス]** を展開し、 **[Integration Services]** をクリックします。  
   
 3.  プロジェクトの種類の一覧から **Integration Services プロジェクトのインポート ウィザード** をクリックします。  
   
@@ -145,11 +145,11 @@ ms.lasthandoff: 01/25/2018
   
 8.  **[次へ]** をクリックして、 **[ソースの選択]** ページに移動します。  
   
-9. **.ispac** ファイルからインポートする場合は、ファイル名を含むパスを **[パス]** ボックスに入力します。 **[参照]** をクリックして、ソリューションを格納するフォルダーに移動し、 **[ファイル名]** ボックスにファイル名を入力して、 **[開く]**をクリックします。  
+9. **.ispac** ファイルからインポートする場合は、ファイル名を含むパスを **[パス]** ボックスに入力します。 **[参照]** をクリックして、ソリューションを格納するフォルダーに移動し、 **[ファイル名]** ボックスにファイル名を入力して、 **[開く]** をクリックします。  
   
      **Integration Services カタログ**からインポートする場合は、データベース インスタンス名を **[サーバー名]** ボックスに入力するか、または **[参照]** をクリックしてカタログを含むデータベース インスタンスを選択します。  
   
-     **[パス]** ボックスの横にある **[参照]** をクリックし、カタログのフォルダーを展開して、インポートするプロジェクトを選択し、 **[OK]**をクリックします。  
+     **[パス]** ボックスの横にある **[参照]** をクリックし、カタログのフォルダーを展開して、インポートするプロジェクトを選択し、 **[OK]** をクリックします。  
   
      **[次へ]** をクリックして **[確認]** ページに移動します。  
   
@@ -201,11 +201,11 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、アイテムを追加する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが含まれているソリューションを開きます。  
   
-2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]**をポイントし、次のいずれかの操作を行います。  
+2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、次のいずれかの操作を行います。  
   
-    -   **[新しい項目]**をクリックし、 **[新しい項目の追加]** ダイアログ ボックスの **[テンプレート]** ペインで、テンプレートを選択します。  
+    -   **[新しい項目]** をクリックし、 **[新しい項目の追加]** ダイアログ ボックスの **[テンプレート]** ペインで、テンプレートを選択します。  
   
-    -   **[既存の項目]**をクリックし、 **[既存項目の追加]** ダイアログ ボックス内を参照して、プロジェクトに追加するアイテムを探します。次に、 **[追加]**をクリックします。  
+    -   **[既存の項目]** をクリックし、 **[既存項目の追加]** ダイアログ ボックス内を参照して、プロジェクトに追加するアイテムを探します。次に、 **[追加]** をクリックします。  
   
 3.  ソリューション エクスプローラーの該当フォルダーに、新しいアイテムが表示されます。  
 

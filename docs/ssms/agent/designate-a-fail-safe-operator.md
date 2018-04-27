@@ -2,7 +2,7 @@
 title: 緊急時のオペレーターを指定する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ed96c9509897968a9c86f546e85d29763eae8eca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 73e5840ba6369686c8f83583bedb47723a7e1e85
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designate a Fail-Safe Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、緊急時のオペレーターとして指定する SQL Server エージェント オペレーターを含むサーバーをプラス記号をクリックして展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]**を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
 3.  *[SQL Server エージェントのプロパティ - <サーバー名>]* ダイアログ ボックスの **[ページの選択]** で **[警告システム]** を選択します。  
   
-4.  **[緊急時のオペレーター]**の **[緊急時のオペレーターを有効にする]**チェック ボックスをオンにします。  
+4.  **[緊急時のオペレーター]** の **[緊急時のオペレーターを有効にする]** チェック ボックスをオンにします。  
   
 5.  **[オペレーター]** 一覧から、緊急時のオペレーターにするオペレーターを選択します。  
   
-6.  **[電子メール]**、 **[ポケットベル]**、 **[Net send]**チェック ボックスのいずれかまたはすべてを選択して、オペレーターへの通知方法を指定します。  
+6.  **[電子メール]**、 **[ポケットベル]**、 **[Net send]** チェック ボックスのいずれかまたはすべてを選択して、オペレーターへの通知方法を指定します。  
   
-7.  完了したら、 **[OK]**をクリックします。  
+7.  完了したら、 **[OK]** をクリックします。  
   

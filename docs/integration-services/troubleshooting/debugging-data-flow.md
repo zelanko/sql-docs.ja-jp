@@ -1,16 +1,16 @@
 ---
-title: "データ フローのデバッグ | Microsoft Docs"
-ms.custom: 
+title: データ フローのデバッグ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec2b3b54fadb130bb58f478e658acec57ce7f424
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
@@ -138,7 +138,7 @@ order by source_component_name desc
   
 5.  **[エラー出力の構成]** ダイアログ ボックスで、コンポーネントの入力の各列について、 **[エラー]** 列および **[切り捨て]** 列のアクションを選択します。  
   
-6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 #### <a name="to-add-an-error-output-using-the-editor-dialog-box-for-the-component"></a>コンポーネントのエディター ダイアログ ボックスを使用してエラー出力を追加するには  
   
@@ -150,9 +150,9 @@ order by source_component_name desc
   
 4.  エラー出力を構成するデータ フロー コンポーネントをダブルクリックし、コンポーネントに応じて、次のいずれかの手順を実行します。  
   
-    -   **[エラー出力の構成]**をクリックします。  
+    -   **[エラー出力の構成]** をクリックします。  
   
-    -   **[エラー出力]**をクリックします。  
+    -   **[エラー出力]** をクリックします。  
   
 5.  各列の **[エラー]** オプションを設定します。  
   
@@ -160,7 +160,7 @@ order by source_component_name desc
   
 7.  **[OK]** をクリックします。  
   
-8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ### <a name="configuring-error-output-columns"></a>エラー出力列の構成  
  エラー出力列を構成するには、 **[詳細エディター]** ダイアログ ボックスの **[入力プロパティと出力プロパティ]** タブを使用します。  
@@ -173,7 +173,7 @@ order by source_component_name desc
   
 3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
   
-4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]**をクリックします。  
+4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックして、**[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
   
@@ -184,7 +184,7 @@ order by source_component_name desc
   
 7.  クリックして **OK.**  
   
-8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="add_viewer"></a> データ フローにデータ ビューアーを追加する
   このトピックでは、データ フローにデータ ビューアーを追加して構成する方法について説明します。 データ ビューアーには、2 つのデータ フロー コンポーネント間を移動するデータが表示されます。 たとえば、データ ビューアーでは、データ ソースから抽出されたデータを、データ フローの変換で変更される前の状態で表示できます。  
@@ -205,13 +205,13 @@ order by source_component_name desc
   
 4.  データ ビューアーをアタッチするデータ フローに対応するデータ フロー タスクをクリックし、 **[データ フロー]** タブをクリックします。  
   
-5.  2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[編集]**をクリックします。  
+5.  2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[編集]** をクリックします。  
   
 6.  **[全般]** ページで、パスのプロパティを表示および編集できます。 たとえば、 **[PathAnnotation]** ボックスの一覧で、パスの横に表示される注釈を選択できます。  
   
 7.  **[メタデータ]** ページで、列のメタデータを表示し、メタデータをクリップボードにコピーできます。  
   
-8.  **[データ ビューアー]** ページで、 **[データ ビューアーを有効にする]**をクリックします。  
+8.  **[データ ビューアー]** ページで、 **[データ ビューアーを有効にする]** をクリックします。  
   
 9. [表示する列] 領域で、データ ビューアーに表示する列を選択します。 既定では、表示可能なすべての列が選択され、 **[表示する列]** の一覧に表示されます。 表示しない列は、選択してから左矢印をクリックして、 **[未使用の列]** の一覧に移動させます。  
   
@@ -242,13 +242,13 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  SQL ステートメントを入力する代わりに、次のステップを実行し、実行パッケージのスクリプトを生成することができます:  
   
-1.  **Package.dtsx** を右クリックし、 **[実行]**をクリックします。  
+1.  **Package.dtsx** を右クリックし、 **[実行]** をクリックします。  
   
 2.  **[スクリプト]** ツール バー ボタンをクリックしてスクリプトを生成します。  
   
 3.  ここで、add_data_tap ステートメントを start_execution 呼び出しの前に追加します。  
   
- add_data_tap ストアド プロシージャの task_package_path パラメーターは、Visual Studio のデータ フロー タスクの PackagePath プロパティに対応しています。 Visual Studio で **[データ フロー タスク]**を右クリックし、 **[プロパティ]** をクリックして [プロパティ] ウィンドウを起動します。  add_data_tap ストアド プロシージャ呼び出しの task_package_path パラメーターの値として使用する、 **PackagePath** プロパティの値を確認します。  
+ add_data_tap ストアド プロシージャの task_package_path パラメーターは、Visual Studio のデータ フロー タスクの PackagePath プロパティに対応しています。 Visual Studio で **[データ フロー タスク]** を右クリックし、 **[プロパティ]** をクリックして [プロパティ] ウィンドウを起動します。  add_data_tap ストアド プロシージャ呼び出しの task_package_path パラメーターの値として使用する、 **PackagePath** プロパティの値を確認します。  
   
  add_data_tap ストアド プロシージャの dataflow_path_id_string パラメーターは、データ タップを追加するデータ フロー パスの IdentificationString プロパティに対応しています。 dataflow_path_id_string を取得するには、データ フロー パス (データ フローのタスク間の矢印) をクリックし、[プロパティ] ウィンドウで **IdentificationString** プロパティの値を確認します。  
   

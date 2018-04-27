@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: relational-databases
 ms.date: 02/03/2018
-ms.openlocfilehash: f30e38adef7faedb273dbd1b22c4ac9d3e8223b4
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: fc37abbb88aa597a6173fa5579fa320e0024581f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新規または最近の更新: リレーショナル データベース ドキュメント
 
@@ -234,7 +234,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 
 
-2.  **[データベース エンジン]**を選択します。
+2.  **[データベース エンジン]** を選択します。
 
     ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
 
@@ -242,7 +242,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
     ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  **[接続]**をクリックします。
+4.  **[接続]** をクリックします。
 
 > [!NOTE]
 > このチュートリアルでは、SQL Server を初めて使い、接続時に特別な問題がないことを想定しています。 このような前提はほとんどのユーザーにとって十分であり、このチュートリアルが単純であるのはこのためです。 詳細なトラブルシューティングの手順については、「 [SQL Server データベース エンジンへの接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)」を参照してください。
@@ -488,9 +488,9 @@ Python コードで使われている列見出しは、SQL Server への出力�
 
 1.  **オブジェクト エクスプローラー**で、データベース エンジンのインスタンスに接続します。
 
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。
 
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、テーブルを作成して `CustomerID` 列に主キーを、`TransactionID` にクラスター化インデックスを定義します。
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `CustomerID` 列に主キーを、`TransactionID` にクラスター化インデックスを定義します。
 
 ```
     USE AdventureWorks2012;

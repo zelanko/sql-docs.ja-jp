@@ -1,30 +1,30 @@
 ---
-title: "手順 2: 破損ファイルの作成 | Microsoft Docs"
-ms.custom: 
+title: '手順 2: 破損ファイルの作成 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62350fd26606de512d982b66ff7f114addc3eb39
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ce1119a0e1a73b485dc06483218fdc34e9755192
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>レッスン 4-2 - 破損ファイルの作成
 変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
@@ -54,11 +54,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>実行時にエラーが発生することを確認するには  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]**をクリックします。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
     データ フローの 3 つ目の反復処理で、Lookup Currency Key 変換が Currency_BAD.txt ファイルを処理しようとし、変換が失敗します。 この変換エラーにより、パッケージ全体が失敗します。  
   
-2.  **[デバッグ]** メニューの **[デバッグの停止]**をクリックします。  
+2.  **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 3.  デザイン画面で、 **[実行結果]** タブをクリックします。  
   

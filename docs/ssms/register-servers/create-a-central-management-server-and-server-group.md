@@ -1,34 +1,34 @@
 ---
-title: "中央管理サーバーおよびサーバー グループの作成 | Microsoft Docs"
-ms.custom: 
+title: 中央管理サーバーおよびサーバー グループの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d3c3a723a63959bb5c1e6b154cf47f64eb81d1db
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2ce561687c315756023b98d9aeb74af038544396
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>中央管理サーバーおよびサーバー グループの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の中央管理サーバーとして指定する方法について説明します。 中央管理サーバーには、1 つ以上の中央管理サーバー グループに編成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一覧が格納されます。 中央管理サーバー グループを使用して実行したアクションは、サーバー グループ内のすべてのサーバーに影響します。 これには、オブジェクト エクスプローラーを使用したサーバーへの接続と、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやポリシー ベースの管理ポリシーの複数サーバーでの同時実行が含まれます。  
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の中央管理サーバーとして指定する方法について説明します。 中央管理サーバーには、1 つ以上の中央管理サーバー グループに編成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの一覧が格納されます。 中央管理サーバー グループを使用して実行したアクションは、サーバー グループ内のすべてのサーバーに影響します。 これには、オブジェクト エクスプローラーを使用したサーバーへの接続と、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやポリシー ベースの管理ポリシーの複数サーバーでの同時実行が含まれます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、中央管理サーバーを指定できません。  
@@ -61,27 +61,27 @@ ms.lasthandoff: 02/12/2018
   
 #### <a name="create-a-central-management-server"></a>中央管理サーバーを作成する  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
-2.  [登録済みサーバー] で、 **[データベース エンジン]**を展開して **[中央管理サーバー]**を右クリックし、 **[中央管理サーバーの登録]**をクリックします。  
+2.  [登録済みサーバー] で、 **[データベース エンジン]** を展開して **[中央管理サーバー]** を右クリックし、 **[中央管理サーバーの登録]** をクリックします。  
   
 3.  **[新規サーバーの登録]** ダイアログ ボックスで、ドロップダウン リストにあるサーバーから、中央管理サーバーにする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。 中央管理サーバーに対して Windows 認証を使用する必要があります。  
   
-4.  **[登録済みサーバー]**で、サーバー名と説明 (省略可) を入力します。  
+4.  **[登録済みサーバー]** で、サーバー名と説明 (省略可) を入力します。  
   
 5.  **[接続プロパティ]** タブで、ネットワークと接続のプロパティを確認または変更します。 詳細については、「[[サーバーへの接続] &#40;[接続プロパティ] ページ&#41; データベース エンジン](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)」を参照してください。  
   
-6.  **[テスト]**をクリックして接続をテストします。  
+6.  **[テスト]** をクリックして接続をテストします。  
   
-7.  **[保存]**をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが **[中央管理サーバー]** フォルダーに表示されます。  
+7.  **[保存]** をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが **[中央管理サーバー]** フォルダーに表示されます。  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>新しいサーバー グループを作成し、グループにサーバーを追加する  
   
-1.  **[登録済みサーバー]**で、 **[中央管理サーバー]**を展開します。 上に挙げた手順で追加した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを右クリックし、 **[新しいサーバー グループ]**を選択します。  
+1.  **[登録済みサーバー]** で、 **[中央管理サーバー]** を展開します。 上に挙げた手順で追加した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを右クリックし、 **[新しいサーバー グループ]** を選択します。  
   
-2.  **[新しいサーバー グループのプロパティ]**で、グループの名前と説明 (省略可) を入力します。  
+2.  **[新しいサーバー グループのプロパティ]** で、グループの名前と説明 (省略可) を入力します。  
   
-3.  **[登録済みサーバー]**で、サーバー グループを右クリックし、 **[新規サーバーの登録]**をクリックします。  
+3.  **[登録済みサーバー]** で、サーバー グループを右クリックし、 **[新規サーバーの登録]** をクリックします。  
   
 4.  [新規サーバーの登録] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択します。 詳細については、「[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)」を参照してください。 必要に応じてサーバーを追加します。  
   

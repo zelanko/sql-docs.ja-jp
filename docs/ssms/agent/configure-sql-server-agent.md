@@ -2,7 +2,7 @@
 title: SQL Server エージェントの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eaf9b91fd1e011655934b12afd2a4873dd44ce0e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 10f1f8b3a736fc3feb47d757d4d29fa121b4266f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-agent"></a>SQL Server エージェントの構成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,15 +75,15 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-sql-server-agent"></a>SQL Server エージェントを構成するには  
   
-1.  **[スタート]** をクリックします。 **[スタート]**  メニューの **[コントロール パネル]**をクリックします。  
+1.  **[スタート]** をクリックします。 **[スタート]**  メニューの **[コントロール パネル]** をクリックします。  
   
-2.  [コントロール パネル] で、 **[システムとセキュリティ]**をクリックします。次に、 **[管理ツール]**をクリックし、 **[ローカル セキュリティ ポリシー]**を選択します。  
+2.  [コントロール パネル] で、 **[システムとセキュリティ]** をクリックします。次に、 **[管理ツール]** をクリックし、 **[ローカル セキュリティ ポリシー]** を選択します。  
   
 3.  [ローカル セキュリティ ポリシー] で、シェブロンをクリックして **[ローカル ポリシー]** フォルダーを展開し、 **[ユーザー権利の割り当て]** フォルダーをクリックします。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] での使用のために構成する権限を右クリックし、 **[プロパティ]**を選択します。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] での使用のために構成する権限を右クリックし、 **[プロパティ]** を選択します。  
   
-5.  権限のプロパティ ダイアログ ボックスで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの実行に使用するアカウントが表示されていることを確認します。 表示されていない場合は、 **[ユーザーまたはグループの追加]**をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの実行に使用するアカウントを **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスに入力し、 **[OK]**をクリックします。  
+5.  権限のプロパティ ダイアログ ボックスで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの実行に使用するアカウントが表示されていることを確認します。 表示されていない場合は、 **[ユーザーまたはグループの追加]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの実行に使用するアカウントを **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスに入力し、 **[OK]** をクリックします。  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントで実行するために追加するそれぞれの権限に対して、この操作を繰り返します。 完了したら、 **[OK]**をクリックします。  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントで実行するために追加するそれぞれの権限に対して、この操作を繰り返します。 完了したら、 **[OK]** をクリックします。  
   

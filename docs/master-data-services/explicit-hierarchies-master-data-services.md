@@ -2,7 +2,7 @@
 title: 明示的階層 (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -22,11 +22,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a59736d8f64a7c0c1a11d4bc85f62cd6f4a7c1ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0e0cb5e004e3b119ab6656e74e5fb3e6f2f50cf1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/18/2018
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の明示的階層は、1 つのエンティティからのメンバーを指定した任意の方法で整理します。 構造は不規則にすることができます。派生階層とは異なり、明示的階層はドメイン ベースの属性のリレーションシップに基づいていません。  
   
 > [!NOTE]  
->  明示的階層は推奨されません。  
+>  明示的階層は非推奨とされます。  
   
 ## <a name="consolidated-members-group-other-members"></a>他のメンバーをグループ化する統合メンバー  
  明示的階層では、他のメンバーをグループ化する目的で作成する統合メンバーを使用します。 これらの統合メンバーは、一度に 1 つの明示的階層にのみ属することができます。 また、明示的階層は、関連付けられたエンティティのすべてのリーフ メンバーを含みます。  

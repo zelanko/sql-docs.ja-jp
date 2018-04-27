@@ -1,30 +1,30 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out でパッケージを実行する | Microsoft Docs"
+title: SQL Server Integration Services (SSIS) Scale Out でパッケージを実行する | Microsoft Docs
 ms.description: This article describes how to run SSIS packages in Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 766e43ab37016cbff99d7d7881e8d1e9b0a9a1cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 Integration Services サーバーにパッケージを配置すると、次のいずれかの方法を使用して Scale Out でそれらのパッケージを実行できます。
@@ -39,7 +39,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 1. [Scale Out でパッケージを実行] ダイアログ ボックスを開きます。
 
-    [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] で、Integration Services サーバーに接続します。 オブジェクト エクスプローラーで、ツリーを展開し、 **[Integration Services カタログ]**のノードを表示します。 **SSISDB** ノード、プロジェクト、または実行するパッケージを右クリックし、 **[Execute in Scale Out (Scale Out で実行)]**をクリックします。
+    [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] で、Integration Services サーバーに接続します。 オブジェクト エクスプローラーで、ツリーを展開し、 **[Integration Services カタログ]** のノードを表示します。 **SSISDB** ノード、プロジェクト、または実行するパッケージを右クリックし、 **[Execute in Scale Out (Scale Out で実行)]** をクリックします。
 
 2. パッケージを選択してオプションを設定します。
 
@@ -62,7 +62,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 4. パッケージを実行してレポートを表示します。
 
-    パッケージの実行を開始するには、 **[OK]** をクリックします。 パッケージの実行レポートを表示するには、オブジェクト エクスプローラーでパッケージを右クリックし、 **[レポート]**、 **[すべての実行]**の順にクリックして実行を見つけます。
+    パッケージの実行を開始するには、 **[OK]** をクリックします。 パッケージの実行レポートを表示するには、オブジェクト エクスプローラーでパッケージを右クリックし、 **[レポート]**、 **[すべての実行]** の順にクリックして実行を見つけます。
     
 ## <a name="stored_proc"></a> ストアド プロシージャでパッケージを実行する
 

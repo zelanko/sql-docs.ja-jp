@@ -2,7 +2,7 @@
 title: オペレーターの編集 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a29cae0abaf718c145c3df7e24fd4ade7d1a737
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cdb9db399047f782e9637876c56ef851ca142a0f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-an-operator"></a>Edit an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、編集するオペレーターを含むサーバーをプラス記号をクリックして展開します。  
   
-2.  プラス記号をクリックして **[SQL Server エージェント]**を展開します。  
+2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  編集するオペレーターを右クリックし、 **[プロパティ]**をクリックします。  
+4.  編集するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
   
     *[<オペレーター名> のプロパティ]* ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/16/2018
   
     -   [[オペレーターのプロパティ] ([履歴] ページ)](../../ssms/agent/operator-properties-history-page.md)  
   
-5.  完了したら、 **[OK]**をクリックします。  
+5.  完了したら、 **[OK]** をクリックします。  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- updates the operator status to enabled, and sets the days   

@@ -2,7 +2,7 @@
 title: SQL Server エージェントのサービス開始アカウントの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ca3eaeb33891f605bd0cd15e834f95dad291b057
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a1b447afcdbded20a4ed0801922770b6338f646c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,15 +74,15 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-set-the-service-startup-account-for-sql-server-agent"></a>SQL Server エージェントのサービス開始アカウントを設定するには  
   
-1.  **[登録済みサーバー]**で、プラス記号をクリックして **[データベース エンジン]**を展開します。  
+1.  **[登録済みサーバー]** で、プラス記号をクリックして **[データベース エンジン]** を展開します。  
   
 2.  プラス記号をクリックして、 **[ローカル サーバー グループ]** フォルダーを展開します。  
   
-3.  サービス開始カウントを設定するサーバー インスタンスを右クリックし、 **[SQL Server 構成マネージャー]**をクリックします。  
+3.  サービス開始カウントを設定するサーバー インスタンスを右クリックし、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-4.  **[ユーザー アカウント制御]** ダイアログ ボックスで、 **[はい]**をクリックします。  
+4.  **[ユーザー アカウント制御]** ダイアログ ボックスで、 **[はい]** をクリックします。  
   
-5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server のサービス]**をクリックします。  
+5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
 6.  詳細ペインで、サービス開始アカウントを変更する *[SQL Server エージェント - <サーバー名>]* (*サーバー名*は [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント インスタンスの名前) を右クリックし、**[プロパティ]** をクリックします。  
   

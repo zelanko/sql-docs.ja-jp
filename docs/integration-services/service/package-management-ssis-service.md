@@ -1,16 +1,16 @@
 ---
-title: "パッケージの管理 (SSIS サービス) | Microsoft Docs"
-ms.custom: 
+title: パッケージの管理 (SSIS サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef5f56d09d34fa2688fe46fdf6d7983af4e9e1f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、パッケージの監視、管理、インポートおよびエクスポートが含まれます。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/25/2018
   
  **[実行中のパッケージ]** フォルダーにはサブフォルダーがなく、拡張もできません。  
   
- 既定では、 **[格納されたパッケージ]** フォルダーには、 **[ファイル システム]** と **[MSDB]**の 2 つのフォルダーがあります。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
+ 既定では、 **[格納されたパッケージ]** フォルダーには、 **[ファイル システム]** と **[MSDB]** の 2 つのフォルダーがあります。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
   
  パッケージ ストア内のパッケージの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続する必要があります。  
   
@@ -78,12 +78,12 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-connect-to-integration-services"></a>Integration Services に接続するには  
   
-1.  **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**の順にポイントし、 **[SQL Server Management Studio]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Management Studio]** をクリックします。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** 一覧の **[Integration Services]** を選択し、 **[サーバー名]** ボックスにサーバー名を入力して **[接続]**をクリックします。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** 一覧の **[Integration Services]** を選択し、 **[サーバー名]** ボックスにサーバー名を入力して **[接続]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。 左ペインで、 **[SQL Server のサービス]**をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
+    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。 左ペインで、 **[SQL Server のサービス]** をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が開きます。 既定では、Management Studio の左下隅にオブジェクト エクスプローラーが開きます。 オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
@@ -131,25 +131,25 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]**をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
   
     -   **[サーバー名]** ボックスでサーバー名を入力するか、**[\<参照...>]** をクリックして使用するサーバーを見つけます。  
   
-3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。  
+3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
 4.  オブジェクト エクスプローラーで、 **[格納されたパッケージ]** フォルダーを展開します。  
   
 5.  サブフォルダーを展開し、パッケージのインポート先のフォルダーを探します。  
   
-6.  フォルダーを右クリックし、 **[パッケージのインポート]**をクリックして、 次のいずれかの操作を行います。  
+6.  フォルダーを右クリックし、 **[パッケージのインポート]** をクリックして、 次のいずれかの操作を行います。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスからインポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]**をクリックします。  
+         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[OK]** をクリックします。  
   
     -   ファイル システムからインポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[開く]**をクリックします。  
+         参照ボタン ( **[...]**) をクリックし、インポートするパッケージを選択します。次に、 **[開く]** をクリックします。  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからインポートするには、 **[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
   
@@ -167,25 +167,25 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]**をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
   
     -   **[サーバー名]** ボックスでサーバー名を入力するか、**[\<参照...>]** をクリックして使用するサーバーを見つけます。  
   
-3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]**をクリックします。  
+3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
 4.  オブジェクト エクスプローラーで、**[格納されたパッケージ]** フォルダーを展開します。  
   
 5.  サブフォルダーを展開し、エクスポートするパッケージを探します。  
   
-6.  パッケージを右クリックして **[エクスポート]**をクリックし、次のいずれかの操作を行います。  
+6.  パッケージを右クリックして **[エクスポート]** をクリックし、次のいずれかの操作を行います。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにエクスポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]**をクリックします。  
+         参照ボタン ( **[...]**) をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを探します。 必要に応じて、パッケージの既定の名前を更新し、 **[OK]** をクリックします。  
   
     -   ファイル システムにエクスポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン ( **[...]** ) をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]**をクリックします。  
+         参照ボタン ( **[...]** ) をクリックし、パッケージのエクスポート先のフォルダーを探します。次に、パッケージ ファイルの名前を入力して **[保存]** をクリックします。  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにエクスポートするには、 **[SSIS パッケージ ストア]** をクリックしてサーバーを指定します。  
   

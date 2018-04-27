@@ -1,30 +1,30 @@
 ---
-title: "手順 3: 配置したパッケージのテスト | Microsoft Docs"
-ms.custom: 
+title: '手順 3: 配置したパッケージのテスト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e51a4fb96520cd5a887fe27fb5eddd62062f4eae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: eb8321c296d461c486490c6a56eeb5b5d7a94293
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>レッスン 3-3 - 配置したパッケージのテスト
 このタスクでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに配置したパッケージをテストします。  
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-connect-to-integration-services-in-sql-server-management-studio"></a>SQL Server Management Studio で Integration Services に接続するには  
   
-1.  **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**の順にポイントし、 **[SQL Server Management Studio]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Management Studio]** をクリックします。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスの一覧から **[Integration Services]** を選択し、 **[サーバー名]** ボックスにサーバーの名前を入力して、 **[接続]**をクリックします。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスの一覧から **[Integration Services]** を選択し、 **[サーバー名]** ボックスにサーバーの名前を入力して、 **[接続]** をクリックします。  
   
     > [!IMPORTANT]  
-    > [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。 左ペインで、 **[SQL Server のサービス]**をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
+    > [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。 左ペインで、 **[SQL Server のサービス]** をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
   
     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] が開きます。 既定では [オブジェクト エクスプローラー] ウィンドウが開き、 の右上に表示されます。 オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
@@ -59,28 +59,28 @@ ms.lasthandoff: 01/25/2018
   
 2.  MSDB フォルダーを展開します。 パッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に配置したため、配置したパッケージはすべて msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースに格納され、MSDB フォルダーに表示されます。 Deployment Tutorial 以外のファイル システムにパッケージを配置した場合を除き、[File System] フォルダーは空です。  
   
-3.  パッケージ一覧の一番上から開始し、[DataTransfer] を右クリックして **[パッケージの実行]**をクリックします。  
+3.  パッケージ一覧の一番上から開始し、[DataTransfer] を右クリックして **[パッケージの実行]** をクリックします。  
   
-4.  **[パッケージ実行ユーティリティ]** ダイアログ ボックスで **[実行]**をクリックします。  
+4.  **[パッケージ実行ユーティリティ]** ダイアログ ボックスで **[実行]** をクリックします。  
   
-5.  **[パッケージ実行ユーティリティ]** ダイアログ ボックスで、パッケージの進行状況と実行結果を表示します。 **[停止]** ボタンが無効の場合は、パッケージが完了したことを示すので、 **[閉じる]**をクリックします。  
+5.  **[パッケージ実行ユーティリティ]** ダイアログ ボックスで、パッケージの進行状況と実行結果を表示します。 **[停止]** ボタンが無効の場合は、パッケージが完了したことを示すので、 **[閉じる]** をクリックします。  
   
     > [!IMPORTANT]  
     > パッケージの実行中に **[停止]** をクリックすると、パッケージは完了しません。  
   
-6.  **[パッケージ実行ユーティリティ]** ダイアログ ボックスで **[閉じる]**をクリックします。  
+6.  **[パッケージ実行ユーティリティ]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
 7.  LoadXML パッケージに手順 3. ～ 6. を繰り返します。  
   
-8.  **[ファイル]** メニューの **[終了]**をクリックします。  
+8.  **[ファイル]** メニューの **[終了]** をクリックします。  
   
 ### <a name="to-verify-the-results-of-the-datatransfer-package"></a>DataTransfer パッケージの結果を確認するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のツール バーから **[新しいクエリ]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のツール バーから **[新しいクエリ]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスの一覧から **[データベース エンジン]** を選択し、チュートリアル パッケージをインストールしたサーバーの名前または種類 (local) を **[サーバー名]** ボックスに入力して、認証モードを選択します。 SQL Server 認証を使用する場合は、ユーザー名とパスワードを入力します。  
   
-3.  **[接続]**をクリックします。  
+3.  **[接続]** をクリックします。  
   
 4.  クエリ ウィンドウで、次の SQL ステートメントを入力するか貼り付けます。  
   
@@ -92,15 +92,15 @@ ms.lasthandoff: 01/25/2018
   
     このクエリによって 31 行のデータが返されます。 返された結果には、YearlyIncome 列の値が 100,000 より大きい Customers.txt テキスト ファイルの行が含まれています。  
   
-6.  DeploymentTutorial フォルダーを見つけ、ログ XML ファイル [Deployment Tutorial Log] を右クリックして、 **[開く]**をクリックします。 メモ帳やその他のテキスト エディターまたは XML エディターを使用してファイルを開くことができます。  
+6.  DeploymentTutorial フォルダーを見つけ、ログ XML ファイル [Deployment Tutorial Log] を右クリックして、 **[開く]** をクリックします。 メモ帳やその他のテキスト エディターまたは XML エディターを使用してファイルを開くことができます。  
   
 ### <a name="to-verify-the-results-of-the-loadxmldata-package"></a>LoadXMLData パッケージの結果を確認するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のツール バーから **[新しいクエリ]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のツール バーから **[新しいクエリ]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスの一覧から **[データベース エンジン]** を選択し、チュートリアル パッケージをインストールしたサーバーの名前または「(local)」を **[サーバー名]** ボックスに入力して、認証モードを選択します。 SQL Server 認証を使用する場合は、ユーザー名とパスワードを入力します。  
   
-3.  **[接続]**をクリックします。  
+3.  **[接続]** をクリックします。  
   
 4.  クエリ ウィンドウで、次の SQL ステートメントを入力するか貼り付けます。  
   

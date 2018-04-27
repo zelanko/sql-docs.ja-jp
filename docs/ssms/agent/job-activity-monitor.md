@@ -2,7 +2,7 @@
 title: '[ジョブの利用状況モニター] | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a157963a80e17cc718e258c0a32d84be6d71e576
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aebda5f74eb2babd81a2426bfe675a6b1d9ff1d8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="job-activity-monitor"></a>[ジョブの利用状況モニター]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,16 +59,16 @@ ms.lasthandoff: 04/16/2018
 ジョブに割り当てられているジョブ カテゴリです。  
   
 **実行可能**  
-ジョブを実行できる場合は**[はい]** 、実行できない場合は **[いいえ]** になります。 ステップがないジョブおよび対象サーバーがないジョブは実行できません。  
+ジョブを実行できる場合は **[はい]** 、実行できない場合は **[いいえ]** になります。 ステップがないジョブおよび対象サーバーがないジョブは実行できません。  
   
 **[スケジュール]**  
-ジョブがジョブ スケジュールに割り当てられている場合は**[はい]** 、ジョブにスケジュールがない場合は **[いいえ]** になります。  
+ジョブがジョブ スケジュールに割り当てられている場合は **[はい]** 、ジョブにスケジュールがない場合は **[いいえ]** になります。  
   
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の sysadmin 固定サーバー ロールおよびサーバー管理者グループのメンバーのみがこの列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>[ジョブの利用状況モニター] を開くには  
   
--   **オブジェクト エクスプローラー**で、サーバーを展開して **[SQL Server エージェント]**を展開し、 **[ジョブの利用状況モニター]**を右クリックした後、 **[ジョブの利用状況の表示]**をクリックします。  
+-   **オブジェクト エクスプローラー**で、サーバーを展開して **[SQL Server エージェント]** を展開し、 **[ジョブの利用状況モニター]** を右クリックした後、 **[ジョブの利用状況の表示]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [ジョブの利用状況の監視](../../ssms/agent/monitor-job-activity.md)  

@@ -2,7 +2,7 @@
 title: SQL Server のローカル言語版 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df0263912472f47d04ff8f4dc8d518bee0da89f7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5fe1accb620ed898dba45bf1ed1a053e2abf2e04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server のローカル言語版
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,9 +58,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  ローカライズ バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に一致するオペレーティング システム MUI がインストールされていない場合は、インストールします。  
   
-2.  コントロール パネルで **[地域と言語のオプション]**を開きます。  
+2.  コントロール パネルで **[地域と言語のオプション]** を開きます。  
   
-3.  **[言語]** タブで、 **[メニューとダイアログで使われる言語]**ボックスの一覧から言語を選択します。  
+3.  **[言語]** タブで、 **[メニューとダイアログで使われる言語]** ボックスの一覧から言語を選択します。  
   
      この設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザー インターフェイス言語に影響を及ぼします。したがって、ローカライズ バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と一致している必要があります。  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  ローカライズ バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に一致するオペレーティング システム MUI がインストールされていない場合は、インストールします。  
   
-2.  コントロール パネルで **[地域と言語のオプション]**を開きます。  
+2.  コントロール パネルで **[地域と言語のオプション]** を開きます。  
   
-3.  **[地域オプション]** タブの **[使う言語を選び、必要に応じてカスタマイズをクリックして希望する形式を選択してください:]**ボックスで、一覧から言語を選択します。  
+3.  **[地域オプション]** タブの **[使う言語を選び、必要に応じてカスタマイズをクリックして希望する形式を選択してください:]** ボックスで、一覧から言語を選択します。  
   
      この設定は、カルチャに特有なデータの書式に影響を及ぼします。  
   
@@ -82,9 +82,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  ローカライズ バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に一致するオペレーティング システム MUI がインストールされていない場合は、インストールします。  
   
-2.  コントロール パネルで **[地域と言語のオプション]**を開きます。  
+2.  コントロール パネルで **[地域と言語のオプション]** を開きます。  
   
-3.  **[詳細設定]** タブの **[使う Unicode 対応でないプログラムの言語バージョンに一致する言語を選んでください]**で、一覧から言語を選択します。  
+3.  **[詳細設定]** タブの **[使う Unicode 対応でないプログラムの言語バージョンに一致する言語を選んでください]** で、一覧から言語を選択します。  
   
      この設定により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに最適な既定照合順序を選択できるようになります。  
   

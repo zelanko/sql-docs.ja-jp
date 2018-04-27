@@ -1,30 +1,30 @@
 ---
-title: "手順 1: 作業フォルダーと環境変数の作成 | Microsoft Docs"
-ms.custom: 
+title: '手順 1: 作業フォルダーと環境変数の作成 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06b762b3411f13eff291746467d9217487e94655
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d3beca5c2797133584ae83bf238b263e1de7b5a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>レッスン 1-1 - 作業フォルダーと環境変数の作成
 このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
   
 1.  [スタート] メニューを右クリックし、[エクスプローラー] をクリックします。  
   
-2.  **[ローカル ディスク (C:)]**をクリックします。  
+2.  **[ローカル ディスク (C:)]** をクリックします。  
   
-3.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[フォルダー]**をクリックします。  
+3.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[フォルダー]** をクリックします。  
   
 4.  新規フォルダーの名前を「 **DeploymentTutorial**」に変更します。  
   
 ### <a name="to-create-local-environment-variables"></a>ローカルの環境変数を作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。  
   
-2.  コントロール パネルで、 **[システム]**をダブルクリックします。  
+2.  コントロール パネルで、 **[システム]** をダブルクリックします。  
   
-3.  **[システムのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** タブをクリックし、 **[環境変数]**をクリックします。  
+3.  **[システムのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** タブをクリックし、 **[環境変数]** をクリックします。  
   
-4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]**をクリックします。  
+4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]** をクリックします。  
   
 5.  **[新しいシステム変数]** ダイアログ ボックスで、 **[変数名]** ボックスに「 **DataTransfer** 」と入力し、 **[変数値]** ボックスに「 **C:\DeploymentTutorial\datatransferconfig.dtsconfig** 」と入力します。  
   
@@ -71,13 +71,13 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-create-destination-environment-variables"></a>配置先の環境変数を作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。  
   
-2.  コントロール パネルで、 **[システム]**をダブルクリックします。  
+2.  コントロール パネルで、 **[システム]** をダブルクリックします。  
   
-3.  **[システムのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** タブをクリックし、 **[環境変数]**をクリックします。  
+3.  **[システムのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** タブをクリックし、 **[環境変数]** をクリックします。  
   
-4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]**をクリックします。  
+4.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** フレームで、 **[新規]** をクリックします。  
   
 5.  **[新しいシステム変数]** ダイアログ ボックスで、 **[変数名]** ボックスに「 **DataTransfer** 」と入力し、 **[変数値]** ボックスに「 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** 」と入力します。  
   

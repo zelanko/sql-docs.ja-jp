@@ -2,7 +2,7 @@
 title: 属性の型の変更 (Excel 用 MDS アドイン) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: microsoft-excel-add-in
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d8b92133677dc40f335951a30e8672aa038ee56
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6098aea69e1549d3db73baf61ef60916afab8022
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
 
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/18/2018
   
 -   属性のデータ型を変更する。  
   
--   "_old" サフィックスが付いた、前の値が格納された属性のコピーを生成する。 これを、非推奨属性といいます。  
+-   "_old" サフィックスが付いた、前の値が格納された属性のコピーを生成する。 これを、非推奨の属性といいます。  
   
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../../master-data-services/attributes-master-data-services.md)   

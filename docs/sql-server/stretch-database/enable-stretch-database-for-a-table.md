@@ -1,31 +1,31 @@
 ---
-title: "データベースに対して Stretch Database を有効にする | Microsoft Docs"
-ms.custom: 
+title: データベースに対して Stretch Database を有効にする | Microsoft Docs
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ebf0e74709450f3f6bcee076c6ac4921996c54b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dc28251af4f8a78d91bcedde2e3d51536c3d8003
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/09/2018
  **ウィザードを起動する**  
  1.  SQL Server Management Studio のオブジェクト エクスプローラーで、ストレッチを有効にするテーブルを選択します。  
   
-2.  右クリックして **[ストレッチ]**を選択し、 **[有効化]** を選択して、ウィザードを起動します。  
+2.  右クリックして **[ストレッチ]** を選択し、 **[有効化]** を選択して、ウィザードを起動します。  
   
  **概要**  
  ウィザードの目的と前提条件を確認します。  

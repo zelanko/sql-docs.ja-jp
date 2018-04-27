@@ -2,7 +2,7 @@
 title: SQL Server エージェント サービスのアカウントの選択 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -30,11 +30,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a0d43ae3c1dbae22d0374f486d077d08b4899ae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 72dd11d2b77b5bd5d7f83056880229fb1d0506a2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 -   **[このアカウント]**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスを実行する Windows ドメイン アカウントを指定します。 Windows **Administrators** グループのメンバーではない Windows ユーザー アカウントを選択することをお勧めします。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービス アカウントがローカル **Administrators** グループのメンバーではない場合、マルチサーバー管理の使用には制限があります。 詳細については、後の「サポートされるサービス アカウントの種類」を参照してください。  
   
 ## <a name="windows-domain-account-permissions"></a>Windows ドメイン アカウントの権限  
-セキュリティを強化するには、 **[このアカウント]**を選択して、Windows ドメイン アカウントを指定します。 指定する Windows ドメイン アカウントは、次の権限を所持している必要があります。  
+セキュリティを強化するには、 **[このアカウント]** を選択して、Windows ドメイン アカウントを指定します。 指定する Windows ドメイン アカウントは、次の権限を所持している必要があります。  
   
 -   すべてのバージョンの Windows で、サービスとしてログオンする権限 (SeServiceLogonRight)。  
   

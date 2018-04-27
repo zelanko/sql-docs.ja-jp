@@ -1,28 +1,28 @@
 ---
-title: "クラスターにおける Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
+title: クラスターにおける Integration Services (SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e76d8815ad02797233c8daada93fc54e5433d106
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>クラスターにおける Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をクラスター化することはお勧めしません。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、クラスター化されるサービスまたはクラスター対応サービスではなく、クラスター ノード間のフェールオーバーはサポートしません。 したがって、クラスター環境では、クラスターの各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールし、スタンドアロン サービスとして起動する必要があります。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **フェールオーバーが発生したときに、実行中のパッケージが再起動されません。**
     
-    チェックポイントからパッケージを再開することで、パッケージのエラーから回復できます。 サービスをクラスター リソースとして構成しなくても、チェックポイントからパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+    チェックポイントからパッケージを再開することで、パッケージのエラーから回復できます。 サービスをクラスター リソースとして構成しなくても、チェックポイントからパッケージを再開できます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] とは異なるリソース グループに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスを構成した場合、クライアント コンピューターから [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して msdb データベースに格納されているパッケージを管理することはできません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、このダブルホップ シナリオで資格情報を委任することはできません。  
   
@@ -103,13 +103,13 @@ ms.lasthandoff: 01/25/2018
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]とは異なるグループに Integration Services をクラスター リソースとして追加するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が属している以外のグループを選択します。  
   
-4.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[リソース]**をクリックします。  
+4.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[リソース]** をクリックします。  
   
-5.  リソースの新規作成ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]**を選択します。 **[グループ]**の値は変更せずに、 **[次へ]** をクリックします。  
+5.  リソースの新規作成ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
   
 6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]** をクリックします。  
   
-7.  依存関係を追加するには、 **[依存関係]** ページで **[利用できるリソース]**からリソースを選択し、 **[追加]**をクリックします。 フェールオーバーが発生した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオンラインになる前に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが保存されている共有ディスクの両方がオンラインになる必要があります。 依存関係を選択したら、 **[次へ]**をクリックします。  
+7.  依存関係を追加するには、 **[依存関係]** ページで **[利用できるリソース]** からリソースを選択し、 **[追加]** をクリックします。 フェールオーバーが発生した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がオンラインになる前に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが保存されている共有ディスクの両方がオンラインになる必要があります。 依存関係を選択したら、 **[次へ]** をクリックします。  
   
      詳細については、「 [Add Dependencies to a SQL Server Resource](../../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)」を参照してください。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/25/2018
   
 9. **[レジストリ レプリケーション]** ページで、 **[追加]** をクリックし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルの場所を示すレジストリ キーを追加します。 このファイルは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスと同じリソース グループに属している共有ディスクに配置されている必要があります。  
   
-10. **[レジストリ キー]** ダイアログ ボックスで、「 **SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**」と入力します。 **[OK]**をクリックし、 **[完了]**をクリックします。  
+10. **[レジストリ キー]** ダイアログ ボックスで、「 **SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**」と入力します。 **[OK]** をクリックし、 **[完了]** をクリックします。  
   
      これで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがクラスター リソースとして追加されました。  
   

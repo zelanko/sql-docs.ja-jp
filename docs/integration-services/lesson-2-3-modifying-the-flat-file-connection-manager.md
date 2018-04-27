@@ -1,30 +1,30 @@
 ---
-title: "手順 3: フラット ファイル接続マネージャーの変更 | Microsoft Docs"
-ms.custom: 
+title: '手順 3: フラット ファイル接続マネージャーの変更 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c447e50a05b1b705690262f322bd1ceeeee72868
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9d5d5e3f02596ac8c973608d7acf8b09c7ea1366
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>レッスン 2-3 - フラット ファイル接続マネージャーの変更
 この実習では、レッスン 1 で作成、構成したフラット ファイル接続マネージャーを変更します。 フラット ファイル接続マネージャーを作成した当初は、1 つのファイルを静的に読み込むように構成しました。 フラット ファイル接続マネージャーで繰り返しファイルを読み込むには、接続マネージャーの ConnectionString プロパティを修正し、ユーザー定義変数 `User:varFileName`を使用できるようにする必要があります。この変数に、実行時に読み込むファイルのパスを定義します。  
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-configure-the-flat-file-connection-manager-to-use-a-variable-for-the-connection-string"></a>接続文字列用の変数を使用するようにフラット ファイル接続マネージャーを構成するには  
   
-1.  **接続マネージャー** ペインで、 **[Sample Flat File Source Data]**を右クリックして **[プロパティ]**をクリックします。  
+1.  **接続マネージャー** ペインで、 **[Sample Flat File Source Data]** を右クリックして **[プロパティ]** をクリックします。  
   
-2.  [プロパティ] ウィンドウの **[Expressions]**で、空のセルをクリックし、参照ボタン ( **[...]**) をクリックします。  
+2.  [プロパティ] ウィンドウの **[Expressions]** で、空のセルをクリックし、参照ボタン ( **[...]**) をクリックします。  
   
 3.  **[プロパティ式エディター]** ダイアログ ボックスの **[プロパティ]** 列で「 **ConnectionString**」と入力するか、ConnectionString プロパティを選択します。  
   

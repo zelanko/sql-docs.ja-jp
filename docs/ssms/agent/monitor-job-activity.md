@@ -2,7 +2,7 @@
 title: ジョブの利用状況の監視 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -30,11 +30,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4d004aa4f74c2fb32a65db15c113d49f37cbd3ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8bcfebba71f1cc1b022c0771b59ed3c1e9796c8b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="monitor-job-activity"></a>ジョブの利用状況の監視
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ ms.lasthandoff: 04/16/2018
   
 -   特定のジョブの履歴を表示する。  
   
--   **[エージェント ジョブの利用状況]** グリッドの情報を手動で更新したり、 **[更新の設定を表示します]**をクリックして自動更新間隔を設定したりする。  
+-   **[エージェント ジョブの利用状況]** グリッドの情報を手動で更新したり、 **[更新の設定を表示します]** をクリックして自動更新間隔を設定したりする。  
   
 ジョブの利用状況モニターは、実行のスケジュールが設定されているジョブ、現在のセッション中に実行されたジョブの最終結果、および現在実行中であるかまたはアイドル状態のジョブを確認する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスが予期せず停止した場合、ジョブの利用状況モニターで以前のセッションを参照することにより、サービスが停止したときに実行中であったジョブを確認できます。  
   
-ジョブの利用状況モニターを開くには、 **のオブジェクト エクスプローラーで** [SQL Server エージェント] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] を展開します。次に、 **[ジョブの利用状況モニター]**を右クリックして、 **[ジョブの利用状況の表示]**をクリックします。  
+ジョブの利用状況モニターを開くには、 **のオブジェクト エクスプローラーで** [SQL Server エージェント] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] を展開します。次に、 **[ジョブの利用状況モニター]** を右クリックして、 **[ジョブの利用状況の表示]** をクリックします。  
   
 ストアド プロシージャ **sp_help_jobactivity**を使用することによって、現在のセッションのジョブの利用状況を表示することもできます。  
   

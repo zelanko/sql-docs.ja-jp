@@ -1,16 +1,16 @@
 ---
-title: "Integration Services (SSIS) の式 | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) の式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7dedaa6d36fb0618b6124b1d2b1014c32fb2f44c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f4f9b65b9de76c993394bcbd0b7c6bc766d7cd82
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、式が設定されている接続マネージャー、変数、およびタスクの横に特別なアイコン マーカーが表示されます。 **HasExpressions** プロパティは、変数を除き、式をサポートするすべての SSIS オブジェクトで使用できます。 このプロパティにより、式が設定されているオブジェクトを簡単に識別できます。  
   
 ## <a name="expression-builder"></a>[式ビルダー]  
- 式ビルダーは、式を作成するためのグラフィック ツールです。 **[条件分割変換エディター]**ダイアログ ボックス、 **[派生列変換エディター]** ダイアログ ボックス、および **[式ビルダー]** ダイアログ ボックスで使用できます。  
+ 式ビルダーは、式を作成するためのグラフィック ツールです。 **[条件分割変換エディター]** ダイアログ ボックス、 **[派生列変換エディター]** ダイアログ ボックス、および **[式ビルダー]** ダイアログ ボックスで使用できます。  
   
  式ビルダーでは、パッケージ固有の要素が格納されているフォルダーと、式の言語で使用される関数、型キャスト、演算子が格納されているフォルダーが用意されています。 パッケージ固有の要素として、システム変数とユーザー定義変数が含まれます。 **[条件分割変換エディター]** ダイアログ ボックスおよび **[派生列変換エディター]** ダイアログ ボックスでは、データ列も表示されます。 変換のための式を作成するには、フォルダー内のアイテムを **[条件]** または **[式]** 列にドラッグするか、式を列に直接入力します。 式ビルダーは、変数名の @ プレフィックスなど、必要な構文要素を自動的に追加します。  
   

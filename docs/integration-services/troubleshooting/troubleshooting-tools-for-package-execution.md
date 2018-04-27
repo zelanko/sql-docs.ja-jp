@@ -1,16 +1,16 @@
 ---
-title: "パッケージ実行のトラブルシューティング ツール| Microsoft Docs"
-ms.custom: 
+title: パッケージ実行のトラブルシューティング ツール| Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ac15ea4e6c42c5f299303a9d2335563e819cc98c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  **パッケージを実行するたびにログを記録する親テーブルを作成する**。 この親テーブルにはパッケージを実行するたびに 1 行だけを記録し、ExecutionID を使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ログ記録テーブルの子レコードにリンクします。 各パッケージの最初に SQL 実行タスクを使用して、この新しい行を作成し、開始時刻を記録します。 次に、パッケージの終了時に別の SQL 実行タスクを使用して、終了時刻、実行時間、状態でその行を更新します。  
   
-    2.  **データ フローに監査情報を追加する**。 監査変換を使用して、各行を作成または変更したパッケージの実行に関する情報を、データ フロー内の行に追加できます。 監査変換は、PackageName や ExecutionInstanceGUID など、9 種類の情報を作成します。 詳細については、「 [監査変換](../../integration-services/data-flow/transformations/audit-transformation.md)」を参照してください。 監査を目的として各行に含めるカスタム情報があれば、派生列変換を使用して、その情報をデータ フロー内の行に追加できます。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
+    2.  **データ フローに監査情報を追加する**。 監査変換を使用して、各行を作成または変更したパッケージの実行に関する情報を、データ フロー内の行に追加できます。 監査変換は、PackageName や ExecutionInstanceGUID など、9 種類の情報を作成します。 詳細については、「 [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md)」を参照してください。 監査を目的として各行に含めるカスタム情報があれば、派生列変換を使用して、その情報をデータ フロー内の行に追加できます。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
     3.  **行数データのキャプチャを検討する**。 行数情報用に別のテーブルを作成することを検討します。このテーブルでは、パッケージ実行の各インスタンスを ExecutionID で識別します。 行数変換を使用して、データ フロー内の重要な時点の行数を一連の変数に保存します。 データ フローの終了後、SQL 実行タスクを使用してこの一連の値をテーブルの行に挿入すると、後の分析やレポートに役立ちます。  
   

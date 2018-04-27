@@ -2,7 +2,7 @@
 title: '[ページ設定] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d56c9a9cae1978d65462d7a1f4439053e82838a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="page-setup-dialog-box"></a>[ページ設定] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[ページ設定]** ダイアログ ボックスでオプションを選択して、ページのデザインをカスタマイズできます。 インストールされている言語、および編集が有効になっている言語によっては、使用できないオプションもあります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**[ページ設定]** ダイアログ ボックスでオプションを選択して、ページのデザインをカスタマイズできます。 インストールされている言語、および編集が有効になっている言語によっては、使用できないオプションもあります。  
   
 ## <a name="paper"></a>[用紙]  
 **[サイズ]**  

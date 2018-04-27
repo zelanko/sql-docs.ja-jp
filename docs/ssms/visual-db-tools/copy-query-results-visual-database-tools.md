@@ -2,7 +2,7 @@
 title: クエリ結果のコピー (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02f030c6336cb90de2d5adf040f9ee170e24187e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c6dd8e3fd1f01c95a138ad2b78ab591595cd0fab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="copy-query-results-visual-database-tools"></a>クエリ結果のコピー (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 結果セットは、**[結果]** ペインからタブ区切りテキストとしてコピーできます。 結果セット全体をコピーすることも、任意の数の連続する行やセル、または連続しない行やセルをコピーすることもできます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+結果セットは、 **[結果]** ペインからタブ区切りテキストとしてコピーできます。 結果セット全体をコピーすることも、任意の数の連続する行やセル、または連続しない行やセルをコピーすることもできます。  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>結果ペインから結果セットのテキストをコピーするには  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/17/2018
   
     選択されたセルは強調表示されます。  
   
-5.  右クリックして **[コピー]**をクリックします。  
+5.  右クリックして **[コピー]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [結果ペインのデータの操作 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

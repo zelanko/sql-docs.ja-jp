@@ -1,33 +1,33 @@
 ---
-title: "SQL Server インポートおよびエクスポート ウィザードへようこそ | Microsoft Docs"
-ms.custom: 
+title: SQL Server インポートおよびエクスポート ウィザードへようこそ | Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: 
+caps.latest.revision: 74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2edc03674b5456f68e484f29c1bbd71c4064ca8b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ad641cf37d91641832d6a42f93c7d7f965bf22c2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>[SQL Server インポートおよびエクスポート ウィザードへようこそ]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動すると、最初のページは **[SQL Server インポートおよびエクスポート ウィザードへようこそ]**になります。 このページでいかなる操作も必要はありません。
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動すると、最初のページは **[SQL Server インポートおよびエクスポート ウィザードへようこそ]** になります。 このページでいかなる操作も必要はありません。
 
 > [!IMPORTANT]
 > このトピックでは、ウィザードの **最初のページ** についてのみ説明します。 他のものをお探しの場合は、「[関連タスクとコンテンツ](#related)」を参照してください。
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
  次回ウィザードを実行するときに、ようこそページをスキップします。  
   
 ## <a name="whats-next"></a>次の操作  
- 次のページは、 **[データ ソースの選択]**です。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。 詳細については、「 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」を参照してください。
+ 次のページは、 **[データ ソースの選択]** です。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。 詳細については、「 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」を参照してください。
 
 ## <a name="related"></a> 関連タスクとコンテンツ  
  その他の基本的なタスクは次のとおりです。

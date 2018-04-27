@@ -1,31 +1,31 @@
 ---
-title: "SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成 | Microsoft Docs"
-ms.custom: 
+title: SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WMI Provider for Server Events, setting permissions
 - WMI permissions [SQL Server]
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 654dfff830fa18a1a38a3ecb3454cfa824e097c9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d55a0e44ecac130f6eb4a32fd802c5004b833ce4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +33,13 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="SSMSProcedure"></a>WMI のアクセス許可を構成するには  
   
-1.  リモート サーバーの **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。  
+1.  リモート サーバーの **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **[名前]** ボックスに「 **wmimgmt.msc**」と入力し、 **[OK]**をクリックします。  
+2.  **[名前]** ボックスに「 **wmimgmt.msc**」と入力し、 **[OK]** をクリックします。  
   
-3.  **[Windows Management Infrastructure (WMI)]** の **[WMI コントロール (ローカル)]**を右クリックし、 **[プロパティ]**をクリックします。  
+3.  **[Windows Management Infrastructure (WMI)]** の **[WMI コントロール (ローカル)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[WMI コントロール (ローカル) のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブで、 **[Root]**を展開し、 **[CIMV2]**をクリックします。  
+4.  **[WMI コントロール (ローカル) のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブで、 **[Root]** を展開し、 **[CIMV2]** をクリックします。  
   
 5.  **[セキュリティ]** をクリックして **[セキュリティ ROOT\CIMV2]** ダイアログ ボックスを開きます。  
   

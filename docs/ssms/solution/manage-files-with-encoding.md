@@ -1,47 +1,49 @@
 ---
-title: "エンコーディングによるファイルの管理 | Microsoft Docs"
-ms.custom: 
+title: エンコーディングによるファイルの管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - files [SQL Server Management Studio]
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76e453879de3505e2a7234d8b6ae69b7627dda4e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 85b742ed21875161aa48cee0146d68707a567a10
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  
   
 ## <a name="opening-files"></a>ファイルを開く  
 ファイルの編集に使用するエディターを選択できます。  
   
 #### <a name="to-open-a-file-with-a-specific-editor"></a>特定のエディターでファイルを開くには  
   
-1.  **[ファイル]** メニューの **[開く]**をポイントし、 **[ファイル]**をクリックします。  
+1.  **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  **[ファイルを開く]** ダイアログ ボックスでファイル名を選択します。  
   
-3.  **[開く]** ボタンの横にある矢印をクリックし、表示されるメニューから**[ファイルを開くアプリケーションの選択]** をクリックします。  
+3.  **[開く]** ボタンの横にある矢印をクリックし、表示されるメニューから **[ファイルを開くアプリケーションの選択]** をクリックします。  
   
-4.  **[このファイルを開くのに使用するプログラムを選択してください]** 一覧でエディターを選択し、 **[開く]**をクリックします。 特定のエンコードでファイルを開くには、SQL クエリ エディター (エンコード付き)、XML エディター (エンコード付き) など、エンコード サポート付きのエディターを選択します。  
+4.  **[このファイルを開くのに使用するプログラムを選択してください]** 一覧でエディターを選択し、 **[開く]** をクリックします。 特定のエンコードでファイルを開くには、SQL クエリ エディター (エンコード付き)、XML エディター (エンコード付き) など、エンコード サポート付きのエディターを選択します。  
   
 ## <a name="saving-files"></a>ファイルの保存  
 西ヨーロッパ言語や東ヨーロッパ言語など、さまざまな言語をサポートするために、Unicode エンコードまたは他のコード ページを指定してコードを保存することができます。 特定の言語でコードを正しく表示するためにその文字エンコードをファイルに関連付けることや、特定のオペレーティング システムをサポートするために行終端文字の種類を選択することも可能です。 また、ファイル名に使用する一部の文字は、Unicode エンコード付きでないと保存できません。  
@@ -50,11 +52,11 @@ ms.lasthandoff: 01/17/2018
   
 1.  **[ファイル]** メニューの **[名前を付けて <filename> を保存]** をクリックします。  
   
-2.  **[ファイル名を付けて保存]** ダイアログ ボックスで、 **[保存]** ボタンを展開し、 **[エンコード付きで保存]**をクリックします。  
+2.  **[ファイル名を付けて保存]** ダイアログ ボックスで、 **[保存]** ボタンを展開し、 **[エンコード付きで保存]** をクリックします。  
   
 3.  **[保存オプションの詳細設定]** ダイアログ ボックスの **[エンコード]** 一覧から目的のエンコードを選択します。  
   
-4.  **[行の終わり]**一覧から目的の行終端文字の種類を選択します。  
+4.  **[行の終わり]** 一覧から目的の行終端文字の種類を選択します。  
   
     > [!NOTE]  
     > Unicode エンコードを指定してファイルを保存した場合は、そのファイルをバイナリ ファイルとして [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe にチェックインする必要があります。Visual SourceSafe は、Unicode で保存したファイルのマージ、比較、差分の表示をサポートしていないからです。  

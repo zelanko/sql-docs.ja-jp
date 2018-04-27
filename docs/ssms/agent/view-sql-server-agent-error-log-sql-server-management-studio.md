@@ -2,7 +2,7 @@
 title: SQL Server エージェントのエラー ログの表示 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8e1eb95043170578901bb3860db87f2ed1ab8997
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cccff0d92ffc1edfc7ba15a04eb0bb93ec531649
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント エラー ログを含むサーバーをプラス記号をクリックして展開します。  
   
-2.  プラス記号をクリックして **[SQL Server エージェント]**を展開します。  
+2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
 3.  プラス記号をクリックして **[エラー ログ]** フォルダーを展開します。  
   
-4.  表示するエラー ログを右クリックし、 **[エージェント ログの表示]**を選択します。  
+4.  表示するエラー ログを右クリックし、 **[エージェント ログの表示]** を選択します。  
   
     *[ログ ファイルの表示 - <サーバー名>]* ダイアログ ボックスでは、次のオプションを使用できます。  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 04/16/2018
     選択されたログの表示を更新します。 **[更新]** ボタンをクリックすると、選択したログが対象サーバーから再度読み込まれ、それと同時にすべてのフィルター設定が適用されます。  
   
     **[フィルター]**  
-    **[接続]**や **[日付]**などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  
+    **[接続]** や **[日付]** などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  
   
     **検索**  
     ログ ファイル内で特定のテキストを検索します。 ワイルドカード文字を使用した検索はサポートされません。  
@@ -104,7 +104,7 @@ ms.lasthandoff: 04/16/2018
     ログ ファイル エントリの読み込みを停止します。 たとえば、最新のエントリのみを表示したい場合に、リモートまたはオフラインのログ ファイルの読み込みに長い時間がかかるときは、このオプションを使用することをお勧めします。  
   
     **[ログ ファイルの概要]**  
-    この情報パネルには、ログ ファイルのフィルター選択の概要が表示されます。 ファイルがフィルター選択されない場合、 **"フィルターが適用されていません"**と表示されます。 ログにフィルターが適用されている場合、" **ログ エントリのフィルター条件:** <filter criteria>" と表示されます。  
+    この情報パネルには、ログ ファイルのフィルター選択の概要が表示されます。 ファイルがフィルター選択されない場合、 **"フィルターが適用されていません"** と表示されます。 ログにフィルターが適用されている場合、" **ログ エントリのフィルター条件:** <filter criteria>" と表示されます。  
   
     **[選択した行の詳細]**  
     行を選択すると、選択されたイベント行の詳細情報がページの下部に表示されます。 列をグリッド内の別の場所にドラッグすることで、列を並べ替えることができます。 グリッドのヘッダーで列のセパレーター バーを左右にドラッグすると、列の幅を変更できます。 グリッドのヘッダーで列のセパレーター バーをダブルクリックすると、内容の長さに合わせて自動的に列の幅が調整されます。  
@@ -127,5 +127,5 @@ ms.lasthandoff: 04/16/2018
     **[ログ ソース]**  
     イベントがキャプチャされているソース ログの説明が表示されます。  
   
-5.  完了したら、 **[閉じる]**をクリックします。  
+5.  完了したら、 **[閉じる]** をクリックします。  
   

@@ -1,30 +1,31 @@
 ---
-title: "テーブルにあるすべての行の値の要約または集計 | Microsoft Docs"
-ms.custom: 
+title: テーブルにあるすべての行の値の要約または集計 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10f6128d21ef9a3b1683dbae66604345e70c03a4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 471228d04afd0cb9666b373e8ec76c1a1413cf2a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +65,7 @@ FROM titles
   
     集計する列に別名が自動的に割り当てられます。 この別名は、わかりやすい名前に変更することができます。 詳しくは、「[列の別名の作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)」をご覧ください。  
   
-4.  **[グループ化]** グリッド列で、**[合計]**、**[平均]**、**[最小]**、**[最大]**、**[カウント]** などの該当する集計関数を選択します。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]**など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]**、 **[式]**、または **[Where 条件]**は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
+4.  **[グループ化]** グリッド列で、**[合計]**、**[平均]**、**[最小]**、**[最大]**、**[カウント]** などの該当する集計関数を選択します。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]**、 **[式]**、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
   
     クエリおよびビュー デザイナーにより、 [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) のステートメントの列名は、指定した集計関数に置き換えられます。 たとえば、SQL ステートメントは次のようになります。  
   

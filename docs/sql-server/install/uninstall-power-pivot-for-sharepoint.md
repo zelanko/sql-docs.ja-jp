@@ -2,7 +2,7 @@
 title: Power Pivot for SharePoint のアンインストール | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 702a6dc176d2f3a86f8691f181c4a4728a605a95
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 6d66a95ce77dca325d4f99247bcb3a5d2cb6cbdf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアンインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,21 +80,21 @@ ms.lasthandoff: 04/06/2018
   
 -   SharePoint Administration Service が実行されていることを確認します。  
   
-1.  **構成ツールを実行します:** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合のみ、構成ツールが表示されることに注意してください。 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にクリックし、次のいずれかをクリックします。  
+1.  **構成ツールを実行します:** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合のみ、構成ツールが表示されることに注意してください。 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にクリックし、次のいずれかをクリックします。  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 の構成**  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール**  
   
-2.  **[機能、サービス、アプリケーション、およびソリューションの削除]** を選択し、 **[OK]**をクリックします。  
+2.  **[機能、サービス、アプリケーション、およびソリューションの削除]** を選択し、 **[OK]** をクリックします。  
   
 3.  必要に応じて、ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
 4.  タスク一覧内の各アクションの機能を確認します。  
   
-     **[削除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]**では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
+     **[削除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除]** では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
   
-     データベースを削除するには、 **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除** を選択し、 **[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]**をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
+     データベースを削除するには、 **[削除] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service アプリケーションの削除** を選択し、 **[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]** をアンインストールするには、Analysis Services のシステム管理者であり、ローカル Administrators グループのメンバーであることが必要です。  
   
 5.  必要に応じて、 **[出力]** タブまたは **[スクリプト]** タブの詳細情報を確認します。  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 04/06/2018
   
 6.  **[検証]** をクリックして、それぞれのアクションが有効かどうかを確認します。 **[検証]** が使用不可能な場合、システムにおいてすべてのアクションが有効であることを意味します。  
   
-7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]**をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。 続行しますか?"  
+7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。 続行しますか?"  
   
 8.  **[はい]** をクリックして続行します。  
   
@@ -136,7 +136,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm –o canceldeployment –id “<GUID>”  
     ```  
   
-5.  構成ツールで **[検証]** に続けて **[実行]**をクリックして、タスクを再試行します。  
+5.  構成ツールで **[検証]** に続けて **[実行]** をクリックして、タスクを再試行します。  
   
  また、PowerShell を使用して、機能とソリューションをファームから削除することもできます。 詳細については、「 [Power Pivot for SharePoint 用 PowerShell リファレンス](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)」を参照してください。  
   
@@ -147,9 +147,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  プログラム リストから **[Microsoft SQL Server 2014 (64 ビット)]** を選択します。  
   
-2.  **[アンインストール] または [変更]**をクリックします。  
+2.  **[アンインストール] または [変更]** をクリックします。  
   
-3.  **[削除]**をクリックします。 SQL Server セットアップが起動します。  
+3.  **[削除]** をクリックします。 SQL Server セットアップが起動します。  
   
      セットアップで **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]]** インスタンスを選択してから、**[Analysis Services]** および **[Analysis Services SharePoint 統合]** を選択して、他はすべてそのままの状態で、その機能だけを削除できます。  
   
@@ -158,7 +158,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 ##  <a name="verify"></a> 手順 5. アンインストールを確認する  
   
-1.  [サーバーの全体管理] の **[サーバーのサービスの管理]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をアンインストールしたサーバーに接続します。  
+1.  [サーバーの全体管理] の **[サーバーのサービスの管理]** で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をアンインストールしたサーバーに接続します。  
   
 2.  -   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 をアンインストールした場合は、**[SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス]** が一覧に表示されないことを確認します。  
   
@@ -166,11 +166,11 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  ファーム内の最後の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーをアンインストールしたら、次の手順を実行します。  
   
-    1.  [アプリケーション構成の管理] の **[サービス アプリケーションの管理]**で、[ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション] が一覧に表示されないことを確認します。  
+    1.  [アプリケーション構成の管理] の **[サービス アプリケーションの管理]** で、[ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション] が一覧に表示されないことを確認します。  
   
-    2.  [システム設定] の **[ファーム機能の管理]**で、[ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 統合機能] がページに表示されないことを確認します。 **[ファーム ソリューションの管理]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションがページに表示されないことを確認します。  
+    2.  [システム設定] の **[ファーム機能の管理]** で、[ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 統合機能] がページに表示されないことを確認します。 **[ファーム ソリューションの管理]** で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューションがページに表示されないことを確認します。  
   
-    3.  [監視] の **[診断ログの構成]** と **[使用状況と正常性のデータ収集の構成]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] イベントとイベント カテゴリが表示されないことを確認します。  
+    3.  [監視] の **[診断ログの構成]** と **[使用状況と正常性のデータ収集の構成]** で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] イベントとイベント カテゴリが表示されないことを確認します。  
   
     4.  [アプリケーションの全般設定] で、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード** がページに表示されないことを確認します。  
   

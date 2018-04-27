@@ -1,28 +1,28 @@
 ---
-title: "ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9a7692c229728e97bc830020d6ec2cdc35843af4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bca53673a0f6b32dd4d1b020c82863cfc98dd554
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **ODBC** データ ソースに接続する方法を説明します。
@@ -117,7 +117,7 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 
 1.  コントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要がある場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
 2.  アプレットを起動します。 **[ODBC データ ソース アドミニストレーター]** ウィンドウが開きます。
-3.  アプレットの **[ファイル DSN]** タブに移動します。 **[追加]**をクリックします。
+3.  アプレットの **[ファイル DSN]** タブに移動します。 **[追加]** をクリックします。
 
     この例では、ユーザー DSN またはシステム DSN ではなくファイル DSN を作成します。これは、ファイル DSN では、接続文字列に必要な特定の形式で名前と値のペアが保存されるためです。
 

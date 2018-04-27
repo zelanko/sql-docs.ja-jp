@@ -1,16 +1,16 @@
 ---
-title: "Integration Services サービス (SSIS サービス) | Microsoft Docs"
-ms.custom: 
+title: Integration Services サービス (SSIS サービス) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssiseditserverregistration.connectionproperties.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b632de9ef477e31de110f98a8fca4295144bb9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c3c2ac5cb5ddc17e7bbec10904b86d6af3c30e0b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
   このセクションのトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 Integration Service パッケージの作成、保存、および実行には、このサービスは不要です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスをサポートしています。  
@@ -102,9 +102,9 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを使用して Integration Services サービスのプロパティを設定するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server 構成マネージャー]** スナップインで、サービスの一覧から **[SQL Server Integration Services]** を探します。次に、 **[SQL Server Integration Services]**を右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server 構成マネージャー]** スナップインで、サービスの一覧から **[SQL Server Integration Services]** を探します。次に、 **[SQL Server Integration Services]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[SQL Server Integration Services のプロパティ]** ダイアログ ボックスでは、次の操作を行うことができます。  
   
@@ -115,17 +115,17 @@ ms.lasthandoff: 01/25/2018
         > [!NOTE]  
         >  **[詳細設定]** タブに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに関する情報は表示されません。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  **[ファイル]** メニューの **[終了]** をクリックして **[SQL Server 構成マネージャー]** スナップインを終了します。  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>[サービス] を使用して Integration Services サービスのプロパティを設定するには  
   
-1.  **[コントロール パネル]**で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]**をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
-2.  **[サービス]**をクリックします。  
+2.  **[サービス]** をクリックします。  
   
-3.  **[サービス]** スナップインで、サービスの一覧から **[SQL Server Integration Services]** を探します。 **[SQL Server Integration Services]**を右クリックし、 **[プロパティ]**をクリックします。  
+3.  **[サービス]** スナップインで、サービスの一覧から **[SQL Server Integration Services]** を探します。 **[SQL Server Integration Services]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[SQL Server Integration Services のプロパティ]** ダイアログ ボックスでは、次の操作を行うことができます。  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  **[OK]** をクリックします。  
   
-6.  [スタートアップの種類] で [手動] または [自動] を選択している場合は、必要に応じて、 **[SQL Server Integration Services]** を右クリックし、 **[開始]、[停止]、または [再起動]**をクリックできます。  
+6.  [スタートアップの種類] で [手動] または [自動] を選択している場合は、必要に応じて、 **[SQL Server Integration Services]** を右クリックし、 **[開始]、[停止]、または [再起動]** をクリックできます。  
   
 7.  **[ファイル]** メニューの **[終了]** をクリックして **[サービス]** スナップインを終了します。  
 
@@ -270,11 +270,11 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
-3.  [オブジェクト エクスプローラー] のツール バーの **[接続]**をクリックし、 **[Integration Services]**をクリックします。  
+3.  [オブジェクト エクスプローラー] のツール バーの **[接続]** をクリックし、 **[Integration Services]** をクリックします。  
   
 4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定します。 ピリオド (.)、(local)、または **localhost** を使用すると、ローカル サーバーを指定できます。  
   
-5.  **[接続]**をクリックします。  
+5.  **[接続]** をクリックします。  
 
 ## <a name="connect-to-a-remote-ssis-server"></a>リモート SSIS サーバーへの接続
   
@@ -291,7 +291,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  **[ファイル]**メニューの **[オブジェクト エクスプローラーを接続]** をクリックして、 **[サーバーへの接続]** ダイアログ ボックスを表示します。  
+2.  **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]** をクリックして、 **[サーバーへの接続]** ダイアログ ボックスを表示します。  
   
 3.  **[サーバーの種類]** ボックスの一覧で **[Integration Services]** を選択します。  
   
@@ -300,7 +300,7 @@ ms.lasthandoff: 01/25/2018
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、そのインスタンスに固有のものではありません。 このサービスに接続するには、Integration Services サービスが実行されているコンピューターの名前を使用します。  
   
-5.  **[接続]**をクリックします。  
+5.  **[接続]** をクリックします。  
   
 > [!NOTE]  
 >  **[サーバーの参照]** ダイアログ ボックスには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のリモート インスタンスは表示されません。 また、 **[サーバーへの接続]** ダイアログ ボックスで **[オプション]** ボタンをクリックしたときに表示される **[接続プロパティ]** タブのオプションは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] への接続時には適用されません。  
@@ -314,21 +314,21 @@ ms.lasthandoff: 01/25/2018
   
 2.  コントロール パネルを開き、 **[管理ツール]** 、 **[コンポーネント サービス]** の順にダブルクリックして、コンポーネント サービス MMC スナップインを起動します。  
   
-3.  コンソールの左ペインで **[コンポーネント サービス]** ノードを展開します。 **[コンピューター]** ノード、 **[マイ コンピューター]**の順に展開し、 **[DCOM の構成]** ノードをクリックします。  
+3.  コンソールの左ペインで **[コンポーネント サービス]** ノードを展開します。 **[コンピューター]** ノード、 **[マイ コンピューター]** の順に展開し、 **[DCOM の構成]** ノードをクリックします。  
   
 4.  **[DCOM の構成]** ノードを選択し、構成できるアプリケーションの一覧から [SQL Server Integration Services 11.0] を選択します。  
   
-5.  [SQL Server Integration Services 11.0] を右クリックし、 **[プロパティ]**を選択します。  
+5.  [SQL Server Integration Services 11.0] を右クリックし、 **[プロパティ]** を選択します。  
   
 6.  **[SQL Server Integration Services 11.0 のプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。  
   
-7.  **[起動とアクティブ化のアクセス許可]**で **[カスタマイズ]**を選択し、 **[編集]** をクリックして **[起動許可]** ダイアログ ボックスを開きます。  
+7.  **[起動とアクティブ化のアクセス許可]** で **[カスタマイズ]** を選択し、 **[編集]** をクリックして **[起動許可]** ダイアログ ボックスを開きます。  
   
 8.  **[起動許可]** ダイアログ ボックスで、ユーザーを追加または削除し、適切なアクセス許可を適切なユーザーとグループに割り当てます。 使用可能なアクセス許可は、[ローカルからの起動]、[リモートからの起動]、[ローカルからのアクティブ化]、[リモートからのアクティブ化] です。 起動権限ではサービスを開始および停止するアクセス許可を許可または拒否し、アクティブ化権限ではサービスに接続するアクセス許可を許可または拒否します。  
   
 9. [OK] をクリックして、ダイアログ ボックスを閉じます。  
   
-10. **[アクセス許可]**で手順 7. ～ 8. を繰り返し、適切なユーザーとグループに適切なアクセス許可を割り当てます。  
+10. **[アクセス許可]** で手順 7. ～ 8. を繰り返し、適切なユーザーとグループに適切なアクセス許可を割り当てます。  
   
 11. MMC スナップインを閉じます。  
   
@@ -338,11 +338,11 @@ ms.lasthandoff: 01/25/2018
   
 1.  コマンド プロンプトで **dcomcnfg.exe** を実行します。  
   
-2.  **[分散 COM の構成のプロパティ]** ダイアログ ボックスの **[アプリケーション]** ページで、[SQL Server Integration Services 11.0] をクリックして **[プロパティ]**をクリックします。  
+2.  **[分散 COM の構成のプロパティ]** ダイアログ ボックスの **[アプリケーション]** ページで、[SQL Server Integration Services 11.0] をクリックして **[プロパティ]** をクリックします。  
   
 3.  **[セキュリティ]** ページをクリックします。  
   
-4.  2 つのダイアログ ボックスを使用して、 **[アクセスの許可]** と **[起動の許可]**を構成します。 リモートとローカルのアクセスは区別できません。アクセスの許可にはローカルとリモートのアクセス権が含まれており、起動の権限にはローカルとリモートの起動権限が含まれています。  
+4.  2 つのダイアログ ボックスを使用して、 **[アクセスの許可]** と **[起動の許可]** を構成します。 リモートとローカルのアクセスは区別できません。アクセスの許可にはローカルとリモートのアクセス権が含まれており、起動の権限にはローカルとリモートの起動権限が含まれています。  
   
 5.  ダイアログ ボックスを閉じ、 **dcomcnfg.exe**を閉じます。  
   
@@ -401,26 +401,26 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>[Windows ファイアウォール] ダイアログ ボックスを使用してファイアウォールを構成するには  
   
-1.  コントロール パネルの **[Windows ファイアウォール]**をダブルクリックします。  
+1.  コントロール パネルの **[Windows ファイアウォール]** をダブルクリックします。  
   
-2.  **[Windows ファイアウォール]** ダイアログ ボックスで、 **[例外]** タブをクリックし、 **[プログラムの追加]**をクリックします。  
+2.  **[Windows ファイアウォール]** ダイアログ ボックスで、 **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
   
-3.  **[プログラムの追加]** ダイアログ ボックスで、 **[参照]**をクリックし、Program Files\Microsoft SQL Server\100\DTS\Binn フォルダーに移動します。次に MsDtsSrvr.exe をクリックし、 **[開く]**をクリックします。 **[OK]** をクリックして、 **[プログラムの追加]** ダイアログ ボックスを閉じます。  
+3.  **[プログラムの追加]** ダイアログ ボックスで、 **[参照]** をクリックし、Program Files\Microsoft SQL Server\100\DTS\Binn フォルダーに移動します。次に MsDtsSrvr.exe をクリックし、 **[開く]** をクリックします。 **[OK]** をクリックして、 **[プログラムの追加]** ダイアログ ボックスを閉じます。  
   
-4.  **[例外]** タブで、 **[ポートの追加]**をクリックします。  
+4.  **[例外]** タブで、 **[ポートの追加]** をクリックします。  
   
-5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]**をクリックにします。  
+5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは常にポート 135 を使用します。 別のポートを指定することはできません。  
   
 6.  **[ポートの追加]** ダイアログ ボックスで、必要に応じて **[スコープの変更]** をクリックし、既定のスコープを変更できます。  
   
-7.  **[スコープの変更]** ダイアログ ボックスで、 **[ユーザーのネットワーク (サブネット) のみ]** を選択するか、カスタムの一覧を入力し、 **[OK]**をクリックします。  
+7.  **[スコープの変更]** ダイアログ ボックスで、 **[ユーザーのネットワーク (サブネット) のみ]** を選択するか、カスタムの一覧を入力し、 **[OK]** をクリックします。  
   
-8.  **[OK]** をクリックして **[ポートの追加]**ダイアログ ボックスを閉じます。  
+8.  **[OK]** をクリックして **[ポートの追加]** ダイアログ ボックスを閉じます。  
   
-9. **[OK]** をクリックして **[Windows ファイアウォール]**ダイアログ ボックスを閉じます。  
+9. **[OK]** をクリックして **[Windows ファイアウォール]** ダイアログ ボックスを閉じます。  
   
     > [!NOTE]  
     >  Windows ファイアウォールを構成するために、この手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、Windows ファイアウォールは、 **netsh** コマンド ライン ツール、またはセキュリティが強化された Windows ファイアウォールの [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインを使用して構成することもできます。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  

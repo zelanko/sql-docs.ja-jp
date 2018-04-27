@@ -1,30 +1,30 @@
 ---
-title: "手順 3: OLE DB 接続マネージャーの追加と構成 | Microsoft Docs"
-ms.custom: 
+title: '手順 3: OLE DB 接続マネージャーの追加と構成 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 86d3e42b79efd2f2541c575b2c860b0a5cb4f41b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de0cbef5949987f523df3099b081c8ddfe39341c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>レッスン 1-3 - OLE DB 接続マネージャーの追加と構成
 前の実習では、データ ソースに接続するためのフラット ファイル接続マネージャーを追加しました。次は、データの変換先に接続するための OLE DB 接続マネージャーを追加します。 パッケージに OLE DB 接続マネージャーを追加すれば、OLE DB 対応のデータ ソースからデータを抽出したり、OLE DB 対応のデータ ソースへデータを読み込んだりできるようになります。 OLE DB 接続マネージャーでは、接続に必要なサーバー、認証方法、既定のデータベースを指定できます。  
@@ -33,11 +33,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="add-and-configure-an-ole-db-connection-manager-to-the-ssis-package"></a>SSIS パッケージに OLE DB 接続マネージャーを追加して構成するには  
   
-1.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい OLE DB 接続]**をクリックします。  
+1.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい OLE DB 接続]** をクリックします。  
   
-2.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]**をクリックします。  
+2.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]** をクリックします。  
   
-3.  **[サーバー名]**に「 **localhost**」と入力します。  
+3.  **[サーバー名]** に「 **localhost**」と入力します。  
   
     サーバー名に localhost という名前を使用すると、接続マネージャーは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のリモート インスタンスを使用するには、localhost ではなく、接続先のサーバー名を指定します。  
   

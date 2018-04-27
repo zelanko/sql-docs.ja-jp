@@ -1,34 +1,36 @@
 ---
-title: "SSMS 出力ウィンドウ | Microsoft Docs"
-ms.custom: 
+title: SSMS 出力ウィンドウ | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Output Window [SQL Server Management Studio]
 - Activity Monitor [SQL Server Management Studio]
 - Object Explorer [SQL Server Management Studio]
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 723128aeff26897aeb6a5d835eebc744791f6e4f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 749b3f22e67e745cf7cf89f27986590105b290d1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>SQL Server Management Studio の出力ウィンドウ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 出力ウィンドウは、[表示] メニューから開くことも、Ctrl + Alt + O キーの組み合わせを使用して開くこともできます。 複数の出力チャネルが使用できます。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+出力ウィンドウは、[表示] メニューから開くことも、Ctrl + Alt + O キーの組み合わせを使用して開くこともできます。 複数の出力チャネルが使用できます。
 
 次の表に、各出力チャネルに関連付けられている各種メッセージの概要を示します。
 

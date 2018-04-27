@@ -1,30 +1,30 @@
 ---
-title: "[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: '[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-caps.latest.revision: 
+caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f20252884bd2adc8003603107ed4efbd45c01ca9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f57b291cbc29e26aebb5281aa65b7e2f3c371134
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
   **[パッケージの保存および実行]** ページで、設定を SQL Server Integration Services (SSIS) パッケージとして保存することを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは **[SSIS パッケージの保存]** を表示します。 このページでは、ウィザードで作成されたパッケージを保存するための追加オプションを指定します。  
@@ -96,7 +96,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>パッケージを保存するためのオプションの 2 つのページについて  
  **[SSIS パッケージの保存]** ページは、SSIS パッケージを保存するためのオプションを選択する 2 つのページの 1 つです。  
   
--   前の **[パッケージの保存および実行]**ページでは、SQL Server またはファイルのどちらにパッケージを保存するかを選択します。 保存されたパッケージのセキュリティ設定も選択します。 **[パッケージの保存および実行]** ページについては、「 [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)」 ([パッケージの保存および実行]) を参照してください。  
+-   前の **[パッケージの保存および実行]** ページでは、SQL Server またはファイルのどちらにパッケージを保存するかを選択します。 保存されたパッケージのセキュリティ設定も選択します。 **[パッケージの保存および実行]** ページについては、「 [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)」 ([パッケージの保存および実行]) を参照してください。  
   
 -   このページでは、パッケージの名前および保存場所に関する詳細情報を指定します。  
  
@@ -107,7 +107,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
   
 -   コマンドラインまたはバッチ ファイルからパッケージを実行するには、「 [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
--   SQL Server の **msdb** データベースにパッケージを保存した場合は、Integration Services サービスに接続します。 次に、SQL Server Management Studio のオブジェクト エクスプローラーで **[格納済みパッケージ]、[MSDB]**に移動し、パッケージを右クリックして、 **[パッケージの実行]**を選択します。
+-   SQL Server の **msdb** データベースにパッケージを保存した場合は、Integration Services サービスに接続します。 次に、SQL Server Management Studio のオブジェクト エクスプローラーで **[格納済みパッケージ]、[MSDB]** に移動し、パッケージを右クリックして、 **[パッケージの実行]** を選択します。
 
 -   ファイル システムにパッケージを保存した場合、開発環境でパッケージを実行するには、「 [Integration Services (SSIS) パッケージの実行](../../integration-services/packages/run-integration-services-ssis-packages.md) 」を参照してください。 パッケージを開いて実行する前に、パッケージを Integration Services プロジェクトに追加する必要があります。  
 
@@ -115,7 +115,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
  保存されたパッケージをカスタマイズする方法については、「[Integration Services (SSIS) パッケージ](../../integration-services/integration-services-ssis-packages.md)」を参照してください。  
   
 ## <a name="whats-next"></a>次の操作  
- パッケージ保存の追加オプションを指定した後、次のページは **[ウィザードの完了]**です。 このページでは、ウィザードで選択した内容を確認し、操作を開始します。 詳細については、「 [[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)」を参照してください。  
+ パッケージ保存の追加オプションを指定した後、次のページは **[ウィザードの完了]** です。 このページでは、ウィザードで選択した内容を確認し、操作を開始します。 詳細については、「 [[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)」を参照してください。  
  
 ## <a name="see-also"></a>参照  
 [パッケージを保存する](../../integration-services/save-packages.md)  

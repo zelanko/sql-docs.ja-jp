@@ -2,7 +2,7 @@
 title: '[変更の保存] | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -23,20 +23,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8913eedde43e2e59dbae1230480bca10fe84219a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fda24f7e68f534572ff38460bd209b3cd9209c7f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-changes"></a>[変更の保存]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **[はい]** をクリックするまでは一覧表示された項目への変更が保存されない、という警告が表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**[はい]** をクリックするまでは一覧表示された項目への変更が保存されない、という警告が表示されます。  
   
 このダイアログ ボックスは、ソリューションやメンテナンス プランなどの開いているファイルを閉じるときに表示されます。  
   
 ### <a name="to-display-the-save-changes-dialog-box"></a>[変更の保存] ダイアログ ボックスを表示するには  
   
--   新しいファイルが開いたら、 **[ファイル]** メニューの **[閉じる]**をクリックします。  
+-   新しいファイルが開いたら、 **[ファイル]** メニューの **[閉じる]** をクリックします。  
   
 前に保存した項目への変更は、ストレージ内の保存場所に自動的に保存されます。 項目がまだ保存されていない場合は、 **[名前を付けてファイルを保存]** ダイアログ ボックスが表示され、新しい保存場所を入力するように求められます。  
   

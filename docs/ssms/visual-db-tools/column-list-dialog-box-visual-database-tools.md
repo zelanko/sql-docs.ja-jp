@@ -2,7 +2,7 @@
 title: '[列一覧] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,16 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12131847bea81558f979516b413c9e6db0e2ecc7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 841c5c8ffd80ea335a96628009ce4aab185876ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>[列一覧] ダイアログ ボックス (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリを記述するときに、選択したテーブル値オブジェクトで利用可能な列の一覧を確認できると便利なことがあります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリを記述するときに、選択したテーブル値オブジェクトで利用可能な列の一覧を確認できると便利なことがあります。  
   
-このダイアログ ボックスを **[クエリ デザイナー]** メニューから表示するには、ダイアグラム ペインでテーブル値オブジェクトのヘッダーを右クリックして、 **[プロパティ]**をクリックします。 **[プロパティ]** ウィンドウで、 **[列一覧]** フィールドをクリックします。 次に、フィールドの右側にある省略記号 ( **[...]** ) をクリックします。  
+このダイアログ ボックスを **[クエリ デザイナー]** メニューから表示するには、ダイアグラム ペインでテーブル値オブジェクトのヘッダーを右クリックして、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウで、 **[列一覧]** フィールドをクリックします。 次に、フィールドの右側にある省略記号 ( **[...]** ) をクリックします。  
   
 このダイアログ ボックスには、選択したテーブル値オブジェクトの列と、その基本的なプロパティ (データ型やその列で null 値が使用できるかどうかなど) が一覧表示されます。  
   

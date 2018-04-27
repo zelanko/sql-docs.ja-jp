@@ -1,16 +1,16 @@
 ---
-title: "パッケージを保存する | Microsoft Docs"
-ms.custom: 
+title: パッケージを保存する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.savecopyas.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ea8bfe361b01ebebbbdd3a794187f4d2983c55b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 404b9d1933a8c8d4b3295b33cace3a182d4e07ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-packages"></a>パッケージを保存する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを構築し、XML ファイル (.dtsx ファイル) としてファイル システムに保存します。 パッケージ XML ファイルのコピーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベースまたはパッケージ ストアに保存することもできます。 パッケージ ストアとは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システムの場所にあるフォルダーのことです。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、保存するパッケージをクリックします。  
   
-3.  **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+3.  **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
     > [!NOTE]  
     >  パッケージが保存されたファイルのパスと名前は、[プロパティ] ウィンドウで確認できます。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/25/2018
     -   [ファイル システム] 
     -   [SSIS パッケージ ストア] 
   
-4.  保存場所が **[SQL Server]** または **[SSIS パッケージ ストア]**の場合、サーバー名を指定します。  
+4.  保存場所が **[SQL Server]** または **[SSIS パッケージ ストア]** の場合、サーバー名を指定します。  
   
 5.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に保存する場合は、認証の種類を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、ユーザー名とパスワードを指定します。  
   
@@ -117,4 +117,4 @@ ms.lasthandoff: 01/25/2018
   
      テンプレートの一覧には、"新しい SSIS パッケージ" という名前の既定のパッケージ テンプレートがあります。 パッケージ テンプレートとして使用できるテンプレートは、パッケージ アイコンで示されます。  
   
-4.  **[追加]**をクリックします。  
+4.  **[追加]** をクリックします。  

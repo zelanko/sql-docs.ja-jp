@@ -1,16 +1,16 @@
 ---
-title: "制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する | Microsoft Docs"
-ms.custom: 
+title: 制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.toolboxcontrolflowtemplate.f1
@@ -18,22 +18,22 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce2aeb6c2900004ea99d6bfeb9d9ff06f8a81114
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 228db331a34b05c7450f1460dd8014f15d571987
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する
   よく使用される制御フロー タスクまたはコンテナーをスタンドアロン パーツ ファイル (".dtsxp"ファイル) に保存し、それを、制御フロー パッケージ パーツを使用して 1 つまたは複数のパッケージで複数回、再利用します。 この再利用性により SSIS パッケージの設計および管理が容易になります。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>新しい制御フロー パッケージ パーツを作成する  
- 新しい制御フロー パッケージ パーツを作成するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[新しい制御フロー パッケージ パーツ]**を選択します。  
+ 新しい制御フロー パッケージ パーツを作成するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[新しい制御フロー パッケージ パーツ]** を選択します。  
   
  ![新しい制御フロー テンプレートを作成する](../integration-services/media/control-flow-templates-create-new.png "新しい制御フロー テンプレートを作成する")  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/25/2018
  ![制御フロー テンプレートが表示されたソリューション エクスプローラー](../integration-services/media/control-flow-templates-in-solution-explorer.png "制御フロー テンプレートが表示されたソリューション エクスプローラー")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>既存の制御フロー パッケージ パーツのコピーまたは既存のパーツへの参照を追加する  
- ファイル システム内の既存のパーツのコピーをパッケージに追加するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[既存の制御フロー パッケージ パーツを追加]**を選択します。  
+ ファイル システム内の既存のパーツのコピーをパッケージに追加するには、ソリューション エクスプ ローラーで **[パッケージ パーツ]** フォルダーを展開します。 **[制御フロー]** を右クリックし、 **[既存の制御フロー パッケージ パーツを追加]** を選択します。  
   
  ![メニューから新しい制御フロー テンプレートを追加する](../integration-services/media/control-flow-templates-add-from-menu.png "メニューから新しい制御フロー テンプレートを追加する")  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="to-open-the-package-part-configuration-dialog-box"></a>[パッケージ パーツの構成] ダイアログ ボックスを開くには  
   
-1.  パーツ インスタンスを構成するには、制御フロー内のパーツ インスタンスをダブルクリックします。 または、パーツ インスタンスを右クリックし、 **[編集]**をクリックします。 **[パッケージ パーツの構成]** ダイアログ ボックスが開きます。  
+1.  パーツ インスタンスを構成するには、制御フロー内のパーツ インスタンスをダブルクリックします。 または、パーツ インスタンスを右クリックし、 **[編集]** をクリックします。 **[パッケージ パーツの構成]** ダイアログ ボックスが開きます。  
   
 2.  パーツ インスタンスのプロパティおよび接続マネージャーを構成します。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 01/25/2018
 -   **値**。 構成された値です。 この値は既定値より優先されます。  
   
 ## <a name="delete-a-control-flow-part"></a>制御フロー パーツを削除する  
- パーツを削除するには、ソリューション エクスプローラーで、対象のパーツを右クリックし、 **[削除]**をクリックします。 削除を確認するには **[OK]** を、パーツを削除しないで残すには **[キャンセル]** を選択します。  
+ パーツを削除するには、ソリューション エクスプローラーで、対象のパーツを右クリックし、 **[削除]** をクリックします。 削除を確認するには **[OK]** を、パーツを削除しないで残すには **[キャンセル]** を選択します。  
   
  プロジェクトからパーツを削除すると、ファイル システムから完全に削除されるため、復元することはできません。  
   

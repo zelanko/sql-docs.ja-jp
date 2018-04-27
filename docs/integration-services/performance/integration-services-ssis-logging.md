@@ -1,16 +1,16 @@
 ---
-title: "Integration Services (SSIS) のログ | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) のログ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -229,9 +229,9 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  次に、 **[SSIS]** メニューの **[ログ記録]**をクリックします。  
+2.  次に、 **[SSIS]** メニューの **[ログ記録]** をクリックします。  
   
-3.  **[プロバイダーの種類]** 一覧からログ プロバイダーを選択し、 **[追加]**をクリックします。  
+3.  **[プロバイダーの種類]** 一覧からログ プロバイダーを選択し、 **[追加]** をクリックします。  
   
 4.  **[構成]** 列で、接続マネージャーを選択するか、または **[\<新しい接続>]** をクリックしてこのログ プロバイダーに適した種類の接続マネージャーを新しく作成します。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
   
@@ -259,7 +259,7 @@ ms.lasthandoff: 01/25/2018
     > [!NOTE]  
     >  既定では、すべての情報がログに記録されます。  
   
-9. **[詳細]** タブで、 **[保存]**をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]**をクリックします。  
+9. **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
   
 10. **[OK]** をクリックします。  
   
@@ -320,7 +320,7 @@ ms.lasthandoff: 01/25/2018
  関連項目:「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」  
   
  **削除**  
- ログ プロバイダーを選択して、 **[削除]**をクリックします。  
+ ログ プロバイダーを選択して、 **[削除]** をクリックします。  
   
 ###  <a name="detail"></a> [詳細] タブでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブで、ログ記録を有効にするイベントと、ログ記録する詳細情報を指定します。 選択した情報は、パッケージ内のすべてのログ プロバイダーに適用されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとテキスト ファイルに別々の情報を書き込むことはできません。  
@@ -363,7 +363,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  次に、 **[SSIS]** メニューの **[ログ記録]**をクリックします。  
+2.  次に、 **[SSIS]** メニューの **[ログ記録]** をクリックします。  
   
 3.  パッケージ ツリー ビューを展開し、構成するコンテナーを選択します。  
   
@@ -372,23 +372,23 @@ ms.lasthandoff: 01/25/2018
     > [!NOTE]  
     >  ログは、パッケージ レベルでのみ作成できます。 詳しくは、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](#ssdt)」をご覧ください。  
   
-5.  **[詳細]** タブをクリックし、 **[読み込み]**をクリックします。  
+5.  **[詳細]** タブをクリックし、 **[読み込み]** をクリックします。  
   
-6.  使用するログ構成ファイルを参照し、 **[開く]**をクリックします。  
+6.  使用するログ構成ファイルを参照し、 **[開く]** をクリックします。  
   
 7.  必要に応じて、 **[イベント]** 列のチェック ボックスをオンにして、ログ記録を行う異なるログ エントリを選択することもできます。 **[詳細設定]** をクリックして、このエントリのログ記録を行うための情報の種類を選択します。  
   
     > [!NOTE]  
     >  最初にログ構成を作成するときに使用されたコンテナーでは使用できない追加のログ エントリが新しいコンテナーに含まれている場合があります。 これらの追加のログ エントリをログに記録するには、手動で選択する必要があります。  
   
-8.  **[保存]**をクリックして、ログ構成の更新バージョンを保存します。  
+8.  **[保存]** をクリックして、ログ構成の更新バージョンを保存します。  
   
 9. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
   このトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを実行するときに、パッケージのログ記録レベルを設定または変更する方法について説明します。 パッケージを実行するときに設定したログ記録レベルは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]での設計時に構成したパッケージのログ記録レベルよりも優先されます。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](#ssdt) 」を参照してください。  
   
- SQL Server の **[サーバーのプロパティ]**のサーバーの **[ログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できます。 このトピックで説明している組み込みのログ記録レベルのいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、既定で SSIS カタログに展開されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  
+ SQL Server の **[サーバーのプロパティ]** のサーバーの **[ログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できます。 このトピックで説明している組み込みのログ記録レベルのいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、既定で SSIS カタログに展開されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  
   
  また、次のいずれかの方法で、個々のパッケージのログ記録レベルを指定することもできます。 このトピックでは最初の方法について説明します。  
   
@@ -402,11 +402,11 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、パッケージに移動します。  
   
-2.  パッケージを右クリックし、 **[実行]**をクリックします。  
+2.  パッケージを右クリックし、 **[実行]** をクリックします。  
   
 3.  **[パッケージの実行]** ダイアログ ボックスで、 **[詳細設定]** タブをクリックします。  
   
-4.  **[ログ記録レベル]**で、ログ記録レベルを選択します。 このトピックでは、使用できる値について説明します。  
+4.  **[ログ記録レベル]** で、ログ記録レベルを選択します。 このトピックでは、使用できる値について説明します。  
   
 5.  他のパッケージの構成を完了し、 **[OK]** をクリックしてパッケージを実行します。  
   
@@ -418,7 +418,7 @@ ms.lasthandoff: 01/25/2018
 |なし|ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。|  
 |[標準]|カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
 |RuntimeLineage|データ フロー内の系列情報を追跡するために必要なデータを収集します。 この系列情報を解析して、タスク間の系列の関係をマッピングできます。 ISV や開発者は、この情報を利用して、ユーザー設定の系列マッピング ツールを構築できます。|  
-|[パフォーマンス]|パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。<br /><br /> **"実行のパフォーマンス"** レポートは、パッケージ データ フロー コンポーネントのアクティブな時間と合計時間を示します。 この情報は、最後のパッケージの実行のログ記録レベルが **[パフォーマンス]** または **[詳細]**に設定されていた場合にのみ表示されます。 詳細については、「 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)」を参照してください。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) ビューは、実行の各フェーズでのデータ フロー コンポーネントの開始時刻と終了時刻を表示します。 これらのコンポーネントの情報は、パッケージの実行のログ記録レベルが **[パフォーマンス]** または **[詳細]**に設定されている場合にのみ、このビューに表示されます。|  
+|[パフォーマンス]|パフォーマンス統計、および OnError イベントと OnWarning のイベントのみをログに記録します。<br /><br /> **"実行のパフォーマンス"** レポートは、パッケージ データ フロー コンポーネントのアクティブな時間と合計時間を示します。 この情報は、最後のパッケージの実行のログ記録レベルが **[パフォーマンス]** または **[詳細]** に設定されていた場合にのみ表示されます。 詳細については、「 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)」を参照してください。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) ビューは、実行の各フェーズでのデータ フロー コンポーネントの開始時刻と終了時刻を表示します。 これらのコンポーネントの情報は、パッケージの実行のログ記録レベルが **[パフォーマンス]** または **[詳細]** に設定されている場合にのみ、このビューに表示されます。|  
 |"詳細"|カスタム イベントと診断イベントを含む、すべてのイベントをログに記録されます。<br /><br /> カスタム イベントには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] タスクによってログに記録されるイベントが含まれます。 カスタム イベントの詳細については、「 [Custom Messages for Logging](#custom_messages)」を参照してください。<br /><br /> **DiagnosticEx** イベントは、診断イベントの例です。 パッケージ実行タスクで子パッケージを実行するたびに、このイベントは、子パッケージに渡されたパラメーター値をキャプチャします。<br /><br /> また、 **DiagnosticEx** イベントを使用すると、行レベルのエラーが発生した列名も取得できます。 このイベントは、データ フロー系列マップをログに書き込みます。 エラー出力でキャプチャされた列識別子を使用して、この系列マップの列名を調べることができます。  詳細については、「[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> **DiagnosticEx** のメッセージ列の値は XML テキストです。 パッケージ実行のメッセージ テキストを表示するには、[catalog.operation_messages &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ビューのクエリを実行します。 **DiagnosticEx** イベントでは XML 出力に含まれる空白が維持されないので、ログのサイズを軽減できます。 読みやすくするために、XML 書式と構文の強調表示をサポートする XML エディター (たとえば Visual Studio) にログをコピーします。<br /><br /> [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) ビューは、パッケージ実行で、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行を表示します。 ビューにこの情報を取得するには、ログ記録レベルを **[詳細]** に設定する必要があります。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>[カスタマイズされたログ記録レベルの管理] ダイアログ ボックスを使用して、カスタマイズされたログ記録レベルを作成して管理する  
@@ -429,11 +429,11 @@ ms.lasthandoff: 01/25/2018
   
 1.  カスタマイズされたログ記録レベルを作成および管理するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、SSISDB データベースを右クリックし、 **[カスタマイズされたログ記録レベル]** を選択し、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスを開きます。 **[カスタマイズされたログ記録レベル]** リストには、既存のカスタマイズされたログ記録レベルがすべて含まれています。  
   
-2.  新しいカスタマイズされたログ記録レベルを **作成** するには、 **[作成]**をクリックし、名前と説明を入力します。 **[統計情報]** タブと **[イベント]** タブで、収集する統計情報とイベントを選択します。 **[イベント]** タブで、必要に応じて個々のイベントについて **[コンテキストを含める]** を選択します。 **[保存]**をクリックします。  
+2.  新しいカスタマイズされたログ記録レベルを **作成** するには、 **[作成]** をクリックし、名前と説明を入力します。 **[統計情報]** タブと **[イベント]** タブで、収集する統計情報とイベントを選択します。 **[イベント]** タブで、必要に応じて個々のイベントについて **[コンテキストを含める]** を選択します。 **[保存]** をクリックします。  
   
-3.  既存のカスタマイズされたログ記録レベルを **更新** するには、リストから選択し、再構成して **[保存]**をクリックします。  
+3.  既存のカスタマイズされたログ記録レベルを **更新** するには、リストから選択し、再構成して **[保存]** をクリックします。  
   
-4.  既存のカスタマイズされたログ記録レベルを **削除** するには、リストから選択し、 **[削除]**をクリックします。  
+4.  既存のカスタマイズされたログ記録レベルを **削除** するには、リストから選択し、 **[削除]** をクリックします。  
   
  **カスタマイズされたログ記録レベルのアクセス許可**  
   

@@ -1,15 +1,16 @@
 ---
-title: "ダイアグラム ペイン (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: ダイアグラム ペイン (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d0b1ab935d8f6af9390131a0813468bbcdd0732
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 62fbb6619719adb82bfd0de041077cc65b7aa6db
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
   
 ダイアグラム ペインでは、次の作業を行うことができます。  
   
@@ -43,19 +45,19 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="options"></a>および  
 **テーブル**  
-ダイアグラム ペインに追加できるテーブルが一覧表示されます。 テーブルを追加するには、テーブルを選択して **[追加]**をクリックします。 複数のテーブルを一度に追加するには、それらのテーブルを選択して **[追加]**をクリックします。  
+ダイアグラム ペインに追加できるテーブルが一覧表示されます。 テーブルを追加するには、テーブルを選択して **[追加]** をクリックします。 複数のテーブルを一度に追加するには、それらのテーブルを選択して **[追加]** をクリックします。  
   
 **ビュー**  
-ダイアグラム ペインに追加できるビューが一覧表示されます。 ビューを追加するには、ビューを選択して **[追加]**をクリックします。 複数のビューを一度に追加するには、それらのビューを選択して **[追加]**をクリックします。  
+ダイアグラム ペインに追加できるビューが一覧表示されます。 ビューを追加するには、ビューを選択して **[追加]** をクリックします。 複数のビューを一度に追加するには、それらのビューを選択して **[追加]** をクリックします。  
   
 **関数**  
-ダイアグラム ペインに追加できるユーザー定義関数が一覧表示されます。 関数を追加するには、関数を選択して **[追加]**をクリックします。 複数の関数を一度に追加するには、それらの関数を選択して **[追加]**をクリックします。  
+ダイアグラム ペインに追加できるユーザー定義関数が一覧表示されます。 関数を追加するには、関数を選択して **[追加]** をクリックします。 複数の関数を一度に追加するには、それらの関数を選択して **[追加]** をクリックします。  
   
 **[ローカル テーブル]**  
 データベースに属するクエリ以外のクエリで作成されたテーブルが一覧表示されます。  
   
 **シノニム**  
-ダイアグラム ペインに追加できるシノニムが一覧表示されます。 シノニムを追加するには、シノニムを選択して **[追加]**をクリックします。 複数のシノニムを一度に追加するには、それらのシノニムを選択して **[追加]**をクリックします。  
+ダイアグラム ペインに追加できるシノニムが一覧表示されます。 シノニムを追加するには、シノニムを選択して **[追加]** をクリックします。 複数のシノニムを一度に追加するには、それらのシノニムを選択して **[追加]** をクリックします。  
   
 |アイコン|オブジェクトの種類|  
 |--------|---------------|  

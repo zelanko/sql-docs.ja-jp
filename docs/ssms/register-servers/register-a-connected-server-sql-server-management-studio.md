@@ -1,16 +1,16 @@
 ---
-title: "接続済みのサーバーの登録 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 接続済みのサーバーの登録 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.registerserver.f1
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6b6639909649cd9f988b5dd308f831763a82ef3c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 48687c1e245c4e57d75b986e24e87c8a7bcb698f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>接続済みのサーバーの登録 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、接続されたサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  メニューから **[表示]**\\**[登録済みサーバー]** に移動して、SSMS で登録済みサーバーを表示することができます。
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、接続されたサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  メニューから **[表示]**\\ **[登録済みサーバー]** に移動して、SSMS で登録済みサーバーを表示することができます。
   
  **このトピックの内容**  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/12/2018
   
 #### <a name="to-register-a-connected-server"></a>接続済みのサーバーを登録するには  
   
-オブジェクト エクスプローラーで、接続済みのサーバーを右クリックし、 **[登録]**をクリックします。
+オブジェクト エクスプローラーで、接続済みのサーバーを右クリックし、 **[登録]** をクリックします。
   
 **サーバー名**  
 このフィールドには、既定で接続先のサーバー名が設定されます。  必要に応じて、サーバー名を入力することも、ドロップ ダウン リストからいずれかを選択することもできます。
@@ -61,7 +61,7 @@ Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 詳細については、「 [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
 
      -    **User name**  
-接続に使用されている、現在のユーザー名を表示します。 この読み取り専用オプションは、Windows 認証を使用した接続が指定されている場合にのみ使用できます。 **[ユーザー名]**を変更するには、別のユーザーとしてコンピューターにログインします。 
+接続に使用されている、現在のユーザー名を表示します。 この読み取り専用オプションは、Windows 認証を使用した接続が指定されている場合にのみ使用できます。 **[ユーザー名]** を変更するには、別のユーザーとしてコンピューターにログインします。 
 
      -    **Login**  
 接続に使用するログインを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ使用できます。  
@@ -73,7 +73,7 @@ Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](
 入力したパスワードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で暗号化して保存する場合に選択します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ表示されます。  
 
           > [!NOTE]  
-          > パスワードの保存を止めるには、このチェック ボックスをオフにして **[保存]**をクリックします。  
+          > パスワードの保存を止めるには、このチェック ボックスをオフにして **[保存]** をクリックします。  
 
 **[登録済みサーバーの名前]**  
 [登録済みサーバー] に表示する名前です。 この名前は、 **[サーバー名]** ボックスの名前と一致する必要はありません。  
@@ -82,7 +82,7 @@ Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](
 サーバーの説明をオプションで入力します。  
   
 **テスト**  
-クリックすると、 **[サーバー名]**で選択されたサーバーへの接続をテストします。  
+クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
 **[保存]**  
 クリックすると、登録済みサーバーの設定を保存します。 

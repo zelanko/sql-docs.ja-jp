@@ -1,15 +1,16 @@
 ---
-title: "データベース ダイアグラム デザイナーを開く (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: データベース ダイアグラム デザイナーを開く (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - opening Database Diagram Designer
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f80f91be3c5ad55103011beb0f56c8a9e0595968
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d9fccbecb1e3985b3d871d47a0444e6a8244a680
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーを開く (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] データベース ダイアグラム デザイナーは、接続しているデータベースをデザインしたりビジュアル化したりできるビジュアル ツールです。 データベースをデザインするときは、データベース デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約の作成、編集、または削除を行うことができます。 データベースをビジュアル化するには、データベースに含まれるテーブル、列、キー、およびリレーションシップの一部または全部を表すダイアグラムを作成します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+データベース ダイアグラム デザイナーは、接続しているデータベースをデザインしたりビジュアル化したりできるビジュアル ツールです。 データベースをデザインするときは、データベース デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約の作成、編集、または削除を行うことができます。 データベースをビジュアル化するには、データベースに含まれるテーブル、列、キー、およびリレーションシップの一部または全部を表すダイアグラムを作成します。  
   
 データベース ダイアグラム デザイナーを開くには、新規ダイアグラムまたは既存のダイアグラムを開きます。  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  オブジェクト エクスプローラーで、接続しているデータベース ダイアグラム ノードを右クリックします。  
   
-2.  ドロップダウン メニューの **[新しいデータベース ダイアグラム]**をクリックします。  
+2.  ドロップダウン メニューの **[新しいデータベース ダイアグラム]** をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、ダイアグラムで操作するテーブルを選択します。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  オブジェクト エクスプローラーで、接続しているデータベース ダイアグラム ノードの下のダイアグラムを右クリックします。  
   
-2.  ドロップダウン メニューの **[デザイン データベース ダイアグラム]**をクリックします。  
+2.  ドロップダウン メニューの **[デザイン データベース ダイアグラム]** をクリックします。  
   
 3.  メイン メニューに **[データベース ダイアグラム]** メニューが追加され、デザイナー ペインにダイアグラムが表示されます。  
   

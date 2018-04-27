@@ -1,15 +1,16 @@
 ---
-title: "結合を使用したクエリ (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 結合を使用したクエリ (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dcdc5f6af6c47c7f100a48f899fe4a86c402d735
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>結合を使用したクエリ (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリ結果には、複数のテーブルまたはテーブル値オブジェクトのデータを含めることができます。 複数のテーブル値オブジェクトのデータを結合するには、SQL の JOIN 演算子を使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリ結果には、複数のテーブルまたはテーブル値オブジェクトのデータを含めることができます。 複数のテーブル値オブジェクトのデータを結合するには、SQL の JOIN 演算子を使用します。  
   
 複数のテーブルを使用するクエリを作成する方法の詳細については、次の各トピックを参照してください。  
   

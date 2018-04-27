@@ -1,16 +1,16 @@
 ---
-title: "デジタル署名を使用してパッケージのソースを特定する | Microsoft Docs"
-ms.custom: 
+title: デジタル署名を使用してパッケージのソースを特定する | Microsoft Docs
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.digitalsigning.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9356463b29b1a4971ddd336a9b44d47f3983f83
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 486070d8bdeb61fb39795823ab2f7d9f4e9d2df4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、そのソースを識別するために、デジタル証明書を使用して署名できます。 パッケージがデジタル証明書を使用して署名されたら、パッケージを読み込む前に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でデジタル署名を確認できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で署名を確認するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** ユーティリティ (dtexec.exe) でオプションを設定するか、オプションのレジストリ値を設定します。  
@@ -77,23 +77,23 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>パッケージに対する署名ポリシーを実装するには  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。  
+1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  [ファイル名を指定して実行] ダイアログ ボックスで、「 **Regedit**」と入力し、 **[OK]**をクリックします。  
+2.  [ファイル名を指定して実行] ダイアログ ボックスで、「 **Regedit**」と入力し、 **[OK]** をクリックします。  
   
 3.  レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS を探します。  
   
-4.  **[MSDTS]**を右クリックし、 **[新規]**をポイントして、 **[DWORD 値]**をクリックします。  
+4.  **[MSDTS]** を右クリックし、 **[新規]** をポイントして、 **[DWORD 値]** をクリックします。  
   
 5.  新しい値の名前を「 **BlockedSignatureStates**」に更新します。  
   
-6.  **[BlockedSignatureStates]** を右クリックし、 **[変更]**をクリックします。  
+6.  **[BlockedSignatureStates]** を右クリックし、 **[変更]** をクリックします。  
   
 7.  **[DWORD 値の編集]** ダイアログ ボックスで、「0」、「1」、「2」、または「3」のいずれかの値を入力します。  
   
 8.  **[OK]** をクリックします。  
   
-9. **[ファイル]** メニューの **[終了]**をクリックします。    
+9. **[ファイル]** メニューの **[終了]** をクリックします。    
 
 ## <a name="cert"></a> デジタル証明書を使用してパッケージに署名する
   このトピックでは、デジタル証明書を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージに署名する方法について説明します。 デジタル署名を他の設定と共に使用して、有効でないパッケージの読み込みや実行を防ぐことができます。  
@@ -124,13 +124,13 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで **[SSIS]** メニューの **[デジタル署名]**をクリックします。  
+3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで **[SSIS]** メニューの **[デジタル署名]** をクリックします。  
   
-4.  **[デジタル署名]** ダイアログ ボックスで、 **[署名]**をクリックします。  
+4.  **[デジタル署名]** ダイアログ ボックスで、 **[署名]** をクリックします。  
   
 5.  **[証明書の選択]** ダイアログ ボックスで、証明書を選択します。  
   
-6.  必要に応じて、 **[証明書の表示]**をクリックして証明書の情報を表示します。  
+6.  必要に応じて、 **[証明書の表示]** をクリックして証明書の情報を表示します。  
   
 7.  **[OK]** をクリックして、 **[証明書の選択]** ダイアログ ボックスを閉じます。  
   

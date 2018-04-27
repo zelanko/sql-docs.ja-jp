@@ -1,33 +1,33 @@
 ---
-title: "テーブルのコピーまたはクエリの指定 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: テーブルのコピーまたはクエリの指定 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 56babe19727ca9ac7e0f364f64c91716508f4dfc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 08403e9fa45906d12057089febf270ece34ff45e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
-  データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]**が表示されます。 このページで、次のいずれかのオプションを選択します。
+  データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]** が表示されます。 このページで、次のいずれかのオプションを選択します。
 -   **1 つ以上のテーブルまたはビューからデータをコピーする**が表示されます。 一覧からテーブル (複数可) を選択します。
 -   **転送するデータを指定するためのクエリを記述する**が表示されます。 SQL クエリのテキストを入力するか貼り付けます。
     
@@ -43,16 +43,16 @@ ms.lasthandoff: 01/25/2018
  **1 つ以上のテーブルまたはビューからデータをコピーする**    
  レコードのフィルター選択や並べ替えを実行せず、コピー元からデータをコピーする場合に、このオプションを選択します。   
 
-**[1 つ以上のテーブルまたはビューからデータをコピーする]**を選択すると、1 つのテーブルまたはビューから 1 つのコピー先のテーブルに、または複数のテーブルまたはビューから複数のコピー先のテーブルにコピーできます。
+**[1 つ以上のテーブルまたはビューからデータをコピーする]** を選択すると、1 つのテーブルまたはビューから 1 つのコピー先のテーブルに、または複数のテーブルまたはビューから複数のコピー先のテーブルにコピーできます。
 
- **[次へ]**をクリックしてから、 **[コピー元のテーブルおよびビューを選択]** ページでコピーするテーブルを選択します。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。   
+ **[次へ]** をクリックしてから、 **[コピー元のテーブルおよびビューを選択]** ページでコピーするテーブルを選択します。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。   
     
  **転送するデータを指定するためのクエリを記述する**    
  転送先にコピーする前に、ソース データのフィルター処理または並べ替えを行う場合は、このオプションを選択します。    
     
-**[転送するデータを指定するためのクエリを記述する]**を選択した場合、1 つのクエリを 1 つの転送先のテーブルにコピーのみすることができます。  
+**[転送するデータを指定するためのクエリを記述する]** を選択した場合、1 つのクエリを 1 つの転送先のテーブルにコピーのみすることができます。  
 
-**[次へ]**をクリックしたら、SQL ステートメントを入力して、 **[基になるクエリの指定]** ダイアログ ボックスで列を指定し、行を選択します。 詳細については、「 [基になるクエリの指定](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)」を参照してください。   
+**[次へ]** をクリックしたら、SQL ステートメントを入力して、 **[基になるクエリの指定]** ダイアログ ボックスで列を指定し、行を選択します。 詳細については、「 [基になるクエリの指定](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)」を参照してください。   
     
 ## <a name="why-isnt-the-copy-option-available"></a>[コピー] オプションはどうして利用できないのですか?    
  ウィザードで **データ プロバイダーを使用してデータ ソースに接続する場合、** [1 つ以上のテーブルまたはビューからデータをコピーする] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] オプションを使用できないことがあります。 データ ソースからテーブルおよびビューの一覧を要求するために必要なデータ プロバイダーに関する十分な情報がウィザードにない場合に、このような問題が起こります。 
@@ -79,9 +79,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="whats-next"></a>次の操作    
  テーブル全体をコピーまたはクエリを指定するかどうかを指定した後、次のページは、このページおよびデータのコピー先で選択するオプションによって異なります。    
     
--   **[1 つ以上のテーブルまたはビューからデータをコピーする]**を選択した場合、ほとんどのコピー先で、次のページは **[コピー元のテーブルおよびビューを選択]**になります。 このページで、データ ソースからコピー先にコピーするために、既存のテーブルおよびビューを選択します。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。    
+-   **[1 つ以上のテーブルまたはビューからデータをコピーする]** を選択した場合、ほとんどのコピー先で、次のページは **[コピー元のテーブルおよびビューを選択]** になります。 このページで、データ ソースからコピー先にコピーするために、既存のテーブルおよびビューを選択します。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。    
     
--   **[1 つ以上のテーブルまたはビューからデータをコピーする]** を選択して、コピー先がフラット ファイルの場合、次のページは **[フラット ファイルの変換先の構成]**になります。 このページでは、変換先フラット ファイルの書式設定オプションを指定します。 (その後、フラット ファイルを構成すると、次のページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。    
+-   **[1 つ以上のテーブルまたはビューからデータをコピーする]** を選択して、コピー先がフラット ファイルの場合、次のページは **[フラット ファイルの変換先の構成]** になります。 このページでは、変換先フラット ファイルの書式設定オプションを指定します。 (その後、フラット ファイルを構成すると、次のページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。    
     
 -   **[転送するデータを指定するためのクエリを記述する]** を選択した場合、次のページは **[基になるクエリの指定]** になります。 このページで、データ ソースから転送先にコピーするデータを選択する SQL ステートメントを書き込んでテストします。 (その後、クエリを指定すると、次のページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[基になるクエリの指定](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)」を参照してください。
 

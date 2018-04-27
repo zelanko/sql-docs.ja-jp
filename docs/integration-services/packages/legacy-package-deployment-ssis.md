@@ -1,16 +1,16 @@
 ---
-title: "レガシー パッケージの配置 (SSIS) | Microsoft Docs"
-ms.custom: 
+title: レガシー パッケージの配置 (SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.packageconfigurationorganizer.f1
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f8e3308aa72bb69002a71c1743cdcfb56dd03333
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
@@ -236,13 +236,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]**タブ、 **[データ フロー]**タブ、 **[イベント ハンドラー]**タブ、または **[パッケージ エクスプローラー]** タブをクリックします。  
+3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、 **[イベント ハンドラー]** タブ、または **[パッケージ エクスプローラー]** タブをクリックします。  
   
-4.  **[SSIS]** メニューの **[パッケージ構成]**をクリックします。  
+4.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
-5.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、 **[パッケージの構成を有効にする]**を選択し、 **[追加]**をクリックします。  
+5.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、 **[パッケージの構成を有効にする]** を選択し、 **[追加]** をクリックします。  
   
-6.  パッケージ構成ウィザードの最初のページが表示されたら、 **[次へ]**をクリックします。  
+6.  パッケージ構成ウィザードの最初のページが表示されたら、 **[次へ]** をクリックします。  
   
 7.  [構成の種類の選択] ページで構成の種類を指定してから、選択した構成の種類に対応するプロパティを設定します。 詳細については、「 [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md)」を参照してください。  
   
@@ -250,11 +250,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
     > **注:** 構成の種類が **[XML 構成ファイル]** および **[SQL Server]** の場合のみ、構成に複数のプロパティを含めることができます。  
   
-9. [ウィザードの完了] というページが表示されたら、構成の名前を入力して **[完了]**をクリックします。  
+9. [ウィザードの完了] というページが表示されたら、構成の名前を入力して **[完了]** をクリックします。  
   
 10. **[パッケージ構成オーガナイザー]** ダイアログ ボックスで構成を確認します。  
   
-11. **[閉じる]**をクリックします。  
+11. **[閉じる]** をクリックします。  
 
 ## <a name="package-configurations-organizer"></a>[パッケージ構成オーガナイザー]
   **[パッケージ構成オーガナイザー]** ダイアログ ボックスを使用すると、パッケージ構成を有効にし、現在のパッケージの構成の一覧を表示して、構成の優先読み込み順序を指定できます。  
@@ -293,7 +293,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  パッケージ構成ウィザードを再実行することにより、既存の構成を編集します。  
   
  **[削除]**  
- 構成を選択してから、 **[削除]**をクリックします。  
+ 構成を選択してから、 **[削除]** をクリックします。  
   
  **矢印**  
  構成を選択し、上矢印および下矢印を使用して、構成を一覧の上または下に移動します。 構成は、一覧に表示された順序で読み込まれます。  
@@ -326,11 +326,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**XML 構成ファイル**|構成を XML ファイルとして格納します。 この値を選択すると、セクション **[構成の種類]**に動的オプションが表示されます。|  
-|**環境変数**|構成を環境変数の 1 つに格納します。 この値を選択すると、セクション **[構成の種類]**に動的オプションが表示されます。|  
-|**レジストリ エントリ**|構成をレジストリに格納します。 この値を選択すると、セクション **[構成の種類]**に動的オプションが表示されます。|  
-|**親パッケージ変数**|構成をタスクを含むパッケージに変数として格納します。  この値を選択すると、セクション **[構成の種類]**に動的オプションが表示されます。|  
-|**SQL Server**|構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のテーブルに格納します。 この値を選択すると、セクション **[構成の種類]**に動的オプションが表示されます。|  
+|**XML 構成ファイル**|構成を XML ファイルとして格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
+|**環境変数**|構成を環境変数の 1 つに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
+|**レジストリ エントリ**|構成をレジストリに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
+|**親パッケージ変数**|構成をタスクを含むパッケージに変数として格納します。  この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
+|**SQL Server**|構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のテーブルに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
   
  **Next**  
  ウィザードのシーケンスの次のページを表示します。  
@@ -428,7 +428,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  構成を作成するためにウィザードが使用する設定を表示します。  
   
  **[完了]**  
- 構成を作成して **[パッケージ構成ウィザード]**を終了します。  
+ 構成を作成して **[パッケージ構成ウィザード]** を終了します。  
 
 ## <a name="child"></a> 子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
@@ -481,7 +481,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトのパッケージ配置ユーティリティを作成するには、最初に配置ユーティリティ作成用のビルド プロセスを設定してから、プロジェクトをビルドします。 プロジェクトをビルドすると、プロジェクトのすべてのパッケージおよびパッケージの構成が自動的に追加されます。 Readme ファイルなどのファイルをプロジェクトに追加して配置するには、 **プロジェクトの** [その他] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] フォルダーにファイルを格納します。 プロジェクトのビルド時に、これらのファイルも自動的に追加されます。  
   
- プロジェクト配置は個別に設定できます。 プロジェクトをビルドしてパッケージ配置ユーティリティを作成する前に、配置ユーティリティのプロパティを設定して、プロジェクトのパッケージの配置方法をカスタマイズできます。 たとえば、プロジェクトの配置時にパッケージの構成を更新するかどうかを指定できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトのプロパティにアクセスするには、プロジェクトを右クリックして **[プロパティ]**をクリックします。  
+ プロジェクト配置は個別に設定できます。 プロジェクトをビルドしてパッケージ配置ユーティリティを作成する前に、配置ユーティリティのプロパティを設定して、プロジェクトのパッケージの配置方法をカスタマイズできます。 たとえば、プロジェクトの配置時にパッケージの構成を更新するかどうかを指定できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトのプロパティにアクセスするには、プロジェクトを右クリックして **[プロパティ]** をクリックします。  
   
  次の表に、配置ユーティリティのプロパティの一覧を示します。  
   
@@ -499,7 +499,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージ配置ユーティリティを作成する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトが含まれているソリューションを開きます。  
   
-2.  プロジェクトを右クリックして、 **[プロパティ]**をクリックします。  
+2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、**[配置ユーティリティ]** をクリックします。  
   
@@ -511,7 +511,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 7.  **[OK]** をクリックします。  
   
-8.  ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[ビルド]**をクリックします。  
+8.  ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[ビルド]** をクリックします。  
   
 9. ビルドの進捗状況とエラーが **[出力]** ウィンドウに表示されます。  
 
@@ -703,5 +703,5 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[パッケージ インストール ウィザードの完了]** ページを使用して、パッケージのインストール結果の要約を表示します。 このページでは、配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの名前、インストールされたパッケージ、構成ファイル、インストール場所などの詳細が表示されます。  
   
  **完了**  
- **[完了]**をクリックすると、ウィザードが終了します。  
+ **[完了]** をクリックすると、ウィザードが終了します。  
 

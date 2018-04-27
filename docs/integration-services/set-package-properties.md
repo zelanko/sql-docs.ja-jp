@@ -1,16 +1,16 @@
 ---
-title: "パッケージのプロパティを設定する | Microsoft Docs"
-ms.custom: 
+title: パッケージのプロパティを設定する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89564adcf11f815413fefaeb2701431c37b898c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のグラフィカル インターフェイスを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージを作成する場合、パッケージ オブジェクトのプロパティは [プロパティ] ウィンドウで設定します。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  次の表は、パッケージのプロパティをカテゴリ別に一覧表示しています。  
   
 ###  <a name="Checkpoints"></a> チェックポイント  
- このカテゴリのプロパティを使用すると、パッケージ制御フローで障害が発生した時点からパッケージを再開できます。制御フローの最初からパッケージを再実行する必要はありません。 詳細については、「 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+ このカテゴリのプロパティを使用すると、パッケージ制御フローで障害が発生した時点からパッケージを再開できます。制御フローの最初からパッケージを再実行する必要はありません。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
@@ -163,13 +163,13 @@ ms.lasthandoff: 01/25/2018
 ## <a name="set-package-properties-in-the-properties-window"></a>[プロパティ] ウィンドウでパッケージのプロパティを設定する 
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  **ソリューション エクスプローラー**で、パッケージをダブルクリックして [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで開くか、右クリックして **[ビュー デザイナー]**を選択します。  
+2.  **ソリューション エクスプローラー**で、パッケージをダブルクリックして [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで開くか、右クリックして **[ビュー デザイナー]** を選択します。  
   
 3.  **[制御フロー]** タブをクリックし、次のいずれかの操作を行います。  
   
-    -   制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]**をクリックします。  
+    -   制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-    -   **[表示]** メニューの **[プロパティ ウィンドウ]**をクリックします。  
+    -   **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。  
   
 4.  **[プロパティ]** ウィンドウで、パッケージのプロパティを編集します。  
   

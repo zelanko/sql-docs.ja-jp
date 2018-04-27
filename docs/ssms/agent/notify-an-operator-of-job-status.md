@@ -2,7 +2,7 @@
 title: オペレーターにジョブの状態を通知する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c72c5538062bbd4b29d3b142b165c62c78cb6d30
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ae4e28903589b95835d3d9b33fe9c0ae4536e6f4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**、 **[ジョブ]**の順に展開し、編集するジョブを右クリックして、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[通知]** ページをクリックします。  
   
-4.  オペレーターに電子メールで通知する場合、 **[電子メール]**チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
+4.  オペレーターに電子メールで通知する場合、 **[電子メール]** チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
   
     -   **[ジョブ成功時]** : ジョブが正常に完了した場合にオペレーターに通知します。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
-5.  オペレーターにポケットベルで通知する場合、 **[ポケットベル]**チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
+5.  オペレーターにポケットベルで通知する場合、 **[ポケットベル]** チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
   
     -   **[ジョブ成功時]** : ジョブが正常に完了した場合にオペレーターに通知します。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
-6.  オペレーターに net send で通知する場合、 **[Net Send]**チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
+6.  オペレーターに net send で通知する場合、 **[Net Send]** チェック ボックスをオンにして一覧からオペレーターを選択し、次のいずれかをクリックします。  
   
     -   **[ジョブ成功時]** : ジョブが正常に完了した場合にオペレーターに通知します。  
   
@@ -99,9 +99,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  

@@ -1,15 +1,16 @@
 ---
-title: "クエリでの TOP 句の指定 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: クエリでの TOP 句の指定 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - TOP clause, queries
@@ -22,29 +23,30 @@ helpviewer_keywords:
 - limiting rows returned
 - search criteria [SQL Server], TOP clause
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25864b7e96a36e38e1ec31cdee4e902e75033da9
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 239c2c484058977217f12577b55a4af4ce8135de
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>クエリでの TOP 句の指定 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] TOP 句は、クエリから最初の *n* 行または *n %* 行だけを返します。 TOP 句は、すべてのクエリ結果を返すために必要なリソースを使用する前に、結果の一部を検査して、必要なクエリが実行されるかどうかを確認する場合に便利です。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+TOP 句は、クエリから最初の *n* 行または *n %* 行だけを返します。 TOP 句は、すべてのクエリ結果を返すために必要なリソースを使用する前に、結果の一部を検査して、必要なクエリが実行されるかどうかを確認する場合に便利です。  
   
 ### <a name="to-specify-the-top-clause-in-queries"></a>クエリで TOP 句を指定するには  
   
 1.  ソリューション エクスプローラーでクエリを開くか、新しいクエリを作成します。  
   
-2.  **[表示]** メニューの **[プロパティ ウィンドウ]**をクリックします。  
+2.  **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。  
   
-3.  **[プロパティ ウィンドウ]**で、 **[Top の指定]** プロパティを検索して展開します。  
+3.  **[プロパティ ウィンドウ]** で、 **[Top の指定]** プロパティを検索して展開します。  
   
-4.  **[(Top)]** 子プロパティをクリックして、 **[はい]**に設定します。  
+4.  **[(Top)]** 子プロパティをクリックして、 **[はい]** に設定します。  
   
 5.  **[式]** 子プロパティで、数値の結果を返す式を入力します ("10"、"2*5" など)。  
   

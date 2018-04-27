@@ -2,7 +2,7 @@
 title: テーブル値オブジェクト (列) のプロパティ (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72f33dceec5940d9b34aa9f7e2c44b4b903d4211
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 76843a03de3223aa1f64ccb1ab012f4b9093a157
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
   
 > [!NOTE]  
 > このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
@@ -42,12 +43,12 @@ ms.lasthandoff: 01/17/2018
 選択した列の名前が表示されます。  
   
 **クエリ デザイナー カテゴリ**  
-展開すると、 **[NULL を許容]**、 **[照合順序]**、 **[長さ]**、 **[データ型]**、 **[精度]**、 **[スケール]**、 **[サイズ]**のプロパティが表示されます。  
+展開すると、 **[NULL を許容]**、 **[照合順序]**、 **[長さ]**、 **[データ型]**、 **[精度]**、 **[スケール]**、 **[サイズ]** のプロパティが表示されます。  
   
 **[NULL を許容]**  
 列のデータ型で NULL が許容されるかどうかが表示されます。  
   
-**照合順序**  
+**[照合順序]**  
 選択した列における照合順序の設定が表示されます。 照合順序は、Table Designer の [列のプロパティ] タブで設定できます。  
   
 **データ型**  

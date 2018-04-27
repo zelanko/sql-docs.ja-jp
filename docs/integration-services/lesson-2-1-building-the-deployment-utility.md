@@ -1,30 +1,30 @@
 ---
-title: "手順 1: 配置ユーティリティの構築 | Microsoft Docs"
-ms.custom: 
+title: '手順 1: 配置ユーティリティの構築 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad64bdaf8424da073dff170761eab0d7bacac750
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 72a36183caf25ecbe916c22d716e27b5ce9c309b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>レッスン 2-1 - 配置ユーティリティの構築
 ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-set-the-deployment-utility-properties"></a>配置ユーティリティのプロパティを設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**の順にポイントして、 **[Business Intelligence Development Studio]**をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
   
-2.  **[ファイル]** メニューの **[開く]**をクリックし、 **[プロジェクト/ソリューション]**をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]**をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
-3.  ソリューション エクスプローラーで [Deployment Tutorial] を右クリックし、 **[プロパティ]**をクリックします。  
+3.  ソリューション エクスプローラーで [Deployment Tutorial] を右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスで、[構成プロパティ] を展開し、[配置ユーティリティ] をクリックします。  
   
@@ -49,11 +49,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-build-the-deployment-utility"></a>配置ユーティリティを構築するには  
   
-1.  ソリューション エクスプローラーで、 **[Deployment Tutorial]**をクリックします。  
+1.  ソリューション エクスプローラーで、 **[Deployment Tutorial]** をクリックします。  
   
-2.  **[表示]** メニューの **[出力]**をクリックします。 既定では、出力ウィンドウは [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の左下隅に配置されます。  
+2.  **[表示]** メニューの **[出力]** をクリックします。 既定では、出力ウィンドウは [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の左下隅に配置されます。  
   
-3.  **[ビルド]** メニューの **[Deployment Tutorial のビルド]**をクリックします。  
+3.  **[ビルド]** メニューの **[Deployment Tutorial のビルド]** をクリックします。  
   
 4.  出力ウィンドウに、次のような情報が表示されます。  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
   
     ========== ビルド: 0 正常終了、0 失敗、1 更新、0 スキップ ==========  
   
-5.  **[ファイル]** メニューの **[終了]**をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]**をクリックします。  
+5.  **[ファイル]** メニューの **[終了]** をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  

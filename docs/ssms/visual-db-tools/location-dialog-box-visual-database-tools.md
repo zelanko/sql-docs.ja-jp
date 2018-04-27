@@ -2,7 +2,7 @@
 title: 場所ダイアログ ボックス (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,16 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b813bc94aa5afcd2cb537de0bfc8cba9d925d034
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9bc38b08444da663b817dc1a9fc749bb87f2eade
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  
   
--   **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]**を選択します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されたら、 **[参照]**を選択します。 " **プロジェクトの場所** " というタイトルの **場所**ダイアログ ボックスが開きます。  
+-   **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されたら、 **[参照]** を選択します。 " **プロジェクトの場所** " というタイトルの **場所**ダイアログ ボックスが開きます。  
   
 **[探す場所]**  
 必要なフォルダーをこの一覧から見つけます。 選択したフォルダーのサブフォルダーが表示されます。  

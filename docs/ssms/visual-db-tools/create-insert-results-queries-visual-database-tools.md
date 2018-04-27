@@ -1,15 +1,16 @@
 ---
-title: "結果の挿入クエリの作成 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 結果の挿入クエリの作成 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77d9cd92950ddecc334fd5d75c3092bc5b3b4214
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f263be2f5d69dcd6f877bba15f3644b214df58f7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 結果の挿入クエリを使用すると、テーブル間またはテーブル内で行をコピーできます。 たとえば、 `titles` テーブルで結果の挿入クエリを使用すると、特定の出版社のすべての書名に関する情報を別のテーブルにコピーして、その出版社に提供できます。 結果の挿入クエリは、テーブルの作成と似ていますが、既存のテーブルに行をコピーする点が異なります。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+結果の挿入クエリを使用すると、テーブル間またはテーブル内で行をコピーできます。 たとえば、 `titles` テーブルで結果の挿入クエリを使用すると、特定の出版社のすべての書名に関する情報を別のテーブルにコピーして、その出版社に提供できます。 結果の挿入クエリは、テーブルの作成と似ていますが、既存のテーブルに行をコピーする点が異なります。  
   
 > [!TIP]  
 > テーブル間の行のコピーは、カット アンド ペーストを使用して行うこともできます。 これにはまず、各テーブルに対するクエリを作成して実行します。 次に、必要な行を結果グリッドから別の結果グリッドにコピーします。  
@@ -75,14 +77,14 @@ WHERE (pub_id = '0766')
   
 1.  新しいクエリを作成して、行のコピー元となるテーブル (コピー元テーブル) を追加します。 同じテーブル内で行をコピーする場合は、コピー先テーブルと同じコピー元テーブルを追加します。  
   
-2.  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]**をポイントし、 **[結果の挿入]**をクリックします。  
+2.  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[結果の挿入]** をクリックします。  
   
 3.  [[挿入先のテーブル選択] ダイアログ ボックス](../../ssms/visual-db-tools/choose-target-table-for-insert-results-dialog-box-visual-database-tools.md)で、行のコピー先となるテーブル (コピー先テーブル) を選択します。  
   
     > [!NOTE]  
     > クエリおよびビュー デザイナーは、更新できるテーブルおよびビューを事前に判別できません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスの **[テーブル名]** ボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
   
-4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、 **\&#42; (すべての列)**を選択します。  
+4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、 **\&#42; (すべての列)** を選択します。  
   
     選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   

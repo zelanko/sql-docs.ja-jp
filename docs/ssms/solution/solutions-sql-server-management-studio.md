@@ -1,15 +1,16 @@
 ---
-title: "ソリューション (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: ソリューション (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbaa02918eb4d30e7fc9f58b69a3665c0a3296a2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 750f883102935cee98018c899860073341df259e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="solutions-sql-server-management-studio"></a>ソリューション (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  
   
 ## <a name="solution-overview"></a>ソリューションの概要  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde_md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]のスクリプト開発プラットフォームとして使用できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] コード エディターでは、リレーショナル データベースや多次元データベースのスクリプトおよびクエリを開発し、プロジェクト内で関連するスクリプトおよびクエリをまとめて収集することができます。  

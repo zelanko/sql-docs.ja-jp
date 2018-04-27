@@ -1,30 +1,30 @@
 ---
-title: "手順 9: レッスン 1 のチュートリアル パッケージのテスト | Microsoft Docs"
-ms.custom: 
+title: '手順 9: レッスン 1 のチュートリアル パッケージのテスト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5fe1c97344edd6b5893fee1873df89a1ca37444c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: df02fdffe31baaf78be2f0b8de49cc4de47bbbd2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>レッスン 1-9 - レッスン 1 のチュートリアル パッケージのテスト
 このレッスンでは次の作業を行いました。  
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>レッスン 1 のチュートリアル パッケージを実行するには  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]**をクリックします。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
     パッケージが実行されます。その結果、 **AdventureWorksDW2012** の **FactCurrency**ファクト テーブルに 1,097 個の行が追加されます。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]**をクリックします。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 2: SSIS でのループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  

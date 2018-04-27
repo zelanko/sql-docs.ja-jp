@@ -1,30 +1,30 @@
 ---
-title: "手順 3 : エラー フロー リダイレクトの追加 | Microsoft Docs"
-ms.custom: 
+title: '手順 3 : エラー フロー リダイレクトの追加 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e4e6e431132c3c6e5c8edc698711e7b24b87f6d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>レッスン 4-3 - エラー フロー リダイレクションの追加
 前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
@@ -39,27 +39,27 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   
-1.  **[SSIS ツールボックス]**で **[共通]**を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
+1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
   
-2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]**をクリックし、 **[OK]**をクリックします。  
+2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]** をクリックし、 **[OK]** をクリックします。  
   
 3.  **[Lookup Currency Key]** 変換をクリックします。赤色の矢印を、新しく追加した **[スクリプト]** 変換までドラッグして、これら 2 つのコンポーネントを接続します。  
   
     赤い矢印は、 **[Lookup Currency Key]** 変換のエラー出力を表します。 赤い矢印を使用して変換をスクリプト コンポーネントに接続すると、エラー処理をスクリプト コンポーネントにリダイレクトできます。スクリプト コンポーネントではエラーが処理され、変換先に送信されます。  
   
-4.  **[エラー出力の構成]** ダイアログ ボックスの **[エラー]** 列で、 **[行のリダイレクト]**を選択し、 **[OK]**をクリックします。  
+4.  **[エラー出力の構成]** ダイアログ ボックスの **[エラー]** 列で、 **[行のリダイレクト]** を選択し、 **[OK]** をクリックします。  
   
-5.  **[データ フロー]** デザイン画面で、新しく追加した **[スクリプト コンポーネント]** で **[スクリプト コンポーネント]**をクリックし、名前を「 **Get Error Description**」に変更します。  
+5.  **[データ フロー]** デザイン画面で、新しく追加した **[スクリプト コンポーネント]** で **[スクリプト コンポーネント]** をクリックし、名前を「 **Get Error Description**」に変更します。  
   
 6.  **[Get Error Description]** 変換をダブルクリックします。  
   
 7.  **[スクリプト変換エディター]** ダイアログ ボックスの **[入力列]** ページで、 **[ErrorCode]** 列を選択します。  
   
-8.  **[入力および出力]** ページで **[出力 0]**を展開し、 **[出力列]**をクリックして、 **[列の追加]**をクリックします。  
+8.  **[入力および出力]** ページで **[出力 0]** を展開し、 **[出力列]** をクリックして、 **[列の追加]** をクリックします。  
   
-9. **Name** プロパティで「 **ErrorDescription** 」と入力し、 **DataType** プロパティを **[Unicode 文字列 [DT_WSTR]]**に設定します。  
+9. **Name** プロパティで「 **ErrorDescription** 」と入力し、 **DataType** プロパティを **[Unicode 文字列 [DT_WSTR]]** に設定します。  
   
-10. **[スクリプト]** ページで、 **LocaleID** プロパティが **[英語 (米国)]**に設定されていることを確認します。  
+10. **[スクリプト]** ページで、 **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 11. **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 **Input0_ProcessInputRow** メソッドに、次のコードを入力するか貼り付けます。  
   

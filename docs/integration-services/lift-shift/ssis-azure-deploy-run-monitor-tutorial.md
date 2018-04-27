@@ -1,24 +1,24 @@
 ---
-title: "Azure で SSIS パッケージを配置、実行、および監視する | Microsoft Docs"
+title: Azure で SSIS パッケージを配置、実行、および監視する | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 2097595a90a44be6285b48be03ac9229749dd419
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Azure で SSIS パッケージを配置、実行、および監視する
 このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
@@ -170,7 +170,7 @@ Write-Host "All done."
 
 2. 右クリックして **[実行]** を選択し、**[パッケージの実行]** ダイアログ ボックスを開きます。
 
-3.  **[パッケージの実行]** ダイアログ ボックスで、**[パラメーター]**タブ、**[接続マネージャー]** タブ、**[詳細設定]** タブの設定を使用して、パッケージの実行を構成します。
+3.  **[パッケージの実行]** ダイアログ ボックスで、**[パラメーター]** タブ、**[接続マネージャー]** タブ、**[詳細設定]** タブの設定を使用して、パッケージの実行を構成します。
 
 4.  **[OK]** を選択してパッケージを実行します。
 

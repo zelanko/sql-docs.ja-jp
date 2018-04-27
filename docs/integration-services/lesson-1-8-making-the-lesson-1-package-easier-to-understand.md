@@ -1,30 +1,30 @@
 ---
-title: "手順 8: レッスン 1 のパッケージをわかりやすくする作業 | Microsoft Docs"
-ms.custom: 
+title: '手順 8: レッスン 1 のパッケージをわかりやすくする作業 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8a576339c4365a266439c4d70cf64ba49670204
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ac3e941c9b0b9e188729407c5edd9e628122e39b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>レッスン 1-8 - レッスン 1 のパッケージをわかりやすくする作業
 ここまでの作業で、レッスン 1 のパッケージの構成が完了しました。次は、パッケージのレイアウトを整理することをお勧めします。 制御フローやデータ フローのレイアウトの図形サイズがまちまちであったり、図形の整列やグループ化が行われていないと、パッケージの機能がわかりにくくなることがあります。  
@@ -43,13 +43,13 @@ ms.lasthandoff: 01/25/2018
   
 3.  Extract Sample Currency 変換の右上隅にカーソルを合わせ、クリックしてすべてのデータ フロー コンポーネントを囲むようにドラッグします。  
   
-4.  **[書式]** メニューの **[同じサイズに揃える]**をポイントし、 **[両方]**をクリックします。  
+4.  **[書式]** メニューの **[同じサイズに揃える]** をポイントし、 **[両方]** をクリックします。  
   
-5.  データ フロー オブジェクトが選択されている状態で、 **[書式]** メニューの **[整列]**をポイントし、 **[左]**をクリックします。  
+5.  データ フロー オブジェクトが選択されている状態で、 **[書式]** メニューの **[整列]** をポイントし、 **[左]** をクリックします。  
   
 ### <a name="to-add-an-annotation-to-the-data-flow"></a>データ フローに注釈を追加するには  
   
-1.  データ フローのデザイン画面の背景で任意の場所を右クリックし、 **[注釈の追加]**をクリックします。  
+1.  データ フローのデザイン画面の背景で任意の場所を右クリックし、 **[注釈の追加]** をクリックします。  
   
 2.  注釈ボックスに、次のテキストを入力するか、コピーして貼り付けます。  
   

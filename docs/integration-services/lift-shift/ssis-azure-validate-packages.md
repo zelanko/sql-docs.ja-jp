@@ -1,22 +1,23 @@
 ---
-title: "Azure にデプロイされた SSIS パッケージの検証 | Microsoft Docs"
+title: Azure にデプロイされた SSIS パッケージの検証 | Microsoft Docs
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Azure にデプロイされた SSIS パッケージの検証
 SQL Server Integration Services (SSIS) プロジェクトを Azure サーバーの SSIS カタログ データベース (SSISDB) にデプロイすると、パッケージの配置ウィザードにより、**[確認]** ページの後に検証手順が追加されます。 この検証手順では、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 その後、**[検証]** ページに該当する警告が表示されます。
@@ -42,7 +43,7 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 | Ado                | ✓        |           |     | ✓         | ✓                 |
 | AdoNet             | ✓        |           |     | ✓         | ✓                 |
 | Cache              |          | ✓         | ✓   |           |                   |
-| Excel              |          | ✓         | ✓   |           |                   |
+| [エクスポート]              |          | ✓         | ✓   |           |                   |
 | ファイル               |          | ✓         | ✓   |           |                   |
 | FlatFile           |          | ✓         | ✓   |           |                   |
 | Ftp                |          |           |     | ✓         |                   |

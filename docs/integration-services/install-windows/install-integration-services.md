@@ -1,16 +1,16 @@
 ---
-title: "Integration Services のインストール | Microsoft Docs"
-ms.custom: 
+title: Integration Services のインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 02/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, installing
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-caps.latest.revision: 
+caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4a33adf33a12279d956ebdc3c5b2e5090e19935a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d985fc44d5fcb3ed6fd50e37e501bc140c964b16
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 セットアップによって、他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントと共にまたは単独で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を 1 台のコンピューターにインストールできます。    
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/09/2018
      
 セットアップ ウィザードを使って [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする場合は、一連のページを使ってコンポーネントとオプションを指定します。
 
--   **[機能の選択]** ページの **[共有機能] **で** [Integration Services]** を選びます。
+-   **[機能の選択]** ページの **[共有機能]**で**[Integration Services]** を選びます。
 
 -   SSIS パッケージを格納、管理、実行、監視するために SSIS カタログ データベース `SSISDB` をホストするには、**[インスタンス機能]** で必要に応じて **[データベース エンジン サービス]** を選びます。
 

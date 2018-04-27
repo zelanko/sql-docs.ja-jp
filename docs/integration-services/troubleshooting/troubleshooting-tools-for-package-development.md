@@ -1,16 +1,16 @@
 ---
-title: "パッケージ開発のトラブルシューティング ツール | Microsoft Docs"
-ms.custom: 
+title: パッケージ開発のトラブルシューティング ツール | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: 
+caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c47c0b46d9b171c2bf75e11e9e854ed91c68836
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b3e6d21fd410b94b8dde984faed82064be790956
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
@@ -36,11 +36,11 @@ ms.lasthandoff: 01/25/2018
 ## <a name="troubleshooting-design-time-validation-issues"></a>デザイン時検証問題のトラブルシューティング  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の現在のリリースでは、パッケージが開かれるときに、システムは、すべてのデータ フロー コンポーネントを検証する前にすべての接続を検証し、低速または使用不能の接続を、オフラインで動作するように設定します。 これにより、パッケージのデータ フローを検証するときの遅延を減らすことができます。  
   
- パッケージを開いた後でも、 **[接続マネージャー]** 領域の接続マネージャーを右クリックして **[オフライン作業]**をクリックすることにより、接続をオフにできます。 これにより SSIS デザイナーの動作を速くできます。  
+ パッケージを開いた後でも、 **[接続マネージャー]** 領域の接続マネージャーを右クリックして **[オフライン作業]** をクリックすることにより、接続をオフにできます。 これにより SSIS デザイナーの動作を速くできます。  
   
  オフラインで動作するように設定された接続は、次のいずれかを行うまでオフラインのままになります。  
   
--   SSIS デザイナーの **[接続マネージャー]** 領域で接続マネージャーを右クリックして **[接続のテスト]**をクリックすることにより、接続をテストします。  
+-   SSIS デザイナーの **[接続マネージャー]** 領域で接続マネージャーを右クリックして **[接続のテスト]** をクリックすることにより、接続をテストします。  
   
      たとえば、パッケージが開かれるとき、オフラインで動作するように接続が初期設定されます。 接続文字列を変更して問題を解決し、 **[接続のテスト]** をクリックして接続をテストします。  
   

@@ -2,7 +2,7 @@
 title: ジョブのスケジュール設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a729584bf6803b3a1f164ce7528a0e8b1abe2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0859b90b2f47d4446845eef34a6b81b80121349
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**、 **[ジョブ]**の順に展開し、スケジュールを設定するジョブを右クリックします。次に、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、スケジュールを設定するジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
-3.  **[スケジュール]** ページをクリックし、 **[新規作成]**をクリックします。  
+3.  **[スケジュール]** ページをクリックし、 **[新規作成]** をクリックします。  
   
 4.  **[名前]** ボックスに新しいスケジュールの名前を入力します。  
   
 5.  スケジュールを作成してもすぐに有効にしない場合は、 **[有効]** チェック ボックスをオフにします。  
   
-6.  **[スケジュールの種類]**ボックスの一覧で、次のいずれかを選択します。  
+6.  **[スケジュールの種類]** ボックスの一覧で、次のいずれかを選択します。  
   
     -   **[SQL Server エージェントの開始時に自動的に開始]** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスが開始されたときにジョブを開始します。  
   
@@ -82,17 +82,17 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**、 **[ジョブ]**の順に展開し、スケジュールを設定するジョブを右クリックして、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、スケジュールを設定するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  **[スケジュール]** ページをクリックし、 **[選択]**をクリックします。  
+3.  **[スケジュール]** ページをクリックし、 **[選択]** をクリックします。  
   
-4.  アタッチするスケジュールを選択して、 **[OK]**をクリックします。  
+4.  アタッチするスケジュールを選択して、 **[OK]** をクリックします。  
   
 5.  **[ジョブのプロパティ]** ダイアログ ボックスで、アタッチされたスケジュールをダブルクリックします。  
   
-6.  **[開始日]** が正しく設定されていることを確認します。 正しく設定されていない場合は、スケジュールの開始日を設定し、 **[OK]**をクリックします。  
+6.  **[開始日]** が正しく設定されていることを確認します。 正しく設定されていない場合は、スケジュールの開始日を設定し、 **[OK]** をクリックします。  
   
-7.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+7.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ## <a name="TSQL"></a>Transact-SQL の使用  
   
@@ -100,9 +100,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE msdb ;  

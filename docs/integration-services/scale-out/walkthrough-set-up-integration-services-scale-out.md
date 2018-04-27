@@ -1,28 +1,28 @@
 ---
-title: "チュートリアル: SQL Server Integration Services Scale Out をセットアップする | Microsoft Docs"
+title: 'チュートリアル: SQL Server Integration Services Scale Out をセットアップする | Microsoft Docs'
 ms.description: This article walks you through the setup and configuration of SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8abf2424f8bb1c9c8fb2e04d649e385dd30a024
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fc1308eded686ab6b86a38b3bc700c7d101c8970
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル: SQL Server Integration Services (SSIS) Scale Out をセットアップする
 以下のタスクを実行して、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out をセットアップします。 
@@ -62,7 +62,7 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
   
     ![Master 機能の選択](media/feature-select-master.PNG)
   
-2.  **[サーバーの構成]** ページで、 **[SQL Server Integration Services Scale Out Master service]** (SQL Server Integration Services Scale Out Master サービス) を実行するアカウントを選び、 **[スタートアップの種類]**を選びます。  
+2.  **[サーバーの構成]** ページで、 **[SQL Server Integration Services Scale Out Master service]** (SQL Server Integration Services Scale Out Master サービス) を実行するアカウントを選び、 **[スタートアップの種類]** を選びます。  
     ![サーバーの構成](media/server-config.PNG)
 
 3.  **[Integration Services Scale Out Master Configuration]** (Integration Services Scale Out Master の構成) ページで、Scale Out Master が Scale Out Worker との通信に使うポート番号を指定します。 既定のポート番号は 8391 です。  
@@ -106,7 +106,7 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
 
     ![Worker 機能の選択](media/feature-select-worker.PNG)
 
-2.  **[サーバーの構成]** ページで、 **[SQL Server Integration Services Scale Out Worker service]** (SQL Server Integration Services Scale Out Worker サービス) を実行するアカウントを選び、 **[スタートアップの種類]**を選びます。
+2.  **[サーバーの構成]** ページで、 **[SQL Server Integration Services Scale Out Worker service]** (SQL Server Integration Services Scale Out Worker サービス) を実行するアカウントを選び、 **[スタートアップの種類]** を選びます。
 
     ![サーバーの構成 2](media/server-config-2.PNG "サーバーの構成 2")
 

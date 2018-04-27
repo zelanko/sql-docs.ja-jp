@@ -1,16 +1,16 @@
 ---
-title: "パフォーマンス カウンター | Microsoft Docs"
-ms.custom: 
+title: パフォーマンス カウンター | Microsoft Docs
+ms.custom: ''
 ms.date: 08/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logs [Integration Services], performance counters
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a94529428cccaa61e3e36b028770ac53113a4f98
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 051ace059f36a831bd1c0b52f1b710a7956a0591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-counters"></a>パフォーマンス カウンター
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、データ フロー エンジンのパフォーマンスを監視するために使用できるパフォーマンス カウンターのセットがインストールされます。 たとえば、"Buffers spooled" カウンターを調べると、パッケージの実行中にデータ バッファーがディスクに一時的に書き込まれているかどうかを判断できます。 このスワップは、パフォーマンスを低下させると共に、コンピューターのメモリが不足していることを示しています。  
@@ -90,15 +90,15 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ### <a name="to-add-logging-of-performance-counters"></a>パフォーマンス カウンターのログを追加するには  
   
-1.  **[コントロール パネル]**で、クラシック表示を使用している場合は **[管理ツール]**をクリックします。 カテゴリ表示を使用している場合は、 **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]**をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]** をクリックします。 カテゴリ表示を使用している場合は、 **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
-2.  **[パフォーマンス]**をクリックします。  
+2.  **[パフォーマンス]** をクリックします。  
   
-3.  **[パフォーマンス]** ダイアログ ボックスで、 **[パフォーマンス ログと警告]**を展開して、 **[カウンター ログ]**を右クリックし、 **[新しいログの設定]**をクリックします。 ログの名前を入力します。 たとえば、「 **MyLog**」のように入力します。  
+3.  **[パフォーマンス]** ダイアログ ボックスで、 **[パフォーマンス ログと警告]** を展開して、 **[カウンター ログ]** を右クリックし、 **[新しいログの設定]** をクリックします。 ログの名前を入力します。 たとえば、「 **MyLog**」のように入力します。  
   
 4.  **[OK]** をクリックします。  
   
-5.  **[MyLog]** ダイアログ ボックスで、 **[カウンターの追加]**をクリックします。  
+5.  **[MyLog]** ダイアログ ボックスで、 **[カウンターの追加]** をクリックします。  
   
 6.  ローカル コンピューターのパフォーマンス カウンターを記録するには、 **[ローカル コンピューターのカウンターを使う]** をオンにします。指定したコンピューターのパフォーマンス カウンターを記録するには、 **[次のコンピューターからカウンターを選ぶ]** をオンにし、一覧からコンピューターを選択します。  
   
@@ -110,9 +110,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
     -   **[一覧からカウンターを選ぶ]** をオンにし、使用するパフォーマンス カウンターを選択します。  
   
-9. **[追加]**をクリックします。  
+9. **[追加]** をクリックします。  
   
-10. **[閉じる]**をクリックします。  
+10. **[閉じる]** をクリックします。  
   
 11. **[MyLog]** ダイアログ ボックスの **[カウンター]** 一覧で、ログ パフォーマンス カウンターの一覧を確認します。  
   

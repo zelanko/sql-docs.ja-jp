@@ -2,7 +2,7 @@
 title: ソリューションへの既存のプロジェクトの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-solutions
@@ -24,22 +24,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad071db3d2a369abe5dc9161e91b837369a475f9
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 35fa29319d738a97cc4e136ed3b5afeb8a73b330
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>ソリューションへの既存のプロジェクトの追加
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 1 つ以上のプロジェクトを既存のソリューションに追加できます。 1 つのプロジェクトは複数のソリューションに関連付けることができます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+1 つ以上のプロジェクトを既存のソリューションに追加できます。 1 つのプロジェクトは複数のソリューションに関連付けることができます。  
   
 ### <a name="to-add-an-existing-project-to-a-solution"></a>既存のプロジェクトをソリューションに追加するには  
   
 1.  ソリューション エクスプローラーで、ソリューションを選択します。  
   
-2.  **[ファイル]** メニューの **[追加]**をポイントし、 **[既存のプロジェクト]**をクリックします。  
+2.  **[ファイル]** メニューの **[追加]** をポイントし、 **[既存のプロジェクト]** をクリックします。  
   
-3.  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを探してプロジェクト ファイルを選択し、 **[開く]**をクリックします。  
+3.  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを探してプロジェクト ファイルを選択し、 **[開く]** をクリックします。  
   
     選択したソリューションにプロジェクトが追加されます。  
   

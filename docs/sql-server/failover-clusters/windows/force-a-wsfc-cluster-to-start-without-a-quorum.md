@@ -2,7 +2,7 @@
 title: クォーラムを使用せずに WSFC クラスターを強制的に起動する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a63f46adf399e2a96d7b6f03a1fefeff6ba55a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1dc0a48eda49aaa40b9e40339975bb8f1c1f21f3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +51,17 @@ ms.lasthandoff: 04/16/2018
   
 1.  フェールオーバー クラスター マネージャーを開き、強制的にオンラインにする目的のクラスター ノードに接続します。  
   
-2.  **[アクション]** ペインで、 **[クラスターの強制起動]**をクリックし、 **[はい – クラスターを強制起動します]**をクリックします。  
+2.  **[アクション]** ペインで、 **[クラスターの強制起動]** をクリックし、 **[はい – クラスターを強制起動します]** をクリックします。  
   
 3.  左ペインにある **[フェールオーバー クラスター マネージャー]** ツリーで、クラスター名をクリックします。  
   
-4.  概要ペインで、 **[クォーラムの構成]** の現在の値が  **[警告: クラスターは ForceQuorum 状態で実行中です]**であることを確認します。  
+4.  概要ペインで、 **[クォーラムの構成]** の現在の値が  **[警告: クラスターは ForceQuorum 状態で実行中です]** であることを確認します。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
-1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
+1.  **[実行管理者として実行]** から高度な権限で Windows PowerShell を起動します。  
   
 2.  `FailoverClusters` モジュールをインポートしてクラスター コマンドレットを有効にします。  
   
@@ -96,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 1.  リモート デスクトップを使用して、強制的にオンラインにする目的のクラスター ノードに接続します。  
   
-2.  **[実行管理者として実行]**から高度な権限でコマンド プロンプトを起動します。  
+2.  **[実行管理者として実行]** から高度な権限でコマンド プロンプトを起動します。  
   
 3.  **net.exe** を使用して、ローカルのクラスター サービスが停止していることを確認します。  
   

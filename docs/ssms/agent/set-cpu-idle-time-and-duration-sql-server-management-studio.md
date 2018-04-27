@@ -2,7 +2,7 @@
 title: CPU のアイドル時間と期間の設定 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ee3aad02c461a06dc36d8eaf4cf53b388c674f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 81fdb194bd1b4e317e744274f584e86be6d978d4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>CPU のアイドル時間と期間の設定 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**を右クリックし、 **[プロパティ]**をクリックして、 **[詳細設定]** ページをクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックして、 **[詳細設定]** ページをクリックします。  
   
-3.  **[CPU のアイドル状態]**で、次の操作を行います。  
+3.  **[CPU のアイドル状態]** で、次の操作を行います。  
   
-    -   **[CPU のアイドル状態を定義する]**チェック ボックスをオンにします。  
+    -   **[CPU のアイドル状態を定義する]** チェック ボックスをオンにします。  
   
     -   **[CPU の平均使用量が次の値以下になったとき]** ボックスで、比率を指定します (全 CPU 共通)。 これにより、CPU がその値を下回ったときにアイドル状態と見なす使用率が設定されます。  
   

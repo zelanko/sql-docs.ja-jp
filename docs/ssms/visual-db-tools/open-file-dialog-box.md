@@ -1,35 +1,37 @@
 ---
-title: "[ファイルを開く] ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[ファイルを開く] ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 64e6cada38ed4c4c91579ca372f298d0ee0f28fc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
   
-このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]**をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]**を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
+このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]** をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]** を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]でプロジェクトやコンポーネントを開く前に、コードが信頼できるものかどうかを確認してください。 プロジェクトまたはコンポーネントを [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] で開くと、それらのコードがローカル コンピューター上で信頼されたプロセスとして実行される場合があります。  
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/17/2018
 このオプションを使用すると、[探す場所] で選択されているフォルダーまたはディレクトリの内容をフィルター選択して、特定の種類のファイルを表示できます。  
   
 **エンコードを指定して開く**  
-**[ファイルを開くアプリケーションの選択]** ダイアログ ボックスを使用して対象ファイルのエディターを指定するには、 **[開く]** ボタンの右側にある小さな四角形をクリックし、 **[ファイルを開くアプリケーションの選択]**を選択します。 必要であれば、言語エンコード方式を指定して、選択したファイルを開くときに適用することもできます。 この操作を行うには、一覧で "**エンコード付き**" が示されているプログラムをクリックし、 **[開く]** をクリックして、 **[エンコード]**ダイアログ ボックスを表示します。 このボタンは、使用できない場合があります。  
+**[ファイルを開くアプリケーションの選択]** ダイアログ ボックスを使用して対象ファイルのエディターを指定するには、 **[開く]** ボタンの右側にある小さな四角形をクリックし、 **[ファイルを開くアプリケーションの選択]** を選択します。 必要であれば、言語エンコード方式を指定して、選択したファイルを開くときに適用することもできます。 この操作を行うには、一覧で "**エンコード付き**" が示されているプログラムをクリックし、 **[開く]** をクリックして、 **[エンコード]** ダイアログ ボックスを表示します。 このボタンは、使用できない場合があります。  
   
 ## <a name="toolbar"></a>[ツール バー]  
 **最近参照した場所**  

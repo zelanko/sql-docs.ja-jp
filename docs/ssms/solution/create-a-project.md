@@ -2,7 +2,7 @@
 title: プロジェクトを作成する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-solutions
@@ -23,20 +23,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767341628dec4f192235954aaa4eeb6ece681615
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d8d5a619b0c25cee830d3ca3934d07898d30dcee
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 既存のソリューション内に、1 つ以上のプロジェクトを作成できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+既存のソリューション内に、1 つ以上のプロジェクトを作成できます。  
   
 ### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>新しいプロジェクトを作成してソリューションに追加するには  
   
 1.  ソリューション エクスプローラーで、ソリューションを選択します。  
   
-2.  **[ファイル]** メニューの **[追加]**をポイントし、 **[新しいプロジェクト]**をクリックします。  
+2.  **[ファイル]** メニューの **[追加]** をポイントし、 **[新しいプロジェクト]** をクリックします。  
   
 3.  **[新しいプロジェクト]** ダイアログ ボックスで、プロジェクトの種類をクリックします。  
   
@@ -97,11 +98,11 @@ ms.lasthandoff: 01/17/2018
     **注** このオプションを使用するには、 **[ソリューション]** の **[新しいソリューションを作成する]** を選択し、 **[ソリューションのディレクトリを作成]** チェック ボックスをオンにする必要があります。 Web アプリケーションなど、一部のプロジェクト テンプレートでは、このオプションはサポートされません。  
   
     **[ソース管理に追加]**  
-    このチェック ボックスをオンにすると、 **[OK]**をクリックしたときにソース管理アプリケーションが開きます。 ソース管理アプリケーションにより求められる情報をすべて入力します。 このオプションを使用するには、ソース管理クライアント アプリケーションをインストールしておく必要があります。  
+    このチェック ボックスをオンにすると、 **[OK]** をクリックしたときにソース管理アプリケーションが開きます。 ソース管理アプリケーションにより求められる情報をすべて入力します。 このオプションを使用するには、ソース管理クライアント アプリケーションをインストールしておく必要があります。  
   
 4.  **[OK]** をクリックします。  
   
-スクリプト プロジェクトの名前は設定できますが、フォルダー名は [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] によって設定され、変更できません。 **[新しいプロジェクトの追加]** ダイアログ ボックスを使用すると、共通のフォルダーのセットを示すドライブとパスを指定できます。 **ソリューション エクスプローラー**でソリューション アイコンを右クリックし、 **[追加]**をクリックします。 スクリプト プロジェクト フォルダーの既定の場所は、C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\です。  
+スクリプト プロジェクトの名前は設定できますが、フォルダー名は [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] によって設定され、変更できません。 **[新しいプロジェクトの追加]** ダイアログ ボックスを使用すると、共通のフォルダーのセットを示すドライブとパスを指定できます。 **ソリューション エクスプローラー**でソリューション アイコンを右クリックし、 **[追加]** をクリックします。 スクリプト プロジェクト フォルダーの既定の場所は、C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\です。  
   
 ## <a name="see-also"></a>参照  
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  

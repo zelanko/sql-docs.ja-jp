@@ -1,32 +1,32 @@
 ---
-title: "Integration Services サービスによってログに記録されるイベント | Microsoft Docs"
-ms.custom: 
+title: Integration Services サービスによってログに記録されるイベント | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - service [Integration Services], events
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ba7f6ab3bda7bfc40acffc54fa56131ba53514b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8e250e2b73768c72f8d01f08f7737ab97e63d01f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、各種のメッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、サービスの起動時、サービスの停止時、および特定の問題の発生時にログに記録されます。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="view-events"></a>イベントの表示
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのイベントを表示できるツールには、次の 2 つがあります。  
   
--   **の** [ログ ファイルの表示] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックス。 **[ログ ファイルの表示]** ダイアログ ボックスには、ログのエクスポート、フィルター、および検索を行うオプションがあります。 **[ログ ファイルの表示]**のオプションの詳細については、「 [[ログ ファイルの表示] の F1 ヘルプ](../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
+-   **の** [ログ ファイルの表示] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックス。 **[ログ ファイルの表示]** ダイアログ ボックスには、ログのエクスポート、フィルター、および検索を行うオプションがあります。 **[ログ ファイルの表示]** のオプションの詳細については、「 [[ログ ファイルの表示] の F1 ヘルプ](../../relational-databases/logs/log-file-viewer-f1-help.md)」を参照してください。  
   
 -   Windows イベント ビューアー。  
   
@@ -74,23 +74,23 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]**をクリックします。  
+2.  **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]** をクリックします。  
   
-3.  **[サーバーへの接続]** ダイアログ ボックスで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のサーバーの種類を選択し、接続するサーバー名を選択または参照して、 **[接続]**をクリックします。  
+3.  **[サーバーへの接続]** ダイアログ ボックスで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のサーバーの種類を選択し、接続するサーバー名を選択または参照して、 **[接続]** をクリックします。  
   
-4.  オブジェクト エクスプローラーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を右クリックして、 **[ログの表示]**をクリックします。  
+4.  オブジェクト エクスプローラーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を右クリックして、 **[ログの表示]** をクリックします。  
   
-5.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のイベントを表示するには、 **[SQL Server Integration Services]**を選択します。 **[NT イベント]** オプションは、 **[SQL Server Integration Services]** オプションに応じて、自動的に選択または選択解除されます。  
+5.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のイベントを表示するには、 **[SQL Server Integration Services]** を選択します。 **[NT イベント]** オプションは、 **[SQL Server Integration Services]** オプションに応じて、自動的に選択または選択解除されます。  
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Windows イベント ビューアーで Integration Services のサービス イベントを表示するには  
   
-1.  **[コントロール パネル]**で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]**をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
-2.  **[イベント ビューアー]**をクリックします。  
+2.  **[イベント ビューアー]** をクリックします。  
   
-3.  **[イベント ビューアー]** ダイアログ ボックスで、 **[アプリケーション]**をクリックします。  
+3.  **[イベント ビューアー]** ダイアログ ボックスで、 **[アプリケーション]** をクリックします。  
   
-4.  **[アプリケーション]** スナップインから **[ソース]** 列の値が **[SQLISService]**のエントリを探して右クリックし、 **[プロパティ]**をクリックします。  
+4.  **[アプリケーション]** スナップインから **[ソース]** 列の値が **[SQLISService]** のエントリを探して右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  必要に応じて、上矢印または下矢印をクリックして、前後のイベントを表示します。  
   

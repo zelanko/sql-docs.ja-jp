@@ -1,15 +1,16 @@
 ---
-title: "オブジェクト エクスプローラー | Microsoft Docs"
-ms.custom: 
+title: オブジェクト エクスプローラー | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.objectexplorer.scriptingoptions
@@ -28,20 +29,20 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d308da274b3dc178dc9ed5f93122057005579920
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 643300ca04dcdadf03f5028a5ce2ce54a6336f75
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、[!INCLUDE[ssDE](../../includes/ssde_md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] のインスタンス内のオブジェクトを管理するための機能が備わっています。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
   
 ## <a name="benefits-of-object-explorer"></a>オブジェクト エクスプローラーの利点  
 オブジェクト エクスプローラーは、SQL Server の各インスタンスのオブジェクトを表示し、管理するための階層形式のユーザー インターフェイスを備えています。 [オブジェクト エクスプローラーの詳細] ペインには、インスタンス オブジェクトの表形式のビューと、特定のオブジェクトを検索する機能が用意されています。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  

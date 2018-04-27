@@ -1,23 +1,24 @@
 ---
-title: "SSMS で SSIS プロジェクトを配置する | Microsoft Docs"
+title: SSMS で SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 151089d319a1106f81426beee4aa2989bc72b978
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c13783a7bbd5a23c2329151932f4438255babb9b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
 このクイック スタートでは、SQL Server Management Studio (SSMS) を使って、SSIS カタログ データベースに接続した後、Integration Services 配置ウィザードを実行して SSIS カタログに SSIS プロジェクトを配置する方法を説明します。 
@@ -47,7 +48,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
-3. **[接続]**をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
+3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
 4. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
@@ -72,7 +73,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     **[次へ]** をクリックして **[レビュー]** ページを開きます。  
   
 4.  **[レビュー]** ページで、選択した設定を確認します。
-    -   選択内容を変更するには、 **[戻る]**をクリックするか、左ペインでいずれかの手順をクリックします。
+    -   選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。
     -   **[配置]** をクリックして、配置プロセスを開始します。
   
 5.  配置プロセスが完了すると、**[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。

@@ -1,23 +1,24 @@
 ---
-title: ".NET コード (C#) を使用して SSIS プロジェクトを配置する | Microsoft Docs"
+title: .NET コード (C#) を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d3971add40fcd60bdce9e9dc7c3f3d02b99fbf0f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET アプリで C# コードを使用して SSIS プロジェクトを配置する
 このクイック スタート チュートリアルでは、データベース サーバーに接続し、SSIS プロジェクトを配置する C# コードの記述方法を示します。

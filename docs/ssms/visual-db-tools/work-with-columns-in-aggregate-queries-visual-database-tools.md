@@ -1,15 +1,16 @@
 ---
-title: "集計クエリにおける列の使用 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 集計クエリにおける列の使用 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - aggregate queries [SQL Server]
 - WHERE clause, query summary results
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0baf031eb2757f9df899c871f983e231b3f96e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 87611561dda34af615da24a7879d6390916d06cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>集計クエリにおける列の使用 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 集計クエリを作成する場合、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+集計クエリを作成する場合、 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  
   
 ## <a name="using-group-by"></a>GROUP BY の使用  
 クエリおよびビュー デザイナーは、次のガイドラインに従って列を処理します。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
   
 -   既に集計クエリを指定していて、 **[グループ化]** 列の **[Where]** オプションを選択している場合、検索条件は WHERE 句に配置されます。  
   
--   **[グループ化]** 列に **[Where]**以外の値が指定されている場合、検索条件は HAVING 句に配置されます。  
+-   **[グループ化]** 列に **[Where]** 以外の値が指定されている場合、検索条件は HAVING 句に配置されます。  
   
 ## <a name="using-the-having-and-where-clauses"></a>HAVING 句と WHERE 句の使用  
 次の原則は、検索条件で集計クエリの列を参照する方法を説明したものです。 通常、検索条件に列を使用すると、集約する行をフィルターで選択したり (WHERE 句)、最終出力に表示されるグループ化の結果を決定したり (HAVING 句) できます。  

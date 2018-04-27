@@ -1,15 +1,16 @@
 ---
-title: "クエリおよびビュー デザイナーでの移動 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: クエリおよびビュー デザイナーでの移動 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, navigating
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], navigating
 - keyboard shortcuts [Visual Database Tools]
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9336d8387ac7ff764821eee47405203672a31fe
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 597f6b5bc6291aae9079587ac402116f23613e17
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリおよびビュー デザイナー内では、キーボードまたはマウスを使用して作業できます。 具体的な方法については、次の表を参照してください。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリおよびビュー デザイナー内では、キーボードまたはマウスを使用して作業できます。 具体的な方法については、次の表を参照してください。  
   
 ## <a name="any-pane"></a>すべてのペイン  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/17/2018
 |テーブルまたはテーブル構造オブジェクト内の列間で移動する|方向キー|移動先の列|  
 |出力するデータ列を選択する|Space または +|列の名前の横にあるチェック ボックス|  
 |選択したデータ列をクエリ出力から削除する|Space または -|列の名前の横にあるチェック ボックス|  
-|選択したテーブル、テーブル構造オブジェクト、または結合線をクエリから削除する|Del|右クリックしてから **[削除]**をクリック|  
+|選択したテーブル、テーブル構造オブジェクト、または結合線をクエリから削除する|Del|右クリックしてから **[削除]** をクリック|  
   
 > [!NOTE]  
 > 複数の項目を選択している場合は、このキーを押すと、選択されているすべての項目が影響を受けます。 複数の項目を選択するには、Ctrl キーを押しながら各項目をクリックします。  
@@ -83,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 詳細については、「[抽出条件ペイン (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)」を参照してください。  
   
 ## <a name="sql-pane"></a>SQL ペイン  
-SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]**メニューの **[切り取り]**、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
+SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]**、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
   
 > [!NOTE]  
 > テキストの挿入だけができます。上書きモードはありません。  

@@ -2,7 +2,7 @@
 title: Windows アプリケーション ログへのジョブ状態の書き込み | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18b8c63c3afb5fb0ed4a8ad571c90351a22afdef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52c18177b568b73ec0508ab13c3b4f589d618c33
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,15 +70,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**を展開し、 **[ジョブ]**を展開します。次に、編集するジョブを右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、編集するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[通知]** ページをクリックします。  
   
-4.  **[Windows アプリケーション イベント ログに書き込む]**チェック ボックスをオンにし、次のいずれかを選択します。  
+4.  **[Windows アプリケーション イベント ログに書き込む]** チェック ボックスをオンにし、次のいずれかを選択します。  
   
-    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ成功時]**をクリックします。  
+    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ成功時]** をクリックします。  
   
-    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ失敗時]**をクリックします。  
+    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ失敗時]** をクリックします。  
   
     -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ完了時]** をクリックします。  
   

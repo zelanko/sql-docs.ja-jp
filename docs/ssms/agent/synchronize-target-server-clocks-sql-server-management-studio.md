@@ -2,7 +2,7 @@
 title: 対象サーバーのクロックの同期 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5ebfedbe00269a761237e01bc1d42caf4fa3ae25
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60eba85e19307635615d69d09a4a47ac95073348
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー** で、対象サーバーのクロックとマスター サーバーのクロックの同期をとるサーバーをプラス記号をクリックして展開します。  
   
-2.  **[SQL Server エージェント]**を右クリックし、 **[マルチ サーバーの管理]**をポイントして、 **[対象サーバーの管理]**を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** を選択します。  
   
-3.  **[対象サーバーの管理]** ダイアログ ボックスで **[命令を通知]**をクリックします。  
+3.  **[対象サーバーの管理]** ダイアログ ボックスで **[命令を通知]** をクリックします。  
   
-4.  **[命令の種類]** ボックスの一覧で、 **[クロックの同期]**を選択します。  
+4.  **[命令の種類]** ボックスの一覧で、 **[クロックの同期]** を選択します。  
   
-5.  **[受信者]**で、次のいずれかの操作を行います。  
+5.  **[受信者]** で、次のいずれかの操作を行います。  
   
     -   すべての対象サーバーのクロックとマスター サーバーのクロックの同期をとるには、 **[すべての対象サーバー]** をクリックします。  
   
     -   特定のサーバーのクロックと同期をとるには、 **[特定の対象サーバー]** をクリックし、マスター サーバーのクロックと同期をとる対象サーバーを選択します。  
   
-6.  完了したら、 **[OK]**をクリックします。  
+6.  完了したら、 **[OK]** をクリックします。  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   
@@ -84,9 +84,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE msdb ;  

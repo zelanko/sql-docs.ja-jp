@@ -2,7 +2,7 @@
 title: 孤立ユーザーのトラブルシューティング (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: failover-clusters
@@ -27,11 +27,11 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba2292c8b8284b78526e0cf3c72c387c793cffab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb4f53fe13290dde4949b6d225f7eecc274922b9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立ユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 > [!IMPORTANT]  
 >  ログインはそのログインのパスワードを変更できます。 `ALTER ANY LOGIN` 権限を持つログインだけが、他のユーザーのログイン パスワードを変更できます。 ただし、 **sysadmin** ロール メンバーのパスワードを変更できるのは、 **sysadmin** ロールのメンバーだけです。  
   
- 非推奨プロシージャ [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) も孤立ユーザーで機能します。 `sp_change_users_login` と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]は一緒には使用できません。  
+ 非推奨のプロシージャ [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) も孤立ユーザーで機能します。 `sp_change_users_login` と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]は一緒には使用できません。  
   
 ## <a name="see-also"></a>参照  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

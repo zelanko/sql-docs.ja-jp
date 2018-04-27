@@ -1,15 +1,16 @@
 ---
-title: "抽出条件ペイン (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 抽出条件ペイン (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d6227d55469f2b1b0688a814083336917a1c534
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e21190cc2fb1e29e8ef5ee1a5cf44e5f0ed367e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="criteria-pane-visual-database-tools"></a>抽出条件ペイン (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 抽出条件ペインでは、表示するデータ列、結果の順序、選択する行などのクエリ オプションを選択してスプレッドシート形式のグリッドに入力することにより、クエリ オプションを指定できます。 抽出条件ペインでは次の内容を指定できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+抽出条件ペインでは、表示するデータ列、結果の順序、選択する行などのクエリ オプションを選択してスプレッドシート形式のグリッドに入力することにより、クエリ オプションを指定できます。 抽出条件ペインでは次の内容を指定できます。  
   
 -   表示する列と列名のエイリアス  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
 抽出条件ペインに表示される具体的な情報は、作成中のクエリの種類によって異なります。  
   
-抽出条件ペインが表示されていない場合は、デザイナーを右クリックし、 **[ペイン]**をポイントして **[抽出条件]**をクリックします。  
+抽出条件ペインが表示されていない場合は、デザイナーを右クリックし、 **[ペイン]** をポイントして **[抽出条件]** をクリックします。  
   
 ## <a name="options"></a>および  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/17/2018
 |[出力]|選択、結果の挿入、テーブルの作成|データ列をクエリの出力に表示するかどうかを指定します。<br /><br />注: データベースが対応している場合は、データ列を結果セットに表示せずに、並べ替えや検索の句として使用できます。|  
 |[並べ替えの種類]|選択、結果の挿入|クエリ結果を並べ替えるために対応するデータ列を使用すること、および並べ替えが昇順であるか降順であるかを指定します。|  
 |[並べ替え順序]|選択、結果の挿入|結果セットの並べ替えに使用するデータ列の並べ替え優先順位を指定します。 データ列の並べ替え順序を変更すると、他のすべての列の並べ替え順序もその変更に従って更新されます。|  
-|[グループ化]|選択、結果の挿入、テーブルの作成|対応するデータ列を集計クエリの作成に使用することを指定します。 このグリッド列が表示されるのは、 **[ツール]** メニューの **[グループ化]** をクリックした場合、または SQL ペインに GROUP BY 句を追加した場合だけです。<br /><br />既定では、この列の値は **[グループ化]**に設定されていて、列は GROUP BY 句の中で使用されます。<br /><br />この列のセルに移動し、対応するデータ列に適用する集計関数を選択すると、既定では、結果として作成される式が、結果セットの出力列として追加されます。|  
+|[グループ化]|選択、結果の挿入、テーブルの作成|対応するデータ列を集計クエリの作成に使用することを指定します。 このグリッド列が表示されるのは、 **[ツール]** メニューの **[グループ化]** をクリックした場合、または SQL ペインに GROUP BY 句を追加した場合だけです。<br /><br />既定では、この列の値は **[グループ化]** に設定されていて、列は GROUP BY 句の中で使用されます。<br /><br />この列のセルに移動し、対応するデータ列に適用する集計関数を選択すると、既定では、結果として作成される式が、結果セットの出力列として追加されます。|  
 |[抽出条件]|All|対応するデータ列に対する検索条件 (フィルター) を指定します。 演算子 (既定では "=") と検索する値を入力します。 テキスト値は単一引用符で囲みます。<br /><br />対応するデータ列が GROUP BY 句の一部である場合、入力した式は HAVING 句で使用されます。<br /><br />**[抽出条件]** グリッド列の複数のセルに値を入力した場合は、結果として生成される検索条件が自動的に論理 AND で連結されます。<br /><br />1 つのデータベース列に複数の検索条件式 (たとえば (fname > 'A') AND (fname < 'M')) を指定するには、そのデータ列を抽出条件ペインに 2 回入力し、データ列の各インスタンスの **[抽出条件]** グリッド列に異なる値を入力します。|  
 |[または...]|All|データ列に追加する検索条件式を指定します。指定した式は、前の式と論理 OR で連結されます。 右端の **[または...]** 列で Tab キーを押すと、 **[または...]** グリッド列を追加できます。|  
 |追加|結果の挿入|対応するデータ列の挿入先データ列の名前を指定します。 結果の挿入クエリを作成すると、クエリおよびビュー デザイナーは、挿入元データ列を適切な挿入先データ列に照合しようとします。 一致するデータ列をクエリおよびビュー デザイナーが選択できない場合は、列の名前を指定する必要があります。|  

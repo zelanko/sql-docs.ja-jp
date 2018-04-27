@@ -2,7 +2,7 @@
 title: '[コピー元のテーブルおよびビューを選択] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d54bc394abb518238e6c00eb65e7b8121d9f2410
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>[コピー元のテーブルおよびビューを選択]\(SQL Server インポートおよびエクスポート ウィザード)
-  テーブル全体をコピーするか、クエリを入力するかを指定した後に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには **[コピー元のテーブルおよびビューを選択]**が表示されます。 このページでは、コピーする既存のテーブルとビューを選択します。 それから、新規または既存のコピー先テーブルにコピー元テーブルをマッピングします。 必要に応じて、個々の列のマッピングも確認し、サンプル データをプレビューします。
+  テーブル全体をコピーするか、クエリを入力するかを指定した後に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには **[コピー元のテーブルおよびビューを選択]** が表示されます。 このページでは、コピーする既存のテーブルとビューを選択します。 それから、新規または既存のコピー先テーブルにコピー元テーブルをマッピングします。 必要に応じて、個々の列のマッピングも確認し、サンプル データをプレビューします。
 
 > [!TIP]
 > 複数の SQL Server データベース、またはテーブルとビュー以外の SQL Server データベース オブジェクトをコピーする必要がある場合は、インポートおよびエクスポート ウィザードではなく、データベース コピー ウィザードを使います。 詳細については、「 [データベース コピー ウィザードの使用](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
@@ -81,7 +81,7 @@ Excel データ ソースの変換元テーブルとビューの一覧には、2
 -   **ワークシート**。 ワークシート名の末尾にはドル記号 ($) が付きます (例: **'Sheet1$'**)。
 -   **名前付き範囲** 名前付き範囲 (ある場合) は名前別に表示されます。
 
-特定の名前のない範囲のセル (たとえば、 **[Sheet1$A1:B4]**) との間でデータの読み込みを行う場合、クエリを記述する必要があります。 **[テーブルのコピーまたはクエリの指定]** ページに戻り、 **[転送するデータを指定するためのクエリを記述する]**を選択します。
+特定の名前のない範囲のセル (たとえば、 **[Sheet1$A1:B4]**) との間でデータの読み込みを行う場合、クエリを記述する必要があります。 **[テーブルのコピーまたはクエリの指定]** ページに戻り、 **[転送するデータを指定するためのクエリを記述する]** を選択します。
 
 ### <a name="excel-destination-tables"></a>Excel 変換先テーブル
 Excel にデータをエクスポートする場合、変換先として、次の 3 つのうちいずれかを指定できます。
@@ -93,7 +93,7 @@ Excel にデータをエクスポートする場合、変換先として、次�
 > 変換元または変換先として Excel を使用する場合、 **[列マッピング]** ページで **[マッピングの編集]** をクリックし、データ型マッピングを確認することをお勧めします。 
 
 ## <a name="whats-next"></a>次の操作  
- 変換先テーブルにコピーおよびマップする既存のテーブルおよびビューを選択した後に表示されるのは、 **[パッケージの保存および実行]**ページです。 このページでは、コピー操作をすぐに実行するかどうかを指定します。 構成によっては、ウィザードによって作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
+ 変換先テーブルにコピーおよびマップする既存のテーブルおよびビューを選択した後に表示されるのは、 **[パッケージの保存および実行]** ページです。 このページでは、コピー操作をすぐに実行するかどうかを指定します。 構成によっては、ウィザードによって作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
  
  ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

@@ -1,23 +1,24 @@
 ---
-title: "Transact-SQL (SSMS) を使用して SSIS パッケージを実行する | Microsoft Docs"
+title: Transact-SQL (SSMS) を使用して SSIS パッケージを実行する | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b5518a521154b37dc473eb700c3ff50d1a70d60
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b72473635da4818ace7b888ee73e186f7d8ad7ed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS パッケージを実行する
 このクイック スタートでは、SQL Server Management Studio (SSMS) を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
@@ -47,7 +48,7 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
-3.  **[接続]**をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。
+3.  **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。
 
 4. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 

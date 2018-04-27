@@ -2,7 +2,7 @@
 title: クラスター クォーラムの NodeWeight の設定の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7cd9f636d0e522c2733df802619cf9a650dbe57
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 75d81e8e19e2ee1cf4efe62da164caf0e337e5ab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight の設定の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-configure-nodeweight-settings"></a>NodeWeight 設定を構成するには  
   
-1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
+1.  **[実行管理者として実行]** から高度な権限で Windows PowerShell を起動します。  
   
 2.  `FailoverClusters` モジュールをインポートしてクラスター コマンドレットを有効にします。  
   
@@ -83,11 +83,11 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> cluster.exe の使用  
   
 > [!NOTE]  
->  cluster.exe ユーティリティは [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] リリースでは推奨されません。  今後は PowerShell とフェールオーバー クラスタリングを使用してください。  cluster.exe ユーティリティは、Windows Server の次のリリースで削除されます。 詳細については、「 [フェールオーバー クラスターの Windows PowerShell コマンドレットへの Cluster.exe コマンドのマッピング](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)」を参照してください。  
+>  cluster.exe ユーティリティは [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] リリースでは非推奨とされます。  今後は PowerShell とフェールオーバー クラスタリングを使用してください。  cluster.exe ユーティリティは、Windows Server の次のリリースで削除されます。 詳細については、「 [フェールオーバー クラスターの Windows PowerShell コマンドレットへの Cluster.exe コマンドのマッピング](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)」を参照してください。  
   
 ##### <a name="to-configure-nodeweight-settings"></a>NodeWeight 設定を構成するには  
   
-1.  **[実行管理者として実行]**から高度な権限でコマンド プロンプトを起動します。  
+1.  **[実行管理者として実行]** から高度な権限でコマンド プロンプトを起動します。  
   
 2.  **cluster.exe** を使用して、 `NodeWeight` 値を設定します。  
   

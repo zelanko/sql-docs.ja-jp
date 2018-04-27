@@ -1,30 +1,30 @@
 ---
-title: "手順 2: パッケージ インストール ウィザードの実行 | Microsoft Docs"
-ms.custom: 
+title: '手順 2: パッケージ インストール ウィザードの実行 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 39d8b83d8cac317648cbc1d1ec24635c399432f9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
 この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
@@ -41,38 +41,38 @@ ms.lasthandoff: 01/25/2018
   
 2.  Deployment フォルダーで、マニフェスト ファイルの Deployment Tutorial.SSISDeploymentManifest をダブルクリックします。  
   
-3.  パッケージ インストール ウィザードの初期画面で、 **[次へ]**をクリックします。  
+3.  パッケージ インストール ウィザードの初期画面で、 **[次へ]** をクリックします。  
   
-4.  [SSIS パッケージの配置] ページで、 **[SQL Server に配置]** オプションを選択し、 **[インストール後にパッケージを検証する]** チェック ボックスをオンにして、 **[次へ]**をクリックします。  
+4.  [SSIS パッケージの配置] ページで、 **[SQL Server に配置]** オプションを選択し、 **[インストール後にパッケージを検証する]** チェック ボックスをオンにして、 **[次へ]** をクリックします。  
   
-5.  [インストール先の SQL Server の指定] ページで、 **[サーバー名]**ボックスに **(local)** と指定します。  
+5.  [インストール先の SQL Server の指定] ページで、 **[サーバー名]** ボックスに **(local)** と指定します。  
   
-6.  SQL Server のインスタンスが Windows 認証をサポートしている場合は、 **[Windows 認証を使用]**を選択します。サポートしていない場合は、 **[SQL Server 認証を使用]** を選択し、ユーザー名とパスワードを入力します。  
+6.  SQL Server のインスタンスが Windows 認証をサポートしている場合は、 **[Windows 認証を使用]** を選択します。サポートしていない場合は、 **[SQL Server 認証を使用]** を選択し、ユーザー名とパスワードを入力します。  
   
 7.  **[暗号化をサーバー ストレージに依存する]** チェック ボックスがオフになっていることを確認します。  
   
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
   
-9. [インストール フォルダーの選択] ページの **[参照]**をクリックします。  
+9. [インストール フォルダーの選択] ページの **[参照]** をクリックします。  
   
-10. **[フォルダーの参照]** ダイアログ ボックスで、 **[マイ コンピューター]** を展開し、 **[ローカル ディスク (C:)]**をクリックします。  
+10. **[フォルダーの参照]** ダイアログ ボックスで、 **[マイ コンピューター]** を展開し、 **[ローカル ディスク (C:)]** をクリックします。  
   
-11. **[新しいフォルダーの作成]** をクリックし、新しいフォルダーの既定の名前 **[新しいフォルダー]**の代わりに「 **DeploymentTutorialInstall**」と入力します。  
+11. **[新しいフォルダーの作成]** をクリックし、新しいフォルダーの既定の名前 **[新しいフォルダー]** の代わりに「 **DeploymentTutorialInstall**」と入力します。  
   
     > [!IMPORTANT]  
     > この名前は、構成が使用する環境変数の値で参照されます。 フォルダーと参照の名前が一致しなければ、パッケージを実行できません。  
   
 12. **[OK]** をクリックします。  
   
-13. [インストール フォルダーの選択] ページで、[フォルダー] ボックスに **C:\DeploymentTutorialInstall** と表示されていることを確認し、 **[次へ]**をクリックします。  
+13. [インストール フォルダーの選択] ページで、[フォルダー] ボックスに **C:\DeploymentTutorialInstall** と表示されていることを確認し、 **[次へ]** をクリックします。  
   
-14. [インストールの確認] ページで、 **[次へ]**をクリックします。  
+14. [インストールの確認] ページで、 **[次へ]** をクリックします。  
   
     パッケージがインストールされます。 インストールが完了すると、[パッケージの構成] ページが表示されます。  
   
 15. [パッケージの構成] ページで、 **[構成ファイル]** ボックスに datatransferconfig.dtsconfig と loadxmldataconfig.dtsconfig が表示されていることを確認します。  
   
-16. **[構成ファイル]** ボックスの一覧で、 **[datatransferconfig.dtsconfig]**をクリックし、 **[構成]** ボックスの **[パス]** 列のプロパティを展開して、 **[値]** 列を次の値で更新します。  
+16. **[構成ファイル]** ボックスの一覧で、 **[datatransferconfig.dtsconfig]** をクリックし、 **[構成]** ボックスの **[パス]** 列のプロパティを展開して、 **[値]** 列を次の値で更新します。  
   
     |プロパティ|ReplTest1|更新後の値|  
     |------------|---------|-----------------|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/25/2018
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
   
-18. [パッケージの検証] ページで、インストールされた各パッケージの検証結果を表示し、 **[次へ]**をクリックします。  
+18. [パッケージの検証] ページで、インストールされた各パッケージの検証結果を表示し、 **[次へ]** をクリックします。  
   
     配置先コンピューターの環境変数の値は開発用コンピューターの環境変数の値と異なるため、[パッケージの検証] ページに複数の警告が表示されます。 次の 4 つの警告が表示されます。  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/25/2018
   
     [SSIS パッケージの配置] ページで **[インストール後にパッケージを検証する]** オプションを選択しなかった場合、[パッケージの検証] ページは表示されず、検証に関するインストール後の情報も表示されません。  
   
-19. [パッケージ インストール ウィザードの完了] ページでインストールの概要を確認してから、 **[完了]**をクリックします。  
+19. [パッケージ インストール ウィザードの完了] ページでインストールの概要を確認してから、 **[完了]** をクリックします。  
   
     > [!NOTE]  
     > パッケージの検証に使用する一時ログ ファイルが作成されます。 このファイルは、パッケージの実行時には使用されません。  

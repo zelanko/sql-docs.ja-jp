@@ -2,7 +2,7 @@
 title: FailureConditionLevel プロパティ設定の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cc2b9c92f30af507ec9750e74a8ee3a3af331af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b2ee08580d952238ca69dc88b2f24dca8ff5b74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-configure-failureconditionlevel-settings"></a>FailureConditionLevel 設定を構成するには  
   
-1.  **[実行管理者として実行]**から高度な権限で Windows PowerShell を起動します。  
+1.  **[実行管理者として実行]** から高度な権限で Windows PowerShell を起動します。  
   
 2.  **FailoverClusters** モジュールをインポートしてクラスター コマンドレットを有効にします。  
   
@@ -81,7 +81,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  **[サービスとアプリケーション]** を展開し、FCI を選択します。  
   
-3.  **[その他のリソース]** の下の **[SQL Server リソース]**を右クリックし、表示されるメニューの **[プロパティ]** をクリックします。 SQL Server リソースの **[プロパティ]** ダイアログ ボックスが表示されます。  
+3.  **[その他のリソース]** の下の **[SQL Server リソース]** を右クリックし、表示されるメニューの **[プロパティ]** をクリックします。 SQL Server リソースの **[プロパティ]** ダイアログ ボックスが表示されます。  
   
 4.  **[プロパティ]** タブをクリックし、 **[FaliureConditionLevel]** プロパティに値を入力し、 **[OK]** をクリックして変更を適用します。  
   

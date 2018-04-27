@@ -1,15 +1,16 @@
 ---
-title: "結果ペインのデータの操作 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 結果ペインのデータの操作 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, Results pane
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6eea731585668ee27cc81e330744e5aa4fac60e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>結果ペインのデータの操作 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+クエリまたはビューを実行すると、その結果が結果ペインに表示されます。 この結果に対して操作を行うことができます。 たとえば、行の追加や削除、データの入力や変更ができるだけでなく、多数の結果セット間を簡単に移動できます。  
   
 次に、問題を回避し、結果セットに対して効果的に操作を行うために役立つ情報を示します。  
   
@@ -123,7 +125,7 @@ null を使用せずに空白を入力するには、既存のテキストを削
   
 -   結果ペインで作業する場合、binary データ型は不便な場合が多く、ダウンロードに長時間かかる場合があります。 このため、binary データ型は *<Binary data>* または *Null*と表示されます。  
   
--   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 これを超える有効桁数を持つデータ型のデータは、27 桁に切り捨てられるか、 *<Unable to read data>*と表示されます。  
+-   有効桁数と小数点以下桁数が保持されない場合があります。 たとえば、結果ペインに表示できる有効桁数は 27 桁です。 これを超える有効桁数を持つデータ型のデータは、27 桁に切り捨てられるか、 *<Unable to read data>* と表示されます。  
   
 ## <a name="see-also"></a>参照  
 [クエリに関する基本操作の実行 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

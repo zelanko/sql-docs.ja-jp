@@ -1,16 +1,16 @@
 ---
-title: "Integration Services のトランザクション | Microsoft Docs"
-ms.custom: 
+title: Integration Services のトランザクション | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - containers [Integration Services], transactions
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83125af2f2f85c825aae5b594767fa421af2a656
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1d690fd8f22e081465e81e4e032c5b7981f7cfec
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-transactions"></a>Integration Services のトランザクション
   パッケージではトランザクションを使用して、タスクがアトミック単位で実行するデータベース処理をバインドし、この処理によってデータの整合性を保ちます。 すべての種類の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンテナー (パッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスクをカプセル化するタスク ホスト) でトランザクションを使用するように設定できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、トランザクションを設定するオプションとして、 **NotSupported**、 **Supported**、および **Required**の 3 つが用意されています。  
@@ -53,9 +53,9 @@ ms.lasthandoff: 01/25/2018
  次の手順では、これらの 2 つのオプションを構成する方法について説明します。  
   
 ### <a name="configure-a-package-to-use-a-single-transaction"></a>1 つのトランザクションを使用するようにパッケージを構成する  
- このオプションでは、パッケージ自体が 1 つのトランザクションを開始します。 このトランザクションを開始するようにパッケージを構成するには、パッケージの TransactionOption プロパティを **[必須]**に設定します。  
+ このオプションでは、パッケージ自体が 1 つのトランザクションを開始します。 このトランザクションを開始するようにパッケージを構成するには、パッケージの TransactionOption プロパティを **[必須]** に設定します。  
   
- 次に、この 1 つのトランザクションに特定のタスクやコンテナーを参加させます。 トランザクションにタスクまたはコンテナーを参加させるには、該当するタスクまたはコンテナーの TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
+ 次に、この 1 つのトランザクションに特定のタスクやコンテナーを参加させます。 トランザクションにタスクまたはコンテナーを参加させるには、該当するタスクまたはコンテナーの TransactionOption プロパティを **[Supported (サポートあり)]** に設定します。  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、トランザクションを使用するように構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -63,13 +63,13 @@ ms.lasthandoff: 01/25/2018
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]**をクリックします。  
+4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[必須]**に設定します。  
+5.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[必須]** に設定します。  
   
-6.  **[制御フロー]** タブのデザイン画面で、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]**をクリックします。  
+6.  **[制御フロー]** タブのデザイン画面で、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
+7.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]** に設定します。  
   
     > [!NOTE]  
     >  トランザクションに接続を登録するには、トランザクションで接続を使用するタスクを登録します。 詳細については、「[Integration Services (SSIS) の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -77,9 +77,9 @@ ms.lasthandoff: 01/25/2018
 8.  トランザクションに登録する各タスクおよびコンテナーに対して、手順 6. と 7. を繰り返します。  
   
 ### <a name="configure-a-package-to-use-multiple-transactions"></a>複数のトランザクションを使用するようにパッケージを構成する  
- このオプションでは、パッケージでトランザクションがサポートされますが、パッケージ自体はトランザクションを開始しません。 トランザクションをサポートするようにパッケージを構成するには、パッケージの TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
+ このオプションでは、パッケージでトランザクションがサポートされますが、パッケージ自体はトランザクションを開始しません。 トランザクションをサポートするようにパッケージを構成するには、パッケージの TransactionOption プロパティを **[Supported (サポートあり)]** に設定します。  
   
- 次に、トランザクションを開始するかトランザクションに参加するように、パッケージ内の目的のタスクおよびコンテナーを構成します。 トランザクションを開始するようにタスクまたはコンテナーを構成するには、該当するタスクまたはコンテナーの TransactionOption プロパティを **[必須]**に設定します。   
+ 次に、トランザクションを開始するかトランザクションに参加するように、パッケージ内の目的のタスクおよびコンテナーを構成します。 トランザクションを開始するようにタスクまたはコンテナーを構成するには、該当するタスクまたはコンテナーの TransactionOption プロパティを **[必須]** に設定します。   
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、複数のトランザクションを使用するように構成するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -87,20 +87,20 @@ ms.lasthandoff: 01/25/2018
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]**をクリックします。  
+4.  制御フローのデザイン画面の背景で任意の場所を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
+5.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]** に設定します。  
   
     > [!NOTE]  
     >  パッケージでトランザクションがサポートされますが、トランザクションは、パッケージ内のタスクまたはコンテナーによって開始されます。  
   
-6.  **[制御フロー]** タブのデザイン画面で、トランザクションを開始するパッケージ内のタスクまたはコンテナーを右クリックし、 **[プロパティ]**をクリックします。  
+6.  **[制御フロー]** タブのデザイン画面で、トランザクションを開始するパッケージ内のタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[必須]**に設定します。  
+7.  **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[必須]** に設定します。  
   
-8.  トランザクションがコンテナーによって開始される場合、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]**をクリックします。  
+8.  トランザクションがコンテナーによって開始される場合、トランザクションに登録するタスクまたはコンテナーを右クリックし、 **[プロパティ]** をクリックします。  
   
-9. **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]**に設定します。  
+9. **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]** に設定します。  
   
     > [!NOTE]  
     >  トランザクションに接続を登録するには、トランザクションで接続を使用するタスクを登録します。 詳細については、「[Integration Services &#40;SSIS&#41; の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
@@ -115,11 +115,11 @@ ms.lasthandoff: 01/25/2018
   
  この場合、シーケンス コンテナーの TransactionOption プロパティ、Foreach ループ コンテナー、および SQL 実行タスクを次のように設定します。  
   
--   シーケンス コンテナーの TransactionOption プロパティを **[Required]**に設定します。  
+-   シーケンス コンテナーの TransactionOption プロパティを **[Required]** に設定します。  
   
--   Foreach ループ コンテナーの TransactionOption プロパティを **[NotSupported]**に設定します。  
+-   Foreach ループ コンテナーの TransactionOption プロパティを **[NotSupported]** に設定します。  
   
--   SQL 実行タスクの TransactionOption プロパティを **[Required]**に設定します。  
+-   SQL 実行タスクの TransactionOption プロパティを **[Required]** に設定します。  
   
  次の図は、パッケージ内の 5 つの関連しないトランザクションを示しています。 1 つのトランザクションはシーケンス コンテナーによって開始され、4 つのトランザクションは SQL 実行タスクによって開始されます。  
   

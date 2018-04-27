@@ -1,30 +1,30 @@
 ---
-title: "手順 2: フラット ファイル接続マネージャーの追加と構成 | Microsoft Docs"
-ms.custom: 
+title: '手順 2: フラット ファイル接続マネージャーの追加と構成 | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d721552ae0560733c8c544ce7576447c8a1c4fdf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d7528d80856763fbf9871e8daed1f5afbd5f3020
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>レッスン 1-2 - フラット ファイル接続マネージャーの追加と構成
 この実習では、先ほど作成したパッケージにフラット ファイル接続マネージャーを追加します。 パッケージにフラット ファイル接続マネージャーを追加すると、フラット ファイルからデータを抽出できるようになります。 フラット ファイル接続マネージャーでは、フラット ファイルからデータを抽出するときに適用するファイルの名前と場所、ロケールとコード ページ、およびファイル形式を指定できます。また、列区切り記号も指定できます。 さらに、各列のデータ型を手動で指定できます。 **[列の型の予測]** ダイアログ ボックスを使用して、抽出したデータの列を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型に自動的にマップすることもできます。  
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>SSIS パッケージにフラット ファイル接続マネージャーを追加するには  
   
-1.  **[接続マネージャー]** 領域内を右クリックし、 **[新しいフラット ファイル接続]**をクリックします。  
+1.  **[接続マネージャー]** 領域内を右クリックし、 **[新しいフラット ファイル接続]** をクリックします。  
   
-2.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[接続マネージャー名]**に「 **Sample Flat File Source Data**」と入力します。  
+2.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[接続マネージャー名]** に「 **Sample Flat File Source Data**」と入力します。  
   
-3.  **[参照]**をクリックします。  
+3.  **[参照]** をクリックします。  
   
 4.  **[ファイルを開く]** ダイアログ ボックスで、コンピューター上の SampleCurrencyData.txt ファイルを指定します。  
   
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-set-locale-sensitive-properties"></a>ロケール依存型のプロパティを設定するには  
   
-1.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[全般]**をクリックします。  
+1.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[全般]** をクリックします。  
   
 2.  **[ロケール]** を [英語 (米国)] に、 **[コード ページ]** を [1252] に設定します。  
   
 ### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>フラット ファイル接続マネージャーで列名を変更するには  
   
-1.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[詳細設定]**をクリックします。  
+1.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[詳細設定]** をクリックします。  
   
 2.  プロパティ ペインで、次のように変更します。  
   
@@ -84,11 +84,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-remap-column-data-types"></a>列のデータ型を再マップするには  
   
-1.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[型の推測]**をクリックします。  
+1.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[型の推測]** をクリックします。  
   
     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、最初の 200 行分のデータに基づいて最適なデータ型を自動的に予測します。 この推測オプションを変更して、サンプルの行数を変更したり、整数またはブール データの既定のデータ型を指定したり、文字列の列の余白としてスペースを挿入することもできます。  
   
-    ここでは **[列の型の予測]** ダイアログ ボックスのオプションを変更せずに、 **[OK]** をクリックして [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に列のデータ型を予測させます。 これにより、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ペインに戻ります。このペインでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって予測された列のデータ型を確認できます ( **[キャンセル]**をクリックすると、列のメタデータの予測は行われず、既定の文字列データ型 (DT_STR) が使用されます)。  
+    ここでは **[列の型の予測]** ダイアログ ボックスのオプションを変更せずに、 **[OK]** をクリックして [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に列のデータ型を予測させます。 これにより、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ペインに戻ります。このペインでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]によって予測された列のデータ型を確認できます ( **[キャンセル]** をクリックすると、列のメタデータの予測は行われず、既定の文字列データ型 (DT_STR) が使用されます)。  
   
     このチュートリアルでは、SampleCurrencyData.txt ファイルのデータに対応するデータ型を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が推測します。推測されたデータ型は、下表の 2 列目に示されています。 一方、変換先の列に必要なデータ型 (以降の手順で定義します) は、下表の 4 列目に示されています。  
   

@@ -1,31 +1,31 @@
 ---
-title: "Integration Services バージョンのサイド バイ サイド インストール | Microsoft Docs"
-ms.custom: 
+title: Integration Services バージョンのサイド バイ サイド インストール | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b14e919cc180e8934b0cf9435d8d286c6468ccc2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d974c97ad4ef3a10993f2ca929d48b3c002138c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Integration Services バージョンのサイド バイ サイド インストール
   Integration Services (SSIS) は、   
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="designing-and-maintaining-packages"></a>パッケージの設計と管理  
  SQL Server 2016、SQL Server 2014、または SQL Server 2012 を対象とするパッケージを設計および管理するには、Visual Studio 2015 用の SQL Server Data Tools (SSDT) を使用します。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
   
- Integration Services プロジェクトのプロパティ ページでは、 **[構成プロパティ]** の **[全般]**タブで **[TargetServerVersion]** プロパティを選択し、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+ Integration Services プロジェクトのプロパティ ページでは、 **[構成プロパティ]** の **[全般]** タブで **[TargetServerVersion]** プロパティを選択し、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
 |SQL Server の対象バージョン|SSIS パッケージの開発環境|  
 |----------------------------------|-----------------------------------------------|  

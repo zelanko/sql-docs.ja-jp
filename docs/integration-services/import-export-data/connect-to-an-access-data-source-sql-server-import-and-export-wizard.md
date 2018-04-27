@@ -1,28 +1,28 @@
 ---
-title: "Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9cfa774cf95334de48e79c0a6db9ee08ab8b709c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft Access** データ ソースに接続する方法を説明します。
@@ -101,7 +101,7 @@ Access データベースがパスワードで保護されているものの、�
 6.  各ダイアログ ボックスで **[OK]** をクリックして、ウィザードの **[データ ソースの選択]** または **[変換先の選択]** ページに戻り、続行します。
 
 ## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>Access からエクスポートするときに、autonumber 値を保持する
-変換元データの既存の ID 値を変換先テーブルの ID 列に挿入できるようにするには、**[列マッピング]** ダイアログボックスで **[ID 挿入を許可する]** オプションを選択します。 既定では、変換先の ID 列に対して既存の値を挿入することは通常許可されません。 **[列マッピング]**ダイアログ ボックスを表示するには、ウィザードの **[コピー元のテーブルおよびビューを選択]** ページに到達したときに、**[マッピングの編集]** を選択します。 これらのページを見るには、「[コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」と「[列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。
+変換元データの既存の ID 値を変換先テーブルの ID 列に挿入できるようにするには、**[列マッピング]** ダイアログボックスで **[ID 挿入を許可する]** オプションを選択します。 既定では、変換先の ID 列に対して既存の値を挿入することは通常許可されません。 **[列マッピング]** ダイアログ ボックスを表示するには、ウィザードの **[コピー元のテーブルおよびビューを選択]** ページに到達したときに、**[マッピングの編集]** を選択します。 これらのページを見るには、「[コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」と「[列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。
 
 既存のプライマリ キーが id 列、autonumber 列、または同等の列である場合、既存のプライマリ キー値を保持するには、通常、このオプションを選択する必要があります。 その他の場合、変換先の ID 列には通常、新しい値が割り当てられます。
 
