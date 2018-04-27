@@ -30,7 +30,6 @@
 ### [フォーマット ファイルを使用したデータ フィールドのスキップ](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 # [フラット ファイル インポート ウィザードを使用したフラット ファイルのインポート](import-flat-file-wizard.md)
-## [フラット ファイルのインポートの失敗の報告](reporting-import-flat-file-failures.md)
 # [インポートおよびエクスポート ウィザードを使用してインポートおよびエクスポートする](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Excel からインポート](import-data-from-excel-to-sql.md) 
 # [JSON ドキュメントのインポート](../json/import-json-documents-into-sql-server.md)
