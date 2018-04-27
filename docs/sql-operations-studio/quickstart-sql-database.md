@@ -1,4 +1,4 @@
----
+﻿---
 title: 'クイック スタート: 接続し、SQL 操作 Studio (プレビュー) を使用して Azure SQL データベースを照会 |Microsoft ドキュメント'
 description: このクイック スタートは、SQL 操作 Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
@@ -28,18 +28,18 @@ ms.lasthandoff: 04/26/2018
 
 このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および Azure SQL サーバーが必要です。
 
-- [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)
 
-Azure SQL サーバーがない場合は、次の Azure SQL Database のクイック スタート (サーバー名、およびログイン資格情報を注意してください)。 のいずれかを完了します。
+まだ Azure SQL サーバーを持っていないという場合は、次のいずれかの Azure SQL Database のクイック スタートを完了させてください (そのときにサーバー名とログイン資格情報を覚えておくようにしてください)。
 
-- [DB - ポータルを作成します。](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [DB - CLI を作成します。](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [作成 DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [DB の作成 - ポータル](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [DB の作成 - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [DB の作成 - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL データベース サーバーへの接続します。
 
-使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]Azure SQL データベース サーバーへの接続を確立します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL データベース サーバーへの接続を確立します。
 
 1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
    
