@@ -21,18 +21,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL サーバーに接続してクエリを問い合わせる
-このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して *TutorialDB* を作成するチュートリアルを説明します。
+このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および SQL Server にアクセスできることが必要です。
+このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および SQL Server へのアクセスが必要です。
 
 - [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)
 
-SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択してください (そのときに SQL ログインとパスワードを覚えておくようにしてください!)。
+SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択してください (SQL ログインとパスワードを覚えておくようにしてください)。
 - [Windows - SQL Server 2017 Developer Edition のダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Docker での SQL Server 2017 のダウンロード](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - SQL Server 2017 Developer Edition のダウンロード](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - *データを作成しクエリを問い合わせる* ための手順のみを参考にしてください。
+- [Linux - SQL Server 2017 Developer Edition のダウンロード](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - *データを作成しクエリを問い合わせる* ための手順に従うだけです。
 
 
 ## <a name="connect-to-a-sql-server"></a>SQL Server に接続します。
