@@ -1,4 +1,4 @@
----
+﻿---
 title: 'クイック スタート: 接続し、クエリの SQL 操作 Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント'
 description: このクイック スタートは、Studio を使用して SQL の操作 (プレビュー) を SQL Server に接続してクエリを実行する方法を示しています。
 ms.custom: tools|sos
@@ -20,19 +20,19 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: に接続してクエリを使用して SQL サーバー [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-このクイック スタートの使用方法を示しています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、作成、 *TutorialDB*で使用される[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアルです。
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL サーバーに接続してクエリを問い合わせる
+このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および SQL Server にアクセスします。
+このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および SQL Server へのアクセスが必要です。
 
-- [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)
 
-SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択 (SQL ログインとパスワードを保存することを確認してください!)。
+SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択してください (SQL ログインとパスワードを覚えておくようにしてください)。
 - [Windows - SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux のダウンロードの SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -だけ手順を最大にする必要があります*データのクエリの作成と*です。
+- [Linux - SQL Server 2017 Developer Edition のダウンロード](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - *データを作成しクエリを問い合わせる* ための手順に従うだけです。
 
 
 ## <a name="connect-to-a-sql-server"></a>SQL Server に接続する
