@@ -23,17 +23,17 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2f03949fa0edab709dcdf14a71daad12d12022b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b8d9a0203b8e4bce7391415c99ebeba8aafa3333
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="master-data-services-overview-mds"></a>マスター データ サービスの概要 (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のデータ編成と管理機能について説明します。 
+このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のデータ編成と管理機能について説明します。 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]を使用すると、組織のデータのマスター セットを管理できます。 データをモデルに整理して、データを更新するためのルールを作成し、データを更新するユーザーを制御します。 Excel では、組織内の他のユーザーとマスター データ セットを共有できます。 
   

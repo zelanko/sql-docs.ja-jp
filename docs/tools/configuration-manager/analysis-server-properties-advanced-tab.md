@@ -2,7 +2,7 @@
 title: 分析サーバーのプロパティ ([詳細] タブ) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b91f70af11fb303d184a30368a3d183549214ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ddb2930a7645662afcc43d6c8f4704af03b99a5b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-このサービスは、Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
+  このサービスは、Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
   
 ## <a name="options"></a>および  
  **クラスター化インデックス**  

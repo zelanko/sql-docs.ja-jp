@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server マシン学習サービスとは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ SQL Server で machine learning の機能を使用するための 2 つのオプ
 | [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | なし | T-SQL に R スクリプトを配置するための関数はストアド プロシージャをデータベースとストアド プロシージャを登録して、R 開発環境からストアド プロシージャを実行しています。
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | なし | など、Machine Learning のサーバーの SQL 以外のインストールで使用される、主に、 [(スタンドアロン) バージョン](r/r-server-standalone.md)します。 展開と web サービスをホストする専用の web スケール アウト トポロジを構築およびコンピューティング ノード、診断、および複数の実行、ローカルおよびリモート セッションの間で切り替えるには、このパッケージを使用します。 (In-database) のインストールでは、クライアントの容量でこのパッケージを使用して: たとえば、リモート サーバー上の web サービスにアクセスする専用の Machine Learning Services ワークロードだけを実行します。 |
 
-カスタム R、Python コードの移植性は、パッケージを配布して複数の製品に組み込まれている通訳扱われます。 SQL Server に含まれている同じパッケージが他のいくつかの Microsoft 製品やサービスをなどと呼ばれる非 SQL バージョンで使用できるも[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)です。 R と Pyton インタープリターを含んだ無料のクライアントが含まれます[Microsoft R クライアント](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)と[Python ライブラリ](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)です。
+カスタム R、Python コードの移植性は、パッケージを配布して複数の製品に組み込まれている通訳扱われます。 SQL Server に含まれている同じパッケージが他のいくつかの Microsoft 製品やサービスをなどと呼ばれる非 SQL バージョンで使用できるも[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)です。 空きクライアント含む、R、Python インタープリターにはが含まれます[Microsoft R クライアント](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)と[Python ライブラリ](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)です。
 
 パッケージおよびインタープリターはいくつかの使用も[Azure の仮想マシン](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)、Azure Machine Learning とような Azure サービス[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)です。 
 
@@ -90,15 +90,15 @@ SQL Server のドキュメントの最近のリリースは、バージョンに
 
 ## <a name="next-steps"></a>次の手順
 
-**手順 1:**をインストールし、ソフトウェアを構成します。 
+**手順 1:** をインストールし、ソフトウェアを構成します。 
 
 + [SQL Server 2017 Machine Learning Services (In-database) のインストールします。](install/sql-machine-learning-services-windows-install.md)
 
-**手順 2:**これらのチュートリアルのいずれかを使用してコードで作業を開始します。
+**手順 2:** これらのチュートリアルのいずれかを使用してコードで作業を開始します。
 
 + [チュートリアル: T-SQL で Python を実行します。](tutorials/run-python-using-t-sql.md)
 + [チュートリアル: T-SQL で R を実行します。](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 
-**手順 3:**お気に入りの R、Python パッケージを追加し、Microsoft によって提供されたパッケージと共に使用します。
+**手順 3:** お気に入りの R、Python パッケージを追加し、Microsoft によって提供されたパッケージと共に使用します。
 
 + [SQL Server の R パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
