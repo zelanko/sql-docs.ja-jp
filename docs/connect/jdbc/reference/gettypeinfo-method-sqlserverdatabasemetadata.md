@@ -1,30 +1,33 @@
 ---
-title: "getTypeInfo メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getTypeInfo メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTypeInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTypeInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 032ddf6a5f266fa68c6a735dd7f59cf4df02c68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,20 +55,20 @@ public java.sql.ResultSet getTypeInfo()
 |名前|型|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**文字列**|データ型の名前です。|  
-|DATA_TYPE|**短い**|java.sql.Types の SQL データ型です。|  
+|DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
 |PRECISION|**int**|有効桁数の合計数。|  
 |LITERAL_PREFIX|**文字列**|文字または文字定数の前に使用します。|  
 |LITERAL_SUFFIX|**文字列**|文字または文字定数を終了するために使用します。|  
 |CREATE_PARAMS|**文字列**|データ型の作成パラメーターの記述です。|  
-|NULLABLE|**短い**|列に null 値を含めることができるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|NULLABLE|**short**|列に null 値を含めることができるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|データ型の大文字と小文字を区別するかどうかを示します。 "**true**「型が大文字小文字を区別、それ以外の場合」**false**"です。|  
-|SEARCHABLE|**短い**|列を SQL の WHERE 句で使用できるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|列を SQL の WHERE 句で使用できるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|データ型の符号を示します。 "**true**「型が符号なし、それ以外の場合」**false**"です。|  
 |FIXED_PREC_SCALE|**boolean**|データ型に money 値を指定できるかどうかを示します。 "**true**"データ型は money 型である場合は、それ以外の場合、"**false**"です。|  
 |AUTO_INCREMENT|**boolean**|データ型を自動インクリメントできるかどうかを示します。 "**true**"場合は、型を自動的には、インクリメント、それ以外の"**false**"です。|  
 |LOCAL_TYPE_NAME|**文字列**|データ型のローカライズされた名前です。|  
-|MINIMUM_SCALE|**短い**|小数点以下の最大桁数です。|  
-|MAXIMUM_SCALE|**短い**|小数点以下の最小桁数です。|  
+|MINIMUM_SCALE|**short**|小数点以下の最大桁数です。|  
+|MAXIMUM_SCALE|**short**|小数点以下の最小桁数です。|  
 |SQL_DATA_TYPE|**int**|JDBC ドライバーではサポートされていません。|  
 |SQL_DATETIME_SUB|**int**|JDBC ドライバーではサポートされていません。|  
 |NUM_PREC_RADIX|**int**|列が保持できる最大数を計算する場合のビット数または桁数です。|  

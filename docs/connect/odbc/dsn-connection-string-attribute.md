@@ -2,7 +2,7 @@
 title: DSN と接続文字列のキーワードと for SQL Server ODBC ドライバーで使用される属性 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -13,13 +13,13 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a24fd4bba9a29733ab13147d5bbfe7537f2ef4e7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b5494a24e48b1d3e997079aba77682dddae7bda7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列キーワードと属性
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/06/2018
 
 | DSN または接続文字列のキーワード | 接続属性 | プラットフォーム | 
 |-|-|-|
-| [Addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [addr](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Address](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [AnsiNPW](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) |  [SQL_COPT_SS_ANSI_NPW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssansinpw) | LMW |
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -152,7 +152,7 @@ SQL Server の代替の接続の使用を制御します。 この 1 つがサ�
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>新しい接続文字列キーワード、接続属性
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Authentication - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sqlcoptssauthentication"></a>認証 - SQL_COPT_SS_AUTHENTICATION
 
 SQL Server に接続するときに使用する認証モードを設定します。 参照してください[を使用して Azure の Active Directory](using-azure-active-directory.md)詳細についてはします。
 
@@ -200,7 +200,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 | 属性値 | Description |
 |-|-|
 | NULL | (既定値)アクセス トークンが指定されていません。 |
-| ACCESSTOKEN* | アクセス トークンへのポインター。 |
+| ACCESSTOKEN * | アクセス トークンへのポインター。 |
 
 ### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 

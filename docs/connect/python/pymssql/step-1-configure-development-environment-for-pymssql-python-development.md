@@ -1,27 +1,28 @@
 ---
-title: "手順 1: pymssql Python 開発環境の構成 |Microsoft ドキュメント"
-ms.custom: 
+title: '手順 1: pymssql Python 開発環境の構成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>手順 1: pymssql Python 開発用の開発環境を構成します。
 SQL Server 用 Python ドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。    

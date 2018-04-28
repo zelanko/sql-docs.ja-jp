@@ -1,27 +1,28 @@
 ---
-title: "カーソルの種類 (PDO_SQLSRV ドライバー) |Microsoft ドキュメント"
-ms.custom: 
+title: カーソルの種類 (PDO_SQLSRV ドライバー) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9757631940208f0f3ded1fe90eec8fbfd1b061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fef4910ae38fba0d101e95e9f7ad0c73d4541b72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>カーソルの種類 (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,9 +36,9 @@ PDO_SQLSRV ドライバーを使用してカーソルを指定する方法、お
   
 サーバー側カーソルの種類を指定するには、pdo::prepare または pdostatement::setattribute を使用して、カーソルの種類を選択します。  
   
--   PDO::ATTR_CURSOR = > PDO::CURSOR_FWDONLY  
+-   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_FWDONLY  
   
--   PDO::ATTR_CURSOR = > PDO::CURSOR_SCROLL  
+-   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_SCROLL  
   
 Pdo::attr_cursor を指定することで、キーセット カーソルまたは動的カーソルを要求することができます = > pdo::cursor_scroll および pdo::sqlsrv_attr_cursor_scroll_type をしに渡したり、適切な値です。 Pdo::sqlsrv_attr_cursor_scroll_type に渡すことが可能な値は次のとおりです。  
   

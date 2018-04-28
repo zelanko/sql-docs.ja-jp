@@ -1,30 +1,33 @@
 ---
-title: "getColumnDisplaySize メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getColumnDisplaySize メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getColumnDisplaySize
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getColumnDisplaySize
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71daaceaa0372840fdcc47ad12587d6d3b1ef58b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f5744315036545579d053ac9db0932674facb490
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public int getColumnDisplaySize(int column)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *列*  
+ *column*  
   
  **Int**列インデックスを示すです。  
   
@@ -52,7 +55,7 @@ public int getColumnDisplaySize(int column)
 ## <a name="remarks"></a>解説  
  この getColumnDisplaySize メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnDisplaySize メソッドによって指定されます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 は、COLUMN_SIZE 列の動作の変更がします。 参照してください[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)詳細についてはします。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、COLUMN_SIZE 列の動作の変更がします。 参照してください[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)詳細についてはします。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData のメンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

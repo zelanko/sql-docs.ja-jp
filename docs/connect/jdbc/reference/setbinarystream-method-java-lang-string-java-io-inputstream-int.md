@@ -1,30 +1,33 @@
 ---
-title: "入力ストリームを長時間にメソッドの setBinaryStream |Microsoft ドキュメント"
-ms.custom: 
+title: 入力ストリームを長時間にメソッドの setBinaryStream |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setBinaryStream
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setBinaryStream
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aee684b25b4ffcebbc647371b74690a5637853e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d5d98d1f3bfba81c1d51e02c173975177f6b3713
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>setBinaryStream (java.lang.String, java.io.InputStream, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +52,7 @@ public void setBinaryStream(java.lang.String parameterName,
   
  InputStream オブジェクト。  
   
- *length*  
+ *長さ*  
   
  **Int**バイト数の長さを示すです。  
   
@@ -64,7 +67,7 @@ public void setBinaryStream(java.lang.String parameterName,
  ストリームの長さが、不明の場合、*長さ*ドライバーがその長さに関係なく、ストリームを受け入れることを示すために、パラメーターを-1 に設定することがあります。 Sqljdbc4.jar、ことをお勧め、JDBC 4.0 メソッドを使用する[setBinaryStream (java.lang.String, java.io.InputStream) メソッド](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md)アプリケーションが列の長さが不明なストリームを更新するときにします。  
   
 ## <a name="see-also"></a>参照  
- [setBinaryStream &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
+ [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

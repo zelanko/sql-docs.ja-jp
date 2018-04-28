@@ -1,30 +1,33 @@
 ---
-title: "setString (long, java.lang.String) メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: setString (long, java.lang.String) メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.setString (long, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.setString (long, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 491f4148e34714829156572d9832d3d4753c291c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3b09881214ef14ef30c37e0050c76edf1f81dd7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString (long, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public int setString(long pos,
   
  CLOB への書き込みを開始する位置です。  
   
- *s*  
+ *S*  
   
  **文字列**CLOB に書き込む。  
   
@@ -60,7 +63,7 @@ public int setString(long pos,
  文字データは、指定された開始位置から上書きされ、CLOB の初期データの長さをオーバーランすることができます。 開始位置に CLOB の長さ + 1 の値を指定すると、文字列が追加されます。 位置を指定する + 2 以上 (または 0 以下) の値と、位置エラーがスローされます。  
   
 ## <a name="see-also"></a>参照  
- [setString メソッド &#40;です。SQLServerClob &#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [setString メソッド&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob のメソッド](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob のメンバー](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob クラス](../../../connect/jdbc/reference/sqlserverclob-class.md)  

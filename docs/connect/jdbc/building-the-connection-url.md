@@ -1,28 +1,28 @@
 ---
-title: "接続 URL の構築 |Microsoft ドキュメント"
-ms.custom: 
+title: 接続 URL の構築 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: a19c9022d26ed7aa0af4443583553b441059e97c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,7 +80,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>名前付きおよび複数の SQL Server インスタンス  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] では、サーバーごとに複数のデータベース インスタンスをインストールできます。 各インスタンスは個別の名前によって識別されます。 名前付きインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](推奨)、名前付きインスタンスのポート番号を指定することができますか、またはインスタンス名を JDBC URL プロパティとして指定することができます、または**データソース**プロパティです。 インスタンス名またはポート番号のプロパティを指定しない場合は、既定のインスタンスへの接続が作成されます。 次の例を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] サーバーごとの複数のデータベース インスタンスをインストールをできます。 各インスタンスは個別の名前によって識別されます。 名前付きインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](推奨)、名前付きインスタンスのポート番号を指定することができますか、またはインスタンス名を JDBC URL プロパティとして指定することができます、または**データソース**プロパティです。 インスタンス名またはポート番号のプロパティを指定しない場合は、既定のインスタンスへの接続が作成されます。 次の例を参照してください。  
   
  ポート番号を使用するには、次のように指定します。  
   

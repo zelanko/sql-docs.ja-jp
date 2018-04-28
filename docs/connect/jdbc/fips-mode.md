@@ -1,28 +1,28 @@
 ---
-title: "FIPS モード |Microsoft ドキュメント"
-ms.custom: 
+title: FIPS モード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
 ms.workload: Inactive
-ms.openlocfilehash: e6e60a44f4dbe890683436ea6f6801f504396239
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: bc357dc09c8357db8c9a5de24d6644029f31dd14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fips-mode"></a>FIPS モード
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -92,11 +92,11 @@ FIPS 準拠モードでは、JDBC ドライバーを実行するためには、�
 
 |プロパティ|型|既定値|Description|注|
 |---|---|---|---|---|
-|encrypt|boolean ["true / false"]|"false"|JVM の暗号化プロパティ FIPS が有効にする必要があります**は true。**||
-|TrustServerCertificate|boolean ["true / false"]|"false"|FIPS のユーザーはため、ユーザーが使用する必要があります、証明書チェーンを検証する必要があります**"false"**このプロパティの値。 ||
+|encrypt|ブール値を [「真/偽」]|"false"|JVM の暗号化プロパティ FIPS が有効にする必要があります**は true。**||
+|TrustServerCertificate|ブール値を [「真/偽」]|"false"|FIPS のユーザーはため、ユーザーが使用する必要があります、証明書チェーンを検証する必要があります **"false"** このプロパティの値。 ||
 |trustStore|文字列|null|証明書をインポートした、Java Keystore ファイル パス。 システムに何も渡す必要はありません証明書をインストールする場合。 ドライバーは、cacerts または jssecacerts ファイルを使用します。||
 |trustStorePassword|文字列|null|trustStore データの整合性を確認するために使用するパスワードです。||
-|fips|boolean ["true / false"]|"false"|このプロパティは、fips が JVM を有効になっている**は true。**|6.1.4 で追加された (安定して 6.2.2 のリリース)||
+|fips|ブール値を [「真/偽」]|"false"|このプロパティは、fips が JVM を有効になっている**は true。**|6.1.4 で追加された (安定して 6.2.2 のリリース)||
 |fipsProvider|文字列|null|JVM で構成されている FIPS プロバイダーです。 たとえば、BCFIPS または SunPKCS11 NSS |6.1.2 で追加 (安定したリリース 6.2.2)、6.4.0 - で非推奨の詳細を参照してください[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)です。|
 |trustStoreType|文字列|JKS|PKCS12 または型のいずれかで FIPS プロバイダーによって定義 FIPS モード セット信頼ストアの種類 |6.1.2 で追加された (安定して 6.2.2 のリリース)||
 

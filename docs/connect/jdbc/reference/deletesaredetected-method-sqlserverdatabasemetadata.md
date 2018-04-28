@@ -1,30 +1,33 @@
 ---
-title: "deletesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: deletesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.deletesAreDetected
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.deletesAreDetected
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2556d8866102f2921c1e17a07f67687a710edf26
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ca58a443f5606cacf9c400895136e53243689478
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean deletesAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *型*  
+ *type*  
   
  **Int**を示す結果セットの種類で、java.sql.ResultSet または SQLServerResultSet で定義されている、次の値のいずれかを指定することができます。  
   
@@ -73,7 +76,7 @@ public boolean deletesAreDetected(int type)
  この deletesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスの deletesAreDetected メソッドによって指定されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]検出は順方向カーソルと動的カーソルの一時的なものですが、すべての更新可能なカーソルの種類の削除された行を検出します。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 検出は順方向カーソルと動的カーソルの一時的なものですが、すべての更新可能なカーソルの種類の削除された行を検出します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

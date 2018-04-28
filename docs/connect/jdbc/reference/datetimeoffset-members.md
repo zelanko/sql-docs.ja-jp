@@ -1,27 +1,28 @@
 ---
-title: "DateTimeOffset のメンバー |Microsoft ドキュメント"
-ms.custom: 
+title: DateTimeOffset のメンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d6d81c7a0a853123467ba09adc01c48bcdac089
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7c43f0a62e25fdee7e8e972e681ba2761f952e41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,12 +39,12 @@ ms.lasthandoff: 11/18/2017
   
 |名前|Description|  
 |----------|-----------------|  
-|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|これと比較**DateTimeOffset**を別のオブジェクト**DateTimeOffset**オブジェクトが GMT の時間に基づいています。|  
+|[CompareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|これと比較**DateTimeOffset**を別のオブジェクト**DateTimeOffset**オブジェクトが GMT の時間に基づいています。|  
 |[等しい](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|これと比較**DateTimeOffset**を別のオブジェクト**オブジェクト**です。|  
 |[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|これの GMT からの分単位のオフセットを返します**DateTimeOffset**オブジェクト。|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|これで表された時間内のポイントを返します**DateTimeOffset** java.sql.Timestamp としてオブジェクト。|  
 |[ハッシュ コード](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|オブジェクトのハッシュ コード値を返します。|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|文字列表現を返します、 **DateTimeOffset**オブジェクト。|  
+|[ToString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|文字列表現を返します、 **DateTimeOffset**オブジェクト。|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|作成、 **DateTimeOffset** GMT からの特定のオフセットのポイントを表すオブジェクト。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

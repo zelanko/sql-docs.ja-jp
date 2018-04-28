@@ -1,30 +1,33 @@
 ---
-title: "getIndexInfo メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getIndexInfo メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  A**文字列**カタログ名を格納しています。  
   
- *スキーマ*  
+ *schema*  
   
  A**文字列**スキーマ名を格納しています。  
   
@@ -82,13 +85,13 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |NON_UNIQUE|**boolean**|インデックス値が重複可能であるかどうかを示します。|  
 |INDEX_QUALIFIER|**文字列**|インデックスの所有者の名前。 TYPE が tableIndexStatistic の場合は null になります。|  
 |INDEX_NAME|**文字列**|インデックスの名前。|  
-|TYPE|**短い**|インデックスの種類。 次の値のいずれかを指定できます。<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**短い**|インデックス内での列の位置を示す序数です。 インデックスの最初の列は 1 です。|  
+|TYPE|**short**|インデックスの種類。 次の値のいずれかを指定できます。<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**short**|インデックス内での列の位置を示す序数です。 インデックスの最初の列は 1 です。|  
 |COLUMN_NAME|**文字列**|列の名前です。|  
-|ASC_OR_DESC|**文字列**|インデックスの照合で使用される順序です。 次の値のいずれかを指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に"A"を返します。|  
+|ASC_OR_DESC|**文字列**|インデックスの照合で使用される順序です。 次の値のいずれかを指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に"A"を返します。  |  
 |CARDINALITY|**int**|テーブル内の行数またはインデックス内の一意の値の個数です。|  
 |PAGES|**int**|インデックスまたはテーブルの格納に使用するページ数です。|  
-|FILTER_CONDITION|**文字列**|フィルター条件です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に null を返します。|  
+|FILTER_CONDITION|**文字列**|フィルター条件です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常に null を返します。  |  
   
 > [!NOTE]  
 >  GetIndexInfo メソッドによって返されるデータに関する詳細については、「sp_indexes (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  

@@ -1,30 +1,33 @@
 ---
-title: "getScale メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getScale メソッド (SQLServerResultSetMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getScale
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getScale
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 735f2aa42382009aae985adc10e6ad1affe2d04d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: aff2bea92259de736697730055079a456951f03a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public int getScale(int column)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *列*  
+ *column*  
   
  **Int**列インデックスを示すです。  
   
@@ -52,7 +55,7 @@ public int getScale(int column)
 ## <a name="remarks"></a>解説  
  この getScale メソッドは、java.sql.ResultSetMetaData インターフェイスの getScale メソッドによって指定されます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、DECIMAL_DIGITS 列の動作の変更。 参照してください[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)詳細についてはします。  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 では、DECIMAL_DIGITS 列に動作の変更を持ちます。 参照してください[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)詳細についてはします。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData のメンバー](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

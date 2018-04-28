@@ -1,28 +1,28 @@
 ---
-title: "JDBC ドライバーによるパフォーマンスと信頼性を向上させる |Microsoft ドキュメント"
-ms.custom: 
+title: JDBC ドライバーによるパフォーマンスと信頼性を向上させる |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8b2d716ada4cb786eb141c0f49dcad41c5231c4
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: d9333af182b7d4fdd8edfe983a6b3874845ba979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC ドライバーによるパフォーマンスと信頼性の強化
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/02/2018
 |[ステートメントおよび結果セットの操作](../../connect/jdbc/working-with-statements-and-result-sets.md)|ステートメントまたは結果セットのオブジェクトを使用する場合は、パフォーマンスを向上させる方法について説明します。|  
 |[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)|サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されている、アダプティブ バッファリング機能について説明します。|  
 |[スパース列](../../connect/jdbc/sparse-columns.md)|JDBC ドライバーのサポートについて説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]スパース列です。|  
-|[JDBC Driver のキャッシュの準備されたステートメント メタデータ](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|準備されたステートメントのクエリのパフォーマンスを向上させるためのテクニックについて説明します。|
+|[JDBC Driver の準備されたステートメント メタデータ キャッシュ](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|準備されたステートメントのクエリのパフォーマンスを向上させるためのテクニックについて説明します。|
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

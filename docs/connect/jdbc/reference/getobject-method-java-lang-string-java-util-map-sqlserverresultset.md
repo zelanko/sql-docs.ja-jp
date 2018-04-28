@@ -1,30 +1,33 @@
 ---
-title: "getObject (java.lang.String, java.util.Map) メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: getObject (java.lang.String, java.util.Map) メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getObject (java.lang.String, java.util.Map)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getObject (java.lang.String, java.util.Map)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5d9892d895f42792f548eb8b4d4ef23f5029bf2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e71f03d93c942a54665d91be04641dcff16e2650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>getObject (java.lang.String, java.util.Map) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +46,7 @@ public java.lang.Object getObject(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *colName*  
+ *ColName*  
   
  A**文字列**列の名前を格納しています。  
   
@@ -75,7 +78,7 @@ public java.lang.Object getObject(java.lang.String colName,
 -   datetimeoffset 型の値は microsoft.sql.DateTimeOffset オブジェクトとして返されます。  
   
 ## <a name="see-also"></a>参照  
- [getObject メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
+ [getObject メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

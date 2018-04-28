@@ -2,7 +2,7 @@
 title: '手順 4: は、ADO.NET を使用した SQL に弾性的接続 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado-net
@@ -18,13 +18,13 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7ccf61c8c1e440ed8ae9533e61cbbf74d156eb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>手順 4: は ADO.NET を使用した SQL に弾性的に接続します。
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/18/2017
   
 サーバー名、パスワード、およびなどの文字列を編集する必要があります。 という名前のメソッドでこれらの文字列を検索できます**GetSqlConnectionStringBuilder**です。  
   
-注: サーバー名の接続文字列が対象としています、Azure SQL データベースの 4 つの文字のプレフィックスが含まれているため**tcp:**です。 Microsoft SQL Server に接続するサーバーの文字列を調整することができます。  
+注: サーバー名の接続文字列が対象としています、Azure SQL データベースの 4 つの文字のプレフィックスが含まれているため**tcp:** です。 Microsoft SQL Server に接続するサーバーの文字列を調整することができます。  
   
   
 ```CSharp  
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/18/2017
 コード サンプルは次のとおりです。  
   
 - という名前の小さな秒クラス**TestSqlException**、という名前のプロパティを**数**です。  
-- `//throw new TestSqlException(4060);`、コメントを解除することができます。  
+- `//throw new TestSqlException(4060);` 、コメントを解除することができます。  
   
 Throw ステートメントを再コンパイルをコメントを解除する場合、次回の実行の**RetryAdo2.exe**には、次のように出力します。  
   

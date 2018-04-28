@@ -1,27 +1,28 @@
 ---
-title: "JDBC ドライバーで一括コピーの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: JDBC ドライバーで一括コピーの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  SQLServerBulkCopy コード サンプルでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL INSERT … SELECT ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
   
-###  <a name="BKMK_TableSetup"></a>テーブルのセットアップ  
+###  <a name="BKMK_TableSetup"></a> テーブルのセットアップ  
  コード サンプルを正しく実行するために必要なテーブルを作成するには、SQL Server データベースで次の Transact-SQL ステートメントを実行する必要があります。  
   
 ```  
@@ -460,7 +461,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>トランザクションとバルク コピー操作  
+##  <a name="BKMK_TransactionBulk"></a> トランザクションとバルク コピー操作  
  一括コピー操作は、単独の操作として、または、複数の手順からなるトランザクションの一部として実行されます。 複数の手順からなるトランザクションの一部として実行する場合、挿入、更新、削除など、他のデータベース操作に加えて、同じトランザクション内で一括コピー操作を複数回実行でき、トランザクション全体をコミットまたはロールバックすることもできます。  
   
  既定では、一括コピー操作は単独の操作として実行されます。 この一括コピー操作は非トランザクション方式で処理され、ロールバックできません。 エラーの発生時に一括コピー処理の全部または一部をロールバックする必要がある場合は、SQLServerBulkCopy が管理するトランザクションを使用するか、既存のトランザクション内で一括コピー操作を実行できます。  
@@ -870,7 +871,7 @@ public class Program
   
 4.  バックアップ先として、次のように選択します。、**フラット ファイル変換先**を入力し、**ファイル名**C:\Test\TestBulkCSVExample.csv などの対象とします。 確認、**形式**区切られた、**テキスト修飾子**は none、および有効にする**先頭データ行の列名**、し、 **次へ**  
   
-5.  選択**を転送するデータを指定するクエリを記述**と**次**です。  入力、 **SQL ステートメント**選択 ProductID、Name、ProductNumber FROM Production.Product と**[次へ]**  
+5.  選択**を転送するデータを指定するクエリを記述**と**次**です。  入力、 **SQL ステートメント**選択 ProductID、Name、ProductNumber FROM Production.Product と **[次へ]**  
   
 6.  構成の確認: 行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  選択**マッピングを編集する**しています. 確認し、データ**型**(整数型、他の ProductID と Unicode の文字列の) の各列に適切な。  
   

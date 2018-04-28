@@ -1,27 +1,28 @@
 ---
-title: "Azure SQL database への接続 |Microsoft ドキュメント"
-ms.custom: 
+title: Azure SQL database への接続 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>詳細  
  接続するとき、 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]、呼び出しに、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**です。  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]ユーザー データベースからカタログのセット全体を返すことはできません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 アクセス許可の説明を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs**の動作を[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]です。  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ユーザー データベースからカタログのセット全体を返すことはできません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 アクセス許可の説明を参照してください[sys.databases (SQL Azure データベース)](http://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs**の動作を[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]です。  
   
  接続のドロップ  
  接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]一定の期間の後に、ファイアウォールなどのネットワーク コンポーネントによってアイドル接続が終了する可能性があります。 このコンテキストでのアイドル接続には、次の 2 種類があります。  
@@ -85,7 +86,7 @@ shutdown /r /t 1
  暗号化の使用に必要な hostNameInCertificate の設定  
  接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を指定する必要があります**hostNameInCertificate**を指定する場合**暗号化 = true**です。 (接続文字列でサーバー名が場合*shortName*.*domainName*、設定、 **hostNameInCertificate**プロパティを\*.*domainName*)。  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  

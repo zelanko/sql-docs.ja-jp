@@ -1,30 +1,33 @@
 ---
-title: "getTime (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント"
-ms.custom: 
+title: getTime (int) メソッド (SQLServerResultSet) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getTime (int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getTime (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f080fccd5312b3f1e22cfb2400777931f5f5649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: cb16c56f9fbed5383bf018f6d05eed70b13821ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public java.sql.Time getTime(int columnIndex)
  このメソッドの有効な時刻部分を返します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime または smalldatetime データ型の日付部分を Java のベースライン 1970/01/01 の日付に設定します。  
   
 ## <a name="see-also"></a>参照  
- [getTime メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

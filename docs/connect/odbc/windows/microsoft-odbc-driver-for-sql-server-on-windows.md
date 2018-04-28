@@ -1,28 +1,28 @@
 ---
-title: "Microsoft ODBC Driver for SQL Server on Windows |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft ODBC Driver for SQL Server on Windows |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: 6d4d453019ffd7fcb04c1c2ba434b864ed283fa3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,7 +31,7 @@ Microsoft ODBC Driver を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md
 
 Microsoft ODBC Driver for SQL Server は、新しいアプリケーションの作成に使用できます。 現在古いバージョンの ODBC ドライバーを使用している古いバージョンのアプリケーションをアップグレードすることもできます。 ODBC Driver for SQL Server では、Azure SQL Database、Azure SQL Data Warehouse、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および SQL Server 2005 への接続をサポートします。  
 
-## <a name="summary"></a>概要
+## <a name="summary"></a>[概要]
 
 | バージョン       | サポートされる機能      |
 | ------------- |---------------| 
@@ -50,7 +50,7 @@ Microsoft ODBC Driver for SQL Server は、新しいアプリケーションの�
 -   [非同期実行 &#40;通知方法&#41; の例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Windows ODBC ドライバーの接続の復元性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
 -   [ODBC ドライバーで Always Encrypted を使用します。](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
--   [ODBC ドライバーで Azure Active Directory の使用](../../../connect/odbc/using-azure-active-directory.md) 
+-   [ODBC ドライバーでの Azure Active Directory の使用](../../../connect/odbc/using-azure-active-directory.md) 
 -   [透過ネットワーク IP 解決を使用してください。](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>コミュニティ  

@@ -3,7 +3,7 @@ title: 初期化プロパティと承認プロパティ |Microsoft ドキュメ�
 description: プロパティの初期化と承認プロパティ
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-source-objects
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a785c2bf470df9f09b177fc7b5119132ed93c319
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6a0a72d84bb9d761bc8dccbb81cdd4b687459f84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/06/2018
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|SQL Server の OLE DB Driver は、認証情報をキャッシュしません。<br /><br /> SQL Server の OLE DB Driver は、プロパティ値を設定しようとすると、DB_S_ERRORSOCCURRED を返します。 *DwStatus* DBPROP 構造体のメンバーは DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|SQL Server の OLE DB Driver は、標準を使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]パスワードを隠しますセキュリティ メカニズム。<br /><br /> SQL Server の OLE DB Driver は、プロパティ値を設定しようとすると、DB_S_ERRORSOCCURRED を返します。 *DwStatus* DBPROP 構造体のメンバーは DBPROPSTATUS_NOTSUPPORTED を示します。|  
-|DBPROP_AUTH_INTEGRATED|If DBPROP_AUTH_INTEGRATED is set to a NULL pointer, a null string, or 'SSPI' VT_BSTR value, the OLE DB Driver for SQL Server uses Windows Authentication Mode to authorize user access to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database specified by the DBPROP_INIT_DATASOURCE and DBPROP_INIT_CATALOG properties.<br /><br /> VT_EMPTY (既定値) に設定すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティが使用されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインとパスワードは、DBPROP_AUTH_USERID プロパティと DBPROP_AUTH_PASSWORD プロパティで指定されます。|  
+|DBPROP_AUTH_INTEGRATED|ユーザーへのアクセスを承認するために、OLE DB Driver for SQL Server が Windows 認証モードを使用して DBPROP_AUTH_INTEGRATED が NULL ポインター、null 文字列、または 'SSPI' VT_BSTR 値に設定されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DBPROP_INIT_DATASOURCE と DBPROP によって指定されたデータベース_INIT_CATALOG プロパティです。<br /><br /> VT_EMPTY (既定値) に設定すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティが使用されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインとパスワードは、DBPROP_AUTH_USERID プロパティと DBPROP_AUTH_PASSWORD プロパティで指定されます。|  
 |DBPROP_AUTH_MASK_PASSWORD|SQL Server の OLE DB Driver は、標準を使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]パスワードを隠しますセキュリティ メカニズム。<br /><br /> SQL Server の OLE DB Driver は、プロパティ値を設定しようとすると、DB_S_ERRORSOCCURRED を返します。 *DwStatus* DBPROP 構造体のメンバーは DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに割り当てられたパスワードです。 このプロパティは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのアクセスの承認に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が選択された場合に使用されます。|  
 |DBPROP_AUTH_PERSIST_ENCRYPTED|SQL Server の OLE DB ドライバーでは、保存されるときに、認証情報は暗号化されません。<br /><br /> SQL Server の OLE DB Driver は、プロパティ値を設定しようとすると、DB_S_ERRORSOCCURRED を返します。 *DwStatus* DBPROP 構造体のメンバーは DBPROPSTATUS_NOTSUPPORTED を示します。|  

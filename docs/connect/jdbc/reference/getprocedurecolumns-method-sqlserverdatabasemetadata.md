@@ -1,30 +1,33 @@
 ---
-title: "getProcedureColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getProcedureColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getProcedureColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getProcedureColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d8fa1fbb84392dba636c8aa5649f45cd54e397d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 457eb19095b87983e72b082f6b67945fa0f0cd31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -75,14 +78,14 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |PROCEDURE_SCHEM|**文字列**|ストアド プロシージャのスキーマです。|  
 |PROCEDURE_NAME|**文字列**|ストアド プロシージャの名前です。|  
 |COLUMN_NAME|**文字列**|列の名前です。|  
-|COLUMN_TYPE|**短い**|列の型。 次の値のいずれかを指定できます。<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
+|COLUMN_TYPE|**short**|列の型。 次の値のいずれかを指定できます。<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|java.sql.Types の SQL データ型です。|  
 |TYPE_NAME|**文字列**|データ型の名前です。|  
 |PRECISION|**int**|有効桁数の合計数。|  
 |LENGTH|**int**|データの長さです (バイト)。|  
-|SCALE|**短い**|小数点以下の桁数です。|  
-|RADIX|**短い**|数値型の基数。|  
-|NULLABLE|**短い**|列に null 値を含めることができるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
+|SCALE|**short**|小数点以下の桁数です。|  
+|RADIX|**short**|数値型の基数。|  
+|NULLABLE|**short**|列に null 値を含めることができるかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
 |REMARKS|**文字列**|プロシージャ列の記述です。<br /><br /> <br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]はこの列の値を返しません。|  
 |COLUMN_DEF|**文字列**|列の既定値です。|  
 |SQL_DATA_TYPE|**smallint**|この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。|  
@@ -98,7 +101,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**文字列**|XML スキーマ コレクションの名前です。 名前が見つからない場合は、空文字列です。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**文字列**|ユーザー定義型 (UDT) を含むカタログの名前。|  
 |SS_XML_SCHEMACOLLECTION_NAME|**文字列**|UDT (ユーザー定義型) を含むスキーマの名前です。|  
-|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]拡張ストアド プロシージャによって使用されるデータ型。<br /><br /> <br /><br /> **注:**によって返されるデータ型の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、「データ型 (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。|  
+|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]拡張ストアド プロシージャによって使用されるデータ型。<br /><br /> <br /><br /> **注:** によって返されるデータ型の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、「データ型 (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。|  
   
 > [!NOTE]  
 >  GetProcedureColumns メソッドによって返されるデータに関する詳細については、「sp_sproc_columns (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  

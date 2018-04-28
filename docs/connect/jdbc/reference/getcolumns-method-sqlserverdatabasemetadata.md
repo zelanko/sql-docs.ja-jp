@@ -1,30 +1,33 @@
 ---
-title: "getColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *カタログ*  
+ *catalog*  
   
  A**文字列**カタログ名を格納しています。  
   
- *スキーマ*  
+ *schema*  
   
  A**文字列**スキーマ名のパターンを格納しています。  
   
@@ -82,7 +85,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|列の小数点以下の桁数です。|  
 |NUM_PREC_RADIX|**smallint**|列の基数です。|  
 |NULLABLE|**smallint**|列が null を許容するかどうかを示します。 次の値のいずれかを指定できます。<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**文字列**|列に関連付けられているコメントです。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常にこの列の null を返します。|  
+|REMARKS|**文字列**|列に関連付けられているコメントです。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]常にこの列の null を返します。  |  
 |COLUMN_DEF|**文字列**|列の既定値です。|  
 |SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 datetime データ型と SQL-92 interval データ型以外は、DATA_TYPE 列と同じです。 この列は、常に値を返します。|  
 |SQL_DATETIME_SUB|**smallint**|datetime および SQL-92 interval データ型のサブタイプ コードです。 他のデータ型の場合、この列は NULL を返します。|  
@@ -110,7 +113,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  DATA_TYPE 列には、次の変更点があります。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型|JDBC Driver 2.0 では型を返す (またはに接続されている[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) と関連付けられている定数の数値|接続しているときに、JDBC Driver 3.0 での型を返す[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]以降|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型|JDBC Driver 2.0 では型を返す (またはに接続されている[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) と関連付けられている定数の数値|接続しているときに、JDBC Driver 3.0 での型を返す[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]以降|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |8 KB を超えるユーザー定義型|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  COLUMN_SIZE 列には、次の変更点があります。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型|JDBC Driver 2.0 での戻り値の型|JDBC Driver 3.0 での戻り値の型|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型|JDBC Driver 2.0 での戻り値の型|JDBC Driver 3.0 での戻り値の型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (データベースのメタデータ)|  
 |xml|1073741823|2147483647 (データベースのメタデータ)|  
@@ -137,13 +140,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  BUFFER_LENGTH 列には、次の変更点があります。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型|JDBC Driver 2.0 での戻り値の型|JDBC Driver 3.0 での戻り値の型|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型|JDBC Driver 2.0 での戻り値の型|JDBC Driver 3.0 での戻り値の型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |8 KB を超えるユーザー定義型||2147483647|  
   
  TYPE_NAME 列には、次の変更点があります。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型|JDBC Driver 2.0 での戻り値の型|JDBC Driver 3.0 での戻り値の型|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型|JDBC Driver 2.0 での戻り値の型|JDBC Driver 3.0 での戻り値の型|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
@@ -159,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  SQL_DATA_TYPE 列には、次の変更点があります。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 2.0 での 2008年のデータ値|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0 での 2008年のデータ値|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] データ型|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 2.0 での 2008年のデータ値|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 での 2008年のデータ値|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  

@@ -1,27 +1,28 @@
 ---
-title: "JDBC ドライバーで SQL Server への接続 |Microsoft ドキュメント"
-ms.custom: 
+title: JDBC ドライバーで SQL Server への接続 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 624a6874931cb8af32bb69ea3ac0f8b395ef8915
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7950bb8bd50efbd9b4c0190fb4f696487e44d2a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC ドライバーによる SQL Server への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[データ ソースのプロパティの設定](../../connect/jdbc/setting-the-data-source-properties.md)|Java Platform, Enterprise Edition (Java EE) 環境でデータ ソースを使用する方法について説明します。|  
 |[接続の操作](../../connect/jdbc/working-with-a-connection.md)|接続のインスタンスを作成するためのさまざまな方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベース。|  
 |[接続プールの使用](../../connect/jdbc/using-connection-pooling.md)|JDBC ドライバーが接続プールをサポートするしくみについて説明します。|  
-|[データベース ミラーリング &#40; を使用します。JDBC &#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC ドライバーがデータベース ミラーリングの使用をサポートするしくみについて説明します。|  
+|[データベース ミラーリングを使用して&#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC ドライバーがデータベース ミラーリングの使用をサポートするしくみについて説明します。|  
 |[高可用性、ディザスター リカバリーのための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 可用性グループに接続するアプリケーションの開発方法について説明します。|  
 |[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|接続するアプリケーションの Java 実装について説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データベースの Kerberos 統合認証を使用します。|  
 |[Azure SQL Database への接続](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure 上のデータベースに対する接続の問題について説明します。|  

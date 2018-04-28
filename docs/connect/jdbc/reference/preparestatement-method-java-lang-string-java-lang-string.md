@@ -1,30 +1,33 @@
 ---
-title: "prepareStatement (java.lang.String, java.lang.String) メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: prepareStatement (java.lang.String, java.lang.String) メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.prepareStatement
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.prepareStatement
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e0db2871-3a5f-4fcc-af61-92333042dcd1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ba4e82c2e37807b886e50fa0613cc3990203a0e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7cf8351c8e924569878c4de5980c51a55d921d27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="preparestatement-method-javalangstring-javalangstring"></a>prepareStatement (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,7 +61,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  この prepareStatement メソッドは、java.sql.Connection インターフェイスの prepareStatement メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [prepareStatement メソッド &#40;です。SQLServerConnection &#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   
+ [prepareStatement メソッド&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

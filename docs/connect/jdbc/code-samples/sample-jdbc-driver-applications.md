@@ -1,26 +1,27 @@
 ---
-title: "サンプル JDBC ドライバー アプリケーション |Microsoft ドキュメント"
-ms.custom: 
+title: サンプル JDBC ドライバー アプリケーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 29439d8929fc7eee4c74ef29fac5260986728a43
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: daca915d7553d62a543487d048cbef025283c89c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-jdbc-driver-applications"></a>サンプル JDBC Driver アプリケーション
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
 |トピック|Description|  
 |-----------|-----------------|  
 |[接続およびデータの取得](../../../connect/jdbc/connecting-and-retrieving-data.md)|これらのサンプル アプリケーションに接続する方法を示す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。 データを取得するためのさまざまな方法も示します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。|  
-|[データ型 &#40; の操作JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|これらのサンプル アプリケーションは、JDBC ドライバーのデータ型のメソッドを使用してデータを処理する方法を示す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。|  
+|[データ型を扱う&#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|これらのサンプル アプリケーションは、JDBC ドライバーのデータ型のメソッドを使用してデータを処理する方法を示す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。|  
 |[結果セットの処理](../../../connect/jdbc/working-with-result-sets.md)|これらのサンプル アプリケーションは、結果セットを使用して、含まれるデータを処理する方法を示す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データベース。|  
 |[大きなデータの処理](../../../connect/jdbc/working-with-large-data.md)|これらのサンプル アプリケーションは、アダプティブ バッファリングを使用して、大きな値データを取得する方法を示す、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サーバー カーソルのオーバーヘッドなしのデータベースです。|  
   

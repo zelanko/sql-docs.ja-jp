@@ -1,30 +1,33 @@
 ---
-title: "registerOutParameter メソッドを型と小数点以下桁数 |Microsoft ドキュメント"
-ms.custom: 
+title: registerOutParameter メソッドを型と小数点以下桁数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.registerOutParameter (java.lang.String, int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.registerOutParameter (java.lang.String, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5d1d3d87db81455d6f34fe00c34801f206ad44
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b82d70e35ef15404f5cab7feb39eb90550752f70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter (java.lang.String, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +44,11 @@ public void registerOutParameter(java.lang.String s,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *s*  
+ *S*  
   
  A**文字列**パラメーター名を格納しています。  
   
- *sqlType*  
+ *SQLtype*  
   
  JDBC の型コード java.sql.Types で定義されています。  
   
@@ -60,7 +63,7 @@ public void registerOutParameter(java.lang.String s,
  この registerOutParameter メソッドは、java.sql.CallableStatement インターフェイスの registerOutParameter メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [registerOutParameter メソッド &#40;です。SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
+ [registerOutParameter メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,34 +1,35 @@
 ---
-title: "JDBC ドライバーの国際化機能 |Microsoft ドキュメント"
-ms.custom: 
+title: JDBC ドライバーの国際化機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7a9960483a410875f4c91d2b809b27f5c74c7d4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC ドライバーの国際対応機能」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   国際化機能、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]次のとおりです。  
   
--   同じ言語に完全にローカライズされたサービスのサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   同じ言語に完全にローカライズされたサービスのサポート [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   ロケール依存型の Java 言語変換をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]データ  
   

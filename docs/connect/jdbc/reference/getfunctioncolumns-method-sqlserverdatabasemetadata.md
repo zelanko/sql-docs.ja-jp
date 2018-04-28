@@ -1,27 +1,28 @@
 ---
-title: "getFunctionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getFunctionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88606f2a53f3f276529feb6b780279fdd3c96323
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8e9e3d78c17b4c2fe44ce80b6baf0eb8e4294339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *カタログ*  
+ *catalog*  
   
  A**文字列**カタログ名を格納しています。 空の文字列 "" の場合、結果にはカタログのない関数が含まれます。 場合は**null**検索、カタログ名は使用されません。  
   
@@ -74,18 +75,18 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |FUNCTION_SCHEM|**文字列**|関数のスキーマです。|  
 |FUNCTION_NAME|**文字列**|関数の名前です。|  
 |COLUMN_NAME|**文字列**|パラメーターまたは列の名前です。|  
-|COLUMN_TYPE|**短い**|**列の型。次の値のいずれかを指定できます。**<br /><br /> functionColumnUnknown (0): 不明な型です。<br /><br /> functionColumnIn (1): 入力パラメーターです。<br /><br /> functionColumnInOut (2): 入力/出力パラメーターです。<br /><br /> functionColumnOut (3): 出力パラメーターです。<br /><br /> functionReturn (4): 関数の戻り値です。<br /><br /> functionColumnResult (5): パラメーターまたは列は結果セット内の列です。|  
+|COLUMN_TYPE|**short**|**列の型。次の値のいずれかを指定できます。**<br /><br /> functionColumnUnknown (0): 不明な型です。<br /><br /> functionColumnIn (1): 入力パラメーターです。<br /><br /> functionColumnInOut (2): 入力/出力パラメーターです。<br /><br /> functionColumnOut (3): 出力パラメーターです。<br /><br /> functionReturn (4): 関数の戻り値です。<br /><br /> functionColumnResult (5): パラメーターまたは列は結果セット内の列です。|  
 |DATA_TYPE|**smallint**|SQL データは、Java.sql.Types から値を入力します。|  
 |TYPE_NAME|**文字列**|データ型の名前です。|  
 |PRECISION|**int**|有効桁数の合計数。|  
 |LENGTH|**int**|データの長さです (バイト)。|  
-|SCALE|**短い**|小数点以下の桁数です。|  
-|RADIX|**短い**|数値型の基数。|  
-|NULLABLE|**短い**|パラメーターまたは戻り値を含めることができるかどうかを示します、 **null**値。<br /><br /> **次の値のいずれかを指定できます。**<br /><br /> functionNoNulls (0): NULL 値は許可されません。<br /><br /> functionNullable (1): NULL 値は許可されます。<br /><br /> functionNullableUnknown (2): 不明です。|  
+|SCALE|**short**|小数点以下の桁数です。|  
+|RADIX|**short**|数値型の基数。|  
+|NULLABLE|**short**|パラメーターまたは戻り値を含めることができるかどうかを示します、 **null**値。<br /><br /> **次の値のいずれかを指定できます。**<br /><br /> functionNoNulls (0): NULL 値は許可されません。<br /><br /> functionNullable (1): NULL 値は許可されます。<br /><br /> functionNullableUnknown (2): 不明です。|  
 |REMARKS|**文字列**|列またはパラメーターに関するコメントです。|  
-|COLUMN_DEF|**文字列**|列の既定値です。<br /><br /> **注:**この情報で利用可能な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]およびは JDBC driver に固有です。|  
-|SQL_DATA_TYPE|**smallint**|この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。<br /><br /> **注:**この情報で利用可能な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]およびは JDBC driver に固有です。|  
-|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO**間隔**サブコードの場合の値**SQL_DATA_TYPE**は**SQL_DATETIME**または**SQL_INTERVAL**. 型のデータ型以外の**datetime**と ISO**間隔**、この列は NULL です。<br /><br /> **注:**この情報で利用可能な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]およびは JDBC driver に固有です。|  
+|COLUMN_DEF|**文字列**|列の既定値です。<br /><br /> **注:** この情報で利用可能な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]およびは JDBC driver に固有です。|  
+|SQL_DATA_TYPE|**smallint**|この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。<br /><br /> **注:** この情報で利用可能な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]およびは JDBC driver に固有です。|  
+|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO**間隔**サブコードの場合の値**SQL_DATA_TYPE**は**SQL_DATETIME**または**SQL_INTERVAL**. 型のデータ型以外の**datetime**と ISO**間隔**、この列は NULL です。<br /><br /> **注:** この情報で利用可能な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]およびは JDBC driver に固有です。|  
 |CHAR_OCTET_LENGTH|**int**|パラメーターまたは列に基づいたバイナリおよび文字の最大長です。 他のデータ型の場合は NULL です。|  
 |ORDINAL_POSITION|**int**|入力パラメーターおよび出力パラメーターの場合は、1 から始まる位置を表します。<br /><br /> 結果セット列の場合は、1 から始まる結果セット内の列の位置です。<br /><br /> 戻り値の場合は 0 です。|  
 |IS_NULLABLE|**文字列**|パラメーターまたは列で null 値が許可されるかどうかを決定します。<br /><br /> 次の値のいずれかを指定できます。<br /><br /> **[はい]**: パラメーターまたは列が NULL 値を含めることができます。<br /><br /> **いいえ**: パラメーターまたは列が NULL 値を含まれません。<br /><br /> 空の文字列 (""): 不明です。|  

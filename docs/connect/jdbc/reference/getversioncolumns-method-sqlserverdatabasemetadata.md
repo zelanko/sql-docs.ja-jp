@@ -1,30 +1,33 @@
 ---
-title: "getVersionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getVersionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getVersionColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getVersionColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6adf8973efd40728df1604dcef9b4a87736be72c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 916191363743bd204b6841e1713e92cfeaddd46b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +44,11 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *カタログ*  
+ *catalog*  
   
  A**文字列**カタログ名を格納しています。  
   
- *スキーマ*  
+ *schema*  
   
  A**文字列**スキーマ名のパターンを格納しています。  
   
@@ -66,14 +69,14 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
 |名前|型|Description|  
 |----------|----------|-----------------|  
-|SCOPE|**短い**|JDBC ドライバーではサポートされていません。|  
+|SCOPE|**short**|JDBC ドライバーではサポートされていません。|  
 |COLUMN_NAME|**文字列**|列名。|  
-|DATA_TYPE|**短い**|java.sql.Types の SQL データ型です。|  
+|DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
 |TYPE_NAME|**文字列**|データ型の名前です。|  
 |COLUMN_SIZE|**int**|列の完全桁数です。|  
 |BUFFER_LENGTH|**int**|列の長さです (バイト)。|  
-|DECIMAL_DIGITS|**短い**|列の小数点以下の桁数です。|  
-|PSEUDO_COLUMN|**短い**|列が擬似列かどうかを示します。 次の値のいずれかを指定できます。<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|DECIMAL_DIGITS|**short**|列の小数点以下の桁数です。|  
+|PSEUDO_COLUMN|**short**|列が擬似列かどうかを示します。 次の値のいずれかを指定できます。<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
 >  GetVersionColumns メソッドによって返されるデータに関する詳細については、「sp_datatype_info (TRANSACT-SQL)」を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]オンライン ブック。  

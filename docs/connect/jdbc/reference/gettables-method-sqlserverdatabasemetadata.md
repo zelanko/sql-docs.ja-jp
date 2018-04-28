@@ -1,30 +1,33 @@
 ---
-title: "getTables メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント"
-ms.custom: 
+title: getTables メソッド (SQLServerDatabaseMetaData) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTables
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTables
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b020065a3285cb93f3230e75a929b85f1c9a3ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *カタログ*  
+ *catalog*  
   
  A**文字列**カタログ名を格納しています。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
   
- *スキーマ*  
+ *schema*  
   
  A**文字列**スキーマ名のパターンを格納しています。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
   
@@ -75,7 +78,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**文字列**|テーブル スキーマ名です。|  
 |TABLE_NAME|**文字列**|テーブル名。|  
 |TABLE_TYPE|**文字列**|テーブルの型です。|  
-|REMARKS|**文字列**|テーブルの説明です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]はこの列の値を返しません。|  
+|REMARKS|**文字列**|テーブルの説明です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]はこの列の値を返しません。  |  
 |TYPE_CAT|**文字列**|JDBC ドライバーではサポートされていません。|  
 |TYPE_SCHEM|**文字列**|JDBC ドライバーではサポートされていません。|  
 |TYPE_NAME|**文字列**|JDBC ドライバーではサポートされていません。|  
