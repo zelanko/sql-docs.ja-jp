@@ -1,27 +1,28 @@
 ---
-title: "SQLServerBlob のメンバー |Microsoft ドキュメント"
-ms.custom: 
+title: SQLServerBlob のメンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ef29d1bcd35511df7caa0ef728513ba70e7624d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: bdcb7495e5f57670ad9b75aee3d6db4aebc43b55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,13 +45,13 @@ ms.lasthandoff: 11/18/2017
   
 |名前|Description|  
 |----------|-----------------|  
-|[解放](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|このメソッドは、BLOB オブジェクトと、それが占有していたリソースを解放します。|  
+|[無料](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|このメソッドは、BLOB オブジェクトと、それが占有していたリソースを解放します。|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|BLOB からデータを読み取る入力ストリームを返します。|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|BLOB データを byte 配列として取得します。|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|BLOB データを byte 配列として取得します。|  
 |[長さ](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|BLOB オブジェクト内のバイト数を返します。|  
-|[位置](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|指定したパターンと開始インデックスに基づいて、BLOB 内の指定されたパターンの位置を返します。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|指定したパターンと開始インデックスに基づいて、BLOB 内の指定されたパターンの位置を返します。|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverblob.md)|BLOB 値への書き込みに使用できるストリームを取得します。|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|渡された byte 配列を、渡された位置から BLOB に書き込み、書き込んだバイト数を返します。|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|渡された byte 配列を、渡された位置から BLOB に書き込み、書き込んだバイト数を返します。|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|BLOB を指定された長さに切り捨てます。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

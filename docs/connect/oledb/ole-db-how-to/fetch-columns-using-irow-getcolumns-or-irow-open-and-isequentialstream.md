@@ -3,7 +3,7 @@ title: Irow::getcolumns (または irow::open) を使用して列をフェッチ
 description: Irow::getcolumns (または irow::open) を使用して列をフェッチと ISequentialStream
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518d974fcb16598e664fb484d03106e2e869ca6d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 71f353f0d37e4f36b72fc63a206c4c6b726d1485
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,13 +41,13 @@ ms.lasthandoff: 04/06/2018
   
 2.  コマンドを実行 (この例では**icommandexecute::execute()** IID_IRow と共に呼び出されます)。  
   
-3.  列データを使用して、フェッチ**IRow::Open()**または**irow::getcolumns()**です。  
+3.  列データを使用して、フェッチ**IRow::Open()** または**irow::getcolumns()** です。  
   
-    -   **IRow::Open()**を開くために使用する、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれているかを示す DBGUID_STREAM を指定 (**IStream**または**ISequentialStream**列からデータの読み取りに使用できます)。  
+    -   **IRow::Open()** を開くために使用する、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれているかを示す DBGUID_STREAM を指定 (**IStream**または**ISequentialStream**列からデータの読み取りに使用できます)。  
   
-    -   場合**irow::getcolumns()**を使用する、 **pData**ストリーム オブジェクトを指す DBCOLUMNACCESS 構造体の要素を設定します。  
+    -   場合**irow::getcolumns()** を使用する、 **pData**ストリーム オブジェクトを指す DBCOLUMNACCESS 構造体の要素を設定します。  
   
-4.  使用して**ISequentialStream::Read()**繰り返しをコンシューマーのバッファーに指定したバイト数を読み取る。  
+4.  使用して**ISequentialStream::Read()** 繰り返しをコンシューマーのバッファーに指定したバイト数を読み取る。  
   
 ## <a name="example"></a>例  
  この例では、IRow を使用して単一の行をフェッチする方法を示します。 また、行から一度に 1 つの列を取得します。 この例では、IRow::GetColumns() および IRow::Open() の使用方法も示します。 列のデータの読み取りには ISequentialStream::Read を使用しています。  

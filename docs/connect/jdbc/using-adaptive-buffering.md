@@ -1,27 +1,28 @@
 ---
-title: "アダプティブ バッファリングの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: アダプティブ バッファリングの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/18/2017
   
  アプリケーションが、非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]アダプティブ バッファリングを提供します。 アダプティブ バッファリングとドライバーがからステートメントの実行結果を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]一度にはなく、アプリケーションの必要に応じて、します。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。  
   
--   **クエリが非常に大きな結果セットを生成:**アプリケーションは、アプリケーションがメモリに格納できるよりも、複数の行を生成する SELECT ステートメントを実行できます。 以前のリリースで、アプリケーションは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要があります。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。  
+-   **クエリが非常に大きな結果セットを生成:** アプリケーションは、アプリケーションがメモリに格納できるよりも、複数の行を生成する SELECT ステートメントを実行できます。 以前のリリースで、アプリケーションは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要があります。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。  
   
--   **クエリが非常に大きな**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列または**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT パラメーター値。**アプリケーションが 1 つの値を取得できます (列または OUT パラメーター) が大きすぎてすべてアプリケーションのメモリ内に収まりません。 アダプティブ バッファリングにより、クライアント アプリケーションを getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして、このような値を取得します。 アプリケーションから値を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ように、ストリームから読み取ります。  
+-   **クエリが非常に大きな**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**列または**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT パラメーター値:** アプリケーションが 1 つの値を取得できます (列または OUT パラメーター) が大きすぎてすべてアプリケーションのメモリ内に収まりません。         アダプティブ バッファリングにより、クライアント アプリケーションを getAsciiStream、getBinaryStream または getCharacterStream メソッドを使用して、ストリームとして、このような値を取得します。 アプリケーションから値を取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ように、ストリームから読み取ります。  
   
 > [!NOTE]  
 >  アダプティブ バッファリングでは、必要な量のデータだけが、JDBC ドライバーによってバッファリングされます。 ドライバーにバッファーのサイズを制御したり制限したりするためのパブリック メソッドは備わっていません。  

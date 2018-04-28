@@ -1,30 +1,33 @@
 ---
-title: "updateBigDecimal (java.lang.String, java.math.BigDecimal) メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: updateBigDecimal (java.lang.String, java.math.BigDecimal) メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateBigDecimal (java.lang.String, java.math.BigDecimal)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0debe120166662bd8855d19ee53cc5f239d02ffe
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b1511b969b29463e196cfce548f5be7ee07c0333
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>updateBigDecimal (java.lang.String, java.math.BigDecimal) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateBigDecimal(java.lang.String columnName,
  この updateBigDecimal メソッドは、java.sql.ResultSet インターフェイスの updateBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateBigDecimal メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   
+ [updateBigDecimal メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

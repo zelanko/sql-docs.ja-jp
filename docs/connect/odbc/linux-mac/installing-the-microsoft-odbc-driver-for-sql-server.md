@@ -2,7 +2,7 @@
 title: Linux および macOS 上の SQL Server 用 Microsoft ODBC Driver をインストールする |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 9819122fd8a0ca50a31d3a97465aaa2f32e37b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -62,7 +62,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 and 7
+### <a name="redhat-enterprise-server-6-and-7"></a>Red Hat Enterprise Server 6、7
 ```
 sudo su
 
@@ -374,7 +374,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 終了したすべての依存パッケージを手動でダウンロード、インストール コンピューター上に一緒に配置し、各パッケージを手動でインストールに共通ではまた、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージです。
 
-#### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
+#### <a name="redhat-linux-enterprise-server-7"></a>Red Hat Linux Enterprise Server 7
   - 最新版をダウンロード`msodbcsql``.rpm`ここから。 http://packages.microsoft.com/rhel/7/prod/
   - 依存関係と、ドライバーをインストールします。
   
@@ -508,7 +508,7 @@ ODBC Driver on Linux and MacOS は、次のコンポーネントで構成され�
 
 |コンポーネント|Description|  
 |---------------|-----------------|  
-|libmsodbcsql-17.X.so.X.X or libmsodbcsql-13.X.so.X.X|共有オブジェクト (`so`) のすべてのドライバーの機能を含むダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`ドライバー 17 し`/opt/microsoft/msodbcsql/lib64/`Driver 13。|  
+|libmsodbcsql 17 です。X.so.X.X または libmsodbcsql 13。X.so.X.X|共有オブジェクト (`so`) のすべてのドライバーの機能を含むダイナミック ライブラリ ファイル。 このファイルがインストールされている`/opt/microsoft/msodbcsql17/lib64/`ドライバー 17 し`/opt/microsoft/msodbcsql/lib64/`Driver 13。|  
 |`msodbcsqlr17.rll`または`msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルはのインストールします。 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|すべてのドライバーを使用するために必要な新しい定義を含むヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h にインストールされている`/opt/microsoft/msodbcsql17/include/`ドライバー 17 し`/opt/microsoft/msodbcsql/include/`Driver 13。 |
 |LICENSE.txt|使用許諾契約書の用語を含むテキスト ファイル。 このファイルが配置されます`/usr/share/doc/msodbcsql17/`ドライバー 17 し`/usr/share/doc/msodbcsql/`Driver 13。|

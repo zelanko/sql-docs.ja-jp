@@ -3,7 +3,7 @@ title: SQL Server の OLE DB ドライバーのスパース列のサポート |M
 description: スパース列が SQL Server の OLE DB Driver のサポートします。
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーのスパース列のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/06/2018
 |列がスパース列かどうかを確認する。|DBSCHEMA_COLUMNS スキーマ行セットの SS_IS_SPARSE 列を調べます (OLE DB)。|  
 |かどうか、列、 **column_set**です。|DBSCHEMA_COLUMNS スキーマ行セットの SS_IS_COLUMN_SET 列を調べます。 またはを参照してください*dwFlags* icolumnsinfo::getcolumninfo または DBCOLUMNFLAGS によって icolumnsrowset::getcolumnsrowset によって返される行セットで返されます。 **Column_set**列、DBCOLUMNFLAGS_SS_ISCOLUMNSET が設定されます。|  
 |含まないテーブルに対して BCP でスパース列のインポートとエクスポート**column_set**です。|SQL Server の以前のバージョンの OLE DB ドライバーからの動作の変更です。|  
-|含むテーブルに対して BCP でスパース列のインポートとエクスポート、 **column_set**です。|**Column_set**がインポートされ、XML; と同じ方法でエクスポートは、として**varbinary (max)**場合としてまたはバイナリ型としてバインドされている**nvarchar (max)**場合、としてバインド**char**または**wchar**型です。<br /><br /> 列、スパースのメンバーである**column_set**個別の列としてはエクスポートされませんの値にのみエクスポートされている、 **column_set**です。|  
+|含むテーブルに対して BCP でスパース列のインポートとエクスポート、 **column_set**です。|**Column_set**がインポートされ、XML; と同じ方法でエクスポートは、として**varbinary (max)** 場合としてまたはバイナリ型としてバインドされている**nvarchar (max)** 場合、としてバインド**char**または**wchar**型です。<br /><br /> 列、スパースのメンバーである**column_set**個別の列としてはエクスポートされませんの値にのみエクスポートされている、 **column_set**です。|  
 |**queryout** BCP の動作です。|SQL Server の以前のバージョンの OLE DB ドライバーから明示的に指定された列の処理は、変更はありません。<br /><br /> スキーマが異なる列の間のインポートおよびエクスポートを含むシナリオでは、特別な処理が必要になる場合があります。<br /><br /> BCP の詳細については、後の「一括コピー (BCP) によるスパース列のサポート」を参照してください。|  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
@@ -60,13 +60,13 @@ ms.lasthandoff: 04/06/2018
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>一括コピー (BCP) によるスパース列のサポート  
  スパース列の OLE DB の BCP API への変更がないか、 **column_set**機能します。  
   
- テーブルがある場合、 **column_set**、スパース列は個別の列として処理されません。 値にすべてのスパース列の値が含まれている、 **column_set**、XML 列と同じ方法でエクスポートするは、として**varbinary (max)**場合としてまたはバイナリ型としてバインドされている**nvarchar (max)**場合としてバインドされている、 **char**または**wchar**型)。 インポート時に、 **column_set**値は、のスキーマに準拠している必要があります、 **column_set**です。  
+ テーブルがある場合、 **column_set**、スパース列は個別の列として処理されません。 値にすべてのスパース列の値が含まれている、 **column_set**、XML 列と同じ方法でエクスポートするは、として**varbinary (max)** 場合としてまたはバイナリ型としてバインドされている**nvarchar (max)** 場合としてバインドされている、 **char**または**wchar**型)。 インポート時に、 **column_set**値は、のスキーマに準拠している必要があります、 **column_set**です。  
   
  **Queryout**操作を明示的に参照されている列の処理方法に変更はありません。 **column_set**列が XML 列と同じ動作があるし、スパースかどうかも何も起こりませんの取り扱いをスパース列をという名前です。  
   
  ただし場合、 **queryout**使用は、スパース列セットを名前のメンバーであるスパース列を参照するは、エクスポートしてには、同じ構造のテーブルに直接インポートを行うことはできません。 これは、BCP と一貫したメタデータを使用するため、**選択\***  、インポート操作に一致するようになって、 **column_set**このメタデータを持つメンバーの列です。 インポートする**column_set**メンバーの列の個別に、目的が参照するテーブルのビューを定義する必要があります**column_set**列、およびするが、ビューを使用してインポート操作を実行する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [OLE DB Driver for SQL Server のプログラミング](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

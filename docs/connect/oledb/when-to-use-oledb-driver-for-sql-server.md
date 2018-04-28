@@ -3,7 +3,7 @@ title: SQL Server の OLE DB ドライバーを使用する場合 |Microsoft ド
 description: SQL Server の OLE DB Driver を使用する場合
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 361a13bd249bef726e202fc8fef69fb48d88b746
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 250fdffb328fe781279819ae2e856624388122bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーを使用する場合
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   OLE DB Driver for SQL Server がデータにアクセスするのに使用できるテクノロジの 1 つ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  別のデータ アクセス テクノロジの詳細については、次を参照してください[データ アクセス テクノロジのロードマップ。](http://go.microsoft.com/fwlink/?LinkID=179186)  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 04/06/2018
  OLE DB Driver for SQL Server と MDAC の違いについては、次を参照してください。 [MDAC から SQL Server の OLE DB Driver をアプリケーションの更新](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)です。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server プログラミング用の OLE DB ドライバー](../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB の操作方法に関するトピック](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -1,30 +1,33 @@
 ---
-title: "setBytes メソッド (long, バイト、int, int) |Microsoft ドキュメント"
-ms.custom: 
+title: setBytes メソッド (long, バイト、int, int) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerBlob.setBytes (long.byte[], int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerBlob.setBytes (long.byte[], int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 583b53edb45215c3c103e78465e1a4dd1bd14294
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 04162acd8f204306d60b5af73637a5835b818861
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes (long, バイト、int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +53,11 @@ public int setBytes(long pos,
   
  BLOB に書き込む byte 配列です。  
   
- *オフセット*  
+ *offset*  
   
  内のオフセット配列からのデータの読み取りを開始する場所、**バイト**配列。  
   
- *len 関数*  
+ *len*  
   
  byte 配列から BLOB に読み込むバイト数です。  
   
@@ -70,7 +73,7 @@ public int setBytes(long pos,
  データは、指定した位置からは上書きされ、BLOB の初期の長さをオーバーランことができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。 長さ 0 を渡す**バイト**配列がバイトが書き込まために 0 が返されます。  
   
 ## <a name="see-also"></a>参照  
- [setBytes メソッド &#40;です。SQLServerBlob &#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [setBytes メソッド&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob のメソッド](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob のメンバー](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob クラス](../../../connect/jdbc/reference/sqlserverblob-class.md)  

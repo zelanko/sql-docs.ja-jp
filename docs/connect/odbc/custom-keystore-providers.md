@@ -1,27 +1,28 @@
 ---
-title: "カスタム キー ストア プロバイダー |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム キー ストア プロバイダー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: "1"
+caps.latest.revision: 1
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: Inactive
-ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-keystore-providers"></a>カスタム キー ストア プロバイダー
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -195,7 +196,7 @@ void (*Free)();
 |`msg`|[入力]レポートのエラー メッセージ。 Null で終わるワイド文字列です。 存在するパラメーター化された情報を許可するのには、この文字列がによって受け入れられるフォームのシーケンスを挿入の書式設定を含めることが、 [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx)関数。 拡張機能は、次のようにこのパラメーターによって指定可能性があります。|
 |[...]|[入力]必要に応じて、メッセージの書式指定子に合わせて追加の可変個引数パラメーターです。|
 
-エラーが発生した日時を報告するため、プロバイダーの呼び出しエラーが生じた場合、コンテキスト パラメーターを指定する関数に渡される、プロバイダーによって、ドライバーと省略可能な追加のパラメーターのエラー メッセージがある書式設定します。 プロバイダーは、1 つのプロバイダー関数の呼び出し内で連続して複数のエラー メッセージを投稿するこの関数複数回を呼び出すことがあります。 例:
+エラーが発生した日時を報告するため、プロバイダーの呼び出しエラーが生じた場合、コンテキスト パラメーターを指定する関数に渡される、プロバイダーによって、ドライバーと省略可能な追加のパラメーターのエラー メッセージがある書式設定します。 プロバイダーは、1 つのプロバイダー関数の呼び出し内で連続して複数のエラー メッセージを投稿するこの関数複数回を呼び出すことがあります。 以下に例を示します。
 
 ```
     if (!doSomething(...))

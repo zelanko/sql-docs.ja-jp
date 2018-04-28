@@ -3,7 +3,7 @@ title: Ibcpsession::bcpcolfmt (OLE DB) |Microsoft ドキュメント
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bbcc9050d7f783635febb3a0142ae91141c8f90
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: eac14e5cd7dd2cc9efecb8154168ca55d14a5c2e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,7 +102,7 @@ HRESULT BCPColFmt(
   
  **CbUserData**値は、データのバイト数を表します。 文字データが Unicode ワイド文字、正の値で表されている場合**cbUserData**パラメーターの値は、各文字のバイト単位のサイズを乗算する文字の数を表します。  
   
- *pbUserDataTerm*[size_is][in]  
+ *pbUserDataTerm*[size_is] [in]  
  フィールドに使用するターミネータ シーケンス。 このパラメーターは主に文字データ型に対して有効です。これは、他のすべての型は固定長であったり、バイト数を正確に記録するために長さのインジケーターが必要になる (バイナリ データの場合) ためです。  
   
  抽出されるデータが途中で終了されないようにしたり、ユーザー ファイル内のデータが途中で終了していないことを示すには、このパラメーターに NULL を設定します。  

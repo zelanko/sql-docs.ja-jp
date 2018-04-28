@@ -2,7 +2,7 @@
 title: Linux および macOS - 高可用性と災害復旧の ODBC ドライバー |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 60f3022334ca505f5ae2d3ddadba623de292f418
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux および macOS 高可用性と災害復旧のサポート上の ODBC ドライバー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -48,9 +48,9 @@ DNS サーバーの最初の返された IP アドレスが接続可能でない
 
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続
 
-常に指定**MultiSubnetFailover = [はい]** (または**= True**) に接続するとき、[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性グループ リスナーまたは[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover**すべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効に[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]です。 **MultiSubnetFailover**単一サブネットおよびマルチ サブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に軽減します。 マルチサブネット フェールオーバーの場合、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に、ドライバーは、TCP 接続を積極的に再試行します。
+常に指定**MultiSubnetFailover = [はい]** (または **= True**) に接続するとき、[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]可用性グループ リスナーまたは[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover**すべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効に[!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]です。 **MultiSubnetFailover**単一サブネットおよびマルチ サブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に軽減します。 マルチサブネット フェールオーバーの場合、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に、ドライバーは、TCP 接続を積極的に再試行します。
 
-**MultiSubnetFailover** 接続プロパティは、可用性グループまたはフェールオーバー クラスター インスタンスにアプリケーションが配置されていることを示します。 ドライバーが、プライマリ データベースに接続しようとしています。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]すべての ip アドレスに接続しようとしてのインスタンスに対応します。 接続するときに**MultiSubnetFailover = [はい]**クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも高速接続試行を再試行します。 **MultiSubnetFailover=Yes** を指定すると、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後に、短時間で再接続できます。 **MultiSubnetFailover = Yes**単一およびマルチ サブネットの可用性グループとフェールオーバー クラスター インスタンスの両方に適用されます。  
+**MultiSubnetFailover** 接続プロパティは、可用性グループまたはフェールオーバー クラスター インスタンスにアプリケーションが配置されていることを示します。 ドライバーが、プライマリ データベースに接続しようとしています。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]すべての ip アドレスに接続しようとしてのインスタンスに対応します。 接続するときに**MultiSubnetFailover = [はい]** クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも高速接続試行を再試行します。 **MultiSubnetFailover=Yes** を指定すると、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後に、短時間で再接続できます。 **MultiSubnetFailover = Yes**単一およびマルチ サブネットの可用性グループとフェールオーバー クラスター インスタンスの両方に適用されます。  
 
 可用性グループ リスナーまたはフェールオーバー クラスター インスタンスに接続する場合は、 **MultiSubnetFailover=Yes** を使用します。 それ以外の場合、アプリケーションのパフォーマンスが低下します。
 

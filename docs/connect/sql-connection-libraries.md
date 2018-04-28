@@ -5,23 +5,23 @@ author: MightyPen
 ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 03/29/2018
+ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースを接続するモジュール
 
-この記事は、接続モジュールのダウンロード リンクを提供または*ドライバー*と対話するために使用するクライアント プログラムを[Microsoft SQL Server](../index.md)、その対となるクラウドを使用して[AzureSQL データベース](http://docs.microsoft.com/azure/sql-database/)です。 ドライバーは、次のオペレーティング システムで実行されているプログラミング言語のさまざまな利用できます。
+この記事は、接続モジュールのダウンロード リンクを提供または*ドライバー*と対話するために使用するクライアント プログラムを[Microsoft SQL Server](../relational-databases/database-features.md)、その対となるクラウドを使用して[AzureSQL データベース](http://docs.microsoft.com/azure/sql-database/)です。 ドライバーは、次のオペレーティング システムで実行されているプログラミング言語のさまざまな利用できます。
 
 - Linux (Ubuntu)
 - MacOS
@@ -54,10 +54,10 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | 言語 | SQL driver をダウンロードします。 |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Ubuntu Linux 用の .NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core、MacOS 用](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js ドライバー、インストール手順](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP (PHP) | *オペレーティング システム：*<br /><br />[Windows の PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Github から Linux または macOS の PHP driver](http://github.com/Microsoft/msphpsql/) |
+| PHP (PHP) | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc、インストール手順](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC をダウンロードします。](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby ドライバー、インストール手順](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[ルビのダウンロード ページ](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

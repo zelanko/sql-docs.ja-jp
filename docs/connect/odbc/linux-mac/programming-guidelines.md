@@ -1,32 +1,32 @@
 ---
-title: "プログラミング ガイドライン (SQL Server 用 ODBC Driver) |Microsoft ドキュメント"
-ms.custom: 
+title: プログラミング ガイドライン (SQL Server 用 ODBC Driver) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: e30ed328931cc33b62dd9d65301dee8921e1cc3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-プログラミング機能、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS および Linux では、ODBC に基づいて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client は Windows Data Access Components の ODBC に基づいて ([ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
+プログラミング機能、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS および Linux では、ODBC に基づいて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client ([SQL Server ・ Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151))。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client は Windows Data Access Components の ODBC に基づいて ([ODBC プログラマ リファレンス](http://go.microsoft.com/fwlink/?LinkID=45250))。  
 
 複数のアクティブな結果セット (MARS) およびその他の ODBC アプリケーションで使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]特定の機能を含めることによって`/usr/local/include/msodbcsql.h`unixODBC ヘッダーを含めた後 (`sql.h`、 `sqlext.h`、 `sqltypes.h`、および`sqlucode.h`)。 場合は、同じシンボル名を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC アプリケーションで使用する特定の項目。
 
@@ -95,15 +95,15 @@ ODBC ドライバーの 17、次の文字セットとエンコーディングの
 |CP1256|アラビア語|
 |CP1257|バルト語|
 |CP1258|ベトナム語|
-|ISO-8859-1 / CP1252|ラテン語-1|
-|ISO-8859-2 / CP1250|ラテン語-2|
+|ISO 8859-1/CP1252|ラテン語-1|
+|ISO 8859-2/CP1250|ラテン語-2|
 |ISO-8859-3|ラテン語-3|
 |ISO-8859-4|ラテン語-4|
 |ISO-8859-5|ラテン/キリル|
 |ISO-8859-6|ラテン語とアラビア語|
 |ISO-8859-7|ラテン語とギリシャ語|
-|ISO-8859-8 / CP1255|ヘブライ語|
-|ISO-8859-9 / CP1254|トルコ語|
+|ISO 8859-8/CP1255|ヘブライ語|
+|ISO 8859-9/CP1254|トルコ語|
 |ISO-8859-13|ラテン語-7|
 |ISO-8859-15|ラテン 9|
 
@@ -119,7 +119,7 @@ SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要が
 
 照合順序とエンコーディングの詳細については、次を参照してください。 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)です。
 
-なエンコード変換相違 Windows と Linux および macOS の iconv ライブラリの複数のバージョンがあります。 テキストのコードページ 1255 (ヘブライ語) にはデータを Unicode に変換すると動作が異なる 1 つのコード ポイント (0 xca)。 Windows では、この文字は、0x05BA の utf-16 コード ポイントに変換します。 MacOS および libiconv 1.15 より前のバージョンの Linux では、0x00CA に変換します。 Big5/CP950 の 2003年バージョンをサポートしていない iconv ライブラリと Linux の (名前付き`BIG5-2003`)、そのリビジョンを使用して追加の文字が正しく変換されません。
+なエンコード変換相違 Windows と Linux および macOS の iconv ライブラリの複数のバージョンがあります。 テキストのコードページ 1255 (ヘブライ語) にはデータを Unicode に変換すると動作が異なる 1 つのコード ポイント (0 xca)。 Windows では、この文字は、0x05BA の utf-16 コード ポイントに変換します。 MacOS および libiconv 1.15 より前のバージョンの Linux では、0x00CA に変換します。 Big5/CP950 の 2003年バージョンをサポートしていない iconv ライブラリと Linux の (名前付き`BIG5-2003`)、そのリビジョンを使用して追加の文字が正しく変換されません。 コード ページ 932 (日本語、Shift JIS)、エンコード標準で定義されていない文字のデコード結果もと異なります。 たとえば、バイト 0x80 は u+0080 Windows 上に変換が U +0 30FB Linux および iconv バージョンに応じて、macOS 上になる可能性があります。
 
 ODBC Driver 13 および 13.1、マルチバイト文字の utf-8 または utf-16 サロゲートが SQLPutData バッファー間で分割はデータの破損で行われます。 部分文字エンコーディングで終了していないストリーミング SQLPutData にバッファーを使用します。 この制限は、ODBC ドライバーの 17 で削除されました。
 

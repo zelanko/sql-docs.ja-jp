@@ -1,5 +1,5 @@
 ---
-title: SQLSRV ドライバーを使用したストリームでのデータ型のサポート
+title: SQLSRV ドライバーを使用してストリームをサポート データ タイプ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,14 +22,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c8d4e97c1312f41b13fe529c97245005c157ba9a
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用したストリームでのデータ型のサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-ストリームとしてのデータの取得は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の SQLSRV ドライバーでのみ使用でき、PDO_SQLSRV ドライバーでは使用できません。  
+ストリームがあるだけの SQLSRV ドライバーで使用できるようにデータを取得する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、し、PDO_SQLSRV ドライバーでは使用できません。  
   
 次の SQL Server のデータ型は、SQLSRV ドライバーを使用して、ストリームとして取得することができます。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
 -   ntext  
   
--   NVARCHAR  
+-   nvarchar  
   
 -   text  
   

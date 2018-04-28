@@ -1,30 +1,33 @@
 ---
-title: "setBytes メソッド (long, バイト) |Microsoft ドキュメント"
-ms.custom: 
+title: setBytes メソッド (long, バイト) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerBlob.setBytes (long.byte[])
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerBlob.setBytes (long.byte[])
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e554122e5435a42f3c35c9a94904c6a329b23e82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: cdb1b7185d60f474d180143fe6d78dc9fd2fa42b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes メソッド (long, バイト)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +63,7 @@ public int setBytes(long pos,
  データは指定された開始位置から上書きされ、BLOB の初期データの長さをオーバーランすることができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。 長さ 0 を渡す**バイト**配列がバイトが書き込まために 0 が返されます。  
   
 ## <a name="see-also"></a>参照  
- [setBytes メソッド &#40;です。SQLServerBlob &#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [setBytes メソッド&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob のメソッド](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob のメンバー](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob クラス](../../../connect/jdbc/reference/sqlserverblob-class.md)  

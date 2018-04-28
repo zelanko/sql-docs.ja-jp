@@ -1,27 +1,28 @@
 ---
-title: "分離レベルを理解する |Microsoft ドキュメント"
-ms.custom: 
+title: 分離レベルを理解する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,11 +52,11 @@ ms.lasthandoff: 11/18/2017
   
 |[分離レベル]|ダーティ リード|反復不能読み取り|ファントム|  
 |---------------------|----------------|-------------------------|-------------|  
-|READ UNCOMMITTED|可|可|可|  
-|読み取りのコミット|不可|はい|可|  
-|REPEATABLE READ|不可|いいえ|可|  
-|スナップショット|不可|いいえ|不可|  
-|Serializable|不可|いいえ|不可|  
+|READ UNCOMMITTED|はい|[ユーザー アカウント制御]|はい|  
+|読み取りのコミット|いいえ|[ユーザー アカウント制御]|はい|  
+|REPEATABLE READ|いいえ|いいえ|はい|  
+|スナップショット|いいえ|いいえ|いいえ|  
+|Serializable|いいえ|いいえ|いいえ|  
   
  2 つのトランザクションが同じ行を取得すると、更新内容の喪失が生じる可能性がありますが、この状況を防ぐためには、REPEATABLE READ 以上の分離レベルでトランザクションを実行し、その後で、元の取得した値に基づいて行を更新する必要があります。 2 つのトランザクションが、元の取得した値に基づかずに 1 つの UPDATE ステートメントを使用して行を更新する場合、既定の分離レベル READ COMMITTED では更新データの喪失が発生しません。  
   

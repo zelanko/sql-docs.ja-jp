@@ -1,27 +1,28 @@
 ---
-title: "SQLServerNClob のメンバー |Microsoft ドキュメント"
-ms.custom: 
+title: SQLServerNClob のメンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ffd65361d92986838fcd623bc52c54f2c986c61
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a47b960f3f81acce23ca77b7e58d8589609f5f4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,15 +42,15 @@ ms.lasthandoff: 11/18/2017
   
 |名前|Description|  
 |----------|-----------------|  
-|[解放](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|このメソッドは、解放、 **NCLOB**オブジェクトを保持しているリソースを解放します。|  
+|[無料](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|このメソッドは、解放、 **NCLOB**オブジェクトを保持しているリソースを解放します。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|取得、 **NCLOB**によって指定された値、 **java.sql.NClob**を ASCII ストリームとしてオブジェクト。|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|指定された部分文字列のコピーを取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
 |[長さ](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|内の文字の数を取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
-|[位置](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|指定した文字位置を取得**java.sql.NClob**オブジェクトまたはサブスト リングので、 **java.sql.NClob**指定された開始位置に基づいて。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|指定した文字位置を取得**java.sql.NClob**オブジェクトまたはサブスト リングので、 **java.sql.NClob**指定された開始位置に基づいて。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|ASCII の書き込みに使用するストリームが文字を取得、 **NCLOB**値**java.sql.NClob**オブジェクトが表す、指定された位置を開始します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Unicode 文字のストリームの書き込みに使用されるストリームを取得、 **NCLOB**値**java.sql.NClob**オブジェクトが表す、指定された位置を開始します。|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|書き込み、指定した**文字列**を**NCLOB**開始位置から指定します。|  
+|[SetString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|書き込み、指定した**文字列**を**NCLOB**開始位置から指定します。|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|切り捨て、 **NCLOB**値を指定の長さ。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

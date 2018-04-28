@@ -3,7 +3,7 @@ title: 一括コピー操作の実行 |Microsoft ドキュメント
 description: SQL Server の OLE DB Driver を使用して一括コピー操作の実行
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6e5c5bf1ecb76a0d0e2c59b16a4900f3ec4e8f8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: fdfb6066692c2d15aa44fa8671cb590f8b009c2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>一括コピー操作の実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/06/2018
 |プロパティ ID|Description|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : コンシューマーが指定する ID 値を管理します。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルの ID 列の値が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって生成されます。 列にバインドされている任意の値は、SQL Server の OLE DB ドライバーによって無視されます。<br /><br /> VARIANT_TRUE: コンシューマーが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ID 列に値を提供するアクセサーをバインドします。 Identity プロパティは、コンシューマーごとに一意の値を提供するため、NULL を許容する列で使用できません**IRowsetFastLoad::Insert**呼び出します。|  
-|SSPROP_FASTLOADKEEPNULLS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : DEFAULT 制約が適用されている列の NULL 値を管理します。 影響を受けるのは、NULL 値を許容し、DEFAULT 制約が適用されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列だけです。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server コンシューマーが列の null 値を含む行を挿入するときに、列の既定値を挿入します。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inserts NULL for the column value when the OLE DB Driver for SQL Server consumer inserts a row containing NULL for the column.|  
+|SSPROP_FASTLOADKEEPNULLS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : DEFAULT 制約が適用されている列の NULL 値を管理します。 影響を受けるのは、NULL 値を許容し、DEFAULT 制約が適用されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列だけです。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server コンシューマーが列の null 値を含む行を挿入するときに、列の既定値を挿入します。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB Driver for SQL Server コンシューマーが列の null 値を含む行を挿入するときに、列の値に対する NULL を挿入します。|  
 |SSPROP_FASTLOADOPTIONS|列 : なし<br /><br /> R/W 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : なし<br /><br /> 説明: このプロパティと同じでは、 **-h** "*ヒント*[,...*n*]"のオプション、 **bcp**ユーティリティです。 データをテーブルに一括コピーするときのオプションとして、次の文字列を使用できます。<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]): データ ファイル内のデータの並べ替え順。 読み込むデータ ファイルをテーブル上のクラスター化インデックスに従って並べ替えると、一括コピーのパフォーマンスが向上します。<br /><br /> **ROWS_PER_BATCH** = *bb*: バッチごとのデータの行の数 (として*bb*)。 サーバーは、 *bb*の値に応じて一括コピーの負荷を最適化します。 既定では、 **ROWS_PER_BATCH**が不明です。<br /><br /> **KILOBYTES_PER_BATCH** = *cc*: (cc) としてバッチごとのデータのキロバイト (KB) の数。 既定では、 **KILOBYTES_PER_BATCH**が不明です。<br /><br /> **TABLOCK**: 一括コピー操作の実行中、テーブル レベルのロックを取得します。 一括コピー操作中だけロックを保持することにより、テーブル ロックの競合が少なくなるので、このオプションによりパフォーマンスが大幅に向上します。 テーブルを読み込める複数のクライアントで同時に、テーブルにインデックスがあるない場合および**TABLOCK**を指定します。 既定では、ロック動作はテーブル オプションによって決まります**一括読み込みでロックをテーブル**です。<br /><br /> **CHECK_CONSTRAINTS**: に対する制約*table_name*一括コピー操作中にチェックされます。 既定では、制約は無視されます。<br /><br /> **FIRE_TRIGGER**:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]トリガーに対して行のバージョン管理を使用し、行のバージョンのバージョン ストアを**tempdb**です。 したがって、トリガーが有効になっていても一括ログ記録を最適化できます。 バッチを一括インポートで大量の行の有効なトリガーを使用して前に、のサイズを拡張する必要があります**tempdb**です。|  
   
 ### <a name="using-file-based-bulk-copy-operations"></a>ファイル ベースの一括コピー操作の使用  

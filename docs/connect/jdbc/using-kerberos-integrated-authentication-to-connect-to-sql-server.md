@@ -1,27 +1,28 @@
 ---
-title: "Kerberos を使用して統合 SQL Server への接続に認証 |Microsoft ドキュメント"
-ms.custom: 
+title: Kerberos を使用して統合 SQL Server への接続に認証 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ddd65d18a4a335ac7ad5d416d87afccf1748fbb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df66fbf0298a0aaae72a46887a630bce63f247b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -155,7 +156,7 @@ forwardable = yes
 ```  
   
 ## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>ドメイン構成ファイルおよびログイン モジュール構成ファイルの有効化  
- ドメイン構成ファイルを有効にするには、-Djava.security.krb5.conf を使用します。 ログイン モジュール構成ファイルを有効にすることができます**-Djava.security.auth.login.config**です。  
+ ドメイン構成ファイルを有効にするには、-Djava.security.krb5.conf を使用します。 ログイン モジュール構成ファイルを有効にすることができます **-Djava.security.auth.login.config**です。  
   
  たとえば、アプリケーションを起動するときに、次のコマンド ラインを使用できます。  
   

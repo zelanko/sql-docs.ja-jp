@@ -1,23 +1,24 @@
 ---
-title: "アイドル接続の回復"
+title: アイドル接続の回復
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: 6c36086404c8767ea30c85b2ebd77340d11732ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a736fc5dafc3c58401c54ab51d1a11d1753f3479
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idle-connection-resiliency"></a>アイドル接続の回復
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

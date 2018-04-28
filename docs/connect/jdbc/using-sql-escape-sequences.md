@@ -1,27 +1,28 @@
 ---
-title: "SQL エスケープ シーケンスの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL エスケープ シーケンスの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edf033fd91ecdd9ddd5ad33ce9a19e32f58b8bba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -69,7 +70,7 @@ LIKE '\\_%' {escape '\\'}");
 {fn functionName}  
 ```  
   
- ここで`functionName`JDBC ドライバーでサポートされる関数。 例:  
+ ここで`functionName`JDBC ドライバーでサポートされる関数。 以下に例を示します。  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -79,7 +80,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 |文字列関数|数値関数|日付時刻関数|システム関数|  
 |----------------------|-----------------------|------------------------|----------------------|  
-|ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> [LEFT]<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> [LTRIM]<br /><br /> REPEAT<br /><br /> [REPLACE]<br /><br /> [RIGHT]<br /><br /> [RTRIM]<br /><br /> SOUNDEX<br /><br /> Space<br /><br /> [SUBSTRING]<br /><br /> UCASE|ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> [MOD]<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> [ROUND]<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE|CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> [DAYOFWEEK]<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> [HOUR]<br /><br /> [MINUTE]<br /><br /> [MONTH]<br /><br /> MONTHNAME<br /><br /> [NOW]<br /><br /> [QUARTER]<br /><br /> [SECOND]<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> [WEEK]<br /><br /> [YEAR]|DATABASE<br /><br /> IFNULL<br /><br /> User|  
+|ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> [LEFT]<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> [LTRIM]<br /><br /> REPEAT<br /><br /> [REPLACE]<br /><br /> [RIGHT]<br /><br /> [RTRIM]<br /><br /> SOUNDEX<br /><br /> Space<br /><br /> [SUBSTRING]<br /><br /> UCASE|ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> [ROUND]<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE|CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> [DAYOFWEEK]<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> [HOUR]<br /><br /> [MINUTE]<br /><br /> [MONTH]<br /><br /> MONTHNAME<br /><br /> [NOW]<br /><br /> [QUARTER]<br /><br /> [SECOND]<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> [WEEK]<br /><br /> [YEAR]|DATABASE<br /><br /> IFNULL<br /><br /> USER|  
   
 > [!NOTE]  
 >  データベースでサポートされていない関数を使用すると、エラーが発生します。  
@@ -99,7 +100,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 |t|[時刻]|hh:mm:ss [1]|  
 |ts|TimeStamp|yyyy-mm-dd hh:mm:ss[.f...]|  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
@@ -135,7 +136,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  ここで`table-reference`テーブル名と`search-condition`テーブルで使用する結合条件です。  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   

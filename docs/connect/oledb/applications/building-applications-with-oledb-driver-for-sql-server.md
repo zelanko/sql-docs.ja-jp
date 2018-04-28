@@ -3,7 +3,7 @@ title: SQL Server の OLE DB ドライバーによるアプリケーションの
 description: SQL Server の OLE DB ドライバーとアプリケーションの構築
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーとアプリケーションの構築
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server ライブラリの OLE DB Driver を使用するアプリケーションを開発するときのさまざまな効果を発揮する問題があります。 このセクションのトピックでは、さまざまな SQL Server のヘッダーとライブラリ ファイル、および S の OLE DB ドライバーで使用できるさまざまな接続文字列の概要の OLE DB Driver を使用して、SQL Server の MDAC から OLE DB ドライバーへのアップグレードを含むこれらの問題について説明しますQL Server です。  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  さまざまなデータ アクセス コンポーネントは、SQL Server の OLE DB Driver の異なるバージョンで使用できますについて説明します。  
 
 ## <a name="see-also"></a>参照  
- [SQL Server プログラミング用の OLE DB ドライバー](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB の操作方法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

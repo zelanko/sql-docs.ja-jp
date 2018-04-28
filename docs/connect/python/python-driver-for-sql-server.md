@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3091eb8867b34e37c799e2e035ae9382dded82f7
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ---
@@ -42,7 +42,7 @@ Windows、Linux、またはファルダに Python を使用して SQL データ�
 * [Azure Python デベロッパー センター](https://azure.microsoft.com/develop/python/)  
 * [python.org コミュニティ](https://www.python.org/community/)  
   
-## <a name="more-samples"></a>その他のサンプルの入手  
+## <a name="more-samples"></a>他のサンプル  
 * [DJango と Azure の web サイトの SQL データベースを使用して、Python web アプリを作成します。](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
 * [Windows での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Macos Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)

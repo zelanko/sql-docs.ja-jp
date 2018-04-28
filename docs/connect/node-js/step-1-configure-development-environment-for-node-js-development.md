@@ -1,27 +1,28 @@
 ---
-title: "手順 1: Node.js 開発のための開発環境の構成 |Microsoft ドキュメント"
-ms.custom: 
+title: '手順 1: Node.js 開発のための開発環境の構成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>手順 1: Node.js 開発のための開発環境を構成します。
 SQL Server の Node.js のドライバーを使用してアプリケーションを開発するために、前提条件と開発環境を構成する必要があります。  面倒のモジュールをインストールするノードのパッケージ マネージャー (npm) を使用する最も一般的な方法ですが、直接に面倒なモジュールをダウンロードする[Github](https://github.com/pekim/tedious)したい場合。  

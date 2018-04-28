@@ -1,7 +1,7 @@
 ---
 title: Linux および macOS Microsoft Drivers for PHP for SQL Server のインストール チュートリアル |Microsoft ドキュメント
-ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.date: 04/11/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.workload: Inactive
-ms.openlocfilehash: f7c9542294be520b6861262e814b9fda31b06d5d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4ab3f815063a537b25b776b6b98fd26e74b7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux および macOS Microsoft Drivers for PHP for SQL Server のインストールのチュートリアル
 次の手順では、クリーンな環境を想定しており、PHP 7.x、Microsoft ODBC driver、Apache、および Microsoft Drivers for PHP および用のインストール Ubuntu と 16.04 17.10、RedHat 7 上の SQL Server、Debian 8 と 9、Suse 12 と macOS X 10.11 10.12 する方法を示します。 これらの手順では、PECL を使用してドライバーをインストールするよう指示がからビルド済みのバイナリをダウンロードすることも、 [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github ページのプロジェクトおよび」の手順に従ってそれらをインストール[SQL server 用 Microsoft Drivers for PHP 読み込む](../../connect/php/loading-the-php-sql-driver.md)します。 拡張機能の読み込みと理由おに追加していない拡張機能 php.ini の詳細についてを参照してください[ドライバーを読み込む](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)します。
@@ -35,8 +35,8 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="installing-the-drivers-on-ubuntu-1604-and-1710"></a>Ubuntu 16.04 および 17.10 にドライバーをインストールします。
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
+> [!NOTE]
+> PHP 7.0 または 7.1 をインストールするには、7.0、または次のコマンドで 7.1 で 7.2 を置き換えます。
 
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 ```
@@ -75,8 +75,8 @@ sudo service apache2 restart
 
 ## <a name="installing-the-drivers-on-red-hat-7"></a>Red Hat 7 に、ドライバーをインストールします。
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
+> [!NOTE]
+> PHP 7.0 または 7.1 をインストールするには、remi php70 または次のコマンドでそれぞれの remi php71 で remi php72 を置き換えます。
 
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 
@@ -138,8 +138,8 @@ sudo apachectl restart
 
 ## <a name="installing-the-drivers-on-debian-8-and-9"></a>Debian 8. と 9. でドライバーをインストールします。
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
+> [!NOTE]
+> PHP 7.0 または 7.1 をインストールするには、7.0 または 7.1 で次のコマンドで 7.2 を置き換えます。
 
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 ```
@@ -187,10 +187,9 @@ sudo service apache2 restart
 
 ## <a name="installing-the-drivers-on-suse-12"></a>Suse 12 に、ドライバーをインストールします。
 
-    > [!NOTE]
-    > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
-    > To install PHP 7.1, replace the repository URL below with the following URL:
-      `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> [!NOTE]
+> PHP 7.0 をインストールするには、skip 次のコマンドは、suse 12 の既定の PHP は 7.0 のリポジトリを追加します。
+> PHP 7.1 をインストールするには、次の URL を下のリポジトリの URL に置き換えます。 `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 ```
@@ -232,21 +231,21 @@ sudo systemctl restart apache2
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace php72 with php70 or php71 respectively in the following commands.
+> [!NOTE]
+> PHP 7.0 または 7.1 をインストールするには、置換php@7.2でphp@7.0またはphp@7.1次のコマンドでそれぞれします。
 
 ### <a name="step-1-install-php"></a>手順 1. PHP をインストールします。
 
 ```
 brew tap
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew install php72 --with-pear --with-httpd24 --with-cgi
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+brew tap homebrew/core
+brew install php@7.2
 ```
+PHP が実行--パスにする必要があります今すぐ`php -v`を正しいバージョンの PHP が実行されていることを確認します。 PHP がパス上にあるか、次を実行して、正しいバージョンではありません: 場合
+```
+brew link --force --overwrite php@7.2
+```
+
 ### <a name="step-2-install-prerequisites"></a>手順 2. インストールの前提条件
 次の手順の macOS の ODBC ドライバーをインストール、 [Linux や macOS のインストール ページ](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)です。 
 
@@ -257,13 +256,20 @@ brew install autoconf automake libtool
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>手順 3. Microsoft SQL Server 用 PHP ドライバーをインストールします。
 ```
-chmod -R ug+w /usr/local/opt/php72/lib/php
-pear config-set php_ini /usr/local/etc/php/7.2/php.ini system
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>手順 4. Apache をインストールし、ドライバーの読み込みの構成
 ```
+brew install apache2
+```
+Apache Apache インストール用の構成ファイルを検索するには、次のように実行します。 
+```
+apachectl -V | grep SERVER_CONFIG_FILE
+``` 
+パスを置き換えると`httpd.conf`次のコマンドで。
+```
+echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>手順 5. Apache を再起動し、サンプル スクリプトをテストします。

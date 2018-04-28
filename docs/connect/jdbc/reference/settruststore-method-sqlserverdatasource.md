@@ -1,30 +1,33 @@
 ---
-title: "setTrustStore メソッド (SQLServerDataSource) |Microsoft ドキュメント"
-ms.custom: 
+title: setTrustStore メソッド (SQLServerDataSource) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: setTrustStore Method (SQLServerDataSource)
-apilocation: setTrustStore Method (SQLServerDataSource)
+apiname:
+- setTrustStore Method (SQLServerDataSource)
+apilocation:
+- setTrustStore Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40cd49482379490d3ac80570bde16ce7f8a81253
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b12bef0614e06bbc47458b3284b09eb66f6e1b87
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +51,7 @@ public void setTrustStore(java.lang.String trustStore)
   
 -   1. Java 仮想マシン (JVM) システム プロパティの "javax.net.ssl.trustStore" で指定されたファイル  
   
--   2. "\<java ホーム >/ライブラリ/セキュリティ/jssecacerts"ファイル。  
+-   2. "\<java-home>/lib/security/jssecacerts" file.  
   
 -   3. "\<java ホーム >/ライブラリ/セキュリティ/cacerts"ファイル。  
   

@@ -2,7 +2,7 @@
 title: 接続オプション |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9e8d87f7c1da0574264744459070a04b9b959e2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 9a8047220d7f09f9a3dea6e750886c13138bdf58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-options"></a>接続オプション
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/28/2018
 このトピックには、連想配列で許可されているオプションが一覧表示 (を使用する場合[sqlsrv_connect](../../connect/php/sqlsrv-connect.md) SQLSRV ドライバーで) またはデータ ソース名 (dsn) で許可されているキーワード (を使用する場合[:: _ _construct](../../connect/php/pdo-construct.md) PDO_SQLSRV ドライバーで)。  
 
 ## <a name="table-of-connection-options"></a>接続オプションの表
-|[キー]|値|Description|既定値|  
+|Key|値|Description|既定値|  
 |-------|---------|---------------|-----------|  
 |APP|文字列|トレースで使用されるアプリケーション名を指定します。|値は設定されません。|  
 |ApplicationIntent|文字列|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、ReadOnly と ReadWrite です。<br /><br />詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、災害復旧をサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|ReadWrite|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/28/2018
 |Failover_Partner|文字列|プライマリ サーバーが利用できないときに使用する、データベースのミラーのサーバーおよびインスタンス (有効かつ構成されている場合) を指定します。<br /><br />Failover_Partner を MultiSubnetFailover とともに使用する場合には、制限があります。 詳細については、次を参照してください。 [High Availability, Disaster Recovery のサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|値は設定されません。|  
 |LoginTimeout|整数 (SQLSRV ドライバー)<br /><br />文字列 (PDO_SQLSRV ドライバー)|接続の試行に失敗するまで待機する秒数を指定します。|タイムアウトはありません。|  
 |MultipleActiveResultSets|複数のアクティブな結果セットを使用するには、1 または **true** 。<br /><br />複数のアクティブな結果セットを無効にするには、0 または **false** 。|複数のアクティブな結果セット (MARS) のサポートを無効にするか、または明示的に有効にします。<br /><br />詳細については、次を参照してください。[する方法: 複数のアクティブな結果を無効にする&#40;MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)です。|true (1)|  
-|MultiSubnetFailover|文字列|常に指定**multiSubnetFailover = [はい]**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]可用性グループ、または[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]フェールオーバー クラスター インスタンス。 **multiSubnetFailover = yes**構成[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を迅速に検出し、(現在) アクティブなサーバーへの接続を提供します。 可能な値は Yes と No です。<br /><br />詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、災害復旧をサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|いいえ|  
+|MultiSubnetFailover|文字列|常に指定**multiSubnetFailover = [はい]** の可用性グループ リスナーに接続するときに、[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]可用性グループ、または[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]フェールオーバー クラスター インスタンス。 **multiSubnetFailover = yes**構成[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を迅速に検出し、(現在) アクティブなサーバーへの接続を提供します。 可能な値は Yes と No です。<br /><br />詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]サポート[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]を参照してください[高可用性、災害復旧をサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|いいえ|  
 |PWD<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|文字列|SQL Server 認証で接続するときに使用されるユーザー ID に関連付けられているパスワードを指定します<sup>4</sup>です。|値は設定されません。|  
 |QuotedId|1 または**true** sql-92 ルールを使用します。<br /><br />レガシ ルールを使用するには、0 または **false** 。|引用符で囲まれた識別子に sql-92 ルールを使用するかどうかを指定します (1 または**true**) またはレガシ TRANSACT-SQL ルールを使用する (0 または**false**)。|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(PDO_SQLSRV ドライバーではサポートされていません)|日付/時刻型を文字列として返すには、1 または **true** 。<br /><br />日付/時刻型を PHP **DateTime** 型として返すには、0 または **false** 。|日付/時刻型 (datetime、date、time、datetime2、および datetimeoffset) を文字列または PHP 型として取得します。 PDO_SQLSRV ドライバーを使用する場合、日付は文字列として返されます。 PDO_SQLSRV ドライバーを持たない**datetime**型です。<br /><br />詳細については、「 [方法: SQLSRV ドライバーを利用し、日付/時刻型を取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」を参照してください。|**false**|  

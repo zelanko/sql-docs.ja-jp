@@ -3,7 +3,7 @@ title: SQL Server の OLE DB ドライバーとの接続文字列キーワード
 description: SQL Server の OLE DB ドライバーで接続文字列キーワードを使用します。
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,20 +22,22 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3607b4a5476a85c839e3a6d2e3801a0b378bef15
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f4ac4a2231ea983e93c9c418bdd309cf45ed6cc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB ドライバーとの接続文字列キーワードを使用してください。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   一部 OLE DB Driver for SQL Server Api では、接続文字列を使用して、接続属性を指定します。 接続文字列はキーワードとそれに関連する値のリストです。各キーワードによって特定の接続属性を識別します。  
   
-> **注:**旧バージョンとの互換性を維持する接続文字列のあいまいさにより、OLE DB Driver for SQL Server (たとえば、いくつかのキーワードを複数回指定することがあります、位置に基づいて解像度で競合するキーワードを許可することがありますか優先順位)。 OLE DB Driver for SQL Server の今後のリリースは、接続文字列のあいまいさを許可しない場合があります。 接続文字列のあいまいさの依存を排除する OLE DB Driver for SQL Server を使用するアプリケーションを変更する場合は、ことをお勧めを勧めします。  
+> **注:** 旧バージョンとの互換性を維持する接続文字列のあいまいさにより、OLE DB Driver for SQL Server (たとえば、いくつかのキーワードを複数回指定することがあります、位置に基づいて解像度で競合するキーワードを許可することがありますか優先順位)。 OLE DB Driver for SQL Server の今後のリリースは、接続文字列のあいまいさを許可しない場合があります。 接続文字列のあいまいさの依存を排除する OLE DB Driver for SQL Server を使用するアプリケーションを変更する場合は、ことをお勧めを勧めします。  
   
  次のセクションでは、使用できる OLE DB ドライバーで SQL Server、および ActiveX データ オブジェクト (ADO) のデータ プロバイダーとして、SQL Server の OLE DB Driver を使用する場合のキーワードについて説明します。  
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 04/06/2018
  使用してアプリケーション**idatainitialize::getdatasource**で使用されるキーワードを使用することも**idbinitialize::initialize**が既定値を持たないプロパティに対してのみです。 アプリケーションでは、どちらも使用している場合、 **idatainitialize::getdatasource**キーワードおよび**idbinitialize::initialize**初期化文字列のキーワードで、 **idatainitialize::getdatasource**キーワードの設定を使用します。 アプリケーションが使用しないことを強くお勧め**idbinitialize::initialize**キーワード**IDataInitialize:GetDataSource**接続文字列をこの動作が維持されない将来のリリースとします。  
   
 > [!NOTE]  
->  接続文字列を通過**idatainitialize::getdatasource**プロパティに変換され、使用して適用**idbproperties::setproperties**です。 コンポーネント サービスのプロパティの説明が見つかった場合**:getpropertyinfo**、このプロパティはスタンドアロン プロパティとして適用されます。 それ以外の場合は、DBPROP_PROVIDERSTRING プロパティを介して適用されます。 たとえば、接続文字列を指定する**データ ソース = server1 です。Server = server2**、**データ ソース**をプロパティとして設定されますが、**サーバー**プロバイダー文字列に変わります。  
+>  接続文字列を通過**idatainitialize::getdatasource**プロパティに変換され、使用して適用**idbproperties::setproperties**です。 コンポーネント サービスのプロパティの説明が見つかった場合 **:getpropertyinfo**、このプロパティはスタンドアロン プロパティとして適用されます。 それ以外の場合は、DBPROP_PROVIDERSTRING プロパティを介して適用されます。 たとえば、接続文字列を指定する**データ ソース = server1 です。Server = server2**、**データ ソース**をプロパティとして設定されますが、**サーバー**プロバイダー文字列に変わります。  
   
  同じプロバイダー固有のプロパティの複数のインスタンスを指定する場合、最初のプロパティの最初の値が使用されます。  
   
@@ -80,12 +82,12 @@ ms.lasthandoff: 04/06/2018
   
 |Keyword|初期化プロパティ|Description|  
 |-------------|-----------------------------|-----------------|  
-|**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address" のシノニム。|  
-|**Address**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーのネットワーク アドレス。 **アドレス**は通常、サーバーのネットワーク名が、パイプ、IP アドレス、または TCP/IP ポートとソケット アドレスなど他の名前を指定できます。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> 値**アドレス**に渡された値よりも優先**サーバー** SQL Server の OLE DB Driver を使用する場合、接続文字列にします。 またを注意してください`Address=;`で指定したサーバーに接続する、**サーバー**キーワード、一方`Address= ;, Address=.;`、 `Address=localhost;`、および`Address=(local);`すべてが原因で、ローカル サーバーに接続します。<br /><br /> 完全な構文、**アドレス**キーワードのとおりです。<br /><br /> [*プロトコル ***:**]*アドレス*[* *、* * * ポート&#124;\pipe\pipename*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。 プロトコルの詳細については、次を参照してください。 [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)です。<br /><br /> どちらの場合*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br /> *ポート*に接続する、指定したサーバー上のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|   
+|**addr**|SSPROP_INIT_NETWORKADDRESS|"Address" のシノニム。|  
+|**Address**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーのネットワーク アドレス。 **アドレス**は通常、サーバーのネットワーク名が、パイプ、IP アドレス、または TCP/IP ポートとソケット アドレスなど他の名前を指定できます。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> 値**アドレス**に渡された値よりも優先**サーバー** SQL Server の OLE DB Driver を使用する場合、接続文字列にします。 またを注意してください`Address=;`で指定したサーバーに接続する、**サーバー**キーワード、一方`Address= ;, Address=.;`、 `Address=localhost;`、および`Address=(local);`すべてが原因で、ローカル サーバーに接続します。<br /><br /> 完全な構文、**アドレス**キーワードのとおりです。<br /><br /> [*プロトコル ***:**]* アドレス *[* *、* * * ポート&#124;\pipe\pipename*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。 プロトコルの詳細については、次を参照してください。 [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)です。<br /><br /> どちらの場合*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br /> *ポート*に接続する、指定したサーバー上のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|   
 |**APP**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**ReadOnly**と**ReadWrite**です。<br /><br /> 既定値は**ReadWrite**です。 SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 使用する**AttachDBFileName**、プロバイダー文字列の Database キーワードでデータベース名を指定することも必要があります。 場合は、データベースは、以前にアタッチされて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に再アタッチしません (、アタッチされたデータベースの既定値として接続に使用)。|  
-|**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
+|**Auto Translate します。**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 文字の変換を構成します。 認識できる値は "yes" と "no" です。|  
 |**データベース**|DBPROP_INIT_CATALOG|データベース名です。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|データ型を使用する処理モードを指定します。 認識できる値は、プロバイダー データ型を示す "0" および SQL Server 2000 データ型を示す "80" です。|  
@@ -94,14 +96,14 @@ ms.lasthandoff: 04/06/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
 |**言語**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの場合)。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = [はい]**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = Yes** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 可能な値は **Yes** と **No**です。 既定値は**いいえ**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = [はい]** の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = Yes** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 可能な値は **Yes** と **No**です。 既定値は**いいえ**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**net**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
 |**ネットワーク**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
 |**PacketSize**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "yes" と "no" を値として受け取ります。 "no" の場合、データ ソース オブジェクトには機密の認証情報を保存できません。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
-|**[サーバー]**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前。 ネットワーク上のサーバーの名前、IP アドレス、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーの別名を指定する必要があります。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> **アドレス**キーワードよりも優先、**サーバー**キーワード。<br /><br /> ローカル サーバーの既定のインスタンスに接続するには、次のいずれかを指定します。<br /><br /> **Server=;**<br /><br /> **サーバー =。 です。**<br /><br /> **Server=(local) です。**<br /><br /> **Server=(local) です。**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> LocalDB のサポートの詳細については、次を参照してください。 [OLE DB Driver for SQL Server で LocalDB のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)です。<br /><br /> 名前付きインスタンスを指定する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、追加 **\\ ***InstanceName*です。<br /><br />サーバーが指定されていない場合、ローカル コンピューター上の既定のインスタンス、接続を確立します。<br /><br />IP アドレスを指定する場合で TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br />完全な構文、**サーバー**キーワードのとおりです:<br /> <br /> **サーバー =**[*プロトコル***:**]*サーバー*[**、* * * ポート*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。<br /><br /> 名前付きパイプを指定する例を次に示します。<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> この行では、名前付きパイプのプロトコル、ローカル コンピューター上の名前付きパイプ (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前 (`MSSQL$MYINST01`)、および名前付きパイプの既定の名前 (`sql/query`) を指定しています。<br /><br /> どちらの場合、*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br /> *ポート*に接続する、指定したサーバー上のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。<br /><br /> 渡される値の先頭のスペースは無視されます**サーバー** SQL Server の OLE DB Driver を使用する場合、接続文字列にします。|   
+|**[サーバー]**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前。 ネットワーク上のサーバーの名前、IP アドレス、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーの別名を指定する必要があります。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> **アドレス**キーワードよりも優先、**サーバー**キーワード。<br /><br /> ローカル サーバーの既定のインスタンスに接続するには、次のいずれかを指定します。<br /><br /> **サーバー = です。**<br /><br /> **サーバー =。 です。**<br /><br /> **Server=(local) です。**<br /><br /> **Server=(local) です。**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> LocalDB のサポートの詳細については、次を参照してください。 [OLE DB Driver for SQL Server で LocalDB のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)です。<br /><br /> 名前付きインスタンスを指定する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、追加 **\\ ***InstanceName*です。<br /><br />サーバーが指定されていない場合、ローカル コンピューター上の既定のインスタンス、接続を確立します。<br /><br />IP アドレスを指定する場合で TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br />完全な構文、**サーバー**キーワードのとおりです:<br /> <br /> **サーバー =**[* プロトコル***:**]*サーバー*[**、* * * ポート*]<br /><br /> *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。<br /><br /> 名前付きパイプを指定する例を次に示します。<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> この行では、名前付きパイプのプロトコル、ローカル コンピューター上の名前付きパイプ (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前 (`MSSQL$MYINST01`)、および名前付きパイプの既定の名前 (`sql/query`) を指定しています。<br /><br /> どちらの場合、*プロトコル*も**ネットワーク**キーワードを指定すると、OLE DB Driver for SQL Server がで指定されたプロトコルの順序を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager です。<br /><br /> *ポート*に接続する、指定したサーバー上のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。<br /><br /> 渡される値の先頭のスペースは無視されます**サーバー** SQL Server の OLE DB Driver を使用する場合、接続文字列にします。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
 |**Timeout**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|ときに、OLE DB Driver for SQL Server ログインの検証に Windows 認証モードを使用するように指示"yes"します。 それ以外の場合、OLE DB Driver for SQL Server を使用するよう指示、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ユーザー名とログインの検証、および、UID キーワードと PWD キーワードのパスワードを指定する必要があります。|  
@@ -138,7 +140,7 @@ ms.lasthandoff: 04/06/2018
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
 |**アプリケーションの目的**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**ReadOnly**と**ReadWrite**です。<br /><br /> 既定値は**ReadWrite**です。 SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
-|**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
+|**Auto Translate します。**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 文字の変換を構成します。 認識できる値は "true" と "false" です。|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**現在の言語**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語の名前。|  
@@ -150,14 +152,14 @@ ms.lasthandoff: 04/06/2018
 |**初期ファイル名**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 使用する**AttachDBFileName**、プロバイダー文字列の DATABASE キーワードでデータベース名を指定することも必要があります。 場合は、データベースは、以前にアタッチされて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に再アタッチしません (、アタッチされたデータベースの既定値として接続に使用)。|  
 |**統合セキュリティ**|DBPROP_AUTH_INTEGRATED|Windows 認証の値 "SSPI" を受け取ります。|  
 |**MARS 接続**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします。 認識できる値は "true" と "false" です。 既定値は "false" です。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = True**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = True** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 指定できる値は、 **[True]** および **[False]**です。 既定値は **False**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = True**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = True** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 指定できる値は、 **[True]** および **[False]** です。 既定値は **False**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**ネットワーク アドレス**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、の説明を参照して、**アドレス**キーワードは、このトピックの「します。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
 |**Password**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "true" と "false" を値として受け取ります。 機微な認証情報を保持するデータ ソース オブジェクトが許可されていません"false"の場合|  
 |**プロバイダー**||OLE DB driver for SQL Server、"MSOLEDBSQL"があります。|  
-|**Server SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
+|**サーバーの SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
 |**[Trust Server Certificate]**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "true" と "false" を値として受け取ります。 既定値は "false" です。これはサーバー証明書が検証されることを示します。|  
 |**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 指定できる値は "true" と "false" です。 既定値は"false"です。|  
 |**[ユーザー ID]**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
@@ -190,7 +192,7 @@ ms.lasthandoff: 04/06/2018
 |-------------|-----------------------------|-----------------|  
 |**アプリケーションの目的**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は**ReadOnly**と**ReadWrite**です。<br /><br /> 既定値は**ReadWrite**です。 SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**Application Name**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
-|**Auto Translate**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
+|**Auto Translate します。**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 文字の変換を構成します。 認識できる値は "true" と "false" です。|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**現在の言語**|SSPROPT_INIT_CURRENTLANGUAGE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語の名前。|  
@@ -202,14 +204,14 @@ ms.lasthandoff: 04/06/2018
 |**初期ファイル名**|SSPROP_INIT_FILENAME|アタッチできるデータベースのプライマリ ファイルの名前 (完全なパス名を含む)。 使用する**AttachDBFileName**、プロバイダー文字列の DATABASE キーワードでデータベース名を指定することも必要があります。 場合は、データベースは、以前にアタッチされて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に再アタッチしません (、アタッチされたデータベースの既定値として接続に使用)。|  
 |**統合セキュリティ**|DBPROP_AUTH_INTEGRATED|Windows 認証の値 "SSPI" を受け取ります。|  
 |**MARS 接続**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの場合)。 認識できる値は "true" と "false" です。既定値は "false" です。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = True**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = True** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 指定できる値は、 **[True]** および **[False]**です。 既定値は **False**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|常に指定**MultiSubnetFailover = True**の可用性グループ リスナーに接続するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可用性グループ、または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。 **MultiSubnetFailover = True** OLE DB Driver for SQL Server を迅速に検出し、(現在) アクティブなサーバーへの接続を提供するように構成します。 指定できる値は、 **[True]** および **[False]** です。 既定値は **False**です。 以下に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> SQL Server のサポートの OLE DB ドライバーの詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[OLE DB Driver for SQL サーバーが高可用性、災害復旧のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)です。|  
 |**ネットワーク アドレス**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、の説明を参照して、**アドレス**キーワードは、このトピックの「します。|  
 |**ネットワーク ライブラリ**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
 |**Password**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "true" と "false" を値として受け取ります。 "false" の場合、データ ソース オブジェクトには機密の認証情報を保存できません。|  
 |**プロバイダー**||OLE DB driver for SQL Server、"MSOLEDBSQL"があります。|  
-|**Server SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
+|**サーバーの SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server、既定では、プロバイダーが生成した SPN を使用するとします。|  
 |**[Trust Server Certificate]**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "true" と "false" を値として受け取ります。 既定値は "false" です。これはサーバー証明書が検証されることを示します。|  
 |**Use Encryption for Data**|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 指定できる値は "true" と "false" です。 既定値は"false"です。|  
 |**[ユーザー ID]**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  

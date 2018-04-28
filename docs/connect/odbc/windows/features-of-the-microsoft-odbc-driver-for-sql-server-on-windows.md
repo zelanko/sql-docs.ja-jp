@@ -1,27 +1,28 @@
 ---
-title: "Microsoft ODBC Driver for SQL Server on Windows の機能 |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft ODBC Driver for SQL Server on Windows の機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows の機能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] の
 ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サポート[ドライバー対応接続プール](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)です。 詳細については、「 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)」を参照してください。  
   
 ### <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)  
-ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サポート[非同期実行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)です。 使用例については、次を参照してください。[非同期実行 &#40;です。通知方法 &#41;サンプル](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)です。  
+ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サポート[非同期実行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)です。 使用例については、次を参照してください。[非同期実行&#40;通知方法&#41;サンプル](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)です。  
   
 ### <a name="connection-resiliency"></a>接続の回復
 アプリケーションを Microsoft Azure SQL データベースに接続されたままにするため、Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。 詳細については、「 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)」を参照してください。  
@@ -58,7 +59,7 @@ ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]サ�
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client は、`-y0`オプションを`sqlcmd.exe`表示幅が 0 の場合は、1 MB で切り捨てられるように出力します。
   
-以降で ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、1 つの列で取得できるデータの量に制限はないとき`–y0`を指定します。 `sqlcmd.exe`2 GB と同じ大きさの列をストリームできるようになりました ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型の最大値)。  
+以降で ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]、1 つの列で取得できるデータの量に制限はないとき`–y0`を指定します。 `sqlcmd.exe` 2 GB と同じ大きさの列をストリームできるようになりました ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]データ型の最大値)。  
   
 別の相違点は、その両方を指定する`-h`と`-y0`これで、オプションの互換性がないことを報告するエラーを生成します。 `-h`、列見出し間に出力する行数を指定し、かつてないと互換性のある`-y0`、ヘッダーは出力されませんが、無視されました。
   

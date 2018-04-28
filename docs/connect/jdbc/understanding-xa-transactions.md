@@ -1,27 +1,28 @@
 ---
-title: "XA トランザクションについて |Microsoft ドキュメント"
-ms.custom: 
+title: XA トランザクションについて |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1388ca846b426e4b544f991855942abab16e3507
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  次のセクションのコード例に従ってログ機能を設定します。 出力ログ ファイルで、"Server XA DLL バージョン:..." というフレーズを探します。  
   
-###  <a name="BKMK_ServerSide"></a>準備されていないトランザクションが自動的にロールバックのサーバー側のタイムアウト設定を構成します。  
+###  <a name="BKMK_ServerSide"></a> 準備されていないトランザクションが自動的にロールバックのサーバー側のタイムアウト設定を構成します。  
   
 > [!WARNING]  
 >  サーバー側は、このオプションは、新しい Microsoft JDBC Driver 4.2 (以降) for SQL Server。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトを設定する方法の詳細については、次を参照してください。 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)です。  
@@ -146,7 +147,7 @@ ms.lasthandoff: 11/18/2017
 > [!IMPORTANT]  
 >  sqljdbc_xa.dll のアップグレードは、メンテナンス ウィンドウ内で行うか、進行中の MS DTC トランザクションがないときに行ってください。  
   
-1.  アンロード sqljdbc_xa.dll を使用して、[!INCLUDE[tsql](../../includes/tsql_md.md)]コマンド**DBCC sqljdbc_xa (無料)**です。  
+1.  アンロード sqljdbc_xa.dll を使用して、[!INCLUDE[tsql](../../includes/tsql_md.md)]コマンド**DBCC sqljdbc_xa (無料)** です。  
   
 2.  JDBC driver のインストール ディレクトリから新しい sqljdbc_xa.dll の Binn ディレクトリにコピーすべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に参加するコンピューターに分散トランザクションです。  
   

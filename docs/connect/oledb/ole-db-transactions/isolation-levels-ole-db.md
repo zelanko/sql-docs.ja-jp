@@ -3,7 +3,7 @@ title: 分離レベル (OLE DB) |Microsoft ドキュメント
 description: 分離レベル (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-transactions
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f40f3936fbf4ace09ff1df6a18ef86bc00747fd4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 03612c759cd25eb280573fa172ef86691f58dc19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isolation-levels-ole-db"></a>分離レベル (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントは、接続のトランザクション分離レベルを制御できます。 トランザクション分離レベルを制御するには、OLE DB Driver for SQL Server コンシューマーが使用します。  
   
--   DBPROPSET_SESSION property DBPROP_SESS_AUTOCOMMITISOLEVELS for the OLE DB Driver for SQL Server default autocommit mode.  
+-   DBPROPSET_SESSION プロパティの DBPROP_SESS_AUTOCOMMITISOLEVELS、OLE DB driver for SQL Server の既定の自動コミット モードです。  
   
      SQL Server の既定のレベルの OLE DB Driver は、DBPROPVAL_TI_READCOMMITTED です。  
   

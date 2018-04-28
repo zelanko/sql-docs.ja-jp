@@ -1,30 +1,33 @@
 ---
-title: "updateClob (java.lang.String, java.sql.Clob) メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: updateClob (java.lang.String, java.sql.Clob) メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateClob (java.lang.String, java.sql.Clob)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateClob (java.lang.String, java.sql.Clob)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5da64915-1c13-44fd-90c0-52168889bae0
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8413634cbf1dbb8290c6a50d46673a9ed70562ba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c069641b5f02518e12db5ee8300724781533330c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateclob-method-javalangstring-javasqlclob"></a>updateClob (java.lang.String, java.sql.Clob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateClob(java.lang.String columnName,
  この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateClob メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
+ [updateClob メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

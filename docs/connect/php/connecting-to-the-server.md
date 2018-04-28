@@ -2,7 +2,7 @@
 title: サーバーへの接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: ''
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 818a71b8e0bc60168602e7fc0228c21319d08a21
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: ea18d388225bd8cf217126fd6ebe685ddf12fd2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-the-server"></a>サーバーへの接続
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/28/2018
 |[方法: 複数のアクティブな結果セット (MARS) を無効にする](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|接続するときに MARS 機能を無効にする方法について説明します。|  
 |[接続オプション](../../connect/php/connection-options.md)|接続属性を格納する連想配列で許可されているオプションを示します。|  
 |[LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で追加された LocalDB 機能の [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]によるサポートについて説明します。|  
-|[高可用性、災害復旧のサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|機能が追加された高可用性、災害復旧を活用するために、アプリケーションを構成する方法について説明[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]です。|  
+|[高可用性およびディザスター リカバリーのサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|機能が追加された高可用性、災害復旧を活用するために、アプリケーションを構成する方法について説明[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]です。|  
 |[Microsoft Azure SQL Database への接続](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Azure SQL Database に接続する方法をについて説明します。|  
 |[接続の復元性](../../connect/php/connection-resiliency.md)|接続が切断されたを再確立する接続の回復性機能について説明します。|  
 

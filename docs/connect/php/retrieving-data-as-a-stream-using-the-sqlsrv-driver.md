@@ -2,7 +2,7 @@
 title: SQLSRV ドライバーを使用してストリームとしてデータを取得する |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa2d15dde596b9fb8ccd4d170281ef6fa4b2646f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: c76d31e89b0335ecef272c44e6fd55553e5e81d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用してデータをストリームとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/28/2018
   
 2.  [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) を使用して、結果セットの次の行に移動します。  
   
-3.  [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行からフィールドを取得します。 データを使用して、ストリームとして取得することを指定**SQLSRV_PHPTYPE_STREAM (<encoding>)**関数呼び出しで 3 番目のパラメーターとして。 次の表は、エンコーディングおよびそれらの記述を指定するために使用する定数を示しています。  
+3.  [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行からフィールドを取得します。 データを使用して、ストリームとして取得することを指定**SQLSRV_PHPTYPE_STREAM (<encoding>)** 関数呼び出しで 3 番目のパラメーターとして。 次の表は、エンコーディングおよびそれらの記述を指定するために使用する定数を示しています。  
   
     |SQLSRV 定数|Description|  
     |-------------------|---------------|  

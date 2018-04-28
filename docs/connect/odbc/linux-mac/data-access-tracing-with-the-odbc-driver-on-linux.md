@@ -1,30 +1,31 @@
 ---
-title: "ODBC Driver on Linux and macOS によるデータ アクセスのトレース |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC Driver on Linux and macOS によるデータ アクセスのトレース |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data access tracing
 - tracing
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a8c00866759a3cc9732083891e911eea9c2677b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4fadd1ddbcf4004b3a6652975c2495db9007d433
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>ODBC Driver on Linux and macOS によるデータ アクセスのトレース
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +43,7 @@ TraceFile=/home/myappuser/odbctrace.log
 
 アプリケーションのトレースが終了したら、削除`Trace=Yes`から、`odbcinst.ini`のトレース、パフォーマンスの低下を避けるためにファイルし、不要なトレース ファイルが削除されたことを確認します。
   
-内のドライバーを使用するすべてのアプリケーションに適用されるトレース`odbcinst.ini`です。 されません (たとえば、ユーザーごとの機密情報の開示を避けるなど) のすべてのアプリケーションをトレースするには、プライベートの場所を提供することで個々 のアプリケーション インスタンスをトレースできます`odbcinst.ini`を使用して、`ODBCSYSINI`環境変数。 例:  
+内のドライバーを使用するすべてのアプリケーションに適用されるトレース`odbcinst.ini`です。 されません (たとえば、ユーザーごとの機密情報の開示を避けるなど) のすべてのアプリケーションをトレースするには、プライベートの場所を提供することで個々 のアプリケーション インスタンスをトレースできます`odbcinst.ini`を使用して、`ODBCSYSINI`環境変数。 以下に例を示します。  
   
 ```  
 $ ODBCSYSINI=/home/myappuser myapp

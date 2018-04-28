@@ -1,8 +1,8 @@
 ---
 title: Pdostatement::bindparam |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*パラメーター*: (混合) パラメーター識別子。 ステートメ�
   
 &$*変数*: (混合の) SQL ステートメントのパラメーターにバインドする PHP 変数の名前。  
   
-$*data_type*: 省略可能な (整数) pdo::param _ * 定数。 Default is PDO::PARAM_STR.  
+$*data_type*: 省略可能な (整数) pdo::param _ * 定数。 既定値は、pdo::param_str です。  
   
 $*長さ*: データ型の省略可能な (整数) 長さ。 $ で PDO::param_int またはを使用する場合は、既定のサイズを示すように pdo::sqlsrv_param_out_default_size を指定する*data_type*です。  
   
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> 場合は、値がの範囲外に至る可能性があります、bigint 型出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、:param_int ように pdo::sqlsrv_param_out_default_size にされる可能性があります「範囲外の値」例外が発生します。 したがって、既定の pdo::param_str を代わりに使用され、21 は、最大で、結果の文字列のサイズを指定します。 これは、bigint 値の負の符号を含め、桁の最大数です。 
+
 ## <a name="example"></a>例  
 このコード サンプルは、入力/出力パラメーターを使用する方法を示しています。  
   
@@ -125,7 +128,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。
+> 値をバインドするときに、入力として文字列を使用することをお勧め、 [decimal 型または numeric 列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)PHP での有効桁数が限られているために、有効桁数と精度を確保する[浮動小数点数](http://php.net/manual/en/language.types.float.php)です。
 
 ## <a name="example"></a>例  
 このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  

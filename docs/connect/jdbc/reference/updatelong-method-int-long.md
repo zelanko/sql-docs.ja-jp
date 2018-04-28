@@ -1,30 +1,33 @@
 ---
-title: "updateLong (int, long) メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: updateLong (int, long) メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateLong (int, long)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateLong (int, long)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0cb96da78af38a220862da9268b8b7c9f972b04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 779d42478f74dc84c834eda6467ca984b38105ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatelong-method-int-long"></a>updateLong (int, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public void updateLong(int index,
  この updateLong メソッドは、java.sql.ResultSet インターフェイスの updateLong メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [updateLong メソッド &#40;です。SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [updateLong メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

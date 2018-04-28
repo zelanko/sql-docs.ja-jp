@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 2: Node.js 開発用の SQL データベースを作成する'
+title: '手順 2: Node.js 開発用の SQL データベースの作成 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 4d2c96f090e60302e70360082ef4743e904b9ab7
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-2-create-a-sql-database-for-nodejs-development"></a>ステップ 2: Node.js 開発用の SQL データベースを作成する
+# <a name="step-2-create-a-sql-database-for-nodejs-development"></a>手順 2: Node.js 開発用の SQL データベースを作成します。
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

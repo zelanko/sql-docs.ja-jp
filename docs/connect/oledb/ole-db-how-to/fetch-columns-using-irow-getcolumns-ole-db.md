@@ -3,7 +3,7 @@ title: Irow::getcolumns (OLE DB) を使用して列をフェッチ |Microsoft �
 description: Irow::getcolumns (OLE DB) を使用して列をフェッチします。
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1da2025f53d6edda881fa80bbc1d3a3e2d05a62
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: a75f879b646e0c2abecec09a575d2b626386772c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/06/2018
   
 -   (シーケンス) 内の列をフェッチする方法。  
   
--   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 **IRow**-**> GetColumns()**実際の列の長さだけを返します。 この場合、 **IRow GetColumns()]-> [**実際のデータの取得に同じ列に対してもう一度呼び出すことができます。  
+-   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 **IRow**-**> GetColumns()** 実際の列の長さだけを返します。 この場合、 **IRow GetColumns()]-> [** 実際のデータの取得に同じ列に対してもう一度呼び出すことができます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  

@@ -1,30 +1,30 @@
 ---
-title: "Installing the Driver Manager (SQL Server 用 ODBC Driver) |Microsoft ドキュメント"
-ms.custom: 
+title: Installing the Driver Manager (SQL Server 用 ODBC Driver) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36f432e883b56759d46304239715a00c06334d3a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: a396bd0cab8ad6298eec79c48fdf541178194c8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-driver-manager"></a>ドライバー マネージャーのインストール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/20/2018
   
 5.  をインストールする準備ができたら、コンピューターが FTP 経由で外部のサイトにアクセスできる場合は、次のコマンドを実行します。 **./build_dm.sh**です。
 
-お使いのコンピューターが FTP 経由で外部のサイトにアクセスできない場合は、取得`unixODBC-2.3.0.tar.gz`です。 取得することができます`unixODBC-2.3.0.tar.gz`から[http://www.unixodbc.org](http://www.unixodbc.org/)です。クリックして、**ダウンロード**ダウンロード ページに移動するページの左側にリンクします。 適切なリンクをクリックして、unixODBC-2.3.0 (unixODBC-2.3.1 ではなく) をダウンロードします。 Unixodbc-2.3.1 はの今回のリリースではサポートされていません、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。 UnixODBC ドライバー マネージャーのインストールを開始するには、次のコマンドを実行します。 **./build_dm.sh--ダウンロード url = file://unixODBC-2.3.0.tar.gz**です。  
+お使いのコンピューターが FTP 経由で外部のサイトにアクセスできない場合は、取得`unixODBC-2.3.0.tar.gz`です。 取得することができます`unixODBC-2.3.0.tar.gz`から[ http://www.unixodbc.org](http://www.unixodbc.org/)です。クリックして、**ダウンロード**ダウンロード ページに移動するページの左側にリンクします。 適切なリンクをクリックして、unixODBC-2.3.0 (unixODBC-2.3.1 ではなく) をダウンロードします。 Unixodbc-2.3.1 はの今回のリリースではサポートされていません、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。 UnixODBC ドライバー マネージャーのインストールを開始するには、次のコマンドを実行します。 **./build_dm.sh--ダウンロード url = file://unixODBC-2.3.0.tar.gz**です。  
 
 6.  型**はい**ファイルを解凍を続行します。 プロセスのこの部分が完了するまで 5 分かかります。  
 
@@ -72,13 +72,13 @@ ms.lasthandoff: 02/20/2018
 
 1.  インストールされている古いバージョンの unixODBC (unixODBC 2.2.11 など) を削除します。 Red Hat Enterprise Linux 5 または 6 では、次のコマンドを実行します: **yum 削除 unixODBC**です。 SUSE Linux Enterprise で**zypper 削除 unixODBC**です。  
   
-2.  移動して[http://www.unixodbc.org](http://www.unixodbc.org/)です。クリックして、**ダウンロード**ダウンロード ページに移動するページの左側にリンクします。 適切なリンクをクリックして、ファイル unixODBC-2.3.0.tar.gz をコンピューターに保存します。 Unixodbc-2.3.1 はの今回のリリースではサポートされていません、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
+2.  移動して[ http://www.unixodbc.org](http://www.unixodbc.org/)です。クリックして、**ダウンロード**ダウンロード ページに移動するページの左側にリンクします。 適切なリンクをクリックして、ファイル unixODBC-2.3.0.tar.gz をコンピューターに保存します。 Unixodbc-2.3.1 はの今回のリリースではサポートされていません、 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
   
 3.  Linux コンピューター上のコマンドを実行します:**して unixodbc-2.3.0.tar.gz を tar**です。  
   
 4.  unixODBC-2.3.0 ディレクトリに変更します。  
   
-5.  コマンド プロンプトでコマンドを実行します: **CPPFLAGS ="-DSIZEOF_LONG_INT 8 を ="**です。  
+5.  コマンド プロンプトでコマンドを実行します: **CPPFLAGS ="-DSIZEOF_LONG_INT 8 を ="** です。  
   
 6.  コマンド プロンプトでコマンドを実行します:**エクスポート CPPFLAGS**です。  
   

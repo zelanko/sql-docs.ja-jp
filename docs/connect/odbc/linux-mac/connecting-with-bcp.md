@@ -2,7 +2,7 @@
 title: Bcp を使用した接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: badff319d1ae969d14fc14fc68d40fdd57b776eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>使用可能なオプション
 現在のリリースでは、次の構文とオプションを使用できます。  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[*データベース ***.**]* スキーマ ***.*** テーブル ***で** *data_file* | **アウト** *data_file*
 
 - -a *packet_size*  
 サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。  
@@ -149,7 +149,7 @@ Unicode 文字を使用して一括コピー操作を実行します。
 - -V (80 | 90 | 100)  
 以前のバージョンからのデータ型を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
   
-- -x  
+- -X  
 フォーマットおよび -f format_file オプションと共に使用し、既定の XML ではないフォーマット ファイルの代わりに XML ベースのフォーマット ファイルを生成します。  
   
 ## <a name="see-also"></a>参照

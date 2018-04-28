@@ -1,8 +1,8 @@
 ---
-title: sqlsrv_prepare | Microsoft Docs
+title: sqlsrv_prepare |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: ''
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 52d4cbf24fe05ff73d85117ab8c9f10f566683a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,7 +74,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [省略可能]: クエリのプロパティを設定する連想配列。 次の表は、サポートされているキーと対応する値を示します。  
   
-|[キー]|サポートされている値|Description|  
+|Key|サポートされている値|Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|正の整数値です。|クエリのタイムアウト (秒単位) を設定します。 既定では、ドライバーは結果を無制限に待機します。|  
 |SendStreamParamsAtExec|**true** または **false**<br /><br />既定値は **true**です。|すべてのストリームの実行時データを送信するドライバーを構成 (**true**)、またはストリーム データをチャンク単位で送信する (**false**)。 既定では、この値は **true**に設定されています。 詳細については、「 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)」を参照してください。|  

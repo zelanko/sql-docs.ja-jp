@@ -1,28 +1,29 @@
 ---
-title: "SQLServerClob のメンバー |Microsoft ドキュメント"
-ms.custom: 
+title: SQLServerClob のメンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8416bd8dea2a36d3421ab44084649e64f39345b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 591756b1dea5200ba65c41332e57c6dcae17ed46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,15 +46,15 @@ ms.lasthandoff: 11/18/2017
   
 |名前|Description|  
 |----------|-----------------|  
-|[解放](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|このメソッドは、CLOB オブジェクトと、それが占有していたリソースを解放します。|  
+|[無料](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|このメソッドは、CLOB オブジェクトと、それが占有していたリソースを解放します。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Clob を ASCII ストリームとして具体化します。|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)|Clob データを、java.io.Reader オブジェクトまたは文字のストリームとして返します。|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlserverclob.md)|渡された開始位置とコピーする文字数に基づいて、指定された Clob の部分文字列のコピーを返します。|  
 |[長さ](../../../connect/jdbc/reference/length-method-sqlserverclob.md)|Clob の文字数を返します。|  
-|[位置](../../../connect/jdbc/reference/position-method-sqlserverclob.md)|指定された開始位置に基づいて、指定された Clob オブジェクトまたは Clob の部分文字列の文字位置を返します。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverclob.md)|指定された開始位置に基づいて、指定された Clob オブジェクトまたは Clob の部分文字列の文字位置を返します。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlserverclob.md)|ASCII 文字を Clob の指定された位置から書き込むために使用するストリームを返します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverclob.md)|Unicode 文字のストリームを Clob の指定された位置から書き込むために使用するストリームを返します。|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)|渡された文字列を Clob の指定された位置から書き込みます。|  
+|[SetString](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)|渡された文字列を Clob の指定された位置から書き込みます。|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverclob.md)|Clob を指定された長さに切り捨てます。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

@@ -1,27 +1,28 @@
 ---
-title: "SQLServerPreparedStatement のメンバー |Microsoft ドキュメント"
-ms.custom: 
+title: SQLServerPreparedStatement のメンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05f80d22f4eb968f6db9ce24a8c5e9808bd43356
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1926d376ac2653dcc7b4d6b0481bbe968d9469d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,12 +46,12 @@ ms.lasthandoff: 11/18/2017
 |名前|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|このステートメント オブジェクトのコマンド バッチにパラメーターのセットを追加します。|  
-|[キャンセル](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメントのオブジェクトによって現在実行されている SQL ステートメントを取り消します。|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメントのオブジェクトによって現在実行されている SQL ステートメントを取り消します。|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|この SQL コマンドの現在のリストを空に[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|現在のパラメーター値を直ちにクリアします。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメント オブジェクトで報告されるすべての警告をクリアします。|  
-|[閉じる](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|データベースと JDBC リソースを待たずにすぐに自動的に解放するには、このステートメント オブジェクトの解放します。|  
-|[実行します。](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|SQL ステートメントの任意の種類を指定できます、このステートメント オブジェクトで SQL ステートメントを実行します。|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|データベースと JDBC リソースを待たずにすぐに自動的に解放するには、このステートメント オブジェクトの解放します。|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|SQL ステートメントの任意の種類を指定できます、このステートメント オブジェクトで SQL ステートメントを実行します。|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|実行するコマンド バッチをデータベースに送信します。 すべてのコマンドが正常に実行されている場合は、更新数の配列が返されます。|  
 |[さらに executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|このステートメント オブジェクトの SQL クエリを実行しを返します、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)クエリによって生成されるオブジェクト。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|SQL の INSERT、UPDATE、MERGE、または DELETE ステートメントである必要があります、このステートメント オブジェクトで SQL ステートメントを実行します。または、SQL ステートメントを何も返さない DDL ステートメントなどです。|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|指定された Blob オブジェクトに指定されたパラメーターを設定します。|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|指定されたパラメーターを指定した設定**ブール**値。|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|指定されたパラメーターを指定した設定**バイト**値。|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された byte 配列に設定します。|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された byte 配列に設定します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|指定された Reader オブジェクトを指定されたパラメーターを設定します。|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|指定された Clob オブジェクトに指定されたパラメーターを設定します。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。SQL カーソル名を、指定された文字列に設定します。この文字列は、後に続く実行 (execute) メソッドによって使用されます。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/18/2017
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|指定された参照オブジェクトを指定されたパラメーターを設定します。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。応答のバッファリング モードを設定[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト大文字と小文字を**文字列完全**または**アダプティブ**です。|  
 |[setShort](../../../connect/jdbc/reference/setshort-method-sqlserverpreparedstatement.md)|指定されたパラメーターを指定した設定**短い**値。|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)|指定されたパラメーターを指定した設定**文字列**値。|  
+|[SetString](../../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)|指定されたパラメーターを指定した設定**文字列**値。|  
 |[setSQLXML](../../../connect/jdbc/reference/setsqlxml-method-sqlserverpreparedstatement.md)|指定されたパラメーターを指定した設定**SQLXML**オブジェクト。|  
 |[setTime](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された時刻の値に設定します。|  
 |[setTimestamp](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定されたタイムスタンプ値に設定します。|  

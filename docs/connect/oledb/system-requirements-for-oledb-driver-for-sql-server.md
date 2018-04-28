@@ -3,7 +3,7 @@ title: SQL Server の OLE DB Driver のシステム要件 |Microsoft ドキュ�
 description: SQL Server の OLE DB ドライバーの要件
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -20,16 +20,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5169c841784230d1ad4d99472dd636a490c750ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server の OLE DB Driver のシステム要件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ アクセス機能 (MARS など) を使用するには、次のソフトウェアがインストールされている必要があります。  
 
@@ -69,9 +71,9 @@ ms.lasthandoff: 04/06/2018
 
  IDBInfo::GetKeywords は常には影響しません、接続のサーバー バージョンに対応するキーワードの一覧を返します**DataTypeCompatibility**です。  
 
-|データ型|OLE DB Driver for SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components、MDAC、<br /><br /> OLE DB Driver for SQL Server の OLE DB アプリケーション datatypecompatibility = 80|  
+|データ型|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components、MDAC、<br /><br /> OLE DB Driver for SQL Server の OLE DB アプリケーション datatypecompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|Udt|Udt|Varbinary|  
+|CLR UDT (\<8 Kb 以下)|udt|Udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|テキスト|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
@@ -83,5 +85,5 @@ ms.lasthandoff: 04/06/2018
 |time|time|varchar|varchar|Varchar|  
 
 ## <a name="see-also"></a>参照  
- [SQL Server プログラミング用の OLE DB ドライバー](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [OLE DB Driver for SQL Server のインストール](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

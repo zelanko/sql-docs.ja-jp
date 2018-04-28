@@ -1,9 +1,9 @@
 ---
-title: OLE DB Driver for SQL Server (OLE DB) |Microsoft ドキュメント
-description: OLE DB Driver for SQL Server (OLE DB)
+title: SQL Server プログラミング用の OLE DB ドライバー |Microsoft ドキュメント
+description: SQL Server プログラミング用の OLE DB ドライバー
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -23,16 +23,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e14bb0a5154101c8d7bc90db91e0c1d0d34f1ccf
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7e6bd7c4be3e516cd1a0f421bd963bc0ef72e99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db"></a>OLE DB Driver for SQL Server (OLE DB)
+# <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server プログラミング用の OLE DB ドライバー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   SQL Server の OLE DB Driver は、データへのアクセスに使用される低レベルの COM API です。 SQL Server の OLE DB Driver は、ツール、ユーティリティ、または高パフォーマンスが必要な低レベルのコンポーネントを開発するためお勧めします。 SQL Server の OLE DB Driver は、ネイティブな高パフォーマンス プロバイダーにアクセスする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表形式データ ストリーム (TDS) プロトコルに直接できます。  
   
  OLE DB Driver for SQL Server に接続するアプリケーションに OLE DB サポートを提供する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 04/10/2018
   
 -   [大きな CLR ユーザー定義型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [FILESTREAM のサポート&#40;OLE DB&#41;](../../oledb/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM のサポート](../../oledb/features/filestream-support.md)  
   
 -   [トランザクション](../../oledb/ole-db-transactions/transactions.md)  
   
@@ -80,6 +83,6 @@ ms.lasthandoff: 04/10/2018
 -   [OLE DB の操作方法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>参照  
- [OLE DB Driver for SQL Server のプログラミング](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

@@ -1,27 +1,28 @@
 ---
-title: "SQLServerResultSet のメンバー |Microsoft ドキュメント"
-ms.custom: 
+title: SQLServerResultSet のメンバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767bc38218c81b81db91e5949bf2431ca4e98e95
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 610ace1ea15f69277cba1e4bd37b365a2c3e1cc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,29 +60,29 @@ ms.lasthandoff: 11/18/2017
 |[beforeFirst](../../../connect/jdbc/reference/beforefirst-method-sqlserverresultset.md)|この最初の行の前にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[cancelRowUpdates](../../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md)|これで、現在の行に加えられた更新を取り消します[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverresultset.md)|これで報告されるすべての警告をクリア[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
-|[閉じる](../../../connect/jdbc/reference/close-method-sqlserverresultset.md)|このリリース[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトのデータベースと JDBC リソースを待たずにすぐに自動的に閉じられているときにします。|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverresultset.md)|このリリース[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトのデータベースと JDBC リソースを待たずにすぐに自動的に閉じられているときにします。|  
 |[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)|これから現在の行を削除[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトと基になるデータベースからです。|  
 |[最終処理します。](../../../connect/jdbc/reference/finalize-method-sqlserverresultset.md)|これを明示的に閉じる[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[findColumn](../../../connect/jdbc/reference/findcolumn-method-sqlserverresultset.md)|これで指定された列名の最初の一致する列のインデックスを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
-|[まずは](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|この最初の行にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
+|[first](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|この最初の行にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトの配列オブジェクトとして。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) ASCII 文字のストリームとしてオブジェクト。|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)|この現在の行に指定された列インデックスの値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) java.math.BigDecimal としてオブジェクト。|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして解釈されないバイトのバイナリ ストリーム。|  
-|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語での Blob オブジェクトとして。|  
-|[getBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**ブール**Java プログラミング言語でします。|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**バイト**Java プログラミング言語でします。|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**バイト**Java プログラミング言語の配列。|  
+|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語での Blob オブジェクトとして。|  
+|[GetBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**ブール**Java プログラミング言語でします。|  
+|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**バイト**Java プログラミング言語でします。|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**バイト**Java プログラミング言語の配列。|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを java.io.Reader オブジェクトとして。|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語で Clob オブジェクトとして。|  
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|この同時実行モードを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|これによって使用される SQL カーソルの名前を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語の java.sql.Date オブジェクトとして。|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|指定した列の値を取得、[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクト。|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**二重**Java プログラミング言語でします。|  
+|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**二重**Java プログラミング言語でします。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|このフェッチ方向を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|このため、フェッチ サイズを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **float** Java プログラミング言語でします。|  
+|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **float** Java プログラミング言語でします。|  
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverresultset.md)|これの保持機能を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **int** Java プログラミング言語でします。|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**長い**Java プログラミング言語でします。|  
@@ -89,12 +90,12 @@ ms.lasthandoff: 11/18/2017
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)|現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)リーダー オブジェクトとしてオブジェクト。|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **NClob** Java プログラミング言語のオブジェクト。|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)|現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) java プログラミング言語の string オブジェクト。|  
-|[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java プログラミング言語でオブジェクトとして。|  
+|[GetObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Java プログラミング言語でオブジェクトとして。|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語で Ref オブジェクトとして。|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|現在の行番号を取得します。|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**短い**Java プログラミング言語でします。|  
 |[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|取得、 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)をこれを生成したオブジェクト[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**文字列**Java プログラミング言語でします。|  
+|[GetString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、**文字列**Java プログラミング言語でします。|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|現在の行に指定された列の値を取得、 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトとして、 **SQLXML**オブジェクト。|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語の java.sql.Time オブジェクトとして。|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)|この現在の行に指定された列の値を取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトを Java プログラミング言語の java.sql.Timestamp オブジェクトとして。|  
@@ -108,16 +109,16 @@ ms.lasthandoff: 11/18/2017
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverresultset.md)|示すかどうかこの[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトが閉じられました。|  
 |[isFirst](../../../connect/jdbc/reference/isfirst-method-sqlserverresultset.md)|この最初の行の上にカーソルがあるかどうかを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[isLast](../../../connect/jdbc/reference/islast-method-sqlserverresultset.md)|上のこの最後の行にカーソルがあるかどうかを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
-|[前の](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|この最後の行にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
+|[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|この最後の行にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|記憶されているカーソルの位置に、現在の行では通常、カーソルを移動します。|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|カーソルを挿入行に移動します。|  
 |[次に](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|カーソルを現在の位置から 1 行下に移動します。|  
 |[先の](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|この前の行にカーソルを移動[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|データベース内の最新の値を使用して、現在の行を更新します。|  
-|[相対](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|正または負の値の方向のいずれかで、現在の行を基準とした、行の特定の量、カーソルを移動します。|  
-|[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|行が削除されたかどうかを取得します。|  
+|[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|正または負の値の方向のいずれかで、現在の行を基準とした、行の特定の量、カーソルを移動します。|  
+|[RowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|行が削除されたかどうかを取得します。|  
 |[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)|現在の行に挿入があったかどうかを取得します。|  
-|[rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|現在の行が更新されたかどうかを取得します。|  
+|[RowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|現在の行が更新されたかどうかを取得します。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md)|方向についてのヒントは、この行[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトが処理されます。|  
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|複数の行は、この必要な場合に、データベースからフェッチする必要があります行の数についてのヒントを JDBC ドライバーに提供[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|配列オブジェクトで指定された列を更新します。|  

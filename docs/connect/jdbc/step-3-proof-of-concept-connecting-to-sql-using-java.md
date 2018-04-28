@@ -1,5 +1,5 @@
 ---
-title: 'ステップ 3: Java を使用した SQL への接続を概念実証する'
+title: '手順 3: 概念実証の Java を使用する SQL への接続 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b4e5d6288a7ac269f60c4c8a0ca37bf52a932f10
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>ステップ 3: Java を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>手順 3: 概念実証の Java を使用して SQL に接続します。
   
 この例は、概念実証ののみを考慮してください。 サンプル コードでは、わかりやすくするため、簡略化し、Microsoft によって推奨されるベスト プラクティスを必ずしもは表しません。  
   
@@ -70,7 +70,7 @@ SQL データベースに接続するには、接続クラスを使用します�
         }  
 ```  
   
-## <a name="step-2-execute-a-query"></a>クエリを実行します。  
+## <a name="step-2-execute-a-query"></a>手順 2: クエリを実行します。  
 このサンプルでは Azure SQL データベースへの接続、SELECT ステートメントを実行および選択した行を返します。   
   
 ```java  

@@ -1,28 +1,28 @@
 ---
-title: "JDBC ドライバーのリリース ノート |Microsoft ドキュメント"
-ms.custom: 
+title: JDBC ドライバーのリリース ノート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 
+caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: d5377db31ae77ea39ad5d73e26453182a7e6b09c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC ドライバーのリリース ノート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ JDBC ドライバーには、SQL Server で使用される sql_variant データ
     ```
     java.lang.String cannot be cast to java.sql.Timestamp
     ```
-    Workaround: use "getString()" or "getObject()" methods instead.
+    回避策:"getString()"または「概念」メソッドを使用して、代わりにします。
 
 2. Null 値用の SQL Variant を TVP を使用します。
 

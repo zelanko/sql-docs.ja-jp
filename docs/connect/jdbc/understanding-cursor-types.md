@@ -1,27 +1,28 @@
 ---
-title: "カーソルの種類を理解する |Microsoft ドキュメント"
-ms.custom: 
+title: カーソルの種類を理解する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1611575b0f0401b47cf468837f39a6a8dd36aa49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-cursor-types"></a>カーソルの種類について
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,12 +52,12 @@ ms.lasthandoff: 11/18/2017
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|なし|順方向専用、読み取り専用|直接|完全|アプリケーションで結果セットに対して 1 回の (順方向の) パススルーを行う必要があります。 これは既定の動作です。TYPE_SS_DIRECT_FORWARD_ONLY カーソルと同じように動作します。 ステートメントの実行時には、サーバーからメモリに結果セット全体が読み込まれます。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|なし|順方向専用、読み取り専用|直接|adaptive|アプリケーションで結果セットに対して 1 回の (順方向の) パススルーを行う必要があります。 TYPE_SS_DIRECT_FORWARD_ONLY カーソルと同じように動作します。 アプリケーションの要求に応じてサーバーから行が読み取られるため、クライアント側のメモリの使用が最小限に抑えられます。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|高速順方向|順方向専用、読み取り専用|カーソル (cursor)|なし|アプリケーションでサーバー カーソルを使用して結果セットに対する 1 回の (順方向の) パススルーを行う必要があります。 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY カーソルと同じように動作します。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
-|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|動的 (順方向専用)|順方向専用、更新可能|なし|なし|アプリケーションで 1 行以上の行を更新するには、結果セットに対して 1 回の (順方向の) パススルーを行う必要があります。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。<br /><br /> 既定では、フェッチ サイズが固定アプリケーションを呼び出すとき、 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。<br /><br /> **注:** JDBC ドライバーからステートメントの実行結果を取得できるアダプティブ バッファリングの機能を提供する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]一度にはなく、アプリケーションの必要に応じて、します。 たとえば、アプリケーションからメモリに収まりきらないほどの大きなデータを取得する必要があっても、アダプティブ バッファリングが作用することで、クライアント アプリケーションがそのような値をストリームとして取得できるようになります。 ドライバーの既定の動作は"**アダプティブ**"です。 ただし、順方向専用の更新可能な結果セットに対するアダプティブ バッファリングを取得するために、アプリケーションが、明示的に呼び出す、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト提供することによって、**文字列**値"**アダプティブ"**です。 コード例では、次を参照してください。[大規模なデータの更新のサンプル](../../connect/jdbc/updating-large-data-sample.md)です。|  
+|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|動的 (順方向専用)|順方向専用、更新可能|なし|なし|アプリケーションで 1 行以上の行を更新するには、結果セットに対して 1 回の (順方向の) パススルーを行う必要があります。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。<br /><br /> 既定では、フェッチ サイズが固定アプリケーションを呼び出すとき、 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)のメソッド、 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。<br /><br /> **注:** JDBC ドライバーからステートメントの実行結果を取得できるアダプティブ バッファリングの機能を提供する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]一度にはなく、アプリケーションの必要に応じて、します。 たとえば、アプリケーションからメモリに収まりきらないほどの大きなデータを取得する必要があっても、アダプティブ バッファリングが作用することで、クライアント アプリケーションがそのような値をストリームとして取得できるようになります。 ドライバーの既定の動作は"**アダプティブ**"です。 ただし、順方向専用の更新可能な結果セットに対するアダプティブ バッファリングを取得するために、アプリケーションが、明示的に呼び出す、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト提供することによって、**文字列**値"**アダプティブ"** です。 コード例では、次を参照してください。[大規模なデータの更新のサンプル](../../connect/jdbc/updating-large-data-sample.md)です。|  
 |TYPE_SCROLL_INSENSITIVE|静的|スクロール可能、更新不可。<br /><br /> 外部の行の更新、挿入、および削除は参照できません。|なし|なし|アプリケーションでは、データベース スナップショットが必要です。 結果セットは更新できません。 CONCUR_READ_ONLY のみがサポートされます。  それ以外の同時実行タイプは、このカーソル タイプと組み合わせて使用すると例外が発生します。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|Keyset|スクロール可能、読み取り専用です。 外部の行の更新を参照できます。削除はデータの欠落によって表されます。<br /><br /> 外部の行の挿入は参照できません。|なし|なし|アプリケーションは、既存の行にのみ変更されたデータを参照してください。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|Keyset|スクロール可能、更新可能。<br /><br /> 外部および内部の行の更新を参照できます。削除はデータの欠落によって表されます。挿入は参照できません。|なし|なし|アプリケーションは、ResultSet オブジェクトを使用して、既存の行のデータを変更する可能性があります。 アプリケーションは、ResultSet オブジェクト以外から他のユーザーによって行われた行に対する変更を表示することもあります。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
 |TYPE_SS_DIRECT_FORWARD_ONLY|なし|順方向専用、読み取り専用|なし|full または adaptive|整数値 2003 です。 全体がバッファーされた、読み取り専用のクライアント側カーソルを使用できます。 サーバー カーソルは作成されません。<br /><br /> 同時実行の種類としては CONCUR_READ_ONLY のみがサポートされます。 その他のすべての同時実行の種類には、このカーソルの種類で使用する場合、例外が発生します。|  
-|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|高速順方向|順方向専用|なし|なし|整数値 2004 です。 サーバー カーソルを使用して、すべてのデータに高速にアクセスできます。 同時実行の種類が CONCUR_UPDATABLE である場合にのみ更新できます。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。<br /><br /> この場合にアダプティブ バッファリングを取得するために、アプリケーションが明示的に呼び出すが、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクトを提供することによって、**文字列**値"**アダプティブ"**です。 コード例では、次を参照してください。[大規模なデータの更新のサンプル](../../connect/jdbc/updating-large-data-sample.md)です。|  
+|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|高速順方向|順方向専用|なし|なし|整数値 2004 です。 サーバー カーソルを使用して、すべてのデータに高速にアクセスできます。 同時実行の種類が CONCUR_UPDATABLE である場合にのみ更新できます。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。<br /><br /> この場合にアダプティブ バッファリングを取得するために、アプリケーションが明示的に呼び出すが、 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)のメソッド、 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクトを提供することによって、**文字列**値"**アダプティブ"** です。 コード例では、次を参照してください。[大規模なデータの更新のサンプル](../../connect/jdbc/updating-large-data-sample.md)です。|  
 |TYPE_SS_SCROLL_STATIC|静的|他のユーザーによる更新は反映されません。|なし|なし|整数値 1004 です。 アプリケーションで、データベース スナップショットが必要になります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_INSENSITIVE に対する固有のシノニム、同時実行設定の動作は同じです。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|Keyset|スクロール可能、読み取り専用。 外部の行の更新を参照できます。削除はデータの欠落によって表されます。<br /><br /> 外部の行の挿入は参照できません。|なし|なし|整数値 1005 です。 アプリケーションで、既存の行についてのみ、変更されたデータを調べる必要があります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE に対する固有のシノニム、同時実行設定の動作は同じです。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
 |TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|Keyset|スクロール可能、更新可能。<br /><br /> 外部および内部の行の更新を参照できます。削除はデータの欠落によって表されます。挿入は参照できません。|なし|なし|整数値 1005 です。 アプリケーションは、既存の行について変更済みデータを参照したり、データを変更したりする必要があります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE に対する固有のシノニム、同時実行設定の動作は同じです。<br /><br /> 行は、フェッチ サイズで指定されたブロック単位でサーバーから取得されます。|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/18/2017
  動的カーソルの場合は、更新された行は、フェッチ バッファーで定義された範囲が移動するまでは、フェッチ バッファー内での位置が維持されます。 更新された行はその後結果セット内の異なる場所に再度現れるか、または完全に削除されます。 結果セット内での一時的な不整合を回避する必要のあるアプリケーションでは、フェッチ サイズを 1 にする必要があります (既定では、CONCUR_SS_SCROLL_LOCKS の同時実行の場合は 8 行、その他の同時実行の場合は 128 行です)。  
   
 ## <a name="cursor-conversion"></a>カーソルの変換  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]暗黙のカーソル変換 (またはカーソルの下位) と呼びますが、要求される異なる種類のカーソルの実装にもできます。 暗黙のカーソル変換の詳細についてで暗黙的なカーソル変換の使用」のトピックを参照してください。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 暗黙のカーソル変換 (またはカーソルの下位) と呼びますが、要求される異なる種類のカーソルの実装にもできます。 暗黙のカーソル変換の詳細についてで暗黙的なカーソル変換の使用」のトピックを参照してください。[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]オンライン ブック。  
   
  [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]ResultSet.TYPE_SCROLL_SENSITIVE および ResultSet.CONCUR_UPDATABLE の結果からデータを更新すると、メッセージ「カーソルは読み取り専用」に設定すると、例外がスローされます。 この例外が発生、[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]その結果が設定され、要求された更新可能なカーソルを返しませんでしたに対して暗黙のカーソル変換が行わします。  
   

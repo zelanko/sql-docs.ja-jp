@@ -1,27 +1,28 @@
 ---
-title: "についてのデータ型の違い |Microsoft ドキュメント"
-ms.custom: 
+title: についてのデータ型の違い |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9f24abd0bf39ebe61cf3715371c6c6c3d6f5663
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: cf10944059322a159de43ccee2a7e4d8ed1d8526
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-differences"></a>データ型の違いについて
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |固定長|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Char**と**nchar**データ型は JDBC に直接マップ**CHAR**と**NCHAR**型です。 列が SET ANSI_PADDING ON の場合、これらはサーバーが埋め込みを行う固定長の型です。 パディングは常にオンに**nchar**が**char**サーバーの char 型の列が行われていない場合は、JDBC ドライバーが埋め込み。|  
 |可変長|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Varchar**と**nvarchar**型 JDBC に直接マップ**VARCHAR**と**NVARCHAR**型、それぞれします。|  
-|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**テキスト**と**ntext**型 JDBC にマップされる**LONGVARCHAR**と**LONGNVARCHAR**それぞれ入力します。 以降で非推奨の種類が[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]、大きな値型を使用する必要がありますので、 **varchar (max)**または**nvarchar (max)**、代わりにします。<br /><br /> 更新プログラムを使用して\<数値型 > と[updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)に対してメソッドが失敗**テキスト**と**ntext** server 列です。 ただしを使用して、 [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)に対して指定した文字変換の型を持つメソッドはサポートされて**テキスト**と**ntext** server 列です。|  
+|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**テキスト**と**ntext**型 JDBC にマップされる**LONGVARCHAR**と**LONGNVARCHAR**それぞれ入力します。 以降で非推奨の種類が[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]、大きな値型を使用する必要がありますので、 **varchar (max)** または**nvarchar (max)**、代わりにします。<br /><br /> 更新プログラムを使用して\<数値型 > と[updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)に対してメソッドが失敗**テキスト**と**ntext** server 列です。 ただしを使用して、 [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)に対して指定した文字変換の型を持つメソッドはサポートされて**テキスト**と**ntext** server 列です。|  
   
 ## <a name="binary-string-types"></a>バイナリ文字列型  
  JDBC のバイナリ文字列型は**バイナリ**、 **VARBINARY**、および**LONGVARBINARY**です。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |固定長|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**バイナリ**JDBC に直接マップ」と入力**バイナリ**型です。 列が SET ANSI_PADDING ON の場合、これはサーバーが埋め込みを行う固定長の型です。 サーバーの char 列に埋め込みが行われていない場合は、JDBC ドライバーが埋め込みを行います。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**タイムスタンプ**型は、JDBC**バイナリ**8 バイトの固定長を持つ型。|  
 |可変長|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Varbinary** JDBC にマップ**VARBINARY**型です。<br /><br /> **Udt**に入力[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]として JDBC にマップする**VARBINARY**型です。|  
-|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**イメージ**JDBC にマップ**LONGVARBINARY**型です。 この型は以降では使用されなくなりました[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]大きな値の型を使用する必要がありますので、 **varbinary (max)**代わりにします。|  
+|Long|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**イメージ**JDBC にマップ**LONGVARBINARY**型です。 この型は以降では使用されなくなりました[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]大きな値の型を使用する必要がありますので、 **varbinary (max)** 代わりにします。|  
   
 ## <a name="exact-numeric-types"></a>真数型  
  JDBC の真数型は、対応する SQL Server 型に直接マップされます。  

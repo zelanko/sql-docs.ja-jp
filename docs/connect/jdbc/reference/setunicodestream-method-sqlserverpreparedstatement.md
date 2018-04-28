@@ -1,30 +1,33 @@
 ---
-title: "setUnicodeStream メソッド (SQLServerPreparedStatement) |Microsoft ドキュメント"
-ms.custom: 
+title: setUnicodeStream メソッド (SQLServerPreparedStatement) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setUnicodeStream
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setUnicodeStream
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e39cd2346c7f7c720f120c675b1540f90e81d5fe
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b38583278f47d2855867babb0eb30d571e0c19d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   指定されたパラメーターの番号を、渡された入力ストリームに設定します。入力ストリームは、指定されたバイト数を持ちます。  
   
 > [!NOTE]  
->  このメソッドは、JDBC 仕様で推奨されていません。このメソッドを呼び出すと、"未実装" 例外がスローされます。  
+>  このメソッドは、JDBC 仕様で非推奨とされます。このメソッドを呼び出すと、"未実装" 例外がスローされます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,7 +55,7 @@ public final void setUnicodeStream(int n,
   
  InputStream オブジェクト。  
   
- *length*  
+ *長さ*  
   
  バイト数です。  
   

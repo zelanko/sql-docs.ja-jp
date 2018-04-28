@@ -3,7 +3,7 @@ title: 行セットのプロパティと動作 |Microsoft ドキュメント
 description: 行セットのプロパティと OLE DB Driver for SQL Server での動作
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_COMMITPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティでコミット操作後の行セットの動作が決まります。<br /><br /> VARIANT_TRUE: SQL Server の OLE DB Driver は、有効な行セットを保持します。<br /><br /> VARIANT_FALSE: コミット操作後に、行セットが、OLE DB Driver for SQL Server に無効にします。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。|  
 |DBPROP_DEFERRED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: ときを VARIANT_TRUE に設定、OLE DB Driver for SQL Server が、行セットのサーバー カーソルを使用します。 **テキスト**、 **ntext**、および**イメージ**アプリケーションによってアクセスされるまでの列は、サーバーから返されません。|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: SQL Server の OLE DB Driver は、ストレージ オブジェクトで即時更新モードをサポートします。<br /><br /> シーケンシャル ストリーム オブジェクトのデータに加えた変更は、直ちに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。 変更は、行セットのトランザクション モードに基づいてコミットされます。|  
-|DBPROP_HIDDENCOLUMNS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> **説明:**列数を非表示<br /><br /> DBPROP_UNIQUEROWS が VARIANT_TRUE の場合、DBPROP_HIDDENCOLUMNS プロパティは、行セット内の行を一意に識別するためにプロバイダーによって追加された追加の "非表示" 列の数を返します。 これらの列がによって返される**icolumnsinfo::getcolumninfo**と**icolumnsrowset::getcolumnsrowset**です。 ただし、これらは含まれませんによって返される行の数の*pcColumns*によって返される引数**icolumnsinfo::getcolumninfo**です。<br /><br /> 表される列の合計数を決定する、 *:getcolumninfo*によって返される構造体**icolumnsinfo::getcolumninfo**コンシューマーが dbprop _ の値を加算する非表示の列を含む返される列の数に HIDDENCOLUMNS **icolumnsinfo::getcolumninfo**で*pcColumns*です。 DBPROP_UNIQUEROWS が VARIANT_FALSE の場合、DBPROP_HIDDENCOLUMNS は 0 です。|  
+|DBPROP_HIDDENCOLUMNS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> **説明:** 列数を非表示<br /><br /> DBPROP_UNIQUEROWS が VARIANT_TRUE の場合、DBPROP_HIDDENCOLUMNS プロパティは、行セット内の行を一意に識別するためにプロバイダーによって追加された追加の "非表示" 列の数を返します。 これらの列がによって返される**icolumnsinfo::getcolumninfo**と**icolumnsrowset::getcolumnsrowset**です。 ただし、これらは含まれませんによって返される行の数の*pcColumns*によって返される引数**icolumnsinfo::getcolumninfo**です。<br /><br /> 表される列の合計数を決定する、 *:getcolumninfo*によって返される構造体**icolumnsinfo::getcolumninfo**コンシューマーが dbprop _ の値を加算する非表示の列を含む返される列の数に HIDDENCOLUMNS **icolumnsinfo::getcolumninfo**で*pcColumns*です。 DBPROP_UNIQUEROWS が VARIANT_FALSE の場合、DBPROP_HIDDENCOLUMNS は 0 です。|  
 |DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: SQL Server の OLE DB Driver は、すべての行セットでこれらのインターフェイスをサポートします。|  
 |DBPROP_IColumnsRowset|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: SQL Server の OLE DB Driver のサポート、 **IColumnsRowset**インターフェイスです。|  
 |DBPROP_IConnectionPointContainer|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : IConnectionPointContainer。 VARIANT_TRUE の場合は、指定したインターフェイスを行セットがサポートします。 VARIANT_FALSE の場合は、指定したインターフェイスを行セットがサポートしません。 インターフェイスをサポートするプロバイダーは、VARIANT_TRUE を指定してインターフェイスに関連付けられたプロパティをサポートする必要があります。 これらのプロパティは、主に、CommandProperties::SetProperties を介してインターフェイスを要求するために使用されます。|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_MAYWRITECOLUMN|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_MEMORYUSAGE|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_NOTIFICATIONGRANULARITY|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
-|DBPROP_NOTIFICATIONPHASES|R/w 読み取り専用<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: SQL Server の OLE DB Driver は、すべての通知フェーズをサポートします。|  
+|DBPROP_NOTIFICATIONPHASES|R/w 読み取り専用<br /><br /> 既定値: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: SQL Server の OLE DB Driver は、すべての通知フェーズをサポートします。|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w 読み取り専用<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 説明: SQL Server の通知フェーズの OLE DB Driver は示されている行セットの変更を実行する前にキャンセル可能なです。 SQL Server の OLE DB Driver は、実行が完了した後、フェーズのキャンセルをサポートしません。|  
 |DBPROP_ORDEREDBOOKMARKS|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 設定の可視性プロパティを変更すると、使用する SQL Server の OLE DB Driver[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットをサポートするカーソル。 詳細については、次を参照してください。[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)です。|  

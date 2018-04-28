@@ -1,27 +1,28 @@
 ---
-title: "手順 3: 概念実証の Node.js を使用して SQL への接続 |Microsoft ドキュメント"
-ms.custom: 
+title: '手順 3: 概念実証の Node.js を使用して SQL への接続 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>手順 3: 概念実証の Node.js を使用して SQL に接続します。
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行します。  
   
   
-使用してすべての SQL ステートメントが実行される、**新しい Request()**関数。 ステートメントが select ステートメントなどの行を返す場合、それらを取得できますを使用して、 **request.on()**関数。 行が存在しない場合、request.on() 関数は、空のリストを返します。  
+使用してすべての SQL ステートメントが実行される、**新しい Request()** 関数。 ステートメントが select ステートメントなどの行を返す場合、それらを取得できますを使用して、 **request.on()** 関数。 行が存在しない場合、request.on() 関数は、空のリストを返します。  
   
   
 ```javascript  

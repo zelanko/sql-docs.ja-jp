@@ -3,7 +3,7 @@ title: OLE DB の日付と時刻の強化のデータ型のサポート |Microso
 description: OLE DB の日付と時刻の強化のためのデータ型のサポート
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336665f67245911fa560c8ac54cad77dc9c661c6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08185700242e870ee58c1d0826fc41081e9d89e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,7 +182,7 @@ enum SQLVARENUM {
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
-|DBTYPE_DBTIME2|**time**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
+|DBTYPE_DBTIME2|**時間**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|SQL Server の OLE DB Driver は、DBCOLUMDESC を検査*bScale*メンバーに秒の小数部の精度を確認します。|  
   
  アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます**datetime2**型の名前を指定することによって*pwszTypeName*です。 場合**datetime**が指定されている*bScale* 3 をする必要があります。 場合**smalldatetime**が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  

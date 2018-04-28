@@ -3,7 +3,7 @@ title: スパース列のサポート (OLE DB) |Microsoft ドキュメント
 description: スパース列のサポート (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327c98688395be4afd5381387be6b6675eae3981
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 9ba4afcc517b5872da5440b26b2e371b8ced18fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ ms.lasthandoff: 04/06/2018
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS が、SS_IS_COLUMN_SET と SS_IS_SPARSE という 2 つの新しい列を返します。<br /><br /> DBSCHEMA_COLUMNS がのメンバーではない列のみを返します、 **column_set**です。<br /><br /> 2 つの新しいスキーマ行セットが追加されました。 DBSCHEMA_COLUMNS_EXTENDED はのスパースかどうかに関係なくすべての列を返します**column_set**メンバーシップです。 DBSCHEMA_SPARSE_COLUMN_SET のメンバーである列のみが返されます、 **column_set**です。 これらの新しい行セットの列と制限は DBSCHEMA_COLUMNS と同じです。|  
 |IDBSchemaRowset::GetSchemas|Idbschemarowset::getschemas には、使用可能なスキーマ行セットの一覧である DBSCHEMA_COLUMNS_EXTENDED と DBSCHEMA_SPARSE_COLUMN_SET の新しい行セットの Guid が含まれています。|  
 |ICommand::Execute|場合**選択\*から***テーブル*は、スパースのメンバーではないすべての列が返されます使用、 **column_set**、すべての値を含む XML 列null 以外の列、スパースのメンバーである**column_set**存在する場合、します。|  
-|IOpenRowset::OpenRowset|Iopenrowset::openrowset で icommand::execute と同じ列を含む行セットが返されます、**選択\***同じテーブルにクエリします。|  
+|IOpenRowset::OpenRowset|Iopenrowset::openrowset で icommand::execute と同じ列を含む行セットが返されます、**選択\*** 同じテーブルにクエリします。|  
 |ITableDefinition|スパース列も、このインターフェイスへの変更がない**column_set**列です。 スキーマを変更する必要のあるアプリケーションでは、適切な [!INCLUDE[tsql](../../../includes/tsql-md.md)] を直接実行する必要があります。|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

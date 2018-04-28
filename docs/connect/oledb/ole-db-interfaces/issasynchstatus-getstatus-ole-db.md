@@ -3,7 +3,7 @@ title: Issasynchstatus::getstatus (OLE DB) |Microsoft ドキュメント
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394539d4788df395e64c96f76c55edf0465326e2
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: ed66ba6eccfd0d5ec6391ad3f18a26dbdcbcc9de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_CANCELED は、オブジェクトの非同期処理が中止されたことを示します。 **Issasynchstatus::getstatus**メソッド DB_E_CANCELED が返されます。 非同期操作が呼び出しの結果が場合**icommand::execute**更新、削除、または行を挿入するコマンドの*pulProgress*がすべてのパラメーター セットの行の合計数に等しいキャンセルする前にコマンドを受けます。  
   
- *ppwszStatusText*[in/out]  
+ *ppwszStatusText*[送受信]  
  操作に関する詳細情報を保持するメモリへのポインター。 プロバイダーは、この値を使用して操作の異なる要素 (アクセス中のさまざまなリソースなど) を区別できます。 この文字列は、データ ソース オブジェクトの DBPROP_INIT_LCID プロパティに従ってローカライズされます。  
   
  場合*ppwszStatusText*が null 以外の入力の場合、プロバイダーを返しますで識別される特定の要素に関連付けられた状態*ppwszStatusText*です。 場合*ppwszStatusText*の要素を示しません*eOperation*、プロバイダーが S_OK が返されます*pulProgress*と*pulProgressMax*同じ値に設定します。 設定されている場合は、プロバイダーがテキスト識別子に基づいて要素を区別しません*ppwszStatusText* NULL を返しますの情報に、操作全体ですそれ以外の場合*ppwszStatusText*。は null 入力上でプロバイダーのまま*ppwszStatusText*アンタッチです。  
@@ -130,6 +130,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>参照  
  [非同期操作を実行します。](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus (&) #40";"OLE DB"&"#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

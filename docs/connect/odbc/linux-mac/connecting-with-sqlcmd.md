@@ -2,7 +2,7 @@
 title: Sqlcmd による接続 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,8 +70,8 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k は、削除するか、制御文字を置き換えます。  
   
-- **-K***application_intent*  
-アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 場合**-k**が指定されていない`sqlcmd`AlwaysOn 可用性グループのセカンダリ レプリカへの接続をサポートしていません。 詳細については、次を参照してください。 [ODBC Driver on Linux and macOS - 高可用性と災害復旧](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)です。  
+- **-K * * * application_intent*  
+アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、**ReadOnly** だけです。 場合 **-k**が指定されていない`sqlcmd`AlwaysOn 可用性グループのセカンダリ レプリカへの接続をサポートしていません。 詳細については、次を参照してください。 [ODBC Driver on Linux and macOS - 高可用性と災害復旧](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)です。  
   
 > [!NOTE]  
 > **-K** は、CTP for SUSE Linux ではサポートされていません。 ただしを指定できます、 **ApplicationIntent = ReadOnly**に渡される DSN ファイルでキーワード`sqlcmd`です。 詳細については、次を参照してください。"での DSN サポート`sqlcmd`と`bcp`"このトピックの最後にします。  
@@ -80,7 +80,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 - -m *error_level*コントロールするエラー メッセージは stdout に送信されます。  
   
-- **-M***multisubnet_failover*  
+- **-M * * * multisubnet_failover*  
 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性グループまたは [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M**迅速に検出およびフェールオーバー (現在) アクティブなサーバーへの接続を提供します。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を参照してください[ODBC Driver on Linux and macOS - 高可用性と災害復旧](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)です。  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -q *commandline_query*クエリを実行するときに`sqlcmd`開始されるが、クエリの実行が終了したら、終了しません。  
 
-- -Q *commandline_query*クエリを実行するときに`sqlcmd`を開始します。 `sqlcmd`クエリの終了時に終了します。  
+- -Q *commandline_query*クエリを実行するときに`sqlcmd`を開始します。 `sqlcmd` クエリの終了時に終了します。  
 
 - -r stderr にエラー メッセージをリダイレクトします。
 
@@ -104,7 +104,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char*列の区切り文字を指定します。  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*プロトコル*:]*サーバー*[**、* * * ポート*]  
 インスタンスを指定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]に接続するかどうか、-d はまたはを使用する DSN。 ODBC driver on Linux and macOS が -%s が必要です。 なお**tcp**唯一の有効なプロトコルです。  
   
 - -t *query_timeout*コマンド (または SQL ステートメント) がタイムアウトするまでの秒数を指定します。  
@@ -216,19 +216,19 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **データベース =***database_name*  
+-   **データベース = * * * database_name*  
   
--   **Driver for SQL Server ODBC Driver 11 を =**または**Driver for SQL Server ODBC Driver 13 を =**
+-   **Driver for SQL Server ODBC Driver 11 を =** または**Driver for SQL Server ODBC Driver 13 を =**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **サーバー =***server_name_or_IP_address*  
+-   **サーバー = * * * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   
 Dsn では DRIVER エントリのみが必要ですが、サーバーに接続する`sqlcmd`または`bcp`サーバー エントリに値が必要です。  
 
-DSN の両方で同じオプションが指定されている場合、`sqlcmd`または`bcp`コマンド ライン コマンド ライン オプションは、DSN で使用される値をオーバーライドします。 例では、DSN に DATABASE エントリと`sqlcmd`コマンドラインが含まれています**-d**に渡された値**-d**を使用します。 場合**Trusted_Connection = [はい]** DSN、Kerberos 認証を使用し、ユーザー名で指定された (**– U**) とパスワード (**– P**)、指定した場合は無視されます。
+DSN の両方で同じオプションが指定されている場合、`sqlcmd`または`bcp`コマンド ライン コマンド ライン オプションは、DSN で使用される値をオーバーライドします。 例では、DSN に DATABASE エントリと`sqlcmd`コマンドラインが含まれています **-d**に渡された値 **-d**を使用します。 場合**Trusted_Connection = [はい]** DSN、Kerberos 認証を使用し、ユーザー名で指定された (**– U**) とパスワード (**– P**)、指定した場合は無視されます。
 
 呼び出す既存のスクリプト`isql`を使用するように変更する`sqlcmd`は次の別名を定義することによって:`alias isql="sqlcmd –D"`です。  
 

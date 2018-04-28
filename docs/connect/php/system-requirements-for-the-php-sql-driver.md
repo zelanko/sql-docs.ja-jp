@@ -2,7 +2,7 @@
 title: システム要件の Microsoft Drivers for PHP for SQL Server |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: ''
+caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f616a439b737e3228321247edab187975790bdde
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 44a18257abc758ee910fb9c4953cbdef02239fbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>システム要件の Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/28/2018
 |5.5|       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |5.4.32  |5.4.32  |
 
--   ドライバー ファイルのバージョンは、PHP 拡張機能ディレクトリにあります。 参照してください[ドライバーのバージョンが](#driver-versions)については、さまざまなドライバー ファイル。  ドライバーをダウンロードする方法については、「 [Microsoft SQL Server 用 Drivers for PHP](http://www.microsoft.com/download/details.aspx?id=20098)」を参照してください。 PHP のドライバーを構成する方法の詳細については、次を参照してください。[用 Microsoft Drivers for PHP for SQL Server 読み込む](../../connect/php/loading-the-php-sql-driver.md)します。
+-   ドライバー ファイルのバージョンは、PHP 拡張機能ディレクトリにあります。 参照してください[ドライバーのバージョンが](#driver-versions)については、さまざまなドライバー ファイル。  ドライバーをダウンロードするを参照してください。 [for PHP for SQL Server、Microsoft ドライバーをダウンロード](download-drivers-php-sql-server.md)です。 PHP のドライバーを構成する方法の詳細については、次を参照してください。[用 Microsoft Drivers for PHP for SQL Server 読み込む](../../connect/php/loading-the-php-sql-driver.md)します。
 
 -   Web サーバーが必要です。 Web サーバーは、PHP を実行するように構成する必要があります。 IIS で PHP アプリケーションをホストする方法については、次を参照してください。、 [PHP の web サイトのチュートリアル](http://php.net/manual/fa/install.windows.iis.php)です。  
 
@@ -127,16 +127,16 @@ Windows では、次のバージョンのドライバーのとおりです。
 |ドライバー ファイル|PHP バージョン|スレッド セーフですか。|PHP .dll で使用|  
 |---------------|---------------|----------------|---------------------|  
 |32 ビット php_sqlsrv_7_nts.dll <br />32 ビット php_pdo_sqlsrv_7_nts.dll |7.0|いいえ |32 ビット php7.dll|
-|32-bit php_sqlsrv_7_ts.dll  <br />32 ビット php_pdo_sqlsrv_7_ts.dll  |7.0|はい|32 ビット php7ts.dll|
-|64-bit php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|いいえ |64 ビット php7.dll|  
-|64-bit php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|はい|64 ビット php7ts.dll|
-|32-bit php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |32 ビット php7.dll|  
+|32 ビット php_sqlsrv_7_ts.dll  <br />32 ビット php_pdo_sqlsrv_7_ts.dll  |7.0|はい|32 ビット php7ts.dll|
+|64 ビット php_sqlsrv_7_nts.dll <br />64 ビット php_pdo_sqlsrv_7_nts.dll |7.0|いいえ |64 ビット php7.dll|  
+|64 ビット php_sqlsrv_7_ts.dll  <br />64 ビット php_pdo_sqlsrv_7_ts.dll  |7.0|はい|64 ビット php7ts.dll|
+|32 ビット php_sqlsrv_71_nts.dll<br />32 ビット php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |32 ビット php7.dll|  
 |32 ビット php_sqlsrv_71_ts.dll <br />32 ビット php_pdo_sqlsrv_71_ts.dll |7.1|はい|32 ビット php7ts.dll|  
-|64-bit php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |64 ビット php7.dll|  
+|64 ビット php_sqlsrv_71_nts.dll<br />64 ビット php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |64 ビット php7.dll|  
 |64 ビット php_sqlsrv_71_ts.dll <br />64 ビット php_pdo_sqlsrv_71_ts.dll |7.1|はい|64 ビット php7ts.dll|   
-|32-bit php_sqlsrv_72_nts.dll<br />32-bit php_pdo_sqlsrv_72_nts.dll|7.2|いいえ |32 ビット php7.dll|  
+|32 ビット php_sqlsrv_72_nts.dll<br />32 ビット php_pdo_sqlsrv_72_nts.dll|7.2|いいえ |32 ビット php7.dll|  
 |32 ビット php_sqlsrv_72_ts.dll <br />32 ビット php_pdo_sqlsrv_72_ts.dll |7.2|はい|32 ビット php7ts.dll|  
-|64-bit php_sqlsrv_72_nts.dll<br />64-bit php_pdo_sqlsrv_72_nts.dll|7.2|いいえ |64 ビット php7.dll|  
+|64 ビット php_sqlsrv_72_nts.dll<br />64 ビット php_pdo_sqlsrv_72_nts.dll|7.2|いいえ |64 ビット php7.dll|  
 |64 ビット php_sqlsrv_72_ts.dll <br />64 ビット php_pdo_sqlsrv_72_ts.dll |7.2|はい|64 ビット php7ts.dll|  
 
 Linux では、次のバージョンのドライバーのとおりです。
@@ -157,12 +157,12 @@ Windows では、次のバージョンのドライバーのとおりです。
 |ドライバー ファイル|PHP バージョン|スレッド セーフですか。|PHP .dll で使用|  
 |---------------|---------------|----------------|---------------------|  
 |32 ビット php_sqlsrv_7_nts.dll <br />32 ビット php_pdo_sqlsrv_7_nts.dll |7.0|いいえ |32 ビット php7.dll|
-|32-bit php_sqlsrv_7_ts.dll  <br />32 ビット php_pdo_sqlsrv_7_ts.dll  |7.0|はい|32 ビット php7ts.dll|
-|64-bit php_sqlsrv_7_nts.dll <br />64-bit php_pdo_sqlsrv_7_nts.dll |7.0|いいえ |64 ビット php7.dll|  
-|64-bit php_sqlsrv_7_ts.dll  <br />64-bit php_pdo_sqlsrv_7_ts.dll  |7.0|はい|64 ビット php7ts.dll|
-|32-bit php_sqlsrv_71_nts.dll<br />32-bit php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |32 ビット php7.dll|  
+|32 ビット php_sqlsrv_7_ts.dll  <br />32 ビット php_pdo_sqlsrv_7_ts.dll  |7.0|はい|32 ビット php7ts.dll|
+|64 ビット php_sqlsrv_7_nts.dll <br />64 ビット php_pdo_sqlsrv_7_nts.dll |7.0|いいえ |64 ビット php7.dll|  
+|64 ビット php_sqlsrv_7_ts.dll  <br />64 ビット php_pdo_sqlsrv_7_ts.dll  |7.0|はい|64 ビット php7ts.dll|
+|32 ビット php_sqlsrv_71_nts.dll<br />32 ビット php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |32 ビット php7.dll|  
 |32 ビット php_sqlsrv_71_ts.dll <br />32 ビット php_pdo_sqlsrv_71_ts.dll |7.1|はい|32 ビット php7ts.dll|  
-|64-bit php_sqlsrv_71_nts.dll<br />64-bit php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |64 ビット php7.dll|  
+|64 ビット php_sqlsrv_71_nts.dll<br />64 ビット php_pdo_sqlsrv_71_nts.dll|7.1|いいえ |64 ビット php7.dll|  
 |64 ビット php_sqlsrv_71_ts.dll <br />64 ビット php_pdo_sqlsrv_71_ts.dll |7.1|はい|64 ビット php7ts.dll|   
 
 Linux では、次のバージョンのドライバーのとおりです。

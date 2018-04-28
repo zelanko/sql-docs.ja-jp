@@ -1,27 +1,28 @@
 ---
-title: "接続のトラブルシューティング |Microsoft ドキュメント"
-ms.custom: 
+title: 接続のトラブルシューティング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b213cb9d2a3527b967afef5dc28aa11d82fd0f9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-connectivity"></a>接続のトラブルシューティング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 -   TCP/IP が有効でない[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、または指定されたサーバーやポート番号が正しくないです。 いることを確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]は tcp/ip が、指定されたサーバーとポートでリッスンします。 このようなエラーは、次のような例外で報告されることがあります。"ログインに失敗しました。 ホストに TCP/IP 接続できませんでした。" これは、次のいずれかの原因を示します。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]インストールされている用のネットワーク プロトコルとして TCP/IP がインストールされていませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ネットワーク ユーティリティ[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Configuration Manager for[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]およびそれ以降。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インストールされている用のネットワーク プロトコルとして TCP/IP がインストールされていませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ネットワーク ユーティリティ[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Configuration Manager for[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]およびそれ以降。  
   
     -   として TCP/IP がインストールされている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロトコルがリッスンしていない、JDBC 接続 URL で指定されたポートです。 既定のポートは 1433 が[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]任意のポートでリッスンするように製品のインストール時に構成することができます。 確認して[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]はポート 1433 でリッスンします。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 Url の詳細については、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)です。  
   

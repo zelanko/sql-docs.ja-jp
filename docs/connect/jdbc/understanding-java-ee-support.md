@@ -20,29 +20,29 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ff6d631ec236a861fb00d4107cc9f04078449c53
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-java-ee-support"></a>Java EE のサポートについて
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  以下のセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が Java Platform, Enterprise Edition (Java EE) および JDBC 3.0 のオプションの API 機能をサポートするしくみについて説明します。 このヘルプ システムで提供されるソース コード例は、これらの機能を使用するための優れた参考資料となります。  
+  次のセクションではドキュメント、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Java プラットフォーム、Enterprise Edition (Java EE) および JDBC 3.0 API のオプションの機能のサポートを提供します。 このヘルプ システムで提供されるソース コード例は、これらの機能を使用するための優れた参考資料となります。  
   
  まず、使用している Java 環境 (JDK、JRE) に javax.sql パッケージが含まれていることを確認してください。 このパッケージは、オプションの API を使用するすべての JDBC アプリケーションに必須です。 JDK 1.5 以降のバージョンには、このパッケージが既に含まれているので、別途インストールする必要はありません。  
   
 ## <a name="driver-name"></a>ドライバー名  
- このドライバーのクラス名は、com.microsoft.sqlserver.jdbc.SQLServerDriver** です。 このドライバーは sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar ファイルに含まれています。 JDBC ドライバー 6.2、ドライバーは mssql jdbc-6.2.1.jre7.jar または mssql jdbc-6.2.1.jre8.jar で含まれています。 JDBC ドライバーの 6.4 のドライバーは mssql jdbc-6.4.0.jre7.jar、mssql jdbc-6.4.0.jre8.jar または mssql jdbc-6.4.0.jre9.jar で含まれています。
+ ドライバーのクラス名は**com.microsoft.sqlserver.jdbc.SQLServerDriver**です。 JDBC ドライバー 4.1、4.2、および 6.0、ドライバーが、sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar ファイルに含まれます。 JDBC ドライバー 6.2、ドライバーは mssql jdbc-6.2.1.jre7.jar または mssql jdbc-6.2.1.jre8.jar で含まれています。 JDBC ドライバーの 6.4 のドライバーは mssql jdbc-6.4.0.jre7.jar、mssql jdbc-6.4.0.jre8.jar または mssql jdbc-6.4.0.jre9.jar で含まれています。
   
- このクラス名は、JDBC  クラスを使用してドライバーを読み込むたびに使用されます。 また、ドライバー構成でドライバーのクラス名を指定する必要があるときにも使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
+ JDBC ドライバー マネージャー クラスを使用してドライバーを読み込むたびに、クラス名が使用されます。 また、ドライバー構成でドライバーのクラス名を指定する必要があるときにも使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
   
-## <a name="data-sources"></a>ソリューション エクスプローラー  
- この JDBC ドライバーは、Java EE または JDBC 3.0 データ ソースをサポートします。 この JDBC ドライバーの SQLServerXADataSource[ クラスは、com.microsoft.sqlserver.jdbc.SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) によって実装されています。  
+## <a name="data-sources"></a>データ ソース  
+ この JDBC ドライバーは、Java EE または JDBC 3.0 データ ソースをサポートします。 JDBC driver [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md)によってクラスが実装されている**com.microsoft.sqlserver.jdbc.SQLServerXADataSource**です。  
   
 ### <a name="datasource-names"></a>データ ソース名  
  データ ソースを使用して、データベース接続を確立できます。 次の表は、JDBC ドライバーで使用できるデータ ソースを示しています。  
   
-|データ ソースの種類|ルール名と説明|  
+|データ ソースの種類|クラスの名前と説明|  
 |---------------|--------------------------|  
 |DataSource|com.microsoft.sqlserver.jdbc.SQLServerDataSource <br/> <br/> 非プーリング データ ソース。|  
 |ConnectionPoolDataSource|com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource <br/> <br/> JAVA EE アプリケーション サーバー接続プールを構成するデータ ソース。 通常は、アプリケーションが JAVA EE アプリケーション サーバー内で実行される場合に使用されます。|  

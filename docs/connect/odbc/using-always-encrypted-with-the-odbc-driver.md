@@ -2,7 +2,7 @@
 title: SQL Server 用 ODBC ドライバーで Always Encrypted を使用して |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 10/01/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -15,14 +15,14 @@ ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -302,7 +302,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ステートメントの Always Encrypted の動作を制御するに呼び出しを設定する SQLSetStmtAttr、`SQL_SOPT_SS_COLUMN_ENCRYPTION`ステートメント属性を次の値のいずれか。
 
-|[値]|Description|
+|値|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|ステートメントの暗号化が常に無効になっています|
 |`SQL_CE_RESULTSETONLY` (1)|復号化だけです。 結果セットと戻り値が復号化、およびパラメーターが暗号化されていません|
@@ -557,7 +557,7 @@ SQLPutData を使用してパーツでは、データを挿入または比較を
 
 |`ColumnEncryption`|BCP の方向|Description|
 |----------------|-------------|-----------|
-|`Disabled`|(クライアント) をチェック アウト|暗号化テキストを取得します。 観察対象のデータ型は**varbinary (max)**です。|
+|`Disabled`|(クライアント) をチェック アウト|暗号化テキストを取得します。 観察対象のデータ型は**varbinary (max)** です。|
 |`Enabled`|(クライアント) をチェック アウト|プレーン テキストを取得します。 ドライバーは、列のデータを復号化されます。|
 |`Disabled`|(サーバー)|暗号化テキストを挿入します。 これは、復号化に読み込まなくても不透過として暗号化されたデータを移動するためのものです。 場合、操作が失敗、`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`ユーザーのオプションが設定されていないか、BCPMODIFYENCRYPTED が接続ハンドルに設定されていません。 詳細については、以下を参照してください。|
 |`Enabled`|(サーバー)|プレーン テキストを挿入します。 ドライバーでは、列のデータを暗号化します。|
