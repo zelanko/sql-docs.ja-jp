@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d6753d2ea8943cc00123dfd7f56328fc5fbe998
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df3d126c25ab02e5d6be4f9f73347500b3607c4
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="transactional-replication"></a>トランザクション レプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,6 @@ ms.lasthandoff: 04/16/2018
 -   パブリッシャーまたはサブスクライバーが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のデータベース (Oracle など) である場合。  
   
  既定では、変更はパブリッシャーには反映されないため、トランザクション パブリケーションに対するサブスクライバーは読み取り専用として処理されます。 ただし、サブスクライバーでの更新を許可するオプションも用意されています。  
-  
- **このトピックの内容**  
-  
- [トランザクション レプリケーションの動作方法](#HowWorks)  
-  
- [初期データセット](#Dataset)  
-  
- [スナップショット エージェント](#SnapshotAgent)  
-  
- [ログ リーダー エージェント (Log Reader Agent)](#LogReaderAgent)  
-  
- [ディストリビューション エージェント](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> トランザクション レプリケーションの動作方法  
  トランザクション レプリケーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のスナップショット エージェント、ログ リーダー エージェント、およびディストリビューション エージェントによって実装されます。 スナップショット エージェントは、パブリッシュされたテーブルやデータベース オブジェクトのスキーマとデータを含むスナップショット ファイルを作成し、ファイルをスナップショット フォルダーに格納して、同期ジョブをディストリビューターのディストリビューション データベースに記録します。  
