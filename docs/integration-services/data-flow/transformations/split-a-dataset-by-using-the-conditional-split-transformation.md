@@ -1,32 +1,32 @@
 ---
-title: "条件分割変換を使用してデータセットを分割する | Microsoft Docs"
-ms.custom: 
+title: 条件分割変換を使用してデータセットを分割する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Conditional Split transformation
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dfc5673dca0a8109e02b76107ad85e8e19324cb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89be5a0f280d5cc2bc698fd469c0c980a7eb03df
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>条件分割変換を使用してデータセットを分割する
   条件分割変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -37,13 +37,13 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、 **[ツールボックス]**で、条件分割変換をデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、 **[ツールボックス]** で、条件分割変換をデザイン画面にドラッグします。  
   
 4.  条件分割変換をデータ フローに連結します。連結するには、データ ソースまたは前の変換から条件分割変換にコネクタをドラッグします。  
   
 5.  条件分割変換をダブルクリックします。  
   
-6.  **[条件分割変換エディター]**で、変数、列、関数、および演算子を、グリッドの **[条件]** 列にドラッグし、条件として使用する式を構築します。 **[条件]** 列には、式を直接入力することもできます。  
+6.  **[条件分割変換エディター]** で、変数、列、関数、および演算子を、グリッドの **[条件]** 列にドラッグし、条件として使用する式を構築します。 **[条件]** 列には、式を直接入力することもできます。  
   
     > [!NOTE]  
     >  1 つの変数または列を、複数の式で使用できます。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
   
 9. 必要に応じて、どの条件にも一致しないデータ行の、既定の出力名を変更します。  
   
-10. エラー出力を構成するには、 **[エラー出力の構成]**をクリックします。 詳細については、「 [データ フローのデバッグ](../../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
+10. エラー出力を構成するには、 **[エラー出力の構成]** をクリックします。 詳細については、「 [データ フローのデバッグ](../../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   
 11. **[OK]** をクリックします。  
   

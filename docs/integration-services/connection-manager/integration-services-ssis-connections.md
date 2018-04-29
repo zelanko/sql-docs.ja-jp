@@ -1,16 +1,16 @@
 ---
-title: "Integration Services (SSIS) の接続 | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) の接続 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 
+caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0f11d9e2acfac903bd77b2931a06d5a17af9782c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -167,7 +167,7 @@ ms.lasthandoff: 01/25/2018
   
          — または —  
   
-    -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]**をクリックします。  
+    -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
@@ -193,7 +193,7 @@ ms.lasthandoff: 01/25/2018
   
      **[接続マネージャー]** 領域に、追加した接続マネージャーが一覧表示されます。  
   
-5.  必要に応じて、接続マネージャーを右クリックし、 **[名前の変更]**をクリックして、接続マネージャーの既定の名前を変更します。  
+5.  必要に応じて、接続マネージャーを右クリックし、 **[名前の変更]** をクリックして、接続マネージャーの既定の名前を変更します。  
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
@@ -201,9 +201,9 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  **ソリューション エクスプローラー**で **[接続マネージャー]**を右クリックし、 **[新しい接続マネージャー]**をクリックします。  
+2.  **ソリューション エクスプローラー**で **[接続マネージャー]** を右クリックし、 **[新しい接続マネージャー]** をクリックします。  
   
-3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで、接続マネージャーの種類を選択し、 **[追加]**をクリックします。  
+3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで、接続マネージャーの種類を選択し、 **[追加]** をクリックします。  
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
@@ -227,9 +227,9 @@ ms.lasthandoff: 01/25/2018
     |[SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[[SQL Server Compact Edition 接続マネージャー エディター] &#40;[接続] ページ&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[すべて] ページ&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)|[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
-     追加した接続マネージャーが、 **ソリューション エクスプローラー** の **[接続マネージャー]**ノードの下に表示されます。 また、プロジェクト内のすべてのパッケージの **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブにも表示されます。 このタブに表示される接続マネージャーの名前の前には **(プロジェクト)** と表記され、パッケージ レベルの接続マネージャーと区別されます。  
+     追加した接続マネージャーが、 **ソリューション エクスプローラー** の **[接続マネージャー]** ノードの下に表示されます。 また、プロジェクト内のすべてのパッケージの **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブにも表示されます。 このタブに表示される接続マネージャーの名前の前には **(プロジェクト)** と表記され、パッケージ レベルの接続マネージャーと区別されます。  
   
-4.  必要に応じて、 **[ソリューション マネージャー]** ウィンドウの **[接続マネージャー]** ノードまたは **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブで接続マネージャーを右クリックし、 **[名前の変更]**をクリックして、接続マネージャーの既定の名前を変更します。  
+4.  必要に応じて、 **[ソリューション マネージャー]** ウィンドウの **[接続マネージャー]** ノードまたは **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブで接続マネージャーを右クリックし、 **[名前の変更]** をクリックして、接続マネージャーの既定の名前を変更します。  
   
     > [!NOTE]  
     >  **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブでは、接続マネージャーの名前の前に表示されている **(プロジェクト)** を上書きすることはできません。 これは仕様です。  
@@ -241,14 +241,14 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="options"></a>および  
  **[接続マネージャーの種類]**  
- エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]**をクリックするか、接続の種類をダブルクリックします。  
+ エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]** をクリックするか、接続の種類をダブルクリックします。  
   
  **[追加]**  
  エディターを使用して、接続の種類に対応する接続プロパティを指定します。  
    
 ##  <a name="parameter"></a> 接続マネージャーのプロパティのパラメーターを作成する  
   
-1.  **[接続マネージャー]** 領域で、パラメーターを作成する接続マネージャーを右クリックし、 **[パラメーター化]**をクリックします。  
+1.  **[接続マネージャー]** 領域で、パラメーターを作成する接続マネージャーを右クリックし、 **[パラメーター化]** をクリックします。  
   
 2.  **[パラメーター化]** ダイアログ ボックスでパラメーター設定を構成します。 詳細については、「 [[パラメーター化] ダイアログ ボックス](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
 
@@ -261,7 +261,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブをクリックして、 **[接続マネージャー]** 領域を表示します。  
   
-4.  削除する接続マネージャーを右クリックして、 **[削除]**をクリックします。  
+4.  削除する接続マネージャーを右クリックして、 **[削除]** をクリックします。  
   
      SQL 実行タスクや OLE DB ソースなどのパッケージ要素が使用している接続マネージャーを削除すると、結果は次のようになります。  
   
@@ -275,7 +275,7 @@ ms.lasthandoff: 01/25/2018
   
 ###  <a name="DeleteProjectLevel"></a> 共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除する  
   
-1.  プロジェクト レベルの接続マネージャーを削除するには、 **[ソリューション エクスプローラー]** ウィンドウの **[接続マネージャー]** ノードで接続マネージャーを右クリックし、 **[削除]**をクリックします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で次のような警告メッセージが表示されます。  
+1.  プロジェクト レベルの接続マネージャーを削除するには、 **[ソリューション エクスプローラー]** ウィンドウの **[接続マネージャー]** ノードで接続マネージャーを右クリックし、 **[削除]** をクリックします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で次のような警告メッセージが表示されます。  
   
     > [!WARNING]  
     >  プロジェクト接続マネージャーを削除すると、その接続マネージャーを使用するパッケージが動作しなくなる場合があります。 この操作を元に戻すことはできません。 接続マネージャーを削除しますか。  
@@ -283,7 +283,7 @@ ms.lasthandoff: 01/25/2018
 2.  接続マネージャーを削除するには [OK] をクリックし、削除しない場合は [キャンセル] をクリックします。  
   
     > [!NOTE]  
-    >  プロジェクトのパッケージに対して開いた **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブから、プロジェクト レベルの接続マネージャーを削除することもできます。 そのためには、タブで接続マネージャーを右クリックし、 **[削除]**をクリックします。 
+    >  プロジェクトのパッケージに対して開いた **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブから、プロジェクト レベルの接続マネージャーを削除することもできます。 そのためには、タブで接続マネージャーを右クリックし、 **[削除]** をクリックします。 
     
 ## <a name="set-the-properties-of-a-connection-manager"></a>接続マネージャーのプロパティを設定する
 すべての接続マネージャーは **[プロパティ]** ウィンドウを使用して構成できます。  
@@ -298,7 +298,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  SSIS デザイナーで、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブをクリックして、 **[接続マネージャー]** 領域を表示します。  
   
-4.  接続マネージャーを右クリックして、 **[プロパティ]**をクリックします。  
+4.  接続マネージャーを右クリックして、 **[プロパティ]** をクリックします。  
   
 5.  **[プロパティ]** ウィンドウで、プロパティの値を編集します。 **[プロパティ]** ウィンドウでは、接続マネージャーの標準エディターで構成できないプロパティにもアクセスできます。  
   

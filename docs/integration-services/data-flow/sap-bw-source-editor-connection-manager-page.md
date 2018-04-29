@@ -1,30 +1,30 @@
 ---
-title: "SAP BW 変換元エディター ([接続マネージャー] ページ) | Microsoft Docs"
-ms.custom: 
+title: SAP BW 変換元エディター ([接続マネージャー] ページ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: acd283582acdde38989b893306534d2f4e7e051f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>[SAP BW ソース エディター] ([接続マネージャー] ページ)
   **[SAP BW ソース エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換元の SAP BW 接続マネージャーを選択できます。 このページでは、実行モードと SAP Netweaver BW システムからデータを抽出するためのパラメーターも選択します。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、SAP BW 変換元をダブルクリックします。  
   
-3.  **[SAP BW 変換元エディター]**で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
+3.  **[SAP BW 変換元エディター]** で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
   
 ## <a name="static-options"></a>静的オプション  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 >  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
  **SAP BW 接続マネージャー**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[SAP BW 接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 > [!IMPORTANT]  
 >  **[プレビュー]** オプションは [SAP BW ソース エディター] の **[接続マネージャー]** ページで使用でき、実際にデータを抽出します。 前の抽出以降に変更されたデータのみを抽出するように SAP Netweaver BW を構成している場合、 **[プレビュー]** を選択すると、次の抽出からプレビュー データを除外します。  
   
- **[プレビュー]**をクリックすると、 **[要求のログ]** ダイアログ ボックスも開きます。 サンプル データの SAP Netweaver BW システムに対する要求中にログに記録するイベントを表示するには、このダイアログ ボックスを使用します。 詳細については、「 [要求のログ](../../integration-services/data-flow/request-log.md)」を参照してください。  
+ **[プレビュー]** をクリックすると、 **[要求のログ]** ダイアログ ボックスも開きます。 サンプル データの SAP Netweaver BW システムに対する要求中にログに記録するイベントを表示するには、このダイアログ ボックスを使用します。 詳細については、「 [要求のログ](../../integration-services/data-flow/request-log.md)」を参照してください。  
   
 ## <a name="execution-mode-dynamic-options"></a>実行モードの動的オプション  
   

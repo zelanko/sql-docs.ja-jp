@@ -1,16 +1,16 @@
 ---
-title: "フラット ファイル ソース | Microsoft Docs"
-ms.custom: 
+title: フラット ファイル ソース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc2455f71ec0aa3f927249d50524cfb98f9b380
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dfb8f75feeca8669f87622c895aa681121ede8f7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="options"></a>および  
  **Flat file connection manager**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続マネージャーを作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
  **[新規作成]**  
  新しい接続マネージャーを作成するには、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスを使用します。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/25/2018
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
   
 > [!NOTE]  
->  フラット ファイル ソースの **FileNameColumnName** プロパティおよびその出力列の **FastParse** プロパティは、 **[フラット ファイル ソース エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
+>  フラット ファイル ソースの **FileNameColumnName** プロパティおよびその出力列の **FastParse** プロパティは、 **[フラット ファイル ソース エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
   
 ### <a name="options"></a>および  
  **使用できる外部列**  
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/25/2018
  データ ソースの名前を表示します。  
   
  **列**  
- **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択した外部 (変換元) 列を表示します。  
+ **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (変換元) 列を表示します。  
   
  **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  

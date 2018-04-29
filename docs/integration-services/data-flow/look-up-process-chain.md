@@ -1,28 +1,28 @@
 ---
-title: "[プロセス チェーンの参照] | Microsoft Docs"
-ms.custom: 
+title: '[プロセス チェーンの参照] | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 331b54b21cd7d19c1c38943f8d6056708cfc52c9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="look-up-process-chain"></a>[プロセス チェーンの参照]
   SAP Netweaver BW システムで定義されたプロセス チェーンを参照する場合、 **[プロセス チェーンの参照]** ダイアログ ボックスを使用します。 使用できるプロセス チェーンの一覧が表示されたら目的のチェーンを選択すると、関連するオプションに必要な値が設定されます。  
@@ -38,11 +38,11 @@ ms.lasthandoff: 02/15/2018
   
 2.  **[データ フロー]** タブで、SAP BW 変換元をダブルクリックします。  
   
-3.  **[SAP BW 変換元エディター]**で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
+3.  **[SAP BW 変換元エディター]** で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
   
 4.  **[プロセス チェーン]** で、 **[プロセス チェーンの参照]** ダイアログ ボックスを表示するには、 **[参照]** をクリックします。  
   
-     **[プロセス チェーン]** は、 **[実行モード]** の値が **[P - プロセス チェーンをトリガー]**の場合にのみ表示されます。  
+     **[プロセス チェーン]** は、 **[実行モード]** の値が **[P - プロセス チェーンをトリガー]** の場合にのみ表示されます。  
   
 ## <a name="lookup-options"></a>[参照] のオプション  
  参照フィールドで、アスタリスクのワイルドカード文字 (*) を使用して、または部分的な文字列をアスタリスクのワイルドカード文字と組み合わせて使用して、結果をフィルター処理できます。 ただし、参照フィールドを空にした場合、参照操作は、フィールドの空の文字列のみを検索します。  

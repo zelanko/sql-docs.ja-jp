@@ -1,16 +1,16 @@
 ---
-title: "メッセージ キュー タスク | Microsoft Docs"
-ms.custom: 
+title: メッセージ キュー タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d58b3c497860668dee90836193ff9bd788852715
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 83de0e38a8e7f4d5144b68daa83e84a4b67f0892
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/25/2018
   
 -   タイムアウトが発生した場合には失敗します。  
   
--   メッセージが **[データ ファイル]**に格納されている場合、既存のファイルを上書きします。  
+-   メッセージが **[データ ファイル]** に格納されている場合、既存のファイルを上書きします。  
   
 -   メッセージが **[データ ファイル メッセージ]** 型を使用している場合、メッセージ ファイルを別のファイル名で保存します。  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/25/2018
  **関連トピック**: [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)、 [MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **メッセージ**  
- メッセージ キュー タスクでメッセージを送信するのか、受信するのかを指定します。 **[メッセージの送信]**を選択すると、ダイアログ ボックスの左側のペインに [送信] ページが表示されます。 **[メッセージの受信]**を選択すると、[受信] ページが表示されます。 既定では、 **[メッセージの送信]**に設定されています。  
+ メッセージ キュー タスクでメッセージを送信するのか、受信するのかを指定します。 **[メッセージの送信]** を選択すると、ダイアログ ボックスの左側のペインに [送信] ページが表示されます。 **[メッセージの受信]** を選択すると、[受信] ページが表示されます。 既定では、 **[メッセージの送信]** に設定されています。  
   
 ## <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/25/2018
  メッセージを暗号化するかどうかを示します。 既定値は **False**です。  
   
  **[EncryptionAlgorithm]**  
- 暗号化を使用する場合は、使用する暗号化アルゴリズムを指定します。 メッセージ キュー タスクでは、RC2 と RC4 のアルゴリズムを使用できます。 既定値は **[RC2]**です。  
+ 暗号化を使用する場合は、使用する暗号化アルゴリズムを指定します。 メッセージ キュー タスクでは、RC2 と RC4 のアルゴリズムを使用できます。 既定値は **[RC2]** です。  
   
 > [!NOTE]  
 >  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
@@ -151,9 +151,9 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]**が表示されます。|  
-|**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]**が表示されます。|  
-|**[文字列メッセージ]**|メッセージはメッセージ キュー タスクに格納されます。 この値を選択すると、動的オプションの **[StringMessage]**が表示されます。|  
+|**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
+|**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  
+|**[文字列メッセージ]**|メッセージはメッセージ キュー タスクに格納されます。 この値を選択すると、動的オプションの **[StringMessage]** が表示されます。|  
   
 ### <a name="messagetype-dynamic-options"></a>[MessageType] の動的オプション  
   
@@ -189,10 +189,10 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]**が表示されます。|  
-|**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]**が表示されます。|  
-|**[文字列メッセージ]**|メッセージはメッセージ キュー タスクに格納されます。 この値を選択すると、動的オプションの **[StringMessage]**が表示されます。|  
-|**[文字列メッセージを変数に指定]**|メッセージです。<br /><br /> この値を選択すると、動的オプションの **[StringMessage]**が表示されます。|  
+|**[データ ファイル メッセージ]**|メッセージはファイルに格納されます。 この値を選択すると、動的オプションの **[DataFileMessage]** が表示されます。|  
+|**[変数メッセージ]**|メッセージは変数に格納されます。 この値を選択すると、動的オプションの **[VariableMessage]** が表示されます。|  
+|**[文字列メッセージ]**|メッセージはメッセージ キュー タスクに格納されます。 この値を選択すると、動的オプションの **[StringMessage]** が表示されます。|  
+|**[文字列メッセージを変数に指定]**|メッセージです。<br /><br /> この値を選択すると、動的オプションの **[StringMessage]** が表示されます。|  
   
 ### <a name="messagetype-dynamic-options"></a>[MessageType] の動的オプション  
   
@@ -208,8 +208,8 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[フィルターなし]**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]**が表示されます。|  
-|**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]**が表示されます。|  
+|**[フィルターなし]**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]** が表示されます。|  
+|**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
   
 #### <a name="filter-dynamic-options"></a>[Filter] の動的オプション  
   
@@ -229,8 +229,8 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[フィルターなし]**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]**が表示されます。|  
-|**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]**が表示されます。|  
+|**[フィルターなし]**|メッセージにフィルターは適用されません。 この値を選択すると、動的オプションの **[IdentifierReadOnly]** が表示されます。|  
+|**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
   
  **変数**  
  変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
@@ -261,7 +261,7 @@ ms.lasthandoff: 01/25/2018
 |**[含まれる文字列]**|メッセージに **[CompareString]** オプションで指定した文字列が含まれている必要があります。|  
   
  **[CompareString]**  
- **[Compare]** オプションが **[なし]**に設定されていない場合、メッセージと比較する文字列を入力します。  
+ **[Compare]** オプションが **[なし]** に設定されていない場合、メッセージと比較する文字列を入力します。  
   
 #### <a name="messagetype--string-message-to-variable"></a>[MessageType] = [文字列メッセージを変数に指定]  
  **[Compare]**  
@@ -275,7 +275,7 @@ ms.lasthandoff: 01/25/2018
 |**[含まれる文字列]**|メッセージに **[CompareString]** オプションで指定した文字列が含まれている必要があります。|  
   
  **[CompareString]**  
- **[Compare]** オプションが **[なし]**に設定されていない場合、メッセージと比較する文字列を入力します。  
+ **[Compare]** オプションが **[なし]** に設定されていない場合、メッセージと比較する文字列を入力します。  
   
  **変数**  
  受信したメッセージを格納する変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  

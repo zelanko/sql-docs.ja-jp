@@ -1,16 +1,16 @@
 ---
-title: "SQL Server データ ツールでのパッケージの作成 | Microsoft Docs"
-ms.custom: 
+title: SQL Server データ ツールでのパッケージの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSIS packages, creating
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ce6e014e80c33181a6ac41c4d249adb5e5df5a0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 733c56cde62d11ae389bf16d7516917a8a7a4e82
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server データ ツールでのパッケージの作成
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で新しいパッケージを作成するには、次のいずれかの方法を使用します。  
@@ -61,7 +61,7 @@ SQL Server Data Tools (SSDT) をインストールするには、「 [SQL Server
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、パッケージを作成する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  ソリューション エクスプローラーで、 **[SSIS パッケージ]** フォルダーを右クリックし、 **[新しい SSIS パッケージ]**をクリックします。  
+2.  ソリューション エクスプローラーで、 **[SSIS パッケージ]** フォルダーを右クリックし、 **[新しい SSIS パッケージ]** をクリックします。  
   
 3.  必要に応じて、制御フロー、データ フロー タスク、およびイベント ハンドラーをパッケージに追加します。 詳細については、「[制御フロー](../integration-services/control-flow/control-flow.md)」、「[データ フロー](../integration-services/data-flow/data-flow.md)」、および「[Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)」を参照してください。  
   
@@ -74,7 +74,7 @@ SQL Server Data Tools (SSDT) をインストールするには、「 [SQL Server
   
 1.  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。  
   
-2.  **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+2.  **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
      ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
   

@@ -1,36 +1,36 @@
 ---
-title: "[機能依存プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs"
-ms.custom: 
+title: '[機能依存プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9307c5f2dfb263453c2d61c024092955d05974b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c428b05a8258081efc6d1b36458256367fe4c88b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[機能依存プロファイル要求]** のオプションを設定できます。 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 このプロファイルでは、郵便番号によって州が一意に決定されますが、依存関係の違反を検出できます。  
   
 > [!NOTE]  
->  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]**ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
+>  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
  データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 >  **[(\*)]** を選択した場合、多数の計算が実行され、タスクのパフォーマンスが低下する可能性があります。 ただし、機能依存のしきい値を満たすサブセットをタスクが見つけた場合、その他の組み合わせは分析されません。 たとえば、上記のサンプル テーブルで C 列が決定列であるとタスクが判断した場合、複合候補の分析は続行されません。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
- **[要求プロパティ]**ペインに表示される **[機能依存プロファイル要求]** のオプション グループは次のとおりです。  
+ **[要求プロパティ]** ペインに表示される **[機能依存プロファイル要求]** のオプション グループは次のとおりです。  
   
 -   **[データ]**( **[DeterminantColumns]** オプション、 **[DependentColumn]** オプションなど)  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  詳細については、このトピックの「決定列と依存列の選択について」と「[DeterminantColumns] および [DependentColumn] のオプション」を参照してください。  
   
 #### <a name="determinantcolumns-and-dependentcolumn-options"></a>[DeterminantColumns] および [DependentColumn] のオプション  
- 次のオプションは、 **[DeterminantColumns]** および **[DependentColumn]**で選択したプロファイル対象の各列で使用できます。  
+ 次のオプションは、 **[DeterminantColumns]** および **[DependentColumn]** で選択したプロファイル対象の各列で使用できます。  
   
  詳細については、このトピックの「決定列と依存列の選択について」を参照してください。  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/25/2018
  選択した列の名前を表示します。 **[(\*)]** を選択してすべての列をプロファイルする場合、このオプションは空白になります。 このオプションは読み取り専用です。  
   
  **[StringCompareOptions]**  
- 文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]**です。  
+ 文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
 >  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/25/2018
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
 |**[DictionarySort]**|関連する言語またはアルファベットの辞書で定義されている並べ替えおよび比較ルールに基づいてデータを並べ替えて比較します。|  
   
- **[DictionarySort]**を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
+ **[DictionarySort]** を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -112,19 +112,19 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="options"></a>および  
  **[ThresholdSetting]**  
- しきい値設定を指定します。 このプロパティの既定値は **[Specified]**です。  
+ しきい値設定を指定します。 このプロパティの既定値は **[Specified]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**[InclusionThresholdSetting]**|しきい値を指定しません。 機能依存の強さは、その値に関係なく報告されます。|  
-|**[Specified]**|**[FDStrengthThreshold]**で指定したしきい値を使用します。 機能依存の強さは、このしきい値より大きい場合にのみ報告されます。|  
+|**[Specified]**|**[FDStrengthThreshold]** で指定したしきい値を使用します。 機能依存の強さは、このしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値を指定しません。 機能依存の強さは、選択した列間の機能依存が完全に一致する場合にのみ報告されます。|  
   
  **[FDStrengthThreshold]**  
- 0 ～ 1 の値を使用して、機能依存の強さが報告されるしきい値を指定します。 このプロパティの既定値は 0.95 です。 このオプションは、 **[ThresholdSetting]** で **[Specified]**が選択されている場合にのみ有効です。  
+ 0 ～ 1 の値を使用して、機能依存の強さが報告されるしきい値を指定します。 このプロパティの既定値は 0.95 です。 このオプションは、 **[ThresholdSetting]** で **[Specified]** が選択されている場合にのみ有効です。  
   
  **[MaxNumberOfViolations]**  
- 出力で報告する機能依存違反の最大数を指定します。 このプロパティの既定値は 100 です。 **[ThresholdSetting]** で **[Exact]**が選択されている場合、このオプションは無効です。  
+ 出力で報告する機能依存違反の最大数を指定します。 このプロパティの既定値は 100 です。 **[ThresholdSetting]** で **[Exact]** が選択されている場合、このオプションは無効です。  
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

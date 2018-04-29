@@ -1,30 +1,30 @@
 ---
-title: "Excel ブックに接続する | Microsoft Docs"
+title: Excel ブックに接続する | Microsoft Docs
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ece6c4ef032f7b60f82f3f58ee602d0a4ac1196
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3c4988017daa41e12f9d640120b6841361232d1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-excel-workbook"></a>Excel ブックに接続する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを Microsoft Office Excel ブックに接続するには、Excel 接続マネージャーが必要です。  
@@ -49,9 +49,9 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを開きます。  
   
-2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい接続]**を選択します。  
+2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい接続]** を選択します。  
   
-3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで、 **[Excel]**を選択し、接続マネージャーを構成します。  
+3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで、 **[Excel]** を選択し、接続マネージャーを構成します。  
   
      この接続マネージャーで使用可能な構成オプションの詳細については、「 [Excel 接続マネージャー](../../integration-services/connection-manager/excel-connection-manager-editor.md)」を参照してください。  
   
@@ -59,7 +59,7 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 1.  32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動します。  
   
-2.  **[データ ソースの選択]** ページの **[データ ソース]**で **[Microsoft Excel]**を選択して、Excel 接続を構成します。  
+2.  **[データ ソースの選択]** ページの **[データ ソース]** で **[Microsoft Excel]** を選択して、Excel 接続を構成します。  
   
      この接続の種類で使用可能な構成オプションの詳細については、「 [Excel 接続マネージャー](../../integration-services/connection-manager/excel-connection-manager-editor.md)」を参照してください。  
   

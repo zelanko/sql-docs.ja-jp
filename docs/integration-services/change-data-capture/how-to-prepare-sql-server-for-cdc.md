@@ -1,28 +1,28 @@
 ---
-title: "CDC 用に SQL Server を準備する方法 | Microsoft Docs"
-ms.custom: 
+title: CDC 用に SQL Server を準備する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48e2cd3e7c8d8c97b3b18f514a481696dabad6c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9104934d908180fed67f1ca95ece86f6c9a21c6d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC 用に SQL Server を準備する方法
   Oracle CDC サービスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのターゲット インスタンスに MSXDBCDC データベースが含まれている必要があります。 このデータベースを作成するには、CDC Service 構成コンソールの "SQL Server の準備" アクションを使用します。このタスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各ターゲット インスタンスに対して一度だけ実行します。  
@@ -33,11 +33,11 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-enable-sql-server-for-cdc"></a>CDC 用に SQL Server を有効にするには  
   
-1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]**をクリックします。  
+1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]** をクリックします。  
   
-2.  左ペインで **[ローカルの CDC Service]** を選択してから、 **[アクション]** ペインの **[SQL Server の準備]**をクリックします。  
+2.  左ペインで **[ローカルの CDC Service]** を選択してから、 **[アクション]** ペインの **[SQL Server の準備]** をクリックします。  
   
-     または、 **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]**をクリックします。  
+     または、 **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]** をクリックします。  
   
 3.  [Oracle CDC 用 SQL Server インスタンスの準備] ダイアログ ボックスに必要な情報を入力します。 このダイアログ ボックスに必要な情報を入力する方法については、「 [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)」を参照してください。  
   

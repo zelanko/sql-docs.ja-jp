@@ -1,32 +1,32 @@
 ---
-title: "[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク) | Microsoft Docs"
-ms.custom: 
+title: '[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.quickprofile.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc9d58ae7577204988fefcf0364c48a8a2695201
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 166af9497e0e05e862dd991cb7fb05864b0811b4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
   **[単一テーブル クイック プロファイル フォーム]** を使用すると、既定の設定を使用して単一のテーブルまたはビューをプロファイルするように、データ プロファイル タスクをすばやく構成できます。  
@@ -50,13 +50,13 @@ ms.lasthandoff: 01/25/2018
 |**列の値分布プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列の値分布プロファイルを計算します。<br /><br /> このプロファイルは、選択された列に含まれる値ごとに、その値と、テーブル内におけるその値の行の比率を報告します。 また、テーブル内の指定された比率を超えている行の値も報告できます。 このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 このプロファイルの詳細については、「[[列の値分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列長分布プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列長分布プロファイルを計算します。<br /><br /> このプロファイルは、選択された列に含まれる文字列値の長さごとに、その長さと、テーブル内におけるその長さの行の比率を報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列長分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列パターン プロファイル (Column Pattern Profile)**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列パターン プロファイルを計算します。<br /><br /> このプロファイルは、文字列型の列に含まれる値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。 また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 このプロファイルの設定の詳細については、「[[列パターン プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)」を参照してください。|  
-|**候補キー プロファイル**|**[最大 N 個の列キー]**で指定された数までの列を含む列の組み合わせの候補キー プロファイルを計算します。<br /><br /> このプロファイルは、列または列のセットが、選択したテーブルのキーとして適しているかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)」を参照してください。|  
+|**候補キー プロファイル**|**[最大 N 個の列キー]** で指定された数までの列を含む列の組み合わせの候補キー プロファイルを計算します。<br /><br /> このプロファイルは、列または列のセットが、選択したテーブルのキーとして適しているかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**[最大 N 個の列キー]**|テーブルまたはビューのキーとして考えられる組み合わせをテストする列の最大数を選択します。 既定値は 1 です。 最大値は 1000 です。 たとえば、3 を選択すると、1 つの列、2 つの列、および 3 つの列のキーの組み合わせがテストされます。|  
-|**機能依存プロファイル**|**[決定列として最大 N 個の列]**で指定された数までの列を含む決定列の組み合わせの機能依存プロファイルを計算します。<br /><br /> このプロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[機能依存プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)」を参照してください。|  
+|**機能依存プロファイル**|**[決定列として最大 N 個の列]** で指定された数までの列を含む決定列の組み合わせの機能依存プロファイルを計算します。<br /><br /> このプロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[機能依存プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**[決定列として最大 N 個の列]**|決定列として考えられる組み合わせをテストする列の最大数を選択します。 既定値は 1 です。 最大値は 1000 です。 たとえば、2 を選択すると、単一の列または 2 つの列の組み合わせが別の (依存) 列の決定列である組み合わせがテストされます。|  
   
 > [!NOTE]  
->  値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]**では使用できません。  
+>  値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]** では使用できません。  
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

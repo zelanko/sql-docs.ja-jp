@@ -1,32 +1,32 @@
 ---
-title: "|| (論理 OR) (SSIS 式) | Microsoft Docs"
-ms.custom: 
+title: '|| (論理 OR) (SSIS 式) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OR operator
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e350e41fa5a53b421b89d8fd2432cbd11c1532d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 43350e41683d9b19f7b79878f54f05a1676b6c50
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (論理 OR) (SSIS 式)
   論理 OR 演算を実行します。 一方または両方の条件が TRUE の場合、式は TRUE に評価されます。  
@@ -48,7 +48,7 @@ boolean_expression1 || boolean_expression2
 ## <a name="remarks"></a>Remarks  
  次の表は、|| 演算子の結果を示します。  
   
-|[結果]|式|式|  
+|結果|式|式|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|TRUE|FALSE|  

@@ -1,16 +1,16 @@
 ---
-title: "データ マイニング クエリ タスク | Microsoft Docs"
-ms.custom: 
+title: データ マイニング クエリ タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquerytask.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 092787065ee391c521810d09d1c01002a3fc8a74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
   データ マイニング クエリ タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に構築されたデータ マイニング モデルに基づいて、予測クエリを実行します。 予測クエリは、マイニング モデルを使用して新しいデータの予測を作成します。 たとえば、予測クエリにより、夏季のヨット販売数を予測したり、ヨットを購入する可能性の高い顧客の一覧を生成できます。  
@@ -140,13 +140,13 @@ ms.lasthandoff: 01/25/2018
  一覧にパラメーターを追加します。  
   
  **[削除]**  
- パラメーターを選択してから、 **[削除]**をクリックします。  
+ パラメーターを選択してから、 **[削除]** をクリックします。  
   
 ### <a name="result-set-tab-options"></a>[結果セット] タブのオプション  
  **[結果名]**  
  オプションで、結果セット名を更新します。 **[変数名]** 一覧から変数を選択して、結果を変数にマップします。  
   
- **[追加]**をクリックして結果を追加したら、結果の一意な名前を指定します。  
+ **[追加]** をクリックして結果を追加したら、結果の一意な名前を指定します。  
   
  **[変数名]**  
  結果セットにマップする変数を一覧から選択します。  
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/25/2018
  一覧に結果セットを追加します。  
   
  **[削除]**  
- 結果を選択してから、 **[削除]**をクリックします。  
+ 結果を選択してから、 **[削除]** をクリックします。  
 ## <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
   

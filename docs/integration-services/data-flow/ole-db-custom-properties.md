@@ -1,28 +1,28 @@
 ---
-title: "OLE DB カスタム プロパティ | Microsoft Docs"
-ms.custom: 
+title: OLE DB カスタム プロパティ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc8a8b573062af1cf719367896e2933556cfdfae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ce22060489349bf270ef3668236cc5d4f09e4aac
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB カスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -60,12 +60,12 @@ ms.lasthandoff: 01/25/2018
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|変換先が変換先となるデータベースにアクセスする方法を指定する値。<br /><br /> このプロパティの値は、次のいずれか 1 つです。<br /><br /> <br /><br /> **OpenRowset** (0): テーブルまたはビューの名前を指定します。<br /><br /> **OpenRowset from Variable** (1): テーブルまたはビューの名前が含まれる変数の名前を指定します。<br /><br /> **OpenRowset Using Fastload** (3): テーブルまたはビューの名前を指定します。<br /><br /> **OpenRowset Using Fastload from Variable** (4): テーブルまたはビューの名前が含まれる変数の名前を指定します。<br /><br /> **SQL Command** (2): SQL ステートメントを指定します。|  
 |AlwaysUseDefaultCodePage|ブール値|**DefaultCodePage** プロパティの値を各列に使用するか、または各列のロケールからコードページを派生するかを示す値。 このプロパティの既定値は **False**です。|  
-|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に 0 を指定すると、時間は無制限になります。 このプロパティの既定値は 0 です。<br /><br /> 注: このプロパティは、 **[OLE DB 変換先エディター]**では使用できませんが、 **[詳細エディター]**を使用して設定できます。|  
+|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に 0 を指定すると、時間は無制限になります。 このプロパティの既定値は 0 です。<br /><br /> 注: このプロパティは、 **[OLE DB 変換先エディター]** では使用できませんが、 **[詳細エディター]** を使用して設定できます。|  
 |DefaultCodePage|Integer|OLE DB 変換先に関連付けられた既定のコード ページ。|  
 |FastLoadKeepIdentity|ブール値|データが読み込まれるときに ID 値をコピーするかどうかを指定する値。 このプロパティは、高速読み取りオプションのいずれかを使用した場合のみ使用できます。 このプロパティの既定値は **False**です。 このプロパティは OLE DB [IRowsetFastLoad (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) プロパティ **SSPROP_FASTLOADKEEPIDENTITY** に相当します。|  
 |FastLoadKeepNulls|ブール値|データが読み込まれるときに NULL 値をコピーするかどうかを指定する値。 このプロパティは、高速読み取りオプションのいずれかを使用した場合のみ使用できます。 このプロパティの既定値は **False**です。 このプロパティは OLE DB [IRowsetFastLoad (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) プロパティ **SSPROP_FASTLOADKEEPNULLS** に相当します。|  
 |FastLoadMaxInsertCommitSize|Integer|高速読み込み操作の実行中に OLE DB 変換先でコミットを試行するバッチ サイズを指定する値。 既定値の **0**は、すべての行が処理された後で、コミット操作が 1 回行われることを示します。|  
-|FastLoadOptions|String|高速読み込みオプションのコレクション。 高速読み込みオプションには、テーブルのロックおよび制約のチェックが含まれています。 どちらか 1 つまたは両方を指定することも、どちらも指定しないこともできます。 このプロパティは OLE DB IRowsetFastLoad プロパティ **SSPROP_FASTLOADOPTIONS** に相当し、 **CHECK_CONSTRAINTS** や **TABLOCK**のような文字列を受け取ります。<br /><br /> 注: このプロパティの一部のオプションは、 **[Excel 変換先エディター]**では使用できませんが、 **[詳細エディター]**を使用して設定できます。|  
+|FastLoadOptions|String|高速読み込みオプションのコレクション。 高速読み込みオプションには、テーブルのロックおよび制約のチェックが含まれています。 どちらか 1 つまたは両方を指定することも、どちらも指定しないこともできます。 このプロパティは OLE DB IRowsetFastLoad プロパティ **SSPROP_FASTLOADOPTIONS** に相当し、 **CHECK_CONSTRAINTS** や **TABLOCK**のような文字列を受け取ります。<br /><br /> 注: このプロパティの一部のオプションは、 **[Excel 変換先エディター]** では使用できませんが、 **[詳細エディター]** を使用して設定できます。|  
 |OpenRowset|String|AccessMode が **OpenRowset**の場合、OLE DB 変換先がアクセスするテーブルまたはビューの名前。|  
 |OpenRowsetVariable|String|AccessMode が **OpenRowset from Variable**の場合、OLE DB 変換先がアクセスするテーブルまたはビューの名前が含まれる変数名。|  
 |SqlCommand|String|AccessMode が **SQL Command**の場合、OLE DB 変換先がデータの変換先列を指定するときに使用する、Transact-SQL ステートメント。|  

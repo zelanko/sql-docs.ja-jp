@@ -1,30 +1,30 @@
 ---
-title: "変更データを取得および理解する | Microsoft Docs"
-ms.custom: 
+title: 変更データを取得および理解する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ff4d2567d455744270b3fa317b3290ac1ced123
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 10b9057d6659ac37b0d841fa12549fdb8d3dc42f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>変更データを取得および理解する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、最初のタスクは、変更データを取得するクエリを実行することです。 このクエリは、データ フロー タスクの変換元コンポーネント内で実行します。 その後、下流にある変換や変換先を使用して、変更データを変換先に適用できます。  
@@ -51,15 +51,15 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の **[データ フロー]** タブで、OLE DB ソースを追加します。  
   
-2.  **[OLE DB ソース エディター]**の **[接続マネージャー]** ページで、次のオプションを選択します。  
+2.  **[OLE DB ソース エディター]** の **[接続マネージャー]** ページで、次のオプションを選択します。  
   
     1.  ソース データベースへの有効な接続を構成します。  
   
-    2.  **[データ アクセス モード]**で **[変数からの SQL コマンド]**を選択します。  
+    2.  **[データ アクセス モード]** で **[変数からの SQL コマンド]** を選択します。  
   
-    3.  **[変数名]**で **[User::SqlDataQuery]**を選択します。  
+    3.  **[変数名]** で **[User::SqlDataQuery]** を選択します。  
   
-3.  **[OLE DB ソース エディター]**の **[列]** ページで、必要なすべての列が出力列にマップされていることを確認します。  
+3.  **[OLE DB ソース エディター]** の **[列]** ページで、必要なすべての列が出力列にマップされていることを確認します。  
   
 ## <a name="next-step"></a>次の手順  
  変更データを取得するように OLE DB ソースを構成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  

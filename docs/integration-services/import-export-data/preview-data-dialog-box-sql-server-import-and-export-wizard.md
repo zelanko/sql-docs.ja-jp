@@ -1,30 +1,30 @@
 ---
-title: "[データのプレビュー] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: '[データのプレビュー] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d0f0772336614e81e1b29c8a4e54fb73d2ed5c2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7750fc7d5ca5a45c38f8a4dba6a6c8f793564aac
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>[データのプレビュー] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)
   コピーするデータを指定した後に、必要に応じて **[プレビュー]** をクリックして **[データのプレビュー]** ダイアログ ボックスを開くことができます。 このページでは、データ ソースから最大 200 行のサンプル データをプレビューできます。 プレビューで、コピーしたいデータがウィザードによってコピーされることを確認します。
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 データをプレビューした後で、ウィザードの前のページで選択したオプションを変更してもかまいません。 これらの変更を行うには、**[OK]** をクリックして **[コピー元のテーブルおよびビューを選択]** ページに戻り、**[戻る]** をクリックし、選択の変更が可能な前のページに戻ります。
 
 ## <a name="whats-next"></a>次の操作  
- コピーするデータをプレビューしたら、 **[OK]**をクリックします。 **[データのプレビュー]** ダイアログ ボックスから、 **[コピー元のテーブルおよびビューを選択]** ページまたは **[フラット ファイルの変換先の構成]** ページに戻ります。 詳細については、「 [[コピー元のテーブルおよびビューを選択]](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 」または「 [[フラット ファイルの変換先の構成]](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
+ コピーするデータをプレビューしたら、 **[OK]** をクリックします。 **[データのプレビュー]** ダイアログ ボックスから、 **[コピー元のテーブルおよびビューを選択]** ページまたは **[フラット ファイルの変換先の構成]** ページに戻ります。 詳細については、「 [[コピー元のテーブルおよびビューを選択]](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 」または「 [[フラット ファイルの変換先の構成]](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
  
  ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

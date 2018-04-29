@@ -1,16 +1,16 @@
 ---
-title: "あいまい参照変換 | Microsoft Docs"
-ms.custom: 
+title: あいまい参照変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 
+caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7c6411c62431bb4c929049cca93805bf49ad5678
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 01/25/2018
  SQL の TRUNCATE TABLE コマンドでは、DELETE トリガーは起動されません。 TRUNCATE TABLE コマンドが参照テーブルに対して使用されると、参照テーブルと一致インデックスが同期されなくなり、あいまい参照変換が失敗します。 一致インデックス テーブルを維持するトリガーが参照テーブルに組み込まれている場合は、TRUNCATE TABLE コマンドではなく、SQL の DELETE コマンドを使用してください。  
   
 > [!NOTE]  
->  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]**を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
 >   
 >  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
   
@@ -147,14 +147,14 @@ ms.lasthandoff: 01/25/2018
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  
   
 > [!NOTE]  
->  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 **[保存されたインデックスを維持する]**を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
+>  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 **[保存されたインデックスを維持する]** を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
   
 > [!NOTE]  
->  あいまい参照変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまい参照変換エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 さらに、 **MaxOutputMatchesPerInput** の 100 より大きい値は、 **[詳細エディター]**でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
+>  あいまい参照変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまい参照変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 さらに、 **MaxOutputMatchesPerInput** の 100 より大きい値は、 **[詳細エディター]** でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
   
 ### <a name="options"></a>および  
  **[キャッシュなし]**  
- 一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続を作成します。  
@@ -175,7 +175,7 @@ ms.lasthandoff: 01/25/2018
  新しい参照インデックスを保存するように指定した場合、そのインデックスを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でも維持するかどうかを指定します。  
   
 > [!NOTE]  
->  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]**を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
+>  **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブで **[保存されたインデックスを維持する]** を選択すると、変換ではマネージ ストアド プロシージャを使用してインデックスを維持します。 これらのマネージ ストアド プロシージャは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の共通言語ランタイム (CLR) 統合機能を使用します。 既定では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の CLR 統合は無効です。 **[保存されたインデックスを維持する]** 機能を使用するには、CLR 統合を有効にする必要があります。 詳細については、「 [CLR 統合の有効化](../../../relational-databases/clr-integration/clr-integration-enabling.md)」を参照してください。  
 >   
 >  **[保存されたインデックスを維持する]** オプションは CLR 統合を必要とするため、この機能を使用できるのは、CLR 統合が有効になっている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの参照テーブルを選択した場合だけです。  
   

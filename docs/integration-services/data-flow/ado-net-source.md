@@ -1,16 +1,16 @@
 ---
-title: "ADO NET ソース | Microsoft Docs"
-ms.custom: 
+title: ADO NET ソース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 
+caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4142fa0f9a01631574cca90a3a21b2047cd30820
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
@@ -47,10 +47,10 @@ ms.lasthandoff: 01/25/2018
   
  ADO NET ソースの後にデータ変換の変換を使用することによって、DT_NTEXT データ型を DT_BYTES データ型または DT_STR データ型に変換することもできます。 詳細については、「 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、日付データ型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定の日付データ型にマップされます。 ADO NET ソースを構成して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用する日付データ型を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が使用する日付データ型に変換できます。 このような日付データ型を変換する ADO NET ソースを構成するには、 **接続マネージャーの** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロパティを **[最新]**に設定します ( **Type System Version** プロパティは、 **[接続マネージャー]** ダイアログ ボックスの **[すべて]** ページにあります。 **[接続マネージャー]** ダイアログ ボックスを開くには、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを右クリックし、 **[編集]**をクリックします)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、日付データ型 DT_DBDATE、DT_DBTIME2、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定の日付データ型にマップされます。 ADO NET ソースを構成して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用する日付データ型を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が使用する日付データ型に変換できます。 このような日付データ型を変換する ADO NET ソースを構成するには、 **接続マネージャーの** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロパティを **[最新]** に設定します ( **Type System Version** プロパティは、 **[接続マネージャー]** ダイアログ ボックスの **[すべて]** ページにあります。 **[接続マネージャー]** ダイアログ ボックスを開くには、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを右クリックし、 **[編集]** をクリックします)。  
   
 > [!NOTE]  
->  **接続マネージャーの** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロパティが **[SQL Server 2005]**に設定されていると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日付データ型は DT_WSTR に変換されます。  
+>  **接続マネージャーの** Type System Version [!INCLUDE[vstecado](../../includes/vstecado-md.md)] プロパティが **[SQL Server 2005]** に設定されていると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日付データ型は DT_WSTR に変換されます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接続マネージャーで、プロバイダーを .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient) と指定すると、システムはユーザー定義データ型 (UDT) は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バイナリ ラージ オブジェクト (BLOB) に変換されます。 UDT データ型の変換時には、次の規則が適用されます。  
   
@@ -106,11 +106,11 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
   
-3.  **[ADO NET 変換元エディター]**で、 **[接続マネージャー]**をクリックします。  
+3.  **[ADO NET 変換元エディター]** で、 **[接続マネージャー]** をクリックします。  
   
 ### <a name="static-options"></a>静的オプション  
  **ADO.NET 接続マネージャー**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
@@ -137,7 +137,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
  **[SQL コマンド テキスト]**  
- SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
+ SQL クエリのテキストを入力し、 **[クエリの作成]** をクリックしてクエリを作成するか、 **[参照]** をクリックしてクエリ テキストを含むファイルを指定します。  
   
  **[クエリの作成]**  
  SQL クエリを視覚的に作成するには、 **[クエリ ビルダー]** ダイアログ ボックスを使用します。  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
   
-3.  **[ADO NET 変換元エディター]**で、 **[列]**をクリックします。  
+3.  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
   
 ### <a name="options"></a>および  
  **使用できる外部列**  
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
   
-3.  **[ADO NET 変換元エディター]**で、 **[エラー出力]**をクリックします。  
+3.  **[ADO NET 変換元エディター]** で、 **[エラー出力]** をクリックします。  
   
 ### <a name="options"></a>および  
  **[入力または出力]**  

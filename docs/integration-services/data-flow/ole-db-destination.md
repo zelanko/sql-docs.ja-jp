@@ -1,16 +1,16 @@
 ---
-title: "OLE DB 変換先 | Microsoft Docs"
-ms.custom: 
+title: OLE DB 変換先 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbdest.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 
+caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3a5dc3a25d85f872603e88a8ed0ef52fec5f4252
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  OLE DB 変換先ではパラメーターがサポートされません。 パラメーター化された INSERT ステートメントを実行する必要がある場合は、OLE DB コマンド変換を検討してください。 詳細については、「 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)」を参照してください。  
   
- OLE DB 変換先で 2 バイト文字セット (DBCS) を使用するデータを読み込む際に、データ アクセス モードで高速読み込みオプションを使用せず、OLE DB 接続マネージャーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) を使用している場合、そのデータは破損する可能性があります。 DBCS データの整合性を保持するには、OLE DB 接続マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用するように構成するか、 **[テーブルまたはビュー - 高速読み込み]** または **[テーブル名またはビュー名の変数 - 高速読み込み]**のうちいずれかの高速読み込みモードを使用する必要があります。 どちらのオプションも、 **[OLE DB 変換先エディター]** ダイアログ ボックスから使用できます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクト モデルをプログラミングするときは、AccessMode プロパティを **[OpenRowset での FastLoad の使用]**または **[Variable から FastLoad を使用して OpenRowset]**に設定する必要があります。  
+ OLE DB 変換先で 2 バイト文字セット (DBCS) を使用するデータを読み込む際に、データ アクセス モードで高速読み込みオプションを使用せず、OLE DB 接続マネージャーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) を使用している場合、そのデータは破損する可能性があります。 DBCS データの整合性を保持するには、OLE DB 接続マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用するように構成するか、 **[テーブルまたはビュー - 高速読み込み]** または **[テーブル名またはビュー名の変数 - 高速読み込み]** のうちいずれかの高速読み込みモードを使用する必要があります。 どちらのオプションも、 **[OLE DB 変換先エディター]** ダイアログ ボックスから使用できます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクト モデルをプログラミングするときは、AccessMode プロパティを **[OpenRowset での FastLoad の使用]** または **[Variable から FastLoad を使用して OpenRowset]** に設定する必要があります。  
   
 > [!NOTE]  
 >  **デザイナーの** [OLE DB 変換先エディター] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスを使用して、OLE DB 変換先がデータを挿入する変換先テーブルを作成する際に、新しく作成したテーブルを手動で選択する必要がある場合があります。 手動で選択する必要があるのは、OLE DB provider for DB2 などの OLE DB プロバイダーが、スキーマの識別子を自動的にテーブル名に追加した場合です。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/25/2018
  データ型の詳細については、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="fast-load-options"></a>高速読み込みオプション  
- OLE DB 変換先で高速読み込みデータ アクセス モードが使用される場合、 **[OLE DB 変換先エディター]**のユーザー インターフェイスで、変換先に対して次の高速読み込みオプションを指定できます。  
+ OLE DB 変換先で高速読み込みデータ アクセス モードが使用される場合、 **[OLE DB 変換先エディター]** のユーザー インターフェイスで、変換先に対して次の高速読み込みオプションを指定できます。  
   
 -   インポートしたデータ ファイルの ID 値を保持します。または、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって割り当てられた一意の値を使用します。  
   
@@ -131,11 +131,11 @@ ms.lasthandoff: 01/25/2018
 >  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)」を参照してください。  
   
 > [!NOTE]  
->  OLE DB 変換先の **CommandTimeout** プロパティは、 **[OLE DB 変換先エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 また、一部の高速読み込みオプションは **[詳細エディター]**でしか使用できません。 これらのプロパティの詳細については、「 [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)」の OLE DB 変換先に関するセクションを参照してください。  
+>  OLE DB 変換先の **CommandTimeout** プロパティは、 **[OLE DB 変換先エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)」の OLE DB 変換先に関するセクションを参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **[キャッシュなし]**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
@@ -165,17 +165,17 @@ ms.lasthandoff: 01/25/2018
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
   
 > [!NOTE]  
->  **[新規作成]**をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  **[新規作成]** をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
 #### <a name="data-access-mode--table-or-view--fast-load"></a>[データ アクセス モード] = [テーブルまたはビュー - 高速読み込み]  
  **[テーブル名またはビュー名]**  
- この一覧を使用してデータベースからテーブルまたはビューを選択するか、 **[新規作成]**をクリックして新しいテーブルを作成します。  
+ この一覧を使用してデータベースからテーブルまたはビューを選択するか、 **[新規作成]** をクリックして新しいテーブルを作成します。  
   
  **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
   
 > [!NOTE]  
->  **[新規作成]**をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  **[新規作成]** をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
  **[ID を保持する]**  
  データが読み込まれるときに ID 値をコピーするかどうかを指定します。 このプロパティは、高速読み取りオプションを指定した場合にのみ使用できます。 このプロパティの既定値は **false**です。  
@@ -201,7 +201,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  値を **0** にすると、OLE DB 変換先と別のデータ フロー コンポーネントが同じソース テーブルを更新している場合に、実行中のパッケージが応答を停止する可能性があります。 パッケージが停止しないようにするには、 **[挿入コミット サイズの最大値]** オプションを **2147483647**に設定します。  
   
- このプロパティに値を指定すると、変換先で **[挿入コミット サイズの最大値]**未満の行数のバッチがコミットされます。値を指定しない場合は、現在処理されているバッファー内の残りの行数がコミットされます。  
+ このプロパティに値を指定すると、変換先で **[挿入コミット サイズの最大値]** 未満の行数のバッチがコミットされます。値を指定しない場合は、現在処理されているバッファー内の残りの行数がコミットされます。  
   
 > [!NOTE]  
 >  変換先で制約が失敗すると、 **[挿入コミット サイズの最大値]** で定義された行数のバッチ全体が失敗します。  
@@ -218,7 +218,7 @@ ms.lasthandoff: 01/25/2018
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
   
 > [!NOTE]  
->  **[新規作成]**をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
+>  **[新規作成]** をクリックすると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、接続されているデータ ソースに基づいて既定の CREATE TABLE ステートメントが生成されます。 基になるテーブルの列に FILESTREAM 属性が宣言されていても、この既定の CREATE TABLE ステートメントには FILESTREAM 属性が含まれません。 FILESTREAM 属性を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを実行するには、まず対象データベースに FILESTREAM ストレージを実装します。 次に、**[テーブルの作成]** ダイアログ ボックスで CREATE TABLE ステートメントに FILESTREAM 属性を追加します。 詳細については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
  **[ID を保持する]**  
  データが読み込まれるときに ID 値をコピーするかどうかを指定します。 このプロパティは、高速読み取りオプションを指定した場合にのみ使用できます。 このプロパティの既定値は **false**です。  
@@ -246,7 +246,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
  **[SQL コマンド テキスト]**  
- SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
+ SQL クエリのテキストを入力し、 **[クエリの作成]** をクリックしてクエリを作成するか、 **[参照]** をクリックしてクエリ テキストを含むファイルを指定します。  
   
 > [!NOTE]  
 >  OLE DB 変換先ではパラメーターがサポートされません。 パラメーター化された INSERT ステートメントを実行する必要がある場合は、OLE DB コマンド変換を検討してください。 詳細については、「 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)」を参照してください。  

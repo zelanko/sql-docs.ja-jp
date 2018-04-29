@@ -1,30 +1,30 @@
 ---
-title: "SAP BW 変換先エディター ([接続マネージャー] ページ) | Microsoft Docs"
-ms.custom: 
+title: SAP BW 変換先エディター ([接続マネージャー] ページ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a0e0efe7a56e05ae0e099a45bbc03f14bc9eaa51
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、SAP BW 変換先をダブルクリックします。  
   
-3.  **[SAP BW 変換先エディター]**で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
+3.  **[SAP BW 変換先エディター]** で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
   
 ## <a name="options"></a>および  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 >  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
  **SAP BW 接続マネージャー**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[SAP BW 接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 01/25/2018
  **作成**  
  選択した種類の SAP Netweaver BW オブジェクトを作成します。  
   
-|[オブジェクトの種類]|[結果]|  
+|[オブジェクトの種類]|結果|  
 |-----------------|------------|  
 |**インフォオブジェクト**|**[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用して、新しいインフォオブジェクトを作成します。 このダイアログ ボックスの詳細については、「 [新しいインフォオブジェクトの作成](../../integration-services/data-flow/create-new-infoobject.md)」を参照してください。|  
 |**インフォキューブ**|**[トランザクション データのインフォキューブの作成]** ダイアログ ボックスを使用して、新しいインフォキューブを作成します。 このダイアログ ボックスの詳細については、「 [トランザクション データのインフォキューブの作成](../../integration-services/data-flow/create-infocube-for-transaction-data.md)」を参照してください。|  

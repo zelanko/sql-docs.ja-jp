@@ -1,16 +1,16 @@
 ---
-title: "パーティション処理変換先 | Microsoft Docs"
-ms.custom: 
+title: パーティション処理変換先 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7bca40d20314fa36693811f58a67fd96cb2c9ef9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
   パーティション処理変換先は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションを読み込んで処理します。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="options"></a>および  
  **Connection manager**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  処理するパーティションを選択します。  
   
  **[処理方法]**  
- 処理方法を選択します。 このオプションの既定値は **[完全]**です。  
+ 処理方法を選択します。 このオプションの既定値は **[完全]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/25/2018
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 上の表で選択された入力列が表示されます。 **[使用できる入力列]**ボックスの一覧を使用して、マッピングを変更できます。  
+ 上の表で選択された入力列が表示されます。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
@@ -133,10 +133,10 @@ ms.lasthandoff: 01/25/2018
  エラーが発生した場合に処理を停止することを指定します。  
   
  **[エラー数]**  
- **[エラー時に停止する]**を選択した場合は、処理を停止するエラーのしきい値を指定します。  
+ **[エラー時に停止する]** を選択した場合は、処理を停止するエラーのしきい値を指定します。  
   
  **[エラー時のアクション]**  
- **[エラー時に停止する]**を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
+ **[エラー時に停止する]** を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/25/2018
 |**StopLogging**|ログ記録エラーを停止します。|  
   
  **[見つからないキー]**  
- 見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]**です。  
+ 見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[許可されていない NULL キー]**  
- NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]**です。  
+ NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

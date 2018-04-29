@@ -1,30 +1,30 @@
 ---
 title: Data Streaming Destination | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c010049c9a55427304357d06dc8fa9fd7b4400b0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0f74f458bd11ef0380a5d1bb8bee276d01b9c84d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
   **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
@@ -39,7 +39,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>データ フィード パブリッシング コンポーネント  
  データ フィード パブリッシング コンポーネントには、コンポーネントとして、OLE DB Provider for SSIS、Data Streaming Destination、SSIS パッケージ パブリッシュ ウィザードが含まれています。 このウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスで SSIS パッケージを SQL ビューとして公開できます。 このウィザードでは、OLE DB Provider for SSIS を利用するリンク サーバーとリンク サーバーでクエリを表示する SQL ビューを作成できます。 ビューを実行し、表形式のデータ セットとなっている SSIS パッケージからの結果にクエリを実行します。  
   
- SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]**の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]**をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]**をクリックします。  
+ SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]** をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]** をクリックします。  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>SQL ビューとして SSIS パッケージを公開する  
  以下では、SQL ビューとして SSIS パッケージを公開する手順について説明します。  
@@ -67,9 +67,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 -   [チュートリアル: SSIS パッケージを SQL ビューとして公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
 ## <a name="configure-data-streaming-destination"></a>Data Streaming Destination を構成する
-  **[Data Streaming Destination の詳細エディター]** ダイアログ ボックスを使用して、Data Streaming Destination を構成します。 このダイアログ ボックスを開くには、コンポーネントをダブルクリックするか、データ フロー デザイナーでコンポーネントを右クリックしてから **[編集]**をクリックします。  
+  **[Data Streaming Destination の詳細エディター]** ダイアログ ボックスを使用して、Data Streaming Destination を構成します。 このダイアログ ボックスを開くには、コンポーネントをダブルクリックするか、データ フロー デザイナーでコンポーネントを右クリックしてから **[編集]** をクリックします。  
   
- このダイアログ ボックスには、 **[コンポーネントのプロパティ]**、 **[入力列]**、 **[入力プロパティと出力プロパティ]**の 3 つのタブがあります。  
+ このダイアログ ボックスには、 **[コンポーネントのプロパティ]**、 **[入力列]**、 **[入力プロパティと出力プロパティ]** の 3 つのタブがあります。  
   
 ## <a name="component-properties-tab"></a>[コンポーネントのプロパティ] タブ  
  このタブには、次の編集可能なフィールドがあります。  
@@ -84,7 +84,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  このタブの上部ペインに、使用可能な入力列がすべて表示されます。 このコンポーネントの出力に含める列を選択します。 選択した列は、下部ペインの一覧に表示されます。 この一覧の **[出力の別名]** フィールドに新しい名前を入力することにより、出力列の名前を変更できます。  
   
 ## <a name="input-output-properties-tab"></a>[入力プロパティと出力プロパティ] タブ  
- [入力列] タブと同様に、このタブの出力列の名前は変更できます。左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]**の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。  
+ [入力列] タブと同様に、このタブの出力列の名前は変更できます。左側のツリー ビューで、 **[Data Streaming Destination の入力]** 、 **[入力列]** の順に展開します。 入力列の名前をクリックし、右ペインで出力列の名前を変更します。  
   
 ## <a name="see-also"></a>参照  
  [Publish SSIS Packages as OData Feed Sources (OData フィード ソースとして SSIS パッケージを公開する)](http://go.microsoft.com/fwlink/?LinkID=317367)  

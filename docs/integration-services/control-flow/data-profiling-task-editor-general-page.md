@@ -1,32 +1,32 @@
 ---
-title: "[データ プロファイル タスク エディター] ([全般] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[データ プロファイル タスク エディター] ([全般] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.general.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e05a90b25672e835963384ab19ec218a7b2d3480
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 993cd523634362d67554d46f630e9e272de71ba7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
   **[データ プロファイル タスク エディター]** の **[全般]** ページを使用すると、次のオプションを構成できます。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[制御フロー]** タブで、データ プロファイル タスクをダブルクリックします。  
   
-3.  **[データ プロファイル タスク エディター]**で、 **[全般]**をクリックします。  
+3.  **[データ プロファイル タスク エディター]** で、 **[全般]** をクリックします。  
   
 ## <a name="data-profiling-options"></a>データ プロファイルに関するオプション  
  **Timeout**  
@@ -65,9 +65,9 @@ ms.lasthandoff: 01/25/2018
  **[Destination]**  
  データ プロファイル出力を含むファイル接続マネージャーまたはパッケージ変数を指定します。  
   
--   **[DestinationType]** オプションが **[FileConnection]**に設定されている場合、 **[Destination]** オプションには使用可能なファイル接続マネージャーが表示されます。 これらの接続マネージャーのいずれかを選択するか、[\<新しいファイル接続>] を選択して新しいファイル接続マネージャーを作成します。  
+-   **[DestinationType]** オプションが **[FileConnection]** に設定されている場合、 **[Destination]** オプションには使用可能なファイル接続マネージャーが表示されます。 これらの接続マネージャーのいずれかを選択するか、[\<新しいファイル接続>] を選択して新しいファイル接続マネージャーを作成します。  
   
--   **[DestinationType]** オプションが **[Variable]**に設定されている場合、 **[Destination]** オプションでは使用可能なパッケージ変数が **[Destination]** の一覧に表示されます。 これらの変数のいずれかを選択するか、[\<新しい変数>] を選択して新しい変数を作成します。  
+-   **[DestinationType]** オプションが **[Variable]** に設定されている場合、 **[Destination]** オプションでは使用可能なパッケージ変数が **[Destination]** の一覧に表示されます。 これらの変数のいずれかを選択するか、[\<新しい変数>] を選択して新しい変数を作成します。  
   
  **[OverwriteDestination]**  
  出力ファイルが既に存在する場合に、その出力ファイルを上書きするかどうかを指定します。 既定値は **False**です。 このプロパティの値は、[DestinationType] オプションが [FileConnection] に設定されている場合にのみ使用されます。 [DestinationType] オプションが [Variable] に設定されている場合は、変数の以前の値が常に上書きされます。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="other-options"></a>その他のオプション  
  **[クイック プロファイル]**  
- **[単一テーブル クイック プロファイル フォーム]**を表示します。 このフォームでは、既定の設定を使用することで、単一のテーブルまたはビューをプロファイルするタスクを簡素化します。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」を参照してください。  
+ **[単一テーブル クイック プロファイル フォーム]** を表示します。 このフォームでは、既定の設定を使用することで、単一のテーブルまたはビューをプロファイルするタスクを簡素化します。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」を参照してください。  
   
  **[プロファイル ビューアーを開く]**  
  Data Profile Viewer を開きます。 スタンドアロンの Data Profile Viewer は、データ プロファイル タスクのデータ プロファイル出力を表示します。 データ プロファイル出力は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内でデータ プロファイル タスクを実行してデータ プロファイルを計算した後に表示できます。  

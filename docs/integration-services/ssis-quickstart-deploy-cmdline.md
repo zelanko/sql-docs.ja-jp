@@ -1,23 +1,24 @@
 ---
-title: "コマンド プロンプトから SSIS プロジェクトを配置する | Microsoft Docs"
+title: コマンド プロンプトから SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a94a74659cefdb1fbed508836d45cacff1cf65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する
 このクイック スタート チュートリアルでは、Integration Services 配置ウィザード `ISDeploymentWizard.exe` を実行して、コマンド プロンプトから、SSIS プロジェクトを配置する方法を示します。
@@ -45,7 +46,7 @@ Integration Services 配置ウィザードの詳細については、「[Integra
     **[次へ]** をクリックして **[レビュー]** ページを開きます。  
   
 4.  **[レビュー]** ページで、選択した設定を確認します。
-    -   選択内容を変更するには、 **[戻る]**をクリックするか、左ペインでいずれかの手順をクリックします。
+    -   選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。
     -   **[配置]** をクリックして、配置プロセスを開始します。
   
 5.  配置プロセスが完了すると、**[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。

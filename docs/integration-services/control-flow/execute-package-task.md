@@ -1,16 +1,16 @@
 ---
-title: "パッケージ実行タスク | Microsoft Docs"
-ms.custom: 
+title: パッケージ実行タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executepackagetask.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 04950be3b6cdff9b21a78be007dcdf4dd5a04858
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、実行可能ファイルやバッチ ファイルの実行などの、ワークフロー処理を実行するタスクが含まれています。 詳細については、「 [プロセス実行タスク](../../integration-services/control-flow/execute-process-task.md)」を参照してください。  
   
 ## <a name="running-packages"></a>パッケージの実行  
- パッケージ実行タスクでは、親パッケージと同じプロジェクトに含まれる子パッケージを実行できます。 子パッケージをプロジェクトから選択するには、 **ReferenceType** プロパティを **[プロジェクト参照]**に設定し、 **PackageNameFromProjectReference** プロパティを設定します。  
+ パッケージ実行タスクでは、親パッケージと同じプロジェクトに含まれる子パッケージを実行できます。 子パッケージをプロジェクトから選択するには、 **ReferenceType** プロパティを **[プロジェクト参照]** に設定し、 **PackageNameFromProjectReference** プロパティを設定します。  
   
 > [!NOTE]  
 >  **[ReferenceType]** オプションは読み取り専用であり、対象パッケージを含むプロジェクトがプロジェクト配置モデルに変換されていない場合は **[外部参照]** に設定されます。 [Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/25/2018
  詳細については、「 [子パッケージでの変数およびパラメーターの値の使用](../../integration-services/packages/legacy-package-deployment-ssis.md#child)」を参照してください。  
   
 ### <a name="accessing-parent-package-variables"></a>親パッケージの変数へのアクセス  
- 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター** で **[スクリプト]**ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。  
+ 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター** で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。  
   
 ## <a name="configuring-the-execute-package-task"></a>パッケージ実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  パッケージ実行タスクが含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で開きます。  
   
-2.  SSIS デザイナーでタスクを右クリックし、 **[編集]**をクリックします。  
+2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="general"></a> [全般] ページのオプションを設定する  
  **名前**  

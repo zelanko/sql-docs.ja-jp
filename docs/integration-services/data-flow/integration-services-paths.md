@@ -1,16 +1,16 @@
 ---
-title: "Integration Services のパス | Microsoft Docs"
-ms.custom: 
+title: Integration Services のパス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.patheditor.general.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7e20807ed1f4972eeb722055e7671fd259aca9dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  **[データ フロー]** タブをクリックし、パスをダブルクリックします。  
   
-4.  **[データ フロー パス エディター]**ダイアログ ボックスで、 **[全般]**をクリックします。 ここで、パスの既定の名前を編集したり、パスに関する説明を入力できます。 PathAnnotation プロパティを変更することもできます。  
+4.  **[データ フロー パス エディター]** ダイアログ ボックスで、 **[全般]** をクリックします。 ここで、パスの既定の名前を編集したり、パスに関する説明を入力できます。 PathAnnotation プロパティを変更することもできます。  
   
 5.  **[OK]** をクリックします。  
   

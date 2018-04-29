@@ -1,16 +1,16 @@
 ---
-title: "スクリプト コンポーネント | Microsoft Docs"
-ms.custom: 
+title: スクリプト コンポーネント | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 
+caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2c446fd57d8dc795931bf9ff5dba6816ec9c9a57
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -163,7 +163,7 @@ ms.lasthandoff: 01/25/2018
  チェック ボックスを使用して、スクリプト変換に使用する列を指定します。  
   
  **入力列**  
- 各行に対して使用できる入力列の一覧から選択します。 選択内容が **[使用できる入力列]**テーブルのチェック ボックスに反映されます。  
+ 各行に対して使用できる入力列の一覧から選択します。 選択内容が **[使用できる入力列]** テーブルのチェック ボックスに反映されます。  
   
  **[出力の別名]**  
  各出力列の別名を入力します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
@@ -191,13 +191,13 @@ ms.lasthandoff: 01/25/2018
  追加の出力を一覧に追加します。  
   
  **[列の追加]**  
- 新しい出力列を格納するフォルダーを選択して **[列の追加]**をクリックすると、列が追加されます。  
+ 新しい出力列を格納するフォルダーを選択して **[列の追加]** をクリックすると、列が追加されます。  
   
  **[出力の削除]**  
- 出力を選択した後、 **[出力の削除]**をクリックするとその出力が削除されます。  
+ 出力を選択した後、 **[出力の削除]** をクリックするとその出力が削除されます。  
   
  **[列の削除]**  
- 列を選択した後、 **[列の削除]**をクリックするとその列が削除されます。  
+ 列を選択した後、 **[列の削除]** をクリックするとその列が削除されます。  
   
 ## <a name="script-transformation-editor-script-page"></a>[スクリプト変換エディター] ([スクリプト] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** タブを使用すると、スクリプトおよび関連プロパティを指定できます。  

@@ -1,30 +1,30 @@
 ---
-title: "パッケージ ワークフローでデータ プロファイル タスクを使用する | Microsoft Docs"
-ms.custom: 
+title: パッケージ ワークフローでデータ プロファイル タスクを使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f7e2cbac0c5a86c4792991dc1634721ac1cb635
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d09c8339cceb052b58fcfd8b1d560b793297eb74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
   データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
@@ -128,11 +128,11 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ プロファイル タスク エディター]** を開き、タスクを構成します。  
   
-3.  エディターの **[全般]** ページの **[変換先]**で、既に構成済みのファイル接続マネージャーの名前を選択します。  
+3.  エディターの **[全般]** ページの **[変換先]** で、既に構成済みのファイル接続マネージャーの名前を選択します。  
   
 4.  エディターの **[プロファイル要求]** ページで、列の NULL 比プロファイルを新しく作成します。  
   
-5.  **[要求プロパティ]** ペインの **[接続マネージャー]**で、既に構成済みの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択します。 次に、 **[TableOrView]**で Person.Address を選択します。  
+5.  **[要求プロパティ]** ペインの **[接続マネージャー]** で、既に構成済みの [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを選択します。 次に、 **[TableOrView]** で Person.Address を選択します。  
   
 6.  データ プロファイル タスク エディターを閉じます。  
   
@@ -149,9 +149,9 @@ ms.lasthandoff: 01/25/2018
   
 4.  **[スクリプト]** ページで、使用するプログラミング言語を選択します。 次に、2 つのパッケージ変数をスクリプトで使用できるようにします。  
   
-    1.  **[ReadOnlyVariables]**で **ProfileConnectionName**を選択します。  
+    1.  **[ReadOnlyVariables]** で **ProfileConnectionName**を選択します。  
   
-    2.  **[ReadWriteVariables]**で **AddressLine2NullRatio**を選択します。  
+    2.  **[ReadWriteVariables]** で **AddressLine2NullRatio**を選択します。  
   
 5.  **[スクリプトの編集]** を選択して、スクリプト開発環境を開きます。  
   
@@ -300,7 +300,7 @@ ms.lasthandoff: 01/25/2018
   
 -   スクリプト タスクをワークフロー内の下流の分岐に接続する優先順位制約では、変数の値を使用してワークフローを分ける式を作成します。  
   
-     たとえば、 **[式と制約]** で、優先順位制約の **[評価操作]**を設定するとします。 次に、式の値として `@AddressLine2NullRatio < .90` を使用します。 これにより、ワークフローは、直前のタスクが成功した場合、および選択した列の NULL 値の比率が 90% 未満の場合に、選択したパスに沿って進みます。  
+     たとえば、 **[式と制約]** で、優先順位制約の **[評価操作]** を設定するとします。 次に、式の値として `@AddressLine2NullRatio < .90` を使用します。 これにより、ワークフローは、直前のタスクが成功した場合、および選択した列の NULL 値の比率が 90% 未満の場合に、選択したパスに沿って進みます。  
   
 ## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>データ フローから変換されたデータへのデータ プロファイル タスクの接続  
  データ ソースから直接データをプロファイルするのではなく、既にデータ フローに読み込まれて変換されたデータをプロファイルできます。 ただし、データ プロファイル タスクは、メモリ内のデータではなく、持続データに対してしか動作しません。 したがって、変換されたデータをステージング テーブルに保存するには、最初に、変換先コンポーネントを使用する必要があります。  

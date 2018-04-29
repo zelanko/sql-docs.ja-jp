@@ -1,41 +1,41 @@
 ---
-title: "[列の値分布プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs"
-ms.custom: 
+title: '[列の値分布プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 861b01ee4002bb592f5fc85978a5afd08994f606
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 28489dd837b9b7c3c93928e98cebb8335079a155
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列の値分布プロファイル要求]** のオプションを設定できます。 列の値分布プロファイルは、選択された列に含まれるすべての異なる値と、それぞれの値が表す行のテーブル内での比率を報告します。 また、テーブル内の指定された比率を超えている行の値も報告できます。 このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 たとえば、米国の州の列をプロファイルし、50 個を超える個別の値を検出できます。  
   
 > [!NOTE]  
->  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]**ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
+>  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
  データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
- **[要求プロパティ]**ペインに表示される **[列の値分布プロファイル要求]** のオプション グループは次のとおりです。  
+ **[要求プロパティ]** ペインに表示される **[列の値分布プロファイル要求]** のオプション グループは次のとおりです。  
   
 -   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/25/2018
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
 |**[DictionarySort]**|関連する言語またはアルファベットの辞書で定義されている並べ替えおよび比較ルールに基づいてデータを並べ替えて比較します。|  
   
- **[DictionarySort]**を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
+ **[DictionarySort]** を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -98,15 +98,15 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="options"></a>および  
  **[ValueDistributionOption]**  
- すべての列の値の分布を計算するかどうかを指定します。 このオプションの既定値は **[FrequentValues]**です。  
+ すべての列の値の分布を計算するかどうかを指定します。 このオプションの既定値は **[FrequentValues]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**[AllValues]**|すべての列の値の分布が計算されます。|  
-|**[FrequentValues]**|**[FrequentValueThreshold]**で指定した最小値を頻繁に超える値の分布のみが計算されます。 **[FrequentValueThreshold]** を満たさない値は出力レポートから除外されます。|  
+|**[FrequentValues]**|**[FrequentValueThreshold]** で指定した最小値を頻繁に超える値の分布のみが計算されます。 **[FrequentValueThreshold]** を満たさない値は出力レポートから除外されます。|  
   
  **[FrequentValueThreshold]**  
- 0 ～ 1 の値を使用して、列の値が報告されるしきい値を指定します。 **[ValueDistributionOption]** で **[AllValues]**を選択した場合、このオプションは無効になります。 このオプションの既定値は 0.001 です。  
+ 0 ～ 1 の値を使用して、列の値が報告されるしきい値を指定します。 **[ValueDistributionOption]** で **[AllValues]** を選択した場合、このオプションは無効になります。 このオプションの既定値は 0.001 です。  
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

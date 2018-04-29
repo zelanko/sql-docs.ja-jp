@@ -1,32 +1,32 @@
 ---
-title: "SSIS カタログ | Microsoft Docs"
-ms.custom: 
+title: SSIS カタログ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSISDB **データベースがアタッチされている** インスタンスが停止したか、応答しない場合、ISServerExec.exe プロセスは終了します。 メッセージが Windows イベント ログに書き込まれます。  
 >   
->  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+>  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ## <a name="features-and-capabilities"></a>機能および能力  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 01/25/2018
   
  同じ名前の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをカタログの同じフォルダーに配置することで、このプロジェクトを更新または再配置できます。 既定では、プロジェクトを再配置するたびに、 **SSISDB** カタログには以前のバージョンのプロジェクトが保持されます。 操作データのサイズを維持するには、 **SSIS サーバー メンテナンス ジョブ** を使用して古いバージョンのプロジェクトを削除します。  
  
-**SSIS サーバー メンテナンス ジョブ**を実行するために、SSIS で SQL Server ログイン **##MS_SSISServerCleanupJobLogin##**が作成されます。 このログインは SSIS による内部使用専用です。
+**SSIS サーバー メンテナンス ジョブ**を実行するために、SSIS で SQL Server ログイン **##MS_SSISServerCleanupJobLogin##** が作成されます。 このログインは SSIS による内部使用専用です。
   
  次の **SSISDB** カタログ プロパティで、この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの動作を定義します。 **[カタログ プロパティ]** ダイアログ ボックスを利用するか、[catalog.catalog_properties (SSISDB データベース)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) と [catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) を利用し、プロパティを表示し、変更できます。  
   
@@ -317,9 +317,9 @@ ms.lasthandoff: 01/25/2018
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンに接続します。  
   
-3.  オブジェクト エクスプローラーで、サーバー ノードを展開します。次に、 **[Integration Services カタログ]** ノードを右クリックし、 **[カタログの作成]**をクリックします。  
+3.  オブジェクト エクスプローラーで、サーバー ノードを展開します。次に、 **[Integration Services カタログ]** ノードを右クリックし、 **[カタログの作成]** をクリックします。  
   
-4.  **[CLR 統合を有効にする]**をクリックします。  
+4.  **[CLR 統合を有効にする]** をクリックします。  
   
      カタログは CLR ストアド プロシージャを使用します。  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 01/25/2018
   
      このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
-6.  パスワードを入力し、 **[OK]**をクリックします。  
+6.  パスワードを入力し、 **[OK]** をクリックします。  
   
      カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
   
@@ -376,7 +376,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  Microsoft SQL Server データベース エンジンに接続します。  
   
-3.  オブジェクト エクスプローラーで、 **[Integration Services]** ノードを展開します。 **[SSISDB]**を右クリックし、 **[プロパティ]**をクリックします。  
+3.  オブジェクト エクスプローラーで、 **[Integration Services]** ノードを展開します。 **[SSISDB]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 ###  <a name="options"></a> オプションの構成  
   
@@ -420,13 +420,13 @@ ms.lasthandoff: 01/25/2018
   
     1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、**[セキュリティ]** ノードを展開し、**[ログイン]** ノードを展開します。  
   
-    2.  **[##MS_SSISServerCleanupJobLogin##]**を右クリックし、 **[ログインをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]**の順にクリックします。  
+    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 5.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、次の操作を行って、sp_ssis_startup の CREATE PROCEDURE スクリプトを生成します。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」を参照してください。  
   
     1.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開し、 **[master]** > **[プログラミング]** > **[ストアド プロシージャ]** ノードの順に展開します。  
   
-    2.  **[dbo.sp_ssis_startup]**を右クリックし、**[ストアド プロシージャをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[dbo.sp_ssis_startup]** を右クリックし、**[ストアド プロシージャをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 6.  SQL Server エージェントが起動したことを確認します。  
   
@@ -541,9 +541,9 @@ ms.lasthandoff: 01/25/2018
   
 1.  SSIS カタログ データベース (SSISDB) をバックアップします。  
   
-2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でローカル サーバーを展開し、 **[Integration Services カタログ]**を展開します。  
+2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でローカル サーバーを展開し、 **[Integration Services カタログ]** を展開します。  
   
-3.  **[SSISDB]**を右クリックして **[データベースのアップグレード]** を選択し、SSISDB アップグレード ウィザードを起動します。  
+3.  **[SSISDB]** を右クリックして **[データベースのアップグレード]** を選択し、SSISDB アップグレード ウィザードを起動します。  
   
      ![SSISDB アップグレード ウィザードの起動](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "SSISDB アップグレード ウィザードの起動")  
   
@@ -606,13 +606,13 @@ ms.lasthandoff: 01/25/2018
   
 1.  **SQL Server Management Studio** を起動し、SSISDB の Always On 高可用性グループの **プライマリ ノード** として設定するクラスターの SQL Server インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで、サーバー ノードを展開します。次に、 **[Integration Services カタログ]** ノードを右クリックし、 **[カタログの作成]**をクリックします。  
+2.  オブジェクト エクスプローラーで、サーバー ノードを展開します。次に、 **[Integration Services カタログ]** ノードを右クリックし、 **[カタログの作成]** をクリックします。  
   
-3.  **[CLR 統合を有効にする]**をクリックします。 カタログは CLR ストアド プロシージャを使用します。  
+3.  **[CLR 統合を有効にする]** をクリックします。 カタログは CLR ストアド プロシージャを使用します。  
   
 4.  SSIS サーバー インスタンスを再起動するたびに **catalog.startup** ストアド プロシージャが実行されるようにするには、 [[SQL Server のスタートアップ時に Integration Services ストアド プロシージャを自動実行できるようにする]](../system-stored-procedures/catalog-startup.md) をクリックします。 このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 SSIS サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
-5.  **パスワード**を入力し、 **[OK]**をクリックします。 カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
+5.  **パスワード**を入力し、 **[OK]** をクリックします。 カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
   
 ####  <a name="Step2"></a> 手順 2: SSISDB を Always On 可用性グループに追加する  
 SSISDB データベースを Always On 可用性グループに追加する手順は、他のユーザー データベースを可用性グループに追加する場合とほぼ同じです。 「 [可用性グループ ウィザードの使用](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
@@ -624,7 +624,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
  ![[データベースの選択]](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
   
 ####  <a name="Step3"></a> 手順 3: Always On の SSIS サポートを有効にする  
- Integration Service カタログを作成した後に、**[Integration Service カタログ]** ノードを右クリックし、**[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]**をクリックします。  
+ Integration Service カタログを作成した後に、**[Integration Service カタログ]** ノードを右クリックし、**[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]** をクリックします。  
   
  ![Always On のサポートを有効にする](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   
@@ -633,7 +633,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
   
  Always On 可用性グループから新しく追加したセカンダリ レプリカが一覧に表示されます。 SSIS サーバー インスタンスを再起動するたびに **[接続]** ボタンをクリックして、認証資格情報を入力してレプリカに接続します。 Always On の SSIS サポートを有効にするには、ユーザー アカウントは、各レプリカの sysadmin グループのメンバーである必要があります。 各レプリカに正常に接続できたら、 **[OK]** をクリックして、Always On の SSIS のサポートを有効にします。  
  
-他の前提条件を満足した後で、コンテキスト メニューの **[Enable Always On support]**\(Always On サポートの有効化\) が無効にオプションとして表示される場合は、次の操作を試してみてください。
+他の前提条件を満足した後で、コンテキスト メニューの **[Enable Always On support]** \(Always On サポートの有効化\) が無効にオプションとして表示される場合は、次の操作を試してみてください。
 1.  **[更新]** オプションをクリックして、コンテキスト メニューを更新します。
 2.  プライマリ ノードに接続されていることを確認します。 プライマリ ノードでは Always On サポートを有効にする必要があります。
 3.  SQL Server のバージョンが 13.0 以上であることを確認します。 SSIS は、SQL Server 2016 以降のバージョンでのみ Always On をサポートします。
@@ -657,7 +657,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
   
 2.  すべての **レプリカ ノード**から SSISDB データベースを削除します。  
   
-3.  **プライマリ ノード**の SSISDB データベースをアップグレードします。 SQL Server Management Studio の**オブジェクト エクスプローラー** で、 **[Integration Service カタログ]**を展開し、 **[SSISDB]**を右クリックし、 **[データベース アップグレード]**を選択します。 **SSISDB アップグレード ウィザード** の指示に従ってデータベースをアップグレードします。 **SSIDB アップグレード ウィザード** は、**プライマリ ノード**のローカルで起動します。  
+3.  **プライマリ ノード**の SSISDB データベースをアップグレードします。 SQL Server Management Studio の**オブジェクト エクスプローラー** で、 **[Integration Service カタログ]** を展開し、 **[SSISDB]** を右クリックし、 **[データベース アップグレード]** を選択します。 **SSISDB アップグレード ウィザード** の指示に従ってデータベースをアップグレードします。 **SSIDB アップグレード ウィザード** は、**プライマリ ノード**のローカルで起動します。  
   
 4.  SSISDB を可用性グループに追加する手順については、「 [手順 2: SSISDB を Always On 可用性グループに追加する](#Step2) 」を参照してください。  
   

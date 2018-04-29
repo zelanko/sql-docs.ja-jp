@@ -1,28 +1,28 @@
 ---
-title: "ODBC 入力先を使用したデータ読み込み | Microsoft Docs"
-ms.custom: 
+title: ODBC 入力先を使用したデータ読み込み | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b8a3c6fad2f19f849eb04772e6f12c875c85a448
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
   次の手順では、ODBC 入力先を使用してデータを読み込む方法を示します。 ODBC 入力先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの入力元があらかじめ含まれている必要があります。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、使用する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
-2.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、ODBC 入力先をデザイン画面にドラッグします。  
+2.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、ODBC 入力先をデザイン画面にドラッグします。  
   
 3.  利用可能なデータ フロー コンポーネントの出力を ODBC 入力先の入力にドラッグします。  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
 6.  データのアクセス方法を選択します。  
   
-    -   **[テーブル名 - バッチ]**バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]**を設定できます。  
+    -   **[テーブル名 - バッチ]** バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
   
     -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/15/2018
   
 9. **[マッピング]** をクリックし、 **[使用できる入力列]** 一覧にある列を、 **[使用できる変換先列]** 一覧の列にドラッグして、列をマップします。  
   
-10. エラー出力を構成するには、 **[エラー出力]**をクリックします。  
+10. エラー出力を構成するには、 **[エラー出力]** をクリックします。  
   
 11. **[OK]** をクリックします。  
   

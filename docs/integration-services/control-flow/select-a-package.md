@@ -1,32 +1,32 @@
 ---
-title: "[パッケージの選択] | Microsoft Docs"
-ms.custom: 
+title: '[パッケージの選択] | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.selectapackage.f1
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fab572c14d87acd3776a94675063ffe372525a5a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5bf8cf86fce968150d94ef1893ebe34a2fa92c0b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-a-package"></a>[パッケージの選択]
   **[パッケージの選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクで受信されるメッセージの送信元パッケージを指定できます。  
@@ -37,8 +37,8 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。 この値を選択すると、動的オプションの [パッケージ名]、 **[サーバー]**、 **[Windows 認証を使用する]**、 **[SQL Server 認証を使用する]**、 **[ユーザー名]**、および **[パスワード]**が表示されます。|  
-|[DTSX ファイル]|DTSX ファイルの場所を設定します。 この値を選択すると、動的オプションの **[ファイル名]**が表示されます。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。 この値を選択すると、動的オプションの [パッケージ名]、 **[サーバー]**、 **[Windows 認証を使用する]**、 **[SQL Server 認証を使用する]**、 **[ユーザー名]**、および **[パスワード]** が表示されます。|  
+|[DTSX ファイル]|DTSX ファイルの場所を設定します。 この値を選択すると、動的オプションの **[ファイル名]** が表示されます。|  
   
 ## <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
  **[Windows 認証を使用する]**  
  Windows 認証を使用する場合にクリックします。  
   
- **SQL Server 認証を使用する**  
+ **[SQL Server 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合にクリックします。  
   
  **User name**  

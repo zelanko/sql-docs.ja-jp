@@ -1,16 +1,16 @@
 ---
-title: "ディメンション処理変換先 | Microsoft Docs"
-ms.custom: 
+title: ディメンション処理変換先 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cb11b490a2ec920d61f55bd403cbbd7c4a36e8b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0cd52f33fc861b5b59055fc9c1bbe8840e46fc81
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dimension-processing-destination"></a>ディメンション処理変換先
   ディメンション処理変換先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションを読み込んで処理します。 ディメンションの詳細については、「[ディメンション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
  処理するディメンションを選択します。  
   
  **[処理方法]**  
- 一覧で選択したディメンションに適用する処理方法を選択します。 このオプションの既定値は **[完全]**です。  
+ 一覧で選択したディメンションに適用する処理方法を選択します。 このオプションの既定値は **[完全]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 上の表で選択された入力列が表示されます。 **[使用できる入力列]**ボックスの一覧を使用して、マッピングを変更できます。  
+ 上の表で選択された入力列が表示されます。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
   
  **変換先列**  
  使用できる変換先列を表示し、それぞれがマップされるかどうかを示します。  
@@ -120,10 +120,10 @@ ms.lasthandoff: 01/25/2018
  エラーが発生した場合に処理を停止することを指定します。  
   
  **[エラー数]**  
- **[エラー時に停止する]**を選択した場合は、処理を停止するエラーのしきい値を指定します。  
+ **[エラー時に停止する]** を選択した場合は、処理を停止するエラーのしきい値を指定します。  
   
  **[エラー時のアクション]**  
- **[エラー時に停止する]**を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
+ **[エラー時に停止する]** を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 01/25/2018
 |**StopLogging**|ログ記録エラーを停止します。|  
   
  **[見つからないキー]**  
- 見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]**です。  
+ 見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/25/2018
 |**ReportAndStop**|エラーを報告して処理を停止します。|  
   
  **[許可されていない NULL キー]**  
- NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]**です。  
+ NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  

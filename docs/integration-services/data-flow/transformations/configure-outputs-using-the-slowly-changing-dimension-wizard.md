@@ -1,32 +1,32 @@
 ---
-title: "緩やかに変化するディメンション ウィザードを使用して出力を構成する | Microsoft Docs"
-ms.custom: 
+title: 緩やかに変化するディメンション ウィザードを使用して出力を構成する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0aa62acd9470c1d1d5e2764046ab3302f8edc46a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 201a34950a0b819970a25509339d69d6143b0caf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  履歴属性のオプションを設定します。  
   
-     列の変化の種類に **[履歴属性]** を使用するように構成した場合、現在のレコードと有効期限が切れたレコードとを区別する方法を選択する必要があります。 現在の行と有効期限が切れた行を判別するには、現在の行のインジケーター列または 2 つの日付列が使用できます。 現在の行のインジケーター列を使用する場合は、現在の行には **[現在]**または **[True]** を設定し、有効期限が切れた行には **[有効期限切れ]** または **[False]** を設定できます。 また、カスタム値を入力することもできます。 開始日と終了日の 2 つの日付列を使用する場合、日付を入力するかまたはシステム変数を選択してその値を使用することにより、日付列の値を設定するときに使用する日付を指定できます。  
+     列の変化の種類に **[履歴属性]** を使用するように構成した場合、現在のレコードと有効期限が切れたレコードとを区別する方法を選択する必要があります。 現在の行と有効期限が切れた行を判別するには、現在の行のインジケーター列または 2 つの日付列が使用できます。 現在の行のインジケーター列を使用する場合は、現在の行には **[現在]** または **[True]** を設定し、有効期限が切れた行には **[有効期限切れ]** または **[False]** を設定できます。 また、カスタム値を入力することもできます。 開始日と終了日の 2 つの日付列を使用する場合、日付を入力するかまたはシステム変数を選択してその値を使用することにより、日付列の値を設定するときに使用する日付を指定できます。  
   
 7.  推定メンバーをサポートするかどうかを指定し、推定メンバー レコードが含む列を選択します。  
   

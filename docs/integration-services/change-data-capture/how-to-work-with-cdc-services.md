@@ -1,35 +1,35 @@
 ---
-title: "CDC Service の操作方法 | Microsoft Docs"
-ms.custom: 
+title: CDC Service の操作方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f3d5ba79da0e39806ba9ad9e3d36cb726802efb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1ad2d49ca33b4f4903a13b4d4ff217f4baa0bbb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service の操作方法
   この手順では、CDC Service 構成コンソールを使用して、Oracle CDC Service の操作用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを準備し、新しい CDC サービスを作成する方法について説明します。  
   
 ### <a name="to-work-with-cdc-services"></a>CDC サービスを操作するには  
   
-1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]**をクリックします。  
+1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]** をクリックします。  
   
 2.  左ペインで **[ローカルの CDC Service]** (ルート レベル) を選択します。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
          CDC Service 構成コンソールの右側にある **[アクション]** ペインで、このオプションを選択します。  
   
-         **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]**をクリックすることもできます。  
+         **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]** をクリックすることもできます。  
   
          [Oracle CDC 用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの準備] ダイアログ ボックスが表示されます。  
   
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/25/2018
   
          CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[新しいサービス]** をクリックします。  
   
-         **[ローカルの CDC Service]** を右クリックして **[新しいサービス]**をクリックすることもできます。  
+         **[ローカルの CDC Service]** を右クリックして **[新しいサービス]** をクリックすることもできます。  
   
          [新しい Oracle CDC Service] ダイアログ ボックスが表示されます。  
   
-         このダイアログ ボックスの使用方法の詳細については、「 [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)」を参照してください。 CDC サービスを作成または編集する方法の詳細については、「 [CDC Service を作成および編集する方法](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)」を参照してください。  
+         このダイアログ ボックスの使用方法の詳細については、「 [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)」を参照してください。 CDC サービスを作成または編集する方法の詳細については、「 [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)」を参照してください。  
   
          Oracle CDC Service によって使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、 `public` 固定サーバー ロールのメンバーであることだけが必要です。その他の権限は必要ありません。 ただし、Oracle CDC Service を作成するには、ログインが MSXDBCDC データベースに対する書き込み権限を持っている必要があります。たとえば、ログインに **db_owner** データベース ロールが割り当てられている必要があります。 MSXDBDCDC データベースに対する書き込み権限を持たないログインが新しい Oracle CDC インスタンスの作成を試みると、エラー メッセージが表示されます。 そのダイアログ ボックスで **[OK]** をクリックします。[SQL Server への接続] ダイアログ ボックスが表示されます。  
   

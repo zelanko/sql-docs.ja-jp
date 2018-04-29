@@ -1,32 +1,32 @@
 ---
-title: "[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス | Microsoft Docs"
-ms.custom: 
+title: '[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.olapconnection.f1
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad19adc4f40c8feaafb48686d7772efc6f1684d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 481184b71cf80f30e23a1309f82f9e9d82001ce6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
   **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]が動作しているサーバーへの接続を作成したり、接続プロパティを編集したりできます。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="options"></a>および  
  **[Analysis Services を実行しているコンピューターへの接続を作成する]**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスが動作しているサーバーへの既定の接続を使用するか、 **[編集]**をクリックして新しい接続を作成します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスが動作しているサーバーへの既定の接続を使用するか、 **[編集]** をクリックして新しい接続を作成します。  
   
  **[編集]**  
  **[接続マネージャー]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスが動作しているサーバーへの接続を作成したり、接続プロパティを編集したりできます。  

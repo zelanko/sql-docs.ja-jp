@@ -1,16 +1,16 @@
 ---
-title: "Integration Services のデータ型 | Microsoft Docs"
-ms.custom: 
+title: Integration Services のデータ型 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying data types
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 
+caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
 -   データ変換の変換を使用して、列のデータ型を別のデータ型にキャストします。 詳細については、「 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
   
--   派生列変換を使用して、元の列とは異なるデータ型を持つ列のコピーを作成します。 詳細については、「 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
+-   派生列変換を使用して、元の列とは異なるデータ型を持つ列のコピーを作成します。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>文字列と日付/時刻データ型間の変換  
  次の表に、日付/時刻データ型と文字列の間でキャストまたは変換を行った結果の一覧を示します。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtfiletime"></a>DT_FILETIME からの変換  
   
-|DT_FILETIME の変換|[結果]|  
+|DT_FILETIME の変換|結果|  
 |-----------------------------|------------|  
 |DT_FILETIME|変更なし。|  
 |DT_DATE|データ型を変換します。|  
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdate"></a>DT_DATE からの変換  
   
-|DT_DATE の変換|[結果]|  
+|DT_DATE の変換|結果|  
 |-------------------------|------------|  
 |DT_FILETIME|データ型を変換します。|  
 |DT_DATE|変更なし。|  
@@ -140,7 +140,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdbdate"></a>DT_DBDATE からの変換  
   
-|DT_DBDATE の変換|[結果]|  
+|DT_DBDATE の変換|結果|  
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の時刻フィールドをゼロに設定します。|  
 |DT_DATE|DT_DATE データ型の時刻フィールドをゼロに設定します。|  
@@ -153,7 +153,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdbtime"></a>DT_DBTIME からの変換  
   
-|DT_DBTIME の変換|[結果]|  
+|DT_DBTIME の変換|結果|  
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。|  
@@ -166,7 +166,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2 からの変換  
   
-|DT_DBTIME2 の変換|[結果]|  
+|DT_DBTIME2 の変換|結果|  
 |----------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP からの変換  
   
-|DT_DBTIMESTAMP の変換|[結果]|  
+|DT_DBTIMESTAMP の変換|結果|  
 |--------------------------------|------------|  
 |DT_FILETIME|データ型を変換します。|  
 |DT_DATE|DT_DBTIMESTAMP データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -192,7 +192,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
   
-|DT_DBTIMESTAMP2 の変換|[結果]|  
+|DT_DBTIMESTAMP2 の変換|結果|  
 |---------------------------------|------------|  
 |DT_FILETIME|秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DATE|DT_DBTIMESTAMP2 データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーが返されます。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
   
-|DT_DBTIMESTAMPOFFSET の変換|[結果]|  
+|DT_DBTIMESTAMPOFFSET の変換|結果|  
 |--------------------------------------|------------|  
 |DT_FILETIME|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を協定世界時 (UTC) に変更します。<br /><br /> 秒の小数点以下桁数が、DT_FILETIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DATE|DT_DBTIMESTAMPOFFSET データ型で表される時刻値を UTC に変更します。<br /><br /> DT_DBTIMESTAMPOFFSET データ型によって表される値が DT_DATE データ型の範囲からオーバーフローする場合は、DB_E_DATAOVERFLOW エラーを返します。<br /><br /> 秒の小数点以下桁数が、DT_DATE データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。<br /><br /> 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  

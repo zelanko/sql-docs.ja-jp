@@ -1,16 +1,16 @@
 ---
-title: "用語抽出変換 | Microsoft Docs"
-ms.custom: 
+title: 用語抽出変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 12c1ef0ce9c4f1fb4fa2277f5095fb77282dc9d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
 ### <a name="identification-of-words"></a>単語の識別  
  最初に、用語抽出変換は次のタスクを実行することによって単語を識別します。  
   
--   スペース、改行、および英語のその他のターミネータを使用して、テキストを単語に分割します。 たとえば、 *?*や *:* などの句読点は、単語を区切るための文字です。  
+-   スペース、改行、および英語のその他のターミネータを使用して、テキストを単語に分割します。 たとえば、 *?* や *:* などの句読点は、単語を区切るための文字です。  
   
 -   ハイフンまたはアンダースコアでつながれている単語を保持します。 たとえば、 *copy-protected* および *read-only* は、1 単語のまま保持されます。  
   
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/25/2018
  除外用語が含まれている列を指定することにより、用語抽出のときに特定の用語を除外するかどうかを示します。 用語を除外する場合は、次のソース プロパティを指定する必要があります。  
   
  **[キャッシュなし]**  
- 既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、データベースへの新しい接続を作成します。  

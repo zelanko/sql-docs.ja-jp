@@ -2,7 +2,7 @@
 title: Excel ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d275a24264a3ac174908f364c99975d4a0ec0014
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-source"></a>Excel ソース
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
@@ -113,11 +113,11 @@ ms.lasthandoff: 04/04/2018
   **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ノードを使用すると、変換元として [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ブックを選択して使用できます。 Excel ソースは、既存のブックのワークシートまたは名前付き範囲からデータを読み取ります。  
   
 > [!NOTE]  
->  Excel ソースの **CommandTimeout** プロパティは **[Excel ソース エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 このプロパティの詳細については、「 [Excel のカスタム プロパティ](../../integration-services/data-flow/excel-custom-properties.md)」 の Excel ソースのセクションを参照してください。  
+>  Excel ソースの **CommandTimeout** プロパティは **[Excel ソース エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [Excel のカスタム プロパティ](../../integration-services/data-flow/excel-custom-properties.md)」 の Excel ソースのセクションを参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **[キャッシュなし]**  
- 既存の Excel 接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の Excel 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[Excel 接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
@@ -147,7 +147,7 @@ ms.lasthandoff: 04/04/2018
   
 #### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
  **[SQL コマンド テキスト]**  
- SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成します。または、 **[参照]**をクリックし、クエリ テキストが含まれているファイルを参照します。  
+ SQL クエリのテキストを入力し、 **[クエリの作成]** をクリックしてクエリを作成します。または、 **[参照]** をクリックし、クエリ テキストが含まれているファイルを参照します。  
   
  **パラメーター**  
  クエリ テキスト内でパラメーターのプレースホルダーとして "?" を使用することにより、 パラメーター化クエリを入力した場合は、 **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、クエリ入力パラメーターをパッケージ変数にマップします。  
@@ -186,7 +186,7 @@ ms.lasthandoff: 04/04/2018
  データ ソースの名前を表示します。  
   
  **列**  
- **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択した外部 (変換元) 列を表示します。  
+ **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (変換元) 列を表示します。  
   
  **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  

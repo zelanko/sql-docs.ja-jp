@@ -1,28 +1,28 @@
 ---
-title: "CDC 制御タスクのカスタム プロパティ | Microsoft Docs"
-ms.custom: 
+title: CDC 制御タスクのカスタム プロパティ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40805d8c0f2e070df89344babfbc607a7cd6c66f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2c6e91a8131da19b8c3c38a261bf93bbaa464f0b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 制御タスクのカスタム プロパティ
   次の表は、CDC 制御タスクのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 |プロパティ名|データ型|Description|  
 |-------------------|---------------|-----------------|  
 |接続|ADO.NET Connection|変更テーブルおよび CDC 状態 (同じデータベースに格納されている場合) にアクセスするための、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースへの ADO.NET 接続。<br /><br /> 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。|  
-|TaskOperation|Integer (列挙)|CDC 制御タスクに対して選択した操作。 有効な値は、 **[初期読み込みの開始をマーク]**、 **[初期読み込みの終了をマーク]**、 **[CDC の開始をマーク]**、 **[処理範囲の取得]**、 **[処理済みの範囲をマーク]**、および **[CDC の状態をリセット]**です。<br /><br /> (Oracle ではなく) **CDC での作業時に**[MarkCdcStart] **、**[MarkInitialLoadStart] **、または** [MarkInitialLoadEnd] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。<br /><br /> これらの操作の詳細については、「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 」(CDC 制御タスク エディター) と「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」(CDC 制御タスク) を参照してください。|  
+|TaskOperation|Integer (列挙)|CDC 制御タスクに対して選択した操作。 有効な値は、 **[初期読み込みの開始をマーク]**、 **[初期読み込みの終了をマーク]**、 **[CDC の開始をマーク]**、 **[処理範囲の取得]**、 **[処理済みの範囲をマーク]**、および **[CDC の状態をリセット]** です。<br /><br /> (Oracle ではなく) **CDC での作業時に**[MarkCdcStart] **、**[MarkInitialLoadStart] **、または** [MarkInitialLoadEnd] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。<br /><br /> これらの操作の詳細については、「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 」(CDC 制御タスク エディター) と「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」(CDC 制御タスク) を参照してください。|  
 |OperationParameter|String|現在、 **MarkCdcStart** 操作で使用されています。 このパラメーターでは、特定の操作に必要な追加情報を入力できます。 たとえば、 **MarkCdcStart** 操作には LSN 番号が必要です。|  
 |StateVariable|String|現在の CDC コンテキストの CDC の状態を格納する SSIS パッケージ変数。 **AutomaticStatePersistenceCDC** が選択されていない限り、制御タスクは **StateVariable** に対して状態を読み書きし、永続ストレージからの読み込みまたは格納は行いません。 「 [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md)」(状態変数の定義) を参照してください。|  
 |StateVariable|ブール値|CDC 制御タスクは、CDC 状態パッケージ変数から CDC 状態を読み取ります。 操作後、CDC 制御タスクによって CDC 状態パッケージ変数の値が更新されます。 **AutomaticStatePersistence** プロパティによって、SSIS パッケージの実行間で CDC 状態値を保持する役割が、CDC 制御タスクに指示されます。<br /><br /> このプロパティが **true**の場合、CDC 制御タスクによって、CDC 状態変数の値が状態テーブルから自動的に読み込まれます。 CDC 制御タスクによって CDC 状態変数の値が更新されると、特別なテーブルの状態である、同じ状態 **table.stores**の値も更新され、状態変数が更新されます。 開発者は、状態テーブルとその名前を保存する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを制御できます。 この状態テーブルの構造はあらかじめ定義されています。<br /><br /> **false**の場合、CDC 制御タスクはその値の保持に関する処理を行いません。 true の場合、CDC 制御タスクが特別なテーブルに状態を格納し、StateVariable を更新します。<br /><br /> 既定値は **true**で、状態の保持が自動的に更新されることを示します。|  

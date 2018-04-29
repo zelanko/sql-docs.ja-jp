@@ -1,16 +1,16 @@
 ---
-title: "データベース転送タスク | Microsoft Docs"
-ms.custom: 
+title: データベース転送タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferdatabasetask.f1
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 80291a770d9e9c42cc9cd5d6a796bd357be52826
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
   データベース転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのインスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを転送します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーして転送するだけの他のタスクに対し、データベース転送タスクでは、データベースをコピーまたは移動できます。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/25/2018
   
  このフィールドにソース データベース ファイルの名前と場所を自動的に入力するには、 **[SourceConnection]**、 **[SourceDatabaseName]**、 **[SourceDatabaseFiles]** を先に指定します。  
   
- データベース ファイルの名前を変更するか、転送先サーバー上の新しい場所を指定するには、このフィールドにソース データベースの情報を入力した後、参照ボタンをクリックします。 **[転送先データベース ファイル]** ダイアログ ボックスで、 **[転送先ファイル]**、 **[転送先フォルダー]**、または **[ネットワーク ファイル共有]**を編集します。  
+ データベース ファイルの名前を変更するか、転送先サーバー上の新しい場所を指定するには、このフィールドにソース データベースの情報を入力した後、参照ボタンをクリックします。 **[転送先データベース ファイル]** ダイアログ ボックスで、 **[転送先ファイル]**、 **[転送先フォルダー]**、または **[ネットワーク ファイル共有]** を編集します。  
   
 > [!NOTE]  
 >  参照ボタンを使用してデータベース ファイルを指定した場合、ファイルの場所はローカル ドライブの表記 (c:\\など) を使用して入力されます。 これをコンピューター名と共有名を含むネットワーク共有の表記に変える必要があります。 既定の管理共有を使用する場合、$ 表記を使用し、その共有に対する管理アクセスを行える必要があります。  
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/25/2018
 |**False**|転送先サーバーのデータベースを上書きしません。|  
   
 > [!CAUTION]  
->  **[DestinationOverwrite]** に **[True]**を指定した場合、転送先サーバーのデータベースのデータが上書きされます。これにより、データが失われる可能性があります。 データが失われないようにするには、データベース転送タスクを実行する前に、転送先サーバーのデータベースを別の場所にバックアップしておきます。  
+>  **[DestinationOverwrite]** に **[True]** を指定した場合、転送先サーバーのデータベースのデータが上書きされます。これにより、データが失われる可能性があります。 データが失われないようにするには、データベース転送タスクを実行する前に、転送先サーバーのデータベースを別の場所にバックアップしておきます。  
   
  **操作**  
  タスクによってデータベースを転送先サーバーにコピー ( **[Copy]** ) するのか移動 ( **[Move]** ) するのかを指定します。  
@@ -194,7 +194,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="destination-database-files"></a>[転送先データベース ファイル]
   **[転送先データベース ファイル]** ダイアログ ボックスを使用すると、転送先サーバーのデータベース ファイルの名前と場所を表示または変更したり、データベース転送タスクのネットワーク ファイルの場所を指定したりできます。  
   
- このダイアログ ボックスで転送元サーバーのデータベース ファイルの名前と場所を自動的に入力するには、最初に **[データベース転送タスク エディター]**ダイアログ ボックスの **[データベース]**ページで、 **[SourceConnection]** 、 **[SourceDatabaseName]** 、および **[SourceDatabaseFiles]** を指定します。  
+ このダイアログ ボックスで転送元サーバーのデータベース ファイルの名前と場所を自動的に入力するには、最初に **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページで、 **[SourceConnection]** 、 **[SourceDatabaseName]** 、および **[SourceDatabaseFiles]** を指定します。  
   
 ### <a name="options"></a>および  
  **[転送先ファイル]**  

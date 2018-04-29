@@ -1,16 +1,16 @@
 ---
-title: "RAW ファイル変換先 | Microsoft Docs"
-ms.custom: 
+title: RAW ファイル変換先 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5bf84808e33f47667720fc4aad9f3a81ee72e0b7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
-2.  コンポーネントを右クリックし、 **[編集]**をクリックします。  
+2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **[アクセス モード]**  
@@ -169,16 +169,16 @@ ms.lasthandoff: 01/25/2018
  ファイルの作成およびファイルへの書き込みに使用するメソッドを選択します。  
   
  **[初期 RAW ファイルの生成]**  
- パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成するには、このボタンをクリックします。 ファイルには、 **[RAW ファイル変換先エディター]** の **[列]**ページで選択した列が含まれています。 RAW ファイル ソースの参照先を、このメタデータのみのファイルにすることができます。  
+ パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成するには、このボタンをクリックします。 ファイルには、 **[RAW ファイル変換先エディター]** の **[列]** ページで選択した列が含まれています。 RAW ファイル ソースの参照先を、このメタデータのみのファイルにすることができます。  
   
- **[初期 RAW ファイルの生成]**をクリックすると、メッセージ ボックスが表示されます。 ファイルの作成を続行するには、 **[OK]** をクリックします。 **[列]** ページで別の列の一覧を選択するには、 **[キャンセル]** をクリックします。  
+ **[初期 RAW ファイルの生成]** をクリックすると、メッセージ ボックスが表示されます。 ファイルの作成を続行するには、 **[OK]** をクリックします。 **[列]** ページで別の列の一覧を選択するには、 **[キャンセル]** をクリックします。  
   
 ###  <a name="mapping"></a> [列] タブのオプションの設定  
  **使用できる入力列**  
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   
  **入力列**  
- **[使用できる入力列]**から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
+ **[使用できる入力列]** から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
   
  **[出力の別名]**  
  出力列に使用する代替名を指定します。  
@@ -198,7 +198,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
-2.  コンポーネントを右クリックし、 **[編集]**をクリックします。  
+2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **[アクセス モード]**  
@@ -220,7 +220,7 @@ ms.lasthandoff: 01/25/2018
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   
  **入力列**  
- **[使用できる入力列]**から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
+ **[使用できる入力列]** から選択した場合、このテーブルに入力列が自動的に追加されます。入力列をこのテーブルで直接選択することもできます。  
   
  **[出力の別名]**  
  出力列に使用する代替名を指定します。  

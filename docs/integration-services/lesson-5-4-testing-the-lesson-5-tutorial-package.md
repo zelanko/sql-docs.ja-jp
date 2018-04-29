@@ -1,30 +1,30 @@
 ---
-title: "手順 4: レッスン 5 のチュートリアル パッケージのテスト | Microsoft Docs"
-ms.custom: 
+title: '手順 4: レッスン 5 のチュートリアル パッケージのテスト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 600fa07aaffe0612cd87bcf33436c01481658782
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e5d5ed069617fc9e1c020ca119ad000b5d017f0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>レッスン 5-4 - レッスン 5 のチュートリアル パッケージのテスト
 パッケージを実行すると、そのときに更新される変数から **Directory** の値が取得されます。パッケージの作成時に指定した元の名前は使用されません。 この変数の値は、SSISTutorial.dtsConfig ファイルにより生成されます。  
@@ -44,9 +44,9 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>レッスン 5 で作成したチュートリアル パッケージをテストするには  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]**をクリックします。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]**をクリックします。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 6: SSIS でプロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

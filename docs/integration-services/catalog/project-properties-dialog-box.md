@@ -1,31 +1,31 @@
 ---
-title: "[プロジェクトのプロパティ] ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[プロジェクトのプロパティ] ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 663312637cef120825522b4dad36f0623a8f872a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2392b67968953d70c119c412fa6629afc0a318a4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトは、配置の 1 単位です。 各プロジェクトには、パッケージ、パラメーター、および環境の参照を含めることができます。 プロジェクトはセキュリティ保護可能なオブジェクトであり、データベース プリンシパルの権限を定義できます。 プロジェクトを再配置するときに、以前のバージョンのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログに保存できます。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  プロパティを設定するプロジェクトが格納されているフォルダーを展開します。  
   
-5.  プロジェクトを右クリックし、 **[プロパティ]**をクリックします。  
+5.  プロジェクトを右クリックし、 **[プロパティ]** をクリックします。  
   
 ##  <a name="general"></a> [全般] ページのオプションの設定  
  プロジェクトのプロパティを表示するには、[全般] ページを使用します。  

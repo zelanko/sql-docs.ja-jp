@@ -1,16 +1,16 @@
 ---
-title: "XML ソース | Microsoft Docs"
-ms.custom: 
+title: XML ソース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 
+caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9e862605c34de37a9937cacd396a5fb645aac76c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/25/2018
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、XML ソースを構成するための **[XML ソース エディター]**ダイアログ ボックスがあります。 このダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、XML ソースを構成するための **[XML ソース エディター]** ダイアログ ボックスがあります。 このダイアログ ボックスは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから利用できます。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 01/25/2018
  XML ソース データ自体に、その構造とデータを定義して検証する XSD スキーマを含めるかどうかを指定します。  
   
  **[XSD の場所]**  
- XSD スキーマ ファイルのパスと名前を入力するか、 **[参照]**をクリックしてファイルを指定します。  
+ XSD スキーマ ファイルのパスと名前を入力するか、 **[参照]** をクリックしてファイルを指定します。  
   
  **[参照]**  
  **[開く]** ダイアログ ボックスを使用して、XSD スキーマ ファイルを指定します。  
@@ -122,7 +122,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="data-access-mode--xml-file-location"></a>[データ アクセス モード] が [XML ファイルの場所] の場合  
  **[XML の場所]**  
- XML データ ファイルのパスと名前を入力するか、 **[参照]**をクリックしてファイルを指定します。  
+ XML データ ファイルのパスと名前を入力するか、 **[参照]** をクリックしてファイルを指定します。  
   
  **[参照]**  
  **[開く]** ダイアログ ボックスを使用して、XML データ ファイルを指定します。  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/25/2018
  データ ソースの名前を表示します。  
   
  **列**  
- **[XML ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択した外部 (ソース) 列を表示します。  
+ **[XML ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (ソース) 列を表示します。  
   
  **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  

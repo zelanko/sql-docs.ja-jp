@@ -1,32 +1,32 @@
 ---
-title: "dBASE ファイルまたはその他の DBF ファイルに接続する | Microsoft Docs"
-ms.custom: 
+title: dBASE ファイルまたはその他の DBF ファイルに接続する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to DBF files
 - dBase files
 - DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a840093c5501dc7d7f91ea3aa0a7b04ed4a42339
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 27078fb038e9cee60a4da76a6548c648ea46085f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>dBASE ファイルまたはその他の DBF ファイルに接続する
   OLE DB 接続マネージャーを使用して Microsoft OLE DB Provider for Jet 4.0 を選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで dBASE データベース ファイルまたは .DBF データベース ファイルに接続できます。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  パッケージに新しい OLE DB 接続マネージャーを追加します。 詳細については、「 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」(パッケージでの接続マネージャーの追加、削除、または共有) を参照してください。  
   
-2.  **[接続マネージャー]** ダイアログ ボックスの **[接続]** ページで、 **[プロバイダー]**としてネイティブ OLE DB\Microsoft Jet 4.0 OLE DB Provider を選択します。  
+2.  **[接続マネージャー]** ダイアログ ボックスの **[接続]** ページで、 **[プロバイダー]** としてネイティブ OLE DB\Microsoft Jet 4.0 OLE DB Provider を選択します。  
   
 3.  DBF ファイルを操作するとき、フォルダーはデータベースを表し、各 DBF ファイルはテーブルを表します。 したがって、 **[データベース ファイル名]** ボックスには、DBF ファイルが存在するフォルダーのパスを含める必要があります。ファイル名自体は含めないでください。 フォルダー パスを入力するか、コピーして貼り付けます。または、 **[参照]** ボタンをクリックして DBF ファイルを選択し、フォルダー パスの末尾からファイル名を削除します。  
   

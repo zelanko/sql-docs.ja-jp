@@ -1,30 +1,30 @@
 ---
-title: "挿入、更新、および削除を処理する | Microsoft Docs"
-ms.custom: 
+title: 挿入、更新、および削除を処理する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7023e7444b5a7eb9b4905e6b6632214ba2d888e4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 41fa73a9af9fbeed79b63cd0ac1c085a4595cb09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="process-inserts-updates-and-deletes"></a>挿入、更新、および削除を処理する
   変更データの増分読み込みを実行する Integration Services パッケージのデータ フローにおいて、2 番目のタスクは、挿入、更新、および削除を分割することです。 その後、適切なコマンドを使用してそれらの変更を変換先に適用できるようになります。  
@@ -63,7 +63,7 @@ select
   
 2.  OLE DB ソースの出力を条件分割変換に接続します。  
   
-3.  **[条件分割変換エディター]**の下側のペインで、次の 3 行を入力して 3 つの出力を指定します。  
+3.  **[条件分割変換エディター]** の下側のペインで、次の 3 行を入力して 3 つの出力を指定します。  
   
     1.  条件 `CDC_OPERATION == "I"` を指定する行を入力し、挿入した行を挿入用の出力に送信します。  
   

@@ -1,30 +1,30 @@
 ---
-title: "データ フロー コンポーネントのプロパティを設定する | Microsoft Docs"
-ms.custom: 
+title: データ フロー コンポーネントのプロパティを設定する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3dc5886a1328d8262a35d01cd5a1301ee3ffd56
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 205baa292b23e205309223b1451030e005a4e58c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  コンポーネント エディターで、プロパティ値を表示または変更し、エディターを閉じます。  
   
-6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>[プロパティ] ウィンドウでデータ フロー コンポーネントのプロパティを設定する  
   
@@ -57,14 +57,14 @@ ms.lasthandoff: 01/25/2018
   
 3.  **[制御フロー]** タブをクリックし、プロパティを表示して変更するコンポーネントが含まれているデータ フロー タスクをダブルクリックします。  
   
-4.  データ フロー コンポーネントを右クリックし、 **[プロパティ]**をクリックします。  
+4.  データ フロー コンポーネントを右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  プロパティ値を表示または変更し、 **[プロパティ]** ウィンドウを閉じます。  
   
     > [!NOTE]  
     >  プロパティの多くは読み取り専用であり、変更できません。  
   
-6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>詳細エディターを使用してデータ フロー コンポーネントのプロパティを設定する  
   
@@ -74,10 +74,10 @@ ms.lasthandoff: 01/25/2018
   
 3.  **[制御フロー]** タブをクリックし、表示または変更するコンポーネントが含まれているデータ フロー タスクをダブルクリックします。  
   
-4.  データ フロー デザイナーで、データ フロー コンポーネントを右クリックし、 **[詳細エディターの表示]**をクリックします。  
+4.  データ フロー デザイナーで、データ フロー コンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、複数の入力をサポートするデータ フロー コンポーネントで **[詳細エディター]**を使用できません。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、複数の入力をサポートするデータ フロー コンポーネントで **[詳細エディター]** を使用できません。  
   
 5.  **[詳細エディター]** ダイアログ ボックスで、次のいずれかの手順を実行します。  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
   
 7.  **[OK]** をクリックします。  
   
-8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]**をクリックします。  
+8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="common-properties-of-data-flow-components"></a>データ フロー コンポーネントの共通プロパティ
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  

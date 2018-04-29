@@ -1,16 +1,16 @@
 ---
-title: "パッケージ オブジェクトをコピーする | Microsoft Docs"
-ms.custom: 
+title: パッケージ オブジェクトをコピーする | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 853125dfe07491f361086e1bdf3b536cf86a7274
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 40accc69f6cdd6122899ef09dd7cce6cf015c2a1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="copy-package-objects"></a>パッケージ オブジェクトをコピーする
   このトピックでは、制御フロー アイテム、データ フロー アイテム、および接続マネージャーをパッケージ内またはパッケージ間でコピーする方法について説明します。  
@@ -38,21 +38,21 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、コピー元とコピー先のパッケージをダブルクリックします。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、コピーするアイテムを含むパッケージのタブをクリックし、 **[制御フロー]**タブ、 **[データ フロー]**タブ、または **[イベント ハンドラー]** タブをクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、コピーするアイテムを含むパッケージのタブをクリックし、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブをクリックします。  
   
 4.  コピーする制御フロー アイテムまたはデータ フロー アイテムを選択します。 アイテムは、Shift キーを押しながらアイテムをクリックして 1 つずつ選択することも、選択する複数のアイテムをポインターでドラッグしてグループとして選択することもできます。  
   
     > [!IMPORTANT]  
     >  アイテムを連結する優先順位制約およびパスは、連結する 2 つのアイテムを選択しても自動的には選択されません。 順序付けられたワークフロー (制御フローやデータ フローの一部) をコピーするには、必ず優先順位制約およびパスもコピーします。  
   
-5.  選択したアイテムを右クリックし、 **[コピー]**をクリックします。  
+5.  選択したアイテムを右クリックし、 **[コピー]** をクリックします。  
   
 6.  アイテムを別のパッケージにコピーする場合は、コピー先のパッケージをクリックし、アイテムの種類に適したタブをクリックします。  
   
     > [!IMPORTANT]  
     >  データ フロー タスクが 1 つもパッケージに含まれていない場合は、データ フローをパッケージにコピーできません。  
   
-7.  右クリックして **[貼り付け]**をクリックします。  
+7.  右クリックして **[貼り付け]** をクリックします。  
   
 ### <a name="to-copy-connection-managers"></a>接続マネージャーをコピーするには  
   
@@ -60,13 +60,13 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックします。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]**タブ、 **[データ フロー]**タブ、または **[イベント ハンドラー]** タブをクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブをクリックします。  
   
-4.  **[接続マネージャー]** 領域で、接続マネージャーを右クリックし、 **[コピー]**をクリックします。 接続マネージャーは、一度に 1 つしかコピーできません。  
+4.  **[接続マネージャー]** 領域で、接続マネージャーを右クリックし、 **[コピー]** をクリックします。 接続マネージャーは、一度に 1 つしかコピーできません。  
   
-5.  アイテムを別のパッケージにコピーしている場合は、コピー先のパッケージをクリックし、 **[制御フロー]**タブ、 **[データ フロー]**タブ、または **[イベント ハンドラー]** タブをクリックします。  
+5.  アイテムを別のパッケージにコピーしている場合は、コピー先のパッケージをクリックし、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブをクリックします。  
   
-6.  **[接続マネージャー]** 領域を右クリックして、 **[貼り付け]**をクリックします。  
+6.  **[接続マネージャー]** 領域を右クリックして、 **[貼り付け]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [[制御フロー]](../integration-services/control-flow/control-flow.md)   

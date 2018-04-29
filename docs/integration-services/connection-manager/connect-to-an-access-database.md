@@ -1,31 +1,31 @@
 ---
-title: "Access データベースに接続する | Microsoft Docs"
-ms.custom: 
+title: Access データベースに接続する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d82334ca4c5b5efb1d956c8d3a8afe901fc94f83
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-access-database"></a>Access データベースに接続する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを Microsoft Office Access データ ソースに接続するには、OLE DB 接続マネージャーとデータ プロパイダが必要です。 使用するデータ プロパイダは、データ ソースを作成した Access のバージョンによって異なります。  
@@ -57,21 +57,21 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを開きます。  
   
-2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい OLE DB 接続]**を選択します。  
+2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい OLE DB 接続]** を選択します。  
   
-3.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]**をクリックします。  
+3.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]** をクリックします。  
   
      詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]**で **[Microsoft Jet 4.0 OLE DB Provider]**を選択し、接続マネージャーを適切に構成します。  
+4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]** で **[Microsoft Jet 4.0 OLE DB Provider]** を選択し、接続マネージャーを適切に構成します。  
   
 ### <a name="to-create-an-access-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードから Access 接続を作成するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動します。  
   
-2.  **[データ ソースの選択]** ページの **[データ ソース]**で **[Microsoft Access]**を選択して、Access 接続を構成します。  
+2.  **[データ ソースの選択]** ページの **[データ ソース]** で **[Microsoft Access]** を選択して、Access 接続を構成します。  
   
-     **[データ ソース]** で **[Microsoft Access]**を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+     **[データ ソース]** で **[Microsoft Access]** を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Access 2007 形式のデータ ソースへの接続  
  Access 2007 データ ソースにアクセスする場合、OLE DB 接続マネージャーでは Microsoft Office 12.0 Access データベース エンジン用の OLE DB プロバイダーが必要です。 このプロバイダーは、2007 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office system と共に自動的にインストールされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を実行しているコンピューターに 2007 Office system がインストールされていない場合は、プロバイダーを別途インストールする必要があります。 Microsoft Office 12.0 Access データベース エンジン用の OLE DB プロバイダーをインストールするには、「 [2007 Office System ドライバー : データ接続コンポーネント](http://go.microsoft.com/fwlink/?LinkId=98155)」でコンポーネントをダウンロードしてインストールしてください。  
@@ -80,27 +80,27 @@ Office 365 サブスクリプションがある場合は、Microsoft Access 2016
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、パッケージを開きます。  
   
-2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい OLE DB 接続]**を選択します。  
+2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい OLE DB 接続]** を選択します。  
   
-3.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]**をクリックします。  
+3.  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]** をクリックします。  
   
      詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]**で **[Microsoft Office 12.0 Access Database Engine OLE DB]**を選択し、接続マネージャーを適切に構成します。  
+4.  **[接続マネージャー]** ダイアログ ボックスの **[プロバイダー]** で **[Microsoft Office 12.0 Access Database Engine OLE DB]** を選択し、接続マネージャーを適切に構成します。  
   
     > [!NOTE]  
-    >  Access 2007 を使用するデータ ソースに接続する場合は、 **[データ ソース]** で **[Microsoft Jet 4.0 OLE DB Provider]**を選択することはできません。  
+    >  Access 2007 を使用するデータ ソースに接続する場合は、 **[データ ソース]** で **[Microsoft Jet 4.0 OLE DB Provider]** を選択することはできません。  
   
 ### <a name="to-create-an-ole-db-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードから OLE DB 接続を作成するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動します。  
   
-2.  **[データ ソースの選択]** ページの **[データ ソース]**で **[Microsoft Office 12.0 Access Database Engine OLE DB Provider]**を選択し、接続マネージャーを適切に構成します。  
+2.  **[データ ソースの選択]** ページの **[データ ソース]** で **[Microsoft Office 12.0 Access Database Engine OLE DB Provider]** を選択し、接続マネージャーを適切に構成します。  
   
     > [!NOTE]  
-    >  Access 2007 を使用するデータ ソースに接続する場合は、 **[データ ソース]** で **[Microsoft Jet 4.0 OLE DB Provider]**を選択することはできません。  
+    >  Access 2007 を使用するデータ ソースに接続する場合は、 **[データ ソース]** で **[Microsoft Jet 4.0 OLE DB Provider]** を選択することはできません。  
   
-     **[データ ソース]** で **[Microsoft Office 12.0 Access Database Engine OLE DB Provider]**を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+     **[データ ソース]** で **[Microsoft Office 12.0 Access Database Engine OLE DB Provider]** を選択すると、適切なデータ プロバイダーを使用して必要な OLE DB 接続マネージャーが自動的に作成されます。 詳細については、「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  

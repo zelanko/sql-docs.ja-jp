@@ -1,30 +1,30 @@
 ---
-title: "[SAP BW 変換元エディター] ([詳細設定] ページ) | Microsoft Docs"
-ms.custom: 
+title: '[SAP BW 変換元エディター] ([詳細設定] ページ) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.advanced.f1
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18328bf954095ebe86f9f3ae6c38d32910ffb468
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef40e8fa7a9a4fe71ad1dcb60ae6acf3adb4278
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
   文字列の変換規則とタイムアウト期間を指定し、特定の要求 ID の状態をリセットするには、 **[SAP BW 変換元エディター]** の **[詳細設定]** ページを使用します。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、SAP BW 変換元をダブルクリックします。  
   
-3.  **[SAP BW 変換元エディター]**で、 **[詳細設定]** をクリックして **[詳細設定]** ページを開きます。  
+3.  **[SAP BW 変換元エディター]** で、 **[詳細設定]** をクリックして **[詳細設定]** ページを開きます。  
   
 ## <a name="options"></a>および  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/25/2018
 >  このオプションは、エディターの **[接続マネージャー]** ページの **[実行モード]** の値として **[W - 通知を待機]** を選択した場合にのみ有効です。 詳細については、「 [SAP BW ソース エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)」を参照してください。  
   
  **要求 ID**  
- **[リセット]**をクリックしたときに状態を "G - Green" にリセットする要求 ID を指定します。  
+ **[リセット]** をクリックしたときに状態を "G - Green" にリセットする要求 ID を指定します。  
   
  **[リセット]**  
  確認後に、指定した要求 ID の状態を "G - Green" リセットできます。 これは、問題が発生し、SAP Netweaver BW システムが要求に黄色または赤の状態フラグを設定した便利です。  

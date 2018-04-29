@@ -1,30 +1,30 @@
 ---
-title: "変更データのクエリを準備する | Microsoft Docs"
-ms.custom: 
+title: 変更データのクエリを準備する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83a9a9297270598346b6f4b7c43891ece83e2254
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d7baab9d80ed096f5bccdc239db06830ebda5ba7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、3 番目に行う最後のタスクは、変更データのクエリを準備してデータ フロー タスクを追加することです。  
@@ -66,13 +66,13 @@ ms.lasthandoff: 01/25/2018
     > [!NOTE]  
     >  この手順では、パッケージによって 1 つのテーブルから増分読み込みが実行されることを前提としています。 複数のテーブルから読み込みが実行され、パッケージに親パッケージと複数の子パッケージが存在する場合、このタスクは最初のコンポーネントとして各子パッケージに追加されます。 詳細については、「 [複数のテーブルの増分読み込みを実行する](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)」を参照してください。  
   
-2.  **[スクリプト タスク エディター]**の **[スクリプト]** ページで、次のオプションを選択します。  
+2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、次のオプションを選択します。  
   
-    1.  **[ReadOnlyVariables]**で **[User::DataReady]**、 **[User::ExtractStartTime]**、および **[User::ExtractEndTime]** を一覧から選択します。  
+    1.  **[ReadOnlyVariables]** で **[User::DataReady]**、 **[User::ExtractStartTime]**、および **[User::ExtractEndTime]** を一覧から選択します。  
   
-    2.  **[ReadWriteVariables]**で [User::SqlDataQuery] を一覧から選択します。  
+    2.  **[ReadWriteVariables]** で [User::SqlDataQuery] を一覧から選択します。  
   
-3.  **[スクリプト タスク エディター]**の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
+3.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
 4.  Main プロシージャに、次のいずれかのコード セグメントを入力します。  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  スクリプトの実行から **DtsExecResult.Success** を返す既定のコード行はそのまま使用します。  
   
-6.  スクリプト開発環境と **[スクリプト タスク エディター]**を閉じます。  
+6.  スクリプト開発環境と **[スクリプト タスク エディター]** を閉じます。  
   
 #### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>SQL 実行タスクを使用してクエリ文字列を連結するには  
   
@@ -142,15 +142,15 @@ ms.lasthandoff: 01/25/2018
     > [!NOTE]  
     >  この手順では、パッケージによって 1 つのテーブルから増分読み込みが実行されることを前提としています。 複数のテーブルから読み込みが実行され、パッケージに親パッケージと複数の子パッケージが存在する場合、このタスクは最初のコンポーネントとして各子パッケージに追加されます。 詳細については、「 [複数のテーブルの増分読み込みを実行する](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)」を参照してください。  
   
-2.  **[SQL 実行タスク エディター]**の **[全般]** ページで、次のオプションを選択します。  
+2.  **[SQL 実行タスク エディター]** の **[全般]** ページで、次のオプションを選択します。  
   
-    1.  **[ResultSet]**で **[単一行]**を選択します。  
+    1.  **[ResultSet]** で **[単一行]** を選択します。  
   
     2.  ソース データベースへの有効な接続を構成します。  
   
-    3.  **[SQLSourceType]**で **[直接入力]**を選択します。  
+    3.  **[SQLSourceType]** で **[直接入力]** を選択します。  
   
-    4.  **[SQLStatement]**に、次の SQL ステートメントを入力します。  
+    4.  **[SQLStatement]** に、次の SQL ステートメントを入力します。  
   
         ```sql
         declare @ExtractStartTime datetime,  
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/25/2018
         > [!NOTE]  
         >  このサンプルの **else** 句では、開始日時として NULL 値を渡すことによって変更データの最初の読み込みのクエリが生成されます。 このサンプルは、変更データ キャプチャを有効にする前に行われた変更もデータ ウェアハウスにアップロードする必要があるシナリオには対応していません。  
   
-3.  **[SQL 実行タスク エディター]** の **[パラメーター マッピング]**ページで、次のマッピングを行います。  
+3.  **[SQL 実行タスク エディター]** の **[パラメーター マッピング]** ページで、次のマッピングを行います。  
   
     1.  DataReady 変数をパラメーター 0 にマップします。  
   
@@ -187,7 +187,7 @@ ms.lasthandoff: 01/25/2018
   
     3.  ExtractEndTime 変数をパラメーター 2 にマップします。  
   
-4.  **[SQL 実行タスク エディター]** の **[結果セット]**ページで、結果名を SqlDataQuery 変数にマップします。  
+4.  **[SQL 実行タスク エディター]** の **[結果セット]** ページで、結果名を SqlDataQuery 変数にマップします。  
   
      結果名は、返される単一列の名前 SqlDataQuery になります。  
   

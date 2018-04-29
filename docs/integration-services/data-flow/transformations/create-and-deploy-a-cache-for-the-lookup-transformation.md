@@ -1,32 +1,32 @@
 ---
-title: "参照変換用のキャッシュを作成および配置する | Microsoft Docs"
-ms.custom: 
+title: 参照変換用のキャッシュを作成および配置する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating cache files for Lookup transformation
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76b6c9efffe9f87dc9bae67958b8ccf85a79bd76
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc165721ed9942fc8d6406b9385f7c7a7f14c93a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>参照変換用のキャッシュを作成および配置する
   参照変換用のキャッシュ ファイル (.caw) を作成および配置できます。 参照データセットはキャッシュ ファイルに格納されます。  
@@ -47,13 +47,13 @@ ms.lasthandoff: 01/25/2018
   
      必要に応じて、データ ソースを構成します。  
   
-4.  キャッシュ変換をダブルクリックし、 **[キャッシュ変換エディター]**の **[接続マネージャー]** ページで **[新規作成]** をクリックして、新しい接続マネージャーを作成します。  
+4.  キャッシュ変換をダブルクリックし、 **[キャッシュ変換エディター]** の **[接続マネージャー]** ページで **[新規作成]** をクリックして、新しい接続マネージャーを作成します。  
   
-5.  **[キャッシュ接続マネージャー エディター]**ダイアログ ボックスの **[全般]** タブで、次のオプションを選択してキャッシュを保存するようにキャッシュ接続マネージャーを構成します。  
+5.  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[全般]** タブで、次のオプションを選択してキャッシュを保存するようにキャッシュ接続マネージャーを構成します。  
   
-    1.  **[ファイル キャッシュを使用する]**をオンにします。  
+    1.  **[ファイル キャッシュを使用する]** をオンにします。  
   
-    2.  **[ファイル名]**に、ファイル パスを入力します。  
+    2.  **[ファイル名]** に、ファイル パスを入力します。  
   
      パッケージを実行すると、ファイルが作成されます。  
   
@@ -85,9 +85,9 @@ ms.lasthandoff: 01/25/2018
   
     1.  ソリューション エクスプローラーで、手順 1. で開いたプロジェクトを選択します。  
   
-    2.  **[プロジェクト]** メニューの **[既存項目の追加]**をクリックします。  
+    2.  **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
-    3.  キャッシュ ファイルを選択し、 **[追加]**をクリックします。  
+    3.  キャッシュ ファイルを選択し、 **[追加]** をクリックします。  
   
      ソリューション エクスプローラーの **[その他]** フォルダーに、選択したキャッシュ ファイルが表示されます。  
   

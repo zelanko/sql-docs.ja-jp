@@ -1,28 +1,28 @@
 ---
-title: "状態変数の定義 | Microsoft Docs"
-ms.custom: 
+title: 状態変数の定義 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 292a24071ea7d6247972353a0dbe7d5bdb689f69
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 116c850ffebcc4307f7b8762bc486f3e819e2ec2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/25/2018
   
  定義するときに、変数に値を設定しないでください。 値は、CDC 制御タスクで設定する必要があります。  
   
- **[状態の自動保持]**を指定して CDC 制御タスクを使用する予定の場合、CDC 状態変数は指定するデータベース状態テーブルから読み取られ、値の変更時に同じテーブルの値が更新されます。 状態テーブルの詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」および「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)」を参照してください。  
+ **[状態の自動保持]** を指定して CDC 制御タスクを使用する予定の場合、CDC 状態変数は指定するデータベース状態テーブルから読み取られ、値の変更時に同じテーブルの値が更新されます。 状態テーブルの詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」および「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)」を参照してください。  
   
  [状態の自動保持] を指定して CDC 制御タスクを使用しない場合は、パッケージが最後に実行されたときに変数の値が保存された永続ストレージからその値を読み込み、現在の処理範囲の処理が終了したときに永続ストレージにその値を書き戻す必要があります。  
   

@@ -1,31 +1,31 @@
 ---
-title: "CDC 制御タスク | Microsoft Docs"
-ms.custom: 
+title: CDC 制御タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0990c664bb8a962dc8a9c1eebd862808965f2c02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6b98a21579471b613dae3746dbc745439103c90e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
   CDC 制御タスクは、変更データ キャプチャ (CDC) パッケージのライフ サイクルの制御に使用します。 CDC 制御タスクは、初期読み込みパッケージと CDC パッケージとの同期処理を行い、CDC パッケージの実行で処理されるログ シーケンス番号 (LSN) 範囲を管理します。 また、エラー シナリオおよび復旧の処理も行います。  
@@ -133,12 +133,12 @@ ms.lasthandoff: 01/25/2018
      この操作は、新たに作成された変更レコードのみを処理し、古い変更レコードをすべて無視する場合などに使用します。  
   
  **[CDC 状態を含む変数]**  
- タスク操作の状態情報を格納する SSIS パッケージ変数を選択します。 始める前に、変数を定義する必要があります。 **[状態の自動保持]**を選択した場合、状態変数は自動的に読み込まれ、保存されます。  
+ タスク操作の状態情報を格納する SSIS パッケージ変数を選択します。 始める前に、変数を定義する必要があります。 **[状態の自動保持]** を選択した場合、状態変数は自動的に読み込まれ、保存されます。  
   
  状態変数の定義の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
   
  **[CDC/スナップショット名を開始する SQL Server LSN]:**  
- 初期読み込みの実行開始位置となる、現在のソース データベース LSN またはスナップショット データベースの名前を入力し、CDC の開始位置を決定します。 **[CDC 制御操作]** が **[CDC の開始をマーク]**に設定されている場合にのみ、使用できます。  
+ 初期読み込みの実行開始位置となる、現在のソース データベース LSN またはスナップショット データベースの名前を入力し、CDC の開始位置を決定します。 **[CDC 制御操作]** が **[CDC の開始をマーク]** に設定されている場合にのみ、使用できます。  
   
  これらの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 01/25/2018
  **[状態の自動保持]** が選択されている場合にのみ使用できます。これは必須パラメーターです。  
   
  **[状態の格納に使用するテーブル]**  
- CDC 状態の格納に使用する状態テーブルの名前を入力します。 指定するテーブルには、 **name** と **state** の 2 列が必要で、両方ともデータ型が **varchar (256)**である必要があります。  
+ CDC 状態の格納に使用する状態テーブルの名前を入力します。 指定するテーブルには、 **name** と **state** の 2 列が必要で、両方ともデータ型が **varchar (256)** である必要があります。  
   
  **[新規作成]** を選択して、必要な列を備えた新しい状態テーブルを構築する SQL スクリプトを入手することもできます。 **[状態の自動保持]** が選択されている場合、開発者は前の要件に従って状態テーブルを作成する必要があります。  
   

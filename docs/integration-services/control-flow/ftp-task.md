@@ -1,16 +1,16 @@
 ---
-title: "FTP タスク | Microsoft Docs"
-ms.custom: 
+title: FTP タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: e2ea750295bdd55129ec59eacf9a0563575e513d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -76,17 +76,17 @@ ms.lasthandoff: 03/20/2018
 |**FTPConnectingToServer**|タスクで FTP サーバーへの接続が開始されたことを示します。|  
 |**FTPOperation**|タスクで実行された FTP 操作の開始および種類を報告します。|  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
-## <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター]\ ([全般] ページ)
+## <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[FtpConnection]**  
  既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
   
@@ -104,20 +104,20 @@ ms.lasthandoff: 03/20/2018
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **Description**  
+ **[説明]**  
  FTP タスクの説明を入力します。  
   
-## <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター]\ ([ファイル転送] ページ)
+## <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター] ([ファイル転送] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[ファイル転送]** ページを使用すると、タスクで実行される FTP 操作を構成できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **[IsRemotePathVariable]**  
  リモート パスが変数に格納されているかどうかを表します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[RemoteVariable]**が表示されます。|  
-|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[RemotePath]**が表示されます。|  
+|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[RemoteVariable]** が表示されます。|  
+|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[RemotePath]** が表示されます。|  
   
  **[OverwriteFileAtDestination]**  
  転送先でファイルを上書きできるかどうかを指定します。  
@@ -125,24 +125,24 @@ ms.lasthandoff: 03/20/2018
  **[IsLocalPathVariable]**  
  ローカル パスが変数に格納されているかどうかを表します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[LocalVariable]**が表示されます。|  
-|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[LocalPath]**が表示されます。|  
+|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[LocalVariable]** が表示されます。|  
+|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[LocalPath]** が表示されます。|  
   
  **操作**  
  実行する FTP 操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|値|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]**が表示されます。|  
-|**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]**が表示されます。|  
-|**ローカル ディレクトリの作成**|ローカル ディレクトリを作成します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]**が表示されます。|  
-|**リモート ディレクトリの作成**|リモート ディレクトリを作成します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]**が表示されます。|  
-|**ローカル ディレクトリの削除**|ローカル ディレクトリを削除します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]**が表示されます。|  
-|**リモート ディレクトリの削除**|リモート ディレクトリを削除します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]**が表示されます。|  
-|**ローカル ファイルの削除**|ローカル ファイルを削除します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]**が表示されます。|  
-|**リモート ファイルの削除**|リモート ファイルを削除します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]**が表示されます。|  
+|**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
+|**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
+|**ローカル ディレクトリの作成**|ローカル ディレクトリを作成します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
+|**リモート ディレクトリの作成**|リモート ディレクトリを作成します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]** が表示されます。|  
+|**ローカル ディレクトリの削除**|ローカル ディレクトリを削除します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
+|**リモート ディレクトリの削除**|リモート ディレクトリを削除します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]** が表示されます。|  
+|**ローカル ファイルの削除**|ローカル ファイルを削除します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
+|**リモート ファイルの削除**|リモート ファイルを削除します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]** が表示されます。|  
   
  **[IsTransferASCII]**  
  リモート FTP サーバーへ転送されるファイル、およびリモート FTP サーバーから転送されるファイルを ASCII モードで転送するかどうかを指定します。  
@@ -159,7 +159,7 @@ ms.lasthandoff: 03/20/2018
  **[RemotePath]**  
  既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
   
- **関連トピック**: [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>[IsLocalPathVariable] の動的オプション  
   

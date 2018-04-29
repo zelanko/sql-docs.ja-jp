@@ -1,33 +1,33 @@
 ---
-title: "[トランザクション データのインフォソースの作成] | Microsoft Docs"
-ms.custom: 
+title: '[トランザクション データのインフォソースの作成] | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcd5dfd23720218376ccaa967c3025898fa27b82
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>[トランザクション データのインフォソースの作成]
   SAP Netweaver BW システムでトランザクション データ用の新しいインフォソースを作成するには、**[トランザクション データのインフォソースの作成]** ダイアログ ボックスを使用します。  
   
- **[トランザクション データのインフォソースの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]**ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
+ **[トランザクション データのインフォソースの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
@@ -38,11 +38,11 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[データ フロー]** タブで、SAP BW 変換先をダブルクリックします。  
   
-3.  **[SAP BW 変換先エディター]**で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
+3.  **[SAP BW 変換先エディター]** で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
   
-4.  **[接続マネージャー]** ページの **[SAP BW オブジェクトの作成]** で、 **[インフォソース]**を選択し、 **[作成]**をクリックします。  
+4.  **[接続マネージャー]** ページの **[SAP BW オブジェクトの作成]** で、 **[インフォソース]** を選択し、 **[作成]** をクリックします。  
   
-5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[トランザクション データ]**を選択して **[OK]**をクリックします。  
+5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[トランザクション データ]** を選択して **[OK]** をクリックします。  
   
 ## <a name="general-options"></a>[全般] のオプション  
  **インフォソースの名前**  
@@ -70,17 +70,17 @@ ms.lasthandoff: 01/25/2018
  データ フロー列の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型を表示します。  
   
  **Iobject - 検索**  
- 既存のインフォオブジェクトを現在の行のデータ フロー列に関連付けます。 関連付けを行うには、 **[検索]**をクリックし、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用して既存のインフォオブジェクトを選択します。 このダイアログ ボックスの詳細については、「 [インフォオブジェクトの参照](../../integration-services/data-flow/look-up-infoobject.md)」を参照してください。  
+ 既存のインフォオブジェクトを現在の行のデータ フロー列に関連付けます。 関連付けを行うには、 **[検索]** をクリックし、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用して既存のインフォオブジェクトを選択します。 このダイアログ ボックスの詳細については、「 [インフォオブジェクトの参照](../../integration-services/data-flow/look-up-infoobject.md)」を参照してください。  
   
  既存のインフォオブジェクトを選択すると、選択した値が **[インフォオブジェクト]** 列と **[種類]** 列に設定されます。  
   
  **Iobject - 新規**  
- 新しいインフォオブジェクトを作成し、現在の行のデータ フロー列に関連付けます。 新しいインフォオブジェクトを作成するには、 **[新規作成]**をクリックし、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用してインフォオブジェクトを作成します。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](../../integration-services/data-flow/create-new-infoobject.md)」を参照してください。  
+ 新しいインフォオブジェクトを作成し、現在の行のデータ フロー列に関連付けます。 新しいインフォオブジェクトを作成するには、 **[新規作成]** をクリックし、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用してインフォオブジェクトを作成します。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](../../integration-services/data-flow/create-new-infoobject.md)」を参照してください。  
   
  新しいインフォオブジェクトを作成すると、新しい値が **[インフォオブジェクト]** 列と **[種類]** 列に設定されます。  
   
  **Iobject - 削除**  
- インフォオブジェクトと現在の行のデータ フロー列との関連付けを削除します。 関連付けを削除するには、 **[削除]**をクリックします。  
+ インフォオブジェクトと現在の行のデータ フロー列との関連付けを削除します。 関連付けを削除するには、 **[削除]** をクリックします。  
   
  **インフォオブジェクト**  
  データ フロー列に関連付けられているインフォオブジェクトの名前を表示します。  

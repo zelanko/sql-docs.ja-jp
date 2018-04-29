@@ -1,16 +1,16 @@
 ---
-title: "SQL 実行タスク | Microsoft Docs"
-ms.custom: 
+title: SQL 実行タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executesqltask.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 
+caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b5b22edaa443597e91045dc1ed5c2b3be9a05caf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -131,7 +131,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  タスクがタイムアウトになるまでに実行される最大の秒数を指定します。この値に 0 を指定すると、時間は無制限になります。 既定値は 0 です。  
   
 > [!NOTE]  
->  接続してトランザクションを完了するための時間を、 **[TimeOut]**で指定された秒数よりも長く指定することによってスリープ機能をエミュレートする場合、ストアド プロシージャはタイムアウトになりません。 ただし、クエリを実行するストアド プロシージャは、 **[TimeOut]**で指定された時間制限の影響を常に受けます。  
+>  接続してトランザクションを完了するための時間を、 **[TimeOut]** で指定された秒数よりも長く指定することによってスリープ機能をエミュレートする場合、ストアド プロシージャはタイムアウトになりません。 ただし、クエリを実行するストアド プロシージャは、 **[TimeOut]** で指定された時間制限の影響を常に受けます。  
   
  **CodePage**  
  変数の Unicode 値を変換するときに使用するコード ページを指定します。 既定値は、ローカル コンピューターのコード ページです。  
@@ -143,10 +143,10 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  このプロパティを **Allowed**に設定すると、SQL 実行タスクは出力パラメーターとクエリ結果を結果が割り当てられている変数のデータ型に変換します。 この機能は、結果セットの種類が **単一行** の場合に適用されます。  
   
  **[ResultSet]**  
- SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]**から選択します。  
+ SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]** から選択します。  
   
  **ConnectionType**  
- データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]**です。  
+ データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
   
  **関連項目:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」、「 [ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)」、「 [ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)」、「 [ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)」、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
@@ -162,9 +162,9 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]**が表示されます。|  
-|**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]**が表示されます。|  
-|**変数**|Transact-SQL ステートメントを定義する変数をソースに設定します。 この値を選択すると、動的オプション **[SourceVariable]**が表示されます。|  
+|**[直接入力]**|Transact-SQL ステートメントをソースに設定します。 この値を選択すると、動的オプション **[SQLStatement]** が表示されます。|  
+|**[ファイル接続]**|Transact-SQL ステートメントを含んでいるファイルを選択します。 この値を設定すると、動的オプション **[ファイル接続]** が表示されます。|  
+|**変数**|Transact-SQL ステートメントを定義する変数をソースに設定します。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
   
  **[QueryIsStoredProcedure]**  
  実行が指定された SQL ステートメントがストアド プロシージャかどうかを示します。 このプロパティは、タスクが ADO 接続マネージャーを使用する場合のみ、読み取り/書き込みになります。 それ以外の場合、このプロパティは読み取り専用となり、その値は **false**となります。  
@@ -178,7 +178,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **[開く]** ダイアログ ボックスを使用して、SQL ステートメントを含むファイルの場所を指定します。 ファイルを選択して、ファイルの内容を SQL ステートメントとして **[SQLStatement]** プロパティにコピーします。  
   
  **[クエリの作成]**  
- クエリの作成に使用するグラフィカルなツールである **[クエリ ビルダー]** ダイアログ ボックスを使用して SQL ステートメントを作成します。 このオプションは、 **[SQLSourceType]** オプションが **[直接入力]**に設定されている場合に使用可能です。  
+ クエリの作成に使用するグラフィカルなツールである **[クエリ ビルダー]** ダイアログ ボックスを使用して SQL ステートメントを作成します。 このオプションは、 **[SQLSourceType]** オプションが **[直接入力]** に設定されている場合に使用可能です。  
   
  **[クエリの解析]**  
  SQL ステートメントの構文を検証します。  
@@ -232,14 +232,14 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  クリックすると、パラメーター マッピングが追加されます。  
   
  **[削除]**  
- 一覧からパラメーター マッピングを選択してから **[削除]**をクリックします。  
+ 一覧からパラメーター マッピングを選択してから **[削除]** をクリックします。  
  
 ## <a name="result-set-page---execute-sql-task-editor"></a>[結果セット] ページ - [SQL 実行タスク エディター]
-**[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]**に設定されている場合は無効です。  
+**[SQL 実行タスク エディター]** ダイアログ ボックスの **[結果セット]** ページを使用すると、SQL ステートメントの結果を新しい変数または既存の変数にマップできます。 このダイアログ ボックスのオプションは、[全般] ページの **[ResultSet]** が **[なし]** に設定されている場合は無効です。  
   
 ### <a name="options"></a>および  
  **[結果名]**  
- **[追加]**をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
+ **[追加]** をクリックして結果セットのマッピング設定を追加した後、結果に名前を付けます。 結果セットの種類によっては、特定の結果名を使用する必要があります。  
   
  結果セットの種類が " **単一行**" の場合、クエリによって返される列の名前か、クエリによって返される列の列リスト内で列の位置を示す数値を使用できます。  
   
@@ -253,7 +253,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  結果セットのマッピングを追加します。  
   
  **[削除]**  
- 一覧で結果セットのマッピングを選択して、 **[削除]**をクリックします。  
+ 一覧で結果セットのマッピングを選択して、 **[削除]** をクリックします。  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>SQL 実行タスクのパラメーター
 SQL ステートメントとストアド プロシージャでは多くの場合、 **入力** パラメーター、 **出力** パラメーター、およびリターン コードを使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、**Input**、**Output**、**ReturnValue** パラメーター型をサポートします。 入力パラメーターには **Input** 型、出力パラメーターには **Output** 型、およびリターン コードには **ReturnValue** 型を使用します。  
@@ -413,7 +413,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
     -   直接入力を使用して、SQLStatement プロパティに SQL コマンドを入力します。  
   
-    -   直接入力を使用して、 **[クエリの作成]**をクリックし、クエリ ビルダーで用意されているグラフィック ツールを使用して、SQL コマンドを作成します。  
+    -   直接入力を使用して、 **[クエリの作成]** をクリックし、クエリ ビルダーで用意されているグラフィック ツールを使用して、SQL コマンドを作成します。  
   
     -   ファイル接続を使用し、SQL コマンドが含まれるファイルを参照します。  
   
@@ -436,9 +436,9 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |ADO (ADO)|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
    
-7.  **[パラメーター マッピング]**をクリックします。  
+7.  **[パラメーター マッピング]** をクリックします。  
   
-8.  パラメーター マッピングを追加するには、 **[追加]**をクリックします。  
+8.  パラメーター マッピングを追加するには、 **[追加]** をクリックします。  
   
 9. **[パラメーター名]** ボックスに名前を入力します。  
   
@@ -556,9 +556,9 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 6.  **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページで、 **[単一行]**、 **[完全な結果セット]**、 **[XML]** のいずれかの種類の結果セットを選択します。  
 
-7.  **[結果セット]**をクリックします。  
+7.  **[結果セット]** をクリックします。  
   
-8.  結果セット マッピングを追加するには、 **[追加]**をクリックします。  
+8.  結果セット マッピングを追加するには、 **[追加]** をクリックします。  
   
 9. **[変数名]** の一覧で、変数を選択するか、新しい変数を作成します。 詳細については、「 [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)」を参照してください。  
   

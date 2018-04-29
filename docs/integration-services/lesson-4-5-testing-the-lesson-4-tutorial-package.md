@@ -1,30 +1,30 @@
 ---
-title: "手順 5: レッスン 4 のチュートリアル パッケージのテスト | Microsoft Docs"
-ms.custom: 
+title: '手順 5: レッスン 4 のチュートリアル パッケージのテスト | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97ea428e44a7d7efc773653837b14f20efb424f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a4516eb77e8f97969a69ea818de8afa44bb6173
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>レッスン 4-5 - レッスン 4 のチュートリアル パッケージのテスト
 壊れているファイル Currency_BAD.txt を実行すると、CurrencyKey 参照変換の照合結果の生成に失敗します。 ただし、CurrencyKey 参照変換のエラー出力は、失敗した行を新しい [Failed Rows] 変換先へリダイレクトするように構成されています。したがって、コンポーネント自体は失敗せず、パッケージは正常に実行されます。 エラーがある行はすべて、ErrorOutput.txt に書き込まれます。  
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>レッスン 4 のチュートリアル パッケージを実行するには  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]**をクリックします。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]**をクリックします。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>ErrorOutput.txt ファイルの内容を確認するには  
   

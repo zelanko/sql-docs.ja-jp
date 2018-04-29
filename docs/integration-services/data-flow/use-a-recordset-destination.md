@@ -1,30 +1,30 @@
 ---
-title: "レコードセット変換先を使用する | Microsoft Docs"
-ms.custom: 
+title: レコードセット変換先を使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d081c9a89e8a72dea2b09771b7ab548f032a25b4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **データ型の** パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/25/2018
   
 7.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [制御フロー] タブで、Foreach ループ コンテナーを追加し、このコンテナーをデータ フロー タスクの後に連結します。 **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **[コレクション]** ページで、[Foreach ADO 列挙子] をクリックします。 次に、 **[ADO オブジェクト ソース変数]**で、レコードセットが含まれる変数を選択します。  
+    1.  **[コレクション]** ページで、[Foreach ADO 列挙子] をクリックします。 次に、 **[ADO オブジェクト ソース変数]** で、レコードセットが含まれる変数を選択します。  
   
     2.  **[変数のマッピング]** ページで、使用する各列の 0 から始まるインデックスを適切な変数にマップします。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを作成します。  
   
-2.  **[SSIS]** メニューの **[変数]**をクリックします。  
+2.  **[SSIS]** メニューの **[変数]** をクリックします。  
   
 3.  **[変数]** ウィンドウで、レコードセットと現在の行の列値を格納する変数を作成します。  
   
@@ -105,15 +105,15 @@ ms.lasthandoff: 01/25/2018
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、データ フロー タスクをデザイン画面に追加します。  
   
-2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]**を開きます。  
+2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
   
 3.  エディターの **[接続マネージャー]** ページで、次の設定を使用してソースを構成します。  
   
-    1.  **[OLE DB 接続マネージャー]**で、前もって作成した OLE DB 接続マネージャーを選択します。  
+    1.  **[OLE DB 接続マネージャー]** で、前もって作成した OLE DB 接続マネージャーを選択します。  
   
-    2.  **[データ アクセス モード]**で、 **[SQL コマンド]**を選択します。  
+    2.  **[データ アクセス モード]** で、 **[SQL コマンド]** を選択します。  
   
-    3.  **[SQL コマンド テキスト]**で、次のクエリを入力します。  
+    3.  **[SQL コマンド テキスト]** で、次のクエリを入力します。  
   
         ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
@@ -126,7 +126,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  **[データ フロー]** タブで、レコードセット変換先を追加し、この変換先を OLE DB ソースの後に連結します。  
   
-5.  **[レコードセット変換先エディター]**を開いて、次の設定を使用して変換先を構成します。  
+5.  **[レコードセット変換先エディター]** を開いて、次の設定を使用して変換先を構成します。  
   
     1.  **[コンポーネントのプロパティ]** タブの **VariableName** プロパティで、 **User::BonusRecordset**を選択します。  
   
@@ -136,35 +136,35 @@ ms.lasthandoff: 01/25/2018
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、Foreach ループ コンテナーを追加し、このコンテナーをデータ フロー タスクの後に連結します。  
   
-2.  **[Foreach ループ エディター]**を開いて、次の設定を使用してコンテナーを構成します。  
+2.  **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **[コレクション]** ページの **[列挙子]**で **[Foreach ADO 列挙子]**を選択し、 **[ADO オブジェクト ソース変数]**で **User::BonusRecordset**を選択します。  
+    1.  **[コレクション]** ページの **[列挙子]** で **[Foreach ADO 列挙子]** を選択し、 **[ADO オブジェクト ソース変数]** で **User::BonusRecordset**を選択します。  
   
     2.  **[変数のマッピング]** ページで、 **User::EmailAddress** をインデックス 0、 **User::FirstName** をインデックス 1、 **User::Bonus** をインデックス 2 にマップします。  
   
 3.  **[制御フロー]** タブで、Foreach ループ コンテナー内にメール送信タスクを追加します。  
   
-4.  **[メール送信タスク エディター]**を開いて、 **[メール]** ページで次の設定を使用してタスクを構成します。  
+4.  **[メール送信タスク エディター]** を開いて、 **[メール]** ページで次の設定を使用してタスクを構成します。  
   
-    1.  **[SmtpConnection]**で、前もって構成した SMTP 接続マネージャーを選択します。  
+    1.  **[SmtpConnection]** で、前もって構成した SMTP 接続マネージャーを選択します。  
   
-    2.  **[差出人]**に、適切な電子メール アドレスを入力します。  
+    2.  **[差出人]** に、適切な電子メール アドレスを入力します。  
   
          自分の電子メール アドレスを使用すると、パッケージが正常に実行されているかどうかを確認できます。 メール送信タスクによって [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]に存在しない販売員にメッセージが送信されると、配信できなかったことが通知されます。  
   
-    3.  **[宛先]**に、既定の電子メール アドレスを入力します。  
+    3.  **[宛先]** に、既定の電子メール アドレスを入力します。  
   
          この値は使用されませんが、実行時に各販売員の電子メール アドレスに置き換えられます。  
   
-    4.  **[件名]**に、「Your annual bonus」と入力します。  
+    4.  **[件名]** に、「Your annual bonus」と入力します。  
   
-    5.  **[MessageSourceType]**に対して **[直接入力]**を選択します。  
+    5.  **[MessageSourceType]** に対して **[直接入力]** を選択します。  
   
-5.  **[メール送信タスク エディター]** の **[式]**ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]**を開きます。  
+5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]** を開きます。  
   
-6.  **[プロパティ式エディター]**で、次の情報を入力します。  
+6.  **[プロパティ式エディター]** で、次の情報を入力します。  
   
-    1.  **[ToLine]**に、次の式を追加します。  
+    1.  **[ToLine]** に、次の式を追加します。  
   
         ```  
         @[User::EmailAddress]  

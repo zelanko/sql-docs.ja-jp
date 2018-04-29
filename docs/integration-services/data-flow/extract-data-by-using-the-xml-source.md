@@ -1,32 +1,32 @@
 ---
-title: "XML ソースを使用してデータを抽出する | Microsoft Docs"
-ms.custom: 
+title: XML ソースを使用してデータを抽出する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extracting data [Integration Services]
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6bad96e7d130fe0caaa935a5e16d7d6c380cbb83
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a18206f2381828b7dbfd85115260e22ec366a930
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML ソースを使用してデータを抽出する
   XML ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
@@ -37,11 +37,11 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、XML ソースをデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、XML ソースをデザイン画面にドラッグします。  
   
 4.  XML ソースをダブルクリックします。  
   
-5.  **[XML ソース エディター]**の **[接続マネージャー]** ページで、データ アクセス モードを次のうちから選択します。  
+5.  **[XML ソース エディター]** の **[接続マネージャー]** ページで、データ アクセス モードを次のうちから選択します。  
   
     -   **[XML ファイルの場所]** アクセス モードでは、 **[参照]** をクリックし、XML ファイルが含まれるフォルダーを探します。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/25/2018
   
 8.  出力列の名前を更新するには、 **[列]** をクリックし、 **[出力列]** 一覧の値を編集します。  
   
-9. エラー出力を構成するには、 **[エラー出力]**をクリックします。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
+9. エラー出力を構成するには、 **[エラー出力]** をクリックします。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   
 10. **[OK]** をクリックします。  
   

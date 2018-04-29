@@ -1,32 +1,32 @@
 ---
-title: "[式ビルダー] | Microsoft Docs"
-ms.custom: 
+title: '[式ビルダー] | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18364f265be288c9e1cb4be8d97731086c993c4f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: be743102bdebe8d30b612f58df606f7d20412f00
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-builder"></a>[式ビルダー]
   **[式ビルダー]** ダイアログ ボックスには、変数を一覧表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の言語に含まれる関数、型キャスト、および演算子への組み込み参照を提供するグラフィカル ユーザー インターフェイスが用意されています。このグラフィカル ユーザー インターフェイスを使用して、プロパティ式の作成および編集や、変数の値を設定する式の作成を行えます。  

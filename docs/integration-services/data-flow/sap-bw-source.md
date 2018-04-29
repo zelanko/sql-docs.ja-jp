@@ -1,28 +1,28 @@
 ---
-title: "SAP BW 変換元 | Microsoft Docs"
-ms.custom: 
+title: SAP BW 変換元 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6af26baf75b59769c6c26757ad1483265eab5c5c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8a25826885bb00e03da47ea6d458ac7ad132e522
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
   SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元コンポーネントです。 SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにこのデータを使用可能にします。  
@@ -51,37 +51,37 @@ ms.lasthandoff: 01/25/2018
   
 1.  SAP の GUI から SAP Netweaver BW にログインしてトランザクション コード SM59 を入力し、RFC 変換先を作成します。  
   
-    1.  **[接続の種類]**の **[TCP/IP]**を選択します。  
+    1.  **[接続の種類]** の **[TCP/IP]** を選択します。  
   
-    2.  **[アクティブ化の種類]**の **[登録済みサーバーのプログラム]**を選択します。  
+    2.  **[アクティブ化の種類]** の **[登録済みサーバーのプログラム]** を選択します。  
   
-    3.  **[対象のシステムを使用している通信の種類]**の **[非 Unicode (非アクティブな MDMP の設定)]**を選択します。  
+    3.  **[対象のシステムを使用している通信の種類]** の **[非 Unicode (非アクティブな MDMP の設定)]** を選択します。  
   
     4.  適切なプログラム ID を割り当てます。  
   
 2.  オープン ハブ転送先を作成します。  
   
-    1.  Administrator Workbench (トランザクション コード RSA1) に移動し、左ペインで **[オープン ハブ転送先]**を選択します。  
+    1.  Administrator Workbench (トランザクション コード RSA1) に移動し、左ペインで **[オープン ハブ転送先]** を選択します。  
   
-    2.  中央のペインで、InfoArea を右クリックし、 **["オープン ハブ転送先の作成"]**を選択します。  
+    2.  中央のペインで、InfoArea を右クリックし、 **["オープン ハブ転送先の作成"]** を選択します。  
   
-    3.  **[変換先の種類]**で、 **["サード パーティ ツール"]**を選択し、作成済みの RFC 変換先を入力します。  
+    3.  **[変換先の種類]** で、 **["サード パーティ ツール"]** を選択し、作成済みの RFC 変換先を入力します。  
   
     4.  新しいオープン ハブ転送先を保存してアクティブにします。  
   
 3.  データ転送プロセス (DTP) を作成します。  
   
-    1.  InfoArea の中央のペインで、作成済みの変換先を右クリックし、 **[データ転送プロセスの作成]**を選択します。  
+    1.  InfoArea の中央のペインで、作成済みの変換先を右クリックし、 **[データ転送プロセスの作成]** を選択します。  
   
     2.  DTP を構成、保存、およびアクティブ化します。  
   
-    3.  メニューで、パーティションをクリックし、 **[移動]**をクリックして、 **[バッチ マネージャーの設定]**をクリックします。  
+    3.  メニューで、パーティションをクリックし、 **[移動]** をクリックして、 **[バッチ マネージャーの設定]** をクリックします。  
   
     4.  順次処理用に **[プロセス数]** を 1 に更新します。  
   
 4.  プロセス チェーンを作成します。  
   
-    1.  プロセス チェーンを構成する場合、 **[メタデータ チェーンまたは API の使用を開始する]** を **[処理の開始]** の **[スケジュール設定のオプション]**として選択し、作成済みの DTP を後続のノードとして追加します。  
+    1.  プロセス チェーンを構成する場合、 **[メタデータ チェーンまたは API の使用を開始する]** を **[処理の開始]** の **[スケジュール設定のオプション]** として選択し、作成済みの DTP を後続のノードとして追加します。  
   
     2.  プロセス チェーンを保存し、アクティブにします。  
   

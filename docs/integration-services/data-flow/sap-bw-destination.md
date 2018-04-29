@@ -1,28 +1,28 @@
 ---
-title: "SAP BW 転送先 | Microsoft Docs"
-ms.custom: 
+title: SAP BW 転送先 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47b31595b327e762f4710ffbfd85f1c3ccf894c9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 49400239fd34e67ee1c2c2dd2d1c7d17c1620889
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
   SAP BW 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換先コンポーネントです。 SAP BW 変換先は、SAP Netweaver BW Version 7 システムに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのデータを読み込みます。  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
   
 1.  新しいデータ ソースを作成します。  
   
-    1.  種類として **["サード パーティ/ステージング BAPI"]**を選択します。  
+    1.  種類として **["サード パーティ/ステージング BAPI"]** を選択します。  
   
-    2.  **[対象のシステムを使用している通信の種類]**の **[非 Unicode (非アクティブな MDMP の設定)]**を選択します。  
+    2.  **[対象のシステムを使用している通信の種類]** の **[非 Unicode (非アクティブな MDMP の設定)]** を選択します。  
   
     3.  適切なプログラム ID を割り当てます。  
   

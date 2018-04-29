@@ -1,28 +1,28 @@
 ---
-title: "CDC ソースを使用した変更データ抽出 | Microsoft Docs"
-ms.custom: 
+title: CDC ソースを使用した変更データ抽出 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 545f7593878688f8b0d792410e363c738460fd90
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f1029b8cb6b6757075e22e614948c3f89e50ef7b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
   CDC ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC 制御タスクがあらかじめ含まれている必要があります。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、CDC ソースをデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、CDC ソースをデザイン画面にドラッグします。  
   
 4.  CDC ソースをダブルクリックします。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/25/2018
   
 9. 現在の CDC コンテキストの CDC 状態を保持する SSIS 文字列パッケージ変数を選択します。 CDC 状態変数の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  
   
-10. **__$reprocessing** という特別な出力列を作成する場合は、 **[再処理インジケーター列を含める]**チェック ボックスをオンにします。 CDC 処理範囲が初期処理範囲 (初期読み込みの期間に対応する LSN の範囲) と重なる場合か、CDC 処理範囲が前の実行でのエラーの後に再処理される場合、この列の値は **true** になります。 このインジケーター列を使用すると、SSIS 開発者は変更を再処理するときに、エラーを別々に処理できます (たとえば、非既存行の削除やキーの重複により失敗した挿入などの操作を無視できます)。  
+10. **__$reprocessing** という特別な出力列を作成する場合は、 **[再処理インジケーター列を含める]** チェック ボックスをオンにします。 CDC 処理範囲が初期処理範囲 (初期読み込みの期間に対応する LSN の範囲) と重なる場合か、CDC 処理範囲が前の実行でのエラーの後に再処理される場合、この列の値は **true** になります。 このインジケーター列を使用すると、SSIS 開発者は変更を再処理するときに、エラーを別々に処理できます (たとえば、非既存行の削除やキーの重複により失敗した挿入などの操作を無視できます)。  
   
      詳細については、「 [CDC ソースのカスタム プロパティ](../../integration-services/data-flow/cdc-source-custom-properties.md)」を参照してください。  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/25/2018
   
 12. 必要に応じて、 **[出力列]** 一覧の値を削除し、出力列の値を更新します。  
   
-13. エラー出力を構成するには、 **[エラー出力]**をクリックします。  
+13. エラー出力を構成するには、 **[エラー出力]** をクリックします。  
   
 14. **[プレビュー]** をクリックすると、CDC ソースによって抽出されるデータを最大 200 行表示できます。  
   

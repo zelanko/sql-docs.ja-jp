@@ -1,28 +1,28 @@
 ---
-title: "Oracle CDC Service の使用 | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC Service の使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e3f62e9ac098fe0eeca228103db665287d3fc8e2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service の使用
   ここでは、Oracle CDC Service のいくつかの重要な概念について説明します。 このセクションで説明する概念は次のとおりです。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/15/2018
 |ref_count|同じ Oracle CDC Service がインストールされているコンピューターの数を示します。 同じ名前の Oracle CDC Service が追加されるたびに値が増加し、それらのサービスが削除されると減少します。 この行はカウンターが 0 に達すると削除されます。|  
 |active_service_node|CDC サービスを現在処理している Windows ノードの名前。 この列は、サービスが適切に停止されると null に設定され、アクティブなサービスがなくなったことが示されます。|  
 |active_service_heartbeat|現在の CDC サービスがまだアクティブであるかどうかを示します。<br /><br /> このアイテムは、アクティブな CDC サービスに対する現在のデータベースの UTC タイムスタンプに基づいて一定の間隔で更新されます。 既定の間隔は 30 秒ですが、この間隔は構成することも可能です。<br /><br /> 構成された間隔が経過してもハートビートが更新されていないことが保留中の CDC サービスで検出されると、その保留中のサービスで、アクティブな CDC サービスの役割の引き継ぎが試行されます。|  
-|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]**の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> trace の有効な値は次のとおりです。<br /><br /> **true**<br /><br /> **on**<br /><br /> **オプション**<br /><br /> **off**<br /><br /> **\<クラス名>[,クラス名>]**<br /><br /> <br /><br /> 既定値は **false**です。<br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
+|options|トレースやチューニングなどの二次的なオプションを指定します。 **name[=value][; ]** の形式で記述されます。 options の文字列では、ODBC 接続文字列と同じセマンティクスを使用します。 オプションがブール値 (value が yes または no) の場合は、name だけでもかまいません。<br /><br /> trace の有効な値は次のとおりです。<br /><br /> **true**<br /><br /> **on**<br /><br /> **オプション**<br /><br /> **off**<br /><br /> **\<クラス名>[,クラス名>]**<br /><br /> <br /><br /> 既定値は **false**です。<br /><br /> **service_heartbeat_interval** は、active_service_heartbeat 列を更新する間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **service_config_polling_interval** は、構成の変更を確認するポーリング間隔 (秒) です。 既定値は、 **30**です。 最大値は **3600**です。<br /><br /> **sql_command_timeout** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するコマンドのタイムアウトです。 既定値は **1**です。 最大値は **3600**です。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC データベースのストアド プロシージャ  
@@ -179,7 +179,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="BKMK_CDCdatabase"></a> CDC データベース  
  CDC サービスで使用される Oracle CDC インスタンスはそれぞれ、CDC データベースと呼ばれる特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースは、Oracle CDC Service に関連付けられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでホストされます。  
   
- CDC データベースには特殊な cdc スキーマがあります。 Oracle CDC Service でこのスキーマを使用するときは、 **xdbcdc_**というプレフィックスを付けてテーブル名を指定します。 このスキーマは、セキュリティや一貫性を確保する目的で使用されます。  
+ CDC データベースには特殊な cdc スキーマがあります。 Oracle CDC Service でこのスキーマを使用するときは、 **xdbcdc_** というプレフィックスを付けてテーブル名を指定します。 このスキーマは、セキュリティや一貫性を確保する目的で使用されます。  
   
  Oracle CDC インスタンスと CDC データベースはどちらも、Oracle CDC デザイナー コンソールを使用して作成されます。 CDC データベースの詳細については、Oracle CDC デザイナー コンソールのインストールに付属のドキュメントを参照してください。  
   
@@ -224,7 +224,7 @@ ms.lasthandoff: 02/15/2018
   
  **sql-username**と **sql-password** には、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証資格情報を指定します。 sqlacct のユーザー名とパスワードをどちらも指定しなかった場合は、Windows 認証を使用して Oracle CDC Service から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続されます。  
   
- **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"**と入力します)。  
+ **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ###  <a name="BKMK_create"></a> 作成  
  `Create` は、Oracle CDC Service をスクリプトで作成する場合に使用します。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Create` コマンドの例を次に示します。  
@@ -250,7 +250,7 @@ ms.lasthandoff: 02/15/2018
   
  **sql-username**と **sql-password** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続に使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアカウント名とパスワードを指定します。 これらのどちらのパラメーターも指定しなかった場合は、Windows 認証を使用して CDC Service for Oracle から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続されます。  
   
- **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"**と入力します)。  
+ **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ###  <a name="BKMK_delete"></a> Del  
  `Delete` は、Oracle CDC Service をスクリプトで完全に削除する場合に使用します。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Delete` コマンドの例を次に示します。  
@@ -265,7 +265,7 @@ ms.lasthandoff: 02/15/2018
   
  **cdc-service-name** には、削除する CDC サービスの名前を指定します。  
   
- **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"**と入力します)。  
+ **注**: スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ## <a name="see-also"></a>参照  
  [CDC Service のコマンド ライン インターフェイスを使用する方法](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   

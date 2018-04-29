@@ -1,37 +1,37 @@
 ---
-title: "ローカルの CDC Service を管理する方法 | Microsoft Docs"
-ms.custom: 
+title: ローカルの CDC Service を管理する方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 699a528063c0ea357352c77ec97295d4b8c92869
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b319fb60e8b3e2d9a657fd7e710359ed274587ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>ローカルの CDC Service を管理する方法
   この手順では、CDC Service 構成コンソールを使用して特定の CDC サービスを管理する方法について説明します。  
   
 ### <a name="to-manage-a-specific-cdc-service"></a>特定の CDC Service を管理するには  
   
-1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]**をクリックします。  
+1.  **[スタート]** メニューの **[CDC Service Configuration for Oracle]** をクリックします。  
   
-2.  CDC Service 構成コンソールの左ペインで **[ローカルの CDC Service]**を展開します。  
+2.  CDC Service 構成コンソールの左ペインで **[ローカルの CDC Service]** を展開します。  
   
 3.  操作する CDC サービスを選択します。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
          サービスを削除するには、CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[削除]** をクリックします。  
   
-         または、削除する CDC サービスを右クリックして **[削除]**を選択します。  
+         または、削除する CDC サービスを右クリックして **[削除]** を選択します。  
   
          **注**: 実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
     -   **CDC Service のプロパティの編集**  
   
-         CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[プロパティ]**をクリックします。  
+         CDC Service 構成コンソールの右側にある **[アクション]** ペインで **[プロパティ]** をクリックします。  
   
-         または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]**を選択します。  
+         または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]** を選択します。  
   
 ## <a name="see-also"></a>参照  
  [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  

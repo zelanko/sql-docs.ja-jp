@@ -1,32 +1,32 @@
 ---
-title: "[構成] ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[構成] ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.configure.f1
 - sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77e862cd82fb7eb8afc294871bfcff50e9b49dd1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89ed2358dbf9f89d7df07601be89349362138daa
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  構成するパッケージまたはプロジェクトが格納されているフォルダーを展開します。  
   
-5.  パッケージまたはプロジェクトを右クリックし、 **[構成]**をクリックします。  
+5.  パッケージまたはプロジェクトを右クリックし、 **[構成]** をクリックします。  
   
 ##  <a name="parameter"></a> [パラメーター] ページのオプションの設定  
  パラメーターの名前と値を表示したり、値を変更するには、 **[パラメーター]** ページを使用します。  
@@ -98,11 +98,11 @@ ms.lasthandoff: 01/25/2018
  **[環境のプロパティ]** ダイアログ ボックスを開く場合にクリックします。  
   
  **[追加]**  
- 環境への参照を追加する場合にクリックします。 **[環境の参照]** ダイアログ ボックスで、環境をクリックして **[OK]**をクリックします。  
+ 環境への参照を追加する場合にクリックします。 **[環境の参照]** ダイアログ ボックスで、環境をクリックして **[OK]** をクリックします。  
   
  **SSISDB** ノードの下の任意のプロジェクト フォルダーに含まれている環境を選択できます。  
   
  **[削除]**  
- **[参照]** 領域に表示されている環境を選択し、 **[削除]**をクリックします。  
+ **[参照]** 領域に表示されている環境を選択し、 **[削除]** をクリックします。  
   
   

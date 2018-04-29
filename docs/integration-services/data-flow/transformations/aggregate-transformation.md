@@ -1,16 +1,16 @@
 ---
-title: "集計変換 | Microsoft Docs"
-ms.custom: 
+title: 集計変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.aggregatetrans.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4583115b3d2faea2c6b421ea8c1bdb6fe20d5e29
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-transformation"></a>集計変換
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 02/15/2018
  [詳細設定] 画面で、後で説明するように、 **[使用できる入力列]** リストを使用してグループ化する列を選択します。  
   
  **[キー スケール]**  
- [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
+ [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -190,10 +190,10 @@ ms.lasthandoff: 02/15/2018
 |**[最大]**|グループ内の最大値を返します。 numeric データ型に制限されます。|  
   
  **[比較フラグ]**  
- **[グループ化]**を選択する場合、チェック ボックスを使用して、変換により比較がどのように実行されるかを制御します。 文字列比較オプションについては、「 [文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
+ **[グループ化]** を選択する場合、チェック ボックスを使用して、変換により比較がどのように実行されるかを制御します。 文字列比較オプションについては、「 [文字列データの比較](../../../integration-services/data-flow/comparing-string-data.md)」を参照してください。  
   
  **Count Distinct Scale**  
- 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
+ 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[CountDistinctScale]** および **[CountDistinctKeys]** の両方が指定されている場合、 **[CountDistinctKeys]** が優先されます。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -215,7 +215,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="options"></a>および  
  **[キー スケール]**  
- 集計で予想される、概算のキー数をオプションで指定します。 変換ではこの情報を使用して最初のキャッシュ サイズを最適化します。 既定では、このオプションの値は **[未指定]**です。 **[キー スケール]** と **[キーの数]** の両方が指定されている場合、 **[キーの数]** の方が優先されます。  
+ 集計で予想される、概算のキー数をオプションで指定します。 変換ではこの情報を使用して最初のキャッシュ サイズを最適化します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** と **[キーの数]** の両方が指定されている場合、 **[キーの数]** の方が優先されます。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -228,7 +228,7 @@ ms.lasthandoff: 02/15/2018
  集計で予想される、正確なキー数をオプションで指定します。 変換ではこの情報を使用して最初のキャッシュ サイズを最適化します。 **[キー スケール]** と **[キーの数]** の両方が指定されている場合、 **[キーの数]** の方が優先されます。  
   
  **[個別カウント スケール]**  
- 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]**です。 **[個別カウント スケール]** と **[個別カウント キー数]** の両方が指定されている場合、 **[個別カウント キー数]** の方が優先されます。  
+ 集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[個別カウント スケール]** と **[個別カウント キー数]** の両方が指定されている場合、 **[個別カウント キー数]** の方が優先されます。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -241,7 +241,7 @@ ms.lasthandoff: 02/15/2018
  集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 **[個別カウント スケール]** と **[個別カウント キー数]** の両方が指定されている場合、 **[個別カウント キー数]** の方が優先されます。  
   
  **[自動拡張率]**  
- 集計の際にメモリを拡張できる割合を 1 ～ 100% の範囲で指定します。 既定では、このオプションの値は **25%**です。  
+ 集計の際にメモリを拡張できる割合を 1 ～ 100% の範囲で指定します。 既定では、このオプションの値は **25%** です。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   

@@ -1,16 +1,16 @@
 ---
-title: "データ マイニング モデル トレーニング変換先 | Microsoft Docs"
-ms.custom: 
+title: データ マイニング モデル トレーニング変換先 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6b30be7d03d20a9bb426d7e37df634d6ba92620a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
   データ マイニング モデル トレーニング変換先は、変換先が受け取るデータをデータ マイニング モデル アルゴリズムに渡すことにより、データ マイニング モデルのトレーニングを行います。 複数のデータ マイニング モデルが同じデータ マイニング構造に基づいて構築されている場合は、1 つの変換先を使用してトレーニングできます。 詳細については、「 [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md) 」と「 [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)」を参照してください。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/25/2018
  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して、新しい接続を作成します。  
   
  **マイニング構造**  
- 使用できるマイニング構造の一覧から選択するか、 **[新規作成]**をクリックして新しいマイニング構造を作成します。  
+ 使用できるマイニング構造の一覧から選択するか、 **[新規作成]** をクリックして新しいマイニング構造を作成します。  
   
  **ボタンを使用して新しい**  
  **データ マイニング ウィザード**を使用して、新しいマイニング構造とマイニング モデルを作成します。  
@@ -86,7 +86,7 @@ ms.lasthandoff: 01/25/2018
  マイニング構造列の一覧を表示します。 マイニング構造列をドラッグして使用できる入力列にマップします。  
   
  **入力列**  
- 上の表で選択された入力列が表示されます。 マッピングを変更または削除するには、 **[使用できる入力列]**ボックスの一覧を使用します。  
+ 上の表で選択された入力列が表示されます。 マッピングを変更または削除するには、 **[使用できる入力列]** ボックスの一覧を使用します。  
   
  **マイニング構造列**  
  マップされているかどうかに関係なく、使用できるマップ先の列を表示します。  

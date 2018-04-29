@@ -1,28 +1,28 @@
 ---
-title: "実行時の OData ソース クエリの提供 | Microsoft Docs"
-ms.custom: 
+title: 実行時の OData ソース クエリの提供 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457e4f5b8d52be56aa82f854e5a87caae72ebd99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 190cbebff69d08424e62ec82b70ea9759d13a96c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの提供
  データ フロー タスクの **[OData ソース].[クエリ]** プロパティに*式*を追加すると、OData ソースのクエリを実行時に変更できます。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  **[パラメーター化]** ダイアログで、**[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
   
-3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]**のどちらかを選択します。  
+3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   
 4.  **[新しいパラメーターを作成する]** を選択した場合は、次の作業を実行します。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  [...] (省略記号) ボタン (**[式]** の) をクリックします。  
   
-6.  **[式]**を入力します。  
+6.  **[式]** を入力します。  
   
 7.  **[OK]** をクリックします。  
   

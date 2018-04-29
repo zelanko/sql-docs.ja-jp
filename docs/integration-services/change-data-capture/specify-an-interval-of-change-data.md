@@ -1,30 +1,30 @@
 ---
-title: "変更データの間隔を指定する | Microsoft Docs"
-ms.custom: 
+title: 変更データの間隔を指定する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 262f93736e963785054686dd573389670d44bc46
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6691390fea6e32f050e9a2b08d6cfc91773f1196
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは **datetime** 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
@@ -88,15 +88,15 @@ ms.lasthandoff: 01/25/2018
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、SQL 実行タスクをパッケージに追加します。  
   
-2.  **[SQL 実行タスク エディター]**を開いて、エディターの **[全般]** ページで次のオプションを選択します。  
+2.  **[SQL 実行タスク エディター]** を開いて、エディターの **[全般]** ページで次のオプションを選択します。  
   
-    1.  **[ResultSet]**で **[単一行]**を選択します。  
+    1.  **[ResultSet]** で **[単一行]** を選択します。  
   
     2.  ソース データベースへの有効な接続を構成します。  
   
-    3.  **[SQLSourceType]**で **[直接入力]**を選択します。  
+    3.  **[SQLSourceType]** で **[直接入力]** を選択します。  
   
-    4.  **[SQLStatement]**に、次の SQL ステートメントを入力します。  
+    4.  **[SQLStatement]** に、次の SQL ステートメントを入力します。  
   
         ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
   
         ```  
   
-3.  **[SQL 実行タスク エディター]** の **[結果セット]**ページで、ExtractStartTime の結果を ExtractStartTime パッケージ変数に、ExtractEndTime の結果を ExtractEndTime パッケージ変数にマップします。  
+3.  **[SQL 実行タスク エディター]** の **[結果セット]** ページで、ExtractStartTime の結果を ExtractStartTime パッケージ変数に、ExtractEndTime の結果を ExtractEndTime パッケージ変数にマップします。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変数の値を設定する式を使用する場合は、変数の値にアクセスするたびに式が評価されます。  

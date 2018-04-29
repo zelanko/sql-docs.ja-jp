@@ -1,16 +1,16 @@
 ---
-title: "DQS クレンジング変換 | Microsoft Docs"
-ms.custom: 
+title: DQS クレンジング変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssdqs.designer.cleansing.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8cf75ff26033b7f6d2dd29af0d226b6b0172c094
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b0123fb60bdc1b5b1f97eb49a40aa84505380364
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
   DQS クレンジング変換では、Data Quality Services (DQS) を使用して、接続されたデータ ソースまたは類似のデータ ソース用に作成された承認済みのルールを適用することにより、接続されたデータ ソースのデータを修正します。 データ修正ルールの詳細については、「 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)」を参照してください。 DQS の詳細については、「 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。  
@@ -81,11 +81,11 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で、DQS クレンジング変換を [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]パッケージに追加します。  
   
-2.  コンポーネントを右クリックし、 **[編集]**をクリックします。  
+2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
  **[データ品質接続マネージャー]**  
- 既存の DQS 接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の DQS 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[DQS クレンジング接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。 「 [[DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定](#manager)」を参照してください。  
@@ -164,7 +164,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]で、既存の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] プロジェクトを開くか、新しいプロジェクトを作成します。  
   
-2.  接続領域内を右クリックし、 **[新しい接続]**をクリックして、 **[DQS]**をクリックします。  
+2.  接続領域内を右クリックし、 **[新しい接続]** をクリックして、 **[DQS]** をクリックします。  
   
-3.  **[追加]**をクリックします。  
+3.  **[追加]** をクリックします。  
   

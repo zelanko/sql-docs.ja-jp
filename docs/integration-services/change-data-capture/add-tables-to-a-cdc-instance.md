@@ -1,30 +1,30 @@
 ---
-title: "CDC へのテーブルの追加 | Microsoft Docs"
-ms.custom: 
+title: CDC へのテーブルの追加 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 056098406b1d7e49612ef5c75f2afd3d7dd1cfdc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebaf98f928c085b56d04b754ab1b82fa69c065d8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC へのテーブルの追加
   [テーブル選択] ダイアログ ボックスを使用すると、Oracle ソースから CDC インスタンスに追加のテーブルを追加できます。 選択したテーブルは、プロパティ エディターの **[テーブル]** タブの一覧に追加されます。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
  既定では、このダイアログ ボックスのテーブルの一覧にはテーブルが含まれていません。 **[(すべて選択)]** チェック ボックスをオンにするか、特定のテーブルを検索することができます。  
   
  **特定のテーブルを検索するには**  
- 次のように検索条件を入力し、 **[検索]**をクリックします。  
+ 次のように検索条件を入力し、 **[検索]** をクリックします。  
   
 -   **[スキーマ]**: データベース スキーマを一覧から選択します。 そのスキーマを持つテーブルだけが一覧に表示されます。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 -   **[一致するテーブルのうち最初の 1000 個を表示する]**: 既定ではこのチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
   
  **CDC インスタンスに含めるテーブルを選択するには**  
- 含めるテーブルの横のチェック ボックスをオンにして、 **[追加]**をクリックします。 新しいインスタンス ウィザードの **[テーブルと列の選択]** ページの一覧にテーブルが追加されます。  
+ 含めるテーブルの横のチェック ボックスをオンにして、 **[追加]** をクリックします。 新しいインスタンス ウィザードの **[テーブルと列の選択]** ページの一覧にテーブルが追加されます。  
   
  テーブルを追加せずにダイアログ ボックスを閉じる場合は、 **[閉じる]** をクリックします。  
   

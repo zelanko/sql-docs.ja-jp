@@ -1,16 +1,16 @@
 ---
-title: "OLE DB ソース | Microsoft Docs"
-ms.custom: 
+title: OLE DB ソース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbsource.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 19d35698d556adc467fc96fe72ff391e2d6b44b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -135,13 +135,13 @@ ms.lasthandoff: 01/25/2018
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、OLE DB ソースを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに追加します。  
   
-2.  ソース コンポーネントを右クリックし、 **[編集]**をクリックします。  
+2.  ソース コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-3.  **[接続マネージャー]**をクリックします。  
+3.  **[接続マネージャー]** をクリックします。  
   
 ### <a name="static-options"></a>静的オプション  
  **[キャッシュなし]**  
- 既存の接続マネージャーを一覧から選択するか、 **[新規作成]**をクリックして新しい接続を作成します。  
+ 既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
  **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
@@ -174,7 +174,7 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="data-access-mode--sql-command"></a>[データ アクセス モード] = [SQL コマンド]  
  **[SQL コマンド テキスト]**  
- SQL クエリのテキストを入力し、 **[クエリの作成]**をクリックしてクエリを作成するか、 **[参照]**をクリックしてクエリ テキストを含むファイルを指定します。  
+ SQL クエリのテキストを入力し、 **[クエリの作成]** をクリックしてクエリを作成するか、 **[参照]** をクリックしてクエリ テキストを含むファイルを指定します。  
   
  **パラメーター**  
  クエリ テキスト内でパラメーターのプレースホルダーとして "?" を使用することにより、 パラメーター化クエリを入力した場合は、 **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、クエリ入力パラメーターをパッケージ変数にマップします。  
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/25/2018
  データ ソースの名前を表示します。  
   
  **列**  
- **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]**ページで選択されている外部 (ソース) 列を表示します。  
+ **[OLE DB ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択されている外部 (ソース) 列を表示します。  
   
  **[エラー]**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  

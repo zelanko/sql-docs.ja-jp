@@ -1,30 +1,30 @@
 ---
-title: "変換先に変更を適用する | Microsoft Docs"
-ms.custom: 
+title: 変換先に変更を適用する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9e4e736d5207eaadfcd593068be68ad8432c212
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7e8755687b2f0edb96f5adac333b980db70b56e9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  条件分割変換から挿入を受け取った出力を OLE DB 変換先に接続します。  
   
-3.  **[OLE DB 変換先エディター]**の **[接続マネージャー]** ページで、次のオプションを選択します。  
+3.  **[OLE DB 変換先エディター]** の **[接続マネージャー]** ページで、次のオプションを選択します。  
   
     1.  変換先データベースの OLE DB 接続マネージャーを選択または作成します。  
   
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
   
 2.  条件分割変換から更新を受け取った出力を OLE DB コマンド変換に接続します。  
   
-3.  **[OLE DB コマンドの詳細エディター]**の **[接続マネージャー]** タブで、変換先データベースの OLE DB 接続マネージャーを選択または作成します。  
+3.  **[OLE DB コマンドの詳細エディター]** の **[接続マネージャー]** タブで、変換先データベースの OLE DB 接続マネージャーを選択または作成します。  
   
-4.  **[OLE DB コマンドの詳細エディター]**の **[コンポーネントのプロパティ]** タブの **[SqlCommand]**に、パラメーター化された UPDATE ステートメントを入力します。  
+4.  **[OLE DB コマンドの詳細エディター]** の **[コンポーネントのプロパティ]** タブの **[SqlCommand]** に、パラメーター化された UPDATE ステートメントを入力します。  
   
      たとえば、Customer テーブルの UPDATE ステートメントの構文は次のようになります。  
   
@@ -93,9 +93,9 @@ ms.lasthandoff: 01/25/2018
   
 3.  詳細エディターを開いて変換を構成します。  
   
-4.  **[OLE DB コマンドの詳細エディター]**の **[接続マネージャー]** タブで、変換先データベースの OLE DB 接続マネージャーを選択または作成します。  
+4.  **[OLE DB コマンドの詳細エディター]** の **[接続マネージャー]** タブで、変換先データベースの OLE DB 接続マネージャーを選択または作成します。  
   
-5.  **[OLE DB コマンドの詳細エディター]**の **[コンポーネントのプロパティ]** タブの **[SqlCommand]**に、パラメーター化された DELETE ステートメントを入力します。  
+5.  **[OLE DB コマンドの詳細エディター]** の **[コンポーネントのプロパティ]** タブの **[SqlCommand]** に、パラメーター化された DELETE ステートメントを入力します。  
   
      たとえば、Customer テーブルの DELETE ステートメントの構文は次のようになります。  
   

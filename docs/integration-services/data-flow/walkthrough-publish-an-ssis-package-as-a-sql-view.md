@@ -1,30 +1,30 @@
 ---
-title: "チュートリアル: SSIS パッケージを SQL ビューとして公開する | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a4aca75d9495d628c314c1382a73dc889cdcc367
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
@@ -39,11 +39,11 @@ ms.lasthandoff: 01/25/2018
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1: SSIS プロジェクトを構築して SSIS カタログに配置する  
  この手順では、SSIS 対応データ ソース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します) からデータを抽出し、そのデータを Data Streaming Destination コンポーネントを使用して出力する SSIS パッケージを作成します。 その後、SSIS プロジェクトを構築して SSIS カタログに配置します。  
   
-1.  **SQL Server Data Tools**を起動します。 **[スタート]** メニューで、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**の順にポイントし、 **[SQL Server Data Tools]**をクリックします。  
+1.  **SQL Server Data Tools**を起動します。 **[スタート]** メニューで、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
   
 2.  新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを作成します。  
   
-    1.  メニュー バーの **[ファイル]** をクリックし、 **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+    1.  メニュー バーの **[ファイル]** をクリックし、 **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
     2.  左側のウィンドウで **[ビジネス インテリジェンス]** を展開し、ツリー ビューで **[Integration Services]** をクリックします。  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   
     4.  **OLE DB Source** コンポーネントを **SSIS ツールボックス** から **データ フロー デザイナー**にドラッグします。  
   
-    5.  コンポーネントを、 **TestDB** データベースの **Employee** テーブルからデータを抽出するように構成します。 **[OLE DB 接続マネージャー]** で **[(local).TestDB]**を、 **[データ アクセス モード]** で **[テーブルまたはビュー]**を、 **[テーブルまたはビューの名前]** で **[[dbo].[Employee]]**を選択します。  
+    5.  コンポーネントを、 **TestDB** データベースの **Employee** テーブルからデータを抽出するように構成します。 **[OLE DB 接続マネージャー]** で **[(local).TestDB]** を、 **[データ アクセス モード]** で **[テーブルまたはビュー]** を、 **[テーブルまたはビューの名前]** で **[[dbo].[Employee]]** を選択します。  
   
          ![Data Streaming Destination - OLE DB 接続](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Data Streaming Destination - OLE DB 接続")  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
 8.  SSIS プロジェクトを構築して SSIS カタログに配置します。  
   
-    1.  メニュー バーの **[プロジェクト]** をクリックし、 **[配置]**をクリックします。  
+    1.  メニュー バーの **[プロジェクト]** をクリックし、 **[配置]** をクリックします。  
   
     2.  ウィザードの指示に従って、プロジェクトをローカル データベース サーバーの SSIS カタログに配置します。 次の例では、 **Power BI** をフォルダー名として、 **SSISPackagePublishing** をSSIS カタログ内のプロジェクト名として使用します。  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
   
          ![データフィード発行ウィザード - [パッケージの設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "データフィード発行ウィザード - [パッケージの設定] ページ")  
   
-    2.  [パス] フィールドの横にある **[参照]** をクリックして SSIS カタログを参照し、公開する SSIS パッケージを選択し (例: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)、 **[OK]**をクリックします。  
+    2.  [パス] フィールドの横にある **[参照]** をクリックして SSIS カタログを参照し、公開する SSIS パッケージを選択し (例: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)、 **[OK]** をクリックします。  
   
          ![データフィード発行ウィザード - パッケージの参照](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "データフィード発行ウィザード - パッケージの参照")  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 01/25/2018
   
     6.  **[次へ]** をクリックして **[検証]** ページに移動します。  
   
-5.  **[検証]** ページで、すべての設定値の検証結果を確認します。 次の例では、選択した SQL Server インスタンスにリンク サーバーが存在しないために、リンクサーバーの存在に関する **警告** が表示されています。 **[結果]** に **[エラー]**が表示された場合は、 **[エラー]** の上にマウス カーソルを合わせると、エラーの詳細を確認できます。 たとえば、SSISOLEDB プロバイダーの [InProcess 許可] オプションを有効にしていなかった場合は、リンク サーバーの構成操作でエラーが発生します。  
+5.  **[検証]** ページで、すべての設定値の検証結果を確認します。 次の例では、選択した SQL Server インスタンスにリンク サーバーが存在しないために、リンクサーバーの存在に関する **警告** が表示されています。 **[結果]** に **[エラー]** が表示された場合は、 **[エラー]** の上にマウス カーソルを合わせると、エラーの詳細を確認できます。 たとえば、SSISOLEDB プロバイダーの [InProcess 許可] オプションを有効にしていなかった場合は、リンク サーバーの構成操作でエラーが発生します。  
   
      ![データフィード発行ウィザード - [検証] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "データフィード発行ウィザード - [検証] ページ")  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 01/25/2018
   
      これで、次の SQL ステートメントを TestDB データベースに対して実行することで、パッケージの出力データをクエリできます: SELECT * FROM [SSISPackageView]。  
   
-9. このレポートを XML ファイルとして保存するために **[レポートの保存]**をクリックします。  
+9. このレポートを XML ファイルとして保存するために **[レポートの保存]** をクリックします。  
   
 10. 公開プロセスの結果を確認し、 **[完了]** をクリックしてウィザードを閉じます。  
   
@@ -176,9 +176,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="step-4-verify-the-ssis-package-execution"></a>手順 4: SSIS パッケージの実行を確認する  
  この手順では、SSIS パッケージが実行されたことを確認します。  
   
-1.  SQL Server Management Studio で、 **[Integration Services カタログ]**、 **[SSISDB]**、SSIS プロジェクトが存在する **フォルダー** 、 **[プロジェクト]**、プロジェクト ノード、 **[パッケージ]**の順に展開します。  
+1.  SQL Server Management Studio で、 **[Integration Services カタログ]**、 **[SSISDB]**、SSIS プロジェクトが存在する **フォルダー** 、 **[プロジェクト]**、プロジェクト ノード、 **[パッケージ]** の順に展開します。  
   
-2.  SSIS パッケージを右クリックし、 **[レポート]**、 **[標準レポート]**の順にポイントし、 **[すべての実行]**をクリックします。  
+2.  SSIS パッケージを右クリックし、 **[レポート]**、 **[標準レポート]** の順にポイントし、 **[すべての実行]** をクリックします。  
   
 3.  SSIS パッケージの実行がレポートに表示されます。  
   
@@ -224,7 +224,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  必要に応じて、フォルダー名、プロジェクト名、パッケージ名を更新します。 OPENQUERY が失敗した場合は、 **[SQL Server Management Studio]**、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]**の順に展開し、 **SSISOLEDB** プロバイダーをクリックし、 **[InProcess 許可]** オプションが有効であることを確認します。  
+    >  必要に応じて、フォルダー名、プロジェクト名、パッケージ名を更新します。 OPENQUERY が失敗した場合は、 **[SQL Server Management Studio]**、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーをクリックし、 **[InProcess 許可]** オプションが有効であることを確認します。  
   
 2.  次のクエリを実行して、このチュートリアル用のデータベース **TestDB** にビューを作成します。  
   

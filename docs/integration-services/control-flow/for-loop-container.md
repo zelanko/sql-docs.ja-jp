@@ -1,16 +1,16 @@
 ---
-title: "For ループ コンテナー | Microsoft Docs"
-ms.custom: 
+title: For ループ コンテナー | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.forloopcontainerdetails.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3062db607cb3f0ead45a29002abe5db5de937bf7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
   For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナーは、ループの各繰り返しで式を評価し、式が **False**に評価されるまでそのワークフローを繰り返します。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/25/2018
   
  For ループ コンテナーの例については、bimonkey.com の「 [失敗しない SSIS ループ](http://go.microsoft.com/fwlink/?LinkId=240295) 」を参照してください。  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、For ループ コンテナーをダブルクリックして **[For ループ エディター]**を開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、For ループ コンテナーをダブルクリックして **[For ループ エディター]** を開きます。  
   
 2.  必要に応じて、For ループ コンテナーの名前と説明を変更します。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  必要に応じて、 **[式]** をクリックし、 **[式]** ページで For ループ コンテナーのプロパティ用のプロパティ式を作成します。 詳細については、「 [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)」を参照してください。  
   
-7.  **[OK]** をクリックし、 **[For ループ エディター]**を閉じます。  
+7.  **[OK]** をクリックし、 **[For ループ エディター]** を閉じます。  
 
 ## <a name="for-loop-editor-dialog-box"></a>[For ループ エディター] ダイアログ ボックス
 **[For ループ エディター]** ダイアログ ボックスの **[For ループ]** ページを使用すると、指定した条件が false と評価されるまでワークフローを繰り返すループを構成できます。  

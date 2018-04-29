@@ -1,16 +1,16 @@
 ---
-title: "Integration Services コンテナー | Microsoft Docs"
-ms.custom: 
+title: Integration Services コンテナー | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSIS containers
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 67a2a8b3da6641533319f5c5662d29b610fb7500
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/25/2018
  コンテナーで使用される変数には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するコンテナー レベルのシステム変数、およびコンテナーが使用するユーザー定義の変数が含まれます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="break-points"></a>ブレークポイント  
- コンテナーにブレークポイントを設定していて、ブレークの条件が **[コンテナーに OnVariableValueChanged イベントが渡されたときに停止します]**である場合は、変数をコンテナーのスコープ内で定義します。  
+ コンテナーにブレークポイントを設定していて、ブレークの条件が **[コンテナーに OnVariableValueChanged イベントが渡されたときに停止します]** である場合は、変数をコンテナーのスコープ内で定義します。  
   
 ## <a name="see-also"></a>参照  
  [制御フロー](../../integration-services/control-flow/control-flow.md)  

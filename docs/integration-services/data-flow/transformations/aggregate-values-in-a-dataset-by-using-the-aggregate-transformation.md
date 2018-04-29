@@ -1,32 +1,32 @@
 ---
-title: "集計変換を使用してデータセットの値を集計する | Microsoft Docs"
-ms.custom: 
+title: 集計変換を使用してデータセットの値を集計する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 985f5cd2a2ed1d93df3d164a34bbeb4428b97df9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b1aa6a99fd0e3109e244cdaeb9988ba75793d005
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>集計変換を使用してデータセットの値を集計する
   集計変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、集計変換をデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、集計変換をデザイン画面にドラッグします。  
   
 4.  集計変換をデータ フローに連結します。連結するには、変換元または前の変換から集計変換にコネクタをドラッグします。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
   
 8.  必要に応じ、 **[出力の別名]** 列の値を変更します。  
   
-9. 既定の集計操作である **[グループ化]**を変更するには、 **[操作]** 一覧で別の操作を選択します。  
+9. 既定の集計操作である **[グループ化]** を変更するには、 **[操作]** 一覧で別の操作を選択します。  
   
 10. 既定の比較を変更するには、 **[比較フラグ]** 列に示された各比較フラグを選択します。 既定の比較では、大文字と小文字、ひらがなとカタカナ、非空白文字、および文字幅は無視されます。  
   

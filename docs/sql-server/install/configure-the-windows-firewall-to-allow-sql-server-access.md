@@ -2,7 +2,7 @@
 title: SQL Server のアクセスを許可するための Windows ファイアウォールの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -153,11 +153,11 @@ ms.lasthandoff: 04/16/2018
 
    **[次へ]** をクリックします。
 
-1. **[操作]** で、**[接続を許可する]**をクリックします。  
+1. **[操作]** で、**[接続を許可する]** をクリックします。  
 
-1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]**をクリックします。
+1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]** をクリックします。
 
-1. **[名前]** に規則の名前を入力します。 **[完了]**をクリックします。
+1. **[名前]** に規則の名前を入力します。 **[完了]** をクリックします。
 
 エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)」を参照してください。 
   
@@ -180,8 +180,8 @@ ms.lasthandoff: 04/16/2018
   
 |機能|Port|コメント|  
 |-------------|----------|--------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービス|TCP ポート 80|URL を使用した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] への HTTP 接続に使用されます。 **[World Wide Web サービス (HTTP)]**のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTPS 経由で使用するように構成された|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。 **[セキュア World Wide Web サービス (HTTPS)]**のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web サービス|TCP ポート 80|URL を使用した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] への HTTP 接続に使用されます。 **[World Wide Web サービス (HTTP)]** のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTPS 経由で使用するように構成された|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。 **[セキュア World Wide Web サービス (HTTPS)]** のあらかじめ構成されたルールは使用しないことをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
   
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、そのサービス用の適切なポートを開く必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
@@ -199,7 +199,7 @@ ms.lasthandoff: 04/16/2018
   
 |シナリオ|Port|コメント|  
 |--------------|----------|--------------|  
-|Windows Management Instrumentation (Windows Management Instrumentation)<br /><br /> WMI の詳細については、「 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)」を参照してください。|WMI は、DCOM によってポートが割り当てられている共有サービス ホストの一部として実行されます。 WMI では TCP ポート 135 を使用している可能性があります。<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、WMI を使用してサービスの一覧を表示し、管理します。 **[Windows Management Instrumentation (WMI)]**のあらかじめ構成されたルール グループを使用することをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
+|Windows Management Instrumentation (Windows Management Instrumentation)<br /><br /> WMI の詳細については、「 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)」を参照してください。|WMI は、DCOM によってポートが割り当てられている共有サービス ホストの一部として実行されます。 WMI では TCP ポート 135 を使用している可能性があります。<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、WMI を使用してサービスの一覧を表示し、管理します。 **[Windows Management Instrumentation (WMI)]** のあらかじめ構成されたルール グループを使用することをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC)|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|アプリケーションで分散トランザクションを使用する場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トラフィックが、各 MS DTC インスタンス間、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのリソース マネージャーと MS DTC との間を流れるように、ファイアウォールを構成することが必要になる可能性があります。 **[分散トランザクション コーディネーター]** のあらかじめ構成されたルール グループを使用することをお勧めします。<br /><br /> 個別のリソース グループのクラスター全体に対して 1 つの共有 MS DTC が構成されている場合は、ファイアウォールに sqlservr.exe を例外として追加する必要があります。|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の参照ボタンを押すと、UDP を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスに接続できます。 詳細については、「[SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)」を参照してください。参照してください。|UDP ポート 1434|UDP はコネクションレスのプロトコルです。<br /><br /> ファイアウォールには、 [INetFwProfile インターフェイスの UnicastResponsesToMulticastBroadcastDisabled プロパティ](http://go.microsoft.com/fwlink/?LinkId=118371) という設定があります。この設定は、ブロードキャスト (またはマルチキャスト) UDP 要求へのユニキャスト応答に関するファイアウォールの動作を制御します。  この設定には次の 2 つの動作があります。<br /><br /> 設定が TRUE の場合、ブロードキャスト要求へのユニキャスト応答はまったく許可されません。 サービスの列挙は失敗します。<br /><br /> 設定が FALSE (既定) の場合、ユニキャスト応答が 3 秒間許可されます。 この時間の長さは構成できません。 混雑しているネットワークや待機時間の長いネットワークまたは負荷の大きいサーバーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを列挙しようとすると、一覧の一部しか返されない可能性があり、ユーザーの混乱を招くことがあります。|  
 |<a name="BKMK_IPsec"></a> IPsec トラフィック|UDP ポート 500 および UDP ポート 4500|ドメインのポリシーにより IPsec 経由でネットワーク通信を行う必要がある場合は、UDP ポート 4500 と UDP ポート 500 も例外の一覧に追加する必要があります。 IPsec は、Windows ファイアウォール スナップインの **新規の受信の規則ウィザード** を使用するオプションです。 詳細については、後の「 [セキュリティが強化された Windows ファイアウォールのスナップインの使用](#BKMK_WF_msc) 」を参照してください。|  
@@ -254,9 +254,9 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>コントロール パネルの [Windows ファイアウォール] を使用して、ファイアウォールの例外のスコープを変更するには  
   
-1.  コントロール パネルの **[Windows ファイアウォール]** の **[例外]** タブでプログラムまたはポートを選択し、 **[プロパティ]** または **[編集]**をクリックします。  
+1.  コントロール パネルの **[Windows ファイアウォール]** の **[例外]** タブでプログラムまたはポートを選択し、 **[プロパティ]** または **[編集]** をクリックします。  
   
-2.  **[プログラムの編集]** または **[ポートの編集]** ダイアログ ボックスの **[スコープの変更]**をクリックします。  
+2.  **[プログラムの編集]** または **[ポートの編集]** ダイアログ ボックスの **[スコープの変更]** をクリックします。  
   
 3.  次のいずれかのオプションを選択します。  
   
@@ -266,11 +266,11 @@ ms.lasthandoff: 04/16/2018
   
     -   **[ユーザーのネットワーク (サブネット) のみ]**  
   
-         **[任意のコンピューター]**より安全な設定です。 ネットワークのローカル サブネット上のコンピューターのみがプログラムまたはポートに接続できます。  
+         **[任意のコンピューター]** より安全な設定です。 ネットワークのローカル サブネット上のコンピューターのみがプログラムまたはポートに接続できます。  
   
     -   **[カスタムの一覧]**  
   
-     作成した一覧に IP アドレスが載っているコンピューターだけが接続できます。 この設定は、 **[ユーザーのネットワーク (サブネット) のみ]**よりもさらに安全ですが、DHCP を使用するクライアント コンピューターでは、その IP アドレスが変更されることがあります。 その場合、意図していたコンピューターは接続することができません。 その代わり、認証の対象として意図していなかった別のコンピューターに一覧の IP アドレスが割り当てられてしまい、そのコンピューターから接続できるようになる可能性があります。 **[カスタムの一覧]** オプションは、固定 IP アドレスを使用するように構成されている他のサーバーの一覧を作成する場合に適しています。ただし、侵入者が IP アドレスを偽装する可能性もあります。 ファイアウォール ルールを制限することは、最低限のネットワーク インフラストラクチャです。  
+     作成した一覧に IP アドレスが載っているコンピューターだけが接続できます。 この設定は、 **[ユーザーのネットワーク (サブネット) のみ]** よりもさらに安全ですが、DHCP を使用するクライアント コンピューターでは、その IP アドレスが変更されることがあります。 その場合、意図していたコンピューターは接続することができません。 その代わり、認証の対象として意図していなかった別のコンピューターに一覧の IP アドレスが割り当てられてしまい、そのコンピューターから接続できるようになる可能性があります。 **[カスタムの一覧]** オプションは、固定 IP アドレスを使用するように構成されている他のサーバーの一覧を作成する場合に適しています。ただし、侵入者が IP アドレスを偽装する可能性もあります。 ファイアウォール ルールを制限することは、最低限のネットワーク インフラストラクチャです。  
   
 ##  <a name="BKMK_WF_msc"></a> セキュリティが強化された Windows ファイアウォールのスナップインの使用  
  セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、さらに詳細なファイアウォール設定を構成できます。 スナップインにはルール ウィザードが組み込まれており、コントロール パネルの **[Windows ファイアウォール]** では使用できない設定も表示されます。 これらの設定は次のとおりです。  
@@ -293,9 +293,9 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>新しい規則ウィザードを使用して、新しいファイアウォール ルールを作成するには  
   
-1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックして「 **WF.msc**」と入力し、 **[OK]**をクリックします。  
+1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]** をクリックします。  
   
-2.  **[セキュリティが強化された Windows ファイアウォール]**の左ウィンドウの **[受信の規則]**を右クリックし、 **[新しい規則]**をクリックします。  
+2.  **[セキュリティが強化された Windows ファイアウォール]** の左ウィンドウの **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
 3.  **新規の受信の規則ウィザード** で、必要な設定を行います。  
   

@@ -2,7 +2,7 @@
 title: CDC ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -91,7 +91,7 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> は、CDC 状態変数に、CE/\<value-from-state-ce>/ として示される値です (CE は Current-processing-range-End (現在の処理範囲の終了) の略語です)。  
   
--   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]**、 **[古い値を含むすべて]**、 **[差分]**、 **[更新マスクを含む差分]**、 **[結合を含む差分]**のいずれかの値です。  
+-   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]**、 **[古い値を含むすべて]**、 **[差分]**、 **[更新マスクを含む差分]**、 **[結合を含む差分]** のいずれかの値です。  
   
  このスクリプトを実行すると、エラーの再現と特定を簡単に行うことができる [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で問題を再現することによって、問題を特定できます。  
   
@@ -109,15 +109,15 @@ use <cdc-enabled-database-name>
   
 -   [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [CDC ソース エディターと &#40; です。「 列」 ページと &#41; です。](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [[CDC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [CDC ソース エディターと &#40; です。エラー出力 ページと &#41; です。](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
   
  **[詳細エディター]** ダイアログ ボックスを開くには、次の操作を実行します。  
   
--   **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、CDC ソースを右クリックし、 **[詳細エディターの表示]**をクリックします。  
+-   **プロジェクトの** [データ フロー] [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 画面で、CDC ソースを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
  **[詳細エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [CDC ソースのカスタム プロパティ](../../integration-services/data-flow/cdc-source-custom-properties.md)」を参照してください。  
   
@@ -127,26 +127,26 @@ use <cdc-enabled-database-name>
   
 -   [CDC ソースを使用した変更データ抽出](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
-## <a name="cdc-source-editor-connection-manager-page"></a>[CDC ソース エディター]\ ([接続マネージャー] ページ)
+## <a name="cdc-source-editor-connection-manager-page"></a>[CDC ソース エディター] ([接続マネージャー] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、CDC ソースが変更行を読み取る [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース (CDC データベース) の ADO.NET 接続マネージャーを選択できます。 CDC データベースを選択した後で、キャプチャされたテーブルをデータベースで選択する必要があります。  
   
  CDC ソースの詳細については、「 [CDC ソース](../../integration-services/data-flow/cdc-source.md)」を参照してください。  
   
 ### <a name="task-list"></a>タスク一覧  
- **CDC ソース エディターの接続マネージャー ページを開きます**  
+ **[CDC ソース エディター] の [接続マネージャー] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、CDC ソースを含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
 2.  **[データ フロー]** タブで、CDC ソースをダブルクリックします。  
   
-3.  **[CDC ソース エディター]**で、 **[接続マネージャー]**をクリックします。  
+3.  **[CDC ソース エディター]** で、 **[接続マネージャー]** をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **ADO.NET 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。  
   
  **[新規作成]**  
- **[新規作成]**をクリックします。 新しい接続マネージャーを作成できる **[ADO.NET 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
+ **[新規作成]** をクリックします。 新しい接続マネージャーを作成できる **[ADO.NET 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
   
  **[CDC テーブル]**  
  読み取って、処理のために下流の SSIS コンポーネントに渡す、キャプチャされた変更の含まれる CDC ソース テーブルを選択します。  
@@ -182,72 +182,72 @@ use <cdc-enabled-database-name>
   
  詳細については、「 [CDC ソースのカスタム プロパティ](../../integration-services/data-flow/cdc-source-custom-properties.md)」を参照してください。  
   
-## <a name="cdc-source-editor-columns-page"></a>[CDC ソース エディター]\ ([列] ページ)
+## <a name="cdc-source-editor-columns-page"></a>[CDC ソース エディター] ([列] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (ソース) 列にマップできます。  
   
 ### <a name="task-list"></a>タスク一覧  
- **CDC ソース エディター の 列 ページを開く**  
+ **[CDC ソース エディター] の [列] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、CDC ソースを含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
 2.  **[データ フロー]** タブで、CDC ソースをダブルクリックします。  
   
-3.  **[CDC ソース エディター]**で、 **[列]**をクリックします。  
+3.  **[CDC ソース エディター]** で、 **[列]** をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>および  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 ソースで使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
   
- **外部列**  
+ **[外部列]**  
  外部 (ソース) 列のビューです。CDC ソースのデータを使用するコンポーネントを構成するときの表示順になります。 この順序を変更するには、まず **[使用できる外部列]** の一覧で選択した列を消去してから、別の順序で一覧から外部列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
   
  **出力列**  
  各出力列の一意の名前を入力します。 既定では選択された外部 (ソース) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 入力した名前は、SSIS デザイナーで表示されます。  
   
-## <a name="cdc-source-editor-error-output-page"></a>[CDC ソース エディター]\ ([エラー出力] ページ)
+## <a name="cdc-source-editor-error-output-page"></a>[CDC ソース エディター] ([エラー出力] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
   
 ### <a name="task-list"></a>タスク一覧  
- **CDC ソース エディター エラー出力 ページを開く**  
+ **[CDC ソース エディター] の [エラー出力] ページを開くには**  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、CDC ソースを含む [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] パッケージを開きます。  
   
 2.  **[データ フロー]** タブで、CDC ソースをダブルクリックします。  
   
-3.  **[CDC ソース エディター]**で、 **[エラー出力]**をクリックします。  
+3.  **[CDC ソース エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>オプション  
- **入力/出力**  
+### <a name="options"></a>および  
+ **[入力または出力]**  
  データ ソースの名前を表示します。  
   
  **列**  
  **[CDC ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページで選択した外部 (ソース) 列を表示します。  
   
- **エラー**  
+ **[エラー]**  
  CDC ソースでフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
  **切り捨て**  
  CDC ソースでフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
- **Description**  
+ **[説明]**  
  使用されていません。  
   
- **この値を選択したセルに設定します。**  
+ **[選択したセルに設定する値]**  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルを CDC ソースでどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
- **適用**  
+ **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
 ### <a name="error-handling-options"></a>エラー処理オプション  
  CDC ソースでのエラーと切り捨ての処理方法を構成するには、次のオプションを使用します。  
   
- **コンポーネントを失敗させる**  
+ **エラー コンポーネント**  
  エラーまたは切り捨てが発生すると、データ フロー タスクは失敗します。 これは既定の動作です。  
   
- **エラーを無視します。**  
+ **エラーを無視する**  
  エラーまたは切り捨ては無視され、データ行は CDC ソース出力に送られます。  
   
- **フローのリダイレクト**  
+ **[フローのリダイレクト]**  
  エラーまたは切り捨てのデータ行は、CDC ソースのエラー出力に送られます。 この場合は、CDC ソースのエラー処理が使用されます。 詳細については、「 [CDC ソース](../../integration-services/data-flow/cdc-source.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  

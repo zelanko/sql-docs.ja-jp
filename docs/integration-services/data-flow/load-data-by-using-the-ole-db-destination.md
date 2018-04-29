@@ -1,32 +1,32 @@
 ---
-title: "OLE DB 変換先を使用してデータを読み込む | Microsoft Docs"
-ms.custom: 
+title: OLE DB 変換先を使用してデータを読み込む | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - loading data
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 692bc6f90cee09f2bff680fe3e19ed3c433f8707
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fb35b8b9b00021c59b9001114122c51d6757602e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
   OLE DB 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、OLE DB 変換先をデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、OLE DB 変換先をデザイン画面にドラッグします。  
   
 4.  OLE DB 変換先をデータ フローに連結します。連結するには、データ ソースまたは前の変換から変換先にコネクタをドラッグします。  
   
@@ -49,20 +49,20 @@ ms.lasthandoff: 01/25/2018
   
     -   **[テーブルまたはビュー]** データが含まれるデータベース内のテーブルまたはビューを選択します。  
   
-    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、 **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、 **[バッチごとの行数]**、または **[挿入コミット サイズの最大値]**があります。  
+    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、 **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、 **[バッチごとの行数]**、または **[挿入コミット サイズの最大値]** があります。  
   
     -   **[テーブル名またはビュー名の変数]** データベースのテーブルまたはビューの名前が含まれている、ユーザー定義変数を選択します。  
   
     -   **[テーブル名またはビュー名の変数 - 高速読み込み]** データが含まれるデータベースのテーブルまたはビューの名前が含まれているユーザー定義変数を選択し、次に高速読み込みのオプションを設定します。  
   
-    -   **[SQL コマンド]** SQL コマンドを入力するか、 **[クエリ ビルダー]** で **[クエリの作成]**をクリックして、SQL コマンドを記述します。  
+    -   **[SQL コマンド]** SQL コマンドを入力するか、 **[クエリ ビルダー]** で **[クエリの作成]** をクリックして、SQL コマンドを記述します。  
   
 8.  **[マッピング]** をクリックし、 **[使用できる入力列]** 一覧にある列を、 **[使用できる変換先列]** 一覧の列にドラッグして、列をマップします。  
   
     > [!NOTE]  
     >  OLE DB 変換先では、同じ名前の列は自動的にマップされます。  
   
-9. エラー出力を構成するには、 **[エラー出力]**をクリックします。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
+9. エラー出力を構成するには、 **[エラー出力]** をクリックします。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   
 10. **[OK]** をクリックします。  
   

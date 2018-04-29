@@ -1,16 +1,16 @@
 ---
-title: "あいまいグループ化変換 | Microsoft Docs"
-ms.custom: 
+title: あいまいグループ化変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 
+caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a12b82c9a0c33438edad684b3fd7a6b5228435d4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
@@ -165,7 +165,7 @@ ms.lasthandoff: 01/25/2018
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
   
 > [!NOTE]  
->  あいまいグループ化変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまいグループ化変換エディター]**ではアクセスできませんが、 **[詳細エディター]**を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
+>  あいまいグループ化変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまいグループ化変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
   
 ### <a name="options"></a>および  
  **[入力キー列名]**  

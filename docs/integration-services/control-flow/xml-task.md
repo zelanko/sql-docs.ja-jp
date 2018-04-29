@@ -1,16 +1,16 @@
 ---
-title: "XML タスク | Microsoft Docs"
-ms.custom: 
+title: XML タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmltask.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d487c283a463df4b1df7b37953e9f31564240e15
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -154,12 +154,12 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[検証]**|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。 このオプションを選択すると、 **[Validate]**セクションに動的オプションが表示されます。|  
-|**XSLT (XSLT)**|XML ドキュメントに対して XSL 変換を実行します。 このオプションを選択すると、 **[XSLT]**セクションに動的オプションが表示されます。|  
-|**[XPath]**|XPath クエリと評価を実行します。 このオプションを選択すると、 **[Xpath]**セクションに動的オプションが表示されます。|  
-|**Merge**|2 つの XML ドキュメントをマージします。 このオプションを選択すると、 **[Merge]**セクションに動的オプションが表示されます。|  
-|**[Diff]**|2 つの XML ドキュメントを比較します。 このオプションを選択すると、 **[Diff]**セクションに動的オプションが表示されます。|  
-|**[Patch]**|Diff 操作からの出力を適用して、新しいドキュメントを作成します。 このオプションを選択すると、 **[Patch]**セクションに動的オプションが表示されます。|  
+|**[検証]**|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。 このオプションを選択すると、 **[Validate]** セクションに動的オプションが表示されます。|  
+|**XSLT (XSLT)**|XML ドキュメントに対して XSL 変換を実行します。 このオプションを選択すると、 **[XSLT]** セクションに動的オプションが表示されます。|  
+|**[XPath]**|XPath クエリと評価を実行します。 このオプションを選択すると、 **[Xpath]** セクションに動的オプションが表示されます。|  
+|**Merge**|2 つの XML ドキュメントをマージします。 このオプションを選択すると、 **[Merge]** セクションに動的オプションが表示されます。|  
+|**[Diff]**|2 つの XML ドキュメントを比較します。 このオプションを選択すると、 **[Diff]** セクションに動的オプションが表示されます。|  
+|**[Patch]**|Diff 操作からの出力を適用して、新しいドキュメントを作成します。 このオプションを選択すると、 **[Patch]** セクションに動的オプションが表示されます。|  
   
  **[SourceType]**  
  XML ドキュメントのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
@@ -211,7 +211,7 @@ ms.lasthandoff: 01/25/2018
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**[DTD]**|文書型定義 (DTD) を使用します。|  
-|**[XSD]**|XML スキーマ定義 (XSD) スキーマを使用します。 このオプションを選択すると、 **[ValidationType]**セクションに動的オプションが表示されます。|  
+|**[XSD]**|XML スキーマ定義 (XSD) スキーマを使用します。 このオプションを選択すると、 **[ValidationType]** セクションに動的オプションが表示されます。|  
   
  **[FailOnValidationFail]**  
  ドキュメントの検証に失敗した場合に、操作が失敗するかどうかを指定します。  
@@ -404,7 +404,7 @@ ms.lasthandoff: 01/25/2018
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -479,7 +479,7 @@ ms.lasthandoff: 01/25/2018
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
@@ -525,7 +525,7 @@ ms.lasthandoff: 01/25/2018
 |**変数**|ソースを XML ドキュメントが含まれている変数に設定します。|  
   
  **[SecondOperand]**  
- **[SecondOperandType]** が **[直接入力]**に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
+ **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **([...])** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
  **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   

@@ -1,16 +1,16 @@
 ---
-title: "OLE DB コマンド変換 | Microsoft Docs"
-ms.custom: 
+title: OLE DB コマンド変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.oledbcommandtrans.f1
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b759d86a0a501364cdb5f4a1544ac2eb3df8d717
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c5391ffd64466986d1f2a0305117e3bad210f7a8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
   OLE DB コマンド変換は、データ フローの各行に対して SQL ステートメントを実行します。 たとえば、データベース テーブル内に行を挿入したり、行を更新または削除する SQL ステートメントを実行できます。  
@@ -65,23 +65,23 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、OLE DB コマンド変換をデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、OLE DB コマンド変換をデザイン画面にドラッグします。  
   
 4.  OLE DB コマンド変換をデータ フローに連結します。連結するには、緑または赤の矢印のコネクタを、データ ソースまたは前の変換から OLE DB コマンド変換にドラッグします。  
   
-5.  コンポーネントを右クリックし、[編集] または **[詳細エディターの表示]**をクリックします。  
+5.  コンポーネントを右クリックし、[編集] または **[詳細エディターの表示]** をクリックします。  
   
 6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
 7.  **[コンポーネントのプロパティ]** タブをクリックし、 **[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
   
-8.  **[文字列値エディター]**で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
+8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   
-9. **[更新]**をクリックします。 **[更新]**をクリックすると、この変換は各パラメーターに対する列を External Columns コレクションに作成し、DBParamInfoFlags プロパティを設定します。  
+9. **[更新]** をクリックします。 **[更新]** をクリックすると、この変換は各パラメーターに対する列を External Columns コレクションに作成し、DBParamInfoFlags プロパティを設定します。  
   
 10. **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-11. **[OLE DB コマンドの入力]**を展開し、次に **[外部列]**を展開します。  
+11. **[OLE DB コマンドの入力]** を展開し、次に **[外部列]** を展開します。  
   
 12. **[外部列]** 一覧に、SQL ステートメント内の各パラメーターに対する列が表示されていることを確認します。 列名は、 **Param_0**、 **Param_1**のように表示されます。  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/25/2018
   
     -   データ型に応じて列のデータ型を指定し、列のコード ページ、長さ、有効桁数、および小数点以下桁数を指定します。  
   
-    -   未使用のパラメーターを削除するには、 **[外部列]**でパラメーターを選択し、 **[列の削除]**をクリックします。  
+    -   未使用のパラメーターを削除するには、 **[外部列]** でパラメーターを選択し、 **[列の削除]** をクリックします。  
   
     -   **[列マッピング]** をクリックし、 **[使用できる入力列]** 一覧の列を **[使用できる変換先列]** 一覧のパラメーターにマップします。  
   

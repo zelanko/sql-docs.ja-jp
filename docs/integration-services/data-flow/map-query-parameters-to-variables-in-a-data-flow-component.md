@@ -1,16 +1,16 @@
 ---
-title: "クエリ パラメーターをデータ フロー コンポーネントの変数にマップする | Microsoft Docs"
-ms.custom: 
+title: クエリ パラメーターをデータ フロー コンポーネントの変数にマップする | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 306d22adf7e49ab9eb8ae2844ad0cc322c96479f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 203f73af84166b2e322c49857aa3dd98a7c6417e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>クエリ パラメーターをデータ フロー コンポーネントの変数にマップする
   パラメーター化クエリを使用するように OLE DB ソースを構成すると、パラメーターを変数にマップすることができます。  
@@ -40,15 +40,15 @@ ms.lasthandoff: 01/25/2018
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]**で、OLE DB ソースをデザイン画面にドラッグします。  
+3.  **[データ フロー]** タブをクリックし、次に **[ツールボックス]** で、OLE DB ソースをデザイン画面にドラッグします。  
   
-4.  OLE DB ソースを右クリックし、 **[編集]**をクリックします。  
+4.  OLE DB ソースを右クリックし、 **[編集]** をクリックします。  
   
-5.  **[OLE DB ソース エディター]**で、OLE DB 接続マネージャーを選択してデータ ソースへの接続に使用するか、 **[新規作成]** をクリックして新しい OLE DB 接続マネージャーを作成します。  
+5.  **[OLE DB ソース エディター]** で、OLE DB 接続マネージャーを選択してデータ ソースへの接続に使用するか、 **[新規作成]** をクリックして新しい OLE DB 接続マネージャーを作成します。  
   
 6.  データ アクセス モードの **[SQL コマンド]** オプションをクリックし、 **[SQL コマンド テキスト]** ペインにパラメーター化クエリを入力します。  
   
-7.  **[パラメーター]**をクリックします。  
+7.  **[パラメーター]** をクリックします。  
   
 8.  **[クエリ パラメーターの設定]** ダイアログ ボックスで、**[パラメーター]** 一覧にある各パラメーターを、**[変数]** 一覧の変数にマップするか、**[\<新しい変数>]** をクリックして新しい変数を作成します。 **[OK]** をクリックします。  
   

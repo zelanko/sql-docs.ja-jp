@@ -1,43 +1,43 @@
 ---
-title: "[候補キー プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs"
-ms.custom: 
+title: '[候補キー プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5440deccfcac158920f6739aa5088b2c6c54e46e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>[候補キー プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[候補キー プロファイル要求]** のオプションを設定できます。 候補キー プロファイルは、列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうかを報告します。 また、このプロファイルを使用すると、キーとなる可能性がある列の重複値などのデータの問題を特定できます。  
   
 > [!NOTE]  
->  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]**ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
+>  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
  データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>KeyColumns プロパティの列の選択について  
  各 **候補キー プロファイル要求** は、1 つまたは複数の列で構成される単一のキー候補のキーの強さを計算します。  
   
--   **[KeyColumns]**で列を 1 つだけ選択すると、その列のキーの強さが計算されます。  
+-   **[KeyColumns]** で列を 1 つだけ選択すると、その列のキーの強さが計算されます。  
   
 -   **[KeyColumns]** で複数の列を選択すると、選択したすべての列で構成される複合キーのキーの強さが計算されます。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/15/2018
 >  [(*)] を選択した場合、多数の計算が実行され、タスクのパフォーマンスが低下する可能性があります。 ただし、キーのしきい値を満たすサブセットをタスクが見つけた場合、その他の組み合わせは分析されません。 たとえば、上記のサンプル テーブルで C 列がキーであるとタスクが判断した場合、複合キー候補の分析は続行されません。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
- **[要求プロパティ]**ペインに表示される **[候補キー プロファイル要求]** のオプション グループは次のとおりです。  
+ **[要求プロパティ]** ペインに表示される **[候補キー プロファイル要求]** のオプション グループは次のとおりです。  
   
 -   **[データ]**( **[TableOrView]** オプション、 **[KeyColumns]** オプションなど)  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 02/15/2018
  選択した列の名前を表示します。 **[(\*)]** を選択してすべての列をプロファイルする場合、このオプションは空白になります。 このオプションは読み取り専用です。  
   
  **[StringCompareOptions]**  
- 文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]**です。  
+ 文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
 >  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/15/2018
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
 |**[DictionarySort]**|関連する言語またはアルファベットの辞書で定義されている並べ替えおよび比較ルールに基づいてデータを並べ替えて比較します。|  
   
- **[DictionarySort]**を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
+ **[DictionarySort]** を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -120,19 +120,19 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="options"></a>および  
  **[ThresholdSetting]**  
- このプロパティのオプションを次の表に示します。 このプロパティの既定値は **[Specified]**です。  
+ このプロパティのオプションを次の表に示します。 このプロパティの既定値は **[Specified]** です。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |**なし**|しきい値が指定されていません。 キーの強さは、その値に関係なく報告されます。|  
-|**[Specified]**|しきい値は **[KeyStrengthThreshold]**で指定します。 キーの強さは、このしきい値より大きい場合にのみ報告されます。|  
+|**[Specified]**|しきい値は **[KeyStrengthThreshold]** で指定します。 キーの強さは、このしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値が指定されていません。 キーの強さは、選択した列がキーに完全に一致している場合にのみ報告されます。|  
   
  **[KeyStrengthThreshold]**  
- 0 ～ 1 の値を使用して、キーの強さが報告されるしきい値を指定します。 このプロパティの既定値は 0.95 です。 このオプションは、 **[KeyStrengthThresholdSetting]** で **[Specified]**が選択されている場合にのみ有効です。  
+ 0 ～ 1 の値を使用して、キーの強さが報告されるしきい値を指定します。 このプロパティの既定値は 0.95 です。 このオプションは、 **[KeyStrengthThresholdSetting]** で **[Specified]** が選択されている場合にのみ有効です。  
   
  **[MaxNumberOfViolations]**  
- 出力で報告する候補キー違反の最大数を指定します。 このプロパティの既定値は 100 です。 このオプションは、 **[KeyStrengthThresholdSetting]** で **[Exact]**が選択されている場合は無効です。  
+ 出力で報告する候補キー違反の最大数を指定します。 このプロパティの既定値は 100 です。 このオプションは、 **[KeyStrengthThresholdSetting]** で **[Exact]** が選択されている場合は無効です。  
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

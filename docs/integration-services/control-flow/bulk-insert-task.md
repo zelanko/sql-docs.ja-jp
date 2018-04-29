@@ -1,16 +1,16 @@
 ---
-title: "一括挿入タスク | Microsoft Docs"
-ms.custom: 
+title: 一括挿入タスク | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d5d2ac1ee71fa67ee426c6e9beba05d78fd06a1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  
@@ -140,8 +140,8 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]**が表示されます。|  
-|**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションの **[RowDelimiter]** および **[ColumnDelimiter]**が表示されます。|  
+|**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]** が表示されます。|  
+|**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションの **[RowDelimiter]** および **[ColumnDelimiter]** が表示されます。|  
   
  **[最近使ったファイル]**  
  ファイル接続マネージャーまたはフラット ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
@@ -163,10 +163,10 @@ ms.lasthandoff: 01/25/2018
   
 #### <a name="format--specify"></a>[Format] = [指定]  
  **[RowDelimiter]**  
- ソース ファイルの行区切り記号を指定します。 既定値は **{CR}{LF}**です。  
+ ソース ファイルの行区切り記号を指定します。 既定値は **{CR}{LF}** です。  
   
  **[ColumnDelimiter]**  
- ソース ファイルの列区切り記号を指定します。 既定値は **[タブ]**です。  
+ ソース ファイルの列区切り記号を指定します。 既定値は **[タブ]** です。  
   
 ## <a name="bulk-insert-task-editor-general-page"></a>[一括挿入タスク エディター] ([全般] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用して、一括挿入タスクの名前と説明を指定します。  
