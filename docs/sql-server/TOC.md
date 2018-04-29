@@ -26,11 +26,13 @@
 ## [SQL Server 2012 ノート](sql-server-2012-release-notes.md)
 ## [SQL Server 2008 R2 SP2 ノート](sql-server-2008-r2-sp2-release-notes.md)
 
+# [SQL Server on Linux](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [データベース エンジン](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [ フェールオーバー クラスター](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-# [インストール](../sql-server/install/planning-a-sql-server-installation.md)
+# [インストール (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
+# [インストール (Linux)](../linux/sql-server-linux-setup.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [マスター データ サービス](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
@@ -38,6 +40,7 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server チュートリアル](tutorials-for-sql-server-2016.md)
+# [SQL Server ツール](../tools/overview-sql-tools.md)
 
 # リソース
 

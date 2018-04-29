@@ -3,15 +3,16 @@
 
 # [SQL Server ガイド](sql-server-guides.md)
 ## Always On 可用性グループのトラブルシューティングと監視のガイド
-## [インデックス デザイン](sql-server-index-design-guide.md)
+## [インデックスのアーキテクチャと設計](sql-server-index-design-guide.md)
 ## [メモリ管理アーキテクチャ](memory-management-architecture-guide.md)
 ### [ページの読み取り](reading-pages.md)  
 ### [ページの書き込み](writing-pages.md)
 ## [ページとエクステントのアーキテクチャ](pages-and-extents-architecture-guide.md)
 ## [移行後の検証および最適化](post-migration-validation-and-optimization-guide.md)
+## [[パフォーマンス]](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [クエリ処理のアーキテクチャ](query-processing-architecture-guide.md)
 ## [スレッドおよびタスクのアーキテクチャ](thread-and-task-architecture-guide.md)
-## [トランザクション ログのアーキテクチャと管理](sql-server-transaction-log-architecture-and-management-guide.md)
+## [トランザクション ログのアーキテクチャと管理ガイド](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [トランザクションのロックおよび行のバージョン管理ガイド](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [バックアップと復元](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [結合](../relational-databases/performance/joins.md)
 # [パーティション](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [[パフォーマンス]](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [ポリシー ベースの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [レプリケーション](../relational-databases/replication/sql-server-replication.md)

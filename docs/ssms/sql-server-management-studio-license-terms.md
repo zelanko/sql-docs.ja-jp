@@ -1,27 +1,28 @@
 ---
-title: "SQL Server Management Studio - ライセンス条項 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Management Studio - ライセンス条項 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3690381b8c1b539bf4f30c8508cd927964e40f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - ライセンス条項
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/17/2018
   
 **3.  インターネット ベースのサービス。** マイクロソフトは、本ソフトウェアについてインターネット ベースのサービスを提供します。 マイクロソフトは、いつでもこのサービスを変更または中止できるものとします。  
   
-&nbsp;&nbsp;**a.  インターネット ベースのサービスに関する同意。** 以下の条項および「SQL Server のプライバシーに関する声明」に記載されているソフトウェア機能は、インターネットを経由してマイクロソフトまたはサービス プロバイダーのコンピューター システムに接続します。 接続が行われる際、通知が行われない場合があります。 お客様は、この機能を解除することや、この機能を使用しないようにすることもできます。 この機能の詳細については、 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)をご参照ください。 **この機能を使用することで、お客様はこの情報の送信に同意されたものとします**。 マイクロソフトは、これらの情報を利用してお客様の特定またはお客様への連絡を行うことはありません。  
+&nbsp;&nbsp;**a.  インターネット ベースのサービスに関する同意。** 以下の条項および「SQL Server のプライバシーに関する声明」に記載されているソフトウェア機能は、インターネットを経由してマイクロソフトまたはサービス プロバイダーのコンピューター システムに接続します。 接続が行われる際、通知が行われない場合があります。 お客様は、この機能を解除することや、この機能を使用しないようにすることもできます。 この機能の詳細については、「[http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)」を参照してください。 **この機能を使用することで、お客様はこの情報の送信に同意されたものとします**。 マイクロソフトは、これらの情報を利用してお客様の特定またはお客様への連絡を行うことはありません。  
   
 &nbsp;&nbsp;**i.  コンピューター情報。** 以下の機能はインターネット プロトコルを使用しており、お客様の IP アドレス、オペレーティング システムの種類、ブラウザーの種類、使用している本ソフトウェアの名称およびバージョン、ならびに本ソフトウェアをインストールしたデバイスの言語コードなどのコンピューター情報を適切なシステムに送信します。 マイクロソフトは、お客様にインターネット ベースのサービスを提供するためにこれらの情報を利用します。  
   

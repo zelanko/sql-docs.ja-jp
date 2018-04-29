@@ -1,23 +1,24 @@
 ---
-title: "英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする | Microsoft Docs"
-description: "英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする"
-ms.custom: 
+title: 英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする | Microsoft Docs
+description: 英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae38d56a3faee88fa688a0b027482713ac07b59
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: 336b26d502d6cb40ab7c3be5de35d52f3d019b8a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする 
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/11/2017
 2. インストールした言語をクリックし、前の手順でインストールした言語パックを使用するようにシステム ロケールを設定します。次に、**[既定として設定する]** を選択します。 
 3. お使いのオペレーティング システムが目的の言語で実行されたら、[それと同じ言語のバージョンの SSMS をインストール](download-sql-server-management-studio-ssms.md#available-languages)します。 新しい言語の SSMS を初めてインストールする場合は、フル パッケージを使用します。 以降のインストールでは、アップグレード パッケージを使用できます。
 4. インストールする各言語が、最初にインストールした SSMS のバージョンの言語と一致しない場合は、次の手順で対応する Visual Studio 2015 Shell (Isolated) Language Pack をインストールします。
-   - [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) を参照します (サインインし、*登録の接続*のプロセスを完了しなければならない場合もあります)。
+   - [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) にアクセスしてください (サインインして *接続登録*プロセスを完了することが必要な場合があります)。
    - 目的の Visual Studio 2015 Shell (Isolated) Language Pack をダウンロードしてインストールします。
 
    > [!IMPORTANT]
