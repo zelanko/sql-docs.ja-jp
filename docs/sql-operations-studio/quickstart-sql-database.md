@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'クイック スタート: 接続し、SQL 操作 Studio (プレビュー) を使用して Azure SQL データベースを照会 |Microsoft ドキュメント'
 description: このクイック スタートは、SQL 操作 Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Azure SQL データベース サーバーへの接続します。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL データベース サーバーへの接続を確立します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して Azure SQL データベース サーバーへの接続を確立します。
 
 1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
    
