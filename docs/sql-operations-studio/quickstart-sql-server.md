@@ -1,6 +1,6 @@
-﻿---
+---
 title: 'クイック スタート: 接続し、クエリの SQL 操作 Studio (プレビュー) を使用して SQL Server |Microsoft ドキュメント'
-description: このクイック スタートは、Studio を使用して SQL の操作 (プレビュー) を SQL Server に接続してクエリを実行する方法を示しています。
+description: このクイック スタートは、SQL Operations Studio (preview) を使用して SQL Server に接続してクエリを実行する方法を示しています。
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL サーバーに接続してクエリを問い合わせる
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して SQL サーバーに接続してクエリを問い合わせる
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成します。
 
 ## <a name="prerequisites"></a>前提条件
 
 このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] および SQL Server へのアクセスが必要です。
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)]のインストール](download.md)。
 
 SQL Server へのアクセスを持っていない場合は、次のリンクからプラットフォームを選択してください (SQL ログインとパスワードを覚えておくようにしてください)。
-- [Windows - SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [Windows - SQL Server 2017 Developer Edition のダウンロード](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux - SQL Server 2017 Developer Edition のダウンロード](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - *データを作成しクエリを問い合わせる* ための手順に従うだけです。
 
