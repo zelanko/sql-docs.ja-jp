@@ -1,25 +1,25 @@
 ---
-title: "開発および Linux 用のデータベースを SQL Server のデプロイ |Microsoft ドキュメント"
-description: 
+title: 開発および Linux 用のデータベースを SQL Server のデプロイ |Microsoft ドキュメント
+description: ''
 author: erickangMSFT
 ms.author: erickang
 manager: jroth
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 71ecd630b78d1a289aec4109a9eaa8c75dec3e90
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して Linux 上の SQL Server のデータベースを作成するには
 
@@ -31,7 +31,7 @@ SQL Server Data Tools (SSDT) は、SQL Server on Linux の強力な開発およ�
 
 1. 既にインストールしていない Visual Studio、Windows コンピューターに場合[ダウンロードおよび Visual Studio のインストール]です。 Visual Studio Community エディション、受講者、無料の完全な機能を備えた IDE は、Visual Studio のライセンスがない、オープン ソース、および個々 の開発者。
 
-2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。 **[次へ]**をクリックします。
+2. Visual Studio のインストール中に次のように選択します。**カスタム**の、**インストールの種類を選択**オプション。 **[次へ]** をクリックします。
 
 3. 選択**Microsoft SQL Server Data Tools**、 **Git for Windows**、および**Visual Studio 向け GitHub 拡張**機能選択項目の一覧です。
 
@@ -55,13 +55,13 @@ Linux 上の SQL Server 2017 は、SSDT 17.0 RC またはそれ以降のバー�
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. **[作成]**をクリックします。 ローカルの Git リポジトリが作成されると、ダブルクリックして**SSDTRepo**です。
+3. **[作成]** をクリックします。 ローカルの Git リポジトリが作成されると、ダブルクリックして**SSDTRepo**です。
 
 4. をクリックして**新規**で、**ソリューション**セクションです。 選択**SQL Server** **他の言語**内のノード、**新しいプロジェクト**ダイアログ。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. 入力**TutorialDB**クリックと名前の**[ok]**新しいデータベース プロジェクトを作成します。
+5. 入力**TutorialDB**クリックと名前の **[ok]** 新しいデータベース プロジェクトを作成します。
 
 ## <a name="create-a-new-table-in-the-database-project"></a>データベース プロジェクトに新しいテーブルを作成します。
 

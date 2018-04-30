@@ -1,15 +1,16 @@
 ---
-title: "[サーバーへの接続] (データベース エンジン) | Microsoft Docs"
-ms.custom: 
+title: '[サーバーへの接続] (データベース エンジン) | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-f1
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.connectoserverunknownservertype.f1
@@ -19,19 +20,20 @@ f1_keywords:
 - sql13.swb.connection.login.sqlserver.f1
 - sql13.swb.manageSS2k.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2a0a98011192659703c444b75cae144dc1303af
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: bcb99ea01db75afc6a2ab061357e8116c33fb3d2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="connect-to-server-database-engine"></a>[サーバーへの接続] (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]**をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、 `mycomputer\myinstance`のようにします。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
+# <a name="connect-to-server-database-engine"></a>[サーバーへの接続] \(データベース エンジン)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+このダイアログを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、 `mycomputer\myinstance`のようにします。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。  
 - [チュートリアル レッスン 1: データベース エンジンへの接続](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  

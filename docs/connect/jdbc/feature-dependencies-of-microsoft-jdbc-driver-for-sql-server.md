@@ -1,28 +1,28 @@
 ---
-title: "SQL Server の機能に関する Microsoft JDBC ドライバーの依存関係の |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server の機能に関する Microsoft JDBC ドライバーの依存関係の |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/28/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 703a27220a80744c46ca0bc7667756cec1ab6596
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 953e727ed3a4c05907895006c232e36a39bfa62d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server の機能の依存関係
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/02/2018
  ##  <a name="test-time"></a>テスト時間
 上記の 2 つの機能のいずれかを必要とする特定のプロジェクトは、その pom ファイル内のそれぞれの依存関係を明示的に宣言する必要があります。
 
-***例:***を使用している場合*Azure Active Directory 認証機能*を再宣言する必要があります*adal4j*プロジェクトの pom ファイル内の依存関係。 次のスニペットを参照してください。 
+***例:*** を使用している場合*Azure Active Directory 認証機能*を再宣言する必要があります*adal4j*プロジェクトの pom ファイル内の依存関係。 次のスニペットを参照してください。 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/02/2018
 </dependency>
 ```
 
-***例:***を使用している場合*Azure Key Vault 機能*を再宣言する必要があります*azure keyvault*依存関係と*adal4j*内の依存関係、プロジェクトの pom ファイルです。 次のスニペットを参照してください。 
+***例:*** を使用している場合*Azure Key Vault 機能*を再宣言する必要があります*azure keyvault*依存関係と*adal4j*内の依存関係、プロジェクトの pom ファイルです。 次のスニペットを参照してください。 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
