@@ -1,16 +1,16 @@
 ---
 title: '@@ROWCOUNT (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@ROWCOUNT_TSQL'
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd23d2af2f35dd0d76557723639f1870ee22e0ee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 78ffb0d32bb5f87b31f3dd24fa51dfcbeb36889d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 -   @@ROWCOUNT を 0 にリセットしますが、クライアントにはその値を返しません。  
   
- 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 これらのステートメントの例を示します。 設定*local_variable*, 、RETURN、READTEXT、および選択せずに、クエリ SELECT getdate や SELECT **'***などのステートメントを実行する* **'** *一般テキスト*'です。  
+ 単純な割り当てを行うステートメントの場合、@@ROWCOUNT の値は常に 1 に設定されます。 行はクライアントに送信されません。 SET @*local_variable*、RETURN、READTEXT、および SELECT GETDATE() や SELECT **'***Generic Text***'** などのクエリのない SELECT ステートメントは、これに該当します。  
   
  クエリで割り当てを行うステートメント、またはクエリ セットで RETURN を使用するステートメントは、クエリに影響を受ける行数、またはクエリで読み取られる行数を @@ROWCOUNT 値に設定します。たとえば、SELECT @*local_variable* = c1 FROM t1 のようになります。  
   

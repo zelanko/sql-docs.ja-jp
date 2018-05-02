@@ -1,16 +1,16 @@
 ---
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DecryptByKey_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1275be81fdf2a8405d0f744da962c3cf874eea2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d3064da25a280e7fe0d2534e7b2b2040094fbc3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引数  
  *ciphertext*  
- キーで暗号化されたデータを指定します。 *ciphertext* は **varbinary**です。  
+ キーで暗号化されたデータを指定します。 *暗号化テキスト* は **varbinary**です。  
   
  **@ciphertext**  
  キーを使用して暗号化されているデータを含む **varbinary** 型の変数を指定します。  
@@ -60,13 +60,15 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  認証子がプレーン テキストと共に暗号化されているかどうかを示します。 この値は、データの暗号化時に EncryptByKey に渡された値と同じである必要があります。 *add_authenticator* は **int**です。  
   
  *authenticator*  
- 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *authenticator* は **sysname**です。  
+ 認証子を生成する基のデータを指定します。 EncryptByKey に渡された値と一致する必要があります。 *認証システム* は **sysname**です。  
   
  **@authenticator**  
  認証子の生成元のデータを含む変数を指定します。 EncryptByKey に渡された値と一致する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+ **varbinary** 8,000 バイトの最大サイズ。
+ 
+データの暗号化に使用する対称キーが開いていない場合または、*ciphertext* が NULL の場合、NULL を返します。
   
 ## <a name="remarks"></a>Remarks  
  DecryptByKey では対称キーが使用されます。 この対称キーはデータベースで開かれている必要があります。 複数のキーを同時に開いておくことができます。 暗号化テキストの暗号化解除をする直前にキーを開く必要はありません。  

@@ -1,16 +1,16 @@
 ---
 title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT STOPLIST
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 20947c0331f9713a937e0a7de8efb1f2fc9f753c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ca94694a4cadc855dea5c43906311ebeeef92d42
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |[形式]|Description|  
 |------------|-----------------|  
-|String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列の場合は、**'***language_term***'** のように引用符 (') で囲む必要があります。|  
+|String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列は、**'***language_term***'** のように引用符 (') で囲む必要があります。|  
 |Integer|*language_term* には、言語の LCID を指定します。|  
 |16 進数|*language_term* には、"0x" の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。 値を 2 バイト文字セット (DBCS) の形式で指定すると、SQL Server で Unicode に変換されます。|  
   

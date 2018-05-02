@@ -1,35 +1,36 @@
 ---
-title: "[名前を付けて保存] | Microsoft Docs"
-ms.custom: 
+title: '[名前を付けて保存] | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d3414012f6873feba14c1701ea72cdd9f998ff2b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-as"></a>[名前を付けて保存]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **ファイル** *<file>* ****  **を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **ファイル** *<file>* ****  **を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
   
 ## <a name="central-panel"></a>中央のパネル  
 **[保存先]**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/17/2018
 このオプションを使用して、選択したアイテムに適用する新しいファイルの種類を選択します。 選択したアイテムに適用できるすべてのファイル タイプが表示されます。  
   
 **[保存オプションの詳細設定]**  
-**[保存オプションの詳細設定]**ダイアログ ボックスを開くには、 **[保存]** ボタンの右側にある小さな三角形をクリックして **[エンコード付きで保存]**をクリックします。 このダイアログ ボックスを使用して、ファイルのエンコードと行末に使用する文字を指定します。  
+**[保存オプションの詳細設定]** ダイアログ ボックスを開くには、 **[保存]** ボタンの右側にある小さな三角形をクリックして **[エンコード付きで保存]** をクリックします。 このダイアログ ボックスを使用して、ファイルのエンコードと行末に使用する文字を指定します。  
   
 ## <a name="left-panel"></a>左側のパネル  
 **[デスクトップ]**  

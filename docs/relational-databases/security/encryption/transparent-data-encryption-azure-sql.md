@@ -15,16 +15,17 @@ ms.custom: ''
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 04/10/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: fd5186e4a069b76108ad0c8cd4e91497e618a195
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Azure SQL Database と Data Warehouse の透過的なデータ暗号化
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 透過的なデータ暗号化は、悪意のあるアクティビティの脅威から Azure SQL Database と Azure Data Warehouse を保護するのに役立ちます。 データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行します。アプリケーションに変更を加える必要はありません。
 
@@ -44,9 +45,9 @@ Azure の透過的なデータ暗号化の既定設定では、データベー�
 > 新しく作成されたすべての SQL データベースは、既定でサービス管理の透過的なデータ暗号化を使用して暗号化されます。 2017 年 5 月より前の既存のデータベースと、復元、geo レプリケーション、およびデータベースのコピーで作成されたデータベースは、既定で暗号化されません。
 >
 
-## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (プレビュー)
+## <a name="bring-your-own-key"></a>Bring Your Own Key
 
-Bring Your Own Key (プレビュー段階) のサポートにより、ユーザーは透過的なデータ暗号化キーを制御でき、また、いつ誰がキーにアクセスできるかを制御できます。 Azure のクラウド ベースの外部キー管理システムである Key Vault は、透過的なデータ暗号化が Bring Your Own Key サポートと統合された最初のキー管理サービスです。 Bring Your Own Key がサポートされている場合、データベース暗号化キーは Key Vault に格納されている非対称キーによって保護されます。 非対称キーが Key Vault の外に出ることはありません。 サーバーに Key Vault へのアクセス許可がある場合、そのサーバーから Key Vault 経由で基本的なキー操作要求が送信されます。 非対称キーはサーバー レベルで設定し、そのサーバーに存在するすべてのデータベースによって継承されます。
+Bring Your Own Key のサポートにより、ユーザーは透過的なデータ暗号化キーを制御でき、また、いつ誰がキーにアクセスできるかを制御できます。 Azure のクラウド ベースの外部キー管理システムである Key Vault は、透過的なデータ暗号化が Bring Your Own Key サポートと統合された最初のキー管理サービスです。 Bring Your Own Key がサポートされている場合、データベース暗号化キーは Key Vault に格納されている非対称キーによって保護されます。 非対称キーが Key Vault の外に出ることはありません。 サーバーに Key Vault へのアクセス許可がある場合、そのサーバーから Key Vault 経由で基本的なキー操作要求が送信されます。 非対称キーはサーバー レベルで設定し、そのサーバーに存在するすべてのデータベースによって継承されます。
 
 Bring Your Own Key サポートにより、キー交換や Key Vault アクセス許可などのキー管理タスクを制御できるようになりました。 また、キーを削除して、すべての暗号化キーの監査/レポート作成を有効にすることもできます。 Key Vault は、キーの集中管理機能を提供し、厳重に監視されたハードウェア セキュリティ モジュールを使用します。 キーとデータの管理の分離を促進することにより、規制のコンプライアンス対応を実現します。 Key Vault の詳細については、「[キー コンテナーのセキュリティ保護](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)」を参照してください。
 

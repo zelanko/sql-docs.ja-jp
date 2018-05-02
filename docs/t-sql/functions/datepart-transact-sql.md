@@ -1,16 +1,16 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,23 +29,24 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定された *date* の特定の *datepart* を表す整数を返します。
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型および関数のすべての概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
+すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,7 +58,7 @@ DATEPART ( datepart , date )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-**integer** が返される *date* の要素 (日付または時刻値) です。 次の表は、すべての有効な *datepart* 引数の一覧です。 ユーザー定義変数に相当するものは無効です。
+**integer** が返される *date* の要素 (日付または時刻値) です。 次の表に一覧のすべての有効な *datepart* 引数。 ユーザー定義変数に相当するものは無効です。
   
 |*datepart*|省略形|  
 |---|---|
@@ -78,18 +79,18 @@ DATEPART ( datepart , date )
 |**ISO_WEEK**|**isowk**、**isoww**|  
   
 *date*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを使用できます。  
+**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *日付* 、式、列式、ユーザー定義変数、または文字列リテラルを指定できます。  
 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の年については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」をご覧ください。
   
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
 ## <a name="return-value"></a>戻り値  
-各 *datepart* とその省略形は同じ値を返します。
+*-各日付構成要素とその省略形は、同じ値を返します。*
   
 戻り値は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) およびログインの [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)で設定した言語環境に依存します。 *date* になんらかの形式の文字列リテラルを指定した場合、戻り値は、[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) を使って指定された形式に依存します。 date が日付データ型や時刻データ型の列式である場合、SET DATEFORMAT は戻り値に影響しません。
   
-次の表は、`SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` ステートメントについて、すべての *datepart* 引数と、対応する戻り値を一覧にしたものです。 *date* 引数のデータ型は、**datetimeoffset (7)** です。 *datepart* に **nanosecond** を指定した場合の戻り値の精度は 9 桁 (.123456700) で、最後の 2 桁は常に 00 になります。
+次の表は、`SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` ステートメントについて、すべての *datepart* 引数と、対応する戻り値を一覧にしたものです。 *date* 引数のデータ型は、**datetimeoffset (7)** です。 **nanosecond***datepart* の戻り値の小数点以下桁数は 9 桁 (.123456700) で、最後の 2 桁は常に 00 になります。
   
 |*datepart*|戻り値|  
 |---|---|
@@ -111,9 +112,9 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week および weekday (datepart 引数)
 *datepart* に **week** (**wk**、**ww**) または **weekday** (**dw**) を指定した場合、戻り値は、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) を使って設定された値に依存します。
   
-*datepart* に **week** を指定した場合、返される数値は 1 月 1 日を起点としてカウントされます。たとえば、DATEPART (**wk**, 'Jan 1, *xxx*x') = 1 となります。ここで、*xxxx* には任意の年を指定できます。
+**week***datepart* の数値は任意の年の 1 月 1 日を起点として定義されます。たとえば、DATEPART (** wk**, 'Jan 1, *xxx*x') = 1 となります。ここで、*xxxx* は任意の年です。
   
-次の表は、*datepart* に **week** および **weekday** を指定した場合の戻り値の一覧です。SET DATEFIRST 引数には、それぞれ "2007-04-21" が指定されています。 西暦 2007 年 1 月 1 日は月曜日です。 西暦 2007 年 4 月 21 日は土曜日です。 SET DATEFIRST 7 (日曜日) は既定の U.S.英語版です。
+次の表は、**week** と **weekday***datepart* の戻り値の一覧です。SET DATEFIRST 引数には、それぞれ '2007-04-21' が指定されています。 西暦 2007 年 1 月 1 日は月曜日です。 西暦 2007 年 4 月 21 日は土曜日です。 SET DATEFIRST 7 (日曜日) は既定の U.S.英語版です。
   
 |SET DATEFIRST<br /><br /> 引数 (argument)|week<br /><br /> 返される値|weekday<br /><br /> 返される値|  
 |---|---|---|
@@ -155,12 +156,12 @@ TZoffset の値は次のようにレンダリングされます。
   
   
 ## <a name="smalldatetime-date-argument"></a>smalldatetime (date 引数)  
-*date* が [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の場合、秒要素は 00 として返されます。
+* * *日付*の場合 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), 、秒は 00.* * として返されます。
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-a-date-argument"></a>date 引数に存在しない datepart を指定した場合に返される既定値  
 *date* 引数のデータ型に、指定された *datepart* が存在しない場合、*date* にリテラルが指定されるときだけ、その *datepart* の既定値が返されます。
   
-たとえば、**date** データ型の既定の年月日は 1900-01-01 です。 次のステートメントでは、*datepart* 引数と *date* 引数に、それぞれ日付部分と時刻を表す値が指定されています。この場合、戻り値は `1900, 1, 1, 1, 2` になります。
+* * など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 次のステートメントの引数の*日付*、*日付の要素*の日付引数があり、1900 年`1900, 1, 1, 1, 2`が返されます 1、1, 1, 2。*
   
 ```sql
 SELECT DATEPART(year, '12:10:30.123')  
@@ -170,7 +171,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-*date* が変数またはテーブル列として指定され、その変数または列のデータ型に、指定された *datepart* が存在しない場合は、エラー 9810 が返されます。 次のコード例は、年の部分が *@t*変数に対して宣言されている **time** データ型では有効でないために失敗します。
+*変数やテーブルの列として*日付*を指定して、データ型の変数または列に指定された*日付要素*をいないこと、エラー 9810 が返されます。 次のコード例は、年の部分が *@t*変数に対して宣言されている **time** データ型では有効でないために失敗します。
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -189,7 +190,7 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 ## <a name="remarks"></a>Remarks  
 DATEPART は、選択リストのほか、WHERE 句、HAVING 句、GROUP BY 句、および ORDER BY 句で使用できます。
   
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DATEPART は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATEPART では、日付が文字列として渡される場合、YDM 形式をサポートしません。 YDM 形式を使用するには、文字列を **datetime** 型または **smalldatetime** 型に明示的にキャストする必要があります。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DATEPART は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、DATEPART では、日付が文字列として渡される場合、YDM 形式をサポートしません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
 ## <a name="examples"></a>使用例  
 次の例では、基準年を返します。 基準年は日付計算などに利用できます。 この例では、日付が数値で指定されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、0 を 1900 年 1 月 1 日と解釈することに注意してください。

@@ -1,16 +1,16 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 
+caps.latest.revision: 111
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cc1b66f561ce413016e154bc329384566a8384b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8118ef2f47ce2dcdf52b3a90791d907d35169077
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -178,7 +179,7 @@ CREATE USER user_name
  データベース ユーザーを作成する Windows プリンシパルを指定します。 *windows_principal* には、Windows ユーザーまたは Windows グループを指定できます。 *windows_principal* がログインを持たない場合でも、ユーザーは作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに、*windows_principal* がログインを持たない場合、ログインを持つ Windows グループのメンバーシップを介して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows プリンシパルを認証するか、または接続文字列で包含データベースを初期カタログとして指定する必要があります。 Windows プリンシパルからユーザーを作成する場合は、**[***\<domainName>***\\***\<loginName>***]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。 Active Directory ユーザーに基づくユーザーは、21 文字未満の名前に制限されます。    
   
  '*Azure_Active_Directory_principal*'  
- **適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]､[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
+ **適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
   
  データベース ユーザーが作成される Azure Active Directory のプリンシパルを指定します。 *Azure_Active_Directory_principal* には、Azure Active Directory ユーザー、または Azure Active Directory グループを指定できます。 (Azure Active Directory ユーザーは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に Windows 認証ログインを持つことはできません。データベース ユーザーのみです)。接続文字列には、初期カタログとして、包含データベースを指定する必要があります。 
 
@@ -197,7 +198,7 @@ CREATE USER user_name
 WITH PASSWORD = '*password*'  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 包含データベースでのみ使用できます。 作成するユーザーのパスワードを指定します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は、ソルト化されたパスワードの SHA-512 を使用して計算されます。  
+ 包含データベースでのみ使用できます。 作成するユーザーのパスワードを指定します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。  
   
 WITHOUT LOGIN  
  ユーザーを既存のログインにマップしません。  

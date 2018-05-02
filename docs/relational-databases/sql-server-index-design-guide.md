@@ -1,8 +1,8 @@
 ---
-title: SQL Server インデックス デザイン ガイド | Microsoft Docs
+title: SQL Server のインデックスのアーキテクチャとデザイン ガイド | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,16 +29,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
+# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
+不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックス デザイン ガイドには、インデックスのアーキテクチャに関する情報と、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つベスト プラクティスが含まれています。  
     
 このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
 
@@ -61,11 +62,11 @@ XML インデックスの詳細については、[XML インデックスの概�
 ##  <a name="Basics"></a> インデックスのデザインの基礎  
  インデックスとは、テーブルまたはビューに関連付けられたディスク上またはメモリ内の構造で、テーブルやビューからの行の取得を高速化します。 インデックスには、テーブル内またはビュー内の 1 つ以上の列から構築されたキーが含まれています。 ディスク上のインデックスの場合、これらのキーは 1 つの構造 (B-Tree) 内に格納されます。SQL Server はこの構造を使用して、キー値に関連した 1 つ以上の行を効率よく迅速に検出できます。  
 
- インデックスは、論理的には、行と列があるテーブルとして編成されたデータを格納します。また物理的には、*行ストア* <sup>1</sup> と呼ばれる行単位のデータ形式、または*[列ストア](#columnstore_index)*という列単位のデータ形式で格納されます。  
+ インデックスは、論理的には、行と列があるテーブルとして編成されたデータを格納します。また物理的には、*行ストア* <sup>1</sup> と呼ばれる行単位のデータ形式、または*[列ストア](#columnstore_index)* という列単位のデータ形式で格納されます。  
     
  データベースとワークロードに適したインデックスの選択は、クエリの速度と更新コストのバランスを取る必要がある複雑な作業です。 インデックス キー内の列数が少ないインデックスを使用すると、ディスク領域とメンテナンスのオーバーヘッドが少なくて済みます。 これに対して、列数の多いインデックスを使用すると、より多くのクエリに対応できます。 効率の高いインデックスを決定するには、さまざまなデザインをテストする必要があります。 インデックスは、データベース スキーマやアプリケーションのデザインに影響を与えずに追加、変更、および削除できます。 さまざまなデザインのインデックスを積極的にテストするようにしてください。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーでは、多くの場合、最も効率的なインデックスが選択されます。 インデックスのデザインの全体的な考え方としては、クエリ オプティマイザーでインデックスを選択するための選択肢として、さまざまなデザインのインデックスを用意し、オプティマイザーに決定を任せる必要があります。 このようにすると、分析時間を短縮でき、さまざまな状況でパフォーマンスを向上できます。 クエリ オプティマイザーで特定のクエリに使用されるインデックスを確認するには、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[クエリ]** メニューの **[実際の実行プランを含める]**を選択します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーでは、多くの場合、最も効率的なインデックスが選択されます。 インデックスのデザインの全体的な考え方としては、クエリ オプティマイザーでインデックスを選択するための選択肢として、さまざまなデザインのインデックスを用意し、オプティマイザーに決定を任せる必要があります。 このようにすると、分析時間を短縮でき、さまざまな状況でパフォーマンスを向上できます。 クエリ オプティマイザーで特定のクエリに使用されるインデックスを確認するには、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、 **[クエリ]** メニューの **[実際の実行プランを含める]** を選択します。  
   
  インデックスを使用しても、常にパフォーマンスが向上するわけではありません。また、パフォーマンスが優れていても、常にインデックスが効率的に使用されているわけでもありません。 インデックスを使用すれば常にパフォーマンスが向上するならば、クエリ オプティマイザーのジョブは単純です。 しかし実際には、不適切なインデックスを選択すると、最適なパフォーマンスを実現することはできません。 したがって、クエリ オプティマイザーでは、パフォーマンスの向上につながる場合にのみインデックスまたはインデックスの組み合わせが選択され、パフォーマンスの低下につながる場合、インデックス付き検索は実行されません。  
 

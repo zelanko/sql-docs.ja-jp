@@ -1,33 +1,35 @@
 ---
-title: "[フィルターの設定](オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs"
-ms.custom: 
+title: '[フィルターの設定](オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.filtersettings.f1
 - sql13.ag.job.filtersettings.f1
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 049d826cfe7170462ed3942202f208a621362613
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8ea644ca7e35cd18bbc0ecef1b2ea68e2098bd70
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このダイアログ ボックスを使用すると、フィルターを指定できます。 フィルターを使用すると、特定の条件を満たす項目だけを表示するようにオブジェクト エクスプローラーとユーティリティ エクスプローラーを構成できます。 たとえば、フィルターを使用して、"Maintenance" という単語を含む名前のジョブだけを表示できます。 **[フィルターの設定]** ダイアログ ボックスのヘッダーにはサーバーの名前が含まれ、場合によってはデータベースの名前が含まれます。  
+# <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] \(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+このダイアログ ボックスを使用すると、フィルターを指定できます。 フィルターを使用すると、特定の条件を満たす項目だけを表示するようにオブジェクト エクスプローラーとユーティリティ エクスプローラーを構成できます。 たとえば、フィルターを使用して、"Maintenance" という単語を含む名前のジョブだけを表示できます。 **[フィルターの設定]** ダイアログ ボックスのヘッダーにはサーバーの名前が含まれ、場合によってはデータベースの名前が含まれます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
 **プロパティ**  

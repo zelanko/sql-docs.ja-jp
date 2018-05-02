@@ -1,16 +1,16 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DELETE
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a30704357c724c3a7e5ecc78569aecdd62687e8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,7 +137,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  \<OUTPUT_Clause>  
- DELETE 操作の一部として、削除された行または行に基づく式を返します。 OUTPUT 句は、ビューまたはリモート テーブルを対象とする DML ステートメントではサポートされません。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。  
+ DELETE 操作の一部として、削除された行または行に基づく式を返します。 OUTPUT 句は、ビューまたはリモート テーブルを対象とする DML ステートメントではサポートされません。 詳細については、を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  追加の FROM 句を指定します。 DELETE に追加されたこの [!INCLUDE[tsql](../../includes/tsql-md.md)] 拡張機能では、\<table_source> のデータを指定して、最初の FROM 句のテーブルから対応する行を削除できます。  
@@ -320,7 +321,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. TOP を使用して削除する行数を制限する  
- DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される *n* 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PurchaseOrderDetail` テーブルからランダムに選択して削除します。  
+ DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される '*n*' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PurchaseOrderDetail` テーブルからランダムに選択して削除します。  
   
 ```  
 DELETE TOP (20)   
@@ -346,7 +347,7 @@ GO
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. リンク サーバーを使用してリモート テーブルからデータを削除する  
- 次の例では、リモート テーブルの行を削除します。 この例ではまず、[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースのリンクを作成します。 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
+ 次の例では、リモート テーブルの行を削除します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
   
 ```  
 USE master;  

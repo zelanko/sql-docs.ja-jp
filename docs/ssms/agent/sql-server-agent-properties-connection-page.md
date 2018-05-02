@@ -2,7 +2,7 @@
 title: '[SQL Server エージェントのプロパティ]([接続] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05520f4d95aecc8b168369721bdedc6af76be6eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c2d209bae6430fef73e9290df2a1f52d189b4a69
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>[SQL Server エージェントのプロパティ] ([接続] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 **[Windows 認証を使用する]**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 認証を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスへの接続に使用する認証方法として設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント サービスが実行に使用するアカウントとして接続します。  
   
-**SQL Server 認証を使用する**  
+**[SQL Server 認証を使用する]**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 認証を [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] インスタンスへの接続に使用する認証方法として設定します。  
   
 > [!IMPORTANT]  

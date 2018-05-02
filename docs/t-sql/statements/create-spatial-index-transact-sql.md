@@ -1,16 +1,16 @@
 ---
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 05e551350da60132741be91d1a9bc22cc0dd7748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -391,7 +391,7 @@ PAD_INDEX = { ON | **OFF** }
  OFF または *fillfactor* の指定なし  
  中間レベルのページはほぼ全容量が使用されることを示します。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。  
   
- PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
+ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
   
 FILLFACTOR =*fillfactor*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
@@ -401,7 +401,7 @@ FILLFACTOR =*fillfactor*
 > [!NOTE]  
 >  FILL FACTOR 値 0 と 100 の機能は、まったく同じです。  
   
- FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ページ内で指定されたパーセント分の空領域は動的に保持されません。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
+ FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ページ内で指定されたパーセント分の空き領域は動的に保持されません。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、クラスター化インデックスの作成時にデータが再分配されるため、100 未満の FILLFACTOR 値を使ってクラスター化インデックスを作成すると、データ用のストレージ領域のサイズに影響が生じます。  
@@ -419,7 +419,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- インデックスを作成するためにユーザー データベース内に必要となる領域の他に、tempdb には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳しくは、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」をご覧ください。  
+ インデックスを作成するためにユーザー データベース内に必要となる領域の他に、tempdb には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳細については、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
   
 IGNORE_DUP_KEY =**OFF**  
 インデックスの種類が一意になることはないので、空間インデックスには影響しません。 このオプションを ON に設定すると、エラーが発生します。  
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
- ページにアクセスするとき、行ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。  
+ ページにアクセスするとき、行ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。  
   
  OFF  
  ページ ロックは使用されません。  
@@ -489,7 +489,7 @@ MAXDOP =*max_degree_of_parallelism*
 > [!IMPORTANT]  
 > MAXDOP オブションは構文的にサポートされていますが、CREATE SPATIAL INDEX では、現在は常に単一のプロセッサしか使用されません。  
   
- *max_degree_of_parallelism* には次の値を指定できます。  
+ *max_degree_of_parallelism* は次のように指定できます。  
   
  @shouldalert  
  並列プラン生成を抑制します。  
@@ -503,7 +503,7 @@ MAXDOP =*max_degree_of_parallelism*
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
-> 並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+> 並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  

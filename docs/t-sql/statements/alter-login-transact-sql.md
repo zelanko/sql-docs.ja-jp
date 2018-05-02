@@ -1,16 +1,16 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 
+caps.latest.revision: 68
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1a1bbef130ca5b5fef4255121a8d602c9dc47d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +84,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Database  
+-- Syntax for Azure SQL Database and Azure SQL Data Warehouse 
   
 ALTER LOGIN login_name   
   {   
@@ -104,7 +105,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER LOGIN login_name   
     {   
@@ -158,7 +159,7 @@ ALTER LOGIN login_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 新しいパスワードを割り当てるログインの、現在のパスワードを指定します。 パスワードでは大文字と小文字が区別されます。  
   
  MUST_CHANGE   
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および Parallel Data Warehouse。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 このオプションを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で変更後のログインを最初に使用するときには新しいパスワードの入力が求められます。  
   
@@ -167,7 +168,7 @@ ALTER LOGIN login_name
   
  既定のデータベースをログインに割り当てます。  
   
- DEFAULT_LANGUAGE **=**"*言語*"  
+ DEFAULT_LANGUAGE **=***language*  
  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -177,12 +178,12 @@ ALTER LOGIN login_name
  ログインの名前を変更する場合、新しい名前を指定します。 Windows ログインの場合は、新しい名前に対応する Windows プリンシパルの SID と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のログインに関連付けられている SID が一致する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの新しい名前には、円記号 (\\) は使用できません。  
   
  CHECK_EXPIRATION = { ON | **OFF** }  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および Parallel Data Warehouse。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 このログインに、パスワードの有効期限ポリシーを適用するかどうかを指定します。 既定値は OFF です。  
   
  CHECK_POLICY **=** { **ON** | OFF }  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および Parallel Data Warehouse。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 このログインに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターの、Windows のパスワード ポリシーを適用するかどうかを指定します。 既定値は ON です。  
   
@@ -197,7 +198,7 @@ ALTER LOGIN login_name
  ログインからサーバー資格情報へのマッピングがある場合は削除します。 詳しくは、「[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)」をご覧ください。  
   
  UNLOCK  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および Parallel Data Warehouse。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにのみ適用されます。 ロックされているログインのロックを解除します。  
   

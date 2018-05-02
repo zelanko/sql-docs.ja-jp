@@ -1,16 +1,16 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 6/7/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81a0b19c21ac231e49dd6c6dad23de7beaaa6b35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |*fractional seconds scale*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の場合は、0 ～ 3 の整数を指定できます。<br /><br /> 既定の有効桁数は 7 (100 ナノ秒) です。|  
 |既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|hh:mm:ss[.nnnnnnn] (Informatica の場合は nnn)<br /><br /> 詳しくは、後の「下位クライアントの下位互換性」セクションをご覧ください。|  
 |範囲|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
-|要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\** は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica の場合は、n\* は 0 ～ 3 桁の数字です (0 ～ 999)。|  
+|要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica の場合は、n\* は 0 ～ 3 桁の数字です (0 ～ 999)。|  
 |文字長|8 文字 (hh:mm:ss) 以上、16 文字 (hh:mm:ss.nnnnnnn) 以下。 Informatica の場合は、最大 12 文字 (hh:mm:ss.nnn) です。|  
 |有効桁数、小数点以下桁数<br /><br /> (ユーザーは小数点以下桁数のみ指定)|次の表を参照してください。|  
 |ストレージのサイズ|既定では 5 バイト固定 (秒部分の既定の有効桁数は 100ns) です。 Informatica の場合は、既定では 4 バイト固定 (秒部分の既定の有効桁数は 1 ミリ秒) です。|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付型データと時刻型データの変換  
- data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。  
+ 日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。  
   
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>time(n) データ型から他の日付/時刻データ型への変換  
  ここでは、**time** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。  
@@ -145,7 +146,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
 ```  
   
- 変換先が **smalldatetime** の場合は、日付が "1900-01-01" に設定され、時間と分の値が切り上げられます。 秒と秒の小数部は 0 に設定されます。 次のコードでは、`time(4)` の値を `smalldatetime` の値に変換した結果を示します。  
+ 変換先が **smalldatetime** の場合は、日付が "1900-01-01" に設定され、時間と分の値が切り上げられます。 秒と秒の小数部は 0 に設定されます。 次のコードは、`time(4)` 値を `smalldatetime` 値に変換した結果を示しています。  
   
 ```  
 -- Shows rounding up of the minute value.  
@@ -213,8 +214,8 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 |ODBC 日付|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC 日付時刻リテラルから **time** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
 |ODBC 時刻|上記の ODBC 日付の規則を参照してください。|  
 |ODBC 日付時刻|上記の ODBC 日付の規則を参照してください。|  
-|日付のみ|既定値が設定される|  
-|時刻のみ|単純変換|  
+|DATE のみ|既定値が設定される|  
+|TIME のみ|単純変換|  
 |タイム ゾーンのみ|既定値が設定される|  
 |日付 + 時刻|入力文字列の時刻部分が使用される|  
 |日付 + タイム ゾーン|許可されていません。|  

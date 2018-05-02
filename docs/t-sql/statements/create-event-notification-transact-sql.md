@@ -1,16 +1,16 @@
 ---
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2528104adb090ceb67476708cd8470d247e35a3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  以下に示す A と B の例では、`TO SERVICE 'NotifyService'` 句の GUID ('8140a771-3c4b-4479-8ac0-81008ab17984') は、例をセットアップしたコンピューターに固有の値です。 ここで示した例の場合は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの GUID です。  
 >   
->  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 上の「引数」セクションで説明したように、**'***broker_instance_specifier***'** は、sys.databases カタログ ビューの service_broker_guid 列にクエリを実行することで取得できます。  
+>  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 上述の「引数」セクションで説明したように、**'***broker_instance_specifier***'** は、sys.databases カタログ ビューの service_broker_guid 列にクエリを実行することで取得できます。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. サーバー スコープのイベント通知を作成する  
  次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで `Object_Created` トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  

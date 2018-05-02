@@ -1,16 +1,16 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +40,17 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +193,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  1 つ以上の引数を使用する *udt_column_name* の静的でないパブリック ミューテーター メソッドです。  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
  *column_name* の値のセクションを変更することを指定します。 *expression* で *column_name* の *@Offset* から始まる *@Length* 単位が置き換えられます。 **varchar(max)**、**nvarchar(max)**、**varbinary(max)** の列だけこの句で指定できます。 *column_name* では NULL 値は許容されません。また、テーブル名やテーブル別名で修飾することもできません。  
   
  *expression* は *column_name* にコピーされる値です。 *expression* は、*column_name* 型に評価されるか、この型に暗黙的にキャストできる必要があります。 *expression* に NULL が設定されている場合、*@Length* は無視され、*column_name* 内の値は指定された *@Offset* で切り捨てられます。  
@@ -209,7 +210,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@***variable* = *column* = *expression* は、列と同じ値に変数を設定します。 一方、SET **@***variable* = *column*, *column* = *expression* は、列の更新前の値に変数を設定します。  
   
  \<OUTPUT_Clause>  
- 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。  
+ 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  別のテーブル、ビュー、または派生テーブルのソースを使用して更新操作の基になる値を提供することを指定します。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
@@ -336,21 +337,21 @@ GO
 >  **ntext**、**text**、**image** データ型は、将来の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。  
   
 ### <a name="updating-large-value-data-types"></a>大きな値のデータ型を更新する  
- **.**WRITE (*expression***,** *@Offset***,***@Length*) 句を使用し、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の部分または完全更新を実行します。 たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 文字だけを削除または変更しますが、完全な更新では、列のすべてのデータを削除または変更します。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、**.**WRITE で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ **.** WRITE (*expression***,** *@Offset ***,***@Length*) 句を使用し、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の部分または完全更新を実行します。 たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 文字だけを削除または変更しますが、完全な更新では、列のすべてのデータを削除または変更します。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、**.** WRITE で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、UPDATE ステートメントで次のいずれかのアクションが発生するとき、部分更新が完全更新に変更されます。  
 -   パーティション ビューまたはパーティション テーブルのキー列が変更される場合  
 -   複数の行が変更され、定数以外の値に対する一意でないクラスター化インデックスのキーも更新される場合  
   
-**.**WRITE 句を使用して NULL 列を更新したり、*column_name* の値を NULL に設定したりすることはできません。  
+**.** WRITE 句を使用して NULL 列を更新したり、*column_name* の値を NULL に設定したりすることはできません。  
   
 *@Offset* と *@Length* は、**varbinary** 型と **varchar** 型の場合はバイト数で、**nvarchar** 型の場合は文字数で指定します。 2 バイト文字セット (DBCS) の照合順序では、適切なオフセットが計算されます。  
   
 最高のパフォーマンスが得られるよう、8,040 バイトの倍数の単位でデータを挿入または更新することをお勧めします。  
   
-**.**WRITE 句で変更される列が OUTPUT 句で参照されている場合は、列の完全な値 (**deleted.***column_name* の前イメージまたは **inserted.***column_name* の後イメージのどちらか) が、テーブル変数内の指定された列に返されます。 後述する例 R を参照してください。  
+**.** WRITE 句で変更される列が OUTPUT 句で参照されている場合は、列の完全な値 (**deleted.***column_name* の前イメージまたは **inserted.***column_name* の後イメージのどちらか) が、テーブル変数内の指定された列に返されます。 後述する例 R を参照してください。  
   
-他の文字型またはバイナリ データ型で **.**WRITE と同じ機能を実現するには、[STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md) を使用します。  
+他の文字型またはバイナリ データ型で **.** WRITE と同じ機能を実現するには、[STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md) を使用します。  
   
 ### <a name="updating-user-defined-type-columns"></a>ユーザー定義型の列を更新する  
  ユーザー定義型の列の値を更新するには、次のいずれかの方法を使用します。  
@@ -464,7 +465,7 @@ ID     Value
  UPDATE ステートメントでは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他ロックをかけたトランザクション以外はデータを変更できません。 別のロック手法を指定することにより、UPDATE ステートメントの存続期間におけるこの既定の動作を無効にするためのテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- UPDATE ステートメントはログに記録されますが、**.**WRITE 句を使用して値の大きなデータ型の一部を更新する場合には、最低限の内容だけがログに記録されます。 詳細については、前のセクション「データ型」の「大きな値のデータ型を更新する」を参照してください。  
+ UPDATE ステートメントはログに記録されますが、**.** WRITE 句を使用して値の大きなデータ型の一部を更新する場合には、最低限の内容だけがログに記録されます。 詳細については、前のセクション「データ型」の「大きな値のデータ型を更新する」を参照してください。  
   
 ## <a name="security"></a>Security  
   
@@ -767,7 +768,7 @@ GO
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O.  リンク サーバーを使用してリモート テーブルのデータを更新する  
- 次の例では、リモート サーバー上のテーブルを更新します。 この例ではまず、[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースのリンクを作成します。 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
+ 次の例では、リモート サーバー上のテーブルを更新します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
   
 ```sql  
 USE master;  
@@ -940,7 +941,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作を上書きする  
  このセクションの例では、テーブル ヒントとクエリ ヒントを使用して、UPDATE ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的に上書きする方法を示します。  
   
 > [!CAUTION]  
@@ -1016,7 +1017,7 @@ GO
  このセクションの例では、他のステートメントでの UPDATE の使用方法を示します。  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. UPDATE をストアド プロシージャで使用する  
- 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャは、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` を受け取ります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用してローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
+ 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用してローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
   
 ```sql  
 USE AdventureWorks2012;  

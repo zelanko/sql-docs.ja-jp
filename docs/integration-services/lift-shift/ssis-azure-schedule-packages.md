@@ -1,30 +1,31 @@
 ---
-title: "Azure で SSIS パッケージの実行をスケジュールする | Microsoft Docs"
-ms.date: 01/16/2018
+title: Azure で SSIS パッケージの実行をスケジュールする | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
 次のスケジュール設定のオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されているパッケージの実行をスケジュール設定することができます。
 -   [SQL Server エージェント](#agent)
 -   [SQL Database エラスティック ジョブ](#elastic)
--   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#sproc)
+-   [Azure Data Factory での SSIS パッケージ アクティビティの実行](#activities)
+-   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#activities)
 
 ## <a name="agent"></a> SQL Server エージェントを使用してパッケージのスケジュールを設定する
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Azure Data Factory SQL Server ストアド プロシージャ アクティビティを使用してパッケージをスケジュール設定する
+## <a name="activities"></a> Azure Data Factory を使用したパッケージのスケジュール
 
-Azure Data Factory ストアド プロシージャ アクティビティを使用して、SSIS パッケージをスケジュールする方法の詳細については、次の記事を参照してください。
+Azure Data Factory アクティビティを使用して、SSIS パッケージをスケジュールする方法の詳細については、次の記事を参照してください。
 
--   Data Factory バージョン 2 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの呼び出し](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Data Factory バージョン 2 の場合: [Azure Data Factory での SSIS アクティビティを使用した SSIS パッケージの実行](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
--   Data Factory バージョン 1 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの呼び出し](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Data Factory バージョン 2 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの実行](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Data Factory バージョン 1 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの実行](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>次の手順
 SQL Server エージェントの詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。

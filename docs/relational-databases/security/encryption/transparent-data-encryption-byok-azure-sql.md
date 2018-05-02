@@ -16,15 +16,16 @@ ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 04/03/2018
+ms.date: 04/19/2018
 ms.author: aliceku
-ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key (プレビュー) サポートによる Transparent Data Encryption
+# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 [Transparent Data Encryption (TDE)](transparent-data-encryption.md) のための Bring Your Own Key (BYOK) サポートを利用すると、TDE プロテクターと呼ばれる非対称キーを使って、データベース暗号化キー (DEK) を暗号化できます。  TDE プロテクターは、Azure のクラウドベースの外部キー管理システムである [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) のコントロールに格納されます。 Azure Key Vault は、TDE により BYOK のサポートが統合された最初のキー管理サービスです。 TDE の DEK は、データベースのブート ページに格納され、TDE プロテクターによって暗号化および複合化されます。 TDE プロテクターは、Azure Key Vault に格納され、そのキー コンテナーの外へ移動されることはありません。 キー コンテナーへのサーバーのアクセス権が取り消された場合、データベースを複合化して、メモリに読み込むことはできません。  TDE プロテクターは、論理サーバー レベルで設定され、そのサーバーと関連付けられているすべてのデータベースによって継承されます。 
@@ -65,9 +66,9 @@ TDE と BYOK には、次のような利点があります。
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Azure Key Vault の構成に関するガイドライン
 
-- キー (または、キー コンテナー) を誤って削除した場合に、データの損失を防ぐには、[論理削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)を有効にしたキー コンテナーを使用します。  
-  - 論理削除のリソースは、一定の期間保持されます。復旧や消去が行われない限り、その期間は 90 日間です。
-  - **復旧**と**消去**アクションには、キー コンテナーのアクセス ポリシーに関連付けられた独自のアクセス許可があります。 
+- キー (または、キー コンテナー) を誤って削除した場合に、データの損失を防ぐには、[soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) を有効にしたキー コンテナーを構成します。  これは、TDE と BYOK の**ハード要件**です。  
+  - 論理削除のリソースは、復旧や消去が行われない限り、90 日間保持されます。
+  - **復旧**と**消去**アクションには、キー コンテナーのアクセス ポリシーで独自のアクセス許可が定義されます。 
 - Azure Active Directory (Azure AD) の ID を使用して、キー コンテナーへのアクセス権を論理サーバーに付与します。  ポータルの UI を使用すると、Azure AD の ID が自動的に作成され、キー コンテナーのアクセス許可がそのサーバーに付与されます。  BYOK で TDE を構成するために PowerShell を使用すると、Azure AD の ID が作成され、完了が確認されます。 PowerShell を使用するときの詳しいステップバイステップのガイダンスについては、「[BYOK での TDE の構成](transparent-data-encryption-byok-azure-sql-configure.md)」を参照してください。
 
   >[!NOTE]
@@ -122,7 +123,8 @@ geo レプリケーションされた Azure SQL データベースの場合、Az
 ### <a name="azure-key-vault-configuration-steps"></a>Azure Key Vault の構成手順
 
 - [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) のインストール 
-- キー コンテナーで [PowerShell で “soft-delete” プロパティを有効にする](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (このオプションは AKV ポータルからはまだ使用できませんが、SQL で必要です) を使用して 2 つの異なる領域に 2 つの Azure Key Vault を作成します。 
+- キー コンテナーで [PowerShell で “soft-delete” プロパティを有効にする](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (このオプションは AKV ポータルからはまだ使用できませんが、SQL で必要です) を使用して 2 つの異なる領域に 2 つの Azure Key Vault を作成します。
+- 両方の Azure Key Vault は、キーのバックアップと復元が機能するために、同じ Azure Geo で使用できる 2 つのリージョンに配置する必要があります。  SQL Geo DR の要件を満たすために、2 つのキー コンテナーを異なる Geo に配置する必要がある場合は、オンプレミス HSM からキーをインポートすることができる [BYOK プロセス](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys)に従います。
 - 最初のキー コンテナーに次の新しいキーを作成します。  
   - RSA/RSA-HSA 2048 キー 
   - 有効期限なし 
@@ -138,7 +140,7 @@ geo レプリケーションされた Azure SQL データベースの場合、Az
 - 論理サーバー TDE ウィンドウを選択し、各論理 SQL Server に対して次のことを行います。  
    - 同じ領域内で AKV を選択します。 
    - TDE プロテクターとして使用するキーを選択します。各サーバーは TDE プロテクターのローカル コピーを使用します。 
-   - Portal でこれを行うと、論理 SQL Server の [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL Server のアクセス許可を割り当てるために使用されるため、削除しないでください。  代わりに Azure Key Vault でアクセス許可を削除することで、アクセス権を取り消すことができます。 Portal でこれを行うと、論理 SQL サーバーの AppID が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL サーバーのアクセス許可を割り当てるために使用されるため、削除しないでください。  代わりに Azure Key Vault でアクセス許可を削除することで、アクセス権を取り消すことができます。 
+   - Portal でこれを行うと、論理 SQL Server の [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) が作成されます。この ID はキー コンテナーにアクセスするために論理 SQL Server のアクセス許可を割り当てるために使用されるため、削除しないでください。  代わりに Azure Key Vault でアクセス許可を削除することで、アクセス権を取り消すことができます。 論理 SQL サーバーの場合、論理 SQL サーバーのアクセス許可をキー コンテナーに割り当てるために使用されます。
 - プライマリ データベースを作成します。 
 - [アクティブ geo レプリケーションのガイダンス](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)に従ってシナリオを完了します。この手順によりセカンダリ データベースが作成されます。
 

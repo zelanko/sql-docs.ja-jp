@@ -2,7 +2,7 @@
 title: 分散型可用性グループ (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -20,14 +20,15 @@ author: allanhirt
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ae16c285a4ff77e0f7753f6bc9a0323aed7f37f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)を補完します。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)を補完します。
 
 > [!NOTE]
 > "DAG" は、Exchange のデータベース可用性グループ機能で既に使われているため、"*分散型可用性グループ*" の正式な省略形ではありません。 Exchange のこの機能は、SQL Server の可用性グループまたは分散型可用性グループとは関係がありません。
@@ -55,6 +56,9 @@ AG 2 のプライマリ レプリカが挿入、更新、削除を受け付け�
 
 > [!NOTE]
 > SQL Server 2016 の分散型可用性グループは、FORCE_FAILOVER_ALLOW_DATA_LOSS オプションを使った可用性グループ間のフェールオーバーのみをサポートします。
+
+> [!NOTE]
+> 分散型可用性グループでトランザクション レプリケーションを使う場合、フォワーダー レプリカをパブリッシャーとして構成することはできません。
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分散型可用性グループに関する SQL Server のバージョンとエディションの要件
 

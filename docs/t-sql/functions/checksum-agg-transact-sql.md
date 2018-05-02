@@ -1,16 +1,16 @@
 ---
 title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKSUM_AGG
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3499cd8fb118d12fdbf450c23f2919fd0003cee7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dc03a1662860aafe1a44e50b40e587f10ebc66ba
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-グループ内にある値のチェックサムを返します。 NULL 値は無視されます。 後に、 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)です。
+この関数はグループ内の値のチェックサムを返します。 `CHECKSUM_AGG` は null 値を無視します。 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は `CHECKSUM_AGG` に続けることができます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,28 +48,28 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
   
 ## <a name="arguments"></a>引数  
 **ALL**  
-すべての値にこの集計関数を適用します。 ALL が既定値です。
+すべての値にこの集計関数を適用します。 ALL が既定の引数です。
   
 DISTINCT  
-CHECKSUM_AGG で、一意な値のチェックサムを返します。
+`CHECKSUM_AGG` で、一意な値のチェックサムを返します。
   
 *式 (expression)*  
-整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
+整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 `CHECKSUM_AGG` では、サブクエリまたは集計関数の使用は許可されません。
   
 ## <a name="return-types"></a>戻り値の型
 すべてのチェックサムを返します *式* 値としての **int**です。
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM_AGG は、テーブル内の変更を検出する場合に使用できます。
+`CHECKSUM_AGG` は、テーブルの変更を検出できます。
   
-テーブル内での行の順序は、CHECKSUM_AGG の結果に影響しません。 また、CHECKSUM_AGG 関数は、DISTINCT キーワードおよび GROUP BY 句と共に使用できます。
+`CHECKSUM_AGG` の結果は、テーブル内の行の順序に依存しません。 また、`CHECKSUM_AGG` 関数では、DISTINCT キーワードおよび GROUP BY 句の使用が許可されます。
   
-いずれかの式の値を変更した場合は通常、そのリストのチェックサムも変わりますが、 チェックサムが変わらない場合もわずかですがあります。
+式リストの値が変更された場合、リストのチェックサム値リストも変更される可能性があります。 ただし、まれには、計算されたチェックサムが変更されない可能性があります。
   
-CHECKSUM_AGG には、他の集計関数とほぼ同じ機能があります。 詳細については、を参照してください。 [集計関数 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
+`CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、を参照してください。 [集計関数 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>使用例  
-次の例では使用 `CHECKSUM_AGG` の変更を検出するために、 `Quantity` の列、 `ProductInventory` テーブルに、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース。
+次の例では、`CHECKSUM_AGG` を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルの `Quantity` 列の変更を検出します。
   
 ```sql
 --Get the checksum value before the column value is changed.  

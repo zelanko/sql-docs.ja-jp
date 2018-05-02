@@ -1,16 +1,16 @@
 ---
 title: column_constraint (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_constraint
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - constraints [SQL Server], definitions
 - column_constraint
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8530f45f71d231783083b061f1c6e0095770ea53
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f02956171b6e8ab84ad89410068a3be21398b7db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,12 +98,12 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]  
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。 ALTER TABLE の [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 句で他のインデックス オプションも指定できます。  
   
- ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup* | **"**default**"** }  
+ ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup* | **"** default **"** }  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 **"**default**"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
+ 制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
   
- ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 **"**default**"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+ ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON になっている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  FOREIGN KEY REFERENCES  
  列内のデータに対して参照整合性を提供する制約です。 FOREIGN KEY 制約では、列内の各値が、参照テーブル内の指定された列に含まれていることが必要となります。  

@@ -1,16 +1,16 @@
 ---
 title: CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 
+caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 37cb1d34ffa7db4aec6a8ef4457321b4d4601d31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -233,12 +233,12 @@ CREATE AVAILABILITY GROUP group_name
   
  WSFC ノードとサーバーのインスタンスの前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
  現在の REPLICA ON 句で定義している可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の[データベース ミラーリング エンドポイント](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)の URL パスを指定します。  
   
  ENDPOINT_URL 句は必須です。 詳細については、「 [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  エンドポイントの URL または読み取り専用のルーティングの URL を指定するための URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  
@@ -321,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
  読み取りを目的とした接続要求をこの可用性レプリカにルーティングするために使用する URL を指定します。 これは、SQL Server データベース エンジンがリッスンしている URL です。 通常、SQL Server データベース エンジンの既定のインスタンスは、TCP ポート 1433 でリッスンします。  
   
  名前付きインスタンスの場合は、[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 動的管理ビューの **port** 列と **type_desc** 列をクエリすることで、ポート番号を取得できます。 サーバー インスタンスでは Transact-SQL リスナーを使用します (**type_desc='TSQL'**)。  
@@ -377,12 +377,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> 分散可用性グループの半分を占める可用性グループの名前を指定します。  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  可用性グループに関連付けられているリスナーの URL パスを指定します。  
   
  LISTENER 句は必須です。  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  可用性グループに関連付けられているリスナーの URL を指定します。 URL のパラメーターは次のとおりです。  
   
  *system-address*  

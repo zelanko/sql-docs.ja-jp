@@ -1,16 +1,16 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EVENT SESSION
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b5d8b3267ca7021d3d713a33bf66a77d664790c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ON SERVER
 > [!IMPORTANT]  
 >  リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。  
   
- WITH ( \<event_session_options> [ ,...*n*] ) Specifies options to use with the event session.  
+ WITH ( \<event_session_options> [ ,...*n*] ) イベント セッションで使用するオプションを指定します。  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
  イベントのバッファリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は、4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。  

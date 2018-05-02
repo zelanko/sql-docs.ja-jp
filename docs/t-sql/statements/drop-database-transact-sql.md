@@ -1,20 +1,22 @@
 ---
-title: "データベースを削除 (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: DROP DATABASE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], deleting
 - removing databases
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e963031c1d9f27293a2f0786e7f0ce19183f038
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 89495565b3e7e42199c23aef1d5d2c2c22e29f0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,13 +59,13 @@ DROP DATABASE database_name [;]
 ```  
   
 ## <a name="arguments"></a>引数  
- *場合に存在します。*  
+ *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、データベースを削除します。  
   
  *database_name*  
- 削除するデータベースの名前を指定します。 データベースの一覧を表示する、 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)カタログ ビューです。  
+ 削除するデータベースの名前を指定します。 データベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。  
   
  *database_snapshot_name*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -70,19 +73,19 @@ DROP DATABASE database_name [;]
  削除するデータベース スナップショットの名前を指定します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- データベースは、オフライン、読み取り専用、未確認などの状態に関係なくドロップすることができます。 表示するには、データベースの現在の状態を使用して、 **sys.databases**カタログ ビューです。  
+ データベースは、オフライン、読み取り専用、未確認などの状態に関係なくドロップすることができます。 データベースの現在の状態を表示するには、**sys.databases** カタログ ビューを使用します。  
   
  削除されたデータベースは、バックアップを復元することによってのみ、再作成できます。 データベース スナップショットはバックアップできません。したがって復元もできません。  
   
- データベースが削除されるとき、 [master データベース](../../relational-databases/databases/master-database.md)をバックアップする必要があります。  
+ データベースを削除する場合は、[master データベース](../../relational-databases/databases/master-database.md)をバックアップする必要があります。  
   
- データベースを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからそのデータベースが削除され、そのデータベースで使用されている物理ディスク ファイルも削除されます。 削除の際にデータベースまたはディスク ファイルのいずれかがオフラインの場合、ディスク ファイルは削除されません。 これらのファイルは Windows エクスプローラーを使用して手動で削除できます。 ファイル システムからファイルを削除することがなく、現在のサーバーからデータベースを削除するには使用[sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)です。  
+ データベースを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからそのデータベースが削除され、そのデータベースで使用されている物理ディスク ファイルも削除されます。 削除の際にデータベースまたはディスク ファイルのいずれかがオフラインの場合、ディスク ファイルは削除されません。 これらのファイルは Windows エクスプローラーを使用して手動で削除できます。 ファイルをファイル システムから削除せずにデータベースを現在のサーバーから削除するには、[sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) を使用します。  
   
 > [!WARNING]  
->  FILE_SNAPSHOT を持つデータベースを削除すると、関連付けられているバックアップは成功しますが、スナップショットが関連付けられているデータベース ファイルは、これらのデータベース ファイルを参照するバックアップを無効化を回避するのには削除されません。 ファイルでは、切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的に削除されません。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用されます**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)します。  
+>  FILE_SNAPSHOT を持つデータベースを削除すると、関連付けられているバックアップは成功しますが、スナップショットが関連付けられているデータベース ファイルは、これらのデータベース ファイルを参照するバックアップを無効化を回避するのには削除されません。 ファイルでは、切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的に削除されません。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](http://go.microsoft.com/fwlink/p/?LinkId=299658)まで。  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- データベース スナップショットを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータベース スナップショットが削除され、スナップショットで使用されている物理的な NTFS ファイル システムのスパース ファイルが削除されます。 データベース スナップショットによるスパース ファイルの使用方法の詳細については、次を参照してください。[データベース スナップショット &#40;です。SQL Server &#41;](../../relational-databases/databases/database-snapshots-sql-server.md). インスタンスのプラン キャッシュが消去、データベース スナップショットを削除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 各キャッシュ ストアが消去、プラン キャッシュ内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログには、次の情報メッセージが含まれています:"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キャッシュ ストア フラッシュをいくつかのデータベースのため '%s' キャッシュ ストア (プラン キャッシュの一部) を %d 個検出が発生しましたメンテナンス操作または再構成操作"です。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
+ データベース スナップショットを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータベース スナップショットが削除され、スナップショットで使用されている物理的な NTFS ファイル システムのスパース ファイルが削除されます。 データベース スナップショットによるスパース ファイルの使用の詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。 データベース スナップショットを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのプラン キャッシュが消去されます。 プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。  
   
 ## <a name="interoperability"></a>相互運用性  
   
@@ -97,7 +100,10 @@ DROP DATABASE database_name [;]
   
  DROP DATABASE ステートメントは、自動コミット モードで実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。 自動コミット モードは、既定のトランザクション管理モードです。  
   
- 使用中のデータベースは削除できません。 使用中のデータベースとは、1 人以上のユーザーが読み込みまたは書き込みのため開いているデータベースです。 データベースからそのユーザーを削除するには、ALTER DATABASE を使用して、データベースを SINGLE_USER に設定します。  
+ 使用中のデータベースは削除できません。 使用中のデータベースとは、1 人以上のユーザーが読み込みまたは書き込みのため開いているデータベースです。 データベースからユーザーを削除するには、ALTER DATABASE を使用して、データベースを SINGLE_USER に設定する方法があります。 
+ 
+ >[!Warning] 
+ > これは、任意のスレッドによる最初の連続する接続で SINGLE_USER スレッドを受け取り、接続できなくなるため、失敗しない方法です。 SQL Server では、負荷時にデータベースを削除する組み込みの方法は提供されていません。
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  データベースを削除する前に、そのデータベース上のすべてのデータベース スナップショットを削除する必要があります。  
@@ -114,21 +120,21 @@ DROP DATABASE database_name [;]
   
  DROP DATABASE ステートメントは SQL バッチ内の唯一のステートメントである必要があります。また、一度に削除できるデータベースは 1 つだけです。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 必要があります、**コントロール**、データベースに対する権限または**ALTER ANY DATABASE**権限、またはメンバーシップ、 **db_owner**固定データベース ロール。  
+ データベースの **CONTROL** 権限、**ALTER ANY DATABASE** 権限、または **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成される) またはのメンバーのみ、 **dbmanager**データベース ロールは、データベースを削除できます。  
+ データベースを削除できるのは、(プロビジョニング プロセスによって作成される) サーバーレベル プリンシパルのログイン、または **dbmanager** データベース ロールのメンバーだけです。  
   
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 必要があります、**コントロール**、データベースに対する権限または**ALTER ANY DATABASE**権限、またはメンバーシップ、 **db_owner**固定データベース ロール。  
+ データベースの **CONTROL** 権限、**ALTER ANY DATABASE** 権限、または **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-dropping-a-single-database"></a>A. 1 つのデータベースを削除する  
- 次の例では、削除、`Sales`データベース。  
+ 次の例では、`Sales` データベースを削除します。  
   
 ```  
 DROP DATABASE Sales;  
@@ -148,7 +154,7 @@ DROP DATABASE Sales, NewSales;
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- 次の例では、削除、データベース スナップショットをという名前`sales_snapshot0600`、ソース データベースには影響しません。  
+ 次の例では、`sales_snapshot0600` というデータベース スナップショットを、ソース データベースには影響を与えずに削除します。  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

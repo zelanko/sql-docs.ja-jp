@@ -1,16 +1,16 @@
 ---
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 137f5200829916c69c2cf8fcae4c8490e48b2b6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ TEXTPTR ( column )
   
 |関数またはステートメント|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***%pattern%***' ,** *expression***)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
-|DATALENGTH**(***expression***)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
+|PATINDEX **('***%pattern%***' ,** *expression***)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
+|DATALENGTH **(***expression***)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
 |SUBSTRING**(***text_column*, *start*, *length***)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   

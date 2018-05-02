@@ -1,16 +1,16 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 46b448a5d464cf0de9f9bf70373103da10f46b4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-**int** ASCII コードを文字に変換します。
+この関数では、**int** ASCII コードが文字値に変換されます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +56,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>引数  
 *integer_expression*  
-0 ～ 255 の整数です。 整数型の式がこの範囲内にない場合は、`NULL` が返されます。
+0 ～ 255 の整数です。 整数式がこの範囲から外れている場合、`CHAR` は `NULL` 値を返します。
   
 ## <a name="return-types"></a>戻り値の型
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-`CHAR` を使って文字列に制御文字を挿入することができます。 次の表に、よく使用される制御文字の一部を示します。
+文字列に制御文字を挿入するには `CHAR` を使用します。 次の表に、よく使用される制御文字の一部を示します。
   
 |制御文字|ReplTest1|  
 |---|---|
@@ -72,7 +73,7 @@ CHAR ( integer_expression )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. ASCII と CHAR を使用して、文字列から ASCII 値を印刷するには  
-次の例では、`New Moon` という文字列の各文字とそれに対応する ASCII コードの値を出力します。
+この例では、`New Moon` という文字列の各文字とそれに対応する ASCII コードの値を出力します。
   
 ```sql
 SET TEXTSIZE 0;  
@@ -113,7 +114,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>B. CHAR を使用して制御文字を挿入する  
-次の例では、結果がテキストで返されるときに、`CHAR(13)` を使用して、従業員の名前と電子メール アドレスを別々の行に出力します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。
+この例では、クエリが結果をテキストとして返す場合に、`CHAR(13)` を使用して、従業員の名前と電子メール アドレスを別々の行に出力します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -135,7 +136,7 @@ ken0@adventure-works.com
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. ASCII と CHAR を使用して、文字列から ASCII 値を印刷するには  
-次の例では、ASCII 文字セットの使用を前提として、6 つの ASCII 文字の数値の文字値を返します。
+この例では、ASCII 文字セットを使用します。 6 種類の ASCII 文字番号の値に対応する文字値が返されます。
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +153,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. CHAR を使用して制御文字を挿入する  
-次の例では、結果がテキストで返されるときに、`CHAR(13)` を使用して、データベースに関する情報を別々の行で返します。
+この例では、クエリが結果をテキストとして返す場合に、`CHAR(13)` を使用して、sys.databases からの情報を別々の行で返します。
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

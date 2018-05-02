@@ -2,7 +2,7 @@
 title: '[サーバーへの接続]([ログイン] ページ) (データベース エンジン) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-f1
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f3824ace141704fb08b29ddbf08890d5299f494
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2f852024214979c34affacbb287477d74e33551b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] \([ログイン] ページ) (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]**をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、 `mycomputer\myinstance`のようにします。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+このタブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号、その後にインスタンスの名前を使用します。 たとえば、 `mycomputer\myinstance`のようにします。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]に接続している場合、コンピューター名の後に **\sqlexpress**を付けて使用します。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。  
 - [チュートリアル レッスン 1: データベース エンジンへの接続](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  

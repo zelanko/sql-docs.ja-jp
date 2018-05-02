@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: e3f3c52b3fca1326d9cc73203ff46285a2da2b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,16 +69,16 @@ AS PARTITION partition_function_name
  パーティション構成を使用するパーティション関数の名前です。 パーティション関数によって作成されたパーティションは、パーティション構成で指定されたファイル グループにマップされます。 *partition_function_name* はデータベースに既に存在する必要があります。 1 つのパーティションに FILESTREAM ファイル グループと非 FILESTREAM ファイル グループの両方を含めることはできません。  
   
  ALL  
- すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。**[**PRIMARY**]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
+ すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。**[** PRIMARY **]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
   
  *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
  *partition_function_name* によって指定されたパーティションを保持するファイル グループの名前を指定します。 *file_group_name* がデータベースに既に存在する必要があります。  
   
- **[**PRIMARY**]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[**,***...n*] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [**,***...n*] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
+ **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[**,***...n*] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。[**,***...n*] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
   
  *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 割り当てられていないファイル グループを追加作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
- *file_group_name* [ 1**,***...n*] でプライマリ ファイル グループを指定するときは、PRIMARY を **[**PRIMARY**]** のように区切る必要があります。これは、PRIMARY がキーワードであるためです。  
+ *file_group_name* [ 1 **,***...n*] でプライマリ ファイル グループを指定するときは、PRIMARY を **[** PRIMARY**]** のように区切る必要があります。これは、PRIMARY がキーワードであるためです。  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] では PRIMARY のみサポートされます。 後半の例 E をご覧ください。 
   

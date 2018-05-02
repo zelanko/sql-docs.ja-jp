@@ -1,32 +1,32 @@
 ---
-title: "SQL Server 2016 の Integration Services の新機能 | Microsoft Docs"
+title: SQL Server 2016 の Integration Services の新機能 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 
+caps.latest.revision: 183
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0d684f94dcd18d45c1a8b860b80d20ab07f64529
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 039def0c2b07934959f8cd066b9a83d90781277a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -235,7 +235,7 @@ ms.lasthandoff: 01/25/2018
 >  (RC0 では、このメソッドは、新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> インターフェイスに移動されています。 詳細については、「 [API の新しい IDTSComponentMetaData130 インターフェイス](#CMD130)」を参照してください。)  
 
 ####  <a name="ServerLogLevel"></a> サーバー全体の既定のログ記録レベルのサポート  
- SQL Server の **[サーバーのプロパティ]**の **[サーバーのログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できるようになりました。 組み込みのログ記録レベル (基本、なし、詳細、パフォーマンス、またはランタイムの系列) のいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、SSIS カタログに配置されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  
+ SQL Server の **[サーバーのプロパティ]** の **[サーバーのログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できるようになりました。 組み込みのログ記録レベル (基本、なし、詳細、パフォーマンス、またはランタイムの系列) のいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、SSIS カタログに配置されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  
 
 ####  <a name="CMD130"></a> API の新しい IDTSComponentMetaData130 インターフェイス  
  SSIS カタログの新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> インターフェイスにより、既存の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイス、特に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> メソッドに新しい機能が追加されます ( **GetIdentificationStringByID Method** メソッドは、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスからこの新しいインターフェイスに移動されました)。また、新しい <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> 」および「 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> インターフェイスも追加されました。これらのインターフェイスは、いずれも **LineageIdentificationString** プロパティを提供します。 詳細については、「 [データ フロー内のエラー列の名前](#ErrorColumn)」を参照してください。  
@@ -328,7 +328,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 ####  <a name="OneDesigner"></a> SSIS デザイナーでの複数ターゲットと複数バージョンのサポート  
  Visual Studio 2015 用の SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 SSDT を入手する方法については、「 [最新の SQL Server Data Tools のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
 
- ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]**タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+ ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
    
  ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
 

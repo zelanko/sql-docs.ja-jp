@@ -1,16 +1,16 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 
+caps.latest.revision: 30
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 352bdf39861d8874f1e7b535c2ef954e65d48339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/24/2018
 >  PolyBase は、SQL Server 2016 以降、Azure SQL Data Warehouse、および Parallel Data Warehouse でのみサポートされています。 Elastic Database のクエリは、Azure SQL Database v12 以降でのみサポートされています。  
 
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、外部テーブルを使用して、Hadoop クラスターまたは Azure Blob Storage に格納されているデータにアクセスします。PolyBase 外部テーブルは、Hadoop クラスターまたは Azure Blob Storage に格納されているデータを参照します。 [Elastic Database クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)の外部テーブルを作成するためにも使用できます。  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は外部テーブルを使用して、Hadoop クラスターまたは Azure Blob Storage に格納されているデータにアクセスします。PolyBase 外部テーブルは、Hadoop クラスターまたは Azure Blob Storage に格納されているデータを参照します。 [Elastic Database クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)の外部テーブルを作成するためにも使用できます。  
   
  外部テーブルを使用します。  
   
@@ -182,6 +183,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION =  '*folder_or_filepath*'  
  Hadoop または Azure blob ストレージでは、フォルダーまたはファイル パスと、実際のデータのファイル名を指定します。 ルート フォルダーから、場所を開始します。ルート フォルダーは、外部データ ソースで指定されたデータの場所です。  
+
+
+SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、まだ存在しない場合にパスとフォルダーが作成されます。 その後、INSERT INTO を使用して、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートすることができます。 詳細については、「[PolyBase クエリ](/sql/relational-databases/polybase/polybase-queries)」を参照してください。 
+
+SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) ステートメントによって、存在しない場合にパスとフォルダーが作成されます。 これらの 2 つの製品では、CREATE EXTERNAL TABLE によってパスとフォルダーは作成されません。
+
   
  フォルダーであることをする場所を指定する場合、外部テーブルから選択する PolyBase クエリはフォルダーとそのすべてのサブフォルダーからファイルを取得します。 Hadoop と同じように PolyBase で非表示のフォルダーは返されません。 それも返さないことをファイル名は、下線 (_) またはピリオド (.) で始まるファイルです。  
   

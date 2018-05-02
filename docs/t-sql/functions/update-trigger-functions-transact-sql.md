@@ -1,16 +1,16 @@
 ---
-title: "UPDATE() (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: UPDATE() (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b91d175788e3f67e8a4e4cc1484e9648072c4cef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="update---trigger-functions-transact-sql"></a>更新プログラム - トリガーUPDATE (TRANSACT-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   テーブルまたはビューの指定された列で、INSERT または UPDATE が行われたかどうかを示すブール値を返します。 UPDATE() は [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。  
@@ -54,23 +54,23 @@ UPDATE ( column )
 ```  
   
 ## <a name="arguments"></a>引数  
- *列*  
- INSERT 動作または UPDATE 動作をテストする列の名前です。 トリガーの ON 句にテーブル名が指定されているため、列名の前にテーブル名を含めないでください。 任意の列を指定できます[データ型](../../t-sql/data-types/data-types-transact-sql.md)でサポートされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 ただし、計算列を使用することはできません。  
+ *column*  
+ INSERT 動作または UPDATE 動作をテストする列の名前です。 トリガーの ON 句にテーブル名が指定されているため、列名の前にテーブル名を含めないでください。 この列の[データ型](../../t-sql/data-types/data-types-transact-sql.md)は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートしているものであれば、どのようなデータ型でもかまいません。 ただし、計算列を使用することはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
  ブール値  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  INSERT または UPDATE が成功するかどうかにかかわらず、UPDATE() は TRUE を返します。  
   
- 1 つ以上の列の挿入または更新操作をテストする別個の更新プログラムを指定します (*列*) 次の 1 つ目の句。 COLUMNS_UPDATED を使用しても、複数の列で INSERT 動作または UPDATE 動作をテストできます。 これは、挿入または更新された列を示すビット パターンを返します。  
+ 複数の列で INSERT 動作または UPDATE 動作をテストするには、最初の UPDATE(*column*) 句に続けて、別の UPDATE(column) 句を指定します。 COLUMNS_UPDATED を使用しても、複数の列で INSERT 動作または UPDATE 動作をテストできます。 これは、挿入または更新された列を示すビット パターンを返します。  
   
  INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、IF UPDATE は TRUE の値を返します。  
   
 > [!NOTE]  
->  IF UPDATE (*列*n) 場合、IF と同じ句機能しています.それ以外の場合、または WHILE 句および使用を開始しています.終了ブロック。 詳細については、次を参照してください。[フロー制御言語 &#40;です。TRANSACT-SQL と #41 です](~/t-sql/language-elements/control-of-flow.md)。  
+>  IF UPDATE(*column*) 句は、IF 句、IF...ELSE 句、または WHILE 句と同じように機能し、BEGIN...END ブロックを使用できます。 詳細については、「[フロー制御言語](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
   
- 更新 (*列*) 内部のどこでも使用できる、[!INCLUDE[tsql](../../includes/tsql-md.md)]トリガーします。  
+ UPDATE(*column*) は、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーの内部のどこでも使用できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`StateProvinceID` テーブルの `PostalCode` 列または `Address` 列を更新しようとするときにクライアントへのメッセージを出力する、トリガーを作成します。  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [COLUMNS_UPDATED と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/columns-updated-transact-sql.md)   
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

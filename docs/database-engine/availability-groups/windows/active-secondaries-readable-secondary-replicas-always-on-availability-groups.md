@@ -1,15 +1,16 @@
 ---
-title: "アクティブなセカンダリ - 読み取り可能なセカンダリ レプリカ - AlwaysOn 可用性 | Microsoft Docs"
-ms.custom: 
+title: アクティブなセカンダリ - 読み取り可能なセカンダリ レプリカ - AlwaysOn 可用性 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection access to availability replicas
@@ -19,21 +20,21 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 211a24d5842cb598021297be23322211d40730ab
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のアクティブなセカンダリ機能では、1 つ以上のセカンダリ レプリカ (*読み取り可能なセカンダリ レプリカ*) への読み取り専用アクセスをサポートしています。 読み取り可能なセカンダリ レプリカは、同期コミット可用性モードまたは非同期コミット可用性モードのいずれにも指定できます。 読み取り可能なセカンダリ レプリカは、すべてのセカンダリ データベースへの読み取り専用アクセスを許可します。 ただし、読み取り可能なセカンダリ データベースは読み取り専用に設定されません。 これらは動的です。 セカンダリ データベースは、対応するプライマリ データベースに対する変更がそのセカンダリ データベースに適用されると変更されます。 一般的なセカンダリ レプリカでは、持続性のあるメモリ最適化テーブルを含めて、セカンダリ データベースのデータはほぼリアルタイムです。 また、フルテキスト インデックスはセカンダリ データベースと同期されます。 多くの場合、プライマリ データベースと対応するセカンダリ データベース間のデータ待機時間は数秒です。  
   
  プライマリ データベースに適用されるセキュリティ設定は、セカンダリ データベースに保存されます。 これには、ユーザー、データベース ロール、およびアプリケーション ロールと、それぞれの権限が含まれます。また、透過的なデータ暗号化 (TDE) も含まれます (プライマリ データベースで有効な場合)。  
   

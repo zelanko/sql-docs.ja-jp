@@ -1,16 +1,16 @@
 ---
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,42 +52,42 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>引数  
 *Cert_ID*  
-明書の ID を指定します。 *Cert_ID* は int です。
+データ型 int の証明書の ID 値
   
 *Expiry_Date*  
-証明書の有効期限日を指定します。
+証明書の有効期限。
   
 *Start_Date*  
-証明書が有効になる日時を指定します。
+証明書が有効になる日付。
   
 *Issuer_Name*  
-証明書の発行者の名前を指定します。
+証明書の名前。
   
 *Cert_Serial_Number*  
-証明書のシリアル番号を指定します。
+証明書のシリアル番号。
   
 *Subject*  
-証明書のサブジェクトを指定します。
+証明書のサブジェクト。
   
  *SID*  
-証明書の SID を指定します。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
+証明書の SID。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
   
 *String_SID*  
-証明書の SID を文字列で指定します。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
+文字列としての証明書の SID。 これは、この証明書にマップされているログインまたはユーザーの SID でもあります。
   
 ## <a name="return-types"></a>戻り値の型
 プロパティは単一引用符で囲んで指定する必要があります。
   
-戻り値の型は、関数の呼び出しで指定されたプロパティによって異なります。 すべての戻り値は、戻り値の型にラップされます **sql_variant**です。
+戻り値の型は、関数の呼び出しで指定されたプロパティによって異なります。 戻り値の型 **sql_variant** は、すべての戻り値をラップします。
 -   *Expiry_Date* と *Start_Date* 返す **datetime**です。  
--   *Cert_Serial_Number*, 、*Issuer_Name*, 、*サブジェクト*, 、および *String_SID* 返す **nvarchar**です。  
+-   *Cert_Serial_Number*、*Issuer_Name*、*String_SID*、*Subject* はすべて **nvarchar** を返します。  
 -   *SID* 返します **varbinary**です。  
   
 ## <a name="remarks"></a>Remarks  
-証明書に関する情報は、[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューで確認できます。
+[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューの証明書情報を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
-証明書に対する権限が必要です。呼び出し元で、証明書に対する VIEW DEFINITION 権限が拒否されていないことも条件となります。
+証明書に関する適切なアクセス許可が必要です。また、証明書に対する呼び出し元の VIEW アクセス許可が拒否されていない必要があります。 証明書のアクセス許可の詳細については、[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) および [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md) を参照してください。
   
 ## <a name="examples"></a>使用例  
 次の例では、証明書のサブジェクトを返します。
@@ -96,7 +96,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

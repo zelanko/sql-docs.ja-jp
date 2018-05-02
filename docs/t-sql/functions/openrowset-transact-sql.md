@@ -1,8 +1,8 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: ''
+caps.latest.revision: 130
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 79de823fc3e413bff1b8538f2641a741c4524e9c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,10 @@ OPENROWSET
   
  CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }  
  データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データに **char**、**varchar**、**text** 列 (文字値が 127 より大きいか、32 未満) が含まれている場合にのみ当てはまります。  
-  
+
+> [!IMPORTANT]
+> CODEPAGE は、Linux ではサポートされていないオプションです。
+
 > [!NOTE]  
 >  フォーマット ファイルの各列に対して照合順序名を指定することをお勧めします (65001 オプションを照合順序/コード ページ仕様よりも優先する場合を除く)。  
   
@@ -230,7 +234,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
  リモートの OLE DB データ ソースにアクセスするとき、信頼関係接続のログイン ID は、クライアントの接続先サーバーからクエリの対象サーバーに自動的に委任されるわけではありません。 したがって、認証の委任を構成する必要があります。  
   
- 指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 値を *カタログ* と *スキーマ* OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、<*スキーマ***>.<***オブジェクト*> という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、<*カタログ***>.<***スキーマ***>.<***オブジェクト*> という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。  
+ 指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 値を *カタログ* と *スキーマ* OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、<*スキーマ ***>.<*** オブジェクト*> という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、<*カタログ ***>.<*** スキーマ ***>.<*** オブジェクト*> という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。  
   
  `OPENROWSET` の引数に変数は指定できません。  
   

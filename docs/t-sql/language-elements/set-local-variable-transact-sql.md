@@ -1,16 +1,16 @@
 ---
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7e7444d8e65bb040bfde68ba4cb7a0a10c35b113
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +121,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  | = ビットごとの OR と割り当て  
   
  *式 (expression)*  
- 有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *cursor_variable*  
  カーソル変数の名前を指定します。 ターゲットのカーソル変数が以前に他のカーソルを参照していた場合は、以前の参照は削除されます。  
@@ -369,7 +370,7 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## <a name="see-also"></a>参照  
- [複合演算子 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

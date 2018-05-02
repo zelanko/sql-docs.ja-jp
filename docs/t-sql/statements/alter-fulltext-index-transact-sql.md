@@ -1,16 +1,16 @@
 ---
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 
+caps.latest.revision: 95
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 022cec421b1827c525d18d04d42bdd648936d147
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 327f527ad470d36dac37bb044fe77149794c1650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  変更の追跡と WITH NO POPULATION の相関関係については、後の「解説」を参照してください。  
   
  MANUAL  
- 追跡された変更の反映を ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
+ ALTER FULLTEXT INDEX を呼び出すことによって、追跡された変更を手動で伝達されることを指定しています. START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
   
  AUTO  
  ベース テーブルでデータが変更されたときに、追跡された変更を自動的に反映すること ("*自動作成*") を指定します。 この場合、フルテキスト インデックスに対して変更は自動的に反映されますが、反映までに少し時間がかかることがあります。 AUTO は既定値です。  
@@ -215,7 +215,7 @@ ALTER FULLTEXT INDEX ON table_name
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>変更の追跡と NO POPULATION パラメーターの相関関係  
  フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと、ALTER FULLTEXT INDEX ステートメントで WITH NO POPULATION が指定されているかどうかによって決まります。 次の表は、その相関関係の結果をまとめたものです。  
   
-|変更の追跡|WITH NO POPULATION|[結果]|  
+|変更の追跡|WITH NO POPULATION|結果|  
 |---------------------|------------------------|------------|  
 |有効ではない|指定なし|インデックスで完全作成が実行されます。|  
 |有効ではない|[Specified]|ALTER FULLTEXT INDEX...START POPULATION ステートメントが実行されるまで、インデックスの作成は行われません。|  

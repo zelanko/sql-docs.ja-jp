@@ -2,7 +2,7 @@
 title: ジョブ ステップのプロパティ - [新しいジョブ ステップ]([全般] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cac9488309c176db78e213613785f8f070b15d48
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 38d21993c6a0de7bbccf1dcac9871af4b992fd43
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>ジョブ ステップのプロパティ - [新しいジョブ ステップ] ([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -244,7 +244,7 @@ JScript をジョブ ステップの言語として指定します。
 > [!IMPORTANT]  
 > パスワードで保護された [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージについては、 **[構成]** タブをクリックし、 **[パッケージ パスワード]** ダイアログ ボックスにパスワードを入力します。 入力しないと、パスワードで保護されたパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェント ジョブは失敗します。  
   
-### <a name="configurations-tab"></a>構成タブ  
+### <a name="configurations-tab"></a>[構成] タブ  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージの構成オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
 **[構成ファイル]**  
@@ -262,7 +262,7 @@ JScript をジョブ ステップの言語として指定します。
 **[下へ移動]**  
 選択された構成ファイルを下へ移動します。  
   
-### <a name="command-files-tab"></a>コマンド ファイルタブ  
+### <a name="command-files-tab"></a>[コマンド ファイル] タブ  
 パッケージのコマンド ファイルを選択します。 コマンド ファイルは、一覧に表示されている順番で処理されます。 このタブを選択するとき、次のオプションを利用できます。  
   
 **[コマンド ファイル]**  
@@ -280,7 +280,7 @@ JScript をジョブ ステップの言語として指定します。
 **[下へ移動]**  
 選択されたコマンド ファイルを下へ移動します。  
   
-### <a name="data-sources-tab"></a>データ ソースタブ  
+### <a name="data-sources-tab"></a>[データ ソース] タブ  
 パッケージの指定されたデータ ソースを表示します。  
   
 **接続マネージャー**  
@@ -292,7 +292,7 @@ JScript をジョブ ステップの言語として指定します。
 **接続文字列**  
 データ ソースの接続文字列を表示します。  
   
-### <a name="execution-options-tab"></a>実行オプションタブ  
+### <a name="execution-options-tab"></a>[実行オプション] タブ  
 パッケージの実行オプションを表示または変更します。  
   
 **[検証時に警告が発生したらパッケージを失敗とする]**  
@@ -319,7 +319,7 @@ JScript をジョブ ステップの言語として指定します。
 **[再開オプション]**  
 パッケージを再開するときに実行するアクションを選択します。  
   
-### <a name="logging-tab"></a>ログ記録タブ  
+### <a name="logging-tab"></a>[ログ記録] タブ  
 パッケージのログ プロバイダーを表示または変更します。  
   
 **[ログ プロバイダー]**  
@@ -331,7 +331,7 @@ JScript をジョブ ステップの言語として指定します。
 **[削除]**  
 ログ プロバイダーを削除します。  
   
-### <a name="set-values-tab"></a>値の設定タブ  
+### <a name="set-values-tab"></a>[値の設定] タブ  
 パッケージのプロパティ値を表示または変更します。  
   
 **[プロパティのパス]**  
@@ -343,7 +343,7 @@ JScript をジョブ ステップの言語として指定します。
 **[削除]**  
 プロパティを削除します。  
   
-### <a name="verification-tab"></a>検証タブ  
+### <a name="verification-tab"></a>[検証] タブ  
 ジョブ ステップの検証オプションを選択します。  
   
 **[署名付きパッケージのみ実行する]**  
@@ -367,7 +367,7 @@ JScript をジョブ ステップの言語として指定します。
 **[バージョン ID]**  
 バージョン ID を入力します。  
   
-### <a name="command-line-tab"></a>コマンド ラインタブ  
+### <a name="command-line-tab"></a>[コマンド ライン] タブ  
 パッケージのコマンド ライン オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
 **[元のオプションを復元する]**  

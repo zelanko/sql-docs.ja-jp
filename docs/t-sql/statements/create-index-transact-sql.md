@@ -1,16 +1,16 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -56,16 +56,17 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 
+caps.latest.revision: 223
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 431a26ae4bc8a7a00afcff70f65128e8108b500d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -280,7 +281,7 @@ CLUSTERED
  フィルター選択されたインデックスは、XML インデックスおよびフルテキスト インデックスには適用されません。 UNIQUE インデックスの場合、一意のインデックス値を持つ必要があるのは選択した行のみです。 フィルター選択されたインデックスでは IGNORE_DUP_KEY オプションを使用できません。  
   
 ON *partition_scheme_name* **( *column_name* )**  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。  
   
@@ -299,12 +300,12 @@ ON *partition_scheme_name* **( *column_name* )**
   
  指定したファイル グループに、指定したインデックスを作成します。 位置の指定がなく、テーブルまたはビューがパーティション分割されていない場合、インデックスには、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
   
- ON **"**default**"**  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
+ ON **"** default **"**  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]。  
   
  既定のファイル グループに、指定したインデックスを作成します。  
   
- この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"**default**"** または ON **[**default**]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+ この文脈での default という語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -338,14 +339,14 @@ ON *partition_scheme_name* **( *column_name* )**
   
  以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 、オブジェクトは、クラスター化列ストア インデックスに格納されたテーブルを指定できます。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、*database_name* が現在のデータベースの場合、または *database_name* が tempdb で、*object_name* が # で始まる場合に、3 つの要素で構成された名前形式 *database_name***.**[*schema_name*]**.***object_name* をサポートします。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、*database_name* が現在のデータベースの場合、または *database_name* が tempdb で、*object_name* が # で始まる場合に、3 つの要素で構成された名前形式 *database_name***.**[* schema_name *]**.***object_name* をサポートします。  
   
  **\<relational_index_option>::=**  
   
  インデックスを作成するときに使用するオプションを指定します。  
   
  PAD_INDEX = { ON | **OFF** }  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  インデックスの埋め込みを指定します。 既定値は OFF です。  
   
@@ -355,16 +356,16 @@ ON *partition_scheme_name* **( *column_name* )**
  OFF または *fillfactor* の指定なし  
  中間レベルのページはほぼ全容量が使用されます。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。  
   
- PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
+ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用されるので、PAD_INDEX オプションは、FILLFACTOR が指定されている場合にのみ有効です。 FILLFACTOR で指定されるパーセンテージで 1 行分のデータを格納できない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では内部的に、最小サイズを格納できるパーセンテージが使用されます。 中間インデックス ページの行数は、*fillfactor* の値がどれだけ小さくなっても 2 未満にはなりません。  
   
  旧バージョンと互換性のある構文では、WITH PAD_INDEX は WITH PAD_INDEX = ON と同じです。  
   
  FILLFACTOR **=***fillfactor*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 *fillfactor* が 100 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では全容量を使用するリーフ ページでインデックスが作成されます。  
   
- FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ページ内で指定されたパーセント分の空領域は動的に保持されません。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
+ FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ページ内で指定されたパーセント分の空き領域は動的に保持されません。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、クラスター化インデックスの作成時にデータが再分配されるため、100 未満の FILLFACTOR 値を使ってクラスター化インデックスを作成すると、データ用のストレージ領域のサイズに影響が生じます。  
@@ -382,7 +383,7 @@ ON *partition_scheme_name* **( *column_name* )**
  OFF  
  中間の並べ替え結果はインデックスと同じデータベースに格納されます。  
   
- インデックスを作成するためにユーザー データベース内に必要となる領域の他に、**tempdb** には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳しくは、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」をご覧ください。  
+ インデックスを作成するためにユーザー データベース内に必要となる領域の他に、**tempdb** には、並べ替えの中間結果を格納するためにほぼ同じ大きさの追加領域が必要になります。 詳細については、「[インデックスの SORT_IN_TEMPDB オプション](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)」を参照してください。  
   
  旧バージョンと互換性のある構文では、WITH SORT_IN_TEMPDB は WITH SORT_IN_TEMPDB = ON と同じです。  
   
@@ -476,7 +477,7 @@ ONLINE = { ON | **OFF** }
 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
   
 ALLOW_ROW_LOCKS = { **ON** | OFF }  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
   
@@ -487,12 +488,12 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
  行ロックは使用されません。  
   
 ALLOW_PAGE_LOCKS = { **ON** | OFF }  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
  ON  
- ページにアクセスするとき、行ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。  
+ ページにアクセスするとき、行ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。  
   
  OFF  
  ページ ロックは使用されません。  
@@ -502,7 +503,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  インデックス操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
- *max_degree_of_parallelism* には次の値を指定できます。  
+ *max_degree_of_parallelism* は次のように指定できます。  
   
  @shouldalert  
  並列プラン生成を抑制します。  
@@ -516,7 +517,7 @@ MAXDOP = *max_degree_of_parallelism*
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]  
-> 並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」および「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
+> 並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」および「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
  DATA_COMPRESSION  
  指定したインデックス、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。  
@@ -530,10 +531,10 @@ MAXDOP = *max_degree_of_parallelism*
  PAGE  
  ページの圧縮を使用して、インデックスまたは指定したパーティションが圧縮されます。  
   
- 圧縮の詳細については、「[データの圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
+ 圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**      
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  DATA_COMPRESSION 設定を適用するパーティションを指定します。 インデックスがパーティション分割されていない場合に ON PARTITIONS 引数を使用すると、エラーが発生します。 ON PARTITIONS 句を指定しないと、パーティション インデックスのすべてのパーティションに対して DATA_COMPRESSION オプションが適用されます。  
   
@@ -617,7 +618,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  SET オプションが正しくないと、次の状態が発生する場合があります。  
   
 -   フィルター選択されたインデックスが作成されません。  
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエラーが生成され、インデックスのデータを変更していた INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントがロールバックされます。  
 -   Transact-SQL ステートメントの実行プランで、クエリ オプティマイザーがインデックスを無視します。  
   
  フィルター選択されたインデックスについて詳しくは、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」をご覧ください。  
@@ -939,7 +940,7 @@ GO
 ### <a name="j-create-a-partitioned-index"></a>J. パーティション インデックスを作成する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの既存のパーティション構成 `TransactionsPS1` に非クラスター化パーティション インデックスを作成します。 この例では、パーティション インデックスのサンプルがインストールされていることを前提としています。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 ```sql  
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID  

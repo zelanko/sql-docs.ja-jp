@@ -1,27 +1,27 @@
 ---
-title: "分散型可用性グループを構成する (Always On 可用性グループ) |Microsoft Docs"
-ms.custom: 
+title: 分散型可用性グループを構成する (Always On 可用性グループ) |Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0306d075998380efc599e82386e49496db3cdaaa
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: d39e9c1decf1f41c47b7dfc9e161996bfa9b9951
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-distributed-availability-group"></a>分散型可用性グループを構成する  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** で、各可用性グループのリスナーと、可用性グループのデータベース ミラーリング エンドポイントを指定します。 この例では、ポート `5022` です (リスナーの作成に使用したポート `60173` ではありません)。  
+>  **LISTENER_URL** で、各可用性グループのリスナーと、可用性グループのデータベース ミラーリング エンドポイントを指定します。 この例では、ポート `5022` です (リスナーの作成に使用したポート `60173` ではありません)。 Azure でインスタンスにロード バランサーを使用している場合、[分散型可用性グループのポートの負荷分散の規則を追加します](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 SQL Server インスタンスのポートだけでなく、リスナー ポートの規則を追加します。 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>2 つ目のクラスターの分散型可用性グループに参加する  
  次に、2 つ目の WSFC の分散型可用性グループに参加します。  

@@ -1,16 +1,16 @@
 ---
 title: ALTER VIEW (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f20a6326f33f0cd41116d3a3c20dcdfad163eea2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ AS select_statement
 >  ビューの列では、列名に対する権限は、基底となるデータのソースがどこにあるかにかかわらず、CREATE VIEW ステートメントまたは ALTER VIEW ステートメントを超えて適用されます。 たとえば、CREATE VIEW ステートメントで **SalesOrderID** 列に対して権限が与えられる場合、ALTER VIEW ステートメントは **SalesOrderID** 列の名前を **OrderRef** などに変更でき、その後も **SalesOrderID** を使用してビューに関連付けられた権限を保持します。  
   
  ENCRYPTION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ALTER VIEW ステートメントのテキストを含んでいる [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) のエントリを暗号化します。 WITH ENCRYPTION を指定すると、そのビューを SQL Server レプリケーションの一部としてパブリッシュできなくなります。  
   
  SCHEMABINDING  
- 基になるテーブルのスキーマにビューをバインドします。 SCHEMABINDING を指定すると、ビュー定義に影響する変更をベース テーブルに加えられなくなります。 まずビュー定義を変更または削除して、変更するテーブルとの依存関係を解消する必要があります。 SCHEMABINDING を使用する場合は、*select_statement* に、参照されるテーブル、ビュー、またはユーザー定義関数の名前として、2 つの部分から構成される名前 (*schema***.***object*) を指定する必要があります。 参照されるオブジェクトは、すべて同じデータベース内にあることが必要です。  
+ 基になるテーブルのスキーマにビューをバインドします。 SCHEMABINDING を指定すると、ビュー定義に影響する変更をベース テーブルに加えられなくなります。 まずビュー定義を変更または削除して、変更するテーブルとの依存関係を解消する必要があります。 SCHEMABINDING を使用する場合は、*select_statement* に、参照されるテーブル、ビュー、またはユーザー定義関数の名前として、2 つの部分から構成される名前 (*schema ***.*** object*) を指定する必要があります。 参照されるオブジェクトは、すべて同じデータベース内にあることが必要です。  
   
  SCHEMABINDING 句を指定して作成されたビューが削除または変更されて、スキーマ バインドがなくならない限り、そのビューに参加しているビューまたはテーブルは削除できません。 スキーマ バインドが残っている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]からエラーが返されます。 また、ビュー定義に影響を与える ALTER TABLE ステートメントを、スキーマ バインドを持つビューに参加しているテーブルに対して実行すると、ステートメントは失敗します。  
   

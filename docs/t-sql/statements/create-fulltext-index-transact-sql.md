@@ -1,16 +1,16 @@
 ---
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXT_INDEX_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 
+caps.latest.revision: 110
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 47808b1214157b393cae5cfcc193f5b482b53601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5ac9e0f05e639e74dd83cdea7c8f7030e6249b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  *language_term* を指定すると、それが表す言語が、**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext** 列のデータのインデックス付けに使われます。 クエリ実行時に、列に対するフルテキスト述語の一部として *language_term* を指定しない場合は、ここで指定した言語がクエリでの既定の言語になります。  
   
- *language_term* を文字列で指定する場合は、syslanguages システム テーブルの alias 列の値と同じ値を指定します。 文字列の場合は、**'***language_term***'** のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数値で指定する場合は、「0x」の後に LCID の 16 進数値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
+ *language_term* を文字列で指定する場合は、syslanguages システム テーブルの alias 列の値と同じ値を指定します。 文字列は、**'***language_term***'** のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数値で指定する場合は、「0x」の後に LCID の 16 進数値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
  値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
@@ -127,7 +127,7 @@ CREATE FULLTEXT INDEX ON table_name
  フルテキスト インデックスの対象となるテーブル列の変更 (更新、削除、または挿入) が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってフルテキスト インデックスに反映されるかどうかを指定します。 WRITETEXT および UPDATETEXT によるデータの変更は、フルテキスト インデックスには反映されず、変更の監視でも取得されません。  
   
  MANUAL  
- 追跡された変更の反映を ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
+ ALTER FULLTEXT INDEX を呼び出すことによって、追跡された変更を手動で反映する必要がありますを指定しています. START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
   
  **AUTO**  
  ベース テーブルでデータが変更されたときに、追跡された変更を自動的に反映すること ("*自動作成*") を指定します。 この場合、フルテキスト インデックスに対して変更は自動的に反映されますが、反映までに少し時間がかかることがあります。 AUTO は既定値です。  
@@ -170,7 +170,7 @@ CREATE FULLTEXT INDEX ON table_name
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>変更の追跡と NO POPULATION パラメーターの相関関係  
  フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと、ALTER FULLTEXT INDEX ステートメントで WITH NO POPULATION が指定されているかどうかによって決まります。 次の表は、その相関関係の結果をまとめたものです。  
   
-|変更の追跡|WITH NO POPULATION|[結果]|  
+|変更の追跡|WITH NO POPULATION|結果|  
 |---------------------|------------------------|------------|  
 |有効ではない|指定なし|インデックスで完全作成が実行されます。|  
 |有効ではない|[Specified]|ALTER FULLTEXT INDEX...START POPULATION ステートメントが実行されるまで、インデックスの作成は行われません。|  

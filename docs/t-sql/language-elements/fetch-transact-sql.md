@@ -1,16 +1,16 @@
 ---
 title: FETCH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5102a72cd08af6627a8954fe12b4a696618cea1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,10 +73,10 @@ FETCH
  カーソル内の最終行を返し、これを現在の行にします。  
   
  ABSOLUTE { *n*| @*nvar*}  
- *n* または @*nvar* が正の値の場合は、カーソルの先頭から *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、カーソルの終端から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、行を返しません。 *n* は整数の定数である必要があります。また、*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
+ *n* または @*nvar* が正の値の場合は、カーソルの先頭から *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、カーソルの終端から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
  RELATIVE { *n*| @*nvar*}  
- *n* または @*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または @*nvar* を負の値または 0 に設定して FETCH RELATIVE を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
+ *n* または @*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または @*nvar* を負の値または 0 に設定して FETCH RELATIVE を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
  GLOBAL  
  *cursor_name* でグローバル カーソルを参照することを指定します。  
@@ -218,6 +218,6 @@ GO
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
+ [開く (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)  
   
   

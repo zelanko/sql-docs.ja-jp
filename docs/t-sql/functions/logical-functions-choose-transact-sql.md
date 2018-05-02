@@ -1,16 +1,16 @@
 ---
-title: "CHOOSE (TRANSACT-SQL) |Microsoft ドキュメント"
-ms.custom: 
+title: CHOOSE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 47c1b132f83999e752f9f16392f521323d546663
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="logical-functions---choose-transact-sql"></a>論理関数の CHOOSE (TRANSACT-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  値のリストから指定したインデックス位置にある項目を返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の値の一覧から指定されたインデックスにある項目を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,18 +46,18 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *インデックス*  
+ *index*  
  後に続く項目のリストへの 1 から始まるインデックスを表す整数式。  
   
- 指定したインデックス値が数値データ型を以外の値がかどうか**int**値は整数を暗黙的に変換し、します。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
+ 入力されたインデックス値が **int** 以外の数値データ型である場合、暗黙的に値が整数に変換されます。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
   
- *val_1... val_n*  
+ *val_1 … val_n*  
  任意のデータ型のコンマ区切り値のリスト。  
   
 ## <a name="return-types"></a>戻り値の型  
  関数に渡される一連の型の中から最も優先順位の高いデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  CHOOSE は、配列へのインデックスと同じように機能します。ここで、配列はインデックス引数の後に続く引数で構成されます。 インデックス引数は、後続の値のうちどの値が返されるのかを決定します。  
   
 ## <a name="examples"></a>使用例  
@@ -77,7 +77,7 @@ Developer
 (1 row(s) affected)  
 ```  
   
- 次の例の値に基づく単純な文字列を返します、`ProductCategoryID`列です。  
+ 次の例では、`ProductCategoryID` 列の値に基づく単純な文字列が返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,6 +130,6 @@ Sales Representative                               2007-07-01 Summer
 ```  
   
 ## <a name="see-also"></a>参照  
- [Iif 関数と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

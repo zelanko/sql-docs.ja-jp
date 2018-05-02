@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -203,14 +204,14 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *n* の既定値は `7` です。  
   
  `float` [ ( *n* ) ]  
- 浮動小数点数値データで使用するおおよその数のデータを入力します。 浮動小数点データは概数、つまりデータ型の範囲内のすべての値を正確に表すことができます。 *n* では、`float` の仮数を指数表記で格納するために使用するビット数を指定します。 したがって、*n* によって、有効桁数および記憶域のサイズが決まります。 *n* を指定する場合、`1` から `53` までの値にする必要があります。 *n* の既定値は `53` です。  
+ 浮動小数点数値データで使用するおおよその数のデータを入力します。 浮動小数点データは概数、つまりデータ型の範囲内のすべての値を正確に表すことができます。 *n* では、`float` の仮数を指数表記で格納するために使用するビット数を指定します。 そのため、*n* は、有効桁数およびストレージのサイズを決定します。 *n* を指定する場合、`1` から `53` までの値にする必要があります。 *n* の既定値は `53` です。  
   
 | *n* 値 | 有効桁数 | ストレージのサイズ |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 桁の数字  | 4 バイト      |  
 | 25-53  | 15 桁 | 8 バイト      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、*n* を、使用可能な 2 つの値のいずれかの値として処理します。 `1`<= *n* <= `24` の場合、*n* は `24` として処理されます。 `25` <= *n* <= `53` の場合、*n* は `53` として処理されます。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 `1`<= *n* <= `24` の場合、*n* は `24` として処理されます。 `25` <= *n* <= `53` の場合、*n* は `53` として処理されます。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` データ型は、*n* が `1` ～ `53` の値をとるすべてのケースにおいて ISO 標準に準拠しています。 倍精度のシノニムは `float(53)` です。  
   
@@ -255,22 +256,22 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `1`、`0`、または `NULL の値をとる整数型です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] はビット列の記憶域を最適化します。 テーブル内で 8 個以下のビット列がある場合は、列が 1 バイトとして格納されます。 9 ～ 16 ビット列の場合、列は 2 バイトとしては保存されなど。  
   
  `nvarchar` [ ( *n* | `max` ) ]  -- `max` は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にのみ適用されます。  
- 可変長の UNICODD 文字データです。 *n* には 1 ～ 4000 の値を指定できます。 `max` は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 記憶域のサイズ (バイト単位) は、入力した + 2 バイトの 2 倍の数です。 入力データの長さは 0 文字でもかまいません。  
+ 可変長の UNICODD 文字データです。 *n* 1 ～ 4000 の値を指定できます。 `max` は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 記憶域のサイズ (バイト単位) は、入力した + 2 バイトの 2 倍の数です。 入力データの長さは 0 文字でもかまいません。  
   
  `nchar` [ ( *n* ) ]  
-  *n* 文字の長さを持つ、固定長の Unicode 文字データです。 *n* には `1` ～ `4000` の値を指定する必要があります。 記憶域のサイズは、*n* の 2 倍のバイト数です。  
+ *n* 文字の長さを持つ、固定長の Unicode 文字データです。 *n* には `1` ～ `4000` の値を指定する必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max` は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にのみ適用されます。   
  *n* バイトの長さを持つ、可変長の Unicode 以外の文字データです。 *n* には `1` ～ `8000` の値を指定する必要があります。 `max` は最大記憶域サイズが 2^31-1 バイト (2 GB) であることを示します。記憶領域のサイズは、入力されたデータの実際の長さに 2 バイトを加えたものとなります。  
   
  `char` [ ( *n* ) ]  
- *n* バイトの長さを持つ、固定長の Unicode 以外の文字データです。 *n* には `1` ～ `8000` の値を指定する必要があります。 記憶領域のサイズは *n* バイトです。 *n* の既定値は `1` です。  
+ *n* バイトの長さを持つ、固定長の Unicode 以外の文字データです。 *n* には `1` ～ `8000` の値を指定する必要があります。 ストレージのサイズは *n* バイトです。 *n* の既定値は `1` です。  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max` は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にのみ適用されます。  
  可変長 binary データ。 *n* には、`1` ～ `8000` の値を指定できます。 `max` は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 記憶領域のサイズは、入力されたデータの実際の長さに 2 バイトを加えたものとなります。 *n* の既定値は 7 です。  
   
  `binary` [ ( *n* ) ]  
- *n* バイトの長さを持つ、固定長のバイナリ データです。 *n* には、`1` ～ `8000` の値を指定できます。 記憶領域のサイズは *n* バイトです。 *n* の既定値は `7` です。  
+ *n* バイトの長さを持つ、固定長のバイナリ データです。 *n* には、`1` ～ `8000` の値を指定できます。 ストレージのサイズは *n* バイトです。 *n* の既定値は `7` です。  
   
  `uniqueidentifier`  
  16 バイトの GUID です。  

@@ -2,7 +2,7 @@
 title: プロセス実行タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: control-flow
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: ''
+caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf81fa613863d01bc672aba97af796bbd27ad896
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: d5ee22a658fa537d58e395aea766699350269984
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
   プロセス実行タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルを実行します。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/21/2018
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](http://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
+ **StandardInputVariable** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、アプリケーションから **Console.ReadLine** メソッドを呼び出して、入力を読み取ります。 詳細については、 [](http://go.microsoft.com/fwlink/?LinkId=129201)クラス ライブラリで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 03/21/2018
  プロセッサのエラー出力をキャプチャする変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
   
  **[FailTaskIfReturnCodeIsNotSuccessValue]**  
- プロセス終了コードが **[SuccessValue]**で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  
+ プロセス終了コードが **[SuccessValue]** で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  
   
  **[SuccessValue]**  
  実行可能ファイルが正常に終了した場合に返される値を指定します。 既定では、この値は **0**に設定されます。  

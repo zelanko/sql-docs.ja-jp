@@ -1,16 +1,16 @@
 ---
-title: "PolyBase の概要 | Microsoft Docs"
-ms.custom: 
+title: PolyBase の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>PolyBase の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   SQL Server Management Studio (SSMS) で PolyBase オブジェクトを管理する方法を理解できる  
   
--   PolyBase オブジェクトを使用するクエリの例を確認できる  
-  
-## <a name="prerequisites"></a>Prerequisites  
- 次のような [SQL Server (64 ビット)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) のインスタンス:  
-  
--   Microsoft .NET Framework 4.5。  
-  
--   Oracle Java SE RunTime Environment (JRE) バージョン 7.51 以上 (64 ビット)。 ( [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) または [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) を使用できます)。 [Java SE ダウンロード](http://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーは失敗します。   
-  
--   最小メモリ: 4 GB  
-  
--   最小ハード ディスク容量: 2 GB    
-
--   TCP/IP 接続を有効にする必要があります。 (「 [サーバー ネットワーク プロトコルを有効または無効にする](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。)SQL Server Developer エディションおよび Express エディションでは、TCP/IP が既定で無効になっています。 PolyBase はインストールできますが、TCP/IP が有効になるまで完全には開始できません。 PolyBase の機能を使用するには、TCP/IP を手動で有効にする必要があります。 
-  
- 
- 次のいずれかの外部データ ソース:  
-  
--   Hadoop クラスター。 サポートされているバージョンについては、「 [PolyBase を構成する](#supported)」を参照してください。  
-
--   Azure BLOB ストレージ
-
-> [!NOTE]
->   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。 
+-   PolyBase オブジェクトを使用するクエリの例を確認できる    
 
 ## <a name="install-polybase"></a>PolyBase のインストール  
- PolyBase をインストールしていない場合は、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」をご覧ください。  
+PolyBase をインストールしていない場合は、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
   
 ### <a name="how-to-confirm-installation"></a>インストールの確認方法  
  インストールが完了したら、次のコマンドを実行して、PolyBase が正常にインストールされていることを確認します。 PolyBase がインストールされている場合は 1 を返し、それ以外の場合は 0 を返します。  
@@ -354,7 +331,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
     ```  
   
 ## <a name="managing-polybase-objects-in-ssms"></a>SSMS での PolyBase オブジェクトの管理  
- SSMS では、外部テーブルが別のフォルダー **[外部テーブル]**に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]**の下のサブフォルダーにあります。  
+ SSMS では、外部テーブルが別のフォルダー **[外部テーブル]** に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
   
  ![SSMS の PolyBase オブジェクト](../../relational-databases/polybase/media/polybase-management.png "SSMS の PolyBase オブジェクト")  
   

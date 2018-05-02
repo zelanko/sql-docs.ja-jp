@@ -1,36 +1,36 @@
 ---
-title: "変更データ キャプチャについて (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 変更データ キャプチャについて (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6347faf1a4de6590063f892cf44f5d58c90cdc0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>変更データ キャプチャについて (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-変更データ キャプチャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティを記録して、 変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更された行に対応する列情報が、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされ、追跡対象となるソース テーブルの列構造がミラー化された変更テーブルに格納されます。 コンシューマーは、用意されているテーブル値関数を使用して、変更データに体系的にアクセスできます。  
+  変更データ キャプチャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに対して適用された挿入、更新、削除の各アクティビティを記録して、 変更の詳細を、利用しやすいリレーショナル形式で格納します。 変更された行に対応する列情報が、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされ、追跡対象となるソース テーブルの列構造がミラー化された変更テーブルに格納されます。 コンシューマーは、用意されているテーブル値関数を使用して、変更データに体系的にアクセスできます。  
   
  この技術の対象となるデータ コンシューマーの好例が、ETL (抽出、変換、読み込み) アプリケーションです。 ETL アプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース テーブルからデータ ウェアハウスやデータ マートに変更データをインクリメンタルに読み込みます。 ソース テーブルの変更をデータ ウェアハウス内のソース テーブルの表現に反映する必要がありますが、ソースのレプリカを更新するエンド ツー エンドのテクノロジでは不適切です。 ここで必要となるのは、対象となる異質なデータ表現に対して適用できるように構成された変更データの確実なストリームです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更データ キャプチャはこの技術を提供します。  
   
@@ -113,7 +113,33 @@ ms.lasthandoff: 02/15/2018
  この 2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブはどちらも、変更データ キャプチャ環境の基本的なニーズに対応できるように十分な柔軟性と構成可能性を備えていますが、 コア機能を提供する基になるストアド プロシージャが公開されているため、さらなるカスタマイズも可能です。  
   
  NETWORK SERVICE アカウントでデータベース エンジン サービスまたは SQL Server エージェント サービスを実行中の場合、変更データ キャプチャは正しく機能できません。 この結果、エラー 22832 が発生します。  
-  
+ 
+## <a name="working-with-database-and-table-collation-differences"></a>データベースとテーブルの照合順序が違う場合の対応
+
+データベースの照合順序と、変更データ キャプチャ用に構成されたテーブルの列の照合順序が異なる状況について認識しておくことが重要です。 CDC は、中間記憶域を使用して、サイド テーブルを設定します。 テーブルにデータベースの照合順序とは異なる照合順序を持つ CHAR または VARCHAR 型の列があり、これらの列に非 ASCII 文字 (2 バイト DBCS 文字など) が格納される場合、CDC は変更されたデータとベース テーブル内のデータの整合性を維持できない可能性があります。 これは、中間記憶域の変数には照合順序を関連付けることができないためです。
+
+変更キャプチャ データとベース テーブルの整合性を保つには、次のいずれかの方法を検討してください。
+
+- 非 ASCII データを格納する列には NCHAR または NVARCHAR データ型を使用します。
+
+- または、列とデータベースに同じ照合順序を使用します。
+
+たとえば、SQL_Latin1_General_CP1_CI_AS の照合順序を使用するデータベースがある場合について、次のようなテーブルを考えます。
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
+
+列 C2 の照合順序が異なるので (Chinese_PRC_CI_AI)、この列に対するバイナリ データの CDC は失敗する可能性があります。 この問題を回避するには、NVARCHAR を使用します。
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

@@ -1,17 +1,17 @@
 ---
-title: "ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs"
-description: "SQL Server および Azure SQL Database で、自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します"
-ms.custom: 
+title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
+description: SQL Server および Azure SQL Database で、自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します
+ms.custom: ''
 ms.date: 12/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 
+caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5432a43a2e9207666cc88da722425006454cdd0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -315,7 +315,7 @@ SET
   
  このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_create_stats_on 列、または DATABASEPROPERTYEX 関数の IsAutoCreateStatistics プロパティを調べてください。  
   
- 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」を参照してください。  
+ 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。  
   
  INCREMENTAL = ON | OFF  
  AUTO_CREATE_STATISTICS が ON の場合に INCREMENTAL を ON に設定すると、増分統計がサポートされているときは常に、自動的に作成される統計が増分統計となります。 既定値は OFF です。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
@@ -990,7 +990,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 > [!IMPORTANT]  
 >  今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_PADDING が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 ANSI_PADDING は常に ON に設定することをお勧めします。 計算列やインデックス付きビューのインデックスを作成または操作するときには、ANSI_PADDING を ON に設定する必要があります。  
   
- **char(*n*)** および **binary(*n*)** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングが行われますが、ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char(*n*)** および **binary(*n*)** 列には、常に列の長さに合うようにパディングが行われます。  
+ **char(*n*)** および **binary(*n*)** 列が NULL を許容する場合は、ANSI_PADDING を ON に設定すると、列の長さに合うようにパディングが行われますが、ANSI_PADDING を OFF に設定すると、末尾の空白および 0 は切り捨てられます。 **char(*n*)** および **binary(*n*)** 列が NULL を許容しない場合は、常に列の長さに合うようにパディングが行われます。  
   
  SET ステートメントを使用した接続レベルの設定は、ANSI_PADDING に関するデータベースレベルの既定の設定よりも優先されます。 既定では、ODBC クライアントと OLE DB クライアントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するときに、そのセッションの ANSI_PADDING を ON に設定する接続レベルの SET ステートメントを実行します。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
   

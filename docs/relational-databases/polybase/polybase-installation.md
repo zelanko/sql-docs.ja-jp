@@ -1,16 +1,16 @@
 ---
-title: "PolyBase のインストール | Microsoft Docs"
-ms.custom: 
+title: PolyBase のインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 02/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4aefc608d16245a2cb28245a87beb6b165489fab
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fbb861dda4b837bc3f3003edf357c89efaa4eb88
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="polybase-installation"></a>PolyBase のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,23 @@ ms.lasthandoff: 02/24/2018
   
 ## <a name="prerequisites"></a>Prerequisites  
   
--   64 ビット SQL Server 評価版。  
+- 64 ビット SQL Server 評価版。  
   
--   Microsoft .NET Framework 4.5。  
+- Microsoft .NET Framework 4.5。  
+
+- Oracle Java SE Runtime Environment (JRE). バージョン 7 (7.51 以降) と 8 がサポートされています ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) または [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) が機能します)。 [Java SE ダウンロード](http://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーは失敗します。 JRE9 と JRE10 はサポートされていません。
+    
+- 最小メモリ: 4 GB。  
   
--   Oracle Java SE RunTime Environment (JRE) バージョン 7.51 または 8 (64 ビット) ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) または [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) が動作します)。 [Java SE ダウンロード](http://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーは失敗します。 JRE 9 以降は、SQL Server 2017 Cumulative Update 4 以降がない場合には機能しません。 JRE 8 をインストールし、PolyBase をインストールしてから JRE 9 をアップグレードできます。 
+- 最小ハード ディスク容量: 2 GB。  
   
--   最小メモリ: 4 GB。  
-  
--   最小ハード ディスク容量: 2 GB。  
-  
--   Polybase が正常に機能するは、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で Polybase が正常に機能するためには、TCP/IP 接続を有効にする必要があります (「[Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」 (サーバー ネットワーク プロトコルを有効または無効にする) を参照してください)。
+- Polybase が正常に機能するは、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で Polybase が正常に機能するためには、TCP/IP 接続を有効にする必要があります (「[Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」 (サーバー ネットワーク プロトコルを有効または無効にする) を参照してください)。
+
+- Azure blob または Hadoop クラスターのいずれかである外部データ ソース。 Hadoop のサポートされているバージョンについては、「[PolyBase を構成する](#supported)」を参照してください。  
+
+
+> [!NOTE]
+>   Hadoop に対して計算プッシュダウン機能を使用する予定の場合、ターゲットの Hadoop クラスターに HDFS のコア コンポーネントの Yarn/MapReduce があり、Jobhistory サーバーが有効であることを確認する必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、JobHistory Server からステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。 
   
  **注**  
   
@@ -60,16 +66,16 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
   
 1.  **SQL Server インストール センター**を実行します。 SQL Server インストール メディアを挿入し、 **Setup.exe**をダブルクリックします。  
   
-2.  **[インストール]**をクリックし、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]**をクリックします。  
+2.  **[インストール]** をクリックし、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
   
-3.  [機能の選択] ページで、 **[外部データ用 PolyBase クエリ サービス]**を選択します。  
+3.  [機能の選択] ページで、 **[外部データ用 PolyBase クエリ サービス]** を選択します。  
   
 4.  [Server の構成] ページで、 **SQL Server PolyBase エンジン サービス** と SQL Server PolyBase データ移動サービスを同じアカウントで実行するように構成します。  
   
     > **重要:** PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase データ移動サービスを、同じドメイン アカウントで実行する必要があります。  
     > PolyBase のスケール アウトを参照してください。  
   
-5.  **[PolyBase の構成]**ページで、次の 2 つのオプションのいずれかを選択します。 詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md) 」を参照してください。  
+5.  **[PolyBase の構成]** ページで、次の 2 つのオプションのいずれかを選択します。 詳細については、「 [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md) 」を参照してください。  
   
     -   スタンドアロンの PolyBase 対応インスタンスとして、 SQL Server インスタンスを使用します  
   
@@ -79,7 +85,7 @@ PolyBase をスタンドアロンとスケールアウト グループのいず�
   
          このオプションを選択すると、Microsoft Distributed Transaction Coordinator (MSDTC) ファイアウォール接続も有効になり、MSDTC レジストリの設定が変更されます。  
   
-6.  **[PolyBase の構成]**ページで、少なくとも 6 つのポートを含むポート範囲を指定します。 SQL Server セットアップにより、この範囲の最初の 6 つの利用可能なポートが割り当てられます。  
+6.  **[PolyBase の構成]** ページで、少なくとも 6 つのポートを含むポート範囲を指定します。 SQL Server セットアップにより、この範囲の最初の 6 つの利用可能なポートが割り当てられます。  
   
 ##  <a name="installing"></a> コマンド プロンプトを使用してインストールする  
  次の表の値を使用して、インストール スクリプトを作成します。 **SQL Server PolyBase エンジン** と **SQL Server PolyBase データ移動サービス** の 2 つのサービスは、同じアカウントで実行する必要があります。 PolyBase スケールアウト グループで、すべてのノード上の PolyBase サービスを、同じドメイン アカウントで実行する必要があります。  
@@ -134,11 +140,11 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 #### <a name="to-enable-the-firewall-rules"></a>ファイアウォール規則を有効にするには  
   
--   **[コントロール パネル]**を開きます。  
+-   **[コントロール パネル]** を開きます。  
   
--   **[システムとセキュリティ]**をクリックし、 **[Windows ファイアウォール]**をクリックします。  
+-   **[システムとセキュリティ]** をクリックし、 **[Windows ファイアウォール]** をクリックします。  
   
--   **[詳細設定]**をクリックして、 **[受信の規則]**をクリックします。  
+-   **[詳細設定]** をクリックして、 **[受信の規則]** をクリックします。  
   
 -   無効になっている規則を右クリックして、**[規則の有効化]** をクリックします。  
   

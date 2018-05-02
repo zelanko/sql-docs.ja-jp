@@ -1,16 +1,16 @@
 ---
-title: "RESTORE の引数 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: RESTORE の引数 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
+caps.latest.revision: 154
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d97ddc0e186a4234fcebf895734e00cc37d36ec0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **サポートしているステートメント:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- ログまたはデータベース全体の復元先データベースを指定します。 変数 (**@***database_name_var*) として指定する場合、この名前は、文字列定数 (**@***database_name_var* = *database*_*name*) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
+ ログまたはデータベース全体の復元先データベースを指定します。 変数 (**@***database_name_var*) として指定する場合、この名前は、文字列定数 (**@***database_name_var* = *database*_* name*) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **サポートしているステートメント:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +98,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  読み書き可能なファイル グループをすべて選択します。 このオプションは、読み書き可能なファイル グループを復元した後で、読み取り専用のファイル グループを復元する場合に特に便利です。  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  ページ復元の対象となる 1 ページまたは複数ページのリストを指定します (ページ復元は、完全復旧モデルまたは一括ログ復旧モデルを使用しているデータベースに対してのみサポートされています)。 値は次のとおりです。  
   
 PAGE  
@@ -135,7 +135,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 通常、バッ�
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Is the logical name, which must follow the rules for identifiers, of the backup device(s) created by **sp_addumpdevice** from which the database is restored.変数 (**@***logical_backup_device_name_var*) として指定する場合、バックアップ デバイス名は、文字列定数 (**@***logical_backup_device_name_var* = *logical_backup_device_name*) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 名前付きのディスクまたはテープ デバイスからバックアップを復元することを許可します。ディスクとテープのデバイスの種類は、`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` や `TAPE ='\\\\.\TAPE0'` のように、デバイスの実際の名前 (たとえば、完全なパスとファイル名) を使用して指定する必要があります。変数 (**@***physical_backup_device_name_var*) として指定する場合、デバイス名は、文字列定数 (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 名前付きのディスクまたはテープ デバイスからバックアップを復元することを許可します。ディスクとテープのデバイスの種類は、`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` や `TAPE ='\\\\.\TAPE0'` のように、デバイスの実際の名前 (たとえば、完全なパスとファイル名) を使用して指定する必要があります。変数 (**@***physical_backup_device_name_var*) として指定する場合、デバイス名は、文字列定数 (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
   
  ネットワーク サーバーを UNC 名で指定する場合は、デバイスの種類に DISK を指定してください (UNC 名にはマシン名を含める必要があります)。 UNC 名を使用する方法の詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   
@@ -354,7 +354,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  復元操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセスで仮想アドレス空間が不足し、"メモリ不足" エラーの原因となる場合があります。  
   
- バッファーで使用される領域の合計は、*buffercount***\****maxtransfersize* で決定されます。  
+ バッファーで使用される領域の合計は、*buffercount***\**** maxtransfersize* で決定されます。  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **サポートしているステートメント:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -429,7 +429,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  これ以外の復元ステートメントで NOREWIND を指定するとエラーが発生します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ操作の後にテープを開いたままにしておくことを指定します。 このオプションを使用すると、1 つのテープに対して複数のバックアップ操作を実行する場合のパフォーマンスを向上できます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ操作後にテープを開いたままにしておくことを指定します。 このオプションを使用すると、1 つのテープに対して複数のバックアップ操作を実行する場合のパフォーマンスを向上できます。  
   
  NOREWIND は暗黙的に NOUNLOAD も意味しています。この 2 つのオプションを同一の RESTORE ステートメント内で同時に使用することはできません。  
   
@@ -511,7 +511,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  詳細については、「[SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  復旧を、指定された復旧ポイントに指定します。 指定したトランザクションは復旧に含められますが、このトランザクションがコミットされるのは、トランザクションの実際の生成時に既にコミットされていた場合のみです。  
   
  RESTORE DATABASE と RESTORE LOG の両方で *lsn_number* パラメーターがサポートされます。 このパラメーターは、ログ シーケンス番号を指定します。  
@@ -525,7 +525,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  詳細については、「[マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」と「[ログ シーケンス番号への復旧 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)」を参照してください。  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  復旧を、指定された復旧ポイントまでに指定します。 指定したトランザクションは復旧に含められず、WITH RECOVERY を使用していればロールバックされます。  
   
  RESTORE DATABASE と RESTORE LOG の両方で *lsn_number* パラメーターがサポートされます。 このパラメーターは、ログ シーケンス番号を指定します。  

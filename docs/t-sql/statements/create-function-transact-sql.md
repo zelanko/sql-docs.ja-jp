@@ -1,16 +1,16 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FUNCTION
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 
+caps.latest.revision: 162
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 072d8fabf26e99137e29f6d1eb42556a6f6ad225
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -368,9 +368,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
+ *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
@@ -450,7 +450,7 @@ RETURNS return_data_type
  COLLATE *collation_name*  
  列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 照合順序の一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。  
   
- COLLATE 句を使用して照合順序を変更できるのは、**char**データ型、**varchar** データ型、**nchar** データ型、**nvarchar** データ型の列だけです。  
+ COLLATE 句を使用して照合順序を変更できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列だけです。  
   
  CLR テーブル値関数には COLLATE を指定できません。  
   
@@ -653,7 +653,7 @@ RETURNS return_data_type
   
 |システム ビュー|Description|  
 |-----------------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|以下の「例」の E をご覧ください。|  
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|以下の「例」の E を参照してください。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR ユーザー定義関数の情報を表示します。|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|ユーザー定義関数で定義されているパラメーターの情報を表示します。|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|関数が参照する基になるオブジェクトを表示します。|  

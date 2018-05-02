@@ -1,33 +1,35 @@
 ---
-title: "[テーブルのプロパティ](Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: '[テーブルのプロパティ](Visual Database Tools) | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e4b490245618493bbe5c13c169421643135239a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5740094cc10868e2b6d46050a1c86bdceffb41bf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] \(Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 以下のプロパティは、テーブル デザイナーで右クリックして [プロパティ] をクリックすると開く [プロパティ] ウィンドウに表示されます。 特に断りのない限り、テーブルが選択されているときにこれらのプロパティを [プロパティ] ウィンドウで編集できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+以下のプロパティは、テーブル デザイナーで右クリックして [プロパティ] をクリックすると開く [プロパティ] ウィンドウに表示されます。 特に断りのない限り、テーブルが選択されているときにこれらのプロパティを [プロパティ] ウィンドウで編集できます。  
   
 > [!NOTE]  
 > テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/17/2018
 > このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
   
 **[IDENTITY] カテゴリ**  
-展開して **[名前]**、 **[説明]**、および **[スキーマ]**の各プロパティを表示します。  
+展開して **[名前]**、 **[説明]**、および **[スキーマ]** の各プロパティを表示します。  
   
 **名前**  
 テーブルの名前を表示します。 名前を編集するには、テキスト ボックスに入力します。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/17/2018
 データ ソースのサーバーの名前を表示します。  
   
 **[テーブル デザイナー] カテゴリ**  
-展開して **[IDENTITY 列]**、 **[Indexable]**、および **[Replicated]**の各プロパティを表示します。  
+展開して **[IDENTITY 列]**、 **[Indexable]**、および **[Replicated]** の各プロパティを表示します。  
   
 **[IDENTITY 列]**  
 テーブルの ID 列として使用されている列を表示します。 ID 列を変更するには、ドロップダウン リストから列を選択します。 数値データ型の列だけが一覧に表示されます。  
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/17/2018
 テーブルが別の場所でレプリケートされているかどうかを表示します。  
   
 **[標準データ スペースの指定] カテゴリ**  
-展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]**の各プロパティを表示します。  
+展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]** の各プロパティを表示します。  
   
 **[(データ スペースの種類)]**  
 テーブルがファイル グループまたはパーティション スキームを使用して保存されるかどうかを表示します。  

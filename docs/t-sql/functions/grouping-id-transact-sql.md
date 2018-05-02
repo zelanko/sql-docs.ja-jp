@@ -1,16 +1,16 @@
 ---
 title: GROUPING_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUPING_ID_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 048ce847992563943a7ff358dcda6ebe249a7310
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aad0f86356e05f41dfe55aa0c4347d08d7e7785d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID () を ROLLUP および CUBE と共に使用してグループ化レベルを識別する  
  以下は、`GROUPING()` を使用して `Bit Vector(base-2)` 列を計算するコードの例です。 `GROUPING_ID()` は、対応する `Integer Equivalent` 列を計算するために使用されます。 `GROUPING_ID()` 関数の列順序は、`GROUPING()` 関数によって連結された列の列順序の逆になります。  
   
- これらの例では、グループ化レベルを示すための値を `Grouping Level` 列の各行に対して作成するために、`GROUPING_ID()` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0、1、2...*n*) になるとは限りません。  
+ これらの例では、グループ化レベルを示すための値を `Grouping Level` 列の各行に対して作成するために、`GROUPING_ID()` が使用されます。 グループ化レベルは、1 で始まる整数の連番リスト (0, 1, 2,...*n*) になるとは限りません。  
   
 > [!NOTE]  
 >  GROUPING と GROUPING_ID は、結果セットをフィルター処理するために HAVING 句で使用できます。  

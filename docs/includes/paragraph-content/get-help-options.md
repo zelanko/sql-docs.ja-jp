@@ -1,9 +1,11 @@
-##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) ヘルプの参照 
-- [UserVoice - SQL Server の機能強化を提案しますか。](https://feedback.azure.com/forums/908035-sql-server)
-- [DBA スタック Exchange (タグ sql server) の SQL Server 質問します。](https://dba.stackexchange.com/questions/tagged/sql-server)
-    - [スタックのオーバーフロー (タグ sql server) - SQL の開発に関するいくつか質問の回答があります。](http://stackoverflow.com/questions/tagged/sql-server) 
-- [セットアップとアップグレードの MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
+##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) ヘルプの参照
+
+- [UserVoice - SQL Server 機能強化のためのご提案](https://feedback.azure.com/forums/908035-sql-server)
+- [セットアップとアップグレード - MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
+- [Transact-SQL - MSDN フォーラム](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [DBA Stack Exchange (tag sql-server) - SQL Server に関する質問](https://dba.stackexchange.com/questions/tagged/sql-server)
+- [Stack Overflow (tag sql-server) - SQL 開発に関する答えもいくつか含まれる](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit - SQL Server に関する一般的なディスカッション](https://www.reddit.com/r/SQLServer/)
 - [Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/download/details.aspx?id=39299)
 - [法人のお客様向けサポート オプション](https://support.microsoft.com/gp/support-options-for-business)

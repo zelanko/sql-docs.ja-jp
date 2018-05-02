@@ -1,16 +1,16 @@
 ---
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TYPE_NAME_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efd210bc036ed301f426e81feb6c783984f9fb4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4c080a7c88d977651e9a3447f05f4e05558631f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,12 +59,12 @@ TYPE_NAME ( type_id )
 ## <a name="exceptions"></a>例外  
  エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、ユーザーがオブジェクトに対する権限を与えられていない場合、メタデータを生成する TYPE_NAME などの組み込み関数では NULL が返される可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、ユーザーがオブジェクトに対する権限を与えられていない場合、メタデータを生成する TYPE_NAME などの組み込み関数では NULL が返される可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  *type_id* が無効であるか、呼び出し元が型の参照に必要な権限を所有していない場合、TYPE_NAME では NULL が返されます。  
   
- TYPE_NAME は、システム データ型と、ユーザー定義データ型にも使用できます。 型が含まれるスキーマはあらゆるスキーマが対象になりますが、常に修飾なしの名前が返されます。 つまり、名前に *schema*****  プレフィックスは含まれません。  
+ TYPE_NAME は、システム データ型と、ユーザー定義データ型にも使用できます。 型が含まれるスキーマはあらゆるスキーマが対象になりますが、常に修飾なしの名前が返されます。 つまり、名前に *schema***.** プレフィックスは含まれません。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳しくは、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」および「[WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)」をご覧ください。  
   
@@ -116,7 +117,7 @@ GO
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

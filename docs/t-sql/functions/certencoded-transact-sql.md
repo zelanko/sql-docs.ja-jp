@@ -1,16 +1,16 @@
 ---
 title: CERTENCODED (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTENCODED
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 635720f8ed9c3d2aa48d2f5cbf03438171b1fe78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f6068562cf6694acc99c1e303dbd4ff10ff583ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-証明書の公開部分をバイナリ形式で返します。 この関数は、証明書の ID を受け取り、エンコードされた証明書を返します。 バイナリの結果を **CREATE CERTIFICATE … WITH BINARY** に渡して、新しい証明書を作成できます。
+この関数は、証明書の公開部分をバイナリ形式で返します。 この関数は、引数として証明書の ID を受け取り、エンコードされた証明書を返します。 証明書を作成するには、バイナリの結果を **CREATE CERTIFICATE … WITH BINARY** に渡します。
   
 ## <a name="syntax"></a>構文  
   
@@ -44,13 +44,13 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>引数  
 *cert_id*  
-証明書の **certificate_id** です。 これは、sys.certificates または [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 関数を使用して取得できます。 *cert_id* は **int** 型です。
+証明書の **certificate_id**。 Sys.certificates; でこの値を見つけます。[CERT_ID &#40;Transact-SQL&#41; ](../../t-sql/functions/cert-id-transact-sql.md) 関数もこの値を返すことができます。 *cert_id* は **int** データ型です。
   
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-**CERTENCODED** と **CERTPRIVATEKEY**を一緒に使用すると、バイナリの形式で証明書の異なる部分を返します。
+**CERTENCODED** と **CERTPRIVATEKEY** を一緒に使用すると、バイナリの形式で証明書の異なる部分を返します。
   
 ## <a name="permissions"></a>アクセス許可  
 **CERTENCODED** はパブリックに使用できます。
@@ -58,25 +58,25 @@ CERTENCODED ( cert_id )
 ## <a name="examples"></a>使用例  
   
 ### <a name="simple-example"></a>簡単な例  
-次の例では、`Shipping04` という名前の証明書を作成した後、その証明書のバイナリ エンコードを **CERTENCODED** 関数を使用して返します。
+この例では、`Shipping04` という名前の証明書を作成した後、その証明書のバイナリ エンコードを **CERTENCODED** 関数を使用して返します。 この例では、証明書の有効期限を 2040 年 10 月 31 日に設定します。
   
 ```sql
-CREATE DATABASE TEST1;  
-GO  
-USE TEST1  
-CREATE CERTIFICATE Shipping04   
-ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
-WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20161031';  
-GO  
-SELECT CERTENCODED(CERT_ID('Shipping04'));  
+CREATE DATABASE TEST1;
+GO
+USE TEST1
+CREATE CERTIFICATE Shipping04
+ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
+WITH SUBJECT = 'Sammamish Shipping Records',
+EXPIRY_DATE = '20401031';
+GO
+SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
 ### <a name="b-copying-a-certificate-to-another-database"></a>B. 別のデータベースへの証明書のコピー  
-次のより複雑な例では、2 つのデータベース (`SOURCE_DB` と `TARGET_DB`) を作成します。 この例では、`SOURCE_DB` に証明書を作成し、その証明書を `TARGET_DB` にコピーした後、`SOURCE_DB` 内の暗号化されたデータを `TARGET_DB` 内の証明書のコピーを使用して暗号化解除します。
+次のより複雑な例では、2 つのデータベース (`SOURCE_DB` と `TARGET_DB`) を作成します。 その後で、`SOURCE_DB` 内に証明書を作成し、証明書を `TARGET_DB` にコピーします。 最後に、`SOURCE_DB` で暗号化されたデータを証明書のコピーを使用して `TARGET_DB` で暗号化解除できることを示します。
   
-この例の環境を作成するために、`SOURCE_DB` データベースと `TARGET_DB` データベースおよびそれぞれのマスター キーを作成します。 その後、`SOURCE_DB` に証明書を作成します。
+この例の環境を作成するために、`SOURCE_DB` と `TARGET_DB` のデータベース、およびそれぞれのデータベース内のマスター キーを作成します。 その後、`SOURCE_DB` に証明書を作成します。
   
 ```sql
 USE master;  
@@ -114,7 +114,7 @@ SELECT @CERTPVK AS EncryptedBinaryCertificate;
 GO  
 ```  
   
-`TARGET_DB` データベースに証明書の複製を作成します。 次のコードを変更して、前の手順で返される 2 つのバイナリ値を挿入する必要があります。
+その後で、`TARGET_DB` データベースに証明書の複製を作成します。 この作業のために次のコードを変更して、前の手順で返される 2 つのバイナリ値 (@CERTENC と @CERTPVK ) を挿入します。 これらの値を引用符で囲まないでください。
   
 ```sql
 -- Create the duplicate certificate in the TARGET_DB database  
@@ -133,7 +133,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-単一のバッチとして実行される次のコードでは、`SOURCE_DB` 内の暗号化されたデータを、`TARGET_DB` に暗号化解除します。
+単一のバッチとして実行されるこのコードでは、`TARGET_DB` が、`SOURCE_DB` で暗号化されたデータを暗号化解除できることを示します。
   
 ```sql
 USE SOURCE_DB;  
