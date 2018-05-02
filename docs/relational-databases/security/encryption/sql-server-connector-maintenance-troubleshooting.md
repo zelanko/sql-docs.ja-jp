@@ -1,30 +1,30 @@
 ---
-title: "SQL Server コネクタのメンテナンスとトラブルシューティング | Microsoft Docs"
-ms.custom: 
+title: SQL Server コネクタのメンテナンスとトラブルシューティング | Microsoft Docs
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 218b9c66b055d92085307bcea5ff722ddc228215
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,8 +194,8 @@ Key Vault は定期的にバックアップする必要があります。 資格
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
-1. Azure クラシック ポータル ( [https://manage.windowsazure.com](https://manage.windowsazure.com)) に移動します。  
-2. 左側のメニューで、下へスクロールし、 **[設定]**を選択します。
+1. Azure クラシック ポータルに移動: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
+2. 左側のメニューで、下へスクロールし、 **[設定]** を選択します。
 3. 現在使用している Azure サブスクリプションを選択し、画面の下部にあるコマンドの **[ディレクトリの編集]** をクリックします。
 4. ポップアップ ウィンドウで、 **[ディレクトリ]** ドロップダウンを使用して、使用する Active Directory を選択します。 これで既定のディレクトリになります。
 5. 新しく選択した Active Directory のグローバル管理者であることを確認します。 グローバル管理者でない場合、ディレクトリを切り替えると、管理権限が失われる可能性があります。

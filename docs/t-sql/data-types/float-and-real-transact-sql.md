@@ -1,16 +1,16 @@
 ---
-title: "float 型と real 型 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: float 型と real 型 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - float
@@ -25,42 +25,43 @@ helpviewer_keywords:
 - floating point data [SQL Server]
 - real data type
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5f955e5d367a17602959f5294f9fb5d393b186b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 87b6b785af338745f3c02cb1d6d0b77efb01240c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="float-and-real-transact-sql"></a>float 型と real 型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-浮動小数点数値データで使用する概数型です。 浮動小数点データは概数であるため、データ型の範囲に含まれるすべての値を正確に表せるわけではありません。 ISO シノニムは、 **実際** は **float (24)**です。
+浮動小数点数値データで使用する概数型です。 浮動小数点データは概数であるため、データ型の範囲に含まれるすべての値を正確に表せるわけではありません。 ISO シノニムは、 **実際** は **float (24)** です。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
 **float** [ **(***n***)** ]。*n* は、科学的表記法で **float** 数の仮数部を格納するために使用されるビット数であるため、精度と格納サイズを指示します。 *n* を指定する場合、**1** から **53** までの値にする必要があります。 *n* の既定値は **53** です。
   
-|*n*値|有効桁数|ストレージのサイズ|  
+|*n* 値|有効桁数|ストレージのサイズ|  
 |---|---|---|
 |**1 ～ 24**|7 桁の数字|4 バイト|  
 |**25-53**|15 桁|8 バイト|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 **1**<=n<=**24** の場合、*n* は **24** として処理されます。 **1**<=n<=**53** の場合、*n* は **53** として処理されます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 **1**<=n<=**24** の場合、*n* は **24** として処理されます。 **25**<=n<=**53** の場合、*n* は **53** として処理されます。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float****[(n)]** データ型は、*n* from **1** ～ **53**のすべての値で ISO 標準に準拠します。 シノニムは、 有効桁数を **2 倍** は **float (53)**です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float****[(n)]** データ型は、*n* (**1** ～ **53**) のすべての値で ISO 標準に準拠しています。 シノニムは、 有効桁数を **2 倍** は **float (53)** です。
   
 ## <a name="remarks"></a>Remarks  
   
 |データ型|範囲|ストレージ|  
 |---|---|---|
-|**float**|- 1.79E+308 ～ -2.23E-308、0、および 2.23E-308 ～ 1.79E+308|*n* の値により異なります。|  
+|**float**|- 1.79E+308 ～ -2.23E-308、0、および 2.23E-308 ～ 1.79E+308|*n* の値により異なります|  
 |**real**|- 3.40E+38 ～ -1.18E-38、0、および 1.18E-38 ～ 3.40E+38|4 バイト|  
   
 ##  <a name="converting-float-and-real-data"></a>float 型データと real 型データの変換  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[データ型の変換 &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)

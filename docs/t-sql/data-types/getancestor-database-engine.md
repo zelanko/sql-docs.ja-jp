@@ -1,16 +1,16 @@
 ---
-title: "GetAncestor (データベース エンジン) | Microsoft Docs"
-ms.custom: 
+title: GetAncestor (データベース エンジン) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetAncestor_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - GetAncestor [Database Engine]
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b232238dccf5c22918a8805cdc9cd876dfef5723
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e07aa5444fa2805e66517b452a13a1ad675deb4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-*this* の *n*番目の先祖を表す **hierarchyid** が返されます。
+*this* の *n* 番目の先祖を表す **hierarchyid** が返されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>参照
-[IsDescendantOf &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf & #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid データ型メソッド リファレンス](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

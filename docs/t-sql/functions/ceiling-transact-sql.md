@@ -1,16 +1,16 @@
 ---
 title: CEILING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CEILING_TSQL
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - integers [SQL Server]
 - CEILING function [Transact-SQL]
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8859077710b51556a9c61c546b91f37795afd8d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc2871d3cdb81cfd4f93000bab0b166a829b490e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-指定された数値式以上の整数のうち最小のものを返します。
+この関数は、指定された数値式に等しいかそれより大きい最小整数を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +49,13 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
 *numeric_expression*  
-**bit** データ型を除く、真数データ型または概数データ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
+真数のデータ型または概数のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 この関数には、**bit** データ型は無効です。
   
 ## <a name="return-types"></a>戻り値の型
-*numeric_expression*と同じ型を返します。
+戻り値の型は *numeric_expression* と同じになります。
   
 ## <a name="examples"></a>使用例  
-次の例では、正の数値、負の数値、および 0 を使った CEILING 関数を示します。
+この例では、CEILING 関数の正の数値、負の数値、および 0 の値の入力を示します。
   
 ```sql
 SELECT CEILING($123.45), CEILING($-123.45), CEILING($0.0);  

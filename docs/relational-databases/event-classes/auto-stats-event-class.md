@@ -1,10 +1,10 @@
-title: "Auto Stats イベント クラス | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
+title: "Auto Stats イベント クラス | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
   - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
   - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: "craigg" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Auto Stats** イベント クラスは、インデックス統計と列統計が自動更新されたことを示します。  **Auto Stats** は、オプティマイザーで使用するために統計情報が読み込まれるときにも呼び出されます。
+  **Auto Stats** イベント クラスは、インデックス統計と列統計が自動更新されたことを示します。  **Auto Stats** は、オプティマイザーで使用するために統計情報が読み込まれるときにも呼び出されます。
   
 ## <a name="auto-stats-event-class-data-columns"></a>Auto Stats イベント クラスのデータ列  
   

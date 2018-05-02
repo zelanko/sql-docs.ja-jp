@@ -1,16 +1,16 @@
 ---
-title: "binary と varbinary (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: binary と varbinary (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 8/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - binary_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - varbinary data type
 - binary [SQL Server], about binary data type
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4ad5bce3cacc0f892f7087df785da8cedcb4e932
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2a214ab3c50af81bf38dbb6f7adaf6f95226d82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary と varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +41,12 @@ ms.lasthandoff: 11/21/2017
 固定長または可変長のバイナリ データ型です。
   
 ## <a name="arguments"></a>引数  
-**binary** [ ( *n* ) ]。長さ *n* バイトの固定長のバイナリ データです。*n* は 1 ～ 8,000 の値になります。 記憶領域のサイズは *n* バイトです。
+**binary** [ ( *n* ) ]。長さ *n* バイトの固定長のバイナリ データです。*n* は 1 ～ 8,000 の値になります。 ストレージのサイズは *n* バイトです。
   
-**varbinary** [ ( *n* | **max**) ]。可変長のバイナリ データです。 *n* 1 ～ 4000 の値を指定できます。 **max** 記憶域の最大サイズが 2 であることを示します。 ^ 31-1 バイトです。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 入力するデータの長さは 0 バイトでもかまいません。 ANSI SQL シノニム **varbinary** は **バイナリのさまざまなです**。
+**varbinary** [ ( *n* | **max**) ] 可変長のバイナリ データ。 *n* には 1 ～ 8,000 の値を指定できます。 **max** 記憶域の最大サイズが 2 であることを示します。 ^ 31-1 バイトです。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 入力するデータの長さは 0 バイトでもかまいません。 ANSI SQL シノニム **varbinary** は **バイナリのさまざまなです**。
   
 ## <a name="remarks"></a>Remarks  
-データ定義または変数宣言ステートメントで  *n*を指定しないと、既定の長さは 1 になります。 CAST 関数で *n* を指定しないと、既定の長さは 30 になります。
+データ定義または変数宣言ステートメントで *n* を指定しないと、既定の長さは 1 になります。 CAST 関数で *n* を指定しないと、既定の長さは 30 になります。
 
 | データ型 | 次の場合に使用 |
 | --- | --- |
@@ -90,7 +91,7 @@ GO
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[データ型の変換 &#40;データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

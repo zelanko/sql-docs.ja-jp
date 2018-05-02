@@ -1,29 +1,30 @@
 ---
-title: "FOR JSON での特殊文字のエスケープと制御文字 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: FOR JSON での特殊文字のエスケープと制御文字 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR JSON, special characters
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 16
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 684df4ae7c0071ce7b538e5d76d124e384fde56d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 86417ee454a9b6283d1ca1a64e06abc3499ce341
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON での特殊文字のエスケープと制御文字 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 02/03/2018
   このトピックでは、SQL Server **SELECT** ステートメントの **FOR JSON** 句が JSON 出力で特殊文字をどのようにエスケープするか、また制御文字をどのように表すかについて説明します。  
 
 > [!IMPORTANT]
-> このページでは、Microsoft SQL Server の JSON の組み込みサポートについて説明します。 JSON のエスケープとエンコードの全般情報については、JSON RFC - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt) のセクション 2.5 をご覧ください。
+> このページでは、Microsoft SQL Server の JSON の組み込みサポートについて説明します。 JSON のエスケープとエンコードの全般情報については、JSON RFC - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt) のセクション 2.5 を参照してください。
 
 ## <a name="escaping-of-special-characters"></a>特殊文字のエスケープ  
 ソース データに特殊文字が含まれる場合、**FOR JSON** 句は JSON 出力の特殊文字を `\` でエスケープします。次の表をご覧ください。 このエスケープは、プロパティの名前と値の両方で行われます。  

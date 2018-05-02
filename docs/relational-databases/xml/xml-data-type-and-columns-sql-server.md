@@ -1,32 +1,32 @@
 ---
-title: "XML データ型と列 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: XML データ型と列 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4fa1ea2ba7eb9742d4596a1ce403a42038d2d842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-このトピックでは、 **での** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する利点と制限および、XML データを保存する方法の正しい選択について説明します。  
+  このトピックでは、 **での** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する利点と制限および、XML データを保存する方法の正しい選択について説明します。  
   
 ## <a name="relational-or-xml-data-model"></a>リレーショナル データ モデルと XML データ モデル  
  使用するデータが既知のスキーマにより十分に構造化されている場合、データ ストレージとしてはリレーショナル モデルが最適です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されています。 ただし、データが構造化されていないか構造化が部分的である場合、または構造化の状態が不明な場合は、データのモデリングを検討する必要があります。  
@@ -60,16 +60,16 @@ ms.lasthandoff: 02/12/2018
   
 -   XML データの管理にデータベース サーバーの管理機能を使用するため。 たとえば、バックアップ、復旧、およびレプリケーションなどです。  
   
- 上記の条件のいずれにも該当しない場合、XML 以外のラージ オブジェクト型 ( **[n]varchar(max)** 、 **varbinary(max)**など) でデータを保存するのが適切です。  
+ 上記の条件のいずれにも該当しない場合、XML 以外のラージ オブジェクト型 ( **[n]varchar(max)** 、 **varbinary(max)** など) でデータを保存するのが適切です。  
   
 ## <a name="xml-storage-options"></a>XML ストレージ オプション  
  次に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での XML のストレージ オプションを示します。  
   
 -   **xml** データ型としてのネイティブ ストレージ  
   
-     データの XML コンテンツを保持できる内部表現を使用してデータが保存されます。 内部表現には、包含階層、表示順、要素や属性の値に関する情報などがあります。 具体的には、XML データの InfoSet コンテンツが保持されます。 InfoSet の詳細については、 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)を参照してください。 InfoSet コンテンツでは、重要でない空白文字、属性の順序、名前空間プレフィックス、および XML 宣言が保持されないので、テキスト形式の XML のまったく同一のコピーにはならない場合があります。  
+     データの XML コンテンツを保持できる内部表現を使用してデータが保存されます。 内部表現には、包含階層、表示順、要素や属性の値に関する情報などがあります。 具体的には、XML データの InfoSet コンテンツが保持されます。 InfoSet の詳細については、「[http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)」を参照してください。 InfoSet コンテンツでは、重要でない空白文字、属性の順序、名前空間プレフィックス、および XML 宣言が保持されないので、テキスト形式の XML のまったく同一のコピーにはならない場合があります。  
   
-     型指定された **xml** データ型、つまり XML スキーマにバインドされた **xml** データ型の場合、PSVI (スキーマ検証後の InfoSet) によって型情報が InfoSet に追加され、内部表現にエンコードされます。 その結果、解析速度が大幅に向上します。 詳細については、 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) および [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)で W3C XML スキーマの仕様を参照してください。  
+     型指定された **xml** データ型、つまり XML スキーマにバインドされた **xml** データ型の場合、PSVI (スキーマ検証後の InfoSet) によって型情報が InfoSet に追加され、内部表現にエンコードされます。 その結果、解析速度が大幅に向上します。 詳細については、[http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) と [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) で W3C の XML スキーマの仕様を参照してください。  
   
 -   XML ストレージとリレーショナル ストレージのマッピング  
   

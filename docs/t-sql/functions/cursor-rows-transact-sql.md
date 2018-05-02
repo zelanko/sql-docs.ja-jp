@@ -1,16 +1,16 @@
 ---
 title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@CURSOR_ROWS'
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c4c1fac4c5d9dacddfb942a3e5b9238e5be16a4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aa8103fee0cea19b626ef583c057c49ff053f2cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 |-*m*|行がカーソルに非同期的に登録されている場合に返されます。 返される値 (-*m*) は、現在キーセットにある行数です。|  
 |-1|カーソルが動的な場合に返されます。 動的カーソルはすべての変更を反映するので、そのカーソルに登録されている行数は常に変化します。 したがって、登録されているすべての行を検索したかどうかは断定できません。|  
 |0|オープンされているカーソルがない場合、最後にオープンされたカーソルに行が登録されていない場合、または最後にオープンされたカーソルがクローズまたは割り当てを解除されている場合に返されます。|  
-|*n*|カーソルに行がすべて完全に登録されている場合に返されます。 返される値 (*n*) は、カーソルに含まれる行数の合計です。|  
+|*n*|カーソルに行がすべて完全に登録されている場合に返されます。 返される値 (*n*) には、カーソル内の行の合計数。|  
   
 ## <a name="remarks"></a>Remarks  
 最後のカーソルが非同期にオープンされている場合、@@CURSOR_ROWS からの戻り値は負になります。 sp_configure カーソルしきい値が 0 より大きく、カーソル結果セットの行数がカーソルしきい値を超える場合、キーセット カーソルまたは静的カーソルは非同期にオープンされます。

@@ -1,31 +1,32 @@
 ---
-title: "クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs"
-ms.custom: 
+title: クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 29ba7f266a86e53f95668b8bf8ca4ce879bb62f8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5451f613900a420aa681ce076cf2c94e59057a98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,14 +40,14 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。  
   
     > [!NOTE]  
     > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のバージョン 16 以降が必要です。  
   
 2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
-3.  **[操作モード (要求)]** ボックスで、 **[オン]**を選択します。  
+3.  **[操作モード (要求)]** ボックスで、 **[オン]** を選択します。  
   
 #### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
   
@@ -105,7 +106,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
  ![オブジェクト エクスプローラーの機能低下したクエリ](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "オブジェクト エクスプローラーの機能低下したクエリ")  
   
- プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]**をクリックします。 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
+ プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]** をクリックします。 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
 ##  <a name="Waiting"></a>待機クエリの検索
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、クエリごとの時系列の待機統計情報をクエリ ストアで使用できます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 待機カテゴリから待機の種類へのマッピングは、[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) で使用できます。
@@ -346,7 +347,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **去1 時間で平均実行時間が長かったクエリの上位。**  
+ **去&1; 時間で平均実行時間が長かったクエリの上位。**  
   
 ```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -467,7 +468,7 @@ GROUP BY qt.query_text_id, q.query_id, p.plan_id
 ORDER BY sum_total_wait_ms DESC
  ```
  
- **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去1 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
+ **最近パフォーマンスが低下したクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去&1; 日間) とで実行を比較し、 `additional_duration_workload`の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
   
 ```sql  
 --- "Recent" workload - last 1 hour  

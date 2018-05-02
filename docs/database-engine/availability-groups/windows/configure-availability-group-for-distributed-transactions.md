@@ -1,15 +1,16 @@
 ---
-title: "分散トランザクション対応の可用性グループを構成する | Microsoft Docs"
-ms.custom: 
+title: 分散トランザクション対応の可用性グループを構成する | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [database mirroring]
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
-ms.assetid: 
-caps.latest.revision: "33"
+ms.assetid: ''
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b6812a199583fee5cff0ce90c0a0e7f72f9b7645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 01/18/2018
 
 * 分散トランザクションに参加する [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] のすべてのインスタンスが、[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] またはそれ以降である必要があります。
 
-* 可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
+* 可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを作成する
 

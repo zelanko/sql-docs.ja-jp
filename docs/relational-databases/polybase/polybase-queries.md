@@ -1,16 +1,16 @@
 ---
-title: "PolyBase クエリ | Microsoft Docs"
-ms.custom: 
+title: PolyBase クエリ | Microsoft Docs
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  この記事では、SQL Server 2016 の [PolyBase](../../relational-databases/polybase/polybase-guide.md) 機能を使用するクエリの例を示します。 これらの例を使用する前に、PolyBase (「[PolyBase T-SQL オブジェクト](../../relational-databases/polybase/polybase-t-sql-objects.md)」をご覧ください) の設定に必要な T-SQL ステートメントを理解する必要があります。
+  この記事では、SQL Server (2016 以降) の [PolyBase](../../relational-databases/polybase/polybase-guide.md) 機能を使用するクエリの例を示します。 これらの例を使用する前に、PolyBase (「[PolyBase T-SQL オブジェクト](../../relational-databases/polybase/polybase-t-sql-objects.md)」をご覧ください) の設定に必要な T-SQL ステートメントを理解する必要があります。
   
 ## <a name="queries"></a>クエリ  
  外部テーブルを照会するには、外部テーブルに対して Transact-SQL ステートメントを実行するか、または BI ツールを使用します。
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Hadoop または Azure ストレージに SQL Server からのデータをエクスポートします。 
 
-まず、'allow polybase export' の `sp_configure` 値を 1 に設定してエクスポート機能を有効にします。 次に、変換先ディレクトリを指す外部テーブルを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO 使用します。 
+まず、'allow polybase export' の `sp_configure` 値を 1 に設定してエクスポート機能を有効にします。 次に、変換先ディレクトリを指す外部テーブルを作成します。 CREATE EXTERNAL TABLE ステートメントは、変換先ディレクトリが存在しない場合にそれを作成します。 次に、ローカルの SQL Server テーブルからのデータを外部データ ソースをエクスポートするのに INSERT INTO を使用します。 
 
-INSERT INTO ステートメントでは、変換先ディレクトリが存在しない場合にそれを作成し、SELECT ステートメントの結果を指定されたファイル形式で指定した場所にエクスポートします。 外部ファイルの名前は *QueryID_date_time_ID.format*です ( *ID* は増分識別子、 *format* はエクスポートされるデータ形式)。 たとえば、あるファイルの名前は QID776_20160130_182739_0.orc となります。
+SELECT ステートメントの結果セットは、指定したファイル形式で指定した場所にエクスポートされます。 外部ファイルの名前は *QueryID_date_time_ID.format*です ( *ID* は増分識別子、 *format* はエクスポートされるデータ形式)。 たとえば、あるファイルの名前は QID776_20160130_182739_0.orc となります。
+
 
 > [!NOTE]
 > データを PolyBase 経由で Hadoop または Azure Blob Storage にエクスポートする場合、データだけがエクスポートされ、CREATE EXTERNAL TABLE コマンドで定義した列名 (メタデータ) はエクスポートされません。

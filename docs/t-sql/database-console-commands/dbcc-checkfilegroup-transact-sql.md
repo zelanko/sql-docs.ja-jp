@@ -1,16 +1,16 @@
 ---
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cd26ee5bce3329d9685beffc2627ace43663c804
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 現在のデータベースで、指定されたファイル グループのすべてのテーブルおよびインデックス付きビューの割り当てと構造的整合性をチェックします。
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+現在のデータベースで、指定されたファイル グループのすべてのテーブルおよびインデックス付きビューの割り当てと構造的整合性をチェックします。
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
@@ -114,7 +115,7 @@ DBCC CHECKFILEGROUP は、次のコマンドを実行します。
 DBCC CHECKALLOC または DBCC CHECKTABLE を DBCC CHECKFILEGROUP と分けて実行する必要はありません。
   
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット  
-DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクションを参照してください。
+DBCC CHECKFILEGROUP は、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を実現します。 詳細については、次を参照してください。「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」および「[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)」の「DBCC 内部データベース スナップショットの使用」セクション。
 スナップショットを作成できない場合や TABLOCK オプションが指定されている場合、DBCC CHECKFILEGROUP はロックを取得して必要な一貫性を実現します。 この場合、割り当てのチェックを行うための排他データベース ロックと、テーブルのチェックを行うための共有テーブル ロックが必要です。 TABLOCK の作用によって負荷の高いデータベースでも DBCC CHECKFILEGROUP の実行速度が速くなりますが、DBCC CHECKFILEGROUP の実行中、データベースでの同時実行性は低下します。
   
 > [!NOTE]  
@@ -140,14 +141,14 @@ DBCC CHECKFILEGROUP コマンドの終了後、メッセージが [!INCLUDE[ssNo
 |状態|Description|  
 |-----------|-----------------|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
-|1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
+|@shouldalert|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
 |2|緊急モードのデータベース修復中にエラーが発生しました。|  
 |3|メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |4|アサートまたはアクセス違反が検出されました。|  
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|  
   
 ## <a name="error-reporting"></a>[エラー報告]  
-DBCC CHECKFILEGROUP により破損エラーが検出されるたびに、ミニ ダンプ ファイル (SQLDUMP*nnnn*.txt) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 機能の使用状況データ収集とエラー報告機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
+DBCC CHECKFILEGROUP で破損エラーが検出されるたびに、ミニ ダンプ ファイル (SQLDUMP*nnnn*.txt) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに作成されます。 機能の使用状況データ収集とエラー報告機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
 このダンプ ファイルには、DBCC CHECKFILEGROUP コマンドの結果と追加の診断出力が含まれます。 また、制限付きの随意アクセス制御リスト (DACL) が割り当てられます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと **sysadmin** ロールのメンバーに制限されます。 既定では、**sysadmin** ロールには Windows の BUILTIN\Administrators グループとローカルの管理者グループのすべてのメンバーが含まれます。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
   
 ## <a name="resolving-errors"></a>エラーの解決  

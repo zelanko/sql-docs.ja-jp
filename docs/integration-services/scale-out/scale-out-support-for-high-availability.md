@@ -1,36 +1,38 @@
 ---
-title: "高可用性を実現するための SQL Server Integration Services (SSIS) Scale Out のサポート | Microsoft Docs"
+title: 高可用性を実現するための SQL Server Integration Services (SSIS) Scale Out のサポート | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
 SSIS Scale Out では、複数の Scale Out Worker を使用してパッケージを実行することで、Scale Out Worker 側の高可用性が提供されます。
 
-Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) と Windows フェールオーバー クラスタリングにより実現されます。このソリューションでは、Scale Out Master の複数のインスタンスは Windows フェールオーバー クラスターでホストされます。 プライマリ ノードの Scale Out Master サービスまたは SSISDB がダウンすると、セカンダリ ノードのサービスまたは SSISDB が引き続きユーザーの要求を受け入れて、Scale Out Worker と通信します。 
+Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) と Windows フェールオーバー クラスターにより実現されます。 このソリューションでは、Scale Out Master の複数のインスタンスは、Windows フェールオーバー クラスターでホストされています。 プライマリ ノードの Scale Out Master サービスまたは SSISDB がダウンすると、セカンダリ ノードのサービスまたは SSISDB が引き続きユーザーの要求を受け入れて、Scale Out Worker と通信します。
 
-Scale Out Master 側の高可用性を設定するには、以下の操作を行います。
+また、SQL Server フェールオーバー クラスター インスタンスを使用して Scale Out Master 側の高可用性を達成することもできます。 「[SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート](scale-out-failover-cluster-instance.md)」を参照してください。
+
+SSIS カタログに Always On を使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
 Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール) を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。

@@ -1,16 +1,16 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHRINKFILE
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 
+caps.latest.revision: 87
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5225b9c6da68489845921f6351e86eb36a02358a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE は現在のデータベース内のファイルに適用されます。 現在のデータベースを変更する方法の詳細については、「[USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)」を参照してください。
   
-DBCC SHRINKFILE 操作は、プロセスのどの時点でも中断でき、中断時に完了していた作業は保持されます。
+DBCC SHRINKFILE 操作は、プロセスのどの時点でも中断でき、中断時に完了していた作業は保持されます。 EMPTYFILE パラメーターがファイルで使用され、操作がキャンセルされた場合、さらにデータが追加されないように、ファイルがマークされることはありません。
   
 DBCC SHRINKFILE 操作が失敗すると、エラーが発生します。
   

@@ -2,7 +2,7 @@
 title: XML フォーマット ファイル (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -22,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5a482e155526645fcfa950b323b4642d9884e5d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML フォーマット ファイル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -189,7 +190,7 @@ ms.lasthandoff: 04/10/2018
   
  ID **="***fieldID***"**  
   
- xsi**:**type **="***fieldType***"**  
+ xsi **:** type **="***fieldType***"**  
   
  [ LENGTH **="***n***"** ]  
   
@@ -205,9 +206,9 @@ ms.lasthandoff: 04/10/2018
   
  それぞれの \<FIELD> 要素は、他の要素から独立しています。 フィールドは、次の属性を使用して表現されます。  
   
-|FIELD 要素の属性|説明|省略可能 /<br /><br /> 必須|  
+|FIELD 要素の属性|説明|省略可能 /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID**="***fieldID***"**/> は \<COLUMN SOURCE**="***fieldID***"**/> にマップします|必須|  
+|ID **="***fieldID***"**|データ ファイル内のフィールドの論理名を指定します。 フィールドの ID は、フィールドを参照する際に使用するキーになります。<br /><br /> \<FIELD ID **="***fieldID***"**/> は \<COLUMN SOURCE **="***fieldID***"**/> にマップします|Required|  
 |xsi:type **="***fieldType***"**|要素のインスタンスの種類を特定する XML コンストラクトです (これは属性のように使用します)。 *fieldType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。|必須 (データ型により異なる)|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
 |PREFIX_LENGTH **="***p***"**|バイナリ データ表現のプレフィックス長を定義します。 PREFIX_LENGTH 値の *p*は、1、2、4、または 8 のいずれかにする必要があります。|省略可能 (xsi:type 値で必要な場合は必須)。|  
@@ -258,15 +259,15 @@ ms.lasthandoff: 04/10/2018
   
  フィールドは、次の属性を使用して、対象となるテーブルにマップされます。  
   
-|COLUMN 要素の属性|Description|省略可能 /<br /><br /> 必須|  
+|COLUMN 要素の属性|Description|省略可能 /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> は \<FIELD ID**="***fieldID***"**/> にマップします|必須|  
-|NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|必須|  
-|xsi**:**type **="***ColumnType***"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可|  
+|SOURCE **="***fieldID***"**|列にマップされているフィールドの ID を指定します。<br /><br /> \<COLUMN SOURCE **="***fieldID***"**/> は \<FIELD ID **="***fieldID***"**/> にマップします|Required|  
+|NAME = "*columnName*"|フォーマット ファイルで表している行セットの列の名前を指定します。 この列名は、結果セット内で列名を特定する際に使用されるので、対象のテーブルで使用されている列名に対応する必要はありません。|Required|  
+|xsi **:** type **="***ColumnType***"**|要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 *ColumnType* の値により、要素のインスタンスで必要なオプションの属性 (下記参照) が決まります。<br /><br /> 注: *ColumnType* に設定できる値と関連する属性値は、「[&lt;COLUMN&gt; 要素の xsi:type 値](#XsiTypeValuesOfCOLUMN)」セクションの \<COLUMN> 要素の表に示します。|省略可|  
 |LENGTH **="***n***"**|固定長データ型のインスタンスの長さを定義します。 LENGTH 属性は、xsi:type が文字列データ型の場合にのみ使用します。<br /><br /> *n* の値は、正の整数にする必要があります。|省略可能 (xsi:type が文字列データ型の場合にのみ使用可能)|  
 |PRECISION **="***n***"**|数値全体の桁数を示します。 たとえば、数字 123.45 の有効桁数は 5 桁です。<br /><br /> この値は、正の整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
 |SCALE **="***int***"**|数値の中で小数点より右側の桁数を示します。 たとえば、数字 123.45 の小数点以下桁数は 2 桁です。<br /><br /> この値は、整数にする必要があります。|省略可能 (xsi:type が可変数値のデータ型の場合にのみ使用可能)|  
-|NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|列で NULL 値を使用できるかどうかを示します。 この属性は、FIELDS 要素から完全に独立しています。 ただし、列が NULLABLE ではない場合に、フィールドで NULL が指定された (何も値が指定されない) 場合、実行時エラーが発生します。<br /><br /> NULLABLE 属性は、単純な SELECT FROM OPENROWSET(BULK...) ステートメントを実行する場合にのみ使用されます。|省略可能 (任意のデータ型で使用可能)|  
+|NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|列で NULL 値を使用できるかどうかを示します。 この属性は、FIELDS 要素から完全に独立しています。 ただし、列が NULLABLE ではない場合に、フィールドで NULL が指定された (何も値が指定されない) 場合、実行時エラーが発生します。<br /><br /> NULLABLE 属性は、単純な SELECT FROM OPENROWSET(BULK...) ステートメントを実行する場合にのみ使用されます。|省略可能 (任意のデータ型で使用可能)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 要素の xsi:type 値  
  xsi:type 値は、要素のインスタンスのデータ型を特定する XML コンストラクトです (これは属性のように使用します)。 詳細については、このトピックの「xsi:type 値のデータセットへの格納」を参照してください。  
@@ -572,7 +573,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [一括データ &#40; のインポートとエクスポートSQL Server と &#41; です。](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  

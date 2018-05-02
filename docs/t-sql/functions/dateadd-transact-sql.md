@@ -1,16 +1,16 @@
 ---
 title: DATEADD (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEADD
@@ -28,23 +28,24 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-caps.latest.revision: 
+caps.latest.revision: 71
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dd7dd81f8e12b0c14048fd8ab550e7edfd780cf5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 指定した *date* の指定した *datepart* に、*number* に指定した間隔 (符号付き整数) を加算して、その *date* を返します。
   
-すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
+すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +57,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-**integer***number* が加算される *date* の部分です。 次の表は、すべての有効な *datepart* 引数の一覧です。 ユーザー定義変数に相当するものは無効です。
+**integer***number* が加算される *date* の部分です。 次の表に一覧のすべての有効な *datepart* 引数。 ユーザー定義変数に相当するものは無効です。
   
 |*datepart*|省略形|  
 |---|---|
@@ -79,7 +80,7 @@ DATEADD (datepart , number , date )
 小数を含む値を指定した場合、小数部は丸められずに切り捨てられます。
   
 *date*  
-**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを使用できます。 式が文字列リテラルの場合は、**datetime** に解決できる必要があります。 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 2 桁の年の情報については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
+**time**、**date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** 値に解決できる式です。 *date* には、式、列式、ユーザー定義変数、または文字列リテラルを使用できます。 式が文字列リテラルの場合は、**datetime** に解決できる必要があります。 こうしたあいまいさを排除するため、4 桁の西暦を使用してください。 については 2 桁の年を参照してください [構成 two digit year cutoff サーバー構成オプション](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)です。
   
 ## <a name="return-types"></a>戻り値の型
 戻り値のデータ型は、文字列リテラルを除き、*date* 引数のデータ型です。
@@ -161,7 +162,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 150 nanoseconds   2007-01-01 13:10:10.1111113  
 ```  
   
-## <a name="time-zone-offset"></a>タイム ゾーンのオフセット
+## <a name="time-zone-offset"></a>タイム ゾーン オフセット
 タイム ゾーン オフセットの加算は許可されません。
   
 ## <a name="examples"></a>使用例  

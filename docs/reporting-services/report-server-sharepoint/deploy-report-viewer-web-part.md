@@ -1,25 +1,25 @@
 ---
-title: "SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する | Microsoft Docs"
-ms.custom: 
+title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
@@ -33,7 +33,11 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 
 ## <a name="requirements"></a>必要条件
 
-**サポートされている SharePoint Server のバージョン:**  
+> [!IMPORTANT]
+> Reporting Services SharePoint 統合モードを既に構成している場合は、現時点でこの Web パーツをインストールすることはできません。
+>
+
+**サポートされている SharePoint Server のバージョン:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -87,7 +91,7 @@ SharePoint Server 2013 または SharePoint Server 2016 環境にレポート �
 
 4. **レポート ビューアー Web パーツ**機能が表示されるまで、ページをスクロール ダウンします。
 
-5. **[アクティブ化]**を選びます。
+5. **[アクティブ化]** を選びます。
 
     ![レポート ビューアー Web パーツ機能のアクティブ化](media/web-part-activiate-feature.png)
 
@@ -148,6 +152,26 @@ Web パーツでサポートされている言語は以下のとおりです。
 * ロシア語 (ru)
 * 簡体字中国語 (zh-HANS および zh-CHS)
 * 繁体中国語 (zh-HANT および zh-CHT)
+
+## <a name="troubleshoot"></a>[トラブルシューティング]
+
+* SharePoint 統合モードを構成している場合、SSRS をアンインストールすると、次のエラーが発生する。
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService は、[B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService にキャストできません。 タイプ A は、'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' の場所で 'Default' のコンテキストで 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' に由来します。 タイプ B は、'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll' の場所で 'Default' のコンテキストで 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' に由来します。
+    
+    解決方法:
+    1. レポート ビューアー Web パーツを削除する
+    2. SSDT をアンインストールする
+    3. レポート ビューアー Web パーツを再インストールする
+
+* SharePoint 統合モードを構成している場合は、SSRS を更新すると次のエラーが発生する。
+
+    ファイルまたはアセンブリ 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込むことができませんでした。 指定されたファイルが見つかりません。 00000000-0000-0000-0000-000000000000
+    
+    解決方法:
+    1. レポート ビューアー Web パーツを削除する
+    2. SSDT をアンインストールする
+    3. レポート ビューアー Web パーツを再インストールする
 
 ## <a name="next-steps"></a>次の手順
 

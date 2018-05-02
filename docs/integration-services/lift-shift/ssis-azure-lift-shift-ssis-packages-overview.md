@@ -1,8 +1,8 @@
 ---
 title: SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: lift-shift
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 10870216c2abc826a72bb16715701a794e651610
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
 SQL Server Integration Services (SSIS) パッケージとワークロードを Azure クラウドに移動できるようになりました。
@@ -85,7 +85,7 @@ SSDT のオンプレミス、または SSDT がインストールされた Visua
 
 SSISDB をホストする SQL Database のインスタンスをプロビジョニングする際に、SSIS 用 Azure Feature Pack と Access Redistributable もインストールされます。 これらのコンポーネントは、組み込みのコンポーネントでサポートされるデータ ソースの他に、さまざまな **Azure** データ ソース、および **Excel ファイルと Access ファイル**への接続を提供します。
 
-この時点では、SSIS 用の**サード パーティ コンポーネント** (Attunity がサポートする Oracle と Teradata のコンポーネント、SAP BI コンポーネントなど、Microsoft が提供するサード パーティ コンポーネントを含む) をインストールまたは使用することはできません。
+追加のコンポーネントをインストールすることもできます。 詳細については、「[Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)」(Azure-SSIS 統合ランタイムのカスタム設定) を参照してください。
 
 ## <a name="deploy-and-run-packages"></a>パッケージの配置と実行
 Azure の SSISDB にプロジェクトをデプロイする場合には、パッケージ配置モデルではなく、**プロジェクト配置モデル**を使用する必要があります。

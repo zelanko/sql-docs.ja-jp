@@ -18,20 +18,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d9cbf7499236daba8ab87e46a6f7cea39016e672
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
-このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft Excel** データ ソースに接続する方法を説明します。
+この記事では、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft Excel** データ ソースに接続する方法を説明します。
 
 Microsoft Excel ブックへの接続例を次のスクリーン ショットに示します。
 
 ![Excel 接続](../../integration-services/import-export-data/media/excel-connection.png) 
 
-Excel ファイルに接続するために追加のファイルのダウンロードとインストールが必要になる場合もあります。 詳細については、「[Excel に接続するために必要なファイルを取得する](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel)」を参照してください。
+Excel ファイルに接続するために追加のファイルのダウンロードとインストールが必要になる場合もあります。 詳細については、「[Excel に接続するために必要なファイルを取得する](../load-data-to-from-excel-with-ssis.md#files-you-need)」を参照してください。
 
 > [!IMPORTANT]
 > Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。

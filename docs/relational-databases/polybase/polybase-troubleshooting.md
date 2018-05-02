@@ -1,16 +1,16 @@
 ---
-title: "PolyBase のトラブルシューティング | Microsoft Docs"
-ms.custom: 
+title: PolyBase のトラブルシューティング | Microsoft Docs
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
@@ -18,20 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7f75c81eb0b2cdcf8fdc68ba5ac1a21ba62481eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-PolyBase のトラブルシューティングを行うには、このトピックに記載されている手法を使用してください。  
+  PolyBase のトラブルシューティングを行うには、このトピックに記載されている手法を使用してください。  
   
 ## <a name="catalog-views"></a>カタログ ビュー  
  PolyBase の操作を管理するには、次に示すカタログ ビューを使用します。  
@@ -243,7 +243,7 @@ PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスと�
 
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 
-外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")を参照してください。
+外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ「[https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")」(PolyBase のセットアップ エラーと使用可能な解決策) を参照してください。
 
 ## <a name="see-also"></a>参照
 [PolyBase Kerberos の接続性のトラブルシューティング](polybase-troubleshoot-connectivity.md)

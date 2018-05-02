@@ -1,8 +1,8 @@
 ---
 title: SSIS を使用して Excel から、または Excel にデータを読み込む | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
-ms.date: 03/27/2018
-ms.prod: sql-non-specified
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: non-specific
@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d7cb51f585055eefa1deff52b8cb25469bdb9ca
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 8c31229aab550138805a912ffe40a33d08143205
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む
 
@@ -28,7 +28,20 @@ ms.lasthandoff: 04/04/2018
 
 Excel からデータをインポートする、または Excel にデータをエクスポートするには、SSIS パッケージを作成し、Excel 接続マネージャーと Excel ソースまたは Excel 変換先を使用することで行えます。 SSIS に組み込まれている SQL Server インポートおよびエクスポート ウィザードを使用することもできます。
 
-## <a name="get-the-files-you-need-to-connect-to-excel"></a>Excel に接続するために必要なファイルを取得する
+この記事には、SSIS から Excel を正常に使用するため、または一般的な問題を理解して解決するために必要な 3 つの情報セットが含まれています。
+-   [必要なファイル](#files-you-need)。
+-   Excel から、または Excel へのデータの読み込み時に指定する必要がある情報。
+    -   データ ソースとして [Excel を指定](#specify-excel)します。
+    -   [Excel ファイル名とパス](#excel-file)を指定します。
+    -   [Excel のバージョン](#excel-version)を選択します。
+    -   [最初の行に列名が含まれる](#first-row)かどうかを指定します。
+    -   [データを含むワークシートまたは範囲](#sheets-ranges)を指定します。
+-   既知の問題と制限事項。
+    -   [データ型](#issues-types)に関する問題
+    -   [インポート](#issues-importing)に関する問題。
+    -   [エクスポート](#issues-exporting)に関する問題。
+
+## <a name="files-you-need"></a> Excel に接続するために必要なファイルを取得する
 
 Excel からデータをインポートしたり、データを Excel にエクスポートするには、事前に Excel の接続コンポーネントをダウンロードする必要があります (まだインストールされていない場合)。 Excel の接続コンポーネントは、既定ではインストールされません。
 
@@ -46,7 +59,7 @@ Office 365 サブスクリプションをお持ちの場合は、インストー
 
 2016 再頒布可能パッケージのインストールに問題がある場合は、代わりに [Microsoft Access データベース エンジン 2010 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=13255)から 2010 再頒布可能パッケージをインストールします  (Excel 2013 用の再頒布可能パッケージはありません)。
 
-## <a name="get-started"></a>はじめに
+## <a name="specify-excel"></a> はじめに
 
 最初の手順は、Excel に接続することを指定することです。
 
@@ -64,7 +77,7 @@ SSIS で、Excel ソースまたは変換先ファイルに接続するための
 
 データ ソースのリストに Excel が表示されない場合は、32 ビットのウィザードを実行していることを確認してください。 Excel 接続コンポーネントは、通常、32 ビット ファイルで、64 ビットのウィザードでは表示されません。
 
-## <a name="excel-file-and-file-path"></a>Excel ファイルとファイル パス
+## <a name="excel-file"></a> Excel ファイルとファイル パス
 
 最初に指定する情報は、Excel ファイルのパスとファイル名です。 この情報は、SSIS パッケージの **Excel 接続マネージャー エディター**、またはインポートとエクスポート ウィザードの **[データ ソースの選択]** または **[変換先の選択]** のページで指定します。
 
@@ -79,7 +92,7 @@ SSIS で、Excel ソースまたは変換先ファイルに接続するための
 > [!IMPORTANT]
 > パスワードで保護された Excel ファイルには接続できません。
 
-## <a name="excel-version"></a>[Excel バージョン]
+## <a name="excel-version"></a> Excel バージョン
 
 2 番目に指定する情報は、Excel ファイルのバージョンです。 この情報は、SSIS パッケージの **Excel 接続マネージャー エディター**、またはインポートとエクスポート ウィザードの **[データ ソースの選択]** または **[変換先の選択]** のページで指定します。
 
@@ -87,7 +100,7 @@ SSIS で、Excel ソースまたは変換先ファイルに接続するための
 
 古いバージョンの接続コンポーネントしかインストールされていない場合は、それより新しいバージョンの Excel をリストで選択することはできません。 **Excel バージョン** リストには、SSIS によってサポートされている Excel のすべてのバージョンが含まれています。 このリスト内に項目があっても、必要な接続コンポーネントがインストールされているとは限りません。 たとえば、2016 接続コンポーネントをインストールしていなくても、リストには **Microsoft Excel 2016** が表示されます。
 
-## <a name="first-row-has-column-names"></a>[先頭行に列名を含める]
+## <a name="first-row"></a> 先頭行に列名を含める
 
 Excel からデータをインポートしている場合、次の手順は、データの最初の行に列の名前が含まれているかどうかを示すことです。 この情報は、SSIS パッケージの **Excel 接続マネージャー エディター**、またはインポートとエクスポート ウィザードの **[データ ソースの選択]** ページで指定します。
 
@@ -97,7 +110,7 @@ Excel からデータをインポートしている場合、次の手順は、�
 
 Excel からデータをエクスポートする場合にこのオプションを有効にすると、エクスポートされたデータの最初の行に列名が含まれます。
 
-## <a name="worksheets-and-ranges"></a>ワークシートと範囲
+## <a name="sheets-ranges"></a> ワークシートと範囲
 
 データのソースまたは変換先として使用できる Excel オブジェクトには、ワークシート、名前付き範囲、またはそのアドレスを使って指定する名前のない範囲のセルの 3 種類があります。
 
@@ -146,7 +159,7 @@ SSIS で、**Excel ソース エディター**または **Excel 変換先エデ�
 
 -   **[プレビュー]** を選択して、サンプル データが期待どおりになっていることをプレビューで確認する。
 
-## <a name="issues-with-data-types"></a>データ型に関する問題
+## <a name="issues-types"></a> データ型に関する問題
 
 ### <a name="data-types"></a>データ型
 
@@ -179,7 +192,7 @@ SSIS では、データ型の暗黙的な変換は行われません。 した�
 > [!TIP]
 > インポートおよびエクスポート ウィザードを使用していて、データにこれらの変換がいくつか必要な場合は、ウィザードによって必要な変換が構成されます。 そのため、SSIS パッケージを使用する場合でも、インポートおよびエクスポート ウィザードを使用して初期パッケージを作成しておくと役立つ場合があります。 ウィザードを使用すると、接続マネージャー、ソース、変換、および変換先を作成および構成できます。
 
-## <a name="issues-with-importing"></a>インポートに関する問題
+## <a name="issues-importing"></a> インポートに関する問題
 
 ### <a name="empty-rows"></a>空の行
 
@@ -209,7 +222,7 @@ Excel の列にテキスト データが含まているとドライバーが判�
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-with-exporting"></a>エクスポートに関する問題
+## <a name="issues-exporting"></a> エクスポートに関する問題
 
 ### <a name="create-a-new-destination-file"></a>新しいエクスポート先ファイルを作成する
 

@@ -2,7 +2,7 @@
 title: Lock Pages in Memory オプションの有効化 (Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad766a982b180e6fad72ec0ca3314648be81315f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac244ae7479f48e08d035ab67d904a74528a00e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory オプションの有効化 (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。  
   
 > [!NOTE]  
 >  メモリ内のページをロックすると、ディスクへのメモリのページングの際にパフォーマンスが向上する場合があります。  
@@ -36,23 +37,23 @@ ms.lasthandoff: 01/18/2018
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>lock pages in memory オプションを有効にするには  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。 **[開く]** ボックスに「 **gpedit.msc**」と入力します。  
+1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[開く]** ボックスに「 **gpedit.msc**」と入力します。  
   
-2.  **[ローカル グループ ポリシー エディター]** コンソールで **[コンピューターの構成]**を展開し、次に **[Windows の設定]**を展開します。  
+2.  **[ローカル グループ ポリシー エディター]** コンソールで **[コンピューターの構成]** を展開し、次に **[Windows の設定]** を展開します。  
   
-3.  **[セキュリティの設定]**を展開し、 **[ローカル ポリシー]**を展開します。  
+3.  **[セキュリティの設定]** を展開し、 **[ローカル ポリシー]** を展開します。  
   
 4.  **[ユーザー権利の割り当て]** フォルダーをクリックします。  
   
      ポリシーが詳細ペインに表示されます。  
   
-5.  詳細ペインで、 **[メモリ内のページのロック]**をダブルクリックします。  
+5.  詳細ペインで、 **[メモリ内のページのロック]** をダブルクリックします。  
   
-6.  **[ローカル セキュリティの設定 - メモリ内のページのロック]** ダイアログ ボックスで、 **[ユーザーまたはグループの追加]**をクリックします。  
+6.  **[ローカル セキュリティの設定 - メモリ内のページのロック]** ダイアログ ボックスで、 **[ユーザーまたはグループの追加]** をクリックします。  
   
-7.  **[ユーザー、サービス アカウント、またはグループの選択]** ダイアログ ボックスで、sqlservr.exe の実行権限のあるアカウントを追加します。  
+7.  **[Select Users, Service Accounts, or Groups]\(ユーザー、サービス アカウント、またはグループの選択\)** ダイアログ ボックスで、SQL Server サービス アカウントを選択します。  
   
-8.  SQL Server Data Engine サービスを再起動して、この設定を反映します。
+8.  SQL Server サービスを再起動して、この設定を反映します。
   
 ## <a name="see-also"></a>参照  
  [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

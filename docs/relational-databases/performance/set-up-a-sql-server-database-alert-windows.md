@@ -1,33 +1,34 @@
 ---
-title: "SQL Server データベースの警告のセットアップ (Windows) | Microsoft Docs"
-ms.custom: 
+title: SQL Server データベースの警告のセットアップ (Windows) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 447c615f57a71a321a85315cb9de40df5fca8cfc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 56dcfcc43dfdaf333990ce3f6e95d5aa9bede260
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server データベースの警告のセットアップ (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] システム モニターでは、システム モニターのカウンターがしきい値に達したときに発生する警告を作成できます。 システム モニターは、この警告に応答して、警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動できます。 たとえば、デッドロックの数が特定の値を超えたときに生成される警告を作成できます。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  システム モニターでは、システム モニターのカウンターがしきい値に達したときに発生する警告を作成できます。 システム モニターは、この警告に応答して、警告状況を処理するために記述されたカスタム アプリケーションなどのアプリケーションを起動できます。 たとえば、デッドロックの数が特定の値を超えたときに生成される警告を作成できます。 
   
  警告は、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して定義することもできます。 詳細については、「 [警告](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)」を参照してください。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/18/2018
   
 7. 新しい警告のダイアログ ボックスで、**[次の値になったら警告する]** の一覧の **[超過]** または **[以下]** を選択します。 **[制限値]** にしきい値を入力します。  
   
-     警告は、カウンターの値がしきい値を超えたとき、またはしきい値以下になったときに生成されます。これは **[超過]** または **[以下]**のどちらを選択したかによって決まります。  
+     警告は、カウンターの値がしきい値を超えたとき、またはしきい値以下になったときに生成されます。これは **[超過]** または **[以下]** のどちらを選択したかによって決まります。  
   
 8. **[Sample data every (データのサンプル間隔)]** ボックスで、サンプリング周期を設定します。  
   
