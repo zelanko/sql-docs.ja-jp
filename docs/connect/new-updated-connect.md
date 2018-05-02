@@ -12,7 +12,7 @@ ms.component: connect
 ms.date: 02/03/2018
 ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/08/2018
 ---

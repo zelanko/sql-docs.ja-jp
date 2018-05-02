@@ -1,7 +1,7 @@
 ---
 title: SQL にフラット ファイルをインポートする | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 09/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: alayu
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 874f49dd654ad1f52079a3d9ba2fbfb1c5497e58
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,11 +94,6 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 このページには、インポートが成功したかどうかが表示されます。 緑のチェック マークが表示される場合は成功です。それ以外の場合は、構成や入力ファイルに誤りがないか確認する必要があります。
 
 ![ウィザードの結果](media/import-flat-file-wizard/importffresults.png)
-
-## <a name="reporting-import-flat-file-failures"></a>フラット ファイルのインポートの失敗の報告
-どのようなエラーが発生した場合でも、sqltoolsprosesupport@microsoft.com に電子メールを送信します。
-
-詳細については、[これらの手順](reporting-import-flat-file-failures.md)を参照してください。
 
 ## <a name="learn-more"></a>詳細情報
 
