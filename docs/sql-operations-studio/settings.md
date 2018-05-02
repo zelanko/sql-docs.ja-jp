@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) のユーザーとワークスペースの設定 |Microsoft ドキュメント
-description: SQL Operations Studio (preview) のユーザーとワークスペースの設定を変更する方法。
+title: SQL 操作 Studio (プレビュー) のユーザーとワークスペースの設定 |Microsoft ドキュメント
+description: SQL 操作 Studio (プレビュー) のユーザーとワークスペースの設定を変更する方法。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>ユーザーとワークスペースの設定
 
 構成が容易である[!INCLUDE[name-sos](../includes/name-sos-short.md)]好みに応じて設定を使用します。 ほぼすべての部分[!INCLUDE[name-sos](../includes/name-sos-short.md)]のエディター、ユーザー インターフェイス、および機能の動作がオプションを変更できます。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]2 つのさまざまなスコープの設定を提供します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 2 つのさまざまなスコープの設定を提供します。
 
 * **ユーザー**の任意のインスタンスにこれらの設定がグローバルに適用[!INCLUDE[name-sos](../includes/name-sos-short.md)]を開きます。
 * **ワークスペース**ワークスペースの設定は、コンピューター上のフォルダーに固有の設定とは、フォルダーをエクスプ ローラー サイドバーで開いている場合にのみ使用できます。 このスコープで定義された設定は、ユーザーのスコープをオーバーライドします。
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 
 設定の変更がによって再度読み込まれる[!INCLUDE[name-sos](../includes/name-sos-short.md)]変更した後`settings.json`ファイルを保存します。
 
->**注:**ワークスペースの設定は、チーム全体のプロジェクトに固有の設定を共有するために役立ちます。
+>**注:** ワークスペースの設定は、チーム全体のプロジェクトに固有の設定を共有するために役立ちます。
 
 ## <a name="settings-file-locations"></a>設定ファイルの場所
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="hot-exit"></a>ホット終了
 
-SQL Operations Studio を忘れずに未保存の変更ファイル既定で終了するとします。 これは、Visual Studio のコードでホット終了機能と同じです。
+SQL 操作の Studio を忘れずに未保存の変更ファイル既定で終了するとします。 これは、Visual Studio のコードでホット終了機能と同じです。
 
 既定では、ホット終了は off です。 ホットを有効にする終了を編集して、`files.hotExit`設定します。 詳細については、「 [(Visual Studio コードのドキュメント) にホットの終了](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)です。
 
