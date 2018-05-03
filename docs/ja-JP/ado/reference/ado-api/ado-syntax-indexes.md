@@ -1,0 +1,39 @@
+---
+title: ADO 構文インデックス |Microsoft ドキュメント
+ms.prod: sql
+ms.prod_service: drivers
+ms.service: ''
+ms.component: ado
+ms.technology:
+- drivers
+ms.custom: ''
+ms.date: 01/19/2017
+ms.reviewer: ''
+ms.suite: sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apitype: COM
+helpviewer_keywords:
+- syntax indexes [ADO]
+ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
+caps.latest.revision: 11
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 418d7fb1fc7f50d072a1183d74584e01d7b36002
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/03/2018
+---
+# <a name="ado-syntax-indexes"></a>ADO 構文のインデックス
+ADO のメソッドとプロパティを呼び出す構文は、開発環境によって異なります。 ADO 言語リファレンスの残りの部分では、ADO メソッドおよびプロパティの構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 ただし、プログラミング言語と方法に基づいて特定の構文例を次のセクションを参照してください。  
+  
+-   [COM 用の Visual の C++ 構文インデックス用の ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)を使用せず、ADO のプロパティとメソッドをについて説明します、 **#import** Microsoft Visual C コンパイラ ディレクティブです。  
+  
+-   [の #import を使用して Visual C++ 構文インデックスの ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)を使用する場合、ADO のプロパティとメソッドの説明、 **#import** Microsoft Visual C コンパイラ ディレクティブです。  
+  
+## <a name="see-also"></a>参照  
+ [Microsoft Visual Basic と ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Microsoft Visual C で ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [スクリプト言語で ADO を使用する](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
