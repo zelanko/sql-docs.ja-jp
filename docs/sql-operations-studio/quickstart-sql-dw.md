@@ -20,18 +20,18 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2018
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: を使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]接続し、Azure SQL Data Warehouse のデータの照会
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
-このクイック スタートを使用する方法を示しています[!INCLUDE[name-sos](../includes/name-sos-short.md)]に Azure SQL データ ウェアハウスに接続し、TRANSACT-SQL ステートメントを使用して、作成、挿入、およびデータを選択します。 
+このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL データ ウェアハウスに接続し、TRANSACT-SQL ステートメントを使用して、データを作成、挿入、および選択する方法を説明します。
 
 ## <a name="prerequisites"></a>前提条件
-このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および Azure SQL データ ウェアハウスです。
+このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および Azure SQL データ ウェアハウス が必要です。
 
-- [インストール[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)です。
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)。
 
-SQL データ ウェアハウスがない場合は、次を参照してください。 [SQL データ ウェアハウスを作成](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)です。
+SQL データ ウェアハウスをもっていない場合は [SQL データ ウェアハウスを作成](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision) を参照してください。
 
-サーバー名、およびログイン資格情報に注意してください。
+サーバー名、およびログイン資格情報を覚えておくようにしてください。
 
 
 ## <a name="connect-to-your-data-warehouse"></a>データ ウェアハウスに接続します。
