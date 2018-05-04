@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
@@ -18,15 +17,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b62c751e7d223adc36dc122086951e2fd371a1ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="process-a-mining-model"></a>マイニング モデルの処理
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ マイニング デザイナーでのマイニング モデル タブで[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、マイニング構造に関連付けられている特定のマイニング モデルを処理することができますか、または構造に関連付けられているすべてのモデルを処理することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーにある [マイニング モデル] タブを使用すると、特定のマイニング モデル構造に関連するマイニング モデルを処理したり、その構造に関連するすべてのモデルを処理したりできます。  
   
  マイニング モデルは、次のツールを使用して処理できます。  
   
@@ -40,15 +39,15 @@ ms.lasthandoff: 01/08/2018
   
 1.  データ マイニング デザイナーの **[マイニング モデル]** タブで、グリッドにある 1 つまたは複数のモデル列からマイニング モデルを 1 つ選択します。  
   
-2.  **[マイニング モデル]** メニューの **[モデルの処理]**をクリックします。  
+2.  **[マイニング モデル]** メニューの **[モデルの処理]** をクリックします。  
   
-     マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]**をクリックします。  
+     マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]** をクリックします。  
   
-3.  **マイニング モデルの処理 -\<モデル >**ダイアログ ボックスで、をクリックして**実行**です。  
+3.  **マイニング モデルの処理 -\<モデル >** ダイアログ ボックスで、をクリックして**実行**です。  
   
      **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
-4.  モデルの処理が問題なく終了したら、 **[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
+4.  モデルの処理が問題なく終了したら、**[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
 5.  をクリックして**閉じる**で、**マイニング モデルの処理 -\<モデル >**  ダイアログ ボックス。  
   
@@ -58,13 +57,13 @@ ms.lasthandoff: 01/08/2018
   
 1.  データ マイニング デザイナーの **[マイニング モデル]** タブにある **[マイニング モデル]** メニューで **[マイニング構造および全モデルの処理]** をクリックします。  
   
-2.  マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]**をクリックします。  
+2.  マイニング構造に変更を加えた場合は、モデルを処理する前に構造を再配置するように求められます。 **[はい]** をクリックします。  
   
-3.  **マイニング構造の処理 -\<構造 >**ダイアログ ボックスで、をクリックして**実行**です。  
+3.  **マイニング構造の処理 -\<構造 >** ダイアログ ボックスで、をクリックして**実行**です。  
   
 4.  **[処理の進行状況]** ダイアログ ボックスが開き、モデル処理の詳細が表示されます。  
   
-5.  モデルの処理が問題なく終了したら、 **[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
+5.  モデルの処理が問題なく終了したら、**[処理の進行状況]** ダイアログ ボックスで **[閉じる]** をクリックします。  
   
 6.  をクリックして**閉じる**で、**処理\<モデル >**  ダイアログ ボックス。  
   

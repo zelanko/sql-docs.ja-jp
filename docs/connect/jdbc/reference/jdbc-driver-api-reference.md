@@ -3,26 +3,22 @@ title: JDBC ドライバー API リファレンス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2104aa05efd1720abe67ad281b14a5bda69c0d43
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 2b9dc05cfa6e96fc3dd987095917a932883df4e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API リファレンス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

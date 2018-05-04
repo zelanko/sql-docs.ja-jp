@@ -37,39 +37,40 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da1f46475be001737512dc3a0da074d2f97c403c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb75008ddad294be1a1f4aa465770d85d7ddb7e2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を確認するには、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を確認するには、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
 [ INTO new_table ]
-[ ON filegroup]
+[ ON filegroup ]
 ```  
   
 ## <a name="arguments"></a>引数  
- *new_table*  
+ *new_table*   
  新しいテーブルの名前を指定します。このテーブルは選択リストで指定した列とデータ ソースから選択された行を基に作成されます。  
- 
-  *filegroup*
- 
- 新しいテーブルを作成するファイル グループの名前を指定します。 指定されたファイル グループがデータベースに存在する必要があります。存在しない場合は、SQL Server エンジンからエラーがスローされます。 このオプションは、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降でのみサポートされています。
  
  *new_table* の形式は、選択リスト内の式を評価することによって決まります。 *new_table* 内の列は、選択リストの指定順に作成されます。 *new_table* 内の各列の名前、データ型、NULL 値の許容属性、値は、選択リスト内の対応する式と同じになります。 列の IDENTITY プロパティは、「解説」の「ID 列の使用」に示されている条件に当てはまる場合を除いて転送されます。  
   
  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの別のデータベースにテーブルを作成するには、*new_table* を *database.schema.table_name* の形式で完全修飾名として指定します。  
   
  リモート サーバーに *new_table* を作成することはできませんが、*new_table* にリモート データ ソースのデータを設定することはできます。 リモート ソース テーブルから *new_table* を作成するには、SELECT ステートメントの FROM 句で、*linked_server*.*catalog*.*schema*.*object* という形式の 4 部構成の名前を使用してソース テーブルを指定します。 FROM 句で [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数か [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用してリモート データ ソースを指定することもできます。  
+ 
+ *filegroup*    
+ 新しいテーブルを作成するファイル グループの名前を指定します。 指定されたファイル グループがデータベースに存在する必要があります。存在しない場合は、SQL Server エンジンからエラーがスローされます。   
+ 
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
 ## <a name="data-types"></a>データ型  
  FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM BLOB がコピーされ、**varbinary(max)** BLOB として新しいテーブルに格納されます。 FILESTREAM 属性がない場合、**varbinary(max)** データ型は 2 GB までに制限されます。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
@@ -91,18 +92,18 @@ ms.lasthandoff: 04/16/2018
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  テーブル変数やテーブル値パラメーターを新しいテーブルとして指定することはできません。  
   
- ソース テーブルがパーティション分割されている場合でも、SELECT...INTO を使用してパーティション テーブルを作成することはできません。 SELECT...INTO では、ソース テーブルのパーティション構成が使用されず、新しいテーブルが既定のファイル グループに作成されます。 パーティション テーブルに行を挿入するには、まずパーティション テーブルを作成してから INSERT INTO...SELECT FROM ステートメントを使用する必要があります。  
+ ソース テーブルがパーティション分割されている場合でも、`SELECT…INTO` を使用してパーティション テーブルを作成することはできません。 `SELECT...INTO` では、ソース テーブルのパーティション構成が使用されず、新しいテーブルが既定のファイル グループに作成されます。 パーティション テーブルに行を挿入するには、まずパーティション テーブルを作成してから `INSERT INTO...SELECT...FROM` ステートメントを使用する必要があります。  
   
- ソース テーブルに定義されているインデックス、制約、およびトリガーは、新しいテーブルに転送されません。SELECT...INTO ステートメントで指定することもできません。 これらのオブジェクトが必要な場合は、SELECT...INTO ステートメントの実行後に作成できます。  
+ ソース テーブルに定義されているインデックス、制約、およびトリガーは、新しいテーブルに転送されません。`SELECT...INTO` ステートメントで指定することもできません。 これらのオブジェクトが必要な場合は、`SELECT...INTO` ステートメントの実行後に作成できます。  
   
- ORDER BY 句を指定しても、行が指定した順序どおりに挿入されるかどうかは保証されません。  
+ `ORDER BY` 句を指定しても、行が指定した順序どおりに挿入されるかどうかは保証されません。  
   
  選択リストにスパース列が含まれている場合、新しいテーブルの列にスパース列のプロパティは転送されません。 新しいテーブルでこのプロパティが必要な場合は、SELECT...INTO ステートメントの実行後に列の定義を変更してプロパティを追加してください。  
   
- リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、SELECT...INTO が実行された時点の計算値になります。  
+ リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、`SELECT...INTO` が実行された時点の計算値になります。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- SELECT...INTO のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 選択 を使用して、最小ログ記録しています. ステートメントに効率的であるテーブルを作成すると、INSERT ステートメントを含むテーブルを作成します。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ `SELECT...INTO` のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 最小ログ記録を使用する場合は、テーブルを作成してから INSERT ステートメントでそのテーブルにデータを設定するより、`SELECT...INTO` ステートメントを使用する方が効率的である可能性があります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
@@ -214,7 +215,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. PolyBase で作成された外部テーブルをインポートします。  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase で作成された外部テーブルをインポートする  
  Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
  **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
@@ -229,8 +230,7 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
         SELECT * FROM CarSensor_Data where Speed > 35   
 ) AS SensorD  
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-ORDER BY YearlyIncome  
-  
+ORDER BY YearlyIncome;  
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 新しいテーブルを別のテーブルのコピーとして作成し、指定したファイル グループに読み込む
 次の例は、新しいテーブルを別のテーブルのコピーとして作成し、ユーザーの既定のファイル グループとは異なる、指定したファイル グループに読み込む方法を示しています。
@@ -247,7 +247,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>参照  

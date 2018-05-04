@@ -24,12 +24,11 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d9c5faa805785b856aca59ff2cd026b6ee9cf5c0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aad5963d2e3135c60e294f5eeb1aaebbc6982e30
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 |__$pre_version|**varbinary (32)**|競合する変更が発生したデータベースのバージョンです。|  
 |__$reason_code|**int**|競合の解決コード。 次の値のいずれかです。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、次を参照してください。 **_ _ $reason_text**です。|  
 |__$reason_text|**nvarchar (720)**|競合の解決。 次の値のいずれかです。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
-|__$update_bitmap|**varbinary (** *n* **)**です。 サイズは、内容によって異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
+|__$update_bitmap|**varbinary (** *n* **)** です。 サイズは、内容によって異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
 |__$inserted_date|**datetime**|競合する行がこのテーブルに挿入された日時です。|  
 |__$row_id|**timestamp**|競合の原因となった行に関連付けられている行バージョンです。|  
 |__$change_id|**binary (8)**|ローカル行の場合、この値はローカル行と競合している挿入行の __$row_id に等しくなります。 挿入行の場合、この値は NULL です。|  

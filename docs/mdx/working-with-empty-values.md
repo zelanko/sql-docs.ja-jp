@@ -21,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 92920642feb9d517067b41206e3cdb7c15f8302b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>空の値の操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +60,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)関数が返される**TRUE**場合にだけ、この関数で指定された組で識別されるセルが空です。 関数を返しますそれ以外の場合、 **FALSE**です。  
   
     > [!NOTE]  
-    >  **IsEmpty**関数では、メンバー式が null 値を返すかどうかを判断できません。 Null のメンバーが式から返されるかどうかを判断するのには、使用、 [IS](../mdx/is-mdx.md)演算子。  
+    >  **IsEmpty** 関数では、メンバー式が null 値を返すかどうかを判断できません。 Null のメンバーが式から返されるかどうかを判断するのには、使用、 [IS](../mdx/is-mdx.md)演算子。  
   
 -   空のセル値が数値演算子 (+、-、*、/) のいずれかのオペランドである場合、もう一方のオペランドが空でない値であるなら、空のセル値は 0 として扱われます。 オペランドが両方とも空なら、数値演算子は空のセル値を返します。  
   
@@ -126,7 +125,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 詳細については、次を参照してください。 [NonEmpty &#40;です。MDX と #41 です](../mdx/nonempty-mdx.md)。  
+ 詳細については、次を参照してください。 [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)です。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空の値と比較演算子  
  データに空の値がある場合、論理演算子と比較演算子は、TRUE または FALSE ではなく EMPTY を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 次の表は、空の値の比較を採用した場合の結果を示しています。  
@@ -135,15 +134,15 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |[AND]|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**場合は TRUE。**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**空**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  下の表は、OR 演算子を 2 つのブール値オペランドに適用した結果を示します。  
   
-|スイッチまたは|TRUE|FALSE|  
+|または|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**場合は TRUE。**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**空**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
@@ -156,8 +155,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です](../mdx/mdx-function-reference-mdx.md)   
- [MDX 演算子リファレンス &#40;です。MDX と #41 です](../mdx/mdx-operator-reference-mdx.md)   
- [式 &#40;です。MDX と #41 です](../mdx/expressions-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

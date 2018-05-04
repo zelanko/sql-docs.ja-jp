@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab3ba71bedbd76f2d7837a660c3a6f9d7a5ba588
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc です。&lt;capture_instance&gt;_CT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**__$start_lsn**|**binary(10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソース テーブルに対して delete 操作では、2 つの行を削除した場合、変更テーブルが含まれて次の 2 つの行と同じ**_ _ $start_lsn**値。|  
+|**__$start_lsn**|**binary(10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソース テーブルに対して delete 操作では、2 つの行を削除した場合、変更テーブルが含まれて次の 2 つの行と同じ **_ _ $start_lsn**値。|  
 |**_ _ $end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、この列は常に NULL です。|  
 |**__$seqval**|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値。|  
 |**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 次のいずれかになります。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
@@ -57,14 +56,14 @@ ms.lasthandoff: 04/16/2018
 ## <a name="captured-column-data-types"></a>キャプチャ対象列のデータ型  
  このテーブルに含まれるキャプチャ対象列は、ソースの対応する列と同じデータ型および値を持ちます。ただし、次の例外があります。  
   
--   **タイムスタンプ**列として定義する**binary (8)**です。  
+-   **タイムスタンプ**列として定義する**binary (8)** です。  
   
 -   **Identity**列がいずれかとして定義されている**int**または**bigint**です。  
   
  ただし、これらの列の値は、ソース列の値と同じです。  
   
 ### <a name="large-object-data-types"></a>ラージ オブジェクト データ型  
- データ型の列**イメージ**、**テキスト**、および**ntext**常に割り当て、 **NULL**ときの値 _ _ $操作 = 1 または\_\_$operation = 3。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)**が割り当てられて、 **NULL**ときの値\_\_$operation 列は、更新中に変更しない限り、3 を = です。 ときに\_ \_$operation = 1、これらの列には、削除時にその値が割り当てられます。 常にキャプチャ インスタンスに含まれている計算列の値を持つ**NULL**です。  
+ データ型の列**イメージ**、**テキスト**、および**ntext**常に割り当て、 **NULL**ときの値 _ _ $操作 = 1 または\_\_$operation = 3。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** が割り当てられて、 **NULL**ときの値\_\_$operation 列は、更新中に変更しない限り、3 を = です。 ときに\_ \_$operation = 1、これらの列には、削除時にその値が割り当てられます。 常にキャプチャ インスタンスに含まれている計算列の値を持つ**NULL**です。  
   
  既定では、INSERT、UPDATE、WRITETEXT、または UPDATETEXT の 1 回のステートメントでキャプチャ対象列に追加できる最大サイズは、65,536 バイト (64 KB) です。 より大きな LOB データをサポートするためにこのサイズを増やすには、使用して、 [max text repl size サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)をより大きな最大サイズを指定します。 詳細については、「 [max text repl size サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)」を参照してください。  
   

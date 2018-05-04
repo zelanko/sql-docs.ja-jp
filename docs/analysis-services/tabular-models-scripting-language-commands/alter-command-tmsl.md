@@ -1,30 +1,29 @@
 ---
-title: "Alter コマンド (TMSL) |Microsoft ドキュメント"
-ms.custom: 
+title: Alter コマンド (TMSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e3e12741988f5d1369e96381a54c15f64ec557
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a28e96ff40a83b3994e0af143a17e21ae8111cf5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-command-tmsl"></a>Alter コマンド (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]既存のオブジェクトがその子ではありません、表形式モードで Analysis Services インスタンス上に変更します。  オブジェクトが存在しない場合、コマンドは、エラーが発生します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  既存のオブジェクトがその子ではありません、表形式モードで Analysis Services インスタンス上に変更します。  オブジェクトが存在しない場合、コマンドは、エラーが発生します。  
   
  使用して**Alter**コマンドを対象となる更新プログラム、すべての列も指定せずに、テーブルのプロパティの設定と同様にします。 このコマンドはのような**CreateOrReplace**、せずに完全なオブジェクトの定義を指定する必要があるなくなります。  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
  要求の構造は、オブジェクトによって異なります。 **Alter**次のオブジェクトのいずれかで使用できます。  
   
- [データベース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)データベースの名前を変更します。  
+ [データベース オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)データベースの名前を変更します。  
   
 ```  
 "alter": {   
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/08/2018
   }   
 ```  
   
- [データ ソース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) 、これは、子オブジェクトのデータベースの接続の名前を変更します。  
+ [データ ソース オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) 、これは、子オブジェクトのデータベースの接続の名前を変更します。  
   
 ```  
 {   
@@ -82,11 +81,11 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)を参照してください**例 1**以下です。  
+ [Tables オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)を参照してください**例 1**以下です。  
   
- [パーティション オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)を参照してください**例 2**以下です。  
+ [パーティション オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)を参照してください**例 2**以下です。  
   
- [ロール オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)ロール オブジェクトのプロパティを変更します。  
+ [ロール オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)ロール オブジェクトのプロパティを変更します。  
   
 ```  
 {   
@@ -152,7 +151,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用状況 (エンドポイント)  
- このコマンドの要素がのステートメントで使用される、[メソッドの実行 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
+ このコマンドの要素がのステートメントで使用される、[メソッドの実行&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
   
 -   SQL Server Management Studio (SSMS) での XMLA ウィンドウとして  
   
@@ -162,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
  SSMS からは、このコマンドの既製のスクリプトを生成することはできません。 代わりに、例を使用して開始したり、独自に作成できます。  
   
- [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語 &#40;です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
+ [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語&#40;TMSL&#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
 
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

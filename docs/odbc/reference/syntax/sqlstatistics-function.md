@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLStatistics
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f91845e85a9af9f99e137368f6bdb7f8570a2cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **準拠**  
@@ -92,7 +91,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE では、ドライバーが統計を無条件に取得することを要求します。 (ドライバーのみ、Open Group 標準に準拠しているし、ODBC 拡張機能をサポートしていませんができなく SQL_ENSURE をサポートするためにします。)  
   
- SQL_QUICK では、サーバーからすぐに使用できる場合に、ドライバーで基数とページを取得するを要求します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (ODBC 3 から SQL_QUICK 動作を常に取得は、Open Group 標準に記述されたアプリケーションを*.x*-準拠のドライバーです)。  
+ SQL_QUICK では、サーバーからすぐに使用できる場合に、ドライバーで基数とページを取得するを要求します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (ODBC 3 から SQL_QUICK 動作を常に取得は、Open Group 標準に記述されたアプリケーションを *.x*-準拠のドライバーです)。  
   
 ## <a name="returns"></a>返します。  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
@@ -132,9 +131,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)です。  
   
- ODBC 3 の名前を変更した次の列*.x*です。 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
+ ODBC 3 の名前を変更した次の列 *.x*です。 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3*.x*列|  
+|ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

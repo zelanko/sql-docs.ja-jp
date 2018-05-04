@@ -3,15 +3,12 @@ title: スクロール可能なカーソルの種類 |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a777db13717dcd2bda9e308e7d7df27c8edb237e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 54acbd1010d546649b1ad92a34289fa4d04da162
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursor-types"></a>スクロール可能なカーソルの種類
 次の 4 つの種類のスクロール可能なカーソルは静的、動的、キーセット ドリブン、混合です。 静的カーソルは、ほとんどまたはまったく変更の検出が、比較的負荷の少ないを実装するのには、します。 動的カーソルでは、すべての変更を検出が、実装にコストがかかります。 キーセット ドリブン カーソルと混合カーソルは、動的カーソルよりも少ない経費では、ほとんどの変更を検出する間にあります。  

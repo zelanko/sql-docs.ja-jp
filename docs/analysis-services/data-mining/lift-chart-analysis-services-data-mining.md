@@ -1,16 +1,15 @@
 ---
-title: "リフト チャート (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: リフト チャート (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46bf1bb6fa5ee2e21a58095c1b705d692fa31a45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>リフト チャート (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*リフト チャート* は、ランダムな推測に対するマイニング モデルによる改善をグラフィカルに表示し、 *リフト* スコアの観点で変化を測定します。 さまざまなモデルのリフト スコアを比較することで、最適なモデルを判断できます。 また、モデルの予測の有用度が低くなる点を判断することもできます。 たとえば、リフト チャートを確認することで、販売促進キャンペーンが顧客の 30% に対してのみ有効であることに気付いた場合は、その図を使用してキャンペーンの範囲を制限します。  
+  *リフト チャート* は、ランダムな推測に対するマイニング モデルによる改善をグラフィカルに表示し、 *リフト* スコアの観点で変化を測定します。 さまざまなモデルのリフト スコアを比較することで、最適なモデルを判断できます。 また、モデルの予測の有用度が低くなる点を判断することもできます。 たとえば、リフト チャートを確認することで、販売促進キャンペーンが顧客の 30% に対してのみ有効であることに気付いた場合は、その図を使用してキャンペーンの範囲を制限します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングでは、リフト チャートにより同じ予測属性を含む複数のモデルの精度を比較できます。 また、1 つの結果 (予測属性の 1 つの値) またはすべての結果 (指定された属性のすべての値) のどちらかの予測精度を評価することもできます。  
   

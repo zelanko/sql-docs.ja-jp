@@ -1,11 +1,9 @@
 ---
 title: NumericScale と有効桁数のプロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e71eb45888921c483b411e7e978d9b7e9996b947
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4fe5e7a62200f4a8b0188db46664e7338fd2fc33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale と (VB) の有効桁数のプロパティの例
 この例では、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)と[精度](../../../ado/reference/ado-api/precision-property-ado.md)内のフィールドの有効桁数と小数点以下桁数を表示するプロパティ、***割引***のテーブル、 ***Pubs***データベース。  

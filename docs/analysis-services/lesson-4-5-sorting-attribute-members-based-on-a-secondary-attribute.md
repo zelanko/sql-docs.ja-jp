@@ -1,29 +1,27 @@
 ---
-title: "2 次属性に基づく属性メンバーの並べ替え |Microsoft ドキュメント"
-ms.custom: 
+title: 2 次属性に基づく属性メンバーの並べ替え |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 456921af2faeeb14373bdc1c7caed30a973549f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>レッスン 4、5、2 次属性に基づく並べ替え属性メンバー
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +43,9 @@ ms.lasthandoff: 02/15/2018
   
     属性階層のメンバーは、ASCII 値である各メンバー キー (月と年) を基準にして並べ替えられています。 この場合、属性名やキーで並べ替えても、カレンダー月は日付順に並びません。 これを解決するには、新しい属性である **MonthNumberOfYear** 属性に基づいて属性階層のメンバーを並べ替えます。 この属性の基になる列がちょうど **Date** ディメンション テーブルにあるので、この列を使用して MonthNumberOfYear 属性を作成します。  
   
-3.  Date ディメンションの **[ディメンションの構造]** タブに切り替え、 **[データ ソース ビュー]** ペインで **[MonthNumberOfYear]** を右クリックします。次に、 **[列から新しい属性を作成]**をクリックします。  
+3.  Date ディメンションの **[ディメンションの構造]** タブに切り替え、 **[データ ソース ビュー]** ペインで **[MonthNumberOfYear]** を右クリックします。次に、 **[列から新しい属性を作成]** をクリックします。  
   
-4.  **[属性]** ペインで、 **[Month Number Of Year]**をクリックします。次に、[プロパティ] ウィンドウで、 **AttributeHierarchyEnabled** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** を **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
+4.  **[属性]** ペインで、 **[Month Number Of Year]** をクリックします。次に、[プロパティ] ウィンドウで、 **AttributeHierarchyEnabled** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** を **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
   
     これらの設定により、ユーザーからはこの属性が見えなくなり、処理時間が短縮されます。 この属性は参照用には使用されません。 別の属性のメンバーを並べ替えるためにのみ使用されます。  
   
@@ -58,11 +56,11 @@ ms.lasthandoff: 02/15/2018
   
     **Date** ディメンションのすべての属性が **Date** 属性に直接関連付けられています。この Date 属性は、ディメンションのメンバーを関連するメジャー グループのファクトに関連付けているメンバー キーです。 **Month Name** 属性と **Month Number Of Year** 属性の間には、リレーションシップが何も定義されていません。  
   
-6.  ダイアグラムで、 **[Month Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
+6.  ダイアグラムで、 **[Month Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-7.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Month Name]**を指定します。 **[関連属性]** を **[Month Number Of Year]**に設定します。  
+7.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Month Name]** を指定します。 **[関連属性]** を **[Month Number Of Year]** に設定します。  
   
-8.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
+8.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
     **Month Name** 属性のメンバーおよび **Month Number Of Year** 属性のメンバー間のリレーションシップは、時間が経過しても変わりません。 その結果、増分処理中に、このリレーションシップの集計が削除されません。 このリレーションシップが変化すると、増分処理時に処理エラーが発生し、ディメンションの完全な処理を実行する必要が生じます。 以上の操作で、 **Month Name**のメンバーの並べ替え順序を設定する準備が整いました。  
   
@@ -72,9 +70,9 @@ ms.lasthandoff: 02/15/2018
   
 11. **[属性]** ペインで、 **[Month Name]** をクリックします。次に、[プロパティ] ウィンドウの **[OrderBy]** プロパティの値を **AttributeKey** に変更し、 **[OrderByAttribute]** プロパティの値を **Month Number Of Year**に変更します。  
   
-12. **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+12. **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-13. 配置が正常に完了したら、Date ディメンションの **[ブラウザー]** タブに切り替え、 **[再接続]**をクリックします。次に、 **Calendar Date** および **Fiscal Date** ユーザー階層を表示し、月が日付順に並んでいることを確認します。  
+13. 配置が正常に完了したら、Date ディメンションの **[ブラウザー]** タブに切り替え、 **[再接続]** をクリックします。次に、 **Calendar Date** および **Fiscal Date** ユーザー階層を表示し、月が日付順に並んでいることを確認します。  
   
     次の図のように、月が日付順に並べ替えられました。  
   
@@ -90,23 +88,23 @@ ms.lasthandoff: 02/15/2018
   
     ![Commute Distance 属性階層](../analysis-services/media/l4-memberproperties-4.gif "Commute Distance 属性階層")  
   
-2.  Customer ディメンションのディメンション デザイナーで **[ディメンションの構造]** タブに切り替えます。次に、 **[データ ソース ビュー]** ペインで、 **[Customer]** テーブルの **[CommuteDistanceSort]** を右クリックして、 **[列から新しい属性を作成]**をクリックします。  
+2.  Customer ディメンションのディメンション デザイナーで **[ディメンションの構造]** タブに切り替えます。次に、 **[データ ソース ビュー]** ペインで、 **[Customer]** テーブルの **[CommuteDistanceSort]** を右クリックして、 **[列から新しい属性を作成]** をクリックします。  
   
-3.  **[属性]** ペインで、 **[Commute Distance Sort]**をクリックします。次に、[プロパティ] ウィンドウで、 **AttributeHierarchyEnabled** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** を **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
+3.  **[属性]** ペインで、 **[Commute Distance Sort]** をクリックします。次に、[プロパティ] ウィンドウで、 **AttributeHierarchyEnabled** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** を **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
   
     これらの設定により、ユーザーからはこの属性が見えなくなり、処理時間が短縮されます。 この属性は参照用には使用されません。 別の属性のメンバーを並べ替えるためにのみ使用されます。  
   
-4.  **[Geography]**をクリックします。次に、[プロパティ] ウィンドウで、 **AttributeHierarchyVisible** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
+4.  **[Geography]** をクリックします。次に、[プロパティ] ウィンドウで、 **AttributeHierarchyVisible** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
   
     これらの設定により、ユーザーからはこの属性が見えなくなり、処理時間が短縮されます。 この属性は参照用には使用されません。 別の属性のメンバーを並べ替えるためにのみ使用されます。 **Geography** にはメンバー プロパティが存在するので、その **AttributeHierarchyEnabled** プロパティを **True**に設定する必要があります。 したがって、この属性を非表示にするには、 **AttributeHierarchyVisible** プロパティを **False**に設定します。  
   
 5.  **[属性リレーションシップ]** タブをクリックします。  
   
-6.  属性の一覧で **[Commute Distance]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
+6.  属性の一覧で **[Commute Distance]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-7.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Commute Distance]**を指定します。 **[関連属性]** を **[Commute Distance Sort]**に設定します。  
+7.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Commute Distance]** を指定します。 **[関連属性]** を **[Commute Distance Sort]** に設定します。  
   
-8.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]**に設定します。  
+8.  **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
     **Commute Distance** 属性のメンバーおよび **Commute Distance Sort** 属性のメンバー間のリレーションシップは、時間が経過しても変わりません。  
   
@@ -116,11 +114,11 @@ ms.lasthandoff: 02/15/2018
   
 10. **[ディメンション構造]** タブをクリックします。  
   
-11. **[属性]** ペインで、 **[Commute Distance]**をクリックします。次に、[プロパティ] ウィンドウの **[OrderBy]** プロパティの値を **AttributeKey**に変更し、 **OrderByAttribute** プロパティの値を **Commute Distance Sort**に変更します。  
+11. **[属性]** ペインで、 **[Commute Distance]** をクリックします。次に、[プロパティ] ウィンドウの **[OrderBy]** プロパティの値を **AttributeKey**に変更し、 **OrderByAttribute** プロパティの値を **Commute Distance Sort**に変更します。  
   
-12. **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+12. **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-13. 配置が正常に完了したら、Customer ディメンションのディメンション デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]**をクリックします。次に、 **Commute Distance** 属性階層を表示します。  
+13. 配置が正常に完了したら、Customer ディメンションのディメンション デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]** をクリックします。次に、 **Commute Distance** 属性階層を表示します。  
   
     次の図のように、属性階層のメンバーは、通勤距離の長い順に論理的な順序で並べ替えられました。  
   

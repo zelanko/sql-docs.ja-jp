@@ -1,11 +1,9 @@
 ---
 title: 介在する図形の COMPUTE 句 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b54f38e92f5728e970363674acea7d29e9cf81a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8c8879e50269271392186e0f7e941551760671b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intervening-shape-compute-clauses"></a>介在する図形の COMPUTE 句
 次の例のように、パラメーター化された shape コマンドで親と子の 1 つまたは複数の COMPUTE 句を埋め込むには有効です。  

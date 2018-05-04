@@ -27,12 +27,11 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a8049558f764d0d135984ec7d00cab06dbb5abd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b2d86105f6ebe44865a0a31d3eedfefe4838bfe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sys.sp_cdc_generate_wrapper_function
  コミット時間が上端と等しい変更を、生成されたプロシージャによって抽出範囲内に含めるかどうかを示すフラグ ビットです。 *high_end_pt_flag*は**ビット**で、既定値は 1 で、エンドポイントを含める必要があることを示します。 値に 0 を指定すると、すべてのコミット時間は上端よりも厳密に短くなります。  
   
  [ @column_list=] '*column_list*'  
- ラッパー関数から返される結果セットに含めるキャプチャ対象列の一覧です。 *column_list*は**nvarchar (max)**あり、既定値は NULL です。 NULL が指定されている場合、キャプチャされたすべての列が含まれます。  
+ ラッパー関数から返される結果セットに含めるキャプチャ対象列の一覧です。 *column_list*は**nvarchar (max)** あり、既定値は NULL です。 NULL が指定されている場合、キャプチャされたすべての列が含まれます。  
   
  [ @update_flag_list=] '*update_flag_list*'  
- ラッパー関数から返される結果セットに更新フラグが含まれる付加列の一覧です。 *update_flag_list*は**nvarchar (max)**あり、既定値は NULL です。 NULL が指定されている場合、更新フラグは含まれません。  
+ ラッパー関数から返される結果セットに更新フラグが含まれる付加列の一覧です。 *update_flag_list*は**nvarchar (max)** あり、既定値は NULL です。 NULL が指定されている場合、更新フラグは含まれません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

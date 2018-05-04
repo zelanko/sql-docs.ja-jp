@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,19 +20,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bc1574fc06eeaa032fb68d395106721fc33ec699
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 79e977a3c25b95d4789d6b7c56ce5e188788a4fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-member-expressions"></a>メンバー式の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   メンバー式には、メンバー識別子、メンバー関数、またはメンバーに変換可能な式が入ります。  
   
- メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 例 :  
+ メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 以下に例を示します。  
   
 ```  
 SELECT Amount ON 0  
@@ -69,12 +67,12 @@ Dimension_Name
   
 ```  
   
- MDX 関数には、メンバーを返すものが多数存在します。 一覧については、次を参照してください。 [MDX 関数リファレンス &#40;です。MDX と #41 です](../mdx/mdx-function-reference-mdx.md)  
+ MDX 関数には、メンバーを返すものが多数存在します。 一覧については、次を参照してください[MDX 関数リファレンス&#40;MDX。&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  メンバー名およびメンバー キーの詳細については、次を参照してください[メンバー、組、およびセット &#40; の操作。MDX と #41 です](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
+>  メンバー名およびメンバー キーの詳細については、次を参照してください。[メンバー、組、およびセット&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。MDX と #41 です](../mdx/expressions-mdx.md)  
+ [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

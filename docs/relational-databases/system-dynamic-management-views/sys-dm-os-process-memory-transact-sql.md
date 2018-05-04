@@ -26,13 +26,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a213906c28d9c05668b49c2644aea1757804a9c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 18c6b50d4f3055b6e3c8e141ee2080bab36a79c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 |**total_virtual_address_space_kb**|**bigint**|仮想アドレス空間のユーザー モード領域の合計サイズを示します。 Null を許容しません。|  
 |**virtual_address_space_reserved_kb**|**bigint**|プロセスによって予約された仮想アドレス空間の総量を示します。 Null を許容しません。|  
 |**virtual_address_space_committed_kb**|**bigint**|コミットまたは物理ページへのマップが済んでいる、予約済みの仮想アドレス空間の量を示します。 Null を許容しません。|  
-|**virtual_address_space_available_kb**|**bigint**|現在利用可能な仮想アドレス空間の量を示します。 Null を許容しません。<br /><br /> **注:**割り当ての粒度が存在できるよりも小さいする領域を解放します。 これらの領域は割り当てに利用できません。|  
+|**virtual_address_space_available_kb**|**bigint**|現在利用可能な仮想アドレス空間の量を示します。 Null を許容しません。<br /><br /> **注:** 割り当ての粒度が存在できるよりも小さいする領域を解放します。 これらの領域は割り当てに利用できません。|  
 |**page_fault_count**|**bigint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスに起因するページ違反の数を示します。 Null を許容しません。|  
 |**memory_utilization_percentage**|**int**|ワーキング セット内のコミット済みメモリの割合を指定します。 Null を許容しません。|  
 |**available_commit_limit_kb**|**bigint**|プロセスによってコミット可能なメモリの量を示します。 Null を許容しません。|  

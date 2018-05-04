@@ -1,16 +1,15 @@
 ---
-title: "欠損値 (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: 欠損値 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9703fb1b4f491f01a698582af7190974cc7afe33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>不足値 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*不足値* の適切な処理は効果的なモデル化の重要な部分です。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
+  *不足値* の適切な処理は効果的なモデル化の重要な部分です。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>データ マイニングにおける不足値の定義  
  不足値は、さまざまな状況を表します。 たとえば、フィールドが該当しなかった、イベントが発生しなかった、データを使用できなかった、 データの入力者が正しい値を知らなかった、入力者がフィールドにデータが入力されていなくてもかまわないと考えた、などです。  
@@ -115,13 +113,13 @@ ms.lasthandoff: 02/15/2018
   
 |処理手順|リンク|  
 |-----------|-----------|  
-|不足値の処理を制御するためのフラグを個々のモデル列に追加する。|[モデリング フラグ &#40;データ マイニング"&"#41 です。 表示または変更](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|不足値の処理を制御するためのフラグを個々のモデル列に追加する。|[モデリング フラグ (&) #40";"データ マイニング"&"#41 です。 表示または変更](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |マイニング モデルに、不足値の処理を制御するためのプロパティを設定する。|[マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|DMX でモデリング フラグを指定する方法を習得する。|[モデリング フラグ &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
+|DMX でモデリング フラグを指定する方法を習得する。|[モデリング フラグ (&) #40";"DMX"&"#41;](../../dmx/modeling-flags-dmx.md)|  
 |マイニング構造が不足値を処理する方法を変更する。|[マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>「  
- [マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [モデリング フラグ (&) #40 です。 データ マイニング &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [モデリング フラグ (&) #40 です。 データ マイニング & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

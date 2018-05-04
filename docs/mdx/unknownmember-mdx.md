@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9b930ede9812ade609476d4b0f648c3455741066
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7fe0fe0706d6b88c19f5683a71de15516dddecec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ Hierarchy_Expression.UnknownMember
  階層を返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]に階層が不明の場合に、階層を持つファクト テーブルのデータを関連付けるには、不明なメンバーを作成します。 不明なメンバーは以下のレベルのいずれかにあります。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 階層が不明の場合に、階層を持つファクト テーブルのデータを関連付けるには、不明なメンバーを作成します。 不明なメンバーは以下のレベルのいずれかにあります。  
   
 -   集計されない属性階層の場合、最上位レベル。  
   
@@ -94,6 +93,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

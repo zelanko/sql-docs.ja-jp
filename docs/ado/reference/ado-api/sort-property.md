@@ -1,11 +1,9 @@
 ---
 title: プロパティを並べ替える |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -28,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a6f1652861f7b057105a198b36ab7bb0e4d98eb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-property"></a>並べ替えのプロパティ
 1 つまたは複数のフィールド名を示す、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられて、各フィールドが昇順または降順で並べ替えられたかどうかとします。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/18/2018
   
  設定、**並べ替え**プロパティを空の文字列には行は元の順序にリセットされ、一時的なインデックスを削除します。 既存のインデックスは削除されません。  
   
- たとえば、**レコード セット**という 3 つのフィールドが含まれています*firstName*、 *[middleinitial]*と*lastName*です。 設定、**並べ替え**プロパティを文字列に"`lastName DESC, firstName ASC`"、順序は、 **Recordset**昇順の最初の名前で、次の姓を降順にします。 ミドル ネームのイニシャルは無視されます。  
+ たとえば、**レコード セット**という 3 つのフィールドが含まれています*firstName*、 *[middleinitial]* と*lastName*です。 設定、**並べ替え**プロパティを文字列に"`lastName DESC, firstName ASC`"、順序は、 **Recordset**昇順の最初の名前で、次の姓を降順にします。 ミドル ネームのイニシャルは無視されます。  
   
  フィールドをするという名前の"ASC"または"DESC"キーワードとそれらの名前が競合するため**ASC**と**DESC**です。 使用して、競合する名前を持つフィールドの別名を作成することができます、 **AS**を返すクエリ内のキーワード、 **Recordset**です。  
   

@@ -1,11 +1,9 @@
 ---
 title: 言語によって、ADO イベントのインスタンス化 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88fe69a56932c450542db04707e47f4c84d4209c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e9d4930294b4024d5c3dfa7dd17ffee3c8f0b11b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-event-instantiation-by-language"></a>言語によって、ADO イベントのインスタンス化
 それぞれのプログラミング言語では、ADO イベントのインスタンスを異なる方法で作成します。 次の例のすべてを作成、 **ConnectComplete**イベント ハンドラー。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 04/18/2018
   
 -   [Visual C](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
--   [[[VBScript]]](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
+-   [[VBScript]](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   
 -   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
   

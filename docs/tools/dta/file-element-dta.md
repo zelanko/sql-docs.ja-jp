@@ -2,7 +2,7 @@
 title: ファイルの要素 (DTA) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65d4f2334b180c7307d95bea0cb13a2c6ce33a5a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: e04127c12690c89a0a6a98c116fe90381237795c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-element-dta"></a>File 要素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]ワークロード ファイルを指定します。 ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 ワークロード ファイルには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト (.sql) またはトレース ファイル (.trc) を指定できます。 詳細については、「[データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ワークロード ファイルを指定します。 ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 ワークロード ファイルには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト (.sql) またはトレース ファイル (.trc) を指定できます。 詳細については、「[データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,9 +45,9 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
-|**データ型と長さ**|**string** データ型を使用して、ワークロード ファイルのあるディレクトリへのパスを指定します。 例:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> 長さの制限はサーバーによって決まることに注意してください。|  
+|**データ型と長さ**|**string** データ型を使用して、ワークロード ファイルのあるディレクトリへのパスを指定します。 例 :<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> 長さの制限はサーバーによって決まることに注意してください。|  
 |**既定値**|[なし] :|  
 |**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 **EventString**親要素に対しては、 **File**、 **Database** 、または **Workload** 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、 **File** 要素を使用してワークロードを指定した場合は、同じ XML 入力ファイル内で **Database** 要素を使用してワークロードを指定することはできません。|  
   

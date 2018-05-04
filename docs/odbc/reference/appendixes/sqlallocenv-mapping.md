@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocEnv
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 01618081862172fb951cfc21c0c7cc5675bb1062
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 75c17775183ba1bcb3164015679adf49a76f6828
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv マッピング
-アプリケーションを呼び出すと**SQLAllocEnv**から ODBC 3*.x*ドライバーへの呼び出し**SQLAllocEnv**(*phenv*)にマップされて**SQLAllocHandle**次のようにします。  
+アプリケーションを呼び出すと**SQLAllocEnv**から ODBC 3 *.x*ドライバーへの呼び出し**SQLAllocEnv**(*phenv*)にマップされて**SQLAllocHandle**次のようにします。  
   
 1.  ドライバー マネージャーは、環境ハンドルを割り当てるし、アプリケーションに返します。 ドライバー マネージャー呼び出し**SQLSetEnvAttr** SQL_OV_ODBC2 にまた環境属性を設定します。  
   

@@ -7,11 +7,11 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b0c32ba91698345adea542ed5929a494b00059e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3b7ffeac0dfe1e441f188aae67e28004e294fc3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wrap-python-code-in-a-stored-procedure"></a>ストアド プロシージャでの Python コードを折り返す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,10 +31,10 @@ ms.lasthandoff: 04/16/2018
 2. このプロジェクトの新しいデータベースを作成し、コンテキストの変更、**クエリ**ウィンドウが、新しいデータベースを使用します。
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/16/2018
 
     覚えなくても、支払いを行う、T-SQL に慣れていない場合、`DROP...IF`ステートメントです。 テーブルを作成しようとして、既に存在する、SQL Server はエラーを返します"が既にデータベースに ' iris_data' という名前のオブジェクトです。"。 このようなエラーを回避する方法の 1 つは、コードの一部として、既存のテーブルまたはその他のオブジェクトを削除するのにです。
 
-4. トレーニング済みモデルを格納するために使用するテーブルを作成する次のコードを実行します。 SQL Server での Python (R) モデルを保存するする必要があるシリアル化型の列に格納されている**varbinary (max)**です。 
+4. トレーニング済みモデルを格納するために使用するテーブルを作成する次のコードを実行します。 SQL Server での Python (R) モデルを保存するする必要があるシリアル化型の列に格納されている**varbinary (max)** です。 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;

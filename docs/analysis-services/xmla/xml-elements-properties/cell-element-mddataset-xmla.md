@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 22d0920699f9acee9dc7a371a9dceb8a633293e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 要素 (MDDataSet) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]1 つの親が含まれているセルに関する情報を格納[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  1 つの親が含まれているセルに関する情報を格納[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,11 +53,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDDataSet データ型 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [MDDataSet データ型 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

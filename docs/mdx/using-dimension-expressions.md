@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>ディメンション式の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   ディメンション式と階層式は通常、階層からメンバー、セット、または組を返すために多次元式 (MDX) 内で関数にパラメーターを渡す場合に使用します。  
   
- ディメンション式はオブジェクト識別子なので、単純式のみを指定できます。 参照してください[式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)単純式と複合式の説明。  
+ ディメンション式はオブジェクト識別子なので、単純式のみを指定できます。 参照してください[式&#40;MDX&#41; ](../mdx/expressions-mdx.md)単純式と複合式の説明。  
   
 ## <a name="dimension-expressions"></a>ディメンション式  
  ディメンション式には、ディメンション識別子またはディメンション関数のいずれかが含まれます。  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- 階層識別子は*Dimension_Name**.**Hierarchy_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
+ 階層識別子は*Dimension_Name **.** Hierarchy_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)  
+ [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

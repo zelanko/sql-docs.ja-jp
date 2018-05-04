@@ -3,15 +3,12 @@ title: 列方向のバインド |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
 列方向のバインドを使用する場合、アプリケーションは、データが返される対象の各列に 1 つまたは 2 つ、または場合によっては、次の 3 つの配列をバインドします。 最初の配列が、データ値を保持し、2 番目の配列が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これは、3 番目の配列はバインドされています。 各配列には、行セットの行数が同じ数の要素が含まれています。  

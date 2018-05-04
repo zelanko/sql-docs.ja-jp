@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31efba3afbbb2f9ee4cfc8ca5b1dccbf7d5f9f2b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ca6eb0e1943d87046da8bb81135e2b2e0546f59b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sourceattributeid-element-assl"></a>SourceAttributeID 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]基になる属性の識別子 (ID) を含む、[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)要素に基づいています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  基になる属性の識別子 (ID) を含む、[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)要素に基づいています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,23 +49,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|String|  
+|データ型と長さ|文字列|  
 |既定値|なし|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[Level](../../../analysis-services/scripting/objects/level-element-assl.md)|  
+|親要素|[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
  親に対応する要素**SourceAttributeID**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Level>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f034a30c00b915fcea6956c2a6ffcf311358f940
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c08e9df78c2da828622ddb3d6e9778cf727226d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonationmode-element-assl"></a>ImpersonationMode 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]派生した要素の権限借用の方法を示す値を含む、 [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)データ型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  派生した要素の権限借用の方法を示す値を含む、 [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md)データ型。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*既定値*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|既定値|*[Default]*|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
 |値|Description|  
 |-----------|-----------------|  
-|*既定値*|親は、権限借用を使用するコンテキストに最適な権限借用方法を使用します。|  
+|*[Default]*|親は、権限借用を使用するコンテキストに最適な権限借用方法を使用します。|  
 |*権限借用アカウント*|親は、親要素で指定されているユーザー アカウントの資格情報を使用します。|  
 |*ImpersonateAnonymous*|親は、匿名ユーザーの資格情報を使用します。|  
 |*ImpersonateCurrentUser*|親は、現在のユーザーの資格情報を使用します。|  
@@ -77,6 +76,6 @@ ms.lasthandoff: 01/08/2018
  許可される値に対応する列挙**ImpersonationMode**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ImpersonationLevel>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

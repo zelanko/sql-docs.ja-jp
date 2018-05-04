@@ -3,15 +3,12 @@ title: インターフェイスの準拠レベル |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be780023002dba4422a6523f57866661fde593b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 890684bf513b80cd484f7b15c75a04c38553513b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interface-conformance-levels"></a>インターフェイスへの準拠レベル
 平準化の目的は、どのような機能を利用して、ドライバーからアプリケーションに通知を開始します。 関数に基づく平準化方式は十分にこの目標を達成できません。 ODBC 3 です。*x*ドライバーは、所有する機能に基づいて分類されます。 関数をサポートする含めることができます、この機能をサポートします。によって返される情報の種類の記述子フィールド、ステートメント属性、"Y"の値をサポートするを含めることができますも**SQLGetInfo**のようにします。  
@@ -43,7 +39,7 @@ ms.lasthandoff: 04/16/2018
  3 つの ODBC インターフェイスへの準拠レベル: コア、レベル 1 およびレベル 2 です。  
   
 > [!NOTE]  
->  これらの準拠レベルは、ODBC 2 で同じ名前の ODBC API への準拠レベルよりも異なる要件を持つ*.x*です。 具体的には、ODBC 2 によって暗黙的にすべての機能*.x* API への準拠レベル 1 は、コア インターフェイスへの準拠レベルの一部であるようになりました。 その結果、多くの ODBC ドライバーは、コア レベル インターフェイスへの準拠を報告する可能性があります。  
+>  これらの準拠レベルは、ODBC 2 で同じ名前の ODBC API への準拠レベルよりも異なる要件を持つ *.x*です。 具体的には、ODBC 2 によって暗黙的にすべての機能 *.x* API への準拠レベル 1 は、コア インターフェイスへの準拠レベルの一部であるようになりました。 その結果、多くの ODBC ドライバーは、コア レベル インターフェイスへの準拠を報告する可能性があります。  
   
  このセクションでは、次のトピックを扱います。  
   

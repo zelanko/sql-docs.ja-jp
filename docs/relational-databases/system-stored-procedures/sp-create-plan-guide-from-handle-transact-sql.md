@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d82828ccf7e1628140a6a20f51685334dd01982
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 19cae7ca2fa4612779b8225526ab7694d576ee0a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name* 、規則に従う必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることもできません (#)。 最大長*plan_guide_name* 124 文字です。  
   
  [ @plan_handle =] *plan_handle*  
- プラン キャッシュのバッチを識別します。 *plan_handle*は**varbinary (64)**です。 *plan_handle*から取得できます、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動的管理ビュー。  
+ プラン キャッシュのバッチを識別します。 *plan_handle*は**varbinary (64)** です。 *plan_handle*から取得できます、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)動的管理ビュー。  
   
  [ @statement_start_offset =] { *statement_start_offset* |NULL}]  
  指定したバッチ内のステートメントの開始位置を識別*plan_handle*です。 *statement_start_offset*は**int**、既定値は NULL です。  

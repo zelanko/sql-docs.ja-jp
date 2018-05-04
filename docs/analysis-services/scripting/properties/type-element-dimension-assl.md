@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aac5535e8d94cdd602b139bd9046b77a15cbad5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ef3fb51a76ce0e51b729028d788a73723b05ba71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimension-assl"></a>Type 要素 (Dimension) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]ディメンションの内容に関する情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  ディメンションのコンテンツに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,17 +49,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|既定値|*Regular*|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|親要素|[ディメンション](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
@@ -70,27 +69,27 @@ ms.lasthandoff: 01/08/2018
   
 |値|Description|  
 |-----------|-----------------|  
-|*通常*|ディメンションは標準ディメンションです。|  
+|*Regular*|ディメンションは標準ディメンションです。|  
 |*[時刻]*|ディメンションは時間ディメンションです。<br /><br /> 注: この値は、ディメンションが時間ディメンションに固有の機能をサポートしていることを示します。|  
 |*Geography*|ディメンションに地域属性が含まれています。|  
 |*組織*|ディメンションに組織属性が含まれています。|  
 |*BillOfMaterials*|ディメンションに部品表属性が含まれています。|  
 |*Accounts*|ディメンションに勘定科目関連の属性が含まれています。<br /><br /> 注: この値は、ディメンションに勘定科目ディメンションに固有の機能がサポートしていることを示します。|  
-|*顧客*|ディメンションに顧客関連の属性が含まれています。|  
+|*Customers*|ディメンションに顧客関連の属性が含まれています。|  
 |*製品*|ディメンションに製品関連の属性が含まれています。|  
 |*シナリオ*|ディメンションにシナリオ関連の属性が含まれています。|  
-|*定量的*|ディメンションに数量属性が含まれています。|  
+|*Quantitative*|ディメンションに数量属性が含まれています。|  
 |*Utility*|ディメンションにユーティリティ属性が含まれています。|  
-|*通貨*|ディメンションに通貨属性が含まれています。|  
+|*Currency*|ディメンションに通貨属性が含まれています。|  
 |*レート*|ディメンションに換算レート属性が含まれています。|  
 |*Channel*|ディメンションにチャネル属性が含まれています。|  
-|*プロモーション*|ディメンションにプロモーション関連の属性が含まれています。|  
+|*Promotion*|ディメンションにプロモーション関連の属性が含まれています。|  
   
  許可される値に対応する列挙**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionType>します。  
   
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Dimension>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

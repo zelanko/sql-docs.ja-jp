@@ -1,31 +1,29 @@
 ---
-title: "Kpi |Microsoft ドキュメント"
-ms.custom: 
+title: Kpi |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a38d562df467f020db529fde8633acaa081d045c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: bb035968cc7c9b5bc40bf176907221becf29076d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-*KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 この記事は、表形式モデルの作成者が表形式モデルの Kpi の基本を理解を提供します。  
+  *KPI* (主要業績評価指標) は、表形式モデルで、 *対象* の値に対する *ベース* メジャーによって定義される、また、メジャーまたは絶対値によって定義される値のパフォーマンスの測定に使用されます。 この記事は、表形式モデルの作成者が表形式モデルの Kpi の基本を理解を提供します。  
   
 ##  <a name="bkmk_benefits"></a> 利点  
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネス目標を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI を使用して予測総利益に対する月間売上総利益を測定できます。 経理部門では、月間の収入に対する支出を測定してコストを評価し、人事部門では、四半期単位の従業員離職率を測定することができます。 これらはそれぞれ KPI の一例です。 企業のプロフェッショナルは、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得したり、傾向を把握したりします。  
@@ -74,7 +72,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
 ##  <a name="bkmk_create"></a> Create and edit KPIs  
  KPI を作成するには、モデル デザイナーの [主要業績評価指標] ダイアログ ボックスを使用します。 KPI はメジャーと関連付ける必要があるため、ベース値を評価するメジャーを拡張してから、対象の値を評価するメジャーを作成するか、絶対値を入力することにより、KPI を作成します。 ベース メジャー (値) および対象の値が定義された後、状態のしきい値のパラメーターをベース値と対象の値の間で定義できます。 状態は、選択可能なアイコン、バー、グラフ、または色を使用して、グラフィカルな形式で表示されます。 ベース値および対象の値は、状態と同様に、他のデータ フィールドに対してスライスできる値として、レポートまたはピボットテーブルに追加できます。  
   
- [主要業績評価指標] ダイアログ ボックスを表示するには、テーブルのメジャー グリッドで、ベース値として機能するメジャーを右クリックし、 **[KPI の作成]**をクリックします。 ベース値としての KPI にメジャーが拡張された後、メジャー グリッドのメジャー名の横にアイコンが表示され、メジャーが KPI に関連付けられていることを示します。  
+ [主要業績評価指標] ダイアログ ボックスを表示するには、テーブルのメジャー グリッドで、ベース値として機能するメジャーを右クリックし、 **[KPI の作成]** をクリックします。 ベース値としての KPI にメジャーが拡張された後、メジャー グリッドのメジャー名の横にアイコンが表示され、メジャーが KPI に関連付けられていることを示します。  
   
 ##  <a name="bkmk_related_tasks"></a> 関連タスク  
   

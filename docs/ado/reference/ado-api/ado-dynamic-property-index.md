@@ -1,8 +1,7 @@
 ---
 title: ADO の動的プロパティ インデックス |Microsoft ドキュメント
 ms.prod: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,11 +15,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d646865c5fc95ed032c0cc21e973a3204162201
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 306b4ecf404afef9e7e6ed2c523c2ca362fab23b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動的プロパティのインデックス
 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネントが動的なプロパティを追加できます、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)と[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 特定のプロバイダーは、これらのオブジェクトが開かれたときに、追加のプロパティを挿入も可能性があります。 これらのプロパティの一部は、「、 [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)セクションです。 内の特定のプロバイダーの詳細に表示される、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)セクションです。  

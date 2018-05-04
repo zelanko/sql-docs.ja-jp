@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 38db9eddac7c7b753b680714f53d6ad01a49ea00
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: e16641bf77362128b0c00f8a5ae2127503b875b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-programming"></a>データ マイニングのプログラミング
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/22/2018
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クライアント アプリケーションとの通信用プロトコルとして XML for Analysis (XMLA) をサポートします。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、XML for Analysis 仕様を拡張する追加のコマンドをサポートしています。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クライアント アプリケーションとの通信用プロトコルとして XML for Analysis (XMLA) をサポートします。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、XML for Analysis 仕様を拡張する追加のコマンドをサポートしています。  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ではデータ定義、データ操作、およびデータ制御サポートに XMLA を使用するため、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に用意されているビジュアル ツールを使用してマイニング構造とマイニング モデルを作成し、データ マイニング拡張機能 (DMX) と Analysis Services スクリプト言語 (ASSL) のスクリプトを使用して作成したデータ マイニング オブジェクトを拡張できます。  
   
@@ -68,14 +66,14 @@ ms.lasthandoff: 01/22/2018
  [ADOMD.NET での開発](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  ADOMD.NET クライアントおよびサーバー プログラミング オブジェクトについて説明します。  
   
- [分析管理オブジェクト &#40; を使用した開発AMO &#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [分析管理オブジェクト & #40; を使用した開発AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  AMO プログラミング ライブラリについて説明します。  
   
- [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Analysis Services スクリプト言語 & #40; を使用した開発ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XML for Analysis (XMLA) とその拡張機能について説明します。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services Developer Documentation (Analysis Services の開発者向けドキュメント)](../analysis-services/analysis-services-developer-documentation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

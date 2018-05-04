@@ -26,12 +26,11 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74dad9d3d3ee2db8c53d8f95d208afb1c6628b2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0df45ca018cc33d7be880983a2dcc70b1b02e71e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
  行グループ内の削除済みの行の数が合計行数に対して占める割合が高くなると、テーブルの効率が低下します。 テーブルのサイズが小さくなるよう列ストア インデックスを再構築して、テーブルを読み取るために必要なディスク I/O を削減します。 使用して列ストア インデックスを再構築する、**リビルド**のオプション、 **ALTER INDEX**ステートメントです。  
   
- 更新可能な列ストアが最初に新規データを挿入、**開く**状態の行グループが行ストア形式とも呼ばれることに、デルタ テーブルとして。  開いている行グループがいっぱいの状態に変わります**CLOSED**です。 Closed 行グループは、組ムーバーによって列ストア形式に圧縮し、状態が**圧縮**です。  組ムーバーは、定期的に起動され、列ストア行グループに圧縮する準備ができている CLOSED 状態の行グループがあるかどうかを確認するバックグラウンド プロセスです。  また、組ムーバーは、すべての行が削除された行グループの割り当てを解除します。 割り当てが解除された行グループとしてマークされている**廃棄 (tombstone)**です。 組ムーバーを直ちに実行するを使用して、 **REORGANIZE**のオプション、 **ALTER INDEX**ステートメントです。  
+ 更新可能な列ストアが最初に新規データを挿入、**開く**状態の行グループが行ストア形式とも呼ばれることに、デルタ テーブルとして。  開いている行グループがいっぱいの状態に変わります**CLOSED**です。 Closed 行グループは、組ムーバーによって列ストア形式に圧縮し、状態が**圧縮**です。  組ムーバーは、定期的に起動され、列ストア行グループに圧縮する準備ができている CLOSED 状態の行グループがあるかどうかを確認するバックグラウンド プロセスです。  また、組ムーバーは、すべての行が削除された行グループの割り当てを解除します。 割り当てが解除された行グループとしてマークされている**廃棄 (tombstone)** です。 組ムーバーを直ちに実行するを使用して、 **REORGANIZE**のオプション、 **ALTER INDEX**ステートメントです。  
   
  列ストア行グループは、いっぱいになると圧縮され、新しい行の受け入れを停止します。 圧縮されたグループから行が削除されると、削除された行は、保持されますが、削除済みとしてマークされます。 圧縮されたグループに対する更新は、圧縮されたグループからの削除、および OPEN 状態のグループへの挿入として実装されます。  
   

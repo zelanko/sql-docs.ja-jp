@@ -1,11 +1,9 @@
 ---
 title: Create メソッドの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87bc653b51b8f1e0c0c98d05a02f93a814bb7706
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 22ccc2fec10db24bd1ca7d21c88a99b7cfe09136
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-method-example-vc"></a>メソッドの例 (vc++) を作成します。
 次のコードを持つ新しい Microsoft Jet データベースを作成する方法を示しています、[作成](../../../ado/reference/adox-api/create-method-adox.md)メソッドです。  

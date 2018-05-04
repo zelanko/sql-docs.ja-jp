@@ -1,29 +1,27 @@
 ---
-title: "ドリルスルー アクションの定義と |Microsoft ドキュメント"
-ms.custom: 
+title: ドリルスルー アクションの定義と |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ba544bf0d557b0ee7462a18fcc762427806a9041
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>レッスン 8-1-を定義して、ドリルスルー アクションを使用します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,11 +48,11 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[名前]** ボックスに、このアクションの名前として「 **Internet Sales Details Drillthrough Action**」と入力します。  
   
-4.  **[メジャー グループのメンバー]** リストで **[Internet Sales]**をクリックします。  
+4.  **[メジャー グループのメンバー]** リストで **[Internet Sales]** をクリックします。  
   
 5.  **[ドリルスルー列]** で、 **[ディメンション]** リストから **[Internet Sales Order Details]** を選択します。  
   
-6.  **[返される列]** リストで、 **[Item Description]** と **[Order Number]** チェック ボックスをオンにして、 **[OK]**をクリックします。 次の図は、ここまでの手順を実行した場合に表示されるアクション テンプレートを示しています。  
+6.  **[返される列]** リストで、 **[Item Description]** と **[Order Number]** チェック ボックスをオンにして、 **[OK]** をクリックします。 次の図は、ここまでの手順を実行した場合に表示されるアクション テンプレートを示しています。  
   
     ![ドリルスルー列 ボックス](../analysis-services/media/l8-action3.gif "ドリルスルー列 ボックス")  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="using-the-drillthrough-action"></a>ドリルスルー アクションの使用  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
@@ -82,13 +80,13 @@ ms.lasthandoff: 02/15/2018
   
 5.  **Customer** ディメンションの **Location** フォルダーの **Customer Geography** ユーザー定義階層を **[レポート フィルター]** 領域に追加します。  
   
-6.  ピボットテーブルの **Customer Geography**で、1 人の顧客を選択するフィルターを追加します。 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]**の順に展開し、 **Adam Powell**のチェック ボックスをオンにして **[OK]**をクリックします。  
+6.  ピボットテーブルの **Customer Geography**で、1 人の顧客を選択するフィルターを追加します。 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順に展開し、 **Adam Powell**のチェック ボックスをオンにして **[OK]** をクリックします。  
   
     Adam Powell に対する [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 社製品の売上合計がデータ領域に表示されます。  
   
-7.  売上高を右クリックし、 **[追加アクション]**をポイントして、 **[Drillthrough to Order Details]**をクリックします。  
+7.  売上高を右クリックし、 **[追加アクション]** をポイントして、 **[Drillthrough to Order Details]** をクリックします。  
   
-    次の図のように、Adam Powell に発送された注文の詳細が **[データ サンプル ビューアー]**に表示されます。 しかし、注文日、期限、発送日などの追加の情報があればさらに便利です。 次の手順では、これらの情報を追加します。  
+    次の図のように、Adam Powell に発送された注文の詳細が **[データ サンプル ビューアー]** に表示されます。 しかし、注文日、期限、発送日などの追加の情報があればさらに便利です。 次の手順では、これらの情報を追加します。  
   
     ![注文が Adam Powell に発送](../analysis-services/media/l8-action6.gif "Adam powell 氏に出荷された注文")  
   
@@ -100,11 +98,11 @@ ms.lasthandoff: 02/15/2018
   
     このディメンションには 3 つの属性しか定義されていません。  
   
-2.  **[データ ソース ビュー]** ペインで、何もない領域を右クリックし、 **[すべてのテーブルを表示]**をクリックします。  
+2.  **[データ ソース ビュー]** ペインで、何もない領域を右クリックし、 **[すべてのテーブルを表示]** をクリックします。  
   
-3.  **[書式]** メニューの **[自動レイアウト]** をポイントし、 **[ダイアグラム]**をクリックします。  
+3.  **[書式]** メニューの **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
-4.  **InternetSales (dbo.FactInternetSales)** テーブルを検索します。検索するには、 **[データ ソース ビュー]** ペインの空いている領域を右クリックし、 **[テーブルの検索]** 、 **[InternetSales]** 、 **[OK]**の順にクリックします。  
+4.  **InternetSales (dbo.FactInternetSales)** テーブルを検索します。検索するには、 **[データ ソース ビュー]** ペインの空いている領域を右クリックし、 **[テーブルの検索]** 、 **[InternetSales]** 、 **[OK]** の順にクリックします。  
   
 5.  以下の列を基にして、新しい属性を作成します。  
   
@@ -116,13 +114,13 @@ ms.lasthandoff: 02/15/2018
   
 6.  **Order Date Key** 属性の **Name** プロパティを **Order Date** に変更します。次に、 **Name Column** プロパティの参照ボタンをクリックし、 **[名前列]** ダイアログ ボックスで、基になるテーブルとして **[Date]** を選択し、基になる列として [SimpleDate] を選択します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  **Due Date Key** 属性の **Name** プロパティを **Due Date**に変更します。次に、 **Order Date Key** 属性と同じ方法で、この属性の **Name Column** プロパティを **Date.SimpleDate (WChar)**に変更します。  
+7.  **Due Date Key** 属性の **Name** プロパティを **Due Date**に変更します。次に、 **Order Date Key** 属性と同じ方法で、この属性の **Name Column** プロパティを **Date.SimpleDate (WChar)** に変更します。  
   
-8.  **Ship Date Key** 属性の **Name** プロパティを **Ship Date**に変更します。次に、この属性の **Name Column** プロパティを **Date.SimpleDate (WChar)**に変更します。  
+8.  **Ship Date Key** 属性の **Name** プロパティを **Ship Date**に変更します。次に、この属性の **Name Column** プロパティを **Date.SimpleDate (WChar)** に変更します。  
   
 9. **Tutorial キューブのキューブ デザイナーを開き、** [アクション] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。  
   
-10. **[ドリルスルー列]** ボックスで、チェック ボックスをオンにして以下の列を **[返される列]** リストに追加し、 **[OK]**をクリックします。  
+10. **[ドリルスルー列]** ボックスで、チェック ボックスをオンにして以下の列を **[返される列]** リストに追加し、 **[OK]** をクリックします。  
   
     -   Order Date  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>変更されたドリルスルー アクションの確認  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替え、 **[再接続]** ボタンをクリックします。  
   
@@ -146,7 +144,7 @@ ms.lasthandoff: 02/15/2018
   
     **All Customers**、 **Australia**、 **Queensland**、 **Brisbane**、 **4000**、 **Adam Powell**から選択するフィルターを追加します。  
   
-5.  **Internet Sales-Sales Amount** データ セルをクリックし、 **[追加アクション]**をポイントして、 **[Drillthrough to Order Details]**をクリックします。  
+5.  **Internet Sales-Sales Amount** データ セルをクリックし、 **[追加アクション]** をポイントして、 **[Drillthrough to Order Details]** をクリックします。  
   
     Adam Powell に発送された注文の詳細が一時ワークシートに表示されます。 表示される情報には、次の図に示すように、アイテムの説明、注文番号、受注日、期日、出荷日が含まれます。  
   

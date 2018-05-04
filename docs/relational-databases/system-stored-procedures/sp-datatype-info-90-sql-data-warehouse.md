@@ -19,13 +19,12 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cca052fb77b2f6bc2db691f884043079197d439
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a633d790503357edef72b8c26b85515dd043c556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -60,9 +59,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS に依存するデータ型です。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
 |PRECISION|**int**|データ ソースでのデータ型の最大有効桁数です。 有効桁数を適用できないデータ型については、NULL が返されます。 PRECISION 列の戻り値は 10 進表記です。|  
-|LITERAL_PREFIX|**varchar(**32**)**|定数の先頭に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの 0x をします。|  
-|LITERAL_SUFFIX|**varchar(**32**)**|定数の末尾に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの引用符のです。|  
-|CREATE_PARAMS|**varchar(**32**)**|データ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が NULL の場合、および**varchar** "max_length"は、します。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|定数の先頭に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの 0x をします。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|定数の末尾に記述する文字です。 単一引用符など、(**'**) 文字の種類とバイナリの引用符のです。|  
+|CREATE_PARAMS|**varchar(** 32 **)**|データ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が NULL の場合、および**varchar** "max_length"は、します。|  
 |NULLABLE|**smallint**|NULL 値を許容するかどうかを示します。<br /><br /> 1 = null 値を許可します。<br /><br /> 0 = は null 値を許容します。|  
 |CASE_SENSITIVE|**smallint**|大文字と小文字を区別するかどうかを示します。<br /><br /> 1 = この型のすべての列では、大文字と小文字を区別します (照合の場合)。<br /><br /> 0 = この型のすべての列では、大文字と小文字を区別しません。|  
 |SEARCHABLE|**smallint**|列の型の検索機能を示します。<br /><br /> 1 = 検索できません。<br /><br /> 2 = LIKE で検索できます。<br /><br /> 3 = WHERE で検索できます。<br /><br /> 4 = WHERE または LIKE で検索できます。|  

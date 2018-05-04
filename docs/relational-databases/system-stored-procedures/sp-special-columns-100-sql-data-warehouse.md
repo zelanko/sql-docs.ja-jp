@@ -19,13 +19,12 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f63087431cfca9578d4af19c7a213a08806f97c8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 774465439764220d854358da6fce331dd463b1e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -62,16 +61,16 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 製品によっては、テーブルのデータベース環境のサーバー名を表す場合があります。  
   
  [ @col_type=] '*col_type*'  
- 列の種類です。 *col_type*は**char (**1**)**既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列は、この目的のために特別に設計された疑似列、または、テーブルでインデックスが一意な 1 つ以上の列になります。 種類 V は、指定したテーブルに自動更新される列が 1 つ以上存在する場合、該当する列または列のセットを返します。この列は、トランザクションによって行の値が更新されると、データ ソースによって自動的に更新される列です。  
+ 列の種類です。 *col_type*は**char (** 1 **)** 既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列は、この目的のために特別に設計された疑似列、または、テーブルでインデックスが一意な 1 つ以上の列になります。 種類 V は、指定したテーブルに自動更新される列が 1 つ以上存在する場合、該当する列または列のセットを返します。この列は、トランザクションによって行の値が更新されると、データ ソースによって自動的に更新される列です。  
   
  [ @scope=] '*スコープ*'  
- ROWID の最低限必要な範囲を指定します。 *スコープ*は**char (**1**)**の既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
+ ROWID の最低限必要な範囲を指定します。 *スコープ*は**char (** 1 **)** の既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
   
  [ @nullable=] '*null 許容*'  
- 特別列に NULL 値を認めるかどうかを示します。 *null 許容*は**char (**1**)**、u です。 O の既定値は null 値を許容しない特別列を指定します。 U は部分的に NULL を許容する列を指定します。  
+ 特別列に NULL 値を認めるかどうかを示します。 *null 許容*は**char (** 1 **)**、u です。 O の既定値は null 値を許容しない特別列を指定します。 U は部分的に NULL を許容する列を指定します。  
   
  [ @ODBCVer=] '*ODBCVer*'  
- 使用する ODBC のバージョンを指定します。 *ODBCVer*は**int (**4**)**、既定値は 2 です。 既定値は ODBC Version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC version 3.0 の ODBC SQLSpecialColumns 仕様を参照してください。  
+ 使用する ODBC のバージョンを指定します。 *ODBCVer*は**int (** 4 **)**、既定値は 2 です。 既定値は ODBC Version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC version 3.0 の ODBC SQLSpecialColumns 仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -85,7 +84,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|ODBC SQL データ型。|  
 |TYPE_NAME|**sysname**|データ ソースに依存するデータ型の名前です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**です。|  
 |PRECISION|**Int**|データ ソース上の列の有効桁数。 このフィールドは常に値を返します。|  
-|LENGTH|**Int**|、(バイト単位) に必要な長さのバイナリ形式にデータ ソースのデータ型などの 10 **char (**10**)**、4 の**整数**、および 2 を**smallint**.|  
+|LENGTH|**Int**|、(バイト単位) に必要な長さのバイナリ形式にデータ ソースのデータ型などの 10 **char (** 10 **)**、4 の**整数**、および 2 を**smallint**.|  
 |SCALE|**smallint**|データ ソース上の列の小数点以下桁数。 NULL は、小数点以下桁数を適用できないデータ型に対して返されます。|  
 |PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

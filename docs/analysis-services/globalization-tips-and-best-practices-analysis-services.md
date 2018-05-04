@@ -1,15 +1,14 @@
 ---
-title: "グローバリゼーションのヒントとベスト プラクティス (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
+title: グローバリゼーションのヒントとベスト プラクティス (Analysis Services) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - translations [Analysis Services], client applications
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - time [Analysis Services]
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 88a6b0a3948e7a29ef97c0bdce85cddcd3f2b6da
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 8d5a756c6db3e5b3997e159c29ffb1b2c8533135
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -98,7 +96,7 @@ ms.lasthandoff: 01/22/2018
   
 -   接続文字列に `Locale Identifier=1036` を追加します。 ファイルを保存して閉じます。  
   
--   Excel で、 **[データ]** | **[既存の接続]**の順に開きます。 リストをフィルター処理し、対象のコンピューター上の接続ファイルのみにします。 Adventure Works 用の接続を検索します (名前を注意深く探します。複数ある場合もあります)。 接続を開きます。  
+-   Excel で、 **[データ]** | **[既存の接続]** の順に開きます。 リストをフィルター処理し、対象のコンピューター上の接続ファイルのみにします。 Adventure Works 用の接続を検索します (名前を注意深く探します。複数ある場合もあります)。 接続を開きます。  
   
      Adventure Works サンプル データベースのフランス語翻訳が表示されるはずです。  
   
@@ -108,7 +106,7 @@ ms.lasthandoff: 01/22/2018
   
  Management Studio で、サーバー接続のロケール ID を指定できます。  
   
--   オブジェクト エクスプローラーで、 **[接続]** | **[Analysis Services]** | **[オプション]**の順に移動し、 **[追加の接続パラメーター]** タブをクリックします。  
+-   オブジェクト エクスプローラーで、 **[接続]** | **[Analysis Services]** | **[オプション]** の順に移動し、 **[追加の接続パラメーター]** タブをクリックします。  
   
 -   `Local Identifier=1036` と入力し、**[接続]** をクリックします。  
   

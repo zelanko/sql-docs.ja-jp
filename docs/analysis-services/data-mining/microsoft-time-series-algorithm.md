@@ -1,16 +1,15 @@
 ---
-title: "Microsoft タイム シリーズ アルゴリズム |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft タイム シリーズ アルゴリズム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 
+caps.latest.revision: 75
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3a6b85445b9d0a8d93cecf36124b2b145032f76c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、一定期間の製品売上などの連続値を予測するために最適化された複数のアルゴリズムが採用されています。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムでは、一定期間の製品売上などの連続値を予測するために最適化された複数のアルゴリズムが採用されています。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
   
  次の図は、4 つの販売地域における一定期間の製品売上を予測するための一般的なモデルを示しています。 図に示したモデルでは、各地域の売上が赤、黄、紫、青の線で表されています。 各地域を表す線は、次の 2 つの部分で構成されます。  
   
@@ -164,6 +162,6 @@ ms.lasthandoff: 02/15/2018
  [Microsoft タイム シリーズ ビューアーを使用してモデルを参照します。](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [タイム シリーズ モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

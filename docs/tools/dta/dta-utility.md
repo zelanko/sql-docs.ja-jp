@@ -1,15 +1,16 @@
 ---
-title: "dta ユーティリティ |Microsoft ドキュメント"
-ms.custom: 
+title: dta ユーティリティ | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7e9849894a011294f63f9e50a0b79eff3ce10897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta**ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **dta** ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
   
  データベース エンジン チューニング アドバイザーと同様、 **dta** ユーティリティは、ワークロードを分析し、そのワークロードに対するサーバー パフォーマンスを向上するために推奨される物理デザイン構造を提示します。 ワークロードには、プラン キャッシュ、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース ファイルやトレース テーブル、または [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを指定できます。 物理デザイン構造には、インデックス、インデックス付きビュー、およびパーティション分割が含まれます。 ワークロードの分析後、 **dta** ユーティリティは、データベースの物理デザインに対する推奨設定を作成します。また、その推奨設定を実装するために必要なスクリプトを生成することができます。 ワークロードは、 **-if** 引数または **-it** 引数を使用してコマンド プロンプトから指定できます。 **-ix** 引数を使用して、コマンド プロンプトから XML 入力ファイルを指定することもできます。 その場合、ワークロードは XML 入力ファイルで指定します。  
   
@@ -134,7 +136,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- ワークロードをチューニングするときに、 **dta** が最初に接続するデータベースを指定します。 この引数で指定できるデータベースは 1 つだけです。 例:  
+ ワークロードをチューニングするときに、 **dta** が最初に接続するデータベースを指定します。 この引数で指定できるデータベースは 1 つだけです。 例 :  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -171,7 +173,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  **dta** が推奨設定に含む必要がある物理デザイン構造の種類を指定します。 次の表は、この引数で指定できる値の一覧と説明です。 値を指定しないと、 **dta** は既定の **-fa****IDX**を使用します。  
   
-|[値]|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |IDX_IV|インデックスおよびインデックス付きビュー。|  
 |IDX|インデックスのみ。|  
@@ -182,8 +184,8 @@ dta -d AdventureWorks2012 ...
  フィルター選択されたインデックスが新しい推奨設定用と見なされるように指定します。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
 **-fc**  
- 列ストア インデックスが新しい推奨設定用と見なされることを指定します。 DTA には、両方のクラスター化および非クラスター化列ストア インデックスが考慮されます。 詳細については、「    
-[列ストア インデックスの推奨設定データベース エンジン チューニング アドバイザー (DTA) で](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)です。
+ 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA には、両方のクラスター化および非クラスター化列ストア インデックスが考慮されます。 詳細については、「    
+「[データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。
  ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -192,7 +194,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  推奨設定を生成する際に **dta** が保持する必要のある既存の物理デザイン構造を指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|[値]|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |なし|既存の構造なし|  
 |ALL|既存のすべての構造|  
@@ -203,7 +205,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  **dta** によって提示される新しい物理デザイン構造 (インデックスおよびインデックス付きビュー) をパーティション分割する必要があるかどうか、およびパーティション分割の方法を指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|[値]|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |なし|パーティション分割しない。|  
 |FULL|完全パーティション分割 (選択するとパフォーマンスが向上します)。|  
@@ -221,7 +223,7 @@ dta -d AdventureWorks2012 ...
  プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **–n** オプションを使用して変更できます。  
  
 **-iq**  
- クエリ ストアがワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリのストアから上位 1,000 個のイベントが分析されます。 この値は **–n** オプションを使用して変更できます。  参照してください[クエリのストア](../../relational-databases/performance/how-query-store-collects-data.md)と[クエリのストアからのデータベースを使用してワークロードのチューニング](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)詳細についてはします。
+ クエリ ストアがワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリのストアから上位 1,000 個のイベントが分析されます。 この値は **–n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -231,7 +233,7 @@ dta -d AdventureWorks2012 ...
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
   
  **-it** *workload_trace_table_name*  
- チューニングのワークロード トレースを含むテーブルの名前を指定します。 形式で名前を指定します [*database_name*]**。** 。[*owner_name*] **. * * * table_name*です。  
+ チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は [*database_name*]**.**[*owner_name*]**.***table_name* の形式で指定します。  
   
  次の表は、各パラメーターの既定値を示しています。  
   
@@ -253,7 +255,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  物理デザイン構造をオンラインで作成するかどうかを指定します。 次の表は、この引数で指定できる値の一覧と説明です。  
   
-|[値]|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |OFF|推奨される物理デザイン構造をオンラインで作成しません。|  
 |ON|推奨される物理デザイン構造をすべてオンラインで作成します。|  
@@ -271,7 +273,7 @@ dta -n number_of_events -A 0
  この場合、チューニング時間を無制限 (`-A 0`) に指定することが重要です。 無制限に指定しない場合、データベース エンジン チューニング アドバイザーでは、既定の 8 時間のチューニング時間が前提となります。
  
  **-I** *time_window_in_hours*   
-   時間ウィンドウの期間 (時間) を指定するときを使用する場合をチューニングするための DTA によってと見なされるには、クエリを実行する必要がありますが**-iq**オプション (クエリ ストアからのワークロード)。 
+   時間ウィンドウの期間 (時間) を指定するときを使用する場合をチューニングするための DTA によってと見なされるには、クエリを実行する必要がありますが **-iq**オプション (クエリ ストアからのワークロード)。 
 ```  
 dta -iq -I 48  
 ```  
@@ -306,7 +308,7 @@ dta -iq -I 48
  **-rl** *analysis_report_list*  
  生成する分析レポートのリストを指定します。 次の表は、この引数で指定できる値の一覧を示しています。  
   
-|[値]|レポート|  
+|ReplTest1|レポート|  
 |-----------|------------|  
 |ALL|すべての分析レポート|  
 |STMT_COST|ステートメント コスト レポート|  
@@ -366,11 +368,11 @@ dta -iq -I 48
  **-x**  
  チューニング セッションを開始し、終了します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Ctrl + C キーを 1 度押すと、チューニング セッションが停止し、 **dta** がこの時点までに完了した分析に基づいて、推奨設定が生成されます。 推奨設定を生成するかどうかの確認が要求されます。 Ctrl</localizedText> + <localizedText>C</localizedText> キーをもう一度押すと、推奨設定を生成せずにチューニング セッションを停止します。  
   
 ## <a name="examples"></a>使用例  
- **A.ワークロードをチューニングする推奨設定でインデックスおよびインデックス付きビューを含む**  
+ **A.推奨設定で、インデックスとインデックス付きビューを含んだワークロードをチューニングする**  
   
  次の例では、セキュリティで保護された接続 (`-E`) を使用して MyServer の **tpcd1G** データベースに接続し、ワークロードの分析と推奨設定の作成を行います。 出力結果は script.sql という名前のスクリプト ファイルへ書き込まれます。 script.sql が既に存在する場合は、 **引数が指定されているため、** dta `-F` はファイルを上書きします。 チューニング セッションは、ワークロードの分析を完全に終了するように時間制限なしで実行されます (`-A 0`)。 推奨設定の最小向上率は 5% を指定する必要があります (`-m 5`)。 **dta** では、最終的な推奨設定にインデックスおよびインデックス付きビューが含まれます (`-fa IDX_IV`)。  
   
@@ -378,7 +380,7 @@ dta -iq -I 48
 dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
 ```  
   
- **B.ディスク使用を制限します。**  
+ **B.ディスク使用量を制限する**  
   
  次の例では、生データと追加のインデックスを含むデータベースの合計サイズを 3 GB までに制限し (`-B 3000`)、出力先には d:\result_dir\script1.sql を指定しています。 実行は、1 時間以内です (`-A 60`)。  
   
@@ -386,7 +388,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
 dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
 ```  
   
- **C.チューニングするクエリの数を制限します。**  
+ **C.チューニングするクエリの数を制限する**  
   
  次の例では、orders_wkld.sql ファイルから読み取るクエリの数を最大 10 に制限し (`-n 10`)、15 分間実行します (`-A 15`)。どちらを先に指定しても同じです。 10 個のクエリすべてをチューニングするために、`-A 0` を使用してチューニング時間を無制限に指定します。 時間が重要な場合は、この例で示すように `-A` 引数でチューニングできる時間数を指定して、適切な制限時間を指定します。  
   
@@ -394,7 +396,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
 dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
 ```  
   
- **D.ファイルに表示されている特定のテーブルをチューニングします。**  
+ **D.ファイル内に指定されている特定のテーブルをチューニングする**  
   
  次の例では、 *table_list_file* ( **-Tf** 引数) の使用方法を示しています。 table_list.txt ファイルの内容は、次のとおりです。  
   

@@ -1,29 +1,27 @@
 ---
-title: "名前付きセットの定義 |Microsoft ドキュメント"
-ms.custom: 
+title: 名前付きセットの定義 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7eda2cde35da166c5c7bd55a0fc8ff27ceaac686
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>レッスン 6-2 - 名前付きセットを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/15/2018
   
     **[スクリプト オーガナイザー]** ペインには、スクリプト コマンドまたは計算されるメンバーとは異なる、名前付きセットの固有のアイコンが表示されます。  
   
-4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Product]**、 **[Category]**、 **[メンバー]**、 **[All Products]**の順に展開します。  
+4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Product]**、 **[Category]**、 **[メンバー]**、 **[All Products]** の順に展開します。  
   
     > [!NOTE]  
     > **[計算ツール]** ペインにメタデータが表示されない場合、ツール バーの **[再接続]** をクリックします。 それでも表示されない場合は、キューブを処理するか、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスを開始する必要があります。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="defining-a-large-resellers-named-set"></a>Large Resellers 名前付きセットの定義  
   
-1.  **[スクリプト オーガナイザー]** ペインの **[Core Products]** を右クリックして、 **[新しい名前付きセット]**をクリックします。  
+1.  **[スクリプト オーガナイザー]** ペインの **[Core Products]** を右クリックして、 **[新しい名前付きセット]** をクリックします。  
   
 2.  **[名前]** ボックスに、この名前付きセットの名前として「 **[Large Resellers]**」と入力します。  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/15/2018
   
     これで、Exists セット式の最初のセットを定義できました。続いて 2 番目のセット、つまり多数の従業員を含む Reseller ディメンションのメンバーのセットを追加できます。  
   
-7.  **[計算ツール]** ペインの **[メタデータ]** タブで、Reseller ディメンションの **[Number of Employees]** を展開して、 **[メンバー]**、 **[All Resellers]**の順に展開します。  
+7.  **[計算ツール]** ペインの **[メタデータ]** タブで、Reseller ディメンションの **[Number of Employees]** を展開して、 **[メンバー]**、 **[All Resellers]** の順に展開します。  
   
     この属性階層のメンバーはグループ化されていません。  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 02/15/2018
   
 11. 配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[計算]** タブのツール バーで **[再接続]** をクリックします。  
   
-12. **[計算ツール]** ペインの **[メタデータ]** タブで、 **Reseller** ディメンションの **[Number of Employees]** を展開して、 **[メンバー]**、 **[All Resellers]**の順に展開します。  
+12. **[計算ツール]** ペインの **[メタデータ]** タブで、 **Reseller** ディメンションの **[Number of Employees]** を展開して、 **[メンバー]**、 **[All Resellers]** の順に展開します。  
   
     この属性階層のメンバーには、0 から 4 までの番号が付いた 5 つのグループが含まれるようになりました。 グループの番号は、グループ上にポインターを合わせると表示されるヒントで確認できます。 `2 -17`の範囲では、ヒントに `[Reseller].[Number of Employees].&[0]`が含まれている必要があります。  
   
@@ -105,7 +103,7 @@ ms.lasthandoff: 02/15/2018
   
     ![[Large Resellers] の計算式ペイン](../analysis-services/media/l6-named-set-02.gif "[Large Resellers] の計算式ペイン")  
   
-14. **[計算]** タブのツール バーで **[スクリプト ビュー]**をクリックし、計算スクリプトに追加した 2 つの名前付きセットを確認します。  
+14. **[計算]** タブのツール バーで **[スクリプト ビュー]** をクリックし、計算スクリプトに追加した 2 つの名前付きセットを確認します。  
   
 15. 計算スクリプトの最初の CREATE SET コマンドの直前に新しい行を追加して、その行に以下のテキストを独自の行として追加します。  
   
@@ -117,9 +115,9 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>新しい名前付きセットを使用したキューブの表示  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **[ブラウザー]** タブをクリックして、 **[再接続]**をクリックします。  
+2.  配置が正常に完了したら、 **[ブラウザー]** タブをクリックして、 **[再接続]** をクリックします。  
   
 3.  データ ペインのグリッドをクリアします。  
   
@@ -142,7 +140,7 @@ ms.lasthandoff: 02/15/2018
     ![フィルター ペインの 2 つの名前を含む設定](../analysis-services/media/l6-named-set-05.gif "という 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 7: 主要業績評価指標を定義する &#40;です。Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[レッスン 7: 主要業績評価指標を定義する & #40 です。Kpi"&"#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>参照  
 [[新しい名前付きセット]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

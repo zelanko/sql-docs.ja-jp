@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - SQLBrowseConnect function [ODBC], establising a connection
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80de9f41bf4c535f7d9daa34b7b14d0377ab2383
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b410afda6e5420b723360cdde03cb76f8b7293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="establishing-a-connection"></a>接続を確立します。
 環境と接続ハンドルを割り当てると、接続属性を設定、アプリケーションがデータ ソースまたはドライバーに接続できるようにします。 これを行うアプリケーションで使用して 3 つの異なる関数があります: **SQLConnect** (コア インターフェイスへの準拠レベル)、 **SQLDriverConnect** (Core)、および**SQLBrowseConnect**(レベル 1)。 別のシナリオで使用する、3 つに設計されています。 接続すると、前に、アプリケーションを判断できますではサポートされているこれらの関数、 **ConnectFunctions**キーワードによって返される**SQLDrivers**です。  

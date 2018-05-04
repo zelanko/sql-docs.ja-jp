@@ -1,11 +1,9 @@
 ---
 title: カスタマイズ ファイルのセクションの接続 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc00af717ef3161f414525f109236b0aba0c442e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルのセクションを接続します。
 ハンドラーの既定の動作は、すべての接続を拒否するのにです。 **接続**セクションでは、その動作に例外を指定します。 たとえば、すべての場合、**接続**セクションがないか、空で、既定で接続を確立できませんでした。  

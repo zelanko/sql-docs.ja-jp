@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>Sqlsetdescfield によると SQLSetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  カーソル ライブラリへの呼び出しを実行する**SQLSetDescRec**ブックマーク列にします。  
   
- ODBC 2 を使用場合します。*x*ドライバー、カーソル ライブラリで SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長) と**SQLSetDescField**または**SQLSetDescRec** SQL_DESC_OCTET_ を設定するために呼び出されるブックマークのレコード、ARD を 4 に等しくない値の長さフィールドです。 ODBC 3 を使用するときに*.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。  
+ ODBC 2 を使用場合します。*x*ドライバー、カーソル ライブラリで SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長) と**SQLSetDescField**または**SQLSetDescRec** SQL_DESC_OCTET_ を設定するために呼び出されるブックマークのレコード、ARD を 4 に等しくない値の長さフィールドです。 ODBC 3 を使用するときに *.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。  
   
  カーソル ライブラリ実行**SQLSetDescField** SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR フィールドの値を返す呼び出されたとき。 これらのフィールドは、ブックマークの行だけでなく、任意の行に対して返されますことができます。  
   

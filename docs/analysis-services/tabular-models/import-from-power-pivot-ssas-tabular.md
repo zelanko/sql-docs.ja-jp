@@ -1,33 +1,31 @@
 ---
-title: "Power Pivot からのインポート |Microsoft ドキュメント"
-ms.custom: 
+title: Power Pivot からのインポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: a391ca06145e8328aa9b81d9693a8471fcff63a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-from-power-pivot"></a>Power Pivot からのインポート 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-メタデータとデータをインポートして新しいテーブル モデル プロジェクトを作成する方法を説明する、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]からのインポートを使用してブック[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]プロジェクト テンプレートを[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。  
+  メタデータとデータをインポートして新しいテーブル モデル プロジェクトを作成する方法を説明する、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]からのインポートを使用してブック[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]プロジェクト テンプレートを[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]です。  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Excel ファイルの Power Pivot から新しいテーブル モデルを作成する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからのインポートにより新しいテーブル モデル プロジェクトを作成すると、ブックの構造を定義するメタデータを使用して、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]にテーブル モデル プロジェクトの構造が作成および定義されます。 テーブル、列、メジャー、リレーションシップなどのオブジェクトは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにあるとおりにテーブル モデル プロジェクトで保持および表示されます。 .xlsx ブック ファイルに対する変更は行われません。  
@@ -45,13 +43,13 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-a-new-tabular-model-project-from-a-power-pivot-for-excel-file"></a>Power Pivot for Excel ファイルからテーブル モデル プロジェクトを作成するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]**をクリックし、 **[プロジェクト]**をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
   
 2.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされているテンプレート]** で **[ビジネス インテリジェンス]** をクリックし、**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からインポート]** をクリックします。  
   
-3.  **[名前]**にプロジェクトの名前を入力し、場所とソリューション名を指定してから、 **[OK]**をクリックします。  
+3.  **[名前]** にプロジェクトの名前を入力し、場所とソリューション名を指定してから、 **[OK]** をクリックします。  
   
-4.  **[ファイルを開く]** ダイアログ ボックスで、インポートするモデル メタデータおよびデータを含む [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルを選択し、 **[開く]**をクリックします。  
+4.  **[ファイルを開く]** ダイアログ ボックスで、インポートするモデル メタデータおよびデータを含む [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] ファイルを選択し、 **[開く]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ワークスペース データベース](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   

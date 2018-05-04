@@ -1,29 +1,27 @@
 ---
-title: "多対多リレーションシップを定義する |Microsoft ドキュメント"
-ms.custom: 
+title: 多対多リレーションシップを定義する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 40bbfb602aadc6e30b58f9f44417b892b4f5b003
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>レッスン 5-3-多対多リレーションシップを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,21 +43,21 @@ ms.lasthandoff: 02/15/2018
   
 1.  データ ソース ビュー デザイナーを開き、 **Adventure Works DW 2012** データ ソース ビューを表示します。  
   
-2.  **[ダイアグラム オーガナイザー]** ペイン内を右クリックし、 **[新しいダイアグラム]**をクリックします。新しいダイアグラムの名前として、「 **Internet Sales Order Reasons** 」と入力します。  
+2.  **[ダイアグラム オーガナイザー]** ペイン内を右クリックし、 **[新しいダイアグラム]** をクリックします。新しいダイアグラムの名前として、「 **Internet Sales Order Reasons** 」と入力します。  
   
 3.  **[テーブル]** ペインの **[InternetSales]** テーブルを、 **[ダイアグラム]** ペインにドラッグします。  
   
-4.  **[ダイアグラム]** ペイン内を右クリックし、 **[テーブルの追加と削除]**をクリックします。  
+4.  **[ダイアグラム]** ペイン内を右クリックし、 **[テーブルの追加と削除]** をクリックします。  
   
-5.  **[テーブルの追加と削除]** ダイアログ ボックスで、 **[含まれているオブジェクト]** ボックスの一覧に **DimSalesReason** テーブルと **FactInternetSalesReason** テーブルを追加し、 **[OK]**をクリックします。  
+5.  **[テーブルの追加と削除]** ダイアログ ボックスで、 **[含まれているオブジェクト]** ボックスの一覧に **DimSalesReason** テーブルと **FactInternetSalesReason** テーブルを追加し、 **[OK]** をクリックします。  
   
     関連するテーブル間に、主キーと外部キーのリレーションシップが自動的に確立されます。これらのリレーションシップは、基になるリレーショナル データベースに定義されているためです。 これらのリレーションシップが基のリレーショナル データベースに定義されていない場合は、データ ソース ビューで定義する必要があります。  
   
-6.  **[書式]** メニューで **[自動レイアウト]**をポイントし、 **[ダイアグラム]**をクリックします。  
+6.  **[書式]** メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
 7.  [プロパティ] ウィンドウで、 **DimSalesReason** テーブルの **FriendlyName** プロパティを **SalesReason**に変更します。次に、 **FactInternetSalesReason** テーブルの **FriendlyName** プロパティを **InternetSalesReason**に変更します。  
   
-8.  **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]**を展開し、 **[SalesOrderNumber]**をクリックします。次に、[プロパティ] ウィンドウで、このデータ列の **DataType** プロパティを確認します。  
+8.  **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]** を展開し、 **[SalesOrderNumber]** をクリックします。次に、[プロパティ] ウィンドウで、このデータ列の **DataType** プロパティを確認します。  
   
     **[SalesOrderNumber]** 列のデータ型は文字列になっています。  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/15/2018
   
     このテーブルでは、他の 2 つの列のデータ型が数値型になっています。  
   
-10. **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]**を右クリックし、 **[データの探索]**をクリックします。  
+10. **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]** を右クリックし、 **[データの探索]** をクリックします。  
   
     次の図のように、各並び順の行番号では、その行の商品の購入動機がキー値により識別されます。  
   
@@ -77,9 +75,9 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[キューブ構造]** タブをクリックします。  
   
-2.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]**をクリックします。 詳細については、「 [多次元モデル内のメジャーおよびメジャー グループの作成](../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」を参照してください。  
+2.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]** をクリックします。 詳細については、「 [多次元モデル内のメジャーおよびメジャー グループの作成](../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」を参照してください。  
   
-3.  **[新しいメジャー グループ]** ダイアログ ボックスで、 **[データ ソース ビューからテーブルを選択]** ボックスの一覧から **[InternetSalesReason]** を選択し、 **[OK]**をクリックします。  
+3.  **[新しいメジャー グループ]** ダイアログ ボックスで、 **[データ ソース ビューからテーブルを選択]** ボックスの一覧から **[InternetSalesReason]** を選択し、 **[OK]** をクリックします。  
   
     **Internet Sales Reason** メジャー グループが **[メジャー]** ペインに表示されます。  
   
@@ -101,29 +99,29 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="defining-the-many-to-many-dimension"></a>多対多ディメンションの定義  
   
-1.  ソリューション エクスプローラーで **[ディメンション]**を右クリックし、 **[新しいディメンション]**をクリックします。  
+1.  ソリューション エクスプローラーで **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。  
   
-2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]**をクリックします。  
+2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]**をクリックします。  
+3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]** をクリックします。  
   
 4.  **[基になる情報の指定]** ページで、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 データ ソース ビューが選択されていることを確認します。  
   
-5.  **[メイン テーブル]** ボックスの一覧で、 **[SalesReason]**を選択します。  
+5.  **[メイン テーブル]** ボックスの一覧で、 **[SalesReason]** を選択します。  
   
 6.  **[キー列]** ボックスの一覧に **[SalesReasonKey]** が表示されていることを確認します。  
   
-7.  **[名前列]** ボックスの一覧から **[SalesReasonName]**を選択します。  
+7.  **[名前列]** ボックスの一覧から **[SalesReasonName]** を選択します。  
   
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
   
-9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type** 属性の横にあるチェック ボックスをオンにし、その名前を **Sales Reason Type**に変更して、 **[次へ]**をクリックします。  
+9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type** 属性の横にあるチェック ボックスをオンにし、その名前を **Sales Reason Type**に変更して、 **[次へ]** をクリックします。  
   
 10. **[ウィザードの完了]** ページで **[完了]** をクリックすると、Sales Reason ディメンションが作成されます。  
   
-11. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
+11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-12. **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[属性] Key**をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **[属性].**に変更します。  
+12. **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[属性] Key**をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **[属性].** に変更します。  
   
 13. ディメンション デザイナーの **[階層]** ペインで、 **Sales Reasons** という名前のユーザー階層を作成します。この階層の下に **Sales Reason Type** レベルを配置し、さらにその下に **Sales Reason** レベルを配置します。  
   
@@ -131,11 +129,11 @@ ms.lasthandoff: 02/15/2018
   
 15. Sales Reason ディメンションの **AttributeAllMemberName** プロパティのセルをクリックし、値として「 **All Sales Reasons** 」と入力します。  
   
-16. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]**をクリックします。  
+16. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]** をクリックします。  
   
-17. **[キューブ ディメンションの追加]** ダイアログ ボックスで、 **[Sales Reason]** を選択し、 **[OK]**をクリックします。  
+17. **[キューブ ディメンションの追加]** ダイアログ ボックスで、 **[Sales Reason]** を選択し、 **[OK]** をクリックします。  
   
-18. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
+18. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="defining-the-many-to-many-relationship"></a>多対多リレーションシップの定義  
   
@@ -149,27 +147,27 @@ ms.lasthandoff: 02/15/2018
   
     Sales Reason ディメンションを Internet Sales メジャー グループに接続する中間メジャー グループを定義する必要があります。  
   
-4.  **[中間メジャー グループ]** ボックスの一覧で **[Internet Sales Reason]**を選択します。  
+4.  **[中間メジャー グループ]** ボックスの一覧で **[Internet Sales Reason]** を選択します。  
   
     次の図は、 **[リレーションシップの定義]** ダイアログ ボックスでの操作を示しています。  
   
     ![定義するリレーションシップ ダイアログ ボックス](../analysis-services/media/l5-many-to-many-3.gif "リレーションシップの定義 ダイアログ ボックス")  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
     多対多アイコンにより、Sales Reason ディメンションと Internet Sales メジャー グループの間のリレーションシップが表されます。  
   
 ## <a name="browsing-the-cube-and-the-many-to-many-dimension"></a>キューブおよび多対多ディメンションの表示  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替え、 **[再接続]**をクリックします。  
+2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替え、 **[再接続]** をクリックします。  
   
 3.  データ ペインのデータ領域に **Internet Sales-Sales Amount** メジャーを追加します。  
   
 4.  **Sales Reason** ディメンションの **Sales Reasons** ユーザー定義階層を、データ ペインの行領域に追加します。  
   
-5.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]**の順にクリックし、 **[Queensland]**を右クリックして **[フィルターに追加]**をクリックします。  
+5.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。  
   
 6.  **Sales Reason Type** レベルの各メンバーを展開し、クイーンズランドの顧客がインターネット経由で [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 製品を購入した理由と、その売上金額を確認します。  
   
@@ -183,7 +181,7 @@ ms.lasthandoff: 02/15/2018
 [メジャー グループ内のディメンションの粒度を定義します。](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>参照  
-[データ ソース ビュー デザイナー &#40; でのダイアグラムの操作します。Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[データ ソース ビュー デザイナー & #40; でのダイアグラムの操作します。Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [ディメンションのリレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

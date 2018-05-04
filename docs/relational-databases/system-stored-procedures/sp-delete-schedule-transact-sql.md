@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6f58b11385f92c34ba5ced00cb94517f737c4bdb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a02340dd4d5ca2e17044f34e521bc9ead793ed50
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +49,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  削除するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
   
-> **注:**か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
+> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
   
  [ **@schedule_name=** ] **'***schedule_name***'**  
  削除するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
   
-> **注:**か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
+> **注:** か*schedule_id*または*schedule_name*指定する必要がありますが両方指定することはできません。  
   
  [ **@force_delete** =] *force_delete*  
  スケジュールがジョブに関連付けられている場合にプロシージャを失敗させるかどうかを指定します。 *Force_delete*は bit で、既定値は**0**します。 ときに*force_delete*は**0**、ストアド プロシージャ、スケジュールがジョブにアタッチされている場合は失敗します。 ときに*force_delete*は**1**スケジュールをジョブにアタッチするかどうかに関係なく、スケジュールを削除します。  

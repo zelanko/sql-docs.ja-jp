@@ -1,15 +1,15 @@
 ---
-title: "CREATE KPI ステートメント (MDX) |Microsoft ドキュメント"
-ms.custom: 
+title: CREATE KPI ステートメント (MDX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE KPI
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - CREATE KPI statement
 - key performance indicators [MDX]
 ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b3174d2be856d3d2956ced0d8ee34aaeb0a872d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX データ定義の KPI の作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -96,22 +95,22 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |グラフィックの使用法|KPI グラフィックの名前|状態の数|  
 |--------------------|-------------------------|----------------------|  
-|状態|図形|3|  
-|状態|信号機|3|  
-|状態|道路標識|3|  
-|状態|ゲージ|3|  
-|状態|反転ゲージ|5|  
-|状態|温度計|3|  
-|状態|シリンダー|3|  
-|状態|外観|3|  
-|状態|変位の矢印|3|  
+|[状態]|図形|3|  
+|[状態]|信号機|3|  
+|[状態]|道路標識|3|  
+|[状態]|ゲージ|3|  
+|[状態]|反転ゲージ|5|  
+|[状態]|温度計|3|  
+|[状態]|シリンダー|3|  
+|[状態]|外観|3|  
+|[状態]|変位の矢印|3|  
 |傾向|標準の矢印|3|  
 |傾向|状態の矢印|3|  
 |傾向|反転した状態の矢印|5|  
 |傾向|外観|3|  
   
 ## <a name="see-also"></a>参照  
- [DROP KPI ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP KPI ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

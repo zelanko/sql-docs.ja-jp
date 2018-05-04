@@ -3,15 +3,12 @@ title: 表示サイズ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f0cd835b31863fa8427f4cb175c66ded5f7e308
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd66f8e88187447209ea55ac9dea77437f34bbaa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-size"></a>表示サイズ
 列の表示サイズは、文字形式でデータを表示するために必要な文字の最大数です。 次の表では、各 ODBC SQL データ型の表示サイズを定義します。  
@@ -46,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 |[A] すべてのバイナリ型|定義済みまたは (変数の型) の最大列の長さが 2 を倍です。 (各バイナリ バイトは、2 桁の 16 進数で表されます)。|  
 |SQL_TYPE_DATE|10 (形式の日付*yyyy mm dd*)。|  
 |SQL_TYPE_TIME|8 (形式の時刻*hh:mm:ss*)<br /><br /> - または -<br /><br /> 9 + *s* (形式の時刻*hh:mm:ss*[.fff...]、場所*s*秒の小数部の有効桁数です)。|  
-|SQL_TYPE_TIMESTAMP|19 (内のタイムスタンプを*- yyyy-mm-dd hh:mm:ss*形式)<br /><br /> - または -<br /><br /> 20 + *s* (内のタイムスタンプを*- yyyy-mm-dd hh:mm:ss*[.fff.] 形式で*s*秒の小数部の有効桁数です)。|  
+|SQL_TYPE_TIMESTAMP|19 (内のタイムスタンプを *- yyyy-mm-dd hh:mm:ss*形式)<br /><br /> - または -<br /><br /> 20 + *s* (内のタイムスタンプを *- yyyy-mm-dd hh:mm:ss*[.fff.] 形式で*s*秒の小数部の有効桁数です)。|  
 |すべての interval データ型|参照してください[Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)です。|  
 |SQL_GUID|36 (文字数、 *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*形式|  
   

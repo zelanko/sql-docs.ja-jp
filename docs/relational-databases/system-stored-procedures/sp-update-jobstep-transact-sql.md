@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f6de1a82fc185c5c6824ff318d93f06b9f677646
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ sp_update_jobstep
  [ **@output_file_name =**] **'***file_name***'**  
  ステップの出力を保存するファイルの名前を指定します。 *file_name*は**nvarchar (200)**、既定値は NULL です。 このパラメーターは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムまたは CmdExec サブシステム上で実行されるコマンドに対してのみ有効です。  
   
- Output_file_name を NULL に設定するに設定する必要があります*output_file_name*に空の文字列 (' ') または使用できませんが、空白文字の文字列に、 **char (32)**関数。 この引数に空文字列を設定する例を次に示します。  
+ Output_file_name を NULL に設定するに設定する必要があります*output_file_name*に空の文字列 (' ') または使用できませんが、空白文字の文字列に、 **char (32)** 関数。 この引数に空文字列を設定する例を次に示します。  
   
  **@output_file_name = ' '**  
   

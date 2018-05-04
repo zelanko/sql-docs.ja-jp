@@ -1,11 +1,9 @@
 ---
 title: データの永続化 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,21 +20,20 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 915f1d4e8ac954302c35eb430bb36bb72b33ef14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-data"></a>データの永続化
 (たとえば、ラップトップを使用)、ポータブル コンピューター、接続および切断されている状態の両方で実行できるアプリケーションの必要性が生成されます。 ADO には、開発者に、クライアント カーソルを保存する機能を提供することによりこのサポートが追加されて**Recordset**をディスクに、後で再読み込みします。  
   
  この種類の機能は、次のようを使用することがいくつかのシナリオはあります。  
   
--   **旅行:**外出先でアプリケーションを作成する場合がする変更を行い、後で、データベースに再接続し、およびコミットできる新しいレコードを追加する機能を提供します。  
+-   **旅行:** 外出先でアプリケーションを作成する場合がする変更を行い、後で、データベースに再接続し、およびコミットできる新しいレコードを追加する機能を提供します。  
   
--   **参照を更新する頻度:**多くの場合、アプリケーションでは、テーブルが参照として使用されます — たとえば、税テーブルを記述します。 頻繁に更新されていては読み取り専用です。 アプリケーションを起動するたびにこのサーバーからのデータを読み取るではなくアプリケーションできますだけからデータを読み込むローカルに保存される**Recordset**です。  
+-   **参照を更新する頻度:** 多くの場合、アプリケーションでは、テーブルが参照として使用されます — たとえば、税テーブルを記述します。 頻繁に更新されていては読み取り専用です。 アプリケーションを起動するたびにこのサーバーからのデータを読み取るではなくアプリケーションできますだけからデータを読み込むローカルに保存される**Recordset**です。  
   
  ADO では、保存および読み込み**レコード セット**を使用して、 **Recordset.Save**と**Recordset.Open(,,,adCmdFile)** 、ADO 上のメソッド**Recordset**オブジェクト。  
   

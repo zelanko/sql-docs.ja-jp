@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetStmtAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a1a861de024a59313bcf883b58d98b867261276
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 関数
 **準拠**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLSetStmtAttr**ステートメントに関連する属性を設定します。  
   
 > [!NOTE]  
->  詳細については、どのようなドライバー マネージャーは、この関数にする際にマップ ODBC 3*.x* ODBC 2 を利用するアプリケーション*.x*ドライバーを参照してください[後方の置換関数のマッピングアプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
+>  詳細については、どのようなドライバー マネージャーは、この関数にする際にマップ ODBC 3 *.x* ODBC 2 を利用するアプリケーション *.x*ドライバーを参照してください[後方の置換関数のマッピングアプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -131,10 +130,10 @@ SQLRETURN SQLSetStmtAttr(
  情報の形式設定*ValuePtr*に指定された依存*属性*です。 **SQLSetStmtAttr**で 2 つの異なる形式のいずれかの属性情報を受け取ります。 文字の文字列または整数値。 それぞれの形式は、属性の説明に記録されます。 この形式は内の各属性に対して返される情報に適用されます**SQLGetStmtAttr**です。 指す文字列の文字、 *ValuePtr*の引数**SQLSetStmtAttr**の長を持つ*StringLength*です。  
   
 > [!NOTE]  
->  呼び出して、接続レベルでのステートメント属性を設定する機能**SQLSetConnectAttr** ODBC 3 では廃止されて*.x*です。 ODBC 3*.x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3*.x*を除き、SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性接続属性とステートメント属性の両方が可能であり、接続レベルでのステートメント属性を設定することはできません接続のレベルまたはステートメント レベルのいずれかに設定します。  
+>  呼び出して、接続レベルでのステートメント属性を設定する機能**SQLSetConnectAttr** ODBC 3 では廃止されて *.x*です。 ODBC 3 *.x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3 *.x*を除き、SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性接続属性とステートメント属性の両方が可能であり、接続レベルでのステートメント属性を設定することはできません接続のレベルまたはステートメント レベルのいずれかに設定します。  
   
 > [!NOTE]  
->  ODBC 3*.x* ODBC 2 で機能する場合、ドライバーはこの機能をサポートのみ必要*.x* ODBC 2 を設定するアプリケーションに*.x*接続レベルでステートメントのオプションです。 詳細については、下にある「設定ステートメント オプションで、接続レベル」を参照してください。 [SQLSetConnectOption マッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)旧バージョンと互換性ための付録 g: ドライバーのガイドライン」にします。  
+>  ODBC 3 *.x* ODBC 2 で機能する場合、ドライバーはこの機能をサポートのみ必要 *.x* ODBC 2 を設定するアプリケーションに *.x*接続レベルでステートメントのオプションです。 詳細については、下にある「設定ステートメント オプションで、接続レベル」を参照してください。 [SQLSetConnectOption マッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)旧バージョンと互換性ための付録 g: ドライバーのガイドライン」にします。  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>記述子フィールドを設定するステートメント属性  
  多くのステートメント属性は、記述子のヘッダー フィールドに対応します。 記述子フィールドの設定でこれらの属性に実際に結果を設定します。 呼び出しによってフィールドの設定**SQLSetStmtAttr**ではなくに**SQLSetDescField**記述子ハンドルは、関数呼び出しを取得する必要がないという利点がします。  
@@ -194,16 +193,16 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN\*を処理した、エラーのセットを含むパラメーターのセットの数を返すバッファーを指すレコードのフィールドです。 これが null ポインターの場合、数値は返されません。<br /><br /> このステートメント属性を設定すると、IPD ヘッダー SQL_DESC_ROWS_PROCESSED_PTR フィールドが設定されます。<br /><br /> 場合に呼び出し**SQLExecDirect**または**SQLExecute**ことでこの属性が指すバッファーがいっぱいになった返さない SQL_SUCCESS または SQL_SUCCESS_WITH_INFO、バッファーの内容は未定義です。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)です。|  
 |SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|各パラメーターの値の数を指定する SQLULEN 値です。 SQL_ATTR_PARAMSET_SIZE が 1 より大きい場合は、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および APD の SQL_DESC_OCTET_LENGTH_PTR 配列をポイントします。 各配列の基数は、このフィールドの値と同じです。<br /><br /> バインドされたパラメーターがない場合に、この属性は無視されます。<br /><br /> 詳細については、次を参照してください。[パラメーターの配列を使用して](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)です。<br /><br /> このステートメント属性を設定すると、APD ヘッダー SQL_DESC_ARRAY_SIZE フィールドが設定されます。|  
 |SQL_ATTR_QUERY_TIMEOUT (ODBC 1.0)|アプリケーションに返す前に実行する SQL ステートメントを待機する秒数に対応する SQLULEN 値です。 場合*ValuePtr*は 0 (既定値) に等しい、タイムアウトが存在しません。<br /><br /> 指定したタイムアウト時間がデータ ソースのタイムアウトの最大値を超えていますまたは最小のタイムアウトよりも小さい場合**SQLSetStmtAttr**その値に置き換えられ、SQLSTATE 01S02 を返します (オプションの値が変更されました)。<br /><br /> アプリケーションを呼び出す必要がありますいないことに注意してください**SQLCloseCursor**場合、ステートメントを再利用する、**選択**ステートメントがタイムアウトしました。<br /><br /> このステートメント属性に設定されているクエリ タイムアウトは、同期および非同期の両方のモードで有効です。|  
-|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 値の場合:<br /><br /> SQL_RD_ON = **SQLFetchScroll**と ODBC 3*.x*、 **SQLFetch**指定した場所にカーソルを配置した後にデータを取得します。 これは既定値です。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**と ODBC 3*.x*、 **SQLFetch**カーソルを配置した後にデータを取得できません。<br /><br /> アプリケーションには、SQL_RETRIEVE_DATA SQL_RD_OFF に設定により、行が存在するか、行を取得する操作のオーバーヘッドは要しません行のブックマークを取得することを検証できます。 詳細については、次を参照してください。[のスクロールとフェッチ行](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)です。<br /><br /> 開いているカーソル; でこの属性の値を設定することができます。ただし、設定がすぐに反映されませんである場合、ドライバーは SQLSTATE 01S02 を返します (オプションの変更された値) と属性を元の値にリセットします。|  
+|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 値の場合:<br /><br /> SQL_RD_ON = **SQLFetchScroll**と ODBC 3 *.x*、 **SQLFetch**指定した場所にカーソルを配置した後にデータを取得します。 これは既定値です。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**と ODBC 3 *.x*、 **SQLFetch**カーソルを配置した後にデータを取得できません。<br /><br /> アプリケーションには、SQL_RETRIEVE_DATA SQL_RD_OFF に設定により、行が存在するか、行を取得する操作のオーバーヘッドは要しません行のブックマークを取得することを検証できます。 詳細については、次を参照してください。[のスクロールとフェッチ行](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)です。<br /><br /> 開いているカーソル; でこの属性の値を設定することができます。ただし、設定がすぐに反映されませんである場合、ドライバーは SQLSTATE 01S02 を返します (オプションの変更された値) と属性を元の値にリセットします。|  
 |SQL_ATTR_ROW_ARRAY_SIZE (ODBC 3.0)|各呼び出しによって返される行の数を指定する SQLULEN 値**SQLFetch**または**SQLFetchScroll**です。 一括ブックマーク操作で使用されるブックマーク配列内の行の数も**SQLBulkOperations**です。 既定値は 1 です。<br /><br /> ドライバーがその値に置き換えられ、SQLSTATE 01S02 を返します、指定した行セット サイズは、データ ソースによってサポートされる最大の行セットのサイズを超えている場合 (オプションの値が変更されました)。<br /><br /> 詳細については、次を参照してください。[行セット サイズ](../../../odbc/reference/develop-app/rowset-size.md)です。<br /><br /> このステートメント属性を設定すると、ARD ヘッダー SQL_DESC_ARRAY_SIZE フィールドが設定されます。|  
 |SQL_ATTR_ROW_BIND_OFFSET_PTR (ODBC 3.0)|SQLULEN * 列のデータのバインドの変更へのポインターに追加のオフセットを示す値。 ドライバーにポインターを逆参照し、遅延フィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR) 記述子レコード内のそれぞれに逆参照された値を追加し、新しいポインター値を使用してこのフィールドが null 以外の場合は、バインドするときにします。 設定されている既定によって null にします。<br /><br /> このステートメント属性を設定すると、ARD ヘッダー SQL_DESC_BIND_OFFSET_PTR フィールドが設定されます。|  
 |SQL_ATTR_ROW_BIND_TYPE (ODBC 1.0)|バインディングの向きを設定する SQLULEN 値ときに使用する**SQLFetch**または**SQLFetchScroll**関連するステートメントで呼び出されるとします。 列方向のバインドは、値を SQL_BIND_BY_COLUMN に設定で選択されます。 行方向のバインドは、構造体または結果の列のバインド先のバッファーのインスタンスの長さの値の設定で選択されます。<br /><br /> すべてのバインドされた列および構造体またはバインドされた列のアドレスの指定した長さでインクリメント時に、結果が th 内の同じ列の先頭を指すがバッファーの埋め込み用の領域を含める必要があります、長さが指定されている場合次の行を e です。 使用する場合、 **sizeof**構造体または共用体では、ANSI C 演算子は、この動作が保証されます。<br /><br /> 既定のバインディングの向きは、列方向のバインド**SQLFetch**と**SQLFetchScroll**です。<br /><br /> 詳細については、次を参照してください。[ブロック カーソルで使用するための列のバインド](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)です。<br /><br /> このステートメント属性を設定すると、ARD ヘッダー SQL_DESC_BIND_TYPE フィールドが設定されます。|  
 |SQL_ATTR_ROW_NUMBER (ODBC 2.0)|全体の結果の現在の行の数を表す SQLULEN 値を設定します。 現在の行の数を特定することはできませんか、現在の行がない場合、ドライバーは、0 を返します。<br /><br /> この属性への呼び出しによって取得できる**SQLGetStmtAttr**への呼び出しでは設定されませんが、 **SQLSetStmtAttr**です。|  
 |SQL_ATTR_ROW_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 値の配列を指す値を使用して一括操作中に行を無視するために使用**SQLSetPos**です。 各値は、(一括操作に含まれる行) の SQL_ROW_PROCEED または SQL_ROW_IGNORE (用、一括操作から除外するのには、行) のいずれかに設定されます。 (の呼び出し中に、この配列を使用して行を無視することはできません**SQLBulkOperations**)。<br /><br /> このステートメント属性は、行の状態の値は、ドライバーの場合に返されません、null ポインターを設定できます。 この属性は、いつでも設定できますが、新しい値は、次回まで使用されません**SQLSetPos**と呼びます。<br /><br /> 詳細については、次を参照してください。 [SQLSetPos で行セット内の行の更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)と[SQLSetPos を含む行セットの行を削除する](../../../odbc/reference/develop-app/deleting-rows-in-the-rowset-with-sqlsetpos.md)です。<br /><br /> このステートメント属性を設定すると、ARD で SQL_DESC_ARRAY_STATUS_PTR フィールドが設定されます。|  
-|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*値 SQLUSMALLINT の配列を指す値が呼び出しの後に行の状態値を含む**SQLFetch**または**SQLFetchScroll**です。 配列には、行セットの行数が多くの要素があります。<br /><br /> このステートメント属性は、行の状態の値は、ドライバーの場合に返されません、null ポインターを設定できます。 この属性は、いつでも設定できますが、新しい値は、次回まで使用されません**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**と呼びます。<br /><br /> 詳細については、次を参照してください。[フェッチされた行の数と状態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)です。<br /><br /> このステートメント属性を設定すると、IRD のヘッダーに SQL_DESC_ARRAY_STATUS_PTR フィールドが設定されます。<br /><br /> この属性は、ODBC 2 によってもマップ*.x*へのドライバー、 *rgbRowStatus*配列への呼び出しで**SQLExtendedFetch**です。|  
+|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT\*値 SQLUSMALLINT の配列を指す値が呼び出しの後に行の状態値を含む**SQLFetch**または**SQLFetchScroll**です。 配列には、行セットの行数が多くの要素があります。<br /><br /> このステートメント属性は、行の状態の値は、ドライバーの場合に返されません、null ポインターを設定できます。 この属性は、いつでも設定できますが、新しい値は、次回まで使用されません**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**と呼びます。<br /><br /> 詳細については、次を参照してください。[フェッチされた行の数と状態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)です。<br /><br /> このステートメント属性を設定すると、IRD のヘッダーに SQL_DESC_ARRAY_STATUS_PTR フィールドが設定されます。<br /><br /> この属性は、ODBC 2 によってもマップ *.x*へのドライバー、 *rgbRowStatus*配列への呼び出しで**SQLExtendedFetch**です。|  
 |SQL_ATTR_ROWS_FETCHED_PTR (ODBC 3.0)|SQLULEN\*呼び出しの後にフェッチされた行の数を取得するためのバッファーを指す値**SQLFetch**または**SQLFetchScroll**; 行われた一括操作によって影響を受ける行の数呼び出しによって**SQLSetPos**で、*操作*SQL_REFRESH; またはを実行する一括操作によって影響を受ける行の数の引数**SQLBulkOperations**. この数には、エラー行が含まれます。<br /><br /> 詳細については、次を参照してください。[フェッチされた行の数と状態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)です。<br /><br /> このステートメント属性を設定すると、IRD のヘッダーに SQL_DESC_ROWS_PROCESSED_PTR フィールドが設定されます。<br /><br /> 場合に呼び出し**SQLFetch**または**SQLFetchScroll**ことでこの属性が指すバッファーがいっぱいになった返さない SQL_SUCCESS または SQL_SUCCESS_WITH_INFO、バッファーの内容は未定義です。|  
 |SQL_ATTR_SIMULATE_CURSOR (ODBC 2.0)|配置をシミュレートするドライバーが update および delete ステートメントであるかどうかを示す SQLULEN 値は、このようなステートメントが 1 つだけの単一行に影響することを保証します。<br /><br /> 位置指定更新をシミュレートを delete ステートメントは、ほとんどのドライバーが、検索した構築**更新**または**削除**ステートメントを含む、**場所**句を指定する、現在の行の各列の値です。 これらの列は、一意のキーを構成、しない限り、このようなステートメントに複数行に影響します。<br /><br /> このようなステートメントが 1 行のみに影響することを保証するには、ドライバーは一意のキーの列を決定し、結果セットにこれらの列を追加します。 アプリケーションでは、結果セット内の列が一意のキーを構成することを保証する場合、ドライバーでは、これを行う必要はありません。 これにより、実行時間が低下します。<br /><br /> SQL_SC_NON_UNIQUE ドライバーを = がシミュレートされるという保証されません更新または位置指定 delete ステートメントが 1 つの行には影響そのためには、アプリケーションの責任です。 ステートメントが複数の行に影響する場合**SQLExecute**、 **SQLExecDirect**、または**SQLSetPos** SQLSTATE 01001 (カーソル操作 conflict) を返します。<br /><br /> SQL_SC_TRY_UNIQUE = シミュレートされた更新プログラムの配置を保証するためにドライバー試行またはステートメントに与える影響の 1 つだけ行を削除します。 ドライバーはこのようなステートメントを常に実行する場合など、複数の行に影響を与える可能性がある場合でも一意のキーはありません。 ステートメントが複数の行に影響する場合**SQLExecute**、 **SQLExecDirect**、または**SQLSetPos** SQLSTATE 01001 (カーソル操作 conflict) を返します。<br /><br /> SQL_SC_UNIQUE 位置指定更新をシミュレートしたドライバーの保証を = = またはステートメントに与える影響の 1 つだけ行を削除します。 ドライバーは特定のステートメントでは、これを保証できない場合**SQLExecDirect**または**SQLPrepare**はエラーを返します。<br /><br /> データ ソースは、ドライバーがカーソルをシミュレートできませんおよびネイティブ SQL が位置指定更新のサポート、および delete ステートメントを提供する場合は、SQL_SIMULATE_CURSOR の SQL_SC_UNIQUE が要求されたときに SQL_SUCCESS が返されます。 SQL_SC_TRY_UNIQUE または SQL_SC_NON_UNIQUE が要求される場合は、SQL_SUCCESS_WITH_INFO が返されます。 データ ソースが SQL_SC_TRY_UNIQUE レベルのサポートを提供し、ドライバーは、SQL_SC_TRY_UNIQUE および SQL_SUCCESS_WITH_INFO が返されます SQL_SC_NON_UNIQUE の SQL_SUCCESS が返されます。<br /><br /> ドライバーがさまざまなシミュレーション型に置き換えられ、SQLSTATE 01S02 を返します、指定されたカーソルのシミュレーションの種類は、データ ソースによってサポートされていない場合、(オプションの値が変更されました)。 SQL_SC_UNIQUE、ドライバーに置き換えます、SQL_SC_TRY_UNIQUE または SQL_SC_NON_UNIQUE の順序で。 SQL_SC_TRY_UNIQUE、ドライバーは SQL_SC_NON_UNIQUE を置き換えます。<br /><br /> 既定値は、SQL_SC_UNIQUE です。<br /><br /> 詳細については、次を参照してください。[をシミュレートする位置指定更新と削除ステートメント](../../../odbc/reference/develop-app/simulating-positioned-update-and-delete-statements.md)です。|  
-|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|アプリケーションが、カーソルにブックマークを使用するかどうかを指定する SQLULEN 値:<br /><br /> SQL_UB_OFF = Off (既定)<br /><br /> SQL_UB_VARIABLE = アプリケーションは、カーソル、カーソルとブックマークを使用して、サポートされている場合、ドライバーは可変長のブックマークになります。 ODBC 3 SQL_UB_FIXED は推奨されなくなりました*.x*です。 ODBC 3*.x*アプリケーション必ず使用して可変長のブックマーク、ODBC 2 を使用する場合にも*.x*ドライバーのみの 4 バイトの固定長のブックマークをサポート)。 これは、固定長のブックマークが可変長のブックマークの特殊なケースのみであるためです。 ODBC 2 を使用するときに*.x* SQL_UB_FIXED にドライバーをドライバー マネージャーのマップ SQL_UB_VARIABLE です。<br /><br /> ブックマークをカーソルで使用するには、アプリケーション SQL_UB_VARIABLE 値を持つこの属性必要があります、カーソルを開く前に指定します。<br /><br /> 詳細については、次を参照してください。[を取得するブックマーク](../../../odbc/reference/develop-app/retrieving-bookmarks.md)です。|  
+|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|アプリケーションが、カーソルにブックマークを使用するかどうかを指定する SQLULEN 値:<br /><br /> SQL_UB_OFF = Off (既定)<br /><br /> SQL_UB_VARIABLE = アプリケーションは、カーソル、カーソルとブックマークを使用して、サポートされている場合、ドライバーは可変長のブックマークになります。 ODBC 3 SQL_UB_FIXED は推奨されなくなりました *.x*です。 ODBC 3 *.x*アプリケーション必ず使用して可変長のブックマーク、ODBC 2 を使用する場合にも *.x*ドライバーのみの 4 バイトの固定長のブックマークをサポート)。 これは、固定長のブックマークが可変長のブックマークの特殊なケースのみであるためです。 ODBC 2 を使用するときに *.x* SQL_UB_FIXED にドライバーをドライバー マネージャーのマップ SQL_UB_VARIABLE です。<br /><br /> ブックマークをカーソルで使用するには、アプリケーション SQL_UB_VARIABLE 値を持つこの属性必要があります、カーソルを開く前に指定します。<br /><br /> 詳細については、次を参照してください。[を取得するブックマーク](../../../odbc/reference/develop-app/retrieving-bookmarks.md)です。|  
   
  [1] これらの関数は、記述子が、実装の記述子アプリケーション記述子ではない場合にのみ、非同期的に呼び出すことができます。  
   

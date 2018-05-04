@@ -1,11 +1,9 @@
 ---
 title: COM 用の Visual C 構文のインデックスの ADO |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3486f6e10162286b43ab1eab39042577c8d5fc4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b0db41cef5c6eb47c28f2eb8dd14a683153c3ecd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>COM 用の Visual C 構文のインデックスの ADO
 このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照します。  

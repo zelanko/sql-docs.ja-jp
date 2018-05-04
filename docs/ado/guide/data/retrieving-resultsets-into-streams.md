@@ -1,11 +1,9 @@
 ---
 title: ストリームへの結果セットの取得 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16d1518d2ddbe5accc6b55fdc0b778a6381e1a5f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cc99c234d810aef48f4c01bdc83229e55d9c5886
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリームへの結果セットの取得
 従来の結果を受信するのではなく**Recordset**オブジェクト、ADO がストリームにクエリの結果を代わりに取得できます。 ADO**ストリーム**オブジェクト (またはその他のオブジェクト、COM をサポートする**IStream** ASP などのインターフェイス**要求**と**応答**オブジェクト) これらの結果を含めるために使用できます。 この機能の 1 つの用途は、XML 形式で結果を取得です。 SQL server などの XML 結果は返されません SQL SELECT クエリを使用した FOR XML 句を使用して、XPath クエリを使用するなど、複数の方法でします。  

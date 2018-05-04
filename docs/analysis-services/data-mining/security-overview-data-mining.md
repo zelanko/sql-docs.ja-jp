@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
@@ -18,26 +17,26 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5907b147aa4e06adfadaa2b56820088846d3fdd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f558e19ded6fa97f195f19b72c3db4810cf7ac7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-overview-data-mining"></a>セキュリティの概要 (データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]セキュリティで保護するプロセス[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]複数レベルで発生します。 まず [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスと、そのデータ ソースのセキュリティを保護して、認証されたユーザーのみが、選択されたディメンション、マイニング モデル、およびデータ ソースに対する読み取り、または読み取り/書き込み権限を持つことを確認する必要があります。 基になるデータ ソースのセキュリティを保護して、権限のないユーザーが機密のビジネス情報を悪意で危険にさらすことを防ぐ必要もあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのセキュリティを保護するプロセスは、次のトピックで説明しています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のセキュリティ保護は、複数レベルで行われます。 まず [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスと、そのデータ ソースのセキュリティを保護して、認証されたユーザーのみが、選択されたディメンション、マイニング モデル、およびデータ ソースに対する読み取り、または読み取り/書き込み権限を持つことを確認する必要があります。 基になるデータ ソースのセキュリティを保護して、権限のないユーザーが機密のビジネス情報を悪意で危険にさらすことを防ぐ必要もあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのセキュリティを保護するプロセスは、次のトピックで説明しています。  
   
 ##  <a name="bkmk_Architecture"></a> セキュリティのアーキテクチャ  
- 次のリソースを参照して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 認証を使用してユーザーのアクセスを認証する方法なども含めて、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスの基本的なセキュリティ アーキテクチャを理解してください。  
+ 次のリソースを参照して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 認証を使用してユーザーのアクセスを認証する方法なども含めて、[!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスの基本的なセキュリティ アーキテクチャを理解してください。  
   
--   [セキュリティ ロール (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [セキュリティ ロール &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [セキュリティのプロパティ](../../analysis-services/server-properties/security-properties.md)  
   
--   [サービス アカウントの構成 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [サービス アカウント & #40; を構成します。Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [オブジェクトと操作へのアクセスの承認 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [オブジェクトと操作 & #40; への認証のアクセスAnalysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Analysis Services のログオン アカウントの構成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に対して適切なログオン アカウントを選択し、このアカウントの権限を指定する必要があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログオン アカウントには、基になるデータ ソースへの適切な権限を含め、必要なタスクの実行に要する権限のみが与えられていることを確認する必要があります。  
@@ -62,6 +61,6 @@ ms.lasthandoff: 01/08/2018
  Integration Services パッケージを使用してデータのクリーンアップ、マイニング モデルの更新、または予測の作成を行う場合は、モデルが格納されているデータベースに対する適切な権限、およびソース データに対する適切な権限が Integration Services サービスにあることを確認する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ロールと権限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [役割とアクセス許可 & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

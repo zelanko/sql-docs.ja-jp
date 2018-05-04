@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 17d866d9a98c4ca7cc3fb3ce4586e54ab0439d72
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +47,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  メンバー プロパティの名前を表す有効な文字列式です。  
   
 ## <a name="remarks"></a>解説  
- **プロパティ**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかのように**名前**、 **ID**、**キー**、または**キャプション**、またはユーザー定義メンバー プロパティを指定できます。 詳細については、次を参照してください。[固有メンバー プロパティ &#40;です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ &#40;です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
+ **プロパティ**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかのように**名前**、 **ID**、**キー**、または**キャプション**、またはユーザー定義メンバー プロパティを指定できます。 詳細については、次を参照してください。[固有メンバー プロパティ&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)です。  
   
  既定では、強制的に文字列型の値が返されます。 場合**型指定された**を指定すると、戻り値が厳密に型指定します。  
   
@@ -119,7 +117,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [メンバーのプロパティ &#40; を使用します。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です](../mdx/mdx-function-reference-mdx.md)  
+ [メンバーのプロパティ & #40; を使用します。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

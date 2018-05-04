@@ -1,11 +1,9 @@
 ---
 title: エラー処理 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4baa601f32a42a109ed32cb1056e5a4d5826c654
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e302e38ee983f8057aa2ce1be321e195abe0afbb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="error-handling"></a>エラー処理
 ADO では、いくつかの方法を使用して、発生したエラーのアプリケーションに通知します。 このセクションでは、ADO およびアプリケーションに通知する方法を使用しているときに発生するエラーの種類について説明します。 最後にこれらのエラーを処理する方法に関する提案をします。  

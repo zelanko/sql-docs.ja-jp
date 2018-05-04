@@ -1,27 +1,25 @@
 ---
-title: "互換性レベル 1200 の表形式モデルのプログラミング |Microsoft ドキュメント"
-ms.custom: 
+title: 互換性レベル 1200 の表形式モデルのプログラミング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 171106f6b1cb34631c3a785c1967844574c7fc4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>表形式モデル プログラミングの互換性レベル 1200 以降
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,13 +39,13 @@ ms.lasthandoff: 02/23/2018
   
  AMO PowerShell は、TMSL スクリプトを入力として受け取ります。  
   
- 参照してください[表形式モデルの言語 &#40; のスクリプトTMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)と[Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md)詳細についてはします。  
+ 参照してください[表形式モデル スクリプト言語&#40;TMSL&#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)と[Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md)詳細についてはします。  
   
 ## <a name="query-languages"></a>クエリ言語  
  DAX と MDX については、すべてのテーブル モデルのサポートします。  
   
 ## <a name="expression-language"></a>式の言語  
- DAX では、フィルターとメジャー、Kpi などの計算されるオブジェクトを作成するために使用する式が策定されました。 参照してください[表形式モデルでの DAX を理解する](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)と[Data Analysis Expressions &#40;DAX"&"#41 です。 Analysis Services で](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)です。  
+ DAX では、フィルターとメジャー、Kpi などの計算されるオブジェクトを作成するために使用する式が策定されました。 参照してください[表形式モデルでの DAX を理解する](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)と[Data Analysis Expressions &#40;DAX&#41; Analysis Services で](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)です。  
   
 ## <a name="managed-code-for-tabular-models-and-databases"></a>表形式モデルとデータベースのマネージ コード  
  AMO には、モデルをプログラムで使用するための新しい名前空間、Microsoft.AnalysisServices.Tabular が含まれています。 参照してください[Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx)詳細についてはします。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], allocating and freeing
 - allocating buffers [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e2f195b33183b90ed49a1e47c572d69a4deb1754
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7cede55feb2da261f6408a807745277b171f441c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allocating-and-freeing-buffers"></a>割り当てと解放バッファー
 すべてのバッファーでは、割り当てられ、アプリケーションによって解放することができます。 バッファーを遅延しませんが場合は、必要がある関数への呼び出しの間のみ存在します。 たとえば、 **SQLGetInfo**が指すバッファー内の特定のオプションに関連付けられている値を返します、 *InfoValuePtr*引数。 このバッファーへの呼び出し後すぐに解放できる**SQLGetInfo**次のコード例のように。  

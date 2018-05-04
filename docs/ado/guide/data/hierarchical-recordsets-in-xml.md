@@ -1,11 +1,9 @@
 ---
 title: XML での階層のレコード セット |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86fa04ed8be926982464d10fd4d63996df358d1f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 64be59db3e65386eaaa267e954f63d0cf063e146
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層のレコード セット
 ADO では、XML に階層のレコード セット オブジェクトの永続化を許可します。 階層のレコード セット オブジェクトでは、親レコード セット内のフィールドの値は、別のレコード セットです。 このようなフィールドは、属性ではなく、XML ストリーム内の子要素として表されます。  

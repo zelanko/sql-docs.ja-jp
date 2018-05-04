@@ -28,12 +28,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 37649d37d1cef67eb50caf8f3768beba19545988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bb32f3319e4e184637c3b816f10ca563d6c76d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX データ定義の更新キューブ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ REFRESH CUBECube_Name
  *Cube_Name*  
  キューブ名を提供する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  インスタンスに接続されているクライアント アプリケーションの[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、このステートメントにより、サーバーと同期するクライアント アプリケーションでキャッシュされているメモリです。 この検出および更新は日常的かつ自動的に行われますが、同期が行われるまでの時間はクライアント接続文字列の設定によって異なります。 REFRESH CUBE ステートメントを実行すると、データが直ちに更新されます。  
   
  ローカル キューブに接続しているクライアント アプリケーションの場合、REFRESH CUBE ステートメントは、ローカルのキューブ ファイルを再構築します。  
@@ -60,6 +59,6 @@ REFRESH CUBECube_Name
 >  サーバーに保存されている名前付きセットは更新されません。  
   
 ## <a name="see-also"></a>参照  
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

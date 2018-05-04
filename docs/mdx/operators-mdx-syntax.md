@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>演算子 (MDX 構文)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
 -   DISTINCT  
   
--   によってデコードされる文字を次に示します。  
+-   [ ] :  
   
 -   ^  
   
@@ -90,14 +89,14 @@ ms.lasthandoff: 01/08/2018
   
 -   XOR  
   
--   スイッチまたは  
+-   または  
   
- MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス &#40;です。MDX と #41 です](../mdx/mdx-operator-reference-mdx.md)。  
+ MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)です。  
   
 ### <a name="determining-results"></a>結果の決定  
  単純な式を結合して複雑な式を作成する場合、演算子に関する規則とデータ型の優先順位に関する規則の組み合わせによって、結果の値のデータ型が決まります。  
   
- 結果が文字値または Unicode 値の場合、演算子に関する規則と照合順序の優先順位に関する規則の組み合わせによって、結果の照合順序が決まります。 照合順序の詳細については、次を参照してください。[言語および照合順序と #40 です。Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)。  
+ 結果が文字値または Unicode 値の場合、演算子に関する規則と照合順序の優先順位に関する規則の組み合わせによって、結果の照合順序が決まります。 照合順序の詳細については、次を参照してください。[言語および照合順序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)です。  
   
  単純式の有効桁数、小数点以下桁数、長さに基づいて結果の有効桁数、小数点以下桁数、長さを指定するルールもあります。  
   
@@ -113,7 +112,7 @@ ms.lasthandoff: 01/08/2018
 |組|スカラー|\<タプル > .value|  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です](../mdx/mdx-operator-reference-mdx.md)   
- [MDX 構文の要素 &#40;です。MDX と #41 です](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX 構文の要素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

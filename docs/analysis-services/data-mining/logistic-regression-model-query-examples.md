@@ -1,34 +1,32 @@
 ---
-title: "ロジスティック回帰モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
+title: ロジスティック回帰モデルのクエリ例 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 086104130f865063739773c1813de3c44ef28bc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>ロジスティック回帰モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータによる予測を行うことができます。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータによる予測を行うことができます。  
   
  ここでは、Microsoft ロジスティック回帰アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
@@ -148,24 +146,24 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Call Center のマイニング構造およびモデルの分離バージョンを作成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、 **[マイニング構造]**を展開します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーで、 **[マイニング構造]** を展開します。  
   
-2.  Call Center.dmm を右クリックして、 **[コピー]**を選択します。  
+2.  Call Center.dmm を右クリックして、 **[コピー]** を選択します。  
   
-3.  **[マイニング構造]** を右クリックし、 **[貼り付け]**をクリックします。 Call Center 1 という名前の新しいマイニング構造が追加されます。  
+3.  **[マイニング構造]** を右クリックし、 **[貼り付け]** をクリックします。 Call Center 1 という名前の新しいマイニング構造が追加されます。  
   
-4.  新しいマイニング構造を右クリックし、 **[名前の変更]**をクリックします。 新しい名前として「 **Call Center Discretized**」と入力します。  
+4.  新しいマイニング構造を右クリックし、 **[名前の変更]** をクリックします。 新しい名前として「 **Call Center Discretized**」と入力します。  
   
 5.  新しいマイニング構造をダブルクリックしてデザイナーで開きます。 すべてのマイニング モデルがコピーされ、拡張子 1 が付いていることに注目してください。 ここでは、名前をそのままにします。  
   
-6.  **[マイニング構造]** タブで、Service Grade の列を右クリックし、 **[プロパティ]**をクリックします。  
+6.  **[マイニング構造]** タブで、Service Grade の列を右クリックし、 **[プロパティ]** をクリックします。  
   
 7.  **Content** プロパティを **Continuous** から **Discretized**に変更します。 **DiscretizationMethod** プロパティを **Clusters**に変更します。 Discretization BucketCount に「 **3**」と入力します。  
   
     > [!NOTE]  
     >  これらのパラメーターは、プロセスを説明するために使用されており、有効なモデルを生成するとは限りません。  
   
-8.  **[マイニング モデル]** メニューの **[構造および全モデルの処理]**をクリックします。  
+8.  **[マイニング モデル]** メニューの **[構造および全モデルの処理]** をクリックします。  
   
  次のサンプル クエリは、この分離モデルに基づいており、指定した曜日のサービス グレードと、各予測出力の確率を予測します。  
   
@@ -197,13 +195,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
+|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[PredictAdjustedProbability & #40";"DMX"&"#41;](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
+|[PredictHistogram (&) #40";"DMX"&"#41;](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
+|[PredictProbability & #40";"DMX"&"#41;](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
+|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -214,7 +212,7 @@ NATURAL PREDICTION JOIN
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [ロジスティック回帰モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル &#40; 中級者向けデータ マイニング チュートリアル &#41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [ロジスティック回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル & #40; 中級者向けデータ マイニング チュートリアル & #41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

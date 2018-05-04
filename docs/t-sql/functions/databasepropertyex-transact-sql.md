@@ -1,7 +1,7 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4331e2c3e4b68a3c439ed72a16f0941068b76802
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b003969b1b42ded9cc0abc86efdc5d9f83b57a3b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsArithmeticAbortEnabled|クエリ実行中にオーバーフローまたは 0 除算エラーが発生したとき、クエリは終了します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAutoClose|最後のユーザーが終了すると、データベースは即座にシャットダウンし、リソースを解放します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAutoCreateStatistics|クエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じて 1 列ずつの統計を作成します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
-|IsAutoCreateStatisticsIncremental|可能な場合、自動作成された 1 列ずつの統計は増分統計になります。|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
+|IsAutoCreateStatisticsIncremental|可能な場合、自動作成された 1 列ずつの統計は増分統計になります。|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAutoShrink|データベース ファイルを、自動的に行われる定期的な圧縮の対象とします。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsAutoUpdateStatistics|クエリで使用される既存の統計が古くなっている可能性がある場合、クエリ オプティマイザーによって更新されます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|
-|IsClone|データベースは、スキーマと統計情報であり、単にユーザー データベースのコピーです。|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *| 
+|IsClone|データベースは、スキーマと統計情報であり、単に DBCC CLONEDATABASE で作成されたユーザー データベースのコピーです。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/3177838)をご覧ください。|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *| 
 |IsCloseCursorsOnCommitEnabled|トランザクションがコミットされたときに開いていたカーソルを閉じます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsFulltextEnabled|データベースではフルテキストおよびセマンティック インデックス作成を有効にします。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *<br /><br /> **注意:** このプロパティの値には、影響ありません。 ユーザー データベースでは、常にフルテキスト検索が有効になっています。 この列は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のリリースでは削除される予定です。 新規の開発作業ではこの列を使用しないようにし、現在この列を使用しているアプリケーションはできるだけ早く修正してください。|  
 |IsInStandBy|データベースは読み取り専用のオンライン状態で、復元ログが許可されています。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
@@ -88,8 +88,10 @@ DATABASEPROPERTYEX ( database , property )
 |IsRecursiveTriggersEnabled|トリガーの再帰的な発生が許可されています。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsSubscribed|データベースはパブリケーションにサブスクライブされます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
 |IsSyncWithBackup|データベースは、パブリッシュされたデータベース、またはディストリビューション データベースです。また、トランザクション レプリケーションを中断せずに復元できます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
-|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、電源障害やその他のシステムの停止によって発生した不完全な I/O 操作を検出します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *|  
-|IsXTPSupported|データベースがインメモリ OLTP、つまり、メモリ最適化テーブルとネイティブ コンパイル モジュールの作成と使用をサポートするかどうかを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有:<br /><br /> IsXTPSupported は、インメモリ OLTP オブジェクトを作成するために必要な MEMORY_OPTIMIZED_DATA ファイル グループの存在に依存しません。|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: * * **int** * *|  
+|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、電源障害やその他のシステムの停止によって発生した不完全な I/O 操作を検出します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *| 
+|IsVerifiedClone|データベースは、スキーマと統計情報であり、単に DBCC CLONEDATABASE の WITH VERIFY_CLONEDB オプションを使用して作成されたユーザー データベースのコピーです。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/3177838)をご覧ください。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: * * **int** * *| 
+|IsXTPSupported|データベースがインメモリ OLTP、つまり、メモリ最適化テーブルとネイティブ コンパイル モジュールの作成と使用をサポートするかどうかを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有:<br /><br /> IsXTPSupported は、インメモリ OLTP オブジェクトを作成するために必要な MEMORY_OPTIMIZED_DATA ファイル グループの存在に依存しません。|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: * * **int** * *|  
+|LastGoodCheckDbTime|指定されたデータベース上で実行する最後に成功した DBCC CHECKDB の日時。|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br /> NULL = 無効な入力<br /><br /> 基本データ型: **datetime**| 
 |LCID (LCID)|照合順序の Windows ロケール識別子 (LCID) です。|LCID 値 (10 進数形式)。<br /><br /> 基本データ型: * * **int** * *|  
 |MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = データベースを閉じている場合<br /><br /> 基本データ型: * * * * **bigint** 型|  
 |復旧|データベースの復旧モデルです。|FULL = 完全復旧モデル<br /><br /> BULK_LOGGED = 一括ログ復旧モデル<br /><br /> SIMPLE = 単純復旧モデル<br /><br /> 基本データ型: **nvarchar(128)**|  

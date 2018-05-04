@@ -1,11 +1,9 @@
 ---
 title: メソッドの例 (VB) の複製 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b84981e9d8a98136e7b2395274ead8c0335efae
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7d7bc925d097819fcbedfa74444062ab5f2e0d17
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clone-method-example-vb"></a>メソッドの例 (VB) の複製します。
 この例では、[クローン](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  

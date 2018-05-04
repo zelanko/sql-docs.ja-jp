@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dfa962e11cc0beaa830e4f5e21144d52822b8b70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d7e79068f407af453e106112490867a72c869109
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-element-xmla"></a>File 要素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親で使用するファイルを識別[バックアップ](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)または[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)コマンド、または親[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  親で使用するファイルを識別[バックアップ](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)または[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)コマンド、または親[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,11 +51,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|String|  
+|データ型と長さ|文字列|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現します|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -72,10 +71,10 @@ ms.lasthandoff: 01/08/2018
   
  **復元**コマンド、**ファイル**要素を決定することで復元するバックアップ ファイルの名前、**復元**コマンド。  
   
- **場所**、要素、**ファイル**要素の場合は、リモート バックアップ ファイルに記述、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]リモート パーティションが含まれているインスタンス。 バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期 (&) #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ **場所**、要素、**ファイル**要素の場合は、リモート バックアップ ファイルに記述、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]リモート パーティションが含まれているインスタンス。 バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期 (&) #40 です。XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>参照  
- [AllowOverwrite 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [AllowOverwrite 要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

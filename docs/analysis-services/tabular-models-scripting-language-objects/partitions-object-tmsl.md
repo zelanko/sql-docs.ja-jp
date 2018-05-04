@@ -1,30 +1,29 @@
 ---
-title: "パーティション オブジェクト (TMSL) |Microsoft ドキュメント"
-ms.custom: 
+title: パーティション オブジェクト (TMSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 782b480475e9174f21121b43fbba46660ba4ace1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-object-tmsl"></a>パーティション オブジェクト (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]パーティション、またはテーブルの行セットの論理セグメントを定義します。 パーティションは、サンプル データ モデリング環境でまたは DirectQuery を使用してクエリを実行してパスの完全なデータ クエリ用のデータのインポートに使用される SQL クエリで構成されます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  パーティション、またはテーブルの行セットの論理セグメントを定義します。 パーティションは、サンプル データ モデリング環境でまたは DirectQuery を使用してクエリを実行してパスの完全なデータ クエリ用のデータのインポートに使用される SQL クエリで構成されます。  
   
  パーティションのプロパティは、テーブルのデータを供給する方法を決定します。  オブジェクトの階層では、パーティションの親オブジェクトは、テーブル オブジェクトです。  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**[インポート]**|要求がインポートされたデータを格納する、メモリ内分析エンジンに対して発行されるクエリを示します。|  
 |**DirectQuery**|外部リレーショナル データベースにクエリを実行して渡します。 DirectQuery モードでは、パーティションを使用して、モデルのデザイン時に使用されるサンプル データを提供します。 実稼働サーバーに展開されると、完全データ ビューに切り替えてください。 DirectQuery モードには、1 つのテーブルの 1 つのパーティションとモデルごとに 1 つのデータ ソースが必要であることを思い出してください。|  
-|**既定値**|モデルまたはデータベース レベルでのオブジェクト ツリーの上位のモードを切り替える場合は、これを設定します。 既定値を選択すると、クエリ モードになります import または DirectQuery。|  
+|**default**|モデルまたはデータベース レベルでのオブジェクト ツリーの上位のモードを切り替える場合は、これを設定します。 既定値を選択すると、クエリ モードになります import または DirectQuery。|  
   
  source  
  クエリを実行するデータの場所を識別します。 有効な値は**クエリ、計算**、または**none**です。 この値は必須です。  
@@ -55,14 +54,14 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |**[なし]**|インポート モード、データの読み込みし、メモリに格納されている場所に使用されます。|  
-|**クエリ**|DirectQuery モードでは、これは、モデルの指定されたリレーショナル データベースに対して実行される SQL クエリ**データソース**です。 参照してください[データソース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**query**|DirectQuery モードでは、これは、モデルの指定されたリレーショナル データベースに対して実行される SQL クエリ**データソース**です。 参照してください[データソース オブジェクト&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)です。|  
 |**計算**|テーブルの作成時に指定された式から計算テーブルに基づいています。 この式は、計算テーブル用に作成されたパーティションのソースと見なされます。|  
   
  dataview  
  DirectQuery パーティションは、さらに、追加の dataView プロパティは、データを取得するクエリがサンプルか、完全なデータセットがかどうかを指定します。 有効な値は**完全**、**サンプル**、または**既定**(継承)。 前述のように、サンプルは、データ モデリングと、テスト中にのみ使用されます。 参照してください[デザイン モードで DirectQuery モデルにサンプル データを追加する](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)詳細についてはします。  
   
 ## <a name="usage"></a>使用方法  
- パーティション オブジェクトを使用[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、[コマンド &#40; を更新TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ パーティション オブジェクトを使用[Alter コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンドを作成して&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、 [Delete コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、 [Refresh コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  作成する場合、置換、またはパーティション オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。 読み取り/書き込みプロパティには、名前、説明、モード、およびソースが含まれます。  
   

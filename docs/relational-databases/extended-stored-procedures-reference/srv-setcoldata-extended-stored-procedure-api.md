@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a8f7ce6ef6686ee9da6fa71fcf634960d7c1a5f3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1575c262c190c014fe478cb0c4aa039688a12b5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +65,10 @@ data
  *data*  
  列のデータを指すポインターです。 別に **srv_setcoldata** を呼び出して列データを置き換えるか、**srv_senddone** を呼び出すまでは、*data* に割り当てたメモリを解放しないでください。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  行の各列はあらかじめ **srv_describe** で定義しておく必要があります。 列データのアドレスは、最初は **srv_describe** で設定されます。 列データのアドレスが変わった場合は、データの新しいアドレスを指定するために **srv_setcoldata** を呼び出してから、変更された各列について改めて **srv_setcoldata** を呼び出す必要があります。  
   
  NULL データを表現するには、**srv_setcollen** を使用して列の長さを 0 に設定します。 これにより、データのアドレスは無視されます。  

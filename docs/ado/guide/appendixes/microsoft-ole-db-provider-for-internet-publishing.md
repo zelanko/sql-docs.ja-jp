@@ -1,11 +1,9 @@
 ---
 title: インターネットへの発行の Microsoft OLE DB Provider |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26b77c49d4275ace0bcb95ec1495f0637e5b19f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f3dbcc73d88669a6787151770d97b3921ae43f2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet パブリッシングの概要
 Microsoft OLE DB Provider for Internet Publishing は、Microsoft や Microsoft Internet Information Server によって提供されたリソースにアクセスする ADO を使用します。 リソースには、HTML ファイル、または Windows 2000 web フォルダーなどの web ソース ファイルが含まれます。
@@ -63,7 +60,7 @@ MSDAIPP.DSO
 |**Password**|ユーザーのパスワードを指定します。|
 
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
 
  設定した場合、 *ResourceURL*値から、"URL ="で無効な値への接続文字列、既定では、インターネット パブリッシング用プロバイダーを発生させます有効な値を要求するダイアログ ボックス。 これは、ダイアログ ボックスがオフになってされ、コンポーネントからの応答を受信していないためにを固定するのには、クライアントが表示されるまでは、プログラムの実行を中断するために、アプリケーションの中間層のコンポーネントの望ましくない動作です。
 

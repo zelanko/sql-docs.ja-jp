@@ -1,11 +1,9 @@
 ---
 title: MaxRecords プロパティの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f59c12cae5ff2b8ce4c78602b7f47d13fbde6f5
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9aa666a38ea427f1852884bf20fa7b6e86cfdd6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords プロパティの例 (VB)
 この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを開くには、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)で 10 個の最も高価なタイトルを含む、***タイトル***テーブル。  

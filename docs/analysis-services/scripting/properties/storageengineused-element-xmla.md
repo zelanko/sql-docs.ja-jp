@@ -1,15 +1,14 @@
 ---
-title: "StorageEngineUsed 要素 (XMLA) |Microsoft ドキュメント"
-ms.custom: 
+title: StorageEngineUsed 要素 (XMLA) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StorageEngineUsed Element
@@ -19,20 +18,19 @@ apitype: Schema
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 87aa1cbcf396e0e6c704e8f288728aacd5118f49
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 要素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-現在のデータベースの種類を示す読み取り専用の値を格納します。  
+  現在のデータベースの種類を示す読み取り専用の値を格納します。  
   
 ## <a name="syntax"></a>構文  
   

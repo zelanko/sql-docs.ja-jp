@@ -3,15 +3,12 @@ title: 10 進数字 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -22,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ded2bda56c0fee5012e451dbee55a89cfa32e16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 307ad06151a821274d376f923a4eb83b37d20622
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decimal-digits"></a>小数点以下桁数
 *小数点以下桁数*またはデータの小数点以下桁数、小数点の右側にある数字の最大数として decimal および numeric のデータの種類が定義されています。 浮動小数点概数の数値列またはパラメーターでは、小数点の右側にある数字の数が一定ではないので、小数点以下桁数は定義されません。 Datetime または期間、データの秒の部分を含む 10 進数字は、データの秒の部分の中で小数点の右側にある数字の数として定義されます。  

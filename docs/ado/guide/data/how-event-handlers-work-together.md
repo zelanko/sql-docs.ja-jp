@@ -1,11 +1,9 @@
 ---
 title: イベント ハンドラーがどのように連携 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e8c279565b17cf236223c641a13c23727fd4c00
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4ef9af3c4ba076048e0d04d31601b20e9d9ca321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-event-handlers-work-together"></a>イベント ハンドラーがどのように連携
 Visual Basic でのすべてのイベント ハンドラーでプログラミングしている場合を除き、**接続**と**Recordset**かどうか実際に処理するすべてのイベントに関係なく、イベントを実装する必要があります。 行う必要がある実装作業量は、使用するプログラミング言語によって異なります。 詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)です。  

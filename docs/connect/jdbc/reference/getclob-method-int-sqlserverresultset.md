@@ -3,15 +3,12 @@ title: getClob (int) メソッド (SQLServerResultSet) |Microsoft ドキュメ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getClob (int)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fefa04300333252f089a2f6a45156afcccbfbb4e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 9f140c77fc5dc3d92a208b37cade2fddbacbbda7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +40,7 @@ public java.sql.Clob getClob(int columnIndex)
 #### <a name="parameters"></a>パラメーター  
  *columnIndex*  
   
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  Clob オブジェクトです。  

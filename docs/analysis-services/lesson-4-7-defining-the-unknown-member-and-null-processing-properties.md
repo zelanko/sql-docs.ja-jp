@@ -1,29 +1,27 @@
 ---
-title: "不明なメンバーと Null 処理のプロパティを定義する |Microsoft ドキュメント"
-ms.custom: 
+title: 不明なメンバーと Null 処理のプロパティを定義する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5d59f09c5f227f684103434ae4371d4b41379482
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>レッスン 4 ~ 7 の Null 処理のプロパティと不明なメンバーを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,11 +59,11 @@ ms.lasthandoff: 02/15/2018
   
     ![ErrorConfiguration プロパティ コレクション](../analysis-services/media/l4-productdimensionerrorconfig-1.gif "ErrorConfiguration プロパティ コレクション")  
   
-5.  **[ブラウザー]** タブをクリックし、 **[階層]** ボックスで **[Product Model Lines]** が選択されていることを確認します。 **[All Products]**を展開します。  
+5.  **[ブラウザー]** タブをクリックし、 **[階層]** ボックスで **[Product Model Lines]** が選択されていることを確認します。 **[All Products]** を展開します。  
   
     Product Line レベルには 5 つのメンバーが存在します。  
   
-6.  **[Components]**を展開します。 **Model Name** レベルのメンバーのうち、ラベルが付いていないメンバーを展開します。  
+6.  **[Components]** を展開します。 **Model Name** レベルのメンバーのうち、ラベルが付いていないメンバーを展開します。  
   
     次の図のように、このレベルには、アジャスタブル レース ( **Adjustable Race** ) など、他の部品を組み立てるときに使用するアセンブリ部品が含まれています。  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 02/15/2018
   
     **[テーブルの追加と削除]** ダイアログ ボックスが開きます。  
   
-2.  **[含まれているオブジェクト]** ボックスの一覧の **[DimProduct (dbo)]**をクリックします。次に、 **[関連テーブルの追加]**をクリックします。  
+2.  **[含まれているオブジェクト]** ボックスの一覧の **[DimProduct (dbo)]** をクリックします。次に、 **[関連テーブルの追加]** をクリックします。  
   
     **DimProductSubcategory (dbo)** と **FactProductInventory (dbo)** の両方が追加されます。 **FactProductInventory (dbo)** を削除して、 **DimProductSubcategory (dbo)** テーブルだけが **[含まれているオブジェクト]** の一覧に追加されるようにします。  
   
@@ -85,31 +83,31 @@ ms.lasthandoff: 02/15/2018
   
     **[含まれているオブジェクト]** の一覧に **DimProductCategory (dbo)** テーブルが追加されます。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
-5.  **の** [書式] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューで **[自動レイアウト]**をポイントし、 **[ダイアグラム]**をクリックします。  
+5.  **の** [書式] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
     **DimProductSubcategory (dbo)** テーブルと **DimProductCategory (dbo)** テーブルは互いにリンクしています。また、 **Product** テーブルを介して **ResellerSales** テーブルにもリンクしています。  
   
 6.  **Product** ディメンションのディメンション デザイナーに切り替え、 **[ディメンション構造]** タブをクリックします。  
   
-7.  **[データ ソース ビュー]** ペイン内を右クリックし、 **[すべてのテーブルを表示]**をクリックします。  
+7.  **[データ ソース ビュー]** ペイン内を右クリックし、 **[すべてのテーブルを表示]** をクリックします。  
   
-8.  **[データ ソース ビュー]** ペインで、 **DimProductCategory** テーブルを探します。次に、このテーブルの **ProductCategoryKey** を右クリックし、 **[列から新しい属性を作成]**をクリックします。  
+8.  **[データ ソース ビュー]** ペインで、 **DimProductCategory** テーブルを探します。次に、このテーブルの **ProductCategoryKey** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
 9. **[属性]** ペインで、この新しい属性の名前を「 **Category**」に変更します。  
   
 10. [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールド内をクリックし、参照ボタン (**[...]**) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
   
-11. **[基になる列]** ボックスの一覧で **[EnglishProductCategoryName]** を選択し、 **[OK]**をクリックします。  
+11. **[基になる列]** ボックスの一覧で **[EnglishProductCategoryName]** を選択し、 **[OK]** をクリックします。  
   
-12. **[データ ソース ビュー]** ペインで、 **DimProductSubcategory** テーブルを探します。このテーブルの **ProductSubcategoryKey** を右クリックし、 **[列から新しい属性を作成]**をクリックします。  
+12. **[データ ソース ビュー]** ペインで、 **DimProductSubcategory** テーブルを探します。このテーブルの **ProductSubcategoryKey** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
 13. **[属性]** ペインで、この新しい属性の名前を「 **Subcategory**」に変更します。  
   
 14. [プロパティ] ウィンドウで、 **[NameColumn]** プロパティ フィールド内をクリックし、参照ボタン ( **[...]** ) をクリックして、 **[名前列]** ダイアログ ボックスを開きます。  
   
-15. **[基になる列]** ボックスの一覧で **[EnglishProductSubcategoryName]** を選択し、 **[OK]**をクリックします。  
+15. **[基になる列]** ボックスの一覧で **[EnglishProductSubcategoryName]** を選択し、 **[OK]** をクリックします。  
   
 16. **Product Categories** という名前の新しいユーザー定義階層を作成します。この階層の最上位レベルに **Category**レベルを配置し、その下に **Subcategory**レベル、さらにその下に **Product Name**レベルを配置します。  
   
@@ -117,13 +115,13 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>Product ディメンションのユーザー定義階層の表示  
   
-1.  **Product** ディメンションの **ディメンション デザイナー** で、 **[ディメンションの構造]** タブのツール バーにある **[処理]**をクリックします。  
+1.  **Product** ディメンションの **ディメンション デザイナー** で、 **[ディメンションの構造]** タブのツール バーにある **[処理]** をクリックします。  
   
 2.  **[はい]** をクリックして、プロジェクトを作成し、配置します。次に、 **[実行]** をクリックして、 **Product** ディメンションを処理します。  
   
-3.  処理が正常に完了したら、 **[処理の進行状況]** ダイアログ ボックスで **[ディメンション 'Product' の処理が正常に完了しました]** を展開し、 **[ディメンション属性 'Product Name' の処理が完了しました]**を展開します。次に、 **[SQL クエリ数 1]**を展開します。  
+3.  処理が正常に完了したら、 **[処理の進行状況]** ダイアログ ボックスで **[ディメンション 'Product' の処理が正常に完了しました]** を展開し、 **[ディメンション属性 'Product Name' の処理が完了しました]** を展開します。次に、 **[SQL クエリ数 1]** を展開します。  
   
-4.  SELECT DISTINCT クエリをクリックし、 **[詳細表示]**をクリックします。  
+4.  SELECT DISTINCT クエリをクリックし、 **[詳細表示]** をクリックします。  
   
     SELECT DISTINCT 句に WHERE 句が追加されています。次の図のように、この WHERE 句は、値を持たない製品を ProductSubcategoryKey から削除します。  
   
@@ -131,11 +129,11 @@ ms.lasthandoff: 02/15/2018
   
 5.  **[閉じる]** を 3 回クリックし、処理中のダイアログ ボックスをすべて閉じます。  
   
-6.  **Product** ディメンションのディメンション デザイナーで、 **[ブラウザー]** タブをクリックします。次に、 **[再接続]**をクリックします。  
+6.  **Product** ディメンションのディメンション デザイナーで、 **[ブラウザー]** タブをクリックします。次に、 **[再接続]** をクリックします。  
   
-7.  **[階層]** ボックスの一覧に **[Product Model Lines]** が表示されていることを確認し、 **[All Products]**、 **[Components]**の順に展開します。  
+7.  **[階層]** ボックスの一覧に **[Product Model Lines]** が表示されていることを確認し、 **[All Products]**、 **[Components]** の順に展開します。  
   
-8.  **[階層]** ボックスの一覧から **[Product Categories]** を選択し、 **[All Products]**、 **[Components]**の順に展開します。  
+8.  **[階層]** ボックスの一覧から **[Product Categories]** を選択し、 **[All Products]**、 **[Components]** の順に展開します。  
   
     アセンブリ部品は何も表示されません。  
   
@@ -151,19 +149,19 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[属性リレーションシップ]** タブをクリックします。  
   
-4.  ダイアグラムで、 **[Subcategory]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
+4.  ダイアグラムで、 **[Subcategory]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-5.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Subcategory]**を指定します。 **[関連属性]** を **[Category]**に設定します。 リレーションシップの種類の設定は **[可変]**のままにします。  
+5.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Subcategory]** を指定します。 **[関連属性]** を **[Category]** に設定します。 リレーションシップの種類の設定は **[可変]** のままにします。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  **[属性]** ペインで、 **[Subcategory]**を選択します。  
+7.  **[属性]** ペインで、 **[Subcategory]** を選択します。  
   
 8.  [プロパティ] ウィンドウで、 **[KeyColumns]** プロパティ、 **[DimProductSubcategory.ProductSubcategoryKey (Integer)]** プロパティの順に展開します。  
   
 9. **NullProcessing** プロパティを **UnknownMember**に変更します。  
   
-10. **[属性]** ペインで、 **[Model Name]**を選択します。  
+10. **[属性]** ペインで、 **[Model Name]** を選択します。  
   
 11. [プロパティ] ウィンドウで、 **[KeyColumns]** プロパティ、 **[Product.ModelName (WChar)]** プロパティの順に展開します。  
   
@@ -173,11 +171,11 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-product-dimension-again"></a>Product ディメンションの再表示  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **Product** ディメンションのディメンション デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]**をクリックします。  
+2.  配置が正常に完了したら、 **Product** ディメンションのディメンション デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]** をクリックします。  
   
-3.  **[階層]** ボックスで **[Product Categories]** が選択されていることを確認し、 **[All Products]**を展開します。  
+3.  **[階層]** ボックスで **[Product Categories]** が選択されていることを確認し、 **[All Products]** を展開します。  
   
     Category レベルの新しいメンバーとして Assembly Components が表示されています。  
   

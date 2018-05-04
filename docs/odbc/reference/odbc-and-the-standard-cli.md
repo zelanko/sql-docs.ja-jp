@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], CLI
 - CLI [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef863329a0f0c8a7c7b8aaef6f55717fbbc1f638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d1b9654979f7c71ce1b3c8d238e62e056e75264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC と標準の CLI
 ODBC は、次の仕様および標準呼び出しレベル インターフェイス (CLI) での処理を整列させます。 (ODBC の機能は、これらの標準の各のスーパー セットです)。  
@@ -41,7 +40,7 @@ ODBC は、次の仕様および標準呼び出しレベル インターフェ�
   
 -   ODBC 3 では、Open Group と ISO CLI 仕様に記述されたアプリケーションは動作します。*x*ドライバーまたは ODBC 3 では、コンパイル時の標準に準拠したドライバー *。x*ヘッダー ファイルし、ODBC 3 とリンクします*。x*ライブラリ、ドライバーは ODBC 3 へのアクセスを得る場合および*。x*ドライバー マネージャー。  
   
--   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC 3 では機能*.x*アプリケーションまたは ODBC 3 では、コンパイル時の標準に準拠したアプリケーション*.x*ヘッダー ファイルし、リンクODBC 3*.x*ライブラリ、ODBC 3 を使用してドライバー、アプリケーションがアクセスおよび*.x*ドライバー マネージャー。 (詳細については、次を参照してください。[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)です。  
+-   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC 3 では機能 *.x*アプリケーションまたは ODBC 3 では、コンパイル時の標準に準拠したアプリケーション *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ODBC 3 を使用してドライバー、アプリケーションがアクセスおよび *.x*ドライバー マネージャー。 (詳細については、次を参照してください。[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)です。  
   
  コア インターフェイスへの準拠レベルには、ISO CLI 内のすべての機能および開くグループ CLI で nonoptional すべての機能が含まれます。 開くグループ CLI の省略可能な機能より高いインターフェイスへの準拠レベルに表示されます。 すべての ODBC 3 です。*x*ドライバーは、コア インターフェイスへの準拠レベルで機能をサポートするために必要な true を次に示します。  
   

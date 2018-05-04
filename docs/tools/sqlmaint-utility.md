@@ -1,15 +1,16 @@
 ---
-title: "sqlmaint ユーティリティ |Microsoft ドキュメント"
-ms.custom: 
+title: sqlmaint ユーティリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqlmaint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 156c72955c93e5ecd699136e9b49df3d63dd1cb1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint**ユーティリティには、指定された 1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。 **sqlmaint** を使用して、DBCC チェックの実行、データベースとデータベース トランザクション ログのバックアップ、統計の更新、およびインデックスの再構築を行います。 すべてのデータベース メンテナンス操作では、指定されたテキスト ファイル、HTML ファイル、または電子メール アカウントに送信できるレポートが生成されます。 **sqlmaint** は、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。 コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プランを実行するには、 [dtexec](../integration-services/packages/dtexec-utility.md)ユーティリティを使用します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **sqlmaint** ユーティリティは、1 つまたは複数のデータベース上で、指定された一連のメンテナンス操作を実行します。 **sqlmaint** を使用して、DBCC チェックの実行、データベースとデータベース トランザクション ログのバックアップ、統計の更新、およびインデックスの再構築を行います。 すべてのデータベース メンテナンス操作では、指定されたテキスト ファイル、HTML ファイル、または電子メール アカウントに送信できるレポートが生成されます。 **sqlmaint** は、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。 コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プランを実行するには、 [dtexec](../integration-services/packages/dtexec-utility.md)ユーティリティを使用します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)]代わりに、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プラン機能を使用してください。 メンテナンス プランの詳細については、「 [メンテナンス プラン](../relational-databases/maintenance-plans/maintenance-plans.md)」を参照してください。  
@@ -86,7 +88,7 @@ number[minutes | hours | days | weeks | months]
  **sqlmaint** の構文ダイアグラムが返されます。 このパラメーターは単独で使用する必要があります。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 対象となる [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] を指定します。 指定*server_name***\\***instance_name*の名前付きインスタンスに接続する[!INCLUDE[ssDE](../includes/ssde-md.md)]そのサーバーにします。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ 対象となる [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 そのサーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)]の名前付きインスタンスに接続するには、*server_name***\\*** instance_name* を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-U** *login_ID*  
  サーバーに接続するときに使用するログイン ID を指定します。 指定しない場合、 **sqlmaint** は [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証の使用を試みます。 *login_ID* に特殊文字が含まれる場合、特殊文字を二重引用符 (") で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  
@@ -135,7 +137,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  *sqlmaint* がリモート サーバーにアクセスする場合、 **html_file** には、完全な UNC ファイル名を指定する必要があります。  
   
  **-DelHtmlRpt** \<*time_period*>  
- レポート ファイルの作成後の時間間隔を超えた場合に、レポート ディレクトリ内のすべての HTML レポートを削除するように指定\< *time_period*>。 **-DelHtmlRpt** は、*html_file* パラメーターを基に生成されたパターンに適合する名前を持つファイルを検索します。 場合*html_file*が c:\Program files \microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm、 **-delhtmlrpt**により**sqlmaint** C:\Program files \microsoft SQL server \mssql\backup\adventureworks2012_maint パターンに一致する名前のファイルを削除する\*.htm とするが、指定よりも古い\< *time_period*>。  
+ レポート ファイル作成後の期間が \<*time_period*> を超える場合、レポート ディレクトリ内にあるすべての HTML レポートを削除します。 **-DelHtmlRpt** は、*html_file* パラメーターを基に生成されたパターンに適合する名前を持つファイルを検索します。 *html_file* が C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm の場合、**-DelHtmlRpt** によって **sqlmaint** は、C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm というパターンに一致する名前を持つファイルを検索し、指定された \<*time_period*> より前のファイルをすべて削除します。  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  **-D**に指定されたデータベースから使用されていない領域を削除します。 このオプションは、自動拡張が定義されているデータベースに対してのみ使用できます。 *Threshold_percent* は、 **sqlmaint** が使用されていないデータ領域を削除する基準となるデータベースのサイズを MB 単位で指定します。 データベースが *threshold_percent*より小さい場合、何も行われません。 *Free_percent* は、データベースに残す必要がある使用されていない領域の量を、データベースの最終的なサイズに対する割合として指定します。 たとえば、200 MB のデータベースに 100 MB のデータを取り込む場合、 *free_percent* に 10 を指定すると、最終的なデータベース サイズは 110 MB になります。 データベースが *free_percent* とデータベースのデータ量の合計より小さい場合、データベースは拡張されないことにご注意ください。 たとえば、108 MB のデータベースが 100 MB のデータを持つ場合、 *free_percent* に 10 を指定してもデータベースは 110 MB に拡張されず、108 MB のままです。  
@@ -205,7 +207,7 @@ dbname_log_yyyymmddhhmm.BAK
  バックアップ メディアがディスクであることを指定します。  
   
  **-DelBkUps**< *time_period* >  
- ディスク バックアップのバックアップの作成後の時間間隔を超えた場合に、バックアップ ディレクトリ内のすべてのバックアップ ファイルが削除されることを指定、 \< *time_period*>。  
+ ディスク バックアップの場合で、バックアップ作成後の期間が \<*time_period*> を超える場合、バックアップ ディレクトリ内にあるすべてのバックアップ ファイルを削除します。  
   
  **-CrBkSubDir**  
  ディスク バックアップの場合で、[*backup_path*] ディレクトリ内、または **-UseDefDir** が指定されている場合は、既定のバックアップ ディレクトリ内にサブディレクトリを作成します。 サブディレクトリの名前は、 **-D**に指定されるデータベース名を基に生成されます。 **-CrBkSubDir** を使用すると、 *backup_path* パラメーターを変更せずに、異なるデータベースのすべてのバックアップを、個別のサブディレクトリに簡単に格納することができます。  
@@ -233,7 +235,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  *number* だけを指定する場合、既定では、 **weeks**と見なされます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sqlmaint** ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作を実行します。 **-D** を指定する場合、残りのスイッチで指定する操作は指定したデータベースでのみ実行されます。 **-PlanName** または **-PlanID** が指定された場合、指定されたメンテナンス プランから **sqlmaint** が取得する情報は、プラン内のデータベースのリストのみです。 その他の **sqlmaint** パラメーターに指定されるすべての操作は、プランから取得されたリスト内の各データベースに対して適用されます。 **sqlmaint** ユーティリティでは、プラン自体に定義されているメンテナンス操作は適用されません。  
   
  **sqlmaint** ユーティリティは、実行が成功した場合には 0 を、実行が失敗した場合には 1 を返します。 失敗は次の場合にレポートされます。  
@@ -244,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   一般エラーが発生した場合。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **に対して** 読み取りおよび実行 **権限のある Windows ユーザーが、** sqlmaint `sqlmaint.exe`ユーティリティを実行できます。このファイルは、既定では `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` フォルダーに格納されています。 さらに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **で指定される** ログインは、指定の操作を実行するのに必要な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の権限を持っている必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への接続で Windows 認証を使用する場合、認証される Windows ユーザーにマップされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインが指定の操作を実行するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の権限が必要です。  
   
  たとえば、 **-BkUpDB** を使用するには、BACKUP ステートメントを実行するための権限が必要です。 また、 **-UpdOptiStats** 引数を使用するには、UPDATE STATISTICS ステートメントを実行するための権限が必要です。 詳細については、オンライン ブックの該当トピックで「権限」を参照してください。  

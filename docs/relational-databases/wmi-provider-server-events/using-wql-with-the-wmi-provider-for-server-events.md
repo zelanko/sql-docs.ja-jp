@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05731087009d1f1ab444c7f740889ee441bb99a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 777d035c3b37f3e8f8eb5e329fe6d19152cced6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events と WQL の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ WHERE where_condition
   
  WMI Provider for Server Events は、bottom-up および first-fit アルゴリズムを使用して、基になる EVENT NOTIFICATION に対してできるだけ小さなスコープを生成します。 アルゴリズムにより、サーバーの内部的な利用状況、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと WMI ホスト プロセス間のネットワーク トラフィックが最小になるように試行されます。 プロバイダーを調べ、 *event_type* FROM 句と WHERE 句の条件で指定し、できるだけ狭いスコープで、基になるイベント通知を登録しようとしています。 プロバイダーが最も狭いスコープで登録できない場合は、登録が正常に終了するまで、順次より高いスコープでの登録が試行されます。 最も高いスコープ (サーバーレベル) に到達して失敗した場合、エラーがコンシューマーに返されます。  
   
- たとえば場合、DatabaseName =**'**AdventureWorks**'**でイベント通知を登録すると、プロバイダー、WHERE 句で指定されて、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが存在し、呼び出し側クライアントが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のイベント通知を作成するために必要な権限を持っている場合、登録は正常に完了します。 それ以外の場合は、イベント通知をサーバー レベルで登録しようとします。 WMI クライアントが必要な権限を持っている場合、登録は正常に終了します。 ただし、このシナリオでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが作成されるまで、イベントはクライアントに返されません。  
+ たとえば場合、DatabaseName =**'** AdventureWorks **'** でイベント通知を登録すると、プロバイダー、WHERE 句で指定されて、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが存在し、呼び出し側クライアントが、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のイベント通知を作成するために必要な権限を持っている場合、登録は正常に完了します。 それ以外の場合は、イベント通知をサーバー レベルで登録しようとします。 WMI クライアントが必要な権限を持っている場合、登録は正常に終了します。 ただし、このシナリオでは、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが作成されるまで、イベントはクライアントに返されません。  
   
  *Where_condition*さらに、クエリを特定のデータベース、スキーマ、またはオブジェクトを制限するフィルターとしても機能できます。 たとえば、次の WQL クエリがあるとします。  
   

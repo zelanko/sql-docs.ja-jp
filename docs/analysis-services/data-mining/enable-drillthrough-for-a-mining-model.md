@@ -1,34 +1,32 @@
 ---
-title: "マイニング モデルのドリルスルーを有効にする |Microsoft ドキュメント"
-ms.custom: 
+title: マイニング モデルのドリルスルーを有効にする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - drillthrough [Analysis Services]
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 81778c4f9b2602c8fa49d5b33f8e1725c05122b7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 34666ecda18c3821c3685f2417f8a777c065dcc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>マイニング モデルのドリルスルーの有効化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-マイニング モデルのドリルスルーを有効にした場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 この情報を表示するには、必要な権限があり、構造が既に処理されている必要があります。  
+  マイニング モデルのドリルスルーを有効にした場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 この情報を表示するには、必要な権限があり、構造が既に処理されている必要があります。  
   
  **権限** モデル データや構造データのドリルスルーを行うユーザーは、マイニング モデルまたはマイニング構造に対する [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 権限を持つロールのメンバーである必要があります。 ドリルスルー権限は、構造およびモデルで個別に設定されます。  
   
@@ -45,11 +43,11 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>マイニング モデルのドリルスルーを有効にするには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーの **[マイニング モデル]** タブで、ドリルスルーを有効にするマイニング モデルの名前を右クリックし、 **[プロパティ]**をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーの **[マイニング モデル]** タブで、ドリルスルーを有効にするマイニング モデルの名前を右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[プロパティ]** ウィンドウで **[AllowDrillthrough]**をクリックし、 **[True]**を選択します。  
+2.  **[プロパティ]** ウィンドウで **[AllowDrillthrough]** をクリックし、 **[True]** を選択します。  
   
-3.  **[マイニング モデル]** タブでモデルを右クリックし、 **[モデルの処理]**をクリックします。  
+3.  **[マイニング モデル]** タブでモデルを右クリックし、 **[モデルの処理]** をクリックします。  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>マイニング構造のキャッシュを有効にするには  
   
@@ -59,9 +57,9 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[プロパティ]** ウィンドウで、 **[CacheMode]** プロパティを探し、一覧から **[KeepTrainingCases]** を選択します。  
   
-4.  **[データベース]** メニューの **[処理]**をクリックします。  
+4.  **[データベース]** メニューの **[処理]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [ドリルスルー クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

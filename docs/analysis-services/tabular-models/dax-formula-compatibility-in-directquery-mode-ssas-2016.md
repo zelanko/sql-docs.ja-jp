@@ -1,27 +1,25 @@
 ---
-title: "DirectQuery モードでの DAX 数式の互換性 |Microsoft ドキュメント"
-ms.custom: 
+title: DirectQuery モードでの DAX 数式の互換性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: cda8483509593db5d30323a43e86a0afaddd58e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery モードでの DAX 数式の互換性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/23/2018
 
 特定の関数が DirectQuery 向けに最適化されていない理由は、基になるリレーショナル エンジンが、xVelocity エンジンによって実行されるものと同等の計算を実行できないか、数式を同等の SQL 式に変換できないことです。 その他のケースとしては、変換された式のパフォーマンスとその結果の計算が受け入れられないことが考えられます。
 
-すべての DAX 関数の詳細については、「DAX 関数リファレンス」(https://msdn.microsoft.com/ja-jp/library/ee634396.aspx) を参照してください。
+すべての DAX 関数については、[DAX 関数リファレンス] を参照してください。(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery モードでの DAX 演算子
 すべての DAX の比較演算および算術演算子は、DirectQuery モードで完全にサポートされます。 詳細については、「 [DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237.aspx)」を参照してください。
@@ -114,7 +112,7 @@ DAX のようなキャスト関数はありませんが、多くの比較演算�
 -   ブール値は、比較において、および EXACT、AND、OR、 &amp;&amp;、または || で使用されるときは、常に論理値として扱われます。  
   
 **文字列からブールへのキャスト**  
-インメモリおよび DirectQuery モデルでは、ブール値へのキャストは、文字列値 **""** (空の文字列)、 **"true"**、 **"false"**からの場合にのみ許可されます。空の文字列は false 値にキャストされます。  
+インメモリおよび DirectQuery モデルでは、ブール値へのキャストは、文字列値 **""** (空の文字列)、 **"true"**、 **"false"** からの場合にのみ許可されます。空の文字列は false 値にキャストされます。  
   
 他のすべての文字列からブール データ型へのキャストはエラーになります。  
   

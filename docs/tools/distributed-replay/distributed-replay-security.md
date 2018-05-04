@@ -1,30 +1,32 @@
 ---
-title: "Distributed Replay のセキュリティ |Microsoft ドキュメント"
-ms.custom: 
+title: Distributed Replay のセキュリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 1e127b3aaf9af2c37ee25339a46d81c9119982bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]インストールして使用する前に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をこのトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をインストールして使用する前に、このトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
   
 ## <a name="user-and-service-accounts"></a>ユーザーおよびサービスのアカウント  
  次の表に、Distributed Replay に使用するアカウントを示します。 Distributed Replay をインストールした後、コントローラーおよびクライアントのサービス アカウントを実行するセキュリティ プリンシパルを割り当てる必要があります。 したがって、Distributed Replay 機能をインストールする前に、対応するドメイン ユーザー アカウントを構成することをお勧めします。  
@@ -53,13 +55,13 @@ ms.lasthandoff: 01/17/2018
   
 1.  オペレーティング システムに応じて、次のいずれかを実行します。  
   
-    -   **[スタート]**ボタンをクリックし、 **[検索の開始]** ボックスに「 **services.msc** 」と入力して Enter キーを押します。  
+    -   **[スタート]** ボタンをクリックし、 **[検索の開始]** ボックスに「 **services.msc** 」と入力して Enter キーを押します。  
   
-    -   **[スタート]**ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。「 **services.msc**」と入力して Enter キーを押します。  
+    -   **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。「 **services.msc**」と入力して Enter キーを押します。  
   
-2.  **[サービス]** ダイアログ ボックスで、構成するサービスを右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[サービス]** ダイアログ ボックスで、構成するサービスを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[ログオン]** タブで、 **[このアカウント]**をクリックします。  
+3.  **[ログオン]** タブで、 **[このアカウント]** をクリックします。  
   
 4.  使用するユーザー アカウントを構成します。  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  **コンポーネント サービス スナップイン dcomcnfg.exe を開く**: dcomcnfg.exe は、DCOM 権限を構成するために使用するツールです。  
   
-    1.  コントローラーのコンピューターで、 **[スタート]**ボタンをクリックします。  
+    1.  コントローラーのコンピューターで、 **[スタート]** ボタンをクリックします。  
   
     2.  **[検索]** ボックスに「 **dcomcnfg.exe** 」と入力します。  
   

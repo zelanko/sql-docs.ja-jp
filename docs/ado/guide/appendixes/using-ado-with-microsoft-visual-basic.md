@@ -1,11 +1,9 @@
 ---
 title: Microsoft Visual Basic と ADO を使用して |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f0a27c38bde206b841829956ef3a555c5c655f8d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 842671f5859fc0522c30aec8a0d363d3f101473c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO プロジェクトの設定や ADO コードの記述はのようなアプリケーションの Visual Basic または Visual Basic を使用するかどうかです。 このトピックでは、Visual Basic および Visual Basic の両方で ADO を使用してアプリケーションに対応し、ノートのすべての差異。
@@ -49,7 +46,7 @@ ADO プロジェクトの設定や ADO コードの記述はのようなアプ�
 
     -   OLE オートメーション
 
-3.  **[OK]**をクリックします。
+3.  **[OK]** をクリックします。
 
  ADO を使用でき同じくらい簡単に Visual Basic によるアプリケーションについては、たとえば Microsoft Access を使用して、します。
 
@@ -67,7 +64,7 @@ ADO プロジェクトの設定や ADO コードの記述はのようなアプ�
 
     -   DAO 3.5 オブジェクト ライブラリ (またはそれ以降)
 
-4.  **[OK]**をクリックします。
+4.  **[OK]** をクリックします。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic では ADO オブジェクトの作成
  オートメーション変数とその変数にオブジェクトのインスタンスを作成するには、2 つのメソッドを使用することができます: **Dim**または**CreateObject**です。

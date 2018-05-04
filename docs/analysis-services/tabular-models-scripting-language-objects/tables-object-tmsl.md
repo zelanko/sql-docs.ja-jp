@@ -1,30 +1,29 @@
 ---
-title: "Tables オブジェクト (TMSL) |Microsoft ドキュメント"
-ms.custom: 
+title: Tables オブジェクト (TMSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: befd3f17f034151924cc962eb5355bd7543ffddb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-object-tmsl"></a>Tables オブジェクト (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]モデルに含まれているテーブルを定義します。 モデル内のテーブルは、外部データのインポートまたはクエリを実行すると、元のデータベース内のテーブルまたは DAX 式から作成された計算テーブルにバインドされますか。 テーブルで 1 つまたは複数**パーティション**オブジェクトは、データのソースを説明します。  テーブルの間、**リレーションシップ**オブジェクトは、基数、フィルターの方向、およびその他のリレーションシップのプロパティを指定します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  モデルに含まれているテーブルを定義します。 モデル内のテーブルは、外部データのインポートまたはクエリを実行すると、元のデータベース内のテーブルまたは DAX 式から作成された計算テーブルにバインドされますか。 テーブルで 1 つまたは複数**パーティション**オブジェクトは、データのソースを説明します。  テーブルの間、**リレーションシップ**オブジェクトは、基数、フィルターの方向、およびその他のリレーションシップのプロパティを指定します。  
   
 ## <a name="object-definition"></a>オブジェクトの定義  
  すべてのオブジェクトは、共通の名前、型、説明、プロパティのコレクション、および注釈を含むプロパティのセットを持ちます。 **テーブル**オブジェクトでは、次のプロパティもがあります。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/08/2018
  クライアント アプリケーションの論理階層ドリルダウン パスを提供するレベルのコレクションを表します。 Table オブジェクトの子です。  
   
 ## <a name="usage"></a>使用方法  
- テーブル オブジェクトを使用[Alter コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンド &#40; を作成します。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、[コマンド &#40; を削除TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、[コマンド &#40; を更新TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ テーブル オブジェクトを使用[Alter コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)、[コマンドを作成して&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)、 [CreateOrReplace コマンド&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)、 [Delete コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)、 [Refresh コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)、および[MergePartitions コマンド&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  作成する場合、置換、またはテーブル オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="full-syntax"></a>完全な構文  
- モデルのテーブル オブジェクトのスキーマ表現を以下に示します。 この定義のサイズを減らすためには、パーティションのオブジェクトは他の場所で説明します。 参照してください[オブジェクト &#40; をパーティション分割TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
+ モデルのテーブル オブジェクトのスキーマ表現を以下に示します。 この定義のサイズを減らすためには、パーティションのオブジェクトは他の場所で説明します。 参照してください[パーティション オブジェクト&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)です。  
   
 ```  
 "tables": {  

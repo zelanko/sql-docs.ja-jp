@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ad6297a1485d710b6ef34cca88a5610efd6e7c9e
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 30fc4cfad99cc88a92a986c8c55fc5c0ef75115b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="workspace-database"></a>[ワークスペース データベース] 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +61,7 @@ model.bim の [ワークスペース データベース] と [ワークスペー
   
 -   クエリ中に待機時間が発生する可能性があります。  
   
--   データ バックアップ プロパティを **[ディスクにバックアップする]**に設定できません。  
+-   データ バックアップ プロパティを **[ディスクにバックアップする]** に設定できません。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からのインポート プロジェクト テンプレートを使用して新しいテーブル モデル プロジェクトを作成するときに、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータをインポートすることはできません。  
   

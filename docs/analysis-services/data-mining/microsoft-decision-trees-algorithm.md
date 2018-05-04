@@ -1,16 +1,15 @@
 ---
-title: "Microsoft デシジョン ツリー アルゴリズム |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft デシジョン ツリー アルゴリズム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
 - predictions [Analysis Services], continuous attributes
@@ -23,20 +22,19 @@ helpviewer_keywords:
 - continuous columns
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: 
+caps.latest.revision: 72
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68821f25ad1a0defca193fa2c8023f64def0da1b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8fe2f592a481f734215000b7ab07a74d57b07966
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft デシジョン ツリー アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングで使用する分類および回帰アルゴリズムです。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングで使用する分類および回帰アルゴリズムです。  
   
  不連続属性の場合、予測はデータセットの入力列間のリレーションシップに基づいて行われます。 アルゴリズムでは、これらの列の値 (状態) を使用して、予測可能として指定した列の状態が予測されます。 具体的には、予測可能列に相関している入力列が識別されます。 たとえば、どのような顧客が自転車を購入する確率が高いかを予測するシナリオにおいて、若い顧客は 10 人のうち 9 人が自転車を購入するのに対し、中高年の顧客は 10 人のうち 2 人しか購入しない場合、アルゴリズムによって、年齢が自転車購入の適切な予測子であると推定されます。 デシジョン ツリーでは、特定の結果に対するこの傾向に基づいて予測が行われます。  
   
@@ -115,6 +113,6 @@ ms.lasthandoff: 02/15/2018
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

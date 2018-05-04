@@ -21,12 +21,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7d0f8228564ec7aa4d873e0472a0b7ea4903b00d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8aaeb0565af6f57a4af8404998c5d95e31c04454
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX のチュートリアル (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,16 +42,16 @@ ms.lasthandoff: 01/08/2018
  このチュートリアルでは、同時に購入される傾向が高い製品を予測するマイニング モデルを作成する方法を学習します。 また、このチュートリアルでは、データ マイニングで入れ子になったテーブルの使用方法についても示します。  
   
 ## <a name="reference"></a>リファレンス  
- [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)  
   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)  
   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [多次元モデルのデータ アクセスと #40 です。Analysis Services - 多次元データ &#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [多次元モデルのデータ アクセス&#40;Analysis Services - 多次元データ&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>参照  
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

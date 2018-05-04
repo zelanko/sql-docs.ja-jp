@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5266359d366acad62f7ef5e4def8c176ea12682
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee270d9434bea19eea08f7473dd4a6b103cb7651
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
  状態要求の送信の対象となったピア ツー ピア トポロジ内のパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [ **@description**=] **'***説明***'**  
- 呼び出すときに指定されている情報を定義したユーザーに基づいて返される応答をフィルター選択されるようにすること、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)です。 *説明*は**nvarchar (4000)**、既定値は **%**です。 既定では、パブリケーションに対するすべての状態要求が返されます。 指定された値に一致する説明と状態要求のみを返すためにこのパラメーターを使用*説明*を使用して文字の文字列が一致するという、[と同様に&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)句。  
+ 呼び出すときに指定されている情報を定義したユーザーに基づいて返される応答をフィルター選択されるようにすること、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)です。 *説明*は**nvarchar (4000)**、既定値は **%** です。 既定では、パブリケーションに対するすべての状態要求が返されます。 指定された値に一致する説明と状態要求のみを返すためにこのパラメーターを使用*説明*を使用して文字の文字列が一致するという、[と同様に&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)句。  
   
 ## <a name="result-sets"></a>結果セット  
   

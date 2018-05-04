@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 885910e506995f6aef382d95eb24320749b682eb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bcd7ad8ff135ef3c818ee8c81eac33b6906bc94b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset データ型 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表す派生データ型を定義、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)要素から表形式のデータを返す、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)または[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  表す派生データ型を定義、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)要素から表形式のデータを返す、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)または[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)メソッドの呼び出しです。  
   
  **Namespace** urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql} の解析: 行セット  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |基本データ型|[結果セット](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |派生データ型|なし|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |子要素|[行](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
 |派生要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  XML には、要素名および属性名として使用できない文字があります。 この名前付けの制約を解決するには、XML for Analysis (XMLA) をサポートしていますで定義されたエンコード[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 XML 1.0 仕様に従った無効な XML 名の文字が含まれている列名、に対しては、XMLA は、無効な Unicode 文字のエンコードに対応する 16 進値を使用します。 16 進数の値は _x としてエスケープ*HHHH*\_ここで、 *HHHH*最上位ビットの最初の注文の文字の 4 桁の 16 進数 ucs-2 コードを表します。 たとえば、XMLA では "Order Details" という名前が Order_x0020_Details とエンコードされます。この場合、空白文字が対応する 16 進数コードに置換されています。  
   
  エンコードのために Extensible Stylesheet Language (XSL) 変換が難しくなる可能性があります。 実際、クイック検索をサポートするために、列名をエンコードされていない、追加、 **sql:field**次の例で示すように、行セットの XML スキーマの列ごとに属性します。  
@@ -233,6 +232,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML データ型 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [XML データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79367f55de35eb285803a08646677eb3b624e16e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,9 +63,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーには、指定した名前を持つテーブルを所有している、そのテーブルの列が返されます。 所有者を指定せず、かつ、指定した名前のテーブルを現在のユーザーが所有していない場合は、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを探します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
  [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子***.***所有者***.***名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
- [ **、** [  **@table_type=** ] **"'***型***'**、 **'**型**'"** ]  
+ [ **、** [  **@table_type=** ] **"'***型***'**、 **'** 型 **'"** ]  
  指定したテーブル型のすべてのテーブルに関する情報を持つ、コンマで区切られた値の一覧です。 これらを含める**テーブル**、 **SYSTEMTABLE**、および**ビュー**です。 *型*は**varchar (100)**、既定値は NULL です。  
   
 > [!NOTE]  

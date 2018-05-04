@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: babb38e88d471cedceaa94e3c6696f9b5b59dcce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b3d26d6d32499d02db46762f6ce66b865a5b403c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-query-language-sql"></a>構造化照会言語 (SQL) (Structured Query Language) (SQL)
 一般的な DBMS では、保存、アクセス、および整理された、効率的な方法でデータを変更することができます。 最初に、Dbms のユーザーには、プログラマがでした。 格納されたデータにアクセスする COBOL などのプログラミング言語で、プログラムの作成が必要です。 これらのプログラムは、技術スタッフ以外のユーザーにわかりやすいインターフェイスを提供する多くの場合、書き込まれた、データ自体へのアクセスでは、知識の豊富なプログラマのサービスが必要です。 カジュアル データにアクセスするが実用的なでした。  

@@ -1,35 +1,33 @@
 ---
-title: "Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1e32633dfa798ea53a2c30c12d211a07e7233f79
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>線形回帰アルゴリズムの実装  
  Microsoft デシジョン ツリー アルゴリズムは、線形回帰、分類、またはアソシエーション分析など多くのタスクで使用できます。 線形回帰のためにこのアルゴリズムを実装するには、ツリーの拡張を制限するようにアルゴリズムのパラメーターを制御し、モデル内のすべてのデータを単一のノード内に保持します。 つまり、線形回帰はデシジョン ツリーに基づいていますが、ツリーに含まれるのは単一のルートのみで、分岐は含まれません。すべてのデータがルート ノード内に存在します。  
@@ -94,6 +92,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [線形回帰モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

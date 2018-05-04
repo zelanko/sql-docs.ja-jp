@@ -1,29 +1,27 @@
 ---
-title: "サービス プロジェクトの分析を展開する |Microsoft ドキュメント"
-ms.custom: 
+title: サービス プロジェクトの分析を展開する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c797c7f1acffb41de751a022d9c2e36b7fbaab4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>レッスン 2 ~ 5-Analysis Services プロジェクトを配置します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,25 +34,25 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-deploy-the-analysis-services-project"></a>Analysis Services プロジェクトを配置するには  
   
-1.  ソリューション エクスプローラーで、 **[Analysis Services Tutorial]** プロジェクトを右クリックし、 **[プロパティ]**をクリックします。  
+1.  ソリューション エクスプローラーで、 **[Analysis Services Tutorial]** プロジェクトを右クリックし、 **[プロパティ]** をクリックします。  
   
     **[Analysis Services Tutorial プロパティ ページ]** ダイアログ ボックスが開き、アクティブ (Development) 構成のプロパティが表示されます。 各プロパティに対し、複数の構成を定義できます。 たとえば、開発者の必要に応じて、同じプロジェクトを異なる配置プロパティ (データベース名や処理プロパティなど) で複数の開発用コンピューターに配置することができます。 **[出力パス]** プロパティの値に注目してください。 このプロパティは、プロジェクトの作成時に、プロジェクトの XMLA 配置スクリプトが保存された場所を表します。 XMLA 配置スクリプトは、プロジェクト内のオブジェクトを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに配置するスクリプトです。  
   
-2.  左側ペインの **[構成プロパティ]** ノードで、 **[配置]**をクリックします。  
+2.  左側ペインの **[構成プロパティ]** ノードで、 **[配置]** をクリックします。  
   
     プロジェクトの配置プロパティを確認します。 既定では、" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト" テンプレートにより、次のように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトが構成されます。まず、ローカル コンピューターの既定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに、すべてのプロジェクトが順次配置されます。プロジェクトと同じ名前の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースが作成され、配置の完了後は既定の処理オプションに基づいてプロジェクトが処理されます。 詳細については、「[Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」をご覧ください。  
   
     > [!NOTE]  
-    > プロジェクトの名前付きインスタンスを配置する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、ローカル コンピューター上またはリモート サーバー上のインスタンスには、変更、**サーバー**プロパティを適切なインスタンス名など、 \< *ServerName**>\\<**InstanceName * * >*です。  
+    > プロジェクトの名前付きインスタンスを配置する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、ローカル コンピューター上またはリモート サーバー上のインスタンスには、変更、**サーバー**プロパティを適切なインスタンス名など、 \< *ServerName**>\\<** InstanceName * * >* です。  
   
-3.  **[OK]**をクリックします。  
+3.  **[OK]** をクリックします。  
   
-4.  ソリューション エクスプローラーで、 **[Analysis Services Tutorial]** プロジェクトを右クリックし、 **[配置]**をクリックします。 場合によっては、しばらく待つ必要があります。  
+4.  ソリューション エクスプローラーで、 **[Analysis Services Tutorial]** プロジェクトを右クリックし、 **[配置]** をクリックします。 場合によっては、しばらく待つ必要があります。  
   
     > [!NOTE]  
     > 配置中にエラーが発生する場合は、SQL Server Management Studio を使用して、データベース権限を確認します。 データ ソース接続用に指定したアカウントに、SQL Server インスタンスへのログインがあることが必要です。 ユーザー マッピングのプロパティを表示するには、ログインをダブルクリックします。 そのアカウントには、 **AdventureWorksDW2012** データベースに対する db_datareader 権限が必要です。  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] により、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトがビルドされ、配置スクリプトを使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の指定したインスタンスに配置されます。 配置の進行状況は、 **[出力]** ウィンドウと **[配置状況 - Analysis Services Tutorial]** ウィンドウの 2 つに表示されます。  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] により、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトがビルドされ、配置スクリプトを使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の指定したインスタンスに配置されます。 配置の進行状況は、 **[出力]** ウィンドウと **[配置状況 - Analysis Services Tutorial]** ウィンドウの 2 つに表示されます。  
   
     必要に応じて、 **[表示]** メニューの **[出力]** をクリックして出力ウィンドウを開きます。 **[出力]** ウィンドウには、配置の全体的な進行状況が表示されます。 **[配置状況 - Analysis Services Tutorial]** ウィンドウには、配置中に実行される各手順の詳細が表示されます。 詳細については、「[Analysis Services プロジェクトのビルド (SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)」および「[Analysis Services プロジェクトの配置 (SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   

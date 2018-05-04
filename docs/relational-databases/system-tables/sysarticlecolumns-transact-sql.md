@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 030b409328d896f0f8b76fc9ef02a6f351c029c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6e236dd702339d48af99bbc7b7e25a87c890eb6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 |**colid**|**smallint**|アーティクル内の列の識別子。|  
 |**is_udt**|**bit**|列がユーザー定義データ型 (UDT) 列であるかどうかを示します。 値**1** UDT 列を示します。|  
 |**is_xml**|**bit**|列があるかどうかを示す、 **xml**列です。 値**1** xml 列を示します。|  
-|**is_max**|**bit**|列が大きな値データ型の列であるかどうかを示します**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)**です。 値**1**大きな値の列を示します。|  
+|**is_max**|**bit**|列が大きな値データ型の列であるかどうかを示します**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** です。 値**1**大きな値の列を示します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

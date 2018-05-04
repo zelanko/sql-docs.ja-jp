@@ -1,39 +1,37 @@
 ---
-title: "テーブルまたは列の名前を変更 |Microsoft ドキュメント"
-ms.custom: 
+title: テーブルまたは列の名前を変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 887c68e57d184453833d625bd1ddcda4cd0d8c68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-a-table-or-column"></a>テーブルまたは列名の変更 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-**テーブルのインポート ウィザード** の **[テーブルとビューの選択]** ページで **表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]**ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
+  **テーブルのインポート ウィザード** の **[テーブルとビューの選択]** ページで **表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]** ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
   
  データをモデルに追加すると、テーブルの名前 (つまりタイトル) がモデル デザイナーの下部にあるテーブル タブに表示されます。 テーブルの名前は、より適切な名前に変更できます。 列の名前は、データをモデルに追加した後で変更することもできます。 このオプションは、複数のソースからデータをインポートして、別のテーブルの列にわかりやすい名前を付けたい場合に特に重要となります。  
   
 ### <a name="to-rename-a-table"></a>テーブル名を変更するには  
   
-1.  モデル デザイナーで、名前を変更するテーブルが入っているタブを右クリックして、 **[名前の変更]**をクリックします。  
+1.  モデル デザイナーで、名前を変更するテーブルが入っているタブを右クリックして、 **[名前の変更]** をクリックします。  
   
 2.  新しい名前を入力します。  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 02/23/2018
   
 -   制御文字。  
   
--   Analysis Services オブジェクトの名前として無効な文字。無効な文字は .,;':/\\*|?&%$!+=()[]{}<> です。  
+-   (これは、Analysis Services オブジェクトの名前で無効)、次の文字:.、;':/\\*|?& % $! + = (){}<>  
   
 -   Analysis Services の予約済みキーワード。多次元式 (MDX) とデータ マイニング拡張機能 (DMX) の関数名と演算子を含みます。  
   

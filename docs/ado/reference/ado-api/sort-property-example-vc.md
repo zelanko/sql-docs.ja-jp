@@ -1,11 +1,9 @@
 ---
 title: 並べ替えプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66fea01b5eb89fcfce0f1a5bb8daff233d423ca7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 10ce301591aaa8c921fb7eabfa153e2e83207ea4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-property-example-vc"></a>並べ替えプロパティの例 (vc++)
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティ、**レコード セット**から派生した、***作成者***のテーブル**Pubs**データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  

@@ -3,15 +3,12 @@ title: SQLGetInfo アクセスの値が返されます |Microsoft ドキュメ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
 - SQLGetInfo function [ODBC], Access Driver
@@ -23,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 37778b8cd5d3ad020cb1af430dbbb33e837f4ae1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fbebc3569c35020b54f2d516d4fde99f14fbd69f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo は、アクセスの値が返されます
 次の表に、C 言語 # を defines、 *fInfoType*引数と、対応する値によって返される**SQLGetInfo**です。 この情報は、表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*です。  

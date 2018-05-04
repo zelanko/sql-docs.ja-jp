@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee9cd8b485584d863e7eac942a7c81792bb22bd7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 関数
 **準拠**  
@@ -99,7 +98,7 @@ SQLRETURN SQLSetDescField(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY016|実装行記述子は変更できません。|*DescriptorHandle*引数は、IRD を関連付け、 *FieldIdentifier* SQL_DESC_ARRAY_STATUS_PTR または SQL_DESC_ROWS_PROCESSED_PTR 引数がありませんでした。|  
 |HY021|不整合な記述子情報|SQL_DESC_TYPE と SQL_DESC_DATETIME_INTERVAL_CODE フィールドが形成されていません、有効な ODBC SQL 型または (Ipd) の有効なドライバー固有の SQL 型または有効な ODBC C 型 (Apd の標準)。<br /><br /> 整合性チェック中にチェック記述子の情報が一致していません。 (「整合性チェック」を参照してください**SQLSetDescRec**)。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*文字の文字列、および*BufferLength*ゼロより小さいは SQL_NTS に等しいでした。<br /><br /> (DM) ドライバーは ODBC 2*.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0 であり、引数に指定された値に設定された*BufferLength*されました4 に等しくないです。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*ValuePtr*文字の文字列、および*BufferLength*ゼロより小さいは SQL_NTS に等しいでした。<br /><br /> (DM) ドライバーは ODBC 2 *.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0 であり、引数に指定された値に設定された*BufferLength*されました4 に等しくないです。|  
 |HY091|無効な記述子フィールド識別子|指定された値、 *FieldIdentifier*引数を選択して、ODBC で定義されたフィールドでしたが、実装定義の値ではありません。<br /><br /> *FieldIdentifier*引数が、無効、 *DescriptorHandle*引数。<br /><br /> *FieldIdentifier*引数が ODBC で定義された、読み取り専用フィールドです。|  
 |HY092|無効な属性またはオプション識別子|値 *\*ValuePtr*が、無効、 *FieldIdentifier*引数。<br /><br /> *FieldIdentifier*引数が SQL_DESC_UNNAMED、および*ValuePtr* SQL_NAMED がします。|  
 |HY105|無効なパラメーターの型|(DM) SQL_DESC_PARAMETER_TYPE フィールドに指定された値が無効でした。 (詳細については、次を参照してください、"*InputOutputType*引数"」の「 **SQLBindParameter**。)。|  
@@ -422,7 +421,7 @@ QL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[すべて] SQL_DESC_LENGTH**  
  SQLULEN レコード フィールドは、文字の文字列の最大値または実際の長さまたはバイトのバイナリ データ型のいずれかです。 これは、固定長のデータ型の最大長または可変長データ型の実際の長さ。 常に、その値には、文字の文字列を終了する null 終了文字が含まれません。 値の型がある SQL_TYPE_DATE、SQL_TYPE_TIME、sql_type_timestamp 型、または SQL interval データ型のいずれかの場合は、このフィールドは、datetime または間隔の値の文字の文字列表現の文字数で長さにします。  
   
- このフィールドの値が""として定義されている長さ ODBC 2 の値と異なる場合があります*.x*です。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
+ このフィールドの値が""として定義されている長さ ODBC 2 の値と異なる場合があります *.x*です。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  この読み取り専用の SQLCHAR * レコードのフィールドには、ドライバーはこのデータ型のリテラルのプレフィックスとして認識される文字が含まれています。 この変数には、リテラル プレフィックスは適用されませんデータ型の空の文字列が含まれています。  
@@ -468,7 +467,7 @@ QL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[すべて] SQL_DESC_PRECISION**  
  この SQLSMALLINT レコード フィールドには、正確な数値型 (バイナリ精度) が、概数型の仮数部のビット数か、SQL_TYPE_TIME、SQL_TYPE の秒部分の数字の数の桁の数字の数が含まれています_TIMESTAMP、または SQL_INTERVAL_SECOND データを入力します。 このフィールドは、他のすべてのデータ型に対して定義されていません。  
   
- このフィールドの値は"precision"として ODBC 2 で定義されているの値と異なる場合があります*.x*です。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
+ このフィールドの値は"precision"として ODBC 2 で定義されているの値と異なる場合があります *.x*です。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
   
  **SQL_DESC_ROWVER [実装記述子]**  
  この SQLSMALLINTrecord フィールドは、(たとえば、SQL Server では、"timestamp"型の列)、行が更新されたときに、列が自動的に、DBMS によって変更するかどうかを示します。 このレコード フィールドの値は、それ以外の場合に列が、行のバージョン管理の列の場合は SQL_TRUE および SQL_FALSE に設定されます。 この列の属性は、呼び出しに似ています**SQLSpecialColumns** IdentifierType の SQL_ROWVER 列が自動的に更新するかどうかを決定するとします。  
@@ -476,7 +475,7 @@ QL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[すべて] SQL_DESC_SCALE**  
  この SQLSMALLINT レコード フィールドには、decimal および numeric データ型に対して定義された有効桁数が含まれています。 フィールドは、他のすべてのデータ型に対して定義されていません。  
   
- このフィールドの値は、ODBC 2 で定義されている"scale"の値と異なる場合があります*.x*です。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
+ このフィールドの値は、ODBC 2 で定義されている"scale"の値と異なる場合があります *.x*です。 詳細については、次を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)です。  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  この読み取り専用の SQLCHAR * レコードのフィールドには、列を含んだベース テーブルのスキーマ名が含まれています。 戻り値にはドライバーによって異なりますが、列が式の場合、または列がビューの一部である場合です。 データ ソースはスキーマをサポートしていないか、スキーマ名を特定することはできない場合、この変数には、空の文字列が含まれています。  
@@ -484,11 +483,11 @@ QL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SEARCHABLE [IRDs]**  
  この読み取り専用 SQLSMALLINT のレコードのフィールドは、次の値のいずれかに設定されます。  
   
--   SQL_PRED_NONE で列を使用できない場合、**場所**句。 (これは、ODBC 2 で SQL_UNSEARCHABLE 値として同じ*.x*)。  
+-   SQL_PRED_NONE で列を使用できない場合、**場所**句。 (これは、ODBC 2 で SQL_UNSEARCHABLE 値として同じ *.x*)。  
   
--   SQL_PRED_CHAR では、列を使用する場合、**場所**されますが、句、**など**述語。 (これは、ODBC 2 で SQL_LIKE_ONLY 値として同じ*.x*)。  
+-   SQL_PRED_CHAR では、列を使用する場合、**場所**されますが、句、**など**述語。 (これは、ODBC 2 で SQL_LIKE_ONLY 値として同じ *.x*)。  
   
--   SQL_PRED_BASIC では、列を使用する場合、**場所**を除くすべての比較演算子を含む句**など**です。 (これは、ODBC 2 で SQL_EXCEPT_LIKE 値として同じ*.x*)。  
+-   SQL_PRED_BASIC では、列を使用する場合、**場所**を除くすべての比較演算子を含む句**など**です。 (これは、ODBC 2 で SQL_EXCEPT_LIKE 値として同じ *.x*)。  
   
 -   SQL_PRED_SEARCHABLE では、列を使用する場合、**場所**任意の比較演算子を含む句。  
   

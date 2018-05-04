@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9843453dce8234e97b40e3ca3be45ed1e48d7c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e42b8f44d9f594ea8d6260a3dd0f3c1551132f65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 ## <a name="arguments"></a>引数  
  [  **@tsqlbatch =**] **'***tsqlbatch***'**  
- Unicode 文字列が含まれて、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチのパラメーターについては、します。 *tsqlbatch*は**nvarchar (max)**に暗黙的に変換または**nvarchar (max)**です。  
+ Unicode 文字列が含まれて、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチのパラメーターについては、します。 *tsqlbatch*は**nvarchar (max)** に暗黙的に変換または**nvarchar (max)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  

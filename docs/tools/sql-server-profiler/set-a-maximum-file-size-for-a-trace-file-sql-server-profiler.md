@@ -1,48 +1,50 @@
 ---
-title: "トレース ファイル (SQL Server Profiler) の最大ファイル サイズの設定 |Microsoft ドキュメント"
-ms.custom: 
+title: トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - maximum file size for traces
 - size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f3825b505604bb3d80bc640983a00bf9c80ae87
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 4052b23602f1af2a3e27dc25a296da6e3e5ceba8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]次の手順を使用すると、トレース ファイルの最大ファイル サイズを設定できます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  トレース ファイルの最大ファイル サイズを設定するには、次の手順を実行します。  
   
 ### <a name="to-set-a-maximum-file-size-for-a-trace-file"></a>トレース ファイルの最大ファイル サイズを設定するには  
   
-1.  **[ファイル]** メニューの **[新しいトレース]**をクリックし、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
+1.  **[ファイル]** メニューの **[新しいトレース]** をクリックし、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
   
-     **[トレースのプロパティ]**ダイアログ ボックスが表示されます。  
+     **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  **[接続の確立直後にトレースを開始する]**チェック ボックスがオンになっている場合、 **[トレースのプロパティ]**ダイアログ ボックスは表示されず、すぐにトレースが開始されます。 この設定を無効にするには、 **[ツール]**メニューの **[オプション]**をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
+    >  **[接続の確立直後にトレースを開始する]** チェック ボックスがオンになっている場合、 **[トレースのプロパティ]** ダイアログ ボックスは表示されず、すぐにトレースが開始されます。 この設定を無効にするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   
-3.  **[テンプレート名]**ボックスの一覧で、トレース テンプレートを選択します。  
+3.  **[テンプレート名]** ボックスの一覧で、トレース テンプレートを選択します。  
   
-4.  **[ファイルに保存]**チェック ボックスをオンにし、トレース情報を格納するファイルを指定します。  
+4.  **[ファイルに保存]** チェック ボックスをオンにし、トレース情報を格納するファイルを指定します。  
   
 5.  **[最大ファイル サイズの設定 (MB)]** ボックスで、トレースの最大ファイル サイズを指定します。 ファイル サイズが指定した最大値に達すると、このファイルにはトレース イベントが記録されなくなります。 **[ファイル ロールオーバーを有効にする]** チェック ボックスをオンにした場合 (既定でオンになっています)、次の動作が行われます。  
   

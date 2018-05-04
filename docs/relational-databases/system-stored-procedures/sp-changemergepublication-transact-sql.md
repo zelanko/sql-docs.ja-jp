@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e17a010a96c669e7f8363634a135bdaa9e7be892
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_changemergepublication [ @publication= ] 'publication'
  指定したパブリケーションの変更対象となるプロパティを指定します。 *プロパティ*は**sysname**値のいずれかに指定できる次の表とします。  
   
  [  **@value=**] **'***値***'**  
- 対象となるプロパティの新しい値を指定します。 *値*は**nvarchar (255)**値のいずれかに指定できる次の表とします。  
+ 対象となるプロパティの新しい値を指定します。 *値*は**nvarchar (255)** 値のいずれかに指定できる次の表とします。  
   
  次の表では、変更できますが、およびそれらのプロパティの値に関する制限について説明するパブリケーションのプロパティについて説明します。  
   
@@ -109,7 +108,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**pre_snapshot_script**||ポインターを指定します、 **.sql**ファイルの場所。 マージ エージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクト スクリプトの前に、プリスナップ ショット スクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**publication_compatibility_level**|**100 RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90 RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
-|**publish_to_activedirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 現在、Active Directory にはパブリケーション情報を追加できません。|  
+|**publish_to_activedirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 現在、Active Directory にはパブリケーション情報を追加できません。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**replicate_ddl**|**1**|パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントがレプリケートされます。|  
 ||**0**|DDL ステートメントはレプリケートされません。|  

@@ -1,28 +1,27 @@
 ---
-title: "レッスン 4: 日付テーブルとしてマークして |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 4: 日付テーブルとしてマークして |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08a3e1852f58e1f21049d1a5c0551669423845db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>レッスン 3: が日付テーブルとしてマークします。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **3 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 2: データを追加](../analysis-services/lesson-2-add-data.md)です。 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>FullDateAlternateKey 列の名前を変更するには
@@ -49,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="to-set-mark-as-date-table"></a>日付テーブルとして設定する  
   
-1.  **[日付]** 列を選択し、 **[プロパティ]** ウィンドウの **[データ型]**で  **[日付]** が必ず選択されているようにします。  
+1.  **[日付]** 列を選択し、 **[プロパティ]** ウィンドウの **[データ型]** で  **[日付]** が必ず選択されているようにします。  
   
 2.  **[テーブル]** メニュー、**[日付]****[日付テーブルとしてマーク]** の順にクリックします。  
   

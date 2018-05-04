@@ -1,29 +1,27 @@
 ---
-title: "Power View レポートのレポート プロパティの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: Power View レポートのレポート プロパティの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2e353d941a009b4dce432a0e16fa2d0305311bb1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補足レッスン - Power View レポートのレポートのプロパティを構成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -59,16 +57,16 @@ Product テーブルには既に Product Category 計算列と Product Subcatego
   
 #### <a name="to-hide-the-product-category-and-product-subcategory-tables"></a>Product Category テーブルと Product Subcategory テーブルを非表示にするには  
   
-1.  モデル デザイナーで、 **Product Category** テーブル (タブ) を右クリックし、 **[クライアント ツールに非表示]**をクリックします。  
+1.  モデル デザイナーで、 **Product Category** テーブル (タブ) を右クリックし、 **[クライアント ツールに非表示]** をクリックします。  
   
-2.  **Product Subcategory** テーブル (タブ) を右クリックし、 **[クライアント ツールに非表示]**をクリックします。  
+2.  **Product Subcategory** テーブル (タブ) を右クリックし、 **[クライアント ツールに非表示]** をクリックします。  
   
 ## <a name="create-new-data-for-charts"></a>グラフ用の新しいデータの作成  
 DAX 式を使用して、モデル内で新しいデータを作成することが必要な場合があります。 ここでは、Date テーブルに 2 つの新しい計算列を追加します。 これらの新しい列は、グラフで使うのに便利な形式の日付フィールドを提供します。  
   
 #### <a name="to-create-new-data-for-charts"></a>グラフ用の新しいデータを作成するには  
   
-1.  **Date** テーブルを右端までスクロールして、 **[列の追加]**をクリックします。  
+1.  **Date** テーブルを右端までスクロールして、 **[列の追加]** をクリックします。  
   
 2.  数式バーで次の式を使用して、2 つの新しい計算列を追加します。  
   
@@ -86,9 +84,9 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
 1.  モデル デザイナーで、 **Customer** テーブル (タブ) をクリックします。  
   
-2.  **[プロパティ]** ウィンドウの **[レポートのプロパティ]**の **[既定のフィールド セット]** プロパティで、 **[クリックして編集]** をクリックして **[既定のフィールド セット]** ダイアログ ボックスを開きます。  
+2.  **[プロパティ]** ウィンドウの **[レポートのプロパティ]** の **[既定のフィールド セット]** プロパティで、 **[クリックして編集]** をクリックして **[既定のフィールド セット]** ダイアログ ボックスを開きます。  
   
-3.  **[既定のフィールド セット]** ダイアログ ボックスの **[テーブル内のフィールド]** ボックスの一覧で、Ctrl キーを押しながら次のフィールドをクリックし、 **[追加]**をクリックします。  
+3.  **[既定のフィールド セット]** ダイアログ ボックスの **[テーブル内のフィールド]** ボックスの一覧で、Ctrl キーを押しながら次のフィールドをクリックし、 **[追加]** をクリックします。  
   
     **[Birth Date]**、 **[Customer Alternate Id]**、 **[First Name]**、 **[Last Name]**。  
   
@@ -121,11 +119,11 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
 1.  モデル デザイナーで、 **Customer** テーブル (タブ) をクリックします。  
   
-2.  **[プロパティ]** ウィンドウの **[テーブルの動作]** プロパティで、 **[クリックして編集]**をクリックして **[テーブルの動作]** ダイアログ ボックスを開きます。  
+2.  **[プロパティ]** ウィンドウの **[テーブルの動作]** プロパティで、 **[クリックして編集]** をクリックして **[テーブルの動作]** ダイアログ ボックスを開きます。  
   
 3.  **[テーブルの動作]** ダイアログ ボックスの **[行識別子 (ROWID)]** ボックスの一覧から、 **[Customer Id]** 列を選択します。  
   
-4.  **[一意の行の保持]** ボックスの一覧の、 **[First Name]** と **[Last Name]**を選択します。  
+4.  **[一意の行の保持]** ボックスの一覧の、 **[First Name]** と **[Last Name]** を選択します。  
   
     このプロパティを設定することで、重複している場合でも一意として扱う必要のある値をこれらの列が提供することを指定します (たとえば、同姓または同名の従業員が複数いる場合など)。  
   
@@ -135,7 +133,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
 6.  **Geography** テーブルについても同じ手順を繰り返します。行識別子 (ROWID) として **[Geography Id]** 列を選択し、 **[一意の行の保持]** ボックスの一覧の **[City]** 列を選択します。 このテーブルには、既定のラベルを設定する必要はありません。  
   
-7.  **Product** テーブルについても同じ手順を繰り返します。行識別子 (ROWID) として **[Product Id]** 列を選択し、 **[一意の行の保持]** ボックスの一覧の **[Product Name]** 行を選択します。 **[既定のラベル]**には、 **[Product Alternate Id]**を選択します。  
+7.  **Product** テーブルについても同じ手順を繰り返します。行識別子 (ROWID) として **[Product Id]** 列を選択し、 **[一意の行の保持]** ボックスの一覧の **[Product Name]** 行を選択します。 **[既定のラベル]** には、 **[Product Alternate Id]** を選択します。  
   
 ## <a name="reporting-properties-for-columns"></a>列の [レポートのプロパティ]  
 列にはいくつかの基本のプロパティと列に固有のレポート プロパティがあり、このプロパティを設定することにより、モデルのレポートをより使いやすくすることができます。 たとえば、ユーザーが必ずしもすべてのテーブルのすべての列を見る必要がない場合もあります。 前の例で Product Category テーブルと Product Subcategory テーブルを非表示にしたように、列の [非表示] プロパティを使用して、本来は表示されるテーブル内の特定の列を非表示にすることができます。 [データ形式] や [列で並べ替え] などの他のプロパティも、レポート内の列データの表示に影響を及ぼします。 ここでは、特定の列にいくつかのプロパティを設定します。 操作の必要がない他の列は、以下には表示していません。  
@@ -156,7 +154,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Customer**  
   
-    |列|プロパティ|[値]|  
+    |列|プロパティ|値|  
     |----------|------------|---------|  
     |[Geography Id]|[非表示]|True|  
     |[Birth Date]|データ形式|短い日付|  
@@ -166,7 +164,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
     > [!NOTE]  
     > Date テーブルは「レッスン 7: 日付テーブルとしてマーク」で、[日付テーブルとしてマーク] 設定を使ってモデル日付テーブルとして選択されています。また、Date テーブルの Date 列は一意の識別子として使われる列です。そのため、Date 列の [行識別子 (ROWID)] プロパティは自動的に True に設定され、変更することができません。 DAX 式でタイム インテリジェンス関数を使用するときは、日付テーブルを指定する必要があります。 このモデルでは、タイム インテリジェンス関数を使用していくつかのメジャーを作成して、さまざまな期間 (前四半期と現四半期など) の売上データを計算しました。これは KPI にも使用できます。 日付テーブルの指定に関する詳細については、次を参照してください。[タイム インテリジェンスで使用するための日付テーブルとしてのマークの指定](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server オンライン ブック。  
   
-    |列|プロパティ|[値]|  
+    |列|プロパティ|値|  
     |----------|------------|---------|  
     |日付|データ形式|短い日付|  
     |Day Number of Week|[非表示]|True|  
@@ -183,14 +181,14 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Geography**  
   
-    |列|プロパティ|[値]|  
+    |列|プロパティ|値|  
     |----------|------------|---------|  
     |[Geography Id]|[非表示]|True|  
     |Sales Territory Id|[非表示]|True|  
   
     **Product**  
   
-    |列|プロパティ|[値]|  
+    |列|プロパティ|値|  
     |----------|------------|---------|  
     |[Product Id]|[非表示]|True|  
     |Product Alternate Id|[既定のラベル]|True|  
@@ -200,7 +198,7 @@ DAX 式を使用して、モデル内で新しいデータを作成すること�
   
     **Internet Sales**  
   
-    |列|プロパティ|[値]|  
+    |列|プロパティ|値|  
     |----------|------------|---------|  
     |[Product Id]|[非表示]|True|  
     |[Customer Id]|[非表示]|True|  

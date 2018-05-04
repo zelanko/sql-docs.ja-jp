@@ -5,10 +5,9 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3fa9da99204196279491c89973846804836188b3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0521bd085bd0b370ffb688c021d0cf1422493051
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO プログラマ&#39;ADO オブジェクトを使用するためのガイド
 このドキュメントでは、さまざまなデータ ソースからデータを操作する ADO オブジェクトを使用する方法の概要を示します。 最初に、導入は、新機能とインストール、使用、および ADO のコンポーネントを再配布するための要件をまとめます。 次のセクションでは、ADO オブジェクトのさまざまな種類の使用について説明します。 最後に、付録各種の Microsoft 提供のデータとサービス プロバイダー、エラー メッセージ、およびヒントについて議論のサンプルと用語集だけでなく、複数のプログラミング言語で ADO を使用する方法です。

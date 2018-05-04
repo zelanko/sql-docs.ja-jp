@@ -25,13 +25,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70bd9f0161b84636d4cea081576ca5b54f0bc158
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6980d71bf921065c0d460fcc9107a8d525dcd60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|別名データ型が存在するデータベース。|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|別名データ型を含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|別名データ型が存在するデータベース。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|別名データ型を含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
 |**ドメイン名**|**sysname**|別名データ型。|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|テーブル所有者<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブル所有者<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**sysname**|別名データ型が使用されているテーブル|  
 |**COLUMN_NAME**|**sysname**|別名データ型を使用している列|  
   

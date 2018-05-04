@@ -34,12 +34,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 270ff587bb8595abab74487d92c237e1cb10e2e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 19459505832734371724444b9c862351101791f0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>データ マイニング拡張機能 (DMX) リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,9 +56,9 @@ ms.lasthandoff: 01/08/2018
   
  この仕様では、データ マイニングの基礎がデータ マイニング モデル仮想オブジェクトとして定義されます。 データ マイニング モデル オブジェクトは、特定のマイニング モデルに関する既知の事柄をすべてカプセル化します。 データ マイニング モデル オブジェクトは SQL テーブルのような構造になっており、モデルを説明する列、データ型、およびメタ情報から構成されています。 この構造により、SQL の拡張版である DMX 言語を使用して、モデルを作成、使用することができるようになります。  
   
- **詳細:** [マイニング構造と #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ **詳細:** [マイニング構造&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
-##  <a name="BKMK_DMXStatements"></a>DMX ステートメント  
+##  <a name="BKMK_DMXStatements"></a> DMX ステートメント  
  DMX ステートメントを使用して、データ マイニング モデルの作成、処理、削除、コピー、参照、および予測を行うことができます。 DMX にはデータ定義ステートメントおよびデータ操作ステートメントの 2 種類のステートメントがあります。 いずれかのステートメントを使用して、各種のタスクを実行することができます。  
   
  以下のセクションでは、DMX ステートメントの使用に関する詳細について説明します。  
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [クエリの基礎](#BKMK_Queries)  
   
-###  <a name="BKMK_DDL"></a>データ定義ステートメント  
+###  <a name="BKMK_DDL"></a> データ定義ステートメント  
  新しいマイニング構造とマイニング モデルの作成および定義、マイニング モデルとマイニング構造のインポートおよびエクスポート、データベースからの既存のモデルの削除を行うには、DMX でデータ定義ステートメントを使用します。 DMX でのデータ定義ステートメントは、データ定義言語 (DDL) の一部です。  
   
  DMX でデータ定義ステートメントを使用して、次のタスクを実行することができます。  
@@ -85,11 +84,11 @@ ms.lasthandoff: 01/08/2018
   
 -   使用して、データベースからマイニング モデルを完全に削除、 [DROP MINING MODEL](../dmx/drop-mining-model-dmx.md)ステートメントです。 使用して、データベースからマイニング構造とそのすべての関連マイニング モデルを完全に削除、 [DROP MINING STRUCTURE](../dmx/drop-mining-structure-dmx.md)ステートメントです。  
   
- DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、次を参照してください[データ マイニング拡張機能 &#40;DMX&#41;。ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)です。  
+ DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)です。  
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_DML"></a>データ操作ステートメント  
+###  <a name="BKMK_DML"></a> データ操作ステートメント  
  既存のマイニング モデルの使用、モデルの参照、およびモデルに対する予測の作成を行うには、DMX でデータ操作ステートメントを使用します。 DMX でのデータ操作ステートメントは、データ操作言語 (DML) の一部です。  
   
  DMX でデータ操作ステートメントを使用して、次のタスクを実行することができます。  
@@ -98,40 +97,40 @@ ms.lasthandoff: 01/08/2018
   
 -   モデルのトレーニング中に計算され、ソース データの統計情報など、データ マイニング モデルに格納される情報を参照する SELECT ステートメントを拡張します。 SELECT ステートメントの機能を拡張に含めることができる句を次に示します。  
   
-    -   [SELECT DISTINCT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)  
+    -   [SELECT DISTINCT FROM&#60;モデル&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
-    -   [SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
+    -   [SELECT FROM&#60;モデル&#62;です。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
-    -   [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
+    -   [SELECT FROM&#60;モデル&#62;です。ケース&#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
-    -   [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+    -   [SELECT FROM&#60;モデル&#62;です。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
-    -   [SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+    -   [SELECT FROM&#60;モデル&#62;です。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
 -   使用して既存のマイニング モデルに基づく予測を作成、 [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) SELECT ステートメントの句。 ソース クエリは、PREDICTION JOIN ステートメントについては、「 [\<ソース データ クエリ >](../dmx/source-data-query.md)です。  
   
--   使用して、モデルまたは構造からトレーニング済みのすべてのデータを削除、[削除 &#40;DMX&#41;](../dmx/delete-dmx.md)ステートメントです。  
+-   使用して、モデルまたは構造からトレーニング済みのすべてのデータを削除、[削除&#40;DMX&#41; ](../dmx/delete-dmx.md)ステートメントです。  
   
- DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、次を参照してください[データ マイニング拡張機能 &#40;DMX&#41;。ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)です。  
+ DMX ステートメントを使用して実行できるデータ マイニング タスクの詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)です。  
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_Queries"></a>DMX クエリの基礎  
+###  <a name="BKMK_Queries"></a> DMX クエリの基礎  
  SELECT ステートメントは、ほとんどの DMX クエリの基礎です。 これらのステートメントで使用する句によって、マイニング モデルの参照、コピー、および予測を行うことができます。 予測クエリでは、既存のマイニング モデルに基づいて予測を作成するのに選択のフォームを使用します。 関数を使用することで、データ マイニング モデルの固有の機能では行えないマイニング モデルの参照およびクエリを行うことができます。  
   
  DMX 関数を使用すると、モデルの学習中に検出された情報の取得および新しい情報の計算を行うことができます。 これらの関数は、予測の根拠となるデータや正確性を説明する統計を返したり、予測に対するより広範な説明を返すなど、多くの目的で使用することができます。  
   
- **詳細について****情報:** [Select ステートメントを DMX を理解する](../dmx/understanding-the-dmx-select-statement.md)、[一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)、[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)、[データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **詳細について****情報:** [Select ステートメントを DMX を理解する](../dmx/understanding-the-dmx-select-statement.md)、[一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)、 [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)、[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [DMX ステートメントに戻る](#BKMK_DMXStatements)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -1,29 +1,27 @@
 ---
-title: "ディメンションを定義する |Microsoft ドキュメント"
-ms.custom: 
+title: ディメンションを定義する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f3084736df2cba2206b8e170994bb83ced689982
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>レッスン 2-1-ディメンションを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,17 +33,17 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-define-a-dimension"></a>ディメンションを定義するには  
   
-1.  ソリューション エクスプローラー (Microsoft Visual Studio の右側) で、 **[ディメンション]**を右クリックし、 **[新しいディメンション]**をクリックします。 ディメンション ウィザードが表示されます。  
+1.  ソリューション エクスプローラー (Microsoft Visual Studio の右側) で、 **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。 ディメンション ウィザードが表示されます。  
   
-2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]**をクリックします。  
+2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]**をクリックします。  
+3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]** をクリックします。  
   
 4.  **[基になる情報の指定]** ページで、 **Adventure Works DW 2012** データ ソース ビューが選択されていることを確認します。  
   
-5.  **[メイン テーブル]** ボックスの一覧で、 **[Date]**を選択します。  
+5.  **[メイン テーブル]** ボックスの一覧で、 **[Date]** を選択します。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  **[ディメンション属性の選択]** ページで、次の属性の横にあるチェック ボックスをオンにします。  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
     -   **Calendar Semester**  
   
-8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]**の順にクリックします。 **[OK]**をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
+8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]** > **[Calendar]** > **[Date]** の順にクリックします。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
     -   **English Month Name** to **Month**  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 02/15/2018
   
     -   **Calendar Semester** to **Half Year**  
   
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. **[ウィザードの完了]** ページの [プレビュー] ペインで、 **Date** ディメンションとその属性を確認できます。  
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/15/2018
   
     ソリューション エクスプローラーでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの **[ディメンション]** フォルダー内に Date ディメンションが表示されます。 開発環境の中央では、ディメンション デザイナーに Date ディメンションが表示されます。  
   
-12. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
+12. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [キューブの定義](../analysis-services/lesson-2-2-defining-a-cube.md)  

@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9e741b37b167fcb4568fd38fe069224e669cda0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>引数  
- *サブクエリ*  
+ *subquery*  
  フォームの選択の SELECT ステートメント * FROM\<列名 > [場所\<述語の一覧 >] です。  
   
 ## <a name="result-type"></a>結果の種類  
@@ -70,7 +69,7 @@ WHERE [[Model] = 'Patch kit'
  このクエリによって返される同じデータを表示する別の方法は、アソシエーション ビューアーでモデルを開き、アイテム セットを右クリックする**Patch kit = Existing**を選択、**ドリル スルー**オプションをクリックし **モデルの場合のみ**です。  
   
 ## <a name="see-also"></a>参照  
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [モデル フィルターの構文と例 &#40;です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [モデル フィルターの構文と例&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

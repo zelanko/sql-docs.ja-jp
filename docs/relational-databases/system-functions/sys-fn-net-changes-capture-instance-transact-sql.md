@@ -29,12 +29,11 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3155994177127d9739b9a908ab439acaf50c979
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bfc1d85252bc07700e093f992f24a887734612b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |\<列@column_list>|**varies**|指定されている列、 **column_list**ために sp_cdc_generate_wrapper_function 際ラッパーを作成するスクリプトを生成するために呼び出さに渡す引数。 場合*column_list* NULL の場合、ルールがすべての追跡対象ソース列が結果セットに表示されます。|  
 |__CDC_OPERATION|**nvarchar(2)**|ターゲット環境に行を適用するために必要な操作を表す操作コードです。 操作の引数の値は異なります*row_filter_option*次の呼び出し時に指定します。<br /><br /> *row_filter_option* = 'all'、'all with mask'<br /><br /> 'D' : 削除操作<br /><br /> 'I' : 挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' : 削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
-|\<列@update_flag_list>|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値がされる場合にのみ*row_filter_option* **= 'all with mask'**と\__CDC_OPERATION **= 'UN'**です。 対応する列がクエリ ウィンドウ内で変更された場合は、1 に設定されます。 それ以外の場合は、0 に設定されます。|  
+|\<列@update_flag_list>|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値がされる場合にのみ*row_filter_option* **= 'all with mask'** と\__CDC_OPERATION **= 'UN'** です。 対応する列がクエリ ウィンドウ内で変更された場合は、1 に設定されます。 それ以外の場合は、0 に設定されます。|  
   
 ## <a name="remarks"></a>解説  
  fn_net_changes_<capture_instance> 関数は、cdc.fn_cdc_get_net_changes_<capture_instance> クエリ関数のラッパーとして機能します。 ラッパーのスクリプトを作成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  

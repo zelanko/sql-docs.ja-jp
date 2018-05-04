@@ -1,16 +1,15 @@
 ---
-title: "機能の選択 (データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: 機能の選択 (データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -23,23 +22,22 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0a860da215808e9a687e95524bc704c7fedbc4c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   "*機能の選択*" は、機械学習の重要な部分です。 機能の選択とは、処理や分析のための入力を減らしたり、最も意味のある入力を探したりするプロセスのことです。 関連用語である " *機能エンジニアリング* " (" *機能抽出*" ともいいます) とは、既存のデータから有益な情報や機能を抽出するプロセスのことです。  
   
 ## <a name="why-do-feature-selection"></a>機能の選択を行う理由  
- 機能の選択は優れたモデル作りに不可欠ですが、それにはいくつか理由があります。 その 1 つは、機能の選択によってある程度 " *基数を削減*" し、モデルの作成時に考慮すべき属性の数を制限できる点にあります。 ほとんどすべての場合において、データには、モデルの作成に必要とされるよりも多くの情報、または間違った種類の情報が含まれています。 たとえば、顧客データを格納した 500 列のデータセットがあるとします。ここで、データ数の少ない列をモデルに追加してもほとんどメリットは得られません。また、データが重複した列を使用するとモデルに影響することがあります。  
+ 機能の選択は優れたモデル作りに不可欠ですが、それにはいくつか理由があります。 その 1 つは、機能の選択によってある程度 " *カーディナリティを削減*" し、モデルの作成時に考慮すべき属性の数を制限できる点にあります。 ほとんどすべての場合において、データには、モデルの作成に必要とされるよりも多くの情報、または間違った種類の情報が含まれています。 たとえば、顧客データを格納した 500 列のデータセットがあるとします。ここで、データ数の少ない列をモデルに追加してもほとんどメリットは得られません。また、データが重複した列を使用するとモデルに影響することがあります。  
   
  機能の選択によって、モデルの品質が向上するだけでなく、モデルの作成プロセスが効率化されます。 不要な列を保持したままモデルを作成すると、トレーニング処理時により多くの CPU リソースとメモリが必要となり、完成したモデルに必要な記憶領域も増大します。 リソースに問題がない場合でも、機能の選択を行って最適な列を特定することにはメリットがあります。なぜなら、不要な列によって、次のようにさまざまな形でモデルの品質低下が起こり得るからです。  
   

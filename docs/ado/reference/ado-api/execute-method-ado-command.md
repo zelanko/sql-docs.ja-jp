@@ -1,11 +1,9 @@
 ---
 title: Execute メソッド (ADO コマンド) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8eaf057d8ac52d1d1664bafd9304fe1f92ab0ae2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-ado-command"></a>Execute メソッド (ADO コマンド)
 クエリや、SQL ステートメントで指定されたストアド プロシージャの実行、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)のプロパティ、[コマンド オブジェクト](../../../ado/reference/ado-api/command-object-ado.md)です。  
@@ -59,7 +56,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>解説  
  使用して、 **Execute**メソッドを**コマンド**オブジェクトで指定されたクエリの実行、 **CommandText**プロパティまたは**CommandStream**オブジェクトのプロパティです。  
   
- 結果が返される、 **Recordset** (既定) またはバイナリ情報のストリームとして。 バイナリ ストリームを取得する指定**adExecuteStream**で*オプション*を設定してストリームを指定し、 **Command.Properties (「出力ストリーム」)**です。 ADO**ストリーム**結果を受信するオブジェクトを指定するか、IIS 応答オブジェクトなどの別のストリーム オブジェクトを指定することができます。 呼び出しの前にストリームが指定されなかった場合**Execute**で**adExecuteStream**エラーが発生します。 制御が戻るとき、ストリームの位置**Execute**がプロバイダーを特定します。  
+ 結果が返される、 **Recordset** (既定) またはバイナリ情報のストリームとして。 バイナリ ストリームを取得する指定**adExecuteStream**で*オプション*を設定してストリームを指定し、 **Command.Properties (「出力ストリーム」)** です。 ADO**ストリーム**結果を受信するオブジェクトを指定するか、IIS 応答オブジェクトなどの別のストリーム オブジェクトを指定することができます。 呼び出しの前にストリームが指定されなかった場合**Execute**で**adExecuteStream**エラーが発生します。 制御が戻るとき、ストリームの位置**Execute**がプロバイダーを特定します。  
   
  プロバイダーが返すかどうか、コマンドはありません (たとえば、SQL UPDATE クエリ) の結果を返す**Nothing**オプションとして長さ**adExecuteNoRecords**が指定されているそれ以外の場合を返しますを実行、。閉じられた**Recordset**です。 いない場合は、この戻り値を無視することは一部のアプリケーション言語**Recordset**が必要です。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,15 +22,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 67171b2144cbfcd6680b2c2f90f4f83e0f40ab8e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2584743c7d2ab0ed2a0501b01d71e72742c3b6c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="holdoutmaxcases-element"></a>HoldoutMaxCases 要素
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]テスト セットを含む、提示されたパーティションに使用するデータ ソース内のケースの最大数を指定、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。 データ セット内の残りのケースは、トレーニングに使用されます。 値が 0 の場合、テスト セットとして提示できるケースの数は制限されません。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  テスト セットを含む、提示されたパーティションに使用するデータ ソース内のケースの最大数を指定、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。 データ セット内の残りのケースは、トレーニングに使用されます。 値が 0 の場合、テスト セットとして提示できるケースの数は制限されません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,11 +45,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|0 より大きい整数値|  
 |既定値|0|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**HoldoutMaxCases**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructure>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutMaxPercent 要素](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [HoldoutSeed 要素](../../../analysis-services/scripting/properties/holdoutseed-element.md)   
  [HoldoutActualSize 要素](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  

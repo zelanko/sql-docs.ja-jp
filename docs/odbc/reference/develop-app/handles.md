@@ -3,15 +3,12 @@ title: 処理 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - handles [ODBC]
 - driver handles [ODBC]
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef9fe627d79c0a2040500cd2894dcd90a83bee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 830c4b653af74097c59c9aff9e073267792a84b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handles"></a>ハンドル
 ハンドルは特定のアイテムを識別する、32 ビットの非透過の値ODBC では、この項目は、環境、接続、ステートメント、または記述子することができます。 アプリケーションを呼び出すと**SQLAllocHandle**では、ドライバー マネージャーまたはドライバーを指定した型の新しい項目を作成およびアプリケーションへのハンドルを返します。 後で、アプリケーションでは、ハンドルを使用して、ODBC 関数を呼び出すときに、そのアイテムを識別します。 ドライバー マネージャーとドライバーは、ハンドルを使用して、項目に関する情報を探します。  

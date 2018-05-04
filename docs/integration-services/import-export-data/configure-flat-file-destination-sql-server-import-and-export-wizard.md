@@ -1,30 +1,30 @@
 ---
-title: "フラット ファイルの変換先の構成 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: フラット ファイルの変換先の構成 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0145a4393465431b68c6fbacfa50a16048384077
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
   フラット ファイルの変換先を選択した場合、テーブルをコピーするように指定した後で、またはクエリを指定した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、**[フラット ファイルの変換先の構成]** が表示されます。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/25/2018
 |**{LF}**|改行で行を区切ります。|  
 |**セミコロン {;}**|セミコロンで行を区切ります。|  
 |**コロン {:}**|コロンで行を区切ります。|  
-|**コンマ {,}**|コンマで行を区切ります。|  
+|**[コンマ {,}]**|コンマで行を区切ります。|  
 |**[タブ {t}]**|タブで行を区切ります。|  
 |**縦棒 {&#124;}**|垂直バーで行を区切ります。|  
   
@@ -87,5 +87,5 @@ ms.lasthandoff: 01/25/2018
 データをプレビューした後で、ウィザードの前のページで選択したオプションを変更してもかまいません。 これらの変更を行うには、 **[フラット ファイルの変換先の構成]** ページに戻り、 **[戻る]** をクリックし、選択の変更が可能な前のページに戻ります。  
 
 ## <a name="whats-next"></a>次の操作  
- 変換先のフラット ファイルの書式設定オプションを指定すると、次のページは **[パッケージの保存および実行]**となります。 このページでは、操作をすぐに実行するかどうかを指定します。 構成によっては、設定を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとして保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。  
+ 変換先のフラット ファイルの書式設定オプションを指定すると、次のページは **[パッケージの保存および実行]** となります。 このページでは、操作をすぐに実行するかどうかを指定します。 構成によっては、設定を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとして保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。  
 

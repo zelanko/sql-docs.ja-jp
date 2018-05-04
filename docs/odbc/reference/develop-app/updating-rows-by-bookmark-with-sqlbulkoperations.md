@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
 - SQLBulkOperations function [ODBC], updating rows
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b843392d9bf45eedad3a4062d7a1f9590801f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations とブックマークによる行の更新
 ブックマークで行を更新するときに**SQLBulkOperations**ようにデータ ソース テーブルの 1 つまたは複数の行を更新します。 行は、バインドされたブックマーク列内のブックマークで識別されます。 アプリケーションのバッファーで列の長さ/インジケーター バッファー内の値がの場合を除き SQL_COLUMN_IGNORE) バインドされた各列のデータを使用して、行が更新されます。 バインドされていない列は更新されません。  

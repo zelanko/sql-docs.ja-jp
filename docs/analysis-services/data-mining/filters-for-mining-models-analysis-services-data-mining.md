@@ -1,16 +1,15 @@
 ---
-title: "マイニング モデルのフィルター選択 (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: マイニング モデルのフィルター選択 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 83f507f3839a7ca0f40b820ded0e1d0f30da0ffc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データに基づくモデル フィルターは、マイニング構造内のデータのサブセットを使用するマイニング モデルを作成するのに役立ちます。 フィルターを使用すると、包括的なデータ ソース ビューに基づいて 1 つのマイニング構造を作成できるため、マイニング構造とデータ ソースを柔軟に設計できます。 つまり、さまざまなモデルのトレーニングとテストを行う場合に、データの各サブセットに対して個別の構造と関連モデルを作成する代わりに、データの一部だけを使用するためのフィルターを作成することができます。  
+  データに基づくモデル フィルターは、マイニング構造内のデータのサブセットを使用するマイニング モデルを作成するのに役立ちます。 フィルターを使用すると、包括的なデータ ソース ビューに基づいて 1 つのマイニング構造を作成できるため、マイニング構造とデータ ソースを柔軟に設計できます。 つまり、さまざまなモデルのトレーニングとテストを行う場合に、データの各サブセットに対して個別の構造と関連モデルを作成する代わりに、データの一部だけを使用するためのフィルターを作成することができます。  
   
  たとえば、Customers テーブルと関連テーブルに、データ ソース ビューを定義します。 次に、必要とするすべてのフィールドを含むマイニング構造を 1 つ定義します。 最後に、Region などの特定の顧客属性に基づいてフィルター処理されるモデルを作成します。 その後、このモデルをコピーし、フィルター条件を変更するだけで、別の地域に基づく新しいモデルを生成できます。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="creating-model-filters-using-data-mining-designer"></a>データ マイニング デザイナーによるモデル フィルターの作成  
  データ マイニング デザイナーでは、マイニング モデルの **Filter** プロパティを変更することによってモデルをフィルター処理します。 **[プロパティ]** ペインにフィルター式を直接入力することも、フィルターのダイアログ ボックスを開いて条件を作成することもできます。  
   
- フィルターのダイアログ ボックスは 2 つあります。 最初のダイアログ ボックスでは、ケース テーブルに適用する条件を作成できます。 データ ソースに複数のテーブルが含まれる場合は、まずテーブルを選択してから列を選択し、その列に適用する演算子と条件を指定します。 **AND**/**OR** 演算子を使用すると、複数の条件を結合できます。 値の定義に使用できる演算子は、列に含まれている値が不連続値か連続値かによって異なります。 たとえば、連続値には、 **greater than** 演算子および **less than** 演算子を使用できます。 一方、不連続値に対しては、 **= (等しい)**演算子、 **!= (等しくない)**演算子、および **is null** 演算子のみを使用できます。  
+ フィルターのダイアログ ボックスは 2 つあります。 最初のダイアログ ボックスでは、ケース テーブルに適用する条件を作成できます。 データ ソースに複数のテーブルが含まれる場合は、まずテーブルを選択してから列を選択し、その列に適用する演算子と条件を指定します。 **AND**/**OR** 演算子を使用すると、複数の条件を結合できます。 値の定義に使用できる演算子は、列に含まれている値が不連続値か連続値かによって異なります。 たとえば、連続値には、 **greater than** 演算子および **less than** 演算子を使用できます。 一方、不連続値に対しては、 **= (等しい)** 演算子、 **!= (等しくない)** 演算子、および **is null** 演算子のみを使用できます。  
   
 > [!NOTE]  
 >  **LIKE** キーワードはサポートされません。 複数の不連続属性を含める場合は、個々の条件を作成し、それらを **OR** 演算子で結合する必要があります。  
@@ -89,7 +87,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>フィルターが使用されているかどうか確認する方法は?  
  フィルターがモデルに適用されているかどうか判断する方法はいくつかあります。  
   
--   デザイナーで、 **[マイニング モデル]** タブをクリックし、 **[プロパティ]**を開いて、マイニング モデルの **Filter** プロパティを確認します。  
+-   デザイナーで、 **[マイニング モデル]** タブをクリックし、 **[プロパティ]** を開いて、マイニング モデルの **Filter** プロパティを確認します。  
   
 -   DMV (DMSCHEMA_MINING_MODELS) はフィルターのテキストを含む列を出力します。 DMV に対して次のクエリを使用して、モデルとフィルターの名前を返すことができます。  
   

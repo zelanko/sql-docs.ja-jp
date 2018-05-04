@@ -25,12 +25,11 @@ caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d7e36df67db10b423557384576f39a751531656e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +55,12 @@ sp_detach_db [ @dbname= ] 'database_name'
  デタッチするデータベースの名前を指定します *database_name*は、 **sysname**値、既定値は NULL です。  
   
  [  **@skipchecks =** ] **'***skipchecks***'**  
- UPDATE STATISTIC をスキップするか、実行するかを指定します。 *skipchecks*は、 **nvarchar (10)**値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**です。 UPDATE STATISTICS を明示的に実行する指定**false**です。  
+ UPDATE STATISTIC をスキップするか、実行するかを指定します。 *skipchecks*は、 **nvarchar (10)** 値、既定値は NULL です。 UPDATE STATISTICS をスキップするには、指定**true**です。 UPDATE STATISTICS を明示的に実行する指定**false**です。  
   
  既定では、UPDATE STATISTICS が実行されると、テーブルおよびインデックスにあるデータに関する情報が更新されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)**値、既定値は**true**です。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているすべてのフルテキスト インデックス ファイル、およびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合または**true**フルテキストの関連するメタデータが保持されます。  
+ データベースをデタッチするとき、そのデータベースに関連付けられているフルテキスト インデックス ファイルを削除しないことを指定します。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**です。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているすべてのフルテキスト インデックス ファイル、およびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合または**true**フルテキストの関連するメタデータが保持されます。  
   
 > [!IMPORTANT]  
 >  **@keepfulltextindexfile**パラメーターは、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新規の開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く修正してください。  

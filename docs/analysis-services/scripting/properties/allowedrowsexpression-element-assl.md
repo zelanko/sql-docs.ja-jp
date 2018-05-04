@@ -1,33 +1,31 @@
 ---
-title: "AllowedRowsExpression 要素 (ASSL) |Microsoft ドキュメント"
-ms.custom: 
+title: AllowedRowsExpression 要素 (ASSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 01f8ab2e7383058fb7fc322f2c06943f1499daca
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ba13c524d4b78fdc8d17e7c15b285c4c1a22239e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowedrowsexpression-element-assl"></a>AllowedRowsExpression 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-親要素のコンテンツを定義するブール型の Data Analysis Expression (DAX) が含まれます。  
+  親要素のコンテンツを定義するブール型の Data Analysis Expression (DAX) が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,6 +61,6 @@ ms.lasthandoff: 02/15/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで親に対応する要素は、<xref:Microsoft.AnalysisServices.CellPermission> と <xref:Microsoft.AnalysisServices.StandardAction> です。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

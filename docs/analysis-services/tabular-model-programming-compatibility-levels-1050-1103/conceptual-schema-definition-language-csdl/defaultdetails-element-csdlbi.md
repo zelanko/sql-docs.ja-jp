@@ -1,33 +1,31 @@
 ---
-title: "DefaultDetails 要素 (CSDLBI) |Microsoft ドキュメント"
-ms.custom: 
+title: DefaultDetails 要素 (CSDLBI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 36b5b5ba1953bf0ade7464a9c6457ed806df9d35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-DefaultDetails 要素は、テーブルの列の「既定のフィールド セット」を一緒に定義するプロパティ参照のリストを表します。 各プロパティが参照できるのは、1 つのメジャーまたは 1 つの列だけです。  
+  DefaultDetails 要素は、テーブルの列の「既定のフィールド セット」を一緒に定義するプロパティ参照のリストを表します。 各プロパティが参照できるのは、1 つのメジャーまたは 1 つの列だけです。  
   
 ## <a name="elements-and-attributes"></a>要素と属性  
  次の表に、DefaultDetails 要素を定義する要素と属性を示します。  

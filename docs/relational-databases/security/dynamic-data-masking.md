@@ -1,7 +1,7 @@
 ---
 title: 動的なデータ マスキング | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 -   	`SELECT INTO` または `INSERT INTO` を使用して、マスクされた列を別のテーブルにコピーすると、対象のテーブルにマスクされたデータが表示されます。  
   
--   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むバックアップ ファイルを生成し ( **UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
+-   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むエクスポートされたデータ ファイルを生成し (**UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
   
 ## <a name="querying-for-masked-columns"></a>マスクされた列に対してクエリを実行する  
  **sys.masked_columns** ビューを使用して、マスク関数が適用されたテーブルの列に対してクエリを実行します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
@@ -96,7 +96,8 @@ WHERE is_masked = 1;
   
 -   データ マスクを持つ列を FULLTEXT インデックスのキーにすることはできません。  
   
- **UNMASK** アクセス許可のないユーザーの場合、使用されていない **READTEXT**、 **UPDATETEXT**、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
+ 
+  **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT**、 **UPDATETEXT**、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
  
  動的データ マスクの追加は基になっているテーブルでのスキーマ変更として実装されるため、依存関係を持つ列では実行できません。 この制限を回避するには、最初に依存関係を削除してから、動的データ マスクを追加した後、依存関係を再作成します。 たとえば、依存関係がその列に依存するインデックスによるものである場合は、インデックスを削除し、マスクを追加してから、依存するインデックスを再作成します。
  

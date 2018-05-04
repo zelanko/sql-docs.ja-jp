@@ -3,26 +3,22 @@ title: getNCharacterStream (int) メソッド (SQLServerResultSet) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f1cfa4e4-3e1f-4504-b0de-cc626d653661
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58806731b46a15d07e86d95e970debec621d9b69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d4d4c1343f7d22f63f94bc2927a60b78b081cc32
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getncharacterstream-method-int-sqlserverresultset"></a>getNCharacterStream (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +35,7 @@ public java.io.Reader getNCharacterStream(int columnIndex)
 #### <a name="parameters"></a>パラメーター  
  *columnIndex*  
   
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  リーダー オブジェクト。  

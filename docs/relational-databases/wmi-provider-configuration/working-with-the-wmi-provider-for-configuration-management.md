@@ -25,12 +25,11 @@ caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: afa06a7a18fe966e834d8ea0da3f31aa06791ed1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0de24aa1fc771fbb2ed0862bcde69e563785cfa8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management の操作
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
  `instance_name` の既定値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインストール内の `MSSQLSERVER` になります。  
   
- **注:**場合は、コンピューターが適切に構成されていることを確認する必要があります Windows ファイアウォール経由で接続します。 Windows Management Instrumentation のマニュアルの「Windows ファイアウォール経由の接続」記事を参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](http://go.microsoft.com/fwlink/?linkid=15426)です。  
+ **注:** 場合は、コンピューターが適切に構成されていることを確認する必要があります Windows ファイアウォール経由で接続します。 Windows Management Instrumentation のマニュアルの「Windows ファイアウォール経由の接続」記事を参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](http://go.microsoft.com/fwlink/?linkid=15426)です。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Configuration Management にアクセスするには、クライアント WMI 管理スクリプトが、対象となるコンピューター上の管理者のコンテキストで実行されている必要があります。 アクセスするユーザーは、管理するコンピューターのローカル Windows 管理者グループのメンバーである必要があります。  

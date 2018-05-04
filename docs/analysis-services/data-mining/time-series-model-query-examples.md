@@ -1,16 +1,15 @@
 ---
-title: "タイム シリーズ モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
+title: タイム シリーズ モデルのクエリ例 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 65e55ee5a68aa81fabd1fb5405229a187008d8cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-series-model-query-examples"></a>タイム シリーズ モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
  ここでは、Microsoft タイム シリーズ アルゴリズムに基づくモデルに対してこの両方の種類のクエリを作成する方法について説明します。  
   
@@ -73,9 +71,9 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},...|  
+|COMPLEXITY_PENALTY 0.1、MINIMUM_SUPPORT の = = 10、PERIODICITY_HINT ={1,3}、.|  
   
- 既定の周期性のヒントである \{1\} は、すべてのモデルで表示されます。このサンプル モデルでは、そのほかにもう 1 つ追加のヒントが作成時に使用されています。これは、最終的なモデルには存在しない可能性があります。  
+ 既定の周期性のヒントである {1} は、すべてのモデルで表示されます。このサンプル モデルでは、そのほかにもう 1 つ追加のヒントが作成時に使用されています。これは、最終的なモデルには存在しない可能性があります。  
   
 > [!NOTE]  
 >  ここでは、読みやすくするために結果が切り捨てられています。  
@@ -222,11 +220,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|現在のケースの日付とトレーニング セットの最後の日付の間のタイム スライス数を返します。<br /><br /> この関数の一般的な使用方法は、最近のトレーニング ケースに関する詳細なデータを取得できるように、そのようなケースを判別することです。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|指定した予測可能列のノードの ID を返します。<br /><br /> この関数の一般的な使用目的は、特定の予測値を生成したノードを識別して、そのノードに関連付けられているケースの表示や、式などの詳細の取得ができるようにすることです。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|指定した予測可能列の予測の標準偏差を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定した予測可能列の予測の分散を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
-|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|時系列の予測される履歴値または将来の予測値を返します。<br /><br /> 汎用の予測関数である [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) を使用して、時系列モデルに対するクエリを実行することもできます。|  
+|[Lag & #40";"DMX"&"#41;](../../dmx/lag-dmx.md)|現在のケースの日付とトレーニング セットの最後の日付の間のタイム スライス数を返します。<br /><br /> この関数の一般的な使用方法は、最近のトレーニング ケースに関する詳細なデータを取得できるように、そのようなケースを判別することです。|  
+|[PredictNodeId & #40";"DMX"&"#41;](../../dmx/predictnodeid-dmx.md)|指定した予測可能列のノードの ID を返します。<br /><br /> この関数の一般的な使用目的は、特定の予測値を生成したノードを識別して、そのノードに関連付けられているケースの表示や、式などの詳細の取得ができるようにすることです。|  
+|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|指定した予測可能列の予測の標準偏差を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
+|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定した予測可能列の予測の分散を返します。<br /><br /> この関数を、時系列モデルでサポートされない INCLUDE_STATISTICS 引数の代わりに使用できます。|  
+|[PredictTimeSeries (&) #40";"DMX"&"#41;](../../dmx/predicttimeseries-dmx.md)|時系列の予測される履歴値または将来の予測値を返します。<br /><br /> 汎用の予測関数である [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) を使用して、時系列モデルに対するクエリを実行することもできます。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -235,6 +233,6 @@ AND NODE_TYPE = 15
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [タイム シリーズ モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

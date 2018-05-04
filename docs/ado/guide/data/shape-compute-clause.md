@@ -1,11 +1,9 @@
 ---
 title: 図形の COMPUTE 句 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>図形の COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**、子への参照で構成されている列を持つ**レコード セット**以外の場合は省略可能な列の内容が章では、新しい、または計算列、または子で集計関数の実行結果**レコード セット**以前形または**レコード セット**; 子からの列と**レコード セット**に一覧表示オプションの BY 句。  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  次のいずれかで構成されます。  
   
--   子を返すクエリ コマンド中かっこ (「{}」) で**Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
+-   中かっこ内のクエリ コマンド ("{}") を返す子**Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
   
 -   既存の形の名前**Recordset**です。  
   

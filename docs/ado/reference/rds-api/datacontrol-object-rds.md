@@ -1,11 +1,9 @@
 ---
 title: DataControl オブジェクト (RDS) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
 データ クエリ バインド[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)1 つまたは複数のコントロール (たとえば、テキスト ボックス、取引先グリッド コントロールまたはコンボ ボックス) を表示する、 **Recordset** Web ページ上のデータ。  
@@ -51,7 +48,7 @@ ms.lasthandoff: 04/18/2018
  クラス ID、 **.rds ですDataControl**オブジェクトが BD96C556 65A3-11-d 0 983A 00C04FC29E33 です。  
   
 > [!NOTE]
->  エラーを取得する場合、 [.rds ですDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)または**.rds ですDataControl**オブジェクトにありませんロードは、正しいクラス ID を使用していることを確認してください クラスのこれらのオブジェクト Id は、バージョン 1.0 および 1.1 から変更されました。 また、注意を使用するときにも null 許容の列を設定する必要がある、 **RDS DataControl**オブジェクト。  
+>  エラーを取得する場合、 [.rds ですDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)または **.rds ですDataControl**オブジェクトにありませんロードは、正しいクラス ID を使用していることを確認してください クラスのこれらのオブジェクト Id は、バージョン 1.0 および 1.1 から変更されました。 また、注意を使用するときにも null 許容の列を設定する必要がある、 **RDS DataControl**オブジェクト。  
   
  基本的なシナリオでは、のみを設定する必要があります、 **SQL**、**接続**、および**サーバー**のプロパティ、 **.rds ですDataControl**オブジェクトで、既定のビジネス オブジェクトの呼び出しに自動的には、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)です。  
   
@@ -90,17 +87,17 @@ ms.lasthandoff: 04/18/2018
 </OBJECT>  
 ```  
   
- 1 つを使用して**.rds ですDataControl** 1 つまたは複数のビジュアル コントロールに 1 つのクエリの結果をリンクするオブジェクト。 たとえば、名前、住所、出生、年齢、および優先順位の顧客のステータスなどのクエリ要求している顧客データをコードがあるとします。 1 つを使用する**.rds ですDataControl** ; 次の 3 つの別々 のテキスト ボックスに、顧客の名前、年齢、および領域を表示するオブジェクト優先順位の顧客のステータス チェック ボックスです。グリッド コントロール内のすべてのデータ。  
+ 1 つを使用して **.rds ですDataControl** 1 つまたは複数のビジュアル コントロールに 1 つのクエリの結果をリンクするオブジェクト。 たとえば、名前、住所、出生、年齢、および優先順位の顧客のステータスなどのクエリ要求している顧客データをコードがあるとします。 1 つを使用する **.rds ですDataControl** ; 次の 3 つの別々 のテキスト ボックスに、顧客の名前、年齢、および領域を表示するオブジェクト優先順位の顧客のステータス チェック ボックスです。グリッド コントロール内のすべてのデータ。  
   
- 使用して異なる**.rds ですDataControl** visual にさまざまなコントロールに複数のクエリの結果をリンクするオブジェクト。 たとえば、1 つのクエリを顧客に関する情報を取得して、顧客が購入した商品に関する情報を取得する 2 番目のクエリを使用するとします。 3 つのテキスト ボックスと 1 つのチェック ボックス、グリッド コントロールで 2 番目のクエリの結果の最初のクエリの結果を表示するには。 既定のビジネス オブジェクトを使用する場合 (**RDSServer.DataFactory**)、次を行う必要があります。  
+ 使用して異なる **.rds ですDataControl** visual にさまざまなコントロールに複数のクエリの結果をリンクするオブジェクト。 たとえば、1 つのクエリを顧客に関する情報を取得して、顧客が購入した商品に関する情報を取得する 2 番目のクエリを使用するとします。 3 つのテキスト ボックスと 1 つのチェック ボックス、グリッド コントロールで 2 番目のクエリの結果の最初のクエリの結果を表示するには。 既定のビジネス オブジェクトを使用する場合 (**RDSServer.DataFactory**)、次を行う必要があります。  
   
--   2 つ追加**.rds ですDataControl** Web ページにオブジェクト。  
+-   2 つ追加 **.rds ですDataControl** Web ページにオブジェクト。  
   
--   2 つの書き込みがクエリごとに 1 つ**SQL** 、2 つのプロパティ**.rds ですDataControl**オブジェクト。 1 つ**.rds ですDataControl**オブジェクトが顧客情報を要求する SQL クエリに含まれますが、2 番目には、顧客が購入した商品の一覧を要求するクエリが格納されています。  
+-   2 つの書き込みがクエリごとに 1 つ**SQL** 、2 つのプロパティ **.rds ですDataControl**オブジェクト。 1 つ **.rds ですDataControl**オブジェクトが顧客情報を要求する SQL クエリに含まれますが、2 番目には、顧客が購入した商品の一覧を要求するクエリが格納されています。  
   
 -   各バインドされたコントロールの OBJECT タグでは、各ビジュアル コントロールに表示するデータの値を設定する DATAFLD 値を指定します。  
   
- 数のカウントの制限はありません**.rds ですDataControl**オブジェクトを 1 つの Web ページに OBJECT タグを使用して、埋め込むことができます。  
+ 数のカウントの制限はありません **.rds ですDataControl**オブジェクトを 1 つの Web ページに OBJECT タグを使用して、埋め込むことができます。  
   
  定義するときに、 **.rds ですDataControl** Web ページ上のオブジェクト、0 以外を使用して**高さ**と**幅**を避けるために余分なスペースを含めること) 1 などの値。  
   

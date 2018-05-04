@@ -1,36 +1,34 @@
 ---
-title: "Microsoft シーケンス クラスター アルゴリズム |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft シーケンス クラスター アルゴリズム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
 - algorithms [data mining]
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 235347cd727627c8db54c8787d10388bc802c90a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft シーケンス クラスター アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、シーケンス分析とクラスタリングを組み合わせた独自のアルゴリズムです。 このアルゴリズムを使用すると、 *シーケンス*でリンク可能なイベントを含むデータを調べることができます。 このアルゴリズムは最も一般的なシーケンスを見つけ、クラスタリングを実行して類似したシーケンスを見つけます。 次の例では、機械学習用にデータを取り込むことができるシーケンスの種類を示し、一般的な問題やビジネス シナリオの理解を深めます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、シーケンス分析とクラスタリングを組み合わせた独自のアルゴリズムです。 このアルゴリズムを使用すると、 *シーケンス*でリンク可能なイベントを含むデータを調べることができます。 このアルゴリズムは最も一般的なシーケンスを見つけ、クラスタリングを実行して類似したシーケンスを見つけます。 次の例では、機械学習用にデータを取り込むことができるシーケンスの種類を示し、一般的な問題やビジネス シナリオの理解を深めます。  
   
 -   ユーザーによる Web サイト閲覧時に生成されるクリック ストリームまたはクリック パス  
   

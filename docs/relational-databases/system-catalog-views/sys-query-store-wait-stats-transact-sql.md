@@ -25,13 +25,12 @@ caps.latest.revision: 18
 author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: cd60e0132c29fdfa2461112aa1220d149c9ad2db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2b7d4ecd866b841e71966f07c23f51ec6ff93c3a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ ms.lasthandoff: 04/16/2018
 |**19**|**追跡**|TRACEWRITE SQLTRACE_LOCK、SQLTRACE_FILE_BUFFER、SQLTRACE_FILE_WRITE_IO_COMPLETION、SQLTRACE_FILE_READ_IO_COMPLETION、SQLTRACE_PENDING_BUFFER_WRITERS、SQLTRACE_SHUTDOWN、QUERY_TRACEOUT TRACE_EVTNOTIFF|
 |**20**|**フル テキスト検索**|FT_RESTART_CRAWL フルテキスト GATHERER、MSSEARCH、FT_METADATA_MUTEX、FT_IFTSHC_MUTEX、FT_IFTSISM_MUTEX、FT_IFTS_RWLOCK、FT_COMPROWSET_RWLOCK、FT_MASTER_MERGE、FT_PROPERTYLIST_CACHE、FT_MASTER_MERGE_COORDINATOR PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**その他のディスク IO**|ASYNC_IO_COMPLETION IO_COMPLETION、BACKUPIO、WRITE_COMPLETION、IO_QUEUE_LIMIT IO_RETRY|
-|**22**|**レプリケーション**|SE_REPL_ %、REPL_ %、HADR_ % **(ではない HADR_THROTTLE_LOG_RATE_GOVERNOR)**PWAIT_HADR_ %、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
+|**22**|**レプリケーション**|SE_REPL_ %、REPL_ %、HADR_ % **(ではない HADR_THROTTLE_LOG_RATE_GOVERNOR)** PWAIT_HADR_ %、REPLICA_WRITES、FCB_REPLICA_WRITE、FCB_REPLICA_READ、PWAIT_HADRSIM|
 |**23**|**ログ単価ガバナー**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR、INSTANCE_LOG_RATE_GOVERNOR|
 
 ***コンパイル**待機のカテゴリは現在サポートされていません。 

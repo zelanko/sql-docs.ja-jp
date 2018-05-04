@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ定義に ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -136,7 +135,7 @@ CELL CALCULATION Calculation_Name
  WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH DESCENDANTS 句を使用した場合、ディメンション テーブル内にあるすべての子孫および対応する行が削除されます。  
   
 > [!NOTE]  
->  計算されるメンバー、名前付きセット、アクション、およびセル計算の削除については、次を参照してください。 [MEMBER ステートメントの削除 &#40;です。MDX と #41 です](../mdx/mdx-data-definition-drop-member.md)、 [DROP SET ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-set.md)、 [DROP ACTION ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-action.md)、および[DROP CELL CALCULATION ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
+>  計算されるメンバー、名前付きセット、アクション、およびセル計算の削除については、次を参照してください[DROP MEMBER ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)、 [DROP SET ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)、。[DROP ACTION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)、および[DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)です。  
   
 ## <a name="updating-the-default-dimension-member"></a>既定のディメンション メンバーの更新  
  この句では、キューブの既定のメンバーを更新します。この句は、MDX 計算スクリプトで既定のメンバーを定義するために使用されます。 データベース ディメンション、キューブ ディメンション、またはユーザー ログインの既定のメンバーを指定できます。 既定のメンバーは、セッション中に変更することもできます。  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  計算されるメンバー プロパティの値を定義する有効な MDX スカラー式です。  
   
 ## <a name="creating-a-cell-calculation"></a>セル計算の作成  
- ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [CELL CALCULATION ステートメントの削除 &#40;です。MDX と #41 です](../mdx/mdx-data-definition-drop-cell-calculation.md)。  
+ ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)です。  
   
 ## <a name="see-also"></a>参照  
- [MDX データ定義ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -1,32 +1,31 @@
 ---
-title: "表形式モデル (Analysis Services AMO-TOM) にデータ ソースを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 表形式モデル (Analysis Services AMO-TOM) にデータ ソースを追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4a963d02e3d3119b7afc5874029450d6897ffeb3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>表形式モデル (Analysis Services AMO-TOM) にデータ ソースを追加します。
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**データソース**Microsoft.AnalysisServices.Tabular 名前空間のクラスは、データ更新操作中に種類を指定する表形式モデルのデータ ソースを抽象化し、インポートされたデータの場所。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+**データソース**Microsoft.AnalysisServices.Tabular 名前空間のクラスは、データ更新操作中に種類を指定する表形式モデルのデータ ソースを抽象化し、インポートされたデータの場所。 
 
-派生したクラスのオブジェクトをインスタンス化して、表形式モデルにデータ ソースを追加することができます**データソース**に追加し、 **DataSources**モデル オブジェクトのコレクション。 サーバーに変更をコミットするには、いずれかを呼び出す**Model.SaveChanges()**または**Database.Update(UpdateOptions.ExpandFull)**です。 
+派生したクラスのオブジェクトをインスタンス化して、表形式モデルにデータ ソースを追加することができます**データソース**に追加し、 **DataSources**モデル オブジェクトのコレクション。 サーバーに変更をコミットするには、いずれかを呼び出す**Model.SaveChanges()** または**Database.Update(UpdateOptions.ExpandFull)** です。 
 
 SQL Server 2016 では、Analysis Services は、リレーショナル データベース、データ プロバイダーがテーブルと列の形式でデータを公開する場所からのみデータのインポートをサポートします。 そのため、表形式オブジェクト モデルは、この機能を公開する (データ ソースから派生) ProviderDataSource クラスを使用します。 
 

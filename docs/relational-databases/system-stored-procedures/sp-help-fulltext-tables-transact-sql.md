@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: daf707e38b2b543302abc21611aa95a242d71085
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 22455cffe0de3065c96ef98ff86a3bc9dbacf386
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
  フルテキスト カタログの名前を指定します。 *fulltext_catalog_name*は**sysname**、既定値は NULL です。 場合*fulltext_catalog_name*を省略するか、NULL の場合は、データベースに関連付けられているすべてのフルテキスト インデックス付きのテーブルが返されます。 場合*fulltext_catalog_name*が指定されているが、 *table_name*を省略するか、NULL の場合は、このカタログに関連付けられているすべてのフルテキスト インデックス付きテーブルについて、フルテキスト インデックス情報を取得します。 両方*fulltext_catalog_name*と*table_name*を指定した場合は、行が返されます*table_name*に関連付けられている*fulltext_catalog_name。*;それ以外の場合、エラーが発生します。  
   
  [ **@table_name=**] **'***table_name***'**  
- フルテキスト メタデータを要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)**既定値は NULL です。 だけの場合*table_name*指定すると、関連する行のみ*table_name*が返されます。  
+ フルテキスト メタデータを要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)** 既定値は NULL です。 だけの場合*table_name*指定すると、関連する行のみ*table_name*が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  

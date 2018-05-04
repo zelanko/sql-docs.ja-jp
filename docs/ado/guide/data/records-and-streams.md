@@ -1,11 +1,9 @@
 ---
 title: レコードとストリーム |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a107f9322758453222982b7f8ad9c1c4a5a15c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="records-and-streams"></a>レコードとストリーム
 ADO は、現在、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト リレーショナル データベースなどのデータ ソース内の情報にアクセスする主な手段として。 ただし、一部のプロバイダーのサポート、[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)のプロバイダーからのデータを操作できるオブジェクトの代替または補完としてオブジェクト。 特性について**レコード**動作、プロバイダーのマニュアルを参照してください。  

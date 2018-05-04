@@ -1,17 +1,17 @@
 ---
-title: "言語および照合順序 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
+title: 言語および照合順序 (Analysis Services) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: "Analysis Services のテスト"
+keywords:
+- Analysis Services のテスト
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - default languages
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75a28b8a2e0d40ae453fce13058bb3cb53c0ea3e
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: dbe4ad71a5cf5819e62c39d8b70e0b230b58c19d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -140,7 +139,7 @@ ms.lasthandoff: 01/22/2018
   
 -   照合順序が更新された後は、パーティションおよびディメンションを再処理します。  
   
- SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、変更、 **\<言語 >**と **\<CollationName >**言語の LCID を指定する、msmdsrv.ini ファイルで設定します。  
+ SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、変更、 **\<言語 >** と **\<CollationName >** 言語の LCID を指定する、msmdsrv.ini ファイルで設定します。  
   
 1.  Management Studio で、サーバー名を右クリックして、**[プロパティ]** | **[言語/照合順序]** と選択します。  
   
@@ -169,7 +168,7 @@ ms.lasthandoff: 01/22/2018
   
  XMLA を使用して、既存のデータベースを変更するには、データベースとそれをビルドするために使用するソース ファイルの間の相違点がないことを確認します。 たとえば、XMLA を使用して、概念実証のテストで言語や照合順序をすばやく変更した後、ソース ファイルの変更によるフォローアップをし (「 [キューブの言語または照合順序を変更します。](#bkmk_cube)」を参照)、既に存在する運用手順を使用してソリューションを再展開するということが考えられます。  
   
-1.  Management Studio で、該当データベースを右クリックし、 **[データベースをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]**と選択します。  
+1.  Management Studio で、該当データベースを右クリックし、 **[データベースをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]** と選択します。  
   
 2.  既存の言語または照合順序を検索して別の値に置き換えます。  
   
@@ -185,7 +184,7 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [グローバリゼーションのヒントとベスト プラクティス (&) #40 です。Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [グローバリゼーションのヒントとベスト プラクティス (&) #40 です。Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

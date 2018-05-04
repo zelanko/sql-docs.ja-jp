@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d7dffa090a3f8b24c08329f14f22881cf45d017b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c2b88f1bf122146e0cf05c04bfe331b29a390429
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-action-assl"></a>Type 要素 (アクション) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]型を含む、[アクション](../../../analysis-services/scripting/objects/action-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  型を含む、[アクション](../../../analysis-services/scripting/objects/action-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現します|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |-----------|-----------------|  
 |*Url*|インターネット ブラウザーで変数ページを表示します。|  
 |*Html*|インターネット ブラウザーで HTML スクリプトを実行します。|  
-|*ステートメント*|OLE DB コマンドを実行します。|  
+|*Statement*|OLE DB コマンドを実行します。|  
 |*ドリル スルー*|ドリルスルーの行セットを取得します。<br /><br /> この値は*行セット*し、ドリルスルー アクションを識別します。 のみを指定できますがアクションで使用される[TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md)に値が設定されている*セル*です。|  
 |*データセット*|データセットを取得します。|  
 |*行セット*|行セットを取得します。|  
@@ -81,8 +80,8 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Action>します。  
   
 ## <a name="see-also"></a>参照  
- [DrillThroughAction データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md)   
- [ReportAction データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [DrillThroughAction データ型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md)   
+ [ReportAction データ型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

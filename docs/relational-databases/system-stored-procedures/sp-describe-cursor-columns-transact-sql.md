@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e5d7c2462551e31d9a32ad62bacd0a281fb9249
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3a5ac85804c0dc94682e089dfc7b962e757447b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,18 +57,18 @@ sp_describe_cursor_columns
  カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable*は**カーソル**, ない必要があり、既定をどのカーソルに関連付けられた時にできない、sp_describe_cursor_columns が呼び出されます。 スクロール可能で動的な読み取り専用カーソルが返されます。  
   
  [ @cursor_source=] {N'local' |N'global' |N'variable'}  
- レポート対象のカーソルをローカル カーソル、グローバル カーソル、カーソル変数のどの名前で指定するのかを指定します。 パラメーターが**nvarchar (30)**です。  
+ レポート対象のカーソルをローカル カーソル、グローバル カーソル、カーソル変数のどの名前で指定するのかを指定します。 パラメーターが**nvarchar (30)** です。  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- LOCAL キーワードを指定した DECLARE CURSOR ステートメント、または既定値が LOCAL になっている DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 *local_cursor_name*は**nvarchar (128)**です。  
+ LOCAL キーワードを指定した DECLARE CURSOR ステートメント、または既定値が LOCAL になっている DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 *local_cursor_name*は**nvarchar (128)** です。  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- GLOBAL キーワードを指定した DECLARE CURSOR ステートメント、または既定値が GLOBAL になっている DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 *global_cursor_name*は**nvarchar (128)**です。  
+ GLOBAL キーワードを指定した DECLARE CURSOR ステートメント、または既定値が GLOBAL になっている DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 *global_cursor_name*は**nvarchar (128)** です。  
   
  *global_cursor_name*を ODBC アプリケーションによって開かれたは SQLSetCursorName を呼び出すことによって、API サーバー カーソルの名前をすることもできます。  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- 開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)**です。  
+ 開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  

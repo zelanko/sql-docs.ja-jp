@@ -1,11 +1,9 @@
 ---
 title: インデックスの追加メソッドの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1edfe0a3c1ba6613c3aa34d3645691d3dc1bc141
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 2f8376004abf7d3e63938a449b7057ff582e8be9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes-append-method-example-vc"></a>インデックスの追加メソッドの例 (vc++)
 次のコードでは、新しいインデックスを作成する方法を示します。 テーブル内の 2 つの列にインデックスがあります。  

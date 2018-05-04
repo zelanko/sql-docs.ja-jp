@@ -1,34 +1,32 @@
 ---
-title: "モデル プロパティの |Microsoft ドキュメント"
-ms.custom: 
+title: モデル プロパティの |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.wspacedbconfig.f1
 - sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a2f2478c92ba44040c8377f6957896d233bf9ce2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ef8ecd9e2c5b3d2da37229cbf22fd8684dd43ac9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-properties"></a>モデルのプロパティ 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-この記事では、表形式モデルのプロパティについて説明します。 各テーブル モデル プロジェクトには、SQL Server 開発ツールで作成中のモデルの構築とバックアップの方法やワークスペース データベースの保存方法に影響するモデルのプロパティが含まれています。 ここで説明するモデルのプロパティは、既に配置されているモデルには適用されません。  
+  この記事では、表形式モデルのプロパティについて説明します。 各テーブル モデル プロジェクトには、SQL Server 開発ツールで作成中のモデルの構築とバックアップの方法やワークスペース データベースの保存方法に影響するモデルのプロパティが含まれています。 ここで説明するモデルのプロパティは、既に配置されているモデルには適用されません。  
   
  このトピックのセクション:  
   

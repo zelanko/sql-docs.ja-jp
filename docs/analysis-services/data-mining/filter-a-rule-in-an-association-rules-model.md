@@ -1,35 +1,33 @@
 ---
-title: "フィルター アソシエーション ルール モデルのルール |Microsoft ドキュメント"
-ms.custom: 
+title: フィルター アソシエーション ルール モデルのルール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8627d46cc0d919ecf41c7ad5c202d13921cd77df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0607c02563babab34f62f784245492fde2e63385
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>アソシエーション ルール モデルのルールのフィルター選択
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-アソシエーション モデルでフィルターを使用して、結果を必要なアソシエーションだけに限定できます。 たとえば、ルールをフィルター選択して、特定の製品を含むルールだけを表示できます。  
+  アソシエーション モデルでフィルターを使用して、結果を必要なアソシエーションだけに限定できます。 たとえば、ルールをフィルター選択して、特定の製品を含むルールだけを表示できます。  
   
  データ マイニング デザイナーで、 **アソシエーション ルール ビューアーの** [ルール] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タブのコントロールを使用して、表示されるルールをフィルター選択します。  モデルに対するクエリを作成して、特定の値が格納されているアイテムセットだけを表示することもできます。  
   
@@ -38,21 +36,21 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="filter-a-rule-in-an-association-model"></a>アソシエーション モデルのルールのフィルター選択  
   
-1.  **アソシエーション ルール ビューアー**を使用してマイニング モデルを開きます。 SQL Server Management Studio でマイニング モデルを開くには、モデル名を右クリックして **[参照]**をクリックします。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でマイニング モデルを開くには、モデルを含むマイニング構造をダブルクリックし、 **データ マイニング デザイナー** の **[マイニング モデル ビューアー]**タブをクリックします。  
+1.  **アソシエーション ルール ビューアー**を使用してマイニング モデルを開きます。 SQL Server Management Studio でマイニング モデルを開くには、モデル名を右クリックして **[参照]** をクリックします。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でマイニング モデルを開くには、モデルを含むマイニング構造をダブルクリックし、 **データ マイニング デザイナー** の **[マイニング モデル ビューアー]** タブをクリックします。  
   
-2.  **アソシエーション ルール ビューアー** の **[ルール]**タブをクリックします。  
+2.  **アソシエーション ルール ビューアー** の **[ルール]** タブをクリックします。  
   
 3.  **[ルールのフィルター]** ボックスにルールの条件を入力します。 たとえば、「Bike Stand」というルールの条件を入力すると、"Bike Stands" も返されます。  
   
      **[ルールのフィルター]** テキスト ボックスでは、.NET 言語で定義されている正規表現を使用できます。 したがって、 `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`のような式を使用できます。 この式は、Helmets と Fenders という単語が任意の順序で含まれる属性を含むすべてのアイテムセットを返します。  
   
-4.  **[最小の確率]**では、確率の値を大きくすると表示されるルール数が減り、値を小さくすると表示されるルール数が増えます。  
+4.  **[最小の確率]** では、確率の値を大きくすると表示されるルール数が減り、値を小さくすると表示されるルール数が増えます。  
   
-5.  **[最小の重要度]**では、重要度の値を大きくすると表示されるルール数が減り、値を小さくすると表示されるルール数が増えます。  
+5.  **[最小の重要度]** では、重要度の値を大きくすると表示されるルール数が減り、値を小さくすると表示されるルール数が増えます。  
   
-6.  **[表示]**では、 **[属性の名前と値を表示]**、 **[属性名のみ表示]**、 **[属性値のみ表示]**のいずれかのオプションを選択します。  
+6.  **[表示]** では、 **[属性の名前と値を表示]**、 **[属性名のみ表示]**、 **[属性値のみ表示]** のいずれかのオプションを選択します。  
   
-7.  **[最大行数]**では、値を大きくすると指定した条件を満たすルールの総数が増え、値を小さくすると返されるルールの数が制限されます。 ルールは確率の順に並べられるので、確率または重要度に対して指定した条件を満たす余分なルールを除外できます。  
+7.  **[最大行数]** では、値を大きくすると指定した条件を満たすルールの総数が増え、値を小さくすると返されるルールの数が制限されます。 ルールは確率の順に並べられるので、確率または重要度に対して指定した条件を満たす余分なルールを除外できます。  
   
 8.  **[長い名前を表示する]** チェック ボックスをオンまたはオフにして、ルール名の表示方法を切り替えます。  
   
@@ -68,6 +66,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft アソシエーション ルール ビューアーを使用してモデルを参照します。](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [レッスン 3: マーケット バスケット シナリオ &#40;中級者向けデータ マイニング チュートリアル&#41; の作成](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [レッスン 3: マーケット バスケット シナリオ (&) #40";"中級者向けデータ マイニング チュートリアル"&"#41; の作成](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

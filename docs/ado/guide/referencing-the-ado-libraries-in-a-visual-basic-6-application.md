@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -22,12 +21,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 20044ab8bc57f8c943a26457cd165d95afcd077f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d2c2aa317f9d4ff810cba13fbb315ce090997583
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 アプリケーションで ADO ライブラリを参照します。
 Microsoft Visual Basic 6 アプリケーションに、ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  
@@ -36,13 +34,13 @@ Microsoft Visual Basic 6 アプリケーションに、ADO ライブラリをイ
   
 1.  新規作成または既存の Visual Basic プロジェクトを開きます。  
   
-2.  クリックして、**プロジェクト**クリックしてメニュー項目**参照しています.**ドロップ ダウン メニュー パネルからです。  
+2.  クリックして、**プロジェクト**クリックしてメニュー項目**参照しています.** ドロップ ダウン メニュー パネルからです。  
   
-3.  **参照可能な**、チェック ボックスをオン**Microsoft ActiveX Data Objects *n.n*ライブラリ**ここで、 ***n.n***最新を表しますバージョン番号です。 **場所**下のフィールドとして選択を識別する必要があります*$installDir\msado15.dll*ここで、 *$installDir*するディレクトリのパスを表す、ADO ライブラリインストールされました。  
+3.  **参照可能な**、チェック ボックスをオン**Microsoft ActiveX Data Objects *n.n*ライブラリ**ここで、 ***n.n***最新を表しますバージョン番号です。 **場所**下のフィールドとして選択を識別する必要があります *$installDir\msado15.dll*ここで、 *$installDir*するディレクトリのパスを表す、ADO ライブラリインストールされました。  
   
-4.  ADO MD を使用する場合は、手順 3 を繰り返して選択**Microsoft ActiveX Data Objects (多次元) *n.n*ライブラリ**です。 **場所**フィールドとしてこの選択を識別する必要があります*$installDir\msadomd.dll*です。  
+4.  ADO MD を使用する場合は、手順 3 を繰り返して選択**Microsoft ActiveX Data Objects (多次元) *n.n*ライブラリ**です。 **場所**フィールドとしてこの選択を識別する必要があります *$installDir\msadomd.dll*です。  
   
-5.  ADOX を使用する場合は、手順 3 を繰り返して選択**Microsoft ADO 内線*n.n* DDL およびセキュリティ用**です。 **場所**フィールドとしてこの選択を識別する必要があります*$installDir\msadox.dll*です。  
+5.  ADOX を使用する場合は、手順 3 を繰り返して選択**Microsoft ADO 内線*n.n* DDL およびセキュリティ用**です。 **場所**フィールドとしてこの選択を識別する必要があります *$installDir\msadox.dll*です。  
   
 6.  をクリックして**OK**参照の設定を完了します。  
   

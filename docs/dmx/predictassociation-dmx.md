@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09933a65f19ca025c8a681b068bf31c6fe0e9d7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a3fd8d22cd601fc26b53af35a4d101ffcaea3e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,15 +54,15 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS はテーブル列の参照にのみ適用され、EXCLUDE_NULL および INCLUDE_NULL はスカラー列の参照にのみ適用されます。  
   
- INCLUDE_STATISTICS はのみを返します**$Probability**と**$AdjustedProbability**です。  
+ INCLUDE_STATISTICS はのみを返します **$Probability**と **$AdjustedProbability**です。  
   
- 場合数値パラメーター  *n* を指定すると、 **PredictAssociation**確率に基づく上位の n 個の最も可能性の高い値を返します。  
+ 場合数値パラメーター *n*を指定すると、 **PredictAssociation**確率に基づく上位の n 個の最も可能性の高い値を返します。  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- 含める場合は**$AdjustedProbability**、ステートメントが最上部を返す *n* 値に基づいて、 **$AdjustedProbability**です。  
+ 含める場合は **$AdjustedProbability**、ステートメントが最上部を返す*n*値に基づいて、 **$AdjustedProbability**です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、 **PredictAssociation**データベースの Adventure Works では 4 つの製品を返す関数が一緒に販売できる最も高いです。  
@@ -91,8 +90,8 @@ SHAPE {
 
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

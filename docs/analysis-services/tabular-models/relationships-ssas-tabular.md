@@ -1,31 +1,29 @@
 ---
-title: "リレーションシップ |Microsoft ドキュメント"
-ms.custom: 
+title: リレーションシップ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b6a091fec23b6890c54b81aac4a83042a21474b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relationships"></a>リレーションシップ 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-テーブル モデルでは、リレーションシップは 2 つのデータ テーブル間の接続を表します。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
+  テーブル モデルでは、リレーションシップは 2 つのデータ テーブル間の接続を表します。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
   
  テーブルのインポート ウィザードを使用して同じデータ ソースからインポートする場合に、データ ソースのテーブルに既に存在するリレーションシップをインポートするよう選択すると、そのリレーションシップはモデル内に再作成されます。 ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用すると、自動的に検出および再作成されたリレーションシップを表示できます。 また、ダイアグラム ビューのモデル デザイナーを使用するか、[リレーションシップの作成] ダイアログ ボックスまたは [リレーションシップの管理] ダイアログ ボックスを使用すると、テーブル間に新しいリレーションシップを手動で作成することもできます。  
   
@@ -173,7 +171,7 @@ ms.lasthandoff: 02/23/2018
   
 |問題またはメッセージ|解決策|  
 |------------------------|----------------|  
-|選択した両方の列に重複する値が含まれるため、リレーションシップを作成できない。|有効なリレーションシップを作成するには、選択したペアの少なくとも一方の列には一意の値のみが含まれている必要があります。<br /><br /> 列を編集して重複値を削除するか、一意の値を含む列が **[関連する参照列]**として使用されるように、列の順序を逆にすることができます。|  
+|選択した両方の列に重複する値が含まれるため、リレーションシップを作成できない。|有効なリレーションシップを作成するには、選択したペアの少なくとも一方の列には一意の値のみが含まれている必要があります。<br /><br /> 列を編集して重複値を削除するか、一意の値を含む列が **[関連する参照列]** として使用されるように、列の順序を逆にすることができます。|  
 |列に NULL 値または空の値が含まれている。|データ列を NULL 値で相互に結合することはできません。 すべての行で、リレーションシップに使用されている両方の列に値が含まれている必要があります。|  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  

@@ -1,30 +1,29 @@
 ---
-title: "メジャー |Microsoft ドキュメント"
-ms.custom: 
+title: メジャー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0b994ddc834317db4c0cb10c55ccd8ef33441473
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="measures"></a>メジャー
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]テーブル モデルでは、メジャーは、レポート クライアントで使用する DAX 数式を使用して作成された計算です。 メジャーの評価は、ユーザーがレポート クライアント アプリケーションで選択するフィールド、フィルター、またはスライサーに基づいて行われます。  
+# <a name="measures"></a>[メジャー]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  テーブル モデルでは、メジャーとはレポート クライアントで使用するために DAX 数式を使用して作成される計算のことです。 メジャーの評価は、ユーザーがレポート クライアント アプリケーションで選択するフィールド、フィルター、またはスライサーに基づいて行われます。  
   
 ##  <a name="bkmk_understanding"></a> 利点  
  AVERAGE、COUNT、SUM などの標準の集計関数に基づいてメジャーを作成することも、DAX を使用して独自の数式を定義することもできます。 各メジャーには、数式に加え、名前、テーブルの詳細、形式、小数点以下桁数などの、メジャーのデータ型によって定義されるプロパティがあります。  
@@ -56,7 +55,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**総計**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- メジャーは、モデル デザイナーのメジャー グリッドを使用してデザイン時に作成されます。 各テーブルにはメジャー グリッドがあります。 既定では、メジャー グリッドはモデル デザイナーの各テーブルの下に表示されます。 特定のテーブルのメジャー グリッドを表示しないことも選択できます。 テーブルのメジャー グリッドの表示を切り替えるには、 **[テーブル]** メニューの **[メジャー グリッドの表示]**をクリックします。  
+ メジャーは、モデル デザイナーのメジャー グリッドを使用してデザイン時に作成されます。 各テーブルにはメジャー グリッドがあります。 既定では、メジャー グリッドはモデル デザイナーの各テーブルの下に表示されます。 特定のテーブルのメジャー グリッドを表示しないことも選択できます。 テーブルのメジャー グリッドの表示を切り替えるには、 **[テーブル]** メニューの **[メジャー グリッドの表示]** をクリックします。  
   
  メジャー グリッドでは、次の方法でメジャーを作成できます。  
   
@@ -86,7 +85,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> KPI でのメジャーの使用  
  KPI (主要業績評価指標) は、メジャーによって定義される *基準* 値を、同じくメジャーまたは絶対値によって定義される *対象* の値と比較することによって定義されます。 KPI には *状態*も含まれています。状態とは、しきい値間の対象の値と比較して基準値を評価した場合の計算結果をグラフィカルに表示したものです。 KPI は、多くの場合、重要なビジネス基準における傾向を特定するためにビジネス プロフェッショナルによって使用されます。  
   
- どのメジャーも KPI のベース メジャーとして使用できます。 KPI を作成するには、メジャー グリッドでメジャーを右クリックして、 **[KPI の作成]**をクリックします。 [主要業績評価指標] ダイアログ ボックスが開き、(メジャーまたは絶対値によって定義される) 対象の値を指定し、状態しきい値とグラフィック タイプを定義できるようになります。 詳細については、次を参照してください。 [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)です。  
+ どのメジャーも KPI のベース メジャーとして使用できます。 KPI を作成するには、メジャー グリッドでメジャーを右クリックして、 **[KPI の作成]** をクリックします。 [主要業績評価指標] ダイアログ ボックスが開き、(メジャーまたは絶対値によって定義される) 対象の値を指定し、状態しきい値とグラフィック タイプを定義できるようになります。 詳細については、次を参照してください。 [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)です。  
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   

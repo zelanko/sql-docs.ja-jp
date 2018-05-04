@@ -1,37 +1,36 @@
 ---
-title: "CreateOrReplace コマンド (TMSL) |Microsoft ドキュメント"
-ms.custom: 
+title: CreateOrReplace コマンド (TMSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d658378bde1e3a58f36b1137328f723ad3d380d5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fac0e43a8c1a8ec8dbdfdc3a255bdee1a74bddae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createorreplace-command-tmsl"></a>CreateOrReplace コマンド (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]作成するか、指定したオブジェクトと指定されているすべての子オブジェクトを置き換えます。 存在しないオブジェクトが作成されます。 既存のオブジェクトは、新しい定義に置き換えられます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  作成するか、指定したオブジェクトと指定されているすべての子オブジェクトを置き換えます。 存在しないオブジェクトが作成されます。 既存のオブジェクトは、新しい定義に置き換えられます。  
   
  読み取り/書き込みプロパティを指定するには、それらすべてを含めることを確認してください。 読み取り/書き込みオブジェクトがない場合は、削除であると見なされます。  
   
 ## <a name="request"></a>要求  
  要求の構造は、オブジェクトによって異なります。 親であるオブジェクトがすべての子、兄弟と親の完全なオブジェクトの定義は必要ありませんがあります。  
   
- [データベース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
+ [データベース オブジェクト&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
   
  既存のデータベースをその名前、モデルが変更されたプロパティ、および接続を指定する名前が変更された、最小限のデータベース定義に置き換えます。 テーブル、パーティション、またはリレーションシップ オブジェクトの定義に含まれていないと、これらすべてのオブジェクトが削除されます。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [データ ソース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)接続名が置き換えられます。  
+ [データ ソース オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)接続名が置き換えられます。  
   
 ```  
 {  
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)指定された 1 つだけを残して、既存のテーブルが上書きされます。  
+ [Tables オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)指定された 1 つだけを残して、既存のテーブルが上書きされます。  
   
 ```  
 {  
@@ -178,7 +177,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [パーティション オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
+ [パーティション オブジェクト&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
   
  パーティション名に置き換えます。 パーティションのオブジェクトが 3 つの読み取り/書き込みプロパティを持つ: ソースの名前を説明します。 読み取り/書き込みプロパティを指定するには、それらすべてを含めることを確認してください。 読み取り/書き込みオブジェクトがない場合は、削除であると見なされます。  
   
@@ -212,7 +211,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [ロール オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)メンバーを含む 1 つのロールの定義に置換します。  
+ [ロール オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)メンバーを含む 1 つのロールの定義に置換します。  
   
 ```  
 {  
@@ -511,7 +510,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用状況 (エンドポイント)  
- このコマンドの要素がのステートメントで使用される、[メソッドの実行 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
+ このコマンドの要素がのステートメントで使用される、[メソッドの実行&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
   
 -   SQL Server Management Studio (SSMS) での XMLA ウィンドウとして  
   
@@ -521,7 +520,7 @@ ms.lasthandoff: 01/08/2018
   
  SSMS からこのコマンドの既製のスクリプトを生成できます。  たとえば、既存のデータベースを右クリックする >**スクリプト** > **データベースをスクリプト** > **作成または置換する**です。  
   
- [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください[表形式モデル スクリプト言語 &#40;です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)明確にする新機能がサポートされている.  
+ [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください[表形式モデル スクリプト言語&#40;TMSL&#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)明確にする新機能がサポートされている.  
 
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

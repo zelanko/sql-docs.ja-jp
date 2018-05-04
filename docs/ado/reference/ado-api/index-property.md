@@ -1,11 +1,9 @@
 ---
 title: Index プロパティ |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b808a65032871bac2b20eb3513dd5bfcd292e55e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-property"></a>Index プロパティ
 有効にインデックスを現在の名前を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/18/2018
   
  インデックスを設定できる場合、 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティは**adLockPessimistic**または**adLockOptimistic**、し、暗黙的な[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)操作を実行します。 これにより、現在および影響を受けるグループが解放されます。 任意の既存のフィルターが解放され、並べ替えられたの最初の行を現在の行位置が変更された**Recordset**です。  
   
- **インデックス**と共にプロパティが使用される、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドです。 基になるプロバイダーがサポートしていない場合、**インデックス**プロパティ、およびこのインターフェイス、**シーク**メソッドの使用を検討、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド代わりにします。 決定するかどうか、**レコード セット**オブジェクトを含むインデックスをサポートしている、[をサポートしている](../../../ado/reference/ado-api/supports-method.md)**(adIndex)**メソッドです。  
+ **インデックス**と共にプロパティが使用される、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドです。 基になるプロバイダーがサポートしていない場合、**インデックス**プロパティ、およびこのインターフェイス、**シーク**メソッドの使用を検討、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド代わりにします。 決定するかどうか、**レコード セット**オブジェクトを含むインデックスをサポートしている、[をサポートしている](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** メソッドです。  
   
  組み込み**インデックス**プロパティが動的に関連しない[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ、インデックスを扱うこれら両方ができます。  
   

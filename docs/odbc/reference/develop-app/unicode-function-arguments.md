@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d0b2e30db5cacd2266ee14ec847210d7ff8407b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1267e54f1f0ce50493558be36531138c00a067b9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
 ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI と Unicode の両方の引数の文字列や文字の SQLPOINTER へのポインターをそのまま使用するすべての関数のバージョンをサポートします。 Unicode 関数は、関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (のサフィックスの有無を呼び出すことができる*A*) 現在の ODBC API 関数と同じです。  
@@ -72,7 +71,7 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、ANSI
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  使用されなくなった関数には Unicode から ANSI へのマッピングのサポートがあるため、ODBC 3*.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています*。x* 、UNICODE を使用アプリケーション**#define**です。  
+>  使用されなくなった関数には Unicode から ANSI へのマッピングのサポートがあるため、ODBC 3 *.x*ドライバー マネージャーは、ODBC 2 を再コンパイルをサポートしています*。x* 、UNICODE を使用アプリケーション **#define**です。  
   
  このセクションでは、次のトピックを扱います。  
   

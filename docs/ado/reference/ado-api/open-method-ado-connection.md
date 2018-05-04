@@ -1,11 +1,9 @@
 ---
 title: Open メソッド (ADO 接続) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 980e53611f5c52e0ef426d22f3f8cc4a9294c877
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 252afc6de9b6cf405fba7ae21a191beef2c198e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO 接続)
 データ ソースへの接続を開きます。  
@@ -57,7 +54,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="remarks"></a>解説  
  使用して、**開く**メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトは、データ ソースへの物理接続を確立します。 このメソッドが正常に完了すると後の接続はライブおよびに対してコマンドを発行し、結果を処理することができます。  
   
- 省略可能なを使用して*ConnectionString*の系列を含む接続文字列を指定する引数*引数**値 =*セミコロンで区切られたステートメントまたはURL で識別されるリソース ファイルまたはディレクトリ。 **ConnectionString**プロパティで使用される値を自動的に継承する、 *ConnectionString*引数。 そのため、設定するか、 **ConnectionString**のプロパティ、**接続**、開く前にオブジェクト、またはを使用して、 *ConnectionString*設定またはオーバーライドへの引数中に現在の接続パラメーター、**開く**メソッドの呼び出しです。  
+ 省略可能なを使用して*ConnectionString*の系列を含む接続文字列を指定する引数*引数**値 =* セミコロンで区切られたステートメントまたはURL で識別されるリソース ファイルまたはディレクトリ。 **ConnectionString**プロパティで使用される値を自動的に継承する、 *ConnectionString*引数。 そのため、設定するか、 **ConnectionString**のプロパティ、**接続**、開く前にオブジェクト、またはを使用して、 *ConnectionString*設定またはオーバーライドへの引数中に現在の接続パラメーター、**開く**メソッドの呼び出しです。  
   
  ユーザー名とパスワード両方の情報を渡す場合、 *ConnectionString*引数と省略可能な*UserID*と*パスワード*、引数、 *UserID*と*パスワード*引数で指定された値が上書きされます*ConnectionString*です。  
   

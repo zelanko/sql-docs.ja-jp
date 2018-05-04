@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 184061f0637aa5f4f17921623c02886fde1c58e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 432a53228022c2f332758252520f980c3faa5436
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,10 +103,10 @@ srcdata
   
  *desttype* が SRVDECIMAL または SRVNUMERIC である場合、*srcdata* パラメーターは DBNUMERIC 構造体または DBDECIMAL 構造体を指すポインターである必要があります。そのとき、構造体の有効桁数と小数点以下桁数のフィールドには、必要な値を設定しておきます。 既定の有効桁数を指定するには DEFAULTPRECISION を、既定の小数点以下桁数を指定するには DEFAULTSCALE を使用できます。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  記述された列の番号を返します。 最初の列は列 1 です。 エラーが発生すると 0 を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **srv_sendrow** を初めて呼び出す前に、行内の各列に対して 1 回ずつ **srv_describe** 関数を呼び出しておく必要があります。 行内の列は任意の順で記述できます。  
   
  完全な結果セットの送信が完了する前に行内の各列のソース データの位置および長さを変更するには、それぞれ **srv_setcoldata** と **srv_setcollen** を使用します。  

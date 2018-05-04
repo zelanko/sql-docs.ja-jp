@@ -32,12 +32,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 315ab1f6f066cad8a0a6652bac5fb24617ac29c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;モデル&gt;PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -112,7 +111,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   子供は 2 名  
   
- 人が自転車とによって返される、表形式の値のセットを購入するかどうかを示すブール値を返します、クエリの TM Decision Tree マイニング モデルとサブジェクトに関する既知の特性を使用して、 [PredictHistogram & # #40; DMX &#41;](../dmx/predicthistogram-dmx.md)予測が行われた方法を説明する関数。  
+ 人が自転車とによって返される、表形式の値のセットを購入するかどうかを示すブール値を返します、クエリの TM Decision Tree マイニング モデルとサブジェクトに関する既知の特性を使用して、 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 、予測が行われた方法を説明する関数。  
   
 ```  
 SELECT  
@@ -186,7 +185,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [予測 &#40;DMX&#41;](../dmx/predict-dmx.md)関数はポリモーフィックでは、すべての種類のモデルで使用できます。 この関数の引数に値 3 を使用して、クエリから返される項目の数を制限します。 **選択**NATURAL PREDICTION JOIN 句を下記の一覧が予測の入力として使用する値を提供します。  
+ [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md)関数はポリモーフィックでは、すべての種類のモデルで使用できます。 この関数の引数に値 3 を使用して、クエリから返される項目の数を制限します。 **選択**NATURAL PREDICTION JOIN 句を下記の一覧が予測の入力として使用する値を提供します。  
   
 ```  
 SELECT FLATTENED  
@@ -210,9 +209,9 @@ NATURAL PREDICTION JOIN
  予測可能属性を含む列`[v Assoc Seq Line Items]`テーブルの列は、クエリは、入れ子になったテーブルを含む 1 つの列を返します。 既定では入れ子になったテーブル列の名前は`Expression`します。 使用することができます、プロバイダーが階層的な行セットをサポートしていない場合、 **FLATTENED**キーワードやすく、結果を表示するこの例で示すようにします。  
   
 ## <a name="see-also"></a>参照  
- [選択 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -26,12 +26,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d4a543f38711f966900a7b9a19533725fcfd7c0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d3e039a298e3bad8e76d76f9d81b065fa1b21c9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   番号付きプロシージャのパラメーターごとに 1 行のデータを格納します。 番号付きストアド プロシージャを作成する場合は、ベース プロシージャの番号が 1 になり、 以降のプロシージャの番号は 2、3 のように続きます。 **sys.numbered_procedure_parameters**番号 2、後続のすべてのプロシージャのパラメーターの定義が含まれていますを超えています。 このビューでは、ベース ストアド プロシージャ (番号 = 1) のパラメーターは示されません。 ベース ストアド プロシージャは番号なしのストアド プロシージャと類似しており、 パラメーターを表現するため、 [sys.parameters (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)です。  
   
 > [!IMPORTANT]  
->  番号付きプロシージャは使用されなくなりました。 番号付きプロシージャの使用はお勧めしません。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
+>  番号付きプロシージャは非推奨とされました。 番号付きプロシージャの使用はお勧めしません。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
   
 > [!NOTE]  
 >  XML および CLR パラメーターは、番号付きプロシージャではサポートされていません。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c50ff4e923e046a157c06ccb139e1b8645d1e9aa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3c398efea03ccf69d7a5cd494189a3b936e77490
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancel-element-xmla"></a>Cancel 要素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]現在実行中のコマンドを取り消します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  現在実行中のコマンドを取り消します、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,11 +54,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -75,10 +74,10 @@ ms.lasthandoff: 01/08/2018
   
  通常、**キャンセル**コマンドを使用して、現在アクティブなセッションで実行中のコマンドをキャンセルします。 その場合は、none の子要素の**キャンセル**コマンドを指定する必要があります。 **キャンセル**コマンドこともできます管理者によって接続または現在アクティブなセッションを除いて、セッションの実行中のコマンドをキャンセルします。 特定のデータベースの管理者権限を持つロールのメンバーは、そのデータベースに該当する接続やセッションでのコマンドをキャンセルできます。サーバー管理者は、特定の Analysis Services インスタンスに関連した接続やセッションでのコマンドをキャンセルできます。  
   
- 現在の接続やセッションに関する情報を取得する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、インスタンス、 **Discover** 、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求するメソッドを実行できます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、 **Discover**メソッドを参照してください[検出メソッド &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
+ 現在の接続やセッションに関する情報を取得する、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、インスタンス、 **Discover** 、それぞれ DISCOVER_CONNECTIONS および DISCOVER_SESSIONS スキーマ行セットを要求するメソッドを実行できます。 特定のデータベースの管理者権限を持つロールのメンバーは、DISCOVER_SESSIONS スキーマ行セットの SESSION_CURRENT_DATABASE 制限列の中でそのデータベースを指定することにより、特定のデータベースに関連したセッションだけを返すことができます。 詳細については、 **Discover**メソッドを参照してください[検出メソッド&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)です。  
   
 ## <a name="see-also"></a>参照  
- [バッチ要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [コマンドと #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [バッチ要素 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [コマンドと #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

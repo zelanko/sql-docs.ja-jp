@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescRec
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67110cfb1f6130153ced12525a2bd7f475b8e63a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 関数
 **準拠**  
@@ -107,7 +106,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY016|実装行記述子は変更できません。|*DescriptorHandle*引数が、IRD に関連付けられました。|  
 |HY021|不整合な記述子情報|*型*フィールド、または、記述子の SQL_DESC_TYPE フィールドに関連付けられた、他のフィールドが無効であるか、一貫性のあります。<br /><br /> 整合性チェック中にチェック記述子の情報が一致していません。 (「一貫性チェック、」このセクションの後半を参照してください)。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) ドライバーは ODBC 2*.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0 であり、引数に指定された値に設定された*BufferLength*されました4 に等しくないです。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM) ドライバーは ODBC 2 *.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0 であり、引数に指定された値に設定された*BufferLength*されました4 に等しくないです。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *DescriptorHandle*関数をサポートしていません。|  

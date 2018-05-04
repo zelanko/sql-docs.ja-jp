@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39e6bf4734a63c79b09a78178e567900ff636bd3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69440a593dabb61c2578ec75c2f381c46f70e32e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pattern-value-arguments"></a>パターン値の引数
 などのいくつかの引数で、カタログ関数、 *TableName*引数**SQLTables**、検索パターンをそのまま使用します。 これらの引数は、検索パターンをそのまま使用 SQL_ATTR_METADATA_ID ステートメント属性が SQL_FALSE; に設定されている場合これらは、この属性が SQL_TRUE に設定されている場合、検索パターンを受け入れない識別子引数です。  
@@ -51,6 +50,6 @@ ms.lasthandoff: 04/16/2018
  検索パターンをそのまま使用する引数の検索パターンの文字をエスケープするために特別な注意を実行する必要があります。 これは特に、下線は識別子でよく使用します。 アプリケーションでよくある間違いは、1 つのカタログ関数から値を取得し、その値を別のカタログ関数の検索パターン引数を渡すにです。 たとえば、アプリケーションの結果から MY_TABLE を設定、テーブル名を取得する**SQLTables**を渡します**SQLColumns** MY_TABLE 内の列の一覧を取得します。 MY_TABLE の列の取得に、代わりに、アプリケーションは MY_TABLE、MY_TABLE MY1TABLE、MY2TABLE、やなどの検索パターンに一致するすべてのテーブルの列を取得します。  
   
 > [!NOTE]  
->  ODBC 2 です。*x*ドライバー内の検索パターンをサポートしていません、 *CatalogName*引数**SQLTables**です。 ODBC 3*.x* SQL_ATTR ODBC_VERSION 環境属性を SQL_OV_ODBC3 に設定されている場合、ドライバーはこの引数での検索パターンを受け入れる; SQL_OV_ODBC2 に設定されている場合、この引数での検索パターンは同意しません。  
+>  ODBC 2 です。*x*ドライバー内の検索パターンをサポートしていません、 *CatalogName*引数**SQLTables**です。 ODBC 3 *.x* SQL_ATTR ODBC_VERSION 環境属性を SQL_OV_ODBC3 に設定されている場合、ドライバーはこの引数での検索パターンを受け入れる; SQL_OV_ODBC2 に設定されている場合、この引数での検索パターンは同意しません。  
   
  検索パターン引数に null ポインターを渡すことです。 その引数の検索を制限しませんつまり、null ポインターと、検索パターン % (任意の文字) は等価です。 ただし、パターンの検索に長さ 0: 長さがゼロの文字列には、有効なポインター: 空の文字列のみと一致する ("") です。

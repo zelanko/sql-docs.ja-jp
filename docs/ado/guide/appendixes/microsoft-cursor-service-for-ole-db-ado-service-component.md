@@ -1,11 +1,9 @@
 ---
 title: OLE DB (ADO サービス コンポーネント) 用 Microsoft カーソル サービス |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17bf332ec692bbcaaafaaf5a491d47b360064f56
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB の概要の Microsoft カーソル サービス
 OLE DB 用の Microsoft カーソル サービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、ユーザーは、すべてのデータ プロバイダーで比較的一定な機能を認識します。

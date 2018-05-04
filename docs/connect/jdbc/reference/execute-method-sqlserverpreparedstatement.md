@@ -3,15 +3,12 @@ title: execute メソッド (SQLServerPreparedStatement) |Microsoft ドキュメ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.execute
 apilocation:
@@ -22,24 +19,23 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2082f674300264ee0c51564b8c9e3eefb8cf9bf3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 71db3f2474ec64658d52d0960c26768433e1065d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この SQL ステートメントを実行します。 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)オブジェクトで、SQL ステートメントの任意の種類を指定できます。  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの SQL ステートメントを実行します。すべての種類の SQL ステートメントを実行することができます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
 |名前|Description|  
 |----------|-----------------|  
-|[() を実行します。](../../../connect/jdbc/reference/execute-method.md)|この SQL ステートメントを実行します。 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)オブジェクトで、SQL ステートメントの任意の種類を指定できます。|  
-|[実行 (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
+|[() を実行します。](../../../connect/jdbc/reference/execute-method.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの SQL ステートメントを実行します。すべての種類の SQL ステートメントを実行することができます。|  
+|[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

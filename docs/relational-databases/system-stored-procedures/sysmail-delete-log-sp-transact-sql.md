@@ -24,12 +24,11 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b6af0845ec009297b2395276c07b2d6af01a2fda
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c9ebf289e6ecc73afeea6a9370bf32696cf0bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
  日付と時刻で指定されたエントリを削除、 *logged_before*引数。 *logged_before*は**datetime**で、既定値としては NULL です。 NULL はすべての日付を表します。  
   
  [ **@event_type** =] **'***event_type***'**  
- ログとして指定された型のエントリを削除、 *event_type*です。 *event_type*は**varchar (15)**既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**です。 NULL はすべてのイベントの種類を表します。  
+ ログとして指定された型のエントリを削除、 *event_type*です。 *event_type*は**varchar (15)** 既定値はありません。 有効なエントリは**成功**、**警告**、**エラー**、および**情報**です。 NULL はすべてのイベントの種類を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

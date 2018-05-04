@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB Provider for ODBC |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界がいずれかですべてのデータ ソースは、OLE DB インターフェイスを公開する ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースはこの方法はまだ公開されません。 ただし、現在使用しているほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -39,7 +36,7 @@ ADO または RDS プログラマでは、理想的な世界がいずれかで�
  これは、ADO の既定のプロバイダーと、すべてのプロバイダーに依存する ADO プロパティとメソッドがサポートされます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、設定、**プロバイダー =**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
+ このプロバイダーに接続するには、設定、**プロバイダー =** の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
 
 ```
 MSDASQL
@@ -67,11 +64,11 @@ MSDASQL
  省略した場合、ADO の既定のプロバイダーは、このため、**プロバイダー =** ADO 接続文字列からのパラメーターは、このプロバイダーへの接続を確立するために試行されます。
 
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
 
  プロバイダーは、ADO で定義されているだけでなく特定の接続パラメーターをサポートしていません。 ただし、プロバイダーは、ODBC ドライバー マネージャーに、ADO 以外の接続パラメーターを渡します。
 
- 省略することができますので、**プロバイダー**パラメーター、ADO 接続文字列を同じデータ ソースの ODBC 接続文字列と同じであるため組み込むことができます。 同じパラメーター名を使用して (**ドライバー =**、**データベース =**、 **DSN =**など)、値、および同様の構文は、ODBC 接続文字列を作成するときにします。 定義済みのデータ ソース名 (DSN) または FileDSN の有無を接続することができます。
+ 省略することができますので、**プロバイダー**パラメーター、ADO 接続文字列を同じデータ ソースの ODBC 接続文字列と同じであるため組み込むことができます。 同じパラメーター名を使用して (**ドライバー =**、**データベース =**、 **DSN =** など)、値、および同様の構文は、ODBC 接続文字列を作成するときにします。 定義済みのデータ ソース名 (DSN) または FileDSN の有無を接続することができます。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>DSN、FileDSN の構文:
 

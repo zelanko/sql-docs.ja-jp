@@ -1,30 +1,28 @@
 ---
-title: "Analysis Services の開発者向けドキュメント |Microsoft ドキュメント"
-ms.custom: 
+title: Analysis Services の開発者向けドキュメント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6feb651ac8a473bf717d86cdeccef6c16bc1a74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,14 +71,14 @@ Analysis Services には、コード内のソリューションをカスタマ�
 
 [Analysis Services のスキーマ行セット](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)サーバーの状態、サーバー操作、およびデータベース オブジェクトに関する情報を提供するスキーマ行セットについて説明します。
 
-[XML for Analysis &#40;です。XMLA &#41;参照](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)するのに役立つ XMLA の説明の概念は、XMLA が、カスタム ソリューションに貢献する方法を理解します。 XMLA 1.1 仕様への準拠のレベルについても説明します。
+[XML for Analysis &#40;XMLA&#41;参照](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)するのに役立つ XMLA の説明の概念は、XMLA が、カスタム ソリューションに貢献する方法を理解します。 XMLA 1.1 仕様への準拠のレベルについても説明します。
 
-[Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) XMLA に対する ASSL 拡張について説明します。 ASSL では、XMLA 仕様を補完する、Analysis Services 多次元モデルのデータ定義と操作言語を提供します。
+[Analysis Services スクリプト言語&#40;の ASSL を XMLA&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) XMLA に対する ASSL 拡張について説明します。 ASSL では、XMLA 仕様を補完する、Analysis Services 多次元モデルのデータ定義と操作言語を提供します。
 
-[表形式モデルの言語 &#40; のスクリプトTMSL &#41;参照](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL は、互換性レベル 1200 以上の表形式モデルの JSON 表現。 オブジェクトの定義は、テーブル、列、およびリレーションシップではなく Analysis Services データをモデリングする新しい表形式モードである場合に使い慣れたでない可能性のあるマルチ ディメンションのメタデータと同様に、表形式のメタデータ構造に基づいています。
+[表形式モデル スクリプト言語&#40;TMSL&#41;参照](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL は、互換性レベル 1200 以上の表形式モデルの JSON 表現。 オブジェクトの定義は、テーブル、列、およびリレーションシップではなく Analysis Services データをモデリングする新しい表形式モードである場合に使い慣れたでない可能性のあるマルチ ディメンションのメタデータと同様に、表形式のメタデータ構造に基づいています。
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)ドキュメントの管理の機能に加えて、汎用的な使用されるコマンドレット**Invoke ASCmd**を任意のスクリプトまたはクエリの入力として受け取るコマンドレット。
 
 ## <a name="see-also"></a>参照
 [テクニカル リファレンス](../analysis-services/powershell/technical-reference-ssas.md) 
-[クエリと式言語リファレンス &#40;です。Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[クエリと式言語リファレンス&#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

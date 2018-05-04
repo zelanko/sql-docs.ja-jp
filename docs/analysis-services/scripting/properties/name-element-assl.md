@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e05f3c2fb94529e7b338f359e1ca809d034706cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b7111e9321ebc68c7ad29c0278f12622f84800cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-element-assl"></a>Name 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親要素の名前が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  親要素の名前が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (最大 100 文字)|  
 |既定値|異なります|  
-|基数|1-1: 回だけ出現する必須要素|  
+|Cardinality|1-1: 回だけ出現する必須要素|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -97,12 +96,12 @@ ms.lasthandoff: 01/08/2018
 |親要素|無効な文字|  
 |--------------------|------------------------|  
 |[[サーバー]](../../../analysis-services/scripting/objects/server-element-assl.md)|名前は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows コンピューター名の規則に従う必要があります。 IP アドレスは無効です。|  
-|[データ ソース](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
-|[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)、[要素の属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
-|他のすべての親要素|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  
+|[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"(){}<>|  
+|[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)、[要素の属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"& % $! + ={}<>|  
+|他のすべての親要素|.,;'`:/\\*&#124;?"& % $! + = (){}<>|  
   
 ## <a name="see-also"></a>参照  
- [ID 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/id-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [ID 要素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/id-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

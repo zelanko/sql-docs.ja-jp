@@ -26,13 +26,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f564f6b610996d00d366a4ade1af8204d688a44f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1147bf6ebd4683a51bb2fed95cdddb2370cc843d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 |**max_used_memory_kb**|**bigint**|この時点までに使用された最大物理メモリ (KB 単位)。|  
 |**query_cost**|**float**|推定クエリ コスト。|  
 |**timeout_sec**|**int**|このクエリがメモリ許可要求をやめるまでのタイムアウト (秒単位)。|  
-|**resource_semaphore_id**|**smallint**|このクエリが待機しているリソース セマフォの非一意の ID。<br /><br /> **注:**この ID は一意のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。 この変更は、クエリの実行のトラブルシューティングに影響する可能性があります。 詳細については、このトピックの後半の「解説」セクションを参照してください。|  
+|**resource_semaphore_id**|**smallint**|このクエリが待機しているリソース セマフォの非一意の ID。<br /><br /> **注:** この ID は一意のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。 この変更は、クエリの実行のトラブルシューティングに影響する可能性があります。 詳細については、このトピックの後半の「解説」セクションを参照してください。|  
 |**queue_id**|**smallint**|このクエリがメモリ許可を待機している待機キューの ID。 メモリが既に許可されている場合は NULL です。|  
 |**wait_order**|**int**|指定した待機クエリの順番**queue_id**です。 他のクエリがメモリ許可を取得するか、タイムアウトになった場合、個々のクエリのこの値は変化する可能性があります。メモリが既に許可されている場合は NULL です。|  
 |**is_next_candidate**|**bit**|次のメモリ許可の候補。<br /><br /> 1 = はい<br /><br /> 0 = いいえ<br /><br /> NULL = メモリが既に許可されている|  

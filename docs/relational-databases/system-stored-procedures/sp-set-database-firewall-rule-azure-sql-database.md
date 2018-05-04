@@ -27,13 +27,12 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d476b15aad4376aa5aea3f51d177b00a5bba8924
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 359854184824a12dc1a05203df820e1fa9cd8c9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
 ## <a name="arguments"></a>引数  
  **[@name**  =] [N]'*名前*'  
- データベース レベルのファイアウォール設定を説明し、区別するために使用される名前。 *名前*は**nvarchar (128)**既定値はありません。 Unicode 識別子`N`は省略可能です[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。 
+ データベース レベルのファイアウォール設定を説明し、区別するために使用される名前。 *名前*は**nvarchar (128)** 既定値はありません。 Unicode 識別子`N`は省略可能です[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]です。 
   
  **[@start_ip_address**  =] '*start_ip_address*'  
- データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。 *start_ip_address*は**varchar (50)**既定値はありません。  
+ データベース レベルのファイアウォール設定の範囲において最も小さい IP アドレス。 これ以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] インスタンスへの接続を試みることができます。 最下位の IP アドレスは`0.0.0.0`します。 *start_ip_address*は**varchar (50)** 既定値はありません。  
   
  [**@end_ip_address** =] '*end_ip_address*'  
- データベース レベルのファイアウォール設定の範囲の最上位の IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。 *end_ip_address*は**varchar (50)**既定値はありません。  
+ データベース レベルのファイアウォール設定の範囲の最上位の IP アドレス。 IP アドレス以下への接続にこれを試みる、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]インスタンス。 最上位の IP アドレスは`255.255.255.255`します。 *end_ip_address*は**varchar (50)** 既定値はありません。  
   
  次の表は、サポートされている引数を示していて、オプション[!INCLUDE[ssSDS](../../includes/sssds-md.md)]です。  
   

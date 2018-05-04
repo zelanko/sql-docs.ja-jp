@@ -1,11 +1,9 @@
 ---
 title: DataControl オブジェクトの例 (VBScript) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53ae4e8ab5a0dcf7af1e0e1e20ca17a9b4a62cdb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3e4e3c330b4e66b40704ddaa6d2bcc06b9a7aead
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl オブジェクトの例 (VBScript)
 > [!IMPORTANT]
@@ -99,7 +96,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- 次の例は、のために必要なパラメーターを設定する方法を示します**.rds ですDataControl**実行時にします。 この例をテストするを切り取って貼り付ける次のコード間、\<本文 > と\</Body > で標準の HTML タグが文書化し、名前を付けます**DataControlRuntimeVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、のために必要なパラメーターを設定する方法を示します **.rds ですDataControl**実行時にします。 この例をテストするを切り取って貼り付ける次のコード間、\<本文 > と\</Body > で標準の HTML タグが文書化し、名前を付けます**DataControlRuntimeVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

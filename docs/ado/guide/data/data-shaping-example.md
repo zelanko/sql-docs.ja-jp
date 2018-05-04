@@ -1,11 +1,9 @@
 ---
 title: データの整形を行う例 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0685e0c593a77f5369513fa9b39fe61f89498ff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 3ead77ee3f08e2a4ffe9e385b32d289a77a55a92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-example"></a>データ シェイプの例
 次のデータの整形を行うコマンドは、階層構造を構築する方法を示します**レコード セット**から、**顧客**と**Orders** Northwind データベース内のテーブルです。  

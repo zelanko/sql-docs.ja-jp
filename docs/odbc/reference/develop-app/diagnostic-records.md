@@ -3,15 +3,12 @@ title: 診断レコード |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - handles [ODBC], diagnostic records
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 191be40ee4d85cc3dcb0915887aa4ef734f67e04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d6395d87e5691dc33b5a08267ef83c459f94c0d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-records"></a>診断レコード
 各環境に関連付けられた、接続、ステートメント、および記述子ハンドルは*診断レコード*です。 これらのレコードと呼ばれる特定のハンドルを使用する最後の関数に関する診断情報が含まれています。 ハンドルを使用して別の関数が呼び出されたときにのみ、レコードが置き換えられます。 任意の時点で格納できる診断レコードの数に制限はありません。  

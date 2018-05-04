@@ -1,29 +1,27 @@
 ---
-title: "非表示にして、属性階層を無効化 |Microsoft ドキュメント"
-ms.custom: 
+title: 非表示にして、属性階層を無効化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a880757dcdaa945cbe9fdb100bb1ded80e584227
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a834f0796041fbdf4b3336cf96efb06c4d7304b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>レッスン 4-4-非表示にして、属性階層を無効化
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -89,9 +87,9 @@ ms.lasthandoff: 02/15/2018
   
     ![False に設定された AttributeHierarchyEnabled プロパティ](../analysis-services/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled プロパティが False に設定します。")  
   
-5.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+5.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-6.  処理が完了したら **[ブラウザー]** タブに切り替え、 **[再接続]**をクリックします。その後、変更後の属性階層を表示してみてください。  
+6.  処理が完了したら **[ブラウザー]** タブに切り替え、 **[再接続]** をクリックします。その後、変更後の属性階層を表示してみてください。  
   
     変更した属性のメンバーは、 **[階層]** ボックスの一覧に属性階層として表示されません。 無効にしたいずれかの階層属性をユーザー階層のレベルとして追加しようとすると、ユーザー定義階層に追加するには、その属性階層を有効にしなければならないことを知らせるエラーが表示されます。  
   
@@ -123,15 +121,15 @@ ms.lasthandoff: 02/15/2018
   
     属性が非表示に設定されていても、ユーザー階層にレベルとして追加することができます。  
   
-6.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+6.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-7.  配置が正常に完了したら、Customer ディメンションの **[ブラウザー]** タブに切り替え、 **[再接続]**をクリックします。  
+7.  配置が正常に完了したら、Customer ディメンションの **[ブラウザー]** タブに切り替え、 **[再接続]** をクリックします。  
   
 8.  **[階層]** ボックスの一覧から、変更した属性階層のいずれかを選択してみます。  
   
     **[階層]** ボックスの一覧には、変更した属性階層は何も表示されないはずです。  
   
-9. **[階層]** ボックスの一覧で **[Customer Geography]**をクリックし、ブラウザー ペインに各レベルを表示します。  
+9. **[階層]** ボックスの一覧で **[Customer Geography]** をクリックし、ブラウザー ペインに各レベルを表示します。  
   
     ユーザー定義階層には、非表示にした **Postal Code** レベルと **Full Name**レベルが表示されます。  
   

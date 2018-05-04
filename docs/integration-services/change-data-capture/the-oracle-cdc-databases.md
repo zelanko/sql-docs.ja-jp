@@ -1,28 +1,28 @@
 ---
-title: "Oracle CDC データベース | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC データベース | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 566392a8118eba1139ef7aef539d29f4b7832ea0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/15/2018
 |アイテム|Description|  
 |----------|-----------------|  
 |version|CDC インスタンスの構成のバージョンを追跡します。 このテーブルが更新されたり、キャプチャ インスタンスが追加または削除されたりするたびに更新されます。|  
-|connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
+|connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
 |use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**: 認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**: Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
 |username|ログ マイニング Oracle データベース ユーザーの名前です。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |パスワード|ログ マイニング Oracle データベース ユーザーのパスワードです。 **use_windows_authentication = 0**の場合のみ必須です。|  

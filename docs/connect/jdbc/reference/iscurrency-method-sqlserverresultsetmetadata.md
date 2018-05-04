@@ -3,15 +3,12 @@ title: isCurrency メソッド (SQLServerResultSetMetaData) |Microsoft ドキュ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.isCurrency
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d8fd88cac8df43ae6a5e7cfbc47d65a9db127b6f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 885e7a8f8f1e32822530b4afa414415e2b667db6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +40,7 @@ public boolean isCurrency(int column)
 #### <a name="parameters"></a>パラメーター  
  *column*  
   
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  **true**列がキャッシュの値である場合。 それ以外の場合は、 **false**です。  

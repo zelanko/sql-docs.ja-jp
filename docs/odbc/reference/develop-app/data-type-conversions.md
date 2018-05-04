@@ -3,15 +3,12 @@ title: データ型の変換 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], conversions
 - SQL data types [ODBC], conversions
@@ -23,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2af1af29f9fa9f4d43b5b56e9dfe55c8c67fcea8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0501e4bf627d8dafddfbf5020345d43135af9d6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-conversions"></a>データ型変換
 データに変換できる 1 つの型から別に 4 回のいずれかの: 転送するときにデータが 1 つのアプリケーションの変数から間 (C に C)、ステートメントのパラメーター (C から SQL へ) をアプリケーション変数にデータを送信するときに結果セット列のデータが返される場合アプリケーション変数 (SQL から C へ) とときにデータを転送 1 つのデータ ソースの列から (SQL to SQL) のもう 1 つです。  

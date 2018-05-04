@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ba90a54159f126e49148de8a8425e74d02e148d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb9f4ec6fbc2e6aecff8d78ff562f35f9a546405
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL ステートメントの相互運用性
 SQL ステートメントには、アプリケーションの残りの部分と同様に、相互運用可能なまたは DBMS 固有を指定できます。 アプリケーションの残りの部分と同様にどのように相互運用可能な SQL ステートメントを選択する必要があるアプリケーションの種類によって異なります。 カスタム アプリケーションは、1 つまたは可能性のある 2 つの Dbms の機能を利用する通常設計されているために、相互運用可能な SQL ステートメントを使用する可能性は低くします。 汎用アプリケーションは、さまざまな Dbms を使用するよう設計されていますので、相互運用可能な SQL ステートメントを使用します。 垂直アプリケーション通常代替の場所間に、特定のレベルの機能を確認要求が、それ以外の場合 相互運用可能な SQL ステートメントを使用しています。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>文字列関数
 次の表は、文字列操作関数を一覧表示します。 文字列関数が呼び出すことによって、ドライバーでサポートされる、アプリケーションを判別**SQLGetInfo**で、*情報の種類*SQL_STRING_FUNCTIONS のです。  
@@ -64,5 +63,5 @@ ms.lasthandoff: 04/16/2018
 |**RTRIM (** *string_exp* **)** (ODBC 1.0)|文字を返します*string_exp*を空白で削除します。|  
 |**SOUNDEX (** *string_exp* **)** (ODBC 2.0)|内の単語のサウンドを表すデータ ソースに依存する文字の文字列を返します*string_exp*です。 たとえば、SQL Server には 4 桁の SOUNDEX コード; が返されますOracle では、各単語の音声表現を返します。|  
 |**領域 (** *カウント* **)** (ODBC 2.0)|成る文字列を返します*カウント*スペースです。|  
-|**部分文字列 (** *string_exp*、*開始*、長さ**)** (ODBC 1.0)|派生した文字列を返します*string_exp*で指定された文字位置から始まる、*開始*の*長さ*文字です。|  
+|**部分文字列 (** *string_exp*、*開始*、長さ **)** (ODBC 1.0)|派生した文字列を返します*string_exp*で指定された文字位置から始まる、*開始*の*長さ*文字です。|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|文字列を以下にするを返します*string_exp*、すべて小文字を大文字に変換します。|

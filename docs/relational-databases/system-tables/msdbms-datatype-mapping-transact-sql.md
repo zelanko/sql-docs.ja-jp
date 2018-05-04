@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0e8cf90524c833f1bca5563ea43ede9cf84a1a27
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3fa02d526bcd4042efa92032551d950b5f553932
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.lasthandoff: 04/16/2018
 |**datatype_mapping_id**|**int**|個々のデータ型マッピングを一意に識別します。|  
 |**map_id**|**int**|マッピング元のデータ型を識別します。|  
 |**dest_datatype_id**|**int**|マッピング先のデータ型を識別します。|  
-|**dest_precision**|**bigint**|ターゲットの場所、値は NULL では、有効桁数が使用されないことを意味、データ型の有効桁数の値を定義**-1**ソースのデータ型の有効桁数が使用されることを意味します。|  
-|**dest_scale**|**int**|ここで、値は NULL は小数点以下桁数が使用されていないことを意味、先のデータ型の小数点以下桁数の値を定義**-1**ソースのデータ型の小数点以下桁数が使用されていることを意味します。|  
-|**dest_length**|**bigint**|ここで、値は NULL は長さが使用されないことを意味、先のデータ型の長さとの値を定義**-1**ソースのデータ型の長さを使用することを意味します。|  
+|**dest_precision**|**bigint**|ターゲットの場所、値は NULL では、有効桁数が使用されないことを意味、データ型の有効桁数の値を定義 **-1**ソースのデータ型の有効桁数が使用されることを意味します。|  
+|**dest_scale**|**int**|ここで、値は NULL は小数点以下桁数が使用されていないことを意味、先のデータ型の小数点以下桁数の値を定義 **-1**ソースのデータ型の小数点以下桁数が使用されていることを意味します。|  
+|**dest_length**|**bigint**|ここで、値は NULL は長さが使用されないことを意味、先のデータ型の長さとの値を定義 **-1**ソースのデータ型の長さを使用することを意味します。|  
 |**dest_nullable**|**bit**|マッピングのマップ先列で NULL 値が許容されるかどうかを示します。値 NULL はこの定義が必要ではないことを示します。|  
 |**dest_createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを表すビットマップです。次のようになります。<br /><br /> **0x1**有効桁数を = です。<br /><br /> **0x2**スケールを = です。<br /><br /> **0x4**長さを = です。|  
   

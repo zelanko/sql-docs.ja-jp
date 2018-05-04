@@ -1,11 +1,9 @@
 ---
 title: 図形の APPEND 句 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>図形の APPEND 句
 列または列を図形コマンドの APPEND 句が追加され、 **Recordset**です。 多くの場合、これらの列は、チャプター列は、子を参照してください**Recordset**です。  
@@ -43,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  次のいずれかです (省略することができます、*親コマンド*完全に)。  
   
--   中かっこ (「{}」) で囲まれたプロバイダーのコマンドを返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
+-   中かっこで囲まれたプロバイダー コマンド ("{}") を返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
   
 -   別の図形のコマンドは、かっこ内に埋め込まれます。  
   
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>解説  
  *child-recordset*  
- -   中かっこ (「{}」) で囲まれたプロバイダーのコマンドを返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
+ -   中かっこで囲まれたプロバイダー コマンド ("{}") を返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーにコマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 これは通常なります SQL 言語では、ADO では、特定のクエリ言語は必要はありません。  
   
 -   別の図形のコマンドは、かっこ内に埋め込まれます。  
   
@@ -97,7 +94,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  親に追加されたチャプター列を参照する別名です。  
   
 > [!NOTE]
->  *"親列*TO*子列"*句では、一覧では実際には、各リレーションシップが定義されてがコンマで区切られています。  
+>  *"親列*TO*子列"* 句では、一覧では実際には、各リレーションシップが定義されてがコンマで区切られています。  
   
 > [!NOTE]
 >  APPEND キーワードが実際には、一覧、それぞれの句はコンマで区切るし、親に追加する別の列を定義した後の句。  

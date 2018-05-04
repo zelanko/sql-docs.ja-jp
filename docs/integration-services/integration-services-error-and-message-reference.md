@@ -1,32 +1,32 @@
 ---
-title: "Integration Services のエラーおよびメッセージのリファレンス | Microsoft Docs"
-ms.custom: 
+title: Integration Services のエラーおよびメッセージのリファレンス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a318c197ceaa9d9b45eec2d4a7d14c4c92460c6c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスのフィールドとして定義されています。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 -   [データ フロー コンポーネントのエラー メッセージ (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> エラー メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_E_**で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_E_** で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -236,8 +236,8 @@ ms.lasthandoff: 01/25/2018
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|書き込み用にファイル "%1" を開けませんでした。 ファイルが読み取り専用であるか、適切な権限がありません。|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|結果行セットがこのクエリの実行に関連付けられていません。 結果が正しく指定されていません。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|デバッグ ダンプ ファイルを正しく生成できませんでした。 hresult は 0x%1!8.8X! です。|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL の形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL の形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定された URL が無効です。 このエラーは、サーバーまたはプロキシの URL に NULL が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|指定された URL %1 が無効です。 このエラーは、http または https 以外の構成が指定されたか、または URL の形式が正しくない場合に発生する可能性があります。 有効な URL 形式は、http://ServerName:Port/ResourcePath または https://ServerName:Port/ResourcePath です。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|サーバー %1 への接続を確立できません。 このエラーは、サーバーが存在しない場合、またはプロキシの設定が正しくない場合に発生する可能性があります。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|サーバーとの接続がリセットされたか、終了しました。 後で再試行してください。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|%1 のログインに失敗しました。 このエラーは、指定されたログイン資格情報が正しくない場合に発生します。 ログイン資格情報を確認してください。|  
@@ -2025,7 +2025,7 @@ ms.lasthandoff: 01/25/2018
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  
   
 ##  <a name="msgWarning"></a> 警告メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、 **DTS_W_**で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、 **DTS_W_** で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2077,7 +2077,7 @@ ms.lasthandoff: 01/25/2018
 |0x8001F204|-2147356156|DTS_W_INITIALIZATIONEXPRESSIONISNOTASSIGNMENT|初期化式が代入式ではありません: "%1"。 このエラーは、通常 ForLoop の反復式の式が代入式ではない場合に発生します。|  
 |0x8001F205|-2147356155|DTS_W_LOGPROVIDERNOTDEFINED|実行可能ファイル "%1" は正常に貼り付けられました。 ただし、この実行可能ファイルに関連付けられたログ プロバイダーがコレクション "LogProviders" に見つかりませんでした。  この実行可能ファイルは、ログ プロバイダー情報なしで貼り付けられました。|  
 |0x8001F300|-2147355904|DTS_W_PACKAGEUPGRADED|パッケージのアップグレードに成功しました。|  
-|0x8001F42B|-2147355605|DTS_W_LEGACYPROGID|"%1" ProgID は使用しないでください。 代わりに、このコンポーネント "%2" の新しい ProgID を使用してください。|  
+|0x8001F42B|-2147355605|DTS_W_LEGACYPROGID|"%1" ProgID は非推奨とされます。 代わりに、このコンポーネント "%2" の新しい ProgID を使用してください。|  
 |0x80020918|-2147350248|DTS_W_FTPTASK_OPERATIONFAILURE|操作 "%1" に失敗しました。|  
 |0x800283A5|-2147318875|DTS_W_MSMQTASK_USE_WEAK_ENCRYPTION|暗号化アルゴリズム "%1" には、弱い暗号が使われています。|  
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|タスクが操作 "%1" を実行できませんでした。|  
@@ -2171,7 +2171,7 @@ ms.lasthandoff: 01/25/2018
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|テーブル "%1" は変更されています。 このテーブルに新しい列が追加されている可能性があります。|  
   
 ##  <a name="msgInfo"></a> 情報メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、 **DTS_I_**で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、 **DTS_I_** で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2270,7 +2270,7 @@ ms.lasthandoff: 01/25/2018
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 変換先 "%1" の挿入コミット サイズの最大値プロパティは 0 に設定されています。 このプロパティの設定により、実行中のパッケージは応答を停止する可能性があります。 詳細については、[OLE DB 変換先エディター] ([接続マネージャー] ページ) の F1 ヘルプ トピックを参照してください。|  
   
 ##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_MSG_**で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTS_MSG_** で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2309,7 +2309,7 @@ ms.lasthandoff: 01/25/2018
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
   
 ##  <a name="msgSuccess"></a> 成功時のメッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、 **DTS_S_**で始まります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、 **DTS_S_** で始まります。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2318,7 +2318,7 @@ ms.lasthandoff: 01/25/2018
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|式の評価中に切り捨てが発生しました。 評価中に切り捨てが発生しました。たとえば、中間手順のある時点で発生した可能性があります。|  
   
 ##  <a name="msgPipeline"></a> データ フロー コンポーネントのエラー メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTSBC_E_**で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、 **DTSBC_E_** で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
   
 |16 進コード|10 進コード|シンボル名|Description|  
 |----------------------|------------------|-------------------|-----------------|  

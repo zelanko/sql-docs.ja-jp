@@ -25,13 +25,12 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a13c0a859b642c272a99b2a935b41933b558578d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 931e5e6b59694d261a957d408a617bac984db28e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,23 +41,23 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**DOMAIN_CATALOG**|**nvarchar(**128**)**|別名データ型が存在するデータベース。|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|別名データ型を含むスキーマの名前。<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
+|**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|別名データ型が存在するデータベース。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|別名データ型を含むスキーマの名前。<br /><br /> **\*\* 重要な\* \*** データ型のスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 型のスキーマを調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。|  
 |**ドメイン名**|**sysname**|別名データ型。|  
 |**DATA_TYPE**|**sysname**|システム提供のデータ型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ データ、文字データ、またはテキスト/イメージ データの最大長 (文字単位)。<br /><br /> 場合は-1 **xml**と大きな値型のデータ。 それ以外の場合は NULL が返されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|バイナリ データ、文字データ、またはテキスト/イメージ データの最大長 (バイト単位)。<br /><br /> 場合は-1 **xml**と大きな値型のデータ。 それ以外の場合は NULL が返されます。|  
-|**COLLATION_CATALOG**|**varchar (**6**)**|常に NULL が返されます。|  
-|**COLLATION_SCHEMA**|**varchar (**3**)**|常に NULL が返されます。|  
-|**COLLATION_NAME**|**nvarchar(**128**)**|列が文字データの場合は、並べ替え順序の一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
-|**CHARACTER_SET_CATALOG**|**varchar (**6**)**|返します**マスター**です。 列が文字データの場合、文字セットが、配置されているデータベースを示すこのまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
-|**CHARACTER_SET_SCHEMA**|**varchar (**3**)**|常に NULL が返されます。|  
-|**CHARACTER_SET_NAME**|**nvarchar(**128**)**|この列が文字データの場合、文字セットの一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
+|**COLLATION_CATALOG**|**varchar (** 6 **)**|常に NULL が返されます。|  
+|**COLLATION_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
+|**COLLATION_NAME**|**nvarchar(** 128 **)**|列が文字データの場合は、並べ替え順序の一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|返します**マスター**です。 列が文字データの場合、文字セットが、配置されているデータベースを示すこのまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
+|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
+|**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|この列が文字データの場合、文字セットの一意の名前を返しますまたは**テキスト**データ型。 それ以外の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION**|**tinyint**|概数データ、真数データ、整数データ、または通貨データの有効桁数。 それ以外の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|概数データ、真数データ、整数データ、または通貨データの有効桁数の基数。 それ以外の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**tinyint**|概数データ、真数データ、整数データ、または通貨データの小数点以下桁数。 それ以外の場合は NULL が返されます。|  
 |**DATETIME_PRECISION**|**smallint**|サブタイプ コード**datetime**と ISO**間隔**データ型。 その他のデータ型の場合は、NULL が返されます。|  
-|**DOMAIN_DEFAULT**|**nvarchar (**4000**)**|定義の実際のテキスト[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。|  
+|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|定義の実際のテキスト[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -1,11 +1,9 @@
 ---
 title: 'ADO イベントのインスタンス化: Visual C |Microsoft ドキュメント'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7416dab9e7fa3df6726e30d172ea307d8024cdb8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9455000386b7bb64073fec6d07fe106b6ad819dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Visual C の ADO イベントのインスタンス化します。
 これは、Microsoft® Visual C++® で ADO イベントをインスタンス化する方法の概略図の説明です。 参照してください[ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)詳細についてはします。  

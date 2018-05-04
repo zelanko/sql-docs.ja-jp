@@ -1,42 +1,40 @@
 ---
-title: "精度チャートの入力としての入れ子になったテーブルのデータを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: 精度チャートの入力としての入れ子になったテーブルのデータを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
 - Mining Accuracy Chart [Analysis Services], input tables
 - nested tables
 - adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2602a79fd7a9beeffb6057428c71dec7a14f0e0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 32220402e68a25d790c7f26455561a1e391290ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>入れ子になったテーブルのデータを精度チャートの入力として使用する方法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-外部データを使用してマイニング モデルの精度をテストする際、マイニング モデルに入れ子になったテーブルが含まれている場合は、外部データにもケース テーブルと関連する入れ子になったテーブルが格納されている必要があります。  
+  外部データを使用してマイニング モデルの精度をテストする際、マイニング モデルに入れ子になったテーブルが含まれている場合は、外部データにもケース テーブルと関連する入れ子になったテーブルが格納されている必要があります。  
   
  このトピックでは、モデルのテストに使用する入れ子になったテーブルを操作する方法、モデルおよび外部データの入れ子になったテーブルとケース テーブルをマップする方法、および入れ子になったテーブルにフィルターを適用する方法について説明します。  
   
  入れ子になったテーブルを操作するときは、次のヒントに留意してください。  
   
--   **[マイニング モデルのテスト ケースを使用する]** または **[マイニング構造のテスト ケースを使用する]**というオプションを選択すると、ケース テーブルまたは入れ子になったテーブルを指定する必要がありません。 これらのオプションを使用すると、テスト データの定義がマイニング構造に格納され、精度チャートの作成時にそのテスト データが自動的に選択されます。  
+-   **[マイニング モデルのテスト ケースを使用する]** または **[マイニング構造のテスト ケースを使用する]** というオプションを選択すると、ケース テーブルまたは入れ子になったテーブルを指定する必要がありません。 これらのオプションを使用すると、テスト データの定義がマイニング構造に格納され、精度チャートの作成時にそのテスト データが自動的に選択されます。  
   
 -   データ ソースのケース テーブルと入れ子になったテーブルとの間に既にリレーションシップが存在する場合、マイニング構造の列は入力テーブル内の同じ名前の列に自動的にマップされます。  
   
@@ -48,13 +46,13 @@ ms.lasthandoff: 02/15/2018
   
 2.  **[マイニング精度チャート]** タブを選択し、次に **[入力の選択]** タブを選択します。  
   
-3.  **[精度チャートに使用するデータセットの選択]**で、 **[別のデータセットを指定する]**を選択します。  
+3.  **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
 4.  参照ボタン **([...])** をクリックして、現在のサーバーのデータ ソース ビューの一覧から外部データセットを選択します。  
   
-5.  **[ケース テーブルの選択]**をクリックします。 **[テーブルの選択]** ダイアログ ボックスで、ケース データが含まれているテーブルをデータ ソース ビューから選択し、 **[OK]**をクリックします。  
+5.  **[ケース テーブルの選択]** をクリックします。 **[テーブルの選択]** ダイアログ ボックスで、ケース データが含まれているテーブルをデータ ソース ビューから選択し、 **[OK]** をクリックします。  
   
-6.  **[入れ子になったテーブルの選択]**をクリックします。 **[テーブルの選択]** ダイアログ ボックスで、入れ子になったデータが含まれているテーブルを選択し、 **[OK]**をクリックします。  
+6.  **[入れ子になったテーブルの選択]** をクリックします。 **[テーブルの選択]** ダイアログ ボックスで、入れ子になったデータが含まれているテーブルを選択し、 **[OK]** をクリックします。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

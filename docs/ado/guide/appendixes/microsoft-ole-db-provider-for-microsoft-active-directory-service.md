@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB Provider for Microsoft Active Directory Service |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory サービスの Microsoft OLE DB プロバイダー
 Active Directory サービス インターフェイス (ADSI) プロバイダーでは、adsi エディターを使用した異種のディレクトリ サービスに接続する ADO が許可されます。 これにより、ADO アプリケーションは、Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory サービスに、すべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなく読み取り専用アクセスできるようにします。 ADSI 自体は、プロバイダー モデルに基づいて、できるように、別のディレクトリに新しいプロバイダーの提供アクセスがある場合、ADO アプリケーションはシームレスにアクセスします。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
@@ -57,7 +54,7 @@ ADSDSOObject
 |**Password**|ユーザーのパスワードを指定します。 このキーワードを省略するとします。 現在のログオンが使用されます。|  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
   
 ## <a name="command-text"></a>コマンド テキスト  
  4 部構成のコマンド テキストの文字列は、次の構文で、プロバイダーで認識されます。  

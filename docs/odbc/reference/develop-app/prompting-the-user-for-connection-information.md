@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
 - connecting to driver [ODBC], prompting user for information
@@ -27,12 +27,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 54d419e83a4a44273b42559e4b1ba300f021f771
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>接続情報をユーザーに確認
 アプリケーションで使用する場合**SQLConnect**接続についてユーザーに確認する必要があるなど、ユーザー名とパスワードに行ってください自体です。 これにより、アプリケーションは、「ルック アンド フィール」を制御する、中にドライバー固有のコードを格納するアプリケーションが強制的に可能性があります。 これは、アプリケーションは、ドライバー固有の接続についてユーザーに確認する必要がある場合に発生します。 これは、汎用アプリケーション、アプリケーションが書き込まれるときに存在しないドライバーを含む、すべてのドライバーを使用するように設計されているため不可能の状況を表示します。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 51
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3863648b3c8978fa8ac3b8ba981c6fa634c30ef0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c6634eb27c2512edec918707226dc6737b0d385b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowdrillthrough-element-assl"></a>AllowDrillThrough 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親要素に対してドリルスルーが許可されているかどうかを判断します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  親要素に対してドリルスルーが許可されているかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|ブール値|  
 |既定値|**False**|  
-|基数|0-1:省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
+|Cardinality|0-1:省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -75,12 +74,12 @@ ms.lasthandoff: 01/08/2018
   
  `SELECT * FROM <structure>.CASES`  
   
- 内の複数の  
+ または  
   
  `SELECT StructureColumn('<structure-column-name>') FROM <model>.CASES`  
   
 ## <a name="see-also"></a>参照  
- [Role 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Role 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

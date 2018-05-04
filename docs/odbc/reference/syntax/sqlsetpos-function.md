@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetPos
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a32c882450a07f4588f46849753835dfe501fc44
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 関数
 **準拠**  
@@ -66,7 +65,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]  
->  値は、SQL_ADD、*操作*ODBC 3 の引数は廃止されて*.x*です。 ODBC 3 です。*x*ドライバーは下位互換性のため SQL_ADD をサポートする必要があります。 この機能がへの呼び出しによって置き換えられました**SQLBulkOperations**で、*操作*SQL_ADD のです。 ODBC 3 時にします。*x*アプリケーションが ODBC 2 *。x*ドライバー、ドライバー マネージャーは、マップの呼び出し**SQLBulkOperations**で、*操作*に SQL_ADD の**SQLSetPos**で、 *操作*SQL_ADD のです。  
+>  値は、SQL_ADD、*操作*ODBC 3 の引数は廃止されて *.x*です。 ODBC 3 です。*x*ドライバーは下位互換性のため SQL_ADD をサポートする必要があります。 この機能がへの呼び出しによって置き換えられました**SQLBulkOperations**で、*操作*SQL_ADD のです。 ODBC 3 時にします。*x*アプリケーションが ODBC 2 *。x*ドライバー、ドライバー マネージャーは、マップの呼び出し**SQLBulkOperations**で、*操作*に SQL_ADD の**SQLSetPos**で、 *操作*SQL_ADD のです。  
   
  詳細については、「コメント」を参照してください。  
   
@@ -129,7 +128,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>コメント  
   
 > [!CAUTION]  
->  については、ステートメントは、ことを示すため**SQLSetPos**呼び出すことができ、ODBC 2 との互換性のために必要な*.x*アプリケーションを参照してください[ブロック カーソル、スクロール可能なカーソルと旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)です。  
+>  については、ステートメントは、ことを示すため**SQLSetPos**呼び出すことができ、ODBC 2 との互換性のために必要な *.x*アプリケーションを参照してください[ブロック カーソル、スクロール可能なカーソルと旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)です。  
   
 ## <a name="rownumber-argument"></a>RowNumber 引数  
  *RowNumber*引数で指定された操作を実行する対象の行セット内の行の数を指定します、*操作*引数。 場合*RowNumber*が 0 の場合、操作は、行セット内のすべての行に適用されます。 *RowNumber* 0、行セット内の行の数の値にする必要があります。  

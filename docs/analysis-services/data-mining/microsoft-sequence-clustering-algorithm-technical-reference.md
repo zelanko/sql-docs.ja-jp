@@ -1,16 +1,15 @@
 ---
-title: "Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6bf7a1a4cd06dcd3a7f538f80dd0fecec14c23fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Microsoft シーケンス クラスター アルゴリズムは、複合的なアルゴリズムです。このアルゴリズムでは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、この分析結果とクラスタリング技法を組み合わせて、シーケンスおよびモデル内のその他の属性に基づいてクラスターを生成します。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
+  Microsoft シーケンス クラスター アルゴリズムは、複合的なアルゴリズムです。このアルゴリズムでは、Markov 連鎖分析を使用して順序付けられたシーケンスを特定し、この分析結果とクラスタリング技法を組み合わせて、シーケンスおよびモデル内のその他の属性に基づいてクラスターを生成します。 このトピックでは、アルゴリズムの実装、アルゴリズムをカスタマイズする方法、およびシーケンス クラスター モデルの特別な要件について説明します。  
   
  シーケンス クラスター モデルの参照およびクエリを行う方法を含む、アルゴリズムに関する一般的な情報については、「 [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)」をご覧ください。  
   
@@ -143,7 +141,7 @@ Microsoft シーケンス クラスター アルゴリズムは、複合的な�
   
 ## <a name="remarks"></a>解説  
   
--   シーケンスの予測には [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 関数を使用します。 シーケンス予測をサポートしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションの詳細については、「[SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) をご覧ください。  
+-   シーケンスの予測には [PredictSequence (DMX)](../../dmx/predictsequence-dmx.md) 関数を使用します。 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]シーケンスの予測をサポートするを参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムでは、Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
@@ -152,6 +150,6 @@ Microsoft シーケンス クラスター アルゴリズムは、複合的な�
 ## <a name="see-also"></a>参照  
  [Microsoft シーケンス クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [シーケンス クラスター モデルのクエリ例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [シーケンス クラスター モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [シーケンス クラスター モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

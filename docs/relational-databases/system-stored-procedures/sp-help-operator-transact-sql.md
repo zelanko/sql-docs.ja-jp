@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 48495576db891a8acbd944578f45bfa5267fb9c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: eccbbe6f7019ac8c31b59c934e279b0d8b74ec43
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_help_operator
   
 ## <a name="arguments"></a>引数  
  [  **@operator_name=** ] **'***@operator_name***'**  
- オペレーター名を指定します。 *@operator_name*は**sysname**です。 場合*@operator_name*が指定されていないすべての演算子に関する情報が返されます。  
+ オペレーター名を指定します。 *@operator_name*は**sysname**です。 場合 *@operator_name*が指定されていないすべての演算子に関する情報が返されます。  
   
  [ **@operator_id=** ] *operator_id*  
  要求する情報の対象となるオペレーターの識別番号を指定します。 *operator_id*は**int**、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*operator_id*または*@operator_name*指定する必要がありますが、両方を指定することはできません。  
+>  いずれか*operator_id*または *@operator_name*指定する必要がありますが、両方を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

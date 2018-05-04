@@ -1,11 +1,9 @@
 ---
 title: 検出して、競合を解決する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディ エイト モードで、レコード セットを処理する場合は、同時実行の問題が発生する可能性は大幅に小さくします。 その一方で、アプリケーションでは、バッチ モードの更新を使用する場合は、ある可能性があります良い機会同じレコードを編集する別のユーザーによって行われた変更が保存される前にあるユーザーが、レコードを変更します。 競合を適切に処理するアプリケーションは、このような場合でします。 最後に更新プログラムをサーバーに送信した人物「優先します」の方がある可能性があります。 または、更新プログラムの優先順位が 2 つの競合する値のいずれかで彼を提供することで決定する、最新のユーザーを許可することができます。  

@@ -1,36 +1,34 @@
 ---
-title: "予測クエリの結果を表示および |Microsoft ドキュメント"
-ms.custom: 
+title: 予測クエリの結果を表示および |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - viewing prediction query results
 - displaying prediction query results
 - Mining Model Prediction [Analysis Services], viewing results
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a96b6825f5b7b5d83981f6c0ec73e8020169b2b7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4057ddf0705e5a9aac141548b91171f7b81e6fc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>予測クエリの結果の表示および保存
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の予測クエリ ビルダーを使用してクエリを定義した後は、クエリ結果ビューに切り替えてクエリを実行し、結果を表示できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の予測クエリ ビルダーを使用してクエリを定義した後は、クエリ結果ビューに切り替えてクエリを実行し、結果を表示できます。  
   
  予測クエリの結果は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトで定義される任意のデータ ソースのテーブルに保存できます。 新しいテーブルを作成するか、または既存のテーブルにクエリ結果を保存できます。 既存のテーブルに結果を保存する場合は、テーブルに現在保存されているデータを上書きするように選択できます。上書きしない場合、クエリ結果は、テーブルの既存のデータに追加されます。  
   
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="save-the-results-of-a-prediction-query-to-a-table"></a>予測クエリの結果をテーブルに保存する  
   
-1.  データ マイニング デザイナーの **[マイニング モデル予測]** タブのツール バーで、 **[クエリ結果の保存]**をクリックします。  
+1.  データ マイニング デザイナーの **[マイニング モデル予測]** タブのツール バーで、 **[クエリ結果の保存]** をクリックします。  
   
      **[データ マイニングのクエリ結果を保存]** ダイアログ ボックスが開きます。  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/15/2018
   
 4.  データ ソース ビューにテーブルを追加する場合は、 **[DSV に追加]** からデータ ソース ビューを選択します。  
   
-5.  **[保存]**をクリックします。  
+5.  **[保存]** をクリックします。  
   
     > [!WARNING]  
     >  保存先で階層的な行セットがサポートされていない場合は、結果に FALTTENED キーワードを追加して、フラット テーブルとして保存できます。  

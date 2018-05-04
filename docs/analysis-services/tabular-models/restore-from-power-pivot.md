@@ -1,33 +1,31 @@
 ---
-title: "Power Pivot から復元 |Microsoft ドキュメント"
-ms.custom: 
+title: Power Pivot から復元 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ab75dfb620c3d0fc41799f2f59a88b6e741440ea
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 18c9eef295ca51648ce0dc27e94b9581ba353772
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-from-power-pivot"></a>Power Pivot から復元
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-SQL Server Management Studio の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx) から既存のデータベースに復元したりできます。  
+  SQL Server Management Studio の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx) から既存のデータベースに復元したりできます。  
   
 > [!NOTE]  
 >  SQL Server Data Tools の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、次を参照してください。 [Power Pivot からのインポート](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)です。  
@@ -48,11 +46,11 @@ SQL Server Management Studio の [!INCLUDE[ssGemini](../../includes/ssgemini-md.
   
 2.  **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] から復元]** ダイアログ ボックスで、**[復元元]** の **[バックアップ ファイル]** で **[参照]** をクリックし、復元する .abf または .xslx ファイルを選択します。  
   
-3.  **[復元対象]**の **[データベースの復元]**で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
+3.  **[復元対象]** の **[データベースの復元]** で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
   
-4.  **[ストレージの場所]**で、 **[参照]**をクリックし、データベースを格納する場所を選択します。  
+4.  **[ストレージの場所]** で、 **[参照]** をクリックし、データベースを格納する場所を選択します。  
   
-5.  **[オプション]**で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックから復元する場合は、この設定は適用されません。  
+5.  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックから復元する場合は、この設定は適用されません。  
   
 ## <a name="see-also"></a>参照  
  [表形式モデル データベース](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   

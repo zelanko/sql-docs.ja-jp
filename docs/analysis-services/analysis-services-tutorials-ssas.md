@@ -1,29 +1,27 @@
 ---
-title: "Analysis Services チュートリアル |Microsoft ドキュメント"
+title: Analysis Services チュートリアル |Microsoft ドキュメント
 ms.date: 02/20/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 7a32867f84771fb2ee1c70098affeb4ae4e88d00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services チュートリアル
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/20/2018
 [テーブル モデリング (1400 互換性レベル)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 Azure Analysis Services と SQL Server 2017 Analysis Services を適用し、後でします。 このチュートリアルでは、SQL Server Data Tools (SSDT) を使用して、Adventure Works という架空の会社の基本的な Analysis Services 表形式モデルを作成する方法を」のレッスンを提供します。 
 
-[テーブル モデリング (互換性レベル 1200)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[表形式のモデリング (1200 互換性レベル)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Azure Analysis Services と SQL Server 2016 Analysis Services を適用し、後でします。 このチュートリアルでは、SQL Server Data Tools (SSDT) を使用して、Adventure Works という架空の会社の基本的な Analysis Services 表形式モデルを作成する方法を」のレッスンを提供します。  
   
 [多次元モデリング](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  

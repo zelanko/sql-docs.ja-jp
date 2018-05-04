@@ -29,12 +29,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 13d2ee822aaa50c58f64446dc3c21bf89a0ab824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd8e7776899331a089fb12157a072e4ade673655
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-action"></a>MDX データ定義の削除アクション
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  削除するアクションの名前を指定する有効な文字列式です。  
   
 ## <a name="see-also"></a>参照  
- [ACTION ステートメント &#40; を作成します。MDX と #41 です。](../mdx/mdx-data-definition-create-action.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [CREATE ACTION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

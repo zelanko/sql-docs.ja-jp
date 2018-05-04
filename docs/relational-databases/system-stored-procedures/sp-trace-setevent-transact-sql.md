@@ -24,12 +24,11 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bf4e3f645a8480104fcb6f67790563fbb05d0480
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e85fe63cd862a816d0df6501d25d383ad967cd13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|プロシージャ キャッシュからアイテムが削除されたことを示します。|  
 |37|SP:Recompile|ストアド プロシージャが再コンパイルされたことを示します。|  
 |38|SP:CacheHit|ストアド プロシージャがプロシージャ キャッシュ内にあることを示します。|  
-|39|廃止予定|廃止予定|  
+|39|非推奨|非推奨|  
 |40|SQL:StmtStarting|発生したときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが開始します。|  
 |41|SQL:StmtCompleted|発生したときに、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが完了しました。|  
 |42|SP:Starting|ストアド プロシージャが開始されたことを示します。|  

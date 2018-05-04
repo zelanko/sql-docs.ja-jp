@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>データ型 (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 04/16/2018
 |SRVINT1|**tinyint**|1 バイトの **tinyint** データ型。|  
 |SRVINT2|**smallint**|2 バイトの **smallint** データ型。|  
 |SRVINT4|**int**|4 バイトの **int** データ型。|  
-|SRVINTN|**tinyint** &#124;**smallint** &#124;**int null**|**tinyint**、**smallint**、または **int** データ型。NULL 値を許容します。|  
+|SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|**tinyint**、**smallint**、または **int** データ型。NULL 値を許容します。|  
 |SRVMONEY4|**smallmoney**|4 バイトの **smallmoney** データ型。|  
 |SRVMONEY|**money**|8 バイトの **money** データ型。|  
 |SRVMONEYN|**money** &#124; **smallmoney null**|**smallmoney** または **money** データ型。NULL 値を許容します。|  

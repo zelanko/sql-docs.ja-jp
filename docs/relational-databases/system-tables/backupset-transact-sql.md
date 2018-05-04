@@ -26,13 +26,12 @@ caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1675b6703b8729458ff10fae7d83a2c56328ee59
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 65d39eb0f4797ceb5e32c663cabbccfaeac12f23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|バックアップ セットを識別する一意なバックアップ セット識別番号。 ID、主キー。|  
 |**backup_set_uuid**|**uniqueidentifier**|バックアップ セットを識別する一意なバックアップ セット識別番号。|  
-|**media_set_id**|**int**|バックアップ セットを含むメディア セットを識別する一意なメディア セット識別番号。 参照**(media_set_id)**です。|  
+|**media_set_id**|**int**|バックアップ セットを含むメディア セットを識別する一意なメディア セット識別番号。 参照 **(media_set_id)** です。|  
 |**first_family_number**|**tinyint**|バックアップ セットの先頭メディアのファミリ番号。 NULL を指定できます。|  
 |**first_media_number**|**smallint**|バックアップ セットの先頭メディアのメディア番号。 NULL を指定できます。|  
 |**last_family_number**|**tinyint**|バックアップ セットの最終メディアのファミリ番号。 NULL を指定できます。|  

@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4438a86353a8fdbc6174a718d401656bf05df4fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47991654f3d73645737872b0dda53ecc1c5c4052
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-指定したテーブルの ID 番号および列の ID 番号から、その列の名前を返します。
+この関数は、テーブルの ID 番号とそのテーブルの列の ID 番号に基づいて、テーブルの列の名前を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,26 +50,26 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>引数  
 *table_id*  
-列を含むテーブルの ID 番号を指定します。 *table_id* のデータ型は **int**です。
+その列を含むテーブルの ID 番号。 *table_id* 引数は **int** データ型です。
   
 *column_id*  
-列の ID 番号を指定します。 *column_id* パラメーター型のデータは **int**です。
+列の ID 番号。 *column_id* 引数は **int** データ型です。
   
 ## <a name="return-types"></a>戻り値の型
 **sysname**
   
 ## <a name="exceptions"></a>例外  
-エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。
+エラーが発生した場合、または呼び出し元にオブジェクトを表示するための適切な権限がない場合は、NULL が返されます。
   
-ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_NAME など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する適切な権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (`COL_NAME` など) が NULL を返す可能性があります。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
 ## <a name="remarks"></a>Remarks  
 *Table_id* と *column_id* パラメーターが同時に、列名文字列を生成します。
   
-テーブルと列の id 番号を取得する方法の詳細については、を参照してください。 [OBJECT_ID (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/object-id-transact-sql.md).
+テーブルおよび列の ID 番号の取得の詳細については、「[OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
-次の例では、サンプルの `Employee` テーブル内の最初の列の名前を返します。
+この例では、サンプルの `Employee` テーブル内の最初の列の名前を返します。
   
 ```sql
 -- Uses AdventureWorks  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments in catalog functions [ODBC]
 - catalog functions [ODBC], arguments
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f46b286a929d261b1cf1c608fefccd5f266b92b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81eb0874d8737ec76736bf4caffb8e646bee29cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arguments-in-catalog-functions"></a>カタログ関数の引数
 すべてのカタログ関数では、引数として使用するアプリケーションが返されるデータのスコープを制限できますを受け取ります。 たとえば、最初と 2 番目の呼び出し**SQLTables**次のコードには、3 番目の呼び出しを Orders テーブルに関する情報を返すときに、すべてのテーブルに関する情報を含む結果セットを返します。  

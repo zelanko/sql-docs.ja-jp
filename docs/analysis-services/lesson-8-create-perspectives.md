@@ -1,28 +1,27 @@
 ---
-title: "レッスン 9 パースペクティブの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: レッスン 9 パースペクティブの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 76fc2643bf8d160b38dbcc1009ad37926051407c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 26e175687bcd09c526c6aef54011ad371bb2b535
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-create-perspectives"></a>レッスン 8: パースペクティブを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **5 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 7: 主要業績評価指標の作成](../analysis-services/lesson-7-create-key-performance-indicators.md)です。  
   
 ## <a name="create-perspectives"></a>パースペクティブを作成する  
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  クリックして、**モデル**メニュー >**パースペクティブ** > **の作成と管理**です。  
   
-2.  **[パースペクティブ]** ダイアログ ボックスで、 **[新しいパースペクティブ]**をクリックします。  
+2.  **[パースペクティブ]** ダイアログ ボックスで、 **[新しいパースペクティブ]** をクリックします。  
   
 3.  ダブルクリックして、**新しいパースペクティブ**列見出し、および名前の変更**Internet Sales**です。  
   

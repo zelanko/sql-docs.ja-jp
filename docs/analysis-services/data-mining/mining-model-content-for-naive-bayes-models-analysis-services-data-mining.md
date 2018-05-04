@@ -1,36 +1,34 @@
 ---
-title: "Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea4b76bc06098491a1ef7025b326cc254a5e1cdc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6908a91c26bfe9051dd1a111c9ea592aa17dd4d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Naive Bayes モデルの構造について  
  Naive Bayes モデルには、モデルとそのメタデータを表す 1 つの親ノードがあり、その親ノードの下に、選択した予測可能な属性を表す任意の数の独立したツリーがあります。 属性のツリーに加え、各モデルに 1 つ、トレーニング ケースのセットに関する説明的な統計情報を提供するマージナル統計ノード (NODE_TYPE = 26) が含まれます。 詳細については、「 [マージナル統計ノードの情報](#bkmk_margstats)」を参照してください。  
@@ -295,7 +293,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  トレーニング データには存在しなかった有効な値を表すために、すべての入力属性と出力属性に **Missing** 値 (VALUE_TYPE = 1) が追加されます。 "missing" という文字列と既定の **Missing** 値を区別するように注意する必要があります。 詳細については、「[Missing 値 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

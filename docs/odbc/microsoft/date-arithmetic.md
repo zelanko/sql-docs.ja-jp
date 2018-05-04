@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - date arithmetic [ODBC]
 - SQL grammar [ODBC], date arithmetic
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9b86d97f07aa615bed0ea9f8b6aaac2aaccd7da2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e98409fb0873f65915a6d77819058192b7865825
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-arithmetic"></a>日付の算術演算子
 ドライバーは、加算と減算の日付、時刻、またはタイムスタンプ列から integer をサポートします。 日付の列は、整数は、加算または減算する日数を指定します。 時間またはタイムスタンプ列の場合は、整数は、加算または減算する秒数を指定します。

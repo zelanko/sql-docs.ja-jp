@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ad1fed7c000a978c096692fa4f4c59d655132e9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c73bc1f9a1b3a1cb7130cb52c5c8b199a9a3be8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="algorithm-element-assl"></a>Algorithm 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]によって使用されるアルゴリズムを定義、 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  によって使用されるアルゴリズムを定義、 [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|String|  
+|データ型と長さ|文字列|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現可能です|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -69,8 +68,8 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**アルゴリズム**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningModel>します。 AMO オブジェクト モデルの中で、関連性の高い要素は <xref:Microsoft.AnalysisServices.MiningModelAlgorithms> です。  
   
 ## <a name="see-also"></a>参照  
- [AlgorithmParameter 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)   
- [AlgorithmParameters 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/algorithmparameters-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [AlgorithmParameter 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/algorithmparameter-element-assl.md)   
+ [AlgorithmParameters 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/collections/algorithmparameters-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,11 +1,9 @@
 ---
 title: データ シェイプに必要なプロバイダー |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce88a316a1ef31baf083032e31023d36a3e3fff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 049f635c9566a72bb84a7cef18aa62b80746c21b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>データ シェイプに必要なプロバイダー
 データ シェイプと、2 つのプロバイダー通常必要があります。 サービス プロバイダー [for OLE DB Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)、整形を行う機能、および、OLE DB Provider for SQL Server などのデータ プロバイダーのデータを提供、形状に表示するデータの行を渡します[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -34,7 +31,7 @@ ms.lasthandoff: 04/18/2018
   
  値として、データ プロバイダーの名前を指定することができます、**データ プロバイダー**動的プロパティに追加されている、**接続**オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)によるコレクションOLE DB、または接続文字列キーワードの Data Shaping Service"**Data Provider = * * * プロバイダー*"です。  
   
- データ プロバイダーは必要な場合、**レコード セット**は設定されません (などのように、用意された**レコード セット**列が新しいキーワードを使用して作成されます)。 その場合は、指定"**Data Provider =**none;"です。  
+ データ プロバイダーは必要な場合、**レコード セット**は設定されません (などのように、用意された**レコード セット**列が新しいキーワードを使用して作成されます)。 その場合は、指定"**Data Provider =** none;"です。  
   
 ## <a name="example"></a>例  
   

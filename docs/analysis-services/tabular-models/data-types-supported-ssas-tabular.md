@@ -1,31 +1,29 @@
 ---
-title: "Analysis Services 表形式モデルでサポートされるデータ型 |Microsoft ドキュメント"
-ms.custom: 
+title: Analysis Services 表形式モデルでサポートされるデータ型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6abf28f71db46d89ee33a91d92940d2c8f8aa90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表形式モデルでサポートされるデータ型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
+  このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
 
   
 ##  <a name="bkmk_data_types"></a> テーブル モデルで使用されるデータ型  
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/23/2018
   
 ||  
 |-|  
-|[値]|  
+|値|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 02/23/2018
   
  各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
   
- 引数として指定した列のデータは、関数に必要なデータ型と互換性がありません、DAX では、多くの場合は、エラーを返します。 ただし、任意の場所可能な DAX しようとデータに必要なデータ型に暗黙的に変換します。 例:  
+ 引数として指定した列のデータは、関数に必要なデータ型と互換性がありません、DAX では、多くの場合は、エラーを返します。 ただし、任意の場所可能な DAX しようとデータに必要なデータ型に暗黙的に変換します。 以下に例を示します。  
   
 -   数値 (たとえば "123") は、文字列として入力できます。 DAX では、文字列を解析し、数値データ型として指定しようとしています。  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 02/23/2018
   
 -   2 つの列内の値を加算する場合に、1 つの値がテキスト ("12") で表現され、他の値が数値 (12) で表現されているとき、DAX では文字列を数値に暗黙的に変換してから加算が実行され、数値の結果が得られます。 次の式では、44: = "22" + 22 が返されます。  
   
--   2 つの数値を連結しようとする場合は文字列として表示し、連結しています。 次の式では、"1234": = 12 &34;が返されます。  
+-   2 つの数値を連結しようとする場合は文字列として表示し、連結しています。 次の式では、"1234": = 12 & 34 が返されます。  
   
  次の表に、数式で実行される暗黙的なデータ型変換をまとめました。 通常、セマンティック モデル デザイナーの動作は Microsoft Excel と似ていますが、指定された演算に必要な場合は可能な限り暗黙的な変換を実行します。  
   

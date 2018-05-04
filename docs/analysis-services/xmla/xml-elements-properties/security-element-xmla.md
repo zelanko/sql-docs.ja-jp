@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e5dbfc3276c972f37e9ed19223fd7a011a1f99b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80d38b9ab91294628279a2696d157a3e6c1c269c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-element-xmla"></a>Security 要素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]バックアップまたは中に、ロールや権限などのセキュリティ定義を復元する方法を指定、[バックアップ](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)または[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)コマンド。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  バックアップまたは中に、ロールや権限などのセキュリティ定義を復元する方法を指定、[バックアップ](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)または[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)コマンド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,11 +51,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*SkipMembership*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|既定値|*skipMembership*|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -72,12 +71,12 @@ ms.lasthandoff: 01/08/2018
   
 |値|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|セキュリティの定義が含まれますが、中に、メンバーシップ情報を除外**バックアップ**または**復元**コマンド。|  
+|*skipMembership*|セキュリティの定義が含まれますが、中に、メンバーシップ情報を除外**バックアップ**または**復元**コマンド。|  
 |*CopyAll*|セキュリティ定義とメンバーシップ情報中に含めます**バックアップ**または**復元**コマンド。|  
-|*Ignoresecurity のいずれか*|実行時にセキュリティ定義を除外する**バックアップ**または**復元**コマンド。|  
+|*IgnoreSecurity*|実行時にセキュリティ定義を除外する**バックアップ**または**復元**コマンド。|  
   
 ## <a name="see-also"></a>参照  
- [SynchronizeSecurity 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)   
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [SynchronizeSecurity 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/synchronizesecurity-element-xmla.md)   
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

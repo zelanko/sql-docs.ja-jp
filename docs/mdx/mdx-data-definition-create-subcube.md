@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ定義のサブキューブの作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,14 +51,14 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  WITH 句、NON EMPTY 句、または HAVING 句が含まれておらず、ディメンションまたはセルのプロパティを要求しない有効な多次元式 (MDX) の SELECT 式です。  
   
- 参照してください[ステートメント &#40; を選択MDX と #41 です](../mdx/mdx-data-manipulation-select.md)構文の詳細については、Select ステートメントを**NON VISUAL**句。  
+ 参照してください[SELECT ステートメント&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md)構文の詳細については、Select ステートメントを**NON VISUAL**句。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定のメンバーをサブキューブの定義から除外すると、それに応じて座標も変わります。 集計が可能な属性の場合、既定のメンバーは [All] のメンバーに移動します。 集計が不可能な属性の場合、既定のメンバーはサブキューブ内に存在するメンバーに移動します。 サブキューブと既定のメンバーの組み合わせの例を以下に示します。  
   
 |元の既定のメンバー|集計可能/不可能|サブセレクト|変更後の既定のメンバー|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|はい|{Time.Year.2003}|変更はありません。|  
+|Time.Year.All|はい|{Time.Year.2003}|変更なし|  
 |Time.Year です。[1997]|はい|{Time.Year.2003}|Time.Year.All|  
 |Time.Year です。[1997]|いいえ|{Time.Year.2003}|Time.Year です。[2003]|  
 |Time.Year です。[1997]|はい|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
@@ -70,7 +68,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  サブキューブのコンテキストで作成されたセッション オブジェクトは、サブキューブが削除された時点で削除されます。  
   
- サブキューブの詳細については、次を参照してください[MDX &#40; でのサブキューブの作成。MDX と #41 です](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)。  
+ サブキューブの詳細については、次を参照してください[MDX & #40; でのサブキューブの作成。MDX と #41 です;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)。  
   
 ## <a name="example"></a>例  
  次の例では、見かけのキューブ空間を Canada に存在するメンバーに制限したサブキューブを作成しています。 次を使用して、**メンバー**すべてのメンバーを返す、国のレベルが、Geography ユーザー定義階層の Canada という国のみを返す関数。  
@@ -146,9 +144,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] および [All Resellers] の列と行それぞれに、表示されているメンバーだけでなく、すべてのメンバーの合計が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [MDX &#40; の主な概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX スクリプト ステートメント &#40;です。MDX と #41 です](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-manipulation-select.md)  
+ [MDX & #40; の主な概念Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX スクリプト ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-manipulation-select.md)  
   
   

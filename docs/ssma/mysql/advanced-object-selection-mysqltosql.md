@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -20,12 +19,11 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc89e8ef8a6e0bf8d1157bbfae42f9bccf05d49d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 451620c631c6cd2430b826fd387bccafbe62708e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>高度なオブジェクトの選択 (MySQLToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名に文字列および部分文字列を使用してデータベース オブジェクトをフィルター処理し、選択するか、それらのオブジェクトの選択を解除することができます。 SSMA では、選択したオブジェクトでの変換と移行操作を実行します。  

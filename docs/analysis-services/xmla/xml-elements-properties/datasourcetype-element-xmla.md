@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6542870aac6490512340d029355855c069d29d4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d99f9ffdf03394774ce6e471b30454c308ae8e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasourcetype-element-xmla"></a>DataSourceType 要素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]示すかどうか、[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)の指定された要素、[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)または[同期](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)コマンドは、ローカルまたはリモートです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  示すかどうか、[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)の指定された要素、[復元](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)または[同期](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)コマンドは、ローカルまたはリモートです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,21 +51,21 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|*リモート*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[[場所]](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|  
+|親要素|[場所](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
- **%Datasourcetype**要素によって、データ ソースを定義するかどうかを決定する、**場所**要素には、ローカル データ ソースまたはリモート データ ソースが含まれています。 バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期 (&) #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ **%Datasourcetype**要素によって、データ ソースを定義するかどうかを決定する、**場所**要素には、ローカル データ ソースまたはリモート データ ソースが含まれています。 バックアップと、リモート パーティションの復元の詳細については、次を参照してください。[データベースのバックアップ、復元、およびデータベースの同期 (&) #40 です。XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
  この要素の値は、次の表の一覧に示す文字列のいずれかに限定されています。  
   
@@ -76,8 +75,8 @@ ms.lasthandoff: 01/08/2018
 |*リモート*|**場所**要素は、リモート データ ソースを定義します。 この値が使用されている場合、**復元**と**同期**コマンドで定義されている情報を使用して、**場所**復元またはリモートのパーティションを同期する要素指定されたバックアップ ファイルのいずれかから取得した、**ファイル**の要素、**バックアップ**コマンドまたはで指定されたデータベース、**ソース**要素を**同期**で識別されるリモート インスタンスに、コマンド、 **DataSourceID**の**場所**要素。|  
   
 ## <a name="see-also"></a>参照  
- [ConnectionString 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
- [DataSourceID 要素 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)   
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [ConnectionString 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
+ [DataSourceID 要素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)   
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

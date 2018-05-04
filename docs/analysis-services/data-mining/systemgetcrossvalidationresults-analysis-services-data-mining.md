@@ -1,35 +1,33 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: SystemGetCrossValidationResults (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SystemGetCrossValidationResults
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
 ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ddb4255fb09131bb2612e47b44a0bedfc22e4be4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-指定した数の複数のセクションにマイニング構造をパーティション分割し、各パーティションに対してモデルをトレーニングして、各パーティションの精度の基準を返します。  
+  指定した数の複数のセクションにマイニング構造をパーティション分割し、各パーティションに対してモデルをトレーニングして、各パーティションの精度の基準を返します。  
   
 > [!NOTE]  
 >  このストアド プロシージャを使用しても、クラスタリング モデルを相互検証したり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムや [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたモデルを相互検証することはできません。 クラスタリング モデルを相互検証するには、 [SystemGetClusterCrossValidationResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)という別のストアド プロシージャを使用できます。  
@@ -119,7 +117,7 @@ SystemGetCrossValidationResults(
  既定値は **null**です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *state threshold* を 0.0 に設定するとエラーが発生しませんが、この値は使用しないでください。 実際、しきい値を 0.0 に設定すると、確率が 0% の予測が正しいと見なされます。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設定した場合、エラーは発生しません*状態のしきい値*0.0 が、この値を使用することはありません。 実際、しきい値を 0.0 に設定すると、確率が 0% の予測が正しいと見なされます。  
   
  (省略可能)  
   
@@ -144,7 +142,7 @@ SystemGetCrossValidationResults(
 |PartitionSize|各パーティションに含まれていたケースの数を示す整数。|  
 |テスト|実行されたテストのカテゴリ。 カテゴリおよび各カテゴリに含まれるテストの説明については、「 [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」を参照してください。|  
 |[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、予測可能な値の型によって異なります。 各メジャーの定義については、「[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」を参照してください。|  
-|[値]|指定したテスト メジャーの値。|  
+|値|指定したテスト メジャーの値。|  
   
 ## <a name="remarks"></a>解説  
  データ セット全体の精度の基準を返すには、 [SystemGetAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)という別のストアド プロシージャを使用できます。  
@@ -173,7 +171,7 @@ NULL
   
  サンプルの結果 :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|[値]|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|テスト|[メジャー]|値|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|分類|True Positive|144|  
 |Target Mail DT|Bike Buyer|1|1|500|分類|False Positive|105|  
@@ -195,8 +193,8 @@ NULL
   
 ## <a name="see-also"></a>参照  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2730a5ceb1f976605f4a784b71194f4b9caceea5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3bc468a1f26c8919951420a2155c031ba2fb5a25
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
   
  [  **@subscriber_db =**] **'***@subscriber_db***'**  
- サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。 値を指定するため、SQL Server 以外のサブスクライバー、 **(既定の出力先)**の*@subscriber_db*です。  
+ サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。 値を指定するため、SQL Server 以外のサブスクライバー、 **(既定の出力先)** の *@subscriber_db*です。  
   
  [  **@subscriber_security_mode =**] *subscriber_security_mode*  
  サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
@@ -103,7 +102,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [  **@job_login =** ] **'***job_login***'**  
- エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**既定値は NULL です。 この Windows アカウントは、エージェントがディストリビューターに接続するとき、および Windows 統合認証を使用してサブスクライバーに接続するときに必ず使用されます。  
+ エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)** 既定値は NULL です。 この Windows アカウントは、エージェントがディストリビューターに接続するとき、および Windows 統合認証を使用してサブスクライバーに接続するときに必ず使用されます。  
   
  [  **@job_password =** ] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  
@@ -198,13 +197,13 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  使用する一意なプログラム識別子 (PROGID) には、OLE DB provider for 以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソースを登録します。 *subscriber_provider*は**sysname**既定値は NULL です。 *subscriber_provider*ディストリビューターにインストールされている OLE DB プロバイダーに対して一意である必要があります。 *subscriber_provider*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- OLE DB プロバイダーで認識されるデータ ソースの名前を指定します。 *subscriber_datasrc*は**nvarchar (4000)**既定値は NULL です。 *subscriber_datasrc* OLE DB プロバイダーを初期化する DBPROP_INIT_DATASOURCE プロパティとして渡されます。 *subscriber_datasrc*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
+ OLE DB プロバイダーで認識されるデータ ソースの名前を指定します。 *subscriber_datasrc*は**nvarchar (4000)** 既定値は NULL です。 *subscriber_datasrc* OLE DB プロバイダーを初期化する DBPROP_INIT_DATASOURCE プロパティとして渡されます。 *subscriber_datasrc*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
   
  [  **@subscriber_location=** ] **'***subscriber_location***'**  
- OLE DB プロバイダーで認識される、データベースの場所です。 *subscriber_location*は**nvarchar (4000)**既定値は NULL です。 *subscriber_location* OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。 *subscriber_location*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
+ OLE DB プロバイダーで認識される、データベースの場所です。 *subscriber_location*は**nvarchar (4000)** 既定値は NULL です。 *subscriber_location* OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。 *subscriber_location*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
   
  [  **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- データ ソースを識別する OLE DB プロバイダー固有の接続文字列を指定します。 *subscriber_provider_string*は**nvarchar (4000)**既定値は NULL です。 *subscriber_provider_string* IDataInitialize に渡したり、OLE DB プロバイダーを初期化する DBPROP_INIT_PROVIDERSTRING プロパティとして設定します。 *subscriber_provider_string*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
+ データ ソースを識別する OLE DB プロバイダー固有の接続文字列を指定します。 *subscriber_provider_string*は**nvarchar (4000)** 既定値は NULL です。 *subscriber_provider_string* IDataInitialize に渡したり、OLE DB プロバイダーを初期化する DBPROP_INIT_PROVIDERSTRING プロパティとして設定します。 *subscriber_provider_string*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
   
  [  **@subscriber_catalog=** ] **'***対応する、***'**  
  OLE DB プロバイダーに接続するときに使用するカタログを指定します。 *対応する、*は**sysname**既定値は NULL です。 *対応する、* OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 *対応する、*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  

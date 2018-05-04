@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f8c84bc6cd2e7679a83a2915f7b28a0c1976a967
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3374a74b231cd704d21c6081ea91c4b48edb8ea2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのバージョン番号は [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]のインスタンス内で同一であることが必要です。  
   
--   SQL Server 2016 は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
+-   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
 -   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードした後、[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server 2016 のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
  
@@ -65,17 +65,15 @@ ms.lasthandoff: 04/16/2018
  
 SQL Server 2016 では、次のバージョンの SQL Server からのアップグレードがサポートされます。
  
-- SQL Server 2008 SP4 以降
-- SQL Server 2008 R2 SP3 以降
-- SQL Server 2012 SP2 以降
-- SQL Server 2014 以降 
+- [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] SP4 以降
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP3 以降
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 以降
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降 
  
-
-  
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でデータベースをアップグレードするには、 [2005 のサポート](#SupportFor2005)を参照してください。  
+> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でデータベースをアップグレードするには、 [2005 のサポート](#SupportFor2005)を参照してください。  
   
- 次の表に示すのは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]への、サポートされるアップグレード シナリオです。  
+次の表に示すのは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]への、サポートされるアップグレード シナリオです。  
   
 |アップグレード元|サポートされているアップグレード パス|  
 |------------------|----------------------------|  
@@ -112,10 +110,9 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
  \* Microsoft では、特に Technology Adoption Program (TAP) に参加したお客様向けに、リリース候補版ソフトウェアからのアップグレードをサポートしています。 
-
    
 ###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] サポート対象 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- ここでは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]では、次の作業を実行できます。  
+ここでは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]では、次の作業を実行できます。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  
   
@@ -123,9 +120,10 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
   
 -   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] キューブをバックアップし、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]に復元します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  ([!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、および 130 です)。[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
+> [!NOTE]  
+> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、および 130 です。 [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
   
- 上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
+上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   
 -   同じコンピューターへの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] と [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の (サイド バイ サイド) インストール。  
   
@@ -148,9 +146,9 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサード パーティのカスタム Integration Services コンポーネントに対するサポート (実行とアップグレードなど)。  
   
 ## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] エディションのアップグレード  
- 次の表に示すのは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]でサポートされるエディションのアップグレード シナリオです。  
+次の表に示すのは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]でサポートされるエディションのアップグレード シナリオです。  
   
- エディションのアップグレードを実行する手順については、「[SQL Server 2016 の別のエディションへのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)」を参照してください。  
+エディションのアップグレードを実行する手順については、「[SQL Server 2016 の別のエディションへのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)」を参照してください。  
   
 |アップグレード元|アップグレード先|  
 |------------------|----------------|  
@@ -161,7 +159,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express*|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
   
- さらに、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL ライセンス) と [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Core License) の間でエディションのアップグレードも実行できます。  
+さらに、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL ライセンス) と [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Core License) の間でエディションのアップグレードも実行できます。  
   
 |エディションのアップグレード元|エディションのアップグレード先|  
 |--------------------------|------------------------|  
@@ -182,10 +180,8 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
   
 ## <a name="see-also"></a>参照  
 
- [SQL Server 2016 の各エディションとサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
- 
- [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- 
- [SQL Server 2016 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
+[SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
+[SQL Server 2016 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)    
   
   

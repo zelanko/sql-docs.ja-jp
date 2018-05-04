@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22e385bb20e0c82e2011f6950e8ea8258c87b117
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b22cd17a9e180a3acc7efecea36bc6df0b53557b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [  **@job_login =** ] **'***job_login***'**  
- エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**既定値は NULL です。 この Windows アカウントは、エージェントがディストリビューターに接続する場合と Windows 統合認証を使用してサブスクライバーとパブリッシャーに接続する場合に必ず使用されます。  
+ エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)** 既定値は NULL です。 この Windows アカウントは、エージェントがディストリビューターに接続する場合と Windows 統合認証を使用してサブスクライバーとパブリッシャーに接続する場合に必ず使用されます。  
   
  [  **@job_password =** ] **'***job_password***'**  
  エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。  

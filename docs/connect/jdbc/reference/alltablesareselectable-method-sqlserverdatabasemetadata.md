@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>allTablesAreSelectable メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  現在のユーザーがによって返されるすべてのテーブルを使用するアクセス許可を持っているかどうかを取得、 [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) SELECT ステートメント内のメソッドです。  
+  現在のユーザーが、[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) メソッドで返されたすべてのテーブルを SELECT ステートメントで使用するアクセス許可を持っているかどうかを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,12 +42,12 @@ public boolean allTablesAreSelectable()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**ユーザーを呼び出すアクセス許可を持っている場合は、すべてのテーブルを使用します。 それ以外の場合は、 **false**です。  
+ ユーザーがすべてのテーブルを使用するためのアクセス許可を持っている場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この allTablesAreSelectable メソッドは、java.sql.DatabaseMetaData インターフェイスの allTablesAreSelectable メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

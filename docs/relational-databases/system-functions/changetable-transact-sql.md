@@ -25,13 +25,12 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5023989a36f6118532dad0b110d03aaabf381242
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ CHANGETABLE (
  *last_sync_version*  
  変更を取得する際に、呼び出し元アプリケーションによって、変更が必要な時点を指定する必要があります。 last_sync_version は、その時点を指定します。 この関数により、そのバージョン以降に変更されたすべての行に関する情報が返されます。 アプリケーションは、last_sync_version よりも大きいバージョンの変更を受信するようにクエリを実行します。  
   
- 通常、変更を取得する前に、アプリケーションが呼び出す**CHANGE_TRACKING_CURRENT_VERSION()**に使用されるバージョンを入手する次の時間の変更が必要です。 したがって、アプリケーションで実際の値を解釈または理解する必要はありません。  
+ 通常、変更を取得する前に、アプリケーションが呼び出す**CHANGE_TRACKING_CURRENT_VERSION()** に使用されるバージョンを入手する次の時間の変更が必要です。 したがって、アプリケーションで実際の値を解釈または理解する必要はありません。  
   
  last_sync_version は呼び出し元アプリケーションによって取得されるため、アプリケーションで値を保存する必要があります。 アプリケーションでこの値が失われた場合は、データを再初期化する必要があります。  
   
@@ -138,7 +137,7 @@ CHANGETABLE (
   
 -   UPDATETEXT ステートメントの実行  
   
-     このステートメントは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定であり、使用は推奨されません。 ただし、UPDATE ステートメントの .WRITE 句によって加えられた変更は追跡されます。  
+     このステートメントは将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定であり、非推奨とされます。 ただし、UPDATE ステートメントの .WRITE 句によって加えられた変更は追跡されます。  
   
 -   TRUNCATE TABLE の使用による行の削除  
   

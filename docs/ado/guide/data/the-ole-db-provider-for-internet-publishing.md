@@ -1,11 +1,9 @@
 ---
 title: インターネットへの発行の OLE DB Provider |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3dfd95a9df4e67effa659e3d76d92ce1927d778
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bd7a8d2fd50cd5eb1317cdb102f9052197a925a4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>インターネットへの発行用の OLE DB プロバイダー
 ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトで使える Microsoft OLE DB Provider for Internet Publishing (インターネット発行プロバイダー) にアクセスして、リソースを操作する Web フォルダーやファイルなどMicrosoft によって処理されます。 ADO のソースを指定することができます、**レコード**、**ストリーム**、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) URL であります。 ことができますし、アップロード、ダウンロード、移動、コピー、および、リソースを削除またはリソースのプロパティを直接操作します。  

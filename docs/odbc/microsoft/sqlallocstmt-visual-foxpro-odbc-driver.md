@@ -3,15 +3,12 @@ title: SQLAllocStmt (Visual FoxPro ODBC ドライバー) |Microsoft ドキュメ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: ba973025-18c8-481b-a383-6ed935237894
@@ -19,12 +16,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a026a49e86e50fedd6882f0a7c780a02ed02e446
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2212d898b30fe89cbdbbf4696fe6411891a2a7c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  

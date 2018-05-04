@@ -3,15 +3,12 @@ title: SQL から C データ型にデータを変換する |Microsoft ドキュ
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,19 +24,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 370286bb4e955247e53d3c010b0bbb2088957bbe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>SQL から C データ型にデータを変換します。
 アプリケーションを呼び出すと**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**ドライバーは、データ ソースからデータを取得します。 かどうか、必要に応じて、データ変換から変換ドライバー取得することによって指定されたデータ型にデータ型、 *TargetType*引数**SQLBindCol**または**SQLGetData です。** 最後に、によって示される場所にデータを格納、 *TargetValuePtr*引数**SQLBindCol**または**SQLGetData** (および、ARD の SQL_DESC_DATA_PTR フィールド)。  
   
  次の表は、ODBC SQL からサポートされている変換にデータ型を ODBC C データ型を示します。 塗りつぶされた円は、SQL データ型の既定の変換を示します (する、データは変換されるときに C データ型の値*TargetType*は SQL_C_DEFAULT)。 中空の円では、サポートされている変換を示します。  
   
- ODBC 3*.x* ODBC 2 を使用するアプリケーション*。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
+ ODBC 3 *.x* ODBC 2 を使用するアプリケーション*。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
   
  変換後のデータの形式は Windows® 国設定の影響を受けません。  
   

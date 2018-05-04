@@ -1,35 +1,33 @@
 ---
-title: "シーケンス クラスター モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
+title: シーケンス クラスター モデルのクエリ例 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: cc61342fb89d01cd10b2866efb7592b187c8fca2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、モデルに格納されている情報の詳細を取得できます。予測クエリでは、モデル内のパターンを使用して、指定した新しいデータに基づく予測を行うことができます。 シーケンス クラスター モデルでコンテンツ クエリを使用すると、一般に、検出されたクラスターやクラスター内の遷移に関する追加情報を取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、モデルに格納されている情報の詳細を取得できます。予測クエリでは、モデル内のパターンを使用して、指定した新しいデータに基づく予測を行うことができます。 シーケンス クラスター モデルでコンテンツ クエリを使用すると、一般に、検出されたクラスターやクラスター内の遷移に関する追加情報を取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
  シーケンス クラスター モデルで予測クエリを使用すると、一般に、シーケンスと遷移、モデル内の非シーケンス属性、またはシーケンス属性と非シーケンス属性の組み合わせに基づく提案が行われます。  
   
@@ -268,13 +266,13 @@ AS t
 |[PredictAdjustedProbability (DMX)](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
 |[PredictAssociation (DMX)](../../dmx/predictassociation-dmx.md)|結合メンバーシップを予測します。|  
 |[PredictCaseLikelihood (DMX)](../../dmx/predictcaselikelihood-dmx.md)|入力したケースが既存のモデル内に収まる確率値を返します。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|指定された列の予測のためのヒストグラムを表すテーブルを返します。|  
+|[PredictHistogram (&) #40";"DMX"&"#41;](../../dmx/predicthistogram-dmx.md)|指定された列の予測のためのヒストグラムを表すテーブルを返します。|  
 |[PredictNodeId (DMX)](../../dmx/predictnodeid-dmx.md)|ケースが分類されるノードの Node_ID を返します。|  
 |[PredictProbability (DMX)](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
 |[PredictSequence (DMX)](../../dmx/predictsequence-dmx.md)|指定された一連のシーケンス データに対して予測される将来のシーケンス値です。|  
 |[PredictStdev (DMX)](../../dmx/predictstdev-dmx.md)|指定された列に対して、予測された標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -282,6 +280,6 @@ AS t
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Microsoft シーケンス クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [シーケンス クラスター モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [シーケンス クラスター モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

@@ -1,11 +1,9 @@
 ---
 title: 'ADO の #import を使用して Visual C++ 構文インデックスの |Microsoft ドキュメント'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -24,15 +22,14 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d878875f2e7f9002e00acef81fafaa89153b933
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import を使用して Visual C++ 構文インデックスの ADO
-このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照と**#import**ディレクティブです。  
+このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照と **#import**ディレクティブです。  
   
  プログラムをコンパイルすると、この特定のインデックスが派生しました、 **#import** *.tlh 生成されたファイルを再フォーマットし、ADO .dll ディレクティブです。 メソッド、プロパティ、およびイベントに関する情報のみが保持されます。 各プロパティに表示されて、対応する宣言される代替構文"`__declspec(property...)`"ディレクティブです。  
   

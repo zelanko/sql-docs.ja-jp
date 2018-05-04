@@ -1,11 +1,9 @@
 ---
 title: 十分な TempDB 領域を確保する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f71e88ce0d15ac28973850a3af8fd742eea54a18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c86196fdf0320b5f3cb5028cb7d5db484c4da846
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域を確保します。
 処理中にエラーが発生した場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を Microsoft SQL Server 6.5 の領域の処理を必要とするオブジェクト、TempDB のサイズを大きく必要があります。 (一部のクエリ処理の一時領域が必要ですたとえば、ORDER BY 句を使用してクエリには、並べ替えが必要です。 の、 **Recordset**、いくつかの一時ディスク領域を作成する必要があります。)。  
@@ -54,7 +51,7 @@ ms.lasthandoff: 04/18/2018
   
 6.  下にある、**サイズ**グループで、**展開**です。 グラフは、各物理デバイスに、使用可能な領域と割り当てられた領域を表示します。 茶色のバーは、使用可能な領域を表します。  
   
-7.  選択、**ログ デバイス**、マスターが使用可能なサイズを表示するなど、**サイズ (MB)**ボックス。  
+7.  選択、**ログ デバイス**、マスターが使用可能なサイズを表示するなど、**サイズ (MB)** ボックス。  
   
 8.  をクリックして**今すぐ展開**TempDB データベースにその領域を割り当てます。  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer tracing [ODBC]
 - ODBC data source administrator [ODBC], tracing options
@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82a6dd15ba2872ed365c41f5d6e8856da6bc94ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e60f40d0e42e2d5115e036e3552745109d53361d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-tracing-options"></a>トレース オプションの設定
 **トレース**のタブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックスでは、ODBC 関数呼び出しをトレースする方法を構成することができます。  
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  ユーザーあたりのトレースを返すには、チェック ボックスをオフにします。  
   
-7.  **[適用]**をクリックします。  
+7.  **[適用]** をクリックします。  
   
 > [!NOTE]  
 >  既に 1 つのモードでトレースを開始しているがある場合にトレースを停止し、正常に変更するモードの他のモードに切り替えます。  

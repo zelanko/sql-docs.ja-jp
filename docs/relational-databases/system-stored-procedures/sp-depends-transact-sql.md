@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 22068e036009c938cda5f67ad813021a863f8638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e51f127fa141d151875621209dc4195393670744
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果セット  
  **sp_depends** 2 つの結果セットが表示されます。  
   
- 次の結果セットでオブジェクトを表示*\<オブジェクト >*によって異なります。  
+ 次の結果セットでオブジェクトを表示*\<オブジェクト >* によって異なります。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
@@ -80,7 +79,7 @@ sp_depends [ @objname = ] '<object>'
 |**選択されています。**|**nvarchar(8)**|アイテムが SELECT ステートメントで使用されているかどうかを示します。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
- 次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >*です。  
+ 次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >* です。  
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  

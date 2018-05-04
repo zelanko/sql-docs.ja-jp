@@ -3,15 +3,12 @@ title: ステートメントの遷移 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f20ec0efb42e877695c44f4d62c4ffc1ae79806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>ステートメントの遷移
 ODBC ステートメントでは、次の状態があります。  
@@ -330,7 +326,7 @@ ODBC ステートメントでは、次の状態があります。
   
  [1] この行は、移行を示しています。 ときに*オプション*SQL_CLOSE をがします。  
   
- [2] この行は、移行を示しています。 ときに*オプション*SQL_UNBIND または SQL_RESET_PARAMS をがします。 場合、*オプション*引数 SQL_DROP れ、基になるドライバーは ODBC 3*.x*ドライバー、ドライバー マネージャーは、これにマップへの呼び出し**SQLFreeHandle**で*HandleType* SQL_HANDLE_STMT を設定します。 詳細については、移行テーブルを参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)です。  
+ [2] この行は、移行を示しています。 ときに*オプション*SQL_UNBIND または SQL_RESET_PARAMS をがします。 場合、*オプション*引数 SQL_DROP れ、基になるドライバーは ODBC 3 *.x*ドライバー、ドライバー マネージャーは、これにマップへの呼び出し**SQLFreeHandle**で*HandleType* SQL_HANDLE_STMT を設定します。 詳細については、移行テーブルを参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)です。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

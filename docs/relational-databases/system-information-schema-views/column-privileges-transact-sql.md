@@ -25,13 +25,12 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ec88ea50f5c82d2c1c1820af3da1587def4307d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e47d428249ffbdcf085814f4b327bb12176f60f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +41,14 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**権限の許可者**|**nvarchar(**128**)**|特権の設定者です。|  
-|**権限付与対象ユーザー**|**nvarchar(**128**)**|特権の被設定者です。|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**権限の許可者**|**nvarchar(** 128 **)**|特権の設定者です。|  
+|**権限付与対象ユーザー**|**nvarchar(** 128 **)**|特権の被設定者です。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
 |**COLUMN_NAME**|**sysname**|列名|  
-|**PRIVILEGE_TYPE**|**varchar (**10**)**|特権のタイプです。|  
-|**IS_GRANTABLE**|**varchar (**3**)**|被設定者が別の人に権限を許可できるかどうかを示します。|  
+|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特権のタイプです。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|被設定者が別の人に権限を許可できるかどうかを示します。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

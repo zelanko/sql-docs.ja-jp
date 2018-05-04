@@ -1,32 +1,19 @@
 ---
-title: "マイニング モデル内の列の分離を変更 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: マイニング モデル内の列の分離を変更 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- discretization [Analysis Services]
-- mining structures [Analysis Services], how-to topics
-- discretized columns [data mining]
-- bucketing problems [Analysis Services]
-ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a443aa02dbc035c6acef13e39c5b03c45692ba37
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c0865cd314c8a2ede3353b61c06cbe3c22705539
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>マイニング モデルでの列の分離の変更
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +23,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-display-the-properties-for-a-mining-model-column"></a>マイニング モデル列のプロパティを表示するには  
   
-1.  データ マイニング デザイナーの **[マイニング モデル]** タブで、マイニング モデル名を含む列ヘッダーか、マイニング アルゴリズム名を含むグリッドの行を右クリックし、 **[プロパティ]**を選択します。  
+1.  データ マイニング デザイナーの **[マイニング モデル]** タブで、マイニング モデル名を含む列ヘッダーか、マイニング アルゴリズム名を含むグリッドの行を右クリックし、 **[プロパティ]** を選択します。  
   
      マイニング モデル全体に関連付けられているプロパティが、 **[プロパティ]** ウィンドウに表示されます。  
   
@@ -46,11 +33,11 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-change-the-discretization-method"></a>分離メソッドを変更するには  
   
-1.  **[マイニング プロパティ]** ウィンドウで、 **[コンテンツ]**の横にあるテキスト ボックスをクリックし、一覧から [ **Discretized** ] を選択します。  
+1.  **[マイニング プロパティ]** ウィンドウで、 **[コンテンツ]** の横にあるテキスト ボックスをクリックし、一覧から [ **Discretized** ] を選択します。  
   
      マイニング モデル全体に関連付けられているプロパティが、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> プロパティと <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> プロパティが有効になりました。  
   
-2.  データ マイニング デザイナーの **[プロパティ]** ウィンドウで、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> の横にあるテキスト ボックスをクリックし、 **[Automatic]**、 **[EqualAreas]**、 **[Cluster]**を参照してください。  
+2.  データ マイニング デザイナーの **[プロパティ]** ウィンドウで、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> の横にあるテキスト ボックスをクリックし、 **[Automatic]**、 **[EqualAreas]**、 **[Cluster]** を参照してください。  
   
     > [!NOTE]  
     >  列の使用法が **Ignore**に設定されている場合、その列の **[プロパティ]** ウィンドウは空白になります。  

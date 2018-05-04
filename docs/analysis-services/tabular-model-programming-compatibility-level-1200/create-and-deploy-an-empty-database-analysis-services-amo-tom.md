@@ -1,30 +1,29 @@
 ---
-title: "作成および展開の空のデータベース (Analysis Services AMO-TOM) |Microsoft ドキュメント"
-ms.custom: 
+title: 作成および展開の空のデータベース (Analysis Services AMO-TOM) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dcb916e9-97c5-47e0-922a-404891423b2a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f2529d4f7cb3e4912b3d0b6d0ee0879c46d83ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88d505db25d797d2224857bcf128efdcaadc8a63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>作成し、空のデータベース (Analysis Services AMO-TOM) の展開
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]AMO TOM の一般的なプログラミング シナリオでは、データベースと、実行時にモデルを生成します。 この記事では、データベースを作成する手順について説明します。 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+AMO TOM の一般的なプログラミング シナリオでは、データベースと、実行時にモデルを生成します。 この記事では、データベースを作成する手順について説明します。 
 
 テーブル ソリューションは、のデータベースと、データベースごとに 1 つのモデルがモデルの間で一対一の対応関係があります。 どちらか一方、通常指定して、エンジンが存在しないオブジェクトを推論します。 
 

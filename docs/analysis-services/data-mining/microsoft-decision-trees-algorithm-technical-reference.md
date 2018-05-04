@@ -1,16 +1,15 @@
 ---
-title: "Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 700a8d3238c9411fd95e9358b26cbfb32ccade87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6a7cc31df33ae8af7a57db1a8842bb182b69117c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
   
  このトピックでは、アルゴリズムの実装について説明し、さまざまなタスクに合わせてアルゴリズムの動作をカスタマイズする方法を示します。また、デシジョン ツリー モデルに対するクエリに関する追加情報へのリンクも示します。  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 02/15/2018
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、結果として得られるマイニング モデルのパフォーマンスおよび精度に影響を与えるパラメーターがサポートされています。 マイニング モデル列またはマイニング構造列にモデリング フラグを設定して、データの処理方法を制御することもできます。  
   
 > [!NOTE]  
->  Microsoft デシジョン ツリー アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、Microsoft デシジョン ツリー アルゴリズムの動作をカスタマイズするためのいくつかの高度なパラメーターは、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473) 」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  Microsoft デシジョン ツリー アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、Microsoft デシジョン ツリー アルゴリズムの動作をカスタマイズするためのいくつかの高度なパラメーターは、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。 各エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムで使用できるパラメーターを示しています。  
@@ -211,6 +209,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

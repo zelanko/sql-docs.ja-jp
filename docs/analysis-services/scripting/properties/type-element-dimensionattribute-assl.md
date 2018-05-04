@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 25fed477ca48cb539ccf6c98f789f2243d67d078
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 要素 (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]属性の型が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  属性の型を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*通常*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|既定値|*Regular*|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -85,11 +84,11 @@ ms.lasthandoff: 01/08/2018
 |*AddressStreet*|住所の番地を表す属性です。|  
 |*AddressZip*|住所の郵便番号を表す属性です。|  
 |*BOMResource*|部品表 (BOM) のリソースを表す属性です。|  
-|*キャプション*|キャプションを表す属性です。|  
+|*Caption*|キャプションを表す属性です。|  
 |*CaptionAbbreviation*|省略形を表す属性です。|  
 |*CaptionDescription*|説明を表す属性です。|  
 |*Channel*|チャネルを表す属性です。|  
-|*市区町村*|市区町村を表す属性です。|  
+|*City*|市区町村を表す属性です。|  
 |*会社*|会社を表す属性です。|  
 |*大陸*|大陸を表す属性です。|  
 |*国*|国または地域を表す属性です。|  
@@ -100,12 +99,12 @@ ms.lasthandoff: 01/08/2018
 |*CurrencySource*|通貨換算の換算元通貨を表す属性です。|  
 |*CustomerGroup*|顧客のグループを表す属性です。|  
 |*CustomerHousehold*|顧客の世帯を表す属性です。|  
-|*顧客*|顧客を表す属性です。|  
+|*Customers*|顧客を表す属性です。|  
 |*日付*|日付を表す属性です。|  
 |*DateCanceled*|キャンセル日を表す属性です。|  
 |*DateDuration*|期間を表す属性です。|  
 |*DateEnded*|終了日を表す属性です。|  
-|*最終更新日時*|更新日を表す属性です。|  
+|*DateModified*|更新日を表す属性です。|  
 |*DateStart*|開始日を表す属性です。|  
 |*DayOfHalfYears*|半期の通算日を表す属性です。|  
 |*DayOfMonth*|月の通算日を表す属性です。|  
@@ -202,7 +201,7 @@ ms.lasthandoff: 01/08/2018
 |*MonthOfTrimester*|三半期の通算月を表す属性です。|  
 |*MonthOfYear*|年の通算月を表す属性です。|  
 |*か月間*|月を表す属性です。|  
-|*OrganizationalUnit*|組織単位を表す属性です。|  
+|*organizationalUnit*|組織単位を表す属性です。|  
 |*OrgTitle*|組織の肩書きを表す属性です。|  
 |*PercentOwnership*|所有権の比率を表す属性です。|  
 |*PercentVoteRight*|投票権の比率を表す属性です。|  
@@ -221,8 +220,8 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalVolume*|容積を表す属性です。|  
 |*PhysicalWeight*|重量を表す属性です。|  
 |*PhysicalWidth*|幅を表す属性です。|  
-|*Point*|ポイントを表す属性です。|  
-|*[郵便番号]*|郵便番号を表す属性です。|  
+|*ポイント*|ポイントを表す属性です。|  
+|*PostalCode*|郵便番号を表す属性です。|  
 |*Product*|製品を表す属性です。|  
 |*ProductBrand*|製品ブランドを表す属性です。|  
 |*ProductCategory*|製品カテゴリを表す属性です。|  
@@ -233,17 +232,17 @@ ms.lasthandoff: 01/08/2018
 |*ProjectEnddate*|プロジェクト終了日を表す属性です。|  
 |*プロジェクト名*|プロジェクト名を表す属性です。|  
 |*ProjectStartDate*|プロジェクト開始日を表す属性です。|  
-|*プロモーション*|プロモーションを表す属性です。|  
+|*Promotion*|プロモーションを表す属性です。|  
 |*QtyRangeHigh*|数量範囲の上限値を表す属性です。|  
 |*QtyRangeLow*|数量範囲の下限値を表す属性です。|  
-|*定量的*|数量属性を表す属性です。|  
+|*Quantitative*|数量属性を表す属性です。|  
 |*QuarterOfHalfYear*|半期の通算四半期を表す属性です。|  
 |*"Quarterofyear"*|年の通算四半期を表す属性です。|  
 |*四半期*|四半期を表す属性です。|  
 |*レート*|レートを表す属性です。|  
 |*RateType*|レートの種類を表す属性です。|  
 |*Region*|顧客によって定義された領域を表す属性です。|  
-|*通常*|標準属性を表す属性です。|  
+|*Regular*|標準属性を表す属性です。|  
 |*RelationToParent*|親へのリレーションを表す属性です。|  
 |*ReportingDay*|レポート カレンダーにおける日を表す属性です。|  
 |*ReportingDayOfHalfYears*|レポート カレンダーにおける半期の通算日を表す属性です。|  
@@ -274,9 +273,9 @@ ms.lasthandoff: 01/08/2018
 |*担当者*|代表者を表す属性です。|  
 |*シナリオ*|シナリオを表す属性です。|  
 |*Seconds*|秒を表す属性です。|  
-|*Sequence*|シーケンス属性を表す属性です。|  
+|*シーケンス*|シーケンス属性を表す属性です。|  
 |*ShortCaption*|短いキャプションを表す属性です。|  
-|*StateOrProvince*|都道府県を表す属性です。|  
+|*stateOrProvince*|都道府県を表す属性です。|  
 |*TenDayOfHalfYears*|半期の通算の旬を表す属性です。|  
 |*TenDayOfQuarter*|四半期の通算の旬を表す属性です。|  
 |*TenDayOfTrimester*|三半期の通算の旬を表す属性です。|  
@@ -287,7 +286,7 @@ ms.lasthandoff: 01/08/2018
 |*TrimesterOfYear*|年の通算三半期を表す属性です。|  
 |*UndefinedTime*|未定義の期間を表す属性です。|  
 |*Utility*|ユーティリティを表す属性です。|  
-|*バージョン*|バージョンを表す属性です。|  
+|*[バージョン]*|バージョンを表す属性です。|  
 |*WebHtml*|HTML コンテンツを表す属性です。|  
 |*WebMailAlias*|電子メールの別名を表す属性です。|  
 |*WebUrl*|URL アドレスを表す属性です。|  
@@ -305,8 +304,8 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**型**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.DimensionAttribute>します。  
   
 ## <a name="see-also"></a>参照  
- [Attributes 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [要素の属性&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Dimension 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

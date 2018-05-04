@@ -1,29 +1,27 @@
 ---
-title: "サンプル データとプロジェクトのインストール |Microsoft ドキュメント"
-ms.custom: 
+title: サンプル データとプロジェクトのインストール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: ab7162604cfd201a541f6ea3b053a7ed799e5e87
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: f5a377263d2bed1cc9798fa0e1b17749ce326ada
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>サンプル データおよび多次元プロジェクトをインストールします。 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -81,11 +79,11 @@ Analysis Services 多次元モデルでは、リレーショナル データベ�
   
 2.  Management Studio で、データベース エンジン インスタンスに接続します。  
   
-3.  [セキュリティ] フォルダーを展開し、[ログイン] を右クリックして **[新しいログイン]**をクリックします。  
+3.  [セキュリティ] フォルダーを展開し、[ログイン] を右クリックして **[新しいログイン]** をクリックします。  
   
 4.  [全般] ページの [ログイン名] に、「 **NT Service\MSSQLServerOLAPService** 」(またはサービスを実行している任意のアカウント) を入力します。  
   
-5.  **[ユーザー マッピング]**をクリックします。  
+5.  **[ユーザー マッピング]** をクリックします。  
   
 6.  次のチェック ボックスをオン、 **AdventureWorksDW**データベース。 ロールのメンバーシップには、 **db_datareader** および **public**が自動的に含まれます。 **[OK]** をクリックして、既定値をそのまま使用します。  
   
@@ -99,9 +97,9 @@ Analysis Services 多次元モデルでは、リレーショナル データベ�
   
 2.  .zip ファイルをルート ドライブ直下のフォルダー (たとえば、C:\Tutorial) に移動します。 この手順により、ダウンロード フォルダーでファイルを解凍する場合に発生することがある "パスが長すぎる" という内容のエラーを回避できます。  
   
-3.  ファイルを右クリックし、 **[すべて展開]**をクリックして、サンプル プロジェクトを解凍します。 ファイルを抽出するには後に、、レッスン 1、2、3、5、6、7、8、9 のフォルダーを含める必要があります 10 完了し、Lesson 4 Start です。 
+3.  ファイルを右クリックし、 **[すべて展開]** をクリックして、サンプル プロジェクトを解凍します。 ファイルを抽出するには後に、、レッスン 1、2、3、5、6、7、8、9 のフォルダーを含める必要があります 10 完了し、Lesson 4 Start です。 
   
-4.  これらのファイルの読み取り専用権限を削除します。 親フォルダーを右クリックし、選択**プロパティ**のチェック ボックスをオフ**読み取り専用**です。 **[OK]**をクリックします。 このフォルダー、サブフォルダー、およびファイルへの変更を適用します。  
+4.  これらのファイルの読み取り専用権限を削除します。 親フォルダーを右クリックし、選択**プロパティ**のチェック ボックスをオフ**読み取り専用**です。 **[OK]** をクリックします。 このフォルダー、サブフォルダー、およびファイルへの変更を適用します。  
 
 5.  レッスンに対応するソリューション (.sln) ファイルを開きます。 たとえば、Lesson 1 Complete というフォルダーで Analysis Services Tutorial.sln ファイルを開きます。  
   

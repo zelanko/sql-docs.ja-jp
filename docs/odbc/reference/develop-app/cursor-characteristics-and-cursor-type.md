@@ -3,15 +3,12 @@ title: カーソルの特性とカーソルの種類 |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
@@ -21,12 +18,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f54cc2f954a67d7a9cb3a4dfa6f6a006b652611d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b73c8d966f0974b09b672e497238f122bf1b13da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>カーソルの特性とカーソルの種類
 アプリケーションでは、(順方向専用、静的、キーセット ドリブンまたは動的) カーソルの種類を指定する代わりに、カーソルの特性を指定できます。 これを行うには、アプリケーションが選択されます (属性を設定して、SQL_ATTR_CURSOR_SCROLLABLE ステートメント) のカーソルのスクロール機能と感度 (属性を設定して、SQL_ATTR_CURSOR_SENSITIVITY ステートメント) のステートメントでカーソルを開く前に処理します。 ドライバーは、アプリケーションが要求した特性をする最も効率的に提供する、カーソルの種類を選択します。  

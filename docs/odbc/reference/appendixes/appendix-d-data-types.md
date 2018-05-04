@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04d25dd57849514636c53092276ef49dc44187bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 057f8a5333ee8f542f63993b014bfcba64e350df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-d-data-types"></a>付録 d: データ型
 ODBC データ型の 2 つのセットを定義します。 SQL データ型と C データ型。 SQL データ型では、データ ソースに格納されているデータのデータ型を示します。 C データ型では、アプリケーションのバッファーに格納されたデータのデータ型を示します。  

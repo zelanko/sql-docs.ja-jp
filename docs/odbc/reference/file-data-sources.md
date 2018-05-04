@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 254e859c8533625cb34f7d867c62f26bea5cd04d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 160d907704a3d2e6aea182bdbecc74b4d7f616a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-data-sources"></a>[ファイル データ ソース]
 *ファイル データ ソース*ファイルに格納され、1 人のユーザーによって繰り返し使用または複数のユーザー間で共有する接続情報を許可します。 ファイル データ ソースを使用する場合、ドライバー マネージャーは、.dsn ファイルに情報を使用してデータ ソースへの接続はします。 このファイルは、その他のファイルと同様に操作できます。 ファイル データ ソースには、データ ソース名はありませんが、コンピューターのデータ ソースと任意の 1 つのユーザーまたはコンピューターに登録されていません。  

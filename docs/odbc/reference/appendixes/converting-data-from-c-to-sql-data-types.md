@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -27,12 +27,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d87c393e9af2b3b24bd50b41287b9323a6e114cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4006d78d46168f6f7be272ce3c6e4557f8305b57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>データを C から SQL データ型に変換します。
 アプリケーションを呼び出すと**SQLExecute**または**SQLExecDirect**のすべてのパラメーターがバインドされたデータを取り出します**SQLBindParameter**記憶域の場所からアプリケーションです。 アプリケーションを呼び出すと**SQLSetPos**、ドライバーの更新プログラムのデータを取得または追加操作を使用してバインドされた列から**SQLBindCol**です。 実行時データ パラメーターの場合、アプリケーション データを送信、パラメーターと**SQLPutData**です。 かどうか、必要に応じて、ドライバーのデータを変換で指定されたデータ型、 *ValueType*引数**SQLBindParameter**で指定されたデータ型を*ParameterType*引数**SQLBindParameter**、し、データ ソースにデータを送信します。  

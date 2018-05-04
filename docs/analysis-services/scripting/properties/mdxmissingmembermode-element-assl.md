@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02ede17b0011ed3eceecf35feaa93fc42c55da3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7bb8564f9951ca06578430b98b9df28ef8fcf283
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>MdxMissingMemberMode 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]どのように不足しているメンバーを決定多次元式 (MDX) ステートメントで処理されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  欠落しているメンバーを多次元式 (MDX) ステートメントでどのように処理するかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,17 +47,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
-|既定値|*既定値*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|既定値|*[Default]*|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[Dimension](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
+|親要素|[ディメンション](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  
@@ -68,12 +67,12 @@ ms.lasthandoff: 01/08/2018
 |-----------|-----------------|  
 |*無視します。*|欠落しているメンバーは無視されます。|  
 |*[エラー]*|欠落しているメンバーが検出された場合、エラーを発生します。|  
-|*既定値*|欠落しているメンバーは無視されます。|  
+|*[Default]*|欠落しているメンバーは無視されます。|  
   
  親に対応する要素**MdxMissingMemberMode**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Dimension>します。  
   
 ## <a name="see-also"></a>参照  
- [多次元式 &#40;です。MDX と #41 です。参照](../../../mdx/multidimensional-expressions-mdx-reference.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [多次元式 & #40 です。MDX と #41 です。参照](../../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

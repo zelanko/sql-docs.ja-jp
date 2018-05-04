@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58f17196962c2ca05ebf1c2e56ce78621dbb9ac7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec45242bef3e7ad510a97d422bf05499b764c9c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 ## <a name="arguments"></a>引数  
  [  **@job_type=** ] **'***job_type***'**  
- 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は**'capture'**と**'cleanup'**です。  
+ 追加するジョブの種類を指定します。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** です。  
   
  [  **@start_job=** ] *start_job*  
  ジョブの追加後、そのジョブを直ちに開始するかどうかを指定するフラグです。 *start_job*は**ビット**既定値は 1 です。  
@@ -104,7 +103,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc ***。< database_name >***_cleanup**または**cdc ***。< database_name >***_capture**ここで、 *< database_name >*現在のデータベースの名前を指定します。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) 一意の識別子をたとえば続く: **cdc です。AdventureWorks_capture です。A1ACBDED-13FC-428C-8302-10100EF74F52**です。  
+ ジョブの名前は**cdc ***。< database_name >***_cleanup**または**cdc ***。< database_name >***_capture**ここで、 *< database_name >* 現在のデータベースの名前を指定します。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) 一意の識別子をたとえば続く: **cdc です。AdventureWorks_capture です。A1ACBDED-13FC-428C-8302-10100EF74F52**です。  
   
  表示するには、クリーンアップ ジョブまたはキャプチャ ジョブの現在の構成を使用して[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)です。 ジョブの構成を変更するには、使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)です。  
   

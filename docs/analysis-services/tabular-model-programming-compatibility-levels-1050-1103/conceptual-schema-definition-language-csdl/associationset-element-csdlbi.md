@@ -1,33 +1,31 @@
 ---
-title: "AssociationSet 要素 (CSDLBI) |Microsoft ドキュメント"
-ms.custom: 
+title: AssociationSet 要素 (CSDLBI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 91bb1eaf83d6de450d90c873b899467559cba451
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-**AssociationSet** 要素は関連付けを定義する複合型です。 CSDLBI データ モデルでは、関連付けは 2 つのテーブル間のリレーションシップを表します。  
+  **AssociationSet** 要素は関連付けを定義する複合型です。 CSDLBI データ モデルでは、関連付けは 2 つのテーブル間のリレーションシップを表します。  
   
  **AssociationSet** は、モデル内の一意なリレーションシップに対して個々に指定する必要があります。 **AssociationSet** では **Association** 要素を使用してエンドポイントを定義します。 **AssociationSet** 要素は、データ モデル内のリレーションシップとその使用状況に関するメタデータを定義します。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/15/2018
   
  次の表に **State** 要素の値を示します。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |Active|関連付けがアクティブです。|  
 |無効|関連付けがアクティブです。|  

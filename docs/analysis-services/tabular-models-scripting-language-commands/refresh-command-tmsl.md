@@ -1,31 +1,30 @@
 ---
-title: "Refresh コマンド (TMSL) |Microsoft ドキュメント"
-ms.custom: 
+title: Refresh コマンド (TMSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3bf58b33d8e0fe72264d50e177cd6678200c006
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-command-tmsl"></a>Refresh コマンド (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]現在のデータベース内のオブジェクトを処理します。   
-**更新**で調整する場合を除き、常に並列で実行[コマンド &#40; をシーケンスTMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  現在のデータベース内のオブジェクトを処理します。   
+**更新**常に並列で実行を調整する場合を除き、[コマンドのシーケンス&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)です。  
   
  データ更新操作中に、一部のオブジェクトの一部のプロパティをオーバーライドできます。  
   
@@ -73,11 +72,11 @@ ms.lasthandoff: 01/08/2018
 |dataOnly|データベース、<br />テーブル、<br />パーティション|このオブジェクトのデータを更新し、すべての依存をクリアします。|  
 |automatic|データベース、<br />テーブル、<br />パーティション|オブジェクトを更新し、再計算する必要がある場合、オブジェクトとそのすべての依存を更新し、再計算します。 パーティションの状態が準備完了以外の場合に適用されます。|  
 |add|パーティション|このパーティションにデータを追加し、すべての依存を再計算します。 このコマンドは通常のパーティションにのみ有効であり、計算パーティションでは利用できません。|  
-|断片化を解消します。|データベース、<br />テーブル|指定されたテーブル内のデータを最適化します。 データがテーブルに追加されるか、テーブルから削除されると、各列のディクショナリに、実際の列値にはもう存在しない値が入力されることがあります。 最適化オプションを利用すると、使用されなくなったディクショナリの値が消去されます。|  
+|断片化を解消します。|データベース、<br />Table|指定されたテーブル内のデータを最適化します。 データがテーブルに追加されるか、テーブルから削除されると、各列のディクショナリに、実際の列値にはもう存在しない値が入力されることがあります。 最適化オプションを利用すると、使用されなくなったディクショナリの値が消去されます。|  
   
  次のオブジェクトを更新することができます。  
   
- [データベース オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)データベースを処理します。  
+ [データベース オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)データベースを処理します。  
   
 ```  
 {  
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Tables オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) 1 つのテーブルを処理します。  
+ [Tables オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) 1 つのテーブルを処理します。  
   
 ```  
 {  
@@ -108,7 +107,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [パーティション オブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)テーブル内の 1 つのパーティションを処理します。  
+ [パーティション オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)テーブル内の 1 つのパーティションを処理します。  
   
 ```  
 {  
@@ -222,7 +221,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>使用状況 (エンドポイント)  
- このコマンドの要素がのステートメントで使用される、[メソッドの実行 &#40;です。XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
+ このコマンドの要素がのステートメントで使用される、[メソッドの実行&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md)呼び出しで、次の方法で公開される XMLA エンドポイント。  
   
 -   SQL Server Management Studio (SSMS) での XMLA ウィンドウとして  
   
@@ -232,10 +231,10 @@ ms.lasthandoff: 01/08/2018
   
  SSMS からこのコマンドの既製のスクリプトを生成できます。  たとえば、クリックして、**スクリプト**処理 ダイアログ ボックス。  
   
- [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語 &#40;です。TMSL &#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
+ [ \[MS-t SSAS\]: QL Server Analysis Services Tabular (SQL Server の技術的なプロトコル)](http://go.microsoft.com/fwlink/p/?LinkId=784855) JSON 表形式メタデータ コマンドとオブジェクトの構造を説明するセクション 3.1.5.2.2 がドキュメントに含まれています。 現時点では、そのドキュメントでは、コマンドや TMSL スクリプトで実装されていない機能について説明します。 トピックを参照してください ([表形式モデル スクリプト言語&#40;TMSL&#41;参照](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) がサポートされているものより明確にします。  
   
 ## <a name="see-also"></a>参照  
  [表形式モデルのスクリプト言語 (TMSL) リファレンス](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [処理オプションと設定 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
+ [処理オプションと設定&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   
   

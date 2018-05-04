@@ -24,12 +24,11 @@ caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 078bdbd13ee0a7bf9f846779b41aa71cabbf590d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @publication **=** ] **'***パブリケーション***'**  
  パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**%**、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
   
- [ @found **=** ] **'***見つかった***'**出力  
+ [ @found **=** ] **'***見つかった***'** 出力  
  行を返すことを示すフラグ。 *見つかった*は**int**と出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
- [ @publication_id **=**] **'***publication_id***'**出力  
+ [ @publication_id **=**] **'***publication_id***'** 出力  
  パブリケーション識別番号です。 *publication_id*は**uniqueidentifier**と出力パラメーター、既定値は NULL です。  
   
  [ @reserved **=**] **'***予約***'**  
@@ -106,7 +105,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_synctoalternate|**int**|代替同期パートナーがこのパブリッシャーと同期できるかどうかを示します。 値**0**同期パートナーを使用できないことを意味します。|  
 |validate_subscriber_info|**nvarchar(500)**|サブスクライバー情報を取得し、サブスクライバー上でのパラメーター化された行フィルター条件を検証するときに使用される機能の一覧。 各マージで、情報に一貫性を持たせながらパーティション分割する場合に使用できます。|  
 |backward_comp_level|**int**|データベースの互換性レベル。次のいずれかの値をとります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_activedirectory|**bit**|パブリケーション情報を Active Directory にパブリッシュするかどうかを示します。 値**0** Active Directory からパブリケーション情報はないことを意味します。<br /><br /> このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 現在、Active Directory にはパブリケーション情報を追加できません。|  
+|publish_to_activedirectory|**bit**|パブリケーション情報を Active Directory にパブリッシュするかどうかを示します。 値**0** Active Directory からパブリケーション情報はないことを意味します。<br /><br /> このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 現在、Active Directory にはパブリケーション情報を追加できません。|  
 |max_concurrent_merge|**int**|同時実行マージ プロセスの数。 場合**0**、特定の時点で実行されている同時実行マージ プロセスの数に制限はありません。|  
 |max_concurrent_dynamic_snapshots|**int**|マージ パブリケーションに対して同時に実行できる、フィルター選択されたデータのスナップショット セッションの最大数。 場合**0**、どの時点においても、パブリケーションに対して同時に実行できるフィルター選択されたデータの同時実行スナップショット セッションの最大数に制限はありません。|  
 |use_partition_groups|**int**|事前計算済みパーティションが使用されるかどうかを示します。 値**1**事前計算済みパーティションの方法が使用されます。|  

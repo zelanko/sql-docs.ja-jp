@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f501b72dad1f0e21bc59ffa6b83dc8e04bf55182
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +60,8 @@ n
  *n*  
  パラメーターの番号です。 最初のパラメーターは 1 です。  
   
-## <a name="returns"></a>返します。  
- パラメーター値を指すポインターを返します。 場合、 *n*番目のパラメーターが NULL ではない*n*番目のパラメーター、またはリモートがないストアド プロシージャは、NULL を返します。 パラメーター値が文字列である場合、NULL 終端ではないこともあります。 文字列の長さを判断するには、**srv_paramlen** を使用します。  
+## <a name="returns"></a>戻り値  
+ パラメーター値を指すポインターを返します。 *n* 番目のパラメーターが NULL である場合、*n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合には、NULL を返します。 パラメーター値が文字列である場合、NULL 終端ではないこともあります。 文字列の長さを判断するには、**srv_paramlen** を使用します。  
   
  パラメーターが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型のいずれかである場合、この関数は次の値を返します。 ポインター データには、データ型に対する有効なポインター (VP) か、NULL か、該当なし (N/A) かを示す情報と、ポインターが指すデータの内容が含まれます。  
   
@@ -79,7 +78,7 @@ n
   
  \*   データが NULL 終端ではないため、255 文字を超えるデータが切り捨てられても警告は発生しません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーター名がわかっている場合は、**srv_paramnumber** でパラメーター番号を取得できます。 パラメーターが NULL かどうかを判断する場合は、**srv_paramlen** を使用します。  
   
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  

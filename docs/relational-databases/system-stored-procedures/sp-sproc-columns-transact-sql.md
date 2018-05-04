@@ -24,13 +24,12 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f176d3f6be7f48920bee35ceae38977e6b947623
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ecbe398a303b7e4cb75fd0eeedc4e7951cfb4fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +53,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="arguments"></a>引数  
  [ **@procedure_name =** ] **'***name***'**  
- カタログ情報を返すために使用するプロシージャの名前を指定します。 *名前*は**nvarchar (**390**)**%、既定値は、現在のデータベースのすべてのテーブルを意味します。 ワイルドカードによるパターン照合がサポートされています。  
+ カタログ情報を返すために使用するプロシージャの名前を指定します。 *名前*は**nvarchar (** 390 **)**%、既定値は、現在のデータベースのすべてのテーブルを意味します。 ワイルドカードによるパターン照合がサポートされています。  
   
  [  **@procedure_owner =**] **'***所有者***'**  
- プロシージャの所有者の名前を指定します。 *所有者*は**nvarchar (**384**)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 場合*所有者*が指定されていない、基になる DBMS の既定のプロシージャの可視性規則が適用されます。  
+ プロシージャの所有者の名前を指定します。 *所有者*は**nvarchar (** 384 **)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 場合*所有者*が指定されていない、基になる DBMS の既定のプロシージャの可視性規則が適用されます。  
   
  指定した名前のプロシージャを現在のユーザーが所有している場合、そのプロシージャの情報が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定した名前を持つプロシージャを所有していないと**sp_sproc_columns**のデータベースの所有者によって所有されている指定の名前を持つプロシージャを探します。 そのプロシージャが存在すると、その列の情報が返されます。  
   
@@ -65,7 +64,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
  プロシージャ修飾子の名前を指定します。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
  [ **@column_name =**] **'***column_name***'**  
- カタログ情報が 1 列だけ必要な場合に使用する 1 つの列を指定します。 *column_name*は**nvarchar (**384**)**、既定値は NULL です。 場合*column_name*は省略すると、すべての列が返されます。 ワイルドカードによるパターン照合がサポートされています。 相互運用性を最大にするため、ゲートウェイのクライアントでは、ISO 標準のパターン (% と _ のワイルドカード文字) のみを使用してください。  
+ カタログ情報が 1 列だけ必要な場合に使用する 1 つの列を指定します。 *column_name*は**nvarchar (** 384 **)**、既定値は NULL です。 場合*column_name*は省略すると、すべての列が返されます。 ワイルドカードによるパターン照合がサポートされています。 相互運用性を最大にするため、ゲートウェイのクライアントでは、ISO 標準のパターン (% と _ のワイルドカード文字) のみを使用してください。  
   
  [  **@ODBCVer =**] **'***ODBCVer***'**  
  ODBC のバージョンが使用されています。 *ODBCVer*は**int**を既定値は 2 には、ODBC version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC を参照してください**SQLProcedureColumns** ODBC version 3.0 の仕様  
@@ -82,7 +81,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|プロシージャ修飾子の名前。 この列は、NULL の場合もあります。|  
 |**PROCEDURE_OWNER**|**sysname**|プロシージャ所有者の名前。 この列は、常に値を返します。|  
-|**PROCEDURE_NAME**|**nvarchar (**134**)**|プロシージャの名前。 この列は、常に値を返します。|  
+|**PROCEDURE_NAME**|**nvarchar (** 134 **)**|プロシージャの名前。 この列は、常に値を返します。|  
 |**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は、常に値を返します。|  
 |**COLUMN_TYPE**|**smallint**|このフィールドは、常に、値を返します。<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|ODBC データ型用の整数コードです。 このデータ型が ISO 型にマップできない場合、値は NULL になります。 ネイティブ データ型の名前が返されます、 **TYPE_NAME**列です。|  
@@ -92,8 +91,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**小数点以下桁数**|**smallint**|小数点より右側の桁数です。|  
 |**RADIX**|**smallint**|数値型の基数です。|  
 |**NULLABLE**|**smallint**|NULL 値を許容するかどうかを指定します。<br /><br /> 1 = NULL 値を許容するデータ型が作成されます。<br /><br /> 0 = null 値は許可されません。|  
-|**「解説」**|**varchar (**254**)**|プロシージャの列の説明です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値を返しません。|  
-|**COLUMN_DEF**|**nvarchar (**4000**)**|列の既定値です。|  
+|**「解説」**|**varchar (** 254 **)**|プロシージャの列の説明です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値を返しません。|  
+|**COLUMN_DEF**|**nvarchar (** 4000 **)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|表示されるように SQL データ型の値、**型**記述子のフィールドです。 この列は、同じ、 **DATA_TYPE**列を除き、 **datetime**と ISO**間隔**データ型。 この列は、常に値を返します。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime** ISO**間隔**サブコードの場合の値**SQL_DATA_TYPE**は**SQL_DATETIME**または**SQL_INTERVAL**. 型のデータ型以外の**datetime**と ISO**間隔**、このフィールドは NULL です。|  
 |**CHAR_OCTET_LENGTH**|**int**|最大長のバイト単位、**文字**または**バイナリ**データ型の列です。 他のすべてのデータ型の場合、この列は NULL を返します。|  

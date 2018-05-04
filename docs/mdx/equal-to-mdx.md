@@ -23,12 +23,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 51df250577d539c48acb55e26e9906cf1d5a15d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1e401e3c69397ce7aa1bf0941528a9e31219e2dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-equal-to-mdx"></a>= (等しい) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値と等しいかどうかを判別する比較演算を実行します。  
   
 > [!NOTE]  
->  オブジェクトを比較する場合、 [IS &#40;です。MDX と #41 です。](../mdx/is-mdx.md)演算子。 たとえば、クエリ軸上の現在のメンバーが特定のメンバーかどうかを確認する場合に IS 演算子を使用します。  
+>  オブジェクトを比較する場合、 [IS &#40;MDX&#41; ](../mdx/is-mdx.md)演算子。 たとえば、クエリ軸上の現在のメンバーが特定のメンバーかどうかを確認する場合に IS 演算子を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,6 +89,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

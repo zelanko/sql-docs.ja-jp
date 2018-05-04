@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, prerequisites
@@ -18,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5cad4953931198d516b53cf80f57ed76d7ac9b9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b1845ee99dc77a25c1afbd7257a6ba31f1fb6d6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO のドキュメントを使用するための前提条件
 使用するにはこのドキュメントが必要には、少なくとも一部エクスペリエンス ガイドの例のほとんどがこの言語で記述されているために、Microsoft Visual Basic でのアプリケーションを開発します。 Microsoft Visual C、Java、Visual Basic Scripting Edition (VBScript) および Microsoft JScript で記述された例をいくつかもあります。  

@@ -1,15 +1,14 @@
 ---
-title: "SQL Server 2016 Analysis Services の旧バージョンと互換性 |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server 2016 Analysis Services の旧バージョンと互換性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbd33812f2fe78fe50dfddc85c23bd24852b1035
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services の旧バージョンとの互換性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,12 +50,12 @@ A*非推奨の機能*将来のリリースで製品から廃止されますが�
 |多次元|セッション キューブ。 これに代わる機能はありません。|  
 |多次元|ローカル キューブ。 これに代わる機能はありません。|  
 |テーブル|表形式モデルの 1100 および 1103 互換性レベルは、将来のリリースではサポートされません。 代わりのモデルの互換性レベル 1200 以上に設定モデル定義を表形式メタデータに変換を開始します。 「 [Analysis Services での表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
-|ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
+|ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「[SQL Server 拡張イベントを使用した Analysis Services の監視](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
 |トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
   
 > [!NOTE]  
->  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前非推奨機能の中に可能性があるアクセス可能は変わらず廃止されており、物理的にある可能性があります製品からいつでも削除です。  
+>  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨の機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前非推奨機能の中に可能性があるアクセス可能は変わらず廃止されており、物理的にある可能性があります製品からいつでも削除です。  
 
 ## <a name="discontinued-features"></a>廃止された機能
 A*提供が中止された機能*以前のリリースでは推奨されなくなりました。 現在のリリースに含まれる継続可能性がありますが、現在サポートされていません。 廃止された機能を削除することがあります、将来のリリースか更新します。
@@ -67,14 +65,14 @@ A*提供が中止された機能*以前のリリースでは推奨されなく�
 |||  
 |-|-|  
 |**機能**|**置換または回避策**|  
-|[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|[なし] : この機能は SQL Server 2005 で非推奨になりました。|  
-|[CalculationCurrentPass (MDX)](../mdx/calculationcurrentpass-mdx.md)|[なし] : この機能は SQL Server 2005 で非推奨になりました。|  
-|NON_EMPTY_BEHAVIOR クエリ オプティマイザー ヒント|[なし] : この機能は SQL Server 2008 で非推奨になりました。|  
-|COM アセンブリ|[なし] : この機能は SQL Server 2008 で非推奨になりました。|  
-|CELL_EVALUATION_LIST intrinsic セル プロパティ|[なし] : この機能は SQL Server 2005 で非推奨になりました。|  
+|[CalculationPassValue (MDX)](../mdx/calculationpassvalue-mdx.md)|[なし] : この機能は SQL Server 2005 で非推奨となりました。|  
+|[CalculationCurrentPass (MDX)](../mdx/calculationcurrentpass-mdx.md)|[なし] : この機能は SQL Server 2005 で非推奨となりました。|  
+|NON_EMPTY_BEHAVIOR クエリ オプティマイザー ヒント|[なし] : この機能は SQL Server 2008 で非推奨となりました。|  
+|COM アセンブリ|[なし] : この機能は SQL Server 2008 で非推奨となりました。|  
+|CELL_EVALUATION_LIST intrinsic セル プロパティ|[なし] : この機能は SQL Server 2005 で非推奨となりました。|  
   
 > [!NOTE]  
->  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前非推奨機能の中に可能性があるアクセス可能は変わらず廃止されており、物理的にある可能性があります製品からいつでも削除です。  
+>  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨の機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前非推奨機能の中に可能性があるアクセス可能は変わらず廃止されており、物理的にある可能性があります製品からいつでも削除です。  
 
 ## <a name="breaking-changes"></a>重大な変更
 *重大な変更* は、モデルまたはサーバーのアップグレード後に、データ モデル、アプリケーション コード、またはスクリプトが機能しなくなるような変更です。
@@ -83,7 +81,7 @@ A*提供が中止された機能*以前のリリースでは推奨されなく�
  Analysis Services 管理オブジェクト (AMO)、ADOMD.NET、および表形式オブジェクト モデル (TOM) のクライアント ライブラリのターゲットを .NET 4.0 ランタイム。 これは、.NET 3.5 をターゲットとするアプリケーションにとって重大な変更になる可能性があります。 これらのアセンブリの新しいバージョンを使用するアプリケーションは、.NET 4.0 以降をターゲットとする必要があります。  
   
 ### <a name="amo-version-upgrade"></a>AMO のバージョン アップグレード  
- このリリースのバージョンのアップグレードは、 [Analysis Services 管理オブジェクト &#40;です。AMO &#41;](https://msdn.microsoft.com/library/mt436122.aspx)は特定の状況での互換性に影響する変更です。  以前のバージョンからアップグレードした場合でも、AMO を呼び出す既存のコードやスクリプトは従来と同様に動作します。 ただし、する必要がある場合*再コンパイル*を SQL Server 2016 Analysis Services インスタンスの対象として、アプリケーション、コードまたはスクリプトを稼働させるために次の名前空間を追加する必要があります。  
+ このリリースのバージョンのアップグレードは、 [Analysis Services 管理オブジェクト&#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx)は特定の状況での互換性に影響する変更です。  以前のバージョンからアップグレードした場合でも、AMO を呼び出す既存のコードやスクリプトは従来と同様に動作します。 ただし、する必要がある場合*再コンパイル*を SQL Server 2016 Analysis Services インスタンスの対象として、アプリケーション、コードまたはスクリプトを稼働させるために次の名前空間を追加する必要があります。  
   
 ```  
   

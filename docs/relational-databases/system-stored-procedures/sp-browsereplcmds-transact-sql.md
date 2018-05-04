@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e7bc94efc680663436b0cc77692c35aaa36bac7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8341d233f84a2c9fb2d5b3c7df2495118a2b2f5c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  返すシーケンス番号の最小値を正確に指定します。 *xact_seqno_start*は**nchar (22)**、既定値は 0x00000000000000000000 です。  
   
  [  **@xact_seqno_end =**] **'***xact_seqno_end***'**  
- 返すシーケンス番号の最大値を正確に指定します。 *xact_seqno_end*は**nchar (22)**の既定値は 0 xffffffffffffffffffff です。  
+ 返すシーケンス番号の最大値を正確に指定します。 *xact_seqno_end*は**nchar (22)** の既定値は 0 xffffffffffffffffffff です。  
   
  [  **@originator_id =**] **'***originator_id***'**  
  場合を指定指定したコマンド*originator_id*が返されます。 *originator_id*は**int**、既定値は NULL です。  

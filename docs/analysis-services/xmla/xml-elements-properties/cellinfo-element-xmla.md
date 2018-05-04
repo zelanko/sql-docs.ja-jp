@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2e26f0b4adb6872fed90fcab1a84b2ff83c90a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93fa1dab887abf695a1b141a307c0c73e060ce7b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 要素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]親に含まれるセル メタデータを表す[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  親に含まれるセル メタデータを表す[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,11 +53,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現します|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |親要素|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |子要素|1 つ以上のセル プロパティ定義|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **CellInfo**要素によって返される多次元データセット内に含まれるセルのセル プロパティのコレクションを格納、**ルート**要素を使用して、 **MDDataSet**データ型。 内の各セル プロパティ、 **CellInfo**要素がそれぞれに個別の XML 要素によって定義されている、**名前**属性および**型**属性。 **名前**セル プロパティの属性は、OLE DB の XML 要素によって表される OLAP セル プロパティの名前に対応し、**型**セルの XML データ型を表す属性プロパティ。 含まれるセルのセル プロパティの値を識別する XML 要素の名前が使用される、 **CellData**の要素、**ルート**要素。  
   
  セル プロパティ定義の構文は次のとおりです。  
@@ -95,6 +94,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

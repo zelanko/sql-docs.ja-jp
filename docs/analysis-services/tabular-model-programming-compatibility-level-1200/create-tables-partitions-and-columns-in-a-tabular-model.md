@@ -1,30 +1,29 @@
 ---
-title: "表形式モデル内のテーブル、パーティション、および列を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 表形式モデル内のテーブル、パーティション、および列を作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3246c04b8aa995442a71ddc49a2282945c829fa6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>表形式モデル内のテーブル、パーティション、および列を作成します。
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]表形式モデルでは、テーブルの行と列で構成されます。 行は、データの増分更新をサポートするパーティションに編成されます。 表形式のソリューションには、複数の種類によっては、データの取得先のテーブルをサポートできます。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+表形式モデルでは、テーブルの行と列で構成されます。 行は、データの増分更新をサポートするパーティションに編成されます。 表形式のソリューションには、複数の種類によっては、データの取得先のテーブルをサポートできます。  
 
 * 通常のテーブル、データ プロバイダーを介して、リレーショナル データ ソースからデータを生成する場所です。 
 

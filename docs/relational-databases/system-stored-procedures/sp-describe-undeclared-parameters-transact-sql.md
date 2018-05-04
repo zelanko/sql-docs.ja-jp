@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a455bfe51ac57408c075a20128054574b86962f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_describe_undeclared_parameters
   
 ## <a name="arguments"></a>引数  
  [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
+ 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** です。  
   
  [  **@params =** ] **N'***パラメーター***'**  
- @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
+ @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (***n***)** または**nvarchar (max)** です。  
   
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む*Transact SQL_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 TRANSACT-SQL ステートメントまたはステートメント内のバッチにパラメーターが含まれない場合@paramsは必要ありません。 このパラメーターの既定値は NULL です。  
   
@@ -188,7 +187,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     最初のケースで、型推論アルゴリズムは**char (30)**のデータ型として@pこのトピックの前半の規則に従ってします。 2 番目のケースで、型推論アルゴリズムは**varchar (8000)**次のセクションで、一般的な推論の規則に従ってします。  
+     最初のケースで、型推論アルゴリズムは**char (30)** のデータ型として@pこのトピックの前半の規則に従ってします。 2 番目のケースで、型推論アルゴリズムは**varchar (8000)** 次のセクションで、一般的な推論の規則に従ってします。  
   
 -   一般的な推論  
   
@@ -202,11 +201,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **numeric (38, 19)** -その他の numeric または decimal データ型は考慮されません。  
   
-    -   **varchar (8000)**、 **varchar (max)**、 **nvarchar (4000)**、および**nvarchar (max)** - その他の文字列データ型 (など**テキスト**、 **char (8000)**、 **nvarchar (30)**など) は考慮されません。  
+    -   **varchar (8000)**、 **varchar (max)**、 **nvarchar (4000)**、および**nvarchar (max)** - その他の文字列データ型 (など**テキスト**、 **char (8000)**、 **nvarchar (30)** など) は考慮されません。  
   
-    -   **varbinary (8000)**と**varbinary (max)** -その他のバイナリ データ型は考慮されません (など**イメージ**、 **binary (8000)**、 **varbinary(30)**, などです。)。  
+    -   **varbinary (8000)** と**varbinary (max)** -その他のバイナリ データ型は考慮されません (など**イメージ**、 **binary (8000)**、 **varbinary(30)**, などです。)。  
   
-    -   **日付**、 **time (7)**、 **smalldatetime**、 **datetime**、 **datetime2 (7)**、 **datetimeoffset (7)** - その他の日付し、時刻型のように**time(4)**とは見なされません。  
+    -   **日付**、 **time (7)**、 **smalldatetime**、 **datetime**、 **datetime2 (7)**、 **datetimeoffset (7)** - その他の日付し、時刻型のように**time(4)** とは見なされません。  
   
     -   **sql_variant**  
   
@@ -239,7 +238,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリで`SELECT @p FROM t`、任意のデータの型のためのデータ型の推論は失敗@p同等になります。 たとえばからの暗黙的な変換はありません**int**に**xml**です。  
   
-3.  かどうかのような 2 つのデータ型にリンク付けルール 1、たとえば**varchar (8000)**と**varchar (max)**、小さいデータ型 (**varchar (8000)**) を選択します。 同じ原則に適用されます**nvarchar**と**varbinary**データ型。  
+3.  かどうかのような 2 つのデータ型にリンク付けルール 1、たとえば**varchar (8000)** と**varchar (max)**、小さいデータ型 (**varchar (8000)**) を選択します。 同じ原則に適用されます**nvarchar**と**varbinary**データ型。  
   
 4.  ルール 1 のために、型推論アルゴリズムでは、特定の変換が他の変換よりも優先されます。 変換の優先順序は、次のとおりです。  
   
@@ -251,7 +250,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  その他の変換。  
   
- たとえば、クエリ`SELECT * FROM t WHERE [Col_varchar(30)] > @p`、 **varchar (8000)**変換 (a) をお勧めするために選択します。 クエリの`SELECT * FROM t WHERE [Col_char(30)] > @p`、 **varchar (8000)**ためと、(b) の型変換が発生するために選択がまだ他の選択肢 (など**(4000)**) 変換の種類 (d) が発生します。  
+ たとえば、クエリ`SELECT * FROM t WHERE [Col_varchar(30)] > @p`、 **varchar (8000)** 変換 (a) をお勧めするために選択します。 クエリの`SELECT * FROM t WHERE [Col_char(30)] > @p`、 **varchar (8000)** ためと、(b) の型変換が発生するために選択がまだ他の選択肢 (など **(4000)**) 変換の種類 (d) が発生します。  
   
  最後の例として、クエリについて考えてみます`SELECT NULL + @p`、 **int**に選択されている@p型 (c) 変換の結果となるためです。  
   

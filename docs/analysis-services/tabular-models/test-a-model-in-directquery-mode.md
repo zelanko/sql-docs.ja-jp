@@ -1,30 +1,29 @@
 ---
-title: "DirectQuery モードでモデルのテスト |Microsoft ドキュメント"
-ms.custom: 
+title: DirectQuery モードでモデルのテスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ad389541ba4bb964df0c3a0ca7cb08277d1bd1d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c57766209690f9509f4fd9c321358faa534cd96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="test-a-model-in-directquery-mode"></a>DirectQuery モードでモデルをテストする
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]デザインから開発の各段階で DirectQuery モードで表形式モデルをテストするためのオプションを確認します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  デザインから開発の各段階で DirectQuery モードのテーブル モデルをテストするためのオプションを確認します。  
   
 ## <a name="test-in-excel"></a>Excel でテストする 
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [SQL Server 拡張イベントを使用した Analysis Services の監視](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
--   [SQL Server Profiler を使用した Analysis Services の監視](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
+-   [SQL Server Profiler を使用して、Analysis Services の監視を](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
  Oracle または Teradata を使用している場合は、それらのシステムのトレース監視ツールを使用してください。  
   

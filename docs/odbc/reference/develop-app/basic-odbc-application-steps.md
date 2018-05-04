@@ -3,15 +3,12 @@ title: 基本的な ODBC アプリケーションの手順 |Microsoft ドキュ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
@@ -20,12 +17,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8879cf9a2d6d56cfb4ac8503b7c8a67d6d2773f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 45b9c9b028e6cc3c380ea8f0da754cebb0f860d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="basic-odbc-application-steps"></a>基本的な ODBC アプリケーションのステップ
 このセクションでは、ODBC アプリケーションの全体的な流れについて説明します。 可能性はほとんどありませんが、任意のアプリケーションを呼び出すすべてこれらの関数のこの順序で。 ただし、ほとんどのアプリケーションは、次の手順のいくつかのバリエーションを使用します。 アプリケーションの基本手順は、次の図に表示されます。  

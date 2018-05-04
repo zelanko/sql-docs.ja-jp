@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d4b85f18478d1cc34050804845f62e2283b57462
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dd1e979a3613dc95566875a57fc422c59dbc5074
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 詳細については、この構文を使用して、次を参照してください。 [SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). マイニング モデル コンテンツ スキーマ行セットの詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)です。  
+ 詳細については、この構文を使用して、次を参照してください。 [SELECT FROM&#60;モデル&#62;です。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)です。 マイニング モデル コンテンツ スキーマ行セットの詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)です。  
   
  場合、\<ノードのキャプション > が指定されていない、関数は、入力ケースが最も高いクラスターに所属する確率を返します。 使用して、**クラスター**関数最も可能性の高いクラスターを返します。  
   
@@ -76,8 +75,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

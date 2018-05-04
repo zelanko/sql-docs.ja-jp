@@ -1,16 +1,15 @@
 ---
-title: "Microsoft ニューラル ネットワーク アルゴリズム |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft ニューラル ネットワーク アルゴリズム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -25,20 +24,19 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 
+caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 359807ec110635df193ee1b2b1c69e1243cbb226
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft ニューラル ネットワーク アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、Machine Learning の一般的で適応性のあるニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、Machine Learning の一般的で適応性のあるニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用してマイニング モデルを作成する場合、複数の出力を含めることができ、アルゴリズムによって複数のネットワークが作成されます。 1 つのマイニング モデルに含まれるネットワークの数は、入力列の状態 (または属性値) の数、およびマイニング モデルが使用する予測可能列の数とそれらの列の状態の数によって異なります。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [ニューラル ネットワーク モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   

@@ -28,12 +28,11 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53ab0ac2a411a571893ee164f8395da77c3e947c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02878eb6f1dbe734142429c2e500396dde373b20
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
  返される情報**sys.dm_os_child_instances**各ユーザー インスタンス (heart_beat) の状態を確認し、ユーザーへの接続の作成に使用できるパイプ名 (instance_pipe_name) を取得するために使用できますインスタンスを使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または SQLCmd します。 ユーザー インスタンスがクライアント アプリケーションなどの外部プロセスによって開始された場合のみ、ユーザー インスタンスに接続できます。 SQL 管理ツールではユーザー インスタンスを開始できません。  
   
-> **注:**の機能、ユーザー インスタンスは[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]のみです。  
+> **注:** の機能、ユーザー インスタンスは[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]のみです。  
   
 > **注**これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_os_child_instances**です。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1feb6b6071958b6bbf73bcb2b50d785dffc1a87e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4812174e3a736a05475ceaf901bc86bf7949436d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,10 +91,10 @@ destlen
  *destlen*  
  出力先変数の長さをバイト数で指定します。 固定長データ型の場合、このパラメーターは無視されます。 出力先変数が SRVCHAR 型である場合、*destlen* の値を出力先バッファー領域全体の長さにする必要があります。 SRVCHAR 型または SRVBINARY 型の出力先変数の長さが -1 であれば、十分な領域があることを示します。 出力先変数が *srvchar* 型である場合、長さを -1 にすると文字列が NULL 終端になります。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  データ型の変換が成功した場合は、変換後のデータの長さをバイト数で返します。 **srv_convert** がサポートしていないデータ型への変換要求を受けた場合は、開発者の定義したエラー ハンドラーがあればそれを呼び出し、グローバル エラー番号を設定して -1 を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **srv_willconvert** 関数は、特定の変換が可能かどうかを判断する関数です。  
   
  概数データ型 SRVFLT4 または SRVFLT8 への変換では、有効桁数の一部が失われることがあります。 概数データ型 SRVFLT4 または SRVFLT8 から SRVCHAR または SRVTEXT への変換でも有効桁数の一部が失われることがあります。  

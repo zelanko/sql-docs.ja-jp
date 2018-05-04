@@ -30,12 +30,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a769e8dc2157140718a4a4c35e45fa9ccdd2e43d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c22aff659dc4de5bd5a16cf927aaf391fa856af4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ SELECT FLATTENED <select list> FROM ...
  、式を使用して、クエリの結果を並べ替えることができ、の組み合わせを使用して、結果のサブセットを返すことができますし、 **ORDER BY**と**上部**句。 これは、最も可能性の高い応答者にのみ結果を送信するような配信先指定メーリングなどのシナリオで役に立ちます。 予測確率で予測クエリのメーリング対象の結果の順序し、し、上部が返されるだけでした\<n > 結果。  
   
 ## <a name="select-list"></a>選択リスト  
- *\<選択リスト >*スカラー列参照、予測関数、および式に含めることができます。 使用できるオプションは、アルゴリズムと以下のコンテキストに依存します。  
+ *\<選択リスト >* スカラー列参照、予測関数、および式に含めることができます。 使用できるオプションは、アルゴリズムと以下のコンテキストに依存します。  
   
 -   クエリの対象がマイニング構造であるかマイニング モデルであるか  
   
@@ -98,7 +97,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 使用して、クエリによって返されるケースを制限することができます、**場所**句。 **場所**句を指定する列を参照、**場所**式内の列参照と同じセマンティクスを持つ必要があります、 *\<選択リスト >*の**選択**ステートメント、およびことのみを返すブール式。 構文、**場所**句は次のように、  
+ 使用して、クエリによって返されるケースを制限することができます、**場所**句。 **場所**句を指定する列を参照、**場所**式内の列参照と同じセマンティクスを持つ必要があります、 *\<選択リスト >* の**選択**ステートメント、およびことのみを返すブール式。 構文、**場所**句は次のように、  
   
 ```  
 WHERE < condition expression >  
@@ -113,9 +112,9 @@ WHERE < condition expression >
 ## <a name="predictions"></a>予測  
  予測の作成に使用できる構文には 2 つの種類があります。  
   
--   [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+-   [SELECT FROM&#60;モデル&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [SELECT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+-   [SELECT FROM&#60;モデル&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
  前者の予測では、複雑な予測をリアルタイムで、またはバッチとして作成することができます。  
   
@@ -132,26 +131,26 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
 ## <a name="clause-syntax"></a>句の構文  
  参照の複雑であるため、**選択**句によってステートメント、構文の詳細について要素と引数を記述します。 それぞれの句の詳細については、次のリストのトピックをクリックしてください。  
   
- [SELECT DISTINCT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)  
+ [SELECT DISTINCT FROM&#60;モデル&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。コンテンツ &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
+ [SELECT FROM&#60;モデル&#62;です。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
+ [SELECT FROM&#60;モデル&#62;です。ケース&#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
+ [SELECT FROM&#60;モデル&#62;です。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
+ [SELECT FROM&#60;モデル&#62;です。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
+ [SELECT FROM&#60;モデル&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [SELECT FROM &#60; モデル &#62;。& # #40; DMX &#41;](../dmx/select-from-model-dmx.md)  
+ [SELECT FROM&#60;モデル&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)  
   
- [SELECT FROM &#60; 構造 &#62;。場合](../dmx/select-from-structure-cases.md)  
+ [SELECT FROM&#60;構造&#62;です。場合](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)  
   
   

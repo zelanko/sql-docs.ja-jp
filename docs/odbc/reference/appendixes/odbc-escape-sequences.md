@@ -3,26 +3,22 @@ title: ODBC エスケープ シーケンス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d330051bb2924f4e5f911e3d181cdb745f6eb3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1a5f06ba64901e666fba94409bf43aef52903cc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-escape-sequences"></a>ODBC エスケープ シーケンス
 次のエスケープ シーケンスは、ODBC で使用されます。 このセクションの文法で定義されているいくつかの要素を使用して[要素は、SQL ステートメントで使用される](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)です。  

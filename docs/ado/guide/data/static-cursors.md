@@ -1,11 +1,9 @@
 ---
 title: 静的カーソル |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02867f7cfa2595f9d7427023092d1cdd9cae2754
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a837ce0d285f24772be5a88e29c0929e398e6582
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="static-cursors"></a>静的カーソル
 常に、静的カーソルには、カーソルが最初に開いた時点と、結果セットが表示されます。 実装によって静的カーソルは読み取り専用または読み取り/書き込みと前方と後方スクロールを提供します。 静的カーソルは、メンバーシップ、順序、または、カーソルが開かれた後に結果セットの値に加えられた変更を通常は検出されません。 静的カーソルは、これらは、これを行うには必要ありませんが、独自の更新、削除、および挿入を検出することがあります。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -24,12 +23,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 659b1047984e58395097a15446b2860ed37a7371
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fba6675213e513806f27c85fe881fc3efdeb0166
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-expressions"></a>組式の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
 -   暗黙的に参照された階層に既定のメンバーがある場合は、既定のメンバーが組に追加されます。  
   
--   暗黙的に参照された階層に既定のメンバーが存在しない場合、 **(すべて)**既定の階層のメンバーが使用されます。  
+-   暗黙的に参照された階層に既定のメンバーが存在しない場合、 **(すべて)** 既定の階層のメンバーが使用されます。  
   
 -   暗黙的に参照された階層に既定のメンバーがない場合は、その階層の最上位レベルにある最初のメンバーが使用されます。  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  組式に 1 つのメンバーしか指定されていない場合、MDX は、式を評価するためにそのメンバーを 1 つのメンバーのみの組に変換します。 つまり、組式の代わりにメンバー式 `[Measures].[TestMeasure]` を使用することは、組式 `( [Measures].[TestMeasure] ).` と機能的に等価です。  
   
 ## <a name="see-also"></a>参照  
- [式 &#40;です。MDX と #41 です。](../mdx/expressions-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

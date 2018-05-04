@@ -1,11 +1,9 @@
 ---
 title: メソッドの例 (vc++) の検索 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8277c4fb811be2d0ae61ded434643aeda835a6a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4ed34d6e09df280034b4e9f9e2e0ce201ff69cf3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-vc"></a>メソッドの例 (vc++) を検索します。
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)見つけてビジネスのタイトルの数をカウントするメソッド、 **Pubs**データベース。 例では、基になるプロバイダーが同様の機能をサポートしていません。  

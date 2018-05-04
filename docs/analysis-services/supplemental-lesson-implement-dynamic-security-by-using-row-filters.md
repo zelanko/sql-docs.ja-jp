@@ -1,26 +1,25 @@
 ---
-title: "行フィルターを使用して動的なセキュリティを実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 行フィルターを使用して動的なセキュリティを実装 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: 
-ms.assetid: 
+applies_to: ''
+ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 51ffec7f5fc4d5d6d44ff1dbab0e4a20827f6718
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d9bb154e75de27c37d78a8144c7fa54ae9297587
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>補足のレッスンで行フィルターを使用して動的なセキュリティを実装します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **30 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 この補足のレッスンのトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>AW Internet Sales Tabular Model プロジェクトへの dimSalesTerritory テーブルの追加  
@@ -45,23 +44,23 @@ ms.lasthandoff: 01/08/2018
   
 1.  SSDT をクリックして、**モデル** メニューをクリックして**既存の接続**です。  
   
-2.  **[既存の接続]** ダイアログ ボックスで **[Adventure Works DB from SQL]** データ ソース接続が選択されていることを確認し、 **[開く]**をクリックします。  
+2.  **[既存の接続]** ダイアログ ボックスで **[Adventure Works DB from SQL]** データ ソース接続が選択されていることを確認し、 **[開く]** をクリックします。  
   
     [権限借用の資格情報] ダイアログ ボックスが表示された場合は、「レッスン 2: データの追加」で使用した権限借用の資格情報を入力します。  
   
-3.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認し、 **[次へ]**をクリックします。  
+3.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認し、 **[次へ]** をクリックします。  
   
 4.  **[テーブルとビューの選択]** ページで、 **DimSalesTerritory** テーブルをクリックします。  
   
-5.  **[プレビューとフィルター]**をクリックします。  
+5.  **[プレビューとフィルター]** をクリックします。  
   
-6.  **SalesTerritoryAlternateKey** 列を選択解除して、 **[OK]**をクリックします。  
+6.  **SalesTerritoryAlternateKey** 列を選択解除して、 **[OK]** をクリックします。  
   
-7.  **[テーブルとビューの選択]** ページで、 **[完了]**をクリックします。  
+7.  **[テーブルとビューの選択]** ページで、 **[完了]** をクリックします。  
   
     新しいテーブルがモデル ワークスペースに追加されます。 オブジェクトとソースの DimSalesTerritory テーブルからのデータは、AW Internet Sales Tabular Model にインポートされます。  
   
-9. テーブルのインポートが完了したら、 **[閉じる]**をクリックします。  
+9. テーブルのインポートが完了したら、 **[閉じる]** をクリックします。  
 
 ## <a name="add-a-table-with-user-name-data"></a>ユーザー名データを含むテーブルの追加  
 AdventureWorksDW サンプル データベース内の dimEmployee テーブルには AdventureWorks ドメインのユーザーが含まれており、それらのユーザー名はご使用の環境に存在しないため、組織の実際のユーザーの小人数 (3 人) のサンプルが含まれたテーブルをモデルに作成する必要があります。 その後、これらのユーザーを新しいロールにメンバーとして追加します。 サンプルのユーザー名のパスワードは不要ですが、自分のドメインの実際の Windows ユーザー名が必要になります。  
@@ -95,7 +94,7 @@ AdventureWorksDW サンプル データベース内の dimEmployee テーブル�
   
 8.  **貼り付けるデータ**データを含むすべてのユーザー データと SampleEmployee ワークシートからヘッダーを確認してください。  
   
-9. **[先頭の行を列見出しとして使用する]** がオンであることを確認し、 **[OK]**をクリックします。  
+9. **[先頭の行を列見出しとして使用する]** がオンであることを確認し、 **[OK]** をクリックします。  
   
     SampleEmployee ワークシートからコピーした従業員データを含む EmployeeSecurity をという名前の新しいテーブルが作成されます。  
   
@@ -115,7 +114,7 @@ AdventureWorksDW サンプル データベース内の dimEmployee テーブル�
   
 #### <a name="to-hide-the-employeesecurity-table-from-client-applications"></a>クライアント アプリケーションから EmployeeSecurity テーブルを非表示にするには  
   
--   モデル デザイナーのダイアグラム ビューで、 **Employee** テーブルの見出しを右クリックし、 **[クライアント ツールで非表示にする]**をクリックします。  
+-   モデル デザイナーのダイアグラム ビューで、 **Employee** テーブルの見出しを右クリックし、 **[クライアント ツールで非表示にする]** をクリックします。  
   
 ## <a name="create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールの作成  
 この作業では、新しいユーザー ロールを作成します。 このロール定義の DimSalesTerritory テーブルのどの行がユーザーに表示された行フィルターが含まれます。 DimSalesTerritory に関連するその他のすべてのテーブルに一対多リレーションシップの方向にフィルターが適用されます。 ロールのメンバーであるすべてのユーザーがクエリ可能なされない EmployeeSecurity テーブル全体をセキュリティで保護する単純なフィルターも適用されます。  
@@ -135,9 +134,9 @@ AdventureWorksDW サンプル データベース内の dimEmployee テーブル�
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、**[読み取り]** 権限を選択します。  
   
-5.  **[メンバー]** タブをクリックし、 **[追加]**をクリックします。  
+5.  **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
-6.  **ユーザーまたはグループ**ダイアログ ボックスで、**を選択するオブジェクト名を入力**、EmployeeSecurity テーブルを作成するときに使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]**をクリックします。  
+6.  **ユーザーまたはグループ**ダイアログ ボックスで、**を選択するオブジェクト名を入力**、EmployeeSecurity テーブルを作成するときに使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]** をクリックします。  
   
     名前の追加の他のサンプル ユーザー EmployeeSecurity テーブルを作成するときに使用した、この手順を繰り返します。  
   
@@ -173,7 +172,7 @@ AdventureWorksDW サンプル データベース内の dimEmployee テーブル�
   
 1.  SSDT をクリックして、**モデル** メニューをクリックして**Excel で分析**です。  
   
-2.  **[Excel で分析]** ダイアログ ボックスの **[モデルへの接続に使用するユーザー名またはロールの指定]**で、 **[その他の Windows ユーザー]**をクリックし、 **[参照]**をクリックします。  
+2.  **[Excel で分析]** ダイアログ ボックスの **[モデルへの接続に使用するユーザー名またはロールの指定]** で、 **[その他の Windows ユーザー]** をクリックし、 **[参照]** をクリックします。  
   
 3.  **ユーザーまたはグループ**ダイアログ ボックスで、**を選択するオブジェクト名を入力**EmployeeSecurity テーブルに含まれるユーザー名のいずれかを入力し、クリックして**名前の確認**.  
   

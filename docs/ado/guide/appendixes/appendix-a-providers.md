@@ -1,11 +1,9 @@
 ---
 title: '付録 a: プロバイダー |Microsoft ドキュメント'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab1ea25e0f2b08956b3462b7b79c8fb28602b3db
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-a-data-and-service-providers"></a>付録 a: データとサービス プロバイダー
 このセクションでは、3 種類のプロバイダー。 データ プロバイダー、サービス プロバイダー、およびサービス コンポーネントです。 プロバイダーは 2 つのカテゴリに分類されます。 データとサービスを提供するものを提供するものです。 A*データ プロバイダー*独自のデータを所有し、表形式で、アプリケーションに公開します。 A*サービス プロバイダー*生成して、ADO アプリケーションの機能の拡張データを使用してサービスをカプセル化します。 サービス プロバイダーはさらとしても定義する、*サービス コンポーネント*、他のコンポーネントまたはサービス プロバイダーと連携する必要があります。

@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a032b71e3c2ec400bb402300573df5f6bc4a70ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,15 +60,15 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance(N) = 1 – ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>関連する予測関数  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]クラスタ リング モデルを照会するためには、次の追加機能を提供します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クラスタ リング モデルを照会するためには、次の追加機能を提供します。  
   
--   使用して、[クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)関数最も可能性の高いクラスターを返します。  
+-   使用して、[クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数最も可能性の高いクラスターを返します。  
   
--   使用して、 [ClusterProbability & # #40; DMX &#41;](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターとの距離とは逆の関係になります。  
+-   使用して、 [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターとの距離とは逆の関係になります。  
   
--   使用して、 [PredictHistogram & # #40; DMX &#41;](../dmx/predicthistogram-dmx.md)関数、入力ケース既存のモデルのクラスターの各確率値のヒストグラムを返します。  
+-   使用して、 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数、入力ケース既存のモデルのクラスターの各確率値のヒストグラムを返します。  
   
--   使用して、 [PredictCaseLikelihood & # #40; DMX &#41;](../dmx/predictcaselikelihood-dmx.md)を考慮すると、モデルが存在するは、入力したケース可能性を示す 1、0 からメジャーを返す関数は、アルゴリズムによって学習します。  
+-   使用して、 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)を考慮すると、モデルが存在するは、入力したケース可能性を示す 1、0 からメジャーを返す関数は、アルゴリズムによって学習します。  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>例 1: 最も可能性の高いクラスターまでのクラスターの距離の取得  
  次の例は、指定したケースから、そのケースが最も所属している可能性の高いクラスターまでの距離を返します。  
@@ -140,8 +139,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

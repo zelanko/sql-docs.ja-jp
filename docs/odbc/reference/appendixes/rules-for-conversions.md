@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -22,27 +22,26 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0e1feb5f75561d95d65cde069f135b9d24c53186
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 38d4fa50d82cf81b47dc50c44410d9e47ca3dfe5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-conversions"></a>変換に関する規則
 このセクションの規則は、数値リテラルを使用する変換の適用されます。 これらの規則の目的で、次の用語が定義されています。  
   
--   *割り当ての保存:*データベースのテーブルの列にデータを送信するときにします。 呼び出し中に発生したこの**SQLExecute**、 **SQLExecDirect**、および**SQLSetPos**です。 ストアの割り当て中に"target"列を参照するデータベースと「ソース」アプリケーション バッファー内のデータを参照します。  
+-   *割り当ての保存:* データベースのテーブルの列にデータを送信するときにします。 呼び出し中に発生したこの**SQLExecute**、 **SQLExecDirect**、および**SQLSetPos**です。 ストアの割り当て中に"target"列を参照するデータベースと「ソース」アプリケーション バッファー内のデータを参照します。  
   
--   *取得割り当て:*アプリケーション バッファーに、データベースからデータを取得するときにします。 呼び出し中に発生したこの**SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、および**SQLSetPos**です。 取得の割り当て中にアプリケーション バッファーを指す"target"と「ソース」データベースの列を参照しています。  
+-   *取得割り当て:* アプリケーション バッファーに、データベースからデータを取得するときにします。 呼び出し中に発生したこの**SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、および**SQLSetPos**です。 取得の割り当て中にアプリケーション バッファーを指す"target"と「ソース」データベースの列を参照しています。  
   
--   *CS:*文字のコピー元の値。  
+-   *CS:* 文字のコピー元の値。  
   
--   *NT:*数値ターゲット内の値。  
+-   *NT:* 数値ターゲット内の値。  
   
--   *NS:*数値のソースの値。  
+-   *NS:* 数値のソースの値。  
   
--   *CT:*文字ターゲット内の値。  
+-   *CT:* 文字ターゲット内の値。  
   
 -   正確な数値リテラルの有効桁数: の桁数が含まれています。  
   

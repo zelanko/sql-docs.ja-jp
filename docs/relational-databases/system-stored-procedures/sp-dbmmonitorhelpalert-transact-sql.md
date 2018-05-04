@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d2c0a90791e36d7628d99335116067143b1db0d2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0718f99372e0850f1d4b9482236e8750129b8906
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,8 +74,8 @@ sp_dbmmonitorhelpalert database_name
 |列|データ型|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|次の表、 **alert_id**各パフォーマンス基準とに表示されるメトリックの測定単位の値、 **sp_dbmmonitorresults**結果セット。|  
-|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:**を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャです。|  
-|**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:**保有期間は常に有効にします。|  
+|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:** を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャです。|  
+|**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効にします。|  
   
 |値|パフォーマンス基準|ユニット|  
 |-----------|------------------------|----------|  

@@ -1,29 +1,27 @@
 ---
-title: "定義とパースペクティブの表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 定義とパースペクティブの表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f9250e25f4e874c40ec9e400850707f30c8e1930
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 48286162e8cdcc36856791d49ab8a5d9d5d1d2fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>レッスン 9-1-の定義とパースペクティブの表示
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,13 +45,13 @@ ms.lasthandoff: 02/15/2018
   
 2.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-    次の図のように、新しいパースペクティブの既定の名前 " **パースペクティブ** " が **[パースペクティブ名]**列に表示されます。 各オブジェクトのチェック ボックスはオンになっています。いずれかのオブジェクトのチェック ボックスをオフにするまでは、このキューブの既定のパースペクティブと同じ表示内容になります。  
+    次の図のように、新しいパースペクティブの既定の名前 " **パースペクティブ** " が **[パースペクティブ名]** 列に表示されます。 各オブジェクトのチェック ボックスはオンになっています。いずれかのオブジェクトのチェック ボックスをオフにするまでは、このキューブの既定のパースペクティブと同じ表示内容になります。  
   
     ![パースペクティブ名 列に新しいパースペクティブ](../analysis-services/media/l9-perspectives-2.gif "パースペクティブ名 列に新しいパースペクティブ")  
   
 3.  パースペクティブ名を「 **Internet Sales**」に変更します。  
   
-4.  次の行で、DefaultMeasure を **[Internet Sales-Sales Amount]**に設定します。  
+4.  次の行で、DefaultMeasure を **[Internet Sales-Sales Amount]** に設定します。  
   
     ユーザーがこのパースペクティブを使ってキューブを表示する場合、他のメジャーをユーザーが指定しない限り、このメジャーがユーザーに表示されます。  
   
@@ -172,7 +170,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>各パースペクティブを使用したキューブの表示  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **[ブラウザー]** タブに切り替えて、 **[再接続]** ボタンをクリックします。  
   
@@ -190,11 +188,11 @@ ms.lasthandoff: 02/15/2018
   
     Internet Sales パースペクティブ用に指定されたオブジェクトだけが表示されます。  
   
-7.  メタデータ ペインで、 **[Measures]**を展開します。  
+7.  メタデータ ペインで、 **[Measures]** を展開します。  
   
     **Internet Sales** メジャー グループと、計算されるメンバー **Internet GPM** および **Internet Sales Ratio to All Products** だけが表示されます。  
   
-8.  モデルで再度 Excel を選択します。 **[Sales Summary]**を選択します。  
+8.  モデルで再度 Excel を選択します。 **[Sales Summary]** を選択します。  
   
     次の図のように、これらの各メジャー グループには 1 つのメジャーだけが表示されます。  
   

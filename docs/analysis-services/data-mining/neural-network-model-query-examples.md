@@ -1,35 +1,33 @@
 ---
-title: "ニューラル ネットワーク モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
+title: ニューラル ネットワーク モデルのクエリ例 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 74feda323c3a1fadcfa9471e80706ede0ad213df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、ニューラル ネットワーク モデルのコンテンツ クエリでは、非表示層の数などのモデル メタデータを取得できます。 また、予測クエリでは、入力に基づいて分類を提示し、必要に応じて各分類の確率を提供することもできます。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、ニューラル ネットワーク モデルのコンテンツ クエリでは、非表示層の数などのモデル メタデータを取得できます。 また、予測クエリでは、入力に基づいて分類を提示し、必要に応じて各分類の確率を提供することもできます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
@@ -188,7 +186,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> サンプル クエリ 5: 単一予測を作成する  
  ニューラル ネットワーク モデルに対する予測クエリを作成する最も簡単な方法は、予測クエリ ビルダーを使用することです。このビルダーは、 **および** のデータ マイニング デザイナーの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [マイニング予測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで使用できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーでモデルを参照し、関心のある属性をフィルター選択して傾向を表示します。その後、 **[マイニング予測]** タブに切り替えて、クエリを作成し、それらの傾向について新しい値を予測できます。  
   
- たとえば、コール センター モデルを参照して、注文数とその他の属性の相関関係を表示できます。 これを行うには、モデルで開き、ビューアー**入力** **\<すべて >**です。  次に、 **[出力]**で **[注文数]**を選択します。 **[値 1]**で最も注文が多い範囲を選択し、 **[値 2]**で最も注文が少ない範囲を選択します。 これにより、モデルで注文数と相関関係があるすべての属性がひとめでわかります。  
+ たとえば、コール センター モデルを参照して、注文数とその他の属性の相関関係を表示できます。 これを行うには、モデルで開き、ビューアー**入力** **\<すべて >** です。  次に、 **[出力]** で **[注文数]** を選択します。 **[値 1]** で最も注文が多い範囲を選択し、 **[値 2]** で最も注文が少ない範囲を選択します。 これにより、モデルで注文数と相関関係があるすべての属性がひとめでわかります。  
   
  ビューアーで結果を参照すると、特定の曜日に注文数が少ないこと、およびオペレーターの増員と売上の向上に相関関係がありそうなことがわかります。 この場合、モデルに対する予測クエリを使用して "what if" 仮説を試し、注文数が少ない曜日にレベル 2 のオペレーターを増員すると注文が増加するかどうかを確認できます。 これを行うには、次のようなクエリを作成します。  
   
@@ -218,13 +216,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがニューラル ネットワーク グラフ内の別のノードの子であるかどうかを示します。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
+|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがニューラル ネットワーク グラフ内の別のノードの子であるかどうかを示します。|  
+|[PredictAdjustedProbability & #40";"DMX"&"#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
+|[PredictHistogram (&) #40";"DMX"&"#41;](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|予測値の分散を返します。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|ニューラル ネットワーク モデルとロジスティック回帰モデルの場合、モデル全体のトレーニング セットのサイズを表す 1 つの値を返します。|  
+|[PredictProbability & #40";"DMX"&"#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
+|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|ニューラル ネットワーク モデルとロジスティック回帰モデルの場合、モデル全体のトレーニング セットのサイズを表す 1 つの値を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通する関数の一覧は、「[アルゴリズム リファレンス (Analysis Services - データ マイニング)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -232,6 +230,6 @@ NATURAL PREDICTION JOIN
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [ニューラル ネットワーク モデル のマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル &#40; 中級者向けデータ マイニング チュートリアル &#41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル & #40; 中級者向けデータ マイニング チュートリアル & #41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

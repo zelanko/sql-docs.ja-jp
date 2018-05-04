@@ -1,16 +1,15 @@
 ---
-title: "Microsoft クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -25,24 +24,23 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: defdcd737ca885a3f558e7b8aafe3b19aaf2fc1a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
+  ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
   
  クラスター モデルの使用方法の詳細については、次のトピックを参照してください。  
   
--   [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -188,6 +186,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [Microsoft クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

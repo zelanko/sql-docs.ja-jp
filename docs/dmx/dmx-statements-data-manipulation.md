@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: da15c0c6f02ae8aaad60897a00ccffdc531e715c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1d4be5c46902b269a3133a488763f5a8d6294aea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX ステートメントのデータの操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,14 +35,14 @@ ms.lasthandoff: 01/08/2018
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[削除 &#40;DMX&#41;](../dmx/delete-dmx.md)|学習済みの内容をマイニング モデルから削除します。|  
-|[挿入 &#40;DMX&#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
-|[選択 &#40;DMX&#41;](../dmx/select-dmx.md)|マイニング モデルを参照します。|  
-|[&#60;以外の場合はソース データ クエリ &#62;。](../dmx/source-data-query.md)|両方のデータ ソースにクエリ**INSERT INTO**と**選択**ステートメントです。|  
-|[更新 &#40;DMX&#41;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
+|[削除&AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|学習済みの内容をマイニング モデルから削除します。|  
+|[挿入&AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
+|[選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|マイニング モデルを参照します。|  
+|[&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)|両方のデータ ソースにクエリ**INSERT INTO**と**選択**ステートメントです。|  
+|[更新&AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

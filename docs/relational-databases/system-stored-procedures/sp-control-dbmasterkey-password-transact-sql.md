@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b162cc7c167c162839bce87164bff7b5ccb753e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c98b88b5e057dad432a178317b5255f0c0111a45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  sp_control_dbmasterkey_password を使用して追加された資格情報を使ってデータベース マスター キーを開く場合、そのデータベース マスター キーはサービス マスター キーによって再暗号化されます。 データベースが読み取り専用モードの場合、再暗号化操作は失敗し、データベース マスター キーは暗号化されません。 それ以降、データベース マスター キーにアクセスする場合は、OPEN MASTER KEY ステートメントおよびパスワードを使用する必要があります。 パスワードの使用を避けるには、データベースを読み取り専用モードに移行する前に、資格情報を作成するようにしてください。  
   
- **下位互換性問題の潜在的な:**現時点では、ストアド プロシージャは確認されないかどうか、マスター _ キー。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は廃止予定となっています。 マスター _ キーが存在する必要があります、将来のリリースと、ストアド プロシージャで使用されるパスワードで**sp_control_dbmasterkey_password**データベース マスター _ キーの暗号化に使用されるパスワードのいずれかと同じパスワードをする必要があります。  
+ **下位互換性問題の潜在的な:** 現時点では、ストアド プロシージャは確認されないかどうか、マスター _ キー。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は廃止予定となっています。 マスター _ キーが存在する必要があります、将来のリリースと、ストアド プロシージャで使用されるパスワードで**sp_control_dbmasterkey_password**データベース マスター _ キーの暗号化に使用されるパスワードのいずれかと同じパスワードをする必要があります。  
   
 ## <a name="permissions"></a>権限  
  データベースに対する CONTROL 権限が必要です。  

@@ -1,35 +1,33 @@
 ---
-title: "処理の要件および考慮事項 (データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: 処理の要件および考慮事項 (データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
-caps.latest.revision: 
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f55e2d47bcc8228111b35f86ec620a6623b68cad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 26c7d21cbf5886fab1ce49a571f7ed2814dbe1ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>処理の要件および注意事項 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、データ マイニング オブジェクトを処理するときに注意するいくつかの技術的な考慮事項について説明します。 処理について、および処理がデータ マイニングに適用される方法に関する一般情報については、「 [データ マイニング オブジェクトの処理](../../analysis-services/data-mining/processing-data-mining-objects.md)」を参照してください。  
+  このトピックでは、データ マイニング オブジェクトを処理するときに注意するいくつかの技術的な考慮事項について説明します。 処理について、および処理がデータ マイニングに適用される方法に関する一般情報については、「 [データ マイニング オブジェクトの処理](../../analysis-services/data-mining/processing-data-mining-objects.md)」を参照してください。  
   
  [リレーショナル ストアに対するクエリ](#bkmk_QueryReqs)  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/15/2018
   
  モデルの処理時に、モデルは、データ ソースからデータを再度読み取るのではなく、マイニング構造からデータの概要を取得します。 サーバーは、作成されたキューブと、キャッシュされたインデックス データとケース データを使用して、モデルのトレーニングを行うための独立したスレッドを作成します。  
   
- 並列モデル処理をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「 [SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473) 」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+ 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並列モデル処理をサポートするを参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
   
 ##  <a name="bkmk_ProcessStructures"></a> マイニング構造の処理  
  マイニング構造は、すべての依存モデルと一緒に処理することも、個別に処理することもできます。 処理に時間がかかると予想されるモデルがあり、その操作を保留する場合、モデルとは別にマイニング構造を処理すると便利です。  
@@ -94,8 +92,8 @@ ms.lasthandoff: 02/15/2018
  詳細については、「 [データ マイニング オブジェクトのエクスポートおよびインポート](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造と #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [マイニング構造と #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

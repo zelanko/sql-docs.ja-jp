@@ -1,29 +1,27 @@
 ---
-title: "キューブおよびディメンションのプロパティの確認 |Microsoft ドキュメント"
-ms.custom: 
+title: キューブおよびディメンションのプロパティの確認 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d0913972ef2ca0b1c40c0e23d3d189a6149809cf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: eb2436f7f9efb2801f7a9195e31af0f746c885e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>レッスン 2-4 - 確認キューブおよびディメンションのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,11 +40,11 @@ ms.lasthandoff: 02/15/2018
   
     ソリューション エクスプローラーに表示されているように、データベース レベルで作成したディメンションは 3 つだけですが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブには 5 つのキューブ ディメンションがあります。 データベース ディメンションよりキューブ ディメンションの方が多いのは、Date データベース ディメンションを使用して、日付関連のキューブ ディメンションを 3 つ作成したためです。これらは、ファクト テーブル内のそれぞれ異なる日付関連ファクトに基づいています。 日付関連のこうしたディメンションは、" *多様ディメンション*" とも呼ばれます。 日付に関連する 3 つのキューブ ディメンションにより、製品売上に関する 3 種類のファクト (製品の受注日、納品期日、出荷日) を使用してキューブを生成できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、複数のキューブ ディメンションに対して 1 つのデータベース ディメンションを繰り返し利用することにより、ディメンションの管理が容易になり、ディスク容量を節約でき、全体的な処理時間が短くなります。  
   
-4.  **[キューブ構造]** タブの **[ディメンション]** ペインで **[Customer]**を展開し、 **[Customer の編集]** をクリックしてディメンション デザイナーでディメンションを開きます。  
+4.  **[キューブ構造]** タブの **[ディメンション]** ペインで **[Customer]** を展開し、 **[Customer の編集]** をクリックしてディメンション デザイナーでディメンションを開きます。  
   
-    ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]**というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]**の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、「 [ディメンションの属性のプロパティの参照](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)」、「 [ユーザー定義階層の作成](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)」、および「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」を参照してください。  
+    ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、「 [ディメンションの属性のプロパティの参照](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)」、「 [ユーザー定義階層の作成](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)」、および「 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)」を参照してください。  
   
-5.  キューブ デザイナーに切り替えるには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブを右クリックし、 **[ビュー デザイナー]**をクリックします。  
+5.  キューブ デザイナーに切り替えるには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブを右クリックし、 **[ビュー デザイナー]** をクリックします。  
   
 6.  キューブ デザイナーで、 **[ディメンションの使用法]** タブをクリックします。  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 02/15/2018
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスにまだキューブを配置していないので、キューブは表示されません。 この時点では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブは、キューブの定義でしかありません。したがって、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のどのインスタンスにも配置できます。 キューブを配置して処理するときに、定義済みオブジェクトを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに作成し、基のデータ ソースのデータをオブジェクトに取り込みます。  
   
-9. ソリューション エクスプローラーで、 **[キューブ]** ノード内にある **[Analysis Services Tutorial]** を右クリックし、 **[コードの表示]**をクリックします。 場合によっては、しばらく待つ必要があります。  
+9. ソリューション エクスプローラーで、 **[キューブ]** ノード内にある **[Analysis Services Tutorial]** を右クリックし、 **[コードの表示]** をクリックします。 場合によっては、しばらく待つ必要があります。  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの XML コードが、 **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** タブに表示されます。ディメンションの配置時には、実際にはこのコードによってキューブが [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに作成されます。 詳細については、「[Analysis Services のプロジェクトでの XML の表示 (SSDT)](../analysis-services/multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)」を参照してください。  
   

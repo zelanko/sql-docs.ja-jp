@@ -1,30 +1,29 @@
 ---
-title: "インストール、配布、および表形式オブジェクト モデルを参照 |Microsoft ドキュメント"
-ms.custom: 
+title: インストール、配布、および表形式オブジェクト モデルを参照 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 117a63b5b2f1f3d5f01fb4a8d44b6c6550df24c9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>インストール、配布、および表形式オブジェクト モデルを参照
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]この記事では、ダウンロード、参照、および Analysis Services 表形式オブジェクト モデル (TOM)、c# ライブラリを作成および表形式モデルとマネージ コード内のデータベースを管理するための再配布する方法について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+この記事では、ダウンロード、参照、および Analysis Services 表形式オブジェクト モデル (TOM)、c# ライブラリを作成および表形式モデルとマネージ コード内のデータベースを管理するための再配布する方法について説明します。  
   
 TOM は、SQL Server 2016 に付属している AMO クライアント ライブラリ (Microsoft.AnalysisServices.dll) の拡張です。 SQL Server 2016 のリリースでは、表形式メタデータ エンジンを対象とするテーブル モデルで動作します。 TOM を使用するには、モデルとデータベースが互換性レベル 1200 以上でなければなりません。  
 
@@ -37,7 +36,7 @@ SQL Server 2016 では、リファクタリングしたし、新しいコア、�
 アセンブリ  |機能  |重要なクラス |
 ---------|---------|--------------  |
 コア <br/>Microsoft.AnalysisServices.Core.dll | 表形式および多次元データベースの両方に共通します。 <br/><br/>例外処理、Analysis Services インスタンスと、データベースへの汎用的な接続と共通のプロパティとメソッドをサーバーおよびデータベース オブジェクトへのアクセスを提供します。 <br/><br/>SQL Server 2016 を対象とする任意の AMO ソリューションに必須です。 | コア&nbsp;サーバー<br/>コア&nbsp;データベース<br/>AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll、13.0.1601.5 のバージョンまたはそれ以降。| 作成および表形式メタデータ オブジェクトを管理します。 | TOM&nbsp;サーバー <br/>TOM&nbsp;データベース<br /> [モデル]<br /> テーブル<br /> [列]<br /> リレーションシップ
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll、13.0.1601.5 のバージョンまたはそれ以降。| 作成および表形式メタデータ オブジェクトを管理します。 | TOM&nbsp;サーバー <br/>TOM&nbsp;データベース<br /> [モデル]<br /> Table<br /> 列<br /> リレーションシップ
   AMO<br /> Microsoft.AnalysisServices.dll| 作成し、テーブル 1050 ~ 1103 データベースを含め、多次元メタデータ オブジェクトを管理します。 | AMO&nbsp;サーバー <br />AMO&nbsp;データベース <br /> Cube <br /> [ディメンション] <br /> [MeasureGroup] 
 Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | Analysis Services のワークロードでの JSON のシリアル化する機能的な変更を導入する際のリスクを削除する更新プログラムを制御する NewtonSoftJson.dll (JSON.NET) をラップする DLL のヘルパーです。 <br /> <br />この DLL は、TOM に依存関係として存在し、コード内で直接使用するものではありません。 | [なし] :  
   
@@ -84,9 +83,9 @@ Microsoft.AnalysisServices.Tabular.dll、せず Microsoft.AnalysisServices.dll �
   
 1. 移動して[、SQL Server 2016 の Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=52676)です。  
   
-2. **[ダウンロード]**をクリックします。  
+2. **[ダウンロード]** をクリックします。  
   
-3. いずれかを選択**\X64\SQL_AS_AMO.msi**または**\X86\SQL_AS_AMO.msi**です。 いずれか 1 つを選択することができます: TOM と AMO のアセンブリは、プラットフォームに依存しません。
+3. いずれかを選択 **\X64\SQL_AS_AMO.msi**または **\X86\SQL_AS_AMO.msi**です。 いずれか 1 つを選択することができます: TOM と AMO のアセンブリは、プラットフォームに依存しません。
   
 4. をクリックして**次**ダウンロードを続行します。 .Msi ファイルが表示されます、**ダウンロード**フォルダーです。  
   

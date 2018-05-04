@@ -1,11 +1,9 @@
 ---
 title: Microsoft OLE DB Provider for Microsoft Jet |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 253de8c53055269efb6a9e15c9d9a5ca940606e8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c0046abe221607ff85b237c1b15ad331ba09c4e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Jet の概要
 OLE DB Provider for Jet は、Microsoft Jet データベースにアクセスする ADO できます。
@@ -57,7 +54,7 @@ Microsoft.Jet.OLEDB.4.0
 |**Password**|ユーザーのパスワードを指定します。 このキーワードが指定されていない場合、空の文字列 ("")、既定で使用します。|
 
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
 
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
  OLE DB Provider for Jet は、ADO で定義されたものだけでなく、いくつかのプロバイダーに固有の動的のプロパティをサポートします。 他のすべてのと同様に**接続**パラメーターを設定できますを使用して、**プロパティ**のコレクション、**接続**オブジェクト、または接続文字列の一部として。

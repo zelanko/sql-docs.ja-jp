@@ -24,12 +24,11 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0387b4dac0a8d0419b5ffccb8ac8520a0bc1bd0c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 32283e740f6b9e206e629ed4ac8cb2bcfeb60ac4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  このアカウントで使用する SMTP メール サーバーの名前または IP アドレスを指定します。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
   
  [ **@mailserver_type** =] '*server_type*'  
- 電子メール サーバーの種類を指定します。 *server_type*は**sysname**、既定値は**'SMTP'**.  
+ 電子メール サーバーの種類を指定します。 *server_type*は**sysname**、既定値は **'SMTP'**.  
   
  [ **@port** =] *port_number*  
  電子メール サーバーのポート番号を指定します。 *port_number*は**int**、既定値は 25 です。  
@@ -101,9 +100,9 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>解説  
- データベース メールを使用する個別のパラメーター **@email_address**、 **@display_name**、および **@replyto_address**です。 **@email_address**パラメーターは、メッセージの送信元となるアドレスです。 **@display_name**パラメーターは、名前に示すように、**から:**電子メール メッセージのフィールドです。 **@replyto_address**パラメーターは、アドレス、電子メール メッセージに返信が送信されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するアカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでのみ使用される電子メール アドレスから電子メール メッセージを送信できます。 受信者が容易に判別するため、そのアドレスからのメッセージはフレンドリ名を表示する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、メッセージを送信します。 受信者がメッセージに返信した場合、その返信は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるアドレスではなくデータベース管理者に送られます。 このシナリオでは、アカウントが使用する**SqlAgent@Adventure-Works.com**として電子メール アドレス。 表示名に設定されている**SQL Server Agent Automated Mailer**です。 アカウントが使用する**danw@Adventure-Works.com**として、返信先アドレスでは、このアカウントから送信されたメッセージへの返信それでの電子メール アドレスではなく、データベース管理者に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントです。 データベース メールではこれら 3 つのパラメーターに対して個別の値を設定できるため、ユーザーの必要に応じてメッセージを構成できます。  
+ データベース メールを使用する個別のパラメーター **@email_address**、 **@display_name**、および **@replyto_address**です。 **@email_address**パラメーターは、メッセージの送信元となるアドレスです。 **@display_name**パラメーターは、名前に示すように、**から:** 電子メール メッセージのフィールドです。 **@replyto_address**パラメーターは、アドレス、電子メール メッセージに返信が送信されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するアカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでのみ使用される電子メール アドレスから電子メール メッセージを送信できます。 受信者が容易に判別するため、そのアドレスからのメッセージはフレンドリ名を表示する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、メッセージを送信します。 受信者がメッセージに返信した場合、その返信は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるアドレスではなくデータベース管理者に送られます。 このシナリオでは、アカウントが使用する**SqlAgent@Adventure-Works.com**として電子メール アドレス。 表示名に設定されている**SQL Server Agent Automated Mailer**です。 アカウントが使用する**danw@Adventure-Works.com**として、返信先アドレスでは、このアカウントから送信されたメッセージへの返信それでの電子メール アドレスではなく、データベース管理者に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントです。 データベース メールではこれら 3 つのパラメーターに対して個別の値を設定できるため、ユーザーの必要に応じてメッセージを構成できます。  
   
- **@mailserver_type**パラメーター値をサポートする**'SMTP'**です。  
+ **@mailserver_type**パラメーター値をサポートする **'SMTP'** です。  
   
  ときに**@use_default_credentials**の資格情報を使用して SMTP サーバーに 1 のメールが送信されるは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]です。 ときに**@use_default_credentials** 0 は、および**@username**と**@password**が指定されて、アカウントのアカウントは、SMTP 認証を使用します。 **@username**と**@password**アカウントが、SMTP サーバーのない資格情報を使用する資格情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]またはコンピューター上にあるネットワークです。  
   
@@ -113,7 +112,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  メンバーにこのプロシージャの既定の実行権限、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、という名前のアカウントを作成`AdventureWorks Administrator`です。 アカウントが使用する電子メール アドレス`dba@Adventure-Works.com`SMTP メール サーバーにメールを送信および`smtp.Adventure-Works.com`です。 このアカウントのスライド ショーから送信された電子メール メッセージ`AdventureWorks Automated Mailer`上、**から:**メッセージの行。 メッセージへの返信は `danw@Adventure-Works.com` に転送されます。  
+ 次の例は、という名前のアカウントを作成`AdventureWorks Administrator`です。 アカウントが使用する電子メール アドレス`dba@Adventure-Works.com`SMTP メール サーバーにメールを送信および`smtp.Adventure-Works.com`です。 このアカウントのスライド ショーから送信された電子メール メッセージ`AdventureWorks Automated Mailer`上、**から:** メッセージの行。 メッセージへの返信は `danw@Adventure-Works.com` に転送されます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_account_sp  

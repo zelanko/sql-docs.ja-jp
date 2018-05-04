@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b00fa29ae9dc0bb4529e013f9767451c3d0f1720
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 11f789c735a80ece07c1c59d18232dfa80a848da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString データ型 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]特定の列挙子の名前付き定数のセットを表す派生データ型を定義します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  特定の列挙子に対する名前付き定数のセットを表す派生データ型を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,9 +47,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
-|基本データ型|**string**|  
+|基本データ型|**文字列**|  
 |派生データ型|なし|  
   
 ## <a name="data-type-relationships"></a>データ型のリレーションシップ  
@@ -68,17 +67,17 @@ ms.lasthandoff: 01/08/2018
   
 |列挙子|Description|  
 |----------------|-----------------|  
-|ProviderType|内の ProviderType 列をサポートしている、 [DISCOVER_DATASOURCES](../../../analysis-services/schema-rowsets/xml/discover-datasources-rowset.md)スキーマ行セットによって返されるデータの種類を決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> この列挙体は、XMLA プロパティもサポートしています。 **ProviderType**、でサポートされているプロバイダーの種類を決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 この列挙は DISCOVER_DATASOURCES スキーマ行セット内でも使用されます。<br /><br /> 詳細については**ProviderType**を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
+|ProviderType|内の ProviderType 列をサポートしている、 [DISCOVER_DATASOURCES](../../../analysis-services/schema-rowsets/xml/discover-datasources-rowset.md)スキーマ行セットによって返されるデータの種類を決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> この列挙体は、XMLA プロパティもサポートしています。 **ProviderType**、でサポートされているプロバイダーの種類を決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。 この列挙は DISCOVER_DATASOURCES スキーマ行セット内でも使用されます。<br /><br /> 詳細については**ProviderType**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
 |AuthenticationMode|DISCOVER_DATASOURCES スキーマ行セット内の AuthenticationMode 列をサポートします。これは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスへのアクセス時に渡される必要のあるセキュリティ資格情報を決定します。|  
 |PropertyAccessType|内の PropertyAccessType 列をサポートしている、 [DISCOVER_PROPERTIES](../../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)スキーマ行セットを XMLA プロパティのアクセスの種類を決定します。|  
-|StateSupport|XMLA プロパティをサポートして**StateSupport**、によってサポートされる状態保持のレベルを決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> 詳細については**StateSupport**を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
-|StateActionVerb|SOAP ヘッダー内の XMLA によってサポートされ、セッションの開始、識別、および終了に使用される動詞の一覧を含みます。<br /><br /> セッションの詳細については、次を参照してください。[接続の管理とのセッションと #40 です。XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).|  
-|ResultsetFormat|XMLA プロパティをサポートして**形式**で返されるデータの種類を決定する、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)要素。<br /><br /> 詳細については**形式**を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
-|ResultsetAxisFormat|XMLA プロパティをサポートして**AxisFormat**で返される軸情報の形式を決定する、**ルート**多次元データを含む要素です。<br /><br /> 詳細については**AxisFormat**を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
-|ResultsetContents|XMLA プロパティをサポートして**コンテンツ**でのメタデータやデータが返されるかどうかを決定する、**ルート**要素。<br /><br /> 詳細については**コンテンツ**を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
-|MDXSupportLevel|XMLA プロパティをサポートして**MDXSupport**で利用可能な多次元式 (MDX) サポートのレベルを示す、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> 詳細については**MDXSupport**を参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
+|StateSupport|XMLA プロパティをサポートして**StateSupport**、によってサポートされる状態保持のレベルを決定する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> 詳細については**StateSupport**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
+|StateActionVerb|SOAP ヘッダー内の XMLA によってサポートされ、セッションの開始、識別、および終了に使用される動詞の一覧を含みます。<br /><br /> セッションの詳細については、次を参照してください。[接続の管理とセッション&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)です。|  
+|ResultsetFormat|XMLA プロパティをサポートして**形式**で返されるデータの種類を決定する、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)要素。<br /><br /> 詳細については**形式**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
+|ResultsetAxisFormat|XMLA プロパティをサポートして**AxisFormat**で返される軸情報の形式を決定する、**ルート**多次元データを含む要素です。<br /><br /> 詳細については**AxisFormat**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
+|ResultsetContents|XMLA プロパティをサポートして**コンテンツ**でのメタデータやデータが返されるかどうかを決定する、**ルート**要素。<br /><br /> 詳細については**コンテンツ**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
+|MDXSupportLevel|XMLA プロパティをサポートして**MDXSupport**で利用可能な多次元式 (MDX) サポートのレベルを示す、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンス。<br /><br /> 詳細については**MDXSupport**を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。|  
   
 ## <a name="see-also"></a>参照  
- [XML データ型 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [XML データ型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

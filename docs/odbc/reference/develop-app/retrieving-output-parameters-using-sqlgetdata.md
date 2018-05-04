@@ -3,15 +3,12 @@ title: SQLGetData を使用して出力パラメーターを取得する |Micros
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], retrieving output parameters
 - output parameters [ODBC]
@@ -21,12 +18,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92903e38c31af40c7d2cf375cad6695a23acb010
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e410618b8a110cbb978f45d4ac5cf37f1a77e845
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用して出力パラメーターを取得します。
 ODBC 3.8 する前に、アプリケーションは、バインドされた出力バッファーを持つクエリの出力パラメーターを取得のみでした。 ただし、パラメーター値のサイズが (たとえば、大きな画像) 非常に大きい場合に非常に大きなバッファーを割り当てるにくくなっています。 ODBC 3.8 には、部分の出力パラメーターを取得する新しい方法が導入されています。 アプリケーションを呼び出せるようになりました**SQLGetData**小さなバッファーを伴うに複数回、大きなパラメーター値を取得します。 これは、大きな列データの取得に似ています。  
@@ -36,7 +32,7 @@ ODBC 3.8 する前に、アプリケーションは、バインドされた出�
  この機能は ODBC 3.8 アプリケーションで使用できるまたは再コンパイル ODBC 3.x と ODBC 2.x アプリケーション、およびこれらのアプリケーションを使用して取得する出力パラメーターをサポートしている ODBC 3.8 ドライバーを持つ必要があります**SQLGetData**と ODBC 3.8 ドライバーマネージャーです。 ODBC の新しい機能を使用する以前のバージョンのアプリケーションを有効にする方法については、次を参照してください。[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)です。  
   
 ## <a name="usage-example"></a>使用例  
- たとえば、ストアド プロシージャの実行**{呼び出し sp_f(?,?)}**として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされている、ストアド プロシージャが結果セットを返さない (このトピックで後述する見つかりますより複雑なシナリオ)。  
+ たとえば、ストアド プロシージャの実行 **{呼び出し sp_f(?,?)}** として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされている、ストアド プロシージャが結果セットを返さない (このトピックで後述する見つかりますより複雑なシナリオ)。  
   
 1.  パラメーターごとに、呼び出す**SQLBindParameter**で*InputOutputType* SQL_PARAM_OUTPUT_STREAM に設定し、 *ParameterValuePtr*パラメーター番号などのトークンに設定、データへのポインターまたは入力パラメーターをバインドするアプリケーションが使用する構造体へのポインター。 この例では、パラメーターの序数をトークンとして使用します。  
   

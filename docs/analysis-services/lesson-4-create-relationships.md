@@ -1,28 +1,27 @@
 ---
-title: "レッスン 5: リレーションシップの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 5: リレーションシップの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 318b583cc92dcd70c75f0eb04be262a82ecf7d1d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2d80999c474fceeb199d812cd2f2112e9c4f360
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-create-relationships"></a>レッスン 4: リレーションシップを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **10 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 3: 日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)です。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>既存のリレーションシップの確認と新しいリレーションシップの追加  
@@ -58,11 +57,11 @@ ms.lasthandoff: 01/08/2018
   
     |Active|テーブル|関連する参照テーブル|  
     |----------|---------|------------------------|  
-    |可|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |可|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |可|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |可|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |可|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |はい|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |はい|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |はい|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |はい|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |はい|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     上の表に、リレーションシップのいずれかが存在しない場合は、次のテーブルがモデルに含まれることを確認してください: DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、および FactInternetSales です。 同じデータ ソース接続からのテーブルが複数回インポートされた場合、それらのテーブル間のリレーションシップは作成されず、手動で作成する必要があります。  
 

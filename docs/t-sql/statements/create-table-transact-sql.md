@@ -54,11 +54,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9f0a96fb3d9ffabc97ae32afbaa2462a34ec14e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d1a856d468f3d1c23acfe88cc867dfebefd3586c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1261,7 +1261,9 @@ SELECT * FROM tempdb.sys.database_files
   
 ## <a name="permissions"></a>アクセス許可  
  データベースの CREATE TABLE 権限と、テーブルを作成するスキーマの ALTER 権限が必要です。  
-  
+ 
+ CREATE TABLE ステートメント内の列をユーザー定義型として定義する場合は、そのユーザー定義型に対する REFERENCES 権限が必要です。 
+ 
  CREATE TABLE ステートメント内の列を CLR ユーザー定義型として定義する場合は、その型の所有権か、その型に対する REFERENCES 権限が必要です。  
   
  CREATE TABLE ステートメント内の列に XML スキーマ コレクションが関連付けられている場合は、その XML スキーマ コレクションの所有権か、そのスキーマ コレクションに対する REFERENCES 権限が必要です。  

@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c26df937a654289c6a5313631a612bfbd386cc6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a330534bfb6178e3fe700ccda06d72036ff48e02
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-列またはパラメーターに関する情報を返します。
+この関数は、列またはパラメーターの情報を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,41 +48,41 @@ COLUMNPROPERTY ( id , column , property )
   
 ## <a name="arguments"></a>引数  
 *id*  
-テーブルまたはプロシージャの識別子 (ID) を含む[式](../../t-sql/language-elements/expressions-transact-sql.md)です。
+テーブルまたはプロシージャの識別子 (ID) を含む[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 *column*  
-列またはパラメーターの名前を含む式です。
+列またはパラメーターの名前を含む式。
   
 *property*  
-*id* として返される情報を含む式を指定します。次のいずれかの値を指定できます。
+*id* 引数の場合、*property* 引数は `COLUMNPROPERTY` 関数が返す情報の型を指定します。 *property* 引数は次のいずれかの値になります。
   
 |ReplTest1|Description|返される値|  
 |---|---|---|
-|**AllowsNull**|NULL 値を許可します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
+|**AllowsNull**|NULL 値を許可します。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
 |**ColumnId**|**sys.columns.column_id** に対応する列の ID 値です。|列 ID<br /><br /> **注:** 複数の列に対してクエリを実行する場合、列の ID 値の順序にギャップが生じることがあります。|  
-|**FullTextTypeColumn**|*column* のドキュメント型情報を保持する、テーブル内の TYPE COLUMN です。|このプロパティの 2 番目のパラメーターとして渡される列の、フルテキストの TYPE COLUMN の ID です。|  
-|**IsComputed**|列は計算列です。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsCursorType**|プロシージャ パラメーターは CURSOR 型です。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsDeterministic**|列は決定的です。 このプロパティは、計算列およびビュー列にのみ適用されます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力 (計算列またはビュー列ではありません)|  
-|**IsFulltextIndexed**|列はフルテキスト インデックス作成用に登録されています。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsIdentity**|列で IDENTITY プロパティを使用します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsIdNotForRepl**|列で IDENTITY_INSERT の設定が確認されます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsIndexable**|列にインデックスを作成できます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsOutParam**|プロシージャ パラメーターは出力パラメーターです。|1 = TRUE<br /><br /> 0 = FALSE NULL = 無効な入力 |  
-|**IsPrecise**|列は正確です。 このプロパティは、決定的な列に対してのみ適用されます。|1 = TRUE<br /><br /> 0 = FALSE NULL = 無効な入力  (決定的な列ではありません)|  
-|**IsRowGuidCol**|列は **uniqueidentifier** 型であり、ROWGUIDCOL プロパティで定義されています。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsSystemVerified**|列の決定性のプロパティと有効桁数のプロパティは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で確認できます。 このプロパティは、計算列およびビュー列にのみ適用されます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsXmlIndexable**|XML 列は XML インデックスで使用できます。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**[精度]**|列またはパラメーターのデータ型の長さです。|指定した列のデータ型の長さ<br /><br /> -1 = **xml** または大きい値の型<br /><br /> NULL = 無効な入力|  
-|**[スケール]**|列またはパラメーターのデータ型の小数点以下桁数です。|小数点以下桁数<br /><br /> NULL = 無効な入力|  
-|**StatisticalSemantics**|列でセマンティック インデックス作成が有効になっています。|1 = TRUE<br /><br /> 0 = FALSE|  
-|**SystemDataAccess**|列は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム カタログまたは仮想システム テーブルのデータにアクセスする関数から派生します。 このプロパティは、計算列およびビュー列にのみ適用されます。|1 = TRUE (読み取り専用アクセス)<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**UserDataAccess**|列は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに格納されている、ビュー テーブルおよび一時テーブルを含むユーザー テーブル内のデータにアクセスする関数から派生します。 このプロパティは、計算列およびビュー列にのみ適用されます。|1 = TRUE (読み取り専用アクセス)<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**UsesAnsiTrim**|テーブルが最初に作成されたときに、ANSI_PADDING が ON に設定されました。 このプロパティは、**char** または **varchar** 型の列またはパラメーターにのみ適用されます。|1= TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsSparse**|列はスパース列です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|1= TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**IsColumnSet**|列は列セットです。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|1= TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力|  
-|**GeneratedAlwaysType**|列の値は、システムによって生成されます。 **sys.columns.generated_always_type** に対応します|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 常に生成された = なし<br /><br /> 1 = 行の先頭として常に生成されました。<br /><br /> 2 – 生成された常に行の終わりとして|  
-|**IsHidden**|列の値は、システムによって生成されます。 **sys.columns.is_hidden** に対応します|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 = 非表示ではありません<br /><br /> 1 = 非表示|  
+|**FullTextTypeColumn**|*column* のドキュメント型情報を保持する、テーブル内の TYPE COLUMN。|この関数の 2 番目のパラメーターとして渡される列名の式の、フルテキストの TYPE COLUMN の ID。|  
+|**GeneratedAlwaysType**|システムによって生成された列の値です。 **sys.columns.generated_always_type** に対応します|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0: 常に生成されなかった<br /><br /> 1: 行の先頭として常に生成された<br /><br /> 2: 行の終わりに常に生成された|  
+|**IsColumnSet**|列は列セットです。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsComputed**|列は計算列です。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsCursorType**|プロシージャ パラメーターは CURSOR 型です。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsDeterministic**|列は決定的です。 このプロパティは、計算列およびビュー列にのみ適用されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力 (計算列またはビュー列ではありません)|  
+|**IsFulltextIndexed**|列はフルテキスト インデックス作成用に登録されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsHidden**|システムによって生成された列の値です。 **sys.columns.is_hidden** に対応します|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0 = 非表示ではない<br /><br /> 1: 非表示|  
+|**IsIdentity**|列で IDENTITY プロパティを使用します。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsIdNotForRepl**|列で IDENTITY_INSERT の設定が確認されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsIndexable**|列にインデックスを作成できます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsOutParam**|プロシージャ パラメーターは出力パラメーターです。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsPrecise**|列は正確です。 このプロパティは、決定的な列に対してのみ適用されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力 (決定的な列ではありません)|  
+|**IsRowGuidCol**|列は **uniqueidentifier** データ型であり、ROWGUIDCOL プロパティで定義されています。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsSparse**|列はスパース列です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、列の決定性のプロパティと有効桁数のプロパティを確認できます。 このプロパティは、計算列およびビュー列にのみ適用されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**IsXmlIndexable**|XML 列は XML インデックスで使用できます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**[精度]**|列またはパラメーターのデータ型の長さ。|指定した列のデータ型の長さ<br /><br /> -1: **xml** または大きい値の型<br /><br /> NULL: 無効な入力|  
+|**[スケール]**|列またはパラメーターのデータ型のスケール。|スケール値<br /><br /> NULL: 無効な入力|  
+|**StatisticalSemantics**|列でセマンティック インデックス作成が有効になっています。|1: TRUE<br /><br /> 0: FALSE|  
+|**SystemDataAccess**|列は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム カタログまたは仮想システム テーブルのデータにアクセスする関数から派生します。 このプロパティは、計算列およびビュー列にのみ適用されます。|1: TRUE (読み取り専用アクセス)<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**UserDataAccess**|列は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに格納されている、ビュー テーブルおよび一時テーブルを含むユーザー テーブル内のデータにアクセスする関数から派生します。 このプロパティは、計算列およびビュー列にのみ適用されます。|1: TRUE (読み取り専用アクセス)<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
+|**UsesAnsiTrim**|ANSI_PADDING はテーブルの作成時に ON に設定されました。 このプロパティは、**char** または **varchar** 型の列またはパラメーターにのみ適用されます。|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 無効な入力|  
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
@@ -90,13 +90,13 @@ COLUMNPROPERTY ( id , column , property )
 ## <a name="exceptions"></a>例外  
 エラーが発生した場合、または呼び出し元にオブジェクトの表示権限がない場合は、NULL が返されます。
   
-ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COLUMNPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
+ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する適切な権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (`COLUMNPROPERTY` など) が NULL を返す可能性があります。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
 ## <a name="remarks"></a>Remarks  
-列の決定的なプロパティを調べるときは、まず、その列が計算列であるかどうかをテストします。 計算列でない場合は、**IsDeterministic** によって NULL が返されます。 計算列は、インデックス列として指定できます。
+列の決定的なプロパティを調べるときは、まず、その列が計算列であるかどうかをテストします。 計算列でない場合は、**IsDeterministic** 引数によって NULL が返されます。 計算列は、インデックス列として指定できます。
   
 ## <a name="examples"></a>使用例  
-次の例では、`LastName` 列の長さを返します。
+この例では、`LastName` 列の長さを返します。
   
 ```sql
 USE AdventureWorks2012;  

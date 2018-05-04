@@ -1,31 +1,29 @@
 ---
-title: "作成し、階層の管理 |Microsoft ドキュメント"
-ms.custom: 
+title: 作成し、階層の管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1bfa85e658203890d99ab3b894a01749ce10ee2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-hierarchies"></a>作成し、階層の管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-階層の作成と管理はダイアグラム ビューのモデル デザイナーで行うことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントして、 **[ダイアグラム ビュー]**をクリックします。  
+  階層の作成と管理はダイアグラム ビューのモデル デザイナーで行うことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
   
  この記事には、次のタスクが含まれています。  
   
@@ -40,9 +38,9 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>ショートカット メニューから階層を作成するには  
   
-1.  テーブル ウィンドウのモデル デザイナー (ダイアグラム ビュー) で、列を右クリックして **[階層の作成]**をクリックします。  
+1.  テーブル ウィンドウのモデル デザイナー (ダイアグラム ビュー) で、列を右クリックして **[階層の作成]** をクリックします。  
   
-     複数の列を選択するには、列を 1 つずつクリックし、右クリックしてショートカット メニューを開き、 **[階層の作成]**をクリックします。  
+     複数の列を選択するには、列を 1 つずつクリックし、右クリックしてショートカット メニューを開き、 **[階層の作成]** をクリックします。  
   
      テーブル ウィンドウの下部に親階層レベルが作成され、選択した列が階層の下に子レベルとしてコピーされます。  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>階層または子レベルの名前を変更するには  
   
-1.  階層の親レベルまたは子レベルを右クリックし、 **[名前の変更]**をクリックします。  
+1.  階層の親レベルまたは子レベルを右クリックし、 **[名前の変更]** をクリックします。  
   
 2.  新しい名前を入力するか、既存の名前を編集します。  
   
@@ -74,14 +72,14 @@ ms.lasthandoff: 02/23/2018
   
 -   列をクリックして、親レベルまたは階層内の特定の場所にドラッグします。 階層の子レベルとして列がコピーされます。  
   
--   または、列を右クリックして **[階層に追加]**をポイントし、階層をクリックします。  
+-   または、列を右クリックして **[階層に追加]** をポイントし、階層をクリックします。  
   
 > [!NOTE]  
 >  非表示の列 (レポートで非表示の列) を子レベルとして階層に追加できます。 子レベルは非表示になりません。  
   
 #### <a name="to-remove-a-child-level-from-a-hierarchy"></a>階層から子レベルを削除するには  
   
--   子レベルを右クリックし、 **[階層から削除]**をクリックします。  
+-   子レベルを右クリックし、 **[階層から削除]** をクリックします。  
   
 -   または、子レベルをクリックして **Del**キーを押します。  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-show-a-source-name"></a>基になる列の名前を表示するには  
   
--   階層の子レベルを右クリックして、 **[基になる列の名前の表示]**をクリックします。 コピー元の列の名前が表示されます。  
+-   階層の子レベルを右クリックして、 **[基になる列の名前の表示]** をクリックします。 コピー元の列の名前が表示されます。  
   
 ##  <a name="bkmk_delete"></a> 階層の削除  
   

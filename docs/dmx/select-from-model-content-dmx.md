@@ -25,12 +25,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d0421998c359dbf40eb2afa36d2487b200bca52f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;です。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,13 +61,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *式 (expression)*  
  省略可。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
- The **SELECT FROM** *\<model>***.コンテンツ**ステートメントは各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
+## <a name="remarks"></a>解説  
+ **SELECT FROM** *\<モデル > * * *。コンテンツ** ステートメントには、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
   
  次の表に、マイニング モデル コンテンツに含まれる列を示します。  
   
 > [!NOTE]  
->  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 詳細については、マイニング モデル アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法のヒントごとにコンテンツの次を参照してください。[マイニング モデルのコンテンツと #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 詳細については、マイニング モデル アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法のヒントごとにコンテンツの次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)です。  
   
 |CONTENT 行セット列|Description|  
 |---------------------------|-----------------|  
@@ -78,7 +77,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|ノードに対応する属性の名前です。|  
 |NODE_NAME|ノードの名前。|  
 |NODE_UNIQUE_NAME|モデル内のノードの一意な名前です。|  
-|NODE_TYPE|ノードの種類を表す整数です。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|NODE_TYPE|ノードの種類を表す整数です。 」をご覧ください。|  
 |NODE_GUID|ノードの GUID です。 GUID がない場合は NULL です。|  
 |NODE_CAPTION|ノードに関連付けられているラベルまはたキャプションです。 主に表示のために使用されます。 キャプションが存在しない場合は、NODE_NAME を返します。|  
 |CHILDREN_CARDINALITY|ノードが持つ子の数です。|  
@@ -137,9 +136,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|@shouldalert|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
  次の例は、下位選択ステートメントを使用して、入れ子になったテーブルから一部の列のみを返す方法を示しています。 次に示すように、入れ子になったテーブルの名前に別名を付けることで表示を簡略化できます。  
   
@@ -153,15 +152,15 @@ WHERE NODE_TYPE = 26
   
  例の結果を次に示します。  
   
-|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|  
+|TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>参照  
- [選択 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

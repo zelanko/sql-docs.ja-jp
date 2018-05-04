@@ -1,17 +1,15 @@
 ---
-title: Dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング |Microsoft ドキュメント
+title: dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: dta
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -21,15 +19,15 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 36b48b9a7798acb5ac602bbe8a867e48abb86ac2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>レッスン 3-1-dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このタスクを追って実行を開始、 **dta**ユーティリティのヘルプを表示して、コマンド プロンプトからのワークロードのチューニングに使用します。 このユーティリティは、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の実習「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成したワークロード MyScript.sql を使用します。  
+# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>レッスン 3-1: dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ここでは、 **dta** ユーティリティを起動してヘルプを表示した後、同ユーティリティを使用してコマンド プロンプトからワークロードをチューニングします。 このユーティリティは、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の実習「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成したワークロード MyScript.sql を使用します。  
   
 このチュートリアルでは [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。 セキュリティ上の理由から、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](http://sqlserversamples.codeplex.com)」を参照してください。  
   
@@ -37,7 +35,7 @@ ms.lasthandoff: 01/17/2018
   
 ### <a name="to-start-the-dta-command-prompt-utility-and-view-help"></a>dta コマンド プロンプト ユーティリティを起動してヘルプを表示するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]**の順にポイントして、 **[コマンド プロンプト]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[コマンド プロンプト]** をクリックします。  
   
 2.  コマンド プロンプトで以下を入力し、Enter キーを押します。  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
 3.  データベース エンジン チューニング アドバイザーによるワークロードのチューニングが完了すると、チューニング セッションが正常に完了したことを知らせるメッセージが表示されます。 チューニング結果を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して MySession2OutputScript.sql および MySession2Output.xml を開きます。 また、データベース エンジン チューニング アドバイザーの GUI でチューニング セッション MySession2 を開き、その推奨設定とレポートを表示する方法もあります。これは、「 [チューニング推奨設定の表示](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) 」および「 [チューニング レポートの表示](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)」で行った操作と同様です。  
   
-## <a name="summary"></a>概要  
+## <a name="summary"></a>[概要]  
 **dta** ユーティリティを使用し、コマンド プロンプトから簡単なワークロードをチューニングしました。 このツールには、これ以外にも多数のチューニング オプションがあります。 詳細については、ヘルプ (**dta -?**) および関連項目「 [dta ユーティリティ](../../tools/dta/dta-utility.md) 」を参照してください。  
   
 ## <a name="after-you-finish-this-tutorial"></a>このチュートリアルが終了したら  

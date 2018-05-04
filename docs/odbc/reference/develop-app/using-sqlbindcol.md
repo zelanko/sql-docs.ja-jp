@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e3329d1f5990edae9805538d6e9c5e4c563b028
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f057dd64e65a60fd168acc72903e45e604967621
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
 アプリケーションが呼び出すことによって列をバインド**SQLBindCol**です。 この関数は、一度に 1 つの列をバインドします。 アプリケーションには、次を指定します。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
  たとえば、次のコードは、販売員および CustID 列に変数をバインドします。 列のデータが返されます*販売員*と*CustID*です。 *販売員*を文字バッファーには、ドライバーは、データを切り捨てるかどうかを判断できるように、アプリケーションがそのバイトの長さ (11) を指定します。 返されたのバイト長のタイトルまたは NULL であるかどうかに返されます*SalesPersonLenOrInd*です。  
   
- *CustID*整数型の変数し、が固定長のバイト長を指定する必要はありません。 ドライバーは、ことが前提としています。 **sizeof (**SQLUINTEGER**)**です。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*です。 バイトの長さは、常にあるため、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください**sizeof (**SQLUINTEGER**)**です。  
+ *CustID*整数型の変数し、が固定長のバイト長を指定する必要はありません。 ドライバーは、ことが前提としています。 **sizeof (** SQLUINTEGER **)** です。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*です。 バイトの長さは、常にあるため、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください**sizeof (** SQLUINTEGER **)** です。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

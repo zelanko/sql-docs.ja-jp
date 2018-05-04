@@ -1,11 +1,9 @@
 ---
 title: 入力プロパティの例 (プロパティ) (vc++) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aaa756ce6f9a314a15421b68872cb28e610c1411
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c2b9ad60d89b7feff377c76f58bb1a45f395ab4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-property-example-property-vc"></a>型のプロパティの例 (プロパティ) (vc++)
 この例で、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティです。 同様に、名前と、コレクションの型を一覧表示するためのユーティリティのモデルは[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md), などです。  

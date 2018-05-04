@@ -22,17 +22,16 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 697f1da527f797a203a8536c80894ba8bffe5dec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 617cd92b6728aa19fbb6599f71fab5374a331857
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母標準偏差を返します (除算 *n* )。  
+  バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母標準偏差を返します (除算*n*)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,6 +65,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

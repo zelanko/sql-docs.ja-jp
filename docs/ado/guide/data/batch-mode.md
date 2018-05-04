@@ -1,11 +1,9 @@
 ---
 title: バッチ モード |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9fadf4744517b2de4e756e6e6167d8615419a25
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 941c331c28cf5d1469b063b882bad23610a5605d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batch-mode"></a>バッチ モード
 バッチ モードが有効になってときに、 **LockType**プロパティに設定されている**adLockBatchOptimistic**バッチ更新は、プロバイダーでサポートされています。 特定のロックの種類の設定は、カーソル位置に応じてご利用いただけません。 たとえば、排他ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**です。 逆に、プロバイダーは、カーソルの場所は、サーバーの場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  

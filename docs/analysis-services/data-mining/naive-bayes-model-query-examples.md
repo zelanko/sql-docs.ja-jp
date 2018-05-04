@@ -1,35 +1,33 @@
 ---
-title: "Naive Bayes モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
+title: Naive Bayes モデルのクエリ例 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0a2bad52bdbb26c3b5fa988041cb969dbd2d695e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 データ マイニング スキーマ行セットに対するクエリによって、モデルに関するメタデータを取得することもできます。 ここでは、Microsoft Naive Bayes アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 データ マイニング スキーマ行セットに対するクエリによって、モデルに関するメタデータを取得することもできます。 ここでは、Microsoft Naive Bayes アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
  **Content Queries**  
   
@@ -175,7 +173,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
  Microsoft Naive Bayes アルゴリズムは、通常、予測に使用するよりも、入力属性と予測可能な属性の間のリレーションシップの検証に使用されます。 ただし、モデルでは予測とアソシエーションの両方に予測関数を使用できます。  
   
 ###  <a name="bkmk_Query5"></a> サンプル クエリ 5: 単一クエリを使用して結果を予測する  
- 次のクエリでは、単一クエリを使用して、新しい値を指定し、モデルに基づいてこれらの特性を持つ顧客が自転車を購入するかどうかを予測します。 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば、次の DMX クエリを作成するには、 `TM_NaiveBayes` モデルを選択し、 **[単一クエリ]**をクリックして、 `[Commute Distance]` および `Gender`のドロップダウン リストから値を選択します。  
+ 次のクエリでは、単一クエリを使用して、新しい値を指定し、モデルに基づいてこれらの特性を持つ顧客が自転車を購入するかどうかを予測します。 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば、次の DMX クエリを作成するには、 `TM_NaiveBayes` モデルを選択し、 **[単一クエリ]** をクリックして、 `[Commute Distance]` および `Gender`のドロップダウン リストから値を選択します。  
   
 ```  
 SELECT  
@@ -251,19 +249,19 @@ AS t
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[予測 (& a) # #40; DMX &#41;](../../dmx/predict-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
-|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[予測 (& a) # #40; DMX & #41;](../../dmx/predict-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
+|[PredictAdjustedProbability & #40";"DMX"&"#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
+|[PredictAssociation & #40";"DMX"&"#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
+|[PredictNodeId & #40";"DMX"&"#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
+|[PredictProbability & #40";"DMX"&"#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
   
  特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Naive Bayes モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

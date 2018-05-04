@@ -1,11 +1,9 @@
 ---
 title: ADO イベント モデルの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ec57df4ce7217579d4b409d3a571a077c376d98e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (vc++)
 Visual C のセクションの[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)ADO イベント モデルのインスタンスを作成する方法の一般的な説明。 によって作成された環境でのイベント モデルのインスタンス化の具体的な例を次に示します、 **#import**ディレクティブです。  
@@ -45,7 +42,7 @@ Visual C のセクションの[言語で ADO イベントのインスタンス�
   
 -   QueryInterface、AddRef、およびリリースのより堅牢な実装をコーディングすることができます。  
   
--   **_Uuidof()**インターフェイス Id を取得するディレクティブを広範囲に使用します。  
+-   **_Uuidof()** インターフェイス Id を取得するディレクティブを広範囲に使用します。  
   
  最後に、この例には、動作可能なコードが含まれています。  
   

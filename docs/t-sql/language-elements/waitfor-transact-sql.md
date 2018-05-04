@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2bf3df5733c9b427f7c34459b95404768d4520d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bee373167ee406e9383053af0f312925441b8895
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ WAITFOR
  バッチ、ストアド プロシージャ、またはトランザクションを実行する前に経過する必要のある、最大 24 時間までの指定された時間です。  
   
  '*time_to_pass*'  
- 待機する時間の長さです。 *time_to_pass* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。  
+ 待機する時間の長さです。 *time_to_pass* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。 これは hh:mm[[:ss].mss] として書式設定されます。
   
  TIME  
  バッチ、ストアド プロシージャ、またはトランザクションを実行するように指定された時間です。  
   
  '*time_to_execute*'  
- WAITFOR ステートメントが終了する時間です。 *time_to_execute* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。  
+ WAITFOR ステートメントが終了する時間です。 *time_to_execute* は、**datetime** データに適合するいずれかの形式で指定することも、ローカル変数として指定することもできます。 日付を指定することはできません。したがって、**datetime** 値の日付の部分は許可されません。 これは hh:mm[[:ss].mss] で書式設定され、必要に応じて、1900-01-01 の日付を含めることができます。
   
  *receive_statement*  
  有効な RECEIVE ステートメントです。  

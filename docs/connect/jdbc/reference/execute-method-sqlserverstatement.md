@@ -3,15 +3,12 @@ title: execute メソッド (SQLServerStatement) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerStatement.execute
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00e3a1114a532a42fdf898bdaa19a56bb74b1a2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: dcc184fc933e2aa1d164446c050c9cb2adf13a52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-method-sqlserverstatement"></a>execute メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|Description|  
+|名前|Description|  
 |----------|-----------------|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
 |[execute (java.lang.String, int)](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|複数の結果を返す可能性がある渡された SQL ステートメントを実行し、すべての自動生成キーを検索可能にする必要があることを [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。|  

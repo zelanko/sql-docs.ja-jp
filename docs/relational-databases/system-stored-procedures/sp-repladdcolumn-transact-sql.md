@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7457c7829662d5716db9e794836f12e3a785564
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9cf625ec15b26743f956ee94ce39c9facbd7b803
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   パブリッシュされた既存のテーブル アーティクルに列を追加します。 このテーブルをパブリッシュするすべてのパブリッシャーに新しい列を追加することも、テーブルをパブリッシュする特定のパブリケーションに列を追加することもできます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!IMPORTANT]  
->  このストアド プロシージャは、旧バージョンとの互換性のためにサポートされており、使用は推奨されません。 のみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]パブリッシャーと[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーを再パブリッシュします。 この手順で導入されたデータ型の列では使用できません[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降。  
+>  このストアド プロシージャは、旧バージョンとの互換性のためにサポートされており、非推奨とされます。 のみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]パブリッシャーと[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーを再パブリッシュします。 この手順で導入されたデータ型の列では使用できません[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]またはそれ以降。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +61,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  レプリケーション用に追加するテーブルの列の名前を指定します。 *列*は**sysname**、既定値はありません。  
   
  [ @typetext =] '*typetext*'  
- 追加する列の定義を指定します。 *typetext*は**nvarchar (3000)**、既定値はありません。 たとえば、列 order_filled が追加、および 1 つの文字のフィールド、NULL でないと、既定の値を持つは**N**、order_filled がなります、*列*の定義の中に、パラメーター、列、 **char (1) は NOT NULL CONSTRAINT constraint_name DEFAULT 'n'**なります、 *typetext*パラメーターの値。  
+ 追加する列の定義を指定します。 *typetext*は**nvarchar (3000)**、既定値はありません。 たとえば、列 order_filled が追加、および 1 つの文字のフィールド、NULL でないと、既定の値を持つは**N**、order_filled がなります、*列*の定義の中に、パラメーター、列、 **char (1) は NOT NULL CONSTRAINT constraint_name DEFAULT 'n'** なります、 *typetext*パラメーターの値。  
   
  [ @publication_to_add =] '*publication_to_add*'  
  新しい列の追加先となるパブリケーションの名前を指定します。 *publication_to_add*は**nvarchar (4000)**、既定値は**すべて**です。 場合**すべて**、このテーブルを含むすべてのパブリケーションが影響を受けます。 場合*publication_to_add*が指定されている、このパブリケーションのみがある、新しい列を追加します。  

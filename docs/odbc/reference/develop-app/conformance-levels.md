@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17e11f8dd61de45f7ce046241695f3dcc901e254
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4eaed0a59daf6a2e9abeb08e5be60ef953733c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conformance-levels"></a>準拠レベル
 ODBC ドライバーでは、さまざまなデータ ソースへアプリケーション アクセス権を付与します。 各ドライバーにより、アプリケーションは実行時に決定 ODBC の機能とどのような SQL 文法ドライバーと、各データ ソースをサポートしています。 これらのアプリケーションはそのドライバーまたはドライバーの機能を提供するだけで書き込まれるので、1 つのドライバーまたはドライバーの既知の小さなセットを使用する設計されたアプリケーションの要件ではありません。 ドライバーとデータ ソースの機能を検出するアプリケーションのため、準拠の 2 つの領域を利用できます。 SQL 文法と ODBC インターフェイスです。  

@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f091544fe79d09664350a312973e9d26a1a90cab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d24024156d54b6db4b74331861fa316618dc74fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ n
  *n*  
  パラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
-## <a name="returns"></a>返します。  
- このパラメーターの状態フラグを示す **int** 値を返します。 現在、フラグは 1 つだけあります。ビット 0 が 1 に設定されている場合、パラメーターは戻りパラメーターです。 ある場合ありません*n*番目のパラメーターまたはリモートのストアド プロシージャがない場合は、-1 を返します。  
+## <a name="returns"></a>戻り値  
+ このパラメーターの状態フラグを示す **int** 値を返します。 現在、フラグは 1 つだけあります。ビット 0 が 1 に設定されている場合、パラメーターは戻りパラメーターです。 *n* 番目のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このルーチンは、リモート ストアド プロシージャ呼び出しのパラメーターに関する状態フラグを返します。  
   
  パラメーターには、リモート ストアド プロシージャを使用してクライアントとアプリケーションとの間で受け渡しされるデータが格納されます。 クライアントは戻りパラメーターとして特定のパラメーターを指定できます。 この戻りパラメーターには、アプリケーションからクライアントに返す値を格納できます。  

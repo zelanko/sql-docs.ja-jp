@@ -3,15 +3,12 @@ title: 列のサイズ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], column size
 - size of data types [ODBC]
@@ -22,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ce38cfd836aa9328838096763ba9191c4a9ec30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-size"></a>列のサイズ
 数値データ型の列 (またはパラメーター) のサイズは、パラメーター、または列のデータ型またはデータの有効桁数によって使用される桁の数字の最大数として定義されます。 文字型の場合、これは、データの文字の長さバイナリ データ型の列のサイズは、データの長さ (バイト単位) として定義されます。 時刻、タイムスタンプ、およびすべての interval データ型の場合は、これはこのデータの文字表記の文字数です。 各簡潔な SQL データ型に対して定義されている列のサイズは、次の表に表示されます。  

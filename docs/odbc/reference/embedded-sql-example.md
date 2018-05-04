@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f6aca6e448a7707394b563f02fe3ca5a31a5424
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4f0125cda224073eb5357026461b1fc5a0bb955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL の使用例
 次のコードは c 言語で記述された単純な埋め込み SQL プログラムです。プログラムは、埋め込みのすべてではありませんが、ほとんどの SQL 方法を示しています。 プログラムは、注文番号の入力を求めます、顧客番号、販売員、および、注文ステータスを取得し、画面で取得した情報を表示します。  

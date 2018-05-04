@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1fc46b0a9c671c82b03e9a4d4166513dc77315da
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 115e317dcbf2e43202d2d43ea39841bf62f64f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>引数  
  *from_lsn*  
- 結果セットに含める LSN 範囲の下端を表す LSN を指定します。 *from_lsn*は**binary (10)**です。  
+ 結果セットに含める LSN 範囲の下端を表す LSN を指定します。 *from_lsn*は**binary (10)** です。  
   
  内の行のみ、 [cdc&#91; 。capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) _ _ $start_lsn に以上の値を持つテーブルを変更する*from_lsn*結果セットに含まれます。  
   
  *to_lsn*  
- 結果セットに含める LSN 範囲の上端を表す LSN を指定します。 *to_lsn*は**binary (10)**です。  
+ 結果セットに含める LSN 範囲の上端を表す LSN を指定します。 *to_lsn*は**binary (10)** です。  
   
  内の行のみ、 [cdc&#91; 。capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) _ _ $start_lsn 以上の値を持つテーブルを変更*from_lsn*以上*to_lsn*結果セットに含まれます。  
   

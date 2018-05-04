@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: afa07f4452bb7815ae30f2be3e8cccab6319eb9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a5ef49bf3b328bc0deef036823cc989ccb151f5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]メンバーがデータベースの定義またはデータベース内のオブジェクトの定義を読み取ることができるかどうかを判断します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  メンバーがデータベースの定義やデータベース内のオブジェクトの定義を読み取ることができるかどうかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|*なし*|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -69,13 +68,13 @@ ms.lasthandoff: 01/08/2018
 |値|Description|  
 |-----------|-----------------|  
 |*なし*|オブジェクト定義へのアクセスは許可されません。|  
-|*基本的な*|オブジェクト定義への基本アクセスが許可されます。<br /><br /> 注: この権限は、ローカル キューブを作成する、リンク メジャー グループ、およびディメンションをリンクが必要です。|  
+|*基本*|オブジェクト定義への基本アクセスが許可されます。<br /><br /> 注: この権限は、ローカル キューブを作成する、リンク メジャー グループ、およびディメンションをリンクが必要です。|  
 |*許可されています。*|オブジェクト定義への完全アクセスが許可されます。<br /><br /> 注: このアクセス許可を実行するために必要な[Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) XML for Analysis (XMLA) の呼び出し、DISCOVER_XML_METADATA パラメーターを使用します。|  
   
  親に対応する要素**ReadDefinition**分析管理オブジェクト (AMO) オブジェクト モデルには<xref:Microsoft.AnalysisServices.CubePermission>、 <xref:Microsoft.AnalysisServices.DatabasePermission>、 <xref:Microsoft.AnalysisServices.DimensionPermission>、 <xref:Microsoft.AnalysisServices.MiningModelPermission>、 <xref:Microsoft.AnalysisServices.MiningStructurePermission>、および<xref:Microsoft.AnalysisServices.Permission>.  
   
 ## <a name="see-also"></a>参照  
- [Role 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Role 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/role-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

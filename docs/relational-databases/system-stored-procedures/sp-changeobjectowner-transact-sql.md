@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5426d05f577016a2a93f131a7eaca85abe6e4f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>引数  
  [  **@objname =** ] **'***オブジェクト***'**  
- 現在のデータベース内の既存のテーブル、ビュー、ユーザー定義関数、またはストアド プロシージャの名前です。 *オブジェクト*は、 **nvarchar (776)**、既定値はありません。 *オブジェクト*形式で、既存のオブジェクトの所有者で修飾できます*existing_owner***.***オブジェクト*スキーマとその所有者の名前が同じ場合です。  
+ 現在のデータベース内の既存のテーブル、ビュー、ユーザー定義関数、またはストアド プロシージャの名前です。 *オブジェクト*は、 **nvarchar (776)**、既定値はありません。 *オブジェクト*形式で、既存のオブジェクトの所有者で修飾できます*existing_owner ***.*** オブジェクト*スキーマとその所有者の名前が同じ場合です。  
   
  [  **@newowner=**] **' * * * 所有者* **'**  
  オブジェクトの新しい所有者となるセキュリティ アカウントの名前です。 *所有者*は**sysname**、既定値はありません。 *所有者*有効なデータベース ユーザー、サーバーの役割をする必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows ログイン、または現在のデータベースへのアクセスを持つ Windows グループです。 新しい所有者が、対応するデータベース レベルのプリンシパルを与えられていない Windows ユーザーまたは Windows グループである場合、データベース ユーザーが作成されます。  

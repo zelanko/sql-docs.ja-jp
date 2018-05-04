@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 92d6cdbd458a32ce0280e60551e5eff2f1fda810
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 754fbef75a1cfd1f3948ccc6c89210b15f780293
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  小数点の右側に格納できる 10 進数の最大桁数を示す、負以外の整数を指定します。有効桁数以下であることが必要です。 詳細については、次を参照してください[decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  [  **@nulltype =** ] **'***null_type***'**  
- 別名データ型で NULL 値をどのように処理するかを指定します。 *null_type*は**varchar (**8**)**、既定値は NULL、および ('NULL'、'NOT NULL' または 'NONULL') 単一引用符で囲む必要があります。 場合*null_type*によって明示的に定義されていない**sp_addtype**、現在の既定の null 値に設定されています。 既定の NULL 値の許容属性を確認するには、GETANSINULL システム関数を使用します。 この設定は、SET ステートメントまたは ALTER DATABASE を使用して変更できます。 NULL 値の許容属性は、明示的に定義してください。 場合**@phystype**は**ビット**、および**@nulltype**が指定されていない、既定値は NULL です。  
+ 別名データ型で NULL 値をどのように処理するかを指定します。 *null_type*は**varchar (** 8 **)**、既定値は NULL、および ('NULL'、'NOT NULL' または 'NONULL') 単一引用符で囲む必要があります。 場合*null_type*によって明示的に定義されていない**sp_addtype**、現在の既定の null 値に設定されています。 既定の NULL 値の許容属性を確認するには、GETANSINULL システム関数を使用します。 この設定は、SET ステートメントまたは ALTER DATABASE を使用して変更できます。 NULL 値の許容属性は、明示的に定義してください。 場合**@phystype**は**ビット**、および**@nulltype**が指定されていない、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Null_type*パラメーターでは、このデータ型の既定の null 値のみを定義します。 ただし別名データ型を使用してテーブルを作成する際に NULL 値の許容属性を明示的に定義した場合は、このパラメーターで定義した NULL 値の許容属性よりも優先されます。 詳細については、次を参照してください。 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)です。  
@@ -101,7 +100,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  旧バージョンとの互換性のため、**パブリック**データベース ロールが自動的を使用して作成した別名データ型に対する REFERENCES 権限を付与**sp_addtype**です。 代わりに CREATE TYPE ステートメントを使用して別名データ型を作成するときに注意してください**sp_addtype**、このような自動付与は行われません。  
   
- 別名データ型を使用して定義することはできません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **タイムスタンプ**、**テーブル**、 **xml**、 **varchar (max)**、 **nvarchar (max)**または**varbinary (max)**データ型。  
+ 別名データ型を使用して定義することはできません、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **タイムスタンプ**、**テーブル**、 **xml**、 **varchar (max)**、 **nvarchar (max)** または**varbinary (max)** データ型。  
   
 ## <a name="permissions"></a>権限  
  メンバーシップが必要、 **db_owner**または**db_ddladmin**固定データベース ロール。  

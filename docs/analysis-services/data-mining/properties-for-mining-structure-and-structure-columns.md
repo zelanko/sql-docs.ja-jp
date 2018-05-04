@@ -1,42 +1,40 @@
 ---
-title: "マイニング構造列および構造列のプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: マイニング構造列および構造列のプロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1ec47ef02b2ff18e28d49e8902ec2cf9a499c153
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>マイニング構造と構造列のプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング デザイナーの **[マイニング構造]** タブを使用すると、マイニング構造のプロパティと、そのマイニング構造に関連付けられた列および入れ子になったテーブルのプロパティを設定または変更できます。 このタブで設定したプロパティは、その構造に関連付けられている各マイニング モデルに反映されます。  
+  データ マイニング デザイナーの **[マイニング構造]** タブを使用すると、マイニング構造のプロパティと、そのマイニング構造に関連付けられた列および入れ子になったテーブルのプロパティを設定または変更できます。 このタブで設定したプロパティは、その構造に関連付けられている各マイニング モデルに反映されます。  
   
 > [!NOTE]  
 >  マイニング構造のプロパティ値を変更した場合は、変更したのが名前や説明などのメタデータであっても、モデルの表示またはクエリを実行する前に、マイニング構造とそのモデルを再処理する必要があります。  
   
 ## <a name="properties-of-mining-structures-and-mining-structure-columns"></a>マイニング構造とマイニング構造列のプロパティ  
- 次の表では、マイニング構造とマイニング構造列に対して **[マイニング構造]** タブで表示または構成できる、データ マイニング固有のプロパティについて説明します。これらのプロパティを表示または構成するには、ツリー ビュー内のアイテムを右クリックし、 **[プロパティ]**をクリックします。  
+ 次の表では、マイニング構造とマイニング構造列に対して **[マイニング構造]** タブで表示または構成できる、データ マイニング固有のプロパティについて説明します。これらのプロパティを表示または構成するには、ツリー ビュー内のアイテムを右クリックし、 **[プロパティ]** をクリックします。  
   
 -   構造のプロパティを表示するには、マイニング構造の見出しをクリックします。  
   
@@ -74,8 +72,8 @@ ms.lasthandoff: 02/15/2018
 |**ModelingFlags**|アルゴリズムによって使用可能になる追加のパラメーターを設定します。|  
 |**名前**|列の名前です。|  
 |**NameColumn**|親要素の名前を指定する列を示します。|  
-|**ソース**|列のソースを表示します。<br /><br /> リレーショナル データ ソースの場合、値は常に **(なし)**です。<br /><br /> OLAP キューブに基づく構造の場合、値は、入れ子になったテーブルのソースとして使用するスライスを定義する MDX ステートメントです。|  
-|**SourceMeasureGroup**|メジャー グループのソースを表示します。<br /><br /> リレーショナル データ ソースの場合、値は常に **(なし)**です。<br /><br /> OLAP キューブに基づく構造の場合、値は、入れ子になったテーブルのソースとして使用するスライスを定義する MDX ステートメントです。|  
+|**ソース**|列のソースを表示します。<br /><br /> リレーショナル データ ソースの場合、値は常に **(なし)** です。<br /><br /> OLAP キューブに基づく構造の場合、値は、入れ子になったテーブルのソースとして使用するスライスを定義する MDX ステートメントです。|  
+|**SourceMeasureGroup**|メジャー グループのソースを表示します。<br /><br /> リレーショナル データ ソースの場合、値は常に **(なし)** です。<br /><br /> OLAP キューブに基づく構造の場合、値は、入れ子になったテーブルのソースとして使用するスライスを定義する MDX ステートメントです。|  
 |**型**|列のコンテンツのデータ型です。|  
   
  プロパティの設定または変更の詳細については、「 [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)」を参照してください。  

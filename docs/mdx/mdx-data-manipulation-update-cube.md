@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -28,12 +27,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 805b6f1bf5966cefd3879ff53f8908f20944c441
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作、UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,14 +77,14 @@ UPDATE [ CUBE ] Cube_Name
   
  割り当ての方法の説明を次に示します。  
   
- **USE_EQUAL_ALLOCATION:**更新されるセルに貢献するすべてのリーフ セルに次の式に基づく同じ値が割り当てられます。  
+ **USE_EQUAL_ALLOCATION:** 更新されるセルに貢献するすべてのリーフ セルに次の式に基づく同じ値が割り当てられます。  
   
 ```  
 <leaf cell value> =   
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**更新されるセルに貢献するすべてのリーフ セルは、次の式に基づいて変更されます。  
+ **USE_EQUAL_INCREMENT:** 更新されるセルに貢献するすべてのリーフ セルは、次の式に基づいて変更されます。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -94,13 +92,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:**更新されるセルに貢献するすべてのリーフ セルに次の式に基づく同じ値が割り当てられます。  
+ **USE_WEIGHTED_ALLOCATION:** 更新されるセルに貢献するすべてのリーフ セルに次の式に基づく同じ値が割り当てられます。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:**更新されるセルに貢献するすべてのリーフ セルは、次の式に基づいて変更されます。  
+ **USE_WEIGHTED_INCREMENT:** 更新されるセルに貢献するすべてのリーフ セルは、次の式に基づいて変更されます。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -128,6 +126,6 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX データ操作ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

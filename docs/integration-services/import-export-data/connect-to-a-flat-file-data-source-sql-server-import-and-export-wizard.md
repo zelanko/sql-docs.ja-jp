@@ -1,28 +1,28 @@
 ---
-title: "フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs"
-ms.custom: 
+title: フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 57326cdaab173fa0ab3255da4b336eb4b294e19b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **フラット ファイル (テキスト ファイル)** データ ソースに接続する方法を説明します。 フラット ファイルの場合、ウィザードのこの 2 つのページでは、それぞれ異なるオプション セットが提供されています。そのため、このトピックでは、フラット ファイル ソースとフラット ファイル変換先を別々に説明します。
@@ -139,7 +139,7 @@ ms.lasthandoff: 01/25/2018
  フラット ファイル内のサンプル データを、選択されたオプションに基づいて列と行に分割して表示します。  
  
  **[更新]**  
- スキップする区切り記号を変更したときの効果を表示するには、 **[最新の情報に更新]**をクリックします。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
+ スキップする区切り記号を変更したときの効果を表示するには、 **[最新の情報に更新]** をクリックします。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
   
  **[列のリセット]**  
  元の列を復元します。  
@@ -221,7 +221,7 @@ ms.lasthandoff: 01/25/2018
 |**[テキスト修飾子]**|テキスト データが引用符などのテキスト修飾子文字で囲まれているかどうかを示します。<br /><br /> True: フラット ファイルのテキスト データは修飾されます。 False: フラット ファイルのテキスト データは修飾されません。|  
   
 **[新規作成]**  
- **[新規作成]**をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
+ **[新規作成]** をクリックして新しい列を追加します。 既定では、 **[新規作成]** ボタンをクリックすると、新しい列がリストの末尾に追加されます。 さらにこのボタンのドロップダウン リストには、次のオプションがあります。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -230,7 +230,7 @@ ms.lasthandoff: 01/25/2018
 |**[後に挿入]**|選択した列の後に新しい列を追加します。|  
   
  **削除**  
- 列を選択して **[削除]**をクリックすると、列が削除されます。  
+ 列を選択して **[削除]** をクリックすると、列が削除されます。  
   
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。  
@@ -262,7 +262,7 @@ ms.lasthandoff: 01/25/2018
  フラット ファイル内のサンプル データを、選択したオプションに基づいて列と行に分割して表示します。
  
  **[更新]**  
- **[最新の情報に更新]**をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
+ **[最新の情報に更新]** をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
  
 **[プレビュー]** ページの詳細については、Integration Services リファレンス ページ「[[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)」を参照してください。
 

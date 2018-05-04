@@ -1,28 +1,27 @@
 ---
-title: "レッスン 6: 計算列の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 6: 計算列の作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 58d361452f134976b7f90ce983b3bc5b7ba28d46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cfa64b41e1de655056dd2d5c8f5d5397e57d54d4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-create-calculated-columns"></a>レッスン 5: 計算列を作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **15 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 4: リレーションシップの作成](../analysis-services/lesson-4-create-relationships.md)です。 
   
 ## <a name="create-calculated-columns"></a>計算列の作成  

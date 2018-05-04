@@ -1,29 +1,27 @@
 ---
-title: "親子階層で親属性プロパティの定義 |Microsoft ドキュメント"
-ms.custom: 
+title: 親子階層で親属性プロパティの定義 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d144c5d4815677db6186dbc48ba25d308e0efe63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>レッスン 4 2: 親子階層の親属性プロパティを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[Ken J. Sánchez]** メンバーをクリックします。  
   
-    このメンバーのレベル名は **Level 02**です。 (レベル名の後ろ**現在のレベル:**すぐ上に、**すべての従業員**メンバーです)。次の実習では、さらにわかりやすい名前を各レベルに定義します。  
+    このメンバーのレベル名は **Level 02**です。 (レベル名の後ろ**現在のレベル:** すぐ上に、**すべての従業員**メンバーです)。次の実習では、さらにわかりやすい名前を各レベルに定義します。  
   
 4.  **[Ken J. Sánchez]** を展開し、この管理者の監督下にある従業員の名前を表示します。次に、 **[Brian S. Welcker]** をクリックし、このレベルの名前を表示します。  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 02/15/2018
   
     **[レベル名前付けテンプレート]** ダイアログ ボックスでレベル名前付けテンプレートを定義します。このテンプレートは、キューブを表示するときに表示される親子階層のレベル名を決定します。  
   
-4.  2 番目の行、  **\*** 行に、入力**Employee Level \*** で、**名前**列、3 番目の行をクリックします。  
+4.  2 番目の行、 **\*** 行に、入力**Employee Level \*** で、**名前**列、3 番目の行をクリックします。  
   
     **[結果]** の下を確認すると、各レベルには、"Employee Level" の後ろに連番を追加した名前が付いています。  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 02/15/2018
   
     ![レベル名前付けテンプレート ダイアログ ボックス](../analysis-services/media/l4-namingtemplate.gif "レベル名前付けテンプレート ダイアログ ボックス")  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  **Employees** 属性の[プロパティ] ウィンドウの **MembersWithData** プロパティ セルで、 **[NonLeafDataHidden]** を選択して **Employees** 属性の値を変更します。  
   
@@ -99,11 +97,11 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>属性を変更した Employee ディメンションの表示  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  チュートリアルが正常に配置されたら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[ブラウザー]** タブのツール バーで **[再接続]** をクリックします。  
   
-3.  Excel アイコンをクリックし、 **[有効化]**をクリックします。  
+3.  Excel アイコンをクリックし、 **[有効化]** をクリックします。  
   
 4.  **Reseller Sales-Sales Amount** を値領域にドラッグします。  
   

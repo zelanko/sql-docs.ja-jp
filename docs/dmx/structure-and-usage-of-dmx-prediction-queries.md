@@ -27,12 +27,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 068472c2e03701fffc051741f4a403b4741ed027
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>構造と DMX 予測クエリの使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **TOP**  
   
--   *****\<モデル >***PREDICTION JOIN**   
+-   **FROM**  *\<モデル >***PREDICTION JOIN**   
   
 -   **ON**  
   
@@ -83,18 +82,18 @@ ms.lasthandoff: 01/08/2018
   
  **ON**要素は、外部データセット内の列をマイニング モデルで定義されている列をマップします。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
   
- 使用することができます、**場所**句を予測クエリの結果をフィルター処理します。 使用することができます、**上部**または**ORDER BY**句を最も可能性の高い予測を選択します。 詳細については、これらの句を使用して、次を参照してください。[選択 &#40;DMX&#41;](../dmx/select-dmx.md)です。  
+ 使用することができます、**場所**句を予測クエリの結果をフィルター処理します。 使用することができます、**上部**または**ORDER BY**句を最も可能性の高い予測を選択します。 詳細については、これらの句を使用して、次を参照してください。[選択&#40;DMX&#41;](../dmx/select-dmx.md)です。  
   
- 予測ステートメントの構文の詳細については、次を参照してください。 [SELECT FROM &#60; モデル &#62;。予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)と[SELECT FROM &60;モデル &#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)です。  
+ 予測ステートメントの構文の詳細については、次を参照してください[SELECT FROM&#60;モデル&#62;PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md)と[SELECT FROM&#60;モデル&#62; &#40;DMX。&#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

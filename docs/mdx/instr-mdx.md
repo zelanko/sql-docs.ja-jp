@@ -1,27 +1,26 @@
 ---
-title: "Instr (MDX) |Microsoft ドキュメント"
-ms.custom: 
+title: Instr (MDX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5638c358-47da-40ad-b988-1a5214c05492
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7a6b5a1a987662fbe4ec0bcab4241ac0d6ff3109
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d269dbaed6c3adc208d4b81b3cbf3af30c3de26d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +34,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>引数  
- *開始*  
+ *start*  
  (省略可) 各検索の開始位置を設定する数値式。 この値が省略された場合、検索は最初の文字位置から開始します。 start が null の場合、関数の戻り値は未定義となります。  
   
  *searched_string*  
@@ -110,7 +109,7 @@ from [Adventure Works]
 |小文字文字列で大文字を検索|16|  
 |検索した文字列が空|0|  
 |検索した文字列が NULL|未定義|  
-|検索する文字列が空|@shouldalert|  
+|検索する文字列が空|1|  
 |検索する文字列が開始位置 10 から空|10|  
 |検索する文字列が NULL|未定義|  
 |開始位置 10 から検索|16|  

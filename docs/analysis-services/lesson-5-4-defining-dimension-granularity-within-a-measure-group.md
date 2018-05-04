@@ -1,29 +1,27 @@
 ---
-title: "メジャー グループ内のディメンションの粒度を定義する |Microsoft ドキュメント"
-ms.custom: 
+title: メジャー グループ内のディメンションの粒度を定義する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d5aed28b47259d06a30985a4b62cfa80fefffdfe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,11 +40,11 @@ ms.lasthandoff: 02/15/2018
   
 1.  **Adventure Works DW 2012** データ ソース ビューに切り替えます。  
   
-2.  **[ダイアグラム オーガナイザー]** ペイン内を右クリックし、 **[新しいダイアグラム]**をクリックして、ダイアグラムの名前として「 **Sales Quotas**」と入力します。  
+2.  **[ダイアグラム オーガナイザー]** ペイン内を右クリックし、 **[新しいダイアグラム]** をクリックして、ダイアグラムの名前として「 **Sales Quotas**」と入力します。  
   
-3.  **[テーブル]**ペインの **Employee**、 **Sales Territory** 、および **Date** テーブルを、 **[ダイアグラム]** ペインにドラッグします。  
+3.  **[テーブル]** ペインの **Employee**、 **Sales Territory** 、および **Date** テーブルを、 **[ダイアグラム]** ペインにドラッグします。  
   
-4.  **[ダイアグラム]** ペイン内を右クリックし、 **[テーブルの追加と削除]** をクリックして、 **FactSalesQuota** テーブルを **[ダイアグラム]**ペインに追加します。  
+4.  **[ダイアグラム]** ペイン内を右クリックし、 **[テーブルの追加と削除]** をクリックして、 **FactSalesQuota** テーブルを **[ダイアグラム]** ペインに追加します。  
   
     **Employee** テーブルを介して、 **SalesTerritory** テーブルが **FactSalesQuota** テーブルに関連付けられます。  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに切り替え、 **[キューブ構造]** タブをクリックします。  
   
-8.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]**をクリックします。次に、 **[新しいメジャー グループ]** ダイアログ ボックスで **[SalesQuotas]** をクリックし、 **[OK]**をクリックします。  
+8.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]** をクリックします。次に、 **[新しいメジャー グループ]** ダイアログ ボックスで **[SalesQuotas]** をクリックし、 **[OK]** をクリックします。  
   
     **[メジャー]** ペインに **Sales Quotas** メジャー グループが表示されます。 **[ディメンション]** ペインを見ると、 **Date** データベース ディメンションに基づく新しい **Date** キューブ ディメンションが定義されていることがわかります。 新しい時間キューブ ディメンションが定義されてしまうのは、Sales Quotas メジャー グループの基となる [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] FactSalesQuota **ファクト テーブルの** DateKey **列に関連付けられている時間キューブ ディメンションがどのディメンションなのかを、** に指定していないためです。 時間キューブ ディメンションの設定は、このトピックの別の実習で変更します。  
   
@@ -72,11 +70,11 @@ ms.lasthandoff: 02/15/2018
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって、Calendar Quarter メジャーの基となる列 (この列には他のメジャーも含まれている) が自動的に検出されました。 しかし、このトピックの後の操作で Sales Quotas メジャー グループを Date ディメンションにリンクさせるときは、検出された列および CalendarYear 列の値を手動で割り当てます。  
   
-13. **[メジャー]** ペインで **Sales Quotas** メジャー グループを右クリックし、 **[新しいメジャー]**をクリックします。  
+13. **[メジャー]** ペインで **Sales Quotas** メジャー グループを右クリックし、 **[新しいメジャー]** をクリックします。  
   
-    **[新しいメジャー]** ダイアログ ボックスが開き、メジャーの使用法が **[合計]**である場合に選択できる列が表示されます。  
+    **[新しいメジャー]** ダイアログ ボックスが開き、メジャーの使用法が **[合計]** である場合に選択できる列が表示されます。  
   
-14. **[新しいメジャー]** ダイアログ ボックスで、 **[使用法]** ボックスの一覧から **[個別のカウント]** をクリックします。 **[基になるテーブル]** ボックスの一覧で **SalesQuotas** が選択されていることを確認します。 **[基になる列]** ボックスの一覧で **EmployeeKey** をクリックし、 **[OK]**をクリックします。  
+14. **[新しいメジャー]** ダイアログ ボックスで、 **[使用法]** ボックスの一覧から **[個別のカウント]** をクリックします。 **[基になるテーブル]** ボックスの一覧で **SalesQuotas** が選択されていることを確認します。 **[基になる列]** ボックスの一覧で **EmployeeKey** をクリックし、 **[OK]** をクリックします。  
   
     **Sales Quotas 1**という名前の新しいメジャー グループに、メジャーが作成されます。 処理速度を最大限に向上させるため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の "個別のカウント" メジャーは専用のメジャー グループに作成されます。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]**ボタンをクリックします。  
+2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
 3.  Excel ショートカットをクリックし、**[有効化]** をクリックします。  
   
@@ -126,9 +124,9 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Sales Quotas メジャー グループにおけるディメンションの使用法の定義  
   
-1.  **Employee** ディメンションのディメンション デザイナーを開き、 **[データ ソース ビュー]** ペインで **[SalesTerritoryKey]** を右クリックし、 **[列から新しい属性を作成]**をクリックします。  
+1.  **Employee** ディメンションのディメンション デザイナーを開き、 **[データ ソース ビュー]** ペインで **[SalesTerritoryKey]** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
-2.  **[属性]** ペインで、 **[SalesTerritoryKey]**をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyVisible** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
+2.  **[属性]** ペインで、 **[SalesTerritoryKey]** をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyVisible** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
   
     この属性は、 **Sales Territory** ディメンションを参照元ディメンションとして **Sales Quotas** および **Sales Quotas 1** メジャー グループにリンクさせる際に使用します。  
   
@@ -138,31 +136,31 @@ ms.lasthandoff: 02/15/2018
   
 4.  **Sales Territory** ディメンションと **Sales Quotas** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
-5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]**をクリックします。  
+5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
-6.  **[中間ディメンション]** ボックスの一覧から **[Employee]**を選択します。  
+6.  **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-7.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]**を選択します。  
+7.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
-8.  **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]**を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
+8.  **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
 9. **[具体化する]** チェック ボックスがオンになっていることを確認します。  
   
-10. **[OK]**をクリックします。  
+10. **[OK]** をクリックします。  
   
 11. **Sales Territory** ディメンションと **Sales Quotas 1** メジャー グループが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。 **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
-12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]**をクリックします。  
+12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
-13. **[中間ディメンション]** ボックスの一覧から **[Employee]**を選択します。  
+13. **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-14. **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]**を選択します。  
+14. **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
-15. **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]**を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
+15. **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
 16. **[具体化する]** チェック ボックスがオンになっていることを確認します。  
   
-17. **[OK]**をクリックします。  
+17. **[OK]** をクリックします。  
   
 18. **Date** キューブ ディメンションを削除します。  
   
@@ -176,11 +174,11 @@ ms.lasthandoff: 02/15/2018
   
 21. **[リレーションシップの定義]** ダイアログ ボックスで、 **[リレーションシップの種類の選択]** ボックスの一覧から **[標準]** を選択します。  
   
-22. **[粒度属性]** ボックスの一覧から **[Calendar Quarter]**を選択します。  
+22. **[粒度属性]** ボックスの一覧から **[Calendar Quarter]** を選択します。  
   
     非キー属性を粒度属性として選択したため、警告が表示されます。他のすべての属性をメンバー プロパティとして指定し、直接または間接的に粒度属性に関連付ける必要があります。  
   
-23. **[リレーションシップの定義]** ダイアログ ボックスの **[リレーションシップ]** 領域で、Date キューブ ディメンションの基となるテーブルから **CalendarYear** および **CalendarQuarter** ディメンション列を、Sales Quota メジャー グループの基となるテーブルの **CalendarYear** および **CalendarQuarter** 列にそれぞれリンクし、 **[OK]**をクリックします。  
+23. **[リレーションシップの定義]** ダイアログ ボックスの **[リレーションシップ]** 領域で、Date キューブ ディメンションの基となるテーブルから **CalendarYear** および **CalendarQuarter** ディメンション列を、Sales Quota メジャー グループの基となるテーブルの **CalendarYear** および **CalendarQuarter** 列にそれぞれリンクし、 **[OK]** をクリックします。  
   
     > [!NOTE]  
     > Calendar Quarter が、Sales Quotas メジャー グループの Date キューブ ディメンションの粒度属性として定義されます。しかし、Date 属性は依然として Internet Sales および Reseller Sales メジャー グループの粒度属性です。  
@@ -193,31 +191,31 @@ ms.lasthandoff: 02/15/2018
   
     **Calendar Year** は、 **Calendar Semester** 属性を介して **Calendar Quarter** にリンクされました。しかし、会計カレンダーの各属性は互いに一対一でリンクしているだけで、 **Calendar Quarter** 属性にはリンクしていません。したがって、このままでは **Sales Quotas** メジャー グループにおいて正しく集計されません。  
   
-2.  ダイアグラムで、 **[Calendar Quarter]** 属性を右クリックし、 **[新しい属性リレーションシップ]**をクリックします。  
+2.  ダイアグラムで、 **[Calendar Quarter]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Quarter]**を指定します。 **[関連属性]** を **[Fiscal Quarter]**に設定します。  
+3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Quarter]** を指定します。 **[関連属性]** を **[Fiscal Quarter]** に設定します。  
   
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
   
     **Date** ディメンションに、1 つまたは複数の重複する属性リレーションシップが含まれており、このことが原因で、非キー属性が粒度属性として使用されている場合にデータの集計ができない可能性があることを警告するメッセージが表示されます。  
   
 5.  **Month Name** 属性と **Fiscal Quarter** 属性との間の属性リレーションシップを削除します。  
   
-6.  **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
+6.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Sales Quota メジャー グループのメジャーの日付順での表示  
   
-1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]**をクリックします。  
+2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** をクリックします。  
   
-3.  Excel ショートカットをクリックし、 **[有効化]**をクリックします。  
+3.  Excel ショートカットをクリックし、 **[有効化]** をクリックします。  
   
 4.  **Sales Amount Quota** メジャーを値領域にドラッグします。  
   
 5.  **Sales Territories** ユーザー階層を列ラベルにドラッグし、 **North America**でフィルター処理します。  
   
-6.  **Date.FiscalDate** ユーザー階層を行ラベルにドラッグし、ピボットテーブルの **[行ラベル]** の横の下矢印をクリックします。次に、 **[FY 2008]**以外のすべてのチェック ボックスをオフにして、2008 年度 (会計年度) だけを表示します。  
+6.  **Date.FiscalDate** ユーザー階層を行ラベルにドラッグし、ピボットテーブルの **[行ラベル]** の横の下矢印をクリックします。次に、 **[FY 2008]** 以外のすべてのチェック ボックスをオフにして、2008 年度 (会計年度) だけを表示します。  
   
 7.  [OK] をクリックします。  
   

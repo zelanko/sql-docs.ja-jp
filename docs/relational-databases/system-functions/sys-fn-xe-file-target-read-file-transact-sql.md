@@ -28,13 +28,12 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb58db9e3e74ad34e01faa4fbb2520813dc135b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,16 +54,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>引数  
  *path*  
- 読み取るファイルのパスです。 *パス*ワイルドカードを含めるし、ファイルの名前を含めることができます。 *パス*は**nvarchar (260)**です。 既定値はありません。 Azure SQL データベースのコンテキストでは、この値は、Azure ストレージ内のファイルへの HTTP URL は。
+ 読み取るファイルのパスです。 *パス*ワイルドカードを含めるし、ファイルの名前を含めることができます。 *パス*は**nvarchar (260)** です。 既定値はありません。 Azure SQL データベースのコンテキストでは、この値は、Azure ストレージ内のファイルへの HTTP URL は。
   
  *mdpath*  
- ファイルまたはで指定されたファイルに対応するメタデータ ファイルへのパス、*パス*引数。 *mdpath*は**nvarchar (260)**です。 既定値はありません。 SQL Server 2016 以降では、このパラメーターは、null として指定することができます。
+ ファイルまたはで指定されたファイルに対応するメタデータ ファイルへのパス、*パス*引数。 *mdpath*は**nvarchar (260)** です。 既定値はありません。 SQL Server 2016 以降では、このパラメーターは、null として指定することができます。
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 必要ありません、 *mdpath*パラメーター。 ただし、以前のバージョンの SQL Server で生成されたログ ファイルに対する下位互換性のために残されています。  
   
  *initial_file_name*  
- 最初のファイルから読み取れません*パス*です。 *initial_file_name*は**nvarchar (260)**です。 既定値はありません。 場合**null**で見つかったすべてのファイルの引数として指定*パス*読み取られます。  
+ 最初のファイルから読み取れません*パス*です。 *initial_file_name*は**nvarchar (260)** です。 既定値はありません。 場合**null**で見つかったすべてのファイルの引数として指定*パス*読み取られます。  
   
 > [!NOTE]  
 >  *initial_file_name*と*initial_offset*ペアの引数は、します。 いずれかの引数の値を指定した場合は、もう一方の引数の値も指定する必要があります。  

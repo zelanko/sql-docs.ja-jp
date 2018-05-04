@@ -1,11 +1,9 @@
 ---
 title: ConnectionString プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 68c7a10a4b674b9ff4092c37c332dffd7e5ff199
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7b34a524380439dba07d12aa74ef24a870ab8ccc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するために使用される情報を示します。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 04/18/2018
  取得または設定、**文字列**値。  
   
 ## <a name="remarks"></a>解説  
- 使用して、 **ConnectionString**プロパティを含む、一連の詳細な接続文字列を渡すことによって、データ ソースを指定する*引数**値 =*で区切られたステートメントセミコロン入力します。  
+ 使用して、 **ConnectionString**プロパティを含む、一連の詳細な接続文字列を渡すことによって、データ ソースを指定する*引数**値 =* で区切られたステートメントセミコロン入力します。  
   
  ADO の 5 つの引数をサポートする、 **ConnectionString**プロパティ; ADO で処理されず、プロバイダーに直接その他の引数のパス。 引数の ADO サポートは次のとおりです。  
   

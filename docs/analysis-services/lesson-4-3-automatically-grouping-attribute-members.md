@@ -1,29 +1,27 @@
 ---
-title: "属性メンバーを自動的にグループ化 |Microsoft ドキュメント"
-ms.custom: 
+title: 属性メンバーを自動的にグループ化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b97f1c25cc46c0518c8dbf2e924d9ab99da32cd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>レッスン 4-3 - 属性メンバーの自動的にグループ化
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +31,10 @@ ms.lasthandoff: 02/15/2018
 **DiscretizationMethod** プロパティは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] にグループを作成させるかどうか、どのような種類のグループ化を実行するかを指定します。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] はグループ化を実行しません。 自動グループ化を有効にすると、属性の構造に基づいて、最適なグループ化の方法が [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって自動的に判断されます。また、次の一覧からいずれかのグループ化アルゴリズムを選択してグループ化の方法を指定することもできます。  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ディメンション メンバーの母集団全体がすべてのグループに均等に分散するように、グループ範囲が作成されます。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ディメンション メンバーの合計の母集団はグループ間で均等に分散されるように、グループの範囲を作成します。  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] K-Means クラスタリング法とガウス分布を使用し、入力値に対して 1 次元クラスタリングが実行されます。 このオプションは、数値列でのみ使用できます。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ガウス分布と K-means クラスタ リング手法を使用して、入力値を 1 次元クラスタ リングを実行してグループを作成します。 このオプションは、数値列でのみ使用できます。  
   
 グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「[属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
@@ -46,13 +44,13 @@ ms.lasthandoff: 02/15/2018
   
 1.  ソリューション エクスプローラーで、 **[ディメンション]** フォルダーの **Customer** をダブルクリックし、Customer ディメンションのディメンション デザイナーを開きます。  
   
-2.  **[データ ソース ビュー]** ペインで **Customer** テーブルを右クリックし、 **[データの探索]**をクリックします。  
+2.  **[データ ソース ビュー]** ペインで **Customer** テーブルを右クリックし、 **[データの探索]** をクリックします。  
   
     **YearlyIncome** 列の値の範囲に注目してください。 メンバーをグループ化しない限り、これらの値は **Yearly Income** 属性階層のメンバーになります。  
   
 3.  **[Customer テーブルの探索]** タブを閉じます。  
   
-4.  **[属性]** ペインで、 **[Yearly Income]**を選択します。  
+4.  **[属性]** ペインで、 **[Yearly Income]** を選択します。  
   
 5.  [プロパティ] ウィンドウで、 **DiscretizationMethod** プロパティの値を **Automatic** に変更し、 **DiscretizationBucketCount** プロパティの値を **5**に変更します。  
   
@@ -64,27 +62,27 @@ ms.lasthandoff: 02/15/2018
   
 1.  Employee ディメンションのディメンション デザイナーに切り替えます。  
   
-2.  **[データ ソース ビュー]** ペインで **Employee** テーブルを右クリックし、 **[データの探索]**をクリックします。  
+2.  **[データ ソース ビュー]** ペインで **Employee** テーブルを右クリックし、 **[データの探索]** をクリックします。  
   
     **SickLeaveHours** 列および **VacationHours** 列の値に注目してください。  
   
 3.  **[Employee テーブルの探索]** タブを閉じます。  
   
-4.  **[属性]** ペインで、 **[Sick Leave Hours]**を選択します。  
+4.  **[属性]** ペインで、 **[Sick Leave Hours]** を選択します。  
   
 5.  [プロパティ] ウィンドウで、 **DiscretizationMethod** プロパティの値を **Clusters** に変更し、 **DiscretizationBucketCount** プロパティの値を **5**に変更します。  
   
-6.  **[属性]** ペインで、 **[Vacation Hours]**を選択します。  
+6.  **[属性]** ペインで、 **[Vacation Hours]** を選択します。  
   
 7.  [プロパティ] ウィンドウで、 **DiscretizationMethod** プロパティの値を **Equal Areas** に変更し、 **DiscretizationBucketCount** プロパティの値を **5**に変更します。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>変更した属性階層の表示  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[ブラウザー]** タブのツール バーで **[再接続]** をクリックします。  
   
-3.  Excel アイコンをクリックし、 **[有効化]**をクリックします。  
+3.  Excel アイコンをクリックし、 **[有効化]** をクリックします。  
   
 4.  **Internet Sales-Sales Amount** メジャーをピボットテーブル フィールド リストの値領域にドラッグします。  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 02/15/2018
   
 8.  **Reseller Sales-Sales Amount** メジャーをデータ領域に追加します。  
   
-9. フィールド リストで **Employee** ディメンションを展開し、 **Organization**を展開します。次に、 **[Sick Leave Hours]** を **[列ラベル]**にドラッグします。  
+9. フィールド リストで **Employee** ディメンションを展開し、 **Organization**を展開します。次に、 **[Sick Leave Hours]** を **[列ラベル]** にドラッグします。  
   
     2 つのグループのうちの 1 つは、すべて従業員によって売り上げられた売上データです 病欠時間が 32 ～ 42 時間の従業員は、病欠時間が 20 ～ 31 時間の従業員よりも大幅に売り上げていることもわかります。  
   
@@ -118,7 +116,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  [プロパティ] ウィンドウで、 **DiscretizationBucketCount** プロパティの値を **10**に変更します。  
   
-3.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+3.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 4.  配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに戻ります。  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 02/15/2018
 [非表示にして、属性階層を無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>参照  
-[グループ メンバーの属性 &#40;分離&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[グループ メンバーの属性 (&) #40";"分離"&"#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

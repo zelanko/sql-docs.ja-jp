@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a2dd0264d572e190278d5cad42e4874554312f72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f0d335907488e5fb7d313b7bb0ee7144bcc4c3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-element-assl"></a>Language 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親要素の言語識別子が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  親要素の言語識別子を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,13 +49,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|Integer|  
 |既定値|なし|  
-|基数|次の表を参照してください。|  
+|Cardinality|次の表を参照してください。|  
   
-|先祖または親|基数|  
+|先祖または親|Cardinality|  
 |------------------------|-----------------|  
 |[翻訳](../../../analysis-services/scripting/objects/translation-element-assl.md)|1-1 : 必須要素で、1 回だけ出現します|  
 |他のすべて|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
@@ -74,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素、**言語**分析管理オブジェクト (AMO) オブジェクト モデル内の要素は<xref:Microsoft.AnalysisServices.Cube>、 <xref:Microsoft.AnalysisServices.Database>、 <xref:Microsoft.AnalysisServices.Dimension>、 <xref:Microsoft.AnalysisServices.MiningModel>、 <xref:Microsoft.AnalysisServices.MiningStructure>、および<xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

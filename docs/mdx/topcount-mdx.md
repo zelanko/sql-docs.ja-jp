@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: e68a27c85dde732a54b87e914b643565d8549933
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 72dfbc5439e4df6e17f42f28589f966f6aec47f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +44,13 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *カウント*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  数値式が指定されている場合、 **TopCount**関数、順序、指定されたセットに対して評価された数値式で指定された値に従って、指定されたセットで指定されたセット内の組を降順で並べ替えます。 セットの並べ替えの後に、 **TopCount**関数では、指定した数の組の最も大きい値を返します。  
   
 > [!IMPORTANT]  
@@ -85,6 +84,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

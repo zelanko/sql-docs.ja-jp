@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6fd6820db6912a15f7991ec76131a8fabe9fd822
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 064c5514e014b8ba976c21001665626bcb71722e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +71,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>時系列の例  
- 次の例は、Forecasting モデルの Amount 列で予測を実行し、次の 4 回のステップを返します。 Model Region 列は、自転車のモデルと地域を単一の識別子に結合します。 クエリを使用して、 [PredictTimeSeries & # #40; DMX &#41;](../dmx/predicttimeseries-dmx.md)予測を実行する関数。  
+ 次の例は、Forecasting モデルの Amount 列で予測を実行し、次の 4 回のステップを返します。 Model Region 列は、自転車のモデルと地域を単一の識別子に結合します。 クエリを使用して、 [PredictTimeSeries &#40;DMX&#41; ](../dmx/predicttimeseries-dmx.md) 、予測を実行する関数。  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   
@@ -80,9 +79,9 @@ FROM Forecasting
 ```  
   
 ## <a name="see-also"></a>参照  
- [選択 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

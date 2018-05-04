@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7db184099a58cf2dd6c8395a23a316739d4437a9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 06f3b79b7176d194ba2e17e3fb9dcc1256b43474
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
  別名データ型からデフォルトをバインド解除すると、そのデータ型の列で同じデフォルトが設定されている列もバインド解除されます。 ただし、同じデータ型でも、デフォルトが直接バインドされている列は影響を受けません。  
   
 > [!NOTE]  
->  *object_name*角かっこを含めることができます**:operator[]**として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
+>  *object_name*角かっこを含めることができます **:operator[]** として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
  別名データ型からデフォルトをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、既存のデータ型の列には、指定されたデフォルトは失われません。  

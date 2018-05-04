@@ -26,13 +26,12 @@ caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec52b02a29f258497b6e7e19cfd23e43fedc7a60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ ms.lasthandoff: 04/16/2018
   
  Sys.dm_exec_connections、sys.dm_exec_sessions、および sys.dm_exec_requests 動的管理ビューにマップする、 [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)システム テーブル。  
   
-> **注:**これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_exec_sessions**です。  
+> **注:** これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して**sys.dm_pdw_nodes_exec_sessions**です。  
   
 |列名|データ型|説明とバージョンに固有の情報|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|アクティブな各プライマリ接続に関連付けられたセッションの識別子。 NULL 値は許可されません。|  
 |login_time|**datetime**|セッションが確立された時刻。 NULL 値は許可されません。|  
-|host_name|**nvarchar(128)**|セッション固有のクライアント ワークステーションの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。<br /><br /> **セキュリティに関する注意:**クライアント アプリケーションは、ワークステーション名を提供し、不正確なデータを提供できます。 セキュリティ機能として HOST_NAME に依存することは避けてください。|  
+|host_name|**nvarchar(128)**|セッション固有のクライアント ワークステーションの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。<br /><br /> **セキュリティに関する注意:** クライアント アプリケーションは、ワークステーション名を提供し、不正確なデータを提供できます。 セキュリティ機能として HOST_NAME に依存することは避けてください。|  
 |program_name|**nvarchar(128)**|セッションを開始したクライアント プログラムの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |host_process_id|**int**|セッションを開始したクライアント プログラムのプロセス ID。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |client_version|**int**|クライアントでサーバーへの接続に使用されるインターフェイスの TDS プロトコル バージョン。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
@@ -99,8 +98,8 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="permissions"></a>権限  
 すべてのユーザーは、独自のセッション情報を参照してくださいことができます。  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:**必要`VIEW SERVER STATE`に対する権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、サーバー上のすべてのセッションを表示します。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:**必要`VIEW DATABASE STATE`を現在のデータベースに対するすべての接続を確認します。 `VIEW DATABASE STATE` 付与することはできません、`master`データベース。 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 必要`VIEW SERVER STATE`に対する権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、サーバー上のすべてのセッションを表示します。  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 必要`VIEW DATABASE STATE`を現在のデータベースに対するすべての接続を確認します。 `VIEW DATABASE STATE` 付与することはできません、`master`データベース。 
   
   
 ## <a name="remarks"></a>解説  

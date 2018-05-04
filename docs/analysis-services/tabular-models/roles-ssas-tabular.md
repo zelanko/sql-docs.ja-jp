@@ -1,31 +1,29 @@
 ---
-title: "役割 |Microsoft ドキュメント"
-ms.custom: 
+title: 役割 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d1bb19f3220da7300a7a7329ae55e859bf86334a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles"></a>ロール
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
+  テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。 
   
  SQL Server Analysis Services のロールは、Windows ユーザー名または Windows グループおよびアクセス許可 (読み取り、処理、管理者) によってユーザーのメンバーを含めます。 Azure Analysis services では、ユーザーが Azure Active Directory とユーザー名である必要があり、組織の電子メール アドレスまたは UPN によって指定されたグループがある必要があります。 
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/23/2018
   
  Transactions テーブルに対するこれらの権限の実質的な影響は、顧客が米国内に存在し、製品カテゴリが自転車で、しかも年度が 2008 であるデータ行をメンバーが照会できることです。 メンバーは、顧客が米国外にいるか、製品が自転車でないか、または年度が 2008 年でないトランザクションは照会できません。ただし、これらの権限を付与された別のロールのメンバーである場合を除きます。  
   
- *=FALSE()*というフィルターを使用すると、テーブル全体のすべての行に対するアクセスを拒否することができます。  
+ *=FALSE()* というフィルターを使用すると、テーブル全体のすべての行に対するアクセスを拒否することができます。  
   
 ### <a name="dynamic-security"></a>動的なセキュリティ  
  動的なセキュリティには、現在ログオンしているユーザーの名前、または接続文字列から返された CustomData プロパティに基づいて、行レベルのセキュリティを定義する方法が用意されています。 動的なセキュリティを実装するために、ユーザーのログイン値 (Windows ユーザー名) および特定の権限を定義できるフィールドを含むテーブルをモデルに含める必要があります。たとえば、ログイン ID (domain\username) と、各従業員の部署の値を含む dimEmployees テーブルなどです。  

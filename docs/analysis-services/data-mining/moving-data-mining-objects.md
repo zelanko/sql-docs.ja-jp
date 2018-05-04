@@ -1,16 +1,15 @@
 ---
-title: "データ マイニング オブジェクトの移動 |Microsoft ドキュメント"
-ms.custom: 
+title: データ マイニング オブジェクトの移動 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af5fab1c549b2a4bcc8ed3bc9f670ac80444856e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moving-data-mining-objects"></a>データ マイニング オブジェクトの移動
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング オブジェクトを移動する最も一般的なシナリオは、テスト環境または分析環境から運用環境にモデルを配置する方法、または他のユーザーとモデルを共有する方法です。  
+  データ マイニング オブジェクトを移動する最も一般的なシナリオは、テスト環境または分析環境から運用環境にモデルを配置する方法、または他のユーザーとモデルを共有する方法です。  
   
  このトピックでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で用意されている、データ マイニング オブジェクトを移動するためのツールおよびスクリプト言語の使用方法について説明します。  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/15/2018
  Analysis Services ソリューションの配置の詳細については、「[Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)」を参照してください。  
   
 ### <a name="scripting"></a>スクリプトの作成  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、オブジェクトのスクリプト作成に使用できる言語がいくつか用意されています。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]スクリプト オブジェクトに使用できるいくつかの言語を提供します。  
   
 -   **XMLA:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクトを右クリックして、XMLA を使用してオブジェクトのスクリプトを作成することができます。 作成したスクリプトを実行するには、対象サーバーの **XMLA クエリ** ウィンドウでスクリプトを開きます。  
   
@@ -80,9 +78,9 @@ ms.lasthandoff: 02/15/2018
 ### <a name="exporting-and-importing"></a>エクスポートとインポート  
  DMX ステートメントを使用してマイニング モデルとマイニング構造をエクスポートし、インポートし直す方法は、リレーショナル データ マイニング オブジェクトを個別に移動したりバックアップしたりする場合に最も簡単です。 これらの操作の DMX 構文の詳細については、次のトピックを参照してください。  
   
--   [エクスポート &#40;DMX&#41;](../../dmx/export-dmx.md)  
+-   [エクスポート (&) #40";"DMX"&"#41;](../../dmx/export-dmx.md)  
   
--   [インポート &#40;DMX&#41;](../../dmx/import-dmx.md)  
+-   [インポート (&) #40";"DMX"&"#41;](../../dmx/import-dmx.md)  
   
  INCLUDE DEPENDENCIES オプションを指定すると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって必要なデータ ソース ビューの定義もエクスポートされます。この場合、モデルや構造をインポートすると、対象サーバーにデータ ソース ビューが再作成されます。 モデルのインポートが完了したら、オブジェクトに対して必要なマイニング権限を設定する必要があります。  
   

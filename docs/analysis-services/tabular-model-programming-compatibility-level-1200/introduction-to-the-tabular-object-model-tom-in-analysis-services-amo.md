@@ -1,36 +1,34 @@
 ---
-title: "サービス AMO の分析で表形式オブジェクト モデル (TOM) の概要 |Microsoft ドキュメント"
-ms.custom: 
+title: サービス AMO の分析で表形式オブジェクト モデル (TOM) の概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e8b2c640bf61a323aeb3e8a04dadd5fe47626a98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO では、表形式オブジェクト モデル (TOM) の概要
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表形式オブジェクト モデル (TOM) は、互換性レベル 1200 以上で作成された表形式モデルのプログラミング シナリオをサポートするために作成された、Analysis Services 管理オブジェクト (AMO) クライアント ライブラリの拡張です。 同様に、AMO は、TOM は、モデルを作成する、インポートとデータを更新するロールとアクセス許可の割り当てなどの管理機能を処理するプログラムによる方法を提供します。  
+  表形式オブジェクト モデル (TOM) は、互換性レベル 1200 以上で作成された表形式モデルのプログラミング シナリオをサポートするために作成された、Analysis Services 管理オブジェクト (AMO) クライアント ライブラリの拡張です。 同様に、AMO は、TOM は、モデルを作成する、インポートとデータを更新するロールとアクセス許可の割り当てなどの管理機能を処理するプログラムによる方法を提供します。  
   
 TOM など、ネイティブの表形式メタデータを公開**モデル**、**テーブル**、**列**、および**リレーションシップ**オブジェクト。  以下に、オブジェクト モデル ツリーの概要を表示では、コンポーネント部分がどのように関連しているかを示します。  
   
  TOM は、AMO の拡張機能であるために、SQL Server 2016 で導入された新しい表形式オブジェクトを表すすべてのクラスは、新しい Microsoft.AnalysisServices.Tabular.dll アセンブリで実装されます。 AMO の汎用クラスでは、Microsoft.AnalysisServices.Core アセンブリに移動されました。 コードは、両方のアセンブリを参照する必要があります。
-参照してください[これをインストールすると、配布、および表形式オブジェクト モデル &#40; を参照Microsoft.AnalysisServices.Tabular &#41;](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md)詳細についてはします。  
+参照してください[これをインストールすると、配布、および表形式オブジェクト モデルを参照&#40;Microsoft.AnalysisServices.Tabular&#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md)詳細についてはします。  
   
  現時点では、API は、.NET framework 経由でマネージ コードでのみ使用できます。 スクリプトおよびクエリの言語サポートを含む、オプションのプログラミングの完全な一覧を確認するのを参照してください。[互換性レベル 1200 の表形式モデルをプログラミング](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)です。  
   
@@ -50,7 +48,7 @@ TOM は多次元および表形式のデータベース互換性レベル 1200 �
 これにより、実際的な影響があります。
 表形式のメタデータで指定されていないオブジェクトを管理するときにすべての最初の (など、**サーバー**または**データベース**)、それらのオブジェクトを記述する、既存の AMO スタックの部分を活用する必要があります。 レガシ API と共に、またはサーバーに保存されると、サーバーから検出されたオブジェクトの状態の詳細な説明を提供するオブジェクトがメジャーおよびマイナーの概念です。 Microsoft.AnalysisServices 名前空間の下 MajorObject クラスのメソッドを公開**更新**と**更新**です。 副次オブジェクトはのみの更新または主要なオブジェクトを使用して保存を格納していること。
 
-これに対し、表形式メタデータの一部であるオブジェクトを管理する場合 (など**モデル**または**テーブル**)、まったく新しい表形式のスタックを活用することです。 このスタック内の更新プログラムは詳細なつまりすべてのメタデータ オブジェクト (から派生した、 **MetadataObject** Microsoft.AnalysisServices.Tabular 名前空間の下のクラス)、サーバーに個別に保存できます。 全体を探索する通常、**モデル**、その下にある個別のメタデータ オブジェクトを変更する (など**テーブル**または**列**)、呼び出す**Model.SaveChanges()**メソッド (これは粒度の細かいレベルで加えた変更を認識する) 場合は、変更されたオブジェクトのみを更新するサーバーにコマンドを送信します。
+これに対し、表形式メタデータの一部であるオブジェクトを管理する場合 (など**モデル**または**テーブル**)、まったく新しい表形式のスタックを活用することです。 このスタック内の更新プログラムは詳細なつまりすべてのメタデータ オブジェクト (から派生した、 **MetadataObject** Microsoft.AnalysisServices.Tabular 名前空間の下のクラス)、サーバーに個別に保存できます。 全体を探索する通常、**モデル**、その下にある個別のメタデータ オブジェクトを変更する (など**テーブル**または**列**)、呼び出す**Model.SaveChanges()** メソッド (これは粒度の細かいレベルで加えた変更を認識する) 場合は、変更されたオブジェクトのみを更新するサーバーにコマンドを送信します。
 
 ### <a name="tom-and-xmla"></a>TOM と XMLA
 

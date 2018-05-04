@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e3553458eecb094ec76ecb6bf7f65691aaa1c4bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7493a809e9856743422421d61e6f7d1bcdd99ea6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,12 +47,12 @@ RollupChildren(Member_Expression, Unary_Operator)
  *Unary_Operator*  
  単項演算子を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **RollupChildren**関数は指定された単項演算子を使用して、指定されたメンバーの子の値をロールアップします。  
   
  次の表に、この関数で使用できる有効な単項演算子を示します。  
   
-|演算子|[結果]|  
+|演算子|結果|  
 |--------------|------------|  
 |**+**|合計 = 合計 + 現在の子|  
 |**-**|合計 = 合計 - 現在の子|  
@@ -74,6 +73,6 @@ RollupChildren
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

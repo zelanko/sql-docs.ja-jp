@@ -1,11 +1,9 @@
 ---
 title: Field オブジェクト |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b0fc2840f9cd1b9dde3e5a9a883f3f37ce816b8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 872bb5e1ccede336f85b7bbcbdc7e91c89dd1688
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-field-object"></a>Field オブジェクト
 各**フィールド**オブジェクトは通常、データベース テーブル内の列に対応しています。 ただし、**フィールド**を別のポインターを表すことができますも**レコード セット**チャプターと呼ばれます。 チャプター列などの例外は、このガイドの後半で取り上げます。  

@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d88193ced1dede073870ff319dedd8c63066ec48
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b99de3d2329479fa190336c25d53e201f77d8cb9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangepublicationsnapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +133,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  スナップショット エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は NULL です。  
   
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
- 既存のジョブが使用されている場合、既存のスナップショット エージェントのジョブ名を指定します。 *snapshot_agent_name*は**nvarchar (100)**で、既定値は NULL です。  
+ 既存のジョブが使用されている場合、既存のスナップショット エージェントのジョブ名を指定します。 *snapshot_agent_name*は**nvarchar (100)** で、既定値は NULL です。  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
  パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**smallint**、既定値は NULL です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  

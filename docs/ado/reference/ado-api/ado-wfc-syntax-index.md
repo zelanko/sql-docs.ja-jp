@@ -1,7 +1,6 @@
 ---
 title: ADO - WFC 構文インデックス |Microsoft ドキュメント
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -20,11 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da1bb017eb98b63fa4fa6a3e445c9e95f9a812c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 構文のインデックス
 ADO 言語リファレンスでは、ADO メソッドおよびプロパティの構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 このインデックスは、ADO の Windows Foundation Class (ADO/WFC) に基づいて、ADO 言語のリファレンス トピックへの相互参照します。 構文の違いが発生した場合は、構文の一覧は、言語のリファレンス トピックではなく、このインデックスに関数のシグネチャを使用します。  

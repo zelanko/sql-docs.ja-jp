@@ -1,31 +1,29 @@
 ---
-title: "計算テーブルを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 計算テーブルを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c34293f6fca5ebfb49ab4f19980e414f8bf056c0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4d2b864184f74c2d3e094c579eef88634e007815
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-calculated-table"></a>計算テーブルを作成します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-*計算テーブル* は、DAX クエリまたは式に基づいて計算されたオブジェクトで、同じモデル内の他のテーブルの全部または一部から派生しています。  
+  *計算テーブル* は、DAX クエリまたは式に基づいて計算されたオブジェクトで、同じモデル内の他のテーブルの全部または一部から派生しています。  
   
  計算テーブルで解決できる一般的な設計上の問題では、クライアント アプリケーションでクエリ構造として公開できるように、特定のコンテキストで多様ディメンションが表示されています。  多様ディメンションは、複数のコンテキストで表示される単なる 1 つのテーブルです。従来の例としては、外部キー関係に応じて OrderDate、ShipDate、または DueDate としてマニフェストされる Date テーブルなどがあります。 明示的に ShipDate 用の計算テーブルを作成すると、他のテーブルのように完全に操作可能なクエリに使用できるスタンドアロン テーブルが作成されます。  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  データ ビューに切り替えます。 ダイアグラム ビューでは計算テーブルを作成できません。  
   
-3.  **[テーブル]** > **[新しい計算テーブル]**の順に選択します。  
+3.  **[テーブル]** > **[新しい計算テーブル]** の順に選択します。  
   
 4.  DAX 式を入力するか貼り付けます (以下を参考にしてください)。  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>参照  
  [互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Analysis Expressions &#40;DAX&#41;Analysis services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [Data Analysis Expressions &#40;DAX&#41; Analysis services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [テーブル モデルで DAX を理解します。](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

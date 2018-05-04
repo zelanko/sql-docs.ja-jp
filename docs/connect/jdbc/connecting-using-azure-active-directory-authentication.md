@@ -6,23 +6,19 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
-ms.topic: article
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef69bb70de8af6b6dc56df66e652f7f4dae7529c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続します。
 
@@ -222,9 +218,9 @@ You have successfully logged on as: <your user name>
     7. 下部にある [作成] をクリックします。
     9. Azure ポータルで、アプリケーションの [設定] タブをクリックし、[プロパティ] タブを開きます。
     10. "アプリケーション ID"(別名クライアント ID) の値を検索し、コピー別に、この後で場合に必要 (たとえば、1846943b-ad04-4808-aa13-4702d908b5c1) アプリケーションを構成します。 次のスナップショットを参照してください。
-    11. "アプリ ID URL"の値を検索し、コピー別に、これは、STS の URL。
-    12. [「キー」] セクションでは、[名前] フィールドに情報を入力、キーの期間を選択し、(値フィールドを空のままにして) の構成を保存して、キーを作成します。 値フィールドにする必要があります、保存した後に生成された値をコピーする、自動的に入力します。 これは、クライアント シークレットです。
-
+    11. [「キー」] セクションでは、[名前] フィールドに情報を入力、キーの期間を選択し、(値フィールドを空のままにして) の構成を保存して、キーを作成します。 値フィールドにする必要があります、保存した後に生成された値をコピーする、自動的に入力します。 これは、クライアント シークレットです。
+    12. 左側のパネルには、Azure Active Directory をクリックします。 「アプリの登録」「終点」タブを探します。「OATH 2.0 トークン エンドポイント」の下にある URL をコピーして、これは、STS の URL。
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Azure Active Directory 管理者と、アプリケーションのプリンシパルの T-SQL コマンド プロビジョニング、包含データベース ユーザーを使用して Azure SQL Server のユーザー データベースにログオンします。 参照してください、 [SQL データベースまたは SQL データ ウェアハウス認証を使用して Azure Active Directory に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)を Azure Active Directory 管理者と包含データベース ユーザーを作成する方法の詳細についてはします。
 
@@ -255,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

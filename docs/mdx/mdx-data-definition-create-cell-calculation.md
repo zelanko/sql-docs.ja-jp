@@ -30,12 +30,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 07f8925db3b1a427129c37e589f37d8b028aae41
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cb0f441fbb42602dad9bed7b06b4299680f5456c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX データ定義のセル計算の作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,11 +96,11 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
   
 ## <a name="see-also"></a>参照  
  [セッション スコープの計算されるセルの作成](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [クエリ スコープのセル計算 &#40; を作成します。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [MDX &#40; でのセル計算の作成MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [セルのプロパティ &#40; を使用します。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [クエリ スコープのセル計算 & #40; を作成します。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [MDX でのセル計算の構築&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
+ [セルのプロパティ & #40; を使用します。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [FORMAT_STRING の内容と #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [FORE_COLOR および BACK_COLOR の内容と #40 です。MDX と #41 です。](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)  
+ [FORE_COLOR および BACK_COLOR の内容&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

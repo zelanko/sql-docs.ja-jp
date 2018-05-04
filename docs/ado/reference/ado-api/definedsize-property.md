@@ -1,11 +1,9 @@
 ---
 title: DefinedSize プロパティ |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b72bb15c70e419ae94f9d1d96ab12a374375933c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b84eb083ba442fc214d63b518c8bab0c001aa229
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property"></a>DefinedSize プロパティ
 データ容量を示す、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
@@ -35,7 +32,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="return-value"></a>戻り値  
  返します、**長い**フィールド オブジェクトのデータ型によって異なります。 表示されるフィールドの定義のサイズを反映した値[型](../../../ado/reference/ado-api/type-property-ado.md)詳細についてはします。 固定長データ型を使用するフィールドの場合は、戻り値は、バイト単位でのデータ型のサイズです。 可変長データ型を使用するフィールドの場合これは、次のいずれかです。  
   
-1.  文字内のフィールドの最大長 (の**それぞれ**と**adVarWChar**) またはバイト数 (の**adVarBinary**、および**adVarNumeric**) フィールドに定義された長さがある場合。 たとえば、 **adVarChar(5)**フィールドが 5 の最大長。  
+1.  文字内のフィールドの最大長 (の**それぞれ**と**adVarWChar**) またはバイト数 (の**adVarBinary**、および**adVarNumeric**) フィールドに定義された長さがある場合。 たとえば、 **adVarChar(5)** フィールドが 5 の最大長。  
   
 2.  文字データ型の最大長 (の**ファミリ**と**adWChar**) またはバイト数 (の**adBinary**と**adNumeric**) 場合、フィールドには、定義された長さがありません。  
   

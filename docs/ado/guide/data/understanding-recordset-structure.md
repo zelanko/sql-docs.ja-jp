@@ -1,11 +1,9 @@
 ---
 title: レコード セットの構造を理解する |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97c118a40e0fb6952f170050bb4b0f3d218363a4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fb889e2f907e1158819997f2f6ba85e4c7ce80c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-recordset-structure"></a>レコード セットの構造を理解します。
 すべて**Recordset**が、**フィールド**1 つ以上から成るコレクション**フィールド**オブジェクト。 A**フィールド**オブジェクトは、通常、テーブルの列を表します。 次のトピックでは、内を移動する方法を説明します。、**フィールド**各フィールドに関する情報のコレクションを取得します。 どのような情報が経由で利用可能なについても説明してから、**フィールド**オブジェクトとその使用方法です。  

@@ -1,33 +1,31 @@
 ---
-title: "CollectionCaption 要素 (ASSL) |Microsoft ドキュメント"
-ms.custom: 
+title: CollectionCaption 要素 (ASSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f241e60e8861974245c0f8b23ac6c291f29d8b3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bf4cd44498950095a6b744084014362842bf8c57
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collectioncaption-element-assl"></a>CollectionCaption 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-親要素の複数形の名前を格納します。  
+  親要素の複数形の名前を格納します。  
   
 ## <a name="syntax"></a>構文  
   

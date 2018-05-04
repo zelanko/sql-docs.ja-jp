@@ -1,11 +1,9 @@
 ---
 title: ADOX のコード例では、Microsoft Visual Basic |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ade36d3c4c3b974e6033bc05a5fb910005b4d9f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f62008a47dad96ff2322e2f2bfd71dbddd8b3476
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>ADOX のコード例では、Microsoft Visual Basic
 これらのトピックでは、ADOX を使用する方法を理解するためのサンプル コードを提供します。 すべてのコード例は、Microsoft Visual Basic を使用して書き込まれます。  

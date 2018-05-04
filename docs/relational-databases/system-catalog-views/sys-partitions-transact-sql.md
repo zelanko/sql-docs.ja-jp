@@ -26,13 +26,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1576cac945fefabc5cc9d8ea84956ae5c97a82d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 231775f5844d0fadb6e13580904a3f49aa423fb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 |hobt_id|**bigint**|このパーティションの行を保持するデータ ヒープまたは B ツリーの ID を示します。|  
 |rows|**bigint**|このパーティション内の行の概数を示します。|  
 |filestream_filegroup_id|**smallint**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> このパーティションに格納された FILESTREAM ファイル グループの ID を示します。|  
-|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列ストア:**対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**対象**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注:**の任意のエディションでフルテキスト インデックスが圧縮される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
+|data_compression|**tinyint**|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = 列ストア:**対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE:**対象**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **注:** の任意のエディションでフルテキスト インデックスが圧縮される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |data_compression_desc|**nvarchar(60)**|各パーティションの圧縮状態を示します。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストア テーブルに指定できる値は COLUMNSTORE および COLUMNSTORE_ARCHIVE です。|  
   
 ## <a name="permissions"></a>権限  

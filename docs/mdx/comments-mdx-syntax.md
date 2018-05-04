@@ -25,12 +25,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9430eeb2613b77ce1f34918382cd57e4958ac512
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4d3a333b2a8fdbb89f718d67a849c08142da8f79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comments-mdx-syntax"></a>コメント (MDX 構文)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,20 +38,20 @@ ms.lasthandoff: 01/08/2018
   
  MDX のコメントは、以下のガイドラインに従います。  
   
--   コメント内ではすべてのアルファベット文字と記号を使用できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメント内のすべての文字は無視されます。  
+-   コメント内ではすべてのアルファベット文字と記号を使用できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメント内のすべての文字を無視します。  
   
 -   ステートメント内またはスクリプト内のコメント長には制限がありません。 1 行または複数行のコメントを作成できます。  
   
  MDX では、次の 3 種類のコメント文字がサポートされます。  
   
  // (二重スラッシュ)  
- このコメント文字では、実行コードと同じ行にコメントを記述できます。コメント専用の行にすることもできます。 2 重スラッシュの後ろから行末までがコメント部分です。 複数行にわたってコメントを記述する場合、それぞれのコメント行の先頭に二重スラッシュを入力する必要があります。 詳細については、次を参照してください。 [&#40;です。コメント &#41;&#40;です。MDX と #41 です。](../mdx/comment-mdx-double-slash.md)。  
+ このコメント文字では、実行コードと同じ行にコメントを記述できます。コメント専用の行にすることもできます。 2 重スラッシュの後ろから行末までがコメント部分です。 複数行にわたってコメントを記述する場合、それぞれのコメント行の先頭に二重スラッシュを入力する必要があります。 詳細については、次を参照してください。 [&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)です。  
   
  -- (二重ハイフン)  
- このコメント文字では、実行コードと同じ行にコメントを記述できます。コメント専用の行にすることもできます。 二重ハイフンの後ろから行末までがコメント部分です。 複数行にわたってコメントを記述する場合、それぞれのコメント行の先頭に二重ハイフンを入力する必要があります。 詳細については、次を参照してください。 [--&#40;です。コメント &#41;&#40;です。MDX と #41 です。](../mdx/comment-mdx-operator-reference.md)。  
+ このコメント文字では、実行コードと同じ行にコメントを記述できます。コメント専用の行にすることもできます。 二重ハイフンの後ろから行末までがコメント部分です。 複数行にわたってコメントを記述する場合、それぞれのコメント行の先頭に二重ハイフンを入力する必要があります。 詳細については、次を参照してください。 [--&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)です。  
   
  /* ...\*/(スラッシュとアスタリスク文字のペア)  
- このコメント文字では、実行コードと同じ行にコメントを記述できるほか、コメント専用の行にすることもできます。さらに、実行可能コード内でもこのコメント文字を使用できます。 コメント開始記号からのすべてのもの (/\*) にコメント終了記号 (\*/)、コメントの一部と見なされます。 複数行のコメントでは、コメント文字のペアの (/\*)、コメント、および閉じるコメント文字のペアを開始する必要があります (\*/)、コメントを終了する必要があります。 コメント行ではそれ以外のコメント文字を使用できません。 詳細については、次を参照してください[/*。\*/ (Comment)](../mdx/comment-mdx.md)。  
+ このコメント文字では、実行コードと同じ行にコメントを記述できるほか、コメント専用の行にすることもできます。さらに、実行可能コード内でもこのコメント文字を使用できます。 コメント開始記号からのすべてのもの (/\*) にコメント終了記号 (\*/)、コメントの一部と見なされます。 複数行のコメントでは、コメント文字のペアの (/\*)、コメント、および閉じるコメント文字のペアを開始する必要があります (\*/)、コメントを終了する必要があります。 コメント行ではそれ以外のコメント文字を使用できません。 詳細については、次を参照してください[/*.。\*/ (Comment)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>例  
  次のクエリでは、3 種類すべてのコメントの例を示します。  
@@ -80,6 +79,6 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 構文の要素 &#40;です。MDX と #41 です。](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 構文の要素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

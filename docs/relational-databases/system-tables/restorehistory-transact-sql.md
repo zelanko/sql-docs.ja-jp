@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f042e3948af90c8eeda86490e1bdda53a181f8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6216c36edeb2fac643e9ad28f5e823f39945456d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 |**restore_date**|**datetime**|復元操作の完了日時。 NULL を指定できます。|  
 |**destination_database_name**|**nvarchar(128)**|復元操作の対象となるデータベース名。 NULL を指定できます。|  
 |**user_name**|**nvarchar(128)**|復元操作を実行したユーザー名。 NULL を指定できます。|  
-|**backup_set_id**|**int**|復元されるバックアップ セットを識別する一意な識別番号。 参照**backupset (backup_set_id)**です。|  
+|**backup_set_id**|**int**|復元されるバックアップ セットを識別する一意な識別番号。 参照**backupset (backup_set_id)** です。|  
 |**restore_type**|**char(1)**|復元操作の種類。<br /><br /> D = データベース<br /><br /> F = ファイル<br /><br /> G = ファイル グループ<br /><br /> I = 差分<br /><br /> L = ログ<br /><br /> V = 検証のみ<br /><br /> NULL を指定できます。|  
 |**replace**|**bit**|復元操作に REPLACE オプションが指定されたかどうか。<br /><br /> 1 = 指定あり<br /><br /> 0 = 指定なし<br /><br /> NULL を指定できます。<br /><br /> データベースをデータベース スナップショットに戻す場合は、0 だけを選択できます。|  
 |**復旧 (recovery)**|**bit**|復元操作に RECOVERY または NORECOVERY オプションが指定されたかどうか。<br /><br /> 1 = RECOVERY<br /><br /> NULL を指定できます。<br /><br /> データベースは、データベース スナップショットに戻す、ときに、唯一のオプションは 1 です。<br /><br /> 0 = NORECOVERY|  

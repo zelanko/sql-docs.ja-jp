@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], identifiers
 - SQLGetTypeInfo function [ODBC], retrieving data type information
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e89297c8fb0cdd7cc048fd19a24810c67b2d271
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e0a5377934d3487fcfdc58459e8d08e01c8bd21b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo とデータ型情報の取得中
 ODBC が関数を提供する ODBC 型識別子を基になる SQL データ型マッピングは概数であるため (**SQLGetTypeInfo**) を介して、ドライバーは完全にデータ ソース内の各 SQL データ型について説明します。 この関数は、各行が名、型識別子、有効桁数、小数点以下桁数、null 値許容属性などの単一のデータ型の特性を記述、結果セットを返します。  

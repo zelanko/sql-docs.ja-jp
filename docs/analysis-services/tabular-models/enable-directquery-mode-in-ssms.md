@@ -1,31 +1,29 @@
 ---
-title: "SSMS での DirectQuery モードを有効にする |Microsoft ドキュメント"
-ms.custom: 
+title: SSMS での DirectQuery モードを有効にする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 629f130bd16e91d3e6f86aed112e417ac1f5a142
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS での DirectQuery モードの有効化
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-既にデプロイされている表形式モデルのデータ アクセス プロパティは、DirectQuery モードを有効にすることで変更できます。このときクエリは、メモリ内にあるキャッシュ データではく、バックエンドのリレーショナル データ ソースに対して実行されます。  
+  既にデプロイされている表形式モデルのデータ アクセス プロパティは、DirectQuery モードを有効にすることで変更できます。このときクエリは、メモリ内にあるキャッシュ データではく、バックエンドのリレーショナル データ ソースに対して実行されます。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、DirectQuery の構成はモデルの互換性レベルにより異なります。 すべての互換性レベルで動作する手順を下記で説明します。  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>手順 2 a: 表形式 1100 から 1103 データベースを DirectQuery モードに切り替える  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]**の順にクリックします。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]** の順にクリックします。  
   
 2.  モードを **[DirectQuery]** に設定します。  
   

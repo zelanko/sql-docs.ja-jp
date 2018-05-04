@@ -24,13 +24,12 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bed13d18bf7055bd72280cabde3fe65ce05b7b64
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74dbd18e87e0e39bfd65daca4c3d1107de97c464
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +61,7 @@ sp_statistics [ @table_name = ] 'table_name'
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザー指定の名前を持つテーブルを所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していないと*名前*、このプロシージャは、指定したテーブルを探します*名前*が所有する、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
   
  [  **@table_qualifier=** ] **'***修飾子***'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子***.***所有者***.***名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+ テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
  [  **@index_name=** ] **'***index_name***'**  
  インデックス名を指定します。 *index_name*は**sysname**、既定値は % です。 ワイルドカードによるパターン照合がサポートされています。  

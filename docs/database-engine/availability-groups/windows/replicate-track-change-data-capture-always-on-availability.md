@@ -1,7 +1,7 @@
 ---
 title: レプリケーション、変更の追跡、変更データ キャプチャ - 可用性グループ | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1036f577a72aa66fd2e91a9ac956fb8d30cbbd35
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
      次の例では、キャプチャ ジョブを作成します。  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 04/16/2018
   
      新しいプライマリ データベースで適切なクリーンアップが確実に行われるように、ローカル クリーアップ ジョブを必ず作成する必要があります。 次の例では、クリーンアップ ジョブを作成します。  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/16/2018
   
      次のクエリを使用して、可用性グループ リスナー名が CDC データベースをホストしている可用性グループに対して定義されているかどうかを確認します。 クエリは、可用性グループ リスナー名が作成されている場合に、それを返します。  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
      次のクエリを使用して、読み取り可能なセカンダリ レプリカに接続するために読み取り専用の目的が必要かどうかを確認できます。  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/16/2018
   
      **sp_addlinkedserver** を使用してセカンダリにアクセスするためのリンク サーバーを作成する場合は、可用性グループ リスナー名または明示的なサーバー名に *@datasrc* パラメーターを使用し、*@provstr* パラメーターを使用して読み取り専用の目的を指定します。  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +207,6 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
     -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]である必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
   
--   ディストリビューション データベースを可用性グループに配置することはサポートされていません。  
-  
 -   パブリッシャーのインスタンスは、Always On 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
 ### <a name="restrictions"></a>制限  
@@ -224,7 +222,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
   
  * レプリカ データベースへのフェールオーバーは手動で行います。 自動フェールオーバーは提供されていません。  
   
- ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングでディストリビューター データベースを使用することはできません。  
+ **データベース ミラーリングでディストリビューター データベースを使用することはできません。  
   
 ### <a name="considerations"></a>考慮事項  
   

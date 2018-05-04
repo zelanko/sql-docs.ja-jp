@@ -27,12 +27,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b1134b0fdf68761a307133bdc9d1f99a906ccf7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a84640449375852f4a618afb1c1282401e784be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ EXEC managed_backup.sp_backup_config_basic
  バックアップ ファイルの保有期間 (日数)。 @storage_urlは int です。 これは、構成する場合の必須パラメーター[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のインスタンスで最初に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 変更中に、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成では、このパラメーターは省略可能です。 指定しない場合は、既存の構成値が保持されます。  
   
  @credential_name  
- Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報の名前。 @credentail_name **SYSNAME**です。 指定した場合、バックアップは、ページ blob に格納されます。 このパラメーターが NULL の場合、バックアップは、ブロック blob として格納されます。 ページ blob へのバックアップには推奨されていませんので、新しいブロック blob のバックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値は保持されます。  
+ Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報の名前。 @credentail_name **SYSNAME**です。 指定した場合、バックアップは、ページ blob に格納されます。 このパラメーターが NULL の場合、バックアップは、ブロック blob として格納されます。 ページ blob へのバックアップには非推奨とされているので、新しいブロック blob のバックアップ機能を使用することをお勧めします。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] の構成を変更するために使用する場合、このパラメーターは省略可能です。 指定しない場合、既存の構成値は保持されます。  
   
 > [!WARNING]  
 >  **@credential_name**パラメーターは、この時点ではサポートされません。 ブロック blob のみのバックアップはサポートされて、このパラメーターを NULL にする必要があります。  

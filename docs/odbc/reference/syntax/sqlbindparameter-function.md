@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBindParameter
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c6dabf41f117227830cdf536f4d17f32b71a2d09
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 **準拠**  
@@ -135,20 +134,20 @@ SQLRETURN SQLBindParameter(
   
  *InputOutputType*引数は、次の値のいずれか。  
   
--   SQL_PARAM_INPUT です。 パラメーターなど、プロシージャを呼び出しませんする SQL ステートメント内のパラメーターをマークする、**挿入**ステートメント、または、プロシージャの入力パラメーターをマークします。 などのパラメーター**従業員の値に挿入 (しますか?、?、?)**は、入力パラメーターに対しでは、パラメーター **{AddEmp を呼び出す (しますか?、?、?)}**指定できますが、必ずしも、入力パラメーターではありません。  
+-   SQL_PARAM_INPUT です。 パラメーターなど、プロシージャを呼び出しませんする SQL ステートメント内のパラメーターをマークする、**挿入**ステートメント、または、プロシージャの入力パラメーターをマークします。 などのパラメーター**従業員の値に挿入 (しますか?、?、?)** は、入力パラメーターに対しでは、パラメーター **{AddEmp を呼び出す (しますか?、?、?)}** 指定できますが、必ずしも、入力パラメーターではありません。  
   
      ドライバーが、データ ソースにパラメーターのデータを送信、ステートメントの実行時\* *ParameterValuePtr*バッファーは有効な入力値を含める必要があります、または **StrLen_or_IndPtr*バッファーが SQL_NULL_DATA、生成される場合、または、SQL_LEN_DATA_AT の結果を含める必要があります_Exec 系マクロです。  
   
      設定されている場合は、プロシージャ呼び出しでパラメーターの型を判断できないのは、アプリケーション、 *InputOutputType* SQL_PARAM_INPUT 以外に、データ ソースは、パラメーターの値を返す場合、ドライバーにそれを廃棄します。  
   
--   SQL_PARAM_INPUT_OUTPUT です。 パラメーターは、プロシージャ内の入力/出力パラメーターをマークします。 内のパラメーターなど、 **{call GetEmpDept(?)}**入力/出力パラメーターで、従業員の名前を受け取り、従業員の部署の名前を返します。  
+-   SQL_PARAM_INPUT_OUTPUT です。 パラメーターは、プロシージャ内の入力/出力パラメーターをマークします。 内のパラメーターなど、 **{call GetEmpDept(?)}** 入力/出力パラメーターで、従業員の名前を受け取り、従業員の部署の名前を返します。  
   
      ドライバーが、データ ソースにパラメーターのデータを送信、ステートメントの実行時\* *ParameterValuePtr*バッファーは有効な入力値を含める必要がありますまたは\* *StrLen_or_IndPtr* SQL_NULL_DATA、生成される場合、または結果のバッファーを含める必要がありますSQL_LEN_DATA_AT_EXEC マクロです。 ステートメントが実行された後に、ドライバー、パラメーターのデータ、アプリケーションに返すです。ドライバーの設定、データ ソースが入力/出力パラメーターの値を返さない場合、**StrLen_or_IndPtr* SQL_NULL_DATA をバッファーします。  
   
     > [!NOTE]  
     >  ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam**への呼び出しにこのドライバー マネージャーによって ODBC 2.0 のドライバーでは、変換**SQLBindParameter**を*InputOutputType*引数は、SQL_PARAM_INPUT_OUTPUT に設定されます。  
   
--   SQL_PARAM_OUTPUT です。 パラメーターは、プロシージャまたはプロシージャの出力パラメーターの戻り値を示しますどちらの場合、これらと呼ばれます。*出力パラメーター*です。 内のパラメーターなど、 **{? = GetNextEmpID を呼び出す}**出力パラメーターで、[次へ] の従業員 ID を返します。  
+-   SQL_PARAM_OUTPUT です。 パラメーターは、プロシージャまたはプロシージャの出力パラメーターの戻り値を示しますどちらの場合、これらと呼ばれます。*出力パラメーター*です。 内のパラメーターなど、 **{? = GetNextEmpID を呼び出す}** 出力パラメーターで、[次へ] の従業員 ID を返します。  
   
      ステートメントが実行された後に、ドライバーを返しますパラメーターのデータ、アプリケーションにしない限り、 *ParameterValuePtr*と*StrLen_or_IndPtr*引数が両方とも null ポインターをその場合は、ドライバーは、出力値を破棄します。 ドライバーの設定、データ ソースが出力パラメーターの値を返さない場合、**StrLen_or_IndPtr* SQL_NULL_DATA をバッファーします。  
   

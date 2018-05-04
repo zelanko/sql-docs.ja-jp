@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 37ee705f6ead5317fe206fc4da27c42387f50e04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 375a83958cbf99bdb183a2beef78d5901e896a16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="core-interface-conformance"></a>コア インターフェイスへの準拠
 すべての ODBC ドライバーは、少なくともコア レベルを示す必要がありますインターフェイスへの準拠です。 最も一般的な相互運用可能なアプリケーションで必要なものでは、コア レベルの機能、ために、ドライバーは、このようなアプリケーションで操作できます。 コア レベルの機能は、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている nonoptional 機能にも対応しています。 コア レベル – インターフェイスに準拠する ODBC ドライバーは、以下のすべてを実行するようにアプリケーションを使用できます。  

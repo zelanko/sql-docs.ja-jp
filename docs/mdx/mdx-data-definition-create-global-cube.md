@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -28,17 +27,16 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dc74fe731c98609a0840c12f0cd216b89d53e0a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX データ定義のグローバル キューブを作成します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  サーバーのキューブのサブキューブを基にして、ローカルに保存されるキューブを作成します。 ローカルに保存されるキューブに接続する場合、サーバーに接続する必要はありません。 ローカル キューブの詳細については、次を参照してください。[ローカル キューブと #40 です。Analysis Services - 多次元データ &#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  サーバーのキューブのサブキューブを基にして、ローカルに保存されるキューブを作成します。 ローカルに保存されるキューブに接続する場合、サーバーに接続する必要はありません。 ローカル キューブの詳細については、次を参照してください。[ローカル キューブ&#40;Analysis Services - 多次元データ&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -217,7 +215,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)   
- [SESSION CUBE ステートメント &#40; を作成します。MDX と #41 です。](../mdx/mdx-data-definition-create-session-cube.md)  
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [CREATE SESSION CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

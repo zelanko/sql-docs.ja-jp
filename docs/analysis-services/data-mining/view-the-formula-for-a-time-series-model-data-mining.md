@@ -1,16 +1,15 @@
 ---
-title: "タイム シリーズの式の表示モデル (データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
+title: タイム シリーズの式の表示モデル (データ マイニング) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -19,24 +18,23 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bc6c4be3fa5833e932448a433a7828d925a5b9f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>タイム シリーズ モデルの式の表示 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングを使用してタイム シリーズ モデルを作成した場合、モデルの回帰式を確認する最も簡単な方法は、すべての定数を読み取り可能な形式で表示する **Microsoft タイム シリーズ ビューアー** の [マイニング凡例](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)を使用する方法です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングを使用してタイム シリーズ モデルを作成した場合、モデルの回帰式を確認する最も簡単な方法は、すべての定数を読み取り可能な形式で表示する **Microsoft タイム シリーズ ビューアー** の [マイニング凡例](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)を使用する方法です。  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>タイム シリーズ モデルの ARTXP 回帰式を表示するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]** をクリックします。  
   
      -- または --  
   
@@ -53,15 +51,15 @@ ms.lasthandoff: 02/15/2018
   
      **[データ系列]** というラベルのノードは常にリーフ ノードであり、式を含むことができます。 **[(すべて)]** ノードに子ノードがない場合も、式を含むことができます。  
   
-5.  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]**をクリックします。  
+5.  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]** をクリックします。  
   
-     ARTXP 式は、 **[マイニング凡例]**の前半に、 **[ツリー ノード式]**として表示されます。  
+     ARTXP 式は、 **[マイニング凡例]** の前半に、 **[ツリー ノード式]** として表示されます。  
   
      ![タイム シリーズ式の凡例に表示](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "凡例でタイム シリーズ式の表示")  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>タイム シリーズ モデルの ARIMA 式を表示するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、表示するタイム シリーズ モデルを選択して、 **[参照]** をクリックします。  
   
      -- または --  
   
@@ -76,9 +74,9 @@ ms.lasthandoff: 02/15/2018
   
 4.  ツリーの任意のノードをクリックします。  
   
-     ARIMA 式は、 **[マイニング凡例]**の後半に、 **[ARIMA 式]**として表示されます。  
+     ARIMA 式は、 **[マイニング凡例]** の後半に、 **[ARIMA 式]** として表示されます。  
   
-5.  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]**をクリックします。  
+5.  **[マイニング凡例]** が表示されない場合は、ノードを右クリックし、 **[凡例の表示]** をクリックします。  
   
 ### <a name="to-get-the-coefficients-and-terms-for-the-equation"></a>式の係数と項を取得するには  
   

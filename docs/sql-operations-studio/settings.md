@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>ユーザーとワークスペースの設定
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/26/2018
 
 ユーザーとワークスペースの設定を開くことも、**コマンド パレット**(**Ctrl + Shift + P**) と**設定: ユーザー設定を開く**と**開いているワークスペースの設定を設定します。**キーボード ショートカットを使用するか (**Ctrl +**)。
 
-次の例では、エディターで行番号を無効にし、行のテキスト エディターのサイズに基づいて自動的にラップするように構成します。
+次の例では、エディターで行番号を無効にし、コード行を自動的にインデントを設定するように構成します。
 
 ![設定の例](media/settings/sample-settings.png)
 

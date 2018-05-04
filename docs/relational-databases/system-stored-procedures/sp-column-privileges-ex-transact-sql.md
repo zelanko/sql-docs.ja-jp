@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,14 +69,14 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子***.***所有者***.***名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドには NULL を指定できます。|  
+|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドには NULL を指定できます。|  
 |**TABLE_SCHEM**|**sysname**|テーブル所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列がテーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 このフィールドは常に値を返します。|  
 |**権限の許可者**|**sysname**|この権限が許可されるデータベース ユーザー名**COLUMN_NAME**を表示される**権限付与対象ユーザー**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に、同じ、 **TABLE_OWNER**です。 このフィールドは常に値を返します。<br /><br /> **GRANTOR**列は、データベース所有者を指定できます (**TABLE_OWNER**) または他のユーザー データベースの所有者が権限を許可、GRANT ステートメントで WITH GRANT OPTION 句を使用します。|  
 |**権限付与対象ユーザー**|**sysname**|このアクセス許可が与えられているデータベース ユーザー名**COLUMN_NAME**によって、表示される**GRANTOR**です。 このフィールドは常に値を返します。|  
-|**特権**|**varchar(**32**)**|有効な列権限。 列権限は、次に挙げる値 (または実装が定義されるときにデータ ソースによってサポートされるその他の値) のいずれかになります。<br /><br /> オン =**権限付与対象ユーザー**列のデータを取得できます。<br /><br /> 挿入 =**権限付与対象ユーザー**新しい行が挿入されると、この列のデータを提供できます (によって、**権限付与対象ユーザー**) テーブルにします。<br /><br /> 更新 =**権限付与対象ユーザー**列内の既存のデータを変更できます。<br /><br /> 参照 =**権限付与対象ユーザー**主キー/外部キーのリレーションシップで外部テーブルで列を参照できます。 主キー/外部キーの関係は、テーブル制約によって定義されます。|  
-|**IS_GRANTABLE**|**varchar (**3**)**|示すかどうか、**権限付与対象ユーザー**を許可 (「許可の許可」権限とも呼ばれます) の他のユーザーに権限を付与します。 YES、NO、NULL のいずれかになります。 不明な値 (つまり NULL) は、"許可の許可" 権限が適用されないデータ ソースを示します。|  
+|**特権**|**varchar(** 32 **)**|有効な列権限。 列権限は、次に挙げる値 (または実装が定義されるときにデータ ソースによってサポートされるその他の値) のいずれかになります。<br /><br /> オン =**権限付与対象ユーザー**列のデータを取得できます。<br /><br /> 挿入 =**権限付与対象ユーザー**新しい行が挿入されると、この列のデータを提供できます (によって、**権限付与対象ユーザー**) テーブルにします。<br /><br /> 更新 =**権限付与対象ユーザー**列内の既存のデータを変更できます。<br /><br /> 参照 =**権限付与対象ユーザー**主キー/外部キーのリレーションシップで外部テーブルで列を参照できます。 主キー/外部キーの関係は、テーブル制約によって定義されます。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|示すかどうか、**権限付与対象ユーザー**を許可 (「許可の許可」権限とも呼ばれます) の他のユーザーに権限を付与します。 YES、NO、NULL のいずれかになります。 不明な値 (つまり NULL) は、"許可の許可" 権限が適用されないデータ ソースを示します。|  
   
 ## <a name="permissions"></a>権限  
  スキーマに対する SELECT 権限が必要です。  

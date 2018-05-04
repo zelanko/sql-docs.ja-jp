@@ -25,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc2457099b01c10da59eeff031b6532d2b8a4ace
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ff52edbfae39e7937ba43a32831eb5d03d80da31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +54,14 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>引数  
  *from_lsn*  
- 結果セットに含める LSN 範囲の下端を表す LSN 値を指定します。 *from_lsn*は**binary (10)**です。  
+ 結果セットに含める LSN 範囲の下端を表す LSN 値を指定します。 *from_lsn*は**binary (10)** です。  
   
- 内の行のみ、 [cdc&#91; 。capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)で値を持つテーブルを変更**_ _ $start_lsn**より大きいまたは等しい*from_lsn*結果セットに含まれます。  
+ 内の行のみ、 [cdc&#91; 。capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)で値を持つテーブルを変更 **_ _ $start_lsn**より大きいまたは等しい*from_lsn*結果セットに含まれます。  
   
  *to_lsn*  
- 結果セットに含める LSN 範囲の上端を表す LSN 値を指定します。 *to_lsn*は**binary (10)**です。  
+ 結果セットに含める LSN 範囲の上端を表す LSN 値を指定します。 *to_lsn*は**binary (10)** です。  
   
- 内の行のみ、 [cdc&#91; 。capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)で値を持つテーブルを変更**_ _ $start_lsn**以下に*from_lsn*以上*to_lsn*が含まれています結果セットです。  
+ 内の行のみ、 [cdc&#91; 。capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)で値を持つテーブルを変更 **_ _ $start_lsn**以下に*from_lsn*以上*to_lsn*が含まれています結果セットです。  
   
  <row_filter_option> ::= { all | all update old }  
  結果セットに返される行と同様に、メタデータ列の内容を制御するオプションです。  
@@ -82,7 +81,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**__$start_lsn**|**binary(10)**|変更に関連付けられたコミット LSN。この LSN によって変更のコミット順が維持されます。 同じトランザクションでコミットされた変更は、同じコミット LSN 値を共有します。|  
 |**__$seqval**|**binary(10)**|シーケンス値が、トランザクション内の行の順序変更するために使用します。|  
 |**__$operation**|**int**|変更データの行をターゲット データ ソースに適用するために必要となった DML (データ操作言語) 操作を識別します。 次のいずれかになります。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (キャプチャされる列値は更新操作前の値)。 この値が該当するのは、行フィルター オプションに 'all update old' を指定した場合だけです。<br /><br /> 4 = 更新 (キャプチャされる列値は更新操作後の値)|  
-|**__$update_mask**|**varbinary (128)**|キャプチャ インスタンスに対して指定された各キャプチャ対象列に対応するビットを持ったビット マスク。 この値がすべて定義すると 1 に設定されたビット**_ _ $操作**= 1 または 2 です。 ときに**_ _ $操作**= 3 または 4、変更された列に対応するビットだけが 1 に設定されます。|  
+|**__$update_mask**|**varbinary (128)**|キャプチャ インスタンスに対して指定された各キャプチャ対象列に対応するビットを持ったビット マスク。 この値がすべて定義すると 1 に設定されたビット **_ _ $操作**= 1 または 2 です。 ときに **_ _ $操作**= 3 または 4、変更された列に対応するビットだけが 1 に設定されます。|  
 |**\< キャプチャ対象のソース テーブルの列 >**|各種|この関数によって返されるその他の列は、キャプチャ インスタンスの作成時に指定されたキャプチャ対象列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
 ## <a name="permissions"></a>権限  
@@ -91,7 +90,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>解説  
  指定した LSN 範囲が、キャプチャ インスタンスの変更追跡時間外に該当した場合、エラー 208 ("プロシージャまたは関数 cdc.fn_cdc_get_all_changes に指定された引数が不足しています。") が返されます。  
   
- データ型の列**イメージ**、**テキスト**、および**ntext**は常に NULL を割り当てられているときの値**_ _ $操作**= 1 または**_ _ $操作**3 を = です。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** 、NULL が割り当てられている値と**_ _ $操作**3 を =しない限り、列が更新中に変更します。 ときに**_ _ $操作**= 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
+ データ型の列**イメージ**、**テキスト**、および**ntext**は常に NULL を割り当てられているときの値 **_ _ $操作**= 1 または **_ _ $操作**3 を = です。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** 、NULL が割り当てられている値と **_ _ $操作**3 を =しない限り、列が更新中に変更します。 ときに **_ _ $操作**= 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
   
 ## <a name="examples"></a>使用例  
  いくつか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のテンプレートは変更データ キャプチャ クエリ関数を使用する方法を示します。 これらのテンプレートでは、**ビュー**でメニュー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]です。 詳細については、次を参照してください。[テンプレート エクスプ ローラー](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)です。  

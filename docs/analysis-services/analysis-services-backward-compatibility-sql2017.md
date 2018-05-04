@@ -1,9 +1,8 @@
 ---
 title: SQL Server 2017 Analysis Services の旧バージョンと互換性 |Microsoft ドキュメント
-ms.date: 07/11/2017
+ms.date: 04/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,13 +22,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3ce7f9d39c8e07a4e3d002a00343f821b0cbbeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services の旧バージョンとの互換性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -48,6 +46,9 @@ A*非推奨の機能*将来のリリースで製品から廃止されますが�
 |多次元|リモート リンク メジャー グループ|
 |テーブル|1100 と 1103 互換性レベル モデル|
 |テーブル|表形式オブジェクト モデルのプロパティ: Column.TableDetailPosition、Column.IsDefaultLabel、Column.IsDefaultImage|
+|ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「[SQL Server 拡張イベントを使用した Analysis Services の監視](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
+|ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
+|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
 
 
 ## <a name="discontinued-features"></a>廃止された機能
@@ -63,9 +64,7 @@ A*提供が中止された機能*以前のリリースでは推奨されなく�
 |多次元|リモート リンク メジャー グループ|  
 |多次元|ディメンションの書き戻し|  
 |多次元|リンク ディメンション|
-|ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「[SQL Server 拡張イベントを使用した Analysis Services の監視](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
-|ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
-|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
+
 
 ## <a name="breaking-changes"></a>重大な変更
 A*互換性に影響する変更*現在のリリースにアップグレードした後、機能、データ モデル、アプリケーション コードまたはスクリプトが機能しなくをによりします。

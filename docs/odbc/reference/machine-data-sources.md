@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - machine data sources [ODBC]
 - data sources [ODBC], machine
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44c163254f23aae90caf24b5be05341cbcc4016b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 51b95411978ced9466d23283b9c99bb2ab2dd614
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="machine-data-sources"></a>マシンのデータ ソース
 *データ ソースのマシン*ユーザー定義の名前を使用してシステムに格納されています。 データ ソース名に関連付けられているすべての情報とは、データ ソースに接続してドライバーのドライバー マネージャーが必要です。 Xbase データ ソースの場合は、Xbase ドライバー、Xbase ファイルとそれらのファイルでは、シングル ユーザー モードなど、または読み取り専用の使用方法、ドライバーに指示するいくつかのオプションを含むディレクトリの完全なパスの名前があります。 Oracle データ ソースの場合は、Oracle ドライバ、Oracle DBMS が存在するサーバー、SQL の名前可能性があります * Net 接続文字列を SQL を識別する\*Net のドライバーを使用して、システム、サーバー上のデータベースの ID。
