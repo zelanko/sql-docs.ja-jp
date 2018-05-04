@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 364f88ae30fa71cd5f2a39dea897252b967d8228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: aaccd874d7f559b422f0f4c8ac6d2e9a2baacb83
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   パブリッシャーに新しいサブスクライバーを追加し、サブスクライバーがパブリケーションを受け取れるようにします。 このストアド プロシージャは、スナップショット パブリケーションとトランザクション パブリケーションの場合はパブリッシャー側でパブリケーション データベースについて実行され、リモート ディストリビューターを使用するマージ パブリケーションの場合はディストリビューター側で実行されます。  
   
 > [!IMPORTANT]  
->  このストアド プロシージャの使用は推奨されません。 パブリッシャー側でサブスクライバーを明示的に登録する必要はなくなりました。  
+>  このストアド プロシージャの使用は非推奨とされます。 パブリッシャー側でサブスクライバーを明示的に登録する必要はなくなりました。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,7 +85,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  ログイン id を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@password=**] **'***パスワード***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のパスワードを指定します。 *パスワード*は**nvarchar (524)**、既定値は NULL です。  
@@ -95,22 +94,22 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@commit_batch_size=**] *commit_batch_size*  
- このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。  
+ このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
 > [!NOTE]  
 >  値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@status_batch_size=**] *status_batch_size*  
- このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。  
+ このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
 > [!NOTE]  
 >  値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@flush_frequency=**] *flush_frequency*  
- このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。  
+ このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
 > [!NOTE]  
 >  値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
@@ -130,13 +129,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**128**|定期的|  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [**@frequency_interval=** ] *frequency_interval*  
  設定した頻度に適用される値は、 *frequency_type*です。 *frequency_interval*は**int**、既定値は 1 です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  レプリケーション エージェントを実行する日付を指定します。 このパラメーターが使用されるときに*frequency_type*に設定されている**32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
@@ -150,13 +149,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**16**|Last|  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
  によって使用される定期実行係数*frequency_type*です。 *frequency_recurrence_factor*は**int**、既定値は**0**します。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@frequency_subday=**] *frequency_subday*  
  定義した期間にスケジュールを組み直す頻度を指定します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
@@ -169,37 +168,37 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**8**|Hour|  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
  間隔は、 *frequency_subday*です。 *frequency_subday_interval*は**int**、既定値は**5**です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
  レプリケーション エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は**0**します。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  レプリケーション エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**、既定値は 235959、午後 11時 59分: 59 を意味 24 時間制です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@active_start_date=**] *active_start_date*  
  レプリケーション エージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は 0 です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@active_end_date=**] *active_end_date*  
  レプリケーション エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**99991231、既定値は 9999 年 12 月 31 日です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@description=**] **'***説明***'**  
  サブスクライバーのテキスト形式の説明を指定します。 *説明*は**nvarchar (255)**、既定値は NULL です。  
@@ -208,7 +207,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  実装されているセキュリティ モードを指定します。 *security_mode*は**int**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 サブスクリプションごとには、実行時に、プロパティを指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)です。 値を指定した場合、その値はサブスクライバーでのサブスクリプションの作成時に既定値として使用され、警告メッセージが返されます。  
   
  [  **@encrypted_password=**] *encrypted_password*  
  このパラメーターは廃止されており、旧バージョンとの互換性のための設定のみが提供*encrypted_password*任意の値が、 **0**エラーが発生します。  

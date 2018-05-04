@@ -36,12 +36,12 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
-|[実行 (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
-|[(java.lang.String, int) の実行します。](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|指定された SQL ステートメントを実行、複数の結果、および信号を返す可能性のある[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]すべての自動生成キーを検索可能にする必要があることです。|  
-|[実行 (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|複数の結果を返す可能性のある渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、JDBC ドライバーに通知します。|  
-|[実行 (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string-java-lang-string.md)|複数の結果を返す可能性のある渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、JDBC ドライバーに通知します。|  
+|[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
+|[execute (java.lang.String, int)](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|複数の結果を返す可能性がある渡された SQL ステートメントを実行し、すべての自動生成キーを検索可能にする必要があることを [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。|  
+|[execute (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|複数の結果を返す可能性のある渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、JDBC ドライバーに通知します。|  
+|[execute (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string-java-lang-string.md)|複数の結果を返す可能性のある渡された SQL ステートメントを実行し、渡された配列に示される自動生成キーを検索可能にするように、JDBC ドライバーに通知します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

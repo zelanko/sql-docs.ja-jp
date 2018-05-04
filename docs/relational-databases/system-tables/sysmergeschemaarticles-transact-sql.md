@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be0e14898e488592e8c0dcdbf40b53b6e678a6a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6901f0676f6c7dbbd3770389d212026b166e7de3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**objid**|**int**|アーティクル ベース オブジェクトのオブジェクト識別子。 プロシージャ、ビュー、インデックス付きビュー、またはユーザー定義関数のオブジェクト識別子です。|  
 |**artid**|**uniqueidentifier**|アーティクル ID です。|  
 |**説明**|**nvarchar (255)**|アーティクルの説明です。|  
-|**pre_creation_command**|**tinyint**|サブスクリプション データベースの中でアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =**なし - サブスクライバーでテーブルが既に存在する場合のアクションが行わします。<br /><br /> **1** = drop - テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセット フィルターの WHERE 句に基づいて削除します。<br /><br /> **3** = 切り捨て-として同じ**2**は行ではなくページを削除します。 ただし、WHERE 句は使用しません。|  
+|**pre_creation_command**|**tinyint**|サブスクリプション データベースの中でアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =** なし - サブスクライバーでテーブルが既に存在する場合のアクションが行わします。<br /><br /> **1** = drop - テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセット フィルターの WHERE 句に基づいて削除します。<br /><br /> **3** = 切り捨て-として同じ**2**は行ではなくページを削除します。 ただし、WHERE 句は使用しません。|  
 |**pubid**|**uniqueidentifier**|パブリケーションの一意識別子。|  
 |**ステータス**|**tinyint**|スキーマだけのアーティクルの状態。次のいずれかになります。<br /><br /> **1** = Unsynced - テーブルの実行に、次回、スナップショット エージェントを実行をパブリッシュする初期処理スクリプト。<br /><br /> **2** = active - テーブルをパブリッシュする初期処理スクリプトが実行されています。<br /><br /> **5** = New_inactive - 追加します。<br /><br /> **6** = New_active - 追加します。|  
 |**creation_script**|**nvarchar (255)**|ターゲット テーブルの作成に使用されるアーティクル スキーマの事前作成スクリプトのパスと名前 (省略可能)。|  

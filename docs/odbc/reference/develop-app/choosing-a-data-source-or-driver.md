@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
 - connecting to data source [ODBC], selecting data source
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6e2bc882cce58654e45f803972820e2ef6615783
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ea84e234291056901c9d759e9aa206301a24641
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>データを選択するソースまたはドライバー
 データ ソースまたはドライバー、アプリケーションで使用される場合があります、アプリケーションにハードコーディングします。 1 つのデータ ソースからのデータには、それらのデータ ソースの名前にが含まれますを転送する MIS 部門で記述された、カスタム アプリケーションなど、アプリケーションだけで動作しない他のデータ ソース。 別の例は、いずれかの注文エントリの使用などの垂直方向のアプリケーションです。 このようなアプリケーションは常には、定義済みのスキーマが既知のアプリケーションによって同じデータ ソースを使用します。  

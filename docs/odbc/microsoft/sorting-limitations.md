@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 31779de22263f2c7baa46a4fc03bceb17974f6f4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: adf6dc17ca0fe51a28d7fc1e0d0c9a5742888d7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-limitations"></a>制限事項を並べ替え
 GROUP BY 句、ORDER BY 句、SELECT DISTINCT ステートメントでは、または外部結合、並べ替えキーの最大長は 255 バイトを表します。並べ替え行内のすべての並べ替えキーの最大長は 65,500 バイトです。

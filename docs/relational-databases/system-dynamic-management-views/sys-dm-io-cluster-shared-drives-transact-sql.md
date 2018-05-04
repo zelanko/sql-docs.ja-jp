@@ -26,13 +26,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d42c66b4abe0fb227384cf1db6aa71e37f15000
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c2b58ce7edec6128e1be77b6f22ac90c900a4a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 04/16/2018
  クラスター化が有効な場合、フェールオーバー クラスター インスタンスには、共有ディスク上にデータ ファイルとログ ファイルが置かれ、別のノードにフェールオーバーした後アクセスできるようになっている必要があります。 このビューの各行は、クラスター化された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで使用される 1 つの共有ディスクを表します。 データを保管するためのこのインスタンスのログ ファイルはこのビューで表示されているディスクのみを使用できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 このビューで表示されるディスクは、SQL Server インスタンスに関連付けられているクラスター リソース グループに属するディスクです。  
   
 > [!NOTE]  
->  このビューは、今後のリリースでは推奨されていません。 使用することをお勧め[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)代わりにします。  
+>  このビューは、今後のリリースでは非推奨とされます。 使用することをお勧め[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)代わりにします。  
   
 ## <a name="permissions"></a>権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する VIEW SERVER STATE 権限が必要です。  

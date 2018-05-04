@@ -26,12 +26,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: bdffb139f9a2870a454c3cdec1318df9dcf4070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 03143000dd2ca4563f6d60d6945e3934ecf5283a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX データ定義のメンバーを作成します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,10 +63,10 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  計算されるメンバー プロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>Remarks  
- CREATE MEMBER ステートメントは、セッション全体で使用できる計算されるメンバーを定義します。作成した計算されるメンバーは、セッション内の複数のクエリで使用できます。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバーと #40 です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
+## <a name="remarks"></a>解説  
+ CREATE MEMBER ステートメントは、セッション全体で使用できる計算されるメンバーを定義します。作成した計算されるメンバーは、セッション内の複数のクエリで使用できます。 詳細については、次を参照してください。 [creating session-scoped 計算されるメンバー &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)です。  
   
- 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバーと #40 です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
+ 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバー &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)です。  
   
  *Property_Name*標準またはオプションの計算されるメンバー プロパティのどちらかを参照できます。 標準のメンバー プロパティの一覧は、このトピックの後半にあります。 計算されるメンバーをしない CREATE MEMBER で作成された、**セッション**値はセッションのスコープを設定します。 また、計算されるメンバーの定義に含まれる文字列は、二重引用符で区切ります。 この点は、OLE DB によって定義される方法と異なっています。OLE DB では、文字列を単一引用符で区切るように指定されています。  
   
@@ -79,7 +78,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  計算されるメンバーには、以下のいずれかのスコープを設定できます。  
   
  クエリ スコープ  
- 計算されるメンバーの表示設定と有効期間は、クエリに限定されます。 そのような計算されるメンバーは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバーと #40 です。MDX と #41 です](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)。  
+ 計算されるメンバーの表示設定と有効期間は、クエリに限定されます。 そのような計算されるメンバーは、個々のクエリの中で定義します。 クエリ スコープは、セッション スコープよりも優先されます。 詳細については、次を参照してください。 [Creating Query-Scoped 計算されるメンバー &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)です。  
   
  セッション スコープ  
  計算されるメンバーの表示設定と有効期間は、メンバーが作成されたセッションに限定されます。 計算されるメンバーに対して DROP MEMBER ステートメントが実行された場合、有効期間はセッションよりも短くなります。CREATE MEMBER ステートメントで作成する計算されるメンバーは、セッション スコープです。  
@@ -132,14 +131,14 @@ WHERE ProfitRatio
 |SOLVE_ORDER|計算されるメンバーがもう 1 つの他の計算されるメンバーを参照する場合 (つまり、計算されるメンバーが互いに交差する場合) に、計算されるメンバーが解決される順序です。|  
 |FORMAT_STRING|A [!INCLUDE[msCoName](../includes/msconame-md.md)] Office スタイルの形式の文字列には、セルの値を表示するときにクライアント アプリケーションで使用できます。|  
 |VISIBLE|計算されるメンバーがスキーマ行セットに表示されるかどうかを示す値です。 表示は、メンバーのセットに追加できますされる計算される、 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)関数。 0 以外の値は、計算されるメンバーが表示されることを示します。 このプロパティの既定値は*Visible*です。<br /><br /> 表示されない (この値が 0 に設定されている) 計算されるメンバーは、一般には中間段階として、より複雑な計算されるメンバー内で使用されます。 これらの計算されるメンバーは、メジャーなど、他の種類のメンバーによって参照することもできます。|  
-|NON_EMPTY_BEHAVIOR|空のセルを解決する場合の計算されるメンバーの動作を決定するために使用するメジャーまたはセットです。<br /><br /> **\*\*警告\* \*** このプロパティは推奨されなくなりました。 これを設定しないでください。 詳細については、「[SQL Server 2016 に含まれている非推奨の Analysis Services 機能](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)」を参照してください。|  
+|NON_EMPTY_BEHAVIOR|空のセルを解決する場合の計算されるメンバーの動作を決定するために使用するメジャーまたはセットです。<br /><br /> **\*\* 警告\* \*** このプロパティは推奨されなくなりました。 これを設定しないでください。 詳細については、「[SQL Server 2016 に含まれている非推奨の Analysis Services 機能](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)」を参照してください。|  
 |CAPTION|メンバーのキャプションとしてクライアント アプリケーションが使用する文字列です。|  
 |DISPLAY_FOLDER|メンバーを表示するためにクライアント アプリケーションが使用する、表示フォルダーのパスを識別する文字列です。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 ツールおよびクライアントによって提供される[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、円記号 (\\) は、レベルの区切り記号。 定義されたメンバーで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  
 |ASSOCIATED_MEASURE_GROUP|このメンバーが関連付けられているメジャー グループの名前です。|  
   
 ## <a name="see-also"></a>参照  
- [DROP MEMBER ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-drop-member.md)   
- [UPDATE MEMBER ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-update-member.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP MEMBER ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [UPDATE MEMBER ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

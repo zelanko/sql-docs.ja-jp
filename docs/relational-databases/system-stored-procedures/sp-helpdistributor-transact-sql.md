@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfd25167cda521390395940b77a2f6a8b79a0000
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 641dd06193b6897a703067f24ce7aa5392abe929
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,26 +57,26 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@distributor=**] **'***ディストリビューター***'**出力  
+ [  **@distributor=**] **'***ディストリビューター***'** 出力  
  ディストリビューターの名前です。 ディストリビューターは**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@distribdb=**] **'***distribdb***'**出力  
+ [  **@distribdb=**] **'***distribdb***'** 出力  
  ディストリビューション データベースの名前を指定します。 *distribdb*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
   
- [  **@directory=**] **'***ディレクトリ***'**出力  
+ [  **@directory=**] **'***ディレクトリ***'** 出力  
  作業ディレクトリです。 *ディレクトリ*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
  [  **@account=**] **'***アカウント***' 出力**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントです。 *アカウント*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
   
  [  **@min_distretention=**] *min_distretention * * * 出力**  
- ディストリビューションの最小保有期間を時間単位で示します。 *min_distretention*は**int**、既定値は**-1**です。  
+ ディストリビューションの最小保有期間を時間単位で示します。 *min_distretention*は**int**、既定値は **-1**です。  
   
  [  **@max_distretention=**] *max_distretention * * * 出力**  
- ディストリビューションの最大保有期間を時間単位で示します。 *max_distretention*は**int**、既定値は**-1**です。  
+ ディストリビューションの最大保有期間を時間単位で示します。 *max_distretention*は**int**、既定値は **-1**です。  
   
  [  **@history_retention=**] *history_retention * * * 出力**  
- 履歴の保有期間を時間単位で示します。 *history_retention*は**int**、既定値は**-1**です。  
+ 履歴の保有期間を時間単位で示します。 *history_retention*は**int**、既定値は **-1**です。  
   
  [  **@history_cleanupagent=**] **'***history_cleanupagent***' 出力**  
  履歴クリーンアップ エージェントの名前です。 *history_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  

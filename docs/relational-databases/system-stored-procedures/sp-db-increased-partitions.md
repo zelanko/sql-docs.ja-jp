@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3eeec3e44c07d8f2d53ab3b954c07304200f6341
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7692f214c38d4d1925b96390f99fa9d86675f8ca
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dp_increased_partitions
  データベースの名前です。 *dbname*は**sysname**で、既定値は NULL です。 場合*dbname*が指定されていない、現在のデータベースを使用します。  
   
  [ @increased_partitions=] '*increased_partitions*'  
- 指定したデータベースに対して 15, 000 個のパーティションのサポートを有効または無効にします。 *increased_partitions*は**varchar (6)**既定値は NULL です。 サポートを有効にするための承認済みの値は 'ON' または 'TRUE' です。サポートを無効にするための承認済みの値は 'OFF' または 'FALSE' です。 場合*increased_partitions*が指定されていない、プロシージャは指定されたデータベースのサポートが有効になっている、サポートを示すために 0 が無効になっているかを示す 1 を返します。  
+ 指定したデータベースに対して 15, 000 個のパーティションのサポートを有効または無効にします。 *increased_partitions*は**varchar (6)** 既定値は NULL です。 サポートを有効にするための承認済みの値は 'ON' または 'TRUE' です。サポートを無効にするための承認済みの値は 'OFF' または 'FALSE' です。 場合*increased_partitions*が指定されていない、プロシージャは指定されたデータベースのサポートが有効になっている、サポートを示すために 0 が無効になっているかを示す 1 を返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

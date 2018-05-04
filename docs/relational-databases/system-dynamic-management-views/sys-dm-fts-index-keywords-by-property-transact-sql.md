@@ -29,12 +29,11 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 603ff2cfed32a6a8ecfb4f55467b697307009822
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb235afa38de1719b67c6bbbf6ffa14b32e40deb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ OBJECT_ID('table_name')
   
  フルテキスト キー列が整数データ型 (推奨されるデータ型) の場合、document_id はベース テーブルのフルテキスト キー値に直接マップされます。  
   
- 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この例では、によって返された結果をこのビューを結合する必要が dm_fts_index_keywords_by_property によって返されるベース テーブルの行を識別するため[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)です。 結合の前に、このストアド プロシージャの出力を一時テーブルに格納します。 このストアド プロシージャによって返される DocId 列を含む dm_fts_index_keywords_by_property の document_id 列を結合することができます。 なお、**タイムスタンプ**列は、によって自動生成されるために、挿入時にの値を受け取ることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 したがって、**タイムスタンプ**に列を変換する必要があります**varbinary (8)**列です。 次の例はこれらの手順を示しています。 この例では*table_id* 、テーブルの id を指定します*database_name* 、データベースの名前を指定し、 *table_name*テーブルの名前を指定します。  
+ 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この例では、によって返された結果をこのビューを結合する必要が dm_fts_index_keywords_by_property によって返されるベース テーブルの行を識別するため[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)です。 結合の前に、このストアド プロシージャの出力を一時テーブルに格納します。 このストアド プロシージャによって返される DocId 列を含む dm_fts_index_keywords_by_property の document_id 列を結合することができます。 なお、**タイムスタンプ**列は、によって自動生成されるために、挿入時にの値を受け取ることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 したがって、**タイムスタンプ**に列を変換する必要があります**varbinary (8)** 列です。 次の例はこれらの手順を示しています。 この例では*table_id* 、テーブルの id を指定します*database_name* 、データベースの名前を指定し、 *table_name*テーブルの名前を指定します。  
   
 ```  
 USE database_name;  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], calling
@@ -23,15 +23,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eac0128a7919f58acc58bce793f9f765fb0d1e07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c34e1e5f9c4dae5f2a39cadd6b9afbdc03403b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos を呼び出す
-ODBC 2 です。*x*、行の状態配列へのポインターが引数**SQLExtendedFetch**です。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**です。 一部のドライバーがこの配列は間変更されないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**です。 ODBC 3 です。*x*状態配列へのポインターが記述子フィールド、および、したがってアプリケーション簡単に変更し、別の配列を指すようにします。 これは、とき、ODBC 3 問題となることができます。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを呼び出すが、 **SQLSetStmtAttr**配列状態のポインターを設定して呼び出しは**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**です。 次のコードでは、エラーは通常と発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC 2 を操作するときに呼び出す*.x*ドライバー。  
+ODBC 2 です。*x*、行の状態配列へのポインターが引数**SQLExtendedFetch**です。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**です。 一部のドライバーがこの配列は間変更されないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**です。 ODBC 3 です。*x*状態配列へのポインターが記述子フィールド、および、したがってアプリケーション簡単に変更し、別の配列を指すようにします。 これは、とき、ODBC 3 問題となることができます。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを呼び出すが、 **SQLSetStmtAttr**配列状態のポインターを設定して呼び出しは**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**です。 次のコードでは、エラーは通常と発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC 2 を操作するときに呼び出す *.x*ドライバー。  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  

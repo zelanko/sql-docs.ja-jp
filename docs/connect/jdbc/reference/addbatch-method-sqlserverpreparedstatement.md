@@ -32,14 +32,14 @@ ms.lasthandoff: 04/16/2018
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  このコマンドのバッチにパラメーターのセットを追加[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)オブジェクト。  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトのコマンド バッチにパラメーターのセットを追加します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|名前|Description|  
+|[オブジェクト名]|Description|  
 |----------|-----------------|  
-|[addBatch)](../../../connect/jdbc/reference/addbatch-method.md)|このコマンドのバッチにパラメーターのセットを追加[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)オブジェクト。|  
-|[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|このコマンドの現在のリストに渡された SQL コマンドを追加[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)オブジェクト。|  
+|[addBatch ()](../../../connect/jdbc/reference/addbatch-method.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトへのコマンド バッチにパラメーターのセットを追加します。|  
+|[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|渡された SQL コマンドを、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの現在のコマンド一覧に追加します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

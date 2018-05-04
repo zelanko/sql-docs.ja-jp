@@ -27,13 +27,12 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2572940f9e8d243839311d78267083217218ec84
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 20a87dee817fe59d715b793a457749ee2a885ece
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**plan_id**|**bigint**|主キー。|  
 |**query_id**|**bigint**|外部キーです。 結合[sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)です。|  
 |**plan_group_id**|**bigint**|計画のグループの ID です。 カーソル クエリには、複数通常必要があります (設定および fetch) プランです。 追加と一緒にコンパイルされるフェッチ計画が、同じグループ内。<br /><br /> 0 は、計画されていないグループを表します。|  
-|**engine_version**|**nvarchar(32)**|内のプランをコンパイルするために使用する、エンジンのバージョン**'major.minor.build.revision'**形式です。|  
+|**engine_version**|**nvarchar(32)**|内のプランをコンパイルするために使用する、エンジンのバージョン **'major.minor.build.revision'** 形式です。|  
 |**compatibility_level**|**smallint**|クエリで参照されているデータベースのデータベースの互換性レベルです。|  
 |**query_plan_hash**|**binary(8)**|個別の計画の MD5 ハッシュ。|  
 |**query_plan**|**nvarchar(max)**|クエリ プランのプラン表示 XML です。|  

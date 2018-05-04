@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b647c31febd5ef06b8cb2e6f808e296518f98af6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +66,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Ytd**はでよく使用の組み合わせでパラメーターを指定せず、つまり、 [CurrentMember (& a) #40 です。MDX と #41 です。](../mdx/currentmember-mdx.md)関数は、次のクエリで示すように、レポートでは、年度累計の累積合計が表示されます。  
+ **Ytd**はでよく使用の組み合わせでパラメーターを指定せず、つまり、 [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)関数で示すように、レポートでは、年度累計の累積合計を表示は、次のクエリ:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -80,6 +79,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 62b73908bc65698cc6f84124a76214398f75fa4a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
  ログイン マッピングの対象となるリンク サーバーの名前を指定します。 *rmtsrvname*は**sysname**、既定値はありません。  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
- 接続するかどうかを判断*rmtsrvname*のローカル ログインの権限を借用または明示的にログインとパスワードを送信します。 データ型は**varchar (**8**)**、既定値は TRUE です。  
+ [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ 接続するかどうかを判断*rmtsrvname*のローカル ログインの権限を借用または明示的にログインとパスワードを送信します。 データ型は**varchar (** 8 **)**、既定値は TRUE です。  
   
  TRUE の値は、ログインがへの接続に自身の資格情報を使用することを指定します*rmtsrvname*で、 *rmtuser*と*rmtpassword*引数は無視されます。 FALSE を指定する、 *rmtuser*と*rmtpassword*引数がへの接続に使用される*rmtsrvname* 、指定された*locallogin*. 場合*rmtuser*と*rmtpassword*も、NULL でないログインまたはパスワードに設定が、リンク サーバーへの接続に使用します。  
   

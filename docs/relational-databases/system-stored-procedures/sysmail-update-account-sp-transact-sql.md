@@ -24,12 +24,11 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 997e21d11225709d1ec716b7bda03b93cea6ea48
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4771a0011f533be044384eac811c8e6de8ff17
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  このアカウントに使用する SMTP メール サーバーの新しい名前を指定します。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
   
  [ **@mailserver_type** =] **'***server_type***'**  
- メール サーバーの新しい種類を指定します。 *server_type*は**sysname**、既定値はありません。 値しか**'SMTP'**はサポートされています。  
+ メール サーバーの新しい種類を指定します。 *server_type*は**sysname**、既定値はありません。 値しか **'SMTP'** はサポートされています。  
   
  [ **@port** =] *port_number*  
  メール サーバーの新しいポート番号を指定します。 *port_number*は**int**、既定値はありません。  

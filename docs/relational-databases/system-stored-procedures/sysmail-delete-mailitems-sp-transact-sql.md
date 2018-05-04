@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518e72a5ad45147bc9cdf3316c7bd2eba07e7fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 81911e04266abf51f28a8906910290bf3d0179f3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  として指定した日時まで電子メールを削除、 *@sent_before*引数。 *@sent_before*は**datetime**で、既定値としては NULL です。 NULL はすべての日付を表します。  
   
  [ **@sent_status=** ] **'***sent_status***'**  
- 指定された型の電子メールを削除*sent_status*です。 *sent_status*は**varchar (8)**既定値はありません。 有効なエントリは**送信**、**未送信**、**再試行**と**失敗**です。 NULL はすべての状態を表します。  
+ 指定された型の電子メールを削除*sent_status*です。 *sent_status*は**varchar (8)** 既定値はありません。 有効なエントリは**送信**、**未送信**、**再試行**と**失敗**です。 NULL はすべての状態を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>解説  
- データベース メール メッセージとその添付ファイルに格納されて、 **msdb**データベース。 メッセージを防ぐために定期的に削除する**msdb**が増え、予想よりも大きいと、組織のドキュメント保有期間のプログラムに準拠します。 使用して、 **sysmail_delete_mailitems_sp**ストアド プロシージャをデータベース メールのテーブルから電子メール メッセージを完全に削除します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 他の省略可能な引数では、特定の型のとして指定した電子メールだけを削除することができます、 **sent_status**引数。 いずれかに引数を指定する必要があります**@sent_before**または **@sent_status**です。 すべてのメッセージを削除するには使用 **@sent_before = getdate()**です。  
+ データベース メール メッセージとその添付ファイルに格納されて、 **msdb**データベース。 メッセージを防ぐために定期的に削除する**msdb**が増え、予想よりも大きいと、組織のドキュメント保有期間のプログラムに準拠します。 使用して、 **sysmail_delete_mailitems_sp**ストアド プロシージャをデータベース メールのテーブルから電子メール メッセージを完全に削除します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 他の省略可能な引数では、特定の型のとして指定した電子メールだけを削除することができます、 **sent_status**引数。 いずれかに引数を指定する必要があります**@sent_before**または **@sent_status**です。 すべてのメッセージを削除するには使用 **@sent_before = getdate()** です。  
   
  電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、対応するエントリは削除されません**sysmail_event_log**です。 使用して[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)ログから項目を削除します。  
   

@@ -25,12 +25,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b958d236f24d36bddca9ed9e51d4cac92aef29e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_syscollector_create_collection_set
  *名前*一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
   
  [  **@target =** ] '*ターゲット*'  
- 将来の使用のために予約されています。 *名前*は**nvarchar (128)**で、既定値は NULL です。  
+ 将来の使用のために予約されています。 *名前*は**nvarchar (128)** で、既定値は NULL です。  
   
  [ **@collection_mode =** ] *collection_mode*  
  データを収集し、格納する方法を指定します。 *collection_mode*は**smallint**値は次のいずれかを持つことができます。  
@@ -120,7 +119,7 @@ sp_syscollector_create_collection_set
  既定値*logging_level*は 1 です。  
   
  [  **@description =** ] '*説明*'  
- コレクション セットの説明です。 *説明*は**nvarchar (4000)**で、既定値は NULL です。  
+ コレクション セットの説明です。 *説明*は**nvarchar (4000)** で、既定値は NULL です。  
   
  [ **@collection_set_id =** ] *collection_set_id*  
  コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**で出力が必要とします。  

@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 83299ab01c2ec8c82b979bb2193cce1a9ca87803
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 99f60818976dc3c89e11d2fd1256a7aecd7d8b63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@job_name =**] **'***job_name***'**  
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
-> **注:**か*job_id*または*job_name*指定する必要がありますが両方指定することはできません。  
+> **注:** か*job_id*または*job_name*指定する必要がありますが両方指定することはできません。  
   
  [ **@step_id =**] *step_id*  
  ジョブ ステップ ログを削除するジョブ ステップの識別番号を指定します。 含まれていなければ、その場合は、ジョブ内のすべてのジョブ ステップ ログは削除されます**@older_than**または**@larger_than**が指定されています。 *step_id*は**int**、既定値は NULL です。  
@@ -64,7 +63,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@step_name =**] **'***step_name***'**  
  ジョブ ステップ ログを削除するジョブ ステップの名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
   
-> **注:**か*step_id*または*step_name*を指定できますが両方指定することはできません。  
+> **注:** か*step_id*または*step_name*を指定できますが両方指定することはできません。  
   
  [  **@older_than =**] **'***日付***'**  
  保持しておく一番古いジョブ ステップ ログの日時を指定します。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付*は**datetime**、既定値は NULL です。 両方**@older_than**と**@larger_than**を指定できます。  

@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  これで指定された列名の最初の一致する列のインデックスを取得[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの指定された列名に一致する、最初の列のインデックスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,18 +44,18 @@ public int findColumn(java.lang.String columnName)
 #### <a name="parameters"></a>パラメーター  
  *columnName*  
   
- A**文字列**列の名前を格納しています。  
+ 列の名前を含む **String**。  
   
 ## <a name="return-value"></a>戻り値  
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この findColumn メソッドは、java.sql.ResultSet インターフェイスの findColumn メソッドによって指定されます。  
   
- 同じ名前の複数の列がある場合、findColumn メソッドは最初、大文字と小文字を返します。 大文字と小文字を区別して一致する列が存在しない場合は、大文字と小文字の区別に関係なく最初に一致した列を返します。  
+ 同じ名前の列が複数存在する場合、findColumn メソッドは、大文字と小文字を区別して最初に一致した列を返します。 大文字と小文字を区別して一致する列が存在しない場合は、大文字と小文字の区別に関係なく最初に一致した列を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

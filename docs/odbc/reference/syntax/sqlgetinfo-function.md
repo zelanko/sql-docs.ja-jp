@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetInfo
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fca7aaa6278bfc7ab6a21b89c620a28297bf9da3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 関数
 **準拠**  
@@ -148,7 +147,7 @@ SQLRETURN SQLGetInfo(
  すべての呼び出しを**SQLGetInfo**場合を除き、開いている接続が必要、*情報の種類*は SQL_ODBC_VER、ドライバー マネージャーのバージョンが返されます。  
   
 ## <a name="information-types"></a>情報の種類  
- このセクションでサポートされている種類の情報を一覧表示**SQLGetInfo**です。 情報の種類では、明確化され、アルファベット順に表示します。 追加または ODBC 3 の名前が変更された情報の種類*.x*も一覧表示されます。  
+ このセクションでサポートされている種類の情報を一覧表示**SQLGetInfo**です。 情報の種類では、明確化され、アルファベット順に表示します。 追加または ODBC 3 の名前が変更された情報の種類 *.x*も一覧表示されます。  
   
 ## <a name="driver-information"></a>ドライバー情報  
  次の値、*情報の種類*引数には、アクティブなステートメント、データ ソース名、およびインターフェイスの標準準拠のレベルの数など、ODBC ドライバーに関する情報が返されます。  
@@ -277,7 +276,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>ODBC 用の種類の情報が追加された 3.x  
- 次の値、*情報の種類*ODBC 3 の引数が追加されました*.x*:  
+ 次の値、*情報の種類*ODBC 3 の引数が追加されました *.x*:  
   
 |||  
 |-|-|  
@@ -308,7 +307,7 @@ SQLRETURN SQLGetInfo(
 |SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
   
 ## <a name="information-types-renamed-for-odbc-3x"></a>ODBC の名前が変更の種類の情報 3.x  
- 次の値、*情報の種類*ODBC 3 の名前を変更した引数*.x*です。  
+ 次の値、*情報の種類*ODBC 3 の名前を変更した引数 *.x*です。  
   
  SQL_ACTIVE_CONNECTIONS  
  SQL_MAX_DRIVER_CONNECTIONS  
@@ -344,7 +343,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>ODBC では非推奨の種類の情報 3.x  
- 次の値、*情報の種類*ODBC 3 で廃止された引数*.x*です。 ODBC 3*.x*ドライバーは ODBC 2 の旧バージョンと互換性のため、これらの種類の情報をサポートするために続行する必要があります*.x*アプリケーションです。 (これらの型の詳細については、次を参照してください[SQLGetInfo サポート](../../../odbc/reference/appendixes/sqlgetinfo-support.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。)。  
+ 次の値、*情報の種類*ODBC 3 で廃止された引数 *.x*です。 ODBC 3 *.x*ドライバーは ODBC 2 の旧バージョンと互換性のため、これらの種類の情報をサポートするために続行する必要があります *.x*アプリケーションです。 (これらの型の詳細については、次を参照してください[SQLGetInfo サポート](../../../odbc/reference/appendixes/sqlgetinfo-support.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。)。  
   
 |||  
 |-|-|  
@@ -732,7 +731,7 @@ SQLRETURN SQLGetInfo(
  文字は、データ ソースには「データベース」と呼ばれる名前付きオブジェクトが定義されている場合、使用して、現在のデータベースの名前の文字列です。  
   
 > [!NOTE]  
->  ODBC 3*.x*、この値が返される*情報の種類*呼び出しによって返されることができますも**SQLGetConnectAttr**で、*属性*SQL_ATTR_CURRENT_CATALOG の引数。  
+>  ODBC 3 *.x*、この値が返される*情報の種類*呼び出しによって返されることができますも**SQLGetConnectAttr**で、*属性*SQL_ATTR_CURRENT_CATALOG の引数。  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  データ ソースによってサポートされる SQL 92 日付時刻リテラルが列挙する SQLUINTEGER ビットマスクです。 日付時刻リテラルが、SQL 92 仕様に記載され、ODBC で定義されている datetime リテラルのエスケープ句とは別に注意してください。 ODBC 日付時刻リテラルのエスケープ句の詳細については、次を参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)です。  
@@ -1337,7 +1336,7 @@ SQLRETURN SQLGetInfo(
  SQL_FN_NUM_ABS (ODBC 1.0) SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) SQL_FN_NUM_DEGREES (ODBC 2.0) SQL _FN_NUM_EXP (ODBC 1.0) SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC 2.0) SQL_FN_NUM_RADIANS (ODBC 2.0) SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_NUM_ROUND (ODBC 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_SQRT、SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
  SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
- ODBC 3 のレベルを示す SQLUINTEGER 値*.x*インターフェイスに準拠しているドライバーです。  
+ ODBC 3 のレベルを示す SQLUINTEGER 値 *.x*インターフェイスに準拠しているドライバーです。  
   
  SQL_OIC_CORE: に準拠するすべての ODBC ドライバーが最低限のレベルが必要です。 このレベルには、接続の機能、準備し、SQL ステートメントを実行するための関数、基本的な結果セットのメタデータ関数、基本的なカタログ関数などの基本インターフェイス要素が含まれます。  
   

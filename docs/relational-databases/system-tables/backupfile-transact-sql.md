@@ -25,12 +25,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: adc995b312ea396c8fba84cbb5e5b43d2f3545e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a8ea3efdd53390b14e3e934a708bf75682145bde
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|バックアップ セットを格納するファイルの一意な識別番号。 参照**backupset (backup_set_id)**です。|  
+|**backup_set_id**|**int**|バックアップ セットを格納するファイルの一意な識別番号。 参照**backupset (backup_set_id)** です。|  
 |**first_family_number**|**tinyint**|バックアップ ファイルが保存されている先頭のメディアのファミリ番号。 NULL を指定できます。|  
 |**first_media_number**|**smallint**|バックアップ ファイルが保存されている先頭のメディアのメディア番号。 NULL を指定できます。|  
 |**filegroup_name**|**nvarchar(128)**|バックアップされたデータベース ファイルが含まれるファイル グループの名前。 NULL を指定できます。|  

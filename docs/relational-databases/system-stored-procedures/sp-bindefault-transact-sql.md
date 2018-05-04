@@ -24,13 +24,12 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67d46825f0da450707710c600cacb549d370082c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,15 +55,15 @@ sp_bindefault [ @defname = ] 'default' ,
  CREATE DEFAULT で作成されるデフォルトの名前です。 *既定*は**nvarchar (776)**、既定値はありません。  
   
  [ **@objname=** ] **'***object_name***'**  
- デフォルトがバインドされるテーブルと列、または別名データ型の名前です。 *object_name*は**nvarchar (776)**既定値はありません。 *object_name*を定義することはできません、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、または CLRユーザー定義型です。  
+ デフォルトがバインドされるテーブルと列、または別名データ型の名前です。 *object_name*は**nvarchar (776)** 既定値はありません。 *object_name*を定義することはできません、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、または CLRユーザー定義型です。  
   
  場合*object_name* 1 部構成の名前は、別名データ型として解決されます。 2 部構成または 3 部構成の名前の場合は、最初にテーブルおよび列として解決され、この解決が失敗すると、別名データ型として解決されます。 既定では、別名データ型の既存の列を継承*既定*既定値を直接その列にバインドしない限り、します。 既定値をバインドできません、**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、**varbinary (max)**、 **xml**、**タイムスタンプ**、または CLR ユーザー定義型列、IDENTITY プロパティを持つ列、計算列または列を既定の制約を既に持っています。  
   
 > [!NOTE]  
->  *object_name*角かっこを含めることができます**:operator[]**区切られた識別子として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
+>  *object_name*角かっこを含めることができます **:operator[]** 区切られた識別子として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- デフォルトを別名データ型にバインドするときにのみ使用されます。 *futureonly_flag*は**varchar (15)**既定値は NULL です。 このパラメーターに設定すると**futureonly**、そのデータ型の既存の列は、新しいデフォルトを継承できません。 デフォルトを列にバインドするときには決してこのパラメーターを使用しないでください。 場合*futureonly_flag*が NULL の場合、新しいデフォルトは現在あるありません既定か、別名データ型の既存のデフォルトを使用している別名データ型の列にバインドします。  
+ デフォルトを別名データ型にバインドするときにのみ使用されます。 *futureonly_flag*は**varchar (15)** 既定値は NULL です。 このパラメーターに設定すると**futureonly**、そのデータ型の既存の列は、新しいデフォルトを継承できません。 デフォルトを列にバインドするときには決してこのパラメーターを使用しないでください。 場合*futureonly_flag*が NULL の場合、新しいデフォルトは現在あるありません既定か、別名データ型の既存のデフォルトを使用している別名データ型の列にバインドします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

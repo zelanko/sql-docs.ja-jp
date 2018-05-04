@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  指定したプラン ガイドを有効に*plan_guide_name*です。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは作成時に有効になります。  
   
  ENABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを有効にします。 **N'***plan_guide_name***'**ENABLE ALL を指定すると指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを有効にします。 **N'***plan_guide_name***'** ENABLE ALL を指定すると指定することはできません。  
   
 ## <a name="remarks"></a>解説  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  プラン ガイドはすべてのエディションで使用できない[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、実行できます。 **sp_control_plan_guide**の任意のエディションで DROP または DROP ALL オプションを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
 ## <a name="permissions"></a>権限  
- 実行する**sp_control_plan_guide** OBJECT 型のプラン ガイドで (指定して作成 **@type ='**オブジェクト**'** ) オブジェクトに対する ALTER 権限が必要ですプラン ガイドによって参照されます。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
+ 実行する**sp_control_plan_guide** OBJECT 型のプラン ガイドで (指定して作成 **@type ='** オブジェクト **'** ) オブジェクトに対する ALTER 権限が必要ですプラン ガイドによって参照されます。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   

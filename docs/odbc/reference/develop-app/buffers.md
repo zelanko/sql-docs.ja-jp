@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input buffers [ODBC]
 - length/indicator buffers [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0d63aa103ac71aa89d245f6b8e4770b2c4943f2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffers"></a>バッファー
 バッファーは、アプリケーションとドライバーの間でデータを渡すために使用するアプリケーションのメモリの任意の断片です。 たとえば、アプリケーション バッファー関連付けることができる、または*、バインド*結果セットの列**SQLBindCol**です。 各の行がフェッチされる間、これらのバッファー内の各列のデータが返されます。 *入力バッファー*アプリケーションからドライバーにデータを渡すために使用*出力バッファー*ドライバーからアプリケーションにデータを返すために使用します。  

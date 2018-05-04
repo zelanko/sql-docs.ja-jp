@@ -24,12 +24,11 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15d4c04f98677d1e7749c2ee94b6410e2a845560
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 15dbae2535db57734c6017e6c6152011e8f497df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ GetPathLocator(filenamespace_path)
   
 ## <a name="arguments"></a>引数  
  *filenamespace_path*  
- FileTable 内の名前空間パス。 型の名前空間のパスは、 **nvarchar (max)**です。  
+ FileTable 内の名前空間パス。 型の名前空間のパスは、 **nvarchar (max)** です。  
   
  データベースが Always On 可用性グループに属している場合、 **GetPathLocator**関数は、仮想ネットワーク名 (VNN) またはコンピューター名を受け取ります。  
   

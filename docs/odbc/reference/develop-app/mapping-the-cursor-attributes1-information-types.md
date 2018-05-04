@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], mapping cursor attributes1 information types
 - application upgrades [ODBC], mapping cursor attributes1 information types
@@ -23,15 +23,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d40ff95acc4011e7cc3dc12785ea6cef7340e35
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 90f5913eef381d2130fbe0c7eeeaa225a2587c6c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>カーソル Attributes1 情報の種類のマッピング
-ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 2 で*.x* SQL_XXXX_CURSOR_ATTRIBUTES1 情報の種類のドライバー (、順方向専用の動的なキーセットのドライバー、または静的カーソル)、ドライバー マネージャーによって返されるビットの設定は、どのような ODBC 2 によって異なります。*x*ドライバーは対応する ODBC 2 を返します*。x*情報の種類。 ビットは、次の表に示すように設定されます。  
+ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 2 で *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 情報の種類のドライバー (、順方向専用の動的なキーセットのドライバー、または静的カーソル)、ドライバー マネージャーによって返されるビットの設定は、どのような ODBC 2 によって異なります。*x*ドライバーは対応する ODBC 2 を返します*。x*情報の種類。 ビットは、次の表に示すように設定されます。  
   
 |内のビットします。<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|カーソルの種類|ODBC 2 です。*x*情報<br /><br /> 型|  
 |-----------------------------------------------|-----------------|-------------------------------------|  

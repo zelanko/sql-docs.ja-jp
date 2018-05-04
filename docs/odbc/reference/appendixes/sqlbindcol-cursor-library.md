@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
@@ -19,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eeca90b8de3ce65e8da68d6aabac89b2181ed047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a877b6cade18e59f12abfe807d8efa04363b3dcb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -36,8 +35,8 @@ ms.lasthandoff: 04/16/2018
   
  アプリケーションが呼び出すことができます**SQLBindCol**結果を再バインドするには列を呼び出した後設定**SQLExtendedFetch**、 **SQLFetch**、または**SQLFetchScroll**C データ型、列のサイズとバインドされた列の 10 進数字は同じまま限り、します。 アプリケーションでは、異なるアドレスに列を再バインドする、カーソルは閉じられません必要があります。  
   
- カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**この再バインドが発生するに呼び出せる必要はありません)。ODBC 3 のかどうか、カーソル ライブラリを使用*.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**と呼びます。 場合、バインドのオフセットが使用される**SQLFetch**は、ODBC 2、カーソル ライブラリを使用する場合に呼び出されます*。x*ドライバーのため**SQLFetch**にマップされます**SQLExtendedFetch**です。  
+ カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**この再バインドが発生するに呼び出せる必要はありません)。ODBC 3 のかどうか、カーソル ライブラリを使用 *.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**と呼びます。 場合、バインドのオフセットが使用される**SQLFetch**は、ODBC 2、カーソル ライブラリを使用する場合に呼び出されます*。x*ドライバーのため**SQLFetch**にマップされます**SQLExtendedFetch**です。  
   
  カーソル ライブラリ呼び出しをサポートする**SQLBindCol**ブックマーク列をバインドします。  
   
- ODBC 2 を使用場合します。*x*ドライバー、カーソル ライブラリで SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長) と**SQLBindCol**ブックマーク列のバッファーの長さを 4 に等しくない値に設定すると呼びます。 ODBC 3 を使用するときに*.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。
+ ODBC 2 を使用場合します。*x*ドライバー、カーソル ライブラリで SQLSTATE HY090 が返されます (無効な文字列長またはバッファー長) と**SQLBindCol**ブックマーク列のバッファーの長さを 4 に等しくない値に設定すると呼びます。 ODBC 3 を使用するときに *.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。

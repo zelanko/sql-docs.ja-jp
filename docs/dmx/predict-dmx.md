@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>戻り値の型  
  \<スカラー列参照 >  
   
- 内の複数の  
+ または  
   
  \<テーブルの列参照 >  
   
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID パラメーターは、結果に $NODEID 列を返します。 NODE_ID は、特定のケースに対して予測が実行されるコンテンツ ノードです。 テーブルの列に対して予測を使用する場合、このパラメーターは省略できます。  
   
-  *n* パラメーター テーブルの列に適用されます。 これにより、予測の種類に基づいて、返される列の数が設定されます。 呼び出す、基になる列がシーケンスの場合、 **PredictSequence**関数。 基になる列が時系列の場合は、呼び出し、 **PredictTimeSeries**関数。 予測の種類が結合型を呼び出し、 **PredictAssociation**関数。  
+ *N*パラメーター テーブルの列に適用されます。 これにより、予測の種類に基づいて、返される列の数が設定されます。 呼び出す、基になる列がシーケンスの場合、 **PredictSequence**関数。 基になる列が時系列の場合は、呼び出し、 **PredictTimeSeries**関数。 予測の種類が結合型を呼び出し、 **PredictAssociation**関数。  
   
  **Predict**関数はポリモーフィズムをサポートします。  
   
@@ -78,7 +77,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
     > [!NOTE]  
     >  この関数の戻り値の型は、列の参照として扱われる元々の型と同じです。 つまり、 **Predict**を引数として列参照を受け取るその他の関数の引数として関数を使用できます (を除き、 **Predict**関数自体)。  
   
- 列を追加する INCLUDE_STATISTICS をテーブル値列の予測に渡す**$Probability**と**$Support**結果のテーブルにします。 これらのメタ列は、入れ子になった関連テーブルのレコードが存在する確率を説明します。  
+ 列を追加する INCLUDE_STATISTICS をテーブル値列の予測に渡す **$Probability**と **$Support**結果のテーブルにします。 これらのメタ列は、入れ子になった関連テーブルのレコードが存在する確率を説明します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、Predict 関数を使用して、一緒に販売できる可能性が最も高い Adventure Works データベースの 4 つの製品を返します。 自動的に使用して、関数は、アソシエーション ルール マイニング モデルに対して予測を行う、ため、 **PredictAssociation**前に説明したとおりに機能します。  
@@ -101,8 +100,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

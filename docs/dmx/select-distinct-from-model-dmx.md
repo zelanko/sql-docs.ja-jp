@@ -26,12 +26,11 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1b3840bebc367e1733b38a74a4bbb8ef04233cd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,13 +64,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>解説  
  **SELECT DISTINCT FROM**ステートメントは 1 つの列または関連する列のセットでのみ機能します。 この句は、関連しない列のセットでは動作しません。  
   
- **SELECT DISTINCT FROM**ステートメントでは、入れ子になったテーブル内の列を直接参照することができます。 例 :  
+ **SELECT DISTINCT FROM**ステートメントでは、入れ子になったテーブル内の列を直接参照することができます。 以下に例を示します。  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- 結果、 **SELECT DISTINCT FROM\<モデル >**列のデータ型に応じて、ステートメントが異なります。 次の表は、サポートされている列の型およびステートメントからの出力について示しています。  
+ 結果、 **SELECT DISTINCT FROM\<モデル >** 列のデータ型に応じて、ステートメントが異なります。 次の表は、サポートされている列の型およびステートメントからの出力について示しています。  
   
 |列の型|出力|  
 |-----------------|------------|  
@@ -152,8 +151,8 @@ FROM [TM Decision Tree]
 >  最小バケットの最小値および最大バケットの最大値は、計測された値のうちの最大値と最小値になります。 この計測された範囲に該当しないすべての値は、最小バケットおよび最大バケットに属していると見なされます。  
   
 ## <a name="see-also"></a>参照  
- [選択 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

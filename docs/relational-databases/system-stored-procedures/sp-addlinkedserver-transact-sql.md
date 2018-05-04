@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  作成するリンク サーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。  
   
  [  **@srvproduct=** ] **'***product_name***'**  
- リンク サーバーとして追加する OLE DB データ ソースの製品名を指定します。 *product_name*は**nvarchar (**128**)**、既定値は NULL です。 場合**SQL Server**、 *provider_name*、 *data_source*、*場所*、 *provider_string*、および*カタログ*を指定する必要はありません。  
+ リンク サーバーとして追加する OLE DB データ ソースの製品名を指定します。 *product_name*は**nvarchar (** 128 **)**、既定値は NULL です。 場合**SQL Server**、 *provider_name*、 *data_source*、*場所*、 *provider_string*、および*カタログ*を指定する必要はありません。  
   
  [  **@provider=** ] **'***provider_name***'**  
- このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を指定します。 *provider_name*現在のコンピューターにインストールされている指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (**128**)**、既定値は NULL です。 ただし、場合*provider_name*は省略すると、SQLNCLI が使用します。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。OLE DB プロバイダーは、指定の PROGID を使用してレジストリに登録されることになっています。  
+ このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を指定します。 *provider_name*現在のコンピューターにインストールされている指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (** 128 **)**、既定値は NULL です。 ただし、場合*provider_name*は省略すると、SQLNCLI が使用します。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。OLE DB プロバイダーは、指定の PROGID を使用してレジストリに登録されることになっています。  
   
  [  **@datasrc=** ] **'***data_source***'**  
- OLE DB プロバイダーで解釈される、データ ソースの名前です。 *data_source*は**nvarchar (**4000**)**です。 *data_source* OLE DB プロバイダーを初期化する DBPROP_INIT_DATASOURCE プロパティとして渡されます。  
+ OLE DB プロバイダーで解釈される、データ ソースの名前です。 *data_source*は**nvarchar (** 4000 **)** です。 *data_source* OLE DB プロバイダーを初期化する DBPROP_INIT_DATASOURCE プロパティとして渡されます。  
   
  [  **@location=** ] **'***場所***'**  
- OLE DB プロバイダーで認識されるデータベースの場所を指定します。 *場所*は**nvarchar (**4000**)**、既定値は NULL です。 *場所*OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。  
+ OLE DB プロバイダーで認識されるデータベースの場所を指定します。 *場所*は**nvarchar (** 4000 **)**、既定値は NULL です。 *場所*OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。  
   
  [  **@provstr=** ] **'***provider_string***'**  
- 一意なデータ ソースを識別する、OLE DB プロバイダー固有の接続文字列を指定します。 *provider_string*は**nvarchar (**4000**)**、既定値は NULL です。 *provstr* IDataInitialize に渡されるか、DBPROP_INIT_PROVIDERSTRING プロパティとして設定する OLE DB プロバイダーを初期化します。  
+ 一意なデータ ソースを識別する、OLE DB プロバイダー固有の接続文字列を指定します。 *provider_string*は**nvarchar (** 4000 **)**、既定値は NULL です。 *provstr* IDataInitialize に渡されるか、DBPROP_INIT_PROVIDERSTRING プロパティとして設定する OLE DB プロバイダーを初期化します。  
   
  に対して、リンク サーバーを作成するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー サーバーとして、SERVER キーワードを使用して、インスタンスを指定することができます =*servername*\\*instancename*の特定のインスタンスを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 *servername*いるコンピューターの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると*instancename*の特定のインスタンスの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーを接続します。  
   

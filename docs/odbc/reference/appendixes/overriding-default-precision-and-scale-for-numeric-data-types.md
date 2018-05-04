@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
 - precision [ODBC], numeric data types
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56b6c9d61c811517ccc089f424622967c81cd123
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67b017d17566fd19d6d4938bf8ef72d49b7c7bc0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>数値データ型の既定の有効桁数と小数点以下桁数を上書きします。
 ARD の SQL_DESC_TYPE フィールド設定されている場合、SQL_C_NUMERIC を呼び出して、 **SQLBindCol**または**SQLSetDescField**ARD SQL_DESC_SCALE フィールドが 0 に設定されている、および SQL_DESC_PRECISION フィールドが設定されています。ドライバーの定義済みの既定の有効桁数です。 これは true にも、APD の SQL_DESC_TYPE フィールドを呼び出して、SQL_C_NUMERIC に設定されている**SQLBindParameter**または**SQLSetDescField**です。 これは、入力、入力/出力、または出力パラメーターの場合は true です。  

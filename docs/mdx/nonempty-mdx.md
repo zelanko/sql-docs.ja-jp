@@ -20,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a17e8cf51ac2c2a8bac98315b85f53421d7c3c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d533d6e5e0d62219f144b325b97142039e4eb5bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  この関数は、指定されている 1 番目のセット内の組のうち、2 番目のセット内のすべての組に対して評価した際に空でなかった組を返します。 **NonEmpty**関数は計算を考慮し、重複する組を保持します。 2 番目のセットが指定されなかった場合、属性階層のメンバーとキューブ内のメジャーの現在の座標のコンテキストで式が評価されます。  
   
 > [!NOTE]  
->  非推奨ではなくこの関数を使用して[NonEmptyCrossjoin (& a) #40 です。MDX と #41 です。](../mdx/nonemptycrossjoin-mdx.md)関数。  
+>  非推奨ではなくこの関数を使用して[NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)関数。  
   
 > [!IMPORTANT]  
 >  空ではないという特性は、組自体ではなく、組から参照されるセルの特性です。  
@@ -99,10 +98,10 @@ NONEMPTY(set_expression1 [,set_expression2])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [DefaultMember &#40;です。MDX と #41 です。](../mdx/defaultmember-mdx.md)   
+ [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
- [IsEmpty &#40;です。MDX と #41 です。](../mdx/isempty-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;です。MDX と #41 です。](../mdx/nonemptycrossjoin-mdx.md)  
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

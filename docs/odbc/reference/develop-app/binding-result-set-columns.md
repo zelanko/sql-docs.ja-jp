@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56b3a9757089bae9da3341ba3649d8579f8d663
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>バインドの結果セットの列
 アプリケーションがない列をバインドしないを含む結果セットを選択する際の多くまたは少数の列としてバインドできます。 データの行がフェッチしたときに、ドライバーは、アプリケーションにバインドされた列のデータを返します。 かどうか、結果セット内のアプリケーション バインドのすべての列は、アプリケーションによって異なります。 たとえば、通常のレポートを生成するアプリケーションにある固定形式です。このようなアプリケーションは、すべてのレポートで使用する列を含む結果セットを作成し、バインドし、これらの列のすべてのデータを取得します。 表示する列を決定することもありますデータでいっぱい画面を表示するアプリケーション アクセス許可します。このようなアプリケーションでは、ユーザー可能性がありますが、バインドし、ユーザーが選択した列のみをデータの取得のすべての列を含む結果セットを作成します。  

@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 01b13554e7cefa60ba382438282fa555b3cc9b67
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  ジョブが削除され、履歴は削除されませんが、ときに、ジョブの履歴情報は表示されませんで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント グラフィカル ユーザー インターフェイスのジョブ履歴が、この情報は存在して、 **sysjobhistory**テーブルに、 **msdb**データベース。  
   
  [  **@delete_unused_schedule=** ] *@delete_unused_schedule*  
- このジョブにアタッチされたスケジュールが他のジョブにはアタッチされていない場合、そのスケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**です。 ときに*@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに*@delete_unused_schedule*は**0**スケジュールは削除されません。  
+ このジョブにアタッチされたスケジュールが他のジョブにはアタッチされていない場合、そのスケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**です。 ときに *@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに *@delete_unused_schedule*は**0**スケジュールは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

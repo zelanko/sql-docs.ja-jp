@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49c258efc97554210dc454dbd01314b5bc4a508e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
 **準拠**  
@@ -94,11 +93,11 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データで、右側が切り捨てられました|文字列または列に対して返されるバイナリ データは、空白でない文字またはバイナリ データが NULL 以外の切り捨てが発生しました。 文字列値が、右側の切り捨てでした。|  
-|01S01|行のエラー|1 つまたは複数の行をフェッチ中にエラーが発生しました。<br /><br /> (ODBC 3 時に、この SQLSTATE が返される場合は*.x* ODBC 2 を利用するアプリケーション*.x*ドライバー、無視することができます)。|  
+|01S01|行のエラー|1 つまたは複数の行をフェッチ中にエラーが発生しました。<br /><br /> (ODBC 3 時に、この SQLSTATE が返される場合は *.x* ODBC 2 を利用するアプリケーション *.x*ドライバー、無視することができます)。|  
 |01S06|結果セットには、最初の行セットが返される前に、フェッチしようとしてください。|要求された行セットには、FetchOrientation SQL_FETCH_PRIOR が、現在の位置が最初の行を超える行がおよび、現在の行の数が行セットのサイズに等しいまたはそれよりも少ない場合の結果セットの開始が重なり合っています。<br /><br /> 要求された行セットには、FetchOrientation SQL_FETCH_PRIOR、現在の位置が結果セットの末尾を越えるがれ、行セットのサイズが、結果セットのサイズよりも大きい場合の結果セットの開始が重なり合っています。<br /><br /> 要求された行セットには、FetchOrientation した SQL_FETCH_RELATIVE、FetchOffset が負の値、および FetchOffset の絶対値が行セットのサイズに等しいまたはそれよりも小さい場合の結果セットの開始が重なり合っています。<br /><br /> オーバー ラップ FetchOrientation が SQL_FETCH_ABSOLUTE、FetchOffset が負の値、および FetchOffset の絶対値が結果セットのサイズよりも大きい場合の結果セットの開始を要求された行セットが、行セットのサイズを小さくします。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S07|小数部の切り捨て|列に対して返されるデータが切り捨てられました。 数値データ型の数値の小数部が切り捨てられました。 時刻、タイムスタンプ、および時刻部分を含む interval データ型の場合は、時間の小数部が切り捨てられました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限付きのデータ型の属性違反|結果セット内の列のデータ値がで指定されたデータ型に変換できませんでした*TargetType*で**SQLBindCol**です。<br /><br /> SQL_C_BOOKMARK のデータ型にバインドされていた列 0 と SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されました。<br /><br /> SQL_C_VARBOOKMARK のデータ型にバインドされていた列 0 と SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されませんでした。|  
-|07009|無効な記述子のインデックス|ドライバーは ODBC 2*.x*ドライバーをサポートしない**SQLExtendedFetch**列のバインドで指定された列の数が 0 とします。<br /><br /> 列 0 がバインドされているし、SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されました。|  
+|07009|無効な記述子のインデックス|ドライバーは ODBC 2 *.x*ドライバーをサポートしない**SQLExtendedFetch**列のバインドで指定された列の数が 0 とします。<br /><br /> 列 0 がバインドされているし、SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されました。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
 |22001|文字列データで、右側が切り捨てられました|列に対して返さ可変長のブックマークが切り捨てられました。|  
 |22002|インジケーター変数が必要ですが、指定されていません|NULL のデータがフェッチされました列にある*StrLen_or_IndPtr*によって設定**SQLBindCol** (またはによって設定 SQL_DESC_INDICATOR_PTR **SQLSetDescField**または**SQLSetDescRec**) が null ポインターでした。|  

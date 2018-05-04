@@ -30,12 +30,11 @@ caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee12b89d5a8162edc4eedcdbc86e4aa7550e1977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 36a6056c8dc147df2a5e4942c680f7f9d103791e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-compatibility-views-transact-sql"></a>システムの互換性ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.lasthandoff: 04/16/2018
 |**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
 |**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
   
- システムでは、SQL Server 2000 で非推奨と発表されたテーブル参照すると、ユーザー データベースで、(など**syslanguages**または**syscacheobjects**)、バック互換性ビューにバインドされています、**sys**スキーマです。 SQL Server 2000 システム テーブルは複数バージョンには推奨されていないため、この変更は重大な変更とは見なされません。  
+ システムでは、SQL Server 2000 で非推奨と発表されたテーブル参照すると、ユーザー データベースで、(など**syslanguages**または**syscacheobjects**)、バック互換性ビューにバインドされています、**sys**スキーマです。 SQL Server 2000 システム テーブルは複数バージョンには非推奨とされているため、この変更は重大な変更とは見なされません。  
   
  例: ユーザーというユーザー テーブルを作成する場合**syslanguages**ユーザー データベース、SQL Server 2008 で、ステートメントで`SELECT * from dbo.syslanguages;`そのデータベースの値を返す、ユーザー テーブルからです。 SQL Server 2012 以降では、これによりデータが返されるシステム ビューから**sys.syslanguages**です。  
   

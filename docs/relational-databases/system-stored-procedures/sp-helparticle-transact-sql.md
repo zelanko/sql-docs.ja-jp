@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25fcce9f83befaeed78abd62ea2e0ad088460756
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0aee19c773e85f5dfe0782384441afa6ac959f23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helparticle [ @publication = ] 'publication'
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [  **@article=**] **'***記事***'**  
- パブリケーション内のアーティクルの名前を指定します。 *記事*は**sysname**、既定値は **%**です。 場合*記事*は省略すると、指定されたパブリケーションのすべてのアーティクルに関する情報が返されます。  
+ パブリケーション内のアーティクルの名前を指定します。 *記事*は**sysname**、既定値は **%** です。 場合*記事*は省略すると、指定されたパブリケーションのすべてのアーティクルに関する情報が返されます。  
   
  [  **@returnfilter=**] *､ レプリケーション*  
  フィルター句を返すかどうかを指定します。 *､ レプリケーション*は**ビット**、既定値は**1**フィルター句が返されます。  

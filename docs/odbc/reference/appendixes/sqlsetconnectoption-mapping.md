@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f00b06d0a4a64f1c699267020e20f2ca1d74b220
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 255e59c3c9da81dfcc8dba13be46fc902e7a81b2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption マッピング
-ODBC 2 時にします。*x*アプリケーション呼び出し**SQLSetConnectOption**から ODBC 3*.x*ドライバーへの呼び出し  
+ODBC 2 時にします。*x*アプリケーション呼び出し**SQLSetConnectOption**から ODBC 3 *.x*ドライバーへの呼び出し  
   
 ```  
 SQLSetConnectOption(hdbc, fOption, vParam)  
@@ -58,11 +57,11 @@ SQLSetConnectOption(hdbc, fOption, vParam)
   
  有効な値で渡す必要がある、ドライバー マネージャーが、文字列または 32 ビット整数値に、ドライバーの定義済みの接続属性が必要かどうかを把握していないため、 *BufferLength*の引数**SQLSetConnectAttr**. 特別な意味を定義しているドライバー場合ドライバーの定義済み接続属性を使用して呼び出す必要があります**SQLSetConnectOption**、サポートする必要がある必要があります**SQLSetConnectOption**です。  
   
- ODBC 2 場合。*x*アプリケーション呼び出し**SQLSetConnectOption**オプションを設定する、ドライバー固有のステートメントで ODBC 3*.x*ドライバー、およびオプションは、ODBC 2 で定義されました*。x* ODBC 3 のオプションのドライバー、新しいマニフェスト定数のバージョンを定義する必要があります*.x*ドライバー。 呼び出しで、古いマニフェスト定数が使用されている場合**SQLSetConnectOption**、ドライバー マネージャーが呼び出す**SQLSetConnectAttr**で、 **StringLength**引数を 0 に設定されています。  
+ ODBC 2 場合。*x*アプリケーション呼び出し**SQLSetConnectOption**オプションを設定する、ドライバー固有のステートメントで ODBC 3 *.x*ドライバー、およびオプションは、ODBC 2 で定義されました*。x* ODBC 3 のオプションのドライバー、新しいマニフェスト定数のバージョンを定義する必要があります *.x*ドライバー。 呼び出しで、古いマニフェスト定数が使用されている場合**SQLSetConnectOption**、ドライバー マネージャーが呼び出す**SQLSetConnectAttr**で、 **StringLength**引数を 0 に設定されています。  
   
- ODBC 3*.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*fOption* SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。  
+ ODBC 3 *.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*fOption* SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。  
   
 ## <a name="setting-statement-options-on-the-connection-level"></a>接続レベルのステートメントのオプションを設定  
  ODBC 2 です。*x*、アプリケーションが呼び出し**SQLSetConnectOption**ステートメント オプションを設定します。 ドライバーがステートメントのオプションを既定としてを確立するインストールが完了したら、その接続に割り当てられた後ですべてのステートメント。 ドライバーで定義されて、ドライバーがすべて既存ステートメントで指定した接続に関連付けられているステートメント オプションを設定するかどうか。  
   
- ODBC 3 でこの機能は廃止されて*.x*です。 ODBC 3*.x*ドライバーのみをサポートする必要 ODBC 2 を設定します*。x* ODBC 2 を使用する場合は、接続レベルでのステートメント属性*。x*これを実行するアプリケーション。 ODBC 3*.x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3*.x*を除き、SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性接続属性とステートメント属性の両方が可能であり、接続レベルでのステートメント属性を設定することはできません接続のレベルまたはステートメント レベルのいずれかに設定します。
+ ODBC 3 でこの機能は廃止されて *.x*です。 ODBC 3 *.x*ドライバーのみをサポートする必要 ODBC 2 を設定します*。x* ODBC 2 を使用する場合は、接続レベルでのステートメント属性*。x*これを実行するアプリケーション。 ODBC 3 *.x*アプリケーションは、接続レベルでステートメント属性を設定しない必要があります。 ODBC 3 *.x*を除き、SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性接続属性とステートメント属性の両方が可能であり、接続レベルでのステートメント属性を設定することはできません接続のレベルまたはステートメント レベルのいずれかに設定します。

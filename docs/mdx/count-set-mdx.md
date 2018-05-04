@@ -22,12 +22,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 41d5ff72346e95985b19812f194d266e8d5db165
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fb02f59ec89c8c3c54c13973251ebdd78cfa32f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-set-mdx"></a>Count (セット) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,13 +48,13 @@ Set_Expression.Count
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>Remarks  
- **Count (セット)**関数を追加または使用する構文に応じて、空のセルを除外します。 空のセルの除外またはを使用して含まれている標準の構文を使用する場合、 **EXCLUDEEMPTY**または**INCLUDEEMPTY**フラグにより、それぞれします。 代替構文を使用した場合、空白セルは常に対象に含められます。  
+## <a name="remarks"></a>解説  
+ **Count (セット)** 関数を追加または使用する構文に応じて、空のセルを除外します。 空のセルの除外またはを使用して含まれている標準の構文を使用する場合、 **EXCLUDEEMPTY**または**INCLUDEEMPTY**フラグにより、それぞれします。 代替構文を使用した場合、空白セルは常に対象に含められます。  
   
  空のセル セットの数に、除外する、標準の構文と省略可能なを使用して**EXCLUDEEMPTY**フラグ。  
   
 > [!NOTE]  
->  **Count (セット)**関数は、既定では空のセルをカウントします。 これに対し、**カウント**セットをカウントする OLE DB 内の関数は、既定で空白セルを除外します。  
+>  **Count (セット)** 関数は、既定では空のセルをカウントします。 これに対し、**カウント**セットをカウントする OLE DB 内の関数は、既定で空白セルを除外します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、Product ディメンションの Model Name 属性階層の子で構成されるメンバーのセットに含まれるセル数をカウントします。  
@@ -105,16 +104,16 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>参照  
- [カウント &#40;ディメンション&#41;&#40;です。MDX と #41 です。](../mdx/count-dimension-mdx.md)   
- [カウント &#40;です。階層レベルが&#41;&#40;です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)   
- [カウント &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
+ [カウント&#40;ディメンション&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [カウント&#40;階層レベル&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [カウント&#40;組&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel & #40 です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
  [Hierarchize (& a) #40 です。MDX と #41 です。](../mdx/hierarchize-mdx.md)   
- [プロパティ &#40;です。MDX と #41 です。](../mdx/properties-mdx.md)   
- [集計 &#40;です。MDX と #41 です。](../mdx/aggregate-mdx.md)   
+ [プロパティ & #40 です。MDX と #41 です。](../mdx/properties-mdx.md)   
+ [集計 & #40 です。MDX と #41 です。](../mdx/aggregate-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
- [PrevMember &#40;です。MDX と #41 です。](../mdx/prevmember-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

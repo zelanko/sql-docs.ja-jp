@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dcfa1cd158e0e853315c57581b48a1abfffd4bdf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: db32f3bf2f6c70bb300852c5f1b994e0896c8c6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_notify_operator
   
 ## <a name="arguments"></a>引数  
  [ **@profile_name=** ] **'***profilename***'**  
- メッセージの送信に使用するデータベース メール プロファイルの名前を指定します。 *profilename*は**nvarchar (128)**です。 場合*profilename*が指定されていない、既定のデータベース メール プロファイルを使用します。  
+ メッセージの送信に使用するデータベース メール プロファイルの名前を指定します。 *profilename*は**nvarchar (128)** です。 場合*profilename*が指定されていない、既定のデータベース メール プロファイルを使用します。  
   
  [ **@id=** ] *id*  
  メッセージ送信先のオペレーターの ID を指定します。 *id*は**int**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
@@ -63,13 +62,13 @@ sp_notify_operator
  [ **@name=** ] **'***name***'**  
  メッセージ送信先のオペレーターの名前を指定します。 *名前*は**nvarchar (128)**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
   
-> **注:**メッセージを受信する前に、オペレーターの電子メール アドレスを定義する必要があります。  
+> **注:** メッセージを受信する前に、オペレーターの電子メール アドレスを定義する必要があります。  
   
  [  **@subject=** ] **'***サブジェクト***'**  
- 電子メール メッセージの件名です。 *サブジェクト*は**nvarchar (256)**既定値はありません。  
+ 電子メール メッセージの件名です。 *サブジェクト*は**nvarchar (256)** 既定値はありません。  
   
  [  **@body=** ] **'***メッセージ***'**  
- 電子メール メッセージの本文です。 *メッセージ*は**nvarchar (max)**既定値はありません。  
+ 電子メール メッセージの本文です。 *メッセージ*は**nvarchar (max)** 既定値はありません。  
   
  [  **@file_attachments=** ] **'***添付***'**  
  電子メール メッセージに添付するファイルの名前を指定します。 *添付ファイル*は**nvarchar (512)**、既定値はありません。  

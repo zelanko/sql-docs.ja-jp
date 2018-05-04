@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
 **準拠**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [入力]接続ハンドルです。  
   
  *FunctionId が不適切*  
- [入力]A **#define**目的; の ODBC 関数を識別する値**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**です。 **SQL_API_ODBC3_ALL_FUNCTIONS** ODBC 3 で使用される*.x*アプリケーションで ODBC 3 のサポートを判断する*.x*と以前の関数。 **SQL_API_ALL_FUNCTIONS** ODBC 2 で使用される*.x*アプリケーションで ODBC 2 のサポートを判断する*.x*と以前の関数。  
+ [入力]A **#define**目的; の ODBC 関数を識別する値**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**です。 **SQL_API_ODBC3_ALL_FUNCTIONS** ODBC 3 で使用される *.x*アプリケーションで ODBC 3 のサポートを判断する *.x*と以前の関数。 **SQL_API_ALL_FUNCTIONS** ODBC 2 で使用される *.x*アプリケーションで ODBC 2 のサポートを判断する *.x*と以前の関数。  
   
- 一覧については**#define** ODBC 関数を識別する値は、「コメント」内のテーブルを参照してください。  
+ 一覧については **#define** ODBC 関数を識別する値は、「コメント」内のテーブルを参照してください。  
   
  *SupportedPtr*  
  [出力] 場合*FunctionId* 1 つの ODBC 関数を識別*SupportedPtr*を 1 つのポイント SQLUSMALLINT 値が SQL_TRUE されていない場合に、ドライバー、および sql_false を受け取りますが、指定した関数がサポートされている場合サポートされています。  
   
- 場合*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS は、 *SupportedPtr* SQL_API_ODBC3_ALL_FUNCTIONS_SIZE と等しい要素の数が SQLSMALLINT 配列を指します。 この配列では、ドライバー マネージャーでは ODBC 3 かどうかを決定するために使用できる 4,000 ビットのビットマップとして処理*.x* earlier 関数がサポートされているか。 SQL_FUNC_EXISTS マクロは、関数のサポートの決定に呼び出されます。 (「コメント」を参照してください)ODBC 3*.x*アプリケーションが呼び出すことができます**SQLGetFunctions**でいずれか、ODBC 3 に対して SQL_API_ODBC3_ALL_FUNCTIONS*.x*または ODBC 2*.x*ドライバーです。  
+ 場合*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS は、 *SupportedPtr* SQL_API_ODBC3_ALL_FUNCTIONS_SIZE と等しい要素の数が SQLSMALLINT 配列を指します。 この配列では、ドライバー マネージャーでは ODBC 3 かどうかを決定するために使用できる 4,000 ビットのビットマップとして処理 *.x* earlier 関数がサポートされているか。 SQL_FUNC_EXISTS マクロは、関数のサポートの決定に呼び出されます。 (「コメント」を参照してください)ODBC 3 *.x*アプリケーションが呼び出すことができます**SQLGetFunctions**でいずれか、ODBC 3 に対して SQL_API_ODBC3_ALL_FUNCTIONS *.x*または ODBC 2 *.x*ドライバーです。  
   
- 場合*FunctionId*は SQL_API_ALL_FUNCTIONS、 *SupportedPtr* 100 個の要素の SQLUSMALLINT 配列を指します。 配列のインデックスを**#define**によって使用される値*FunctionId* ; 各 ODBC 関数を識別する、配列の要素の一部は未使用および将来使用するために予約済みです。 ODBC 2 を特定すると、要素が SQL_TRUE*.x*またはドライバーでサポートされている以前の関数。 ドライバーでサポートされていない ODBC 関数を識別または ODBC 関数を識別しない場合は、SQL_FALSE を勧めします。  
+ 場合*FunctionId*は SQL_API_ALL_FUNCTIONS、 *SupportedPtr* 100 個の要素の SQLUSMALLINT 配列を指します。 配列のインデックスを **#define**によって使用される値*FunctionId* ; 各 ODBC 関数を識別する、配列の要素の一部は未使用および将来使用するために予約済みです。 ODBC 2 を特定すると、要素が SQL_TRUE *.x*またはドライバーでサポートされている以前の関数。 ドライバーでサポートされていない ODBC 関数を識別または ODBC 関数を識別しない場合は、SQL_FALSE を勧めします。  
   
  返される配列 **SupportedPtr* 0 から始まるインデックスを使用します。  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1]、ODBC 2 を使用するときに*.x*ドライバー、 **SQLBulkOperations**が返されますのみサポートされているかどうかは、次の両方に当てはまる: ODBC 2*.x*ドライバーをサポートしています**SQLSetPos**、SQL_POS_OPERATIONS 情報の種類をセットとして SQL_POS_ADD ビットを返します。  
+ [1]、ODBC 2 を使用するときに *.x*ドライバー、 **SQLBulkOperations**が返されますのみサポートされているかどうかは、次の両方に当てはまる: ODBC 2 *.x*ドライバーをサポートしています**SQLSetPos**、SQL_POS_OPERATIONS 情報の種類をセットとして SQL_POS_ADD ビットを返します。  
   
  次の有効な値の一覧は*FunctionId* ODBC 3.8 またはそれ以降に導入された関数の。  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle**が返されますのみサポートされているかどうか、ドライバーはサポート両方**SQLCancel**と**SQLCancelHandle**です。 場合**SQLCancel**はサポートされてが**SQLCancelHandle**は、アプリケーションが呼び出すことができますも**SQLCancelHandle**ステートメント ハンドルで、にマップするため**SQLCancel**です。  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS マクロ  
- SQL_FUNC_EXISTS (*SupportedPtr*、 *FunctionID*) マクロを使用して、ODBC 3 のサポートの決定*.x*または以前の関数の後に**SQLGetFunctions**で呼び出されましたが、 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS の引数。 アプリケーションを呼び出すと SQL_FUNC_EXISTS、 *SupportedPtr*引数に設定されて、 *SupportedPtr*に渡された*SQLGetFunctions*を使用して、 *FunctionID*引数に設定されて、 **#define**関数。 SQL_FUNC_EXISTS では、関数がサポートされている場合は SQL_TRUE および SQL_FALSE をそれ以外の場合を返します。  
+ SQL_FUNC_EXISTS (*SupportedPtr*、 *FunctionID*) マクロを使用して、ODBC 3 のサポートの決定 *.x*または以前の関数の後に**SQLGetFunctions**で呼び出されましたが、 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS の引数。 アプリケーションを呼び出すと SQL_FUNC_EXISTS、 *SupportedPtr*引数に設定されて、 *SupportedPtr*に渡された*SQLGetFunctions*を使用して、 *FunctionID*引数に設定されて、 **#define**関数。 SQL_FUNC_EXISTS では、関数がサポートされている場合は SQL_TRUE および SQL_FALSE をそれ以外の場合を返します。  
   
 > [!NOTE]  
->  ODBC 2 を使用するときに*.x*ドライバー、ODBC 3*.x*ドライバー マネージャーの SQL_TRUE を返します**SQLAllocHandle**と**SQLFreeHandle**ため**SQLAllocHandle**にマップされて**SQLAllocEnv**、 **SQLAllocConnect**、または**SQLAllocStmt**、および**SQLFreeHandle**にマップされて**SQLFreeEnv**、 **SQLFreeConnect**、または**SQLFreeStmt**です。 **SQLAllocHandle**または**SQLFreeHandle**で、 *HandleType* SQL_HANDLE_DESC の引数はサポートされていません、ただし、場合でも、SQL_TRUE が関数では、返されるがあるためありませんODBC 2*.x*ここでにマップする関数。  
+>  ODBC 2 を使用するときに *.x*ドライバー、ODBC 3 *.x*ドライバー マネージャーの SQL_TRUE を返します**SQLAllocHandle**と**SQLFreeHandle**ため**SQLAllocHandle**にマップされて**SQLAllocEnv**、 **SQLAllocConnect**、または**SQLAllocStmt**、および**SQLFreeHandle**にマップされて**SQLFreeEnv**、 **SQLFreeConnect**、または**SQLFreeStmt**です。 **SQLAllocHandle**または**SQLFreeHandle**で、 *HandleType* SQL_HANDLE_DESC の引数はサポートされていません、ただし、場合でも、SQL_TRUE が関数では、返されるがあるためありませんODBC 2 *.x*ここでにマップする関数。  
   
 ## <a name="code-example"></a>コード例  
  次の 3 つの例は、アプリケーションでの使用方法を表示する**SQLGetFunctions**ドライバーをサポートしているかどうかは**SQLTables**、 **SQLColumns**、および**SQLStatistics**です。 ドライバーがこれらの関数をサポートしていない場合、アプリケーションは、ドライバーから切断します。 最初の例では、 **SQLGetFunctions**関数ごとに 1 回です。  

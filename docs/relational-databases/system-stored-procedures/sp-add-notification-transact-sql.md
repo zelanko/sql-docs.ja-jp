@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 65687af95ff4d8f608d528277e897e0cca2c70ab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 846083ffab4fd294cc9d3dae51b730793adcbbdb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>使用例  
  次の例では、指定された警告 (`Test Alert`) に対応する電子メールでの通知を追加します。  
   
-> **注:**この例では、`Test Alert`既に存在することと`François Ajenstat`有効な演算子の名前を指定します。  
+> **注:** この例では、`Test Alert`既に存在することと`François Ajenstat`有効な演算子の名前を指定します。  
   
 ```  
 USE msdb ;  

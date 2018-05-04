@@ -26,12 +26,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77e6f3c548e7ab610b84c68cc1545836cfc02c77
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5825da75cb9d0d89f141e96cb044cf1fe1890271
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +51,6 @@ ms.lasthandoff: 04/16/2018
 |**ステータス**|**tinyint**|ジョブのステータス。<br /><br /> **0** = 未ダウンロード<br /><br /> **1** = 正常にダウンロード|  
 |**deleted_object_name**|**sysname**|削除されたオブジェクトの名前。|  
   
- <sup>1</sup> 、 **object_id**列の値にすることができます**-1**、場合、すべての値に対応する、 **operation_code**列は削除の値。  
+ <sup>1</sup> 、 **object_id**列の値にすることができます **-1**、場合、すべての値に対応する、 **operation_code**列は削除の値。  
   
   

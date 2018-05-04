@@ -2,7 +2,7 @@
 title: 統合認証を使用して |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -11,20 +11,19 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: e6a67ed0afbbfb2407950c2b68b2cd3c87365390
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>接続に統合認証を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]ODBC アプリケーションから  
 
-指定して Kerberos 統合認証を有効にすることができます**Trusted_Connection = yes**の接続文字列で**SQLDriverConnect**または**SQLConnect**です。 例:  
+指定して Kerberos 統合認証を有効にすることができます**Trusted_Connection = yes**の接続文字列で**SQLDriverConnect**または**SQLConnect**です。 以下に例を示します。  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -89,7 +88,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   アプリケーション サーバーが別のデータベースとして認証しに接続する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]別のデータベースにデータベース ユーザーとして認証 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 別のデータベースにデータベース ユーザーとして認証 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]です。  
   
 統合認証を構成すると、資格情報がリンク サーバーに渡されます。  
   
@@ -101,17 +100,17 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 使用すると、エラーは`-T`で、`-U`または`-P`オプション。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>によって登録された SPN でサポートされる構文[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>によって登録された SPN でサポートされる構文 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 接続文字列または接続属性で Spn に使用される構文は次のとおりです。  
 
-|構文|説明|  
+|構文|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。 *port* は、TCP ポート番号です。 *fqdn* は完全修飾ドメイン名です。|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Linux または macOS Active Directory を使用してコンピューターの認証
 
-Kerberos を構成するには、データを入力、`krb5.conf`ファイル。 `krb5.conf``/etc/`例: 構文を使用して別のファイルを参照することができますが、`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`です。 例を次に示します`krb5.conf`ファイル。  
+Kerberos を構成するには、データを入力、`krb5.conf`ファイル。 `krb5.conf` `/etc/`例: 構文を使用して別のファイルを参照することができますが、`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`です。 例を次に示します`krb5.conf`ファイル。  
   
 ```  
 [libdefaults]  
@@ -126,13 +125,13 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-使用することができます、Linux または macOS コンピューターが DNS サーバーを提供する Windows DHCP サーバーで使用する動的ホスト構成プロトコル (DHCP) を使用する構成されている場合**dns_lookup_kdc = true**です。 Kerberos を使用して、コマンドを実行して、ドメインにサインインするようになりましたが、`kinit alias@YYYY.CORP.CONTOSO.COM`です。 渡されるパラメーター`kinit`大文字小文字を区別し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]そのユーザーがコンピューターをドメインに存在するように構成は必要`alias@YYYY.CORP.CONTOSO.COM`ログイン用に追加します。 ここで、信頼関係接続を使用することができます (**Trusted_Connection = [はい]**接続文字列で**bcp-t**、または**sqlcmd -E**)。  
+使用することができます、Linux または macOS コンピューターが DNS サーバーを提供する Windows DHCP サーバーで使用する動的ホスト構成プロトコル (DHCP) を使用する構成されている場合**dns_lookup_kdc = true**です。 Kerberos を使用して、コマンドを実行して、ドメインにサインインするようになりましたが、`kinit alias@YYYY.CORP.CONTOSO.COM`です。 渡されるパラメーター`kinit`大文字小文字を区別し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]そのユーザーがコンピューターをドメインに存在するように構成は必要`alias@YYYY.CORP.CONTOSO.COM`ログイン用に追加します。 ここで、信頼関係接続を使用することができます (**Trusted_Connection = [はい]** 接続文字列で**bcp-t**、または**sqlcmd -E**)。  
   
 Linux または macOS コンピューターの時刻とタイム Kerberos キー配布センター (KDC) では、閉じるでなければなりません。 システム時刻が正しく設定されて、たとえばネットワーク タイム プロトコル (NTP) を使用して、ことを確認します。  
 
 Kerberos 認証が失敗した場合、ODBC driver on Linux または macOS は NTLM 認証を使用しません。  
 
-Linux または macOS のコンピューターを Active Directory の認証の詳細については、次を参照してください[Active Directory と Linux クライアントを認証](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)と[Active DirectoryとOSXを統合するためのベストプラクティス。](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Kerberos の構成の詳細については、次を参照してください。、 [MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)です。
+Linux または macOS のコンピューターを Active Directory の認証の詳細については、次を参照してください[Active Directory と Linux クライアントを認証](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)と[Active DirectoryとOSXを統合するためのベストプラクティス](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf)。 Kerberos の構成の詳細については、次を参照してください。、 [MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)です。
 
 ## <a name="see-also"></a>参照  
 [プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)

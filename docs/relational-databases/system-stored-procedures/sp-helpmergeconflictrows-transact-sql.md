@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>引数  
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%**です。 パブリケーションを指定した場合は、パブリケーションに関係するすべての競合が返されます。 たとえば場合、 **MSmerge_conflict_Customers**テーブルが競合する行を**WA**と**CA**パブリケーションの場合、パブリケーション名を渡す**CA**に関連する競合の取得、 **CA**パブリケーション。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** です。 パブリケーションを指定した場合は、パブリケーションに関係するすべての競合が返されます。 たとえば場合、 **MSmerge_conflict_Customers**テーブルが競合する行を**WA**と**CA**パブリケーションの場合、パブリケーション名を渡す**CA**に関連する競合の取得、 **CA**パブリケーション。  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- 競合テーブルの名前を指定します。 *conflict_table*は**sysname**、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンで競合テーブルがという名前の形式名を使用して **msmerge_conflict _*パブリケーション*_*記事 * * *、パブリッシュされた各テーブルを使用アーティクルです。  
+ 競合テーブルの名前を指定します。 *conflict_table*は**sysname**、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンで競合テーブルがという名前の形式名を使用して **msmerge_conflict _* パブリケーション *_* 記事 * * *、パブリッシュされた各テーブルを使用アーティクルです。  
   
  [ **@publisher=**] **'***publisher***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  

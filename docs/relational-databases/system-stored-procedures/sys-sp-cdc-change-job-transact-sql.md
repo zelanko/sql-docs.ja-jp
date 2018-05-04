@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 48ea42d122c0b7431279ec53b384d400ea5f9de8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4878eeca70732ed5a7ab19e220eac60260e71ee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>引数  
  [  **@job_type=** ] **'***job_type***'**  
- 変更するジョブの種類を指定します。 *job_type*は**nvarchar (20)**既定値は 'capture' です。 有効な入力値は 'capture' と 'cleanup' です。  
+ 変更するジョブの種類を指定します。 *job_type*は**nvarchar (20)** 既定値は 'capture' です。 有効な入力値は 'capture' と 'cleanup' です。  
   
  [ **@maxtrans** ] **= * * * max_trans*  
  各スキャン サイクルで処理する最大トランザクション数を指定します。 *max_trans*は**int**既定値は NULL でないことを示しますこのパラメーターに変更します。 指定する場合、値は正の整数にする必要があります。  

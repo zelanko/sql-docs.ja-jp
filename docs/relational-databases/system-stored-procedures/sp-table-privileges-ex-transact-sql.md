@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad7d7746c1bd436a6473d7d25921c7a3437e75a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +71,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子***.***所有者***.***名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドには NULL を指定できます。|  
+|**TABLE_CAT**|**sysname**|テーブル修飾子の名前。 さまざまな DBMS 製品は、3 部構成テーブルの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドには NULL を指定できます。|  
 |**TABLE_SCHEM**|**sysname**|テーブル所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列がテーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは常に値を返します。|  
 |**権限の許可者**|**sysname**|これに対する権限が許可されるデータベース ユーザー名**TABLE_NAME**を表示される**権限付与対象ユーザー**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に、同じ、 **TABLE_OWNER**です。 このフィールドは常に値を返します。 GRANTOR 列も、データベース所有者である可能性があります (**TABLE_OWNER**) または、権限をユーザーと、データベース所有者が GRANT ステートメントで WITH GRANT OPTION 句を使用しています。|  
 |**権限付与対象ユーザー**|**sysname**|このアクセス許可が与えられているデータベース ユーザー名**TABLE_NAME**によって、表示される**GRANTOR**です。 このフィールドは常に値を返します。|  
-|**特権**|**varchar(**32**)**|使用可能なテーブル権限の 1 つ。 次に示す値、または実装が定義されるときにデータ ソースによってサポートされるその他の値のいずれかになります。<br /><br /> オン =**権限付与対象ユーザー** 1 つまたは複数の列のデータを取得することができます。<br /><br /> 挿入 =**権限付与対象ユーザー**新しい行のデータを 1 つまたは複数の列を提供できます。<br /><br /> 更新 =**権限付与対象ユーザー** 1 つまたは複数の列の既存のデータを変更できます。<br /><br /> 削除 =**権限付与対象ユーザー**テーブルから行を削除することができます。<br /><br /> 参照 =**権限付与対象ユーザー**主キー/外部キーのリレーションシップで外部テーブルで列を参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルの制約を使用して主キー/外部キーのリレーションシップを定義します。<br /><br /> 与えられる操作のスコープ、**権限付与対象ユーザー**特権とは、特定のテーブルで、データ ソースに依存します。 UPDATE 権限により、たとえば、**権限付与対象ユーザー**を 1 つのデータ ソース上のテーブルのすべての列と列のみを更新する、 **GRANTOR**別のデータ ソースに対する更新権限を持っています。|  
-|**IS_GRANTABLE**|**varchar (**3**)**|示すかどうか、**権限付与対象ユーザー**は他のユーザーに権限を与える許可。 これは、"許可の許可" 権限と呼ばれることがあります。 YES、NO、NULL のいずれかになります。 不明、つまり NULL の場合は、"許可の許可" が適用されないデータ ソースを示します。|  
+|**特権**|**varchar(** 32 **)**|使用可能なテーブル権限の 1 つ。 次に示す値、または実装が定義されるときにデータ ソースによってサポートされるその他の値のいずれかになります。<br /><br /> オン =**権限付与対象ユーザー** 1 つまたは複数の列のデータを取得することができます。<br /><br /> 挿入 =**権限付与対象ユーザー**新しい行のデータを 1 つまたは複数の列を提供できます。<br /><br /> 更新 =**権限付与対象ユーザー** 1 つまたは複数の列の既存のデータを変更できます。<br /><br /> 削除 =**権限付与対象ユーザー**テーブルから行を削除することができます。<br /><br /> 参照 =**権限付与対象ユーザー**主キー/外部キーのリレーションシップで外部テーブルで列を参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルの制約を使用して主キー/外部キーのリレーションシップを定義します。<br /><br /> 与えられる操作のスコープ、**権限付与対象ユーザー**特権とは、特定のテーブルで、データ ソースに依存します。 UPDATE 権限により、たとえば、**権限付与対象ユーザー**を 1 つのデータ ソース上のテーブルのすべての列と列のみを更新する、 **GRANTOR**別のデータ ソースに対する更新権限を持っています。|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|示すかどうか、**権限付与対象ユーザー**は他のユーザーに権限を与える許可。 これは、"許可の許可" 権限と呼ばれることがあります。 YES、NO、NULL のいずれかになります。 不明、つまり NULL の場合は、"許可の許可" が適用されないデータ ソースを示します。|  
   
 ## <a name="remarks"></a>解説  
  返される結果は並べ**TABLE_QUALIFIER**、 **TABLE_OWNER**、 **TABLE_NAME**、および**特権**です。  

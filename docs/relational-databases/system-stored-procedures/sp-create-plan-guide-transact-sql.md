@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  アプリケーションから送信されたバッチと一致するプラン ガイドの*batch_tex*t は、同じ形式で指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この適合を容易にするために内部変換は実行されません。 詳細については、「解説」を参照してください。  
   
- [*schema_name*]。*object_name*の名前を指定、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ、スカラー関数、複数ステートメント テーブル値関数、または[!INCLUDE[tsql](../../includes/tsql-md.md)]DML トリガーを含む*statement_text*. 場合*schema_name*が指定されていない*schema_name*は現在のユーザーのスキーマを使用します。 NULL が指定されている場合と@type= の値 ' SQL'@module_or_batchの値に設定されている@stmtです。場合@type= 'テンプレート**'**、 @module_or_batch NULL にする必要があります。  
+ [*schema_name*]。*object_name*の名前を指定、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャ、スカラー関数、複数ステートメント テーブル値関数、または[!INCLUDE[tsql](../../includes/tsql-md.md)]DML トリガーを含む*statement_text*. 場合*schema_name*が指定されていない*schema_name*は現在のユーザーのスキーマを使用します。 NULL が指定されている場合と@type= の値 ' SQL'@module_or_batchの値に設定されている@stmtです。場合@type= 'テンプレート **'**、 @module_or_batch NULL にする必要があります。  
   
  [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
  埋め込まれているすべてのパラメーターの定義を指定します*statement_text*です。 @params 場合にのみ、次のいずれかの場合は true が適用されます。  
@@ -123,11 +122,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  @type = 'SQL' で、@module_or_batch が NULL に設定されている場合、@module_or_batch の値は @stmt の値に設定されます。つまり、この値を*statement_text*まったく同じ形式で指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 この適合を容易にするために内部変換は実行されません。  
   
- ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の値と一致する*statement_text*に*batch_text*と *@parameter_name data_type* [、*.. .n* ]、または場合@type= **'**オブジェクト '、内の対応するクエリのテキストに*object_name*、次の文字列要素は考慮されません。  
+ ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の値と一致する*statement_text*に*batch_text*と *@parameter_name data_type* [、*.. .n* ]、または場合@type= **'** オブジェクト '、内の対応するクエリのテキストに*object_name*、次の文字列要素は考慮されません。  
   
 -   文字列内の空白文字 (タブ、スペース、復帰、改行)  
   
--   コメント (**--**または**/ \* \* /**)。  
+-   コメント (**--** または**/ \* \* /**)。  
   
 -   末尾のセミコロン  
   

@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 2a25f2cfa7ce0afdd1455cecd1ad8c8befce53e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループに RHEL クラスターを構成します。
 
@@ -127,18 +126,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >STONITH を無効にするのはテスト目的のみです。 実稼働環境で Pacemaker を使用する場合は、環境に応じて STONITH 実装を計画して有効にしておいてください。 RHEL では、クラウド環境 (Azure を含む) や Hyper-V 向けにフェンス操作エージェントを提供していません。 このため、クラスターのベンダーでは、これらの環境で運用のためにクラスターを実行するサポートは提供していません。 将来のリリースで利用できるように取り組んでいます。
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始-障害が-致命的でクラスターのプロパティが false に設定します。
+## <a name="set-cluster-property-cluster-recheck-interval"></a>クラスター プロパティ クラスター-再確認-間隔を設定します。
 
-`start-failure-is-fatal` ノードにリソースを起動しますの失敗によってそのノードに対して試行された開始でがさらにかどうかを示します。 設定すると`false`クラスターは、リソースの現在の失敗数と移行のしきい値に基づいて、もう一度同じノードで起動するかどうかを決定します。 フェールオーバーが発生した後は、SQL インスタンスが使用可能に以前のプライマリ上のリソースがグループ ペースの再試行回数が、可用性を開始します。 ペースがセカンダリ レプリカを降格し、可用性グループを自動的に再度参加します。 
+`cluster-recheck-interval` リソースのパラメーター、制約またはその他のクラスターのオプションの変更のポーリング間隔クラスターを確認することを示します。 クラスターがによってバインドされている間隔で、レプリカを再起動しようとしたレプリカがダウンした場合、`failure-timeout`値、および`cluster-recheck-interval`値。 たとえば場合、 `failure-timeout` 60 秒に設定されていると`cluster-recheck-interval`が設定されては 60 秒より大きく 120 秒未満の間隔で 120 秒後に、再起動がしようとしました。 60 およびクラスター再確認の時間が 60 秒より大きい値にエラー タイムアウトを設定することをお勧めします。 クラスター再確認時間を小さい値に設定することは推奨されません。
 
-プロパティの値を`false`に更新するには、次のコマンドを実行します。
+プロパティの値を`2 minutes`に更新するには、次のコマンドを実行します。
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->自動フェールオーバーの後、`start-failure-is-fatal = true`の場合、リソース マネージャーはリソースの開始を試みます。 最初の試行で失敗した場合、`pcs resource cleanup <resourceName>`を手動で実行することで、リソースの失敗数をクリーンアップし、構成をリセットできます。 
+> [!IMPORTANT] 
+> (など RHEL 7.3 7.4)、最新使用可能なペース パッケージ 1.1.18-11.el7 を使用するすべての配布は、その値が false の場合、開始-障害が-致命的でクラスター設定の動作の変更を紹介します。 この変更には、フェールオーバー ワークフローが影響します。 プライマリ レプリカで障害が発生した場合に使用可能なセカンダリ レプリカのいずれかのフェールオーバー クラスターが必要です。 代わりに、ユーザーでは、クラスターが失敗したプライマリ レプリカを開始しようとする保持がわかります。 そのプライマリことはありませんがオンライン (永続的な停電など) が原因になった場合、クラスターにフェールオーバーしない別の使用可能なセカンダリ レプリカです。 この変更のため開始-障害が-致命的で設定する前の推奨構成が無効になってと設定の既定値に戻す必要があります`true`です。 可用性グループ リソースがさらに、含まれるように更新する必要があります、`failover-timeout`プロパティです。 
+
+プロパティの値を`true`に更新するには、次のコマンドを実行します。
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+更新する、`ag1`リソース プロパティ`failure-timeout`に`60s`を実行します。
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 ペース クラスターのプロパティについては、次を参照してください。[ペース クラスター プロパティ](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)です。
 
@@ -151,8 +163,8 @@ sudo pcs property set start-failure-is-fatal=false
 可用性グループ リソースを作成するには、`pcs resource create`コマンドを使用し、リソース プロパティを設定します。 次のコマンドで、`ag1`という名前を持つ可用性グループにマスター/スレーブ型のリソース`ocf:mssql:ag`を作成します。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

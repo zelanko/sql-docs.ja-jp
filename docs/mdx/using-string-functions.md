@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf114f9b706497512f10e3629e871ba64ecaaee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-string-functions"></a>文字列関数の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,12 +112,12 @@ ms.lasthandoff: 01/08/2018
 >  **StrToMember**と**StrToSet**関数を使用して、注意してください。 これらの関数を計算の定義内で使用すると、クエリのパフォーマンスが低下する場合があります。  
   
 ## <a name="see-also"></a>参照  
- [生成 (& a) #40 です。MDX と #41 です。](../mdx/generate-mdx.md)   
- [名前と #40 です。MDX と #41 です。](../mdx/name-mdx.md)   
- [UniqueName &#40;です。MDX と #41 です。](../mdx/uniquename-mdx.md)   
- [関数と #40 です。MDX 構文 &#41;](../mdx/functions-mdx-syntax.md)   
- [ストアド プロシージャ &#40; を使用します。MDX と #41 です。](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;です。MDX と #41 です。](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;です。MDX と #41 です。](../mdx/strtoset-mdx.md)  
+ [生成&#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [名前&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
+ [ストアド プロシージャを使用して&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   
   

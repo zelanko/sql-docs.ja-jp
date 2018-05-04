@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS では、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられた DBMS 定義 SQL データ型のみを公開します。 ODBC で定義された SQL 型識別子をドライバーがどのようにマップについて DBMS SQL 型し、を呼び出すことによって、ドライバーがドライバー固有の SQL 型識別子には独自に DBMS SQL 型をマップする方法が返されます**SQLGetTypeInfo**です。 ドライバーは、列とを呼び出すことでパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**です。  
@@ -92,7 +91,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|INTERVAL MINUTE (*p*) 2 番目 (*q*)|2 つ分/秒
   
  [24 または 53 5]、実装に繰り返し使用できますの有効桁数ができますは、使用できますのデータ型が、SQL_REAL; と同じになる場合 24 は、。53 の場合、使用できますのデータ型は SQL_DOUBLE と同じです。  
   
- [6] ODBC 3*.x*、SQL の日付、時刻、および timestamp データ型は SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP、ODBC 2 にそれぞれ;.*x*データ型は、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP です。  
+ [6] ODBC 3 *.x*、SQL の日付、時刻、および timestamp データ型は SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP、ODBC 2 にそれぞれ;.*x*データ型は、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP です。  
   
  [7] interval SQL データ型の詳細についてを参照してください、 [Interval データ型](../../../odbc/reference/appendixes/interval-data-types.md)この付録の後半の「します。  
   

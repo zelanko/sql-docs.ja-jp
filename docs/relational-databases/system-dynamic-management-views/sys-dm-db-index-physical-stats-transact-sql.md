@@ -27,13 +27,12 @@ caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 048961489aee9c369c8b01a04a083eba32d255dc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f5e548a6ef4a01cd88a33c015ff2567639c91c62
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA アロケーション ユニットのリーフ レベルにおける、フラグメントあたりのページの平均数。<br /><br /> インデックスの非リーフ レベル、および LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは NULL になります。<br /><br /> NULL を時にヒープ*モード*SAMPLED を = です。|  
 |page_count|**bigint**|インデックス ページまたはデータ ページの合計数。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルにおけるインデックス ページの合計数になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるデータ ページの合計数になります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニットに含まれる合計ページ数になります。|  
 |avg_page_space_used_in_percent|**float**|すべてのページで、使用可能なデータ ストレージ領域のうち使用されているパーセンテージ (%) の平均。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるすべてのデータ ページの平均になります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニットに含まれるすべてのページの平均になります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  
-|record_count|**bigint**|レコードの総数。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルにおけるレコードの合計数になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるレコードの合計数になります。<br /><br /> **注:**ヒープの場合、この関数から返されるレコードの数と一致しません選択カウントを実行して返される行の数 (\*)、ヒープに対してです。 これは、1 行に複数のレコードが含まれる場合があるためです。 たとえば、更新の状況によっては、更新操作の結果として転送元レコードと転送先レコードが 1 つのヒープ行に含まれることがあります。 また、大きな LOB 行のほとんどは、LOB_DATA ストレージ内で複数のレコードに分割されます。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体でのレコードの合計数になります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  
+|record_count|**bigint**|レコードの総数。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルにおけるレコードの合計数になります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれるレコードの合計数になります。<br /><br /> **注:** ヒープの場合、この関数から返されるレコードの数と一致しません選択カウントを実行して返される行の数 (\*)、ヒープに対してです。 これは、1 行に複数のレコードが含まれる場合があるためです。 たとえば、更新の状況によっては、更新操作の結果として転送元レコードと転送先レコードが 1 つのヒープ行に含まれることがあります。 また、大きな LOB 行のほとんどは、LOB_DATA ストレージ内で複数のレコードに分割されます。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体でのレコードの合計数になります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  
 |ghost_record_count|**bigint**|アロケーション ユニットで、非実体クリーンアップ タスクによる削除の準備ができているゴースト レコードの数。<br /><br /> IN_ROW_DATA アロケーション ユニットに含まれるインデックスの非リーフ レベルでは 0 になります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  
 |version_ghost_record_count|**bigint**|アロケーション ユニット内で、未処理のスナップショット分離トランザクションによって保持されているゴースト レコードの数。<br /><br /> IN_ROW_DATA アロケーション ユニットに含まれるインデックスの非リーフ レベルでは 0 になります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  
 |min_record_size_in_bytes|**int**|最小レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの最小レコード サイズになります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれる最小レコード サイズになります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体での最小レコード サイズになります。<br /><br /> 場合、NULL*モード*LIMITED を = です。|  

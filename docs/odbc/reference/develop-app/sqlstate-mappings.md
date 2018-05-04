@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
 このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*です。 ODBC 3 の詳細についてはします。*x* SQLSTATE 値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)です。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
  ODBC 2 時にします。*x*アプリケーションは、ODBC 3 にアップグレードします*。x* ODBC 3 の期待に変更するアプリケーションでは、アプリケーションが*。x* ODBC 2 ではなく SQLSTATEs *。x* SQLSTATEs です。 次の表には、ODBC 3 が一覧表示します。*x* SQLSTATEs される各 ODBC 2 *。x* SQLSTATE にマップします。  
   
- また環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは ODBC 2 をポストします。*x* ODBC 3 ではなく SQLSTATEs *。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**と呼びます。 特定のマッピングは、ODBC 2 注目することで決定できます*.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE *。x*列 2 の SQLSTATE。  
+ また環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは ODBC 2 をポストします。*x* ODBC 3 ではなく SQLSTATEs *。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**と呼びます。 特定のマッピングは、ODBC 2 注目することで決定できます *.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE *。x*列 2 の SQLSTATE。  
   
 |ODBC 2 です。*x* SQLSTATE|ODBC 3 です。*x* SQLSTATE|コメント|  
 |-------------------------|-------------------------|--------------|  

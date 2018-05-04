@@ -49,13 +49,13 @@ public void commit(javax.transaction.xa.Xid xid,
   
  *onePhase*  
   
- A**ブール**値。  
+ **ブール**値です。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>解説  
- このコミット メソッドは、javax.transaction.xa.XAResource インターフェイスに commit メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この commit メソッドは、javax.transaction.xa.XAResource インターフェイスの commit メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

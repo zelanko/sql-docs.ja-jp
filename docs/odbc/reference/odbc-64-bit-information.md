@@ -11,25 +11,24 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77449f6077adbad3eabf9ca928b2ce19b47c79b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
 Windows Server 2003 以降では、Microsoft のオペレーティング システムがサポートされている 64 ビット ODBC ライブラリです。 ODBC ヘッダーと最初 MDAC 2.7 SDK に付属のライブラリは、新しい 64 ビット プラットフォーム用のコードを簡単に記述するプログラマのための変更を含めます。 64 ビットおよび 32 ビットのプラットフォームの両方に基づいて、同じソース コードをコンパイルするコードが以下に示す ODBC が定義されている型を使用するようにするには、によって、 **_WIN64**または**WIN32**マクロです。  
   
  64 ビット プロセッサ用プログラムするときに注意するいくつかの点があります。  
   
--   ポインターのサイズは、4 バイトから 8 バイトに変更が、整数と個の長整数がまだ 4 バイト値です。 種類**INT64**と**UINT64** 8 バイトの整数型に対して定義されています。 新しい ODBC 型**SQLLEN**と**SQLULEN**として ODBC ヘッダー ファイルで定義された**INT64**と**UINT64**とき**_WIN64**は定義されています。  
+-   ポインターのサイズは、4 バイトから 8 バイトに変更が、整数と個の長整数がまだ 4 バイト値です。 種類**INT64**と**UINT64** 8 バイトの整数型に対して定義されています。 新しい ODBC 型**SQLLEN**と**SQLULEN**として ODBC ヘッダー ファイルで定義された**INT64**と**UINT64**とき **_WIN64**は定義されています。  
   
 -   ODBC でのいくつかの関数は、ポインター パラメーターの取得として宣言されます。 32 ビット ODBC では、パラメーターは、ポインターは、呼び出しのコンテキストによってバッファーに整数値またはポインターを渡す頻繁に使用されたとしてを定義します。 これが、もちろん、ポインターと整数がある同じサイズにするために可能です。 64 ビット Windows で、これはない場合です。  
   

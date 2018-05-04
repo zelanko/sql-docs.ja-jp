@@ -27,12 +27,11 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8807e3e16266eb1be45d05aa7a516ea83357ab6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cb3620bc20ae46dd2aac4fa89d4031ab996ed0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ EXEC managed_backup.sp_backup_on_demand
  バックアップの実行対象となるデータベースの名前。 @database_nameは**SYSNAME**です。  
   
  @type  
- 実行するバックアップの種類: Database または Log。 @typeパラメーターは**nvarchar (32)**です。  
+ 実行するバックアップの種類: Database または Log。 @typeパラメーターは**nvarchar (32)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  

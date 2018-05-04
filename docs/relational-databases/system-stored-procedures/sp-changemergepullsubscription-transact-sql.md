@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c195541281667574fb7283b368f91fc1e02bb4d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c39a3c28f96fe662888a86c49cdfce66c2314c58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  変更するプロパティの名前を指定します。 *プロパティ*は**sysname**テーブル内の値のいずれかを指定できます。  
   
  [  **@value=**] **'***値***'**  
- 指定したプロパティの新しい値です。 *値*は**nvarchar (255)**テーブル内の値のいずれかを指定できます。  
+ 指定したプロパティの新しい値です。 *値*は**nvarchar (255)** テーブル内の値のいずれかを指定できます。  
   
 |プロパティ|値|Description|  
 |--------------|-----------|-----------------|  

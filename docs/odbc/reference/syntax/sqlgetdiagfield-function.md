@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 関数
 **準拠**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  ドライバーは、診断データ構造で、ドライバー固有のヘッダーとレコードのフィールドを定義できます。  
   
- ODBC 3*.x* ODBC 2 作業アプリケーション*.x*ドライバーが呼び出すできる**SQLGetDiagField**でのみ、 *DiagIdentifier*SQL_DIAG_CLASS_ORIGIN、SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_NUMBER、SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME、または SQL_DIAG_SQLSTATE の引数。 その他のすべての診断フィールドには、SQL_ERROR が返されます。  
+ ODBC 3 *.x* ODBC 2 作業アプリケーション *.x*ドライバーが呼び出すできる**SQLGetDiagField**でのみ、 *DiagIdentifier*SQL_DIAG_CLASS_ORIGIN、SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_NUMBER、SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME、または SQL_DIAG_SQLSTATE の引数。 その他のすべての診断フィールドには、SQL_ERROR が返されます。  
   
 ## <a name="header-fields"></a>ヘッダー フィールド  
  次の表に記載されたヘッダー フィールドに含まれる、 *DiagIdentifier*引数。  
@@ -240,7 +239,7 @@ n-定義 *|「ドメインの作成」|SQL_DIAG_CREATE_DOMAIN|
 -   特定の行に関連するすべてのレコードのレコードが SQL_DIAG_ROW_NUMBER フィールドの値によって並べ替えられます。 すべてのエラーと最初の影響を受ける行の警告が表示され、し、すべてのエラーと警告は、次の行、影響を受けるおよびなどです。  
   
 > [!NOTE]  
->  ODBC 3*.x*ドライバー マネージャーの順序付けしません状態レコード診断のキューに場合 SQLSTATE 01S01 (行でエラー) は、ODBC 2 によって返される*.x*ドライバー場合、または SQLSTATE 01S01 (行でエラー) は、ODBC によって返される3*.x*ドライバーと**SQLExtendedFetch**が呼び出されたまたは**SQLSetPos**に位置付けられているカーソルに対してを呼び出した**SQLExtendedFetch**.  
+>  ODBC 3 *.x*ドライバー マネージャーの順序付けしません状態レコード診断のキューに場合 SQLSTATE 01S01 (行でエラー) は、ODBC 2 によって返される *.x*ドライバー場合、または SQLSTATE 01S01 (行でエラー) は、ODBC によって返される3 *.x*ドライバーと**SQLExtendedFetch**が呼び出されたまたは**SQLSetPos**に位置付けられているカーソルに対してを呼び出した**SQLExtendedFetch**.  
   
  各行では、またはそれらすべてのレコードにも、または行の番号が指定されて、既知の行に対応していないまたは SQL_NO_ROW_NUMBER と等しい行番号を持つそれらすべてのレコードの表示されている最初のレコードは、並べ替え規則のセットを使用してによって決定されます。 最初のレコードの後の行に影響するその他のレコードの順序は定義されません。 アプリケーションは、警告のエラーは、最初のレコードの後に前に限りません。 アプリケーションでは、完全な関数呼び出しが失敗した情報を入手する診断データの完全な構造をスキャンする必要があります。  
   

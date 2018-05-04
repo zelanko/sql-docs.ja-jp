@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
 - connecting to driver [ODBC], SQLConnect
@@ -25,12 +25,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b67f1fdbf609aa8564a6b95a0e60382a0b97a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
 **SQLConnect**データ ソース名、ユーザー ID とパスワードがデータ ソースに接続するための十分なことと、システム上の他のすべての接続情報を格納できることを前提としています。 これは頻繁に当てはまりません。 たとえば、ドライバーは、1 人のユーザー ID とパスワード、サーバー、および別のユーザー ID とパスワードにログオンする DBMS にログオンする必要があります。 **SQLConnect** 1 人のユーザー ID とパスワードを受け入れるつまり他のユーザー ID とパスワードが場合、システム上のデータ ソース情報を格納する必要があります**SQLConnect**を使用します。 これは潜在的なセキュリティ侵害であり、パスワードが暗号化されていない限り避ける必要があります。  
@@ -46,6 +45,6 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
   
  **DSN** (データ ソース名) のキーワード、データ ソースの名前、 **UID**と**PWD**キーワードは、ユーザー ID と、サーバーのパスワードを指定し、 **UIDDBMS**と**PWDDBMS**キーワードは、DBMS のユーザー ID とパスワードを指定します。 最後のセミコロンが省略可能なことに注意してください。 **SQLDriverConnect**この文字列を解析して以外の場合は"xyz"Corp データ ソース名を使用して、サーバーのアドレスなど、システムから追加の接続情報を取得する、DBMS が、指定されたユーザー Id とパスワードを使用して、サーバーにログオンします。  
   
- キーワードと値のペアで**SQLDriverConnect**特定構文規則に従う必要があります。 キーワードとその値を含めないで、 **{} ()、;?\*=! @**文字です。 値、 **DSN**キーワードは、空白のみ含めることはできませんし、先頭の空白を含めることはできません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。 スペースはキーワード/値ペア内の等号 (=) を使用できません。  
+ キーワードと値のペアで**SQLDriverConnect**特定構文規則に従う必要があります。 キーワードとその値を含めないで、 **:operator[]{}()、;?\*=! @** 文字です。 値、 **DSN**キーワードは、空白のみ含めることはできませんし、先頭の空白を含めることはできません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。 スペースはキーワード/値ペア内の等号 (=) を使用できません。  
   
  **FILEDSN**キーワードへの呼び出しで使用することができます**SQLDriverConnect**をデータ ソースの情報を含むファイルの名前を指定する (を参照してください[接続を使用してファイル データ ソース](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、このセクションで後述)。 **SAVEFILE**への呼び出しによって正常な接続のキーワードと値のペアが行われた .dsn ファイルの名前を指定するキーワードを使用できる**SQLDriverConnect**は保存されます。 ファイルのデータ ソースの詳細については、次を参照してください。、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。

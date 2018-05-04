@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSpecialColumns
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: be502c9fd52c78cd587aa9307380c235fe2c0184
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **準拠**  
@@ -157,9 +156,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**結果のスコープによって順序付け、標準的な結果セットとして返します。  
   
- ODBC 3 の名前を変更した次の列*.x*です。 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
+ ODBC 3 の名前を変更した次の列 *.x*です。 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3*.x*列|  
+|ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
@@ -178,7 +177,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|データ ソースの列のサイズ。 列のサイズに関する詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)です。|  
 |BUFFER_LENGTH 列 (ODBC 1.0)|6|Integer|転送されるデータの長さ (バイト単位)、 **SQLGetData**または**SQLFetch** SQL_C_DEFAULT が指定されている場合に操作します。 数値データは、このサイズは、データ ソースに格納されているデータのサイズとは異なる可能性があります。 この値は、文字またはバイナリ データの COLUMN_SIZE 列と同じです。 詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)です。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|データ ソース上の列の 10 進数字。 小数点以下桁数は適用されないデータ型に対して NULL を返します。 詳細については小数点以下桁数を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)です。|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|列が Oracle ROWID などの擬似列であるかどうかを示します。<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注:**相互運用性を最大にするため、擬似列必要がありますいないする引用符で囲まれた識別子を持つ、引用符文字によって返される**SQLGetInfo**です。|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|列が Oracle ROWID などの擬似列であるかどうかを示します。<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**注:** 相互運用性を最大にするため、擬似列必要がありますいないする引用符で囲まれた識別子を持つ、引用符文字によって返される**SQLGetInfo**です。|  
   
  アプリケーションは、SQL_BEST_ROWID の値を取得後、アプリケーションに定義されたスコープ内でその行を再度選択してこれらの値を使用できます。 **選択**ステートメントが行の存在しないか、1 つの行を返すことが保証されます。  
   

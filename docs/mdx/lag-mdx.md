@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a219e0b8455ff3a66d20a8c670bb8675481498e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dce14ac4d98d3fd75da42ace8327115eefafd1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lag(Index)
   
  指定した間隔が負の場合、 **Lag**関数は、後続のメンバーを返します。  
   
- `Lag(1)`等価の[PrevMember](../mdx/prevmember-mdx.md)関数。 `Lag(-1)`等価の[NextMember](../mdx/nextmember-mdx.md)関数。  
+ `Lag(1)` 等価の[PrevMember](../mdx/prevmember-mdx.md)関数。 `Lag(-1)` 等価の[NextMember](../mdx/nextmember-mdx.md)関数。  
   
  **Lag**関数がに似ていますが、[リード](../mdx/lead-mdx.md)関数点を除いて、**潜在顧客**関数は方向が逆になります、 **Lag**関数。 つまり、`Lag(n)`は等価`Lead(-n)`です。  
   
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

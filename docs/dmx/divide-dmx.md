@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9b24f49594003f453f3258c431881bd0ddda0f70
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>(除算)(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,10 +55,10 @@ Dividend / Divisor
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 除算の結果が NULL 値になる場合、演算子はエラーになります。 除数と被除数の両方の結果が NULL 値になる場合、演算子は NULL 値を返します。  
   
 ## <a name="see-also"></a>参照  
- [算術演算子 &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [除算 &#40;です。SSIS 式 &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [& # #40; 除算 &#41;&#40;です。TRANSACT-SQL と #41 です。](../t-sql/language-elements/divide-transact-sql.md)  
+ [算術演算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [分割&#40;SSIS 式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;分割&#41; &#40;TRANSACT-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

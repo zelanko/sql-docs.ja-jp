@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading applications [ODBC], affected components
 - application upgrades [ODBC], affected components
@@ -23,23 +23,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb58971a193a210f927d1b0a38f2be671b749468
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a35f04a2e4cf540c5e2419f9bb1616b3ff02d8f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="affected-odbc-components"></a>影響を受ける ODBC コンポーネント
 旧バージョンとの互換性は、アプリケーション、ドライバー マネージャー、およびドライバーがドライバー マネージャーの新しいバージョンの導入によって影響を受ける方法について説明します。 アプリケーションの古いバージョンで残っていなくても、これらの両方またはいずれかにはドライバーに影響します。 、そのため、次の 3 つの種類があります旧バージョンとの互換性を考慮すると、次の表に示すようにします。  
   
 |型|DM のバージョン|アプリケーションのバージョン|ドライバーのバージョン|  
 |----------|-------------------|----------------------------|-----------------------|  
-|旧バージョンと互換性のドライバー マネージャー|3*.x*|2*x。*|2*x。*|  
-|[1] のドライバーの旧バージョンとの互換性|3*.x*|2*x。*|3*x。*|  
+|旧バージョンと互換性のドライバー マネージャー|3 *.x*|2*x。*|2*x。*|  
+|[1] のドライバーの旧バージョンとの互換性|3 *.x*|2*x。*|3*x。*|  
 |アプリケーションの旧バージョンとの互換性|3*x。*|3*x。*|2*x。*|  
   
  [ドライバーの 1]、旧バージョンとの互換性は旧バージョンとの互換性のため、主に付録 g: ドライバーのガイドラインについて説明します。  
   
 > [!NOTE]  
->  標準に準拠したアプリケーション — たとえば、Open Group または ISO CLI 標準に従って書き込まれているアプリケーション、ODBC 3 を使用することが保証*.x*ドライバーは ODBC 3*.x*ドライバー マネージャー。 アプリケーションを使用している機能は、ドライバーで使用できることと見なされます。 ODBC 3 で標準に準拠したアプリケーションがコンパイルされていると見なされますも*.x*ヘッダー ファイルです。
+>  標準に準拠したアプリケーション — たとえば、Open Group または ISO CLI 標準に従って書き込まれているアプリケーション、ODBC 3 を使用することが保証 *.x*ドライバーは ODBC 3 *.x*ドライバー マネージャー。 アプリケーションを使用している機能は、ドライバーで使用できることと見なされます。 ODBC 3 で標準に準拠したアプリケーションがコンパイルされていると見なされますも *.x*ヘッダー ファイルです。

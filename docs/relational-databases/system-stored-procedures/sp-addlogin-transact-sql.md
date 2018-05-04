@@ -24,12 +24,11 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f191cf305941d837a65708aea62527c0649b6e7f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3120366e65e33341dfb4ab17e9e2c5436a47d4c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_addlogin [ @loginame = ] 'login'
  セキュリティ ID 番号 (SID) を指定します。 *sid*は**varbinary (16)**、既定値は NULL です。 場合*sid*が NULL の場合、システムには、新しいログインの SID が生成されます。 使用に関係なく、 **varbinary**データ型、NULL 以外の値は 16 バイトの長さにする必要があり、既に存在する必要があります。 指定する*sid*役に立ちます、たとえば、スクリプトをまたは移動するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を別の 1 つのサーバーからログインする別のサーバーに同じ SID をログインします。  
   
  [ @encryptopt=] '*encryption_option*'  
- パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリア テキスト パスワードが渡される場合、そのパスワードはハッシュされます。 ハッシュは保存されます。 *encryption_option*は**varchar (20)**値は次のいずれかを指定できます。  
+ パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリア テキスト パスワードが渡される場合、そのパスワードはハッシュされます。 ハッシュは保存されます。 *encryption_option*は**varchar (20)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  

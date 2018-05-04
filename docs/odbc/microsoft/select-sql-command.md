@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
@@ -19,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69b3d6bd8330ff5a1ba85ba1da1a7b6f3a3cc26a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---sql-command"></a>SQL コマンドを選択します。
 1 つまたは複数のテーブルからデータを取得します。  
@@ -120,7 +119,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   クエリに 2 つのテーブルを含めるし、結合条件を指定しない場合、フィルター条件が満たされている限り、最初のテーブルのすべてのレコードが 2 番目のテーブルのすべてのレコードに参加しています。 このようなクエリでは、長い結果を生成できます。  
   
--   Visual FoxPro が空のフィールドと一致するために、空のフィールドを持つテーブルを結合する際に、注意を使用します。 たとえば、顧客に参加する場合です。Zip 圧縮し、請求します。Zip 圧縮し、クエリ出力に空のフィールドを結果として得られる 40,000 の余分なレコードが含まれています顧客には、空の 100 の zip コードが含まれています、請求書には、空の zip コードが 400 が含まれている場合は、します。 使用して、**空 ()**関数をクエリ出力から空のレコードを削除します。  
+-   Visual FoxPro が空のフィールドと一致するために、空のフィールドを持つテーブルを結合する際に、注意を使用します。 たとえば、顧客に参加する場合です。Zip 圧縮し、請求します。Zip 圧縮し、クエリ出力に空のフィールドを結果として得られる 40,000 の余分なレコードが含まれています顧客には、空の 100 の zip コードが含まれています、請求書には、空の zip コードが 400 が含まれている場合は、します。 使用して、**空 ()** 関数をクエリ出力から空のレコードを削除します。  
   
 -   AND 演算子を使用して、複数の結合条件を接続する必要があります。 各 join 条件には、次の形式があります。  
   
@@ -141,7 +140,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  使用すると、= 演算子、文字列、その機能は、異なる設定の ANSI の設定に応じて。 ANSI の設定が OFF に設定されている場合、Visual FoxPro は Xbase ユーザーになじみ方法で文字列比較を処理します。 ANSI の設定が ON に設定されている場合、Visual FoxPro には、文字列比較のための ANSI 規格に従います。 参照してください[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)と[設定の正確な](../../odbc/microsoft/set-exact-command.md)Visual FoxPro が文字列比較を実行する方法の詳細についてはします。  
   
- *FilterCondition*クエリの結果に含まれるレコードが満たす必要がある条件を指定します。 AND で接続すること、必要な数のフィルター クエリ内の条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するまたは使用することができます**空 ()**空のフィールドを確認します。 *FilterCondition*次の例で、フォームのいずれかを実行できます。  
+ *FilterCondition*クエリの結果に含まれるレコードが満たす必要がある条件を指定します。 AND で接続すること、必要な数のフィルター クエリ内の条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するまたは使用することができます**空 ()** 空のフィールドを確認します。 *FilterCondition*次の例で、フォームのいずれかを実行できます。  
   
  **例 1** *FieldName1 比較 FieldName2*  
   

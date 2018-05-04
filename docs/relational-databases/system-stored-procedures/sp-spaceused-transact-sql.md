@@ -24,13 +24,12 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f255eaa4837ac7193925265f6427706d55009b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5f3b8d866149c615422e35a8f1922103c0596218
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -75,7 +74,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分だけの記憶域の統計を返します。 返す場合と同様の統計情報の場合は、オブジェクトまたはデータベースがストレッチが有効な@mode= ALL です。|  
 |REMOTE_ONLY|オブジェクトまたはデータベースのリモートの部分のみの記憶域の統計を返します。 このオプションでは、次の条件のいずれかの条件が true の場合、エラーが発生します。<br /><br /> テーブルには、拡大は無効です。<br /><br /> Stretch」の表が有効になっているが、データの移行を有効にしていません。 この場合、リモート テーブルは、スキーマをまだがありません。<br /><br /> ユーザーは、リモート テーブルを削除して手動で。<br /><br /> 返される、成功のステータスをリモート データのアーカイブのプロビジョニングしますが、実際に失敗しました。|  
   
- *モード*は**varchar (11)**、既定値は**N'ALL'**です。  
+ *モード*は**varchar (11)**、既定値は**N'ALL'** です。  
   
  [  **@oneresultset=**] *oneresultset*  
  1 つの結果セットを返すかどうかを示します。 *Oneresultset*引数は、次の値を持つことができます。  

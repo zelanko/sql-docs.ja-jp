@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ sp_addpublication [ @publication = ] 'publication'
  旧バージョンとの互換性のためです。 サポートされています。使用して*default_access*です。  
   
  [  **@sync_method=**] *' sync_method * * * '**  
- 同期モードを指定します。 *sync_method*は**nvarchar (13)**値は次のいずれかを指定できます。  
+ 同期モードを指定します。 *sync_method*は**nvarchar (13)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -115,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
 |NULL (既定値)|既定値は**ネイティブ**の[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、既定値は**文字**ときの値*repl_freq*は**スナップショット**にされ、 **concurrent_c**その他の場合。|  
   
  [  **@repl_freq=**] **'***repl_freq***'**  
- レプリケーションの頻度などの型は、 *repl_freq*は**nvarchar (10)**値は次のいずれかを指定できます。  
+ レプリケーションの頻度などの型は、 *repl_freq*は**nvarchar (10)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -126,7 +125,7 @@ sp_addpublication [ @publication = ] 'publication'
  パブリケーションに関する説明を指定します (省略可能)。 *説明*は**nvarchar (255)**、既定値は NULL です。  
   
  [  **@status=**] **'***ステータス***'**  
- パブリケーション データを使用できるかどうかを指定します。 *ステータス*は**nvarchar (8)**値は次のいずれかを指定できます。  
+ パブリケーション データを使用できるかどうかを指定します。 *ステータス*は**nvarchar (8)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -145,7 +144,7 @@ sp_addpublication [ @publication = ] 'publication'
  パブリケーションをインターネット対応にするかどうかを指定し、サブスクライバーへのスナップショット ファイルの転送にファイル転送プロトコル (FTP) を使用できるかどうかを決定します。 *enabled_for_internet*は**nvarchar (5)**、既定値は FALSE。 場合**true**パブリケーションの同期ファイルは、C:\Program files \microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp ディレクトリに格納されます。 ユーザーは Ftp ディレクトリを作成する必要があります。  
   
  [  **@allow_push=**] **'***allow_push***'**  
- 特定のパブリケーションに対して、プッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)**TRUE の場合、既定値は、パブリケーションに対してプッシュ サブスクリプションを許可します。  
+ 特定のパブリケーションに対して、プッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)** TRUE の場合、既定値は、パブリケーションに対してプッシュ サブスクリプションを許可します。  
   
  [  **@allow_pull=**] **'***allow_pull***'**  
  特定のパブリケーションに対して、プル サブスクリプションを作成できるかどうかを指定します。 *allow_pull*は**nvarchar (5)**、既定値は FALSE。 場合**false**、パブリケーションに対してプル サブスクリプションが許可されていません。  
@@ -157,7 +156,7 @@ sp_addpublication [ @publication = ] 'publication'
  パブリケーションでサブスクリプションの即時更新を許可するかどうかを指定します。 *allow_sync_tran*は**nvarchar (5)**、既定値は FALSE。 **true**は*Oracle パブリッシャーに対してサポートされていません*です。  
   
  [  **@autogen_sync_procs=**] **'***autogen_sync_procs***'**  
- 更新サブスクリプションの同期ストアド プロシージャがパブリッシャーで生成されるかどうかを指定します。 *autogen_sync_procs*は**nvarchar (5)**値は次のいずれかを指定できます。  
+ 更新サブスクリプションの同期ストアド プロシージャがパブリッシャーで生成されるかどうかを指定します。 *autogen_sync_procs*は**nvarchar (5)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -172,13 +171,13 @@ sp_addpublication [ @publication = ] 'publication'
  サブスクリプション処理の保有期間を時間数で指定します。 *保有期間*は**int**の既定値は 336 時間です。 サブスクリプションは、保有期間内に非アクティブになると、期限切れとなって削除されます。 この値には、パブリッシャーによって使用されるディストリビューション データベースの最大保有期間を上回る値を指定することもできます。 場合**0**、よく知られているパブリケーションに対するサブスクリプションが決して期限切れし、期限切れサブスクリプション クリーンアップ エージェントによって削除されます。  
   
  [  **@allow_queued_tran=** ] **'***allow_queued_updating***'**  
- 変更をパブリッシャーに適用できるようになるまで、サブスクライバーでの変更のキュー登録を有効または無効にします。 *allow_queued_updating*は**nvarchar (5)**既定値は FALSE。 場合**false**、サブスクライバーの変更はキュー登録されません。 **true**は*Oracle パブリッシャーに対してサポートされていません*です。  
+ 変更をパブリッシャーに適用できるようになるまで、サブスクライバーでの変更のキュー登録を有効または無効にします。 *allow_queued_updating*は**nvarchar (5)** 既定値は FALSE。 場合**false**、サブスクライバーの変更はキュー登録されません。 **true**は*Oracle パブリッシャーに対してサポートされていません*です。  
   
  [  **@snapshot_in_defaultfolder=** ] **'***snapshot_in_default_folder***'**  
- スナップショット ファイルを既定のフォルダーに格納するかどうかを指定します。 *snapshot_in_default_folder*は**nvarchar (5)**既定値は TRUE です。 場合**true**、スナップショット ファイルは既定のフォルダーにあります。 場合**false**、スナップショット ファイルで指定された代替位置に格納されている*alternate_snapshot_folder*です。 代替位置は、他のサーバー、ネットワーク ドライブ、CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに設定できます。 スナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。 このパラメーターが true にしてもに、場所があることができますに注意してください、 **@alt_snapshot_folder**パラメーター。 これらのパラメーターを組み合わせて指定した場合、スナップショット ファイルは、既定のフォルダーと代替位置の両方に格納されます。  
+ スナップショット ファイルを既定のフォルダーに格納するかどうかを指定します。 *snapshot_in_default_folder*は**nvarchar (5)** 既定値は TRUE です。 場合**true**、スナップショット ファイルは既定のフォルダーにあります。 場合**false**、スナップショット ファイルで指定された代替位置に格納されている*alternate_snapshot_folder*です。 代替位置は、他のサーバー、ネットワーク ドライブ、CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに設定できます。 スナップショット ファイルを FTP サイトに保存し、後でサブスクライバーで取得することもできます。 このパラメーターが true にしてもに、場所があることができますに注意してください、 **@alt_snapshot_folder**パラメーター。 これらのパラメーターを組み合わせて指定した場合、スナップショット ファイルは、既定のフォルダーと代替位置の両方に格納されます。  
   
  [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder***'**  
- スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)**既定値は NULL です。  
+ スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)** 既定値は NULL です。  
   
  [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
  ポインターを指定します、 **.sql**ファイルの場所。 *pre_snapshot_script*は**nvarchar (255)、**既定値は NULL です。 ディストリビューション エージェントでは、サブスクライバーでスナップショットが適用されるとき、レプリケートされたオブジェクト スクリプトよりも前に、プリスナップショット スクリプトが実行されます。 このスクリプトは、サブスクリプション データベースへの接続時にディストリビューション エージェントによって使用されるセキュリティ コンテキストで実行されます。  
@@ -205,7 +204,7 @@ sp_addpublication [ @publication = ] 'publication'
  FTP サービスに接続するときに使用するユーザー パスワードです。 *ftp_password*は**sysname**、既定値は NULL です。  
   
  [  **@allow_dts =** ] **'***allow_dts を含む***'**  
- パブリケーションでデータを変換できるかどうかを指定します。 サブスクリプションを作成するときに DTS パッケージを指定できます。 *allow_transformable_subscriptions*は**nvarchar (5)**既定値は FALSE には、これはいない DTS 変換が許可されます。 ときに*allow_dts を含む*が true の場合、 *sync_method*設定する必要がいずれかに**文字**または**concurrent_c**です。  
+ パブリケーションでデータを変換できるかどうかを指定します。 サブスクリプションを作成するときに DTS パッケージを指定できます。 *allow_transformable_subscriptions*は**nvarchar (5)** 既定値は FALSE には、これはいない DTS 変換が許可されます。 ときに*allow_dts を含む*が true の場合、 *sync_method*設定する必要がいずれかに**文字**または**concurrent_c**です。  
   
  **true**は*Oracle パブリッシャーに対してサポートされていません*です。  
   
@@ -213,7 +212,7 @@ sp_addpublication [ @publication = ] 'publication'
  このパブリケーションにサブスクライブするサブスクリプション データベースをコピーする機能を有効または無効にします。 *allow_subscription_copy*は**nvarchar (5)**、既定値は FALSE。  
   
  [  **@conflict_policy =** ] **'***conflict_policy***'**  
- キュー更新サブスクライバー オプションを使用するときの競合の解決方法。 *conflict_policy*は**nvarchar (100)**既定値は NULL の場合、値は次のいずれかを指定できます。  
+ キュー更新サブスクライバー オプションを使用するときの競合の解決方法。 *conflict_policy*は**nvarchar (100)** 既定値は NULL の場合、値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -244,7 +243,7 @@ sp_addpublication [ @publication = ] 'publication'
  *Oracle パブリッシャーに対してサポートされていません。*です。  
   
  [  **@add_to_active_directory =** ] **' * * * 追加**_**to_active_directory * * * '**  
- このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。  
+ このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。  
   
  [  **@logreader_job_name =** ] **'***logreader_agent_name***'**  
  既存のエージェント ジョブの名前を指定します。 *logreader_agent_name*は**sysname**既定値は NULL です。 このパラメーターは、ログ リーダー エージェントで、新しく作成されるジョブではなく既存のジョブが使用される場合にのみ指定します。  
@@ -310,7 +309,7 @@ sp_addpublication [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@enabled_for_het_sub=** ] **'***enabled_for_het_sub***'**  
- パブリケーションをサポートしていないように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 *enabled_for_het_sub*は**nvarchar (5)**で既定値は FALSE。 値**true**パブリケーションをサポートしているではないことを意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 ときに*enabled_for_het_sub*は**true**、次の制限が適用されます。  
+ パブリケーションをサポートしていないように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 *enabled_for_het_sub*は**nvarchar (5)** で既定値は FALSE。 値**true**パブリケーションをサポートしているではないことを意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。 ときに*enabled_for_het_sub*は**true**、次の制限が適用されます。  
   
 -   *allow_initialize_from_backup*する必要があります**false**です。  
   
@@ -351,22 +350,22 @@ sp_addpublication [ @publication = ] 'publication'
  詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
  [  **@p2p_conflictdetection=** ] **'***p2p_conflictdetection***'**  
- パブリケーションでピア ツー ピア レプリケーションが有効である場合に、ディストリビューション エージェントが競合を検出できるようにします。 *p2p_conflictdetection*は**nvarchar (5)**で既定値は TRUE です。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
+ パブリケーションでピア ツー ピア レプリケーションが有効である場合に、ディストリビューション エージェントが競合を検出できるようにします。 *p2p_conflictdetection*は**nvarchar (5)** で既定値は TRUE です。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
  [  **@p2p_originator_id=** ] *p2p_originator_id*  
  ピア ツー ピア トポロジ内のノードの ID を指定します。 *p2p_originator_id*は**int**、既定値は NULL です。 場合、この ID は競合検出に対して使用*p2p_conflictdetection*が TRUE に設定します。 トポロジで使用されていない、正の値、0 以外の ID を指定します。 既に使用されている Id の一覧は、実行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)です。  
   
  [  **@p2p_continue_onconflict=** ] **'***@p2p_continue_onconflict***'**  
- 競合の検出後にディストリビューション エージェントで変更の処理を続行するかどうかを示します。 *@p2p_continue_onconflict*は**nvarchar (5)**で既定値は FALSE。  
+ 競合の検出後にディストリビューション エージェントで変更の処理を続行するかどうかを示します。 *@p2p_continue_onconflict*は**nvarchar (5)** で既定値は FALSE。  
   
 > [!CAUTION]  
 >  既定値の FALSE を使用することをお勧めします。 このオプションを TRUE に設定すると、ディストリビューション エージェントは、発信元 ID が最も大きいノードから競合する行を適用してトポロジ内のデータを収束しようとします。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。  
   
  [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
- パブリッシュされたデータベースに対して ALTER TABLE ... SWITCH ステートメントを実行できるかどうかを指定します。 *allow_partition_switch*は**nvarchar (5)**で既定値は FALSE。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。  
+ パブリッシュされたデータベースに対して ALTER TABLE ... SWITCH ステートメントを実行できるかどうかを指定します。 *allow_partition_switch*は**nvarchar (5)** で既定値は FALSE。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。  
   
  [  **@replicate_partition_switch=** ] **'***replicate_partition_switch***'**  
- パブリッシュされたデータベースに対して実行される ALTER TABLE ... SWITCH ステートメントをサブスクライバーにレプリケーションする必要があるかどうかを指定します。 *replicate_partition_switch*は**nvarchar (5)**で既定値は FALSE。 このオプションは有効な場合にのみ、 *allow_partition_switch*が TRUE に設定します。  
+ パブリッシュされたデータベースに対して実行される ALTER TABLE ... SWITCH ステートメントをサブスクライバーにレプリケーションする必要があるかどうかを指定します。 *replicate_partition_switch*は**nvarchar (5)** で既定値は FALSE。 このオプションは有効な場合にのみ、 *allow_partition_switch*が TRUE に設定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

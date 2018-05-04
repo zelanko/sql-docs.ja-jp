@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
@@ -20,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d2be6f4e75ebc774c17bd0d80eb37efec74499d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9d3ee89477b2037f2eb11bdde1a6b08d53ad3065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>手順 3: ビルドし、SQL ステートメントを実行
 3 番目の手順は、次の図に示すようにビルドし、SQL ステートメントを実行するです。 この手順を実行するために使用するメソッドは、大幅に異なる可能性があります。 アプリケーションは、SQL ステートメントを入力して、ユーザー入力に基づいて SQL ステートメントを作成するように求めるか、ハード コーディングされた SQL ステートメントを使用する可能性があります。 詳細については、次を参照してください。 [SQL ステートメントを構築する](../../../odbc/reference/develop-app/constructing-sql-statements.md)です。  

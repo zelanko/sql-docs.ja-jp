@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - standardizing database access [ODBC], about standardizing
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ba4fd8fac85087765b8f95f916bb737862a5d308
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 147841249b79ec1aab24941be533702443c72d6a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-access-architecture"></a>データベース アクセスのアーキテクチャ
 ODBC の開発の質問の 1 つは、標準化するためにデータベース アクセスのアーキテクチャのどの部分をでした。 プログラミング インターフェイスの前のセクションで説明されている SQL: SQL、SQL が埋め込まれているモジュール、および Cli — このアーキテクチャの 1 つだけの一部であります。 実際には、ODBC がミニとメインフレームの Dbms にパーソナル コンピューター ベースのアプリケーションを接続するためのもので、主に、ためにありましたも多数のネットワーク コンポーネント、その一部を標準化する可能性があります。  

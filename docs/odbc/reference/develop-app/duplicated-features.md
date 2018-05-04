@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - duplicated functions [ODBC]
 - compatibility [ODBC], duplicated functions
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e834e0733e3f388658cf41e3a620b17f843e0c14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 55faa01b16331870c4539e290e218838e4d9e381
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="duplicated-features"></a>重複する機能
 次の ODBC 2.*x* ODBC 3 で関数が重複しています*。x*関数。 結果として、ODBC 2 です。*x*関数、ODBC 3 で廃止されました*。x*です。 ODBC 3 です。*x*関数を置換機能と呼びます。  
@@ -58,4 +57,4 @@ ms.lasthandoff: 04/16/2018
  [1]、関数**SQLExtendedFetch**が重複している機能です。**SQLFetchScroll** ODBC 3 で同様の機能を提供します*。x*です。 ただし、ドライバー マネージャーはマップされていない**SQLExtendedFetch**に**SQLFetchScroll**されるときに ODBC 3 に対して*。x*ドライバー。 詳細については、次を参照してください。 [、ドライバー マネージャーが何](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。 ドライバー マネージャーは、マップ**SQLFetchScroll**に**SQLExtendedFetch**されるときに ODBC 2 に対する*。x*ドライバー。  
   
 > [!NOTE]  
->  関数は、 **SQLBindParam**特殊なケースです。 **SQLBindParam**が重複している機能です。 これは、ODBC 2 ではありません*.x*関数が、Open Group および ISO 規格に存在する関数。 この関数によって提供される機能はのによって完全に包含されています。 **SQLBindParameter**です。 ドライバー マネージャーがへの呼び出しをマップするため、 **SQLBindParam**に**SQLBindParameter**基になるドライバーが ODBC 3 の場合*。x*ドライバー。 ただし、ときに、基になるドライバーは、ODBC 2*.x*ドライバー、ドライバー マネージャーはこのマッピングを実行していません。
+>  関数は、 **SQLBindParam**特殊なケースです。 **SQLBindParam**が重複している機能です。 これは、ODBC 2 ではありません *.x*関数が、Open Group および ISO 規格に存在する関数。 この関数によって提供される機能はのによって完全に包含されています。 **SQLBindParameter**です。 ドライバー マネージャーがへの呼び出しをマップするため、 **SQLBindParam**に**SQLBindParameter**基になるドライバーが ODBC 3 の場合*。x*ドライバー。 ただし、ときに、基になるドライバーは、ODBC 2 *.x*ドライバー、ドライバー マネージャーはこのマッピングを実行していません。

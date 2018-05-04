@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], stored procedures
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -35,12 +35,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c7e7c1794d2caa3a6b76a4b8075bd7d0a07323a0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 710cd2eb0be42a455fda1dc48d9877f28b8bd9d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>ルール、トリガー、既定値、およびストアド プロシージャ (Visual FoxPro ODBC Driver) のサポート
 Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC ドライバーを使用してストアド プロシージャを作成することはできません。 ただし、アプリケーションは、挿入、更新、またはデータベースに格納されている Visual FoxPro データ削除と、既存のルール、トリガー、既定値、またはストアド プロシージャと対話可能性があります。  
@@ -50,7 +49,7 @@ Visual FoxPro 規則、トリガー、既定値、または、Visual FoxPro ODBC
  場合は、アプリケーションがの規則、トリガー、既定値は、データと対話する。 または、ストアド プロシージャは、その他の Visual FoxPro コマンドまたは関数を呼び出す、ドライバーはエラーを生成します。 参照してください[サポートされていない Visual FoxPro コマンドと関数](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)コマンドと、ドライバーでサポートされていない関数の一覧についてはします。  
   
 > [!TIP]  
->  使用することができます、ルール、トリガー、またはドライバーによって呼び出されたときに実行するコマンドを決定するストアド プロシージャに条件付きのコードを挿入する場合、**バージョンに関するページ ()**関数。 **バージョンに関するページ ()**関数が返される"Visual FoxPro ODBC ドライバー *\<バージョン >*"ドライバーによって呼び出されるとします。  
+>  使用することができます、ルール、トリガー、またはドライバーによって呼び出されたときに実行するコマンドを決定するストアド プロシージャに条件付きのコードを挿入する場合、**バージョンに関するページ ()** 関数。 **バージョンに関するページ ()** 関数が返される"Visual FoxPro ODBC ドライバー *\<バージョン >*"ドライバーによって呼び出されるとします。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro コマンドと規則、トリガー、既定値、およびストアド プロシージャでサポートされる関数  
   

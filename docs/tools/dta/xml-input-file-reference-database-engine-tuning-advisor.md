@@ -1,17 +1,16 @@
 ---
-title: XML 入力ファイル リファレンス (データベース エンジン チューニング アドバイザー) |Microsoft ドキュメント
+title: XML 入力ファイル リファレンス (データベース エンジン チューニング アドバイザー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: dta
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -23,15 +22,15 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d507c858f2103af6521e57ffca3385a23c913cd2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: da76d868d74c5891b354b2392a24fcf030f917af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 入力ファイル リファレンス (データベース エンジン チューニング アドバイザー)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]チューニング アドバイザーは、XML 入力ファイルを使用してデータベースをチューニングすることができます。 この XML ファイルでは、チューニング セッションで使用するデータベース、テーブル、ワークロード ファイルまたはワークロード テーブル、およびチューニング オプションを指定します。 このファイルを使用して、ユーザー指定の構成を指定し、"what-if" 分析を実行することもできます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、XML 入力ファイルを使用してデータベースをチューニングできます。 この XML ファイルでは、チューニング セッションで使用するデータベース、テーブル、ワークロード ファイルまたはワークロード テーブル、およびチューニング オプションを指定します。 このファイルを使用して、ユーザー指定の構成を指定し、"what-if" 分析を実行することもできます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML 入力ファイルには XML 要素の階層が含まれており、各要素には、チューニング セッションの設定を指定するテキスト、またはその他の要素が含まれています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML 入力ファイルは整形式 XML の標準に準拠する必要があるため、すべての要素名で大文字と小文字が区別されます。 要素の大文字と小文字の記述は Pascal 形式にします。つまり、最初の文字を大文字で表記し、結合されている後に続く単語の最初の文字も大文字で表記します。  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="xml-declaration"></a>XML 宣言  
   
--   [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+-   [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
 ## <a name="dtaxml-root-element"></a>DTAXML ルート要素  
   
@@ -61,15 +60,15 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="server-elements"></a>サーバー要素  
   
--   [サーバー &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-server-dta.md)  
+-   [Server の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-server-dta.md)  
   
--   [サーバー &#40;DTA&#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)  
+-   [Server の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Workload 要素  
   
 -   [File 要素 &#40;DTA&#41;](../../tools/dta/file-element-dta.md)  
   
--   [ワークロード &#40; DTA &#41; の database 要素](../../tools/dta/database-element-for-workload-dta.md)  
+-   [Workload の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)  
   
 -   [EventString 要素 &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)  
   
@@ -95,35 +94,35 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="configuration-elements"></a>構成の要素  
   
--   [構成 &#40;DTA&#41; の server 要素](../../tools/dta/server-element-for-configuration-dta.md)  
+-   [Configuration の Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)  
   
--   [構成 &#40;DTA&#41; の database 要素](../../tools/dta/database-element-for-configuration-dta.md)  
+-   [Configuration の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)  
   
 -   [Recommendation 要素 &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)  
   
--   [要素 &#40;DTA&#41; を作成します。](../../tools/dta/create-element-dta.md)  
+-   [Create 要素 &#40;DTA&#41;](../../tools/dta/create-element-dta.md)  
   
 -   [Index 要素 &#40;DTA&#41;](../../tools/dta/index-element-dta.md)  
   
--   [インデックス &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-index-dta.md)  
+-   [Index の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-index-dta.md)  
   
--   [インデックス &#40;DTA&#41; の column 要素](../../tools/dta/column-element-for-index-dta.md)  
+-   [Index の Column 要素 &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)  
   
--   [列 &#40; DTA &#41; の name 要素](../../tools/dta/name-element-for-column-dta.md)  
+-   [Column の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)  
   
--   [インデックス &#40;DTA&#41; の Filegroup 要素](../../tools/dta/filegroup-element-for-index-dta.md)  
+-   [Index の Filegroup 要素 &#40;DTA&#41;](../../tools/dta/filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>データベースの要素  
   
--   [データベース &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)  
+-   [Database の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)  
   
--   [データベース &#40;DTA&#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)  
+-   [Database の Schema 要素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)  
   
--   [スキーマ &#40; DTA &#41; の name 要素](../../tools/dta/name-element-for-schema-dta.md)  
+-   [Schema の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-schema-dta.md)  
   
--   [スキーマ &#40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)  
+-   [Schema の Table 要素 &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)  
   
--   [テーブル &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-table-dta.md)  
+-   [Table の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)  

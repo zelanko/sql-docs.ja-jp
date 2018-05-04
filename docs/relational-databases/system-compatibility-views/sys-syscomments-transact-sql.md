@@ -27,12 +27,11 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 375c289c67f951b68255d67d4092a02f343587b1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9cb69062f30a60a95d2aa844ed05a9a5af4082c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
 |**言語**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**encrypted**|**bit**|プロシージャ定義が暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> **\*\* 重要な\* \*** ストアド プロシージャの定義を難読化するには、暗号化のキーワードを含む CREATE PROCEDURE を使用します。|  
 |**圧縮**|**bit**|常に 0 を返します。 これは、プロシージャが圧縮されていることを示します。|  
-|**text**|**nvarchar (4000)**|SQL 定義ステートメントの実際のテキストです。<br /><br /> デコードされた式のセマンティクスは元のテキストと同じですが、構文も同じであるとは限りません。 たとえば、デコードされた式からは空白文字が削除されます。<br /><br /> これは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-互換のビューを現在の情報を取得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造しより多くの文字を返すことができます、 **nvarchar (4000)**定義します。 **sp_help**返します**nvarchar (4000)**テキスト列のデータ型として。 使用するときに**syscomments**使用を検討して**nvarchar (max)**です。 新しい開発作業では使用しないで**syscomments**です。|  
+|**text**|**nvarchar (4000)**|SQL 定義ステートメントの実際のテキストです。<br /><br /> デコードされた式のセマンティクスは元のテキストと同じですが、構文も同じであるとは限りません。 たとえば、デコードされた式からは空白文字が削除されます。<br /><br /> これは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-互換のビューを現在の情報を取得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造しより多くの文字を返すことができます、 **nvarchar (4000)** 定義します。 **sp_help**返します**nvarchar (4000)** テキスト列のデータ型として。 使用するときに**syscomments**使用を検討して**nvarchar (max)** です。 新しい開発作業では使用しないで**syscomments**です。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

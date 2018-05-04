@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39bdde1095f5780fac2f27a9da1e834e6c3af968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4f01f1bb50323ec68860df15594a4d3688e5aebd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |TRACE_PRODUCE_BLACKBOX|**8**|サーバーで生成されたトレース情報の末尾にある 5 MB のレコードが、サーバーで保存されます。 TRACE_PRODUCE_BLACKBOX は、他のオプションと同時に指定できません。|  
   
  [ **@tracefile=** ] *'**trace_file**'*  
- トレースを書き込む場所とファイル名を指定します。 *trace_file*は**nvarchar (245)**既定値はありません。 *trace_file* (N 'C:\MSSQL\Trace\trace.trc') などのローカル ディレクトリまたは UNC 共有またはパスのいずれかを指定できます (N'\\\\*Servername*\\*Sharename*\\*ディレクトリ*\trace.trc')。  
+ トレースを書き込む場所とファイル名を指定します。 *trace_file*は**nvarchar (245)** 既定値はありません。 *trace_file* (N 'C:\MSSQL\Trace\trace.trc') などのローカル ディレクトリまたは UNC 共有またはパスのいずれかを指定できます (N'\\\\*Servername*\\*Sharename*\\*ディレクトリ*\trace.trc')。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追加、 **.trc**すべてのトレース ファイル名に拡張します。 場合、TRACE_FILE_ROLLOVER オプションと*max_file_size*指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元のトレース ファイルが最大サイズに拡張する場合は、新しいトレース ファイルを作成します。 新しいファイルに同じ名前が、元のファイルは、_*n*以降で、その順番を示すために追加された**1**です。 たとえば、最初のトレース ファイルの名前は**filename.trc**、2 番目のトレース ファイルの名前は**filename_1.trc**です。  
   

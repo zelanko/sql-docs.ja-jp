@@ -24,12 +24,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab2bee2085b2b86015225f67a99bb01d833efb9d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 652983ee8143f8ef23001bb702c323b25a13e36b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +56,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|属性の ID 番号です。|  
-|**ATTRIBUTE_NAME**|**varchar (**60**)**|属性名です。|  
-|**ATTRIBUTE_VALUE**|**varchar (**255**)**|属性の現在の設定です。|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|属性名です。|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|属性の現在の設定です。|  
   
  次の表に属性の一覧を示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC クライアント ライブラリは、現在の属性を使用して**1**、 **2**、 **18**、 **22**、および**500**接続時間です。  
   

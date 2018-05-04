@@ -25,12 +25,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b40b75f21b77e6dd17cf426be3ea70fe05ac0757
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3210dbcbd8453769d4edb675a04c775e72784dd1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;モデル&gt;です。ケース (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  データ マイニング拡張機能 (DMX) では、ドリルスルーはモデルの作成時にのみ可能です。 使用して、既存のモデルにドリルスルーを追加することができます[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]が、表示したり、ケースをクエリする前に、モデルが再処理する必要があります。  
   
- ドリルスルーを有効にする方法の詳細については、次を参照してください。[マイニング モデルの作成 &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)、 [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)、および[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)です。  
+ ドリルスルーを有効にする方法の詳細については、次を参照してください[CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)、 [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)、および[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -73,9 +72,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="remarks"></a>解説  
  マイニング モデルとマイニング構造の両方についてドリルスルーを有効にした場合、そのモデルと構造に対するドリルスルー権限を持つロールのメンバー ユーザーが、マイニング モデルに含まれていないマイニング構造の列にアクセスできるようになります。 したがって、機密データまたは個人情報を保護する必要がありますを構築、個人情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**必要がある場合にのみ、マイニング構造に対する権限。  
   
- [Lag &#40;DMX&#41;](../dmx/lag-dmx.md)を返したりフィルター各ケースと初期時間の間のタイム ラグ タイム シリーズ モデルで関数を使用できます。  
+ [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md)を返したりフィルター各ケースと初期時間の間のタイム ラグ タイム シリーズ モデルで関数を使用できます。  
   
- 使用して、 [IsInNode & # #40; DMX &#41;](../dmx/isinnode-dmx.md)で機能、**場所**句には、スキーマ行セットの NODE_UNIQUE_NAME 列によって指定されているノードに関連付けられているケースのみが返されます。  
+ 使用して、 [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)で機能、**場所**句には、スキーマ行セットの NODE_UNIQUE_NAME 列によって指定されているノードに関連付けられているケースのみが返されます。  
   
 ## <a name="examples"></a>使用例  
  次の例は、マイニング構造に基づく Targeted Mailing に基づいて、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベースとその関連マイニング モデルです。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)です。  
@@ -101,12 +100,12 @@ AND IsInNode('002')
  構造列を返すには、マイニング モデルとマイニング構造の両方についてドリルスルー権限を有効にする必要があります。  
   
 > [!NOTE]  
->  すべての種類のマイニング モデルでドリルスルーがサポートされるわけではありません。 ドリルスルーをサポートするモデルについては、次を参照してください。[ドリルスルー クエリ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)です。  
+>  すべての種類のマイニング モデルでドリルスルーがサポートされるわけではありません。 ドリルスルーをサポートするモデルについては、次を参照してください。[ドリルスルー クエリ&#40;データ マイニング&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)です。  
   
 ## <a name="see-also"></a>参照  
- [選択 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

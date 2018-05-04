@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e8472562fe764a8fb6a70efa84082dfbb074563a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 200b559b443f9c7475f672ae4427bca822583ae6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_cycle_errorlog
  なし  
   
 ## <a name="remarks"></a>解説  
- たびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されると、現在のエラー ログに名前が変更**'errorlog.1'**です。**'errorlog.1'**なります**errorlog.2**、 **errorlog.2**なります**errorlog.3**のようにします。 **sp_cycle_errorlog**を停止してから、サーバーを起動しないで、エラー ログ ファイルを使い回すことができます。  
+ たびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されると、現在のエラー ログに名前が変更 **'errorlog.1'** です。**'errorlog.1'** なります**errorlog.2**、 **errorlog.2**なります**errorlog.3**のようにします。 **sp_cycle_errorlog**を停止してから、サーバーを起動しないで、エラー ログ ファイルを使い回すことができます。  
   
 ## <a name="permissions"></a>権限  
  実行権限**sp_cycle_errorlog**のメンバーに制限されます、 **sysadmin**固定サーバー ロール。  

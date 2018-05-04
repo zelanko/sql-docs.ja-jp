@@ -24,12 +24,11 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e6218ad7eaba6f6f6e108739dee392b0f9ec177
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5d4cbc7acfb07c28a8380be87ac7010be92274e7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ sp_add_alert [ @name = ] 'name'
  では未実装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0。 *raise_snmp_trap*は**tinyint**、既定値は 0 です。  
   
  [  **@performance_condition =** ] **'***performance_condition***'**  
- 形式で表現される値は、'*itemcomparatorvalue*' です。 *performance_condition*は**nvarchar (512)**既定値は NULL の場合、これらの要素で構成されています。  
+ 形式で表現される値は、'*itemcomparatorvalue*' です。 *performance_condition*は**nvarchar (512)** 既定値は NULL の場合、これらの要素で構成されています。  
   
 |形式の要素|Description|  
 |--------------------|-----------------|  

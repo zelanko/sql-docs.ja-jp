@@ -28,13 +28,12 @@ caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d2eff1feb09046d592f88f63d3d12ad734eb930
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6c652ad6e9db451d490d8803f9689e9e82b1c231
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Windows の標準的な形式でタイム ゾーンの名前です。 たとえば、**中央オーストラリア標準時**または**中央ヨーロピアン標準時**です。|  
-|**current_utc_offset**|**nvarchar(12)**|現在の UTC のオフセットです。 たとえば、 **+01: 00**または**-07:00**です。|  
+|**current_utc_offset**|**nvarchar(12)**|現在の UTC のオフセットです。 たとえば、 **+01: 00**または **-07:00**です。|  
 |**is_currently_dst**|**bit**|現在夏時間を確認する場合は true。|  
   
 ## <a name="see-also"></a>参照  

@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f461f979c9d064305b0004fb906673e97f2ab5f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 78298188ba089dde1c9aae9f833c673817f16820
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *開始*  
+ *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
  返す最初の組の位置を指定する有効な数値式です。  
   
- *カウント*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
 ## <a name="remarks"></a>解説  
@@ -73,6 +72,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

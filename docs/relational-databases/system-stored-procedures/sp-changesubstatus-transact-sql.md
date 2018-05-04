@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f38f61bdb7fe29846b9776e5b9c89dee6c52feda
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c28d008a3eba995afce4cb302ecdc1428a5be397
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,13 +73,13 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>引数  
  [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%**です。 場合*パブリケーション*が指定されていない、すべてのパブリケーションが影響を受けます。  
+ パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** です。 場合*パブリケーション*が指定されていない、すべてのパブリケーションが影響を受けます。  
   
  [  **@article=**] **'***記事***'**  
- アーティクルの名前を指定します。 アーティクルの名前はパブリケーションに対して一意である必要があります。 *記事*は**sysname**、既定値は **%**です。 場合*記事*が指定されていない、すべてのアーティクルが影響を受けます。  
+ アーティクルの名前を指定します。 アーティクルの名前はパブリケーションに対して一意である必要があります。 *記事*は**sysname**、既定値は **%** です。 場合*記事*が指定されていない、すべてのアーティクルが影響を受けます。  
   
  [  **@subscriber=**] **'***サブスクライバー***'**  
- 状態を変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値は **%**です。 場合*サブスクライバー*が指定されていない、すべてのサブスクライバーの指定したアーティクルの状態が変更されました。  
+ 状態を変更するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値は **%** です。 場合*サブスクライバー*が指定されていない、すべてのサブスクライバーの指定したアーティクルの状態が変更されました。  
   
  [  **@status =**] **'***ステータス***'**  
  サブスクリプションの状態で、 **syssubscriptions**テーブル。 *ステータス*は**sysname**, で、既定値はありませんはこれらの値のいずれかを指定します。  
@@ -95,7 +94,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  サブスクリプションの前の状態を指定します。 *previous_status*は**sysname**、既定値は NULL です。 このパラメーターでは、現在のサブスクリプションの特定のグループの機能できるように、ステータスを持つ任意のサブスクリプションを変更することができます (たとえば、すべてのアクティブな設定をバックアップするサブスクリプション**サブスクライブしている**)。  
   
  [  **@destination_db=**] **'***destination_db***'**  
- 対象データベース名を指定します。 *destination_db*は**sysname**、既定値は **%**です。  
+ 対象データベース名を指定します。 *destination_db*は**sysname**、既定値は **%** です。  
   
  [  **@frequency_type=**] *frequency_type*  
  ディストリビューション タスクをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**、既定値は NULL です。  
@@ -158,11 +157,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**0**でエラーが生成されます。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**0**でエラーが生成されます。  
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
  データ変換サービス (DTS) パッケージの名前。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、という名前のパッケージ**DTSPub_Package**を指定する場合`@dts_package_name = N'DTSPub_Package'`です。  

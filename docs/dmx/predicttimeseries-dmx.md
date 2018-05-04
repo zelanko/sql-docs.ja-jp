@@ -26,12 +26,11 @@ caps.latest.revision: 56
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6adc5668f43a6db002c3622cc65b7ea1f09dee78
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,9 +58,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  予測する列の名前を指定します。 列にはスカラー データまたは表形式データを格納できます。  
   
  *n*  
- 予測する次のステップの数を指定します。 値が指定されていない場合 *n* 、既定値は 1 です。  
+ 予測する次のステップの数を指定します。 値が指定されていない場合*n*、既定値は 1 です。  
   
- *n*0 にすることはできません。 1 つ以上の予測を作成しないと、関数はエラーを返します。  
+ *n* 0 にすることはできません。 1 つ以上の予測を作成しないと、関数はエラーを返します。  
   
  *開始 n、n エンド*  
  時系列ステップの範囲を指定します。  
@@ -88,7 +87,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="remarks"></a>解説  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]ユーザーは、PREDICTION JOIN ステートメントを使用して新しいデータを追加する場合は、タイム シリーズ アルゴリズムには履歴予測はサポートされません。  
   
- PREDICTION JOIN では、予測処理は常に、元のトレーニング シリーズが終了した直後の時間ステップから開始されます。 これは、新しいデータを追加する場合にも当てはまります。 したがって、  *n* パラメーターと*n 開始*パラメーター値は 0 より大きい整数である必要があります。  
+ PREDICTION JOIN では、予測処理は常に、元のトレーニング シリーズが終了した直後の時間ステップから開始されます。 これは、新しいデータを追加する場合にも当てはまります。 したがって、 *n*パラメーターと*n 開始*パラメーター値は 0 より大きい整数である必要があります。  
   
 > [!NOTE]  
 >  新しいデータの長さは、予測の開始位置には影響しません。 そのため、新しいデータを追加して新しい予測を作成する場合は、予測の開始位置を新しいデータの長さより大きい値に設定するか、予測の終了位置を新しいデータの長さだけ拡張するようにします。  
@@ -102,7 +101,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   3 番目の例では、EXTEND_MODEL_CASES パラメーターを使用して、マイニング モデルを新しいデータで更新する方法を示します。  
   
- タイム シリーズ モデルの操作に関する詳細については、データ マイニング チュートリアル」を参照してください。[レッスン 2: a Forecasting Scenario &#40;中級者向けデータ マイニング チュートリアル&#41; の構築](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[時系列予測の DMX のチュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)です。  
+ タイム シリーズ モデルの操作に関する詳細については、データ マイニング チュートリアル」を参照してください[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[時系列予測の DMX。チュートリアル](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)です。  
   
 > [!NOTE]  
 >  モデルの結果は異なる場合があります。次の例の結果は、結果の形式を説明することのみを目的としています。  
@@ -136,7 +135,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>例 2: 新しいデータを追加して REPLACE_MODEL_CASES を使用する  
  特定の地域のデータが正しくないことが判明したので、モデル内のパターンを使用しながら新しいデータに合わせて予測を調整するとします。 または、別の地域の傾向の方が信頼性が高いことが判明したので、最も信頼性が高いモデルを異なる地域のデータに適用するとします。  
   
- このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用する新しいデータセットを指定できます。 これにより、予測は指定したモデル内のパターンに基づくが、新しいデータ ポイントの末尾からスムーズに継続するようになります。 このシナリオの完全なチュートリアルについては、次を参照してください。[高度な時系列予測 &#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)です。  
+ このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用する新しいデータセットを指定できます。 これにより、予測は指定したモデル内のパターンに基づくが、新しいデータ ポイントの末尾からスムーズに継続するようになります。 このシナリオの完全なチュートリアルについては、次を参照してください。[高度な時系列予測&#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)です。  
   
  次の PREDICTION JOIN クエリでは、データを置き換えて新しい予測を作成する構文を示します。 この例では、置き換え後のデータとして、Amount 列と Quantity 列の値を取得してそれぞれの値に 2 を乗算します。  
   
@@ -270,8 +269,8 @@ OR [Model Region] = 'M200 North America'
 >  この例では、FLATTENED キーワードを使用して、結果を表形式でわかりやすくしました。ただし、プロバイダーで階層的な行セットがサポートされている場合は、FLATTENED キーワードを省略できます。 FLATTENED キーワードを省略した場合、クエリを返します 2 つの列を識別する値を含む最初の列、`[Model Region]`データ系列、および統計の入れ子になったテーブルを含む 2 番目の列です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [タイム シリーズ モデルのクエリ例](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [予測 (& a) # #40; DMX &#41;](../dmx/predict-dmx.md)  
+ [予測 (& a) # #40; DMX & #41;](../dmx/predict-dmx.md)  
   
   

@@ -4,7 +4,7 @@ description: SQL Server 2017 を使用して Linux 上のトラブルシュー�
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: On Demand
-ms.openlocfilehash: 2be739569e240bfecd7e18fecae52a6f15d24e0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: e699d921a6100c3f8381b4a5ad1ba3054c258961
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -160,6 +159,41 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## <a name="rebuild-system-databases"></a>システム データベースの再構築します。
+最後の手段として、master の再構築することもでき、モデル データベースが既定のバージョンにバックアップします。
+
+> [!WARNING]
+> 次の手順は**SQL Server システム データをすべて削除**構成されています。 これには、ユーザー データベース (ただし、ユーザー データベース自体ではなく) に関する情報が含まれます。 システム データベースは、次のように格納されているその他の情報も削除されます: マスター_キーについては、任意の証明書をマスター、SA ログインのパスワード、msdb、および sp_configure オプションから msdb からのジョブに関連する情報、データベース メールに読み込まれます。 影響を理解する場合にのみ使用できます。
+
+1. SQL Server を停止します。
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. 実行**sqlservr**で、 **force セットアップ**パラメーター。 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > 以前の警告を参照してください。 また、実行すると、 **mssql**ユーザーは、ここに示すようにします。
+
+1. 「回復が完了しました」メッセージを確認した後、ctrl キーを押しながら C キーを押します。 これがシャット ダウン、SQL Server
+
+1. SA パスワードを再構成します。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. SQL Server を起動し、サーバーを再構成します。 これには、復元または任意のユーザー データベースを再アタッチが含まれます。
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
 ## <a name="common-issues"></a>一般的な問題
 
 1. リモート SQL Server インスタンスに接続することはできません。
@@ -186,7 +220,7 @@ SQLCMD でのシングル ユーザー モードで SQL Server を起動しま�
 
 4. [パスワード] に特殊文字を使用します。
 
-   SQL Server ログイン パスワードでいくつかの文字を使用する場合は、Linux ターミナルで使用するときにエスケープする必要があります。 $ をエスケープする必要があります、円記号を使用していつでもは、ターミナル コマンド/シェル スクリプトで使用されます。
+   SQL Server ログイン パスワードでいくつかの文字を使用する場合は、端末の Linux コマンドで使用する場合、円記号でエスケープする必要があります。 たとえば、する必要がありますをエスケープするドル記号 ($) を使用するといつでもターミナル コマンド/シェル スクリプトで。
 
    機能しません。
 

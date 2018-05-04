@@ -25,13 +25,12 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61c8dddc5d4a7b4673de1cc2fda057d444a03bef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>引数  
  [ @Resource=] '*resource_name*'  
- ロック リソースを識別するための名前を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)**既定値はありません。 リソース文字列がより長い場合**nvarchar (255)**に切り捨てられます**nvarchar (255)**です。  
+ ロック リソースを識別するための名前を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)** 既定値はありません。 リソース文字列がより長い場合**nvarchar (255)** に切り捨てられます**nvarchar (255)** です。  
   
  *resource_name*はバイナリ比較、そのため、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。  
   
@@ -65,7 +64,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  特定のリソースに対して取得されるロック モードを指定します。 *lock_mode* は **nvarchar (32)** 、既定値はありません。 値は、次のいずれかを指定できます: **Shared**、**更新**、 **IntentShared**、 **IntentExclusive**、または**排他**.  
   
  [ @LockOwner=] '*lock_owner*'  
- ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 ときに、 *lock_owner*値は**トランザクション**により、既定または明示的に指定すると、sp_getapplock 必要がありますから実行するトランザクション内で。  
+ ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 ときに、 *lock_owner*値は**トランザクション**により、既定または明示的に指定すると、sp_getapplock 必要がありますから実行するトランザクション内で。  
   
  [ @LockTimeout=] '*値*'  
  ロック タイムアウト値をミリ秒単位で指定します。 既定値はによって返される値と同じ@LOCK_TIMEOUTです。 ロック要求がすぐに許可されない場合に、ロックを待機するのではなくエラーを返すようにするには、0 を指定します。  

@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ff58f474c565d10a57505dce5019bca5ddafb34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a6e55691bc045a8de84084498a501983bcc5a11a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +164,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  場合挿入*\<テーブル名 >*を指定すると、任意の値、*テーブル*パラメーターは無視されます。  
+>  場合挿入*\<テーブル名 >* を指定すると、任意の値、*テーブル*パラメーターは無視されます。  
   
  複数のパラメーターを使用する場合は、最初のパラメーターに次の形式の文字列を指定する必要があります。  
   
@@ -175,7 +174,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- ただし、VALUES を指定した場合は例外として、最後の式の末尾に ")" を付ける必要があります。 ここで、 *\<テーブル名 >*で構築された UDPATE ステートメントが指定した値または既定値に 1 つ、*テーブル*パラメーター。  
+ ただし、VALUES を指定した場合は例外として、最後の式の末尾に ")" を付ける必要があります。 ここで、 *\<テーブル名 >* で構築された UDPATE ステートメントが指定した値または既定値に 1 つ、*テーブル*パラメーター。  
   
 > [!NOTE]  
 >  1 つのパラメーターを名前付きパラメーターとして送信することもできます ("`@VALUES`" など)。 その場合、他の名前付きパラメーターは使用できません。  

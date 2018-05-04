@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4ca9192b53e2fa1e6b8eaeb66b4cddd923dd7631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>引数  
  [ @table_name=] '*table_name*'  
- カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**nvarchar (**384**)**、既定値はありません。 ワイルドカードによるパターン照合がサポートされています。  
+ カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**nvarchar (** 384 **)**、既定値はありません。 ワイルドカードによるパターン照合がサポートされています。  
   
  [ @table_owner=] '*table_owner*'  
- カタログ情報を返すために使用するテーブルのテーブル所有者です。 *table_owner*は**nvarchar (**384**)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 所有者を指定しない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
+ カタログ情報を返すために使用するテーブルのテーブル所有者です。 *table_owner*は**nvarchar (** 384 **)**、既定値は NULL です。 ワイルドカードによるパターン照合がサポートされています。 所有者を指定しない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
  現在のユーザー指定の名前を持つテーブルを所有している場合は、そのテーブルの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していないと*名前*、このプロシージャは、指定したテーブルを探します*table_name*が所有する、データベース所有者です。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   

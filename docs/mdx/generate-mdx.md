@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b352fe818402cbad25af99a4ca336704b331a4f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -118,7 +117,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>文字列  
  次の例は、の使用を示しています。**生成**文字列を返します。  
   
 ```  
@@ -138,9 +137,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  この形式の**生成**関数場合に利用でき、計算のデバッグように、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 一連の厳密な MDX 表記よりも読みやすくする可能性がある、 [SetToStr (& a) #40 です。MDX と #41 です。](../mdx/settostr-mdx.md)関数が返される。  
+>  この形式の**生成**関数場合に利用でき、計算のデバッグように、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 一連の厳密な MDX 表記よりも読みやすくする可能性がある、 [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)関数が返される。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

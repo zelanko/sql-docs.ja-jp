@@ -24,12 +24,11 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10a03aebfdd4b22bf0e2e63f4ad4a9c1337a1201
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 991c8f5d6e94724fec85370f354cd19bf6584ffe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
  ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のログインを指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは不要な場合は*security_mode*に設定されている**1**、つまり Windows 認証です。  
   
  [  **@password=**] **'***パスワード***'**  
- ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のパスワードを指定します。 *パスワード*は**sysname**、既定値は**'** (空の文字列)。 このパラメーターは不要な場合は*security_mode*に設定されている**1**、つまり Windows 認証です。  
+ ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のパスワードを指定します。 *パスワード*は**sysname**、既定値は **'** (空の文字列)。 このパラメーターは不要な場合は*security_mode*に設定されている**1**、つまり Windows 認証です。  
   
  [  **@security_mode=**] **'***security_mode***'**  
  ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、ログイン セキュリティ モードを指定します。 *security_mode*は**ビット**で、既定値は**1**です。 場合**0**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証が使用されます。 場合**1**、Windows 認証が使用されます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  

@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9e3f0c96d3b0921a7843e83d2b174ace160caf66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_name=** ] **'***job_name***'**  
  ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
-> **注:**か*job_id*または*job_name*指定する必要がありますが両方指定することはできません。  
+> **注:** か*job_id*または*job_name*指定する必要がありますが両方指定することはできません。  
   
  [ **@schedule_name=** ] **'***schedule_name***'**  
  ジョブのスケジュール アイテムの名前を指定します。 *schedule_name*は**sysname**、既定値は NULL です。  
@@ -94,7 +93,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**job_count**|**int**|返されたジョブの数。|  
   
-> **注:****sp_help_jobschedule**から値を返します、**では**と**dbo.sysschedules**システム テーブルに**msdb**.   **sysjobschedules** 20 分ごとに更新します。 そのため、このストアド プロシージャから返される値に影響が生じることがあります。  
+> **注:****sp_help_jobschedule**から値を返します、**では**と**dbo.sysschedules**システム テーブルに**msdb**. **sysjobschedules** 20 分ごとに更新します。 そのため、このストアド プロシージャから返される値に影響が生じることがあります。  
   
 ## <a name="remarks"></a>解説  
  パラメーターの**sp_help_jobschedule**特定の組み合わせでのみ使用できます。 場合*schedule_id*指定すると、どちらも*job_id*も*job_name*を指定できます。 それ以外の場合、 *job_id*または*job_name*でパラメーターを使用できます*schedule_name*です。  

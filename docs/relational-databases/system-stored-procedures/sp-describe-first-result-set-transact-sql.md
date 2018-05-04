@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: acb21fb540012216aec4477193cf836bb7c19153
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,10 +49,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ## <a name="arguments"></a>引数  
  [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)**または**nvarchar (max)**です。  
+ 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** です。  
   
  [  **@params =** ] **N'***パラメーター***'**  
- @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)**または**nvarchar (max)**です。  
+ @params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** です。  
   
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*です。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定する各パラメーターを定義する必要があります@paramsです。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない@paramsは必要ありません。 このパラメーターの既定値は NULL はします。  
   
@@ -80,7 +79,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**bit NOT NULL**|列が NULL を許可する場合は 1、NULL を許可しない場合は 0、NULL を許可するかどうかを特定できない場合は 1 を格納します。|  
 |**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar(256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
-|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**です。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'**です。|  
+|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**です。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** です。|  
 |**有効桁数 (precision)**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
 |**scale**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
 |**collation_name**|**sysname NULL**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合は NULL を返します。|  
@@ -147,17 +146,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   データ型が異なる場合は、エラーがスローされ、以下の場合を除いて結果は返されません。  
   
-    -   **varchar (a)**に**varchar(a')**ここで、' >、します。  
+    -   **varchar (a)** に**varchar(a')** ここで、' >、します。  
   
-    -   **varchar (a)**に**varchar (max)**  
+    -   **varchar (a)** に**varchar (max)**  
   
-    -   **nvarchar (a)**に**nvarchar(a')**ここで、' >、します。  
+    -   **nvarchar (a)** に**nvarchar(a')** ここで、' >、します。  
   
-    -   **nvarchar (a)**に**nvarchar (max)**  
+    -   **nvarchar (a)** に**nvarchar (max)**  
   
-    -   **varbinary (a)**に**varbinary(a')**ここで、' >、します。  
+    -   **varbinary (a)** に**varbinary(a')** ここで、' >、します。  
   
-    -   **varbinary (a)**に**varbinary (max)**  
+    -   **varbinary (a)** に**varbinary (max)**  
   
  **sp_describe_first_result_set**間接再帰をサポートしていません。  
   
@@ -307,7 +306,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果: エラー、型の不一致 (**varchar (10)**と**nvarchar (10)**)。  
+ 結果: エラー、型の不一致 (**varchar (10)** と**nvarchar (10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>結果セットがエラーを返す  
  最初の結果セットがエラーまたは結果セットです。  

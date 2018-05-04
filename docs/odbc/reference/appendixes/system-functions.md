@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9005b533f6fdad687b98530aecfbbcdff3807fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e684d24050560ebf7501cf92887adc559686e03b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-functions"></a>システム関数
 次の表は、ODBC スカラー関数のセットに含まれているシステム関数を一覧表示します。 呼び出して**SQLGetInfo**で、*情報の種類*するシステム関数は、ドライバーでサポートされる SQL_SYSTEM_FUNCTIONS のアプリケーションを決定できます。  

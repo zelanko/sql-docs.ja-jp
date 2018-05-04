@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], performance
 - desktop database drivers [ODBC], performance
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d13ef42e9658a24de65947fcb9aa85ffb854181
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 760cec404f274d77d5382a3d164898c95545894e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-performance-issues"></a>デスクトップ データベース ドライバー パフォーマンスの問題
 既存の ANSI アプリケーションとの互換性のために、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR データ型は Microsoft アクセス 4.0 または上位のデータ ソースとして SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR に公開されます。 データ ソースはデータ型のワイド文字を返しませんが、データもする必要があります送信 jet ワイド文字形式で。 変換が行われる SQL_C_CHAR パラメーターまたは結果の列が、ANSI アプリケーションで SQL_CHAR データ型にバインドされている場合を理解しておく必要があります。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 04/16/2018
  この変換型 LONGVARCHAR のパラメーターを SQL_C_CHAR 型がバインドされている場合にメモリの観点から、特に効率的なことができます。 Jet 4.0 のエンジンは、長いテキスト パラメーター データをストリームにできないため、UNICODE 変換バッファー割り当てる必要があります、SQL_C_CHAR ANSI バッファーのサイズの 2 倍であります。 UNICODE 変換を実行および型 SQL_C_WCHAR としてパラメーターをバインドするアプリケーションは最も効率的なメカニズムです。 実行時のデータとして、パラメーターをマークすると、SQLPutData に複数の呼び出しで、データを提供、longtext データ バッファーが拡張されます。 SQL_DATA_AT_EXEC_LEN(x)、経由での省略可能な長さを指定する、この成長のコストを回避する方法の 1 つの「データの配置」バッファーが場所*x*バイトの予期された長さです。 これに内部 PutData バッファーのサイズが初期化されます*x*バイトです。  
   
 > [!NOTE]  
->  使用して効率的に挿入または長い形式のデータの更新を実現できます**SQLBulkOperations()**または**SQLSetPos()**および SQL_DATA_AT_EXEC を長い形式のデータを設定します。 (このケースで EXEC_LEN を無視) します。呼び出してチャンク単位でデータをストリーミングできます**SQLPutData** 、複数回これは効果的にデータ テーブルを追加します。  
+>  使用して効率的に挿入または長い形式のデータの更新を実現できます**SQLBulkOperations()** または**SQLSetPos()** および SQL_DATA_AT_EXEC を長い形式のデータを設定します。 (このケースで EXEC_LEN を無視) します。呼び出してチャンク単位でデータをストリーミングできます**SQLPutData** 、複数回これは効果的にデータ テーブルを追加します。  
   
  バージョン 4.0 を Microsoft ODBC のデスクトップ データベース ドライバーを使用して Jet 3.5 データベースを使用してアプリケーションをアップグレードすると、パフォーマンスが低下し、ワーキング セット サイズの増加が発生します。 これは、ためと、バージョン 3 です。*x*データベースでは、新しいバージョン 4.0 ドライバーを使用して開くときは、Jet 4.0 を読み込みます。 Jet 4.0 データベースを開くし、データベースが 3 が表示されます。*x*バージョン、Jet 3.5 エンジンは、同様の読み込みと等価のインストール可能な ISAM ドライバーを読み込みます。 パフォーマンスとサイズの低下、Jet 3 を削除します。*x* Jet 4.0 形式のデータベースにデータベースを圧縮する必要があります。 これにより、2 つの Jet エンジンの読み込みを排除され、データへのコード パスを最小限に抑えるされます。  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdcee5a30dd32dc7ce269bc8ab5e2ba3adb6da40
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e45bef5198bc90cc7838dcdc56147c8d1c3d3551
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**name**|**nvarchar(100)**|エージェントの名前。|  
 |**publisher_security_mode**|**smallint**|次のいずれかと、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証です。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
-|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \***は常に返されます。|  
+|**publisher_password**|**nvarchar (524)**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
 |**job_id**|**uniqueidentifier**|エージェント ジョブの一意な ID。|  
 |**job_login**|**nvarchar(512)**|形式で返される、ログ リーダー エージェントを実行する Windows アカウントは、*ドメイン*\\*username*です。|  
-|**job_password**|**sysname**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \***は常に返されます。|  
+|**job_password**|**sysname**|セキュリティ上の理由の値**\* \* \* \* \* \* \* \* \* \*** は常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

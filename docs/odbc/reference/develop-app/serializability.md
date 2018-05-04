@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], serialization
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa983da3ad05b6f4c4ac29fbdf986a7a8a350e34
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7262105a1f6911affb56464bf4bc410cceabf71f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="serializability"></a>シリアル化可能性
 トランザクションが理想的には、する必要があります*シリアル化可能な*します。 トランザクションが同時に実行されるトランザクションの結果が同じで、結果を逐次的に実行する場合は、シリアル化できると考えられます: つまり、1 つずつです。 トランザクションが最初に実行、のみ結果反映されていないトランザクションを混在させることは重要はありません。  

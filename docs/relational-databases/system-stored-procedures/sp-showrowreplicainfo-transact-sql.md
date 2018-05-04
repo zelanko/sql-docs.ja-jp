@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87857390035273ca2350f90175cc4254f182bb7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 80e50ddc736ee63c893fdd3b6a785503c2f17c7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  行の一意識別子です。 *rowguid*は**uniqueidentifier**、既定値はありません。  
   
  [ **@show**=] **'***表示***'**  
- 結果セットに返す情報量を指定します。 *表示*は**nvarchar (20)**両方の既定値です。 場合**行**行のバージョン情報のみが返されます。 場合**列**列のバージョン情報のみが返されます。 場合**両方**、両方の行および列情報が返されます。  
+ 結果セットに返す情報量を指定します。 *表示*は**nvarchar (20)** 両方の既定値です。 場合**行**行のバージョン情報のみが返されます。 場合**列**列のバージョン情報のみが返されます。 場合**両方**、両方の行および列情報が返されます。  
   
 ## <a name="result-sets-for-row-information"></a>行情報の結果セット  
   
@@ -69,7 +68,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネームです。|  
 |**version**|**int**|エントリのバージョンです。|  
-|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y** -行データが行の現在の状態を表します。<br /><br /> **n** -行データが行の現在の状態を表していません。<br /><br /> **\<n/a >**は適用されません。<br /><br /> **\<不明な >** -現在の状態を特定することはできません。|  
+|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y** -行データが行の現在の状態を表します。<br /><br /> **n** -行データが行の現在の状態を表していません。<br /><br /> **\<n/a >** は適用されません。<br /><br /> **\<不明な >** -現在の状態を特定することはできません。|  
 |**rowversion_table**|**nchar(17)**|行のバージョンを格納するかどうかを示す、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブルまたは[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブル。|  
 |**comment**|**nvarchar (255)**|この行バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
   

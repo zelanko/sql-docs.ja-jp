@@ -26,12 +26,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28bf9e7ecfe802087fc2eebd775a9dc537ccb763
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fb4d6d761c0c15f686e0967dfcc3e8bea78a240c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |**view_type**|**tinyint**|ビューの種類。<br /><br /> **0**ビューではなくを = です。 すべてのベース オブジェクトを使用します。<br /><br /> **1** = パーマネント ビュー。<br /><br /> **2** = 一時ビュー。|  
 |**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
 |**説明**|**nvarchar (255)**|アーティクルの簡単な説明。|  
-|**pre_creation_command**|**tinyint**|サブスクリプション データベースにアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =**なし - サブスクライバーでテーブルが既に存在する場合のアクションが行わします。<br /><br /> **1** = drop - テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセット フィルターの WHERE 句に基づいて削除します。<br /><br /> **3** = 切り捨て-として同じ**2**は行ではなくページを削除します。 ただし、WHERE 句は使用しません。|  
+|**pre_creation_command**|**tinyint**|サブスクリプション データベースにアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =** なし - サブスクライバーでテーブルが既に存在する場合のアクションが行わします。<br /><br /> **1** = drop - テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセット フィルターの WHERE 句に基づいて削除します。<br /><br /> **3** = 切り捨て-として同じ**2**は行ではなくページを削除します。 ただし、WHERE 句は使用しません。|  
 |**pubid**|**uniqueidentifier**|現在のアーティクルが属するパブリケーションの ID。|  
 |**nickname**|**int**|アーティクル識別用のニックネーム マップ。|  
 |**column_tracking**|**int**|アーティクルに対して列追跡が実装されているかどうかを示します。|  
@@ -83,7 +82,7 @@ ms.lasthandoff: 04/16/2018
 |**verify_resolver_signature**|**int**|マージ レプリケーションで競合回避モジュールを使用する前に、デジタル署名を確認するかどうかを示します。<br /><br /> **0** = 署名がないことを確認します。<br /><br /> **1** = 署名が信頼できる発行元であるかどうかを表示することを確認します。|  
 |**allow_interactive_resolver**|**bit**|アーティクルに対する対話型の競合回避モジュールの使用が有効かどうかを示します。 **1**アーティクルにインタラクティブ競合回避モジュールを使用するを指定します。|  
 |**fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0**列ごとに個別の更新の変更の問題を = です。<br /><br /> **1** = 1 つのステートメントで複数の列を更新する UPDATE ステートメントを発行します。|  
-|**check_permissions**|**int**|マージ エージェントがパブリッシャーに変更を適用するときに確認されるテーブルレベル権限のビットマップ。 *check_permissions*これらの値のいずれかを持つことができます。<br /><br /> **0x00 =**権限はチェックされません。<br /><br /> **0x10 =**したサブスクライバー側で Insert をアップロードする前に、パブリッシャー側で権限をチェックします。<br /><br /> **0x20 =**サブスクライバーで行われた更新プログラムをアップロードする前に、パブリッシャー側で権限をチェックします。<br /><br /> **0x40 =**したサブスクライバー側で Delete をアップロードする前に、パブリッシャー側で権限をチェックします。|  
+|**check_permissions**|**int**|マージ エージェントがパブリッシャーに変更を適用するときに確認されるテーブルレベル権限のビットマップ。 *check_permissions*これらの値のいずれかを持つことができます。<br /><br /> **0x00 =** 権限はチェックされません。<br /><br /> **0x10 =** したサブスクライバー側で Insert をアップロードする前に、パブリッシャー側で権限をチェックします。<br /><br /> **0x20 =** サブスクライバーで行われた更新プログラムをアップロードする前に、パブリッシャー側で権限をチェックします。<br /><br /> **0x40 =** したサブスクライバー側で Delete をアップロードする前に、パブリッシャー側で権限をチェックします。|  
 |**maxversion_at_cleanup**|**int**|メタデータがクリーンアップされる最上位世代。|  
 |**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**はアーティクルが順序付けられた、非と最高の最低値からの順序でアーティクルが処理のことで示されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、「[マージ アーティクルの処理順序の指定](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)」を参照してください。|  
 |**upload_options**|**tinyint**|クライアント サブスクリプションを使用したサブスクライバー側での更新に対する制限を定義します。次のいずれかの値になります。<br /><br /> **0** = クライアント サブスクリプションを使用したサブスクライバー側で更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = クライアント サブスクリプションを使用したサブスクライバー側で変更が許可されますが、パブリッシャーにアップロードされません。<br /><br /> **2** = クライアント サブスクリプションを使用したサブスクライバーでの変更は許可されません。<br /><br /> 詳細については、次を参照してください。 [Download-Only アーティクルを使用したマージ レプリケーション パフォーマンスの最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)します。|  

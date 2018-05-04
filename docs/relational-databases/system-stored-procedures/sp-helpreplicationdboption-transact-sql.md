@@ -24,12 +24,11 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 050eb8a82a7c4e9b3204af812072ea83fec7ecea
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 037f6f4ac2f5fef59eb8250c2acbb361ebe53761
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="arguments"></a>引数  
  [ **@dbname=**] **'***dbname***'**  
- データベースの名前です。 *dbname*は**sysname**、既定値は **%**です。 場合**%**、その結果セットには、パブリッシャーのすべてのデータベースが含まれています、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
+ データベースの名前です。 *dbname*は**sysname**、既定値は **%** です。 場合**%**、その結果セットには、パブリッシャーのすべてのデータベースが含まれています、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 ユーザーに適切な権限がないデータベースについての情報は返されません。詳細については以下を参照してください。  
   
  [  **@type=**] **'***型***'**  
  結果セットを含まれているデータベースのみに制限、指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  

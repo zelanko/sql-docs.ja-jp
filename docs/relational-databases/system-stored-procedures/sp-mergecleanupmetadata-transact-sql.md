@@ -24,12 +24,11 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21740d0105f07e4792fbaff90ebb73b4dda3d338
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションのメタデータをクリーンアップします。 パブリケーションを明示的に指定する場合は、これが既に存在している必要があります。  
   
  [  **@reinitialize_subscriber =** ] **'***サブスクライバー***'**  
- サブスクライバーを再初期化するかどうかを指定します。 *サブスクライバー*は**nvarchar (5)**を指定できます**TRUE**または**FALSE**、既定値は**TRUE**です。 場合**TRUE**サブスクリプションが再初期化のマークが付けします。 場合**FALSE**サブスクリプションが再初期化のマークされていません。  
+ サブスクライバーを再初期化するかどうかを指定します。 *サブスクライバー*は**nvarchar (5)** を指定できます**TRUE**または**FALSE**、既定値は**TRUE**です。 場合**TRUE**サブスクリプションが再初期化のマークが付けします。 場合**FALSE**サブスクリプションが再初期化のマークされていません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

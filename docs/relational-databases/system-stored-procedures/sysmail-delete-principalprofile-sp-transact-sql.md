@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a0ac22fd71b80aa973d3e114a76e1f1bd192fc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ccfc4bfd03b7a7fba693bfd9e6eb86494057a665
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>引数  
  [ **@principal_id** =] *principal_id*  
- データベース ユーザーまたはロールの id を指定します、 **msdb**データベースの関連付けを削除します。 *principal_id*は**int**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルをようにするには、プリンシパル ID を指定して**0**またはプリンシパル名**'public'**です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+ データベース ユーザーまたはロールの id を指定します、 **msdb**データベースの関連付けを削除します。 *principal_id*は**int**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルをようにするには、プリンシパル ID を指定して**0**またはプリンシパル名 **'public'** です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
  [ **@principal_name** =] **'***principal_name***'**  
- データベース ユーザーまたはロールの名前を指定します、 **msdb**データベースの関連付けを削除します。 *principal_name*は**sysname**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルをようにするには、プリンシパル ID を指定して**0**またはプリンシパル名**'public'**です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+ データベース ユーザーまたはロールの名前を指定します、 **msdb**データベースの関連付けを削除します。 *principal_name*は**sysname**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルをようにするには、プリンシパル ID を指定して**0**またはプリンシパル名 **'public'** です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
  [ **@profile_id** = ] *profile_id*  
  関連付けを削除するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
@@ -63,7 +62,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>解説  
- パブリック プロファイルをプライベート プロファイルにするには、するには指定**'public'**のプリンシパル名または**0**プリンシパルの id。  
+ パブリック プロファイルをプライベート プロファイルにするには、するには指定 **'public'** のプリンシパル名または**0**プリンシパルの id。  
   
  ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合は慎重に行ってください。 既定のプロファイルを使用できない場合、 **sp_send_dbmail**を引数としてプロファイルの名前が必要です。 これにより、既定のプロファイルを削除することがありますとへの呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)です。  
   

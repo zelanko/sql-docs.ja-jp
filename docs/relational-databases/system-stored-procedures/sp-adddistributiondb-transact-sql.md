@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributiondb (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -24,12 +24,11 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a91a41c1d0ca2df23f48bc6144fc185a9e9725f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad675b3330585ff791c72bf1c4faafd4502bf04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,9 @@ sp_adddistributiondb [ @database= ] 'database'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @createmode= ] createmode ]  
-    [ , [ @from_scripting = ] from_scripting ]  
+    [ , [ @from_scripting = ] from_scripting ] 
+    [ , [ @deletebatchsize_xact = ] deletebatchsize_xact ] 
+    [ , [ @deletebatchsize_cmd = ] deletebatchsize_cmd ] 
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -110,6 +111,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ 
+ [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
+ MSRepl_Transactions テーブルから期限切れになったトランザクションのクリーンアップ中に使用されるバッチ サイズを指定します。 *deletebatchsize_xact*は**int**、既定値は 5000 です。 このパラメーターは、SQL Server 2012 SP4 と SQL Server 2016 SP2 のリリース後に、SQL Server 2017 で初めて導入されました。  
+
+ [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
+ 有効期限が切れたからのコマンドの MSRepl_Commands テーブルのクリーンアップ中に使用されるバッチ サイズを指定します。 *deletebatchsize_cmd*は**int**2000年の既定値です。 このパラメーターは、SQL Server 2012 SP4 と SQL Server 2016 SP2 のリリース後に、SQL Server 2017 で初めて導入されました。 
+ 
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

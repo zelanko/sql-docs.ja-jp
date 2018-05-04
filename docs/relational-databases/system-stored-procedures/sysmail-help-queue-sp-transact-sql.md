@@ -24,12 +24,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ba3b42c0ac095d4f8c0ad8f4819cd341097aef4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c95bdba93f23bc3343a64cbf8f5ab63a2fbd209d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="arguments"></a>引数  
  [ **@queue_type** =] **'***queue_type***'**  
- 省略可能な引数として指定された型の電子メールを削除する、 *queue_type*です。 *queue_type*は**nvarchar (6)**既定値はありません。 有効なエントリは**メール**と**ステータス**です。  
+ 省略可能な引数として指定された型の電子メールを削除する、 *queue_type*です。 *queue_type*は**nvarchar (6)** 既定値はありません。 有効なエントリは**メール**と**ステータス**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

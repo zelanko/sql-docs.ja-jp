@@ -24,12 +24,11 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f9296b1ff21ee5412aa83f7a5edc2736793777f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引数  
  **'** *command_string* **'**  
- オペレーティング システムに渡すコマンドを含む文字列を指定します。 *command_string*は**varchar (8000)**または**nvarchar (4000)**、既定値はありません。 *command_string*二重引用符の 1 つ以上のセットを含めることはできません。 スペースをすべてのファイル パスに存在またはプログラムの名前で参照されている場合は、引用符の 1 つのペアが必要*command_string*です。 ファイル パスやファイル名に埋め込まれたスペースに関する問題が発生する場合は、その問題への対処方法として FAT 8.3 ファイル名の使用を検討してください。  
+ オペレーティング システムに渡すコマンドを含む文字列を指定します。 *command_string*は**varchar (8000)** または**nvarchar (4000)**、既定値はありません。 *command_string*二重引用符の 1 つ以上のセットを含めることはできません。 スペースをすべてのファイル パスに存在またはプログラムの名前で参照されている場合は、引用符の 1 つのペアが必要*command_string*です。 ファイル パスやファイル名に埋め込まれたスペースに関する問題が発生する場合は、その問題への対処方法として FAT 8.3 ファイル名の使用を検討してください。  
   
  **no_output**  
  クライアントに出力を返す必要がないことを指定します (省略可能)。  
@@ -63,7 +62,7 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- 行が返されます、 **nvarchar (255)**列です。 場合、 **no_output**オプションを使用すると、次のオプションのみが返されます。  
+ 行が返されます、 **nvarchar (255)** 列です。 場合、 **no_output**オプションを使用すると、次のオプションのみが返されます。  
   
 ```  
 The command(s) completed successfully.  
@@ -80,7 +79,7 @@ The command(s) completed successfully.
 >  場合**xp_cmdshell**バッチ内で実行され、エラーを返します、バッチは失敗します。 これは新しい動作です。 以前のバージョンの[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチは実行を続行します。  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell プロキシ アカウント  
- メンバーではないユーザーによって呼び出されたとき、 **sysadmin**固定サーバー ロール、 **xp_cmdshell**アカウント名と名前付き資格情報に格納されているパスワードを使用して Windows への接続**##xp_cmdshell_proxy_account ##**です。 このプロキシ資格情報が存在しない場合**xp_cmdshell**は失敗します。  
+ メンバーではないユーザーによって呼び出されたとき、 **sysadmin**固定サーバー ロール、 **xp_cmdshell**アカウント名と名前付き資格情報に格納されているパスワードを使用して Windows への接続 **##xp_cmdshell_proxy_account ##** です。 このプロキシ資格情報が存在しない場合**xp_cmdshell**は失敗します。  
   
  プロキシ アカウントの資格情報を実行して作成できる**sp_xp_cmdshell_proxy_account**です。 このストアド プロシージャは、Windows のユーザー名とパスワードを引数にとります。 次のコマンドが Windows ドメイン ユーザーの資格情報をプロキシを作成するなど、 `SHIPPING\KobeR` Windows パスワードを持つ`sdfh%dkc93vcMt0`します。  
   

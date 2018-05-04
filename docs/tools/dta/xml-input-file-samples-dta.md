@@ -2,7 +2,7 @@
 title: XML 入力ファイルのサンプル (DTA) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,22 +22,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4d9d8aaf26114afae1bcf35ab1ea0288e6893d1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 54ecf5b22dc5b7670031426fd6abcce8dd5f02ca
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-input-file-samples-dta"></a>XML 入力ファイルのサンプル (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]このセクションにはで使用できる XML 入力ファイル サンプルにはが含まれています、 **dta**コマンド ライン ツールです。 このツールは、データベース エンジン チューニング アドバイザーのユーザー インターフェイスの 1 つで、クエリのパフォーマンスを改善する目的でデータベースをチューニングするために使用できます。 データベース エンジン チューニング アドバイザーは、1 つまたは複数のデータベースに対するワークロードの影響を分析します。 ワークロードとは、チューニングしたいデータベースに対して実行される、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットのことです。 データベース エンジン チューニング アドバイザーは、ワークロードの影響を分析し終えると、そのデータベースに対するクエリのパフォーマンスを改善するための、インデックスの追加、インデックス付きビュー、またはパーティション分割ストラテジの推奨を作成します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このセクションでは、**dta** コマンド ライン ツールで使用できる XML 入力ファイルのサンプルを紹介します。 このツールは、データベース エンジン チューニング アドバイザーのユーザー インターフェイスの 1 つで、クエリのパフォーマンスを改善する目的でデータベースをチューニングするために使用できます。 データベース エンジン チューニング アドバイザーは、1 つまたは複数のデータベースに対するワークロードの影響を分析します。 ワークロードとは、チューニングしたいデータベースに対して実行される、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットのことです。 データベース エンジン チューニング アドバイザーは、ワークロードの影響を分析し終えると、そのデータベースに対するクエリのパフォーマンスを改善するための、インデックスの追加、インデックス付きビュー、またはパーティション分割ストラテジの推奨を作成します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [単純な XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
+-   [XML 入力ファイルの簡単なサンプル &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md)  
   
--   [インライン ワークロード &#40; DTA &#41; XML 入力ファイルのサンプル](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
+-   [インライン ワークロードを使用した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)  
   
--   [ユーザー指定の構成 &#40; DTA &#41; XML 入力ファイルのサンプル](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
+-   [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)  

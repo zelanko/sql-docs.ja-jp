@@ -28,13 +28,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51026e420e509cfe4af315dfaee767c45f04bcbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f27298a3d92df9092d6b18cf5a9c11112bccd37e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -97,7 +96,7 @@ sys.dm_fts_index_keywords_by_document
   
  フルテキスト キー列が整数データ型 (推奨されるデータ型) の場合、document_id はベース テーブルのフルテキスト キー値に直接マップされます。  
   
- 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この例では、によって返された結果をこのビューを結合する必要が dm_fts_index_keywords_by_document から返されるベース テーブルの行を識別するため[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)です。 結合の前に、このストアド プロシージャの出力を一時テーブルに格納します。 その後、dm_fts_index_keywords_by_document の document_id 列と、このストアド プロシージャから返される DocId 列を結合します。 なお、**タイムスタンプ**列は、によって自動生成されるために、挿入時にの値を受け取ることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 したがって、**タイムスタンプ**に列を変換する必要があります**varbinary (8)**列です。 次の例はこれらの手順を示しています。 この例では*table_id* 、テーブルの id を指定します*database_name* 、データベースの名前を指定し、 *table_name*テーブルの名前を指定します。  
+ 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この例では、によって返された結果をこのビューを結合する必要が dm_fts_index_keywords_by_document から返されるベース テーブルの行を識別するため[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)です。 結合の前に、このストアド プロシージャの出力を一時テーブルに格納します。 その後、dm_fts_index_keywords_by_document の document_id 列と、このストアド プロシージャから返される DocId 列を結合します。 なお、**タイムスタンプ**列は、によって自動生成されるために、挿入時にの値を受け取ることはできません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 したがって、**タイムスタンプ**に列を変換する必要があります**varbinary (8)** 列です。 次の例はこれらの手順を示しています。 この例では*table_id* 、テーブルの id を指定します*database_name* 、データベースの名前を指定し、 *table_name*テーブルの名前を指定します。  
   
 ```  
 USE database_name;  

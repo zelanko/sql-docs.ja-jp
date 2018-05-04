@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d61d5b674c5adb36c75e7af44edb0955ae0bbba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  アーティクルの状態を指定します。 *ステータス*は**nvarchar (10)**、既定値は**unsynced**です。 場合**active**テーブルをパブリッシュする初期処理スクリプトを実行します。 場合**unsynced**、次回、スナップショット エージェントの実行時にテーブルをパブリッシュする初期処理スクリプトが実行されます。  
   
  [  **@pre_creation_cmd=** ] **'***pre_creation_cmd***'**  
- スナップショットの適用時、サブスクライバーにテーブルが存在した場合にシステムが実行する処理を指定します。 *pre_creation_cmd*は**nvarchar (10)**値は次のいずれかを指定できます。  
+ スナップショットの適用時、サブスクライバーにテーブルが存在した場合にシステムが実行する処理を指定します。 *pre_creation_cmd*は**nvarchar (10)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -166,12 +165,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x20000000**|変換の大きなオブジェクトのデータ型 (**nvarchar (max)**、 **varchar (max)**、および**varbinary (max)**) で導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]でサポートされているデータ型[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |**0x40000000**|権限をレプリケートします。|  
 |**0x80000000**|パブリケーションの一部ではない任意のオブジェクトに対する依存関係の削除を試行します。|  
-|**0x100000000**|このオプションを使用して指定されている場合に、FILESTREAM 属性をレプリケート**varbinary (max)**列です。 テーブルをレプリケートしている場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバーです。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。 関連するオプションを参照してください**0x800000000**です。|  
+|**0x100000000**|このオプションを使用して指定されている場合に、FILESTREAM 属性をレプリケート**varbinary (max)** 列です。 テーブルをレプリケートしている場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバーです。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。 関連するオプションを参照してください**0x800000000**です。|  
 |**0x200000000**|日付と時刻のデータ型に変換 (**日付**、**時間**、 **datetimeoffset**、および**datetime2**) で導入された[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]データ以前のバージョンでサポートされている種類[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。|  
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 |**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイル グループに格納されます。 レプリケーションではファイル グループは作成されないので、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイル グループを作成しておく必要があります。 スナップショットを適用する前に、オブジェクトを作成する方法の詳細については、次を参照してください。[前にスクリプトを実行し、後のスナップショットが適用される](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)です。<br /><br /> 関連するオプションを参照してください**0x100000000**です。|  
-|**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) に変換**varbinary (max)**を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。|  
-|**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)**ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)です。|  
+|**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) に変換**varbinary (max)** を実行しているサブスクライバーに UDT 型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。|  
+|**0x2000000000**|変換、 **hierarchyid**のデータ型**varbinary (max)** ように型の列**hierarchyid**実行しているサブスクライバーにレプリケートできる[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]です。 使用する方法の詳細についての**hierarchyid**レプリケートされたテーブル内の列を参照してください[hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)です。|  
 |**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、次を参照してください。 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)です。|  
 |**0x8000000000**|変換、 **geography**と**geometry**データ型を**varbinary (max)** を実行しているサブスクライバーにこれらの型の列をレプリケートできるように[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|型の列にインデックスをレプリケート**geography**と**geometry**です。|  
@@ -182,7 +181,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  *Schema_option*パラメーターでは、初期スナップショットのレプリケーション オプションだけに影響します。 最初のスキーマをスナップショット エージェントによって生成され、サブスクライバーで適用すると、サブスクライバーにパブリケーションのスキーマ変更のレプリケーションがスキーマ変更レプリケーション ルールに基づいてで発生して、 *replicate_ddl*指定されたパラメーター設定[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)です。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
  [  **@subset_filterclause=** ] **'***subset_filterclause***'**  
- テーブル アーティクルの行フィルター選択を指定する、WHERE という語が含まれていない WHERE 句を指定します。 *subset_filterclause*の**nvarchar (1000)**の既定値は空の文字列。  
+ テーブル アーティクルの行フィルター選択を指定する、WHERE という語が含まれていない WHERE 句を指定します。 *subset_filterclause*の**nvarchar (1000)** の既定値は空の文字列。  
   
 > [!IMPORTANT]  
 >  パラメーター化された行フィルター句では列名に関数を適用しないことをお勧めします。これは、 `LEFT([MyColumn]) = SUSER_SNAME()`のように指定すると、パフォーマンスに問題が生じるためです。 使用する場合[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)フィルター句と HOST_NAME 値よりも優先的に適用する場合を使用してデータ型を変換する必要があります[変換](../../t-sql/functions/cast-and-convert-transact-sql.md)です。 この場合のベスト プラクティスに関する詳細については、セクションの「HOST_NAME() 値のオーバーライド」を参照してください[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)です。  
@@ -200,7 +199,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  所有者が "dbo" ではない場合、サブスクリプション データベースのオブジェクトの所有者を指定します。 *destination_owner*は**sysname**、既定値は NULL です。 NULL を指定した場合は、'dbo' が所有者であるものと見なされます。  
   
  [  **@vertical_partition=** ] **'***column_filter***'**  
- テーブル アーティクル上の列フィルター選択を有効または無効にします。 *vertical_partition*は**nvarchar (5)**既定値は FALSE。  
+ テーブル アーティクル上の列フィルター選択を有効または無効にします。 *vertical_partition*は**nvarchar (5)** 既定値は FALSE。  
   
  **false**垂直方向のフィルタ リングがないことを示します、すべての列をパブリッシュします。  
   
@@ -241,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  インタラクティブ競合回避モジュールでサポートされていない[!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバーです。  
   
  [  **@fast_multicol_updateproc=** ] **'***@fast_multicol_updateproc***'**  
- このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。  
+ このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
  [  **@check_permissions=** ] *check_permissions*  
  マージ エージェントがパブリッシャーに変更を適用するときに確認されるテーブルレベル権限のビットマップです。 マージ処理が使用するパブリッシャーのログインまたはユーザー アカウントが正しいテーブル権限を持っていない場合、無効な変更は競合としてログに記録されます。 *check_permissions*は**int**、可能であり、 [|(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)値は次の 1 つ以上の製品です。  
@@ -321,7 +320,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  値、別のパブリケーションでアーティクルのソース テーブルが既にパブリッシュされている場合*subscriber_upload_options*の両方のアーティクルで同じである必要があります。  
   
  [  **@identityrangemanagementoption=** ] *identityrangemanagementoption*  
- アーティクルに対する ID 範囲の管理がどのように処理されるかを指定します。 *identityrangemanagementoption*は**nvarchar (10)**値は次のいずれかを指定できます。  
+ アーティクルに対する ID 範囲の管理がどのように処理されるかを指定します。 *identityrangemanagementoption*は**nvarchar (10)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  

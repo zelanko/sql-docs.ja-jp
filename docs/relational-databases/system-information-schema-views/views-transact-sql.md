@@ -25,13 +25,12 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a66a77296c7bbef81bc2f319ae0c4750e25e010b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bf49802b5b37ab17b9ec4a91b345d0dc7e75ddd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,12 +41,12 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|ビュー修飾子です。|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|ビューを含むスキーマの名前です。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
-|**TABLE_NAME**|**nvarchar(**128**)**|ビュー名です。|  
-|**VIEW_DEFINITION**|**nvarchar (**4000**)**|定義の長さがより大きい場合**nvarchar (**4000**)**、この列は NULL です。 それ以外の場合は、ビュー定義のテキストです。|  
-|**CHECK_OPTION**|**varchar (**7**)**|WITH CHECK OPTION のタイプです。 元のビューが WITH CHECK OPTION を使用して作成されている場合、CASCADE です。 それ以外の場合は、NONE が返されます。|  
-|**IS_UPDATABLE**|**varchar (**2**)**|ビューが更新可能かどうかを指定します。 常に NO を返します。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|ビュー修飾子です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|ビューを含むスキーマの名前です。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|ビュー名です。|  
+|**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|定義の長さがより大きい場合**nvarchar (** 4000 **)**、この列は NULL です。 それ以外の場合は、ビュー定義のテキストです。|  
+|**CHECK_OPTION**|**varchar (** 7 **)**|WITH CHECK OPTION のタイプです。 元のビューが WITH CHECK OPTION を使用して作成されている場合、CASCADE です。 それ以外の場合は、NONE が返されます。|  
+|**IS_UPDATABLE**|**varchar (** 2 **)**|ビューが更新可能かどうかを指定します。 常に NO を返します。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81e174922753ed4a40111caba8aa34efd359e866
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7aec930d639bd5f1e2549ef5d49fd76963667b0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
@@ -108,7 +107,7 @@ RECONFIGURE
   
  一部のオプションは、RECONFIGURE ステートメントにより動的に更新されます。その他のオプションを使用する場合は、サーバーの停止と再起動が必要になります。 たとえば、**最小サーバー メモリ**と**サーバー メモリの最大**サーバー メモリ オプションが動的に更新される、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 したがって、サーバーを再起動しなくても変更することができます。 実行中の値をそれに対し、再構成、**の fill factor**オプションは、再起動する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]です。  
   
- 構成オプションで RECONFIGURE を実行後に実行することによって、オプションが動的に更新されたかどうかを確認できます**sp_configure'***option_name***'**です。 内の値、 **run_value**と**config_value**列が動的に更新されるオプションの一致する必要があります。 調べることで、動的のオプションを参照してください。 確認することも、 **is_dynamic**の列、 **sys.configurations**カタログ ビューです。  
+ 構成オプションで RECONFIGURE を実行後に実行することによって、オプションが動的に更新されたかどうかを確認できます**sp_configure'***option_name***'** です。 内の値、 **run_value**と**config_value**列が動的に更新されるオプションの一致する必要があります。 調べることで、動的のオプションを参照してください。 確認することも、 **is_dynamic**の列、 **sys.configurations**カタログ ビューです。  
   
 > [!NOTE]  
 >  指定した場合*値*が大きすぎる、オプションの**run_value**という事実を反映する列を[!INCLUDE[ssDE](../../includes/ssde-md.md)]無効な設定を使用するのではなく、動的メモリは、既定値がします。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2241eaf4693bf7bdb1fe5d7fbbf809047090dfbc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 16 ビット アプリケーションを使用
 > [!IMPORTANT]  
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 >  16 ビット アプリケーションは、32 ビット ドライバーを使用して相互運用、いつでも、32 ビット ドライバー マネージャーは「2.0」ODBC のバージョンとして、ドライバーでサポートを常に返します。  
   
 ## <a name="administration"></a>管理  
- 32 ビット ドライバーのデータ ソースを管理するには、ODBC データ ソース アドミニストレーターを使用します。 Microsoft® Windows® 2000 を実行するコンピューター上の ODBC アドミニストレーターを開くには、Windows コントロール パネルを開きをダブルクリックして**管理ツール**、順にダブルクリック**データ ソース (ODBC)**です。 Microsoft Windows の以前のバージョンを実行するコンピューターで、アイコンの名前は**32 ビット ODBC**または単に**ODBC**です。  
+ 32 ビット ドライバーのデータ ソースを管理するには、ODBC データ ソース アドミニストレーターを使用します。 Microsoft® Windows® 2000 を実行するコンピューター上の ODBC アドミニストレーターを開くには、Windows コントロール パネルを開きをダブルクリックして**管理ツール**、順にダブルクリック**データ ソース (ODBC)** です。 Microsoft Windows の以前のバージョンを実行するコンピューターで、アイコンの名前は**32 ビット ODBC**または単に**ODBC**です。  
   
  次の図は、16 ビット アプリケーションが 32 ビット ドライバーのセットアップ DLL を呼び出す方法を示します。 16 ビット インストーラー DLL と 32 ビット ドライバーのセットアップ DLL は、32 ビット インストーラー DLL の呼び出しに 16 ビットのインストーラー DLL の呼び出しを変換する汎用サンク DLL です。  
   

@@ -26,12 +26,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c1a69ce5647abb9b0b75dce96f755db0dbf6721
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_execute_external_script
  有効な値は `Python` または `R` です。 
   
  @script = N'*スクリプト*'  
- 外部の言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)**です。  
+ 外部の言語のスクリプト リテラルまたは変数の入力として指定します。 *スクリプト*は**nvarchar (max)** です。  
   
  [ @input_data_1_name = N'*input_data_1_name*']  
  によって定義されたクエリを表すために使用する変数の名前を指定@input_data_1です。 外部のスクリプトで変数のデータ型は、言語に依存します。 R が発生した場合は、入力変数は、データ フレームです。 Python の場合は、入力が表形式でなければなりません。 *input_data_1_name*は**sysname**です。  
@@ -69,7 +68,7 @@ sp_execute_external_script
  既定値は`InputDataSet`します。  
   
  [ @input_data_1 = N'*input_data_1*']  
- 形式で外部のスクリプトで使用される入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)**です。
+ 形式で外部のスクリプトで使用される入力データを指定します、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。 データ型*input_data_1*は**nvarchar (max)** です。
   
  [ @output_data_1_name =  N'*output_data_1_name*' ]  
  返されるデータを含む外部スクリプトで変数の名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャの呼び出しの完了時にします。 外部のスクリプトで変数のデータ型は、言語に依存します。 R、出力は、データ フレームをする必要があります。 Python、出力はパンダ データ フレームをする必要があります。 *output_data_1_name*は**sysname**です。  

@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90a71416548b92480826c61979f98a3948527b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0b385ddfdb140f38614e4082b45ada8a8140e4f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpserver [ [ @server = ] 'server' ]
  レポート対象のサーバーを指定します。 ときに*サーバー*が指定されていないすべてのサーバーに関するレポート**master.sys.servers**です。 *サーバー*は**sysname**、既定値は NULL です。  
   
  [  **@optname =** ] **'***オプション***'**  
- サーバーを説明するオプションを指定します。 *オプション*は**varchar (**35**)**、既定値は NULL、これらの値のいずれかを指定する必要があります。  
+ サーバーを説明するオプションを指定します。 *オプション*は**varchar (** 35 **)**、既定値は NULL、これらの値のいずれかを指定する必要があります。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -69,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**リモート照合順序を使用します。**|ローカル サーバーの照合順序ではなく、リモート列の照合順序を使用します。|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- 指定したサーバーと他のサーバーとの関係を指定します。 *show_topology*は**varchar (**1**)**、既定値は NULL です。 場合*show_topology*は等しくありません**t**が NULL の場合、または**sp_helpserver**結果セット セクションに示されている列を返します。 場合*show_topology*と等しい**t**、結果セットに示されている列だけでなく**sp_helpserver**も返します**topx**と**topy**情報。  
+ 指定したサーバーと他のサーバーとの関係を指定します。 *show_topology*は**varchar (** 1 **)**、既定値は NULL です。 場合*show_topology*は等しくありません**t**が NULL の場合、または**sp_helpserver**結果セット セクションに示されている列を返します。 場合*show_topology*と等しい**t**、結果セットに示されている列だけでなく**sp_helpserver**も返します**topx**と**topy**情報。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)。  
@@ -80,8 +79,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|サーバー名。|  
 |**network_name**|**sysname**|サーバーのネットワーク名|  
-|**ステータス**|**varchar (**70**)**|サーバーの状態|  
-|**id**|**char (**4**)**|サーバーの識別番号|  
+|**ステータス**|**varchar (** 70 **)**|サーバーの状態|  
+|**id**|**char (** 4 **)**|サーバーの識別番号|  
 |**collation_name**|**sysname**|サーバーの照合順序です。|  
 |**connect_timeout**|**int**|リンク サーバーへの接続のタイムアウト値|  
 |**query_timeout**|**int**|リンク サーバーに対するクエリのタイムアウト値|  

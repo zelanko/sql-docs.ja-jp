@@ -27,12 +27,11 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61992375ba1ad997c177d1a6e9a0f0779c9aefa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 306c70e6170487092ece8391167c92e4cd5515fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> 引数  
  parameter_name  
- パラメーターの名前です。 parameter_name は**nvarchar (128)**です。 この関数の引数として NULL または空の文字列が指定されると、構成されたすべての Smart Admin パラメーターの名前と値のペアが返されます。  
+ パラメーターの名前です。 parameter_name は**nvarchar (128)** です。 この関数の引数として NULL または空の文字列が指定されると、構成されたすべての Smart Admin パラメーターの名前と値のペアが返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbd64e21c5a992507be3aa430e05b828e34b6f62
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 224631e19059547b7ae4a99ddc0e849009913e63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  子アーティクルがで指定された親アーティクルです*記事*で指定された結合句を使用して結合する必要があります*join_filterclause*を満たす子アーティクル内の行を判別するために、マージ フィルターのフィルター条件です。 *join_articlename*は**sysname**、既定値はありません。 指定されたパブリケーションでアーティクルがある必要があります*パブリケーション*です。  
   
  [  **@join_filterclause=** ] *join_filterclause*  
- 指定された子アーティクルを結合に使用する必要がある join 句は、*記事*とで指定された親アーティクル*join_article*、マージ フィルターの条件を満たす行を判断するためです。 *join_filterclause*は**nvarchar (1000)**です。  
+ 指定された子アーティクルを結合に使用する必要がある join 句は、*記事*とで指定された親アーティクル*join_article*、マージ フィルターの条件を満たす行を判断するためです。 *join_filterclause*は**nvarchar (1000)** です。  
   
  [  **@join_unique_key=** ] *join_unique_key*  
  場合の指定子アーティクル間の結合*記事*と親アーティクル*join_article*は一対多、一対一、多対一または多対多です。 *join_unique_key*は**int**、既定値は 0 です。 **0**多対一または多対多の結合を示します。 **1**一対一または一対多の結合を示します。 この値は**1**結合列に一意のキーで構成される場合*join_article*、または*join_filterclause*間の外部キーは*記事*との主キー *join_article*です。  

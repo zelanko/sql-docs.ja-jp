@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27d719a9ab41bfa7594231462ea5c6318d95247d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 b: ODBC 状態遷移のテーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことができる場合は決定します。 環境、接続、ステートメント、および記述子の状態は次の図に示すようにほぼと重複します。 たとえば、接続の正確な重複の状態の C5 と C6、S1 S12 からはデータ ソースに依存する、さまざまなデータ ソースに異なる時刻でトランザクションを開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ステートメントの状態記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態に依存しないです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、後の「します。  
@@ -58,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **NS** : 次の状態。 ステートメントの移行は、ステートメントが非同期状態を完了していない場合と同じです。 たとえば、結果セットを作成するステートメントの状態に S11 状態 S1 からため**SQLExecDirect** SQL_STILL_EXECUTING が返されます。 状態 S11 NS 表記では、ステートメントの遷移と同じ状態 S1 内のステートメントの結果セットを作成することを意味します。 場合**SQLExecDirect**エラーを返します、ステートメントは状態 S1 のまま以外の場合は成功した場合、ステートメントに移動 S5 を記述する以外の場合はデータを必要とする場合、ステートメント S8; の状態をし移動がまだ実行中の場合 S11 の状態のままにします。  
   
--   ***XXXXX***または**(*XXXXX*)** — 移行テーブルに関連付けられている、SQLSTATESQLSTATEs ドライバー マネージャーによって検出されたは、かっこで囲まれます。 関数から SQL_ERROR と指定の SQLSTATE 返されましたが、状態は変更されません。 たとえば場合、 **SQLExecute**前に呼び出されます**SQLPrepare**、SQLSTATE HY010 が返されます (関数のシーケンス エラーです)。  
+-   ***XXXXX***または **(*XXXXX*)** — 移行テーブルに関連付けられている、SQLSTATESQLSTATEs ドライバー マネージャーによって検出されたは、かっこで囲まれます。 関数から SQL_ERROR と指定の SQLSTATE 返されましたが、状態は変更されません。 たとえば場合、 **SQLExecute**前に呼び出されます**SQLPrepare**、SQLSTATE HY010 が返されます (関数のシーケンス エラーです)。  
   
 > [!NOTE]  
 >  テーブルでは、状態を変更しない移行テーブルに関係のないエラーは表示されません。 たとえば、 **SQLAllocHandle** E1 環境の状態で呼び出され、SQLSTATE HY001 を返します (メモリ割り当てエラー) は、環境の状態のまま E1 ですこれは、用の環境移行テーブルに表示されません**。SQLAllocHandle**です。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC numeric functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], numeric functions
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91c5e11ea258dc70b6d527259bf938119317861e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 42d494823cf1792bbec78ff3de1d70d4f8f75046
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数値関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 数値関数同じ関数の場合、Visual FoxPro 文法は、ODBC 構文によって異なります、同等の Visual FoxPro が一覧表示されます。  
@@ -42,23 +41,23 @@ ms.lasthandoff: 04/16/2018
 |CEILING *(numeric_exp)*||  
 |COS *(float_exp)*||  
 |COT *(float_exp)*||  
-|度*(numeric_exp)*|RTOD *(numeric_exp)*|  
+|度 *(numeric_exp)*|RTOD *(numeric_exp)*|  
 |EXP *(float_exp)*||  
 |FLOOR *(numeric_exp)*||  
-|ログ*(float_exp)*||  
+|ログ *(float_exp)*||  
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1、integer_exp2)*||  
 |PI *)*||  
-|ラジアン*(numeric_exp)*|DTOR *(numeric_exp)*|  
+|ラジアン *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |ROUND *(numeric_exp、integer_exp)*||  
-|サインオン*(numeric_exp)*||  
+|サインオン *(numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
  次のような数値関数はサポートされていません。  
   
- 電源*(numeric_exp、integer_exp)*  
+ 電源 *(numeric_exp、integer_exp)*  
   
  TRUNCATE *(numeric_exp、integer_exp)*

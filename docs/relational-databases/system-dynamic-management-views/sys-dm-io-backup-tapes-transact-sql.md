@@ -26,12 +26,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3ac436bf8cecfd0f1c255e769dcfcd9b7420cc84
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 196096f7093a01eda291106cf60f5b563e1e2539
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|バックアップを実行できる実際の物理デバイスの名前。 NULL 値は許可されません。|  
 |**logical_device_name**|**nvarchar (256)**|ドライブのユーザーが指定した名前 (から**sys.backup_devices**)。 ユーザーが指定した名前がない場合は NULL になります。 NULL 値が許可されます。|  
-|**ステータス**|**int**|テープの状態。<br /><br /> 1 = 空き、使用可<br /><br /> 2 = マウント保留<br /><br /> 3 = 使用中<br /><br /> 4 = 読み込み中<br /><br /> **注:**テープの読み込み中に (**状態 = 4**)、メディア ラベルがまだ閲覧していません。 など、メディア ラベル値をコピーする列**media_sequence_number**、予想値を表示する、テープ上の実際の値と異なる場合があります。 ラベルが読み取られた後**ステータス**に変更**3** (使用中)、メディア ラベル列が読み込まれている実際のテープを反映し、します。<br /><br /> NULL 値は許可されません。|  
+|**ステータス**|**int**|テープの状態。<br /><br /> 1 = 空き、使用可<br /><br /> 2 = マウント保留<br /><br /> 3 = 使用中<br /><br /> 4 = 読み込み中<br /><br /> **注:** テープの読み込み中に (**状態 = 4**)、メディア ラベルがまだ閲覧していません。 など、メディア ラベル値をコピーする列**media_sequence_number**、予想値を表示する、テープ上の実際の値と異なる場合があります。 ラベルが読み取られた後**ステータス**に変更**3** (使用中)、メディア ラベル列が読み込まれている実際のテープを反映し、します。<br /><br /> NULL 値は許可されません。|  
 |**status_desc**|**nvarchar(520)**|テープの状態の説明。<br /><br /> AVAILABLE <br /><br /> MOUNT PENDING <br /><br /> IN USE <br /><br /> LOADING MEDIA <br /><br /> NULL 値は許可されません。|  
 |**mount_request_time**|**datetime**|マウントが要求された時間。 保留中マウントがない場合は NULL (**ステータス! = 2**)。 NULL 値が許可されます。|  
 |**mount_expiration_time**|**datetime**|マウント要求が期限切れ (タイムアウト) となる時間。 保留中マウントがない場合は NULL (**ステータス! = 2**)。 NULL 値が許可されます。|  

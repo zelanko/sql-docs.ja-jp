@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], dynamic
 - dynamic tracing [ODBC]
@@ -20,16 +20,15 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ca4985388ef607becef285b8883f8ab24fbad78
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6746566d09d2862275daf508d08e20e2fca8473
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-tracing"></a>動的トレース
 トレースを有効になっているまたは実行するアプリケーションのどの時点でも無効になっていることができます。 これにより、関数呼び出しの任意の数を追跡するアプリケーション。  
   
  変数**ODBCSharedTraceFlag**が動的にトレースを有効に設定します。 この変数は、実行中のすべてのコピー、ドライバー マネージャーの間で共有されます。 任意のアプリケーションでは、この変数を設定、現在実行されているすべての ODBC アプリケーションのトレースが有効です。 アプリケーションを呼び出す動的トレースが有効な場合は、トレースを有効にする**SQLSetConnectAttr** SQL_TRACE_OFF SQL_ATTR_TRACE に設定します。 この呼び出しは、そのアプリケーションのみに対してオフ トレースを有効にします。 Odbc32.lib とリンクされているアプリケーションは、この変数の使用を変更できます。 トレース データは、ODBC のセッション後に開く必要のあるトレース ファイルではなく、リアルタイムのウィンドウで表示できます。 コントロールでトレースをオンまたはオフは有効にするアプリケーションの画面に追加することができます。  
   
- ODBC 3 に DLL が付属してトレース*.x*はスレッド セーフではありません。 グローバル トレースが有効になっている場合にログ ファイルが正常に書き込まことは保証されません (変数**ODBCSharedTraceFlag**設定されている) 複数のアプリケーションが同時に、トレース ファイルに書き込みます。 このような状況では、エラーは返されません。
+ ODBC 3 に DLL が付属してトレース *.x*はスレッド セーフではありません。 グローバル トレースが有効になっている場合にログ ファイルが正常に書き込まことは保証されません (変数**ODBCSharedTraceFlag**設定されている) 複数のアプリケーションが同時に、トレース ファイルに書き込みます。 このような状況では、エラーは返されません。

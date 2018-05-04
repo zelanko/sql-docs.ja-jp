@@ -1,15 +1,16 @@
 ---
-title: "トレースと Windows パフォーマンス ログ データの関連付け |Microsoft ドキュメント"
-ms.custom: 
+title: トレースと Windows パフォーマンス ログ データの関連付け | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - correlating trace with log data
@@ -18,27 +19,28 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fc0474e0f3c823b2ca3fa16979e16ff5123f321
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: abb31814c1fec1740e585d75a21b2693c9820670
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>トレースと Windows パフォーマンス ログ データの関連付け
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、Microsoft Windows パフォーマンス ログを開き、トレースと相関させる対象カウンターを選択およびトレースと共に選択したパフォーマンス カウンターを表示することができます、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]グラフィカル ユーザー インターフェイス。 トレース ウィンドウでイベントを選択すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の [システム モニター] データ ウィンドウ画面の赤い縦棒で、選択したトレース イベントに関連付けられているパフォーマンス ログ データが示されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、Microsoft Windows パフォーマンス ログを開き、トレースと関連付けるカウンターを選択し、選択したパフォーマンス カウンターをトレースと共に [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに表示できます。 トレース ウィンドウでイベントを選択すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の [システム モニター] データ ウィンドウ画面の赤い縦棒で、選択したトレース イベントに関連付けられているパフォーマンス ログ データが示されます。  
   
- トレースをパフォーマンス カウンターに関連付けるには、 **StartTime** および **EndTime** data columns, および then click **で** [ファイル] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[パフォーマンス データのインポート]** をクリックします。 パフォーマンス ログを開き、トレースに関連付けるシステム モニター オブジェクトおよびカウンターを選択します。  
+ トレースをパフォーマンス カウンターに関連付けるには、 **StartTime** および **EndTime** data columns, および then click **で** [ファイル] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu. パフォーマンス ログを開き、トレースに関連付けるシステム モニター オブジェクトおよびカウンターを選択します。  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>トレースとパフォーマンス ログ データとを相互に関連付けるには  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で、保存されているトレース ファイルまたはトレース テーブルを開きます。 イベント データを収集している実行中のトレースを相互に関連付けることはできません。 システム モニター データとの相関関係の精度を保証するには、 **[StartTime]** データ列と **[EndTime]** データ列の両方がトレースに含まれている必要があります。  
   
-2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[ファイル]** メニューで、 **[パフォーマンス データのインポート]**をクリックします。  
+2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[ファイル]** メニューで、 **[パフォーマンス データのインポート]** をクリックします。  
   
 3.  **[開く]** ダイアログ ボックスで、パフォーマンス ログが含まれているファイルを選択します。 パフォーマンス ログ データは、トレース データがキャプチャされたのと同じ期間にキャプチャされている必要があります。  
   
@@ -50,19 +52,19 @@ ms.lasthandoff: 01/17/2018
   
 ### <a name="to-create-performance-logs-that-can-be-shared-among-different-versions-of-windows"></a>異なるバージョンの Windows 間で共有できるパフォーマンス ログを作成するには  
   
-1.  コントロール パネルで **[管理ツール]**を開き、 **[パフォーマンス]**をダブルクリックします。  
+1.  コントロール パネルで **[管理ツール]** を開き、 **[パフォーマンス]** をダブルクリックします。  
   
-2.  **[パフォーマンス]** ダイアログ ボックスで、 **[パフォーマンス ログと警告]**を展開して、 **[カウンター ログ]**を右クリックし、 **[新しいログの設定]**をクリックします。  
+2.  **[パフォーマンス]** ダイアログ ボックスで、 **[パフォーマンス ログと警告]** を展開して、 **[カウンター ログ]** を右クリックし、 **[新しいログの設定]** をクリックします。  
   
-3.  カウンター ログの名前を入力し、 **[OK]**をクリックします。  
+3.  カウンター ログの名前を入力し、 **[OK]** をクリックします。  
   
-4.  **[全般]** タブで **[カウンターの追加]**をクリックします。  
+4.  **[全般]** タブで **[カウンターの追加]** をクリックします。  
   
 5.  **[パフォーマンス オブジェクト]** ボックスで、監視するパフォーマンス オブジェクトを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス オブジェクトの名前は 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で始まり、名前付きインスタンスの場合は MSSQL$*instanceName*で始まります。  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス、プロセッサ時間やディスク時間などのその他の重要な値から必要なカウンターを追加します。  
   
-7.  カウンターの追加を終了したら、 **[閉じる]**をクリックします。  
+7.  カウンターの追加を終了したら、 **[閉じる]** をクリックします。  
   
 8.  **[データのサンプル間隔]** の間隔の値を設定します。 5 分程度のサンプリング間隔から始めて、必要に応じて間隔を調整します。  
   

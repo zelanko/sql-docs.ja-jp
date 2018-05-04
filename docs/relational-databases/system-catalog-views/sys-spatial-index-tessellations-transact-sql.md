@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e8f9146bd2b164dee4e45f71e11104efc78f9d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cb3c73d1baf770004cb56cebaa6034ed5091090c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspatialindextessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |object_id|**int**|インデックスが定義されているオブジェクトの ID です。 各 (object_id、index_id) のペアが、対応するエントリ[sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)です。|  
 |index_id|**int**|インデックス列が定義されている空間インデックスの ID です。|  
 |tessellation_scheme|**sysname**|いずれかのテセレーション スキームの名前: geometry_grid である、GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float(53)**|境界の左下隅の X 座標がボックスのいずれかの: NULL = 特定のテセレーション スキーム (GEOGRAPHY_GRID など) の適用不可*n* = tessellation_scheme が geometry_grid であると、x 座標の最小値の場合。                     **注:**境界ボックスのパラメーターで定義された座標の解釈によると、各オブジェクトの[空間参照識別子 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)です。|  
+|bounding_box_xmin|**float(53)**|境界の左下隅の X 座標がボックスのいずれかの: NULL = 特定のテセレーション スキーム (GEOGRAPHY_GRID など) の適用不可*n* = tessellation_scheme が geometry_grid であると、x 座標の最小値の場合。                     **注:** 境界ボックスのパラメーターで定義された座標の解釈によると、各オブジェクトの[空間参照識別子 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)です。|  
 |bounding_box_ymin|**float(53)**|境界の左下隅の Y 座標がボックスのいずれかの: NULL = 特定のテセレーション スキーム (GEOGRAPHY_GRID など) の適用不可*n* = tessellation_scheme が geometry_grid であると、y 座標の最小値の場合|  
 |bounding_box_xmax|**float(53)**|境界の右上隅の X 座標がボックスのいずれかの: NULL = 特定のテセレーション スキーム (GEOGRAPHY_GRID など) の適用不可*n* = tessellation_scheme が geometry_grid である x 座標の最大値の場合|  
 |bounding_box_ymax|**float(53)**|境界の右上隅の Y 座標がボックスのいずれかの: NULL = 特定のテセレーション スキーム (GEOGRAPHY_GRID など) の適用不可*n* = tessellation_scheme が geometry_grid であると y 座標の最大値の場合|  

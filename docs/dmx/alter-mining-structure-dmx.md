@@ -27,17 +27,16 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b269d7e574e27de90ff4854cde1233312d444dd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**を次のように新しいマイニング モデル構造を作成するステートメントが既に存在する必要があります。 ステートメントを使用する場合にこれに対し、[マイニング モデルの作成 &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
+  既存のマイニング構造に基づいて新しいマイニング モデルを作成します。  使用すると、 **ALTER MINING STRUCTURE**を次のように新しいマイニング モデル構造を作成するステートメントが既に存在する必要があります。 ステートメントを使用する場合にこれに対し、 [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)、モデルを作成し、その基になるマイニング構造を同時に自動的に生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -82,7 +81,7 @@ USING <algorithm> [(<parameter list>)]
  *フィルター条件*  
  ケース テーブルの列に適用されるフィルター式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  マイニング構造に複合キーが含まれる場合、マイニング モデルは、構造に定義されているすべてのキー列を含む必要があります。  
   
  モデルが予測可能列、たとえばを使用して作成されたモデルが必要としない場合、[!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リングと[!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター アルゴリズムをする必要はありません、ステートメントに列の定義を含めます。 結果モデルのすべての属性は入力として処理されます。  
@@ -122,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
  入れ子になったテーブル列の定義の後にフィルター条件式を配置することで、入れ子になったテーブルに適用されるフィルター式を定義できます。  
   
 ### <a name="modeling-flags"></a>ModelingFlags  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]マイニング モデル列で使用するためには、次のモデリング フラグをサポートします。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] マイニング モデル列で使用するためには、次のモデリング フラグをサポートします。  
   
 > [!NOTE]  
 >  NOT_NULL モデリング フラグは、マイニング構造列に適用されます。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
@@ -130,10 +129,10 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |項目|定義|  
-|**REGRESSOR**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
+|**リグレッサー**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
- 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)です。  
+ 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)です。  
   
 ### <a name="prediction-clause"></a>予測句  
  予測句では、予測列の使用方法を説明します。 次の表は、使用可能な句を示しています。  
@@ -148,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
   
  フィルター条件式は、簡略化された DMX 述語で、WHERE 句に似ています。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、AND、OR、および NOT という一般的な論理演算子を使用して組み合わせることができます。  
   
- マイニング モデルを使用するフィルターの詳細については、次を参照してください。[フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ マイニング モデルを使用するフィルターの詳細については、次を参照してください。[マイニング モデル フィルターの&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)です。  
   
 > [!NOTE]  
 >  フィルター内の列は、マイニング構造列である必要があります。 モデル列または別名の列に対してフィルターを作成することはできません。  
@@ -156,7 +155,7 @@ USING <algorithm> [(<parameter list>)]
  DMX の演算子と構文の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)です。  
   
 ## <a name="parameter-definition-list"></a>パラメーター定義リスト  
- アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)です。  
   
  パラメーター リストの構文は次のとおりです。  
   
@@ -220,8 +219,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

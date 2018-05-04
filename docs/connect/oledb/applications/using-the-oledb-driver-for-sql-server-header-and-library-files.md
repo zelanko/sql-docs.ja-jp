@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>SQL Server のヘッダーとライブラリ ファイルの OLE DB ドライバーを使用します。
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  カスタム アプリケーションにデータ アクセス機能を SQL Server の OLE DB ドライバーを追加する、OLE DB Driver for SQL Server ヘッダー ファイル (msoledbsql.h) を使用できます。 ヘッダー ファイルの SQL Server の OLE DB Driver には、すべての定義、属性、プロパティが含まれておりで導入された新機能を活用するために必要なインターフェイス[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。  
   
- だけでなく、OLE DB Driver for SQL Server のヘッダー ファイル、また、msoledbsql.lib ライブラリ ファイルには、エクスポート ライブラリでの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一括コピー プログラム (BCP) 機能です。  
+ だけでなく、OLE DB Driver for SQL Server のヘッダー ファイル、また、msoledbsql.lib ライブラリ ファイルには、エクスポート ライブラリでの[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)機能します。  
   
  ヘッダー ファイルの SQL Server の OLE DB Driver は、Microsoft Data Access Components (MDAC) とを使用する sqloledb.h ヘッダー ファイルとの下位互換性ですがありません Clsid SQLOLEDB の (、OLE DB provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] MDAC 付属) のシンボルまたは(これはサポートされていません、OLE DB Driver for SQL Server) の XML 機能します。    
   

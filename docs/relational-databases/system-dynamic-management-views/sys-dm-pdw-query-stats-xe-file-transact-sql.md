@@ -19,18 +19,17 @@ caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca6921b4c1592c44248fd4ba61d36a30ff0238ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 090332d413b592d80461e8ff3b3ea55795f39b79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmpdwquerystatsxefile-transact-sql"></a>sys.dm_pdw_query_stats_xe_file (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  この DMV は推奨されておらず、将来のリリースでは削除されます。 このリリースでは、0 行を返します。  
+  この DMV は非推奨とされており、将来のリリースでは削除されます。 このリリースでは、0 行を返します。  
   
 |列名|データ型|Description|範囲|  
 |-----------------|---------------|-----------------|-----------|  

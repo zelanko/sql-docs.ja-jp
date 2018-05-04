@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
 - CLI [ODBC], using CLI
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b019e7757f907656b2d1180af9488f9a4e8595f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5df7ff90e8b290f6fb55f1c62b59eee10d83cd8e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-level-interfaces"></a>呼び出しレベルのインターフェイス
 最終的な手法、DBMS に SQL ステートメントを送信するは、呼び出しレベル インターフェイス (CLI) を使用します。 呼び出しレベルのインターフェイスは、アプリケーション プログラムによって呼び出すことができる DBMS 関数のライブラリを提供します。 したがって、他のプログラミング言語で SQL を合成するのではなく呼び出しレベルのインターフェイスがに似ていますが、日常的なライブラリのほとんどのプログラマは、文字列、I/O、または C. 注 embedded SQL をサポートするその Dbms での数値演算ライブラリなど、使用することに慣れて呼び出しレベルのインターフェイスを呼び出し先がプリによって生成されたが既にあります。 ただし、これらの呼び出しには、記載されていないと予告なく変更へのサブジェクトがします。  

@@ -24,13 +24,12 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddfd5a7dd04bcacb2544b6fb38a2cd1bedd6e284
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ sp_columns [ @table_name = ] object
  指定した名前のオブジェクトを現在のユーザーが所有している場合は、そのオブジェクトの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したオブジェクトを所有していないと*オブジェクト*、 **sp_columns**は、指定したオブジェクトを検索*オブジェクト*データベース所有者が所有します。 存在する場合は、そのオブジェクトの列が返されます。  
   
  [ **@table_qualifier****=**] *qualifier*  
- オブジェクト識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分は、オブジェクトの名前付けをサポート (*修飾子***.***所有者***.***名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 製品によっては、オブジェクトのデータベース環境のサーバー名を表す場合があります。  
+ オブジェクト識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分は、オブジェクトの名前付けをサポート (*修飾子 ***.*** 所有者 ***.*** 名前*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベースの名前を表します。 製品によっては、オブジェクトのデータベース環境のサーバー名を表す場合があります。  
   
  [ **@column_name=**] *column*  
  1 つの列には、1 つだけカタログ情報の列が必要な場合に使用されます。 *列*は**nvarchar (384)**、既定値は NULL です。 場合*列*が指定されていないすべての列が返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、*列*に記載されている列の名前を表す、 **syscolumns**テーブル。 ワイルドカードによるパターン照合がサポートされています。 相互運用可能性を最大にするため、ゲートウェイのクライアントは、SQL-92 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定してください。  

@@ -24,13 +24,12 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ba0a2d4ccfe5250e75b113acd3b407fc4b50c9b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0f10122f44768dd19f08f17ca9b2a12136be754f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="arguments"></a>引数  
  [ **@resample** =] **'resample'**  
- 指定する**sp_updatestats**の RESAMPLE オプションを使用、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントです。 場合**'resample'**が指定されていない**sp_updatestats**既定のサンプリングを使用して統計を更新します。 **resample**は**varchar (8)**で、既定値は no です。  
+ 指定する**sp_updatestats**の RESAMPLE オプションを使用、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントです。 場合 **'resample'** が指定されていない**sp_updatestats**既定のサンプリングを使用して統計を更新します。 **resample**は**varchar (8)** で、既定値は no です。  
   
 ## <a name="remarks"></a>解説  
  **sp_updatestats**データベース内のすべてのユーザー定義および内部テーブルに、ALL キーワードを指定することによって、統計を更新を実行します。 sp_updatestats は、その進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことをレポートします。  

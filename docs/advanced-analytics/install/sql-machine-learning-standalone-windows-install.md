@@ -7,18 +7,18 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ec764a5cb5a6ce011d47f7f185cc05c906fe41d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>Windows Server (スタンドアロン) を学習の SQL Server 2017 マシンをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server セットアップには、機械学習の SQL Server の外部で実行しているサーバーをインストールするオプションが含まれています。 このオプションは、高パフォーマンス マシン計算コンテキストをリモートで使用できるソリューションを学習、ローカル サーバーとリモート マシン ラーニング サーバーまたは別の SQL Server 上の Spark クラスター上の同じ意味で切り替えを開発する必要がある場合に役立ちます。インスタンス。
   
-SQL Server セットアップを使用して、スタンドアロン バージョンをインストールする方法について説明**SQL Server 2017 Machine Learning サーバー**です。 Enterprise Edition またはソフトウェア アシュアランスがある場合、機械学習のスタンドアロン サーバーをインストールするは無料です。
+SQL Server セットアップを使用して、スタンドアロン バージョンをインストールする方法について説明**SQL Server 2017 Machine Learning サーバー**です。 
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 

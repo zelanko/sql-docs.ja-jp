@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea6da80de3845f87d3e8bef7757e13bb71c8b737
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c127d8cf7e27872d946a350c3e5d53e900145805
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ xp_sqlmaint 'switch_string'
  [なし] : エラーが返されます、 **sqlmaint**ユーティリティが失敗します。  
   
 ## <a name="remarks"></a>解説  
- SQL Server 認証でログオンするユーザーによってこのプロシージャが呼び出される場合、 **-u"***login_id***"**と**-p"***パスワード***"**スイッチ前に付加されます*switch_string*実行前にします。 Windows 認証では、ユーザーがログオンしている場合*switch_string*を変更せずに渡される**sqlmaint**です。  
+ SQL Server 認証でログオンするユーザーによってこのプロシージャが呼び出される場合、 **-u"***login_id***"** と **-p"***パスワード***"** スイッチ前に付加されます*switch_string*実行前にします。 Windows 認証では、ユーザーがログオンしている場合*switch_string*を変更せずに渡される**sqlmaint**です。  
   
 ## <a name="permissions"></a>権限  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  

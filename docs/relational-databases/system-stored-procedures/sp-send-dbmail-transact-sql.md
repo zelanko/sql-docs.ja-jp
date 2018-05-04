@@ -25,12 +25,11 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba13be54b517541ee0e14ac291d871aa8654561f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,22 +73,22 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  メッセージの送信元プロファイルの名前を指定します。 *Profile_name*の種類は**sysname**、既定値は NULL です。 *Profile_name*既存のデータベース メール プロファイルの名前を指定する必要があります。 ない場合*profile_name*が指定されている**sp_send_dbmail**現在のユーザーの既定のプライベート プロファイルを使用します。 ユーザーが既定のプライベート プロファイルを持たない場合**sp_send_dbmail**の既定のパブリック プロファイルを使用して、 **msdb**データベース。 ユーザーには、既定のプライベート プロファイルはありませんし、データベースの既定のパブリック プロファイルがない場合**@profile_name**指定する必要があります。  
   
  [  **@recipients=** ] **'***受信者***'**  
- メッセージの送信先の電子メール アドレスを、セミコロン区切りのリストで指定します。 受信者リストのデータ型**varchar (max)**です。 このパラメーターは省略可能で、少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
+ メッセージの送信先の電子メール アドレスを、セミコロン区切りのリストで指定します。 受信者リストのデータ型**varchar (max)** です。 このパラメーターは省略可能で、少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
   
  [ **@copy_recipients=** ] **'***copy_recipients***'**  
- メッセージのカーボン コピーを送信する電子メール アドレスを、セミコロン区切りのリストで指定します。 コピーの受信者リストのデータ型**varchar (max)**です。 このパラメーターは省略可能で、少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
+ メッセージのカーボン コピーを送信する電子メール アドレスを、セミコロン区切りのリストで指定します。 コピーの受信者リストのデータ型**varchar (max)** です。 このパラメーターは省略可能で、少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
   
  [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- メッセージのブラインド カーボン コピーを送信する電子メール アドレスを、セミコロン区切りのリストで指定します。 ブラインド コピーの受信者リストのデータ型**varchar (max)**です。 このパラメーターは省略可能で、少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
+ メッセージのブラインド カーボン コピーを送信する電子メール アドレスを、セミコロン区切りのリストで指定します。 ブラインド コピーの受信者リストのデータ型**varchar (max)** です。 このパラメーターは省略可能で、少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
   
  [ **@from_address=** ] **'***from_address***'**  
- 電子メール メッセージの差出人アドレスの値を指定します。 これは、メール プロファイルの設定を上書きするためのオプションのパラメーターです。 このパラメーターの型は**varchar (max)**です。 上書きが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しなかった場合の既定値は NULL です。  
+ 電子メール メッセージの差出人アドレスの値を指定します。 これは、メール プロファイルの設定を上書きするためのオプションのパラメーターです。 このパラメーターの型は**varchar (max)** です。 上書きが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しなかった場合の既定値は NULL です。  
   
  [ **@reply_to=** ] **'***reply_to***'**  
- 電子メール メッセージの返信先アドレスの値を指定します。 有効な値として電子メール アドレスが 1 つだけ許可されます。 これは、メール プロファイルの設定を上書きするためのオプションのパラメーターです。 このパラメーターの型は**varchar (max)**です。 上書きが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しなかった場合の既定値は NULL です。  
+ 電子メール メッセージの返信先アドレスの値を指定します。 有効な値として電子メール アドレスが 1 つだけ許可されます。 これは、メール プロファイルの設定を上書きするためのオプションのパラメーターです。 このパラメーターの型は**varchar (max)** です。 上書きが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しなかった場合の既定値は NULL です。  
   
  [  **@subject=** ] **'***サブジェクト***'**  
- 電子メール メッセージの件名を指定します。 サブジェクトがの型は**nvarchar (255)**です。 件名を指定しない場合、既定の件名 'SQL Server メッセージ' が使用されます。  
+ 電子メール メッセージの件名を指定します。 サブジェクトがの型は**nvarchar (255)** です。 件名を指定しない場合、既定の件名 'SQL Server メッセージ' が使用されます。  
   
  [ **@body=** ] **'***body***'**  
  電子メール メッセージの本文を指定します。 型のメッセージの本文は、 **nvarchar (max)**、既定値は NULL です。  
@@ -104,7 +103,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  既定値は TEXT です。  
   
  [  **@importance=** ] **'***重要度***'**  
- メッセージの重要度を指定します。 型のパラメーターが**varchar (6)**です。 次のいずれかの値を指定できます。  
+ メッセージの重要度を指定します。 型のパラメーターが**varchar (6)** です。 次のいずれかの値を指定できます。  
   
 -   Low  
   
@@ -115,7 +114,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  既定値は Normal です。  
   
  [  **@sensitivity=** ] **'***感度***'**  
- メッセージの秘密度を指定します。 型のパラメーターが**varchar (12)**です。 次のいずれかの値を指定できます。  
+ メッセージの秘密度を指定します。 型のパラメーターが**varchar (12)** です。 次のいずれかの値を指定できます。  
   
 -   標準  
   
@@ -128,7 +127,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  既定値は Normal です。  
   
  [  **@file_attachments=** ] **'***@file_attachments***'**  
- メール メッセージに添付するファイル名を、セミコロン区切りのリストで指定します。 リスト内のファイルは、絶対パスで指定する必要があります。 添付ファイル リストのデータ型**nvarchar (max)**です。 既定では、データベース メールの添付ファイルは 1 ファイルにつき 1 MB に制限されます。  
+ メール メッセージに添付するファイル名を、セミコロン区切りのリストで指定します。 リスト内のファイルは、絶対パスで指定する必要があります。 添付ファイル リストのデータ型**nvarchar (max)** です。 既定では、データベース メールの添付ファイルは 1 ファイルにつき 1 MB に制限されます。  
   
  [  **@query=** ] **'***クエリ***'**  
  実行するクエリを指定します。 クエリの結果をファイルとして添付するか、メッセージの本文に含めるかを指定します。 クエリの種類のデータ**nvarchar (max)**、任意の有効なを含めることができると[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントです。 別のセッション、スクリプトの呼び出しのためのローカル変数に、クエリが実行されたことに注意してください**sp_send_dbmail**はクエリを使用できません。  
@@ -151,7 +150,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  クエリの結果の書式設定に使用する行の幅を、バイト単位で指定します。 *Query_result_width*の種類は**int**、既定値は 256 です。 値は 10 ～ 32767 の間の数値で指定してください。 このパラメーターは、のみ適用場合**@query**を指定します。  
   
  [  **@query_result_separator=** ] **'***@query_result_separator***'**  
- クエリの出力で列の区切りに使用する文字を指定します。 型の区切り記号は**char (1)**です。 既定値は、' ' (空白文字) です。  
+ クエリの出力で列の区切りに使用する文字を指定します。 型の区切り記号は**char (1)** です。 既定値は、' ' (空白文字) です。  
   
  [ **@exclude_query_output=** ] *exclude_query_output*  
  電子メール メッセージ内にクエリ実行の出力を返すかどうかを指定します。 **exclude_query_output**は bit で、既定値は 0 です。 このパラメーターが 0 の場合の実行の場合、 **sp_send_dbmail**ストアド プロシージャは、コンソールで、クエリの実行の結果として返されたメッセージを出力します。 このパラメーターが 1 での実行の場合、 **sp_send_dbmail**ストアド プロシージャが印刷されないクエリの実行のメッセージのいずれかのコンソールにします。  

@@ -24,12 +24,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4562fd7fdc9d034a0170ccb444f3b0cf05e8f87c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_create_removable
  システム カタログ テーブルを格納するファイルの論理名を指定します。 *syslogical*は**sysname**です。  
   
  [  **@sysphysical=** ] **'***sysphysical***'**  
- 物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)**です。  
+ 物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)** です。  
   
  [ **@syssize=** ] *syssize*  
  システム カタログ テーブルを格納するファイルのサイズ (MB) を指定します。 *syssize*は**int**です。最小*syssize*は 1 です。  
@@ -78,7 +77,7 @@ sp_create_removable
  トランザクション ログを格納するファイルの論理名を指定します。 *loglogical*は**sysname**です。  
   
  [  **@logphysical=** ] **'***logphysical***'**  
- 物理名です。 トランザクション ログを格納するファイルの名前をフル パスと共に指定します。 *logphysical*は**nvarchar (260)**です。  
+ 物理名です。 トランザクション ログを格納するファイルの名前をフル パスと共に指定します。 *logphysical*は**nvarchar (260)** です。  
   
  [ **@logsize=** ] *logsize*  
  トランザクション ログを格納するファイルのサイズ (MB) を指定します。 *logsize*は**int**です。最小*logsize*は 1 です。  
@@ -89,7 +88,7 @@ sp_create_removable
  データ ファイルの数は 1 ～ 16 です。 データベースが大きくなり複数のディスクに分散する必要が生じた場合に備えて、通常、複数のデータ ファイルを作成します。  
   
  [  **@dataphysical1=** ] **'***dataphysical***'**  
- 物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)**です。  
+ 物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)** です。  
   
  [  **@datasize1=** ] **'***datasize***'**  
  データ テーブルを格納するファイルのサイズ (MB) を指定します。 *datasize*は**int**です。最小*datasize*は 1 です。  

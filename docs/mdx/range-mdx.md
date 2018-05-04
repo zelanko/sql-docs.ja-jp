@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e9ca2a16a74ce772ce7737c6c30581522d6d30f1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cba26f6b69ca22a1ab39fa753749d6a8b1a150df
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-range-mdx"></a>: (範囲) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ Member_Expression : Member_Expression
  指定されているメンバーと、指定されているメンバーの間にあるすべてのメンバーを含むセットです。  
   
 ## <a name="remarks"></a>解説  
- 両方のパラメーターに、ディメンションの同じレベルと同じ階層にあるメンバーを指定する必要があります。 両方のパラメーターが、同じメンバーを指定した場合、 **: (範囲)**演算子が指定されたメンバーのみを含むセットを返します。 最初のパラメーターが NULL の場合、2 番目のパラメーターで指定されたメンバーのレベルの、最初のメンバーからその指定されたメンバー (その指定されたメンバーを含む) までのすべてのメンバーがセットに含まれます。 2 番目のパラメーターが NULL の場合、最初のパラメーターで指定されたメンバーから同じレベルの最後のメンバー (最後のメンバーを含む) までのすべてのメンバーがセットに含まれます。  
+ 両方のパラメーターに、ディメンションの同じレベルと同じ階層にあるメンバーを指定する必要があります。 両方のパラメーターが、同じメンバーを指定した場合、 **: (範囲)** 演算子が指定されたメンバーのみを含むセットを返します。 最初のパラメーターが NULL の場合、2 番目のパラメーターで指定されたメンバーのレベルの、最初のメンバーからその指定されたメンバー (その指定されたメンバーを含む) までのすべてのメンバーがセットに含まれます。 2 番目のパラメーターが NULL の場合、最初のパラメーターで指定されたメンバーから同じレベルの最後のメンバー (最後のメンバーを含む) までのすべてのメンバーがセットに含まれます。  
   
  MDX にこのセット演算子と等価な関数はありません。  
   
@@ -77,6 +76,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

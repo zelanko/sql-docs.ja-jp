@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a936895822b842d2d08672c4c05bd8c1a416064c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bd4cad291b909a0ed2b86d56f2df489b6de8e6f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union---mdx-operator-reference"></a>共用体の MDX 演算子リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +48,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>戻り値  
  指定されている両方のセットのメンバーを含むセットです。  
   
-## <a name="remarks"></a>Remarks  
- **+ (Union)**演算子は機能的に等価、[共用体 &#40;です。MDX と #41 です。](../mdx/union-mdx.md)関数。  
+## <a name="remarks"></a>解説  
+ **+ (Union)** 演算子は機能的に等価、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)関数。  
   
 ## <a name="examples"></a>使用例  
  この演算子の使用例を以下に示します。  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

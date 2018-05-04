@@ -27,13 +27,12 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b0b69c68a213531d66162b42267cb0fac634de18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5d16205902435c3564bc7dc1617a75615e3f1bd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.lasthandoff: 04/18/2018
 |**接続**|**connection_failed**|9|**再構成**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> データベースが再構成中であったため接続に失敗しました。|  
 |**接続**|**connection_terminated**|0|**idle_connection_timeout**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 接続がシステム定義のしきい値よりも長い時間にわたってアイドル状態でした。|  
 |**接続**|**connection_terminated**|1|**再構成**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
-|**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >*です。 詳細については、次を参照してください。[エンジン調整](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)です。|  
+|**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >* です。 詳細については、次を参照してください。[エンジン調整](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)です。|  
 |**接続**|**throttling_long_transaction**|40549|**long_transaction**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
 |**接続**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  
 |**接続**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: は、Azure SQL データベース V11 にのみ適用されます。*<br /><br /> TEMPDB の使用領域が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、次を参照してください。[リソース制限](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)です。|  

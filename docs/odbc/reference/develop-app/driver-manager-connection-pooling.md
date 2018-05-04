@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールを使用するたびに再確立する必要がない接続プールからの接続を使用するアプリケーションを有効にします。 接続が作成され、プールに格納されて、アプリケーションは、完全な接続プロセスを実行しないで、その接続を再利用できます。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
   
  ドライバー マネージャーで渡される引数に基づいて、プール内の特定の接続を使用するかどうかを判断**SQLConnect**または**SQLDriverConnect**と、接続属性に従って接続が割り当てられた後に設定します。  
   
- ドライバー マネージャーは、接続をプールは、ときにかどうか、接続が機能する接続を渡す前に決定できるでなければなりません。 それ以外の場合、ドライバー マネージャーが保持でを配布アプリケーションへの接続を停止している一時的なネットワーク エラーが発生するたびにします。 ODBC 3 で新しい接続属性を定義した*.x*: SQL_ATTR_CONNECTION_DEAD です。 これは読み取り専用接続属性を SQL_CD_TRUE または SQL_CD_FALSE を返します。 SQL_CD_TRUE 値は、接続が失われたこと、SQL_CD_FALSE 値により、接続がアクティブであること、一方を意味します。 (ODBC の以前のバージョンに準拠したドライバーは、この属性をサポートできますも)。  
+ ドライバー マネージャーは、接続をプールは、ときにかどうか、接続が機能する接続を渡す前に決定できるでなければなりません。 それ以外の場合、ドライバー マネージャーが保持でを配布アプリケーションへの接続を停止している一時的なネットワーク エラーが発生するたびにします。 ODBC 3 で新しい接続属性を定義した *.x*: SQL_ATTR_CONNECTION_DEAD です。 これは読み取り専用接続属性を SQL_CD_TRUE または SQL_CD_FALSE を返します。 SQL_CD_TRUE 値は、接続が失われたこと、SQL_CD_FALSE 値により、接続がアクティブであること、一方を意味します。 (ODBC の以前のバージョンに準拠したドライバーは、この属性をサポートできますも)。  
   
  ドライバーでは、このオプションを効率的に実装する必要があります。 または接続プールのパフォーマンスを品質が低下します。 具体的には、この接続属性を取得する呼び出しでは、サーバーへのラウンド トリップが発生しません必要があります。 代わりに、ドライバーは、接続の最後の既知の状態を返すだけ必要があります。 サーバーへの最後のトリップが失敗した場合は停止していると、最後のトリップが成功した場合にいない配信不能の接続です。  
   

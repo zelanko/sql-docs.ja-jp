@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f386bd758a9b8c247197418448914904560cd1b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
 **準拠**  
@@ -64,10 +63,10 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データで、右側が切り捨てられました|文字列または列に対して返されるバイナリ データは、空白でない文字またはバイナリ データが NULL 以外の切り捨てが発生しました。 文字列値が、右側の切り捨てでした。|  
-|01S01|行のエラー|1 つまたは複数の行をフェッチ中にエラーが発生しました。<br /><br /> (ODBC 3 時に、この SQLSTATE が返される場合は*.x* ODBC 2 を利用するアプリケーション*.x*ドライバー、無視することができます)。|  
+|01S01|行のエラー|1 つまたは複数の行をフェッチ中にエラーが発生しました。<br /><br /> (ODBC 3 時に、この SQLSTATE が返される場合は *.x* ODBC 2 を利用するアプリケーション *.x*ドライバー、無視することができます)。|  
 |01S07|小数部の切り捨て|列に対して返されるデータが切り捨てられました。 数値データ型の数値の小数部が切り捨てられました。 時刻、タイムスタンプ、および時刻部分を含む interval データ型の場合は、時間の小数部が切り捨てられました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限付きのデータ型の属性違反|結果セット内の列のデータ値がで指定されたデータ型に変換できませんでした*TargetType*で**SQLBindCol**です。<br /><br /> SQL_C_BOOKMARK のデータ型にバインドされていた列 0 と SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されました。<br /><br /> SQL_C_VARBOOKMARK のデータ型にバインドされていた列 0 と SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されませんでした。|  
-|07009|無効な記述子のインデックス|ドライバーは ODBC 2*.x*ドライバーをサポートしない**SQLExtendedFetch**列のバインドで指定された列の数が 0 とします。<br /><br /> 列 0 がバインドされているし、SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されました。|  
+|07009|無効な記述子のインデックス|ドライバーは ODBC 2 *.x*ドライバーをサポートしない**SQLExtendedFetch**列のバインドで指定された列の数が 0 とします。<br /><br /> 列 0 がバインドされているし、SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメント属性が設定されました。|  
 |08S01|通信リンクが失敗しました|関数は完了しました処理する前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクが失敗しました。|  
 |22001|文字列データで、右側が切り捨てられました|列に対して返さ可変長のブックマークが切り捨てられました。|  
 |22002|インジケーター変数が必要ですが、指定されていません|NULL のデータがフェッチされました列にある*StrLen_or_IndPtr*によって設定**SQLBindCol** (またはによって設定 SQL_DESC_INDICATOR_PTR **SQLSetDescField**または**SQLSetDescRec**) が null ポインターでした。|  
@@ -97,7 +96,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>コメント  
  **SQLFetch**結果セットに次の行セットを返します。 結果セットが存在するときにのみ呼び出すことができます。 つまり、結果セットを作成する呼び出しの後に、カーソルの前に結果セット全体が閉じられます。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定されている場合**SQLFetch**もこの情報を返します。 呼び出す**SQLFetch**の呼び出しを混在させることができます**SQLFetchScroll**の呼び出しを混在させることはできませんが、 **SQLExtendedFetch**です。 詳細については、次を参照してください。[行のデータのフェッチ](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)です。  
   
- 場合、ODBC 3*.x*アプリケーションが ODBC 2*.x*ドライバー、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLExtendedFetch**用、ODBC 2*.x*をサポートするドライバー **SQLExtendedFetch**です。 場合、ODBC 2*.x*ドライバーがサポートしていません**SQLExtendedFetch**、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLFetch** ODBC 2*.x*ドライバーで、1 つの行のみをフェッチできます。  
+ 場合、ODBC 3 *.x*アプリケーションが ODBC 2 *.x*ドライバー、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLExtendedFetch**用、ODBC 2 *.x*をサポートするドライバー **SQLExtendedFetch**です。 場合、ODBC 2 *.x*ドライバーがサポートしていません**SQLExtendedFetch**、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLFetch** ODBC 2 *.x*ドライバーで、1 つの行のみをフェッチできます。  
   
  詳細については、次を参照してください。[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
   

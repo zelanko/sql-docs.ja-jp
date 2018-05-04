@@ -21,12 +21,11 @@ caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 38ab1d924ad4bb81b13fd013d837652c304bb8e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c12449103010f14ff9466a28543b0c59c979c88
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL を使用して構成管理の WMI プロバイダーにアクセスする
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +37,12 @@ ms.lasthandoff: 04/16/2018
   
 1.  **開始** メニューのをクリックして**実行**、し、入力**WBEMtest**です。  
   
-2.  WBEMtest.exe のダイアログ ボックスが表示されます。 **[接続]**をクリックします。  
+2.  WBEMtest.exe のダイアログ ボックスが表示されます。 **[接続]** をクリックします。  
   
-3.  最初のテキスト フィールドに、WMI Provider for Computer Management の名前空間 (「root\Microsoft\SqlServer\ComputerManagement11」) を入力します。 **[接続]**をクリックします。  
+3.  最初のテキスト フィールドに、WMI Provider for Computer Management の名前空間 (「root\Microsoft\SqlServer\ComputerManagement11」) を入力します。 **[接続]** をクリックします。  
   
-4.  をクリックして**クエリ**です。 ローカル コンピューターで実行されている現在のサービスを返すクエリを入力:**選択\*から SqlService です。** **[適用]**をクリックします。  
+4.  をクリックして**クエリ**です。 ローカル コンピューターで実行されている現在のサービスを返すクエリを入力:**選択\*から SqlService です。** **[適用]** をクリックします。  
   
-5.  さらに追加することでクエリを絞り込んで**場所 ServiceName"MSSQLSERVER"を =**です。  
+5.  さらに追加することでクエリを絞り込んで**場所 ServiceName"MSSQLSERVER"を =** です。  
   
   

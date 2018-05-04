@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7104db0241fe6d68137f5290f82e33f5dd3984ae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d65b9bd957485aa1309c82a7698a0b0b009cb65f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   既存のサブスクリプション データベースを任意のサブスクライバーにアタッチします。 このストアド プロシージャは、master データベース上の新しいサブスクライバー側で実行されます。  
   
 > [!IMPORTANT]  
->  この機能は廃止されており、今後のリリースでは削除されます。 この機能は、新しい開発作業では使用できません。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+>  この機能は非推奨とされており、今後のリリースでは削除されます。 この機能は、新しい開発作業では使用できません。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)」を参照してください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,13 +77,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  サブスクライバーへ接続して同期するときに使用するサブスクライバーのログイン名を指定します。 *subscriber_login*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの旧バージョンとの互換性を維持するために用意されているもので、使用はお勧めしません。 場合*subscriber_security_mode*は**1**と*subscriber_login*が指定すると、エラーが返されます。  
+>  このパラメーターは、スクリプトの旧バージョンとの互換性を維持するために用意されているもので、非推奨とされます。 場合*subscriber_security_mode*は**1**と*subscriber_login*が指定すると、エラーが返されます。  
   
  [  **@subscriber_password=** ] **'***subscriber_password***'**  
  サブスクライバーのパスワードです。 *subscriber_password*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの旧バージョンとの互換性を維持するために用意されているもので、使用はお勧めしません。 場合*subscriber_security_mode*は**1**と*subscriber_password*が指定すると、エラーが返されます。  
+>  このパラメーターは、スクリプトの旧バージョンとの互換性を維持するために用意されているもので、非推奨とされます。 場合*subscriber_security_mode*は**1**と*subscriber_password*が指定すると、エラーが返されます。  
   
  [  **@distributor_security_mode=** ] *distributor_security_mode*  
  ディストリビューターへ接続して同期するときに使用するセキュリティ モードを指定します。 *distributor_security_mode*は**int**、既定値は**0**します。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -120,7 +119,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [  **@db_master_key_password=** ] **'***db_master_key_password***'**  
- ユーザー定義データベースのマスター キーのパスワードを指定します。 *db_master_key_password*は**nvarchar (524)**既定値は NULL です。 場合*db_master_key_password*が指定されていない、既存のデータベース マスター _ キーを削除して再作成されます。  
+ ユーザー定義データベースのマスター キーのパスワードを指定します。 *db_master_key_password*は**nvarchar (524)** 既定値は NULL です。 場合*db_master_key_password*が指定されていない、既存のデータベース マスター _ キーを削除して再作成されます。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  

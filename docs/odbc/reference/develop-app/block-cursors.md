@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], block
 - block cursors [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdda088594fcad53b1d53093e2ef4a39adb5cf75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f63bbab9dd5b74c23f3f76b2c851e49a7094e9dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors"></a>ブロック カーソル
 多くのアプリケーションでは、かなりのネットワーク経由でデータを取り込む時間が短縮されます。 この時間の部分は実際には、ネットワーク経由でデータを取り込むに費やされたし、1 行のデータを要求する、ドライバーによって行われた呼び出しなどの一部がネットワーク オーバーヘッドで消費されします。 アプリケーションにより効率的に使用する場合、後者の時間を短縮できます。*ブロック、*または*fat、* *カーソル、*を一度に 1 つ以上の行を返すことができます。  

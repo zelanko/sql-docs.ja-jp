@@ -24,12 +24,11 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c9a1709d788ac12e927de909af3ea3a00574e90
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [ **@publication =** ] **'***publication***'**  
  表示するパブリケーションの名前を指定します。 *パブリケーション*は sysname で、既定値は**%**、すべてのパブリケーションに関する情報が返されます。  
   
- [  **@found =** ] **'***見つかった***'**出力  
+ [  **@found =** ] **'***見つかった***'** 出力  
  行を返すことを示すフラグです。 *見つかった*は**int**と、既定値は、出力パラメーター **23456**です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
  [ **@publisher** =] **'***パブリッシャー***'**  

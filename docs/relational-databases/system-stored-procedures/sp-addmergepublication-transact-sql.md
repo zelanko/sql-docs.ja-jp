@@ -24,12 +24,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 26eb846b1744fcf8616228ca1bf95b80c4e4d33c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 >  マージ パブリケーションの保有期間には、サブスクライバーの異なるタイム ゾーンに対応する 24 時間の猶予期間があります。 たとえば、保有期間を 1 日に設定した場合、実際の保有期間は 48 時間となります。  
   
  [  **@sync_mode =** ] **'***sync_mode***'**  
- サブスクライバーのパブリケーションに対する初期同期モードです。 *sync_mode*は**nvarchar (10)**値は次のいずれかを指定できます。  
+ サブスクライバーのパブリケーションに対する初期同期モードです。 *sync_mode*は**nvarchar (10)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -105,7 +104,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |**character**|すべてのテーブルのキャラクタモード BCP 出力を作成する。 サポートするために必要な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]と非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。|  
   
  [  **@allow_push =** ] **'***allow_push***'**  
- 特定のパブリケーションに対して、プッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)**TRUE の場合、既定値は、パブリケーションに対してプッシュ サブスクリプションを許可します。  
+ 特定のパブリケーションに対して、プッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)** TRUE の場合、既定値は、パブリケーションに対してプッシュ サブスクリプションを許可します。  
   
  [  **@allow_pull =** ] **'***allow_pull***'**  
  特定のパブリケーションに対して、プル サブスクリプションを作成できるかどうかを指定します。 *allow_pull*は**nvarchar (5)**、既定値は TRUE、パブリケーションに対してプル サブスクリプションを許可します。 サポートする場合は true を指定する必要があります[!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバーです。  
@@ -117,7 +116,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  パブリケーションをインターネット対応にするかどうかを指定し、サブスクライバーへのスナップショット ファイルの転送にファイル転送プロトコル (FTP) を使用できるかどうかを決定します。 *enabled_for_internet*は**nvarchar (5)**、既定値は FALSE。 場合**true**パブリケーションの同期ファイルは、C:\Program files \microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp ディレクトリに格納されます。 ユーザーは Ftp ディレクトリを作成する必要があります。 場合**false**パブリケーションはインターネット アクセスに対応できません。  
   
  [  **@centralized_conflicts =**] **'***centralized_conflicts***'**  
- このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 使用して*conflict_logging*競合レコードの保存先の場所を指定します。  
+ このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 使用して*conflict_logging*競合レコードの保存先の場所を指定します。  
   
  [  **@dynamic_filters =**] **'***dynamic_filters***'**  
  マージ パブリケーションでパラメーター化された行フィルターを使用できるようにします。 *dynamic_filters*は**nvarchar (5)**、既定値は FALSE。  
@@ -172,7 +171,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  事前計算済みパーティションを使用できない場合に、パーティションの変更の最適化を有効にするかどうかを指定します。 *keep_partition_changes*は**nvarchar (5)**、既定値は TRUE です。 **false**変更をパーティション分割することを意味が最適化されていないと、パーティションにデータが変更されたときに事前計算済みパーティションを使用しない場合のすべてのサブスクライバーに送信されるパーティションが検証されます。 **true**変更をパーティション分割することを意味は最適化され、変更されたパーティションの行を持つサブスクライバーだけが影響を受けます。 事前計算済みパーティションを使用する場合は、設定*use_partition_groups*に**true**設定と*keep_partition_changes*に**false**です。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
 > [!NOTE]  
->  値を指定する場合**true**の*keep_partition_changes*の値を指定して**1** 、スナップショット エージェント パラメーターの**-MaxNetworkOptimization**. このパラメーターの詳細については、次を参照してください。[レプリケーション スナップショット エージェント](../../relational-databases/replication/agents/replication-snapshot-agent.md)です。 エージェント パラメーターを指定する方法については、次を参照してください。[レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)です。  
+>  値を指定する場合**true**の*keep_partition_changes*の値を指定して**1** 、スナップショット エージェント パラメーターの **-MaxNetworkOptimization**. このパラメーターの詳細については、次を参照してください。[レプリケーション スナップショット エージェント](../../relational-databases/replication/agents/replication-snapshot-agent.md)です。 エージェント パラメーターを指定する方法については、次を参照してください。[レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)です。  
   
  [!INCLUDE[ssEW](../../includes/ssew-md.md)]サブスクライバー、 *keep_partition_changes*削除を正しく反映されていることを確認する場合は true に設定する必要があります。 false に設定すると、サブスクライバーに予想よりも多くの行が含まれる場合があります。  
   
@@ -189,7 +188,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 >  このパラメーターは指定しないで、代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフィルター選択条件を自動的に決定できるようにしてください。  
   
  [  **@add_to_active_directory =** ] **'***add_to_active_directory***'**  
- このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。  
+ このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。  
   
  [  **@max_concurrent_merge =** ] *maximum_concurrent_merge*  
  同時に実行できるマージ処理の最大数です。 *maximum_concurrent_merge*は**int**既定値は 0 です。 値**0**のこのプロパティは、特定の時点で実行されている同時実行マージ プロセスの数に制限がないことを意味します。 このプロパティでは、マージ パブリケーションに対して同時に実行できる同時マージ処理の数を制限します。 同時にスケジュールに組み込まれているマージ処理の数が、指定された実行可能な数より大きい場合、余分なジョブは待ち行列に挿入され、現在実行されているマージ処理が終わるまで待機状態に置かれます。  
@@ -243,7 +242,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 >  設定した結果、サブスクライバーで保持されるデータ*allow_partition_realignment*に**false**が読み取り専用であるかのように扱う必要があります。 ただし、これが強制されていません、レプリケーション システムによってです。  
   
  [  **@retention_period_unit =** ] **'***retention_period_unit***'**  
- 設定された保有期間の単位を指定*保有*です。 *retention_period_unit*は**nvarchar (10)**値は次のいずれかを指定できます。  
+ 設定された保有期間の単位を指定*保有*です。 *retention_period_unit*は**nvarchar (10)** 値は次のいずれかを指定できます。  
   
 |値|バージョン|  
 |-----------|-------------|  
@@ -262,7 +261,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   
  [  **@conflict_logging =** ] **'***conflict_logging***'**  
- 競合レコードの保存先を指定します。 *conflict_logging*は**nvarchar (15)**値は次のいずれかを指定できます。  
+ 競合レコードの保存先を指定します。 *conflict_logging*は**nvarchar (15)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  

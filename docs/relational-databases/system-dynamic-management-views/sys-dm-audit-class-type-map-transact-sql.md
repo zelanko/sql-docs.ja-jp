@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89b23ac70a1d698dccac9b12d4f578664c149e19
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6246bfebac2cba917d04a5d585083b1a78544816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|監査されたエンティティのクラス型。 監査ログに書き込まれ、によって返される class_type にマップ、 **get_audit_file()**関数。 NULL 値は許可されません。|  
+|**class_type**|**char(2)**|監査されたエンティティのクラス型。 監査ログに書き込まれ、によって返される class_type にマップ、 **get_audit_file()** 関数。 NULL 値は許可されません。|  
 |**class_type_desc**|**nvarchar(120)**|監査可能なエンティティの名前。 NULL 値は許可されません。|  
 |**securable_class_desc**|**nvarchar(120)**|監査対象の class_type にマップされる、セキュリティ保護可能なオブジェクト。 class_type がセキュリティ保護可能なオブジェクトにマップされない場合は NULL です。 sys.dm_audit_actions の class_desc に関連付けることができます。|  
   

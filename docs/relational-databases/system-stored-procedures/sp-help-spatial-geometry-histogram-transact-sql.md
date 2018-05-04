@@ -24,12 +24,11 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85790a21cc513a2cb46276dca3ab918bf2db2b1c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 092a1e6e25bb445b30644b028e82677200376c5c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  [  **@tabname =**] **'***tabname $***'**  
  空間インデックスが指定されているテーブルの修飾名または非修飾名です。  
   
- 引用符が必要なのは、修飾されたテーブルを指定する場合のみです。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *tabname $*は**sysname**、既定値はありません。  
+ 引用符が必要なのは、修飾されたテーブルを指定する場合のみです。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *tabname $* は**sysname**、既定値はありません。  
   
  [  **@colname =** ] **'***colname***'**  
  指定されている空間列の名前です。 *colname*は、 **sysname**、既定値はありません。  

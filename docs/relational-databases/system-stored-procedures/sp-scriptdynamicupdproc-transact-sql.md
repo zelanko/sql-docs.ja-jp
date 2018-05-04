@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b548223d520696f7c7a2b48f4010247666d41597
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5c40ea324f16fa299364659d0cb3090502bae243
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
  アーティクルの ID を指定します。 *artid*は**int**、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
- 1 つので構成される結果セットを返します**nvarchar (4000)**列です。 この結果セットは、カスタム ストアド プロシージャの作成に使用される完全な CREATE PROCEDURE ステートメントを構成します。  
+ 1 つので構成される結果セットを返します**nvarchar (4000)** 列です。 この結果セットは、カスタム ストアド プロシージャの作成に使用される完全な CREATE PROCEDURE ステートメントを構成します。  
   
 ## <a name="remarks"></a>解説  
  **sp_scriptdynamicupdproc**トランザクション レプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていなかった場合、列は元に戻され、通常は問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的な処理では変更された列だけが対象になり、最適な UPDATE 文字列が提供されます。 ただし、動的な UPDATE ステートメントが構築されると、実行時に追加の処理が発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  

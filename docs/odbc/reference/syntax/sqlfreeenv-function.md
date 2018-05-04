@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeEnv
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 802dfd5b5f95a615cca743299b264dd93afe4798
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2b7a037fee8f70704eb33c8eb4be5c1c5293270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 関数
 **準拠**  
  バージョンで導入された: ODBC 1.0 標準準拠: 非推奨  
   
  **概要**  
- ODBC 3*.x*、ODBC 2.0 関数**SQLFreeEnv**代わりました**SQLFreeHandle**です。 詳細については、次を参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)です。  
+ ODBC 3 *.x*、ODBC 2.0 関数**SQLFreeEnv**代わりました**SQLFreeHandle**です。 詳細については、次を参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)です。  
   
 > [!NOTE]  
->  詳細については、どのようなドライバー マネージャーは、この関数にする際にマップ ODBC 2*.x*アプリケーションは、ODBC 3 と連携して*.x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  詳細については、どのようなドライバー マネージャーは、この関数にする際にマップ ODBC 2 *.x*アプリケーションは、ODBC 3 と連携して *.x*ドライバーを参照してください[非推奨機能のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

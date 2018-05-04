@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 911d6dd9613803aff79187a22f4ebf6bc0b7a4cc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 040d5a0490457d9edd0ce9cc0e6674fcfc45e7b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  OPENXML の XPath 式の行および列で使用される名前空間宣言を指定します。 *xpath_namespaces*テキスト パラメーターです: **char**、 **nchar**、 **varchar**、 **nvarchar**、**テキスト**、 **ntext**または**xml**です。  
   
- 既定値は **\<root xmlns:mp ="urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}--microsoft-com:xml-metaprop">**です。 *xpath_namespaces*整形式 XML ドキュメントを使用して OPENXML の XPath 式で使用されるプレフィックスに対する名前空間 Uri を提供します。 *xpath_namespaces*名前空間を参照するために使用する必要がありますプレフィックスを宣言します**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}--microsoft-com:xml-metaprop**; これが解析された XML 要素に関するメタデータを提供します。 この方法を使用して、メタプロパティ名前空間に対する名前空間プレフィックスを再定義できますが、再定義してもこの名前空間が失われることはありません。 プレフィックス**mp**は現在も有効**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}--microsoft-com:xml-metaprop**場合でも*xpath_namespaces*このような宣言が含まれていません。  
+ 既定値は **\<root xmlns:mp ="urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}--microsoft-com:xml-metaprop">** です。 *xpath_namespaces*整形式 XML ドキュメントを使用して OPENXML の XPath 式で使用されるプレフィックスに対する名前空間 Uri を提供します。 *xpath_namespaces*名前空間を参照するために使用する必要がありますプレフィックスを宣言します**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}--microsoft-com:xml-metaprop**; これが解析された XML 要素に関するメタデータを提供します。 この方法を使用して、メタプロパティ名前空間に対する名前空間プレフィックスを再定義できますが、再定義してもこの名前空間が失われることはありません。 プレフィックス**mp**は現在も有効**urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}--microsoft-com:xml-metaprop**場合でも*xpath_namespaces*このような宣言が含まれていません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  

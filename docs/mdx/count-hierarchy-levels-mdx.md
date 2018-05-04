@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b68bb6f266fefff1274241e6f5b2860fb522fb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1c4d61bcb5ca05b36fa64629ea5bb74f9e3ecad7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (階層レベル) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,9 +61,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [カウント &#40;ディメンション&#41;&#40;です。MDX と #41 です。](../mdx/count-dimension-mdx.md)   
- [カウント &#40;です。組と #41 です。&#40;です。MDX と #41 です。](../mdx/count-tuple-mdx.md)   
- [カウント &#40;です。セット &#41;&#40;です。MDX と #41 です。](../mdx/count-set-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [カウント&#40;ディメンション&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [カウント&#40;組&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [カウント & #40 です。セット & #41;& #40 です。MDX と #41 です。](../mdx/count-set-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

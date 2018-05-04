@@ -26,13 +26,12 @@ caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 355b762dc24fe6cd63fb1620c23fb03c7be0a6bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f233810918cec1e546b61203bea55adb4b128b08
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 |is_online|**bit**|場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が構成されている、サーバーで使用可能なプロセッサの一部のみを使用する可能性が一部のスケジューラが、関係マスクに含まれていないプロセッサにマップされています。 これに該当する場合、この列には 0 が返されます。 この値は、スケジューラがクエリまたはバッチの処理に使用されていないことを意味します。<br /><br /> NULL 値は許可されません。|  
 |is_idle|**bit**|1 = スケジューラはアイドル状態です。 現在実行中のワーカーはありません。 NULL 値は許可されません。|  
 |preemptive_switches_count|**int**|スケジューラのワーカーがプリエンプティブ モードに切り替えられた回数。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。|  
-|context_switches_count|**int**|スケジューラでコンテキストが切り替えられた回数。 NULL 値は許可されません。<br /><br /> 他のワーカーの実行を許可するには、現在実行しているワーカーでスケジューラの制御を解放するか、コンテキストを切り替える必要があります。<br /><br /> **注:**ワーカーは、スケジューラが得られます自体を実行可能キューに格納し、他の作業者が、見つからない、作業者が選択されます。 この場合、context_switches_count は更新されませんが、yield_count は更新されます。|  
+|context_switches_count|**int**|スケジューラでコンテキストが切り替えられた回数。 NULL 値は許可されません。<br /><br /> 他のワーカーの実行を許可するには、現在実行しているワーカーでスケジューラの制御を解放するか、コンテキストを切り替える必要があります。<br /><br /> **注:** ワーカーは、スケジューラが得られます自体を実行可能キューに格納し、他の作業者が、見つからない、作業者が選択されます。 この場合、context_switches_count は更新されませんが、yield_count は更新されます。|  
 |idle_switches_count|**int**|スケジューラがアイドル中にイベントを待機した回数。 この列は context_switches_count と類似しています。 NULL 値は許可されません。|  
 |current_tasks_count|**int**|このスケジューラに関連付けられている現在のタスクの数。 これには次のタスクが含まれます。<br /><br /> -それらを実行するワーカーを待機しているタスクです。<br />-タスクを現在待機中または (SUSPENDED または RUNNABLE 状態) で実行します。<br /><br /> タスクが完了すると、このカウントは 1 減ります。 NULL 値は許可されません。|  
 |runnable_tasks_count|**int**|実行可能キューにあるスケジュール待ちのワーカーで、タスクが割り当てられているワーカーの数。 NULL 値は許可されません。|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forward-only cursors [ODBC]
 - scrollable cursors [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e83efd6239d49af2066bd39d244665a50fa7030
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursors"></a>カーソル
 アプリケーションでのデータのフェッチ、*カーソル*です。 カーソルが結果セットを異なる: 結果セットは、特定の検索条件に一致する行のセットをアプリケーションにこれらの行を返すのに対し、カーソルは、ソフトウェア。 名前*カーソル、*データベースに適用される、コンピューターの端末に点滅するカーソルから発生した可能性があります。 そのカーソルは、どこに型指定された単語が [次へ] を表示し、画面上の現在の位置を示すと同様、結果セットのカーソルは結果セットとどのような行が次に返されますの現在の位置を示します。  

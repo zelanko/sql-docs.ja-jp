@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2501a747df22295cd42b9820e7b80b1ee9716333
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2c9c8ffbcd8c53054bfc3ce1638aa0f5f1bec8c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 関数
 **準拠**  
@@ -86,7 +85,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="comments"></a>コメント  
  カーソル名が位置指定更新でのみ使用および delete ステートメント (たとえば、**更新***テーブル名*.**WHERE CURRENT OF** *カーソル名*)。 詳細については、次を参照してください。[位置指定の Update ステートメントとステートメントの削除](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)です。 アプリケーションが要求されていない場合**SQLSetCursorName**ドライバーが SQL_CUR 文字で始まり、かつ 18 文字の長さを超えていない名前を生成クエリ ステートメントの実行時に、カーソル名を定義します。  
   
- 接続内のすべてのカーソル名は一意である必要があります。 カーソル名の最大長は、ドライバーによって定義されます。 相互運用性を最大にするため、アプリケーションは 18 個までの文字にカーソル名を制限することをお勧めします。 ODBC 3*.x*カーソル名は引用符で囲まれた識別子かどうかは、大文字小文字を区別の方法で扱われ、SQL の構文について、ことを認めていないまたは空白などの特別な処理、または予約済みキーワードで、文字を含めることができます。 カーソル名は、大文字小文字を区別の方法で扱う必要があるを場合は、引用符で囲まれた識別子として渡す必要があります。  
+ 接続内のすべてのカーソル名は一意である必要があります。 カーソル名の最大長は、ドライバーによって定義されます。 相互運用性を最大にするため、アプリケーションは 18 個までの文字にカーソル名を制限することをお勧めします。 ODBC 3 *.x*カーソル名は引用符で囲まれた識別子かどうかは、大文字小文字を区別の方法で扱われ、SQL の構文について、ことを認めていないまたは空白などの特別な処理、または予約済みキーワードで、文字を含めることができます。 カーソル名は、大文字小文字を区別の方法で扱う必要があるを場合は、引用符で囲まれた識別子として渡す必要があります。  
   
  カーソル名を明示的に設定されて、または暗黙的に設定を使用して、それが関連付けられているステートメントが削除されるまで**SQLFreeHandle**です。 **SQLSetCursorName**カーソルが割り当てられているまたは準備された状態である限り、ステートメントのカーソルの名前を変更するに呼び出せることができます。  
   

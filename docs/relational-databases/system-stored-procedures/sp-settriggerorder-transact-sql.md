@@ -24,13 +24,12 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5059547366dbc167c4c73e3c8cabac53d0007382
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="arguments"></a>引数  
  [  **@triggername=** ] **'**[ *triggerschema ***.**]*トリガー * * * '**  
- 順序を設定または変更するトリガーの名前と、(該当する場合は) そのトリガーが属するスキーマを指定します。 [*triggerschema ***.**]*トリガー * は**sysname**です。 名前がトリガーに対応していない場合、または名前が INSTEAD OF トリガーに対応している場合は、エラーが返されます。 *triggerschema* DDL トリガーまたはログオン トリガーを指定することはできません。  
+ 順序を設定または変更するトリガーの名前と、(該当する場合は) そのトリガーが属するスキーマを指定します。 [*triggerschema ***.**]* トリガー * は**sysname**です。 名前がトリガーに対応していない場合、または名前が INSTEAD OF トリガーに対応している場合は、エラーが返されます。 *triggerschema* DDL トリガーまたはログオン トリガーを指定することはできません。  
   
  [ **@order=** ] **'***value***'**  
- 新しいトリガー順序の設定です。 *値*は**varchar (10)**値は次のいずれかを指定できます。  
+ 新しいトリガー順序の設定です。 *値*は**varchar (10)** 値は次のいずれかを指定できます。  
   
 > [!IMPORTANT]  
 >  **最初**と**最後**トリガーは次の 2 つの異なるトリガーである必要があります。  

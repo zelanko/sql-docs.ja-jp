@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6af10b10a3b2669dceb1035f38f3099c5b3177b8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d87d0b6c86a753d49ccf3aa287bc8e95b02270f7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーで Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 
 |属性|型|値|既定値|Description|
 |-|-|-|-|-|
-|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_RESET`|(未設定)|説明を参照してください`Authentication`上記キーワード。 `SQL_AU_NONE` セットを明示的にオーバーライドするために提供される`Authentication`DSN または接続文字列で、値中に`SQL_AU_RESET`設定されている場合、優先する DSN または接続文字列値を許可する属性を解除します。|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`、`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_RESET`|(未設定)|説明を参照してください`Authentication`上記キーワード。 `SQL_AU_NONE` セットを明示的にオーバーライドするために提供される`Authentication`DSN または接続文字列で、値中に`SQL_AU_RESET`設定されている場合、優先する DSN または接続文字列値を許可する属性を解除します。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|ポインター`ACCESSTOKEN`または NULL|NULL|Null 以外の場合、を使用する azure Ad アクセス トークンを指定します。 アクセス トークンを指定すると、エラーは、さらに`UID`、 `PWD`、 `Trusted_Connection`、または`Authentication`接続文字列キーワードまたはそれらと同等の属性です。 <br> **注:** ODBC Driver 13.1 のバージョンのみをサポートしている_Windows_です。|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(説明を参照してください)|接続の暗号化を制御します。 `SQL_EN_OFF` および`SQL_EN_ON`を無効にして、それぞれの暗号化を有効にします。 場合は前の属性の値、`Authentication`の設定が_none_または`SQL_COPT_SS_ACCESS_TOKEN`が設定されていると`Encrypt`既定値は、DSN または接続文字列で指定されていない`SQL_EN_ON`です。 それ以外の場合、既定値は`SQL_EN_OFF`します。 この属性のコントロールの有効な値[接続の暗号化を使用するかどうか。](https://docs.microsoft.com/en-us/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|AAD プリンシパルへパスワードの変更は、ODBC 接続を介して実現できないため、Azure Active Directory でサポートされません。 <br><br>SQL Server 認証のパスワードの有効期限は、SQL Server 2005 で導入されました。 `SQL_COPT_SS_OLDPWD`属性は、接続の古いと、新しいパスワードの両方を提供するために使用できるように追加されました。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。|

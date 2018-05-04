@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f7b9f52f494665d00f7a75811b839d543c3da5ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 365181e10812a1f28bf39385a75215e6be304b23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ NameToSet(Member_Name)
  指定したメンバー名が存在する場合、 **NameToSet**関数は、そのメンバーを含むセットを返します。 そうでない場合は、空のセットを返します。  
   
 > [!NOTE]  
->  メンバーの名前には、メンバー名のみを指定する必要があります。メンバー式を指定することはできません。 メンバー式を使用するのを参照してください。 [StrToSet (& a) #40 です。MDX と #41 です](../mdx/strtoset-mdx.md)。  
+>  メンバーの名前には、メンバー名のみを指定する必要があります。メンバー式を指定することはできません。 メンバー式を使用するのを参照してください。 [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)です。  
   
 ## <a name="example"></a>例  
  次の例では、指定されたメンバー名の既定のメジャー値を返しています。  
@@ -60,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

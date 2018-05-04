@@ -26,20 +26,19 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 507a42fbb349ce9dca17d3221fe3b001dffe4bbe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2ed4d33a41227dad1a0084a880bd26591ff2e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   ファイル サイズ、物理的な場所、トランザクション ID など、チェックポイント ファイルに関する情報を表示します。  
   
-> **注:**現在のチェックポイントが閉じられていない、s の状態 列の`ys.dm_db_xtp_checkpoint_files`新しいファイルの UNDER CONSTRUCTION がされます。 最後のチェックポイント以降のトランザクション ログ拡張のための十分ながある場合、または発行した場合に、チェックポイントが自動的に閉じられます、`CHECKPOINT`コマンド ([チェックポイント&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注:** 現在のチェックポイントが閉じられていない、s の状態 列の`ys.dm_db_xtp_checkpoint_files`新しいファイルの UNDER CONSTRUCTION がされます。 最後のチェックポイント以降のトランザクション ログ拡張のための十分ながある場合、または発行した場合に、チェックポイントが自動的に閉じられます、`CHECKPOINT`コマンド ([チェックポイント&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
  メモリ最適化ファイル グループは、インメモリ テーブルでの挿入および削除された行を格納するのに追加専用のファイルを内部的に使用されます。 これらのファイルには 2 つの種類があります。 データ ファイルには、デルタ ファイルには、削除された行への参照が含まれますが挿入された行が含まれています。 
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/16/2018
  詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)です。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびそれ以降  
- 次の表に、列の`sys.dm_db_xtp_checkpoint_files`で始まる、  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**です。  
+ 次の表に、列の`sys.dm_db_xtp_checkpoint_files`で始まる、  **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** です。  
   
 |列名|型|Description|  
 |-----------------|----------|-----------------|  
@@ -74,7 +73,7 @@ ms.lasthandoff: 04/16/2018
 |encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > 1 のキーで暗号化<br /><br /> 2 = > 2 のキーで暗号化します。 アクティブなファイルのみ有効です。|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 次の表に、列の`sys.dm_db_xtp_checkpoint_files`の **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**です。  
+ 次の表に、列の`sys.dm_db_xtp_checkpoint_files`の **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** です。  
   
 |列名|型|Description|  
 |-----------------|----------|-----------------|  

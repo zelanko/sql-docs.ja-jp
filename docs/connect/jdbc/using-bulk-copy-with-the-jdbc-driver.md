@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f1a53821f6a8e0354b992b8110d300e96633b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -873,7 +872,7 @@ public class Program
   
 5.  選択**を転送するデータを指定するクエリを記述**と**次**です。  入力、 **SQL ステートメント**選択 ProductID、Name、ProductNumber FROM Production.Product と **[次へ]**  
   
-6.  構成の確認: 行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  選択**マッピングを編集する**しています. 確認し、データ**型**(整数型、他の ProductID と Unicode の文字列の) の各列に適切な。  
+6.  構成を確認: 行区切り記号を {CR} {LF}、列区切り記号をコンマのままにする{,}です。  選択**マッピングを編集する**しています. 確認し、データ**型**(整数型、他の ProductID と Unicode の文字列の) の各列に適切な。  
   
 7.  進んで**完了**エクスポートを実行します。  
   

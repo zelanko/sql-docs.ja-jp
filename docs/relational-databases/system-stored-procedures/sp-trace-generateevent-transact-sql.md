@@ -24,19 +24,18 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74240040ca9fec751c34efa397f119d4231e7898
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4e0cf34c1efe4d5eee7bb1f531067ccc0f05d291
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義イベントを作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
->**注:**このストアド プロシージャは**いない**推奨されなくなりました。 他のすべてのトレース関連のストアド プロシージャの使用は推奨されません。  
+>**注:** このストアド プロシージャは**いない**推奨されなくなりました。 他のすべてのトレース関連のストアド プロシージャの使用は非推奨とされます。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

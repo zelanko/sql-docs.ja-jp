@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6f7bda4d6d9e0387dcbd98a09040be4d0a0d0a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1c2d31df834b2809612604d1392f860b222da73c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,31 +100,31 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
  [  **@subscriber_db=**] **'***@subscriber_db***'**  
  サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
  [  **@subscriber_security_mode=**] *subscriber_security_mode*  
  サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int、**既定値は NULL です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 ディストリビューション エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 場合は NULL 以外の値または**1**が指定されているこのパラメーターは、警告メッセージが返されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 ディストリビューション エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 場合は NULL 以外の値または**1**が指定されているこのパラメーターは、警告メッセージが返されます。  
   
  [  **@subscriber_login =**] **'***subscriber_login***'**  
  同期するときに、サブスクライバーに接続するときに使用するサブスクライバー ログインです。*subscriber_login*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
   
  [  **@subscriber_password=**] **'***subscriber_password***'**  
  サブスクライバーのパスワードです。 *subscriber_password*場合は必須*subscriber_security_mode*に設定されている**0**します。 *subscriber_password*は**sysname**、既定値は NULL です。 サブスクライバー パスワードを使用する場合、サブスクライバー パスワードは自動的に暗号化されます。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターの値を指定すると、警告メッセージが返されますが、値は無視されます。  
   
  [  **@distributor=**] **'***ディストリビューター***'**  
  ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値で指定された値は*パブリッシャー*です。  
@@ -149,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
  [  **@optional_command_line=**] **'***optional_command_line***'**  
- ディストリビューション エージェントに与えられるコマンド プロンプトで、省略可能です。 たとえば、 **-definitionfile** C:\Distdef.txt または**- CommitBatchSize** 10 です。 *optional_command_line*は**nvarchar (4000)**、空の文字列の既定値です。  
+ ディストリビューション エージェントに与えられるコマンド プロンプトで、省略可能です。 たとえば、 **-definitionfile** C:\Distdef.txt または **- CommitBatchSize** 10 です。 *optional_command_line*は**nvarchar (4000)**、空の文字列の既定値です。  
   
  [  **@frequency_type=**] *frequency_type*  
  ディストリビューション エージェントをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
@@ -211,7 +210,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  ディストリビューション エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は**0**します。  
   
  [  **@distribution_jobid =**] *distribution_jobid * * * 出力**  
- このジョブのディストリビューションの ID を指定します。 *distribution_jobid*は**binary (16)**NULL の場合は、既定値は、出力パラメーターです。  
+ このジョブのディストリビューションの ID を指定します。 *distribution_jobid*は**binary (16)** NULL の場合は、既定値は、出力パラメーターです。  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
  設定*encrypted_distributor_password*は現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
@@ -260,11 +259,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
  [ **@offloadagent**=] '*remote_agent_activation*'  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**でエラーが発生します。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**でエラーが発生します。  
   
  [ **@offloadserver**=] '*remote_agent_server_name*'  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
  [ **@job_name**=] '*job_name*'  
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーではない場合、 **sysadmin**固定サーバー ロールを指定してください*job_login*と*job_password*を指定すると*job_name*.  

@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  オプションを設定するサーバーの名前です。 *server* のデータ型は **sysname**で、既定値はありません。  
   
  [  **@optname =** ] **'***option_name***'**  
- 指定したサーバーに設定するオプションです。 *option_name*は**varchar (**35**)**、既定値はありません。 *option_name*値は次のいずれかを指定できます。  
+ 指定したサーバーに設定するオプションです。 *option_name*は**varchar (** 35 **)**、既定値はありません。 *option_name*値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**リモート proc トランザクションの昇格**|このオプションを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 このオプションが TRUE の場合 (または) はリモート ストアド プロシージャを呼び出す分散トランザクションを開始し、され、トランザクションは MS DTC に参加します。 リモート ストアド プロシージャを呼び出す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、トランザクションを実行したインスタンスであり、このインスタンスによってトランザクションが制御されます。 この接続に対して引き続き COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントを実行すると、制御側のインスタンスは MS DTC 対して、コンピューター間の分散トランザクションの完了を管理することを要求します。<br /><br /> 後に、[!INCLUDE[tsql](../../includes/tsql-md.md)]分散トランザクションが開始された、リモート ストアド プロシージャが呼び出されるは、その他のインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク サーバーとして定義されています。 リンク サーバーがすべてに参加している、[!INCLUDE[tsql](../../includes/tsql-md.md)]分散トランザクション、および MS DTC により、各リンク サーバーに対して、トランザクションが完了したことです。<br /><br /> このオプションが FALSE (OFF) の場合は、リンク サーバーに対するリモート プロシージャ コールの呼び出し中、ローカル トランザクションは分散トランザクションに昇格されません。<br /><br /> サーバー間のプロシージャ コールを行う前にトランザクションが既に分散トランザクションである場合、このオプションに効力はありません。 リンク サーバーに対するプロシージャ コールは、同じ分散トランザクションで実行されます。<br /><br /> サーバー間のプロシージャ コールを行う前に接続にアクティブなトランザクションがない場合、このオプションに効力はありません。 プロシージャは、アクティブなトランザクションなしにリンク サーバーに対して実行されます。<br /><br /> このオプションの既定値は TRUE (ON) です。|  
   
  [  **@optvalue =**] **'***option_value***'**  
- 指定するかどうか、 *option_name*有効にする必要があります (**TRUE**または**で**) または無効に (**FALSE**または**オフ**). *option_value*は**varchar (**10**)**、既定値はありません。  
+ 指定するかどうか、 *option_name*有効にする必要があります (**TRUE**または**で**) または無効に (**FALSE**または**オフ**). *option_value*は**varchar (** 10 **)**、既定値はありません。  
   
  *option_value*の負でない整数である可能性があります、**接続のタイムアウト**と**クエリ タイムアウト**オプション。 **照合順序名**オプション、 *option_value*照合順序名または NULL にすることがあります。  
   

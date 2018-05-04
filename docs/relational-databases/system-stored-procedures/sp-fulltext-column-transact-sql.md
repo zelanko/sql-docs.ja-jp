@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f50c57b18d249b7f9e988b55e68338ba558aa6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e5b40c23fb1e5ca20b97431c3f99e45603fe32ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,13 +54,13 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 ## <a name="arguments"></a>引数  
  [  **@tabname=** ] **'***qualified_table_name***'**  
- 1 つまたは 2 つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 テーブルにフルテキスト インデックスがある。 *qualified_table_name*は**nvarchar (517)**既定値はありません。  
+ 1 つまたは 2 つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 テーブルにフルテキスト インデックスがある。 *qualified_table_name*は**nvarchar (517)** 既定値はありません。  
   
  [ **@colname=** ] **'***column_name***'**  
- 内の列の名前を指定*qualified_table_name*です。 列は、いずれかの文字である必要があります**varbinary (max)**または**イメージ**列、計算列にすることはできません。 *column_name*は**sysname**、既定値はありません。  
+ 内の列の名前を指定*qualified_table_name*です。 列は、いずれかの文字である必要があります**varbinary (max)** または**イメージ**列、計算列にすることはできません。 *column_name*は**sysname**、既定値はありません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ある列に格納されているテキスト データのフルテキスト インデックスを作成できる**varbinary (max)**または**イメージ**データ型。 画像に対してインデックスを作成することはできません。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ある列に格納されているテキスト データのフルテキスト インデックスを作成できる**varbinary (max)** または**イメージ**データ型。 画像に対してインデックスを作成することはできません。  
   
  [  **@action=** ] **'***アクション***'**  
  実行する操作を指定します。 *アクション*は**varchar (20)**, で、ない既定値は、次の値のいずれかを指定します。  
@@ -78,7 +77,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 >  複数の言語のデータ、またはサポートされていない言語のデータが列に含まれる場合は、"ニュートラル言語" を使用します。 既定値は構成オプション 'default full-text language' で指定されます。  
   
  [ **@type_colname =** ] **'***type_column_name***'**  
- 内の列の名前を指定*qualified_table_name*のドキュメントの種類を保持する*column_name*です。 この列である必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**です。 データの型の場合のみ使用される*column_name*の種類は**varbinary (max)**または**イメージ**です。 *type_column_name*は**sysname**、既定値はありません。  
+ 内の列の名前を指定*qualified_table_name*のドキュメントの種類を保持する*column_name*です。 この列である必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**です。 データの型の場合のみ使用される*column_name*の種類は**varbinary (max)** または**イメージ**です。 *type_column_name*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

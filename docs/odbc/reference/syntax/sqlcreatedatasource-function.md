@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLCreateDataSource
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ec2faf8327c9b18dec5716108d538445a3a4feb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b6e3b90f9634abd1e22b923f12b8b8854c7427d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 関数
 **準拠**  
@@ -96,11 +95,11 @@ BOOL SQLCreateDataSource(
   
  追加のドライバー固有のキーワードの説明の下にあります**SQLDriverConnect**です。 除くすべて**DSN**は許可されています。  
   
- 既定値を**この接続のことを確認**オプションが TRUE です。 この既定値は、このウィザード ページがアクティブになるかどうかを適用します。 場合**[ok]**がクリックされると、テキスト ボックスで指定した文字列と**この接続のことを確認**オプションの値がキャッシュされます。 (場合、**閉じる**ボタンまたは**キャンセル**がクリックすると、新たに入力した任意、テキスト ボックスに文字列が指定されているために、ドライバー固有の情報が失われた、 **の接続のことを確認**オプションの値はキャッシュされません)。  
+ 既定値を**この接続のことを確認**オプションが TRUE です。 この既定値は、このウィザード ページがアクティブになるかどうかを適用します。 場合 **[ok]** がクリックされると、テキスト ボックスで指定した文字列と**この接続のことを確認**オプションの値がキャッシュされます。 (場合、**閉じる**ボタンまたは**キャンセル**がクリックすると、新たに入力した任意、テキスト ボックスに文字列が指定されているために、ドライバー固有の情報が失われた、 **の接続のことを確認**オプションの値はキャッシュされません)。  
   
  場合**ファイル データ ソース**ユーザーがファイル名を入力するように求め、ドライバーが選択されているし、キーワードの値は、詳細ウィザードのページに入力されている、し、ウィザードの最初のページで選択しました。 をクリックして**参照**で検索するファイル名では、その場合の既定のディレクトリ、**参照**ボックスは、hkey_local_machine \software\ で CommonFileDir によって指定されたパスの組み合わせで指定されました。Microsoft\Windows\CurrentVersion と"ODBC\DataSources"です。 (CommonFileDir が"C:\Program files \common files Files"の場合は、既定のディレクトリになります"C:\Program files \common files 場合 Sources"です。)  
   
- ファイル名が入力された場合と**[次へ]**がクリックされると、ファイル入力名に対して、オペレーティング システムの標準のファイルの名前付け規則の有効性がチェックされます。 ファイル名が有効でない場合、エラー メッセージ ボックスは、無効なファイル名が入力されたユーザーを通知します。 ユーザーが承認されると、メッセージ ボックス後は、ファイル名が入力されるウィザードのページにフォーカスが返されます。 ファイル名が有効な場合は、次の図に示すように、レビュー用を選択したキーワードと値のペアを示すウィザード ページが表示されます。  
+ ファイル名が入力された場合と **[次へ]** がクリックされると、ファイル入力名に対して、オペレーティング システムの標準のファイルの名前付け規則の有効性がチェックされます。 ファイル名が有効でない場合、エラー メッセージ ボックスは、無効なファイル名が入力されたユーザーを通知します。 ユーザーが承認されると、メッセージ ボックス後は、ファイル名が入力されるウィザードのページにフォーカスが返されます。 ファイル名が有効な場合は、次の図に示すように、レビュー用を選択したキーワードと値のペアを示すウィザード ページが表示されます。  
   
  ![新しいデータ ソース ダイアログ ボックスを作成します確認](../../../odbc/reference/syntax/media/ch23d.gif "CH23D。")  
   

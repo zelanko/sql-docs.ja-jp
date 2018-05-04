@@ -2,7 +2,7 @@
 title: Schema 要素 (DTA) データベースの |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2b4da3d22c91ad05ba53736eb17a2210b0c0b5d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 74e93cdefb2cc50bb03b20cc217b94025f97b6d5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="schema-element-for-database-dta"></a>Database の Schema 要素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]チューニングするデータベースのスキーマを指定します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  チューニングするデータベースのスキーマを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -52,8 +53,8 @@ ms.lasthandoff: 01/17/2018
   
 |リレーションシップ|要素|  
 |------------------|--------------|  
-|**親要素**|[サーバー &#40;DTA&#41; の database 要素](../../tools/dta/database-element-for-server-dta.md)|  
-|**子要素**|[スキーマ &#40; DTA &#41; の name 要素](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [スキーマ &#40; DTA &#41; の table 要素](../../tools/dta/table-element-for-schema-dta.md)|  
+|**親要素**|[Server の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
+|**子要素**|[Schema の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [Schema の Table 要素 &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)」を参照してください。  

@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3aa1c3d1704fd8131265cc0567219edad43ccb4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6c95b04711d4fd370058e2ca9e785cd25665050c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間インデックス ストアド プロシージャの引数とプロパティ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 04/16/2018
  [  **@tabname =**] **'***tabname $***'**  
  空間インデックスが指定されているテーブルの修飾名または非修飾名です。  
   
- 引用符が必要なのは、修飾されたテーブルを指定する場合のみです。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *tabname $*は**nvarchar**(776)、既定値はありません。  
+ 引用符が必要なのは、修飾されたテーブルを指定する場合のみです。 データベース名を含む完全修飾名を指定する場合、データベース名は現在のデータベースの名前である必要があります。 *tabname $* は**nvarchar**(776)、既定値はありません。  
   
  [  **@indexname =** ] **'***indexname***'**  
  指定されている空間インデックスの名前です。 *indexname*は**sysname**既定値はありません。  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -32,12 +32,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d332950fa3c1f5f9e81dfb3a60009380440d6fb5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は 2 つの日付と時刻の差として定義されます。 間隔は 2 つの方法のいずれかで表されます。 1 つは、*年-月*年と月の整数単位の間隔を表す間隔。 もう 1 つは、*日時間*日間、分、および秒単位の間隔を表す間隔。 これら 2 種類の間隔は、distinct か月間で異なる数の日数があるため、混在させることはできません。  
