@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6e25739d2c2fd92642e8e9d61e514c0fb181bb36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8754f92f96740c02470081b12b8fe1056c2fe04a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ IsTestCase()
 > [!NOTE]  
 >  IsTrainingCase または IsTestCase 関数を使用して、特定のモデルでケースに関する詳細を返す場合、モデルでドリルスルーを有効にする必要があります。 詳細については、「 [Enable Drillthrough for a Mining Model](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)」(マイニング モデルのドリルスルーの有効化) を参照してください。  
   
- トレーニング データ セットの一部であるケースを返すには、関数を使用[IsTrainingCase & # #40; DMX &#41;](../dmx/istrainingcase-dmx.md)です。  
+ トレーニング データ セットの一部であるケースを返すには、関数を使用[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`Targeted Mailing`で作成されるマイニング構造、[基本的なデータ マイニング チュートリアル」](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)です。 このクエリでは、テストに使用される構造内のすべてのケースが返されます。  
@@ -63,11 +62,11 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- データ マイニングで使用されるケースをクエリする方法の詳細については、次を参照してください。 [SELECT FROM &#60; モデル &#62;。場合 &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM &#60; 構造 &#62;。ケース](../dmx/select-from-structure-cases.md)です。  
+ データ マイニングで使用されるケースをクエリする方法の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;です。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;です。ケース](../dmx/select-from-structure-cases.md)です。  
   
 ## <a name="see-also"></a>参照  
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
  [データ マイニング クエリ](../analysis-services/data-mining/data-mining-queries.md)   
- [トレーニング データ セットとテスト データ セット](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [トレーニング セットとテスト データ セット](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61839fe1cad32bc9daf0acdc1bb43a2d793bf5b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
 行方向のバインドを使用して、またはアプリケーションを含む 1 つまたは 2 つ、構造体を定義、いくつかの場合、3 つ、データが返される対象の各列の要素。 最初の要素をデータ値を保持し、2 番目の要素が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は、SQL_DESC_INDICATOR_PTR および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての個別のバッファーに格納できます。これを行う場合、構造体には、3 番目の要素が含まれています。 その後、アプリケーションでは、行セットの行数が同じ数の要素を格納しているこれらの構造体の配列を割り当てます。  

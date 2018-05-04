@@ -20,17 +20,16 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb7bbf571b29294d7637d68d21e9e961d388edc1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  1 番目に指定されている組のセットのうち、2 番目に指定されているセットの 1 つ以上の組と共存する組のセットを返します。 この関数は、autoexist によって自動的に実行される操作を手動で実行するために使用します。 詳細については自動が存在するを参照してください[MDX &#40; の主な概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+  1 番目に指定されている組のセットのうち、2 番目に指定されているセットの 1 つ以上の組と共存する組のセットを返します。 この関数は、autoexist によって自動的に実行される操作を手動で実行するために使用します。 詳細については自動が存在するを参照してください[MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)です。  
   
  場合、省略可能な\<メジャー グループ名 > は、提供された場合、2 番目のセットと指定されたメジャー グループのファクト テーブルの行に関連付けられている組の 1 つまたは複数の組と存在する組を返します。  
   
@@ -105,10 +104,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [クロス結合 &#40;です。MDX と #41 です。](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;です。MDX と #41 です。](../mdx/nonemptycrossjoin-mdx.md)   
- [空でない &#40;です。MDX と #41 です。](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;です。MDX と #41 です。](../mdx/isempty-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
+ [空でない&#40;MDX&#41;](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

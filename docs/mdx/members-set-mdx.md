@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f643eeb5d864b37e9d18e82178ec1cf0eb179584
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-set-mdx"></a>Members (セット) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +52,9 @@ Level_Expression.Members
  レベルを返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>解説  
- 階層式が指定されている場合、 **Members (セット)**関数は、計算されるメンバーを除く、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバー、計算のセットを取得またはそれ以外の場合、階層を使用する、 [AllMembers (& a) #40 です。MDX と #41 です。](../mdx/allmembers-mdx.md)関数  
+ 階層式が指定されている場合、 **Members (セット)** 関数は、計算されるメンバーを除く、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバー、計算のセットを取得またはそれ以外の場合、階層を使用する、 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md)関数  
   
- レベル式が指定されている場合、 **Members (セット)**関数は、指定されたレベル内のすべてのメンバーのセットを返します。  
+ レベル式が指定されている場合、 **Members (セット)** 関数は、指定されたレベル内のすべてのメンバーのセットを返します。  
   
 > [!IMPORTANT]  
 >  階層がディメンション内に 1 つしかない場合は、ディメンション名がその唯一の階層に解決されるので、ディメンション名または階層名でその階層を参照できます。 たとえば Measures.Members は、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
@@ -84,7 +83,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -2,7 +2,7 @@
 title: サーバー (DTA) の database 要素 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5150ec15a3cdd1f218bb108b8e305eaae7f2121
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: f279de19e0a9634011dc84e70c984d948f185bab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="database-element-for-server-dta"></a>Server の Database 要素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]特定のサーバーでチューニングするデータベースを指定します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  特定のサーバーにあるチューニング対象のデータベースを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |データ型と長さ|[なし] :|  
 |既定値|[なし] :|  
@@ -53,13 +54,13 @@ ms.lasthandoff: 01/17/2018
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |親要素|[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)|  
-|子要素|[データベース &#40;DTA&#41; の name 要素](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [データベース &#40;DTA&#41; の schema 要素](../../tools/dta/schema-element-for-database-dta.md)|  
+|子要素|[Database の Name 要素 &#40;DTA&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Database の Schema 要素 &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseDetailsTypecomplexType** の名前です。 この **Database** 要素を、ルートの親要素が **Configuration** 要素である他の要素と混同しないでください。 詳細については、「[Configuration の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 使用例については、**データベース**要素を参照してください[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)です。  
+ **Database** 要素の使用例については、「[Server 要素 &#40;DTA&#41;](../../tools/dta/server-element-dta.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 91ef03b9b43dba3e76d921abf3a32fdbb456f49b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: da070d23c0a01886cc63632ccd269502d1dc33a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX データ操作ステートメント (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +37,15 @@ ms.lasthandoff: 01/08/2018
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[CALL ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-call.md)|現在のスコープで、または指定されたキューブに対して、void を返すストアド プロシージャを実行します。|  
-|[CLEAR CALCULATIONS ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-clear-calculations.md)|キューブからすべての計算を削除して、キューブの計算パスを 0 に戻します。|  
-|[DRILLTHROUGH ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-drillthrough.md)|キューブ内の指定されたセルの作成に使用された行セットを取得します。|  
-|[SELECT ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-select.md)|指定されたキューブからデータを取得します。|  
-|[UPDATE CUBE ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-update-cube.md)|キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新します。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。|  
+|[CALL ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|現在のスコープで、または指定されたキューブに対して、void を返すストアド プロシージャを実行します。|  
+|[CLEAR CALCULATIONS ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|キューブからすべての計算を削除して、キューブの計算パスを 0 に戻します。|  
+|[DRILLTHROUGH ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|キューブ内の指定されたセルの作成に使用された行セットを取得します。|  
+|[SELECT ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-data-manipulation-select.md)|指定されたキューブからデータを取得します。|  
+|[UPDATE CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新します。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。|  
   
 ## <a name="see-also"></a>参照  
- [MDX ステートメント リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-statement-reference-mdx.md)   
- [MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX スクリプト ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX ステートメント リファレンス&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [MDX スクリプト ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)  
   
   

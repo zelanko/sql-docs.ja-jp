@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fe2d85bd347477c0acc775a4f071968d6d8b15d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-arrays-of-parameters"></a>パラメーターの配列の使用
 アプリケーションの呼び出し、パラメーターの配列を使用する**SQLSetStmtAttr**で、*属性*SQL_ATTR_PARAMSET_SIZE パラメーター セットの数を指定の引数。 呼び出す**SQLSetStmtAttr**で、*属性*SQL_ATTR_PARAMS_PROCESSED_PTR ドライバーが処理された、パラメーターのセットの数を返すことができます、変数のアドレスを指定の引数などのエラーを設定します。 呼び出す**SQLSetStmtAttr**で、*属性*パラメーター値の行ごとに状態情報を返す対象の配列を指す SQL_ATTR_PARAM_STATUS_PTR の引数。 ドライバーは、ステートメントを保持する構造体でこれらのアドレスを格納します。  

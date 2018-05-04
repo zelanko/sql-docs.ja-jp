@@ -22,12 +22,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d073e4bc1916720224b7b355b00e23c35430b86a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5836e793bd226291944326402a2a980ce1cd3723
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Intersect**関数は、2 つのセットの積集合を返します。 既定では、両方のセットの重複部分を削除してから積集合を取得します。 指定された 2 つのセットの次元は同一である必要があります。  
   
  省略可能な**すべて**フラグは、重複部分を保持します。 場合**すべて**を指定すると、 **Intersect**関数が通常どおり、積の要素と交差して、2 番目のセットで一致する複製されている最初のセット内の重複は各交差しています。 指定された 2 つのセットの次元は同一である必要があります。  
@@ -87,6 +86,6 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 612312b3c295e2b9b3f45c4fdba9049036fd7b19
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 860a95d1e16a2404a13812ca77cf0c0a46ae7ead
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-operators"></a>セット演算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,11 +38,11 @@ ms.lasthandoff: 01/08/2018
 |[- (を除く)](../mdx/except-mdx-operator.md)|2 つの集合から重複するメンバーを除去し、両者の差を返します。<br /><br /> この演算子は機能的に等価、[を除く](../mdx/except-mdx-function.md)関数。|  
 |[* (クロス積)](../mdx/crossjoin-mdx-operator-reference.md)|2 つのセットのクロス積を返します。<br /><br /> この演算子は機能的に等価、 [Crossjoin](../mdx/crossjoin-mdx.md)関数。|  
 |[: (範囲)](../mdx/range-mdx.md)|自然な順序で並べた集合を返します。指定された 2 つのメンバーが終端になり、その 2 つのメンバーの間にあるすべてのメンバーが集合のメンバーに含まれます。|  
-|[+ (和集合)](../mdx/union-mdx-operator-reference.md)|2 つの集合から重複するメンバーを除外し、両者の和集合を返します。<br /><br /> この演算子は機能的に等価、[共用体 &#40;です。MDX と #41 です。](../mdx/union-mdx.md)関数。|  
+|[+ (和集合)](../mdx/union-mdx-operator-reference.md)|2 つの集合から重複するメンバーを除外し、両者の和集合を返します。<br /><br /> この演算子は機能的に等価、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)関数。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)   
- [演算子 &#40;です。MDX 構文 &#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
   
   

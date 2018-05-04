@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,13 +23,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d22968bcda34b3b69707f4cd670bf7d55d070fa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 185b87f17cb800fd5cfb6a7df6e9087d84c2aff9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 04/16/2018
  XDR スキーマを、SQLXML 4.0 の同等の XSD スキーマに変換する方法について説明します。  
   
  [注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
- 以前のバージョンの SQLXML では、XDR スキーマの注釈がサポートされていました。 注釈付き XDR スキーマは SQLXML 4.0 では推奨されませんが、ここでは、レガシ アプリケーションの参照用として説明します。  
+ 以前のバージョンの SQLXML では、XDR スキーマの注釈がサポートされていました。 注釈付き XDR スキーマは SQLXML 4.0 では非推奨とされますが、ここでは、レガシ アプリケーションの参照用として説明します。  
   
 ## <a name="other-resources"></a>その他のリソース  
  XML スキーマ定義言語 (XSD)、XML パス言語 (XPath)、Extensible Stylesheet Language Transformations (XSLT) の詳細については、次の Web サイトを参照してください。  

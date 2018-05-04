@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 213fa7b4c8a46966fa7054c6c20fbf79c5896d74
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="was-a-result-set-created"></a>結果セットの作成にありましたか。
 ほとんどの状況では、アプリケーション プログラマは、アプリケーションが実行するステートメントが結果セットを作成するかどうかを知る。 これは、アプリケーション プログラマによって書き込まれたハード コーディングされた SQL ステートメントを使用している場合に、ケースです。 通常は、大文字と小文字、アプリケーションが実行時に SQL ステートメントを構築するときに: プログラマは、フラグを設定するコードを簡単に追加できるかどうか、**を選択**ステートメントまたは**挿入**ステートメントの中構成されます。 いくつかの状況で、プログラマ可能性がありますが認識できない、ステートメントが結果セットを作成するかどうか。 これは、アプリケーションはユーザーを入力して SQL ステートメントを実行する方法を提供する場合は true です。 これは、アプリケーションがプロシージャを実行する実行時にステートメントを構築するときにも当てはまります。  

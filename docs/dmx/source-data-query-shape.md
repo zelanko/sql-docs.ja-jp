@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b79237879b2e23682bfdd89dcf1d2ba59824aa1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;ソース データ クエリ&gt;-図形
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +72,7 @@ APPEND ({ <child table query> }
  親テーブルと子テーブルを関連付ける列ごとにクエリを発行する必要があります。  
   
 ## <a name="examples"></a>使用例  
- 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md)ステートメントを入れ子になったテーブルが含まれるモデルをトレーニングします。 2 つのテーブル内で、**図形**によってステートメントが関連付けられて、 **OrderNumber**列です。  
+ 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)ステートメントを入れ子になったテーブルが含まれるモデルをトレーニングします。 2 つのテーブル内で、**図形**によってステートメントが関連付けられて、 **OrderNumber**列です。  
   
 ```  
 SHAPE {  
@@ -86,9 +85,9 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>参照  
- [&#60;以外の場合はソース データ クエリ &#62;。](../dmx/source-data-query.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

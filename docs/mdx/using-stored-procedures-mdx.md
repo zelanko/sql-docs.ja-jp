@@ -21,12 +21,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e591f000488220b9d1db784c39b82a991837401d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fff3b831a076ad4c6d2dfb5f2cdeb134bd3341cb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-stored-procedures-mdx"></a>ストアド プロシージャの使用 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,6 +53,6 @@ WHERE [Measures].[Reseller Freight Cost]
 >  Microsoft Visual Basic for Applications (VBA) COM アセンブリは自動的に登録されます。  
   
 ## <a name="see-also"></a>参照  
- [関数と #40 です。MDX 構文 &#41;](../mdx/functions-mdx-syntax.md)  
+ [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
   
   

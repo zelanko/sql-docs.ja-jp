@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 880b8a12da960269ff559653880ebf62d01947ef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ Qtd( [ Member_Expression ] )
  *メンバー式*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  メンバー式が指定されていない、既定値は、現在の最初の階層のレベルを持つメンバー型の*四半期*型の最初の次元の*時間*メジャー グループにします。  
   
- **Qtd**関数のショートカット関数では、 [PeriodsToDate (& a) #40 です。MDX と #41 です。](../mdx/periodstodate-mdx.md) 、レベル式引数に設定されている関数*四半期*です。 つまり、`Qtd(Member_Expression)` と `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` は機能的に等価です。  
+ **Qtd**関数のショートカット関数では、 [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md) 、レベル式引数に設定されている関数*四半期*です。 つまり、`Qtd(Member_Expression)` と `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` は機能的に等価です。  
   
 ## <a name="example"></a>例  
  次の例は、の合計を返して、`Measures.[Order Quantity]`メンバーを集計した、最初の 2 か月の 2003 年第 3 四半期に含まれている、`Date`ディメンションから、 **Adventure Works**キューブ。  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

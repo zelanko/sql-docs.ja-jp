@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - sending SQL statements to DBMS [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e7d51d8ae632f30528510448e52fc6c363d066d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dd31890b353d335872e857f8b0e4daf581783cd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 DBMS に SQL ステートメントを送信するための最初の手法が埋め込まれた SQL です。 SQL は、変数および流れ制御ステートメントは使用しないので、多くの場合、C または COBOL などの従来のプログラミング言語で書かれたプログラムを追加できるデータベース サブ言語として使用されます。 これは、embedded SQL の中心: ホスト プログラミング言語で書かれたプログラムで SQL ステートメントを配置することです。 簡単に、ホスト言語で SQL ステートメントを埋め込むには、次の手法が使用されます。  

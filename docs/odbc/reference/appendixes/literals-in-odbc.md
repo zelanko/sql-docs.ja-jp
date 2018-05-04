@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - literals [ODBC]
 - ODBC literals [ODBC], about literals
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a63da81bc0c011e749efdb95bb966759c5744a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b9be3eb1bf00d031c2a43ebb16be5461ae30469
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="literals-in-odbc"></a>ODBC でのリテラル
 間隔と ODBC の数値リテラルでは、次のセクションでは、構文が使用されます。 この構文の提供を数値型または interval 型では、文字列型とは、文字の文字列型に型の数値型または interval 型から変換を実行すると、ドライバーの作成者を支援するため、ここです。 詳細については、次を参照してください。[間隔のリテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)付録 d: データ型にします。  

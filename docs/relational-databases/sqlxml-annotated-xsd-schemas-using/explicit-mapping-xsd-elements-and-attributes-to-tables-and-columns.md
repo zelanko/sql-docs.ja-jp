@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -35,13 +34,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b411f418f684ad54a7a04bce0a8c90484f475dc9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1aa43166872412d9008a6be3bec869917c533b02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>テーブルと列に明示的なマッピング XSD 要素および属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,9 +65,9 @@ ms.lasthandoff: 04/16/2018
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 注釈と sql:field 注釈を指定する  
- この例では、XSD スキーマで構成されます、 **\<連絡先 >**複合型の要素 **\<FName >**と **\<LName >**子要素、および**ContactID**属性。  
+ この例では、XSD スキーマで構成されます、 **\<連絡先 >** 複合型の要素 **\<FName >** と **\<LName >** 子要素、および**ContactID**属性。  
   
- **Sql:relation**注釈マップ、 **\<連絡先 >**要素 AdventureWorks データベースの Person.Contact テーブルにします。 **Sql:field**注釈マップ、  **\<FName >**要素が FirstName 列に、  **\<LName >** LastName 要素列です。  
+ **Sql:relation**注釈マップ、 **\<連絡先 >** 要素 AdventureWorks データベースの Person.Contact テーブルにします。 **Sql:field**注釈マップ、  **\<FName >** 要素が FirstName 列に、  **\<LName >** LastName 要素列です。  
   
  注釈が指定されていない、 **ContactID**属性。 このため、既定のマッピングが使用され、属性が同じ名前の列にマップされます。  
   

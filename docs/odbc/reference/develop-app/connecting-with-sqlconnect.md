@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
 - connecting to driver [ODBC], SQLConnect
@@ -27,12 +27,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcb591c8fb9e3921ad3788669f47290384c302e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1dbb9c58b69fbec426fb203e47c355348f089b0b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect による接続
 **SQLConnect**最も簡単な接続関数です。 データ ソース名が必要ですし、省略可能なユーザー ID とパスワードを受け取ります。 ハード コード、データ ソース名、ユーザー ID またはパスワードが不要のアプリケーションに対して適切に機能します。 でも使用アプリケーション制御独自「ルック アンド フィール」またはそのユーザー インターフェイスのないにもできます。 このようなアプリケーションを使用してデータ ソースの一覧を作成できる**SQLDataSources**、ユーザーにデータ ソース、ユーザー ID とパスワードを要求し、呼び出す**SQLConnect**です。  

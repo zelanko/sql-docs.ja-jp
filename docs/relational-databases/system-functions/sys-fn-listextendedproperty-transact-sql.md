@@ -32,13 +32,12 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cdd9b448d0d8e6a6c57a6bae2c9c52a94952f380
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d55eb614a9041322db2e4ddfeb03f64e6cff9e29
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ fn_listextendedproperty (
  指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
   
  { default | '*level1_object_type*' | NULL }  
- レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)**既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
+ レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)** 既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
   
 > [!NOTE]  
 >  default は NULL に相当し、'default' はオブジェクトの種類の DEFAULT に相当します。  
@@ -86,7 +85,7 @@ fn_listextendedproperty (
  指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  
   
  { default | '*level2_object_type*' |NULL }  
- レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)**既定値は NULL です。 有効な値は、DEFAULT、default (NULL に相当します)、または NULL です。 有効な入力*level2_object_type*は、列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
+ レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)** 既定値は NULL です。 有効な値は、DEFAULT、default (NULL に相当します)、または NULL です。 有効な入力*level2_object_type*は、列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
   
  { default | '*level2_object_name*' |NULL }  
  指定したレベル 2 のオブジェクトの種類の名前です。 *level2_object_name*は**sysname**既定値は NULL です。 有効な値は、default、NULL、またはオブジェクト名です。  

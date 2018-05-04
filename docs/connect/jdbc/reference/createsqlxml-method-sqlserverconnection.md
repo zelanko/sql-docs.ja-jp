@@ -42,7 +42,7 @@ public java.sql.SQLXML createSQLXML()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この createSQLXML メソッドは、java.sql.Connection インターフェイスの createSQLXML メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  

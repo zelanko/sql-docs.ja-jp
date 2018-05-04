@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -25,12 +25,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce98e3471f3bf14ada77fcbb67291ba8a4dff166
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>互換性マトリックス
 次の表では、アプリケーションやドライバーのこのセクションで以前定義の型の互換性について説明します。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
  [3] この構成可能性のある ODBC 2 で機能があるために、機能があります。*x*ブックマークなど、標準に含まれていません。  
   
- [ODBC 3 の機能があるために、機能を 4] この構成が失敗する可能性のある*.x*ブックマークなど、標準に含まれていません。  
+ [ODBC 3 の機能があるために、機能を 4] この構成が失敗する可能性のある *.x*ブックマークなど、標準に含まれていません。  
   
  [ODBC 3.8 ODBC 2.x または 3.x ドライバー、ドライバー固有の仕様などに含まれていない機能があるためにが、5] この構成に失敗する可能性があることができます[ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)です。  
   

@@ -1,30 +1,32 @@
 ---
-title: "Distributed Replay の構成 |Microsoft ドキュメント"
-ms.custom: 
+title: Distributed Replay の構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2ded636f3ded5a8821b6675ef5d18c21a31b968
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 1c203d2f67712e833d0866d871ad41b1c0462cb8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の構成の詳細は、Distributed Replay controller、クライアント上の XML ファイルで指定された管理ツールがインストールされているとします。 このようなファイルには、次のファイルが含まれます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Distributed Replay Controller、クライアント、および管理ツールのインストール場所に関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の構成の詳細は、XML ファイルで指定されます。 このようなファイルには、次のファイルが含まれます。  
   
 -   [コントローラー構成ファイル](#DReplayController)  
   
@@ -37,11 +39,11 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="DReplayController"></a> コントローラー構成ファイル: DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
- **\<コント ローラーのインストール パス > \DReplayController.config**  
+ **\<コントローラーのインストール パス>\DReplayController.config**  
   
  コントローラー構成ファイルによって指定されるログ記録レベルには、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|必須|  
+|設定|XML 要素|Description|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |ログ記録レベル|`<LoggingLevel>`|コントローラー サービスのログ記録レベルを指定します。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|不可。 既定値は `CRITICAL`です。|  
   
@@ -58,11 +60,11 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="DReplayClient"></a> クライアント構成ファイル: DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを開始すると、クライアント構成ファイル `DReplayClient.config`から構成設定が読み込まれます。 このファイルは、各クライアントの Distributed Replay Client サービスをインストールしたフォルダーにあります。  
   
- **\<クライアントのインストール パス > \DReplayClient.config**  
+ **\<クライアントのインストール パス>\DReplayClient.config**  
   
  クライアント構成ファイルによって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|必須|  
+|設定|XML 要素|Description|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |コントローラー|`<Controller>`|コントローラーのコンピューターの名前を指定します。 クライアントは、コントローラーにアクセスすることによって、Distributed Replay 環境での登録を試みます。|"`localhost`" または "`.`" を使用してローカル コンピューターを参照できます。|不可。 既定では、クライアントはローカル ("`.`") で実行しているコントローラー インスタンスの登録を試みます (存在する場合)。|  
 |クライアントの作業ディレクトリ|`<WorkingDirectory>`|ディスパッチ ファイルが保存されるクライアント上のローカル パス。<br /><br /> このディレクトリ内のファイルは、次の再生時に上書きされます。|ドライブ文字で始まる完全なディレクトリ名。|不可。 値が指定されない場合は、ディスパッチ ファイルは既定のクライアント構成ファイルと同じ場所に保存されます。 値が指定されており、そのフォルダーがクライアントに存在しない場合は、クライアント サービスは開始されません。|  
@@ -89,11 +91,11 @@ ms.lasthandoff: 01/17/2018
   
  既定の前処理構成ファイルは管理ツールのインストール フォルダーにあります。  
   
- **\<管理ツールのインストール パス > \DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<管理ツールのインストール パス>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  前処理構成の設定は、前処理構成ファイル内の `<PreprocessModifiers>` 要素の子である XML 要素で指定されています。 これらの設定は次のとおりです。  
   
-|設定|XML 要素|Description|指定できる値|必須|  
+|設定|XML 要素|Description|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |システム セッション アクティビティを含む|`<IncSystemSession>`|キャプチャ中のシステム セッション アクティビティが再生中に含まれるかどうかを示します。|`Yes` &#124; `No`|不可。 既定値は `No`です。|  
 |最大アイドル時間|`<MaxIdleTime>`|アイドル時間を絶対数 (単位は秒) で指定します。|>= -1 の整数です。<br /><br /> `-1` は、元のトレース ファイルの元の値から変更されていないことを示します。<br /><br /> `0` は、指定された時刻に何らかのアクティビティが行われていることを示します。|不可。 既定値は `-1`です。|  
@@ -118,16 +120,16 @@ ms.lasthandoff: 01/17/2018
   
  既定の再生構成ファイルは管理ツールのインストール フォルダーにあります。  
   
- **\<管理ツールのインストール パス > \DReplayAdmin\DReplay.exe.replay.config**  
+ **\<管理ツールのインストール パス>\DReplayAdmin\DReplay.exe.replay.config**  
   
  再生構成の設定は、再生構成ファイルの `<ReplayOptions>` 要素および `<OutputOptions>` 要素の子である XML 要素で指定されています。  
   
 ### <a name="replayoptions-element"></a>\<ReplayOptions > 要素  
  再生構成ファイルの `<ReplayOptions>` 要素によって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|必須|  
+|設定|XML 要素|Description|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ、サーバー名が既に使用して、指定されている場合、**-s * * * ターゲット サーバー*を持つパラメーター、**再生**管理ツールのオプションです。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象インスタンス (テスト サーバー)|`<Server>`|接続先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバーとインスタンスの名前を指定します。|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" または "`.`" を使用してローカル ホストを表すことはできません。|いいえ (管理ツールの **replay** オプションで、サーバー名が既に **-s***target server* パラメーターを使用して指定されている場合)。|  
 |シーケンス モード|`<SequencingMode>`|イベント スケジュールに使用されるモードを指定します。|`synchronization` &#124; `stress`|不可。 既定値は `stress`です。|  
 |ストレス スケールの粒度|`<StressScaleGranularity>`|ストレス モードで、Service Profile ID (SPID) のすべての接続をまとめて測定するのか (SPID)、個別に測定するのか (Connection) を指定します。|SPID &#124; Connection|可能。 既定値は `SPID`です。|  
 |接続タイム スケール|`<ConnectTimeScale>`|ストレス モードで接続時間を測定するのに使用されます。|`1` ～ `100`の整数値です。|不可。 既定値は `100`です。|  
@@ -140,7 +142,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="outputoptions-element"></a>\<OutputOptions > 要素  
  再生構成ファイルの `<OutputOptions>` 要素によって指定される設定には、次の内容が含まれます。  
   
-|設定|XML 要素|Description|指定できる値|必須|  
+|設定|XML 要素|Description|指定できる値|Required|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |行数の記録|`<RecordRowCount>`|それぞれの結果セットで行数を記録するかどうかを示します。|`Yes` &#124; `No`|不可。 既定値は `Yes`です。|  
 |結果セットの記録|`<RecordResultSet>`|すべての結果セットの内容を記録するかどうかを示します。|`Yes` &#124; `No`|不可。 既定値は `No`です。|  
@@ -173,7 +175,7 @@ ms.lasthandoff: 01/17/2018
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay フォーラム](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Distributed Replay を使用した SQL Server のロード テスト – パート 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Distributed Replay を使用した SQL Server のロード テスト – パート 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [分散再生を使用した SQL Server のロード テスト – パート 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [分散再生を使用した SQL Server のロード テスト – パート 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

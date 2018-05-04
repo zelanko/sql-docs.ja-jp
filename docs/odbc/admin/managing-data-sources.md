@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
 - data sources [ODBC], ODBC data source administrator
@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 222bbc143fee7aa89d8414a05510fa01a35873cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-data-sources"></a>データ ソースの管理
 ドライバーのセットアップ プログラムから ODBC ドライバーをインストールした後は、その 1 つまたは複数のデータ ソースを定義できます。 データ ソース名 (DSN) が作成したデータの一意の説明を提供する必要があります。たとえば、*給与*または*Accounts Payable*です。 現在インストールされているすべてのドライバーに定義されているユーザーおよびシステム データ ソースは、「、**ユーザー DSN**または**システム DSN**のタブ、 **ODBC データ ソース アドミニストレーター** ダイアログ ボックス。 特定のディレクトリ内のファイル データ ソースは、「、**ファイル DSN** ; タブに表示されるディレクトリを入力、**ファイルの場所**ボックスに、**ファイル DSN**  タブ。  

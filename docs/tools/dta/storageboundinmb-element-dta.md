@@ -2,7 +2,7 @@
 title: StorageBoundInMB 要素 (DTA) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 185c6fa8228fb4239789a010ec4eeb5975c14eb9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データベース エンジン チューニング アドバイザーのチューニング推奨設定 (インデックスおよびパーティション分割のセット) で使用できるメガバイト単位で最大の領域を指定します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベース エンジン チューニング アドバイザーのチューニング推奨設定 (インデックスとパーティション分割のセット) で使用できる最大容量を MB 単位で指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**unsignedInt**、長さは無制限です。|  
 |**既定値**|[なし] :|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 01/17/2018
 |**親要素**|[TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  複数のデータベースをチューニングする場合は、すべてのデータベースの推奨設定が容量計算の対象になります。 データベース エンジン チューニング アドバイザーは、既定で以下の記憶領域サイズのうちの小さい方を使用します。  
   
 -   現在の生データのサイズの 3 倍 (テーブルのヒープとクラスター化インデックスの合計サイズも含まれる)  
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>Description  
  次のコード例では、チューニングの推奨設定で使用できる最大ディスク領域として 1500 MB の制限を設定する方法を示します。  
   
 ## <a name="code"></a>コード  

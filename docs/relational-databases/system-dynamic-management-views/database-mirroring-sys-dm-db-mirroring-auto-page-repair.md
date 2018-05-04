@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4c86f019ed7b34ceab785c8f78205c5aed2d709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>データベース ミラーリングでは sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**database_id**|**int**|この行に対応するデータベースの ID です。|  
 |**file_id**|**int**|ページが存在するファイルの ID です。|  
 |**page_id**|**bigint**|ファイル内のページの ID です。|  
-|**error_type**|**int**|エラーの種類です。 値を指定できます。<br /><br /> **-**1 = すべてのハードウェア 823 エラー<br /><br /> 1 = 824 不適切なチェックサムまたは破損ページ (不適切なページ ID など) 以外のエラー<br /><br /> 2 = 不適切なチェックサム<br /><br /> 3 = 破損ページ|  
+|**error_type**|**int**|エラーの種類です。 値を指定できます。<br /><br /> **-** 1 = すべてのハードウェア 823 エラー<br /><br /> 1 = 824 不適切なチェックサムまたは破損ページ (不適切なページ ID など) 以外のエラー<br /><br /> 2 = 不適切なチェックサム<br /><br /> 3 = 破損ページ|  
 |**page_status**|**int**|ページ修復の試行ステータスです。<br /><br /> 2 = パートナーからの要求を待機中。<br /><br /> 3 = 要求はパートナーに送信済み。<br /><br /> 4 =  ページの自動修復を待機中 (応答はパートナーから受信済み)。<br /><br /> 5 = ページの自動修復に成功し、ページは使用可能。<br /><br /> 6 = 修復不可能。 パートナー側でもページが破損していた、パートナーと接続されていない、ネットワークの問題が発生したなど、ページ修復を試みているときにエラーが発生したことを示します。 これは最終的な状態ではありません。同じページで再度破損が見つかった場合、そのページが再びパートナーから要求されます。|  
 |**modification_time**|**datetime**|ページ ステータスが最後に変更された日時です。|  
   

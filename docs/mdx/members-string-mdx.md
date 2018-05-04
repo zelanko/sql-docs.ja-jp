@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a561739e4a0963b42080e2f27e7ce664d887870d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9fe851d1ac58e70b8a14212ee8cd8acd3feaf08a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-string-mdx"></a>Members (文字列) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +45,10 @@ Members(Member_Name)
  メンバー名を指定する有効な文字列式です。  
   
 ## <a name="remarks"></a>解説  
- **Members (String)**関数を指定する名前を持つ 1 つのメンバーを返します。 通常、使用して、 **Members (String)**を提供する外部の関数と併用、 **Members (String)**関数、メンバーを識別する文字列と**Members (String)**関数がその指定したメンバーについて、値を返します。  
+ **Members (String)** 関数を指定する名前を持つ 1 つのメンバーを返します。 通常、使用して、 **Members (String)** を提供する外部の関数と併用、 **Members (String)** 関数、メンバーを識別する文字列と**Members (String)** 関数がその指定したメンバーについて、値を返します。  
   
 ## <a name="example"></a>例  
- 次の例では、 **Members (String)**関数の有効なメンバーに、指定した文字列を変換して、文字列で指定されたメンバーの既定のメジャーを返します。 指定の文字列は単一引用符で囲まれています。 既定のメジャーは Reseller Sales Amount メジャーです。  
+ 次の例では、 **Members (String)** 関数の有効なメンバーに、指定した文字列を変換して、文字列で指定されたメンバーの既定のメジャーを返します。 指定の文字列は単一引用符で囲まれています。 既定のメジャーは Reseller Sales Amount メジャーです。  
   
 ```  
 SELECT Members ('[Geography].[Geography].[Country].&[United States] ') ON 0  
@@ -57,6 +56,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

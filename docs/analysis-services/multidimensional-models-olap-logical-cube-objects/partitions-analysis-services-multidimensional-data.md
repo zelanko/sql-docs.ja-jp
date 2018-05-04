@@ -1,46 +1,23 @@
 ---
-title: "パーティション (Analysis Services - 多次元データ) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- incremental updates [Analysis Services]
-- data sources [Analysis Services], partitions
-- data storage [Analysis Services]
-- aggregations [Analysis Services], partitions
-- OLAP objects [Analysis Services], partitions
-- storing data [Analysis Services], partitions
-- partitions [Analysis Services], about partitions
-- cubes [Analysis Services], partitions
-- partitions [Analysis Services]
-- remote partitions [Analysis Services]
-- measure groups [Analysis Services], partitions
-ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 
-author: Minewiskan
+title: パーティション (Analysis Services - 多次元データ) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e88ef15309c52942c24f663f3242ec3aba1afb81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>パーティション (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-パーティションは、メジャー グループ データの一部を入れるコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  
+  パーティションは、メジャー グループ データの一部を入れるコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  
   
  簡単な <xref:Microsoft.AnalysisServices.Partition> オブジェクトは、基本情報、スライス定義、集計デザインなどで構成されます。 基本情報には、パーティションの名前、ストレージ モード、処理モードなどが含まれます。 スライス定義は、組またはセットを指定する MDX 式です。 スライス定義には、StrToSet MDX 関数と同様の制限があります。 CONSTRAINED パラメーターを指定したスライス定義では、ディメンション、階層、レベルとメンバーの名前、キー、一意の名前やキューブ内のその他の名前付きオブジェクトを使用できますが、MDX 関数は使用できません。 集計デザインは、複数のパーティションで共有できる集計定義のコレクションです。 親キューブの集計デザインが既定値となります。  
   
@@ -50,7 +27,7 @@ ms.lasthandoff: 02/15/2018
   
  パーティションは、キューブのビジネス ユーザーには表示されません。 ただし、管理者は、パーティションの構成、追加、または削除を行うことができます。 各パーティションは、個別のファイル セットに格納されます。 各パーティションの集計データは、そのパーティションが定義されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス、別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス、またはそのパーティションの変換元データを提供するために使用される同じデータ ソースに格納できます。 パーティションを使用すると、キューブの変換元データと集計データを複数のハード ディスク ドライブと複数のサーバー コンピューターに分散できます。 中規模から大規模のキューブでは、パーティションによってクエリのパフォーマンスや読み込みのパフォーマンスが大幅に向上し、キューブのメンテナンスが容易になります。  
   
- 各パーティションのストレージ モードは、メジャー グループの他のパーティションとは別個に構成できます。 各パーティションは、変換元データの場所、ストレージ モード、プロアクティブ キャッシュ、集計デザインを自由に組み合わせて格納できます。 リアルタイム OLAP およびプロアクティブ キャッシュのオプションを使用すると、パーティションをデザインするときにクエリの速度と遅延のバランスを取ることができます。 ストレージ オプションは、関連するディメンションだけでなく、メジャー グループのファクトにも適用できます。 この柔軟性により、ユーザーのニーズに応じてキューブの格納方法を設計することが可能になります。 詳細については、次を参照してください。[パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)と[プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ 各パーティションのストレージ モードは、メジャー グループの他のパーティションとは別個に構成できます。 各パーティションは、変換元データの場所、ストレージ モード、プロアクティブ キャッシュ、集計デザインを自由に組み合わせて格納できます。 リアルタイム OLAP およびプロアクティブ キャッシュのオプションを使用すると、パーティションをデザインするときにクエリの速度と遅延のバランスを取ることができます。 ストレージ オプションは、関連するディメンションだけでなく、メジャー グループのファクトにも適用できます。 この柔軟性により、ユーザーのニーズに応じてキューブの格納方法を設計することが可能になります。 詳細については、次を参照してください[パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)と[プロアクティブ キャッシュ&#40;パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="partition-structure"></a>パーティションの構造  
  パーティションの構造は、そのメジャー グループの構造と一致する必要があります。つまり、メジャー グループを定義しているメジャーも、すべての関連ディメンションと共に、パーティションにおいて定義する必要があります。 このため、パーティションを作成すると、メジャー グループに定義したのと同じメジャーおよび関連するディメンションのセットが自動的に継承されます。  
@@ -68,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 -   列方向にパーティション分割されたメジャー グループでは、メジャー グループは 1 つのテーブルに基づいており、各パーティションは、データをパーティション用にフィルター選択するソース システム クエリに基づいています。 たとえば、1 つのテーブルに数か月のデータが含まれている場合、メジャー グループは、パーティションごとに個別の月のデータを返す Transact-SQL の WHERE 句を適用することによって月別にパーティション分割できます。  
   
- 各パーティションには、データと集計を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のローカル インスタンスに保存するか、別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを使用してリモート パーティションに保存するかを決定するストレージ設定があります。 このストレージ設定では、ストレージ モードや、パーティションについて待機時間を制御するためにプロアクティブ キャッシュを使用するかどうかも指定できます。 詳細については、次を参照してください。[パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)、および[リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)です。  
+ 各パーティションには、データと集計を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のローカル インスタンスに保存するか、別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを使用してリモート パーティションに保存するかを決定するストレージ設定があります。 このストレージ設定では、ストレージ モードや、パーティションについて待機時間を制御するためにプロアクティブ キャッシュを使用するかどうかも指定できます。 詳細については、次を参照してください。[パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[プロアクティブ キャッシュ&#40;パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)、および[リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)です。  
   
 ## <a name="incremental-updates"></a>増分更新  
  複数パーティションのメジャー グループ内でパーティションを作成して管理する際には、キューブ データが正確であることを保証するために特別な予防策をとる必要があります。 このような予防策は、単一パーティションのメジャー グループには通常は適用されませんが、パーティションを増分更新する場合には適用されます。 パーティションを増分更新すると、新しい一時パーティションは、基になるパーティションと同じ構造で作成されます。 一時パーティションは処理され、基になるパーティションにマージされます。 したがって、一時パーティションにデータを格納する処理クエリでは、既存パーティションに既に存在するデータが複製されないようにする必要があります。  

@@ -25,13 +25,12 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 507593c3b3d9240bf42482a9fc1a1c342e3df958
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3e41d96d6376dceb8594851e2ba31244ca1a8b60
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(**128**)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューを照会する方法です。 INFORMATION_SCHEMA ビューは、すべての新機能が反映されるとは限らないため、不完全な可能性があります。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューを照会する方法です。 INFORMATION_SCHEMA ビューは、すべての新機能が反映されるとは限らないため、不完全な可能性があります。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
-|**TABLE_TYPE**|**varchar (**10**)**|テーブルの種類。 VIEW または BASE TABLE です。|  
+|**TABLE_TYPE**|**varchar (** 10 **)**|テーブルの種類。 VIEW または BASE TABLE です。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

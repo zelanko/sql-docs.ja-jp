@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +24,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5eb440c409e7819d35b90b335004e9be7bb69c51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69549a2df3ae93e5f87777eaa70bf68bf76b447e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,13 +40,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. コンテキスト ノードの子要素を取得する  
- 次の XPath クエリでは、すべてを選択、 **\<連絡先 >**コンテキスト ノードの子要素。  
+ 次の XPath クエリでは、すべてを選択、 **\<連絡先 >** コンテキスト ノードの子要素。  
   
 ```  
 /child::Contact  
 ```  
   
- クエリで`child`軸と`Contact`ノード テストです (場合は TRUE`Contact`は、 **\<要素 >**ノード、ため\<要素 > 主ノード型に関連付けられている、`child`軸) です。  
+ クエリで`child`軸と`Contact`ノード テストです (場合は TRUE`Contact`は、 **\<要素 >** ノード、ため\<要素 > 主ノード型に関連付けられている、`child`軸) です。  
   
  `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
   
@@ -93,13 +91,13 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. コンテキスト ノードの孫を取得する  
- 次の XPath クエリでは、すべてを選択、 **\<順序 >**の子要素、 **\<顧客 >**コンテキスト ノードの子要素。  
+ 次の XPath クエリでは、すべてを選択、 **\<順序 >** の子要素、 **\<顧客 >** コンテキスト ノードの子要素。  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- クエリで`child`軸と`Customer`と`Order`はノード テスト (Customer と Order は場合、これらのノード テストは TRUE **\<要素 >**ノード、ため、  **\<要素 >**ノードは、プライマリ ノードの**子**軸) です。 一致する各ノードに対して**\<顧客 >**、一致するノード **\<Orders >**結果に追加されます。 のみ**\<順序 >**が結果セットに返されます。  
+ クエリで`child`軸と`Customer`と`Order`はノード テスト (Customer と Order は場合、これらのノード テストは TRUE **\<要素 >** ノード、ため、  **\<要素 >** ノードは、プライマリ ノードの**子**軸) です。 一致する各ノードに対して**\<顧客 >**、一致するノード **\<Orders >** 結果に追加されます。 のみ**\<順序 >** が結果セットに返されます。  
   
  **子**軸は、既定値です。 そのため、クエリは、として指定できます。  
   
@@ -168,10 +166,10 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから**\<顧客 >**に移動する、クエリ、 **\<順序 >**要素。 一致する各ノードの**\<順序 >**、ノードが、クエリ、追加 **\<OrderDetail >**結果にします。 のみ **\<OrderDetail >**が結果セットに返されます。  
+ XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから**\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードの**\<順序 >**、ノードが、クエリ、追加 **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
- 次のクエリでは、すべてを取得、 **\<順序 >**親を持つ要素**\<顧客 >**を持つ要素を**CustomerID**属性1 の値です。 クエリを使用して、**子**の親を検索する述語内の軸、 **\<順序 >**要素。  
+ 次のクエリでは、すべてを取得、 **\<順序 >** 親を持つ要素**\<顧客 >** を持つ要素を**CustomerID**属性1 の値です。 クエリを使用して、**子**の親を検索する述語内の軸、 **\<順序 >** 要素。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -190,7 +188,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 > [!NOTE]  
->  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます**\<順序 >**です。 含むマッピング スキーマ内の要素がある可能性がありますが**\<順序 >**、; それらのいずれかで、XPath を開始していないその結果、 **\<順序 >**と見なされます、このドキュメントの最上位の要素型。  
+>  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます**\<順序 >** です。 含むマッピング スキーマ内の要素がある可能性がありますが**\<順序 >**、; それらのいずれかで、XPath を開始していないその結果、 **\<順序 >** と見なされます、このドキュメントの最上位の要素型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
@@ -261,7 +259,7 @@ ms.lasthandoff: 04/16/2018
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 述語で`attribute::CustomerID`、`attribute`軸と`CustomerID`ノード テストです (場合`CustomerID`では、ノード テストは TRUE、属性、 **\<属性 >**ノード プライマリ ノードです`attribute`軸) です。  
+ 述語で`attribute::CustomerID`、`attribute`軸と`CustomerID`ノード テストです (場合`CustomerID`では、ノード テストは TRUE、属性、 **\<属性 >** ノード プライマリ ノードです`attribute`軸) です。  
   
  `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
   

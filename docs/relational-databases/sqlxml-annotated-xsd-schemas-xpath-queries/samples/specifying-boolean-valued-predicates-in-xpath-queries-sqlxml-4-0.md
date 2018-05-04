@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +24,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3ad82b1419ba924578854adb4f24d37f3f196d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7f15bb5aab9af5758471d2518da2641e8ff58a7f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath クエリでのブール値述語の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,13 +96,13 @@ ms.lasthandoff: 04/16/2018
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 連続する述語を入れ子で指定する  
- 次のクエリでは、述語を連続して使用しています。 クエリでは、すべてを返します、 **\<顧客 >**両方がある、コンテキスト ノードの子要素、 **SalesPersonID** 277 の値を持つ属性と**TerritoryID**3 の値を持つ属性。  
+ 次のクエリでは、述語を連続して使用しています。 クエリでは、すべてを返します、 **\<顧客 >** 両方がある、コンテキスト ノードの子要素、 **SalesPersonID** 277 の値を持つ属性と**TerritoryID**3 の値を持つ属性。  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- クエリを返します、 **\<顧客 >**を述語で指定された両方の条件を満たす要素。  
+ クエリを返します、 **\<顧客 >** を述語で指定された両方の条件を満たす要素。  
   
  ショートカット、**属性**軸 (@)、指定できるためと、**子**軸は、既定値、クエリから省略することができます。  
   
@@ -112,7 +110,7 @@ ms.lasthandoff: 04/16/2018
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >**コンテキスト ノードの子要素を含む**\<順序 >**に少なくとも 1 つの子要素 **\<順序 >**を持つ要素を**SalesPersonID**属性の値は 2 です。  
+ 次の XPath クエリでは、述語を入れ子にして使用しています。 クエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素を含む**\<順序 >** に少なくとも 1 つの子要素 **\<順序 >** を持つ要素を**SalesPersonID**属性の値は 2 です。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -175,7 +173,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 最上位の述語を指定する  
- 次のクエリを返します、 **\<顧客 >**がコンテキスト ノードの子要素ノード**\<順序 >**子要素です。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
+ 次のクエリを返します、 **\<顧客 >** がコンテキスト ノードの子要素ノード**\<順序 >** 子要素です。 このクエリでは、ロケーション パスを最上位の述語としてテストします。  
   
 ```  
 /child::Customer[child::Order]  

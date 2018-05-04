@@ -22,12 +22,11 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 39de8bf43f01354e06a24305c650b52852687f4c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3201ea45c940c4d08956192203a167436c4135f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  階層を返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>解説  
- **LinkMember**関数は、関連する階層で指定されたメンバーの各レベルでキー値に一致する指定された階層からメンバーを返します。 各レベルの属性では、キーの基数およびデータ型が同じである必要があります。 不自然階層では、属性のキー値が複数一致する場合、結果はエラーまたは不確定になります。  
+ **LinkMember**関数は、関連する階層で指定されたメンバーの各レベルでキー値に一致する指定された階層からメンバーを返します。 各レベルの属性では、キーのカーディナリティおよびデータ型が同じである必要があります。 不自然階層では、属性のキー値が複数一致する場合、結果はエラーまたは不確定になります。  
   
 ## <a name="examples"></a>使用例  
  次の例では、 **LinkMember**関数を Calendar 階層にある Date.Date 属性階層の July 1, 2002年メンバーの先祖の Adventure Works キューブ内の既定のメジャーを返します。  
@@ -67,7 +66,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [Hierarchize (& a) #40 です。MDX と #41 です。](../mdx/hierarchize-mdx.md)   
- [先祖と #40 です。MDX と #41 です。](../mdx/ascendants-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [先祖&#40;MDX&#41;](../mdx/ascendants-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

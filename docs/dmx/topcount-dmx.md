@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: cd3ed46a927a40804b09e674fe6d814d2b085ab1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +46,12 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>戻り値の型  
  \<テーブル式 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  によって指定された値、\<式をランク付け > 引数で指定される行のランクの減少順を決定する、\<テーブル式 > 引数とで指定されている最上位の行の数、 \<count > 引数が返されます。  
   
- TopCount 関数が結合型の予測を有効にするのには導入最初および一般に、同じ結果を含むステートメントとして**SELECT TOP**と**ORDER BY**句。 使用する場合は、結合型の予測のパフォーマンスが向上を取得するが、 **Predict (DMX)**関数で、さまざまな予測を返すの仕様をサポートします。  
+ TopCount 関数が結合型の予測を有効にするのには導入最初および一般に、同じ結果を含むステートメントとして**SELECT TOP**と**ORDER BY**句。 使用する場合は、結合型の予測のパフォーマンスが向上を取得するが、 **Predict (DMX)** 関数で、さまざまな予測を返すの仕様をサポートします。  
   
- ただし、ここで TopCount を使用する必要がありますも状況もあります。 たとえば、DMX はサポートされません、**上部**サブ select ステートメント内の修飾子です。 [PredictHistogram & # #40; DMX &#41;](../dmx/predicthistogram-dmx.md)機能もサポートされていませんの追加**上部**です。  
+ ただし、ここで TopCount を使用する必要がありますも状況もあります。 たとえば、DMX はサポートされません、**上部**サブ select ステートメント内の修飾子です。 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)機能もサポートされていませんの追加**上部**です。  
   
 ## <a name="examples"></a>使用例  
  次の例としてを使用して作成した Association モデルに対する予測クエリ、 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)です。 クエリは、同じ結果を返しますが、最初の例では、TopCount、および 2 番目の例では、予測関数を使用しています。  
@@ -122,11 +121,11 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- 結果には、サポート値に基づいて並べ替えられた上位 3 件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、次を参照してください。 **Predict (DMX)**です。  
+ 結果には、サポート値に基づいて並べ替えられた上位 3 件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、次を参照してください。 **Predict (DMX)** です。  
   
 ## <a name="see-also"></a>参照  
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
  [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  

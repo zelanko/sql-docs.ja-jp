@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e181cfbcdee2313872c032f2f6c6feb70c1394e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3f9fb56134ffa762350b5c17f50994f589c79058
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath クエリの実行 (SQLXMLOLEDB プロバイダー)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **マッピング スキーマ**  
   
- このサンプル ADO アプリケーションでは、XPath クエリ (root) を XSD マッピング スキーマ (MySchema.xml) に対して指定します。 スキーマには、 **\<連絡先 >**を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。 このスキーマでは、既定のマッピングにより、要素名は同じ名前のテーブルに、単純型の属性は同じ名前の列にマップされます。  
+ このサンプル ADO アプリケーションでは、XPath クエリ (root) を XSD マッピング スキーマ (MySchema.xml) に対して指定します。 スキーマには、 **\<連絡先 >** を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。 このスキーマでは、既定のマッピングにより、要素名は同じ名前のテーブルに、単純型の属性は同じ名前の列にマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

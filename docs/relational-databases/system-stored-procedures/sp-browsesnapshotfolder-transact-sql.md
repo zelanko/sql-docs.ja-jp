@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fff4d6ca3c05e75dfbbfb756abcec6540cd33949
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a283d6d2dcac430fda8d0861681c563eebaedb5e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ## <a name="remarks"></a>解説  
  **sp_browsesnapshotfolder**はスナップショット レプリケーションおよびトランザクション レプリケーションで使用します。  
   
- 場合、*サブスクライバー*と*@subscriber_db*フィールドが NULL のままで、ストアド プロシージャには、パブリケーションを検索できる最新のスナップショットのスナップショット フォルダーが返されます。 場合、*サブスクライバー*と*@subscriber_db*フィールドが指定されると、ストアド プロシージャには、指定されたサブスクリプションのスナップショット フォルダーが返されます。 パブリケーションに対するスナップショットが生成されていない場合は、空の結果セットが返されます。  
+ 場合、*サブスクライバー*と *@subscriber_db*フィールドが NULL のままで、ストアド プロシージャには、パブリケーションを検索できる最新のスナップショットのスナップショット フォルダーが返されます。 場合、*サブスクライバー*と *@subscriber_db*フィールドが指定されると、ストアド プロシージャには、指定されたサブスクリプションのスナップショット フォルダーが返されます。 パブリケーションに対するスナップショットが生成されていない場合は、空の結果セットが返されます。  
   
  パブリケーションが、パブリッシャーの作業ディレクトリとパブリッシャーのスナップショット フォルダーの両方にスナップショット ファイルを生成するようにセットアップされている場合、結果セットには 2 行のデータが含まれます。 第 1 の行にはパブリケーションのスナップショット フォルダーが含まれ、第 2 の行にはパブリッシャーの作業ディレクトリが含まれます。 **sp_browsesnapshotfolder**スナップショット ファイルが生成されるディレクトリを特定するのに役立ちます。  
   

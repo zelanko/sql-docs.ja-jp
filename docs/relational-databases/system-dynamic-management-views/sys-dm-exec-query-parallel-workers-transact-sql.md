@@ -26,13 +26,12 @@ caps.latest.revision: 1
 author: pelopes
 ms.author: pelopes
 manager: ajayj
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71b120e4cbc759f41f59bede066b75a7737bad2a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bbc180c4d3eac80d01be7795bdc524e79b6b9793
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**scheduler_count**|**int**|このノード上のスケジューラの数です。|  
 |**max_worker_count**|**int**|並列クエリのワーカーの最大数。|  
 |**reserved_worker_count**|**int**|並列クエリは、によって予約されているワーカーの数とすべての要求で使用されるメインのワーカーの数。| 
-|**free_worker_count**|**int**|タスクの使用可能なワーカーの数。<br /><br />**注:**すべての受信要求を消費に少なくとも 1 つのワーカーは、空いているワーカー カウントから減算されます。  空いているワーカーの数が負荷の高いサーバーに負の数を指定できます。| 
+|**free_worker_count**|**int**|タスクの使用可能なワーカーの数。<br /><br />**注:** すべての受信要求を消費に少なくとも 1 つのワーカーは、空いているワーカー カウントから減算されます。  空いているワーカーの数が負荷の高いサーバーに負の数を指定できます。| 
 |**used_worker_count**|**int**|並列クエリで使用しているワーカーの数。|  
   
 ## <a name="permissions"></a>権限  

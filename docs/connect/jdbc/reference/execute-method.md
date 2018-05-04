@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="execute-method-"></a>execute () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この SQL ステートメントを実行します。 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)オブジェクトで、SQL ステートメントの任意の種類を指定できます。  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの SQL ステートメントを実行します。すべての種類の SQL ステートメントを実行することができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,11 +47,11 @@ public boolean execute()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>解説  
- この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドによって指定されます。  
+## <a name="remarks"></a>Remarks  
+ この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [メソッドを実行する&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)   
+ [execute メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

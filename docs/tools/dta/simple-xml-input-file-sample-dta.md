@@ -2,7 +2,7 @@
 title: 単純な XML 入力ファイルのサンプル (DTA) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,20 +22,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89b221df8cea8289477bb64e05aabd54ab8f1d0f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 48764af9fdea6225bc3fe3434b5db7a1b13cd40b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>XML 入力ファイルの簡単なサンプル (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]コピーし、使い慣れた XML エディターまたはテキスト エディターにワークロードのチューニングに使用する単純な XML 入力ファイルのこのサンプルを貼り付けます。 サンプルを貼り付けた後に、 **Server**、 **Database**、 **Schema**、 **Table**、 **Workload**、および **TuningOptions** 要素で指定する値を、特定のチューニング セッションの値に置き換えてください。 これらの要素で使用できる子要素、属性の詳細については、次を参照してください。、 [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)です。 以下のサンプルでは、使用できる属性や子要素の一部だけを使用しています。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  この簡単な XML 入力ファイルのサンプルをコピーして、お使いの XML エディターやテキスト エディターに貼り付け、ワークロードのチューニングのために使用することができます。 サンプルを貼り付けた後に、 **Server**、 **Database**、 **Schema**、 **Table**、 **Workload**、および **TuningOptions** 要素で指定する値を、特定のチューニング セッションの値に置き換えてください。 これらの要素で使用できる属性および子要素の詳細については、「 [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。 以下のサンプルでは、使用できる属性や子要素の一部だけを使用しています。  
   
 ## <a name="code"></a>コード  
  [!code-xml[InputFileSamples#SimpleXMLInputFile](../../tools/dta/codesnippet/xml/simple-xml-input-file-sa_1.xml)]  
   
 ## <a name="see-also"></a>参照  
- [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+ [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

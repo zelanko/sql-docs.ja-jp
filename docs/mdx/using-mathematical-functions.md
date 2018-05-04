@@ -20,12 +20,11 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: edf38e8ecd84fd4f4db18bdb9423edeb8e56e76b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e1119b4fc27ba91aacebe37f8be0911f319a87d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-mathematical-functions"></a>数学関数の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +34,6 @@ ms.lasthandoff: 01/08/2018
  特に指定しない限り、数学関数に引き渡される数字は、倍精度浮動小数点数として解釈されます。  
   
 ## <a name="see-also"></a>参照  
- [関数と #40 です。MDX 構文 &#41;](../mdx/functions-mdx-syntax.md)  
+ [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
 - ODBC drivers [ODBC], backward compatibility
@@ -25,23 +25,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9a713564688e97c4b9b649880e989598a58179f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 61809072272ae91c32d4780971735c29c53fe977
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x アプリケーションの作成
 ODBC 2 時にします。*x*アプリケーションが ODBC 3 にアップグレードします*。x*、両方の ODBC 2 と連携するようは記述されている必要があります*。x*および 3 *。x*ドライバー。 アプリケーションでは、ODBC 3 の活用するために条件付きのコードを組み込む必要があります。*x*機能します。  
   
- SQL_OV_ODBC2 にまた環境属性を設定する必要があります。 これにより、ドライバーは ODBC 2 のように動作するよう*.x*セクションで説明されている変更に関してドライバー[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)です。  
+ SQL_OV_ODBC2 にまた環境属性を設定する必要があります。 これにより、ドライバーは ODBC 2 のように動作するよう *.x*セクションで説明されている変更に関してドライバー[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)です。  
   
- かどうか、アプリケーションで使用のセクションで説明する機能のいずれかの[の新機能](../../../odbc/reference/develop-app/new-features.md)、ドライバーは ODBC 3 であるかどうかを決定する条件付きコードを使用する必要があります*。x*または ODBC 2*.x*ドライバー。 アプリケーションを使用して**SQLGetDiagField**と**SQLGetDiagRec** ODBC 3 を取得します*。x* SQLSTATEs これらの条件付きコード フラグメントの処理中にエラーの実行中にします。 新しい機能に関する次の点を考慮する必要があります。  
+ かどうか、アプリケーションで使用のセクションで説明する機能のいずれかの[の新機能](../../../odbc/reference/develop-app/new-features.md)、ドライバーは ODBC 3 であるかどうかを決定する条件付きコードを使用する必要があります*。x*または ODBC 2 *.x*ドライバー。 アプリケーションを使用して**SQLGetDiagField**と**SQLGetDiagRec** ODBC 3 を取得します*。x* SQLSTATEs これらの条件付きコード フラグメントの処理中にエラーの実行中にします。 新しい機能に関する次の点を考慮する必要があります。  
   
 -   行セット サイズの動作の変更によって影響を受けるアプリケーションの呼び出しをしないように注意する必要があります**SQLFetch**配列のサイズが 1 より大きい場合。 これらのアプリケーションへの呼び出しを置き換える必要があります**SQLExtendedFetch**への呼び出しに**SQLSetStmtAttr** SQL_ATTR_ARRAY_STATUS_PTR ステートメント属性を設定して**SQLFetchScroll**両方 ODBC 3 で動作する一般的なコードを持つようにする、します。*x*および ODBC 2 *。x*ドライバー。 **SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE を型にマップされます**SQLSetStmtAttr** ODBC 2 SQL_ROWSET_SIZE と*。x*ドライバー、その複数行のフェッチ操作のため、アプリケーションは SQL_ATTR_ROW_ARRAY_SIZE を設定できますだけです。  
   
--   ほとんどのアプリケーションをアップグレードするには実際に受けません SQLSTATE コードの変更。 影響を受けるアプリケーションの機械的な検索を行うし、「SQLSTATE マッピング」セクションで、エラー変換テーブルを使用して、ODBC 3 を変換するほとんどの場合に交換できます。*x*エラー コードが ODBC 2*.x*コード。 ODBC 3 以降*.x*ドライバー マネージャーは ODBC 2 からマッピングを実行します*。x* odbc 3 SQLSTATEs *。x* SQLSTATEs、これらのアプリケーションの作成者に ODBC 3 のチェックだけが必要があります*。x* SQLSTATEs であり、ODBC 2 を追加する方法がありません*。x* SQLSTATEs の条件付きコードにします。  
+-   ほとんどのアプリケーションをアップグレードするには実際に受けません SQLSTATE コードの変更。 影響を受けるアプリケーションの機械的な検索を行うし、「SQLSTATE マッピング」セクションで、エラー変換テーブルを使用して、ODBC 3 を変換するほとんどの場合に交換できます。*x*エラー コードが ODBC 2 *.x*コード。 ODBC 3 以降 *.x*ドライバー マネージャーは ODBC 2 からマッピングを実行します*。x* odbc 3 SQLSTATEs *。x* SQLSTATEs、これらのアプリケーションの作成者に ODBC 3 のチェックだけが必要があります*。x* SQLSTATEs であり、ODBC 2 を追加する方法がありません*。x* SQLSTATEs の条件付きコードにします。  
   
 -   アプリケーションが日付、時刻、および timestamp データ型の優れた使用する場合、アプリケーションは ODBC 2 自体を宣言できます。*x*調整コードを使用する代わりに、既存のコードをアプリケーションおよび使用します。  
   
@@ -63,7 +62,7 @@ ODBC 2 時にします。*x*アプリケーションが ODBC 3 にアップグ�
   
 -   すべての呼び出しを置き換える**SQLTransact**への呼び出しに**SQLEndTran**です。 場合の右端にある有効なハンドル、 **SQLTransact**呼び出しは、環境ハンドル、 *HandleType* SQL_HANDLE_ENV の引数を使用する必要があります、 **SQLEndTran**を呼び出す適切な*処理*引数。 場合の右端にある有効なハンドル、 **SQLTransact**呼び出しは、接続ハンドル、 *HandleType* sql_handle_dbc としての引数を使用する必要があります、 **SQLEndTran**を呼び出す適切な*処理*引数。  
   
--   すべての呼び出しを置き換える**SQLColAttributes**への呼び出しに**SQLColAttribute**です。 場合、 *FieldIdentifier*引数が SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、または SQL_COLUMN_LENGTH 関数の名前以外の何かを変更しないでください。 いない場合は、変更*FieldIdentifier* SQL_COLUMN_XXXX SQL_DESC_XXXX するからです。 場合*FieldIdentifier* SQL_DESC_CONCISE_TYPE は、データ型が datetime データ型を変更、対応する ODBC 3*.x*データ型。  
+-   すべての呼び出しを置き換える**SQLColAttributes**への呼び出しに**SQLColAttribute**です。 場合、 *FieldIdentifier*引数が SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、または SQL_COLUMN_LENGTH 関数の名前以外の何かを変更しないでください。 いない場合は、変更*FieldIdentifier* SQL_COLUMN_XXXX SQL_DESC_XXXX するからです。 場合*FieldIdentifier* SQL_DESC_CONCISE_TYPE は、データ型が datetime データ型を変更、対応する ODBC 3 *.x*データ型。  
   
 -   ブロック カーソル、スクロール可能なカーソル、またはその両方を使用する場合、アプリケーションは、次を行います。  
   

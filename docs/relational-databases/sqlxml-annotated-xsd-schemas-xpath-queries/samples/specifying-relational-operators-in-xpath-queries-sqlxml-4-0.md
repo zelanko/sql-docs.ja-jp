@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b360fb33ecbee395519f39a14b5be5bf0a023857
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d7c5c0a97498a1ebae3656b73e3f6d0d6e45eeb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での関係演算子の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-specify-relational-operator"></a>A. 関係演算子を指定する  
- この XPath クエリは、子の要素を返します、 **\<顧客 >**要素を**CustomerID**属性の値が「1」と where 任意の子**\<順序>**要素を含む、  **\<OrderDetail >**を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
+ この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」と where 任意の子**\<順序>** 要素を含む、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 角かっこのフィルターで指定された述語、 **\<顧客 >**要素。 のみ、 **\<顧客 >**要素には、少なくとも 1 つを持つ **\<OrderDetail >** 3 が返されるよりも大きい OrderQty 属性値を持つ孫です。  
+ 角かっこのフィルターで指定された述語、 **\<顧客 >** 要素。 のみ、 **\<顧客 >** 要素には、少なくとも 1 つを持つ **\<OrderDetail >** 3 が返されるよりも大きい OrderQty 属性値を持つ孫です。  
   
  **子**軸は、既定値です。 そのため、クエリは、として指定できます。  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. XPath クエリに関係演算子を指定し、論理関数を使用して結果を比較する  
- このクエリでは、すべてを返します、 **\<順序 >**をコンテキスト ノードの子要素、 **SalesPersonID**属性値が 270 未満。  
+ このクエリでは、すべてを返します、 **\<順序 >** をコンテキスト ノードの子要素、 **SalesPersonID**属性値が 270 未満。  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

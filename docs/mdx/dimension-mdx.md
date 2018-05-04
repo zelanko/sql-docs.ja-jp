@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0da55878251f8235b9e262e38356a0eacc19d3a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b15f8b2772e468976ed21720e7a3b214cf64651c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,10 +84,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [カウント &#40;です。階層レベルが&#41;&#40;です。MDX と #41 です。](../mdx/count-hierarchy-levels-mdx.md)   
- [カウント &#40;です。セット &#41;&#40;です。MDX と #41 です。](../mdx/count-set-mdx.md)   
- [レベル &#40;です。MDX と #41 です。](../mdx/levels-mdx.md)   
- [メンバーと #40 です。セット &#41;&#40;です。MDX と #41 です。](../mdx/members-set-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [カウント&#40;階層レベル&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [カウント & #40 です。セット & #41;& #40 です。MDX と #41 です。](../mdx/count-set-mdx.md)   
+ [レベル&#40;MDX&#41;](../mdx/levels-mdx.md)   
+ [メンバー&#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

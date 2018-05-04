@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b6681b8cb16336c077ad4d3d6c54ab8da97c9a58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 75c30d2874cfdbb46823f095d14685866d3e6252
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +44,13 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *[値]*  
+ *値*  
  各組の比較の基準値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、メジャーを返す多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **TopSum**関数セットを降順で並べ替え、指定されたセットに対して評価される指定メジャーの合計を計算します。 次に、値の大きい方から、指定した数値式の合計が指定値以上になるように要素のセットを作成して返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!IMPORTANT]  

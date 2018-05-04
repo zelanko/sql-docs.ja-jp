@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2c8ff1f7343017b3c7870f963fe2006699f88e9d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dc8b2cf387c9a094a0615b6e7a7ef7e2f4da381b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +87,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 現在のメンバーは、クエリ内の軸で使用される階層で変更されます。 そのため、現在、同じディメンションに、軸上で使用されていないその他の階層のメンバーを変更することができますも;この動作は ' autoexist"' と呼ばれ、詳細についてを参照できます[MDX &#40; の主な概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). たとえば、次のクエリでは、Date ディメンションの Calendar Year 階層の現在のメンバーを、Calendar 階層の現在のメンバーと共に変更する方法 (後者が行軸に表示されている場合) を示しています。  
+ 現在のメンバーは、クエリ内の軸で使用される階層で変更されます。 そのため、現在、同じディメンションに、軸上で使用されていないその他の階層のメンバーを変更することができますも;この動作は ' autoexist"' と呼ばれ、詳細についてを参照できます[MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)です。 たとえば、次のクエリでは、Date ディメンションの Calendar Year 階層の現在のメンバーを、Calendar 階層の現在のメンバーと共に変更する方法 (後者が行軸に表示されている場合) を示しています。  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -131,6 +130,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -22,17 +22,16 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 53598a178d8b11e03feb81634d76a46974aedfe2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2efbc1d57b79ae1794db19564553d4aa91cf65bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-dmx"></a>予約されているキーワード (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]排他的に使用するための特定のキーワードを予約します。 これらのキーワードを任意の場所を除く、位置でのデータ マイニング拡張機能 (DMX) ステートメントで使用できませんを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]DMX 言語リファレンスで定義します。 これらの制限された DMX キーワードには次のメンバーがあります。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 排他的に使用するための特定のキーワードを予約します。 これらのキーワードを任意の場所を除く、位置でのデータ マイニング拡張機能 (DMX) ステートメントで使用できませんを[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]DMX 言語リファレンスで定義します。 これらの制限された DMX キーワードには次のメンバーがあります。  
   
 -   すべてのデータ定義ステートメントは、トピックに示されている[DMX データ定義ステートメント](../dmx/dmx-statements-data-definition.md)です。  
   
@@ -46,13 +45,13 @@ ms.lasthandoff: 01/08/2018
   
  データベースのオブジェクトに名前を付ける場合、予約されたキーワードを使用しない名前付け規則の使用を推奨します。  
   
- データベースに予約されたキーワードと一致する名前が含まれている場合、これらのオブジェクトを参照するときに区切られた識別子を使用する必要があります。 詳細については、次を参照してください。[識別子 &#40;DMX&#41;](../dmx/identifiers-dmx.md)です。  
+ データベースに予約されたキーワードと一致する名前が含まれている場合、これらのオブジェクトを参照するときに区切られた識別子を使用する必要があります。 詳細については、次を参照してください。[識別子&#40;DMX&#41;](../dmx/identifiers-dmx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

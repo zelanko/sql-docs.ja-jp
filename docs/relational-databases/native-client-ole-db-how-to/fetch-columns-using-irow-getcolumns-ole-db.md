@@ -18,13 +18,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75800bac6e0d13b625adf8f66c035d302ad968a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: db273a16ba7fd829cb5052c8f25427fe5806d8d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 -   (シーケンス) 内の列をフェッチする方法。  
   
--   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 **IRow**-**> GetColumns()**実際の列の長さだけを返します。 この場合、 **IRow GetColumns()]-> [**実際のデータの取得に同じ列に対してもう一度呼び出すことができます。  
+-   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体の場合は**pData** null と**cbMaxLen** 0 への呼び出しは、 **IRow**-**> GetColumns()** 実際の列の長さだけを返します。 この場合、 **IRow GetColumns()]-> [** 実際のデータの取得に同じ列に対してもう一度呼び出すことができます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  

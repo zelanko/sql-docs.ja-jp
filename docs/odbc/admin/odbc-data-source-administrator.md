@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f94dd66f0b09c31244a7126edbaff526308dd8d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 612badd195e427907262c79005f13b44af89d65b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC データ ソース アドミニストレーター
 Microsoft® ODBC データ ソース アドミニストレーターは、データベースのドライバーとデータ ソースを管理します。 Windows コントロール パネルの このアプリケーションがある**管理ツール**です。 アイコンの名前は Windows 8 以降、 **ODBC データ ソース**、64 ビット オペレーティング システムでは、32 ビットおよび 64 ビット バージョンとします。  

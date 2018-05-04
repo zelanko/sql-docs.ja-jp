@@ -29,12 +29,11 @@ caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95ee3e6306b47f74d0787bf62e4bfe3ecd5e07c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f463c01205b574334dd52263cb056f3a2daea62f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  **'**< relational_operator >**'** {よりも少ない最大 | よりも少ない最も大きいまたは等しい | 最小値を超える | 最小値より大きいか等しい}  
  内の個別の LSN 値を識別するため、 **cdc.lsn_time_mapping**テーブルが関連付け**tran_end_time**と比較したときに関係を満たす、 *tracking_time*値。  
   
- *relational_operator*は**nvarchar (30)**です。  
+ *relational_operator*は**nvarchar (30)** です。  
   
  *tracking_time*  
  照合する日付時刻値を指定します。 *tracking_time*は**datetime**です。  
