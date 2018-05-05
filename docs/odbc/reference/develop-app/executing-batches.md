@@ -3,15 +3,12 @@ title: バッチを実行して |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
@@ -20,12 +17,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ebbba1ef4141ed71a80afa91c28d9b12a6dbacc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 22c034d4be28ca8c3212fad4ee1493cb0a22d915
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-batches"></a>バッチの実行
 アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずチェックする必要があります。 これには、アプリケーションの呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS と SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションでは、行のカウント – 生成および – セットを生成するステートメントが明示的なバッチおよび後者 2 つのオプションの戻り値の行の数と結果の可用性に関する情報を設定中に、プロシージャでサポートされる結果がパラメーター化するかどうかが返されます。実行します。  

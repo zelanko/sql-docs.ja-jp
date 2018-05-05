@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 285df1ab327617437fa9edf32f21b84b2499e0ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合アーキテクチャのパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +57,10 @@ ms.lasthandoff: 04/16/2018
  配列として簡単に表現できるデータを [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルでスキャンする必要がある場合、マネージ コードを使用するとパフォーマンスが大幅に向上します。  
   
 ### <a name="string-data"></a>文字列データ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など、データの文字**varchar**、マネージ関数で SqlString または SqlChars 型を指定できます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 さらに、XML データをサーバーから使用できますが返すストリーミング インターフェイス**SqlXml.CreateReader()**です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など、データの文字**varchar**、マネージ関数で SqlString または SqlChars 型を指定できます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 さらに、XML データをサーバーから使用できますが返すストリーミング インターフェイス**SqlXml.CreateReader()** です。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR と拡張ストアド プロシージャ  
- マネージ プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 また、System.Data.SqlServer Api サポート データなどの型**xml**、 **varchar (max)**、 **nvarchar (max)**、および**varbinary(max)**で導入された、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]となる一方で、新しいデータ型をサポートするために、ODS Api が拡張されていません。  
+ マネージ プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 また、System.Data.SqlServer Api サポート データなどの型**xml**、 **varchar (max)**、 **nvarchar (max)**、および**varbinary(max)** で導入された、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]となる一方で、新しいデータ型をサポートするために、ODS Api が拡張されていません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではマネージ コードによってメモリ、スレッド、同期などのリソースの使用状況が管理されます。 これらのリソースを公開するマネージ API が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース マネージャーの上位に実装されるためです。 逆に、拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってリソースの使用状況が監視または制御されることがありません。 たとえば、拡張ストアド プロシージャで大量の CPU リソースまたはメモリ リソースが消費されていても、それを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出したり制御することはできません。 一方、マネージ コードでは、特定のスレッドが長期間リソースを占有していることを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出して、タスクからリソースを解放し、他の作業のスケジュールを設定できるようになります。 つまり、マネージ コードを使用すると、スケーラビリティやシステム リソースの使用状況が改善されます。  
   

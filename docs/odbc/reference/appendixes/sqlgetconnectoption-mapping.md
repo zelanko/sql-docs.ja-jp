@@ -3,15 +3,12 @@ title: SQLGetConnectOption マッピング |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
@@ -20,15 +17,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d4682ae8fcf0c745816ed9b2155ebf5072a538d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9ec36a536732299337efde3cf58cc98fbf4c46e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption マッピング
-アプリケーションを呼び出すと**SQLGetConnectOption**から ODBC 3*.x*ドライバーへの呼び出し  
+アプリケーションを呼び出すと**SQLGetConnectOption**から ODBC 3 *.x*ドライバーへの呼び出し  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -58,4 +54,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  ODBC で定義された文字列の接続オプションでは、ドライバー マネージャーの設定、 *BufferLength*への呼び出しで引数**SQLGetConnectAttr**定義済みの最大長 (SQL_MAX_OPTION_STRING_LENGTH) です。文字列以外の接続オプション、 *BufferLength*は 0 に設定します。  
   
- ODBC 3*.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*オプション*SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。 ドライバーは、オプションの値の有効性をチェックする必要があります。
+ ODBC 3 *.x*ドライバー、ドライバー マネージャーがチェックされなくなるかどうかを*オプション*SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きいです。 ドライバーは、オプションの値の有効性をチェックする必要があります。

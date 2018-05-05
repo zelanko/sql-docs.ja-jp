@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 780047c7dcd4114cc70225f668f80deb3fb28fb9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9c6b91109f3aec4094a6347f88d729da0ed6a398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@job_name=** ] **'***job_name***'**  
  ステップを削除するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
   
-> **注:**か*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
+> **注:** か*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
   
  [ **@step_id=** ] *step_id*  
  削除するステップの識別番号を指定します。 *step_id*は**int**、既定値はありません。  
@@ -70,7 +69,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  特定のジョブに関連付けられている手順の詳細については、実行**sp_help_jobstep**です。  
   
-> **注:**呼び出す**sp_delete_jobstep**で、 *step_id*ゼロの値は、ジョブのすべてのジョブ ステップを削除します。  
+> **注:** 呼び出す**sp_delete_jobstep**で、 *step_id*ゼロの値は、ジョブのすべてのジョブ ステップを削除します。  
   
  Microsoft SQL Server Management Studio は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、Microsoft SQL Server Management Studio を使用することをお勧めします。  
   

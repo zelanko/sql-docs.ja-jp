@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35cf1ad4a7181ef39b04e355092f98ff1adda230
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c03c8932e8948fde5c0c116d5517f66dda4f407a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン * です。 たとえば、 **london \joeb**です。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
+ [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\* ログイン * です。 たとえば、 **london \joeb**です。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
   
  [  **@name_in_db=**] **'***name_in_db***'** **[出力]**  
  新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*を使用します。 値は NULL の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*です。 *name_in_db*現在のデータベースに既に存在する必要があります。  

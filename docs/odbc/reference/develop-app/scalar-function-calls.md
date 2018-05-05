@@ -3,15 +3,12 @@ title: スカラー関数の呼び出し |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
@@ -19,17 +16,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ee7070453f7d6303bdaebe15c7bbdd89710d5c28
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値スカラー関数は数値列を引数としてし、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
   
- **{fn***スカラー関数* **}**   
+ **{fn***スカラー関数* **}**  
   
  ここで*スカラー関数*はでは、関数の 1 つ[付録 e: のスカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)です。 スカラー関数エスケープ シーケンスの詳細については、次を参照してください。[スカラー関数エスケープ シーケンス](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)付録 c: SQL の文法でします。  
   

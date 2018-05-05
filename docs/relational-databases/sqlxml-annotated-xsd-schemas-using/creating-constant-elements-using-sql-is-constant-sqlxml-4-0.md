@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,13 +23,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff5fac71ef48053e57ae3410adfadb3a2b46cbe7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 81ee34607d198e88eee397b9c9f254f2133d1b22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,17 +38,17 @@ ms.lasthandoff: 04/16/2018
   
 -   最上位要素を XML ドキュメントに追加する。 XML では、ドキュメントに 1 つの最上位要素 (ルート要素) が必要です。  
   
--   コンテナー要素を作成するなど、  **\<Orders >**すべての注文をラップする要素。  
+-   コンテナー要素を作成するなど、  **\<Orders >** すべての注文をラップする要素。  
   
- **Sql: 定数**に注釈を追加することができます、  **\<complexType >**要素。  
+ **Sql: 定数**に注釈を追加することができます、  **\<complexType >** 要素。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
- この注釈付き XSD スキーマで **\<CustomerOrders >**を指定して、定数要素として定義されているが、 **sql: が定数**1 の値を持つ属性。 したがって、  **\<CustomerOrders >**はデータベース テーブルまたは列にマップされていません。 この定数要素には、 **\<順序 >**子要素です。  
+ この注釈付き XSD スキーマで **\<CustomerOrders >** を指定して、定数要素として定義されているが、 **sql: が定数**1 の値を持つ属性。 したがって、  **\<CustomerOrders >** はデータベース テーブルまたは列にマップされていません。 この定数要素には、 **\<順序 >** 子要素です。  
   
-  **\<CustomerOrders >**にマップされないデータベースのテーブルまたは列を含むコンテナー要素として生成される XML に表示されたまま、 **\<順序 >**子要素です。  
+ **\<CustomerOrders >** にマップされないデータベースのテーブルまたは列を含むコンテナー要素として生成される XML に表示されたまま、 **\<順序 >** 子要素です。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

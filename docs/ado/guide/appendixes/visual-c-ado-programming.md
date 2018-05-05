@@ -1,11 +1,9 @@
 ---
 title: Visual C ADO プログラミング |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 37c00d7256beef1041ee9c24484449971c3dceee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ce5a300ec2dd17109f888c9023b934c686289504
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-ado-programming"></a>Visual C ADO プログラミング
 ADO の API リファレンスでは、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用するの機能について説明します。 ADO プログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(とそうでない、 **#import**ディレクティブ)、および Visual j (ADO/WFC クラス パッケージ) にします。  
@@ -39,7 +36,7 @@ ADO の API リファレンスでは、ADO アプリケーション プログラ
   
  ADO は、COM (コンポーネント オブジェクト モデル) インターフェイスで実装されます。 ただし、他のユーザーよりも特定のプログラミング言語で COM を使用するプログラマにとって簡単です。 たとえば、詳細自体を Visual C プログラマに参加する必要がありますが、Visual Basic プログラマのための COM の使用の詳細をほぼすべては暗黙的に処理されます。  
   
- 次のセクションでは、ADO を使用する C および C++ のプログラマのための詳細情報の要約および**#import**ディレクティブです。 COM に固有のデータ型に焦点を当てています (**バリアント**、 **BSTR**、および**SafeArray**)、およびエラー処理 (_com_error)。  
+ 次のセクションでは、ADO を使用する C および C++ のプログラマのための詳細情報の要約および **#import**ディレクティブです。 COM に固有のデータ型に焦点を当てています (**バリアント**、 **BSTR**、および**SafeArray**)、およびエラー処理 (_com_error)。  
   
 ## <a name="using-the-import-compiler-directive"></a>#Import コンパイラ ディレクティブを使用します。  
  **#Import** Visual C コンパイラ ディレクティブは、ADO のメソッドとプロパティの使用を簡略化します。 ディレクティブは、ADO dll (Msado15.dll) などのタイプ ライブラリを含むファイルの名前を取得し、typedef 宣言、インターフェイス、および列挙定数のスマート ポインターを含むヘッダー ファイルを生成します。 各インターフェイスがカプセル化され、またはクラスでラップします。  
@@ -57,7 +54,7 @@ objectPtr->PutRefProperty(&value);   // set property with object pointer
 ```  
   
 ## <a name="using-property-directives"></a>プロパティのディレクティブを使用します。  
- **__Declspec(property...)**コンパイラ ディレクティブは、代替構文を持つとプロパティとして使用される関数を宣言する Microsoft 固有の C 言語拡張機能です。 その結果、設定または Visual Basic に似た方法でプロパティの値を取得できます。 たとえば、設定およびプロパティにこの方法を取得できます。  
+ **__Declspec(property...)** コンパイラ ディレクティブは、代替構文を持つとプロパティとして使用される関数を宣言する Microsoft 固有の C 言語拡張機能です。 その結果、設定または Visual Basic に似た方法でプロパティの値を取得できます。 たとえば、設定およびプロパティにこの方法を取得できます。  
   
 ```  
 objectPtr->property = value;        // set property value  
@@ -73,16 +70,16 @@ variable = objectPtr->GetProperty;  // get property value
   
  コンパイラは、適切な生成 **Get * * *-*、 **Put**-、または **PutRef * * * プロパティ*代替構文は宣言されており、プロパティは使用するかどうかに基づいて、呼び出し読み取りまたは書き込まれます。  
   
- **__Declspec(property...)**のみコンパイラ ディレクティブを宣言できます**取得**、 **put**、または**取得**と**put**関数の代替構文です。 読み取り専用操作だけが、**取得**宣言; のみが書き込み専用の操作、**配置**宣言以外の操作は両方の読み取りし、書き込み両方を**取得**と**put**宣言します。  
+ **__Declspec(property...)** のみコンパイラ ディレクティブを宣言できます**取得**、 **put**、または**取得**と**put**関数の代替構文です。 読み取り専用操作だけが、**取得**宣言; のみが書き込み専用の操作、**配置**宣言以外の操作は両方の読み取りし、書き込み両方を**取得**と**put**宣言します。  
   
  2 つだけ宣言も有効であるこのディレクティブを指定します。ただし、各プロパティがプロパティの 3 つの関数を必要があります: **取得 * * * プロパティ*、**Put * * * プロパティ*、および **PutRef * * * プロパティ*です。 その場合は、プロパティの 2 つの形式では、代替構文があります。  
   
  たとえば、**コマンド**オブジェクト**ActiveConnection**プロパティが、別の構文で宣言された **取得 * * * ActiveConnection*と **PutRef ** * ActiveConnection*です。 **PutRef**の実習では通常設定する、開いているために、構文は、適切な選択**接続**オブジェクト (つまり、**接続**オブジェクト ポインター) このプロパティ。 その一方で、**レコード セット**オブジェクトが**取得**-、 **Put**-、および **PutRef * * * ActiveConnection*操作が代替オプションがないです。構文があります。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>コレクション、GetItem メソッド、および項目のプロパティ  
- ADO など、いくつかのコレクションを定義する**フィールド**、**パラメーター**、**プロパティ**、および**エラー**です。 Visual c で、 **GetItem (***インデックス***)**メソッドがコレクションのメンバーを返します。 *インデックス*は、**バリアント**の値は、コレクション内のメンバーの数値インデックスまたはメンバーの名前を含む文字列。  
+ ADO など、いくつかのコレクションを定義する**フィールド**、**パラメーター**、**プロパティ**、および**エラー**です。 Visual c で、 **GetItem (***インデックス***)** メソッドがコレクションのメンバーを返します。 *インデックス*は、**バリアント**の値は、コレクション内のメンバーの数値インデックスまたはメンバーの名前を含む文字列。  
   
- **__Declspec(property...)**コンパイラ ディレクティブを宣言、**項目**コレクションごとに別の構文としてプロパティの基本的な**37-1getitem ()**メソッドです。 代替構文では、角かっこを使用し、配列参照に似たします。 一般に、2 つの形式は、次のようになります。  
+ **__Declspec(property...)** コンパイラ ディレクティブを宣言、**項目**コレクションごとに別の構文としてプロパティの基本的な**37-1getitem ()** メソッドです。 代替構文では、角かっこを使用し、配列参照に似たします。 一般に、2 つの形式は、次のようになります。  
   
 ```  
   
@@ -90,7 +87,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```  
   
- などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト***rs***から派生した、**作成者**のテーブル、 **pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドの名前は前提としています。 ***au_fname***)。 まず、 **Value()**メソッドを**フィールド**文字列値を代入するオブジェクト。  
+ などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト***rs***から派生した、**作成者**のテーブル、 **pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドの名前は前提としています。 ***au_fname***)。 まず、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
   
  これで表現できる Visual Basic では、次の 4 つの方法 (最後の 2 つのフォームは、Visual Basic に一意です。 他の言語には、対応はありません)。  
   
@@ -139,7 +136,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  ADO の API リファレンスが、メソッドやプロパティを表示するときに、**文字列**値、つまり、値の形式で、 **_bstr_t**です。  
   
 ### <a name="casting-variantt-and-bstrt-classes"></a>キャスト _variant_t および _bstr_t クラス  
- 多くの場合、コードでは明示的にする必要はありません、 **_variant_t**または**_bstr_t**で操作に渡す引数。 場合、 **_variant_t**または**_bstr_t**クラスは、引数のデータ型と一致するコンス トラクターを持つ、コンパイラは、適切な生成**_variant_t**または**_bstr_t**です。  
+ 多くの場合、コードでは明示的にする必要はありません、 **_variant_t**または **_bstr_t**で操作に渡す引数。 場合、 **_variant_t**または **_bstr_t**クラスは、引数のデータ型と一致するコンス トラクターを持つ、コンパイラは、適切な生成 **_variant_t**または **_bstr_t**です。  
   
  ただし、引数があいまいな場合は、引数のデータ型が複数のコンス トラクターを一致する、適切な正しいのコンス トラクターを呼び出すデータ型引数をキャストする必要があります。  
   
@@ -156,10 +153,10 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  `ActiveConnection`引数への参照には、 **_variant_t**、接続文字列または開いているへのポインターとしてコードがこれ**接続**オブジェクト。  
   
- 正しい**_variant_t**など、文字列を渡す場合は、暗黙的に構築されます"`DSN=pubs;uid=MyUserName;pwd=MyPassword;`"、またはなどのポインター"`(IDispatch *) pConn`"です。  
+ 正しい **_variant_t**など、文字列を渡す場合は、暗黙的に構築されます"`DSN=pubs;uid=MyUserName;pwd=MyPassword;`"、またはなどのポインター"`(IDispatch *) pConn`"です。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = [はい]** または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
   
  明示的にコーディングすることがありますか、 **_variant_t**などへのポインターを含む"`_variant_t((IDispatch *) pConn, true)`"です。 キャスト`(IDispatch *)`、IUnknown インターフェイスへのポインターを受け取る別のコンス トラクターを持つあいまいさを解決します。  
   
@@ -179,7 +176,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ## <a name="missing-and-default-parameters"></a>Missing および既定のパラメーター  
  Visual Basic では、メソッドのパラメーターがありません。 たとえば、 **Recordset**オブジェクト**開く**メソッドには 5 つのパラメーターが、中間のパラメーターをスキップし、後続のパラメーターをオフのままにすることができます。 既定の**BSTR**または**バリアント**が不足しているオペランドのデータの種類によって置換されます。  
   
- C と C++ では、すべてのオペランドを指定する必要があります。 データ型が文字列で不足しているパラメーターを指定する場合、指定、 **_bstr_t** null 文字列を格納します。 データ型が不足しているパラメーターを指定するかどうか、**バリアント**を指定して、 **_variant_t** DISP_E_PARAMNOTFOUND と VT_ERROR の型の値を使用します。 また、該当するショートカットを指定**_variant_t**定数、 **vtMissing**は、によって提供される、 **#import**ディレクティブです。  
+ C と C++ では、すべてのオペランドを指定する必要があります。 データ型が文字列で不足しているパラメーターを指定する場合、指定、 **_bstr_t** null 文字列を格納します。 データ型が不足しているパラメーターを指定するかどうか、**バリアント**を指定して、 **_variant_t** DISP_E_PARAMNOTFOUND と VT_ERROR の型の値を使用します。 また、該当するショートカットを指定 **_variant_t**定数、 **vtMissing**は、によって提供される、 **#import**ディレクティブです。  
   
  次の 3 つのメソッドは例外の典型的な使用を**vtMissing**です。 これらは、 **Execute**のメソッド、**接続**と**コマンド**オブジェクト、および**NextRecordset**メソッド、の**Recordset**オブジェクト。 それぞれの署名を次に示します。  
   
@@ -235,7 +232,7 @@ Dim rst As ADODB.Recordset
 Set rst = New ADODB.Recordset  
 ```  
   
- Visual c で、 **#import**ディレクティブには、すべての ADO オブジェクトのスマート ポインター型宣言が生成されます。 指す変数など、 **_Recordset**オブジェクトの型が**_RecordsetPtr**が次のように宣言されているとします。  
+ Visual c で、 **#import**ディレクティブには、すべての ADO オブジェクトのスマート ポインター型宣言が生成されます。 指す変数など、 **_Recordset**オブジェクトの型が **_RecordsetPtr**が次のように宣言されているとします。  
   
 ```  
 _RecordsetPtr  rs;  
@@ -298,7 +295,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);
 Dim VariableName As Variant  
 ```  
   
- Visual c での型として変数を宣言**_variant_t**です。 いくつかの概略図**_variant_t**宣言を以下に示します。  
+ Visual c での型として変数を宣言 **_variant_t**です。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
   
 > [!NOTE]
 >  これらの宣言は、単なる独自のプログラムでコーディングする新機能の大まかな目安を提供します。 詳細については、以下の例と Visual c ドキュメントを参照してください。  
@@ -330,7 +327,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```  
   
- Visual C の次の例では、使用方法を示します、 **SafeArray**と共に使用する**_variant_t**です。  
+ Visual C の次の例では、使用方法を示します、 **SafeArray**と共に使用する **_variant_t**です。  
   
 #### <a name="notes"></a>注  
  次の注意事項は、コード例ではコメント部分に対応します。  
@@ -444,7 +441,7 @@ End Sub
 #### <a name="notes"></a>注  
  次の注意事項は、コード例ではコメント部分に対応します。  
   
-1.  この例は、不足している文字列引数の 2 つの形式を使用して: 明示的な定数、 **strMissing**、およびコンパイラが、一時パスワードが作成に使用する文字列**_bstr_t** のスコープに存在します。**開いている**メソッドです。  
+1.  この例は、不足している文字列引数の 2 つの形式を使用して: 明示的な定数、 **strMissing**、およびコンパイラが、一時パスワードが作成に使用する文字列 **_bstr_t** のスコープに存在します。**開いている**メソッドです。  
   
 2.  オペランドをキャストする必要はありません`rs->PutRefActiveConnection(cn)`に`(IDispatch *)`オペランドの型が既に`(IDispatch *)`です。  
   
@@ -563,13 +560,13 @@ void main() {
 #### <a name="notes"></a>注  
  次の注意事項は、コード例ではコメント部分に対応します。  
   
-1.  開いているを指定**接続**で明示的にコード化されたオブジェクト**バリアント**です。 キャスト (IDispatch \*) 正しいコンス トラクターが呼び出されるようにします。 また、2 つ目を明示的に設定**_variant_t**パラメーターの既定値を**true**ので、オブジェクトの参照カウントされるが正しい場合、 **Recordset::Open**操作を終了します。  
+1.  開いているを指定**接続**で明示的にコード化されたオブジェクト**バリアント**です。 キャスト (IDispatch \*) 正しいコンス トラクターが呼び出されるようにします。 また、2 つ目を明示的に設定 **_variant_t**パラメーターの既定値を**true**ので、オブジェクトの参照カウントされるが正しい場合、 **Recordset::Open**操作を終了します。  
   
 2.  式、 `(_bstr_t)`、キャストではありませんが、 **_variant_t**抽出演算子、 **_bstr_t**から文字列、**バリアント**によって返される**値**.  
   
  式、 `(char*)`、キャストではありませんが、 **_bstr_t**でカプセル化された文字列へのポインターを抽出する演算子、 **_bstr_t**オブジェクト。  
   
- コードのこのセクションでは、に使用できる動作の一部を示しています**_variant_t**と**_bstr_t**演算子。  
+ コードのこのセクションでは、に使用できる動作の一部を示しています **_variant_t**と **_bstr_t**演算子。  
   
 ```  
 // Visual_CPP_ado_prog_4.cpp  

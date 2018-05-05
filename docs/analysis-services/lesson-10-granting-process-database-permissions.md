@@ -1,29 +1,27 @@
 ---
-title: "プロセスのデータベース権限を付与 |Microsoft ドキュメント"
-ms.custom: 
+title: プロセスのデータベース権限を付与 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3ed05bb9716993cbee74581cfcb080dbce14ccbf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>レッスン 10 - プロセス データベース権限の許可
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,9 +42,9 @@ ms.lasthandoff: 02/15/2018
   
     ![ロール デザイナー](../analysis-services/media/l10-security-1.png "ロール デザイナー")  
   
-4.  ロール デザイナーの **[メンバーシップ]** タブに切り替えて、 **[追加]**をクリックします。  
+4.  ロール デザイナーの **[メンバーシップ]** タブに切り替えて、 **[追加]** をクリックします。  
   
-5.  このロールのメンバーになる Windows ドメイン ユーザーまたはグループのアカウントを入力します。 アカウント情報を確認するために **[名前の確認]** をクリックし、 **[OK]**をクリックします。  
+5.  このロールのメンバーになる Windows ドメイン ユーザーまたはグループのアカウントを入力します。 アカウント情報を確認するために **[名前の確認]** をクリックし、 **[OK]** をクリックします。  
   
 6.  ロール デザイナーの **[キューブ]** タブに切り替えます。  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
     このロールのメンバーにはこのデータベース内のすべてのディメンション オブジェクトを処理する権限が与えられ、既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial データベース内の各ディメンション オブジェクトにアクセスするための読み取り権限も与えられます。  
   
-8.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]**をクリックします。  
+8.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
     これで、Process Database Objects セキュリティ ロールが正常に定義され、配置されました。 キューブが実稼働環境に配置された後、その配置されたキューブの管理者は、ユーザーをこのロールに追加することにより、処理作業を必要に応じて特定のユーザーに委任することができます。  
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/15/2018
 > レッスン 10 の操作内容が反映されたプロジェクトを入手するには、サンプルをダウンロードしてインストールしてください。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../analysis-services/install-sample-data-and-projects.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[役割とアクセス許可 &#40;です。Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[役割とアクセス許可 & #40 です。Analysis Services & #41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

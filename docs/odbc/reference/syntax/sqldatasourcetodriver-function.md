@@ -3,15 +3,12 @@ title: SQLDataSourceToDriver 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDataSourceToDriver
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcdad2099be94a719333d4e0754318f7c00572df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 742375c2ce4bfc9813c50d0584fe024e383ffd79
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 関数
 **SQLDataSourceToDriver** supportstranslations ODBC ドライバー用です。 この関数は、ODBC 対応のアプリケーションでは呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**です。 関連付けられたドライバ、 *ConnectionHandle*で指定された**SQLSetConnectAttr**すべてのデータがドライバーに、データ ソースからフローの変換を実行する指定された DLL を呼び出します。 既定トランスレーター DLL は、ODBC の初期化ファイルで指定できます。  

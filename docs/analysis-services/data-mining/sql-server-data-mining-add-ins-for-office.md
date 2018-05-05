@@ -1,27 +1,25 @@
 ---
-title: "SQL Server 用データ マイニング アドイン Office |Microsoft ドキュメント"
-ms.custom: 
+title: SQL Server 用データ マイニング アドイン Office |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea4c810eb5c3dfca0588efc02407cf5a5729f68e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2852d573a665566e048afca18be259d2b00b2203
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office 用 SQL Server データ マイニング アドイン
 
@@ -85,6 +83,6 @@ ms.lasthandoff: 01/08/2018
   
  接続先の SQL Server Analysis Services のエディションによっては、高度なアルゴリズムの一部を使用できない場合があります。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」を参照してください。  
   
- インストールに関する追加の参照情報については、ダウンロード センターの次のページを参照してください: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ インストールの詳細については、ダウンロード センターからこのページを参照してください。 [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

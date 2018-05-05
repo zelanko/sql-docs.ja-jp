@@ -1,11 +1,9 @@
 ---
 title: オブジェクトのプログラミング モデルを RDS |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da0fee3543f3e684f403f11bad5a613e9f4cac21
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 32cd0b412e06f591eee69581e1e7ea8f871cab7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>オブジェクトと RDS プログラミング モデル
 RDS の目的にアクセスし、IIS などの中間層経由でデータ ソースの更新です。 プログラミング モデルでは、この目標を達成するために必要な活動のシーケンスを指定します。 オブジェクト モデルでは、あるメソッドとプロパティに影響を与える、プログラミング モデルのオブジェクトを指定します。  
@@ -43,7 +40,7 @@ RDS の目的にアクセスし、IIS などの中間層経由でデータ ソ�
   
 -   サーバーを返します、最終的な**レコード セット**をクライアント アプリケーション (プロキシ) オブジェクト。  
   
--   クライアントで、 **Recordset**オブジェクトがビジュアル コントロールで簡単に使用できるフォームに配置 (ビジュアル コントロールと**.rds ですDataControl**)。  
+-   クライアントで、 **Recordset**オブジェクトがビジュアル コントロールで簡単に使用できるフォームに配置 (ビジュアル コントロールと **.rds ですDataControl**)。  
   
 -   変更、 **Recordset**オブジェクトがサーバーに送信され、データ ソースを更新するために使用 (**.rds ですDataControl**または**RDSServer.DataFactory**)。  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], elements supported
 - minimum SQL syntax supported [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 60e0bf5d464b85aeca56d89fa130553f8114b813
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 046b67e69c2269b0468f2ec42a2ca494f4c53348
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
  *ブール値を要素*:: = [NOT]*ブール値をプライマリ*  
   
- *ブール値をプライマリ*:: = 比較*-述語*&#124; です。(*検索条件*)  
+ *ブール値をプライマリ*:: = 比較 *-述語*&#124; です。(*検索条件*)  
   
  *ブール値を長期的な*:: =*ブール値を要素*[AND*ブール値を長期的な*]  
   

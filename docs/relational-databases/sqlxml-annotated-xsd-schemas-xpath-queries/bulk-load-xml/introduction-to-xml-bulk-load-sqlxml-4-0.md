@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebdbed96867a664fe64f6b8508c6a38e97d27166
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac7e7c9b48f21c3258bb170c1e8f8dea4522eca1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みの概要 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="streaming-of-xml-data"></a>XML データのストリーミング  
  ソースの XML ドキュメントは大きい可能性があるため、一括読み込み処理では、メモリにドキュメント全体は読み込まれません。 代わりに、XML 一括読み込みでは XML データがストリームとして解釈され読み取られます。 データが読み取られるとき、このユーティリティではデータベース テーブルが特定され、XML データ ソースを基に適切なレコードが生成された後、そのレコードが挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。  
   
- たとえば、次のソース XML ドキュメントから成る**\<顧客 >**要素および**\<順序 >**子要素。  
+ たとえば、次のソース XML ドキュメントから成る**\<顧客 >** 要素および**\<順序 >** 子要素。  
   
 ```  
 <Customer ...>  
@@ -65,7 +62,7 @@ ms.lasthandoff: 04/16/2018
 ...  
 ```  
   
- XML 一括読み込みの読み取りを始めると、 **\<顧客 >**要素、Customertable のレコードが生成されます。 読み取られる、  **\</Customer >**終了タグ、XML 一括読み込みの挿入でテーブルに記録する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 同じで、それを読み取るとき、 **\<順序 >**要素、XML 一括読み込みが、Ordertable のレコードの生成およびにそのレコードを挿入、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]読み取り時にテーブル、  **\</注文 >**タグを終了します。  
+ XML 一括読み込みの読み取りを始めると、 **\<顧客 >** 要素、Customertable のレコードが生成されます。 読み取られる、  **\</Customer >** 終了タグ、XML 一括読み込みの挿入でテーブルに記録する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。 同じで、それを読み取るとき、 **\<順序 >** 要素、XML 一括読み込みが、Ordertable のレコードの生成およびにそのレコードを挿入、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]読み取り時にテーブル、  **\</注文 >** タグを終了します。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>トランザクション モードとトランザクション以外のモードでの XML 一括読み込みの操作  
  XML 一括読み込みは、トランザクション モードまたはトランザクション以外のモードで操作できます。 パフォーマンスは通常、トランザクション以外のモードで一括読み込みを行う場合に最適な: トランザクションのプロパティが FALSE に設定は、) 次の条件のいずれかが true とします。  

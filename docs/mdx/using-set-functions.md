@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c0afa99103cbb10c29c66bc375dc10d206560fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bdc98dee4f56d940042e57620ea94ebf7611197a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-set-functions"></a>集合関数の使用
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
  集合関数は、メンバー関数や組関数と同様に、Analysis Services で使用される多次元構造を操作するために不可欠です。 さらに、セット式が多次元式 (MDX) クエリの軸を定義するため、集合関数は MDX クエリから結果を得るうえでも不可欠です。  
   
- 最も一般的な集合関数の 1 つは、[メンバー &#40;です。セット &#41;&#40;です。MDX と #41 です。](../mdx/members-set-mdx.md)関数で、すべてのディメンション、階層、またはレベルからメンバーを含むセットを取得します。 クエリ内でのこの関数の使用例を次に示します。  
+ 最も一般的な集合関数の 1 つは、[メンバー&#40;設定&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md)関数で、すべてのディメンション、階層、またはレベルからメンバーを含むセットを取得します。 クエリ内でのこの関数の使用例を次に示します。  
   
  `SELECT`  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- 一般的に使用される別の関数は、 [Crossjoin &#40;です。MDX と #41 です。](../mdx/crossjoin-mdx.md)関数。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 つまり、この関数を使用すると、クエリに "入れ子になった" 軸または "クロス集計された" 軸を作成できます。  
+ 一般的に使用される別の関数は、 [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md)関数。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 つまり、この関数を使用すると、クエリに "入れ子になった" 軸または "クロス集計された" 軸を作成できます。  
   
  `SELECT`  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- [子孫 &#40;です。MDX と #41 です。](../mdx/descendants-mdx.md)関数は似ています、**子**機能しますより強力です。 この関数は、階層内の 1 つ以上のレベルにある任意のメンバーの子孫を返します。  
+ [子孫&#40;MDX&#41; ](../mdx/descendants-mdx.md)関数は似ています、**子**機能しますより強力です。 この関数は、階層内の 1 つ以上のレベルにある任意のメンバーの子孫を返します。  
   
  SELECT  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
  FROM [Adventure Works]  
   
- [順序と #40 です。MDX と #41 です。](../mdx/order-mdx.md)関数では、昇順または降順の特定の数値式に従って順序でセットの内容を注文することができます。 次のクエリでは、上記のクエリと同じ、行のメンバーを返しますが、ここでは Internet Sales Amount メジャーでこのメンバーを並べ替えます。  
+ [順序&#40;MDX&#41; ](../mdx/order-mdx.md)関数では、昇順または降順の特定の数値式に従って順序でセットの内容を注文することができます。 次のクエリでは、上記のクエリと同じ、行のメンバーを返しますが、ここでは Internet Sales Amount メジャーでこのメンバーを並べ替えます。  
   
  `SELECT`  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 01/08/2018
   
  このクエリでは、集合関数 Descendants から返されたセットをパラメーターとして別の集合関数 Order に渡す方法も示しています。  
   
- 特定の条件に従ってセットをフィルター選択非常に便利です、クエリを記述する場合は、この目的で使用することができます、[フィルター &#40;です。MDX と #41 です。](../mdx/filter-mdx.md)関数は、次の例で示すようにします。  
+ 特定の条件に従ってセットをフィルター選択非常に便利です、クエリを記述する場合は、この目的で使用することができます、[フィルター &#40;MDX&#41; ](../mdx/filter-mdx.md)関数は、次の例で示すようにします。  
   
  `SELECT`  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリの表示、 [TopCount &#40;です。MDX と #41 です。](../mdx/topcount-mdx.md)関数がセット内の最上位の n 個のアイテムを返します。  
+ また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリの表示、 [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md)関数がセット内の最上位の n 個のアイテムを返します。  
   
  `SELECT`  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- 最後に、多数のなどの関数を使用して論理セットの操作を実行することは[Intersect と #40 です。MDX と #41 です。](../mdx/intersect-mdx.md)、[共用体 &#40;です。MDX と #41 です。](../mdx/union-mdx.md)と[を除く (& a) #40 です。MDX と #41 です。](../mdx/except-mdx-function.md)関数。 次のクエリでは、後者 2 つの関数の例を示します。  
+ 最後に、多数のなどの関数を使用して論理セットの操作を実行することは[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)と[&#40;MDX&#41; ](../mdx/except-mdx-function.md)関数。 次のクエリでは、後者 2 つの関数の例を示します。  
   
  `SELECT`  
   
@@ -227,7 +225,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [関数と #40 です。MDX 構文 &#41;](../mdx/functions-mdx-syntax.md)   
+ [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
  [メンバー関数の使用](../mdx/using-member-functions.md)   
  [組関数の使用](../mdx/using-tuple-functions.md)  
   

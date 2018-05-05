@@ -3,15 +3,12 @@ title: SQLColAttribute 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLColAttribute
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5afbe6bbea4e1c50e3b16742bf5d0fa1b3c16a9d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 関数
 **準拠**  
@@ -150,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
 -   場合*FieldIdentifier* ODBC 3 内の新しい値です*。x*、これがありませんでした対応する値では、ODBC 2 のです*。x*、ODBC 3 時にマップできません*。x*アプリケーションでの呼び出しで使用**SQLColAttribute** ODBC 2 *。x*ドライバー、および呼び出しは SQLSTATE HY091 を返します (無効な記述子フィールド識別子)。  
   
- 次の表に、によって返される記述子型**SQLColAttribute**です。 型は、 *NumericAttributePtr*値は**SQLLEN \***です。  
+ 次の表に、によって返される記述子型**SQLColAttribute**です。 型は、 *NumericAttributePtr*値は**SQLLEN \*** です。  
   
 |*FieldIdentifier*|情報<br /><br /> 返される|Description|  
 |-----------------------|---------------------------------|-----------------|  

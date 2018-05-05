@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetData
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba5edc5dc4bfe9ea0deeb40cd5c96e14480ee27b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 関数
 **準拠**  
@@ -124,10 +123,10 @@ SQLRETURN SQLGetData(
 |HY009|無効な null ポインターの使用|(DM) 引数*TargetValuePtr*が null ポインターでした。|  
 |HY010|関数のシーケンス エラー|(DM)、指定した*StatementHandle*実行された状態ではありませんでした。 最初の呼び出さずに、関数が呼び出された**SQLExecDirect**、 **SQLExecute**またはカタログ関数。<br /><br /> (DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLGetData**関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数 (いないこの 1 つ) が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *StatementHandle*が実行された状態でしたが、結果セットが関連付けられていない、 *StatementHandle*です。<br /><br /> 呼び出し**SQLExeceute**、 **SQLExecDirect**、または**SQLMoreResults** SQL_PARAM_DATA_AVAILABLE が返されますが、 **SQLGetData**が呼び出されました、の代わりに**SQLParamData**です。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|引数の指定された値 (DM) *BufferLength*が 0 未満です。<br /><br /> 引数に指定された値*BufferLength* 4 より小さいをでした、 *Col_or_Param_Num*引数が 0 に設定して、ドライバーは ODBC 2*.x*ドライバー。|  
+|HY090|文字列またはバッファーの長さが無効です。|引数の指定された値 (DM) *BufferLength*が 0 未満です。<br /><br /> 引数に指定された値*BufferLength* 4 より小さいをでした、 *Col_or_Param_Num*引数が 0 に設定して、ドライバーは ODBC 2 *.x*ドライバー。|  
 |HY109|無効なカーソルの位置|カーソルの位置 (によって**SQLSetPos**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLBulkOperations**) が削除された行にまたは、取得できませんでした。<br /><br /> カーソルが、順方向専用カーソルと行セットのサイズが 1 よりも大きいです。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
-|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、の使用をサポートしていない**SQLGetData**で複数の行で**SQLFetchScroll**です。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプションの SQL_GD_BLOCK ビットマスクを返すには適用されません**SQLGetInfo**です。<br /><br /> ドライバーまたはデータ ソースがの組み合わせで指定された変換をサポートしていない、 *TargetType*引数と対応する列の SQL データ型。 このエラーは、列の SQL データ型は、ドライバー固有の SQL データ型にマップされた場合にのみ適用されます。<br /><br /> ドライバーは、ODBC 2 のみをサポートしている*.x*、およびその引数*TargetType*次のいずれかの。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> interval C データ型の一覧に示されたのと[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型にします。<br /><br /> ドライバーのみがサポート 3.50、および引数の前に ODBC バージョン*TargetType* SQL_C_GUID がします。|  
+|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、の使用をサポートしていない**SQLGetData**で複数の行で**SQLFetchScroll**です。 この説明は、ドライバーの SQL_GETDATA_EXTENSIONS オプションの SQL_GD_BLOCK ビットマスクを返すには適用されません**SQLGetInfo**です。<br /><br /> ドライバーまたはデータ ソースがの組み合わせで指定された変換をサポートしていない、 *TargetType*引数と対応する列の SQL データ型。 このエラーは、列の SQL データ型は、ドライバー固有の SQL データ型にマップされた場合にのみ適用されます。<br /><br /> ドライバーは、ODBC 2 のみをサポートしている *.x*、およびその引数*TargetType*次のいずれかの。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> interval C データ型の一覧に示されたのと[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型にします。<br /><br /> ドライバーのみがサポート 3.50、および引数の前に ODBC バージョン*TargetType* SQL_C_GUID がします。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングが無効になっています|通知のモデルを使用するとは、ポーリングは無効です。|  
@@ -153,14 +152,14 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_BOUND です。 このオプションが返される場合は**SQLGetData**バインドされた列に対して呼び出すことができるだけでなく、列をバインド解除されました。  
   
- これらの制限事項とドライバーの権限を許可し、それらを緩和する 2 つの例外があります。 最初に、 **SQLGetData**呼び出さないで順方向専用カーソルの行セットのサイズが 1 より大きい場合。 第二に、ドライバーは、ブックマークをサポートする場合、必要があります常にサポートを呼び出す機能**SQLGetData**列 0 で、アプリケーションを呼び出すことはできない場合でも**SQLGetData**の他の列の最後より前に、バインドされた列です。 (アプリケーションが ODBC 2 扱うとき*.x*ドライバー、 **SQLGetData**で呼び出されると、ブックマークを正常に返す*Col_or_Param_Num*呼び出しの後に 0 に等しい**SQLFetch**ので、 **SQLFetch**は ODBC 3 によってもマップ*.x*ドライバー マネージャーを**SQLExtendedFetch** と*FetchOrientation* SQL_FETCH_NEXT のおよび**SQLGetData**で、 *Col_or_Param_Num* 0 は、ODBC 3 によってマップされて*.x*をドライバー マネージャー**SQLGetStmtOption**で、 *fOption* SQL_GET_BOOKMARK のです)。  
+ これらの制限事項とドライバーの権限を許可し、それらを緩和する 2 つの例外があります。 最初に、 **SQLGetData**呼び出さないで順方向専用カーソルの行セットのサイズが 1 より大きい場合。 第二に、ドライバーは、ブックマークをサポートする場合、必要があります常にサポートを呼び出す機能**SQLGetData**列 0 で、アプリケーションを呼び出すことはできない場合でも**SQLGetData**の他の列の最後より前に、バインドされた列です。 (アプリケーションが ODBC 2 扱うとき *.x*ドライバー、 **SQLGetData**で呼び出されると、ブックマークを正常に返す*Col_or_Param_Num*呼び出しの後に 0 に等しい**SQLFetch**ので、 **SQLFetch**は ODBC 3 によってもマップ *.x*ドライバー マネージャーを**SQLExtendedFetch** と*FetchOrientation* SQL_FETCH_NEXT のおよび**SQLGetData**で、 *Col_or_Param_Num* 0 は、ODBC 3 によってマップされて *.x*をドライバー マネージャー**SQLGetStmtOption**で、 *fOption* SQL_GET_BOOKMARK のです)。  
   
  **SQLGetData**だけ呼び出すことによって挿入された行のブックマークを取得するのには使用できません**SQLBulkOperations** SQL_ADD オプションを使用して、行にカーソルが配置されていないためです。 アプリケーションでは、このような行のブックマークを呼び出す前に、バインド列 0 によって取得できます**SQLBulkOperations**その場合は、SQL_ADD で**SQLBulkOperations**バインドされたバッファー内のブックマークを返します。 **SQLFetchScroll** sql_fetch_bookmark を指定してその行にカーソルの位置を変更すると呼ばれることができます。  
   
  場合、 *TargetType*の SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION フィールドで設定されている引数は、interval データ型、既定の間隔先頭精度 (2) と既定の間隔 (秒) の有効桁数 (6)それぞれ、ARD は、データに使用されます。 場合、 *TargetType*引数 SQL_C_NUMERIC データ型、既定の有効桁数 (ドライバーの定義) と、ARD の SQL_DESC_PRECISION および SQL_DESC_SCALE フィールドで設定されている既定の (0)、小数点以下桁数は、データに使用されます。 既定の有効桁数または小数点以下桁数が適切でない場合、アプリケーションを明示的に設定、適切な記述子フィールドへの呼び出しによって**SQLSetDescField**または**SQLSetDescRec**です。 SQL_DESC_CONCISE_TYPE フィールド SQL_C_NUMERIC と呼び出しを設定できます**SQLGetData**で、 *TargetType*記述子フィールドで、有効桁数と小数点以下桁数の値を原因となる SQL_ARD_TYPE の引数使用されます。  
   
 > [!NOTE]  
->  ODBC 2 で*.x*、アプリケーション設定*TargetType*を示すために、SQL_C_DATE、SQL_C_TIME、または SQL_C_TIMESTAMP \* *TargetValuePtr*日付、時刻、またはタイムスタンプの構造体。 ODBC 3*.x*、アプリケーション設定*TargetType* SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、または SQL_C_TYPE_TIMESTAMP にします。 ドライバー マネージャーにより、適切なマッピング情報に基づいて、必要な場合、アプリケーションとドライバーのバージョンにします。  
+>  ODBC 2 で *.x*、アプリケーション設定*TargetType*を示すために、SQL_C_DATE、SQL_C_TIME、または SQL_C_TIMESTAMP \* *TargetValuePtr*日付、時刻、またはタイムスタンプの構造体。 ODBC 3 *.x*、アプリケーション設定*TargetType* SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、または SQL_C_TYPE_TIMESTAMP にします。 ドライバー マネージャーにより、適切なマッピング情報に基づいて、必要な場合、アプリケーションとドライバーのバージョンにします。  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>部分の可変長データを取得します。  
  **SQLGetData**部分の可変長データを含む列からデータを取得するために使用できます: そのときに、SQL データ型の列の識別子は SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR、SQL_WCHAR、SQL_WVARCHAR、sql _WLONGVARCHAR、sql_binary 型、SQL_VARBINARY、SQL_LONGVARBINARY、または可変長型のドライバー固有の識別子。  

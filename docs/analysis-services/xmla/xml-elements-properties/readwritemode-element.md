@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,15 +19,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 695cf49a79bebe5540cb07c28f474d9b73cbb669
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 要素
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]**ReadWriteMode**データベース プロパティを指定するかどうか、データベースで**ReadWrite**モードまたは**ReadOnly**モード。 このプロパティの使用可能な値は 2 つだけです。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  **ReadWriteMode**データベース プロパティを指定するかどうか、データベースで**ReadWrite**モードまたは**ReadOnly**モード。 このプロパティの使用可能な値は 2 つだけです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,17 +42,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|ReadWrite|  
-|基数|0-1 : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[[データベース]](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|親要素|[データベース](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
 |子要素|なし|  
   
 ## <a name="remarks"></a>解説  

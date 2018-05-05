@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 711e71809a4c75eb4cb4507fc6528efa10dd07ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4ecf7a751f8a846c5ffcdc6aba12fb7828fb6c5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-drivers"></a>ドライバーの種類
 ODBC ドライバーは、次のように分類できます。  
@@ -35,7 +34,7 @@ ODBC ドライバーは、次のように分類できます。
 -   **32 ビット ODBC 2.**  
      ***x*ドライバー** 32 ビット バージョンのドライバーです。  
   
-    -   ODBC 2 のみをエクスポート*.x*関数。  
+    -   ODBC 2 のみをエクスポート *.x*関数。  
   
     -   ODBC 2 が発生します。*x*動作の変更に対して動作します。  
   

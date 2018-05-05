@@ -22,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 36e19418f982542318da340664182526c2b00070
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 061b4226e0fe884f04d203e2fca575fe7b4574b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="except-mdx-function"></a>Except (MDX) 関数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  セットを返す有効な多次元式 (MDX) です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  場合**すべて**が指定すると、関数は、最初のセットで検出された重複部分を保持は 2 番目のセットで検出された重複部分は削除されます。 メンバーは、1 番目のセット内に出現する順序で返されます。  
   
 ## <a name="examples"></a>使用例  
@@ -71,7 +70,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [-(& a) #40 です。除く (& a) #41;&#40;です。MDX と #41 です。](../mdx/except-mdx-operator.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [-&#40;を除く&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

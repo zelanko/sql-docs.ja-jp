@@ -24,12 +24,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 398ed7c0cfb5123b649901b91ef95b7c7282ab6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bcb469245fdfb60c7a8063b68d749aa194e5f87a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  このパラメーターを指定する必要があります。  
   
  [  **@source_version=** ] **'***source_version***'**  
- マップ元 DBMS のバージョン番号を指定します。 *source_version*は**varchar (10)**既定値は NULL です。  
+ マップ元 DBMS のバージョン番号を指定します。 *source_version*は**varchar (10)** 既定値は NULL です。  
   
  [ **@source_type**=] **'***source_type***'**  
  マップ元 DBMS のデータ型です。 *source_type*は**sysname**、既定値はありません。  
@@ -101,9 +100,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  このパラメーターを指定する必要があります。  
   
  [ **@destination_version**=] **'***destination_version***'**  
- マップ先 DBMS の製品バージョンを指定します。 *destination_version*は**varchar (10)**既定値は NULL です。  
+ マップ先 DBMS の製品バージョンを指定します。 *destination_version*は**varchar (10)** 既定値は NULL です。  
   
- [ **@destination_type**=] **'***destination_type***'**出力  
+ [ **@destination_type**=] **'***destination_type***'** 出力  
  マップ先 DBMS で定義されているデータ型を指定します。 *destination_type*は**sysname**既定値は NULL です。  
   
  [  **@destination_length=** ] *destination_length*出力  

@@ -1,27 +1,25 @@
 ---
-title: "表形式モデルのパーティション作成し、管理 |Microsoft ドキュメント"
-ms.custom: 
+title: 表形式モデルのパーティション作成し、管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1dfe0ae7dd1ee92cd365a34cf6502d8358c474cb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 10c539b5d30d5c1acca4e21b07ddaf9761833818
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>表形式モデルのパーティション作成し、管理
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,23 +31,23 @@ ms.lasthandoff: 02/23/2018
 >
   
 ## <a name="tasks"></a>処理手順  
- 配置済みテーブル モデル データベース用のパーティションを作成、管理するには、 **で** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用します。 **で** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを表示するには、任意のテーブルを右クリックし、 **[パーティション]**をクリックします。  
+ 配置済みテーブル モデル データベース用のパーティションを作成、管理するには、 **で** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用します。 **で** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを表示するには、任意のテーブルを右クリックし、 **[パーティション]** をクリックします。  
   
 ###  <a name="bkmk_create_new"></a> 新しいパーティションを作成するには  
   
 1.  **[パーティション]** ダイアログ ボックスで **[新規]** をクリックします。  
   
-2.  **[パーティション名]**にパーティションの名前を入力します。 既定では、既定のパーティション名に番号が付き、新しいパーティションを作成するたびにその番号が増加します。  
+2.  **[パーティション名]** にパーティションの名前を入力します。 既定では、既定のパーティション名に番号が付き、新しいパーティションを作成するたびにその番号が増加します。  
   
 3.  **クエリ ステートメント**を入力するか、列と、クエリ ウィンドウに、パーティションに含める句を定義する、SQL または M のクエリ ステートメントを貼り付けます。  
   
-4.  このステートメントを検証するため、 **[構文の確認]**をクリックします。  
+4.  このステートメントを検証するため、 **[構文の確認]** をクリックします。  
   
 ###  <a name="bkmk_copy"></a> パーティションをコピーするには  
   
 1.  **[パーティション]** ダイアログ ボックスの **[パーティション]** ボックスの一覧で、コピーするパーティションを選択し、 **[コピー]** をクリックします。  
   
-2.  **[パーティション名]**にパーティションの新しい名前を入力します。  
+2.  **[パーティション名]** にパーティションの新しい名前を入力します。  
   
 3.  **クエリ ステートメント**、クエリ ステートメントを編集します。  
   

@@ -1,33 +1,31 @@
 ---
-title: "計算列表現 (テーブル) |Microsoft ドキュメント"
-ms.custom: 
+title: 計算列表現 (テーブル) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 94d8e0cf692041673fe4a728981d77a759167bb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables---calculated-column-representation"></a>テーブルの計算列表現
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-計算列はテーブルに新しい列を作成する DAX 式で、取得した値はテーブルに格納されます。 計算列式はテーブルが処理されるたびに評価されます。  
+  計算列はテーブルに新しい列を作成する DAX 式で、取得した値はテーブルに格納されます。 計算列式はテーブルが処理されるたびに評価されます。  
   
 ## <a name="calculated-column-representation"></a>計算列表現  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - unallocated state [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bd212668646a5d02059250b7ecfc4f8b81ec406c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-transitions"></a>状態遷移
 ODBC 定義不連続*状態*の各環境や接続ごとに、各ステートメント。 たとえば、環境には 3 つの状態: (する環境が割り当てられていない) で、未割り当て、割り当てられた (を環境が割り当てられますが、接続が割り当てられていません)、および接続 (環境とがである 1 つまたは複数の接続割り当てられている)。 接続がある 7 つの可能な状態です。ステートメントが 13 の可能な状態であります。  

@@ -1,27 +1,25 @@
 ---
-title: "SSDT での DirectQuery モードを有効にする |Microsoft ドキュメント"
-ms.custom: 
+title: SSDT での DirectQuery モードを有効にする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc16e4c1e4c34e9e37d20a747e8ea2acac6bea01
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8b8df527759c89579e5e6e73a703964eaed6d448
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>SSDT での DirectQuery モードの有効化
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +32,7 @@ SSDT で設計するテーブル モデルに対して DirectQuery モードを�
   
 ### <a name="enable-directquery"></a>DirectQuery の有効化  
   
-SSDT の **[Model.bim]** ファイルの **[プロパティ]** ペインで、プロパティの **[DirectQuery モード]**を **[オン]**に変更します。  
+SSDT の **[Model.bim]** ファイルの **[プロパティ]** ペインで、プロパティの **[DirectQuery モード]** を **[オン]** に変更します。  
 
 ![SSDT での DirectQuery モードの有効化](../../analysis-services/tabular-models/media/enable-directquery-mode-in-ssdt.png)
   

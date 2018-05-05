@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7aa94520c72183f4aaf619d252ce7c99f35f2c96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 59da29cf48a242916949330e19587dd3c7af43d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="targettype-element-assl"></a>TargetType 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]識別されるアイテムの項目の種類を識別、[ターゲット](../../../analysis-services/scripting/properties/target-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  識別されるアイテムの項目の種類を識別、[ターゲット](../../../analysis-services/scripting/properties/target-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現します|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -71,8 +70,8 @@ ms.lasthandoff: 01/08/2018
 |*Cube*|アクションの対象はキューブです。|  
 |*セル*|アクションの対象はサブキューブです。|  
 |*設定*|アクションの対象はセットです。|  
-|*Hierarchy*|アクションの対象は階層です。|  
-|*Level*|アクションの対象はレベルです。|  
+|*階層*|アクションの対象は階層です。|  
+|*レベル*|アクションの対象はレベルです。|  
 |*DimensionMembers*|アクションの対象はディメンションのメンバーです。|  
 |*HierarchyMembers*|アクションの対象は階層のメンバーです。|  
 |*LevelMembers*|アクションの対象はレベルのメンバーです。|  
@@ -83,6 +82,6 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**TargetType**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.Action>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

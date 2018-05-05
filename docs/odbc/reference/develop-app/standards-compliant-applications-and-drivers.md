@@ -3,15 +3,12 @@ title: 標準に準拠したアプリケーションやドライバー |Microsof
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standards-compliant applications and drivers [ODBC]
 - ODBC drivers [ODBC], standards-compliant
@@ -21,21 +18,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43630c2a9cc12d90927862c6de30b0c9fa85e8b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fc733f6a9bf4d7edeae5c06f577b206f8232281b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>標準に準拠したアプリケーションやドライバー
 標準に準拠したアプリケーションやドライバーは、オープンなグループ CAE 仕様"データ管理:: SQL 呼び出しレベル インターフェイス (CLI)"と ISO/IEC 9075 に準拠している 1 つの 3:1995 (E) 呼び出しレベルのインターフェイス (SQL/CLI)。  
   
- ODBC 3*.x*次の機能を保証します。  
+ ODBC 3 *.x*次の機能を保証します。  
   
--   Open Group および ISO CLI 仕様に記述されたアプリケーションは、ODBC 3 の使用*.x*ドライバーまたは ODBC 3 では、コンパイル時の標準に準拠したドライバー*.x*ヘッダー ファイルし、リンクODBC 3*.x*ライブラリ、ドライバーは ODBC 3 へのアクセスを得る場合および*.x*ドライバー マネージャー。  
+-   Open Group および ISO CLI 仕様に記述されたアプリケーションは、ODBC 3 の使用 *.x*ドライバーまたは ODBC 3 では、コンパイル時の標準に準拠したドライバー *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ドライバーは ODBC 3 へのアクセスを得る場合および *.x*ドライバー マネージャー。  
   
--   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC 3 では機能*.x*アプリケーションまたは ODBC 3 では、コンパイル時の標準に準拠したアプリケーション*.x*ヘッダー ファイルし、リンクODBC 3*.x*ライブラリ、ODBC 3 を使用してドライバー、アプリケーションがアクセスおよび*.x*ドライバー マネージャー。  
+-   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC 3 では機能 *.x*アプリケーションまたは ODBC 3 では、コンパイル時の標準に準拠したアプリケーション *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ODBC 3 を使用してドライバー、アプリケーションがアクセスおよび *.x*ドライバー マネージャー。  
   
  ODBC_STD コンパイル フラグでは、標準に準拠したアプリケーションやドライバーがコンパイルされます。  
   
@@ -43,8 +39,8 @@ ms.lasthandoff: 04/16/2018
   
 -   標準に準拠したアプリケーションを呼び出す場合**SQLAllocEnv** (ために発生する**SQLAllocEnv** Open Group および ISO CLI で有効な関数は、)、呼び出しにマップされて**SQLAllocHandleStd**コンパイル時にします。 その結果、実行時に、アプリケーションが呼び出す**SQLAllocHandleStd**です。 この呼び出しを処理中に、ドライバー マネージャーはまた環境属性を SQL_OV_ODBC3 に設定します。 呼び出し**SQLAllocHandleStd**への呼び出しに相当**SQLAllocHandle**で、 *HandleType* SQL_HANDLE_ENV とへの呼び出しの**SQLSetEnvAttr**またを SQL_OV_ODBC3 に設定します。  
   
--   標準に準拠したアプリケーションを呼び出す場合**SQLBindParam** (ために発生する**SQLBindParam** Open Group および ISO CLI で有効な関数は、)、ODBC 3*.x*ドライバー マネージャーで、同等の呼び出しへの呼び出しをマップする**SQLBindParameter**です。 (を参照してください[SQLBindParam マッピング](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします)。  
+-   標準に準拠したアプリケーションを呼び出す場合**SQLBindParam** (ために発生する**SQLBindParam** Open Group および ISO CLI で有効な関数は、)、ODBC 3 *.x*ドライバー マネージャーで、同等の呼び出しへの呼び出しをマップする**SQLBindParameter**です。 (を参照してください[SQLBindParam マッピング](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします)。  
   
--   ISO CLI、ODBC 3 に合うように*.x*ヘッダー ファイルへの呼び出しで使用される情報の型のエイリアスを含める**SQLGetInfo**です。 標準に準拠したアプリケーションは、これらの別名を使用して、ODBC 3 ではなく*.x*情報の種類。 詳細については、次のトピックを参照してください。[ヘッダー ファイル](../../../odbc/reference/develop-app/header-files.md)です。  
+-   ISO CLI、ODBC 3 に合うように *.x*ヘッダー ファイルへの呼び出しで使用される情報の型のエイリアスを含める**SQLGetInfo**です。 標準に準拠したアプリケーションは、これらの別名を使用して、ODBC 3 ではなく *.x*情報の種類。 詳細については、次のトピックを参照してください。[ヘッダー ファイル](../../../odbc/reference/develop-app/header-files.md)です。  
   
--   標準に準拠したアプリケーションでは、サポートするすべての機能は、ドライバーでは動作でサポートされていることを確認してください。 SQL_SCROLLABLE と設定に SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定する SQL_INSENSITIVE または SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY ステートメント属性は、標準のオプション機能として利用可能な機能ODBC 3 に含まれていませんが、*.x*コア レベルおよび可能性がありますでサポートされていないすべての ODBC 3*.x*ドライバー。 標準に準拠したアプリケーションでは、これらの機能を使用する場合、ドライバーでは動作をサポートしていることを確認する必要があります。
+-   標準に準拠したアプリケーションでは、サポートするすべての機能は、ドライバーでは動作でサポートされていることを確認してください。 SQL_SCROLLABLE と設定に SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定する SQL_INSENSITIVE または SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY ステートメント属性は、標準のオプション機能として利用可能な機能ODBC 3 に含まれていませんが、*.x*コア レベルおよび可能性がありますでサポートされていないすべての ODBC 3 *.x*ドライバー。 標準に準拠したアプリケーションでは、これらの機能を使用する場合、ドライバーでは動作をサポートしていることを確認する必要があります。

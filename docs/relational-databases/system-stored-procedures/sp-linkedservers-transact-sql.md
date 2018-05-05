@@ -24,12 +24,11 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c017d5b0e510147b668eeab458841ebcbf15de00
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 217350ed772c731d8a23e1a859e8dc95f02220a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +52,11 @@ sp_linkedservers
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|リンク サーバーの名前|  
-|**SRV_PROVIDERNAME**|**nvarchar(**128**)**|指定したリンク サーバーへのアクセスを管理している OLE DB プロバイダーの名前|  
-|**SRV_PRODUCT**|**nvarchar(**128**)**|リンク サーバーの製品名|  
-|**SRV_DATASOURCE**|**nvarchar (**4000**)**|指定したリンク サーバーに対応する OLE DB のデータ ソース プロパティ|  
-|**SRV_PROVIDERSTRING**|**nvarchar (**4000**)**|リンク サーバーに対応する OLE DB プロバイダーの文字列プロパティ|  
-|**SRV_LOCATION**|**nvarchar (**4000**)**|指定したリンク サーバーに対応する OLE DB の位置プロパティ|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|指定したリンク サーバーへのアクセスを管理している OLE DB プロバイダーの名前|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|リンク サーバーの製品名|  
+|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|指定したリンク サーバーに対応する OLE DB のデータ ソース プロパティ|  
+|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|リンク サーバーに対応する OLE DB プロバイダーの文字列プロパティ|  
+|**SRV_LOCATION**|**nvarchar (** 4000 **)**|指定したリンク サーバーに対応する OLE DB の位置プロパティ|  
 |**SRV_CAT**|**sysname**|指定したリンク サーバーに対応する OLE DB のカタログ プロパティ|  
   
 ## <a name="permissions"></a>権限  

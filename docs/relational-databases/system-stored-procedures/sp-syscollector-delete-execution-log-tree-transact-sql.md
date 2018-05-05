@@ -25,12 +25,11 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6353c668342f49f8bbb1f053210701f8ab79dbdb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fb66c3d92789637c27b50e0180dd314cfa907e81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
  コレクション セット ログの一意の識別子を指定します。 *log_id*は**int**です。  
   
  [ **@from_collection_set =** ] *from_collection_set*  
- コレクション セットの識別子を指定します。 *from_collection_set*は**ビット 1 =**です。  
+ コレクション セットの識別子を指定します。 *from_collection_set*は**ビット 1 =** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

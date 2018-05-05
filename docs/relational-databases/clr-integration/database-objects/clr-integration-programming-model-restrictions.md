@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a63ef5e4f3d2db6db5b90c91af4714fa035f45bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6f8e62bc460062b96a43f09bf1296cf6acd8636f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 -   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)です。  
   
--   使用している **FROM * * * の CREATE ASSEMBLY\<場所 >、*すべての参照先アセンブリとその依存関係がで利用できる*\<場所 >*です。  
+-   使用している **FROM * * * の CREATE ASSEMBLY\<場所 >、*すべての参照先アセンブリとその依存関係がで利用できる*\<場所 >* です。  
   
 -   使用している **FROM * * * の CREATE ASSEMBLY\<バイト... >、*参照が領域を使用して指定されたすべての区切りのバイトとします。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 04/16/2018
  コード アセンブリは、実行時に次の条件をチェックされます。 これらの条件のいずれかが見つからなかった場合、マネージ コードの実行が失敗し、例外がスローされます。  
   
 ### <a name="unsafe"></a>UNSAFE  
- アセンブリの読み込み-呼び出すことによって明示的にするか、 **System.Reflection.Assembly.Load()**メソッドをバイト配列からまたはを使用して暗黙的に**Reflection.Emit**名前空間: は許可されていません。  
+ アセンブリの読み込み-呼び出すことによって明示的にするか、 **System.Reflection.Assembly.Load()** メソッドをバイト配列からまたはを使用して暗黙的に**Reflection.Emit**名前空間: は許可されていません。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  すべて**UNSAFE**条件がチェックされます。  

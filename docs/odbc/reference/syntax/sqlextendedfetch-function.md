@@ -3,15 +3,12 @@ title: SQLExtendedFetch 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1a02b1c2e050b6fc7a0724286c7f023cb376e7bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 関数
 **準拠**  
@@ -41,7 +37,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch**結果セットからデータの指定した行セットをフェッチされ、すべてのバインドされた列のデータを返します。 絶対または相対位置にまたはブックマークによる行セットを指定できます。  
   
 > [!NOTE]  
->  ODBC 3*.x*、 **SQLExtendedFetch**代わりました**SQLFetchScroll**です。 ODBC 3*.x*アプリケーションを呼び出す必要がありますいない**SQLExtendedFetch**; 代わりに呼び出すことによって**SQLFetchScroll**です。 ドライバー マネージャーは、マップ**SQLFetchScroll**に**SQLExtendedFetch** ODBC 2 を使用するときに*.x*ドライバー。 ODBC 3*.x*ドライバーをサポートする必要があります**SQLExtendedFetch** ODBC 2 を使用する場合は*.x*それを呼び出すアプリケーションです。 詳細については、「コメント」を参照してください。 および[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
+>  ODBC 3 *.x*、 **SQLExtendedFetch**代わりました**SQLFetchScroll**です。 ODBC 3 *.x*アプリケーションを呼び出す必要がありますいない**SQLExtendedFetch**; 代わりに呼び出すことによって**SQLFetchScroll**です。 ドライバー マネージャーは、マップ**SQLFetchScroll**に**SQLExtendedFetch** ODBC 2 を使用するときに *.x*ドライバー。 ODBC 3 *.x*ドライバーをサポートする必要があります**SQLExtendedFetch** ODBC 2 を使用する場合は *.x*それを呼び出すアプリケーションです。 詳細については、「コメント」を参照してください。 および[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -129,9 +125,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   呼び出す**SQLExtendedFetch**の呼び出しを混在させることはできません**SQLFetch**または**SQLFetchScroll**、場合**SQLBulkOperations**は呼び出されますすべてのフェッチ関数を呼び出す前に**SQLExtendedFetch**カーソルを閉じて再度開くまでに呼び出すことができません。 つまり、 **SQLExtendedFetch**ステートメント状態 S7 でのみ呼び出すことができます。 詳細については、次を参照してください。[ステートメント遷移](../../../odbc/reference/appendixes/statement-transitions.md)付録 b: ODBC 状態遷移表でします。  
   
- アプリケーションを呼び出すと**SQLFetchScroll** ODBC 2 を使用しているときに*.x*ドライバー、ドライバー マネージャーは、マップするには、この呼び出し**SQLExtendedFetch**です。 詳細については、次を参照してください。"SQLFetchScroll および ODBC 2*.x*ドライバー"で[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)です。  
+ アプリケーションを呼び出すと**SQLFetchScroll** ODBC 2 を使用しているときに *.x*ドライバー、ドライバー マネージャーは、マップするには、この呼び出し**SQLExtendedFetch**です。 詳細については、次を参照してください。"SQLFetchScroll および ODBC 2 *.x*ドライバー"で[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)です。  
   
- ODBC 2 で*.x*、 **SQLExtendedFetch**を複数の行をフェッチが呼び出されたと**SQLFetch**を 1 つの行をフェッチが呼び出されました。 ODBC 3*.x*、その一方で、 **SQLFetch**複数行のフェッチを呼び出すことができます。  
+ ODBC 2 で *.x*、 **SQLExtendedFetch**を複数の行をフェッチが呼び出されたと**SQLFetch**を 1 つの行をフェッチが呼び出されました。 ODBC 3 *.x*、その一方で、 **SQLFetch**複数行のフェッチを呼び出すことができます。  
   
 ## <a name="related-functions"></a>関連する関数  
   

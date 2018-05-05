@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2a8a2f968861c8f79a32a088d4f66746a3b4174
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 808ab79ea75bb191b496411d5088e7a23b692daf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +56,7 @@ HRESULT BCPControl(
 |BCP_OPTION_BATCH|バッチごとの行数を指定します。 既定値は 0 で、データが抽出されている場合は、テーブル内のすべての行を示す、またはユーザー データのすべての行はファイルにデータがコピーされているときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 BCP_OPTION_BATCH に 1 未満の値を指定すると、既定値にリセットされます。|  
 |BCP_OPTION_DELAYREADFMT|ブール値の場合は、true に設定すると、 [ibcpsession::bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)実行時に読み取り。 場合は false (既定値)、ibcpsession::bcpreadfmt がすぐには、フォーマット ファイルを読み取る。 シーケンス エラーが発生**BCP_OPTION_DELAYREADFMT**は true を呼び出す ibcpsession::bcpcolumns または ibcpsession::bcpcolfmt です。<br /><br /> 呼び出す場合にもシーケンス エラーが発生`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`呼び出した後`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`および ibcpsession::bcpwritefmt です。<br /><br /> 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)です。|  
 |BCP_OPTION_FILECP|*IValue*引数には、データ ファイルのコード ページの数が含まれています。 1252 など、コード ページの数または 850、またはその値は次のいずれかを指定できます。<br /><br /> BCP_FILECP_ACP を指定すると、ファイル内のデータには、クライアントの Microsoft Windows&#xAE; コード ページが使用されます。<br /><br /> BCP_FILECP_OEMCP を指定すると、ファイル内のデータには、クライアントの OEM コード ページ (既定) が使用されます。<br /><br /> BCP_FILECP_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコード ページが使用されます。|  
-|BCP_OPTION_FILEFMT|データ ファイル形式のバージョン番号を指定します。 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。  たとえば、データをインポートする内のテキスト列から取得、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]のサーバーに、 **varchar (max)**内の列、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバー 80 を指定する必要があります。 同様に、データのエクスポート中に 80 を指定する場合、 **varchar (max)**列、保存されるのでにテキスト列を保存する場合と同じように、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびのテキスト列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。|  
+|BCP_OPTION_FILEFMT|データ ファイル形式のバージョン番号を指定します。 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。  たとえば、データをインポートする内のテキスト列から取得、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]のサーバーに、 **varchar (max)** 内の列、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバー 80 を指定する必要があります。 同様に、データのエクスポート中に 80 を指定する場合、 **varchar (max)** 列、保存されるのでにテキスト列を保存する場合と同じように、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびのテキスト列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。|  
 |BCP_OPTION_FIRST|ファイルまたはテーブルにコピーするデータの先頭行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。|  
 |BCP_OPTION_FIRSTEX|BCP out 操作の場合は、データ ファイルにコピーするための、データベース テーブルの最初の行を指定します。<br /><br /> BCP in 操作の場合は、データベース テーブルにコピーするための、データ ファイルの最初の行を指定します。<br /><br /> *IValue*値を含む符号付き 64 ビット整数のアドレスを指定するパラメーターが必要です。 BCPFIRSTEX に渡すことができる最大値は 2^63-1 です。|  
 |BCP_OPTION_FMTXML|XML 形式でフォーマット ファイルが生成されることを指定する場合に使用します。 既定では、このオプションは無効で、フォーマット ファイルはテキスト ファイルとして保存されます。 XML フォーマット ファイルにより柔軟性が向上しますが、いくつか制約も追加されます。 たとえば、以前のフォーマット ファイルでは、1 つのフィールドにプレフィックスとターミネータを同時に指定できましたが、XML フォーマット ファイルでは指定できません。<br /><br /> 注: XML フォーマット ファイルはのみサポートされている場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と共にツールがインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client です。|  

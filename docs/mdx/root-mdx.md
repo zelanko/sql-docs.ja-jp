@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ef6d95e700e8eda518a33eb5d9482ef8a77d82b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  構成される組を返します、**すべて**キューブ、ディメンション、または組の現在のスコープ内の各属性階層のメンバーです。 スコープの詳細については、次を参照してください。 [SCOPE ステートメント &#40;です。MDX と #41 です](../mdx/mdx-scripting-scope.md)。  
+  構成される組を返します、**すべて**キューブ、ディメンション、または組の現在のスコープ内の各属性階層のメンバーです。 スコープの詳細については、次を参照してください。 [SCOPE ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)です。  
   
 > [!NOTE]  
 >  属性階層がない場合、**すべて**メンバー、組には、その階層の既定のメンバーが含まれています。  
@@ -91,6 +90,6 @@ WHERE [Measures].[Order Count]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -19,13 +19,12 @@ caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc0552d5baf1c35e4ffa02ae6f05f7a397a5523a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27b303f1e78826e74fb94f254a0c2e3692fbef7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログを受けた**sp_pdw_log_user_data_masking**確実な[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログです。 **sp_pdw_log_user_data_masking**データベース トランザクション ログには影響しませんまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログ。  
   
- **背景知識:**既定の構成で[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログが完全に含む[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、および場合によってなどの操作に含まれているユーザー データを含める**挿入**、 **更新**、および**選択**ステートメントです。 アプライアンス上の問題が発生した場合は、分析、問題を再現するがなくても、問題の原因となった条件を許可します。 ユーザー データに書き込まれていることを防ぐために[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログ、お客様がこのストアド プロシージャを使用してユーザー データのマスキングを有効にするを選択できます。 ステートメントが引き続き書き込まれます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティのログはすべて、いくつかの定義済みの定数値に置き換えられます。 ユーザー データを含む可能性のあるステートメント内のリテラルを隠蔽することができます。  
+ **背景知識:** 既定の構成で[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログが完全に含む[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、および場合によってなどの操作に含まれているユーザー データを含める**挿入**、 **更新**、および**選択**ステートメントです。 アプライアンス上の問題が発生した場合は、分析、問題を再現するがなくても、問題の原因となった条件を許可します。 ユーザー データに書き込まれていることを防ぐために[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログ、お客様がこのストアド プロシージャを使用してユーザー データのマスキングを有効にするを選択できます。 ステートメントが引き続き書き込まれます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティのログはすべて、いくつかの定義済みの定数値に置き換えられます。 ユーザー データを含む可能性のあるステートメント内のリテラルを隠蔽することができます。  
   
  アプライアンスの透過的なデータ暗号化が有効の場合は、ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログが自動的にオンにします。  
   

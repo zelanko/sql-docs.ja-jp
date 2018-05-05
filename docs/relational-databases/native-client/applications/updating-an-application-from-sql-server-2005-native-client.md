@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
@@ -18,13 +17,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32ebeaefe034128943f081251cc9c40e34e88ee7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client からのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB によって定義された有効桁数までしか埋め込まれない|サーバーへの変換後のデータの送信先の変換を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) の最大長までしかデータの後続の 0 パッド**datetime**値。 SQL Server Native Client 9.0 では、9 桁まで埋め込まれていました。|  
 |ICommandWithParameter::SetParameterInfo DBTYPE_DBTIMESTAMP を検証します。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])、OLE DB 要件が実装され*bScale* DBTYPE_DBTIMESTAMP の秒の小数部の有効桁数を設定する ICommandWithParameter::SetParameterInfo でします。|  
-|**Sp_columns**ストアド プロシージャを今すぐ返します**"NO"**の代わりに**"NO"**によって IS_NULLABLE 列にします。|以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])、 **sp_columns**ストアド プロシージャを今すぐ返します**"NO"**の代わりに**"NO"**によって IS_NULLABLE 列.|  
+|**Sp_columns**ストアド プロシージャを今すぐ返します **"NO"** の代わりに **"NO"** によって IS_NULLABLE 列にします。|以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])、 **sp_columns**ストアド プロシージャを今すぐ返します **"NO"** の代わりに **"NO"** によって IS_NULLABLE 列.|  
 |Sqlsetdescrec による、SQLBindCol、SQLBindParameter、一貫性チェックが実行されます。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLSetDescRec、SQLBindParameter、または SQLBindCol 記述子の型に対して整合性チェックが Native Client 10.0、SQL_DESC_DATA_PTR を設定では発生しませんでした。|  
 |SQLCopyDesc が、記述子の一貫性をチェックします。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 SQLCopyDesc しなかった、整合性チェック、SQL_DESC_DATA_PTR フィールドが特定のレコードで設定されたときにします。|  
 |SQLGetDescRec 不要になったは記述子の一貫性を確認します。|前のバージョン[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 SQLGetDescRec 実行記述子の一貫性チェック、SQL_DESC_DATA_PTR フィールドが設定されたときにします。 この一貫性チェックは、ODBC 仕様では不要になったため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 以降のバージョンでは行われなくなりました。|  

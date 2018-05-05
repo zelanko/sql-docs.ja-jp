@@ -1,11 +1,9 @@
 ---
 title: レコード セットの操作 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b83fb8d5ad4e2e063ca840b7e8fb31bbf15fde14
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-recordsets"></a>レコード セットの操作
 **Recordset**オブジェクトが組み込みの機能を指定する条件に基づいて特定のレコードを検索して、インデックスを使用してこれらの検索操作を最適化するためにも、結果セット内のデータの順序を変更することができます。 これらの機能を使用できるかどうかは、プロバイダーによって異なります: などの[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティ — データ ソース自体の構造。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 04/18/2018
   
  設定、**並べ替え**プロパティを空の文字列には行は元の順序にリセットされ、一時的なインデックスを削除します。 既存のインデックスは削除されません。  
   
- たとえば、**レコード セット**という 3 つのフィールドが含まれています*firstName*、 *[middleinitial]*と*lastName*です。 設定、**並べ替え**プロパティを文字列に"`lastName DESC, firstName ASC`"、順序は、 **Recordset**姓の順序を降順で、最初名順で昇順に並べ替えます。 ミドル ネームのイニシャルは無視されます。  
+ たとえば、**レコード セット**という 3 つのフィールドが含まれています*firstName*、 *[middleinitial]* と*lastName*です。 設定、**並べ替え**プロパティを文字列に"`lastName DESC, firstName ASC`"、順序は、 **Recordset**姓の順序を降順で、最初名順で昇順に並べ替えます。 ミドル ネームのイニシャルは無視されます。  
   
  フィールドの並べ替え条件の文字列で参照されている名前を指定できますなし"ASC"または"DESC"キーワードとそれらの名前が競合するため**ASC**と**DESC**です。 名前を持つ、競合するエイリアスを使用してフィールドを付ける、 **AS**を返すクエリ内のキーワード、 **Recordset**です。  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 04/18/2018
  アスタリスクできる条件の文字列の末尾でのみまたは組み合わせて使用先頭と条件の文字列の末尾の両方で前に示したようです。 先頭のワイルドカードとしてアスタリスクを使用することはできません ('* str')、または埋め込みワイルドカード ('s\*r')。 これにより、エラーが発生します。  
   
 ### <a name="seek-and-index"></a>シークおよびインデックス  
- 使用して、**シーク**メソッドと共に、**インデックス**基になるプロバイダーのインデックスをサポートする場合は、プロパティ、 **Recordset**オブジェクト。 使用して、[サポート](../../../ado/reference/ado-api/supports-method.md)**(adSeek)**基になるプロバイダーがサポートしているかどうかを判断するメソッド**シーク**、および**Supports(adIndex)**プロバイダーはインデックスをサポートするかどうかを判断するメソッドです。 (たとえば、 [OLE DB Provider for Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)をサポートしている**シーク**と**インデックス**)。  
+ 使用して、**シーク**メソッドと共に、**インデックス**基になるプロバイダーのインデックスをサポートする場合は、プロパティ、 **Recordset**オブジェクト。 使用して、[サポート](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 基になるプロバイダーがサポートしているかどうかを判断するメソッド**シーク**、および**Supports(adIndex)** プロバイダーはインデックスをサポートするかどうかを判断するメソッドです。 (たとえば、 [OLE DB Provider for Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)をサポートしている**シーク**と**インデックス**)。  
   
  場合**シーク**は検索対象の行では、エラーはありませんが発生すると、およびその行がの末尾に配置されている、 **Recordset**です。 設定、**インデックス**にこのメソッドを実行する前に目的のインデックスのプロパティです。  
   

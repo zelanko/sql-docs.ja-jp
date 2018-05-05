@@ -1,29 +1,27 @@
 ---
-title: "定義と Kpi を表示 |Microsoft ドキュメント"
-ms.custom: 
+title: 定義と Kpi を表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7c3d9cf5da2347a12afc0649c43d26c9691b1948
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>レッスン 7-1-の定義と Kpi を表示
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,9 +77,9 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[名前]** ボックスに「 **Reseller Revenue**」と入力し、 **[関連付けられたメジャー グループ]** ボックスの一覧の **[Reseller Sales]** をクリックします。  
   
-4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]**の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
+4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
-5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Sales Quotas]**の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
+5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
   
 6.  **[状態インジケーター]** ボックスの一覧で **[ゲージ]** が選択されていることを確認します。次に、以下の MDX 式を **[状態式]** ボックスに入力します。  
   
@@ -144,15 +142,15 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-cube-by-using-the-reseller-revenue-kpi"></a>Reseller Revenue KPI を使用したキューブの表示  
   
-1.  **の** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューで、 **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **の** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューで、 **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[ブラウザー ビュー]** ボタンをクリックし、 **[再接続]**をクリックします。  
+2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[ブラウザー ビュー]** ボタンをクリックし、 **[再接続]** をクリックします。  
   
     各ディメンションの既定のメンバーの値に基づき、状態ゲージおよび傾向ゲージが再販業者の売上の **[KPI ブラウザー]** ペインに表示され、それと共に値と目標の値が表示されます。 現時点では、どのディメンションのどのメンバーも既定のメンバーとしてまだ定義されていないため、各ディメンションの既定のメンバーは全レベルの全メンバーです。  
   
-3.  [フィルター] ペインで、 **[ディメンション]** ボックスの一覧の **[Sales Territory]** をクリックし、 **[階層]** ボックスの一覧の **[Sales Territories]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[North America]** チェック ボックスをオンにし、 **[OK]**をクリックします。  
+3.  [フィルター] ペインで、 **[ディメンション]** ボックスの一覧の **[Sales Territory]** をクリックし、 **[階層]** ボックスの一覧の **[Sales Territories]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[North America]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-4.  **[フィルター]** ペインの次の行で、 **[ディメンション]** ボックスの一覧の **[Date]** をクリックし、 **[階層]** ボックスの一覧の **[Calendar Date]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Q3 CY 2007]** チェック ボックスをオンにし、 **[OK]**をクリックします。  
+4.  **[フィルター]** ペインの次の行で、 **[ディメンション]** ボックスの一覧の **[Date]** をクリックし、 **[階層]** ボックスの一覧の **[Calendar Date]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Q3 CY 2007]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
 5.  **[KPI ブラウザー]** ペイン内の任意の場所をクリックすると、 **Reseller Revenue KPI**の値が更新されます。  
   
@@ -186,7 +184,7 @@ ms.lasthandoff: 02/15/2018
     End  
     ```  
   
-5.  **[状態インジケーター]** ボックスの一覧で **[シリンダー]**をクリックします。  
+5.  **[状態インジケーター]** ボックスの一覧で **[シリンダー]** をクリックします。  
   
 6.  以下の MDX 式を **[状態式]** ボックスに入力します。  
   
@@ -267,13 +265,13 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="browsing-the-cube-by-using-the-total-gross-profit-margin-kpi"></a>Total Gross Profit Margin KPI を使用したキューブの表示  
   
-1.  **[ビルド]** メニューで、 **[Analysis Services Tutorial の配置]**をクリックします。  
+1.  **[ビルド]** メニューで、 **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[再接続]** をクリックして、 **[ブラウザー ビュー]**をクリックします。  
+2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[再接続]** をクリックして、 **[ブラウザー ビュー]** をクリックします。  
   
     **Product Gross Profit Margin** KPI が、 **Q3 CY 2007** および **North America** 販売区域の KPI 値と共に表示されます。  
   
-3.  **[フィルター]** ペインで、 **[ディメンション]** ボックスの一覧の **[Product]** をクリックし、 **[階層]** ボックスの一覧の **[Category]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Bikes]** チェック ボックスをオンにし、 **[OK]**をクリックします。  
+3.  **[フィルター]** ペインで、 **[ディメンション]** ボックスの一覧の **[Product]** をクリックし、 **[階層]** ボックスの一覧の **[Category]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Bikes]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
     Q3 CY 2007 の North America における小売店のバイクの売上総利益率が表示されます。  
   

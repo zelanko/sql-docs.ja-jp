@@ -1,27 +1,25 @@
 ---
-title: "表形式モデル (Analysis Services) での翻訳 |Microsoft ドキュメント"
-ms.custom: 
+title: 表形式モデル (Analysis Services) での翻訳 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 661f1f7a1fe9336504da07414ad3879eeab6321e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表形式モデルでの翻訳 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,17 +44,17 @@ ms.lasthandoff: 02/23/2018
 ## <a name="create-an-empty-translation-file"></a>空の翻訳ファイルの作成  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して翻訳を追加します。  
   
-1.  **[モデル]** > **[翻訳]** > **[翻訳の管理]**の順にクリックします。  
+1.  **[モデル]** > **[翻訳]** > **[翻訳の管理]** の順にクリックします。  
   
-2.  翻訳を提供している言語を選択して、 **[追加]**をクリックします。  
+2.  翻訳を提供している言語を選択して、 **[追加]** をクリックします。  
   
 3.  後で文字列をインポートする方法に応じて、リストから 1 つ以上の言語を選択します。  
   
      翻訳ファイルには複数の言語を含めることができますが、言語ごとに翻訳ファイルを作成すると、より簡単に翻訳を管理できる場合があります。 作成中の翻訳ファイルは、後でその全体にインポートされます。 言語によってインポート オプションを変えるには、各言語を自身のファイルに含める必要があります。  
   
-4.  **[言語ファイルのエクスポート]**をクリックします。  ファイル名と場所を指定します。  
+4.  **[言語ファイルのエクスポート]** をクリックします。  ファイル名と場所を指定します。  
   
- ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
+ ![ssas 表形式-変換-エクスポート](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas 表形式の変換のエクスポート")  
   
 ## <a name="add-translations"></a>翻訳の追加  
  空の JSON 翻訳ファイルには、特定の言語の翻訳に対するメタデータが含まれます。 オブジェクト名と説明の翻訳のプレースホルダーは、モデル定義の最後の **Culture** セクションに指定されます。 次の翻訳を追加することができます。  
@@ -80,9 +78,9 @@ ms.lasthandoff: 02/23/2018
 ## <a name="import-a-translation-file"></a>翻訳ファイルのインポート  
  インポートする翻訳文字列は、モデル定義の一部として恒久的に保存されます。 文字列がインポートされると、翻訳ファイルが参照されなくなります。  
   
-1.  **[モデル]** > **[翻訳]** > **[翻訳のインポート]**の順にクリックします。  
+1.  **[モデル]** > **[翻訳]** > **[翻訳のインポート]** の順にクリックします。  
   
-2.  翻訳ファイルを検索して、 **[開く]**をクリックします。  
+2.  翻訳ファイルを検索して、 **[開く]** をクリックします。  
   
 3.  必要に応じて、インポート オプションを指定します。  
   
@@ -93,13 +91,13 @@ ms.lasthandoff: 02/23/2018
     |インポートの結果をログ ファイルに書き込む|ログ ファイルは、既定ではプロジェクト フォルダーに保存されます。 インポートが終了した後に、ファイルの正確なパスが提供されます。 ログ ファイルの名前は、ssdt_translations_log _\<タイムスタンプ >。|  
     |インポートする前に翻訳を JSON ファイルにバックアップする|インポートされている文字列のカルチャに一致する既存の翻訳をバックアップします。  インポートされているカルチャがモデルに存在しない場合は、バックアップは空になります。<br /><br /> 後でこのファイルを復元する必要がある場合は、この JSON ファイルを使用して、model.bim のコンテンツを置き換えることができます。|  
   
-4.  **[インポート]**をクリックします。  
+4.  **[インポート]** をクリックします。  
   
 5.  必要に応じて、ログ ファイルまたはバックアップを作成した場合は、プロジェクト フォルダーでファイルを見つけることができます (例: C:\Users\Documents\Visual Studio 2015\Projects\Tabular1200-AW\Tabular1200-AW)。  
   
 6.  インポートを検証するには、次の手順に従います。  
   
-    -   ソリューション エクスプローラーで **model.bim** を右クリックして、 **[コードの表示]**を選択します。 **[はい]** をクリックし、デザイン ビューを閉じて、もう一度コード ビューで **model.bim** を開きます。  無料の Community Edition など、通常版の Visual Studio をインストールした場合、ファイルは組み込みの JSON エディターで開きます。  
+    -   ソリューション エクスプローラーで **model.bim** を右クリックして、 **[コードの表示]** を選択します。 **[はい]** をクリックし、デザイン ビューを閉じて、もう一度コード ビューで **model.bim** を開きます。  無料の Community Edition など、通常版の Visual Studio をインストールした場合、ファイルは組み込みの JSON エディターで開きます。  
   
     -   **Culture** または特定の翻訳された文字列を検索して、想定した文字列が実際に存在することを確認します。  
   

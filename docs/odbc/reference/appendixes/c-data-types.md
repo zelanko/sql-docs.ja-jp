@@ -3,15 +3,12 @@ title: C データ型 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -22,12 +19,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 288ca6cbd5553b963131d34b8e63640518f70ef4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>C データ型
 ODBC C データ型では、アプリケーションでデータの格納に使用される C バッファーのデータ型を示します。  
@@ -140,9 +136,9 @@ struct tagSQLGUID {
   
  [ODBC 2 の c]。*x*C の日付、時刻、および timestamp データ型は SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP です。  
   
- [d] ODBC 3*.x* SQL_C_VARBOOKMARK、SQL_C_BOOKMARK いないアプリケーションを使用します。 ときに ODBC 3*.x*アプリケーションが ODBC 2 *。x*ドライバー、ODBC 3*.x*ドライバー マネージャーが SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップされます。  
+ [d] ODBC 3 *.x* SQL_C_VARBOOKMARK、SQL_C_BOOKMARK いないアプリケーションを使用します。 ときに ODBC 3 *.x*アプリケーションが ODBC 2 *。x*ドライバー、ODBC 3 *.x*ドライバー マネージャーが SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップされます。  
   
- [e] A 番号が格納されている、 *val*リトル エンディアン モード (、左端バイトが最下位バイト) でのスケーリングの整数として SQL_NUMERIC_STRUCT 構造体のフィールドです。 たとえば、4 の小数点以下桁数で数値 10.001 の底 10 は 100010 の整数にスケーリングされます。 これ 186AA 16 進形式であるため SQL_NUMERIC_STRUCT の値になります"AA 86 01 00 00.00"、SQL_MAX_NUMERIC_LEN によって定義されたバイト数で**#define**です。  
+ [e] A 番号が格納されている、 *val*リトル エンディアン モード (、左端バイトが最下位バイト) でのスケーリングの整数として SQL_NUMERIC_STRUCT 構造体のフィールドです。 たとえば、4 の小数点以下桁数で数値 10.001 の底 10 は 100010 の整数にスケーリングされます。 これ 186AA 16 進形式であるため SQL_NUMERIC_STRUCT の値になります"AA 86 01 00 00.00"、SQL_MAX_NUMERIC_LEN によって定義されたバイト数で **#define**です。  
   
  詳細については**SQL_NUMERIC_STRUCT**を参照してください[HOWTO: SQL_NUMERIC_STRUCT で数値データの取得](retrieve-numeric-data-sql-numeric-struct-kb222831.md)です。  
   
@@ -152,9 +148,9 @@ struct tagSQLGUID {
   
  [h] _int64 を一部のコンパイラで提供されない可能性があります。  
   
- [ODBC 3 i] _SQL_C_BOOKMARK は廃止されて*.x*です。  
+ [ODBC 3 i] _SQL_C_BOOKMARK は廃止されて *.x*です。  
   
- [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なしの型: SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG、and SQL_C_STINYINT SQL_C_UTINYINT です。 ODBC 3*.x* ODBC 2 で動作するドライバー *。x*アプリケーションは、そのため、呼び出されるときに、ドライバー マネージャーを使ってドライバーに渡します SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT、サポートする必要があります。  
+ [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なしの型: SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG、and SQL_C_STINYINT SQL_C_UTINYINT です。 ODBC 3 *.x* ODBC 2 で動作するドライバー *。x*アプリケーションは、そのため、呼び出されるときに、ドライバー マネージャーを使ってドライバーに渡します SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT、サポートする必要があります。  
   
  [k] SQL_C_GUID SQL_CHAR または SQL_WCHAR にのみ変換できます。  
   

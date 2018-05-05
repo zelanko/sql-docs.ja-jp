@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 884b83ae8d893aa9004c978e4023a3329aebddc9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 218be13894e8d7dec687ad9b3c7aab28a1cd7bfb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-operators"></a>ビット演算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +36,13 @@ ms.lasthandoff: 01/08/2018
 |演算子|Description|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|2 つの数値式の論理積演算を実行します。|  
-|[IS](../mdx/is-mdx.md)|2 つのオブジェクト式の論理比較を実行します。|  
+|[します。](../mdx/is-mdx.md)|2 つのオブジェクト式の論理比較を実行します。|  
 |[NOT](../mdx/not-mdx.md)|1 つの数値式の論理否定を実行します。|  
 |[または](../mdx/or-mdx.md)|2 つの数値式の論理和を実行します。|  
 |[XOR](../mdx/xor-mdx.md)|2 つの数値式の排他的論理和演算を実行します。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)   
- [演算子 &#40;です。MDX 構文 &#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
   
   

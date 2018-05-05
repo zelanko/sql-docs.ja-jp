@@ -1,29 +1,27 @@
 ---
-title: "Analysis Services のチュートリアルのシナリオ |Microsoft ドキュメント"
-ms.custom: 
+title: Analysis Services のチュートリアルのシナリオ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 85890ac9d5264bdce01f5bf10a0060532da00646
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a41edfe5ca3056db0f063ca7fdd2e10052162f7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services のチュートリアル シナリオ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +70,7 @@ Adventure Works Cycles では、販売チーム、マーケティング チー�
 Analysis Services チュートリアルのレッスンには、これらのすべての目標に適したキューブ データベースを構築するためのガイダンスが用意されています。 まず、「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)」に進みます。  
   
 ## <a name="see-also"></a>参照  
-[多次元モデリング &#40;です。Adventure Works チュートリアル &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多次元モデリング & #40 です。Adventure Works チュートリアル & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

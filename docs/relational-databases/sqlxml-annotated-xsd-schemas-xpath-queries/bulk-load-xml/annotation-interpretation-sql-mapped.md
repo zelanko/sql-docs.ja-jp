@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 288a045d5bea7da63ef058b749f4e92409be28ae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql: マップ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込み処理、 **sql: マップ**期待どおりに、XSD スキーマで注釈-つまり、マッピング スキーマを指定する場合**sql: マップ ="false"**任意の要素または属性を使用して、XML 一括読み込みはできません対応する列に関連付けられているデータを格納しようとしてください。  
+  XML 一括読み込み処理、 **sql: マップ**期待どおりに、XSD スキーマで注釈-つまり、マッピング スキーマを指定する場合**sql: マップ ="false"** 任意の要素または属性を使用して、XML 一括読み込みはできません対応する列に関連付けられているデータを格納しようとしてください。  
   
  XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマで記述されていないか、XSD スキーマで注釈が付いているため**sql: マップ ="false"**)。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**です。  
   

@@ -25,13 +25,12 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 89c64873ca571c838a9415c2d38a8d7e5f561d27
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 71aaf16dd45c0bc5efb6a2741f554b346abf4905
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,35 +41,35 @@ ms.lasthandoff: 04/16/2018
   
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**SPECIFIC_CATALOG**|**nvarchar(**128**)**|パラメーターの基になるルーチンのカタログ名。|  
-|**SPECIFIC_SCHEMA**|**nvarchar(**128**)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
-|**SPECIFIC_NAME**|**nvarchar(**128**)**|パラメーターの基になるルーチンの名前。|  
+|**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのカタログ名。|  
+|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンのスキーマ名。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**SPECIFIC_NAME**|**nvarchar(** 128 **)**|パラメーターの基になるルーチンの名前。|  
 |**ORDINAL_POSITION**|**int**|1 から始まるパラメーターの順序を表す位置。 関数の戻り値の場合、この値は 0 です。|  
-|**PARAMETER_MODE**|**nvarchar (**10**)**|入力パラメーターの場合は IN、出力パラメーターの場合は OUT、入出力パラメーターの場合は INOUT を返します。|  
-|**IS_RESULT**|**nvarchar (**10**)**|関数であるルーチンの結果を表す場合は YES を返します。 それ以外の場合は NO を返します。|  
-|**AS_LOCATOR**|**nvarchar (**10**)**|ロケーターとして宣言されている場合は YES を返します。 それ以外の場合は NO を返します。|  
-|**PARAMETER_NAME**|**nvarchar(**128**)**|パラメーターの名前です。 関数の戻り値に対応する場合は NULL です。|  
-|**DATA_TYPE**|**nvarchar(**128**)**|システム提供のデータ型。|  
+|**PARAMETER_MODE**|**nvarchar (** 10 **)**|入力パラメーターの場合は IN、出力パラメーターの場合は OUT、入出力パラメーターの場合は INOUT を返します。|  
+|**IS_RESULT**|**nvarchar (** 10 **)**|関数であるルーチンの結果を表す場合は YES を返します。 それ以外の場合は NO を返します。|  
+|**AS_LOCATOR**|**nvarchar (** 10 **)**|ロケーターとして宣言されている場合は YES を返します。 それ以外の場合は NO を返します。|  
+|**PARAMETER_NAME**|**nvarchar(** 128 **)**|パラメーターの名前です。 関数の戻り値に対応する場合は NULL です。|  
+|**DATA_TYPE**|**nvarchar(** 128 **)**|システム提供のデータ型。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|バイナリ型または文字型の最大文字数。<br /><br /> 場合は-1 **xml**と大きな値型のデータ。 それ以外の場合は NULL を返します。|  
 |**CHARACTER_OCTET_LENGTH**|**int**|バイナリ型または文字型の最大バイト数。<br /><br /> 場合は-1 **xml**と大きな値型のデータ。 それ以外の場合は NULL を返します。|  
-|**COLLATION_CATALOG**|**nvarchar(**128**)**|常に NULL が返されます。|  
-|**COLLATION_SCHEMA**|**nvarchar(**128**)**|常に NULL が返されます。|  
-|**COLLATION_NAME**|**nvarchar(**128**)**|パラメーターの照合順序の名前。 文字型のいずれかに該当しない場合は NULL を返します。|  
-|**CHARACTER_SET_CATALOG**|**nvarchar(**128**)**|パラメーターの文字セットのカタログ名。 文字型のいずれかに該当しない場合は NULL を返します。|  
-|**CHARACTER_SET_SCHEMA**|**nvarchar(**128**)**|常に NULL が返されます。|  
-|**CHARACTER_SET_NAME**|**nvarchar(**128**)**|パラメーターの文字セットの名前。 文字型のいずれかに該当しない場合は NULL を返します。|  
+|**COLLATION_CATALOG**|**nvarchar(** 128 **)**|常に NULL が返されます。|  
+|**COLLATION_SCHEMA**|**nvarchar(** 128 **)**|常に NULL が返されます。|  
+|**COLLATION_NAME**|**nvarchar(** 128 **)**|パラメーターの照合順序の名前。 文字型のいずれかに該当しない場合は NULL を返します。|  
+|**CHARACTER_SET_CATALOG**|**nvarchar(** 128 **)**|パラメーターの文字セットのカタログ名。 文字型のいずれかに該当しない場合は NULL を返します。|  
+|**CHARACTER_SET_SCHEMA**|**nvarchar(** 128 **)**|常に NULL が返されます。|  
+|**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|パラメーターの文字セットの名前。 文字型のいずれかに該当しない場合は NULL を返します。|  
 |**NUMERIC_PRECISION**|**tinyint**|概数データ、真数データ、整数データ、または通貨データの有効桁数。 それ以外の場合は NULL を返します。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|概数データ、真数データ、整数データ、または通貨データの有効桁数の基数。 それ以外の場合は NULL を返します。|  
 |**NUMERIC_SCALE**|**tinyint**|概数データ、真数データ、整数データ、または通貨データの小数点以下桁数。 それ以外の場合は NULL を返します。|  
 |**DATETIME_PRECISION**|**smallint**|パラメーターの型がある場合の秒の小数部の有効桁数**datetime**または**smalldatetime**です。 それ以外の場合は NULL を返します。|  
-|**INTERVAL_TYPE**|**nvarchar (**30**)**|NULL。 将来の使用のために予約されています。|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL。 将来の使用のために予約されています。|  
 |**INTERVAL_PRECISION**|**smallint**|NULL。 将来の使用のために予約されています。|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar(**128**)**|NULL。 将来の使用のために予約されています。|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar(**128**)**|NULL。 将来の使用のために予約されています。|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar(**128**)**|NULL。 将来の使用のために予約されています。|  
-|**SCOPE_CATALOG**|**nvarchar(**128**)**|NULL。 将来の使用のために予約されています。|  
-|**SCOPE_SCHEMA**|**nvarchar(**128**)**|NULL。 将来の使用のために予約されています。|  
-|**SCOPE_NAME**|**nvarchar(**128**)**|NULL。 将来の使用のために予約されています。|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar(** 128 **)**|NULL。 将来の使用のために予約されています。|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar(** 128 **)**|NULL。 将来の使用のために予約されています。|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar(** 128 **)**|NULL。 将来の使用のために予約されています。|  
+|**SCOPE_CATALOG**|**nvarchar(** 128 **)**|NULL。 将来の使用のために予約されています。|  
+|**SCOPE_SCHEMA**|**nvarchar(** 128 **)**|NULL。 将来の使用のために予約されています。|  
+|**SCOPE_NAME**|**nvarchar(** 128 **)**|NULL。 将来の使用のために予約されています。|  
   
 ## <a name="see-also"></a>参照  
  [システム ビュー &#40;TRANSACT-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

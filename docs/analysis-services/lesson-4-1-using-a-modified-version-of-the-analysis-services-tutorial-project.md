@@ -1,29 +1,27 @@
 ---
-title: "解析の変更済みバージョンを使用してサービスのチュートリアル プロジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: 解析の変更済みバージョンを使用してサービスのチュートリアル プロジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 47d4ce5b877b360e7e340fff65199080cfb7441b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>レッスン 4-1-Analysis Services チュートリアル プロジェクトの変更済みバージョンを使用します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 02/19/2018
   
 4.  移動、 **adventure-works-マルチ ディメンションのチュートリアル-projects.zip**サブフォルダーにファイル。  
   
-5.  ファイルを右クリックし、 **[すべて展開]**をクリックします。  
+5.  ファイルを右クリックし、 **[すべて展開]** をクリックします。  
   
 6.  **Lesson 4 Start** フォルダーに移動して、 **Analysis Services Tutorial.sln** ファイルを見つけます。  
   

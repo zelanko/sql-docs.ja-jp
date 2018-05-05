@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 900b602a00e11cc58cd6500cafc99eb90dcca62d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad69726d5cdba7b421c33bdde86f46c187af4049
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="slash-star-comment-dmx"></a>スラッシュ スター (コメント) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,16 +45,16 @@ ms.lasthandoff: 01/08/2018
  コメントのテキストを含む文字列です。  
   
 ## <a name="remarks"></a>解説  
- によって複数行のコメントを示す必要があります/* と\*/です。  
+ 複数行のコメントは、/* と \*/ で示す必要があります。  
   
  コメントの長さには制限がありません。  
   
- DMX でさまざまな種類のコメントを使用する方法の詳細については、次を参照してください。[コメント &#40;DMX&#41;](../dmx/comments-dmx.md)です。  
+ DMX でさまざまな種類のコメントを使用する方法の詳細については、次を参照してください。[コメント&#40;DMX&#41;](../dmx/comments-dmx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [2 つのスラッシュ &#40;です。コメント &#41;& # #40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
- [--&#40;です。コメント &#41;& # #40; DMX &#41;概要](../dmx/comment-dmx-summary.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [2 つのスラッシュ&#40;コメント&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
+ [--&#40;コメント&#41; &#40;DMX&#41;の概要](../dmx/comment-dmx-summary.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [演算子 &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

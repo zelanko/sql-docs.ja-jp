@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 14a72899497437068d87c7fae658808d0cffe6f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eceed9b317b220a0d23a42133afbbe6be9a9eb1f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="id-element-assl"></a>ID 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親要素の一意の識別子 (ID) が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  親要素の一意の識別子 (ID) を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (最大 100 文字)|  
 |既定値|なし|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -66,9 +65,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>解説  
  すべての主要なオブジェクト[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]が、 **ID**プロパティとして要素。 値、 **ID**要素には、次の制限。  
   
--   値の先頭または末尾にスペースを含めることはできません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]値から先頭または末尾のスペースを暗黙的に削除されます、 **ID**要素。  
+-   値の先頭または末尾にスペースを含めることはできません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 値から先頭または末尾のスペースを暗黙的に削除されます、 **ID**要素。  
   
--   値は、制御文字を含めることはできません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]値から制御文字を暗黙的に削除されます、 **ID**要素。  
+-   値は、制御文字を含めることはできません。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 値から制御文字を暗黙的に削除されます、 **ID**要素。  
   
 -   次の値は予約済みなので使用できません。  
   
@@ -91,12 +90,12 @@ ms.lasthandoff: 01/08/2018
 |親要素|文字|  
 |--------------------|----------------|  
 |[[サーバー]](../../../analysis-services/scripting/objects/server-element-assl.md)|値は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows コンピューター名の規則に従う必要があります。 (IP アドレスが正しくありません。)|  
-|[データ ソース](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"()[]{}<>|  
-|[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)、[要素の属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"&%$!+=[]{}<>|  
-|他のすべての親要素|.,;'`:/\\*&#124;?"&%$!+=()[]{}<>|  
+|[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md)|:/\\*&#124;?"(){}<>|  
+|[レベル](../../../analysis-services/scripting/objects/level-element-assl.md)、[要素の属性](../../../analysis-services/scripting/objects/attribute-element-assl.md)|.,;'`:/\\*&#124;?"& % $! + ={}<>|  
+|他のすべての親要素|.,;'`:/\\*&#124;?"& % $! + = (){}<>|  
   
 ## <a name="see-also"></a>参照  
- [Name 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/name-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [要素名を指定&#40;ASSL&#41;](../../../analysis-services/scripting/properties/name-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ad45f26fbd1c6b7f9488497333f5ba44a2b5fa8c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02de3e99a2cb322d59e7303abe3701e3acf4e33b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,17 +53,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  [  **@article_resolver =** ] **'***article_resolver***'**  
  登録を解除するカスタム ビジネス ロジックの名前を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。 削除されるビジネス ロジックが COM コンポーネントの場合、そのコンポーネントの表示名です。 ビジネス ロジックがある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリでは、このパラメーターは、アセンブリの名前。  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'**出力  
+ [ **@resolver_clsid**=] **'***resolver_clsid***'** 出力  
  指定されたカスタム ビジネス ロジックの名前に関連付けられている COM オブジェクトの CLSID 値は、 *article_resolver*パラメーター。 *resolver_clsid*は**nvarchar (50)**、既定値は NULL です。  
   
- [  **@is_dotnet_assembly=** ] **'***@is_dotnet_assembly***'**出力  
+ [  **@is_dotnet_assembly=** ] **'***@is_dotnet_assembly***'** 出力  
  登録するカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**ビット**、既定値は 0 です。 **1**登録するカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**0** COM コンポーネントであることを示します。  
   
- [  **@dotnet_assembly_name=** ] **'***@dotnet_assembly_name***'**出力  
- ビジネス ロジック ハンドラーを実装するアセンブリの名前を指定します。 *@dotnet_assembly_name*は**nvarchar (255)**既定値は NULL です。  
+ [  **@dotnet_assembly_name=** ] **'***@dotnet_assembly_name***'** 出力  
+ ビジネス ロジック ハンドラーを実装するアセンブリの名前を指定します。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。  
   
- [  **@dotnet_class_name=** ] **'***@dotnet_class_name***'**出力  
- オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 *@dotnet_class_name*は**nvarchar (255)**既定値は NULL です。  
+ [  **@dotnet_class_name=** ] **'***@dotnet_class_name***'** 出力  
+ オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 *@dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
   
  [  **@publisher=** ] **'***パブリッシャー***'**  
  パブリッシャーの名前です。 *パブリッシャー*は**sysname**既定値は NULL です。 このパラメーターは、ストアド プロシージャをパブリッシャーから呼び出さないときに使用します。 指定しない場合、ローカル サーバーがパブリッシャーであると見なされます。  

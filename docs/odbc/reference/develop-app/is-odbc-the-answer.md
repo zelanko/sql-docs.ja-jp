@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fffe02b0e000750792bc71654bbc59becf0f087
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c92ffbcdf0dc09ddb72916ebb1207775a7157d7d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-odbc-the-answer"></a>ODBC の答えですか。
 相互運用性の問題を詳しく調べる前に、次の質問を検討してください必要があります、アプリケーションを使用して ODBC にしますか?。 奇妙な ODBC では、ガイドの「にたずねる質問かもしれませんが、実際には、正当なものです。 完全にデータベースを置き換えるネイティブ Api、ODBC がものではありません。 またが、すべての環境でデータベースへのアクセスを提供するよう設計されています。 データベースに共通のインターフェイスを提供するように設計されましたし、空きについて学習し、複数のデータベースへのリンクを維持することから、アプリケーション プログラマが想定されていました。  

@@ -1,35 +1,34 @@
 ---
-title: "レッスン 7: メジャーを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 7: メジャーを作成する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3729aa2c15bf633ce76af5395175dfd07b3e9ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-create-measures"></a>レッスン 6: メジャーを作成します。
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、モデルに含められるメジャーを作成します。 前のレッスンで作成した計算列と同様に、メジャーとは、計算、DAX の数式を使用して作成します。 ただし、計算列とは違い、メジャーはユーザーが選択した " *フィルター*" に基づいて評価されます (たとえば、PivotTable 内の行ラベル フィールドに追加された特定の列やスライサーなど)。 フィルター内の各セルの値は、適用されたメジャーによって計算されます。 メジャーは、数値データに対する動的な計算を実行するほとんどすべてのテーブル モデルに含めるか強力で柔軟な計算です。 詳細については、次を参照してください。[メジャー](../analysis-services/tabular-models/measures-ssas-tabular.md)です。  
   
-メジャーを作成するには、使用して、*メジャー グリッド*です。 既定では、各テーブルに空のメジャー グリッドがあります。ただし、通常はすべてのテーブルにメジャーを作成することはありません。 メジャー グリッドは、モデル デザイナーのデータ ビューで、テーブルの下に表示されます。 テーブルのメジャー グリッドを表示または非表示にするには、 **[テーブル]** メニューをクリックし、 **[メジャー グリッドの表示]**をクリックします。  
+メジャーを作成するには、使用して、*メジャー グリッド*です。 既定では、各テーブルに空のメジャー グリッドがあります。ただし、通常はすべてのテーブルにメジャーを作成することはありません。 メジャー グリッドは、モデル デザイナーのデータ ビューで、テーブルの下に表示されます。 テーブルのメジャー グリッドを表示または非表示にするには、 **[テーブル]** メニューをクリックし、 **[メジャー グリッドの表示]** をクリックします。  
   
 メジャーを作成するには、メジャー グリッド内で空のセルをクリックし、数式バーに DAX 数式を入力します。 Enter キーを押して式の入力を完了すると、そのセルにメジャーが表示されます。 標準の集計関数を使用してメジャーを作成することもできます。その場合は、列をクリックし、ツール バーの [オート SUM] ボタン (**∑**) をクリックします。 オート Sum 機能を使用して作成したメジャーは、列のすぐ下のメジャー グリッド セルに表示されますが、移動することができます。  
   
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **30 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 5: 計算列の作成](../analysis-services/lesson-5-create-calculated-columns.md)です。  
   
 ## <a name="create-measures"></a>メジャーを作成する  
@@ -79,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  をクリックして、 **SalesOrderNumber**列見出し。  
   
-3.  ツール バーで、[オート SUM] \(**∑**) ボタンの横にある下矢印をクリックし、 **[DistinctCount]**を選択します。  
+3.  ツール バーで、[オート SUM] \(**∑**) ボタンの横にある下矢印をクリックし、 **[DistinctCount]** を選択します。  
   
     オート SUM 機能が、DistinctCount 標準集計式を使用して、選択された列に対するメジャーを自動的に作成します。  
     
@@ -92,16 +91,16 @@ ms.lasthandoff: 01/08/2018
   
 1.  オート SUM 機能を使用して、次の名前のメジャーを作成します。  
   
-    |[メジャー名]|[列]|オート SUM (∑)|[数式]|  
+    |[メジャー名]|列|オート SUM (∑)|[数式]|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
   
 2.  メジャー グリッドで空のセルをクリックすると、数式バーを使用して、作成し、名前は次のメジャーの順序で。  
   

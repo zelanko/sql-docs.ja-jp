@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
@@ -20,13 +19,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1dd7be5820756c39123425168f6ecb39bfbad2ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 13c41862464fc304b7d9b52f6b482288dee479db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,13 +41,13 @@ ms.lasthandoff: 04/16/2018
   
 2.  コマンドを実行 (この例では**icommandexecute::execute()** IID_IRow と共に呼び出されます)。  
   
-3.  列データを使用して、フェッチ**IRow::Open()**または**irow::getcolumns()**です。  
+3.  列データを使用して、フェッチ**IRow::Open()** または**irow::getcolumns()** です。  
   
-    -   **IRow::Open()**を開くために使用する、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれているかを示す DBGUID_STREAM を指定 (**IStream**または**ISequentialStream**列からデータの読み取りに使用できます)。  
+    -   **IRow::Open()** を開くために使用する、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれているかを示す DBGUID_STREAM を指定 (**IStream**または**ISequentialStream**列からデータの読み取りに使用できます)。  
   
-    -   場合**irow::getcolumns()**を使用する、 **pData**ストリーム オブジェクトを指す DBCOLUMNACCESS 構造体の要素を設定します。  
+    -   場合**irow::getcolumns()** を使用する、 **pData**ストリーム オブジェクトを指す DBCOLUMNACCESS 構造体の要素を設定します。  
   
-4.  使用して**ISequentialStream::Read()**繰り返しをコンシューマーのバッファーに指定したバイト数を読み取る。  
+4.  使用して**ISequentialStream::Read()** 繰り返しをコンシューマーのバッファーに指定したバイト数を読み取る。  
   
 ## <a name="example"></a>例  
  この例では、IRow を使用して単一の行をフェッチする方法を示します。 また、行から一度に 1 つの列を取得します。 この例では、IRow::GetColumns() および IRow::Open() の使用方法も示します。 列のデータの読み取りには ISequentialStream::Read を使用しています。  

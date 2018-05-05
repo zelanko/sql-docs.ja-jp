@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +21,16 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d71554373fab48fe3636500a70c800d66ec9863
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 335a19f89d73aa796dad6fbda72a412972acaea6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの削除 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  レコード インスタンスが表示されたら、アップデート グラムは削除操作を示す、 **\<する前に >**に対応するレコードのないブロック、 **\<後 >**ブロックします。 この場合、アップデート グラムでレコードを削除、 **\<する前に >**データベースからブロックされます。  
+  レコード インスタンスが表示されたら、アップデート グラムは削除操作を示す、 **\<する前に >** に対応するレコードのないブロック、 **\<後 >** ブロックします。 この場合、アップデート グラムでレコードを削除、 **\<する前に >** データベースからブロックされます。  
   
  削除操作のアップデートグラムの形式は次のとおりです。  
   
@@ -50,9 +47,9 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- 省略することができます、 **\<後 >**アップデート グラムでは削除操作のみを実行する場合にタグ付けします。 省略可能な指定しない場合**マッピング スキーマ**、属性、  **\<ElementName >**アップデート グラムで、データベース テーブルにマップし、子要素または属性にマップで指定されました。テーブル内の列です。  
+ 省略することができます、 **\<後 >** アップデート グラムでは削除操作のみを実行する場合にタグ付けします。 省略可能な指定しない場合**マッピング スキーマ**、属性、  **\<ElementName >** アップデート グラムで、データベース テーブルにマップし、子要素または属性にマップで指定されました。テーブル内の列です。  
   
- アップデート グラムではエラーが返され、全体を取り消す場合は、アップデート グラムで指定される要素は、テーブル内の 1 つ以上の行と一致するか、任意の行と一致しません、 **\<同期 >**ブロックします。 アップデートグラム内の要素で削除できるのは、一度に 1 つのレコードだけです。  
+ アップデート グラムではエラーが返され、全体を取り消す場合は、アップデート グラムで指定される要素は、テーブル内の 1 つ以上の行と一致するか、任意の行と一致しません、 **\<同期 >** ブロックします。 アップデートグラム内の要素で削除できるのは、一度に 1 つのレコードだけです。  
   
 ## <a name="examples"></a>使用例  
  この例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムの注釈付きマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)です。  
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
  この例のアップデートグラムでは、マッピング スキーマを指定しません。 したがって、アップデートグラムでは既定のマッピングが使用されます。このマッピングでは、要素名はテーブル名にマップされ、属性または副要素は列にマップされます。  
   
- 最初のアップデート グラムは属性中心とで 2 つのシフト (日中から夕方と夕方から夜) を識別、 **\<する前に >**ブロックします。 対応するレコードがないため、 **\<後 >**ブロック、これは、削除操作です。  
+ 最初のアップデート グラムは属性中心とで 2 つのシフト (日中から夕方と夕方から夜) を識別、 **\<する前に >** ブロックします。 対応するレコードがないため、 **\<後 >** ブロック、これは、削除操作です。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

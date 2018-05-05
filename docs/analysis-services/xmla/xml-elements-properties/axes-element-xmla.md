@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -30,15 +29,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8e1f992cd7cf9a6aceb1490d78aa0fba49b7758
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a64f078995d5984e4ff9bc6d5267febacd44cff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axes-element-xmla"></a>Axes 要素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]コレクションを格納[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)要素に含まれる軸データを表す、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  コレクションを格納[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)要素に含まれる軸データを表す、[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)を使用する要素、 [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)データ型。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,21 +54,21 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|Any|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現します|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現します|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
 |親要素|[ルート](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|子要素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|子要素|[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>解説  
- 下にある、**軸**要素、**軸**要素は、0 から始まる、データセット内の出現順序で一覧表示されます。 **AxisFormat** XMLA プロパティの設定の決定方法**軸**要素が書式設定します。 詳細については、 **AxisFormat**プロパティを参照してください[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ 下にある、**軸**要素、**軸**要素は、0 から始まる、データセット内の出現順序で一覧表示されます。 **AxisFormat** XMLA プロパティの設定の決定方法**軸**要素が書式設定します。 詳細については、 **AxisFormat**プロパティを参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。  
   
  軸は、次元が同じである複数の組から成るセットを表します。 1 つのセットを表す方法はいくつかあり、それぞれの方法に利点があります。 たとえば、次のような 4 つの組から成るセットは、2 次元の組のコレクションとして表すことも、2 つの 1 次元セットのデカルト積として表すこともできます。  
   
@@ -125,7 +124,7 @@ CrossProduct (
  クライアントが使用できる、 **AxisFormat**プロパティを特定の表現を要求します。  
   
 ## <a name="see-also"></a>参照  
- [MDDataSet データ型 &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [MDDataSet データ型 & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [プロパティ & #40 です。XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

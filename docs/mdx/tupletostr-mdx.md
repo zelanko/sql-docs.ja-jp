@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0c777583e5ae027ab3f2ada53b4b168431e3390a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a49e2ffcaca8ae68b2c88f0877bab867746f1da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,8 +43,8 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- この関数は、解析用に組の文字列表記を外部関数に転送する場合に使用します。 返される文字列は中かっこ {} で囲まれ、組内で複数のメンバーが明示的に定義されている場合は、各メンバーがコンマで区切られます。  
+## <a name="remarks"></a>解説  
+ この関数は、解析用に組の文字列表記を外部関数に転送する場合に使用します。 返される文字列は中かっこで囲まれた{}し、各メンバーは、明示的に 1 つ以上が、組で定義されている場合は、コンマで区切られます。  
   
 ## <a name="examples"></a>使用例  
  次の例は、文字列 ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States]) を返します。  

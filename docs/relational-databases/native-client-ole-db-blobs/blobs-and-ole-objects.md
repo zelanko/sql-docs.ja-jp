@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 686f9f7c4ec9562e6e5141553a3a36d779e7ad68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f5ec924883f046991c9eba6e62c79b9bec7a6fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
  大きな値データ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで型の想定サイズをチェック**IRowset**や DDL インターフェイスです。 持つ列**varchar**、 **nvarchar**、および**varbinary**最大サイズが無制限に設定したデータ型がスキーマ行セットと列のデータ型を返すインターフェイスを通じて ISLONG として表されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **varchar (max)**、 **varbinary (max)**と**nvarchar (max)**それぞれ DBTYPE_STR、DBTYPE_BYTES、dbtype_wstr 型として型です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを公開、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** それぞれ DBTYPE_STR、DBTYPE_BYTES、dbtype_wstr 型として型です。  
   
  アプリケーションではこれらの型を使用するには、次のオプションがあります。  
   

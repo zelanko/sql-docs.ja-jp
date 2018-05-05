@@ -1,11 +1,9 @@
 ---
 title: Web サーバー コンピューターへのゲストの特権の付与 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7128286a68184f89ecc3da7914f7a1787378335b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7ffe80c4182d97725a342738b9df3eb0345f9272
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Web サーバー コンピューターへのゲストの特権の付与
 匿名の Web サーバー アカウント (iusr _*ComputerName*) RDS を使うため、ゲストをローカル Web サーバー コンピューターのグループに追加する必要があります  
@@ -44,6 +41,6 @@ ms.lasthandoff: 04/18/2018
   
 5.  一覧で、匿名の Web サーバー アカウントが表示されないかどうか、 **[ユーザーまたはグループ**] ダイアログ ボックスで、その名前を入力 (iusr _*ComputerName*) クリックして下の空のボックスに**追加**.  
   
-6.  **[OK]**をクリックします。
+6.  **[OK]** をクリックします。
 
 

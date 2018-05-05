@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 75d297bbbea99dfa5f4baa9ca862d9846318cb4a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8bf6b05d891d18fec8cfc063321f294c914cfa13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  ソース コードに 1 つ以上のブレークポイントを配置します。 関数またはデバッグするルーチン内のテキスト エディター内のコード行を右クリックし、選択**ブレークポイント**と**ブレークポイントの挿入**です。 ブレークポイントが追加され、コード行が赤で強調表示されます。  
   
-6.  **デバッグ**メニューの [**デバッグの開始]**コンパイル、配置、およびプロジェクトをテストします。 Test.sql のテスト スクリプトが実行され、マネージ データベース オブジェクトが呼び出されます。  
+6.  **デバッグ**メニューの [**デバッグの開始]** コンパイル、配置、およびプロジェクトをテストします。 Test.sql のテスト スクリプトが実行され、マネージ データベース オブジェクトが呼び出されます。  
   
 7.  命令ポインターを表す黄色い矢印がブレークポイントに表示されると、コードの実行が一時停止され、マネージ データベース オブジェクトのデバッグを開始できます。 実行できます**ステップ オーバー**から、**デバッグ**命令ポインターを次のコード行に進めるメニュー。 **ローカル**ウィンドウは、命令ポインターにより現在強調表示されているオブジェクトの状態の監視に使用します。 変数に追加できる、**ウォッチ**ウィンドウです。 監視される変数の状態は、変数が命令ポインターにより現在強調表示されているコード行にあるときだけでなく、デバッグ セッション全体で見ることができます。 [デバッグ] メニューの [続行] をクリックし、命令ポインターを次のブレークポイントに進めるか、ブレークポイントがこれ以上ない場合にはルーチンの実行を完了します。  
   

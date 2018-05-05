@@ -1,11 +1,9 @@
 ---
 title: Visual C 拡張機能ヘッダー |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b4b2563ea21fa749a7ccb6aec797fee7f688d706
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 6bc42c7ca15c94a6b1ac9acc9711f9b755610ba2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-extensions-header"></a>Visual C 拡張機能ヘッダー
 次のヘッダー **icrsint.h**、クライアントからのフィールドを取得できるようにするインターフェイスの詳細、 **Recordset**から派生したクラスで定義された変数に**CADORecordBinding**. アクセスする各フィールドに、ADO バインディング マクロを指定する必要があります。  

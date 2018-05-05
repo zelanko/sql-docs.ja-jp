@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -25,13 +24,12 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 525ebd80dc0977969114119c8d8c9045b38ac6bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b433851601bb3bbe1a9bd339b4af2b0835c1673
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performing-asynchronous-operations"></a>非同期操作の実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="execution-and-rowset-initialization"></a>実行と行セットの初期化  
  コマンドの実行結果を非同期に開くようデザインされているアプリケーションは、DBPROP_ROWSET_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます。 呼び出しの前にこのビットを設定するときに**idbinitialize::initialize**、 **icommand::execute**、 **iopenrowset::openrowset**または**IMultipleResults:。GetResult**、 *riid*引数を IID_IDBAsynchStatus、IID_ISSAsynchStatus、または IID_IUnknown に設定する必要があります。  
   
- メソッドは S_OK をすぐに返します行セットの初期化が完了した場合、すぐにまたは db_s_asynchronous を返して、行セットは、非同期的に初期化が解決しない場合に*ppRowset*で要求されたインターフェイスへの設定、行セット。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、このインターフェイスは、必ず**IDBAsynchStatus**または**ISSAsynchStatus**です。 このインターフェイスが一時停止状態と呼び出し元にした場合と同じ動作は、行セットが完全に初期化されるまで**QueryInterface**以外のインターフェイスに対して**IID_IDBAsynchStatus**または**iid _ISSAsynchStatus** E_NOINTERFACE を返す可能性があります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 要求されたすべてのインターフェイスは、使用可能な場合に**idbasynchstaus:**または**issasynchstatus::waitforasynchcompletion**非同期操作が完了したことを示す値を返します。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
+ メソッドは S_OK をすぐに返します行セットの初期化が完了した場合、すぐにまたは db_s_asynchronous を返して、行セットは、非同期的に初期化が解決しない場合に*ppRowset*で要求されたインターフェイスへの設定、行セット。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、このインターフェイスは、必ず**IDBAsynchStatus**または**ISSAsynchStatus**です。 このインターフェイスが一時停止状態と呼び出し元にした場合と同じ動作は、行セットが完全に初期化されるまで**QueryInterface**以外のインターフェイスに対して**IID_IDBAsynchStatus**または**iid _ISSAsynchStatus** E_NOINTERFACE を返す可能性があります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 要求されたすべてのインターフェイスは、使用可能な場合に**idbasynchstaus:** または**issasynchstatus::waitforasynchcompletion**非同期操作が完了したことを示す値を返します。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
   
  実行されたコマンドが行セットを返さない場合も直ちにを返したをサポートするオブジェクト**IDBAsynchStatus**です。  
   

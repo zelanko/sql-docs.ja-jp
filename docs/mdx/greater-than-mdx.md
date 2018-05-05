@@ -1,10 +1,9 @@
 ---
-title: '&gt;(より大きい)(MDX) |Microsoft ドキュメント'
+title: '&gt; (より大きい)(MDX) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,14 +22,13 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f60f464114d9ff0c2bf51257d03ec9e0952a7a7f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d82e6fb8d2c10c88ba8e8a7945f93b3278f9656
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;(より大きい)(MDX)
+# <a name="gt-greater-than-mdx"></a>&gt; (より大きい)(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値よりも大きいかどうかを判別する比較演算を実行します。  
@@ -77,6 +75,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

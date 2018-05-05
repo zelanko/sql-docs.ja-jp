@@ -1,31 +1,29 @@
 ---
-title: "テーブル モデルにおける DAX |Microsoft ドキュメント"
-ms.custom: 
+title: テーブル モデルにおける DAX |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/21/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e1fb8bb03a256dfb0e2acbaebd15be4680c437f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dax-in-tabular-models"></a>テーブル モデルにおける DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
+  Data Analysis Expressions (DAX) は、Analysis Services、Power BI Desktop と Power Pivot in Excel でカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  
   
  Analysis Services、Power BI Desktop と Excel の Power Pivot で DAX が使用されますが、このトピックは SQL Server Data Tools (SSDT) で作成されたため、Analysis Services テーブル モデル プロジェクトに複数適用されます。  
   

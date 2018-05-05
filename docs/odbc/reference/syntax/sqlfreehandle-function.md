@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41ed0af53844edfe55203e8310ce326fb2c4e2b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 関数
 **準拠**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle**特定の環境、接続、ステートメント、または記述子ハンドルに関連付けられているリソースを解放します。  
   
 > [!NOTE]  
->  このハンドルを解放するための汎用関数です。 ODBC 2.0 関数に置き換えられます**SQLFreeConnect** (接続ハンドルを解放) 用と**SQLFreeEnv** (の環境ハンドルを解放)。 **SQLFreeConnect**と**SQLFreeEnv** ODBC 3 で非推奨両方*.x*です。 **SQLFreeHandle**も ODBC 2.0 関数を置き換えます**SQLFreeStmt** (、SQL_DROP で*オプション*) のステートメント ハンドルを解放します。 詳細については、「コメント」を参照してください。 詳細については、どのようなドライバー マネージャーは、この関数にする際にマップ ODBC 3*.x* ODBC 2 を利用するアプリケーション*.x*ドライバーを参照してください[後方の置換関数のマッピングアプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
+>  このハンドルを解放するための汎用関数です。 ODBC 2.0 関数に置き換えられます**SQLFreeConnect** (接続ハンドルを解放) 用と**SQLFreeEnv** (の環境ハンドルを解放)。 **SQLFreeConnect**と**SQLFreeEnv** ODBC 3 で非推奨両方 *.x*です。 **SQLFreeHandle**も ODBC 2.0 関数を置き換えます**SQLFreeStmt** (、SQL_DROP で*オプション*) のステートメント ハンドルを解放します。 詳細については、「コメント」を参照してください。 詳細については、どのようなドライバー マネージャーは、この関数にする際にマップ ODBC 3 *.x* ODBC 2 を利用するアプリケーション *.x*ドライバーを参照してください[後方の置換関数のマッピングアプリケーションの互換性を](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,7 +89,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|自動的に割り当てられた記述子ハンドルの使い方が正しくありません。|(DM)、*処理*引数は、自動的に割り当てられた記述子ハンドルに設定されました。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM)、 *HandleType*引数 SQL_HANDLE_DESC、れ、ドライバーは ODBC 2*.x*ドライバー。<br /><br /> (DM)、 *HandleType*引数 SQL_HANDLE_STMT、れ、ドライバーは無効な ODBC ドライバー、でした。|  
+|IM001|ドライバーでは、この関数はサポートされていません|(DM)、 *HandleType*引数 SQL_HANDLE_DESC、れ、ドライバーは ODBC 2 *.x*ドライバー。<br /><br /> (DM)、 *HandleType*引数 SQL_HANDLE_STMT、れ、ドライバーは無効な ODBC ドライバー、でした。|  
   
 ## <a name="comments"></a>コメント  
  **SQLFreeHandle**使用すると、次のセクションで説明されている、環境、接続、ステートメント、および記述子のハンドルを解放します。 ハンドルに関する概要については、次を参照してください。[ハンドル](../../../odbc/reference/develop-app/handles.md)です。  
@@ -116,7 +115,7 @@ SQLRETURN SQLFreeHandle(
  呼び出し**SQLFreeHandle**で、 *HandleType* SQL_HANDLE_DESC の解放で記述子ハンドル*処理*です。 呼び出し**SQLFreeHandle**任意の参照できるは、ポインター フィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR など) によって、アプリケーションによって割り当てられたメモリを解放しません記述子レコード*処理*です。 ハンドルが解放されると、ポインター フィールドではないフィールド用のドライバーによって割り当てられたメモリが解放されます。 ユーザーに割り当てられた記述子ハンドルが解放されると、解放されたハンドルが関連付けられているすべてのステートメントは、それぞれ自動的に割り当てられた記述子ハンドルに戻します。  
   
 > [!NOTE]  
->  ODBC 2*.x*記述子ハンドルの割り当てをサポートするいないと同様のドライバーが、記述子ハンドルの解放をサポートしています。  
+>  ODBC 2 *.x*記述子ハンドルの割り当てをサポートするいないと同様のドライバーが、記述子ハンドルの解放をサポートしています。  
   
  注意して**SQLDisconnect**接続でステートメントや開いている記述子が自動的に削除します。 アプリケーションでは、ステートメント ハンドルを解放、ドライバーは、そのハンドルに関連付けられているすべての自動生成された記述子を解放します。  
   

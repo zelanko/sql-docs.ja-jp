@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51728d15698d79b93d802c6f0be75fba8cf1ab0c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 025ad34e3aca3ea4330c9a5878f834c605bf645c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  このフラグメントでは、従業員 5 が従業員 4、従業員 4 が従業員 3 に、従業員 3 と 2 は従業員 1 に報告を行います。  
   
- この結果を生成するには、次の XSD スキーマを使用して、これに対する XPath クエリを指定できます。 スキーマでは、記述、  **\<Emp >**から成る EmployeeType 型の要素、  **\<Emp >**同じ EmployeeType 型の子要素です。 これは、要素とその先祖が同じ型の再帰リレーションシップです。 さらに、スキーマを使用して、  **\<sql:relationship >**監督者と被間の親子リレーションシップを記述します。 これで **\<sql:relationship >**Emp は親と子テーブルの両方です。  
+ この結果を生成するには、次の XSD スキーマを使用して、これに対する XPath クエリを指定できます。 スキーマでは、記述、  **\<Emp >** から成る EmployeeType 型の要素、  **\<Emp >** 同じ EmployeeType 型の子要素です。 これは、要素とその先祖が同じ型の再帰リレーションシップです。 さらに、スキーマを使用して、  **\<sql:relationship >** 監督者と被間の親子リレーションシップを記述します。 これで **\<sql:relationship >** Emp は親と子テーブルの両方です。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -178,7 +175,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  結果の階層の深さを生成するには、値を変更、 **sql:max-深さ**スキーマの注釈とそれぞれの変更後にもう一度、テンプレートを実行します。  
   
- 上のスキーマでは、すべて、  **\<Emp >**要素がまったく同じ属性のセット (**EmployeeID**、 **FirstName**、および**LastName**)。 次のスキーマが返す、さらに若干変更されて**ReportsTo**すべての属性、  **\<Emp >**マネージャーに報告する要素。  
+ 上のスキーマでは、すべて、  **\<Emp >** 要素がまったく同じ属性のセット (**EmployeeID**、 **FirstName**、および**LastName**)。 次のスキーマが返す、さらに若干変更されて**ReportsTo**すべての属性、  **\<Emp >** マネージャーに報告する要素。  
   
  たとえば、次の XML フラグメントでは、従業員 1 の部下が示されています。  
   
@@ -250,7 +247,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  **Sql:max-深さ**複雑なコンテンツ要素に注釈を指定することができます。  
   
 ### <a name="recursive-elements"></a>再帰要素  
- 場合**sql:max-深さ**親要素と、再帰リレーションシップの子要素の両方で指定された、 **sql:max-深さ**親で指定されている注釈が優先されます。 たとえば、次のスキーマで、 **sql:max-深さ**親と子の従業員要素に注釈を指定します。 この場合、 **sql:max-深さ = 4**に指定されている、  **\<Emp >**親要素 (監督者) が優先されます。 **Sql:max-深さ**の子で指定された **\<Emp >**要素 (被監督者) は無視されます。  
+ 場合**sql:max-深さ**親要素と、再帰リレーションシップの子要素の両方で指定された、 **sql:max-深さ**親で指定されている注釈が優先されます。 たとえば、次のスキーマで、 **sql:max-深さ**親と子の従業員要素に注釈を指定します。 この場合、 **sql:max-深さ = 4**に指定されている、  **\<Emp >** 親要素 (監督者) が優先されます。 **Sql:max-深さ**の子で指定された **\<Emp >** 要素 (被監督者) は無視されます。  
   
 #### <a name="example-b"></a>例 B  
   
@@ -290,9 +287,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  このスキーマをテストするには、サンプル A は、このトピックの前半に記載されている手順に従います。  
   
 ### <a name="nonrecursive-elements"></a>非再帰要素  
- 場合、 **sql:max-深さ**再帰が発生しないスキーマ内の要素に注釈が指定されて、これは無視されます。 次のスキーマで、  **\<Emp >**要素から成る、 **\<定数 >**が含まれている子要素、  **\<Emp >**子要素です。  
+ 場合、 **sql:max-深さ**再帰が発生しないスキーマ内の要素に注釈が指定されて、これは無視されます。 次のスキーマで、  **\<Emp >** 要素から成る、 **\<定数 >** が含まれている子要素、  **\<Emp >** 子要素です。  
   
- このスキーマで、 **sql:max-深さ**で指定されている注釈、 **\<定数 >**間に再帰がないために、要素は無視されます、  **\<Emp>**親と**\<定数 >**子要素です。 間に再帰が、  **\<Emp >**先祖と **\<Emp >**子。 スキーマを指定します、 **sql:max-深さ**両方での注釈。 したがって、 **sql:max-深さ**、先祖に対して指定されている注釈 (**\<Emp >**監督) が優先されます。  
+ このスキーマで、 **sql:max-深さ**で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp>** 親と**\<定数 >** 子要素です。 間に再帰が、  **\<Emp >** 先祖と **\<Emp >** 子。 スキーマを指定します、 **sql:max-深さ**両方での注釈。 したがって、 **sql:max-深さ**、先祖に対して指定されている注釈 (**\<Emp >** 監督) が優先されます。  
   
 #### <a name="example-c"></a>例 C  
   
@@ -340,7 +337,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
   
  その一方で、により派生する複合型がある場合**\<拡張子 >**、対応する基本複合型の要素を指定できます、 **sql:max-深さ**注釈。  
   
- に、次の XSD スキーマがエラーを生成するなど、 **sql:max-深さ**基本データ型に注釈を指定します。 によって派生した型では、この注釈はサポートされていません**\<制限 >**別の型から。 この問題を解決するには、スキーマを変更し、を指定する必要があります、 **sql:max-深さ**派生型の要素の注釈。  
+ に、次の XSD スキーマがエラーを生成するなど、 **sql:max-深さ**基本データ型に注釈を指定します。 によって派生した型では、この注釈はサポートされていません**\<制限 >** 別の型から。 この問題を解決するには、スキーマを変更し、を指定する必要があります、 **sql:max-深さ**派生型の要素の注釈。  
   
 #### <a name="example-d"></a>例 D  
   
@@ -384,7 +381,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- スキーマでは、 **sql:max-深さ**で指定された、 **CustomerBaseType**複合型。 スキーマで指定も、 **\<顧客 >**型の要素**CustomerType**から派生した**CustomerBaseType**です。 このようなスキーマで指定された XPath クエリで、エラーが発生**sql:max-深さ**制限の基本型で定義されている要素でサポートされていません。  
+ スキーマでは、 **sql:max-深さ**で指定された、 **CustomerBaseType**複合型。 スキーマで指定も、 **\<顧客 >** 型の要素**CustomerType**から派生した**CustomerBaseType**です。 このようなスキーマで指定された XPath クエリで、エラーが発生**sql:max-深さ**制限の基本型で定義されている要素でサポートされていません。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>深い階層のスキーマ  
  要素に子要素が含まれ、その子要素にさらに別の子要素が含まれるというような深い階層のスキーマの場合は、 場合、 **sql:max-深さ**このようなスキーマで指定されている注釈を 500 個を超えるレベルをレベル 1、その子をレベル 2、およびなどで最上位の要素) の階層を含む XML ドキュメントを生成する、エラーが返されます。  

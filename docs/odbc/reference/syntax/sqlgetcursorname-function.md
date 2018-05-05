@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetCursorName
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f8e2490321aae6b155da3486cb78b1f5740738c6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 関数
 **準拠**  
@@ -80,7 +79,7 @@ SQLRETURN SQLGetCursorName(
 |HY001|メモリ割り当てエラー|ドライバーは、実行や、関数の終了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY010|関数のシーケンス エラー|(DM)、非同期的に実行されている関数が呼び出されたため、接続ハンドルに関連付けられている、 *StatementHandle*です。 この非同期関数がまだ実行したときに、 **SQLGetCursorName**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**で呼び出され、 *StatementHandle*し SQL_PARAM_DATA_ が返されました使用できます。 ストリーミングのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) の非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**で呼び出され、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列に対してデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、可能性のあるメモリ不足の状況が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY015|使用可能なカーソル名|(DM) ドライバーは ODBC 2*.x*ドライバーのステートメントで開いているカーソルがなかったおよびでカーソル名が設定されていません**SQLSetCursorName**です。|  
+|HY015|使用可能なカーソル名|(DM) ドライバーは ODBC 2 *.x*ドライバーのステートメントで開いているカーソルがなかったおよびでカーソル名が設定されていません**SQLSetCursorName**です。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された値 (DM) *BufferLength*が 0 未満です。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)です。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続タイムアウト期間が期限切れです。 によって、接続タイムアウト期間が設定されている**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT です。|  
@@ -90,7 +89,7 @@ SQLRETURN SQLGetCursorName(
  カーソル名が位置指定更新でのみ使用および delete ステートメント (たとえば、**更新***テーブル名*.**WHERE CURRENT OF** *カーソル名*)。 詳細については、次を参照してください。[位置指定の Update ステートメントとステートメントの削除](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)です。 アプリケーションが要求されていない場合**SQLSetCursorName**カーソル名を定義するには、ドライバーには名前が生成されます。 この名前は、アルファベット SQL_CUR で始まります。  
   
 > [!NOTE]  
->  ODBC 2 で*.x*開いているカーソルが入っていなかったし、への呼び出しで名前が設定されていません、 **SQLSetCursorName**への呼び出し**SQLGetCursorName** SQLSTATE HY015 が返されます (カーソル名がないです。使用可能)。 ODBC 3*.x*、これが true であるのどの段階で不要になった**SQLGetCursorName**が呼び出されると、ドライバーは、カーソル名を返します。  
+>  ODBC 2 で *.x*開いているカーソルが入っていなかったし、への呼び出しで名前が設定されていません、 **SQLSetCursorName**への呼び出し**SQLGetCursorName** SQLSTATE HY015 が返されます (カーソル名がないです。使用可能)。 ODBC 3 *.x*、これが true であるのどの段階で不要になった**SQLGetCursorName**が呼び出されると、ドライバーは、カーソル名を返します。  
   
  **SQLGetCursorName**明示的または暗黙的に名前が作成されたかどうか、カーソルの名前を返します。 場合、カーソル名が暗黙的に生成された**SQLSetCursorName**は呼び出されません。 **SQLSetCursorName**カーソルが割り当てられているまたは準備された状態である限り、ステートメントのカーソルの名前を変更するに呼び出せることができます。  
   

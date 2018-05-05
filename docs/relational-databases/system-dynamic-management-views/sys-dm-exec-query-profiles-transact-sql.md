@@ -26,13 +26,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e6ccdc2d12a7903641ab2db32eb8c0aa8602d3f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b81508cc9e8897d2bc3b4669ecf838a5f4794489
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.lasthandoff: 04/16/2018
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでのセグメント スキップの数。| 
 |actual_read_row_count|**bigint**|残余述語が適用される前に、演算子によって読み取られる行の数。| 
-|estimated_read_row_count|**bigint**|**適用されます:**で始まる[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子で読み取られる行の数が推定されます。|  
+|estimated_read_row_count|**bigint**|**適用されます:** で始まる[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>残余述語が適用される前に、演算子で読み取られる行の数が推定されます。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クエリ プラン ノードで IO がない場合、IO 関連のすべてのカウンターは NULL に設定されます。  

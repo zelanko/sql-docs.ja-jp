@@ -3,25 +3,22 @@ title: 大量のデータ サンプルを読み取る |Microsoft ドキュメン
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fad58a391c4fc0a89d8bc663698d4e77230bf79d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d75c6fcf4148a4aa27dee51300d41a8c42e80acf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reading-large-data-sample"></a>大きなデータを読み取るサンプル
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

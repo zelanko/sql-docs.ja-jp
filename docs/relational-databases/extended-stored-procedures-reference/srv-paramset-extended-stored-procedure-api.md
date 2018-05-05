@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f41db279ec8c4087dbc086b8aca7ad79f5fe68d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,8 +71,8 @@ len
  *len*  
  返されるデータの実際の長さを指定します。 パラメーターのデータ型が固定長であり、NULL 値を許容しない型 (*srvbit* や *srvint1* など) である場合、*len* は無視されます。  
   
-## <a name="returns"></a>返します。  
- パラメーター値が正しく設定された場合は SUCCEED を返し、それ以外の場合は FAIL を返します。 ある場合に、現在のリモート ストアド プロシージャがないときに FAIL が返されるありません*n*番目のリモート ストアド プロシージャのパラメーター、パラメーターが戻りパラメーターでないときに、 *len*引数ではありません法的です。  
+## <a name="returns"></a>戻り値  
+ パラメーター値が正しく設定された場合は SUCCEED を返し、それ以外の場合は FAIL を返します。 FAIL を返すのは、現在のリモート ストアド プロシージャがない場合、*n* 番目のリモート ストアド プロシージャ パラメーターがない場合、パラメーターが戻りパラメーターでない場合、*len* 引数が無効である場合です。  
   
  *len* が 0 である場合は、NULL を返します。 *len* を 0 に設定する以外に、クライアントに NULL を返す方法はありません。  
   
@@ -94,7 +92,7 @@ len
 |IG は値が無視されることを示します。||  
 |valid はデータを指す任意の有効なポインターを示します。||  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターには、リモート ストアド プロシージャを使用してクライアントとアプリケーションとの間で受け渡しされるデータが格納されます。 クライアントは戻りパラメーターとして特定のパラメーターを指定できます。 この戻りパラメーターには、Open Data Services サーバー アプリケーションがクライアントに返す値を格納することができます。 戻りパラメーターの使用は、パラメーターの参照渡しに類似しています。  
   
  戻りパラメーターとして呼び出されていないパラメーターには、戻り値を設定できません。 パラメーターがどのように呼び出されたかを判別するには **srv_paramstatus** を使用します。  

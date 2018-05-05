@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fed82c2cfb21efa75278847716e90f546e64eb3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e8a08f91688a4a6c26fd138de51ee50b7b2a3974
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-usage"></a>データ型の使用方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 |**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint**データ型は符号付きではありません。 A **tinyint**列は既定では SQL_C_UTINYINT データ型の変数にバインドします。|  
 |別名データ型|インスタンスに接続しているときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*、ODBC ドライバーが、列の null 値許容属性で明示的に宣言されていない列の定義に NULL を追加します。 したがって、別名データ型の定義に格納されている NULL 値の許容属性は無視されます。<br /><br /> インスタンスに接続しているときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.2*x*の基本のデータが含まれている別名データ型を持つ列が入力**char**または**バイナリ**し null 値許容属性がありません宣言されているデータ型として作成された**varchar**または**varbinary**です。 [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)、 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)、および[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)戻り値として SQL_VARCHAR または SQL_VARBINARY データ、これらの列を入力します。 これらの列から取得するデータには、埋め込みは行われません。<br /><br /> 注: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはへの接続をサポートして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]6.5 およびそれ以前です。|  
 |LONG データ型|*実行時データ*パラメーターは、SQL_LONGVARBINARY、SQL_LONGVARCHAR データ型の両方を制限します。|  
-|大きな値型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは公開**varchar (max)**、 **varbinary (max)**、および**nvarchar (max)**型として SQL_VARCHAR、SQL_VARBINARY、および sql _WVARCHAR (それぞれ) Api を受け入れるか、ODBC SQL データ型を返します。|  
+|大きな値型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは公開**varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** 型として SQL_VARCHAR、SQL_VARBINARY、および sql _WVARCHAR (それぞれ) Api を受け入れるか、ODBC SQL データ型を返します。|  
 |ユーザー定義型 (UDT)|UDT 列は SQL_SS_UDT としてマップされます。 SQL ステートメントで、UDT の ToString() メソッドまたは ToXMLString() メソッドを使用するか、CAST/CONVERT 関数を使用して UDT 列を明示的に別の型にマップする場合、結果セット内の列の型には変換された列の実際の型が反映されます。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、UDT 列へのバイナリとしてのみバインドできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるのは、SQL_SS_UDT データ型と SQL_C_BINARY データ型の間の変換のみです。|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML を Unicode テキストに自動的に変換します。 XML 型は SQL_SS_XML としてマップされます。|  
   

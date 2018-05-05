@@ -1,35 +1,33 @@
 ---
-title: "線形回帰モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
+title: 線形回帰モデルのクエリ例 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6b66268d63551f60850f54c8d2e576464d04bfab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>線形回帰モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえばコンテンツ クエリを使用すると、回帰式に関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントがモデルに適合するかどうかを調べることができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえばコンテンツ クエリを使用すると、回帰式に関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントがモデルに適合するかどうかを調べることができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
  ここでは、Microsoft 線形回帰アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
@@ -78,7 +76,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 ###  <a name="bkmk_Query2"></a> サンプル クエリ 2: モデルの回帰式を取得する  
  次のクエリでは、「 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で使用したものと同じ Targeted Mailing データ ソースを使用して作成された線形回帰モデルのマイニング モデル コンテンツを返します。 このモデルでは、年齢に基づいて顧客の収入を予測します。  
   
- このクエリは、回帰式を含むノードのコンテンツを返します。 各変数と係数は、入れ子になった NODE_DISTRIBUTION テーブルの個別の行に保存されます。 完全な回帰式を表示する場合は、 [Microsoft ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)を使用します。 **[(すべて)]** ノードをクリックして **[マイニング凡例]**を開くと表示されます。  
+ このクエリは、回帰式を含むノードのコンテンツを返します。 各変数と係数は、入れ子になった NODE_DISTRIBUTION テーブルの個別の行に保存されます。 完全な回帰式を表示する場合は、 [Microsoft ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)を使用します。 **[(すべて)]** ノードをクリックして **[マイニング凡例]** を開くと表示されます。  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -99,11 +97,11 @@ FROM LR_PredictIncome.CONTENT
 |Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
- 一方、 **[マイニング凡例]**では、回帰式は次のように表示されます。  
+ 一方、 **[マイニング凡例]** では、回帰式は次のように表示されます。  
   
  `Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)`  
   
- **[マイニング凡例]**ではいくつかの数字が丸められますが、NODE_DISTRIBUTION テーブルと **[マイニング凡例]** には基本的に同じ値が格納されます。  
+ **[マイニング凡例]** ではいくつかの数字が丸められますが、NODE_DISTRIBUTION テーブルと **[マイニング凡例]** には基本的に同じ値が格納されます。  
   
  VALUETYPE 列の値を参照すると、各行に含まれている情報の種類がわかるため、結果をプログラムで処理する場合に役に立ちます。 次の表に、線形回帰式の出力となる値の種類を示します。  
   
@@ -153,7 +151,7 @@ FROM LR_PredictIncome.CONTENT
  [トップに戻る](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> サンプル クエリ 4: 単一クエリを使用して収入を予測する  
- 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば次の DMX クエリを作成するには、適切な回帰モデルを選択し、 **[単一クエリ]**を選択して、 **Age** の値として「 **20**」を入力します。  
+ 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば次の DMX クエリを作成するには、適切な回帰モデルを選択し、 **[単一クエリ]** を選択して、 **Age** の値として「 **20**」を入力します。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -197,13 +195,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
+|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[IsInNode (&) #40";"DMX"&"#41;](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
+|[PredictHistogram (&) #40";"DMX"&"#41;](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
+|[PredictNodeId & #40";"DMX"&"#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
+|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通する関数の一覧は、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。 これらの関数の使用方法については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -211,6 +209,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [線形回帰モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

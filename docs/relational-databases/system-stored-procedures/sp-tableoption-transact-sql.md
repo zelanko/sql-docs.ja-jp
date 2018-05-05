@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f74c1bac2175c89abffb717e2ae382d165fab81f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   ユーザー定義テーブルのオプション値を設定します。 sp_tableoption を使用して、含むテーブルの行の動作を制御できます**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、**テキスト**、 **ntext**、**イメージ**、または大きなユーザー定義型列です。  
   
 > [!IMPORTANT]  
->  text in row 機能は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 大きな値のデータを格納することをお勧めを使用すること、 **varchar (max)**、 **nvarchar (max)**と**varbinary (max)**データ型。  
+>  text in row 機能は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 大きな値のデータを格納することをお勧めを使用すること、 **varchar (max)**、 **nvarchar (max)** と**varbinary (max)** データ型。  
   
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -57,7 +56,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  ユーザー定義データベース テーブルの修飾名または修飾されていない名前を指定します。 データベース名も含めてフル パスで指定した場合は、そのデータベース名は現在のデータベース名である必要があります。 複数のテーブルにはテーブル オプションを同時に設定できません。 *テーブル*は**nvarchar (776)**、既定値はありません。  
   
  [ @OptionName =] '*option_name*'  
- テーブル オプション名を指定します。 *option_name*は**varchar (35)**NULL の既定値はありません。 *option_name*値は次のいずれかになります。  
+ テーブル オプション名を指定します。 *option_name*は**varchar (35)** NULL の既定値はありません。 *option_name*値は次のいずれかになります。  
   
 |値|Description|  
 |-----------|-----------------|  

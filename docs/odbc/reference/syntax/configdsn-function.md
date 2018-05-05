@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d7ae36927ef95bcfb96846b5f266da56e5f3bec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN 関数
 **準拠**  
@@ -88,7 +87,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>コメント  
  **ConfigDSN**キーワードと値のペアの形式で属性の一覧としてインストーラー DLL からの接続情報を受信します。 各ペアは、null バイトで終了し、null バイトのリスト全体が終了します。 (つまり、2 つの null バイトの末尾を示す一覧です。)スペースはキーワード/値ペア内の等号 (=) を使用できません。 **ConfigDSN**のキーワードが指定されていないキーワードを受け入れることができる**SQLBrowseConnect**と**SQLDriverConnect**です。 **ConfigDSN**が必ずしもサポートのキーワードが指定されているすべてのキーワード**SQLBrowseConnect**と**SQLDriverConnect**です。 (**ConfigDSN**受け付けない、**ドライバー**キーワードです)。使用されるキーワード、 **ConfigDSN**関数は、インストーラーの自動設定機能を使用してデータ ソースを再作成に必要なすべてのオプションをサポートする必要があります。 場合の使用、 **ConfigDSN**値と接続文字列の値が同じで、同じキーワードを使用する必要があります。  
   
- として**SQLBrowseConnect**と**SQLDriverConnect**、キーワードとその値を含めないで、 **{} ()、;?\*=! @**文字、およびの値、 **DSN**空白のみのキーワードは受け付けられません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。  
+ として**SQLBrowseConnect**と**SQLDriverConnect**、キーワードとその値を含めないで、 **{}()、;?\*=! @** 文字、およびの値、 **DSN**空白のみのキーワードは受け付けられません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字です。  
   
  **ConfigDSN**呼び出す必要があります**SQLValidDSN**をデータ ソース名の長さを確認し、名前に無効な文字が含まれていないことを確認してください。 場合は、データ ソース名 SQL_MAX_DSN_LENGTH より長いか、無効な文字が含まれています**SQLValidDSN**はエラーを返しますと**ConfigDSN**はエラーを返します。 データ ソース名の長さがによってチェックも**SQLWriteDSNToIni**です。  
   

@@ -1,28 +1,27 @@
 ---
-title: "レッスン 13: Excel で分析 |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 13: Excel で分析 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d202c423a513949b425ac016ebfbcdbe6fe4b321
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2761aea00c6acc83d02079b563b49b8ea3d21006
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-12-analyze-in-excel"></a>レッスン 12: Excel で分析
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **20 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 11: ロールの作成](../analysis-services/lesson-11-create-roles.md)です。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>既定のパースペクティブと Internet Sales パースペクティブを使用した参照  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  クリックして、**モデル**メニュー > **Excel で分析**です。  
   
-2.  **[Excel で分析]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+2.  **[Excel で分析]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
     Excel で新しいブックが開きます。 現在のユーザー アカウントを使用してデータ ソース接続が作成され、既定のパースペクティブを使用して表示可能なフィールドが定義されます。 ピボット テーブルがワークシートに自動的に追加されます。  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  クリックして、**モデル** メニューをクリックして**Excel で分析**です。  
   
-2.  **[Excel で分析]** ダイアログ ボックスの **[現在の Windows ユーザー]** を選択したままにして、 **[パースペクティブ]** ドロップダウン リストで **[Internet Sales]**を選択し、 **[OK]**をクリックします。 
+2.  **[Excel で分析]** ダイアログ ボックスの **[現在の Windows ユーザー]** を選択したままにして、 **[パースペクティブ]** ドロップダウン リストで **[Internet Sales]** を選択し、 **[OK]** をクリックします。 
     
     ![としてのテーブルの lesson12 の観点から見た](../analysis-services/media/as-tabular-lesson12-perspective.png)
     

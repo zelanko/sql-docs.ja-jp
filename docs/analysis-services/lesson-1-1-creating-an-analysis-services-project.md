@@ -1,29 +1,27 @@
 ---
-title: "サービス プロジェクトの分析を作成 |Microsoft ドキュメント"
-ms.custom: 
+title: サービス プロジェクトの分析を作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0058394310e7160ba0ff59affe25d777d8acf1be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>レッスン 1-1-Analysis Services プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +37,7 @@ ms.lasthandoff: 02/15/2018
   
     ダイアログ ボックスの下部に、既定のプロジェクト名、場所、および既定のソリューション名が表示されます。 既定では、このソリューション用に新しいディレクトリが作成されます。  
   
-3.  プロジェクト名を「 **Analysis Services Tutorial**」に変更します。プロジェクト名を変更すると、 **[ソリューション名]** ボックスも自動的に変更されます。 **[OK]**をクリックします。  
+3.  プロジェクト名を「 **Analysis Services Tutorial**」に変更します。プロジェクト名を変更すると、 **[ソリューション名]** ボックスも自動的に変更されます。 **[OK]** をクリックします。  
   
 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを基にして **Analysis Services Tutorial** プロジェクトを作成しました。このプロジェクトは、同じ名前の新しいソリューション ( **Analysis Services Tutorial**) に格納されています。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
 [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Analysis Services プロジェクト &#40; を作成します。SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Analysis Services プロジェクト & #40; を作成します。SSDT & #41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

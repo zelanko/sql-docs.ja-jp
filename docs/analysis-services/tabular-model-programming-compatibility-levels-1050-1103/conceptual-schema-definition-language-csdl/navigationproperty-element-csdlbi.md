@@ -1,33 +1,31 @@
 ---
-title: "NavigationProperty 要素 (CSDLBI) |Microsoft ドキュメント"
-ms.custom: 
+title: NavigationProperty 要素 (CSDLBI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b004e611448db0100186a9f6d7fa9812d3de9c15
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 610b3a332c5b7c988d9a082a84622f8cc163a4a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty 要素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-NavigationProperty 要素は、CSDL Member の種類を拡張する複合型で、ビジネス インテリジェンス データ モデルでの移動をサポートします。  
+  NavigationProperty 要素は、CSDL Member の種類を拡張する複合型で、ビジネス インテリジェンス データ モデルでの移動をサポートします。  
   
 > [!WARNING]  
 >  この要素は報告用であり、変更または操作することはできません。  

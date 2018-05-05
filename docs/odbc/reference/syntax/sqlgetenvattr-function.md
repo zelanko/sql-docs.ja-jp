@@ -3,15 +3,12 @@ title: SQLGetEnvAttr 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b1a31f7d374a06a4e9cfe963c92b73fa681a41d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 関数
 **準拠**  
@@ -92,10 +88,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>コメント  
  属性の一覧は、次を参照してください。 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)です。 ドライバー固有の環境属性はありません。 場合*属性*、文字列を返す属性を指定します*ValuePtr*を文字列を返すバッファーへのポインターにする必要があります。 Null 終了バイトを含む文字列の最大長*BufferLength*バイトです。  
   
- **SQLGetEnvAttr**割り当てと開放環境ハンドルの間でいつでも呼び出すことができます。 環境のアプリケーションによって設定が正常にすべての環境属性がまで保持**SQLFreeHandle**で呼び出されると、 *EnvironmentHandle*で、 *HandleType*SQL_HANDLE_ENV のです。 ODBC 3 に、1 つ以上の環境ハンドルを同時に割り当てることができる*.x*です。 別の環境が割り当てられたときに、1 つの環境の環境属性は影響はありません。  
+ **SQLGetEnvAttr**割り当てと開放環境ハンドルの間でいつでも呼び出すことができます。 環境のアプリケーションによって設定が正常にすべての環境属性がまで保持**SQLFreeHandle**で呼び出されると、 *EnvironmentHandle*で、 *HandleType*SQL_HANDLE_ENV のです。 ODBC 3 に、1 つ以上の環境ハンドルを同時に割り当てることができる *.x*です。 別の環境が割り当てられたときに、1 つの環境の環境属性は影響はありません。  
   
 > [!NOTE]  
->  SQL_ATTR_OUTPUT_NTS 環境属性は、標準に準拠したアプリケーションでサポートされています。 ときに**SQLGetEnvAttr**が呼び出されると、ODBC 3*.x*ドライバー マネージャーは常にこの属性を SQL_TRUE を返します。 呼び出しによってのみ SQL_ATTR_OUTPUT_NTS SQL_TRUE に設定できます**SQLSetEnvAttr**です。  
+>  SQL_ATTR_OUTPUT_NTS 環境属性は、標準に準拠したアプリケーションでサポートされています。 ときに**SQLGetEnvAttr**が呼び出されると、ODBC 3 *.x*ドライバー マネージャーは常にこの属性を SQL_TRUE を返します。 呼び出しによってのみ SQL_ATTR_OUTPUT_NTS SQL_TRUE に設定できます**SQLSetEnvAttr**です。  
   
 ## <a name="related-functions"></a>関連する関数  
   

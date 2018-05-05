@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: ad03c455c6ee0b623fca0544901ee4c6c6e397d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +107,11 @@ ms.lasthandoff: 04/03/2018
   
  DMX クエリで Reporting Services をデータ ソースとして使用する方法の詳細については、以下のリンクを参照してください。  
   
- [データ マイニング モデル &#40;DMX&#41; からのデータを取得します。&#40;です。SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [データ マイニング モデル (&) #40";"DMX"&"#41; からのデータを取得します。& #40 です。SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX &#40; analysis Services 接続の種類SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX & #40; analysis Services 接続の種類SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  ただし、DMX をデータ ソースとして使用する必要はありません。 データ マイニング用の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントでは、予測クエリの結果をリレーショナル データベースに保存することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用して、モデルを更新するためのワークフローを確立している場合は、予測をはじめとするデータ マイニング クエリの結果を SQL Server で保持することで、レポート用の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] や、DMX とやり取りしないその他のツールを使用できます。  
   

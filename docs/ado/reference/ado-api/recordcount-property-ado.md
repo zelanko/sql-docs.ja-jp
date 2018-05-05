@@ -1,11 +1,9 @@
 ---
 title: RecordCount プロパティ (ADO) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7c2a7900d47b2e80227e470219fd7a7566dc41e4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 67416b2282f913e04867b9d4ac23ee0ea0f0c41a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordcount-property-ado"></a>RecordCount プロパティ (ADO)
 
@@ -53,7 +50,7 @@ ms.lasthandoff: 04/18/2018
 - **adApproxPosition**おおよその位置に関連します。
 
 > [!NOTE]
-> SQLOLEDB プロバイダーがサーバー側カーソルが使用される場合でも、返されるすべてのレコードをフェッチ ADO 2.8 およびそれ以前のバージョン、 **True**両方の**サポート (adApproxPosition)**と**サポート (adBookmark)**です。
+> SQLOLEDB プロバイダーがサーバー側カーソルが使用される場合でも、返されるすべてのレコードをフェッチ ADO 2.8 およびそれ以前のバージョン、 **True**両方の**サポート (adApproxPosition)** と**サポート (adBookmark)** です。
   
 カーソルの種類、 **Recordset**オブジェクトは、レコードの数を決定できるかどうかに影響します。 **RecordCount**プロパティは、順方向専用カーソル以外の場合は、静的な実際の数またはキーセット カーソル; し、-1 の場合は-1 または動的カーソルの場合は、データ ソースによって実際の数を返します。
   

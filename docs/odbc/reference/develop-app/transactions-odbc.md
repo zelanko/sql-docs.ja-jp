@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa56e9d1827b5a4335afb94fc8e69085e662009d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: da784f2af905aeeab914e4a2365978b1cdbec37c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions-odbc"></a>ODBC トランザクション
 A*トランザクション*作業の単位ですが、1 つのアトミック操作として完了する以外の場合は、操作として成功または失敗全体です。 たとえば、間の 1 つの銀行口座の money を転送します。 これは、2 つの手順: 参加お金を最初のアカウントと 2 番目にデポジットです。 重要です。 両方の手順が成功します。1 つのステップが成功して失敗する余裕がないです。 トランザクションをサポートするデータベースは、これを保証できません。  

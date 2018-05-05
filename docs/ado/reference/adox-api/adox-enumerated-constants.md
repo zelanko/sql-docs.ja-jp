@@ -1,11 +1,9 @@
 ---
 title: ADOX 列挙定数 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b622f8cda931a0c15c1ff97dbf33ffdb9a9441be
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列挙定数
 デバッグを支援するには、ADOX 列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは必要があります列挙定数の実際の値ではなく、名前にのみ依存します。  

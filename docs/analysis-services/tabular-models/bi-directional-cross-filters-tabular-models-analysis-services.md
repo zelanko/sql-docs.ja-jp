@@ -1,31 +1,29 @@
 ---
-title: "双方向クロス フィルター テーブル モデルで |Microsoft ドキュメント"
-ms.custom: 
+title: 双方向クロス フィルター テーブル モデルで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 72a14c23993a3e18c4ca804fab04247090f10596
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>テーブル モデルでの双方向クロス フィルターします。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-SQL Server 2016 では、表形式モデルで *双方向のクロス フィルター* を有効にするための組み込みアプローチが新たに導入されています。これにより、テーブル リレーションシップ間でフィルター コンテキストを伝達するために DAX 式を手動で作成する必要がなくなります。  
+  SQL Server 2016 では、表形式モデルで *双方向のクロス フィルター* を有効にするための組み込みアプローチが新たに導入されています。これにより、テーブル リレーションシップ間でフィルター コンテキストを伝達するために DAX 式を手動で作成する必要がなくなります。  
   
  この概念を構成要素に分解して説明します。 *クロス フィルタリング* は、関連テーブルの値に基づいてテーブルのフィルター コンテキストを設定する機能です。 *双方向* は、テーブル リレーションシップのもう一方の側の 2 つ目の関連テーブルにフィルター コンテキストを伝達することを意味します。 名前が示すように、一方向ではなく、双方向のリレーションシップでスライスすることができます。  内部的には、双方向のフィルタリングではフィルター コンテキストが展開され、データのスーパーセットが照会されます。  
   
@@ -53,18 +51,18 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
   
  設定は、プロジェクトの作成時にプロジェクト レベルで評価されるので、既定値を双方向に変更した場合、次のプロジェクトの作成時にその効果を確認できます。  
   
-1.  SSDT で、 **[ツール]** > **[オプション]** > **[Analysis Services Tabular Designers]** > **[新しいプロジェクトの設定]**の順に選択します。  
+1.  SSDT で、 **[ツール]** > **[オプション]** > **[Analysis Services Tabular Designers]** > **[新しいプロジェクトの設定]** の順に選択します。  
   
-2.  **[既定のフィルターの方向]** を **[一方向]** または **[双方向]**に設定します。  
+2.  **[既定のフィルターの方向]** を **[一方向]** または **[双方向]** に設定します。  
   
  既定値はモデルで変更することもできます。  
   
 1.  ソリューション エクスプローラーで、 **[Model.bim]** > **[プロパティ]** の順に選択します。  
   
-2.  **[既定のフィルターの方向]** を **[一方向]** または **[双方向]**に設定します。  
+2.  **[既定のフィルターの方向]** を **[一方向]** または **[双方向]** に設定します。  
   
 ## <a name="walkthrough-an-example"></a>サンプルの使用  
- 双方向のクロス フィルタリングの価値を評価する最良の方法は、サンプルを使ってみることです。 既定で作成された基数とクロス フィルターが反映された、 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)の次のデータセットについて考えてみましょう。  
+ 双方向のクロス フィルタリングの価値を評価する最良の方法は、サンプルを使ってみることです。 既定で作成されたカーディナリティとクロス フィルターが反映された、 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)の次のデータセットについて考えてみましょう。  
   
  ![SSAS BIDI 2 モデル](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2 モデル")  
   
@@ -77,7 +75,7 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
   
  この単純なスター スキーマでは、フィルタリングがディメンション テーブルの行と列から中央の **FactOnlineSales** テーブルにある **Sum of Sales** メジャーで提供される集計データに流れる場合に、データが適切にスライスされることが Excel でのテストで確認されています。  
   
- ![ssas-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
+ ![ssas bidi 4 excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas bidi 4 excelSumSales")  
   
  メジャーがファクト テーブルから取得され、フィルター コンテキストがファクト テーブルで終了していれば、このモデルの集計は正しくフィルター処理されます。 しかし、製品テーブルまたは顧客テーブルの個別カウントやプロモーション テーブルの平均割引率など、他の場所でメジャーを作成し、既存のフィルター コンテキストをそのメジャーにも適用する場合はどうなるのでしょうか。  
   
@@ -106,23 +104,23 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
   
 1.  SQL Server Data Tools for Visual Studio 2015 を起動します。  
   
-2.  **[ファイル]** > **[新規作成]** > **[プロジェクト]** > **[Analysis Services 表形式モデル]**の順にクリックします。  
+2.  **[ファイル]** > **[新規作成]** > **[プロジェクト]** > **[Analysis Services 表形式モデル]** の順にクリックします。  
   
 3.  Tabular Model Designer で、ワークスペース データベースを、表形式のサーバー モードの SQL Server 2016 Preview Analysis Services インスタンスに設定します。  
   
-4.  モデルの互換性レベルに設定されていることを確認**SQL Server 2016 RTM (1200)**またはそれ以降。  
+4.  モデルの互換性レベルに設定されていることを確認**SQL Server 2016 RTM (1200)** またはそれ以降。  
   
      **[OK]** をクリックすると、プロジェクトが作成されます。  
   
 ### <a name="add-data"></a>データを追加する  
   
-1.  **[モデル]** > **[データ ソースからのインポート]** > **[Microsoft SQL Server]**の順にクリックします。  
+1.  **[モデル]** > **[データ ソースからのインポート]** > **[Microsoft SQL Server]** の順にクリックします。  
   
 2.  サーバー、データベース、認証方法を指定します。  
   
 3.  ContosoRetailDW データベースを選択します。  
   
-4.  **[次へ]**をクリックします。  
+4.  **[次へ]** をクリックします。  
   
 5.  テーブルの選択では、Ctrl キーを押しながら次のテーブルを選択します。  
   
@@ -145,7 +143,7 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
  エラーが発生した場合は、データベースへの接続に使用しているアカウントが、Contoso データ ウェアハウスに対する読み取りアクセス許可を持つ SQL Server ログインを持っていることを確認します。 リモート接続で、SQL Server に対するファイアウォールのポート構成を確認することもできます。  
   
 ### <a name="review-default-table-relationships"></a>既定のテーブル リレーションシップの確認  
- **[モデル]** > **[モデル ビュー]** > **[ダイアグラム ビュー]**の順にクリックして、ダイアグラム ビューに切り替えます。 基数とアクティブなリレーションシップが視覚的に示されます。 リレーションシップは、いずれも 2 つの関連テーブル間の一対多のリレーションシップです。  
+ **[モデル]** > **[モデル ビュー]** > **[ダイアグラム ビュー]** の順にクリックして、ダイアグラム ビューに切り替えます。 カーディナリティとアクティブなリレーションシップが視覚的に示されます。 リレーションシップは、いずれも 2 つの関連テーブル間の一対多のリレーションシップです。  
   
  ![SSAS BIDI 2 モデル](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2 モデル")  
   
@@ -156,17 +154,17 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
 ### <a name="create-measures"></a>メジャーを作成する  
  ディメンション データのさまざまなファセットで売上高の合計を集計する必要があります。 **DimProduct** で、製品数をカウントするメジャーを作成し、特定の年、特定の地域、または顧客タイプの売上に関与する製品の数を示す、製品販売促進の分析に使用できます。  
   
-1.  **[モデル]** > **[モデル ビュー]** > **[ダイアグラム ビュー]**をクリックします。  
+1.  **[モデル]** > **[モデル ビュー]** > **[ダイアグラム ビュー]** をクリックします。  
   
-2.  **[FactOnlineSales]**をクリックします。  
+2.  **[FactOnlineSales]** をクリックします。  
   
 3.  **[SalesAmount]** 列を選択します。  
   
 4.  **[列]** > **[オート SUM]** > **[合計]** の順にクリックして、売上のメジャーを作成します。  
   
-5.  **[DimProduct]**をクリックします。  
+5.  **[DimProduct]** をクリックします。  
   
-6.  **[ProductKeycolumn]**を選択します。  
+6.  **[ProductKeycolumn]** を選択します。  
   
 7.  **[列]** > **[オート SUM]** > **[DistinctCount]** の順にクリックして、一意の製品のメジャーを作成します。  
   
@@ -176,9 +174,9 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
   
 2.  フィールドの一覧から先ほど作成した 2 つのメジャーを選択します。  
   
-3.  **[製品]** > **[製造元]**を選択します。  
+3.  **[製品]** > **[製造元]** を選択します。  
   
-4.  **[Date]** > **[Calendar Year]**の順に選択します。  
+4.  **[Date]** > **[Calendar Year]** の順に選択します。  
   
  売上が年と製造元で予想どおりに分類されていることがわかります。 これは、 **FactOnlineSales**、 **DimProduct**、 **DimDate** の間の既定のフィルター コンテキストが、リレーションシップの "多" 側のメジャーで正しく機能しているためです。  
   
@@ -186,7 +184,7 @@ SQL Server 2016 では、表形式モデルで *双方向のクロス フィル�
   
 ### <a name="change-the-cross-filter"></a>クロス フィルターの変更  
   
-1.  モデルに戻り、 **[テーブル]** > **[リレーションシップの管理]**の順に選択します。  
+1.  モデルに戻り、 **[テーブル]** > **[リレーションシップの管理]** の順に選択します。  
   
 2.  **FactOnlineSales** と **DimProduct**の間のリレーションシップを編集します。  
   
