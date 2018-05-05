@@ -22,12 +22,11 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c3f885ecf4b30e573ba7f0140ad48c69c744d9db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +52,9 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
   
  次の表方法、**集計**各種集計関数の関数の動作です。  
   
-|集計演算子|[結果]|  
+|集計演算子|結果|  
 |--------------------------|------------|  
-|SUM|セット全体の値の合計を返します。|  
+|Sum|セット全体の値の合計を返します。|  
 |Count|セット全体の値の数を返します。|  
 |Max|セット全体の最大値を返します。|  
 |Min|セット全体の最小値を返します。|  
@@ -136,15 +135,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>参照  
- [PeriodsToDate &#40;です。MDX と #41 です。](../mdx/periodstodate-mdx.md)   
- [子と #40 です。MDX と #41 です。](../mdx/children-mdx.md)   
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [子&#40;MDX&#41;](../mdx/children-mdx.md)   
  [Hierarchize (& a) #40 です。MDX と #41 です。](../mdx/hierarchize-mdx.md)   
- [カウント &#40;です。セット &#41;&#40;です。MDX と #41 です。](../mdx/count-set-mdx.md)   
+ [カウント & #40 です。セット & #41;& #40 です。MDX と #41 です。](../mdx/count-set-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
- [プロパティ &#40;です。MDX と #41 です。](../mdx/properties-mdx.md)   
- [PrevMember &#40;です。MDX と #41 です。](../mdx/prevmember-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40 です。MDX と #41 です。](../mdx/drilldownlevel-mdx.md)   
+ [プロパティ & #40 です。MDX と #41 です。](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

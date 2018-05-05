@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3a79fda8a5fa7ce29713e9c47ab8d136f24c1ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ad2e7b3c0fd877dad8b14360d7c3f65331cb8cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  競合検出を構成するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
   
  [ @action=] '*アクション*'  
- パブリケーションの競合検出を有効にするか無効にするかを指定します。 *アクション*は**nvarchar (5)**値は次のいずれかを指定できます。  
+ パブリケーションの競合検出を有効にするか無効にするかを指定します。 *アクション*は**nvarchar (5)** 値は次のいずれかを指定できます。  
   
 |値|Description|  
 |-----------|-----------------|  
@@ -72,7 +70,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @continue_onconflict= ] '*continue_onconflict*' ]  
- 競合の検出後にディストリビューション エージェントで変更の処理を続行するかどうかを示します。 *continue_onconflict*は**nvarchar (5)**で既定値は FALSE。  
+ 競合の検出後にディストリビューション エージェントで変更の処理を続行するかどうかを示します。 *continue_onconflict*は**nvarchar (5)** で既定値は FALSE。  
   
 > [!CAUTION]  
 >  既定値の FALSE を使用することをお勧めします。 このオプションを TRUE に設定すると、ディストリビューション エージェントは、発信元 ID が最も大きいノードから競合する行を適用してトポロジ内のデータを収束しようとします。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。  

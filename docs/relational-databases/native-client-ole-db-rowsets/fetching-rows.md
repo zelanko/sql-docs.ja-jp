@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 362e1f2baf61ae8fe75422cc420ea7dbbf633343
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 24d8b01218b506e5041ad453a07a501ec615e894
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-rows"></a>行のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 
   **IRowset**インターフェイスは、行セットの基本インターフェイスです。 **IRowset**インターフェイスには、行を順番にフェッチ、これらの行からデータを取得する行を管理するためのメソッドが用意されています。 コンシューマーでメソッドを使用して**IRowset**すべての行セットの基本的な操作です。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  
   
- 使用して、行セットの機能を決定する通常の最初の手順では、コンシューマーが行セットに対するインターフェイス ポインターを取得する際、 **irowsetinfo:**メソッドです。 このメソッドにより、行セットが公開しているインターフェイスに関する情報に加えて、個別のインターフェイスとしては提供されない行セットの機能に関する情報も返されます。このような行セットの情報には、アクティブ行の最大数や、保留中の更新を同時に含むことができる行数などが含まれています。  
+ 使用して、行セットの機能を決定する通常の最初の手順では、コンシューマーが行セットに対するインターフェイス ポインターを取得する際、 **irowsetinfo:** メソッドです。 このメソッドにより、行セットが公開しているインターフェイスに関する情報に加えて、個別のインターフェイスとしては提供されない行セットの機能に関する情報も返されます。このような行セットの情報には、アクティブ行の最大数や、保留中の更新を同時に含むことができる行数などが含まれています。  
   
  次に、コンシューマーは、行セット内の列の特性、つまりメタデータを調査します。 これを使用、 **IColumnsInfo**簡易列情報メソッドまたは**IColumnsRowset**メソッド拡張列情報です。 **GetColumnInfo**メソッドは、次の情報を返します。  
   

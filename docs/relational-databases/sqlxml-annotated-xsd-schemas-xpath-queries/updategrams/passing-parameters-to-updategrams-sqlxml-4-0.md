@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1852a8ee9c0c96a58c5ad71e25eafa1730d0ec49
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d89d8d78b2d9f2439711756ae97f5fae5220724d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 指定する NULL パラメーター値を渡す、 **nullvalue**属性。 割り当てられている値、 **nullvalue**属性は、パラメーターの値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
->   **\<Sql:header >**と **\<updg:header >**を指定する必要があります、 **nullvalue**として修飾されていない以外の一方で、 **\<updg:sync >**を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
+>  **\<Sql:header >** と **\<updg:header >** を指定する必要があります、 **nullvalue**として修飾されていない以外の一方で、 **\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要がある[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,15 +17,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f3c3be311e1f0ce7b53bd35b90fb94dfc03f07b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 47c9385177fd02266b7814e08cde5e6a33b55418
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-events-data-columns"></a>Command イベントのデータ列
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]次の表には、各イベント クラスのデータ列の一覧、 **Command イベント**イベント カテゴリ。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  次の表は、 **Command イベント** のイベント カテゴリにある各イベント クラスのデータ列の一覧です。  
   
  **Command イベント** のイベント カテゴリには、次のイベント クラスがあります。  
   
@@ -79,6 +78,6 @@ ms.lasthandoff: 01/08/2018
 |ClientProcessID|Command イベントに関連付けられた一意のクライアント プロセス ID を表します。|  
   
 ## <a name="see-also"></a>参照  
- [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
+ [コマンドのイベントのイベント カテゴリ](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

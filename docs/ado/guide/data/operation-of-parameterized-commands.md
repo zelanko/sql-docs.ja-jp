@@ -1,11 +1,9 @@
 ---
 title: パラメーター化コマンドの操作 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子で作業している場合**レコード セット**、特に、親のサイズに比べて**レコード セット**、いくつかの子チャプターのみにアクセスする必要がありますが、した方がより効果的に使用、パラメーター化コマンド。  

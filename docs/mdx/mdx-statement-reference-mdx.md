@@ -22,12 +22,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 331f4e7d67524bb6fc4d3af706f9a28ef9dabb95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb0c2586ba5ba25c7a5791e8f1ec9418f9079ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX ステートメント リファレンス (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +37,11 @@ ms.lasthandoff: 01/08/2018
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[MDX スクリプト ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)|MDX スクリプト内のクエリ コンテキスト、スコープ、フロー制御を管理する MDX スクリプト ステートメントについて説明します。|  
-|[MDX データ定義ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-definition-statements-mdx.md)|多次元オブジェクトの作成、削除、操作を行う MDX データ定義ステートメントについて説明します。|  
-|[MDX データ操作ステートメント &#40;です。MDX と #41 です。](../mdx/mdx-data-manipulation-statements-mdx.md)|多次元オブジェクトからのデータの取得や操作を行う MDX データ操作ステートメントについて説明します。|  
+|[MDX スクリプト ステートメント & #40 です。MDX と #41 です。](../mdx/mdx-scripting-statements-mdx.md)|MDX スクリプト内のクエリ コンテキスト、スコープ、フロー制御を管理する MDX スクリプト ステートメントについて説明します。|  
+|[MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|多次元オブジェクトの作成、削除、操作を行う MDX データ定義ステートメントについて説明します。|  
+|[MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|多次元オブジェクトからのデータの取得や操作を行う MDX データ操作ステートメントについて説明します。|  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-language-reference-mdx.md)  
   
   

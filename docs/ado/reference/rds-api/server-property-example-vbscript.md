@@ -1,7 +1,6 @@
 ---
 title: サーバー プロパティの例 (VBScript) |Microsoft ドキュメント
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25e8b813724b17d4389eda170eb350fab2aa4a6f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 56dd3ab941a40b6b574a7fca5b907c18b126ac29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-property-example-vbscript"></a>サーバー プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -95,7 +93,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 次の例は、のために必要なパラメーターを設定する方法を示します**.rds ですDataControl**実行時にします。 この例をテストして、通常の ASP ドキュメントにこのコードを貼り付けますを切り取ってという名前を付けます**ServerRuntimeVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、のために必要なパラメーターを設定する方法を示します **.rds ですDataControl**実行時にします。 この例をテストして、通常の ASP ドキュメントにこのコードを貼り付けますを切り取ってという名前を付けます**ServerRuntimeVBS.asp**です。 ASP スクリプトは、サーバーで識別されます。  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  

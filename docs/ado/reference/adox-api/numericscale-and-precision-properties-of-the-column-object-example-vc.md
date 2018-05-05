@@ -1,11 +1,9 @@
 ---
 title: NumericScale と列の例 (vc++) の有効桁数プロパティ |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e863b4241b67118234fa1ffc8777af001e929df4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ca11ba4800d0516b9a87c91fca4b4dd58f7ea42c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale および列オブジェクトの例 (vc++) の有効桁数のプロパティ
 この例で、 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)と[精度](../../../ado/reference/adox-api/precision-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 このコードは、それらの値を表示、 **Order Details**のテーブル、 *Northwind*データベース。  

@@ -1,11 +1,9 @@
 ---
 title: フィルターおよび RecordCount のプロパティの例 (vc++) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3ef95acddadf87e941dfc0a8e388f251586d8e14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1462aea811bafb1b2d3dad0380488317beb33867
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>フィルターおよび RecordCount のプロパティの例 (vc++)
 この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)を開くには、新しいプロパティ[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される、指定した条件に基づいて**Recordset**です。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)を 2 つのレコードの数を表示するプロパティ**レコード セット**です。 FilterField 関数は、この手順を実行する必要があります。  

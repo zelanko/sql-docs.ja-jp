@@ -1,11 +1,9 @@
 ---
 title: 名前のプロパティ-動的 (ADO) の形状変更 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4901e09d0df933c6aa35e8c1ebed3e62ef2012f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>名前のプロパティ-動的 (ADO) の形状変更します。
 名前を指定、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  

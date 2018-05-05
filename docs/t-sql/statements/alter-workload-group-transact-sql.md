@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 78e3660935d5969e2a67afed85f295998e496153
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +108,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。  
   
 > [!NOTE]  
->  メモリ許可のタイムアウトに達しても、常にクエリが失敗するとは限りません。 クエリが失敗するのは、同時実行クエリ数が多すぎる場合だけです。 それ以外の場合、クエリは最小限のメモリ許可しか取得できないので、クエリのパフォーマンスが低下します。  
+> メモリ許可のタイムアウトに達しても、常にクエリが失敗するとは限りません。 クエリが失敗するのは、同時実行クエリ数が多すぎる場合だけです。 それ以外の場合、クエリは最小限のメモリ許可しか取得できないので、クエリのパフォーマンスが低下します。  
   
  *value* は正の整数である必要があります。 *value* の既定の設定である 0 の場合、クエリ コストに基づく内部の計算を使用して、最大時間が決定されます。  
   
@@ -122,10 +122,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  並列要求の最大 DOP (並列処理の次数) を指定します。 *value* は 0 または正の整数 (1 から 255) にする必要があります。 *value* が 0 の場合、サーバーは並列処理の最大限度を選択します。 これは既定の推奨設定です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)]によって MAX_DOP に設定される実際の値は、指定された値よりも小さくなる場合があります。 最終的な値は、min(255, *number of CPUs)* という式で決定されます。  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]によって MAX_DOP に設定される実際の値は、指定された値よりも小さくなる場合があります。 最終的な値は、min(255, *number of CPUs)* という式で決定されます。  
   
 > [!CAUTION]  
->  MAX_DOP を変更すると、サーバーのパフォーマンスが低下することがあります。 MAX_DOP を変更する必要がある場合には、1 つの NUMA ノードで示されているハードウェア スケジューラの最大数以下の値に設定することをお勧めします。 MAX_DOP に 8 よりも大きな値を設定することはお勧めできません。  
+> MAX_DOP を変更すると、サーバーのパフォーマンスが低下することがあります。 MAX_DOP を変更する必要がある場合には、1 つの NUMA ノードで示されているハードウェア スケジューラの最大数以下の値に設定することをお勧めします。 MAX_DOP に 8 よりも大きな値を設定することはお勧めできません。  
   
  MAX_DOP は次のように処理されます。  
   
@@ -148,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  オプションの "default" を ALTER WORKLOAD GROUP で使用する場合は、システム予約語の DEFAULT と競合しないように引用符 ("") または角かっこ ([]) で囲む必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
 > [!NOTE]  
->  オプションの "default" は、大文字と小文字が区別されます。  
+> オプションの "default" は、大文字と小文字が区別されます。  
   
 ## <a name="remarks"></a>Remarks  
  ALTER WORKLOAD GROUP は、既定のグループに対して使用できます。  
@@ -160,7 +160,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   MAX_DOP を 1 から 0、または 1 より大きい値に変更する場合、DBCC FREEPROCCACHE を実行する必要はありません。 ただし、直列プランは並列で実行できません。そのため、個々のキャッシュを消去すると、場合によっては、新しいプランを並列処理でコンパイルできます。  
   
 > [!CAUTION]  
->  複数のワークロード グループに関連付けられているリソース プールからキャッシュされているプランを消去すると、ユーザー定義のリソース プールが *pool_name* で識別されているすべてのワークロード グループに影響します。  
+> 複数のワークロード グループに関連付けられているリソース プールからキャッシュされているプランを消去すると、ユーザー定義のリソース プールが *pool_name* で識別されているすべてのワークロード グループに影響します。  
   
  DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
@@ -176,7 +176,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>使用例  
  次の例は、既定のグループの要求の重要度を `MEDIUM` から `LOW` に変更する方法を示しています。  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +186,7 @@ GO
   
  次の例は、ワークロード グループを現在のプールから既定のプールに移動する方法を示しています。  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

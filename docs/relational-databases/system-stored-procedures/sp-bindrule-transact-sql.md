@@ -24,13 +24,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af3a7f2e9d0c891cd416db9eb5449e21e3b8aa06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3aec507212896d9ed03cdb7053b320743b2236c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,16 +57,16 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@objname=**] **'***object_name***'**  
  ルールがバインドされるテーブルと列、または別名データ型です。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 また、計算列にもバインドできません。  
   
- *object_name*は**nvarchar (776)**既定値はありません。 場合*object_name* 1 部構成の名前は、別名データ型として解決されます。 2 部構成または 3 部構成の名前の場合は、最初にテーブルおよび列として解決されます。この解決が失敗すると、別名データ型として解決されます。 既定では、別名データ型の既存の列を継承*ルール*ルールを直接その列にバインドしない限り、します。  
+ *object_name*は**nvarchar (776)** 既定値はありません。 場合*object_name* 1 部構成の名前は、別名データ型として解決されます。 2 部構成または 3 部構成の名前の場合は、最初にテーブルおよび列として解決されます。この解決が失敗すると、別名データ型として解決されます。 既定では、別名データ型の既存の列を継承*ルール*ルールを直接その列にバインドしない限り、します。  
   
 > [!NOTE]  
->  *object_name* 、角かっこを含めることができる**[**と**]**文字で区切られた識別子の文字として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
+>  *object_name* 、角かっこを含めることができる **[** と **]** 文字で区切られた識別子の文字として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
 > [!NOTE]  
 >  別名データ型を使用する式に対して作成されたルールは、列または別名データ型にバインドできますが、参照されてもコンパイルできません。 別名データ型に対して作成されたルールは使用しないでください。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
- ルールを別名データ型にバインドするときにのみ使用されます。 *future_only_flag*は**varchar (15)**既定値は NULL です。 このパラメーターに設定すると**futureonly**別名データ型の既存の列を新しいルールを継承しないようにします。 場合*futureonly_flag*が NULL の場合、する現在ルールがあるいないか、別名データ型の既存のルールを使用している別名データ型の列に新しいルールをバインドします。  
+ ルールを別名データ型にバインドするときにのみ使用されます。 *future_only_flag*は**varchar (15)** 既定値は NULL です。 このパラメーターに設定すると**futureonly**別名データ型の既存の列を新しいルールを継承しないようにします。 場合*futureonly_flag*が NULL の場合、する現在ルールがあるいないか、別名データ型の既存のルールを使用している別名データ型の列に新しいルールをバインドします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

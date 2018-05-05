@@ -27,13 +27,12 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6dc30f57484714d70c7777a30ee43246c5980fcf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0f98aa670816f0337e943dff8d68513fcb95706c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>引数  
  *file_pattern*  
- 読み取り対象に設定する監査ファイルのディレクトリまたはパスとファイル名を指定します。 種類は**nvarchar (260)**です。 
+ 読み取り対象に設定する監査ファイルのディレクトリまたはパスとファイル名を指定します。 種類は**nvarchar (260)** です。 
  
  - **SQL Server**:
     
@@ -60,7 +59,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<パス >\\ \*** 収集 - すべての監査ファイルを指定した場所にします。  
   
-    -   **\<パス > \LoginsAudit_{GUID}**収集 - すべての監査を指定した名前と GUID のペアを持つファイルです。  
+    -   **\<パス > \LoginsAudit_{GUID}** 収集 - すべての監査を指定した名前と GUID のペアを持つファイルです。  
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
@@ -76,7 +75,7 @@ fn_get_audit_file ( file_pattern,
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
   
  *initial_file_name*  
- 監査レコードの最初の読み取り元に設定する監査ファイル内の特定のファイルのパスと名前を指定します。 種類は**nvarchar (260)**です。  
+ 監査レコードの最初の読み取り元に設定する監査ファイル内の特定のファイルのパスと名前を指定します。 種類は**nvarchar (260)** です。  
   
 > [!NOTE]  
 >  *Initial_file_name*引数が有効なエントリを含める必要がありますか、またはいずれかの既定値を含める必要があります |NULL 値です。  

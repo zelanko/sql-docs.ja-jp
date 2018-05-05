@@ -31,12 +31,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 86fd2ea716fd0366149937af749c240fe01e486d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c4309b2b3aceb51ba17de90cdf33e62653da573
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comments-dmx"></a>コメント (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,22 +50,22 @@ ms.lasthandoff: 01/08/2018
   
 -   ステートメント内またはスクリプト内のコメント長には制限がありません。 1 行または複数行のコメントを作成できます。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]次の種類のコメント文字をサポートしています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の種類のコメント文字をサポートしています。  
   
--   **(二重スラッシュ)。** 実行するコードと同じ行にコメントを記述する、またはコメントのみの行にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメントの一部として、行の末尾に二重ハイフンの後ろからすべての情報を評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重スラッシュを使用します。 このコメント文字の詳細については、次を参照してください。[二重スラッシュ (&) #40 です。コメント &#41;& # #40; DMX &#41;](../dmx/double-slash-comment-dmx.md).  
+-   **(二重スラッシュ)。** 実行するコードと同じ行にコメントを記述する、またはコメントのみの行にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメントの一部として、行の末尾に二重ハイフンの後ろからすべての情報を評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重スラッシュを使用します。 このコメント文字の詳細については、次を参照してください。[二重スラッシュ&#40;コメント&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)です。  
   
--   **-(二重ハイフン)。** 実行するコードと同じ行にコメントを記述する、またはコメントのみの行にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメントの一部として、行の末尾に二重ハイフンの後ろからすべての情報を評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重ハイフンを使用します。 このコメント文字の詳細については、次を参照してください。 [--&#40;です。コメント &#41;& # #40; DMX &#41;概要](../dmx/comment-dmx-summary.md)です。  
+-   **-(二重ハイフン)。** 実行するコードと同じ行にコメントを記述する、またはコメントのみの行にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメントの一部として、行の末尾に二重ハイフンの後ろからすべての情報を評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重ハイフンを使用します。 このコメント文字の詳細については、次を参照してください。 [--&#40;コメント&#41; &#40;DMX&#41;概要](../dmx/comment-dmx-summary.md)です。  
   
--   **/\*...\*/(スラッシュとアスタリスク文字のペア) です。** 実行コードと同じ行にコメントを記述する、コメント専用の行にコメントを記述する、または実行可能コード内にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメント開始記号からすべてを評価 (/*) にコメント終了記号 (\*/)、コメント部分として。 複数行のコメントを作成するには、コメント文字のペアでコメントを開始 (/\*)、および閉じるコメント文字のペアでコメントの終了 (\*/)。 コメント行ではそれ以外のコメント文字は使用できません。 このコメント文字の詳細については、次を参照してください。[スラッシュ スター &#40;です。コメント &#41;& # #40; DMX &#41;](../dmx/slash-star-comment-dmx.md).  
+-   **/\* ...\*/(スラッシュとアスタリスク文字のペア) です。** 実行コードと同じ行にコメントを記述する、コメント専用の行にコメントを記述する、または実行可能コード内にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメント開始記号からすべてを評価 (/*) にコメント終了記号 (\*/)、コメント部分として。 複数行のコメントを作成するには、コメント文字のペアでコメントを開始 (/\*)、および閉じるコメント文字のペアでコメントの終了 (\*/)。 コメント行ではそれ以外のコメント文字は使用できません。 このコメント文字の詳細については、次を参照してください。[スラッシュ スター&#40;コメント&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)です。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; 演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [一般的な予測関数 (&) #40";"DMX"&"#41;](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

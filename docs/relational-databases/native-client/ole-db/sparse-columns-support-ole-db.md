@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
@@ -16,13 +15,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: acde7986c28b409bd72785883f37f4230674f3d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: de135d6d4e172045e7841197c79d86eea9397c9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS が、SS_IS_COLUMN_SET と SS_IS_SPARSE という 2 つの新しい列を返します。<br /><br /> DBSCHEMA_COLUMNS がのメンバーではない列のみを返します、 **column_set**です。<br /><br /> 2 つの新しいスキーマ行セットが追加されました。 DBSCHEMA_COLUMNS_EXTENDED はのスパースかどうかに関係なくすべての列を返します**column_set**メンバーシップです。 DBSCHEMA_SPARSE_COLUMN_SET のメンバーである列のみが返されます、 **column_set**です。 これらの新しい行セットの列と制限は DBSCHEMA_COLUMNS と同じです。|  
 |IDBSchemaRowset::GetSchemas|Idbschemarowset::getschemas には、使用可能なスキーマ行セットの一覧である DBSCHEMA_COLUMNS_EXTENDED と DBSCHEMA_SPARSE_COLUMN_SET の新しい行セットの Guid が含まれています。|  
 |ICommand::Execute|場合**選択\*から***テーブル*は、スパースのメンバーではないすべての列が返されます使用、 **column_set**、すべての値を含む XML 列null 以外の列、スパースのメンバーである**column_set**存在する場合、します。|  
-|IOpenRowset::OpenRowset|Iopenrowset::openrowset で icommand::execute と同じ列を含む行セットが返されます、**選択\***同じテーブルにクエリします。|  
+|IOpenRowset::OpenRowset|Iopenrowset::openrowset で icommand::execute と同じ列を含む行セットが返されます、**選択\*** 同じテーブルにクエリします。|  
 |ITableDefinition|スパース列も、このインターフェイスへの変更がない**column_set**列です。 スキーマを変更する必要のあるアプリケーションでは、適切な [!INCLUDE[tsql](../../../includes/tsql-md.md)] を直接実行する必要があります。|  
   
 ## <a name="see-also"></a>参照  

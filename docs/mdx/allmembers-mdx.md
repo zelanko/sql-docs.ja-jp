@@ -22,12 +22,11 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 67b0b2071e03d3b66daa1a34a6af4159cee89cea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f20f6af260ff5f37aa2665d6229c2096360e05fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ Level_Expression.AllMembers
  *Level_Expression*  
  レベルを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **AllMembers**関数を指定された階層またはレベルで、計算されるメンバーを含むすべてのメンバーを含むセットを返します。 **AllMembers**関数が、指定された階層またはレベルが表示できるメンバーに含まれない場合でも、計算されるメンバーを返します。  
   
 > [!IMPORTANT]  
@@ -83,8 +82,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>参照  
- [AddCalculatedMembers &#40;です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
- [子と #40 です。MDX と #41 です。](../mdx/children-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [AddCalculatedMembers & #40 です。MDX と #41 です。](../mdx/addcalculatedmembers-mdx.md)   
+ [子&#40;MDX&#41;](../mdx/children-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

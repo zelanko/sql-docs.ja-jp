@@ -25,13 +25,12 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e814026040e37b8467407ddca9f73c57438fa4bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 446c6645f850ac11b546929006e4b20b51c8c38b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,10 +40,10 @@ ms.lasthandoff: 04/16/2018
 |列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|現在のデータベース名です。|  
-|**SCHEMA_NAME**|**nvarchar(**128**)**|スキーマ名を返します。|  
-|**SCHEMA_OWNER**|**nvarchar(**128**)**|スキーマ所有者名を返します。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューを照会する方法です。|  
-|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (**6**)**|常に NULL が返されます。|  
-|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (**3**)**|常に NULL が返されます。|  
+|**SCHEMA_NAME**|**nvarchar(** 128 **)**|スキーマ名を返します。|  
+|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|スキーマ所有者名を返します。<br /><br /> **\*\* 重要な\* \*** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューを照会する方法です。|  
+|**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|常に NULL が返されます。|  
+|**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|常に NULL が返されます。|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|既定の文字セットの名前を返します。|  
 
 **例**  

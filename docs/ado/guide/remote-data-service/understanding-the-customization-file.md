@@ -1,11 +1,9 @@
 ---
 title: カスタマイズ ファイルの概要 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**:operator[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**接続**、 **sql**、 **userlist**、または**ログ**です。 パラメーターでは、リテラル文字列、既定値、ユーザー指定の識別子では、または何も行われません。  
@@ -61,7 +58,7 @@ identifier
   
  特定のセクションは、次の状況で使用されます。  
   
--   A**接続**セクションは、クライアントの値部分文字列のキーワードを接続する場合は、使用"**データ ソース = * * * 値*"、一致する、**接続**セクション識別子*.*  
+-   A**接続**セクションは、クライアントの値部分文字列のキーワードを接続する場合は、使用"**データ ソース = * * * 値*"、一致する、**接続**セクション識別子 *.*  
   
 -   **Sql**セクションには、クライアントのコマンド文字列に一致する文字列が含まれている場合、使用、 **sql**セクションの識別子。  
   

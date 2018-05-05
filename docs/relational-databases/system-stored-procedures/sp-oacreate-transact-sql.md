@@ -24,12 +24,11 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f09e5cdf526a798fde6f4f49f98575011d4e9462
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  たとえば、SQLDMO です。Sql Server は、SQL-DMO の ProgID **SQLServer**オブジェクト。 SQL-DMO は SQLDMO のコンポーネント名を持ち、 **SQLServer**オブジェクトが有効であり、(すべての SQL-DMO のようなオブジェクト)、 **SQLServer**オブジェクトのサポート**IDispatch**です。  
   
  *clsid*  
- 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスについて説明しは、形式があります: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**です。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイスです。  
+ 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスについて説明しは、形式があります: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'** です。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイスです。  
   
  たとえば、SQL-DMO の CLSID は、{00026BA1-0000-0000-C000-000000000046} **SQLServer**オブジェクト。  
   

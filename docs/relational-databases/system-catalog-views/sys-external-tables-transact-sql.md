@@ -19,13 +19,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf4bceb7932cb5f8a5f4f891015efb4e540d6cf9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 53e30403430eed3786d815d604ed5ba3b7c2768c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 |file_format_id|**int**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部ファイル形式のオブジェクトの ID です。||  
 |location|**nvarchar (4000)**|HADOOP の外部データ ソース経由で外部テーブルは、これは、HDFS の外部データのパスです。||  
 |reject_type|**tinyint**|HADOOP の外部データ ソース経由で外部テーブルは、これは、外部データを照会するときに、拒否された行はカウント方法です。|値 – 拒否された行の数。<br /><br /> パーセント – 拒否された行の割合。|  
-|reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルの。<br /><br /> *Reject_type =*値で、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = 割合、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
+|reject_value|**float**|HADOOP の外部データ ソース経由で外部テーブルの。<br /><br /> *Reject_type =* 値で、これは、クエリが失敗するまでに許可する行の拒否された回数。<br /><br /> *Reject_type* = 割合、これは、クエリが失敗するまでに許可する行の却下のパーセンテージです。||  
 |reject_sample_value|**int**|*Reject_type* = 割合、これは、読み込むには、成功と失敗、拒否された行の比率を計算する前に行の数。|場合は NULL reject_type = 値です。|  
 |distribution_type|**int**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルは、これは、行のデータの分布、基になるベース テーブルの間でです。|0 – Sharded<br /><br /> 1 – レプリケート<br /><br /> 2 – ラウンド ロビン|  
 |distribution_desc|**nvarchar(120)**|SHARD_MAP_MANAGER 外部データ ソース経由で外部テーブルの場合は、この配布種類を文字列として表示されます。||  

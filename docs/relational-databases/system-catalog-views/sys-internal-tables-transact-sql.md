@@ -27,19 +27,18 @@ caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f0f30bc972bf0af35d582b908da6e163917b965
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cbdff6493fca5bbb9aae67a8a7c7be58b7554556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   内部テーブルであるオブジェクトごとに 1 行のデータを返します。 内部テーブルはによって自動的に生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]さまざまな機能をサポートするためにします。 たとえば、プライマリ XML インデックスを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を細分化の XML ドキュメントのデータを保持する内部テーブルが自動的に作成します。 内部テーブルに表示される、 **sys**すべてのデータベースのスキーマなど、その機能を示す、システムによって生成された一意の名前を持つ**xml_index_nodes_2021582240_32001**または**queue_messages_1977058079**  
   
- 内部テーブルには、ユーザーがアクセスできるデータは含まれていません。また、そのスキーマは固定され変更できません。 内部テーブルの名前を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照することはできません。 たとえば、SELECT などのステートメントを実行することはできません\*FROM  *\<sys.internal_table_name >*です。 ただし、カタログ ビューにクエリを実行して、内部テーブルのメタデータを表示することはできます。  
+ 内部テーブルには、ユーザーがアクセスできるデータは含まれていません。また、そのスキーマは固定され変更できません。 内部テーブルの名前を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで参照することはできません。 たとえば、SELECT などのステートメントを実行することはできません\*FROM  *\<sys.internal_table_name >* です。 ただし、カタログ ビューにクエリを実行して、内部テーブルのメタデータを表示することはできます。  
   
   
 |列名|データ型|Description|  

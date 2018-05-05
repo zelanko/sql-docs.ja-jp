@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f5271c7e096ef7a6b09efc7cc818b31ccd1ec699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ Ancestor(Member_Expression, Distance)
  **先祖**関数、MDX メンバー式で、関数を提供し、提供するメンバーの先祖であるレベルの MDX 式または数値式をそのメンバー上のレベルの数を表すのいずれか。 この情報により、**先祖**関数は、そのレベルの先祖メンバーを返します。  
   
 > [!NOTE]  
->  先祖メンバーだけではなく、先祖メンバーを含むセットを返すには使用、[先祖と #40 です。MDX と #41 です。](../mdx/ancestors-mdx.md)関数。  
+>  先祖メンバーだけではなく、先祖メンバーを含むセットを返すには使用、[先祖&#40;MDX&#41; ](../mdx/ancestors-mdx.md)関数。  
   
  レベル式が指定されている場合、**先祖**関数は、指定されたレベルで指定されたメンバーの先祖を返します。 指定したメンバーが指定されたレベルと同じ階層内でない場合、関数はエラーを返します。  
   
@@ -113,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

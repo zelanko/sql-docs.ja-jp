@@ -1,24 +1,25 @@
 ---
-title: "SQL クライアントのプログラミングのホームページ |Microsoft ドキュメント"
-description: "注釈付きへのリンクのダウンロードとドキュメントの言語と SQL Server または Azure SQL Database に接続するためのオペレーティング システムのさまざまな組み合わせをハブ ページ。"
+title: SQL クライアントのプログラミングのホームページ |Microsoft ドキュメント
+description: 注釈付きへのリンクのダウンロードとドキュメントの言語と SQL Server または Azure SQL Database に接続するためのオペレーティング システムのさまざまな組み合わせをハブ ページ。
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 886cf05cf5d52d4f4619047f43f1f78449441a9d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL Server へのプログラミングのホームページ
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/29/2017
 - 適切な場所、領域と特定の言語で階層的なドキュメントのサブエリアを表示します。
 
 
-#### <a name="azure-sql-database"></a>Azure SQL データベース
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 、任意の言語では、SQL Server に接続するコードは Azure SQL Database に接続するためのコードとほぼ同じです。
 
@@ -56,9 +57,9 @@ ms.lasthandoff: 11/29/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![C# ロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework では、.NET Framework の][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java ロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js ロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大きなプラス][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP ロゴ][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Python ロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby ロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework の ORM の Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java ロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大きなプラス][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python のロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![ルビのロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +108,7 @@ EF には、次のテクノロジに直接的または間接的なリレーシ�
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)、または[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 言語の構文の機能強化など、  **=>**  (C#) 演算子。
+- 言語の構文の機能強化など、 **=>** (C#) 演算子。
 - SQL データベースのテーブルにマップされるクラスのソース コードを生成する便利なプログラムです。 たとえば、 [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)です。
 
 

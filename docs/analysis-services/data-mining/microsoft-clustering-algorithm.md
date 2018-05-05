@@ -1,16 +1,15 @@
 ---
-title: "Microsoft クラスタ リング アルゴリズム |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft クラスタ リング アルゴリズム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 
+caps.latest.revision: 62
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 74a6989ebbf0a0d60f4708da667d5ea339512a92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムとは、データセット内のケースを反復処理して類似した特性を持つクラスターにグループ化する " *セグメンテーション* " または " *クラスタリング* " アルゴリズムです。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムとは、データセット内のケースを反復処理して類似した特性を持つクラスターにグループ化する " *セグメンテーション* " または " *クラスタリング* " アルゴリズムです。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  
   
  クラスタリング モデルでは、一般レベルの観察では論理的に推論できないデータセット内の関係が識別されます。 たとえば、自転車で通勤している従業員は、一般的に勤め先から遠くないところに住んでいることは、だれでも容易に想像できます。 しかし、このアルゴリズムでは、それほど明確でない自転車通勤者に関する他の特性を見つけることができます。 次の図では、クラスター A は勤め先に車で通勤する従業員に関するデータを表し、クラスター B は勤め先に自転車で通勤する従業員に関するデータを表しています。  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft クラスタ リング アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [クラスタ リング モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

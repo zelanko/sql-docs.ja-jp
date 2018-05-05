@@ -1,31 +1,29 @@
 ---
-title: "リレーションシップの削除 |Microsoft ドキュメント"
-ms.custom: 
+title: リレーションシップの削除 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 690224c1798494e75f6b26add07d51c3afa7134f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f8c593bbad1c367c9a0f00c12e04b5debd136e8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-relationships"></a>リレーションシップを削除します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 テーブル モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)です。  
+  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 テーブル モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)です。  
   
 ## <a name="considerations-for-deleting-relationships"></a>リレーションシップの削除に関する考慮事項  
  リレーションシップを削除するかどうかを判断する際には、以下の点に注意してください。  
@@ -42,21 +40,21 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-delete-a-relationship-by-using-diagram-view"></a>ダイアグラム ビューを使用してリレーションシップを削除するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]**をポイントして、 **[ダイアグラム ビュー]**をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
   
-2.  2 つのテーブルの間のリレーションシップの線を右クリックし、 **[削除]**をクリックします。  
+2.  2 つのテーブルの間のリレーションシップの線を右クリックし、 **[削除]** をクリックします。  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>[リレーションシップの管理] ダイアログ ボックスを使用してリレーションシップを削除するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]**をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。  
   
 2.  **[リレーションシップの管理]** ダイアログ ボックスで、一覧から 1 つまたは複数のリレーションシップを選択します。  
   
      複数のリレーションシップを選択するには、Ctrl キーを押しながら各リレーションシップをクリックします。  
   
-3.  **[リレーションシップの削除]**をクリックします。  
+3.  **[リレーションシップの削除]** をクリックします。  
   
-4.  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]**をクリックします。  
+4.  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   

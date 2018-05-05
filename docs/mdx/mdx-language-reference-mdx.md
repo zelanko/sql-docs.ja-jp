@@ -21,12 +21,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: e5cf88778cdd78c7119d94754d246dbba3709adb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f92c8a0da17a08423efd04b3cb74b4854a2e1460
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX 言語リファレンス (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +36,13 @@ ms.lasthandoff: 01/08/2018
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[MDX 構文の表記規則 &#40;です。MDX と #41 です。](../mdx/mdx-syntax-conventions-mdx.md)|MDX 言語リファレンスで使用する構文の表記規則を簡単に説明します。|  
-|[MDX ステートメント リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-statement-reference-mdx.md)|MDX 言語で使用できるスクリプト ステートメント、データ定義ステートメント、データ操作ステートメントについて説明します。|  
-|[MDX 演算子リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-operator-reference-mdx.md)|MDX 言語で使用できる演算子の一覧を示します。|  
-|[MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)|MDX 言語で使用できる関数について説明します。|  
+|[MDX 構文の表記規則&#40;MDX&#41;](../mdx/mdx-syntax-conventions-mdx.md)|MDX 言語リファレンスで使用する構文の表記規則を簡単に説明します。|  
+|[MDX ステートメント リファレンス&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)|MDX 言語で使用できるスクリプト ステートメント、データ定義ステートメント、データ操作ステートメントについて説明します。|  
+|[MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)|MDX 言語で使用できる演算子の一覧を示します。|  
+|[MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)|MDX 言語で使用できる関数について説明します。|  
 |[MDX の予約語](../mdx/mdx-reserved-words.md)|MDX 言語で使用する予約語の一覧を示します。|  
   
 ## <a name="see-also"></a>参照  
- [多次元式 &#40;です。MDX と #41 です。参照](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [多次元式 & #40 です。MDX と #41 です。参照](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,13 +29,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbef6a043fb1132da098541724a47d01d77d6a08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a6b58b7503e066c8d36e178b82f9048be7cd235f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide による要素と属性の非表示
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +46,9 @@ ms.lasthandoff: 04/16/2018
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 属性に sql:hide を指定する  
- この例では、XSD スキーマ、  **\<Person.Contact >**を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。  
+ この例では、XSD スキーマ、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。  
   
-  **\<Person.Contact >**要素は複合型であり、したがって、同じ名前 (既定のマッピング) のテーブルにマップします。 すべての属性 **\<Person.Contact >**要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、 **sql:hide**注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリが指定されている場合、 **ContactID** XML ドキュメントでは返されません。  
+ **\<Person.Contact >** 要素は複合型であり、したがって、同じ名前 (既定のマッピング) のテーブルにマップします。 すべての属性 **\<Person.Contact >** 要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、 **sql:hide**注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリが指定されている場合、 **ContactID** XML ドキュメントでは返されません。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -98,7 +95,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- ときに**sql:hide**が指定されて、要素を要素とその属性または子要素が生成される XML ドキュメントに表示されません。 ここでは、別の XSD スキーマで**sql:hide**で指定された、  **\<OD >**要素。  
+ ときに**sql:hide**が指定されて、要素を要素とその属性または子要素が生成される XML ドキュメントに表示されません。 ここでは、別の XSD スキーマで**sql:hide**で指定された、  **\<OD >** 要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -153,7 +150,7 @@ ms.lasthandoff: 04/16/2018
 </xsd:schema>  
 ```  
   
- XPath クエリ (たとえば`/Customers[@CID="1"]`) が指定されて、このスキーマに対して生成される XML ドキュメントには含まれません、  **\<OD >**要素とその子は、この結果の一部で示すようにします。  
+ XPath クエリ (たとえば`/Customers[@CID="1"]`) が指定されて、このスキーマに対して生成される XML ドキュメントには含まれません、  **\<OD >** 要素とその子は、この結果の一部で示すようにします。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

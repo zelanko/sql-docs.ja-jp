@@ -2,16 +2,15 @@
 title: sqllogship アプリケーション |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: sqllogship
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
@@ -19,17 +18,17 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship**アプリケーションは、ログ配布構成のバックアップ、コピー、または復元操作、および関連するクリーンアップ タスクを実行します。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文規則では、次を参照してください。[コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)です。  
+ ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文規則では、次を参照してください。[コマンド プロンプト ユーティリティ リファレンス&#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,28 +62,28 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|Description|  
 |-----------|-----------------|  
 |0|トレースおよびデバッグのメッセージを出力しません。|  
-|1|エラー処理メッセージを出力します。|  
+|@shouldalert|エラー処理メッセージを出力します。|  
 |2|警告およびエラー処理メッセージを出力します。|  
 |**3**|情報メッセージ、警告、およびエラー処理メッセージを出力します。 これが既定値です。|  
 |4|すべてのデバッグおよびトレースのメッセージを出力します。|  
   
  **–logintimeout** *timeout_value*  
- サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。既定値は 15 秒です。 *timeout_value*は **int * * *。*  
+ サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。既定値は 15 秒です。 *timeout_value* は **int**** です。  
   
  **-querytimeout** *timeout_value*  
- 指定した操作を開始してからタイムアウトするまでの時間を指定します。既定では、タイムアウトはありません。 *timeout_value*は **int * * *。*  
+ 指定した操作を開始してからタイムアウトするまでの時間を指定します。既定では、タイムアウトはありません。 *timeout_value* は **int**** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  可能な限り、バックアップ、コピー、および復元ジョブでバックアップ、コピー、および復元を行うことをお勧めします。 バッチ操作や他のアプリケーションからこれらのジョブを開始するには、 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) ストアド プロシージャを呼び出します。  
   
  **sqllogship** で作成されるログ配布の履歴には、ログ配布のバックアップ、コピー、および復元ジョブで作成される履歴も含まれます。 **sqllogship** を繰り返し使用してログ配布構成のバックアップ、コピー、および復元操作を行う場合、対応するログ配布ジョブを無効にすることを検討してください。 詳細については、「 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)」をご覧ください。  
   
  **sqllogship** アプリケーション  (SqlLogShip.exe) は、x:\Program Files\Microsoft SQL Server\130\Tools\Binn ディレクトリにインストールされます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  **sqllogship** では Windows 認証を使用します。 コマンドを実行する Windows 認証アカウントには、Windows のディレクトリ アクセスおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の権限が必要です。 要件は、 **sqllogship** コマンドで **-backup**、 **-copy**、 **-restore** のいずれのオプションを指定するかで変わります。  
   
-|オプション|ディレクトリ アクセス|権限|  
+|オプション|ディレクトリ アクセス|アクセス許可|  
 |------------|----------------------|-----------------|  
 |**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
 |**-copy**|バックアップ ディレクトリの読み取りアクセス許可と、コピー ディレクトリの書き込みアクセス許可が必要です。|[sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャと同一の権限が必要です。|  
@@ -95,10 +94,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
- [log_shipping_secondary &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_help_log_shipping_primary_database &#40;です。TRANSACT-SQL と #41 です。](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
+ [log_shipping_secondary &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
