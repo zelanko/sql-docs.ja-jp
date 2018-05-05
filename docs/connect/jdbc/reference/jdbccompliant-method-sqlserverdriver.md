@@ -3,15 +3,12 @@ title: jdbcCompliant メソッド (SQLServerDriver) |Microsoft ドキュメン�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerDriver.jdbcCompliant
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf5dc875f5f02ffd8e14ae00c738e71797c2b502
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 357024153bb862ff369278096018dd544ead4ca8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

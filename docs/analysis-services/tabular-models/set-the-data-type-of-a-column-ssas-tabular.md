@@ -1,31 +1,29 @@
 ---
-title: "列のデータ型を設定 |Microsoft ドキュメント"
-ms.custom: 
+title: 列のデータ型を設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d9764c9bdd60c9189a609b1bccfd6e0383cd329e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-data-type-of-a-column"></a>列のデータ型の設定 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
+  モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>列のデータ型または表示形式を変更するには  
   

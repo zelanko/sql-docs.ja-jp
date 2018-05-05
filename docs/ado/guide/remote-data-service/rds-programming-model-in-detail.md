@@ -1,11 +1,9 @@
 ---
 title: RDS プログラミング モデルの詳細 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7bf61bda567af5d2791d3b3133425254a8511234
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7e11dbaf046124e837b6ef33b8eb98219371ae18
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS プログラミング モデルの詳細
 RDS のプログラミング モデルの主要な要素を次に示します。  
@@ -65,9 +62,9 @@ RDS のプログラミング モデルの主要な要素を次に示します。
   
  RDS オブジェクト モデルを使用してこの機能を具体化する、 [.rds ですDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- **.Rds ですDataControl**は 2 つの特徴があります。 1 つの側面は、データ ソースに関連します。 コマンドと接続情報を使用して設定した場合、**接続**と**SQL**のプロパティ、 **.rds ですDataControl**が自動的に使用されている、 **.rds ですDataSpace**を既定値への参照を作成する**RDSServer.DataFactory**オブジェクト。 **RDSServer.DataFactory**を使用して、**接続**プロパティの値をデータ ソースへの接続を使用して、 **SQL**プロパティの値を取得する、 **レコード セット**からデータ ソース、および戻り値、 **Recordset**オブジェクトを**.rds ですDataControl**です。  
+ **.Rds ですDataControl**は 2 つの特徴があります。 1 つの側面は、データ ソースに関連します。 コマンドと接続情報を使用して設定した場合、**接続**と**SQL**のプロパティ、 **.rds ですDataControl**が自動的に使用されている、 **.rds ですDataSpace**を既定値への参照を作成する**RDSServer.DataFactory**オブジェクト。 **RDSServer.DataFactory**を使用して、**接続**プロパティの値をデータ ソースへの接続を使用して、 **SQL**プロパティの値を取得する、 **レコード セット**からデータ ソース、および戻り値、 **Recordset**オブジェクトを **.rds ですDataControl**です。  
   
- 表示に関連する 2 番目の縦横比返された**Recordset**ビジュアル コントロール内の情報です。 コントロールが visual を関連付けることができます、 **.rds ですDataControl** (、プロセスでは、バインディングと呼ばれます) で、関連する情報にアクセスできるように**レコード セット**Microsoft® Internet Explorer で Web ページ上のクエリの結果を表示するオブジェクト。 各**.rds ですDataControl**オブジェクトは 1 つにバインド**Recordset** (たとえば、テキスト ボックス、コンボ ボックス、グリッド コントロールとなど) 1 つまたは複数のビジュアル コントロールへの 1 つのクエリの結果を表すオブジェクト。 1 つ以上あります**.rds ですDataControl**各ページ上のオブジェクト。 各**.rds ですDataControl**オブジェクトが別のデータ ソースに接続することができ、別のクエリの結果は含まれています。  
+ 表示に関連する 2 番目の縦横比返された**Recordset**ビジュアル コントロール内の情報です。 コントロールが visual を関連付けることができます、 **.rds ですDataControl** (、プロセスでは、バインディングと呼ばれます) で、関連する情報にアクセスできるように**レコード セット**Microsoft® Internet Explorer で Web ページ上のクエリの結果を表示するオブジェクト。 各 **.rds ですDataControl**オブジェクトは 1 つにバインド**Recordset** (たとえば、テキスト ボックス、コンボ ボックス、グリッド コントロールとなど) 1 つまたは複数のビジュアル コントロールへの 1 つのクエリの結果を表すオブジェクト。 1 つ以上あります **.rds ですDataControl**各ページ上のオブジェクト。 各 **.rds ですDataControl**オブジェクトが別のデータ ソースに接続することができ、別のクエリの結果は含まれています。  
   
  **.Rds ですDataControl**オブジェクトに移動、並べ替え、および関連付けられている行をフィルター処理用の独自のメソッドもあります**Recordset**オブジェクト。 これらのメソッドと同様に、ADO 上のメソッドとして同じ**Recordset**オブジェクト。  
   

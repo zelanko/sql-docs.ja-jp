@@ -1,28 +1,27 @@
 ---
-title: "レッスン 2: データの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'レッスン 2: データの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 103e6317751156edb53eb0abe43b5e8193989bee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2: データの追加
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 このレッスンの推定所要時間: **20 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前の「 [レッスン 1: 新しいテーブル モデル プロジェクトの作成](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)」を完了している必要があります。  
   
 ## <a name="create-a-connection"></a>接続の作成  
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  テーブルのインポート ウィザードで [**リレーショナル データベース**、] をクリックして**Microsoft SQL Server** > **次**です。  
   
-3.  **[Microsoft SQL Server データベースへの接続]** ページで、 **[接続の表示名]**に「 **Adventure Works DB from SQL**」と入力します。  
+3.  **[Microsoft SQL Server データベースへの接続]** ページで、 **[接続の表示名]** に「 **Adventure Works DB from SQL**」と入力します。  
   
 4.  **サーバー名**、AdventureWorksDW データベースをインストールしたサーバーの名前を入力します。  
   
@@ -58,12 +57,12 @@ ms.lasthandoff: 01/08/2018
   
     ![として、表形式の lesson2-tiw-名前](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
-6.  **[権限借用情報]** ページで、データをインポートおよび処理する際、Analysis Services がデータ ソースへの接続のために使用する資格情報を指定する必要があります。 **[特定の Windows ユーザー名とパスワード]** が選択されていることを確認し、 **[ユーザー名]** と **[パスワード]**に Windows のログオン資格情報を入力して、 **[次へ]**をクリックします。  
+6.  **[権限借用情報]** ページで、データをインポートおよび処理する際、Analysis Services がデータ ソースへの接続のために使用する資格情報を指定する必要があります。 **[特定の Windows ユーザー名とパスワード]** が選択されていることを確認し、 **[ユーザー名]** と **[パスワード]** に Windows のログオン資格情報を入力して、 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     > Windows のユーザー アカウントとパスワードを使用することで、最も安全なデータ ソース接続方法が提供されます。 詳細については、次を参照してください。[偽装](../analysis-services/tabular-models/impersonation-ssas-tabular.md)です。  
   
-7.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
+7.  **[データのインポート方法の選択]** ページで、**[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
   
 8.  **[テーブルとビューの選択]** ページで、 **DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および **FactInternetSales**の各テーブルのチェック ボックスをオンにします。  
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
     これらの列の値はインターネット売上分析と関連がないので、これらの列をインポートする必要はありません。 不要な列を排除することはことで、モデルより小さいより効率的です。  
   
-3.  他の列がすべてオンになっていることを確認し、 **[OK]**をクリックします。  
+3.  他の列がすべてオンになっていることを確認し、 **[OK]** をクリックします。  
   
     単語に注意してください**適用されたフィルター**に表示されるようになりました、**フィルターの詳細**内の列、 **DimCustomer**行ですそのリンクのテキスト説明が表示されます をクリックすると、。適用するフィルター。  
     
@@ -93,7 +92,7 @@ ms.lasthandoff: 01/08/2018
     
     **DimDate**
     
-      |[列]|  
+      |列|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
     **DimGeography**
   
-      |[列]|  
+      |列|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +110,7 @@ ms.lasthandoff: 01/08/2018
   
     **DimProduct**
   
-      |[列]|  
+      |列|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +125,21 @@ ms.lasthandoff: 01/08/2018
   
     **DimProductCategory**
   
-      |[列]|  
+      |列|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |[列]|  
+      |列|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |[列]|  
+      |列|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
@@ -158,9 +157,9 @@ ms.lasthandoff: 01/08/2018
     ![として表形式の lesson2-成功](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
-    > インポートしたテーブル間に自動的に作成されたリレーションシップを表示するために、 **[データ準備]** 行で、 **[詳細]**をクリックします。 
+    > インポートしたテーブル間に自動的に作成されたリレーションシップを表示するために、 **[データ準備]** 行で、 **[詳細]** をクリックします。 
   
-2.  **[閉じる]**をクリックします。  
+2.  **[閉じる]** をクリックします。  
   
     ウィザードを閉じるし、モデル デザイナー、インポートされたテーブルに表示されます。 
   

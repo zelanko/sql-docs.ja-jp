@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +18,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24abfe07598e3bac0502189204fadf7ca0e9b349
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4b0796f498bd70f5b16ceb50b82843cc891652bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みのガイドラインと制限 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
      XML 一括読み込みの前後にあるすべての情報を無視する、\<ルート > XML ドキュメント内の要素。 たとえば、XML 宣言、内部 DTD 定義、外部 DTD 参照、コメントなどは無視されます。  
   
--   マッピング スキーマで、2 つのテーブル (たとえば Customer と CustOrder) 間の主キー/外部キーのリレーションシップを定義する場合は、主キーがあるテーブルを先に記述する必要があります。 外部キー列があるテーブルは、後に記述します。 この理由は、スキーマ内のテーブルが識別される順序がデータベースに読み込みに使用される順序でことです。たとえば、次の XDR スキーマ エラーが発生、XML 一括読み込みで使用した場合、 **\<順序 >**する前に要素が記述されている、 **\<顧客 >**要素。 CustOrder の CustomerID 列は、Cust テーブル内の CustomerID 主キー列を参照する外部キー列です。  
+-   マッピング スキーマで、2 つのテーブル (たとえば Customer と CustOrder) 間の主キー/外部キーのリレーションシップを定義する場合は、主キーがあるテーブルを先に記述する必要があります。 外部キー列があるテーブルは、後に記述します。 この理由は、スキーマ内のテーブルが識別される順序がデータベースに読み込みに使用される順序でことです。たとえば、次の XDR スキーマ エラーが発生、XML 一括読み込みで使用した場合、 **\<順序 >** する前に要素が記述されている、 **\<顧客 >** 要素。 CustOrder の CustomerID 列は、Cust テーブル内の CustomerID 主キー列を参照する外部キー列です。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
 -   かどうか、スキーマで指定されませんオーバーフロー列を使用して、 **sql:overflow-フィールド**注釈、XML 一括読み込み、XML ドキュメント内に存在が、マッピング スキーマに記述されていないデータは無視されます。  
   
-     XML 一括読み込みでは、XML データ ストリーム内に既知のタグが検出されると常に、指定のマッピング スキーマが適用されます。 XML ドキュメントに存在していてもスキーマに記述されていないデータは無視されます。 たとえば、説明するマッピング スキーマがある場合、 **\<顧客 >**要素。 XML データ ファイルが、  **\<AllCustomers >**タグ (スキーマに記述されていません) を囲むすべてのルート、 **\<顧客 >**要素。  
+     XML 一括読み込みでは、XML データ ストリーム内に既知のタグが検出されると常に、指定のマッピング スキーマが適用されます。 XML ドキュメントに存在していてもスキーマに記述されていないデータは無視されます。 たとえば、説明するマッピング スキーマがある場合、 **\<顧客 >** 要素。 XML データ ファイルが、  **\<AllCustomers >** タグ (スキーマに記述されていません) を囲むすべてのルート、 **\<顧客 >** 要素。  
   
     ```  
     <AllCustomers>  
@@ -96,9 +93,9 @@ ms.lasthandoff: 04/16/2018
     </AllCustomers>  
     ```  
   
-     この場合、XML 一括読み込みは無視されます、  **\<AllCustomers >**要素からマッピングが開始し、 **\<顧客 >**要素。 XML ドキュメントに存在していてもスキーマに記述されていない要素は無視されます。  
+     この場合、XML 一括読み込みは無視されます、  **\<AllCustomers >** 要素からマッピングが開始し、 **\<顧客 >** 要素。 XML ドキュメントに存在していてもスキーマに記述されていない要素は無視されます。  
   
-     含む別の XML ソース データ ファイル**\<順序 >**要素。 この要素はマッピング スキーマには記述されていません。  
+     含む別の XML ソース データ ファイル**\<順序 >** 要素。 この要素はマッピング スキーマには記述されていません。  
   
     ```  
     <AllCustomers>  
@@ -114,11 +111,11 @@ ms.lasthandoff: 04/16/2018
     </AllCustomers>  
     ```  
   
-     XML 一括読み込みでは、これらは無視されます**\<順序 >**要素。 使用する場合は、 **sql:overflow-フィールド**XML 一括読み込みで、オーバーフロー列として列を識別するスキーマの注釈は、この列のすべての未使用データを格納します。  
+     XML 一括読み込みでは、これらは無視されます**\<順序 >** 要素。 使用する場合は、 **sql:overflow-フィールド**XML 一括読み込みで、オーバーフロー列として列を識別するスキーマの注釈は、この列のすべての未使用データを格納します。  
   
 -   CDATA セクションとエンティティ参照は、データベースに保存される前に、同等の文字列に変換されます。  
   
-     この例では、CDATA セクションでの値がラップ、  **\<City >**要素。 これを挿入する前に、XML 一括読み込みが、文字列値 ("NY") を抽出、  **\<City >**要素がデータベースにします。  
+     この例では、CDATA セクションでの値がラップ、  **\<City >** 要素。 これを挿入する前に、XML 一括読み込みが、文字列値 ("NY") を抽出、  **\<City >** 要素がデータベースにします。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -151,7 +148,7 @@ ms.lasthandoff: 04/16/2018
     </Schema>  
     ```  
   
-     この XML データ、 **HireDate**属性が 2 番目の見つからない**\<顧客 >**要素。 XML 一括読み込みで 2 つ目を挿入するときに**\<顧客 >**要素がデータベースに、スキーマで指定されている既定値が使用されます。  
+     この XML データ、 **HireDate**属性が 2 番目の見つからない**\<顧客 >** 要素。 XML 一括読み込みで 2 つ目を挿入するときに**\<顧客 >** 要素がデータベースに、スキーマで指定されている既定値が使用されます。  
   
     ```  
     <ROOT>  

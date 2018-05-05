@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +18,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3c3fadf12229847961842162130a8dbdfe21d40
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7c897d32c8373301f62e83ef35f868a6435c3dcf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 の DiffGram の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +57,19 @@ ms.lasthandoff: 04/16/2018
  この要素の名前**DataInstance**、このドキュメントでは説明のために使用します。 たとえば、.NET framework での値のデータセットから DiffGram を生成した場合、**名前**この要素の名前としてデータセットのプロパティを使用するとします。 このブロックには、変更後のすべての関連データを指定します。変更されていないデータも指定できます。 DiffGram の処理ロジックでは、このブロック内の要素を無視する、 **diffgr:hasChanges**属性が指定されていません。  
   
  **\<diffgr:before>**  
- 省略可能なブロックです。更新または削除する必要がある元のレコード インスタンス (要素) を指定します。 変更 (更新または削除) されるすべてのデータベースのテーブルでは、DiffGram 必要がありますの最上位要素として表示されます、 **\<する前に >**ブロックします。  
+ 省略可能なブロックです。更新または削除する必要がある元のレコード インスタンス (要素) を指定します。 変更 (更新または削除) されるすべてのデータベースのテーブルでは、DiffGram 必要がありますの最上位要素として表示されます、 **\<する前に >** ブロックします。  
   
  **\<diffgr:errors>**  
  省略可能なブロックです。DiffGram の処理ロジックでは無視されます。  
   
 ## <a name="diffgram-annotations"></a>DiffGram の注釈  
- これらの注釈は DiffGram 名前空間で定義されている**"urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}-diffgram-01"**:  
+ これらの注釈は DiffGram 名前空間で定義されている **"urn: スキーマ-microsoft-{urn:schemas-microsoft-com:xml-sql}-diffgram-01"**:  
   
  **id**  
- この属性は内の要素のペアを使用、 **\<する前に >**と **\<DataInstance >**ブロックします。  
+ この属性は内の要素のペアを使用、 **\<する前に >** と **\<DataInstance >** ブロックします。  
   
  **hasChanges**  
- 挿入または更新操作では、DiffGram は、値は、この属性を指定する必要があります**挿入**または**変更**です。 この属性が存在しない場合、対応する要素で、  **\<DataInstance >**処理では無視されますロジックや更新を実行します。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。  
+ 挿入または更新操作では、DiffGram は、値は、この属性を指定する必要があります**挿入**または**変更**です。 この属性が存在しない場合、対応する要素で、  **\<DataInstance >** 処理では無視されますロジックや更新を実行します。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。  
   
  **parentID**  
  この属性は、DiffGram の要素間の親子リレーションシップを指定するときに使用します。 この属性にのみ表示されます、\<する前に > ブロックします。 この属性は更新の適用時に SQLXML で使用されます。 親子リレーションシップは、DiffGram の要素の処理順序を決定するために使用されます。  
@@ -82,9 +79,9 @@ ms.lasthandoff: 04/16/2018
   
 |操作|Description|  
 |---------------|-----------------|  
-|Insert|要素が表示されたら、DiffGram は挿入操作を示す、  **\<DataInstance >**ブロックではなく、対応する**\<する前に >**ブロック、および、 **diffgr:hasChanges**属性を指定する (**diffgr:hasChanges = 挿入**) 要素にします。 DiffGram で指定されているレコード インスタンスを挿入します。 ここでは、、  **\<DataInstance >**データベースにブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が指定されていない、処理ロジックで、要素は無視され、挿入は実行されません。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。|  
-|Update|内の要素がある場合、DiffGram は更新操作を示す、\<する前に > が対応する要素が存在するブロック、  **\<DataInstance >**ブロック (つまり、両方の要素である、 **diffgr:id**同じ値を持つ属性) と**diffgr:hasChanges**値を持つ属性が指定されて**変更**要素で、 **\<DataInstance >**ブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が要素で指定されていない、  **\<DataInstance >**ブロック、処理ロジックで、エラーが返されます。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >**ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが更新される順序を決定します。|  
-|Del|要素が表示されたら、DiffGram は削除操作を示す、 **\<する前に >**ブロックではなく、対応する **\<DataInstance >**ブロックします。 DiffGram がで指定されているレコード インスタンスを削除するこの例では、 **\<する前に >**データベースからブロックされます。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >**ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが削除される順序を決定します。|  
+|Insert|要素が表示されたら、DiffGram は挿入操作を示す、  **\<DataInstance >** ブロックではなく、対応する**\<する前に >** ブロック、および、 **diffgr:hasChanges**属性を指定する (**diffgr:hasChanges = 挿入**) 要素にします。 DiffGram で指定されているレコード インスタンスを挿入します。 ここでは、、  **\<DataInstance >** データベースにブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が指定されていない、処理ロジックで、要素は無視され、挿入は実行されません。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。|  
+|Update|内の要素がある場合、DiffGram は更新操作を示す、\<する前に > が対応する要素が存在するブロック、  **\<DataInstance >** ブロック (つまり、両方の要素である、 **diffgr:id**同じ値を持つ属性) と**diffgr:hasChanges**値を持つ属性が指定されて**変更**要素で、 **\<DataInstance >** ブロックします。<br /><br /> 場合、 **diffgr:hasChanges**属性が要素で指定されていない、  **\<DataInstance >** ブロック、処理ロジックで、エラーが返されます。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >** ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが更新される順序を決定します。|  
+|Del|要素が表示されたら、DiffGram は削除操作を示す、 **\<する前に >** ブロックではなく、対応する **\<DataInstance >** ブロックします。 DiffGram がで指定されているレコード インスタンスを削除するこの例では、 **\<する前に >** データベースからブロックされます。 作業用サンプルについては、次を参照してください。 [DiffGram の例&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)です。<br /><br /> 場合**diffgr:parentID**で指定された、 **\<する前に >** ブロックで指定されている要素の親子リレーションシップ**parentID**で使用されますレコードが削除される順序を決定します。|  
   
 > [!NOTE]  
 >  DiffGram にパラメーターを渡すことはできません。  

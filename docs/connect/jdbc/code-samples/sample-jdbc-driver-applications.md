@@ -3,25 +3,22 @@ title: サンプル JDBC ドライバー アプリケーション |Microsoft ド
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: daca915d7553d62a543487d048cbef025283c89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: ee89352cca231307b2f55402fb04b0c709786bd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-jdbc-driver-applications"></a>サンプル JDBC Driver アプリケーション
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

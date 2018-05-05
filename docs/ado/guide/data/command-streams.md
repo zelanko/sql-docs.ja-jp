@@ -1,11 +1,9 @@
 ---
 title: コマンド ストリーム |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35efef1459e2a44d19602ce77adeacb6b01ff81b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a98dc21338ef492aa126e70cc28bc636acb2b91b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-streams"></a>コマンド ストリーム
 ADO で指定された文字列の形式でコマンドの入力を常にサポートされている、 **CommandText**プロパティです。 代わりに、ADO 2.7 以降を使用することも、情報のストリーム コマンドの入力のストリームを割り当てることによって、 **CommandStream**プロパティです。 ADO を割り当てることができます**ストリーム**オブジェクト、または COM をサポートする任意のオブジェクト**IStream**インターフェイスです。  

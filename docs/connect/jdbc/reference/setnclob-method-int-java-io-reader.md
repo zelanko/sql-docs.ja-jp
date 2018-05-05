@@ -3,26 +3,22 @@ title: setNClob (int, java.io.Reader) メソッド |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff09ba24027c061e935b45bdc1e98bf9c422d52e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 2e6f9e15ba04b383ccf7955c85c0470a98f91ac7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setnclob-method-int-javaioreader"></a>setNClob (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

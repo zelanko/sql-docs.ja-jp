@@ -1,11 +1,9 @@
 ---
 title: プロシージャの追加メソッドの例 (VB) |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a46c7dd2ab095a6bc50dab15cf3a1b9a1cb3024d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedures-append-method-example-vb"></a>プロシージャは、メソッドの例 (VB) を追加します。
 次のコードを使用する方法を示しています、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトおよび[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドを基になるデータ ソースで、新しいプロシージャを作成します。  

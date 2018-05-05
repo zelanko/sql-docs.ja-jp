@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
@@ -21,13 +20,12 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 279ea0c6232ebe1b81c67dedbde78d7614e1dbc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 |DBPROP_COMMITPRESERVE|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティでコミット操作後の行セットの動作が決まります。<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが有効な行セットを保持します。<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コミット操作後の行セットを無効になります。 行セット オブジェクトの機能は、ほぼ失われます。 のみをサポート**IUnknown**操作と、保留状態の行とアクセサー ハンドルのリリースです。|  
 |DBPROP_DEFERRED|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: が VARIANT_TRUE に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、行セットのサーバー カーソルを使用しようとしています。 **テキスト**、 **ntext**、および**イメージ**アプリケーションによってアクセスされるまでの列は、サーバーから返されません。|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、ストレージ オブジェクトで即時更新モードをサポートしています。<br /><br /> シーケンシャル ストリーム オブジェクトのデータに加えた変更は、直ちに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信されます。 変更は、行セットのトランザクション モードに基づいてコミットされます。|  
-|DBPROP_HIDDENCOLUMNS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> **説明:**列数を非表示<br /><br /> DBPROP_UNIQUEROWS が VARIANT_TRUE の場合、DBPROP_HIDDENCOLUMNS プロパティは、行セット内の行を一意に識別するためにプロバイダーによって追加された追加の "非表示" 列の数を返します。 これらの列がによって返される**icolumnsinfo::getcolumninfo**と**icolumnsrowset::getcolumnsrowset**です。 ただし、これらは含まれませんによって返される行の数の*pcColumns*によって返される引数**icolumnsinfo::getcolumninfo**です。<br /><br /> 表される列の合計数を決定する、 *:getcolumninfo*によって返される構造体**icolumnsinfo::getcolumninfo**コンシューマーが dbprop _ の値を加算する非表示の列を含む返される列の数に HIDDENCOLUMNS **icolumnsinfo::getcolumninfo**で*pcColumns*です。 DBPROP_UNIQUEROWS が VARIANT_FALSE の場合、DBPROP_HIDDENCOLUMNS は 0 です。|  
+|DBPROP_HIDDENCOLUMNS|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> **説明:** 列数を非表示<br /><br /> DBPROP_UNIQUEROWS が VARIANT_TRUE の場合、DBPROP_HIDDENCOLUMNS プロパティは、行セット内の行を一意に識別するためにプロバイダーによって追加された追加の "非表示" 列の数を返します。 これらの列がによって返される**icolumnsinfo::getcolumninfo**と**icolumnsrowset::getcolumnsrowset**です。 ただし、これらは含まれませんによって返される行の数の*pcColumns*によって返される引数**icolumnsinfo::getcolumninfo**です。<br /><br /> 表される列の合計数を決定する、 *:getcolumninfo*によって返される構造体**icolumnsinfo::getcolumninfo**コンシューマーが dbprop _ の値を加算する非表示の列を含む返される列の数に HIDDENCOLUMNS **icolumnsinfo::getcolumninfo**で*pcColumns*です。 DBPROP_UNIQUEROWS が VARIANT_FALSE の場合、DBPROP_HIDDENCOLUMNS は 0 です。|  
 |DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/w 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、すべての行セットにこれらのインターフェイスをサポートしています。|  
 |DBPROP_IColumnsRowset|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート、 **IColumnsRowset**インターフェイスです。|  
 |DBPROP_IConnectionPointContainer|R/W 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : IConnectionPointContainer。 VARIANT_TRUE の場合は、指定したインターフェイスを行セットがサポートします。 VARIANT_FALSE の場合は、指定したインターフェイスを行セットがサポートしません。 インターフェイスをサポートするプロバイダーは、VARIANT_TRUE を指定してインターフェイスに関連付けられたプロパティをサポートする必要があります。 これらのプロパティは、主に、CommandProperties::SetProperties を介してインターフェイスを要求するために使用されます。|  

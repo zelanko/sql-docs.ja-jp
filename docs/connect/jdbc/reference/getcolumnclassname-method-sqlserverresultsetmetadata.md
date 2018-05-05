@@ -3,15 +3,12 @@ title: getColumnClassName メソッド (SQLServerResultSetMetaData) |Microsoft �
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.getColumnClassName
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11e09bd404348f7f670f339238a7bf36a75cdf4a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 1b847b1556324bb9a85cfb965a9f5b188e756952
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +40,7 @@ public java.lang.String getColumnClassName(int column)
 #### <a name="parameters"></a>パラメーター  
  *column*  
   
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  A**文字列**クラスの完全修飾名を格納しています。  

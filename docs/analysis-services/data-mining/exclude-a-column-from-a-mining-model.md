@@ -1,35 +1,33 @@
 ---
-title: "マイニング モデルから列を除外 |Microsoft ドキュメント"
-ms.custom: 
+title: マイニング モデルから列を除外 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - excluding mining model columns
 - mining models [Analysis Services], columns
 - columns [data mining], excluding
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9e175dde4ca78636c909b20e3898ee582f1adb9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 584303518d464508dd790f7c2488105f8c504baf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>マイニング モデルからの列の除外
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-新しいマイニング モデルを作成するとき、基となるマイニング構造に存在するすべての列を使用しないことがあります。 たとえば、顧客名列をドリルスルー用に追加し、モデリングには使用しない場合があります。 または、列の複数のコピーをそれぞれ異なる分離で作成して、各モデルで 1 つのコピーのみ使用し、残りは無視する場合があります。 複数の異なるモデルで入力列を選択的に追加して、追加した変数が出力列に与える影響を確認することもできます。  
+  新しいマイニング モデルを作成するとき、基となるマイニング構造に存在するすべての列を使用しないことがあります。 たとえば、顧客名列をドリルスルー用に追加し、モデリングには使用しない場合があります。 または、列の複数のコピーをそれぞれ異なる分離で作成して、各モデルで 1 つのコピーのみ使用し、残りは無視する場合があります。 複数の異なるモデルで入力列を選択的に追加して、追加した変数が出力列に与える影響を確認することもできます。  
   
  列の組み合わせごとに新しいマイニング構造を作成する必要はありません。代わりに、特定のモデルで使用されていないことを示すフラグを列に設定できます。  
   

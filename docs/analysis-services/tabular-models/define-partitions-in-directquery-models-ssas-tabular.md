@@ -1,31 +1,29 @@
 ---
-title: "パーティションと DirectQuery モデルでの定義 |Microsoft ドキュメント"
-ms.custom: 
+title: パーティションと DirectQuery モデルでの定義 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 21e629bbac90f30562c6b8434e2a73a71fdea4ed
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 7b184e2c6f28a86a31f7c10913eccaafa3c2561a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>パーティションと DirectQuery モデルの定義
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでパーティションの概要については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
+  ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでパーティションの概要については、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)です。  
   
 > [!NOTE]  
 >  1 つのテーブルに対して複数のパーティションを設定することができますが、DirectQuery モードでは、クエリの実行に使用できるのはそのうちの 1 つのみです。 この単一のパーティションの要件は、すべての互換性レベルの DirectQuery モデルに適用されます。  
@@ -51,19 +49,19 @@ ms.lasthandoff: 02/23/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のモデル デザイナーで、パーティション テーブルが含まれているテーブル (タブ) をクリックします。  
   
-2.  **[テーブル]** メニューをクリックし、 **[パーティション]**をクリックします。  
+2.  **[テーブル]** メニューをクリックし、 **[パーティション]** をクリックします。  
   
-3.  **[パーティション マネージャー]**で、現在の直接クエリ パーティションであるパーティションはパーティション名に **(DirectQuery)** というプレフィックスで示されます。  
+3.  **[パーティション マネージャー]** で、現在の直接クエリ パーティションであるパーティションはパーティション名に **(DirectQuery)** というプレフィックスで示されます。  
   
-     **[パーティション]** ボックスの一覧で別のパーティションを選択し、 **[DirectQuery として設定]**をクリックします。 **[DirectQuery として設定]** ボタンは、現在の DirectQuery パーティションが選択されている場合は無効になり、モデルが直接 Direct Query モードに対して有効になっていない場合は表示されません。  
+     **[パーティション]** ボックスの一覧で別のパーティションを選択し、 **[DirectQuery として設定]** をクリックします。 **[DirectQuery として設定]** ボタンは、現在の DirectQuery パーティションが選択されている場合は無効になり、モデルが直接 Direct Query モードに対して有効になっていない場合は表示されません。  
   
-4.  必要に応じて、処理オプションを変更し、 **[OK]**をクリックします。  
+4.  必要に応じて、処理オプションを変更し、 **[OK]** をクリックします。  
   
 #### <a name="change-the-directquery-partition-for-a-deployed-tabular-model"></a>配置済みテーブル モデルの DirectQuery パーティションの変更  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、オブジェクト エクスプローラーにモデル データベースを開きます。  
   
-2.  **[テーブル]** ノードを展開し、パーティション分割されたテーブルを右クリックして **[パーティション]**を選択します。  
+2.  **[テーブル]** ノードを展開し、パーティション分割されたテーブルを右クリックして **[パーティション]** を選択します。  
   
      DirectQuery モードで使用するように指定されたパーティションには、パーティション名にプレフィックス (DirectQuery) があります。  
   

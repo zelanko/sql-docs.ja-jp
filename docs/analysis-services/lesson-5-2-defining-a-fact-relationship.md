@@ -1,29 +1,27 @@
 ---
-title: "ファクト リレーションシップの定義 |Microsoft ドキュメント"
-ms.custom: 
+title: ファクト リレーションシップの定義 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d27a6da971ebd1927080235a56ccab9239ff02d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>レッスン 5-2-ファクト リレーションシップの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,35 +45,35 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="defining-the-internet-sales-orders-fact-dimension"></a>Internet Sales Orders ファクト ディメンションの定義  
   
-1.  ソリューション エクスプローラーで **[ディメンション]**を右クリックし、 **[新しいディメンション]**をクリックします。  
+1.  ソリューション エクスプローラーで **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。  
   
-2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]**をクリックします。  
+2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]**をクリックします。  
+3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]** をクリックします。  
   
 4.  **[基になる情報の指定]** ページで、 **Adventure Works DW 2012** データ ソース ビューが選択されていることを確認します。  
   
-5.  **[メイン テーブル]** ボックスの一覧で、 **[InternetSales]**を選択します。  
+5.  **[メイン テーブル]** ボックスの一覧で、 **[InternetSales]** を選択します。  
   
 6.  **[キー列]** ボックスの一覧に **[SalesOrderNumber]** と **[SalesOrderLineNumber]** が表示されていることを確認します。  
   
-7.  **[名前列]** ボックスの一覧から **[SalesOrderLineNumber]**を選択します。  
+7.  **[名前列]** ボックスの一覧から **[SalesOrderLineNumber]** を選択します。  
   
-8.  **[次へ]**をクリックします。  
+8.  **[次へ]** をクリックします。  
   
-9. **[関連テーブルの選択]** ページで、すべてのテーブルの横のチェック ボックスをオフにし、 **[次へ]**をクリックします。  
+9. **[関連テーブルの選択]** ページで、すべてのテーブルの横のチェック ボックスをオフにし、 **[次へ]** をクリックします。  
   
 10. **[ディメンション属性の選択]** ページで、ヘッダーのチェック ボックスを 2 回クリックしてすべてのチェック ボックスをオフにします。 **Sales Order Number** 属性はキー属性なので、選択されたままになります。  
   
-11. **Customer PO Number** 属性を選択し、 **[次へ]**をクリックします。  
+11. **Customer PO Number** 属性を選択し、 **[次へ]** をクリックします。  
   
 12. **[ウィザードの完了]** ページで、名前を **Internet Sales Order Details** に変更します。 **[完了]** をクリックしてウィザードを終了します。  
   
-13. **[ファイル]** メニューの **[すべてを保存]**をクリックします。  
+13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-14. **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[Sales Order Number]**をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **Item Description**に変更します。  
+14. **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[Sales Order Number]** をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **Item Description**に変更します。  
   
-15. **NameColumn** プロパティ セルの参照ボタン ( **[...]**) をクリックします。 **[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]**を選択して、 **[OK]**をクリックします。  
+15. **NameColumn** プロパティ セルの参照ボタン ( **[...]**) をクリックします。 **[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
@@ -87,9 +85,9 @@ ms.lasthandoff: 02/15/2018
   
     既定では、このディメンションは MOLAP ディメンションに格納されます。 このストレージ モードを ROLAP に変更すると、処理時間を短縮し、記憶領域を節約できますが、クエリのパフォーマンスが低下します。 このチュートリアルでは、MOLAP ストレージ モードを使用します。  
   
-20. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]**をクリックします。  
+20. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]** をクリックします。  
   
-21. **[キューブ ディメンションの追加]**ダイアログ ボックスで、 **[Internet Sales Order Details]** を選択し、 **[OK]**をクリックします。  
+21. **[キューブ ディメンションの追加]** ダイアログ ボックスで、 **[Internet Sales Order Details]** を選択し、 **[OK]** をクリックします。  
   
 ## <a name="defining-a-fact-relationship-for-the-fact-dimension"></a>ファクト ディメンションへのファクト リレーションシップの定義  
   
@@ -105,7 +103,7 @@ ms.lasthandoff: 02/15/2018
   
     ![定義するリレーションシップ ダイアログ ボックス](../analysis-services/media/l5-factrelationship-2.gif "リレーションシップの定義 ダイアログ ボックス")  
   
-3.  **[キャンセル]**をクリックします。  
+3.  **[キャンセル]** をクリックします。  
   
 ## <a name="browsing-the-cube-by-using-the-fact-dimension"></a>ファクト ディメンションを使用したキューブの表示  
   
@@ -115,7 +113,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  データ ペインからすべてのメジャーと階層を消去します。次に、データ ペインのデータ領域に **Internet Sales-Sales Amount** メジャーを追加します。  
   
-4.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]**の順にクリックし、 **[Adam Powell]**を右クリックして **[フィルターに追加]**をクリックします。  
+4.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
   
     フィルタリングを使用し、1 顧客から返される販売注文数を制限すると、クエリ パフォーマンスを大幅に犠牲にすることなく、基となる詳細情報を大規模なファクト テーブルから検索できます。  
   

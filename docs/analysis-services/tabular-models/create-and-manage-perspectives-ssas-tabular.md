@@ -1,40 +1,38 @@
 ---
-title: "作成し、パースペクティブの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: 作成し、パースペクティブの管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e5c74ca6dd103d77b8f4a747e8c52543d777169d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-perspectives"></a>作成し、パースペクティブの管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-パースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをモデルに対して的を絞って作成するための、表示可能なサブセットを定義できます。 このトピックのタスクでは、モデル デザイナーで **[パースペクティブ]** ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法について説明します。  
+  パースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをモデルに対して的を絞って作成するための、表示可能なサブセットを定義できます。 このトピックのタスクでは、モデル デザイナーで **[パースペクティブ]** ダイアログ ボックスを使用して、パースペクティブを作成し管理する方法について説明します。  
   
 ## <a name="tasks"></a>処理手順  
- パースペクティブを作成するには、 **[パースペクティブ]** ダイアログ ボックスを使用します。このダイアログ ボックスでは、パースペクティブの追加、編集、削除、コピー、表示の各操作を実行できます。 **[パースペクティブ]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[パースペクティブ]**をクリックします。  
+ パースペクティブを作成するには、 **[パースペクティブ]** ダイアログ ボックスを使用します。このダイアログ ボックスでは、パースペクティブの追加、編集、削除、コピー、表示の各操作を実行できます。 **[パースペクティブ]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[パースペクティブ]** をクリックします。  
   
 ###  <a name="bkmk_add"></a> パースペクティブを追加するには  
   
--   新しいパースペクティブを追加するには、 **[新しいパースペクティブ]**をクリックします。 パースペクティブに含めるフィールド オブジェクトのチェック ボックスをオンまたはオフにできます。新しいパースペクティブの名前を指定します。  
+-   新しいパースペクティブを追加するには、 **[新しいパースペクティブ]** をクリックします。 パースペクティブに含めるフィールド オブジェクトのチェック ボックスをオンまたはオフにできます。新しいパースペクティブの名前を指定します。  
   
      すべてのフィールド オブジェクトのフィールドが空のパースペクティブを作成した場合、そのパースペクティブを使用するユーザーには空の "フィールドの一覧" が表示されます。 パースペクティブには 1 つ以上のテーブルおよび列を含める必要があります。  
   
@@ -44,7 +42,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="bkmk_rename"></a> パースペクティブの名前を変更するには  
   
--   パースペクティブの列のヘッダー (パースペクティブの名前) にマウス ポインターを合わせると、 **[名前の変更]** ボタンが表示されます。 パースペクティブの名前を変更するには、 **[名前の変更]**をクリックした後、新しい名前を入力するか、既存の名前を編集します。  
+-   パースペクティブの列のヘッダー (パースペクティブの名前) にマウス ポインターを合わせると、 **[名前の変更]** ボタンが表示されます。 パースペクティブの名前を変更するには、 **[名前の変更]** をクリックした後、新しい名前を入力するか、既存の名前を編集します。  
   
 ###  <a name="bkmk_delete"></a> パースペクティブを削除するには  
   

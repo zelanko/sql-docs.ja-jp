@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0da42fc1b6a06c0a17f758bf692f065c1e3866c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9ac0d0a9cd8af41eddf90a0aeea85bcf7013ee27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-別の式から式を検索し、見つかった場合は開始位置を返します。
+この関数は、2 番目の文字式内の 1 つの文字式を検索して、見つかった場合には最初の式の開始位置を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,25 +50,25 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 ## <a name="arguments"></a>引数  
 *expressionToFind*  
-検索するシーケンスを含む文字[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *expressionToFind* は 8,000 文字に制限されます。
+検索するシーケンスを含む文字[式](../../t-sql/language-elements/expressions-transact-sql.md)。 *expressionToFind* には 8000 文字の制限があります。
   
 *expressionToSearch*  
-検索する文字式です。
+検索する文字式。
   
 *start_location*  
-検索が開始される **integer** 型または **bigint** 型の式を指定します。 *start_location* を指定しない場合、または負の値や 0 を指定した場合は、*expressionToSearch* の先頭から検索が開始されます。
+検索が開始される **integer** 型または **bigint** 型の式。 *start_location* を指定しない場合、または負の値や 0 を指定した場合は、*expressionToSearch* の先頭から検索が開始されます。
   
 ## <a name="return-types"></a>戻り値の型
-**bigint** 場合 *expressionToSearch* は、 **varchar (max)**, 、**nvarchar (max)**, 、または **varbinary (max)** データ型。 それ以外の場合、 **int**です。
+*expressionToSearch* が **varchar(max)**、**nvarchar(max)**、または **varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
 ## <a name="remarks"></a>Remarks  
-いずれか *expressionToFind* または *expressionToSearch* が Unicode データ型の (**nvarchar** または **nchar**)、もう一方がありませんが、Unicode データ型に変換されますが、他のです。 Charindex 関数と併用できない **text**、**ntext**、および **image** データ型。
+*expressionToFind* または *expressionToSearch* のいずれかの式が Unicode データ型 (**nchar** または **nvarchar**) の場合で、他の式がそうでない場合、CHARINDEX 関数はその他の式を Unicode データ型に変換します。 CHARINDEX は、**image**、**ntext**、または **text** データ型では使用できません。
   
-いずれか *expressionToFind* または *expressionToSearch* が NULL の場合、CHARINDEX は NULL を返します。
+*expressionToFind* 式または *expressionToSearch* のいずれかに NULL 値がある場合、CHARINDEX は NULL を返します。
   
-場合 *expressionToFind* 内に見つからなかった *expressionToSearch*, 、CHARINDEX は 0 を返します。
+CHARINDEX によって *expressionToSearch* 内で *expressionToFind* が見つからない場合、CHARINDEX は 0 を返します。
   
-CHARINDEX は、入力の照合順序に基づいて比較を行います。 指定した照合順序で比較を実行するには、COLLATE を使って入力に明示的な照合順序を適用できます。
+CHARINDEX は、入力の照合順序に基づいて比較を行います。 特定の照合順序で比較を行うには、COLLATE を使用して、入力に明示的な照合順序を適用します。
   
 開始位置は 0 ではなく 1 を基準とします。
   
@@ -80,7 +80,7 @@ SC の照合順序を使用する場合、*start_location* と戻り値では、
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. 式の開始位置を返す  
-次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Document` テーブルの `DocumentSummary` 列で `bicycle` という文字シーケンスが開始される位置を返します。
+この例では、検索された文字列値の変数 `@document` で `bicycle` を検索します。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. 特定の位置から検索する  
-次の例では、オプションの *start_location* パラメーターを使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `DocumentSummary` 列の 5 文字目から `vital` の検索を開始します。
+この例では、オプションの *start_location* パラメーターを使用して、検索された文字列値の変数 `@document` の 5 文字目で `vital` の検索を開始します。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. 存在しない式を検索する  
-次の例では、*expressionToFind* から *expressionToSearch* が検出できない場合の結果セットを示します。
+この例では、CHARINDEX が *expressionToSearch* で *expressionToFind* を検出できない場合の結果セットを示します。
   
 ```sql
 DECLARE @document varchar(64);  
@@ -140,7 +140,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. 大文字小文字を区別する検索を実行する  
-次の例では、大文字と小文字を区別して、`'This is a Test``'` に含まれる文字列 `'TEST'` を検索します。
+この例では、大文字と小文字を区別して、検索された文字列 `'This is a Test``'` に含まれる文字列 `'TEST'` を検索します。
   
 ```sql
 USE tempdb;  
@@ -158,7 +158,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-次の例では、大文字と小文字を区別して、`'This is a Test'` に含まれる文字列 `'Test'` を検索します。
+この例では、大文字と小文字を区別して、`'This is a Test'` に含まれる文字列 `'Test'` を検索します。
   
 ```sql
   
@@ -173,11 +173,11 @@ SELECT CHARINDEX ( 'Test',
   
 ```
 -----------
-13
+11
 ```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. 大文字小文字を区別しない検索を実行する  
-次の例では、大文字と小文字を区別せずに、`'This is a Test'` に含まれる文字列 `'TEST'` を検索します。
+この例では、大文字と小文字を区別せずに、`'This is a Test'` に含まれる文字列 `'TEST'` を検索します。
   
 ```sql
   
@@ -199,7 +199,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. 文字列式の先頭から検索する  
-次の例では、文字列内の位置 1 (最初の文字) から開始して、`This is a string` の `is` 文字列の最初の位置を返します。
+この例では、`This is a string` の位置 1 (最初の文字) から開始して、文字列 `This is a string` に含まれる文字列 `is` の最初の位置を返します。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -213,7 +213,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. 最初の位置以外の位置から検索する  
-次の例では、4 番目の位置から開始して、`This is a string` の `is` 文字列の最初の位置を返します。
+この例では、位置 4 (4 番目の文字) から開始して、文字列 `This is a string` に含まれる文字列 `is` の最初の位置を返します。
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -227,7 +227,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. 文字列が見つからない場合の結果  
-次の例は、*string_pattern* が検索文字列に見つからない場合の戻り値を示します。
+この例では、CHARINDEX で文字列 *string_pattern* が検索文字列に見つからない場合の戻り値を示します。
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  

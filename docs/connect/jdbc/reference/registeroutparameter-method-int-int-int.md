@@ -3,15 +3,12 @@ title: registerOutParameter (int、int, int) メソッド |Microsoft ドキュ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.registerOutParameter (int, int, int)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b29ccc540b7b165ad54245dd4dfdb5299a9d48d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: e8e58c5cffd9f20ac238588de4dbb0f4d07b23f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>registerOutParameter (int, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

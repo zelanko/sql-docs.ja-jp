@@ -3,15 +3,12 @@ title: getRef (int) メソッド (SQLServerResultSet) |Microsoft ドキュメン
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getRef (int)
 apilocation:
@@ -22,12 +19,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a5778d6ced3974779b8bbc1bbe0aae8774b5a15c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 7e0fa29b417b708ff28cfe06cef908c6dd0be3dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>getRef (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +40,7 @@ public java.sql.Ref getRef(int i)
 #### <a name="parameters"></a>パラメーター  
  *私*  
   
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
  Ref オブジェクトです。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,15 +22,15 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 910372435e504efb7afabfe245bba65e430fe1d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 27ab6ae7456c2028d58ad5218b517056da134e68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 要素
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]テスト セットを含む反復可能な提示されたパーティションのシードを指定します、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。 このシードを指定すると、再処理中にモデルのコンテンツが変更されることはありません。 指定されていないか 0 に設定する場合[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]マイニング構造の名前のハッシュ アルゴリズムを使用して、シードを作成します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  テスト セットを含む反復可能な提示されたパーティションのシードを指定します、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。 このシードを指定すると、再処理中にモデルのコンテンツが変更されることはありません。 指定されていないか 0 に設定する場合[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]マイニング構造の名前のハッシュ アルゴリズムを使用して、シードを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,11 +45,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|Long|  
 |既定値|0|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**HoldoutSeed**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.MiningStructure>します。  
   
 ## <a name="see-also"></a>参照  
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
+ [プロパティ&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutActualSize 要素](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [HoldoutMaxPercent 要素](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [HoldoutMaxCases 要素](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  

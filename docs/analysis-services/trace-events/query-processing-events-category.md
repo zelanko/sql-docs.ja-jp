@@ -1,31 +1,29 @@
 ---
-title: "クエリ処理イベントのカテゴリ |Microsoft ドキュメント"
-ms.custom: 
+title: クエリ処理イベントのカテゴリ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d547a887a05120405f6bf26049a567e1aa8026c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d35990adad35f6007b1e09054a89b609de2bbe43
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-processing-events-category"></a>クエリ処理イベント カテゴリ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-クエリ処理イベント カテゴリには、次の表に示したイベント クラスがあります。  
+  クエリ処理イベント カテゴリには、次の表に示したイベント クラスがあります。  
   
 |**Event Class**|**イベント ID**|**Description**|  
 |---------------------|------------------|---------------------|  

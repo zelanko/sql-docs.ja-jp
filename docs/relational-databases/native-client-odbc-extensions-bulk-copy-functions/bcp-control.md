@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53ed8a1b6af16e36fe431a56dc32dee78c1ccf2c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 31efad83f947d774b6602fe4da85046ad6b9e198
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +76,7 @@ RETCODE bcp_control (
  BCPFILE_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコード ページが使用されます。  
   
  BCPFILEFMT  
- データ ファイル形式のバージョン番号を指定します。 80 を使用できます ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 テキストの列から取得されたデータをインポートするなど、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]のサーバーに、 **varchar (max)**内の列、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバーでは、80 を指定する必要があります。 同様からのデータをエクスポートするときに 80 を指定する場合、 **varchar (max)**列、保存されるのでにテキスト列を保存する場合と同じように、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびのテキスト列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。  
+ データ ファイル形式のバージョン番号を指定します。 80 を使用できます ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 テキストの列から取得されたデータをインポートするなど、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]のサーバーに、 **varchar (max)** 内の列、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバーでは、80 を指定する必要があります。 同様からのデータをエクスポートするときに 80 を指定する場合、 **varchar (max)** 列、保存されるのでにテキスト列を保存する場合と同じように、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびのテキスト列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。  
   
  BCPFIRST   
  ファイルまたはテーブルにコピーする最初のデータ行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。  

@@ -1,11 +1,9 @@
 ---
 title: アドレス帳の SQL スクリプトを実行している |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d4e84958860f790254319e8d23b0720e22a710c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 375de59f8746b80982576dc56e401ffe368186e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-the-address-book-sql-script"></a>アドレス帳の SQL スクリプトを実行します。
 > [!IMPORTANT]
@@ -53,7 +50,7 @@ ms.lasthandoff: 04/18/2018
   
 3.  をクリックして**SQL スクリプトの読み込み**c:\Platform SDK\Samples\DataAccess\RDS\AddressBook を参照します。  
   
-4.  Sampleemp.sql ファイルを選択します。 **[開く]**をクリックします。  
+4.  Sampleemp.sql ファイルを選択します。 **[開く]** をクリックします。  
   
 5.  クリックして、**クエリの実行**(ツールバーの緑色の矢印) ボタンをクリックします。  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 04/18/2018
   
 4.  クリックして、 **SQL スクリプトの読み込み**c:\Platform SDK\Samples\DataAccess\RDS\AddressBook を参照し、ボタン (ツールバーの開いているフォルダー) をクリックします。  
   
-5.  Sampleemp.sql ファイルを選択します。 **[開く]**をクリックします。  
+5.  Sampleemp.sql ファイルを選択します。 **[開く]** をクリックします。  
   
 6.  クリックして、**クエリの実行**ボタン (ツールバーの緑色の矢印) または**f5 キーを押して**です。  
   
