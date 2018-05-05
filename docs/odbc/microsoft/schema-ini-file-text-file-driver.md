@@ -3,15 +3,12 @@ title: Schema.ini ファイル (テキスト ファイル ドライバー) |Micr
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
@@ -20,12 +17,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 604dccbbb139cd72f8952fdd604a55d1d9af11c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
 テキストのドライバーを使用すると、スキーマ情報ファイルを使用してテキスト ファイルの形式が決まります。 スキーマ情報ファイルが常に Schema.ini という名前し、常にテキスト データ ソースと同じディレクトリ内に保持します。 スキーマ情報ファイルでは、ファイル、列の名前とデータ型情報、およびその他のいくつかのデータの特性の一般的な形式に関する情報を IISAM を提供します。 Schema.ini ファイルは、固定長データにアクセスするために必要では常にします。 文字列テーブルには、DateTime、通貨、または 10 進数データ、またはいつでも、テーブル内のデータの処理より詳細に制御することが含まれている場合、Schema.ini ファイルを使用する必要があります。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 909c5251151a42e519778f5247665d65d101a119
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 31f50aa8c094ba983a8382379fd0d833edb0f9dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -195,7 +193,7 @@ bcp_bind(hdbc, szName, 0,
   
  場合*pData*列に設定されている NULL への呼び出しがその値を提供するための[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)、以降の任意の列と*eDataType* SQLTEXT、SQLNTEXT に設定SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR、または SQLIMAGE をバインドする必要がありますも*pData*は NULL に設定し、その値への呼び出しによっても指定する必要があります**bcp_moretext**.  
   
- 新しい大きな値の型のように**varchar (max)**、 **varbinary (max)**、または**nvarchar (max)**SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY を使用することができ、型を表すインジケーターとして SQLNCHAR、 *eDataType*パラメーター。  
+ 新しい大きな値の型のように**varchar (max)**、 **varbinary (max)**、または**nvarchar (max)** SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY を使用することができ、型を表すインジケーターとして SQLNCHAR、 *eDataType*パラメーター。  
   
  場合*cbTerm*が 0 ではなく、任意の値 (1、2、4、または 8) が有効では、プレフィックス (*cbIndicator*)。 このような状況で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、終端文字の検索、ターミネータを基準のデータの長さを計算 (*すれば*)、し、設定、 *cbData* i との値の小さい方の値をプレフィックス。  
   

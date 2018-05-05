@@ -3,15 +3,12 @@ title: ファイルのデータ ソースを使用して接続する |Microsoft 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
 - SQLDriverConnect function [ODBC], connecting using file data sources
@@ -24,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e9e8fa3bbc90af4dc17d1dfc7e161fcab0177db7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイルのデータ ソースを使用して接続します。
 ファイル データ ソースの接続情報は、.dsn ファイルに格納されます。 その結果、接続文字列を 1 人のユーザーによって繰り返し使用または適切なドライバーがインストールされている場合に、いくつかのユーザー間で共有を設定します。 ファイルには、ドライバー名 (または別のデータ ソース名、共有不能なファイルのデータ ソースの場合) が含まれていると、必要に応じて、接続文字列をで使用できる**SQLDriverConnect**です。 ドライバー マネージャーへの呼び出しの接続文字列を構築する**SQLDriverConnect** .dsn ファイル内のキーワードからです。  

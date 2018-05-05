@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e48fa527d745b920e2a664f8e8982b18cc53038
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e735efbd7aa155d8f4618afffc203cf4558fe9ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +44,11 @@ ms.lasthandoff: 04/16/2018
   
 |列名|Description|  
 |-----------------|-----------------|  
-|DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)**データ型。|  
-|TYPE_NAME|"Varchar"、"varbinary"、または"nvarchar"を返します、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)**データ型。|  
-|COLUMN_SIZE|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)**列のサイズが制限付きではないことを示すデータ型。|  
-|BUFFER_LENGTH|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)**バッファーのサイズが制限付きではないことを示すデータ型。|  
-|SQL_DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)**データ型。|  
+|DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
+|TYPE_NAME|"Varchar"、"varbinary"、または"nvarchar"を返します、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型。|  
+|COLUMN_SIZE|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** 列のサイズが制限付きではないことを示すデータ型。|  
+|BUFFER_LENGTH|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** バッファーのサイズが制限付きではないことを示すデータ型。|  
+|SQL_DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
 |CHAR_OCTET_LENGTH|char 型または binary 型の列の最大長を返します。 サイズが無制限であることを示す場合は 0 を返します。|  
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|XML スキーマ コレクション名が定義されているカタログの名前を返します。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|XML スキーマ コレクション名が定義されているスキーマの名前を返します。 スキーマ名が見つからない場合は、この変数に空文字列が含まれます。|  
