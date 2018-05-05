@@ -1,11 +1,9 @@
 ---
 title: プロパティをフィルター処理 |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-property"></a>プロパティをフィルター処理します。
 内のデータにフィルターを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)です。  
@@ -36,7 +33,7 @@ ms.lasthandoff: 04/18/2018
 
 取得または設定、**バリアント**値で、次の項目のいずれかを含めることができます。  
   
--   **条件の文字列:**と連結された 1 つまたは複数の個別句から成る文字列**AND**または**OR**演算子。  
+-   **条件の文字列:** と連結された 1 つまたは複数の個別句から成る文字列**AND**または**OR**演算子。  
   
 -   **ブックマークの配列。**一意のブックマークの配列値内のレコードを指す、**レコード セット**オブジェクト。  
   
@@ -95,7 +92,7 @@ ms.lasthandoff: 04/18/2018
   
 -   複数キー テーブル内のフィールドで変更されました。  
   
-次の表の効果**行と列が**フィルター処理と変更のさまざまな組み合わせでします。 左側の列は、変更を表示します。 任意の非キー フィールド、または単一キーのテーブル内のキー フィールドに複数キー テーブルのキー フィールドのいずれかで変更できます。 最上位の行は、フィルター選択条件を示します。 フィルター処理できますに基づいて任意の非キー フィールドで、単一キーのテーブルでは、または複数キー テーブルのキー フィールドのいずれかのキー フィールド。 交差するセルは、結果を表示します。 A **+**プラス記号は、適用されることを意味**行と列が**結果、空でない、 **Recordset**です。 A **-**マイナス記号は、空**Recordset**です。  
+次の表の効果**行と列が**フィルター処理と変更のさまざまな組み合わせでします。 左側の列は、変更を表示します。 任意の非キー フィールド、または単一キーのテーブル内のキー フィールドに複数キー テーブルのキー フィールドのいずれかで変更できます。 最上位の行は、フィルター選択条件を示します。 フィルター処理できますに基づいて任意の非キー フィールドで、単一キーのテーブルでは、または複数キー テーブルのキー フィールドのいずれかのキー フィールド。 交差するセルは、結果を表示します。 A **+** プラス記号は、適用されることを意味**行と列が**結果、空でない、 **Recordset**です。 A **-** マイナス記号は、空**Recordset**です。  
   
 ||非キー|1 つのキー|複数のキー|
 |-|--------------|----------------|-------------------|

@@ -1,29 +1,27 @@
 ---
-title: "ディメンションの属性の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: ディメンションの属性の追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5d78d2400097e9dfdecba8453e7a7c55aea7cda6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>レッスン 2 ~ 3-ディメンションの属性の追加
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -82,7 +80,7 @@ ms.lasthandoff: 02/15/2018
   
     -   **PostalCode**  
   
-6.  [ファイル] メニューの **[すべてを保存]**をクリックします。  
+6.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Product ディメンションへの属性の追加  
   
@@ -130,7 +128,7 @@ ms.lasthandoff: 02/15/2018
   
     -   **[状態]**  
   
-5.  [ファイル] メニューの **[すべてを保存]**をクリックします。  
+5.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [キューブとディメンションのプロパティの確認](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  

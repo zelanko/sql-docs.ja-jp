@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -37,13 +35,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b34c2f95c2e698e9e84a55850005a6aa409c4ad7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a5e468796d1acaf2c5b5cc0fbefe8502aa04732a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML マネージ クラス - SqlXmlCommand オブジェクト
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +107,7 @@ public SqlXmlCommand(string cnString)
  コマンドのテキストを指定します。 このプロパティは、実行するコマンドのテキストを指定するときに使用します。 作業用サンプルについては、次を参照してください。 [SQL クエリの実行 & #40 です。SQLXML マネージ クラス"&"#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  CommandStream  
- コマンド ストリームを指定します。 このプロパティは、XML テンプレートなどのファイルからコマンドを実行する場合に便利です。 CommandStream、のみを使用する場合**"Template"**、 **"UpdateGram"**と**"DiffGram"CommandType**値はサポートされています。 作業用サンプルについては、次を参照してください。 [CommandStream プロパティを使用して、テンプレート ファイルを実行する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)です。  
+ コマンド ストリームを指定します。 このプロパティは、XML テンプレートなどのファイルからコマンドを実行する場合に便利です。 CommandStream、のみを使用する場合 **"Template"**、 **"UpdateGram"** と **"DiffGram"CommandType**値はサポートされています。 作業用サンプルについては、次を参照してください。 [CommandStream プロパティを使用して、テンプレート ファイルを実行する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)です。  
   
  CommandType  
  コマンドの種類を指定します。 このプロパティは、実行するコマンドの種類を指定するときに使用します。 コマンドの種類の値を、次の表に示します。 作業用サンプルについては、次を参照してください。 [.NET 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)です。  

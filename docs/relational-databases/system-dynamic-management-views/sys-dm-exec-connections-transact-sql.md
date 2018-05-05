@@ -26,13 +26,12 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f7c0ba5a48b1282961fb405ca3a8209f33936b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0a603884ce20003248f217031e2bca76a4c2c612
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |session_id|**int**|この接続に関連付けられたセッションの識別子。 NULL 値が許可されます。|  
 |most_recent_session_id|**int**|この接続に関連付けられた最新の要求のセッション ID。 SOAP 接続は別のセッションで再利用できます。NULL 値が許可されます。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|net_transport|**nvarchar(40)**|常に返します**セッション**接続で複数のアクティブな結果セット (MARS) は有効にします。<br /><br /> **注:**この接続で使用される物理的な転送プロトコルについて説明します。 NULL 値は許可されません。|  
+|net_transport|**nvarchar(40)**|常に返します**セッション**接続で複数のアクティブな結果セット (MARS) は有効にします。<br /><br /> **注:** この接続で使用される物理的な転送プロトコルについて説明します。 NULL 値は許可されません。|  
 |protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類。 現在、TDS (TSQL) と SOAP が区別されます。 NULL 値が許可されます。|  
 |protocol_version|**int**|この接続に関連付けられたデータ アクセス プロトコルのバージョン。 NULL 値が許可されます。|  
 |endpoint_id|**int**|この接続の種類を表す識別子。 この endpoint_id は sys.endpoints ビューのクエリに使用できます。 NULL 値が許可されます。|  

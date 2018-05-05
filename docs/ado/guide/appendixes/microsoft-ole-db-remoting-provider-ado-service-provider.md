@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB リモート プロバイダー (ADO サービス プロバイダー) |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB リモート プロバイダー (ADO サービス プロバイダー) |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB remoting provider [ADO]
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 189be564682e59c64a49e7b53dd9e6a763e92cdd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 4f132bb8124afecea1b1f7fb519ecf64d1cfe88a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB のリモート処理のプロバイダーの概要
 Microsoft OLE DB リモート プロバイダーをクライアント コンピューターでリモート コンピューター上のデータ プロバイダーを呼び出すためのローカル ユーザーを有効にします。 リモート コンピューター上のローカル ユーザーをした場合と同様、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート プロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合とするリモート コンピューターにアクセスできます。

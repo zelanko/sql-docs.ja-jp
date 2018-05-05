@@ -22,12 +22,11 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd5ed7f5ef6eb60b37c5066f7535d34913572871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bac34c96e9acaeeb480b12cd3acded7e08225093
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -74,8 +73,8 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 >  管理者のみが使用できる、 **CalculationPassValue** MDX スクリプト内の関数。 管理者権限を持たないロールのコンテキストでこの関数を含んだ MDX スクリプトを実行すると、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
- [CalculationCurrentPass &#40;です。MDX と #41 です。](../mdx/calculationcurrentpass-mdx.md)   
- [Iif 関数と #40 です。MDX と #41 です。](../mdx/iif-mdx.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [CalculationCurrentPass & #40 です。MDX と #41 です。](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

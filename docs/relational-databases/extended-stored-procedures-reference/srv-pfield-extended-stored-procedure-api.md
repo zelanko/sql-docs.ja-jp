@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c593cab9b3de64c0b2442c7c8be1390553b01497
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b99afab30584db1a13444f2d259ffafa0459c967
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ len
  *field*  
  その接続について返すデータを指定します。  
   
-|値|返します。|  
+|ReplTest1|戻り値|  
 |-----------|-------------|  
 |SRV_APPLNAME|接続の確立時にクライアントから提供されたアプリケーション名。|  
 |SRV_BCPFLAG|クライアントが一括コピー操作の準備中である場合は TRUE、それ以外の場合は FALSE を示すフラグ。|  
@@ -89,7 +87,7 @@ len
  *len*  
  返された *field* 値の長さを格納した **int** 型変数を指すポインターです。 *len* が NULL の場合、文字列の長さは返されていません。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  SRV_PROC 構造体にある指定されたフィールドの現在値を格納した NULL 終端文字列へのポインターを返します。 フィールドが空の場合は空文字列への有効なポインターが返され、*len* は 0 になります。 フィールドが指定されていない場合は NULL を返し、*len* は -1 になります。  
   
 > [!IMPORTANT]  

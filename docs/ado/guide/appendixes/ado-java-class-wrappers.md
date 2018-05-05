@@ -1,11 +1,9 @@
 ---
 title: Java クラス ラッパーを ADO |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b77807fbdf03dd729f504e4112d205fb6cf7d6d6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 40c9943eb1004dd612e46a144ec50e6753181be7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java クラスのラッパー
 このコードは、ADO のインスタンスを宣言して[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)クラス ラッパーして初期化し、すべてのコードの同じ行にします。 さらに、引数は、の各変数を宣言、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド、特に[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)と[カーソル](../../../ado/reference/ado-api/cursortype-property-ado.md)(Java はサポートされていない列挙型。型の場合)。 これの開閉、**レコード セット**オブジェクト。 Java が使用されていないオブジェクトの体系的な断続的なリリースを実行するときに解放するには、その変数をスケジュールだけ Rs1 を NULL に設定します。  

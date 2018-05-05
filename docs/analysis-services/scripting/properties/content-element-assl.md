@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f9d0cd4dc1e60a59af3b8d3e976eeff888d24aa1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 731a5446a7c337696e15e1ad8430f28cb3db9875
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-element-assl"></a>Content 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]内の列のコンテンツについて説明、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  内の列のコンテンツについて説明、 [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|String (列挙型)|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現可能です|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -89,13 +88,13 @@ ms.lasthandoff: 01/08/2018
 |-----------|-----------------|  
 |*キーのシーケンス*|その列はキー列です。列の値がイベントの順序を表します。<br /><br /> 注: このコンテンツの種類は、キー列にのみ適用されます、 **IsKey**要素に設定されている**True**です。|  
 |*[キー時刻]*|その列はキー列です。列の値は時間計測の単位を表します。<br /><br /> 注: このコンテンツの種類は、キー列にのみ適用されます、 **IsKey**要素に設定されている**True**です。|  
-|*Sequence*|列の値がイベントの順序を表します。|  
+|*シーケンス*|列の値がイベントの順序を表します。|  
 |*[時刻]*|この列の値は、時間単位を表します。|  
   
  許可される値に対応する列挙**コンテンツ**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>します。  
   
 ## <a name="see-also"></a>参照  
- [ClassifiedColumns 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [ClassifiedColumns 要素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/classifiedcolumns-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,33 +1,31 @@
 ---
-title: "CSDLBI の概念 |Microsoft ドキュメント"
-ms.custom: 
+title: CSDLBI の概念 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bd68587d7d2af8f68c57e2a71ef03ea4e90fe27b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI の概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
+  BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデータセットにプログラムでアクセスしてクエリやエクスポートを実行できるように各種のデータを抽象的に表す、Entity Data Framework に基づく言語です。 CSDLBI はリッチ形式でデータ ドリブンのレポートとアプリケーションをサポートしているため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用して作成されたデータ モデルを表すために CSDLBI が使用されます。  
   
  このセクションでは、CSDLBI 表現と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルをマップする方法 (テーブルと多次元の両方) を、各モデルの種類の例と共に説明します。  
   
@@ -136,15 +134,15 @@ BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデ�
   
  その場合、キューブの表現はテーブル モデル データベースによく似ています。 キューブ名とキューブが、表形式のデータベース名とデータベース識別子に対応します。  
   
- **ディメンション:**ディメンションは列やプロパティを持つエンティティ (テーブル) として CSDLBI で表されます。 パースペクティブに含まれていない場合でも、モデルに含まれているディメンションとしてマークされて CSDL 出力で表現することに注意してください**Hidden**です。  
+ **ディメンション:** ディメンションは列やプロパティを持つエンティティ (テーブル) として CSDLBI で表されます。 パースペクティブに含まれていない場合でも、モデルに含まれているディメンションとしてマークされて CSDL 出力で表現することに注意してください**Hidden**です。  
   
- **パースペクティブ:**クライアントは個々 のパースペクティブに対する CSDL を要求することができます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)です。  
+ **パースペクティブ:** クライアントは個々 のパースペクティブに対する CSDL を要求することができます。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)です。  
   
- **階層:**階層がサポートされているし、一連のレベルとして CSDLBI で表現します。  
+ **階層:** 階層がサポートされているし、一連のレベルとして CSDLBI で表現します。  
   
- **メンバー:**サポート、既定のメンバーが追加され、既定値は、CSDLBI 出力に自動的に追加します。  
+ **メンバー:** サポート、既定のメンバーが追加され、既定値は、CSDLBI 出力に自動的に追加します。  
   
- **計算されるメンバー:**多次元モデルの子に対して計算されるメンバーをサポートする**すべて**実際のメンバーを 1 つにします。  
+ **計算されるメンバー:** 多次元モデルの子に対して計算されるメンバーをサポートする**すべて**実際のメンバーを 1 つにします。  
   
  **ディメンション属性:** CSDLBI 出力でディメンション属性はサポートされ、自動的に非集計としてマークします。  
   
@@ -152,9 +150,9 @@ BI 注釈付き概念スキーマ定義言語 (CSDLBI) は、さまざまなデ�
   
  **新しいプロパティ:** DirectQuery モデルをサポートする属性が追加されました。  
   
- **制限事項:**セルのセキュリティはサポートされていません。  
+ **制限事項:** セルのセキュリティはサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [Business Intelligence &#40; 向けの CSDL 注釈CSDLBI &#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Business Intelligence & #40; 向けの CSDL 注釈CSDLBI & #41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

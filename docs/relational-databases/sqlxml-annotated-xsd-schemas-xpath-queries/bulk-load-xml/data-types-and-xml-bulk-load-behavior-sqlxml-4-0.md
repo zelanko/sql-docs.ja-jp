@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8315130a7228d0d5dce2f8baa2f337f16015ae23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb6f8a64d48e6fa1336a4f56ca63b07873ee7168
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>データ型と XML 一括読み込みの動作 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 -   場合、 **dt:type**は**datetime**、**時間**、 **dateTime.tz**、または**time.tz**、両方を指定する必要があります**dt:type**と**sql:datatype**データ型にデータを送信する前に、XML 一括読み込みがデータ変換を実行するため[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]です。  
   
--   型の場合は、XML データ**uuid**、 **sql:datatype**指定する必要があります。**dt:type ="uuid"**も必要です、データが文字列データです。 指定しない場合**dt:uuid**、XML 一括読み込みは中かっこで文字列を受け入れ (および必要に応じて削除されます)。  
+-   型の場合は、XML データ**uuid**、 **sql:datatype**指定する必要があります。**dt:type ="uuid"** も必要です、データが文字列データです。 指定しない場合**dt:uuid**、XML 一括読み込みは中かっこで文字列を受け入れ (および必要に応じて削除されます)。  
   
 -   XML データは、場合**bin.base64**または**bin.hex**、XML データ型を指定する必要があります**dt:type**です。 指定すると、XML 一括読み込みではデータを 16 進数表記として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に読み込みます。  
   

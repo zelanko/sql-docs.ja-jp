@@ -1,30 +1,29 @@
 ---
-title: "データベース オブジェクト (TMSL) |Microsoft ドキュメント"
-ms.custom: 
+title: データベース オブジェクト (TMSL) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e67dfe62b23e08a675fbb93833c9383091198629
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4213ebbcc74244ba62221f88c6ff9732a354230
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-object-tmsl"></a>データベース オブジェクト (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]同じレベルのモデルに基づく表形式データベース互換性レベル 1200 以上を定義します。 このトピックでは、作成、変更、削除、およびデータベースの管理タスクを実行した要求のペイロードを提供する、データベースのオブジェクト定義を説明します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  同じレベルのモデルに基づく表形式データベース互換性レベル 1200 以上を定義します。 このトピックでは、作成、変更、削除、およびデータベースの管理タスクを実行した要求のペイロードを提供する、データベースのオブジェクト定義を説明します。  
   
 > [!NOTE]  
 >  任意のスクリプトでは、時にデータベースを 1 つだけを参照できます。 データベース自体以外の任意のオブジェクトのデータベースのプロパティは、モデルを指定する場合は省略可能です。 モデルとを明示的に提供されている場合は、データベース名を推測するために使用するデータベースの間の一対一のマッピングがあります。   
@@ -42,12 +41,12 @@ ms.lasthandoff: 01/08/2018
                 または、readOnlyExclusive します。 参照してください[高可用性とスケーラビリティの Analysis Services](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)と[Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)詳細については、このプロパティを使用する場合。  
   
 ## <a name="usage"></a>使用方法  
- **データベース**オブジェクトは、ほぼすべてのコマンドで使用します。 参照してください[コマンドで表形式モデル スクリプト言語 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)一覧についてはします。 A**データベース**サーバー オブジェクトの子であるオブジェクト。  
+ **データベース**オブジェクトは、ほぼすべてのコマンドで使用します。 参照してください[で表形式モデル スクリプト言語コマンド&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)一覧についてはします。 A**データベース**サーバー オブジェクトの子であるオブジェクト。  
   
  作成する場合、置換、またはデータベース オブジェクトを変更することは、オブジェクト定義のすべての読み取り/書き込みプロパティを指定します。 読み取り/書き込みプロパティの省略は、削除であると見なされます。  
   
 ## <a name="partial-syntax"></a>一部の構文  
- このオブジェクトの定義が非常に大きいため、直接プロパティのみが一覧表示されます。 **モデル**オブジェクトはデータベースの定義の大部分を提供します。 参照してください[モデルのオブジェクト &#40;です。TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)オブジェクトの定義方法にします。  
+ このオブジェクトの定義が非常に大きいため、直接プロパティのみが一覧表示されます。 **モデル**オブジェクトはデータベースの定義の大部分を提供します。 参照してください[モデル オブジェクト&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)オブジェクトの定義方法にします。  
   
 ```  
     "database": {  

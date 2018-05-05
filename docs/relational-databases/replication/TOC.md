@@ -1,7 +1,8 @@
 # [レプリケーション](sql-server-replication.md)  
 # [新機能 (レプリケーション)](what-s-new-replication.md)  
 # [レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md)  
-## [SQL Server レプリケーションの非推奨機能](deprecated-features-in-sql-server-replication.md)  
+## 
+  [SQL Server レプリケーションの非推奨の機能](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server レプリケーションにおける重大な変更](breaking-changes-in-sql-server-replication.md)  
 
 # レプリケーション領域
@@ -292,4 +293,7 @@
 ## [レプリケーションで使用するサーバーの準備](tutorial-preparing-the-server-for-replication.md)  
 ## [トランザクション レプリケーションの構成](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [マージ レプリケーションの構成](tutorial-replicating-data-with-mobile-clients.md)  
+
+# トラブルシューティング ツール
+## [トランザクション レプリケーションでのエラー](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
 

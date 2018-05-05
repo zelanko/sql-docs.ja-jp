@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,17 +21,16 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b149d346c3caba0c573f5e3f85ad6647b2e178b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f77997ec3b5492d63812fefb2051e847b899b0b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母分散を返します (除算 *n* -1)。  
+  バイアスをかけた母集団の公式を使用して、セットに対して評価される数値式の母分散を返します (除算*n*-1)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,6 +52,6 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  **VarP**関数は、バイアスをかけた母集団を使用しているときに、数式、 [Var](../mdx/var-mdx.md)関数は、バイアスをかけない母集団の公式を使用します。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../mdx/mdx-function-reference-mdx.md)  
   
   

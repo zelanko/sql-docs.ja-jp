@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -39,12 +38,11 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58838ffa846a8b7e6ebaf18e155817c64cf0cb9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
  Visual Studio を使用して UDT を作成および配置するには、次の手順を実行します。  
   
-1.  新しい**データベース**でプロジェクトを**Visual Basic**または**Visual c#**言語ノード。  
+1.  新しい**データベース**でプロジェクトを**Visual Basic**または**Visual c#** 言語ノード。  
   
 2.  UDT を格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの参照を追加します。  
   
@@ -85,7 +83,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを使用してアセンブリを登録する*< assembly_bits >* FROM 句の引数。 これは、 **varbinary**値がバイト ストリームとして、ファイルを表します。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを使用してアセンブリを登録する *< assembly_bits >* FROM 句の引数。 これは、 **varbinary**値がバイト ストリームとして、ファイルを表します。  
   
 ```  
 USE AdventureWorks;  

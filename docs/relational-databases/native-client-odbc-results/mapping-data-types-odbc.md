@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
@@ -25,13 +24,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf59cc129d6442d08154df95ff9b02f5d417c405
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2fa9ef65906c70a3542fbdd617661c59a64bbad9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー マップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL データ型を ODBC SQL データ型。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**タイムスタンプ**ためにのデータ型の sql_binary 型または SQL_VARBINARY ODBC データ型にマップ内の値**タイムスタンプ**の列がない**datetime**値**binary (8)**または**varbinary (8)**の順序を示す値を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行上のアクティビティ。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**タイムスタンプ**ためにのデータ型の sql_binary 型または SQL_VARBINARY ODBC データ型にマップ内の値**タイムスタンプ**の列がない**datetime**値**binary (8)** または**varbinary (8)** の順序を示す値を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行上のアクティビティ。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
   
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>ODBC での sql_variant データ型の処理  
  **Sql_variant**データ型の列にデータ型を含めることができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのラージ オブジェクト (Lob) を除く**テキスト**、 **ntext**、および**イメージ**です。 たとえば、列を含めたり**smallint**いくつかの行の値**float**の他の行の値と**char または nchar**残りの部分で値。  

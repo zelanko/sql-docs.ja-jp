@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 821c13f6a0d6e695249d873477a5145fc64b1b4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>データ マイニング拡張機能 (DMX) 構文表記規則
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |`[ ]` (角かっこ)|省略可能な構文項目が含まれてください。 角かっこは入力しません。|  
 |{} (中かっこ)|必要な構文項目が含まれてください。 中かっこは入力しません。|  
 |, ...|コンマの前の項目を、任意の回数繰り返せることを示します。 項目は、コンマで区切られます。|  
-|\<ラベル >:: =|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる箇所はなど、二重山かっこで囲まれたラベル\<ラベル >。|  
+|\<label> ::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる箇所はなど、二重山かっこで囲まれたラベル\<ラベル >。|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

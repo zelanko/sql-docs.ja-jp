@@ -2,28 +2,23 @@
 title: SQL Server の機能と機能の使用 |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology:
-- samples
+ms.technology: samples
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 caps.latest.revision: 2
-author: BarbKess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-robots: noindex,nofollow
-ms.workload: Inactive
-ms.openlocfilehash: a2b0ccfba8baf0f52245a7beba44e846b481cfa8
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 49062b7d9ff47912ded1b53ef6682e3bf750875b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

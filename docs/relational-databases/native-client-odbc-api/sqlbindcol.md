@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6b114e0c6c4c962642ffa7ae5a3328a3590131d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3dce23669637b9fd39e9fa84d37600bae6e64f98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  開発者は、列をバインドできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定の C データ型を使用して、 *TargetType*値**SQL_C_BINARY**です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の型にバインドされた列は移植できません。 また、定義済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の ODBC C データ型は DB-Library の型定義と一致するので、アプリケーションを移植する DB-Library 開発者はこの特性を利用できます。  
   
- 負荷の高い処理は、レポート データの切り捨て、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。 バインドされるすべてのデータ バッファーのサイズがデータを返すのに十分なサイズであれば、データの切り捨てを回避できます。 文字データの場合、文字列の終了に既定のドライバーの動作を使用するときは、データ バッファーの大きさに文字列ターミネータの領域も含める必要があります。 たとえば、バインディング、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char (5)**列値がフェッチされるごとに切り捨ての結果を 5 つの文字の配列にします。 同じ列を 6 文字の配列にバインドすると、NULL ターミネータを格納する文字要素が用意されるため、切り捨てを回避できます。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)切り捨てることがなく、長い文字やバイナリ データを効率的に取得するために使用できます。  
+ 負荷の高い処理は、レポート データの切り捨て、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。 バインドされるすべてのデータ バッファーのサイズがデータを返すのに十分なサイズであれば、データの切り捨てを回避できます。 文字データの場合、文字列の終了に既定のドライバーの動作を使用するときは、データ バッファーの大きさに文字列ターミネータの領域も含める必要があります。 たとえば、バインディング、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char (5)** 列値がフェッチされるごとに切り捨ての結果を 5 つの文字の配列にします。 同じ列を 6 文字の配列にバインドすると、NULL ターミネータを格納する文字要素が用意されるため、切り捨てを回避できます。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)切り捨てることがなく、長い文字やバイナリ データを効率的に取得するために使用できます。  
   
  ユーザーが指定したバッファーが、列の値全体を保持するのに十分でない場合、大きな値データ型の**SQL_SUCCESS_WITH_INFO**が返されると、"文字列データです。右側が切り捨てられました"警告が発行されます。 **StrLen_or_IndPtr**引数が文字数とバイト バッファーに格納されている数を格納します。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
@@ -22,13 +21,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 26efb6569ba997ed8eb53036987081b2cf8f5f2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/16/2018
     |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
-     この型マッピングは、列のメタデータに返される値に影響を与えます。 たとえば、**テキスト**列の最大サイズは 2,147, 483,647 が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC の最大サイズを報告する**varchar (max)**列として、SQL_SS_LENGTH_UNLIMITED と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB の最大サイズを報告する**varchar (max)** 2,147, 483,647 または-1 プラットフォームとしての列です。  
+     この型マッピングは、列のメタデータに返される値に影響を与えます。 たとえば、**テキスト**列の最大サイズは 2,147, 483,647 が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC の最大サイズを報告する**varchar (max)** 列として、SQL_SS_LENGTH_UNLIMITED と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB の最大サイズを報告する**varchar (max)** 2,147, 483,647 または-1 プラットフォームとしての列です。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、旧バージョンとの互換性を維持するために接続文字列のあいまい性が許可されます。たとえば、キーワードを複数回指定したり、位置と優先順位に基づいた解決方法を使用して、競合するキーワードを指定することができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の今後のリリースでは、あいまいな接続文字列を使用できなくなる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するアプリケーションでは、あいまいな接続文字列を利用しないように変更することをお勧めします。  
   

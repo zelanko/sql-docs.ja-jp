@@ -1,11 +1,9 @@
 ---
 title: Fields コレクション |Microsoft ドキュメント
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d26e2fb793dc1b4b6b757e17064760857b748ed8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-fields-collection"></a>Fields コレクション
 **フィールド**コレクションは、ADO の組み込みコレクションの 1 つです。 コレクションは、単位としてに参照できる項目の順序付けされたセットです。 ADO コレクションの詳細については、次を参照してください。 [ADO オブジェクト モデル](../../../ado/guide/data/ado-objects-and-collections.md)です。  
@@ -59,7 +56,7 @@ SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7
  このコードの数を指定するだけ**フィールド**内のオブジェクト、**フィールド**コレクションを使用して、**カウント**プロパティしの値を返す、コレクションをループ**名前**それぞれのプロパティ**フィールド**オブジェクト。 さらに多くを使用する**フィールド**プロパティ、フィールドに関する情報を取得します。 クエリの詳細については、**フィールド**を参照してください[フィールド Object](../../../ado/guide/data/the-field-object.md)です。  
   
 ## <a name="counting-columns"></a>列のカウント  
- ご想像、**カウント**の実際の数を返します**フィールド**内のオブジェクト、**フィールド**コレクション。 コレクションのメンバーの番号付けは 0 から始まるため、する必要がありますループ常に 0 から始まるの値で終わる、**カウント**から 1 を引いたプロパティです。 Microsoft Visual Basic を使用しているし、確認せずにコレクションのメンバーをループ処理する場合、**カウント**プロパティを使用して、**ごとにしています.[次へ]**コマンド。  
+ ご想像、**カウント**の実際の数を返します**フィールド**内のオブジェクト、**フィールド**コレクション。 コレクションのメンバーの番号付けは 0 から始まるため、する必要がありますループ常に 0 から始まるの値で終わる、**カウント**から 1 を引いたプロパティです。 Microsoft Visual Basic を使用しているし、確認せずにコレクションのメンバーをループ処理する場合、**カウント**プロパティを使用して、**ごとにしています.[次へ]** コマンド。  
   
  場合、**カウント**プロパティが 0 で、コレクションにオブジェクトがありません。  
   

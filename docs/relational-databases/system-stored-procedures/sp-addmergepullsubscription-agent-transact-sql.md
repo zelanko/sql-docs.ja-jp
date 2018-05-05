@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4034453646cc75c41ac2dd0f2bd7661778e65c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8d57f9f136ad2e11648d039c1b29e46b4a2e1455
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -138,19 +137,19 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int**、既定値は 1 です。 場合**0**、指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 マージ エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 マージ エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
   
  [  **@subscriber_login =** ] **'***subscriber_login***'**  
  サブスクライバーへ接続して同期するときに使用するサブスクライバー ログインを指定します。 *subscriber_login*場合は必須*subscriber_security_mode*に設定されている**0**します。 *subscriber_login*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
   
  [  **@subscriber_password =** ] **'***subscriber_password***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証で使用するサブスクライバーのパスワードを指定します。 *subscriber_password*場合は必須*subscriber_security_mode*に設定されている**0**します。 *subscriber_password*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、使用は推奨されません。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
+>  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 このパラメーターに値を指定した場合は、警告メッセージが返されますが、値は無視されます。  
   
  [  **@distributor =** ] **'***ディストリビューター***'**  
  ディストリビューターの名前です。 *ディストリビューター*は**sysname**、既定値は*パブリッシャー*; は、パブリッシャーがディストリビューターでもあります。  
@@ -291,11 +290,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
  [  **@offloadagent =** ] **'***remote_agent_activation***'**  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**でエラーが発生します。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_activation*以外の値を**false**でエラーが発生します。  
   
  [  **@offloadserver =** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
->  リモート エージェント アクティブ化は現在サポートされておらず、使用は推奨されません。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
+>  リモート エージェント アクティブ化は現在サポートされておらず、非推奨とされます。 このパラメーターは、スクリプトの下位互換性を確保するためだけに用意されています。 設定*remote_agent_server_name* NULL 以外の値にエラーが生成されます。  
   
  [  **@job_name =** ] **'***job_name***'** ]  
  既存のエージェント ジョブの名前を指定します。 *job_name*は**sysname**既定値は NULL です。 このパラメーターは、新しく作成したジョブ (既定値) の代わりに既存のジョブを使ってサブスクリプションを同期するときにだけ指定します。 メンバーではない場合、 **sysadmin**固定サーバー ロールを指定してください*job_login*と*job_password*を指定すると*job_name*.  
@@ -313,7 +312,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するログインを指定します。 *internet_login*は**sysname**、既定値は NULL です。  
   
  [  **@internet_password =** ] **'***internet_password***'**  
- HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するパスワードを指定します。 *internet_password*は**nvarchar (524)**既定値は NULL です。  
+ HTTP 基本認証を使って Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するパスワードを指定します。 *internet_password*は**nvarchar (524)** 既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  

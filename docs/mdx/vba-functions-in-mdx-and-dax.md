@@ -1,27 +1,26 @@
 ---
-title: "MDX および DAX での VBA 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: MDX および DAX での VBA 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 6356a6c841072490e10f9c32933606010ce0b9f9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
-ms.translationtype: MT
+ms.openlocfilehash: 5f8b50aaef88b4bfd17cace3877da88e6939605e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 02/01/2018
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|Command|サポートされていません||  
+|コマンド|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -153,7 +152,7 @@ ms.lasthandoff: 02/01/2018
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
-|String]|MDX のみ||  
+|[文字列]|MDX のみ||  
 |StrReverse|サポートされていません||  
 |スイッチ|MDX のみ||  
 |SYD|MDX のみ||  

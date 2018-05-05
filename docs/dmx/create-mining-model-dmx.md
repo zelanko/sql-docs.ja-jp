@@ -29,12 +29,11 @@ caps.latest.revision: 57
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3c4720b0ecb2dcf3aa17f250a30f106ddd1e941f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6d3d8471754918eaff793bb6787f383b67f33a77
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  マイニング構造には、モデル名の後に「_structure」を追加した名前を付けます。これにより、構造名がモデル名から一意であることが保証されます。  
   
- 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)ステートメントです。  
+ 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)ステートメントです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -115,15 +114,15 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  構造列の定義に使用できる、データ型、コンテンツの種類、列分布、モデリング フラグのリストについては、次のトピックを参照してください。  
   
--   [データ型 &#40;データ マイニング&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型 (&) #40";"データ マイニング"&"#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類 (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列の分布 &#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [モデリング フラグ (&) #40 です。 データ マイニング &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [モデリング フラグ (&) #40 です。 データ マイニング & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]次の使用をサポートしている\<Column relationship > 句。  
+ ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の使用をサポートしている\<Column relationship > 句。  
   
  **を関連します。**  
  この形式は値の階層を示します。 RELATED TO 列の対象にすることが可能なのは、入れ子になったテーブル内のキー列、ケース行内の不連続値の列、RELATED TO 句のある別の列です。これにより、より深い階層が示されます。  
@@ -142,7 +141,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)です。  
   
 ## <a name="remarks"></a>解説  
  組み込みのテスト データセットを持つモデルを作成する場合は、CREATE MINING STRUCTURE ステートメントの後に ALTER MINING STRUCTURE ステートメントを使用します。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
@@ -208,8 +207,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
+ [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,15 +1,16 @@
 ---
-title: "tablediff ユーティリティ |Microsoft ドキュメント"
-ms.custom: 
+title: tablediff ユーティリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: tabledif
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - comparing data
@@ -20,19 +21,21 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 94251ef866c52e6e865cd68b282ef020781d2d5a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**ユーティリティ非収束の 2 つのテーブル内のデータを比較するために使用し、レプリケーション トポロジ内の非収束のトラブルシューティングに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
   
 -   レプリケーション パブリッシャーとして動作する [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス内のソース テーブルと、レプリケーション サブスクライバーとして動作する 1 つ以上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスにある対象テーブルの間で、1 行単位の比較を行う。  
   
@@ -85,7 +88,7 @@ tablediff
  サポートされているパラメーターのリストを返します。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定*source_server_name***\\***instance_name*の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+ ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *source_server_name***\\*** instance_name* を指定します。  
   
  **-sourcedatabase** *source_database*  
  ソース データベース名を指定します。  
@@ -109,7 +112,7 @@ tablediff
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 指定*destination_server_name***\\***instance_name*の名前付きインスタンスの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスの *destination_server_name***\\*** instance_name* を指定します。  
   
  **-destinationdatabase** *subscription_database*  
  対象データベース名を指定します。  
@@ -133,7 +136,7 @@ tablediff
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、対象テーブルがロックされます。  
   
  **-b** *large_object_bytes*  
- ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)**、 **nvarchar(max)** 、 **varbinary(max)**です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
+ ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)**、 **nvarchar(max)** 、 **varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
  **-bf**  *number_of_statements*  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
@@ -170,13 +173,13 @@ tablediff
   
 ## <a name="return-value"></a>戻り値  
   
-|[値]|説明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|重大なエラー|  
 |**2**|テーブルの差分|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **tablediff** ユーティリティは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のサーバーでは使用できません。  
   
  **sql_variant** データ型列を含むテーブルはサポートされていません。  
@@ -218,7 +221,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
  テーブルを比較するには、比較するテーブル オブジェクトに対する SELECT ALL 権限が必要です。  
   
  **-et** オプションを使用するには、db_owner 固定データベース ロールのメンバーであることが必要です。または、少なくともサブスクリプション データベースでの CREATE TABLE 権限、および対象サーバーにある対象所有者スキーマに対する ALTER 権限を持っている必要があります。  

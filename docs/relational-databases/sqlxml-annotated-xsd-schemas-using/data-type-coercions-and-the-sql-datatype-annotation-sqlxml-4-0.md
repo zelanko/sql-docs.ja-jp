@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a2dc2c3d91eea67e9e08a87d5aa7735a1b45b1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 25685856bbb1b088f7c2825e27973915f850dea7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の強制型変換と sql:datatype 注釈 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +92,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="sqldatatype-annotation"></a>sql:datatype 注釈  
  **Sql:datatype**注釈が指定に使用される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。 この注釈場合に指定する必要があります。  
   
--   一括読み込みを行うには**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD から列**dateTime**、**日付**、または**時間**型です。 この場合、指定する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列のデータの型を使用して**sql:datatype ="dateTime"**です。 この規則はアップデートグラムにも当てはまります。  
+-   一括読み込みを行うには**dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD から列**dateTime**、**日付**、または**時間**型です。 この場合、指定する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列のデータの型を使用して**sql:datatype ="dateTime"** です。 この規則はアップデートグラムにも当てはまります。  
   
 -   列に一括読み込みを行う[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier**型と、XSD 値が中かっこが含まれる GUID ({および})。 指定すると**sql:datatype = uniqueidentifier**列に挿入される前に、中かっこが値から削除されます。 場合**sql:datatype**が指定されていない、値は、中かっこと、insert または update は失敗と共に送信されます。  
   
@@ -126,9 +123,9 @@ ms.lasthandoff: 04/16/2018
   
  この XSD スキーマには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から日付値を返す 3 つの属性が含まれています。 それぞれの属性は次のとおりです。  
   
--   指定します**xsd:type 日付 =**上、 **OrderDate**属性、によって返される値の日付部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**OrderDate**属性が表示されます。  
+-   指定します**xsd:type 日付 =** 上、 **OrderDate**属性、によって返される値の日付部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**OrderDate**属性が表示されます。  
   
--   指定します**xsd:type 時間 =**上、 **ShipDate**属性、によって返される値の時刻部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ShipDate**属性が表示されます。  
+-   指定します**xsd:type 時間 =** 上、 **ShipDate**属性、によって返される値の時刻部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ShipDate**属性が表示されます。  
   
 -   指定されていない**xsd:type**上、 **DueDate**属性、によって返されるものと同じ値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が表示されます。  
   

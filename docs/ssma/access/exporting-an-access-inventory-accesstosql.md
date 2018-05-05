@@ -2,16 +2,14 @@
 title: エクスポート アクセス インベントリ (AccessToSQL) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -29,12 +27,11 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d3968104ed7e9dec525afa3bd3e0cd7b8dcbb96
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 7d0877666e13f490463e77ec30bf7792367747d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>アクセス インベントリ (AccessToSQL) をエクスポートします。
 アクセスの複数のデータベースがあり、どれに移行するかわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]プロジェクト内のすべてのアクセス データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行にこれらのデータベース内のオブジェクトを決定するインベントリのメタデータをクエリします。 このインベントリではすぐに、次のように、質問への回答を検索します。  

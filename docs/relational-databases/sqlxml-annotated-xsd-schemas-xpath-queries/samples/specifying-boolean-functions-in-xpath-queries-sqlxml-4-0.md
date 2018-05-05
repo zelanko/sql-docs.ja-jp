@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +21,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5b395a49f69ed83acedde1dc8e70cc00db78b63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9366a70d31e286ec69610f3551642ec24b1e2cad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理関数の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>使用例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 論理関数を指定する  
- このクエリでは、すべてを返します、 **\<顧客 >**コンテキスト ノードの子要素がない**\<順序 >**子要素。  
+ このクエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素がない**\<順序 >** 子要素。  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 論理関数と false() 論理関数を指定する  
- このクエリでは、すべてを返します**\<顧客 >**がない、コンテキスト ノードの要素の子**\<順序 >**子要素です。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
+ このクエリでは、すべてを返します**\<顧客 >** がない、コンテキスト ノードの要素の子**\<順序 >** 子要素です。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
   
 ```  
 /child::Customer[child::Order=false()]  

@@ -24,12 +24,11 @@ caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8db735195ad0667944ca3e3710e629791662fd7f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6b7f1c4b8c6075c322944a57f81a04a8a1763fa9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
  パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。  
   
  [  **@property =** ] **'***プロパティ***'**  
- 変更するパブリケーションのプロパティを指定します。 *プロパティ*は**nvarchar (255)**です。  
+ 変更するパブリケーションのプロパティを指定します。 *プロパティ*は**nvarchar (255)** です。  
   
  [  **@value =** ] **'***値***'**  
  新しいプロパティ値を指定します。 *値*は**nvarchar (255)**、既定値は NULL です。  
@@ -100,11 +99,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|新しいサブスクリプションがある場合にのみ、同期ファイルが作成されます。 サブスクリプションの後、スナップショット エージェントが起動して完了するまで、サブスクライバーは同期ファイルを取得できません。|  
 |**independent_agent**|**true**|パブリケーションに専用のディストリビューション エージェントがあります。|  
 ||**false**|パブリケーションでは共有ディストリビューション エージェントが使用されます。パブリケーションおよびサブスクリプション データベースの各ペアには 1 つの共有エージェントがあります。|  
-|**@p2p_continue_onconflict**|**true**|ディストリビューション エージェントは、競合の検出時に変更の処理を続行します。<br /> **注意:**の既定値を使用することをお勧め`FALSE`です。 このオプションを設定すると`TRUE`、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
+|**@p2p_continue_onconflict**|**true**|ディストリビューション エージェントは、競合の検出時に変更の処理を続行します。<br /> **注意:** の既定値を使用することをお勧め`FALSE`です。 このオプションを設定すると`TRUE`、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 この方法では収束が保証されません。 競合が検出された後に、トポロジに一貫性があることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
 ||**false**|ディストリビューション エージェントは、競合の検出時に変更の処理を停止します。|  
 |**post_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用された後で行われます。|  
 |**pre_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用される前に行われます。|  
-|**publish_to_ActiveDirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、使用は推奨されません。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。|  
+|**publish_to_ActiveDirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 パブリケーション情報を不要になった追加することができます、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory です。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**queue_type**|**sql**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。 このプロパティを変更できるのは、アクティブなサブスクリプションがない場合に限られます。<br /><br /> 注: サポートを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]メッセージ キューは廃止されました。 値を指定する**msmq**の*値*でエラーが発生します。|  
 |**repl_freq**|**継続的です**|ログ ベースのすべてのトランザクションの出力をパブリッシュします。|  
@@ -122,7 +121,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**character**|サブスクリプションの同期時に、すべてのテーブルについてキャラクター モード一括コピー出力を使用します。|  
 ||**同時実行**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションには無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションには無効です。|  
-|**taskid**||このプロパティは現在サポートされておらず、使用は推奨されません。|  
+|**taskid**||このプロパティは現在サポートされておらず、非推奨とされます。|  
 |**allow_drop**|**true**|により、`DROP TABLE`トランザクション レプリケーションの一部であるアーティクルの DLL をサポートします。 サポートされるバージョンの最小: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 以降および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 またはそれ以降。 その他の参照: [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|無効に`DROP TABLE`トランザクション レプリケーションの一部であるアーティクルの DLL をサポートします。 これは、**既定**このプロパティの値。|
 |**NULL** (既定値)||サポートされる値の一覧を返します*プロパティ*です。|  

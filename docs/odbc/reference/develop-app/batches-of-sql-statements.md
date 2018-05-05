@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e7f0119110e1bc57d106163d2e187bf599a0c596
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e16289c20e8f6264fcc1231e5085285443c7d6c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batches-of-sql-statements"></a>SQL ステートメントのバッチ
 SQL ステートメントのバッチは、2 つ以上の SQL ステートメントまたはを 2 つ以上の SQL ステートメントのグループと同じ効果を持つ単一の SQL ステートメントのグループです。 一部の実装では、すべての結果を利用する前に、バッチ全体のステートメントが実行されます。 これは、多くの場合、複数のネットワーク トラフィックが低下することができ、データ ソースが SQL ステートメントのバッチの実行を最適化できる場合がありますので、個別にステートメントを送信するよりも効率的です。 呼び出し、他の実装で**SQLMoreResults**バッチ内の次のステートメントの実行を開始します。 ODBC には、次の種類のバッチがサポートされています。  

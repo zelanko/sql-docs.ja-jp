@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d3bd65ad512d3e6802754cb6ad1e80ec4cae7fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 623f2814322a6a57e6845a8d3d8d734b1b7c68f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリでの明示変換関数の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
- **Number()**関数は引数を数値に変換します。  
+ **Number()** 関数は引数を数値に変換します。  
   
  値を想定して**ContactID**は数値型以外は、次のクエリに変換**ContactID**数値にし値 4 と比較します。 クエリが、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
- **String()**関数の引数を文字列に変換します。  
+ **String()** 関数の引数を文字列に変換します。  
   
  次のクエリに変換**ContactID**で文字列値「4」と比較して、文字列にします。 クエリでは、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID**文字列の値「4」。  
   

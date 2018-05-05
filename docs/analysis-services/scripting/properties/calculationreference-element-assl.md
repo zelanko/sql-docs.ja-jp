@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b87172bcd66e692be7325bcdfc3293d03de8078a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 594b316cd136ecf3493d329da47aa9b07e81ad13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculationreference-element-assl"></a>CalculationReference 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]名前付きセットまたはによって参照される計算されるセルの名前を含む、 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  名前付きセットまたはによって参照される計算されるセルの名前を含む、 [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
-|データ型と長さ|String|  
+|データ型と長さ|文字列|  
 |既定値|なし|  
-|基数|1-1 : 必須要素で、1 回だけ出現可能です|  
+|Cardinality|1-1 : 必須要素で、1 回だけ出現可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -69,9 +68,9 @@ ms.lasthandoff: 01/08/2018
  親に対応する要素**CalculationReference**分析管理オブジェクト (AMO) オブジェクト モデルは<xref:Microsoft.AnalysisServices.CalculationProperty>します。  
   
 ## <a name="see-also"></a>参照  
- [CalculationProperties 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
- [MdxScript 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
- [MdxScripts 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
- [プロパティ &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [CalculationProperties 要素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/calculationproperties-element-assl.md)   
+ [MdxScript 要素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)   
+ [MdxScripts 要素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md)   
+ [プロパティ & #40 です。ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

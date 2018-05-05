@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da47b1493fc0892b19c468cf421aa58c7c9907f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3c078adc30fee659d87e58a1ea6ac44e25e68236
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 文字型のパラメーターのバインド  
  渡された SQL データ型が型の場合、文字、 *ColumnSize*文字 (バイトではなく) でのサイズします。 バイト単位でデータ文字列の長さが 8000 より大きい場合*ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED**SQL 型のサイズに制限がないことを示すです。  
   
- インスタンスの場合は、SQL データ型は**SQL_WVARCHAR**、 *ColumnSize* 4000 を超えることができないする必要があります。 かどうか、実際のデータ長が 4000 より長い、し*ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED**ように**nvarchar (max)**ドライバーによって使用されます。  
+ インスタンスの場合は、SQL データ型は**SQL_WVARCHAR**、 *ColumnSize* 4000 を超えることができないする必要があります。 かどうか、実際のデータ長が 4000 より長い、し*ColumnSize*に設定する必要があります**SQL_SS_LENGTH_UNLIMITED**ように**nvarchar (max)** ドライバーによって使用されます。  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter とテーブル値パラメーター  
  他のパラメーター型と同様に、テーブル値パラメーターは、SQLBindParameter によってバインドされます。  

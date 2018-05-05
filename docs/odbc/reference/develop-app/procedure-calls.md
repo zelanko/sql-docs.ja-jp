@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b12586b2da965ef159766e670ecc9456260c75d3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cdcf2922260d834bf4da104cae82c49ffb77f257
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedure-calls"></a>プロシージャ呼び出し
 A*プロシージャ*データ ソースに格納されている実行可能オブジェクトです。 これは通常、プリコンパイルされた 1 つ以上の SQL ステートメントです。 プロシージャを呼び出すためのエスケープ シーケンスは、します。  
@@ -36,7 +35,7 @@ A*プロシージャ*データ ソースに格納されている実行可能オ�
   
  プロシージャ呼び出しのエスケープ シーケンスの詳細については、次を参照してください。[プロシージャ Call エスケープ シーケンス](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)付録 c: SQL の文法でします。  
   
- プロシージャには、0 個以上のパラメーターを指定できます。 省略可能なパラメーター マーカーに従い、値を返すことも**? =**構文の先頭にします。 場合*パラメーター*が入力パラメーターまたは入出力パラメーターでは、リテラルまたはパラメーター マーカーを指定できます。 ただし、一部のデータ ソースはリテラル パラメーター値を受理しないために、相互運用可能アプリケーションはパラメーター マーカーを使用常にする必要があります。 場合*パラメーター*出力パラメーター、パラメーター マーカーをする必要があります。 パラメーター マーカーにバインドする必要があります**SQLBindParameter**プロシージャ呼び出しの前にステートメントを実行します。  
+ プロシージャには、0 個以上のパラメーターを指定できます。 省略可能なパラメーター マーカーに従い、値を返すことも **? =** 構文の先頭にします。 場合*パラメーター*が入力パラメーターまたは入出力パラメーターでは、リテラルまたはパラメーター マーカーを指定できます。 ただし、一部のデータ ソースはリテラル パラメーター値を受理しないために、相互運用可能アプリケーションはパラメーター マーカーを使用常にする必要があります。 場合*パラメーター*出力パラメーター、パラメーター マーカーをする必要があります。 パラメーター マーカーにバインドする必要があります**SQLBindParameter**プロシージャ呼び出しの前にステートメントを実行します。  
   
  プロシージャ呼び出しでは、入力パラメーターと入出力パラメーターを省略できます。 かどうか、プロシージャが呼び出さかっこでは、パラメーターを使用せずなど {呼び出す*プロシージャ名*()}、ドライバーは、最初のパラメーターの既定値を使用するデータ ソースを指示します。 プロシージャは、パラメーターを持たない場合の処理が失敗する可能性がします。 プロシージャがかっこがない場合などと呼ばれるかどうかは {呼び出す*プロシージャ名*}、ドライバーは、パラメーターの値を送信しません。  
   

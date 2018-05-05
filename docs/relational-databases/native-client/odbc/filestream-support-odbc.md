@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02292cffead70858e8a965afe6adb719ac7fb742
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4e6a0f57c9f04bfa6ee839a443d7b6601ac14801
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 04/16/2018
  場合は、バインドされた列で SQLFetch を呼び出すと、バッファーは全体の値を保持するのに十分な大きさがない場合、「データが切り捨てられました」警告が表示されます。 この警告を無視し、SQLParamData と SQLPutData の呼び出しでこのバインドされた列のデータを更新します。 SQLBindCol にバインドされている場合は、SQLSetPos を使用して FILESTREAM データを更新できます。  
   
 ## <a name="example"></a>例  
- FILESTREAM 列の動作と同様に**varbinary (max)**列、なくサイズを制限します。 これらは SQL_VARBINARY としてバインドされます。 SQL_LONGVARBINARY は image 列で使用され、この型に関する制限が存在します。 たとえば、SQL_LONGVARBINARY を出力パラメーターとして使用することはできません。次の例は、FILESTREAM 列に対する直接 NTFS アクセスを示しています。 これらの例では、データベースで、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] コードが実行されていることを前提としています。  
+ FILESTREAM 列の動作と同様に**varbinary (max)** 列、なくサイズを制限します。 これらは SQL_VARBINARY としてバインドされます。 SQL_LONGVARBINARY は image 列で使用され、この型に関する制限が存在します。 たとえば、SQL_LONGVARBINARY を出力パラメーターとして使用することはできません。次の例は、FILESTREAM 列に対する直接 NTFS アクセスを示しています。 これらの例では、データベースで、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] コードが実行されていることを前提としています。  
   
 ```  
 CREATE TABLE fileStreamDocs(  

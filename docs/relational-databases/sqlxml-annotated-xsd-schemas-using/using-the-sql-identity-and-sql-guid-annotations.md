@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -30,13 +28,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e83773d7a0cc10c2a36c5305a1a460eecc1f531d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: da967220c77451d807a79d2e10701fd1f76791d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 注釈と sql:guid 注釈の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ms.lasthandoff: 04/16/2018
  useValue  
  アップデートグラムで提供される値を使用して、IDENTITY 型列を更新します。 アップデートグラムでは、列が ID 値かどうかは確認されません。  
   
- このアップデート グラムで IDENTITY 型の列の値を指定する場合、 **sql:identity 注釈 ="useValue"**スキーマで指定する必要があります。  
+ このアップデート グラムで IDENTITY 型の列の値を指定する場合、 **sql:identity 注釈 ="useValue"** スキーマで指定する必要があります。  
   
 ## <a name="sqlguid-annotation"></a>sql:guid 注釈  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で GUID 値を生成し、その値をアップデートグラムで使用できます。 Diffgram のコンテキストで使用することができます、 **sql:guid**注釈を SQL Server によって生成される GUID 値を使用するかどうかを指定するか、その列に対して、アップデート グラムで提供されている値を使用します。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf5a3a4c62b8ba11aecd5b62f38bec9913816402
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0081b632d9955a1fc4f8003c0036288c2d5b6c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
   FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、次を参照してください。 [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)です。  
   
- データベース接続が開かれたときに**@@TEXTSIZE**  (「無制限」)、既定では-1 に設定します。  
+ データベース接続が開かれたときに **@@TEXTSIZE**  (「無制限」)、既定では-1 に設定します。  
   
  Windows ファイル システムの API を使用して、FILESTREAM 列にアクセスし、更新することもできます。  
   
@@ -69,7 +67,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
   
  データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   
- SQLOLEDB または以前にリリースされたその他のプロバイダーを使用するクライアント用、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]バージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、 **varbinary (max)**はマップをイメージにします。  
+ SQLOLEDB または以前にリリースされたその他のプロバイダーを使用するクライアント用、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]バージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client は、 **varbinary (max)** はマップをイメージにします。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

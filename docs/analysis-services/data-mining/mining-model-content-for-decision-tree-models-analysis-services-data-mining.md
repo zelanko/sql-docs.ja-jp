@@ -1,35 +1,33 @@
 ---
-title: "デシジョン ツリー モデルのマイニング モデル コンテンツ |Microsoft ドキュメント"
-ms.custom: 
+title: デシジョン ツリー モデルのマイニング モデル コンテンツ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a1817491dbc523f1fa2ceb87b9667024a36e79d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
   
 ##  <a name="bkmk_Top"></a> デシジョン ツリー モデルの構造について  
  デシジョン ツリー モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、選択した予測可能な属性を表す独立したツリーがあります。 たとえば、顧客が購入を行うかどうかを予測するためのデシジョン ツリー モデルを設定し、性別と収入の入力を指定した場合、モデルでは購入の属性に対して 1 つのツリーが作成され、その中に性別と収入に関連する条件で分割される多数の分岐が含まれます。  
@@ -84,10 +82,10 @@ ms.lasthandoff: 02/15/2018
 |ノードの種類|Description|  
 |---------------|-----------------|  
 |1 (モデル)|モデルのルート ノードです。|  
-|2 (ツリー)|モデル内の分類ツリーの親ノードです。 **"すべて"**というラベルが付けられます。|  
+|2 (ツリー)|モデル内の分類ツリーの親ノードです。 **"すべて"** というラベルが付けられます。|  
 |3 (内部)|内部分岐の先頭です。分類ツリーまたは回帰ツリー内に存在します。|  
 |4 (分布)|リーフ ノードです。分類ツリーまたは回帰ツリー内に存在します。|  
-|25 (回帰ツリー)|モデル内の回帰ツリーの親ノードです。 **"すべて"**というラベルが付けられます。|  
+|25 (回帰ツリー)|モデル内の回帰ツリーの親ノードです。 **"すべて"** というラベルが付けられます。|  
   
  NODE_CAPTION  
  表示名。  
@@ -301,7 +299,7 @@ ms.lasthandoff: 02/15/2018
  回帰ノードの詳細については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

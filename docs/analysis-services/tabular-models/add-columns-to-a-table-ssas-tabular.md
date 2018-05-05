@@ -1,31 +1,29 @@
 ---
-title: "テーブルに列を追加 |Microsoft ドキュメント"
-ms.custom: 
+title: テーブルに列を追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ac4b677edc906b6e5081e1c7a16b5089865c75eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-table"></a>テーブルに列を追加します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-この記事では、既存のテーブルに列を追加する方法について説明します。  
+  この記事では、既存のテーブルに列を追加する方法について説明します。  
   
 ## <a name="add-columns-from-the-datasource"></a>データ ソースから列を追加します。  
  テーブルのインポート ウィザードを使用してデータ ソース テーブルからデータをインポートすると、ソース テーブル内のすべての列を含むテーブルがモデルに新しく作成されます。ただし、[プレビュー] 機能および [フィルター] 機能を使用して特定の列を除外した場合は、このテーブルには選択したフィルター処理済みのデータのみが含まれます。 また、インポートする特定の列のみを指定する SQL クエリを作成することもできます。 ただし、モデル テーブルに追加したいその他の列がソース テーブルにあることが後で判明する場合や DAX 式で算定された値を含む計算列を追加する必要がある場合があります。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-add-a-column-from-the-data-source-by-using-the-edit-table-properties-dialog-box"></a>[テーブルのプロパティの編集] ダイアログ ボックスを使用してデータ ソースから列を追加するには  
   
-1.  モデル デザイナーで列を追加するテーブルをクリックし、 **[テーブル]** メニュー、  **[テーブルのプロパティ]**の順にクリックします。  
+1.  モデル デザイナーで列を追加するテーブルをクリックし、 **[テーブル]** メニュー、  **[テーブルのプロパティ]** の順にクリックします。  
   
 2.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
   
@@ -51,9 +49,9 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-a-calculated-column"></a>計算列を作成するには  
   
-1.  モデル デザイナーのデータ ビューで、新しい空白の計算列を追加するテーブルを選択し、右端の列にスクロールするか、 **[列]** メニューをクリックしてから **[列の追加]**をクリックします。  
+1.  モデル デザイナーのデータ ビューで、新しい空白の計算列を追加するテーブルを選択し、右端の列にスクロールするか、 **[列]** メニューをクリックしてから **[列の追加]** をクリックします。  
   
-     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]**をクリックします。  
+     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]** をクリックします。  
   
 2.  各行の属性を追加するには、数式バーに DAX 式を入力します。  
   
@@ -62,9 +60,9 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-a-named-blank-column"></a>名前付きの空白列を作成するには  
   
-1.  モデル デザイナーのデータ ビューで、空白列を追加するテーブルを選択し、右端の列にスクロールするか、 **[列]** メニューをクリックしてから **[列の追加]**をクリックします。  
+1.  モデル デザイナーのデータ ビューで、空白列を追加するテーブルを選択し、右端の列にスクロールするか、 **[列]** メニューをクリックしてから **[列の追加]** をクリックします。  
   
-     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]**をクリックします。  
+     2 つの既存の列の間に新しい列を作成するには、既存の列をクリックしてから **[列の挿入]** をクリックします。  
   
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   

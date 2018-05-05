@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +26,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9537b116415c9620b31ad98348bcea6aca7fefe2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  値**sql:key-フィールド**リレーションの行を一意に識別する列を識別します。 複数の列が必要な場合、行を一意に識別する、列の値はスペースで区切られます。  
   
- 使用する必要があります、 **sql:key-フィールド**注釈要素が含まれている場合、  **\<sql:relationship >**要素と子要素の間に定義されている、主キーは提供されません親要素で指定されているテーブルです。  
+ 使用する必要があります、 **sql:key-フィールド**注釈要素が含まれている場合、  **\<sql:relationship >** 要素と子要素の間に定義されている、主キーは提供されません親要素で指定されているテーブルです。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
@@ -53,11 +50,11 @@ ms.lasthandoff: 04/16/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 適切な入れ子時に生成した\<sql:relationship > ための十分な情報は提供されません  
  この例は、場所を示しています**sql:key-フィールド**指定する必要があります。  
   
- 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >**と**\<顧客 >**要素を**\<順序 >**要素は親と**\<顧客 >**要素が子。  
+ 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と**\<顧客 >** 要素を**\<順序 >** 要素は親と**\<顧客 >** 要素が子。  
   
-  **\<Sql:relationship >**タグを使用して、親子のリレーションシップを指定します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >**親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
+ **\<Sql:relationship >** タグを使用して、親子のリレーションシップを指定します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
   
- **Sql:key-フィールド**で指定された**\<順序 >**注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別、およびその子要素の下に表示、親です。  
+ **Sql:key-フィールド**で指定された**\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別、およびその子要素の下に表示、親です。  
   
  スキーマは次のようになります。  
   
@@ -134,7 +131,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. sql:key-fields を指定して結果内に適切な入れ子を生成する  
- 次のスキーマを使用して指定の階層がありません **\<sql:relationship >**です。 スキーマに指定する必要である、 **sql:key-フィールド**HumanResources.Employee テーブル内の従業員を一意に識別するコメントです。  
+ 次のスキーマを使用して指定の階層がありません **\<sql:relationship >** です。 スキーマに指定する必要である、 **sql:key-フィールド**HumanResources.Employee テーブル内の従業員を一意に識別するコメントです。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -161,7 +158,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  上のスキーマのコードをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml として保存します。  
   
-2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml を保存したディレクトリに KeyFields2T.xml として保存します。 テンプレートの XPath クエリでは、すべてを返します、  **\<HumanResources.Employee >**要素。  
+2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml を保存したディレクトリに KeyFields2T.xml として保存します。 テンプレートの XPath クエリでは、すべてを返します、  **\<HumanResources.Employee >** 要素。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

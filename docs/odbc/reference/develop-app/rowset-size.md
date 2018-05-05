@@ -3,15 +3,12 @@ title: 行セット サイズ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rowset size [ODBC]
 - cursors [ODBC], block
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c0fa3d2feb8bcd3c4c342567e67f403edfb8029a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-size"></a>行セット サイズ
 使用するには、どの行セット サイズは、アプリケーションによって異なります。 通常、画面ベースのアプリケーションでは、2 つの方法に従います。 1 つは、行セット サイズを画面に表示される行の数に設定するのにはアプリケーションをユーザーが画面を変更する場合、行セットのサイズがそれに応じて変わります。 2 番目をより大きな数値に 100 など、データ ソースへの呼び出しの数が減少行セットのサイズを設定することです。 アプリケーションでは、可能な場合は、行セット内でローカルにまでスクロールし、行セットの外部スクロール場合にのみ新しい行がフェッチされます。  

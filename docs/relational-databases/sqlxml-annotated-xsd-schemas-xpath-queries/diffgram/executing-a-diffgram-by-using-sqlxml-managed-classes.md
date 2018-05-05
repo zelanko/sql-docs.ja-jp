@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fa04e87ef14c0a863cbace5e2dfa41a31ec2c7a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d0fba2d5e51c38ccc2fee03279d4f97c4841ecb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML マネージ クラスを使用した、DiffGram の実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 </ROOT>  
 ```  
   
- **\<する前に >**ブロックに含まれる、 **\<顧客 >**要素 (**diffgr:id ="Customer1"**)。  **\<DataInstance >**ブロックに含まれる、対応する**\<顧客 >**要素と同じ**id**です。**\<顧客 >**内の要素、  **\<NewDataSet >**も指定**diffgr:hasChanges ="modified"**です。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
+ **\<する前に >** ブロックに含まれる、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。 **\<DataInstance >** ブロックに含まれる、対応する**\<顧客 >** 要素と同じ**id**です。**\<顧客 >** 内の要素、  **\<NewDataSet >** も指定**diffgr:hasChanges ="modified"** です。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視され、更新は実行されません。  
   
  C# チュートリアル アプリケーション SQLXML マネージ クラスを使用して、上の DiffGram を実行しでも作成する 2 つのテーブル (Cust、Ord) を更新する方法を示すためのコードを次に示します、 **tempdb**データベース。  
   

@@ -1,35 +1,33 @@
 ---
-title: "イベントのイベント カテゴリの検出 |Microsoft ドキュメント"
-ms.custom: 
+title: イベントのイベント カテゴリの検出 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Discover Events event category
 - discover events [Analysis Services]
 - event classes [Analysis Services], discover events
 ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 40cbdf890c45c965217e038420e4fea4b108a08e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6cd4ea31037cdc86ca354329c6286327ede6b927
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discover-events-event-category"></a>Discover イベントのイベント カテゴリ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Discover イベントのイベント カテゴリには、次の表に示したイベント クラスがあります。  
+  Discover イベントのイベント カテゴリには、次の表に示したイベント クラスがあります。  
   
 |Event Class|イベント ID|Description|  
 |-----------------|--------------|-----------------|  

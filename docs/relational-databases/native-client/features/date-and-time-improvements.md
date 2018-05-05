@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -16,13 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36aea58e1a26507a5178b5b5a58bf08df9c08489
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e2077845a348243b8f2e68563580028f6d656354
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-improvements"></a>日付と時刻の強化
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,9 +47,9 @@ ms.lasthandoff: 04/16/2018
  プロセス制御や製造アプリケーションなど、アプリケーションによっては、有効桁数が 100 ナノ秒までの時刻データを処理できる必要があります。 このための新しい型が DBTYPE_DBTIME2 (OLE DB) と SQL_SS_TIME2 (ODBC) です。  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>秒の有効桁数が拡張された Datetime を使用する  
- OLE DB では既に、有効桁数が 1 ナノ秒までの型が定義されています。 ただし、この型は既に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既存のアプリケーションで使用されており、このようなアプリケーションでは、有効桁数を 1/300 秒までしか想定していません。 新しい**datetime2(3)**型は、既存の datetime 型と直接的な互換性はありません。 これがアプリケーションの動作に影響するというリスクがある場合、アプリケーションは新しい DBCOLUMN フラグを使用して、実際のサーバーの種類を判断する必要があります。  
+ OLE DB では既に、有効桁数が 1 ナノ秒までの型が定義されています。 ただし、この型は既に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既存のアプリケーションで使用されており、このようなアプリケーションでは、有効桁数を 1/300 秒までしか想定していません。 新しい**datetime2(3)** 型は、既存の datetime 型と直接的な互換性はありません。 これがアプリケーションの動作に影響するというリスクがある場合、アプリケーションは新しい DBCOLUMN フラグを使用して、実際のサーバーの種類を判断する必要があります。  
   
- ODBC DB でも既に、有効桁数が 1 ナノ秒までの型が定義されています。 ただし、この型は既に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既存のアプリケーションで使用されており、このようなアプリケーションでは、有効桁数を 3 ミリ秒までしか想定していません。 新しい**datetime2(3)**型は、既存の直接的な互換性がない**datetime**型です。 **datetime2(3)**精度は 1 ミリ秒、および**datetime** 1/300 秒の有効桁数です。 ODBC では、アプリケーションが SQL_DESC_TYPE_NAME 記述子フィールドで使用されているサーバーの種類を判断できます。 したがって、既存の型 SQL_TYPE_TIMESTAMP (ODBC 2.0 アプリケーションの場合は SQL_TIMESTAMP) は両方の型に使用できます。  
+ ODBC DB でも既に、有効桁数が 1 ナノ秒までの型が定義されています。 ただし、この型は既に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既存のアプリケーションで使用されており、このようなアプリケーションでは、有効桁数を 3 ミリ秒までしか想定していません。 新しい**datetime2(3)** 型は、既存の直接的な互換性がない**datetime**型です。 **datetime2(3)** 精度は 1 ミリ秒、および**datetime** 1/300 秒の有効桁数です。 ODBC では、アプリケーションが SQL_DESC_TYPE_NAME 記述子フィールドで使用されているサーバーの種類を判断できます。 したがって、既存の型 SQL_TYPE_TIMESTAMP (ODBC 2.0 アプリケーションの場合は SQL_TIMESTAMP) は両方の型に使用できます。  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>秒の有効桁数とタイム ゾーンが拡張された Datetime を使用する  
  アプリケーションによっては、タイム ゾーン情報を含む datetime 値が必要です。 これは、新しい型 DBTYPE_DBTIMESTAMPOFFSET (OLE DB) および SQL_SS_TIMESTAMPOFFSET (ODBC) でサポートされています。  

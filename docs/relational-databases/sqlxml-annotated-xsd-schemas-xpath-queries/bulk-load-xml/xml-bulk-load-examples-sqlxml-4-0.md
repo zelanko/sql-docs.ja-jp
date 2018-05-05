@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +36,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4527b1c3fb4e3573bad5b34a3c4743da16d94487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +205,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 複数テーブルでの XML データの一括読み込み  
- この例では、XML ドキュメントは、 **\<顧客 >**と**\<順序 >**要素。  
+ この例では、XML ドキュメントは、 **\<顧客 >** と**\<順序 >** 要素。  
   
 ```xml  
 <ROOT>  
@@ -239,7 +236,7 @@ End Function
   
 -   CustOrder (OrderID、CustomerID)  
   
- 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップが指定の**\<顧客 >**と**\<順序 >**要素。  
+ 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップが指定の**\<顧客 >** と**\<順序 >** 要素。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -278,7 +275,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 主キー/外部キーのリレーションシップ間で上記で指定した XML 一括読み込みで、  **\<Cust >**と **\<CustOrder >**一括する要素は、両方のテーブルにデータを読み込みます.  
+ 主キー/外部キーのリレーションシップ間で上記で指定した XML 一括読み込みで、  **\<Cust >** と **\<CustOrder >** 一括する要素は、両方のテーブルにデータを読み込みます.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>一括読み込みのサンプルをテストするには  
   
@@ -391,7 +388,7 @@ End Function
 </xsd:schema>  
 ```  
   
- スキーマを指定します、 **\<順序 >**を持つ要素を**\<製品 >**子要素です。 **\<順序 >**要素 Ord テーブルにマップされ、 **\<製品 >**要素は、データベースの Product テーブルにマップします。 指定されたチェーン リレーションシップ、 **\<製品 >**要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
+ スキーマを指定します、 **\<順序 >** を持つ要素を**\<製品 >** 子要素です。 **\<順序 >** 要素 Ord テーブルにマップされ、 **\<製品 >** 要素は、データベースの Product テーブルにマップします。 指定されたチェーン リレーションシップ、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
   
  このスキーマで XML ドキュメントの一括読み込みを行うと、Ord テーブル、Product テーブル、および OrderDetail テーブルにレコードが追加されます。  
   
@@ -853,10 +850,10 @@ End Sub
 </xsd:schema>  
 ```  
   
- このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各**\<顧客 >**要素がこの列に追加します。  
+ このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各**\<顧客 >** 要素がこの列に追加します。  
   
 > [!NOTE]  
->  すべての abstract 要素 (対象の要素**抽象 ="true"**が指定されている) すべての禁止属性と (対象の属性**禁止されています ="true"**が指定されている) XML の一括でオーバーフローと見なされますロード テストは、指定した場合は、オーバーフロー列に追加されます。 それ以外の場合は無視されます。  
+>  すべての abstract 要素 (対象の要素**抽象 ="true"** が指定されている) すべての禁止属性と (対象の属性**禁止されています ="true"** が指定されている) XML の一括でオーバーフローと見なされますロード テストは、指定した場合は、オーバーフロー列に追加されます。 それ以外の場合は無視されます。  
   
 #### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
@@ -1251,9 +1248,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. xml データ型の列に一括読み込みを行う  
- マッピング スキーマを指定する場合、 [xml データ型](../../../t-sql/xml/xml-transact-sql.md)列を使用して、 **sql:datatype ="xml"**注釈、XML 一括読み込みはこれにはソース ドキュメントからマップされたフィールドの XML 子要素をコピーすることができます列です。  
+ マッピング スキーマを指定する場合、 [xml データ型](../../../t-sql/xml/xml-transact-sql.md)列を使用して、 **sql:datatype ="xml"** 注釈、XML 一括読み込みはこれにはソース ドキュメントからマップされたフィールドの XML 子要素をコピーすることができます列です。  
   
- 次の XSD スキーマを考えてみます。この XSD スキーマでは、サンプル データベース AdventureWorks の Production.ProductModel テーブルのビューがマップされます。 この表の CatalogDescription フィールド**xml**はデータ型にマップ、  **\<Desc >**要素を使用して、 **sql:field**と**sql:データ型"xml"を =**注釈。  
+ 次の XSD スキーマを考えてみます。この XSD スキーマでは、サンプル データベース AdventureWorks の Production.ProductModel テーブルのビューがマップされます。 この表の CatalogDescription フィールド**xml**はデータ型にマップ、  **\<Desc >** 要素を使用して、 **sql:field**と**sql:データ型"xml"を =** 注釈。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

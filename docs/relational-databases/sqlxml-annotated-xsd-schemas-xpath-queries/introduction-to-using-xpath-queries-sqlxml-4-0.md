@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 628efe2628353992667474d8c5cff2b9eb88e228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e620b704f7678a9af8510e7b1d81321aec6ba061
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,9 +51,9 @@ ms.lasthandoff: 04/16/2018
 </root>  
 ```  
   
- このドキュメントで**\<顧客 >**要素ノード、 **cid**が属性ノード、および**"Important"**テキスト ノードします。  
+ このドキュメントで**\<顧客 >** 要素ノード、 **cid**が属性ノード、および **"Important"** テキスト ノードします。  
   
- XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、特定のセット**\<顧客 >** XPath のノードで、すべてを選択できます**\<順序 >**を持つノード、**日付**属性の値を指定します。**「7/14/1999」**です。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
+ XPath は、XML ドキュメントからノード セットを選択するときに使用できるグラフ ナビゲーション言語です。 XPath の各演算子では、前の XPath 演算子によって選択されたノード セットに基づいて、ノード セットを選択します。 たとえば、特定のセット**\<顧客 >** XPath のノードで、すべてを選択できます**\<順序 >** を持つノード、**日付**属性の値を指定します。**「7/14/1999」**です。 結果のノード セットには、注文日が 1999 年 7 月 14 日となっているすべての注文が含まれます。  
   
  XPath 言語は W3C (World Wide Web Consortium) によって標準のナビゲーション言語として定義されています。 SQLXML 4.0 である W3C XPath 仕様のサブセットを実装するhttp://www.w3.org/TR/1999/PR-xpath-19991008.htmlです。  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **ルート クエリ**  
   
-     SQLXML 4.0 では、ルート クエリ (/) はサポートされません。 すべての XPath クエリは、最上位から始める必要があります **\<ElementType >**スキーマです。  
+     SQLXML 4.0 では、ルート クエリ (/) はサポートされません。 すべての XPath クエリは、最上位から始める必要があります **\<ElementType >** スキーマです。  
   
 -   **エラーの報告**  
   

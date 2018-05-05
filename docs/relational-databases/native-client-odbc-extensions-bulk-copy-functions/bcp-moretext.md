@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
@@ -24,13 +23,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db0bf2f1fdfc57a1f92aa7fce8bd27c29e99003a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e64f445788e35563120c357b93395fcfede50410
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +70,7 @@ RETCODE bcp_moretext (
   
  コピーする行に 1 つ以上の長い可変長列が含まれている場合**bcp_moretext**最初の送信を低いものまで、そのデータには、次に、列序数に基づく番号が付けられます最小序数の列となどです。 コピーするデータの合計長を正しく設定することが重要です。 長さの設定以外に、一括コピーによって列のすべてのデータを受け取ったことを示す方法はありません。  
   
- ときに**var(max)**値が送信される bcp_sendrow および bcp_moretext を使用して、サーバーには列の長さを設定する bcp_collen を呼び出す必要です。 代わりに、これらの種類に対してのみ値が長さ 0 の呼び出し元の bcp_sendrow で終了します。  
+ ときに**var(max)** 値が送信される bcp_sendrow および bcp_moretext を使用して、サーバーには列の長さを設定する bcp_collen を呼び出す必要です。 代わりに、これらの種類に対してのみ値が長さ 0 の呼び出し元の bcp_sendrow で終了します。  
   
  アプリケーションが通常どおり呼び出す**bcp_sendrow**と**bcp_moretext**内でのデータの行の数を送信するループします。 これを行う方法を含む 2 つのテーブルの概要を次に示します**テキスト**列。  
   

@@ -3,15 +3,12 @@ title: 記述子の解放 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeHandle function [ODBC]
 - descriptors [ODBC], allocating and freeing
@@ -22,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e99c394521bf6f733503e2d5e2f8794d5412cc94
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4c96d5b654d8331f95e3abbe8a3aa8b563bf7a63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freeing-descriptors"></a>記述子の解放
 明示的に割り当てられた記述子は、いずれかを呼び出すことによって、明示的に解放**SQLFreeHandle**で*HandleType* SQL_HANDLE_DESC、または暗黙的にすると、接続ハンドルが解放されます。 明示的に割り当てられた記述子が解放されるときに、それらを暗黙的に割り当てられた記述子を元に戻す、解放された記述子を自動的に適用されるすべてのステートメント ハンドルです。  

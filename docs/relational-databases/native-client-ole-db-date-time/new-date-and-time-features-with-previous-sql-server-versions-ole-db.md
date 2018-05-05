@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
@@ -16,13 +15,12 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f5e7bdd599222eb0c37f851901a59f663cc2658
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5cb50889a9cb584e5f22d5f2e77960dba567fda1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新しい日付と時刻の機能と以前の SQL Server バージョン (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 -   切り替え**datetime2**日付と時刻の推奨されるデータ型は、このためです。  
   
- Icommandwithparameters::setparameterinfo をパラメーターの型情報を設定する icommandwithparameters::getparameterinfo またはスキーマ行セットから取得したサーバー メタデータを使用するアプリケーションがクライアントでの変換中にエラーが発生場所文字列ソース型の表現は、変換先の型の文字列形式より大きいです。 たとえば、クライアントのバインドで DBTYPE_DBTIMESTAMP を使用して、サーバーの列は日付、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、"yyyy mm dd hh:mm:ss.fff"に値が変換されますが、サーバーのメタデータとして返されます**nvarchar (10)**です。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 ような問題が発生したデータ変換を含む IRowsetChange、によって結果セットのメタデータから行セットのメタデータが設定されているためです。  
+ Icommandwithparameters::setparameterinfo をパラメーターの型情報を設定する icommandwithparameters::getparameterinfo またはスキーマ行セットから取得したサーバー メタデータを使用するアプリケーションがクライアントでの変換中にエラーが発生場所文字列ソース型の表現は、変換先の型の文字列形式より大きいです。 たとえば、クライアントのバインドで DBTYPE_DBTIMESTAMP を使用して、サーバーの列は日付、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、"yyyy mm dd hh:mm:ss.fff"に値が変換されますが、サーバーのメタデータとして返されます**nvarchar (10)** です。 その結果発生するオーバーフローが、DBSTATUS_E_CATCONVERTVALUE の原因となります。 ような問題が発生したデータ変換を含む IRowsetChange、によって結果セットのメタデータから行セットのメタデータが設定されているためです。  
   
 ### <a name="parameter-and-rowset-metadata"></a>パラメーターと行セットのメタデータ  
  このセクションのバージョンでコンパイルされたクライアントのパラメーター、結果列、およびスキーマ行セットのメタデータをについて説明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client より前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。  

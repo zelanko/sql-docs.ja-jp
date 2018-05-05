@@ -27,12 +27,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2d5e82f9da96f1831d7f0b76b92f469ec567a508
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49ed5ae45fcd3f5c760481a4dce85f8a5bd8e5a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="RolesAndOperationalStates"></a> ロールと操作状態  
  役割、**ロール**、特定の可用性レプリカの状態と動作の状態を反映**operational_state**レプリカはすべてのクライアント要求を処理する準備ができているかどうかについて説明します、可用性レプリカのデータベースです。 各ロールの可能なオペレーション状態の概要を次に示します: 解決して、プライマリ、およびセカンダリ。  
   
- **RESOLVING:**運用状態には、次の表に示すように可用性レプリカが RESOLVING ロールの場合は、します。  
+ **RESOLVING:** 運用状態には、次の表に示すように可用性レプリカが RESOLVING ロールの場合は、します。  
   
 |動作状態|Description|  
 |-----------------------|-----------------|  
@@ -73,7 +72,7 @@ ms.lasthandoff: 04/16/2018
 |FAILED|WSFC クラスターから情報を取得しようとして、読み取りエラーが発生しました。|  
 |FAILED_NO_QUORUM|ローカルの WSFC ノードに、クォーラムがありません。 これは、推論された状態です。|  
   
- **PRIMARY:**可用性レプリカがプライマリ ロールを実行してが現在プライマリ レプリカであります。 運用状態には、次の表に示すようにします。  
+ **PRIMARY:** 可用性レプリカがプライマリ ロールを実行してが現在プライマリ レプリカであります。 運用状態には、次の表に示すようにします。  
   
 |動作状態|Description|  
 |-----------------------|-----------------|  
@@ -81,7 +80,7 @@ ms.lasthandoff: 04/16/2018
 |ONLINE|可用性グループ リソースがオンラインになっており、すべてのデータベース ワーカー スレッドが選択されました。|  
 |FAILED|可用性レプリカは、WSFC クラスターに対して読み取りまたは書き込みを行うことができません。|  
   
- **SECONDARY:**セカンダリ レプリカが現在可用性レプリカがセカンダリ ロールを実行する、ときにします。 運用状態には次の表に示すようにします。  
+ **SECONDARY:** セカンダリ レプリカが現在可用性レプリカがセカンダリ ロールを実行する、ときにします。 運用状態には次の表に示すようにします。  
   
 |動作状態|Description|  
 |-----------------------|-----------------|  

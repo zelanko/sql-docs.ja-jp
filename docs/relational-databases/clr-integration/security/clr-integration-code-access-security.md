@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +22,11 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ebe23e9aa58308e404f8cf748abe3e903471cb11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +62,8 @@ ms.lasthandoff: 04/16/2018
   
 |権限|値/説明|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**実行する場合:**をマネージ コードを実行する権限です。|  
-|**SqlClientPermission**|**コンテキスト接続 = true**、**コンテキスト接続 = [はい]**: コンテキスト接続を使用して、接続文字列がの値を指定できますのみ専用"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"です。<br /><br /> **AllowBlankPassword = false:**空のパスワードは許可されていません。|  
+|**SecurityPermission**|**実行する場合:** をマネージ コードを実行する権限です。|  
+|**SqlClientPermission**|**コンテキスト接続 = true**、**コンテキスト接続 = [はい]**: コンテキスト接続を使用して、接続文字列がの値を指定できますのみ専用"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"です。<br /><br /> **AllowBlankPassword = false:** 空のパスワードは許可されていません。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS アセンブリと同じアクセス許可がある**セーフ**アセンブリ、ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスする追加機能を使用します。  
@@ -74,19 +72,19 @@ ms.lasthandoff: 04/16/2018
   
 |権限|値/説明|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**無制限:**分散トランザクションが許可されます。|  
-|**コード**|**無制限:**ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
-|**EnvironmentPermission**|**無制限:**完全システムとユーザーの環境変数へのアクセスを許可します。|  
-|**EventLogPermission**|**管理:**次の操作が許可されます: イベント ソースまたはオフにすると、イベントをリッスンしていると、すべてのイベント ログのコレクションへのアクセスのイベント ログ エントリに応答して、ログを削除すると、既存のログの読み取り、イベント ソースを作成します。|  
-|**FileIOPermission**|**無制限:**ファイルへのフル アクセスのフォルダーが許可されているとします。|  
-|**KeyContainerPermission**|**無制限:**フル キー コンテナーへのアクセスを許可します。|  
+|**DistributedTransactionPermission**|**無制限:** 分散トランザクションが許可されます。|  
+|**コード**|**無制限:** ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
+|**EnvironmentPermission**|**無制限:** 完全システムとユーザーの環境変数へのアクセスを許可します。|  
+|**EventLogPermission**|**管理:** 次の操作が許可されます: イベント ソースまたはオフにすると、イベントをリッスンしていると、すべてのイベント ログのコレクションへのアクセスのイベント ログ エントリに応答して、ログを削除すると、既存のログの読み取り、イベント ソースを作成します。|  
+|**FileIOPermission**|**無制限:** ファイルへのフル アクセスのフォルダーが許可されているとします。|  
+|**KeyContainerPermission**|**無制限:** フル キー コンテナーへのアクセスを許可します。|  
 |**NetworkInformationPermission**|**アクセス:** Pinging は許可されています。|  
 |**RegistryPermission**|読み取り権限を許可**HKEY_CLASSES_ROOT**、 **HKEY_LOCAL_MACHINE**、 **HKEY_CURRENT_USER**、 **HKEY_CURRENT_CONFIG**、および**HKEY_USERS です。**|  
-|**SecurityPermission**|**アサーション:**このコードのすべての呼び出し元に、操作に必要な権限があることをアサートする機能。<br /><br /> **ControlPrincipal:**プリンシパル オブジェクトを操作する機能。<br /><br /> **実行する場合:**をマネージ コードを実行する権限です。<br /><br /> **SerializationFormatter:**をシリアル化サービスを提供する機能。|  
+|**SecurityPermission**|**アサーション:** このコードのすべての呼び出し元に、操作に必要な権限があることをアサートする機能。<br /><br /> **ControlPrincipal:** プリンシパル オブジェクトを操作する機能。<br /><br /> **実行する場合:** をマネージ コードを実行する権限です。<br /><br /> **SerializationFormatter:** をシリアル化サービスを提供する機能。|  
 |**SmtpPermission**|**アクセス:** SMTP ホスト ポート 25 への発信接続を許可します。|  
-|**SocketPermission**|**接続:**トランスポート アドレスでの発信接続 (すべてのポートおよびプロトコル) を許可します。|  
-|**SqlClientPermission**|**無制限:**完全データ ソースへのアクセスを許可します。|  
-|**StorePermission**|**無制限:**フル アクセスを X.509 証明書ストアを許可します。|  
+|**SocketPermission**|**接続:** トランスポート アドレスでの発信接続 (すべてのポートおよびプロトコル) を許可します。|  
+|**SqlClientPermission**|**無制限:** 完全データ ソースへのアクセスを許可します。|  
+|**StorePermission**|**無制限:** フル アクセスを X.509 証明書ストアを許可します。|  
 |**WebPermission**|**接続:** web リソースへの発信接続を許可します。|  
   
 ### <a name="unsafe"></a>UNSAFE  

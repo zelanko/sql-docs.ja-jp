@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -20,13 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7f4d77722108f82733978b5b2c778ddfbfb958c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5f9cf56b4ee1a7e3108607912ecba9a05d0815e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client におけるスパース列のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
 |列がスパース列かどうかを確認する。|SQLColumns 結果セット (ODBC) の SS_IS_SPARSE 列を参照してください。<br /><br /> DBSCHEMA_COLUMNS スキーマ行セットの SS_IS_SPARSE 列を調べます (OLE DB)。<br /><br /> このシナリオは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のリリースの [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client を使用するアプリケーションでは使用できません。 ただし、そのようなアプリケーションでは、システム ビューに対してクエリを実行できます。|  
 |かどうか、列、 **column_set**です。|SQLColumns の結果セットの SS_IS_COLUMN_SET 列を参照してください。 または、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の列属性である SQL_CA_SS_IS_COLUMN_SET を調べます (ODBC)。<br /><br /> DBSCHEMA_COLUMNS スキーマ行セットの SS_IS_COLUMN_SET 列を調べます。 またはを参照してください*dwFlags* icolumnsinfo::getcolumninfo または DBCOLUMNFLAGS によって icolumnsrowset::getcolumnsrowset によって返される行セットで返されます。 **Column_set**列、DBCOLUMNFLAGS_SS_ISCOLUMNSET が設定されます (OLE DB)。<br /><br /> このシナリオは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のリリースの [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client を使用するアプリケーションでは使用できません。 ただし、そのようなアプリケーションでは、システム ビューに対してクエリを実行できます。|  
 |含まないテーブルに対して BCP でスパース列のインポートとエクスポート**column_set**です。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の以前のバージョンから動作は変更されていません。|  
-|含むテーブルに対して BCP でスパース列のインポートとエクスポート、 **column_set**です。|**Column_set**がインポートされ、XML; と同じ方法でエクスポートは、として**varbinary (max)**場合としてまたはバイナリ型としてバインドされている**nvarchar (max)**場合、としてバインド**char**または**wchar**型です。<br /><br /> 列、スパースのメンバーである**column_set**個別の列としてはエクスポートされませんの値にのみエクスポートされている、 **column_set**です。|  
+|含むテーブルに対して BCP でスパース列のインポートとエクスポート、 **column_set**です。|**Column_set**がインポートされ、XML; と同じ方法でエクスポートは、として**varbinary (max)** 場合としてまたはバイナリ型としてバインドされている**nvarchar (max)** 場合、としてバインド**char**または**wchar**型です。<br /><br /> 列、スパースのメンバーである**column_set**個別の列としてはエクスポートされませんの値にのみエクスポートされている、 **column_set**です。|  
 |**queryout** BCP の動作です。|明示的に指定された列の処理は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の以前のバージョンから変更されていません。<br /><br /> スキーマが異なる列の間のインポートおよびエクスポートを含むシナリオでは、特別な処理が必要になる場合があります。<br /><br /> BCP の詳細については、後の「一括コピー (BCP) によるスパース列のサポート」を参照してください。|  
   
 ## <a name="down-level-client-behavior"></a>下位クライアントの動作  
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>一括コピー (BCP) によるスパース列のサポート  
  スパース列の ODBC または OLE DB の BCP API への変更がないか、 **column_set**機能します。  
   
- テーブルがある場合、 **column_set**、スパース列は個別の列として処理されません。 値にすべてのスパース列の値が含まれている、 **column_set**、XML 列と同じ方法でエクスポートするは、として**varbinary (max)**場合としてまたはバイナリ型としてバインドされている**nvarchar (max)**場合としてバインドされている、 **char**または**wchar**型)。 インポート時に、 **column_set**値は、のスキーマに準拠している必要があります、 **column_set**です。  
+ テーブルがある場合、 **column_set**、スパース列は個別の列として処理されません。 値にすべてのスパース列の値が含まれている、 **column_set**、XML 列と同じ方法でエクスポートするは、として**varbinary (max)** 場合としてまたはバイナリ型としてバインドされている**nvarchar (max)** 場合としてバインドされている、 **char**または**wchar**型)。 インポート時に、 **column_set**値は、のスキーマに準拠している必要があります、 **column_set**です。  
   
  **Queryout**操作を明示的に参照されている列の処理方法に変更はありません。 **column_set**列が XML 列と同じ動作があるし、スパースかどうかも何も起こりませんの取り扱いをスパース列をという名前です。  
   

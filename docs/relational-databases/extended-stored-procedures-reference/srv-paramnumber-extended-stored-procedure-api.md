@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1dd94f1af6f41728114605934ee0e780d48db683
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 980752e300bf514b12a7c546068201a603922db1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamnumber-extended-stored-procedure-api"></a>srv_paramnumber (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +65,10 @@ namelen
  *namelen*  
  *name* の長さです。 *name* が NULL 終端である場合は、*namelen* を SRV_NULLTERM に設定します。  
   
-## <a name="returns"></a>返します。  
+## <a name="returns"></a>戻り値  
  指定されたパラメーターのパラメーター番号を返します。 最初のパラメーターは 1 です。 *name* という名前のパラメーターがない場合、またはリモート ストアド プロシージャがない場合は、0 を返し、メッセージを生成します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  
   
 > [!IMPORTANT]  

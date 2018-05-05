@@ -2,7 +2,7 @@
 title: DatabaseToConnect 要素 (DTA) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e57133b7158ba1fae461f2d058f9cd8065226c8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 3c48aa606255566959943b03d8cd1449453b937d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 要素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]データベース エンジン チューニング アドバイザーがワークロードのチューニング時に接続する最初のデータベースを指定します。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  データベース エンジン チューニング アドバイザーがワークロードのチューニング時に最初に接続するデータベースを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**既定値**|[なし] :|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/17/2018
 |**親要素**|[TuningOptions 要素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **DatabaseToConnect** は、データベース エンジン チューニング アドバイザーがチューニング セッションの開始時に最初に接続するデータベースの名前を指定するために使用します。 この要素では、データベースを 1 つだけ指定できます。 複数のデータベース名が指定されていると、データベース エンジン チューニング アドバイザーはエラーを返します。  
   
 ## <a name="example"></a>例  

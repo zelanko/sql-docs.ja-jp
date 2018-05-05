@@ -24,12 +24,11 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 015121ef484dca6791947417e54987733bbbcfcb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 91ee8de84d828daf7ae1540c36e9a74120531e3c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**不適切な変数型 (0x80020008)**|データ型、[!INCLUDE[tsql](../../includes/tsql-md.md)]メソッドのパラメーターが一致しませんでしたとして渡される値、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]メソッド パラメーター、または NULL 値のデータ型が、メソッド パラメーターとして渡されました。|  
 |**不明な名前 (です 0x8002006)**|指定したプロパティ名またはメソッド名が、指定したオブジェクトに見つかりませんでした。|  
-|**無効なクラス文字列 (です 0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 インスタンス化することを使用する前に、カスタム OLE オートメーション サーバーを登録する必要があります**sp_OACreate**です。 組み込み (.dll) サーバーでは、Regsvr32.exe ユーティリティを使用して、そのため、または**/REGSERVER**コマンド ライン スイッチをローカル (.exe) サーバー。|  
+|**無効なクラス文字列 (です 0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 インスタンス化することを使用する前に、カスタム OLE オートメーション サーバーを登録する必要があります**sp_OACreate**です。 組み込み (.dll) サーバーでは、Regsvr32.exe ユーティリティを使用して、そのため、または **/REGSERVER**コマンド ライン スイッチをローカル (.exe) サーバー。|  
 |**サーバーの実行に失敗しました (0x80080005)**|指定した OLE オブジェクトは、ローカル OLE サーバー (.exe ファイル) として登録されていますが、.exe ファイルが見つからないか、起動できません。|  
 |**指定したモジュールに見つかりませんでした (0x8007007e)**|指定した OLE オブジェクトは、組み込み OLE サーバー (.dll ファイル) として登録されていますが、.dll ファイルが見つからないか、読み込むことができません。|  
 |**型が一致しません (0x80020005)**|プロパティ値またはメソッドの戻り値を格納するために使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ローカル変数のデータ型が、プロパティ値またはメソッドの戻り値の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型と一致しません。 または、プロパティやメソッドの戻り値を要求しましたが、そのプロパティやメソッドで戻り値が返されません。|  

@@ -24,12 +24,11 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 065126113e8914d1f22959bbfacc3e341d8855c8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 79a0e1807b517c900dfc29bc41c24cc7c223291f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="arguments"></a>引数  
  [ @Action=] '*アクション*'  
- プロシージャにより実行されるアクションの説明です。 *アクション*は**varchar (10)**です。 *アクション*値は次のいずれかを持つことができます。  
+ プロシージャにより実行されるアクションの説明です。 *アクション*は**varchar (10)** です。 *アクション*値は次のいずれかを持つことができます。  
   
 |値|Description|  
 |-----------|-----------------|  

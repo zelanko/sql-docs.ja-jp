@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -38,13 +36,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b3b3798be063dd586d74cf4f44d72a48c5f39ccf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 43ca8f3b345f5db9c0d11217caef744e9172bd22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -141,7 +138,7 @@ ms.lasthandoff: 04/16/2018
  既定値は FALSE です。  
   
  SGUseID  
- 指定するかどうか、マッピング スキーマで属性として識別された**id**型は、テーブルの作成時に PRIMARY KEY 制約の作成で使用できます。 SchemaGen プロパティが TRUE に設定されている場合は、このプロパティを使用します。 SchemaGen ユーティリティが、対象の属性を使用して SGUseID が TRUE の場合は、 **dt:type ="id"**が主キー列として指定され、テーブルを作成する際に、適切な主キー制約を追加します。  
+ 指定するかどうか、マッピング スキーマで属性として識別された**id**型は、テーブルの作成時に PRIMARY KEY 制約の作成で使用できます。 SchemaGen プロパティが TRUE に設定されている場合は、このプロパティを使用します。 SchemaGen ユーティリティが、対象の属性を使用して SGUseID が TRUE の場合は、 **dt:type ="id"** が主キー列として指定され、テーブルを作成する際に、適切な主キー制約を追加します。  
   
  既定値は FALSE です。  
   

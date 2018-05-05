@@ -5,16 +5,18 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: sql-linux,UpdArt.exe
+ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
-ms.component: ''
-ms.date: 02/03/2018
-ms.openlocfilehash: c277f51ddb50dfb9a5ef2bd23af7f6e80d00c25c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: linux
+ms.date: 04/28/2018
+ms.openlocfilehash: adc9b9d4dec86f1b0e8807869aa0f20532837cea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>新規または最近の更新: SQL Server on Linux のドキュメント
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
+- *更新プログラムの日付範囲:* &nbsp; **2018-02-03** &nbsp;対&nbsp; **2018-04-28**
 - *サブジェクト領域:* &nbsp; **Microsoft SQL Server on Linux**です。
 
 
@@ -41,12 +43,9 @@ ms.lasthandoff: 04/26/2018
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスを構成します。](sql-server-linux-configure-multiple-subnet.md)
-2. [作成し、Linux 上の SQL Server の可用性グループを構成します。](sql-server-linux-create-availability-group.md)
-3. [SQL Server on Linux のペース クラスターを展開します。](sql-server-linux-deploy-pacemaker-cluster.md)
-4. [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.md)
-5. [Linux 展開用の SQL Server 可用性の基礎](sql-server-linux-ha-basics.md)
-6. [Kubernetes で高可用性のため、SQL Server のコンテナーを構成します。](tutorial-sql-server-containers-kubernetes.md)
+1. [Linux 上の SQL Server の active Directory 認証](sql-server-linux-active-directory-auth-overview.md)
+2. [構成する SQL Server Always On 可用性グループを Windows および Linux (プラットフォーム) 間に](sql-server-linux-availability-group-cross-platform.md)
+3. [Linux 上の可用性グループに対して常に実行します。](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -72,8 +71,9 @@ ms.lasthandoff: 04/26/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [Always On Linux 上の可用性グループ](#TitleNum_1)
-2. [抽出、変換、および SSIS Linux でのデータを読み込む](#TitleNum_2)
+1. [インストールして、Linux 上の SQL Server をアップグレードするためのリポジトリを構成します。](#TitleNum_1)
+2. [Mssql conf ツールを使用して Linux 上の SQL Server を構成します。](#TitleNum_2)
+3. [Linux 上の SQL Server 2017 のリリース ノート](#TitleNum_3)
 
 
 
@@ -84,34 +84,69 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-always-on-availability-groups-on-linuxsql-server-linux-availability-group-overviewmd"></a>1.&nbsp;[Always On Linux 上の可用性グループ](sql-server-linux-availability-group-overview.md)
+### <a name="1-nbsp-configure-repositories-for-installing-and-upgrading-sql-server-on-linuxsql-server-linux-change-repomd"></a>1.&nbsp; [インストールして、Linux 上の SQL Server をアップグレードするためのリポジトリを構成します。](sql-server-linux-change-repo.md)
 
-*最終更新日: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
+*最終更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
 
-<!-- Source markdown line 85.  ms.author= mikeray.  -->
+<!-- Source markdown line 72.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 85685bc8ad3528aa26ca3f2bba7b0112808ad6f9 51aff6e55104c8f775d2b4f4461e44f689a9ee6b  (PR=4768  ,  Filename=sql-server-linux-availability-group-overview.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
+<!-- git diff --ignore-all-space --unified=0 b5ccaa0fcb8895f25c162e4e0494ad4872773de3 29a959be6ee7d58fe0c53e8f91bdd282fb2e6d29  (PR=5676  ,  Filename=sql-server-linux-change-repo.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-自動フェールオーバー、AG は、次の条件が満たされたときにできます。
+- ファイルの内容を出力します。
 
--   プライマリ レプリカとセカンダリ レプリカは、同期のデータの移動に設定されます。
--   セカンダリには、同期されている (同期中にありません)、つまり、2 つは、同じデータ ポイントでの状態があります。
--   クラスターの種類は、外部に設定されます。 自動フェールオーバーのなしのクラスターのタイプはできません。
--   `sequence_number`になるセカンダリ レプリカのプライマリが最も高いシーケンス番号: つまり、セカンダリ レプリカの`sequence_number`元のプライマリ レプリカから 1 つに一致します。
+```
+   sudo cat /etc/yum.repos.d/mssql-server.repo
+```
 
-これらの条件が満たされてし、失敗した場合、プライマリ レプリカをホストしているサーバー、AG は同期レプリカへの所有権を変更します。 同期レプリカの動作は、(存在できる 3 つの合計: 1 つのプライマリ レプリカと 2 つのセカンダリ レプリカ) でさらに制御できます`required_synchronized_secondaries_to_commit`です。 これにより、Windows と Linux の両方の Ag とでも動作しますが完全に異なる方法で構成されています。 Linux では、値は AG リソース自体に、クラスターによって自動的に構成します。
+- **名前**プロパティが構成されているリポジトリ。 この記事の [リポジトリ] セクションでテーブルを識別できます。
 
-**構成専用のレプリカとクォーラム**
+**古いリポジトリ (RHEL) を削除します。**
 
+必要に応じて、次のコマンドを使用して古いリポジトリを削除します。
 
-また新しい CU1 時点での SQL Server 2017 では構成専用のレプリカです。 ペースは異なるため、WSFC よりも、クォーラムと STONITH を必要とするときに特に 2 つのノードの構成のみは機能しません、AG になります。 FCI のペースで提供されるクォーラム メカニズムもかまいません、クラスターの層のすべての FCI フェールオーバー判別が行われるためです。 AG の判別 Linux では、すべてのメタデータが格納されている SQL Server で行われます。 これは、活躍するが、構成のみのレプリカです。
+```
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
 
-せず何でも、3 番目のノードと、少なくとも 1 つの同期レプリカが必要になります。 これは、可用性グループに参加している 2 つのレプリカにしか持てないために、SQL Server Standard を使用できません。 構成専用のレプリカは、AG の構成内の他のレプリカと同じで、master データベースは、AG の構成を格納します。 構成専用レプリカには、可用性グループに参加しているユーザー データベースがありません。 構成データは、プライマリから同期的に送信されます。 自動か手動かにかかわらず、この構成データは、フェールオーバー時に使用されます。
+このコマンドは、前のセクションで指定されたファイルがという名前の前提としています。 **mssql server.repo**です。
+
+**新しいリポジトリ (RHEL) を構成します。**
+
+SQL Server のインストールとアップグレードに使用する新しいリポジトリを構成します。 任意のリポジトリを構成するのにには、次のコマンドのいずれかを使用します。
+
+| リポジトリ | コマンド |
+|---|---|
+| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+**<a id="sles"></a> SLES リポジトリを構成します。**
+
+SLES でリポジトリを構成するのにには、次の手順を使用します。
+
+**以前に構成したリポジトリ (SLES) の確認します。**
+
+まず、SQL Server リポジトリが既に登録されているかどうかを確認します。
+
+- 使用して**zypper 情報**すべて以前に構成されたリポジトリに関する情報を取得します。
+
+```
+   sudo zypper info mssql-server
+```
+
+- **リポジトリ**プロパティが構成されているリポジトリ。 この記事の [リポジトリ] セクションでテーブルを識別できます。
+
+**古いリポジトリ (SLES) を削除します。**
+
+必要に応じて、古いリポジトリを削除します。 以前に構成されたリポジトリの種類に基づいて、次のコマンドのいずれかを使用します。
+
+| リポジトリ | 削除するコマンド |
+|---|---|
+| **プレビュー** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 
 
 
@@ -123,46 +158,109 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2.&nbsp;[抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
+### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2.&nbsp; [Mssql conf ツールを使用して Linux 上の SQL Server を構成します。](sql-server-linux-configure-mssql-conf.md)
 
-*最終更新日: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1))
+*最終更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [次](#TitleNum_3))
 
-<!-- Source markdown line 50.  ms.author= lle.  -->
+<!-- Source markdown line 151.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9bba002ae3955ebb8376c7c85b7ec1ac8c706073 1533a8e0bfe553e5404de79129119b3f93185ee9  (PR=4768  ,  Filename=sql-server-linux-migrate-ssis.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=d4d880dd9c247d1e7fb7a728d5231bc9ac61c989) -->
+<!-- git diff --ignore-all-space --unified=0 3664c4d64ea4840dcbc718461ed04403cc486f30 89f708af45ce262057e967e9047f1328e19248ba  (PR=5676  ,  Filename=sql-server-linux-configure-mssql-conf.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-    ```
-    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
-    ```
 
-2.  指定して、`/de[crypt]`対話形式で、次の例で示すように、パスワードを入力するオプション。
-
-    ```
-    /opt/ssis/bin/dtexec /f package.dtsx /de
-
-    Enter decryption password:
-    ```
-
-3.  指定して、`/de`次の例のように、コマンド ラインで、パスワードを提供するオプションです。 このメソッドは、コマンド履歴にコマンドを使用して復号化パスワードを格納するためには推奨されません。
-
-    ```
-    opt/ssis/bin/dtexec /f package.dtsx /de test
-
-    Warning: Using /De[crypt] <password> may store decryption password in command history.
-
-    You can use /De[crypt] instead to enter interactive mode,
-    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
-    ```
-
-**パッケージの設計**
+**<a id="masterdatabasedir"></a> Master データベース ファイル ディレクトリの既定の場所を変更します。**
 
 
-**ODBC データ ソースに接続**です。 Linux CTP 2.1 の更新以降、SSIS で SSIS パッケージは、Linux の ODBC 接続を使用できます。 この機能は、SQL Server および MySQL の ODBC ドライバーでテスト済みですはまた、ODBC 仕様に従うすべての Unicode ODBC ドライバーを使用する必要があります。 、デザイン時に、ODBC データに接続する DSN または接続文字列を指定できますWindows 認証を使用することもできます。 詳細については、次を参照してください。、 [Linux 上のブログの投稿 announcing ODBC サポート](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)です。
+**Filelocation.masterdatafile**と**filelocation.masterlogfile**設定の変更を SQL Server エンジンが master データベース ファイルを検索する場所です。 既定では、この場所は、/var/opt/mssql/data です。
+
+これらの設定を変更するには、次の手順を使用します。
+
+- 新しいエラー ログ ファイルのターゲット ディレクトリを作成します。 次の例は、新しい作成**tmp/masterdatabasedir**ディレクトリ。
+
+```
+   sudo mkdir /tmp/masterdatabasedir
+```
+
+- 所有者とするディレクトリのグループを変更、 **mssql**ユーザー。
+
+```
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+```
+
+- Mssql conf を使用して、マスター データ ファイルとログ ファイルの既定の master データベースのディレクトリを変更する、**設定**コマンド。
+
+```
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+```
+
+- SQL Server サービスを停止します。
+
+```
+   sudo systemctl stop mssql-server
+```
+
+- Master.mdf と masterlog.ldf を移動するには。
+
+```
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+```
+
+- SQL Server サービスを開始します。
+
+```
+   sudo systemctl start mssql-server
+```
+
+> [!NOTE]
+> SQL Server は、指定したディレクトリ内 master.mdf ファイルおよび mastlog.ldf ファイルを見つけることができません、指定したディレクトリ内のシステム データベースのテンプレートのコピーが自動的に作成されます、および SQL Server は正常に場合を起動します。 ただし、ユーザー データベース、サーバーのログイン、サーバー証明書、暗号化キー、SQL エージェント ジョブ、または古い SA ログインのパスワードなどのメタデータは、新しいマスター データベースでは更新されません。 SQL Server を停止し、新しい指定した場所に古い master.mdf および mastlog.ldf を移動し、引き続き既存のメタデータを使用する SQL Server を開始する必要があります。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-release-notes-for-sql-server-2017-on-linuxsql-server-linux-release-notesmd"></a>3.&nbsp; [Linux 上の SQL Server 2017 のリリース ノート](sql-server-linux-release-notes.md)
+
+*最終更新日: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2))
+
+<!-- Source markdown line 64.  ms.author= jroth.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 367d112a9427bbdd18e0e52cc82264dd169c91ae 63a67be08fa39ece778cf9ca0b9746dd28694574  (PR=5676  ,  Filename=sql-server-linux-release-notes.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+- [SQL Server エージェントを有効にする]
+
+**<a id="CU6"></a> CU6 (年 2018年 4 月)**
+
+
+これは、SQL Server 2017 の累積的な更新プログラム 6 (CU6) リリースです。 このリリースの SQL Server エンジンのバージョンは、14.0.3025.34 です。 修正プログラムとこのリリースの機能強化については、次を参照してください。 [ https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464)です。
+
+**パッケージの詳細**
+
+
+手動またはオフラインのパッケージのインストールで、次の表の情報とパッケージの RPM と Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3025.34-3 | [エンジンは RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
+| SLES RPM パッケージ | 14.0.3025.34-3 | [mssql server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索の 15,000 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| Ubuntu 16.04 Debian パッケージ | 14.0.3025.34-3 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 
 
@@ -175,40 +273,36 @@ ms.lasthandoff: 04/26/2018
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ある*" 対象領域
 
-
-- [新規 + 更新 (1 + 3):&nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (12 + 1): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (6 + 2):&nbsp;**Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (15 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (2 + 9):&nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (1 + 0):&nbsp;**SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (1 + 1):&nbsp;**SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新規 + 更新 (1 + 1):&nbsp;**Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (1 + 2):&nbsp;**SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 2):&nbsp;**Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新しい + 更新 (11 + 6): &nbsp; &nbsp; **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新しい + 更新 (18 + 0): &nbsp; &nbsp; **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (218 + 14): **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新しい + 更新 (14 + 0): &nbsp; &nbsp; **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
+- [新しい + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [新しい + 更新 (3 + 3): &nbsp; &nbsp; **SQL の Linux** docs](../linux/new-updated-linux.md)
+- [新しい + 更新 (7 + 10): &nbsp; &nbsp;**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [新しい + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新しい + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [新しい + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [新しい + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [新しい + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ない*" 対象領域
 
-
-- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
-- [新しい + 更新 (0 0 以降): **SQL のように、ActiveX データ オブジェクト (ADO)** docs](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (0 0 以降): **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新しい + 更新 (0 0 以降): **SQL の Data Quality Services** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [新しい + 更新 (0 0 以降):**データ マイニング拡張機能 (DMX) の SQL** docs](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新しい + 更新 (0 0 以降): **SQL の多次元式 (MDX)** docs](../mdx/new-updated-mdx.md)
 - [新しい + 更新 (0 0 以降): **SQL に対する ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [新しい + 更新 (0 0 以降): **SQL 用の PowerShell** docs](../powershell/new-updated-powershell.md)
 - [新しい + 更新 (0 0 以降): **SQL 用のサンプル**docs](../samples/new-updated-samples.md)
 - [新しい + 更新 (0 0 以降): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新しい + 更新 (0 0 以降): **SQL 用の XQuery** docs](../xquery/new-updated-xquery.md)
-
 

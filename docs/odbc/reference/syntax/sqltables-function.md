@@ -3,15 +3,12 @@ title: SQLTables 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTables
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f98db327f8d764c5f4fdd8a862505c23c99e8893
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **準拠**  
@@ -129,7 +125,7 @@ SQLRETURN SQLTables(
   
  それ以外の場合、アプリケーションがユーザーがテーブルを選択した対象の状況に対処することにする必要があります**選択**特権は与えられません。  
   
- *SchemaName*と*TableName*引数には、検索パターンがそのまま使用します。 *CatalogName* SQL_ODBC_VERSION 環境属性が SQL_OV_ODBC3 場合引数は検索パターンを受け入れます。 SQL_OV_ODBC2 が設定されている場合の検索パターンを受け取ることはできません。 SQL_OV_ODBC3 設定されている場合、ODBC 3*.x*ドライバーでのワイルドカード文字が必要になります、 *CatalogName*引数として扱われるエスケープします。 有効な検索パターンの詳細については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)です。  
+ *SchemaName*と*TableName*引数には、検索パターンがそのまま使用します。 *CatalogName* SQL_ODBC_VERSION 環境属性が SQL_OV_ODBC3 場合引数は検索パターンを受け入れます。 SQL_OV_ODBC2 が設定されている場合の検索パターンを受け取ることはできません。 SQL_OV_ODBC3 設定されている場合、ODBC 3 *.x*ドライバーでのワイルドカード文字が必要になります、 *CatalogName*引数として扱われるエスケープします。 有効な検索パターンの詳細については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)です。  
   
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)です。  
@@ -148,9 +144,9 @@ SQLRETURN SQLTables(
   
  TABLE_CAT、TABLE_SCHEM、TABLE_NAME の各列の実際の長さを決定するには、アプリケーションが呼び出すことができます**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、および SQL_MAX_TABLE_NAME_LEN 情報型。  
   
- ODBC 3 の名前を変更した次の列*.x*です。 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
+ ODBC 3 の名前を変更した次の列 *.x*です。 列名の変更では、列番号により、アプリケーション バインドのための下位互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3*.x*列|  
+|ODBC 2.0 列|ODBC 3 *.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

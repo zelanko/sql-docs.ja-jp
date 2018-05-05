@@ -1,16 +1,15 @@
 ---
-title: "Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 20ff481f2466e471dbfc2fbe55aa980e7b9c7227
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズムの実装  
  予測可能列に状態が 2 つしか含まれていない場合に、予測可能列に特定の状態が含められる確率と入力列を関連付けて、回帰分析を実行する必要があるとします。 次の図は、予測可能列の状態に 1 と 0 を割り当て、この列に特定の状態が含められる確率を計算し、入力変数に対する線形回帰を実行した場合に得られる結果を示しています。  
@@ -162,7 +160,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [ロジスティック回帰モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [ロジスティック回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

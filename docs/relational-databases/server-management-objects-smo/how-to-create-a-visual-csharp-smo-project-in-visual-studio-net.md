@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: smo
 ms.reviewer: ''
 ms.suite: sql
@@ -18,13 +17,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6645ab2f714b6d0e54299324a3406cc37319cc22
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 25e06aa3493b10e5a282fc5a709605eae18cb5fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET で Visual c# SMO プロジェクトを作成する方法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 
 6. 上の指示に従って[SMO のインストール](installing-smo.md)を参照するプロジェクトのパッケージをインストールします。
   
-7. **[表示]** メニューの **[コード]**をクリックします。
+7. **[表示]** メニューの **[コード]** をクリックします。
     
 8. コードでは、名前空間ステートメントの前に、次の入力**を使用して**SMO 名前空間の型を修飾するためにステートメント。
   

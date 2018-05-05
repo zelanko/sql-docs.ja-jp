@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -40,17 +38,16 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 563a79b68a39a886d70234f2e9f6eaae118d11ca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  レコード インスタンスが表示されたら、アップデート グラムは挿入操作を示す、 **\<後 >**ブロックではなく、対応する**\<する前に >**ブロックします。 アップデート グラムが内のレコードを挿入します。 ここでは、、 **\<後 >**データベースにブロックします。  
+  レコード インスタンスが表示されたら、アップデート グラムは挿入操作を示す、 **\<後 >** ブロックではなく、対応する**\<する前に >** ブロックします。 アップデート グラムが内のレコードを挿入します。 ここでは、、 **\<後 >** データベースにブロックします。  
   
  挿入操作のアップデートグラムの形式は次のとおりです。  
   
@@ -74,12 +71,12 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="before-block"></a>\<前に > ブロック  
- **\<する前に >**挿入操作のブロックを省略できます。 場合、省略可能な**マッピング スキーマ**属性が指定されていない、  **\<ElementName >**アップデート グラムにマップをデータベース テーブルと子要素で指定されている、または属性にマップテーブル内の列です。  
+ **\<する前に >** 挿入操作のブロックを省略できます。 場合、省略可能な**マッピング スキーマ**属性が指定されていない、  **\<ElementName >** アップデート グラムにマップをデータベース テーブルと子要素で指定されている、または属性にマップテーブル内の列です。  
   
 ## <a name="after-block"></a>\<後 > ブロック  
- 内の 1 つまたは複数のレコードを指定することができます、 **\<後 >**ブロックします。  
+ 内の 1 つまたは複数のレコードを指定することができます、 **\<後 >** ブロックします。  
   
- 場合、 **\<後 >**ブロックが特定の列の値を提供せず、アップデート グラムでは、(スキーマが指定されている) 場合は、注釈付きスキーマで指定されている既定値を使用します。 スキーマでは、列の既定値を指定しない場合、アップデート グラムでこの列に任意の明示的な値を指定しないと、代わりに、割り当て、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定この列に値 (指定した場合)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg:returnid**属性は、IDENTITY 型列のテーブルにレコードが追加されたときに、システムによって生成される id 値を返すに使用します。  
+ 場合、 **\<後 >** ブロックが特定の列の値を提供せず、アップデート グラムでは、(スキーマが指定されている) 場合は、注釈付きスキーマで指定されている既定値を使用します。 スキーマでは、列の既定値を指定しない場合、アップデート グラムでこの列に任意の明示的な値を指定しないと、代わりに、割り当て、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既定この列に値 (指定した場合)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値がなく、列で NULL 値が許容される場合、アップデートグラムでは列値に NULL が設定されます。 列に既定値がなく NULL 値が許容されない場合、コマンドは失敗し、アップデートグラムではエラーが返されます。 省略可能な**updg:returnid**属性は、IDENTITY 型列のテーブルにレコードが追加されたときに、システムによって生成される id 値を返すに使用します。  
   
 ## <a name="updgid-attribute"></a>updg:id 属性  
  アップデート グラムでは、レコードだけの挿入する場合、アップデート グラムでは必要ありません、 **updg:id**属性。 詳細については**updg:id**を参照してください[更新データを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)です。  
@@ -88,7 +85,7 @@ ms.lasthandoff: 04/16/2018
  アップデート グラムでは、IDENTITY 型列を持つテーブルにレコードを挿入する場合、アップデート グラムではオプションを使用して、このシステムによって割り当てられた値をキャプチャできます**updg: identity に**属性。 キャプチャした値は、後続のアップデートグラム操作で使用できます。 を、アップデート グラムの実行時に指定することによって生成される id 値を返すことができます、 **updg:returnid**属性。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- **Updg:guid**属性は省略可能な属性をグローバルに一意の識別子を生成します。 この値は、全体のスコープ内のまま**\<同期 >**ブロックが指定されています。 この値はで任意の場所を使用することができます、 **\<同期 >**ブロックします。 属性の呼び出し、 **:newguid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一意識別子を生成する関数。  
+ **Updg:guid**属性は省略可能な属性をグローバルに一意の識別子を生成します。 この値は、全体のスコープ内のまま**\<同期 >** ブロックが指定されています。 この値はで任意の場所を使用することができます、 **\<同期 >** ブロックします。 属性の呼び出し、 **:newguid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一意識別子を生成する関数。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要がある[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)です。  
@@ -166,7 +163,7 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. アップデートグラムを使用して複数のレコードを挿入する  
- このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデート グラムではオプションで指定されていない**\<する前に >**ブロックします。  
+ このアップデートグラムでは、HumanResources.Shift テーブルに 2 つの新しい勤務時間レコードを追加します。 アップデート グラムではオプションで指定されていない**\<する前に >** ブロックします。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -244,7 +241,7 @@ ms.lasthandoff: 04/16/2018
   
  Order Details テーブル内の UnitPrice 列は、 **money**型です。 適切な型変換を適用する (から、**文字列**型を**money**型)、ドル記号 ($) は、値の一部として追加する必要があります。 アップデート グラムではマッピング スキーマでの最初の文字を指定しないかどうか、**文字列**値が評価されます。 最初の文字がドル記号 ($) の場合、適切な変換が行われます。  
   
- アップデート グラムがいずれかとして、列が正しくマークされているマッピング スキーマに対して指定されている場合**dt:type="fixed.14.4"**または**sql:datatype ="money"**、ドル記号 ($) は必要ありません、変換は、マッピングによって処理されます。 適切な型変換が行われるようにするには、この方法が推奨されます。  
+ アップデート グラムがいずれかとして、列が正しくマークされているマッピング スキーマに対して指定されている場合**dt:type="fixed.14.4"** または**sql:datatype ="money"**、ドル記号 ($) は必要ありません、変換は、マッピングによって処理されます。 適切な型変換が行われるようにするには、この方法が推奨されます。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   
@@ -391,7 +388,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  このアップデートグラムでは XSD スキーマを指定しています。アップデートグラム要素と属性に既定のマッピングはありません。 このスキーマでは、要素および属性からデータベース テーブルおよび列への必要なマッピングが提供されます。  
   
- 次のスキーマ (CustOrderSchema.xml) について説明します、  **\<CustOrder >**要素で構成される、 **OrderID**と**EmployeeID**属性。 スキーマをさらに興味深いものにするために、既定値が割り当てられている、 **EmployeeID**属性。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
+ 次のスキーマ (CustOrderSchema.xml) について説明します、  **\<CustOrder >** 要素で構成される、 **OrderID**と**EmployeeID**属性。 スキーマをさらに興味深いものにするために、既定値が割り当てられている、 **EmployeeID**属性。 アップデートグラムでは、属性の既定値は、アップデートグラムでその属性が指定されていない挿入操作のみに使用されます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -490,7 +487,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- XSD スキーマで指定**nillable ="true"**の **\<fname >**要素。 このスキーマを使用するアップデートグラムは次のとおりです。  
+ XSD スキーマで指定**nillable ="true"** の **\<fname >** 要素。 このスキーマを使用するアップデートグラムは次のとおりです。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -510,7 +507,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- このアップデート グラムで指定**xsi:nil**の **\<fname >**内の要素、 **\<後 >**ブロックします。 したがって、このアップデートグラムを実行すると、テーブルの first_name 列に NULL 値が挿入されます。  
+ このアップデート グラムで指定**xsi:nil**の **\<fname >** 内の要素、 **\<後 >** ブロックします。 したがって、このアップデートグラムを実行すると、テーブルの first_name 列に NULL 値が挿入されます。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -538,7 +535,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. アップデートグラムで名前空間を指定する  
  アップデートグラム内の要素で名前空間を宣言し、その名前空間に属する要素として、同じ要素を保持することができます。 この場合、対応するスキーマで同じ名前空間を宣言する必要があり、対象の名前空間に要素が属している必要があります。  
   
- たとえば、次のアップデート グラム (Updategram-elementhavingnamespace.xml) で、 **\<順序 >**要素は、要素で宣言された名前空間に属します。  
+ たとえば、次のアップデート グラム (Updategram-elementhavingnamespace.xml) で、 **\<順序 >** 要素は、要素で宣言された名前空間に属します。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -625,7 +622,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 -   挿入される XML フラグメントのスコープ内にある名前空間、 **xml**列が保持され、その名前空間宣言が挿入されたフラグメントの最上位の要素に追加されます。  
   
- たとえば、次のアップデート グラム (SampleUpdateGram.xml) で、  **\<Desc >**要素、ProductDescription 列が更新、実稼働環境で > productModel テーブル、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]サンプル データベース。 このアップデート グラムでの結果はある ProductDescription 列の XML コンテンツの XML コンテンツで更新プログラム、  **\<Desc >**要素。  
+ たとえば、次のアップデート グラム (SampleUpdateGram.xml) で、  **\<Desc >** 要素、ProductDescription 列が更新、実稼働環境で > productModel テーブル、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]サンプル データベース。 このアップデート グラムでの結果はある ProductDescription 列の XML コンテンツの XML コンテンツで更新プログラム、  **\<Desc >** 要素。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
