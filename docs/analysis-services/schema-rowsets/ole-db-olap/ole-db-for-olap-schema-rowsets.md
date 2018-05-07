@@ -1,38 +1,23 @@
 ---
-title: "OLE DB for OLAP スキーマ行セット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: OLE DB for OLAP スキーマ行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- schema rowsets [Analysis Services], OLE DB for OLAP
-- OLE DB for OLAP schema rowsets
-- schema rowsets [OLE DB for OLAP]
-- rowsets [Analysis Services], OLE DB for OLAP
-ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 75bdb07bd24f44fd42cf257a1e365c101329060f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a8e3413b951cb12796139c3ff390a2d1951c02ab
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB for OLAP スキーマ行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーでは、次の OLE DB for OLAP スキーマ行セットがサポートされています。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーでは、次の OLE DB for OLAP スキーマ行セットがサポートされています。  
   
 > [!NOTE]  
 >  特定のデータ ソース プロバイダーが行セットをサポートしているかどうかを確認するには、使用、 **DISCOVER_ENUMERATIONS**を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドです。  
@@ -44,7 +29,7 @@ ms.lasthandoff: 02/15/2018
 |スキーマ行セット<sup>1</sup>|Description|  
 |-------------------------------|-----------------|  
 |[DISCOVER_INSTANCES 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|サーバー上のインスタンスについて記述します。|  
-|[DISCOVER_KEYWORDS 行セット (&) #40 です。 OLE DB for OLAP &#41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|プロバイダーの予約語の一覧を列挙します。|  
+|[DISCOVER_KEYWORDS 行セット (&) #40 です。 OLE DB for OLAP & #41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|プロバイダーの予約語の一覧を列挙します。|  
 |[MDSCHEMA_ACTIONS 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)|クライアント アプリケーションで利用できるアクションについて記述します。|  
 |[MDSCHEMA_CUBES 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|データベース内のキューブの構造について記述します。|  
 |[MDSCHEMA_DIMENSIONS 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|データベース内の共有ディメンションとプライベート ディメンションについて記述します。|  

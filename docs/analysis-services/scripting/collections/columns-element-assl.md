@@ -1,41 +1,23 @@
 ---
 title: Columns 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Columns Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- COLUMNS
-helpviewer_keywords:
-- Columns element
-ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ebff40f4dce500da857990ccba3f90351385e98f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columns-element-assl"></a>Columns 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親要素に関連付けられている列のコレクションが含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  親要素に関連付けられた列のコレクションを格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,13 +40,13 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|次の表を参照してください。|  
+|Cardinality|次の表を参照してください。|  
   
-|先祖または親|基数|  
+|先祖または親|Cardinality|  
 |------------------------|-----------------|  
 |[イベント](../../../analysis-services/scripting/objects/event-element-assl.md)|1-1 : 必須要素で、1 回だけ出現します|  
 |他のすべて|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
@@ -91,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する一部の要素は、<xref:Microsoft.AnalysisServices.TraceColumnCollection>、<xref:Microsoft.AnalysisServices.MiningModelColumnCollection>、および <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection> です。  
   
 ## <a name="see-also"></a>参照  
- [コレクション &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [コレクション & #40 です。ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

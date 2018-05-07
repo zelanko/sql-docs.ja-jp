@@ -1,38 +1,23 @@
 ---
-title: "XML for Analysis スキーマ行セット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: XML for Analysis スキーマ行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- rowsets [Analysis Services], XML for Analysis
-- XML for Analysis, schema rowsets
-- schema rowsets [Analysis Services], XML for Analysis
-- schema rowsets [XML for Analysis]
-ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 44222381092f973f00ca79583c78e27bd0780f6e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis スキーマ行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーには、サーバーの状態、アクティビティ、およびオブジェクトに関するメタデータを返すスキーマ行セットが含まれています。 構造と特性が変化する Analysis Services モデルに接続するクライアント アプリケーションを開発する場合は、メタデータを取得する必要があります。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) プロバイダーには、サーバーの状態、アクティビティ、およびオブジェクトに関するメタデータを返すスキーマ行セットが含まれています。 構造と特性が変化する Analysis Services モデルに接続するクライアント アプリケーションを開発する場合は、メタデータを取得する必要があります。  
   
  スキーマ行セットは、サーバーの監視と問題のトラブルシューティングに役立つ、内部プロセスおよび操作の内部情報も提供します。 アドホック管理タスクをより適切にサポートするには、ほとんどのスキーマ行セットに対して動的管理ビュー (DMV) クエリを実行できます。 DMV クエリが返す判読可能なテーブル形式の結果は、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] で表示できます。  
   
@@ -52,7 +37,7 @@ ms.lasthandoff: 02/15/2018
 |[DISCOVER_DIMENSION_STAT 行セット](../../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|指定したディメンションで統計を返します。|  
 |[DISCOVER_ENUMERATORS 行セット](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|特定のデータ ソースの XMLA プロバイダーによってサポートされている列挙子の名前、データ型、および列挙値の一覧を返します。|  
 |[DISCOVER_JOBS 行セット](../../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|サーバーで実行されているアクティブなジョブに関する情報を提供します。|  
-|[DISCOVER_KEYWORDS 行セット &#40;です。XMLA &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|XMLA プロバイダーによって予約されているキーワードに関する情報を返します。|  
+|[DISCOVER_KEYWORDS 行セット & #40 です。XMLA & #41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|XMLA プロバイダーによって予約されているキーワードに関する情報を返します。|  
 |[DISCOVER_LITERALS 行セット](../../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|XMLA プロバイダーによってサポートされているデータ型や値などを含むリテラルに関する情報を返します。|  
 |[DISCOVER_LOCATIONS 行セット](../../../analysis-services/schema-rowsets/xml/discover-locations-rowset.md)|バックアップ ファイルの内容に関する情報を返します。|  
 |[DISCOVER_LOCKS 行セット](../../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|サーバー上で現在保持されているロックに関する情報を提供します。|  
@@ -80,7 +65,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services の XMLA による開発](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [使用して動的管理ビュー (&) #40 です。 Dmv &#41;Analysis Services を監視するには](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [動的管理ビューを使用して&#40;Dmv&#41;サービス分析を監視するのには](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [分析データ ソースからのメタデータの取得](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

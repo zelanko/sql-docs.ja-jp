@@ -1,41 +1,23 @@
 ---
 title: ComAssembly データ型 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- ComAssembly Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ComAssembly
-helpviewer_keywords:
-- ComAssembly data type
-ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
-caps.latest.revision: 48
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ba15ade9aaad8586806da3cd4b19cf8998dfca62
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 409eb7fd0dd093e7bd44a642868c8dd87d25f04e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comassembly-data-type-assl"></a>ComAssembly データ型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]関連付けられた COM ライブラリを表す派生データ型を定義、[サーバー](../../../analysis-services/scripting/objects/server-element-assl.md)または[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [Server](../../../analysis-services/scripting/objects/server-element-assl.md) 要素または [Database](../../../analysis-services/scripting/objects/database-element-assl.md) 要素に関連付けられた COM ライブラリを表す派生データ型を定義します。  
   
 > [!IMPORTANT]  
 >  COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 このリスクやその他の考慮事項により、 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]では、COM アセンブリが推奨されていません。 COM アセンブリは、今後のリリースではサポートされない可能性があります。  
@@ -52,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |基本データ型|[アセンブリ](../../../analysis-services/scripting/objects/assembly-element-assl.md)|  
 |派生データ型|なし|  
@@ -63,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 |------------------|-------------|  
 |親要素|なし|  
 |子要素|[ソース](../../../analysis-services/scripting/properties/source-element-comassembly-assl.md)|  
-|派生要素|参照してください[アセンブリ](../../../analysis-services/scripting/objects/assembly-element-assl.md)([アセンブリ](../../../analysis-services/scripting/collections/assemblies-element-assl.md)のコレクション[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)または[サーバー](../../../analysis-services/scripting/objects/server-element-assl.md))|  
+|派生要素|「 [Assembly](../../../analysis-services/scripting/objects/assembly-element-assl.md) 」を参照 ([Database](../../../analysis-services/scripting/collections/assemblies-element-assl.md) または [Server](../../../analysis-services/scripting/objects/database-element-assl.md) の [Assemblies](../../../analysis-services/scripting/objects/server-element-assl.md)コレクション)|  
   
 ## <a name="remarks"></a>解説  
  **ComAssembly**要素のインスタンスに関連付けられた COM ライブラリ (完全修飾ファイル名またはプログラム識別子) の参照を含む[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]または特定インスタンス上のデータベース[!INCLUDE[ssAS](../../../includes/ssas-md.md)]です。  
@@ -71,7 +53,7 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.ComAssembly>します。  
   
 ## <a name="see-also"></a>参照  
- [ClrAssembly データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
- [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [ClrAssembly データ型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md)   
+ [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

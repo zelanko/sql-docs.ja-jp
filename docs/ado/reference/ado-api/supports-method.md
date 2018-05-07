@@ -1,17 +1,17 @@
 ---
-title: "メソッドをサポートしています |Microsoft ドキュメント"
-ms.prod: sql-non-specified
+title: メソッドをサポートしています |Microsoft ドキュメント
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Supports
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b78cb1325b720207f6a18201971ef627314bfee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: e13a49cdb340f69e268b8555e4fea846f645b6f2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="supports-method"></a>メソッドをサポートしています
 指定したかどうかを決定[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、特定の種類の機能をサポートしています。  
@@ -48,7 +48,7 @@ boolean = recordset.Supports(CursorOptions )
  A**長い**を 1 つ以上で構成される式[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)値。  
   
 ## <a name="remarks"></a>解説  
- 使用して、**をサポートしている**機能の種類を特定する方法、 **Recordset**サポートしています。 場合、 **Recordset**オブジェクトを定数に対応するが、機能をサポートしている*CursorOptions*、**をサポートしている**メソッドを返します**をTrue**。 返しますそれ以外の場合、 **False**です。  
+ 使用して、**をサポートしている**機能の種類を特定する方法、 **Recordset**サポートしています。 場合、 **Recordset**オブジェクトを定数に対応するが、機能をサポートしている*CursorOptions*、**をサポートしている**メソッドを返します**をTrue。**. 返しますそれ以外の場合、 **False**です。  
   
 > [!NOTE]
 >  **サポート**メソッドが返す可能性があります**True**の特定の機能とは限りませんプロバイダーは、実行できること、機能のすべての状況で使用可能な。 **サポート**メソッドは単に特定の条件が満たされたと仮定した場合で、指定された機能をプロバイダーがサポートできるかどうかを返します。 たとえば、**をサポートしている**メソッド可能性があります、**レコード セット**カーソルは一部の列は更新できない複数のテーブル結合に基づいている場合でも、オブジェクトが更新をサポートします。  

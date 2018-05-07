@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_ACTIONS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_ACTIONS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_ACTIONS rowset
-ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a68f7e2aa7f12d42c08e7d9226ee5306d0b07021
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]クライアント アプリケーションで使用できる可能性がある操作をについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  クライアント アプリケーションで利用できるアクションについて記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_ACTIONS**行セットには、次の列が含まれています。  
@@ -39,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 |列名|型を表すインジケーター|長さ|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||データベースの名前。|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**||サポートされていません。 常に含まれています。 **vt_**です。|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**||サポートされていません。 常に含まれています。 **vt_** です。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||このアクションが所属するキューブの名前。|  
 |**ACTION_NAME**|**DBTYPE_WSTR**||このアクションの名前。|  
 |**ACTION_TYPE**|**DBTYPE_I4**||アクションのトリガー方法を指定するために使用されるビットマップ。 Msmd.h ファイルは、このビットマップに対して次のビット値定数を定義します。<br /><br /> **MDACTION_TYPE_URL** (**0x01**)<br /><br /> **MDACTION_TYPE_HTML** (**0x02**)<br /><br /> **MDACTION_TYPE_STATEMENT** (**0x04**)<br /><br /> **MDACTION_TYPE_DATASET** (**0x08**)<br /><br /> **MDACTION_TYPE_ROWSET** (**0x10**)<br /><br /> **MDACTION_TYPE_COMMANDLINE** (**0x20**)<br /><br /> **MDACTION_TYPE_PROPRIETARY** (**0x40**)<br /><br /> **MDACTION_TYPE_REPORT** (**0x80**)<br /><br /> **MDACTION_TYPE_DRILLTHROUGH** (**0x100**)|  
@@ -47,7 +33,7 @@ ms.lasthandoff: 01/08/2018
 |**COORDINATE_TYPE**|**DBTYPE_I4**||ビットマップを指定する方法、**調整**制限列の解釈します。 Msmd.h ファイルは、このビットマップに対して次のビット値定数を定義します。<br /><br /> **MDACTION_COORDINATE_CUBE** (**1**)<br /><br /> **MDACTION_COORDINATE_DIMENSION** (**2**): ディメンション階層を指します。<br /><br /> **MDACTION_COORDINATE_LEVEL** (**3**)<br /><br /> **MDACTION_COORDINATE_MEMBER** (**4**)<br /><br /> **MDACTION_COORDINATE_SET** (**5**)<br /><br /> **MDACTION_COORDINATE_CELL** (**6**)|  
 |**ACTION_CAPTION**|**DBTYPE_WSTR**||キャプションと翻訳が DDL で指定されなかった場合は、アクション名。<br /><br /> キャプションまたは翻訳、指定した場合と**CaptionIsMDX**が false の場合、次の文字列のいずれか。<br /><br /> 適切な言語の翻訳します。<br /><br /> 指定した言語の翻訳が見つからなかった場合は-指定したキャプションです。<br /><br /> に翻訳が見つからなかった場合、アクション名およびキャプションが DDL で指定されていません。<br /><br /> キャプションまたは翻訳、指定した場合と**CaptionIsMDX**から指定された言語または DDL キャプションの指定の平行移動の適切な翻訳を検索して、計算結果の文字列が true の場合、文字列を作成する数式です。<br /><br /> アクションが MDX スクリプトで指定された場合、翻訳はなく、キャプションは常に MDX 式として扱われます。|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||アクションについてのわかりやすい説明。|  
-|**コンテンツ**|**DBTYPE_WSTR**||実行対象のアクションの式またはコンテンツ。|  
+|**CONTENT**|**DBTYPE_WSTR**||実行対象のアクションの式またはコンテンツ。|  
 |**アプリケーション**|**DBTYPE_WSTR**||アクションを実行するために使用されるアプリケーションの名前。|  
 |**呼び出し**|**DBTYPE_I4**||アクションの呼び出し方法に関する情報。<br /><br /> **MDACTION_INVOCATION_INTERACTIVE** (**1**) 通常の操作中に使用される標準のアクションを示します。 この列の既定値です。<br /><br /> **MDACTION_INVOCATION_ON_OPEN** (**2**) キューブを最初に開いたときにアクションを実行することを示します。<br /><br /> **MDACTION_INVOCATION_BATCH** (**4**) アクションがバッチ操作の一部として実行されていることを示しますまたは[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]タスク。<br /><br /> <br /><br /> これらの列挙値が Msmd.h ファイルで定義されていることに注意してください。|  
   
@@ -82,14 +68,14 @@ ms.lasthandoff: 01/08/2018
 |COORDINATE オブジェクトの種類|COORDINATE_TYPE|  
 |----------------------------|----------------------|  
 |**Cube**|**MDACTION_COORDINATE_CUBE**|  
-|**Dimension**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
-|**Hierarchy**|**MDACTION_COORDINATE_DIMENSION**|  
-|**Level**|**MDACTION_COORDINATE_LEVEL**|  
+|**ディメンション**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
+|**階層**|**MDACTION_COORDINATE_DIMENSION**|  
+|**レベル**|**MDACTION_COORDINATE_LEVEL**|  
 |**メンバー**|**MDACTION_COORDINATE_MEMBER**|  
 |**設定**|**MDACTION_COORDINATE_SET**|  
 |**セル**|**MDACTION_COORDINATE_CELL**|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

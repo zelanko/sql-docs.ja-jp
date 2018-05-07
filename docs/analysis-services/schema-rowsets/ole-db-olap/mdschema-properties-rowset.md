@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_PROPERTIES 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_PROPERTIES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_PROPERTIES rowset
-ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 43ec669b0b72775645f12ff51d0e4ede962b7700
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 48a02b333ac3c4eb0fb7c40ab24023f126ec6239
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemaproperties-rowset"></a>MDSCHEMA_PROPERTIES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データベース内のメンバーのプロパティについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  データベース内のメンバーのプロパティについて記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_PROPERTIES**行セットには、次の列が含まれています。  
@@ -59,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 |**LANGUAGE**|**DBTYPE_UI2**||として表される、翻訳、 **LCID**です。 プロパティの翻訳に対してのみ有効です。|  
 |**PROPERTY_ORIGIN**|**DBTYPE_UI2**||プロパティが適用される階層の種類を識別します。<br /><br /> **MD_USER_DEFINED** (**1**) プロパティは、ユーザー定義階層を示します<br /><br /> **MD_SYSTEM_ENABLED** (**2**) プロパティは、属性階層を示します<br /><br /> **MD_SYSTEM_DISABLED** (**4**) プロパティは、属性階層が有効になっていないことを示します。|  
 |**PROPERTY_ATTRIBUTE_HIERARCHY_NAME**|**DBTYPE_WSTR**||このプロパティの基になる属性階層の名前。|  
-|**PROPERTY_CARDINALITY**|**DBTYPE_WSTR**||プロパティの基数。 次のいずれかの文字列になります。<br /><br /> **1 つ**<br /><br /> **多く**|  
+|**PROPERTY_CARDINALITY**|**DBTYPE_WSTR**||プロパティのカーディナリティ。 次のいずれかの文字列になります。<br /><br /> **1 つ**<br /><br /> **多く**|  
 |**MIME_TYPE**|**DBTYPE_WSTR**||バイナリ ラージ オブジェクト (BLOB) の MIME の種類。|  
 |**PROPERTY_IS_VISIBLE**|**DBTYPE_BOOL**||プロパティが表示されるかどうかを示すブール値。<br /><br /> **TRUE**プロパティが表示されている、それ以外の場合**FALSE**です。|  
   
@@ -85,6 +71,6 @@ ms.lasthandoff: 01/08/2018
 |**PROPERTY_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 有効な値は次のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

@@ -5,12 +5,10 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +20,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 907e1c08f422809a04d3e3c8846d91f7982bb7ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC から SQL Server の OLE DB ドライバーへのアプリケーションの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +56,6 @@ ms.lasthandoff: 04/16/2018
 -   OLE DB Driver for SQL Server では、XML との統合は含まれません。 OLE DB Driver for SQL Server では、選択をサポートしています. XML のクエリが、その他の XML 機能をサポートしていません。 ただしは、OLE DB Driver for SQL Server のサポート、 **xml**データ型がで導入された[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]です。  
 
 -   OLE DB Driver for SQL Server では、接続文字列の属性のみを使用してクライアント側のネットワーク ライブラリの構成をサポートします。 ネットワーク ライブラリをさらに詳細に構成する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用する必要があります。  
-
--   OLE DB Driver for SQL Server は、odbcbcp.dll と互換性がありません。 SQL Server の OLE DB Driver を使用するために msoledbsql.lib とリンクするには、アプリケーションをリビルドしてください。    
 
 -   MDAC 接続文字列、ブール値を許可する (**true**) の**Trusted_Connection**キーワード。 OLE DB Driver for SQL Server 接続文字列を使用する必要があります**はい**または**ありません**です。  
 

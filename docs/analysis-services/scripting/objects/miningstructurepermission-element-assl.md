@@ -1,41 +1,23 @@
 ---
 title: MiningStructurePermission 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- MiningStructurePermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructurePermission
-helpviewer_keywords:
-- MiningStructurePermission element
-ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
-caps.latest.revision: 43
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aef87c52834015311cc5302c46fd539be89e172d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a88facf7cb11546ecef703b61c2ae212f7f4af9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]メンバーがアクセス権を定義、[ロール](../../../analysis-services/scripting/objects/role-element-assl.md)、個別の要素がある[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  メンバーがアクセス権を定義、[ロール](../../../analysis-services/scripting/objects/role-element-assl.md)、個別の要素がある[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|[アクセス許可](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -84,11 +66,11 @@ SELECT StructureColumn('<structure column name>' FROM <model>.CASES
   
  したがって、機密データまたは個人情報を保護する必要がありますを構築、データ ソース ビューを個人情報をマスクし、付与する**AllowDrillthrough**構造体に必要な場合にのみに対する権限。  
   
- 詳細については、「[ドリルスルー クエリ &#40;データ マイニング&#41;](../../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」を参照してください。  
+ 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.MiningModel.AllowDrillThrough%2A>   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningModel.AllowDrillThrough%2A>   
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

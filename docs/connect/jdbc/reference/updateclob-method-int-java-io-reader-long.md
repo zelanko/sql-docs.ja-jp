@@ -3,26 +3,22 @@ title: updateClob (int, java.io.Reader, long) メソッド |Microsoft ドキュ�
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
 caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aec641b10888f2b3d57c4cd66e18cf63d3f43806
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 978c5f09f2c7524462dc950a5edc9b435324bdb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +37,7 @@ public void updateClob(int columnIndex,
 #### <a name="parameters"></a>パラメーター  
  *columnIndex*  
   
- **Int**列インデックスを示すです。  
+ 列インデックスを示す **int** です。  
   
  *リーダー*  
   

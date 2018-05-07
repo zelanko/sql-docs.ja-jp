@@ -3,13 +3,10 @@ title: SQLServerPreparedStatement のメンバー |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
@@ -17,9 +14,9 @@ caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae0d92258f45f976d18c679059ba831a1c892638
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 275115e8d23c48a564528de57fee14ae19513e00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -46,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|このステートメント オブジェクトのコマンド バッチにパラメーターのセットを追加します。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメントのオブジェクトによって現在実行されている SQL ステートメントを取り消します。|  
-|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|この SQL コマンドの現在のリストを空に[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
+|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトに対する SQL コマンドの現在の一覧を空にします。|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|現在のパラメーター値を直ちにクリアします。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメント オブジェクトで報告されるすべての警告をクリアします。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|データベースと JDBC リソースを待たずにすぐに自動的に解放するには、このステートメント オブジェクトの解放します。|  
