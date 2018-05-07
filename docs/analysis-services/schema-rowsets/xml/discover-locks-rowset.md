@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_LOCKS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_LOCKS rowset
-ms.assetid: dea48167-212c-40b7-a416-434042a1b697
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c835183f85f72046c3a20ccdee6478ed5661e015
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーで現在継続ロックに関する情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  サーバー上で現在保持されているロックに関する情報を提供します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_LOCKS**行セットには、次の列が含まれています。  
@@ -75,6 +64,6 @@ ms.lasthandoff: 01/08/2018
 |LOCK_INVALID|0x0000080|無効なロック。|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

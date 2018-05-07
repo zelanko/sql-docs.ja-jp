@@ -1,38 +1,38 @@
 ---
-title: "NS$&lt;サービス名&gt;プロパティ ([サービス] タブ) |Microsoft ドキュメント"
-ms.custom: 
+title: NS$&lt;サービス名&gt;プロパティ ([サービス] タブ) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59203f010913252abf05201df0f92a2d1b639c18
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: f6c59ff68ccee2fb2655badb0ac98ca782fa641a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;サービス名&gt;プロパティ ([サービス] タブ)
+# <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;サービス名&gt; プロパティ ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
+  このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>オプション  
- **[バイナリ パス]**  
+## <a name="options"></a>および  
+ **バイナリ パス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
- **[エラー制御]**  
+ **エラー制御**  
  1 は `SERVICE_ERROR_NORMAL`を示します。 コンピューターの起動時にこのサービスが開始しなかった場合は、スタートアップ プログラムによってログにエラーが記録され、ポップアップ メッセージ ボックスが表示されますが、スタートアップ操作は継続します。 この値は変更できません。  
   
  **終了コード**  
@@ -50,14 +50,14 @@ ms.lasthandoff: 02/03/2018
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **[開始モード]**  
+ **開始モード**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   「手動」: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   [手動]: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   「自動」: このサービスは、コンピューターの起動時に開始を試みます。  
+-   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
   
--   「無効」: このサービスは開始できません。  
+-   \[無効]: このサービスは開始できません。  
   
  **状態**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  

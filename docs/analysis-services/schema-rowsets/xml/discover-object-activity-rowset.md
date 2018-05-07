@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_OBJECT_ACTIVITY 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_OBJECT_ACTIVITY rowset
-ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e5ac394fea6e7f430d1eadd0dc5b0fb1e0e3865
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サービスの開始以降には、オブジェクトごとのリソースの利用状況を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  サービスが開始されてからのオブジェクトごとのリソース使用量に関する情報を提供します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_OBJECT_ACTIVITY**行セットには、次の列が含まれています。  
@@ -62,6 +51,6 @@ ms.lasthandoff: 01/08/2018
 |OBJECT_ID|DBTYPE_WSTR|省略可。|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

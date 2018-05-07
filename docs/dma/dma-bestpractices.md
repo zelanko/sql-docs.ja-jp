@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
 ms.prod_service: dma
-ms.service: ''
-ms.component: ''
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-dma
+ms.technology: dma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
@@ -20,12 +17,11 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b903d62a78b420ae6a267449b81919bd9db876e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 4f568ed5159a36ae4a5d072471ded6498dbc2150
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>データ移行のアシスタントを実行するためのベスト プラクティス
 この記事では、インストール、評価、および移行の次のベスト プラクティス情報を提供します。

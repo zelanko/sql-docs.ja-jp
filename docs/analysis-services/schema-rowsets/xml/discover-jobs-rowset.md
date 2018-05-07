@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_JOBS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_JOBS rowset
-ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0fd27205ff919130eed2e7708031b0268f35408f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f262e4d0b486676eb9f541fbd7d5c0e2866a07ae
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverjobs-rowset"></a>DISCOVER_JOBS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーで実行されているアクティブなジョブに関する情報を提供します。 ジョブはコマンドの一部であり、コマンドに代わって特定のタスクを実行します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  サーバーで実行されているアクティブなジョブに関する情報を提供します。 ジョブはコマンドの一部であり、コマンドに代わって特定のタスクを実行します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_JOBS**行セットには、次の列が含まれています。  
@@ -58,6 +47,6 @@ ms.lasthandoff: 01/08/2018
 |JOB_MIN TOTAL_TIME_MS|DBTYPE_I8|省略可。|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

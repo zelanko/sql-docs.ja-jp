@@ -1,41 +1,23 @@
 ---
 title: アカウントの要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Accounts Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Accounts
-helpviewer_keywords:
-- Accounts element
-ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
-caps.latest.revision: 44
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 68975a4da8425a423f38bed174c180ea5d27299b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 97d247756dd744bb1ffb5a83bb4931d3fd823a4b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accounts-element-assl"></a>Accounts 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義されている勘定科目の種類のコレクションを格納、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義されている勘定科目の種類のコレクションを格納、[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,17 +34,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし (コレクション型)|  
 |既定値|なし (コレクション型)|  
-|基数|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
+|Cardinality|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
 |リレーションシップ|要素|  
 |------------------|-------------|  
-|親要素|[[データベース]](../../../analysis-services/scripting/objects/database-element-assl.md)|  
+|親要素|[データベース](../../../analysis-services/scripting/objects/database-element-assl.md)|  
 |子要素|[アカウント](../../../analysis-services/scripting/objects/account-element-assl.md)|  
   
 ## <a name="remarks"></a>解説  
@@ -75,7 +57,7 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AccountCollection>します。  
   
 ## <a name="see-also"></a>参照  
- [AccountType 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/properties/accounttype-element-assl.md)   
- [コレクション &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [AccountType 要素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/accounttype-element-assl.md)   
+ [コレクション & #40 です。ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

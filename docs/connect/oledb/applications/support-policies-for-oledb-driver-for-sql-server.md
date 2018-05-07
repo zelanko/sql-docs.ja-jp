@@ -4,24 +4,21 @@ description: OLE DB driver for SQL Server サポート ポリシー
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: dfac5b5acd86c71787e3ee5052927d7d59969f8b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 7660feb4b041804c33465b47d738085eecf4ca4c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB driver for SQL Server サポート ポリシー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

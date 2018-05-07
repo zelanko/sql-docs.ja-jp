@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 80972c7888cab4c64e30e346064d321715e5f2ce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0722045df83ce2a70d6c17ba9b55d482799b6039
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ PredictStdev(<scalar column reference>)
  スカラー列です。  
   
 ## <a name="return-type"></a>戻り値の型  
- 指定された型のスカラー値*\<スカラー列参照 >*です。  
+ 指定された型のスカラー値*\<スカラー列参照 >* です。  
   
 ## <a name="remarks"></a>解説  
  列参照が不連続で場合**PredictStdev**不連続の値から標準偏差を計算できないために、0 を返します。  
@@ -68,8 +66,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [関数 (&) #40";"DMX"&"#41;](../dmx/functions-dmx.md)   
+ [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

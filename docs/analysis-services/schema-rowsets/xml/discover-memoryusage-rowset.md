@@ -1,40 +1,30 @@
 ---
-title: "DISCOVER_MEMORYUSAGE 行セット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_MEMORYUSAGE 行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: abca3c8dc426e380b20c40db5a78d8300748aa0c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-サーバーによって割り当てられているさまざまなオブジェクトの DISCOVER_MEMORYUSAGE 統計を返します。  
+  サーバーによって割り当てられているさまざまなオブジェクトの DISCOVER_MEMORYUSAGE 統計を返します。  
   
 > [!WARNING]  
 >  この行セットでは、非常に大きな結果セットが生成されることがあります。 SQL Server Management Studio によって許可されている量よりも多くの表示メモリを必要とするために結果を表示できない場合、次の既定の場所にある一時ファイルに結果が書き込まれます。  
 >   
 >  '\<ドライブ >: \Users\\< ユーザー名\>\AppData\Local\Temp\\< fileID\>.xml' です。  
   
- **適用されます:**表形式モデル、多次元モデル  
+ **適用されます:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_MEMORYUSAGE**行セットには、次の列が含まれています。  

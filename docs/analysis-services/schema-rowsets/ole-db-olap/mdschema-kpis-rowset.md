@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_KPIS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_KPIS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_KPIS rowset
-ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbf191fafa07bbc436c9971a5c16f4fb455f78bd
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データベース内で主要業績評価指標 (Kpi) をについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  データベース内の主要業績評価指標 (KPI) について記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_KPIS**行セットには、次の列が含まれています。  
@@ -72,6 +58,6 @@ ms.lasthandoff: 01/08/2018
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(省略可能)既定の制限の値は**1**です。 有効な値は次のいずれかのビットマップ。<br /><br /> **1**キューブ<br /><br /> **2**ディメンション|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

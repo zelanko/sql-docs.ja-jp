@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_STRUCTURE_COLUMNS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_STRUCTURE_COLUMNS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
-ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d7c520e22580a12afc1a1d12ce41e08388d6b107
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]実行しているサーバーに展開されているすべてのマイニング構造の個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  実行しているサーバーに展開されているすべてのマイニング構造の個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DMSCHEMA_MINING_STRUCTURE_COLUMNS**行セットには、次の列が含まれています。  
@@ -39,17 +25,17 @@ ms.lasthandoff: 01/08/2018
 |列名|型を表すインジケーター|長さ|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||カタログ名。|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||修飾されていないスキーマ名。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]スキーマをサポートしないため、この列は常に**NULL**です。|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||修飾されていないスキーマ名。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] スキーマをサポートしないため、この列は常に**NULL**です。|  
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**||構造名。 この列を含めることはできません、 **NULL**です。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**||列の名前です。 同じパターンを共有する列間でのみ、一意性が保証されます。 たとえば、入れ子になった 2 つの列が、同じ構造内の入れ子になった 2 つの異なるテーブルに属する場合、それらの列は同じ名前を持つことがあります。|  
 |**COLUMN_GUID**|**DBTYPE_GUID 型**||列の GUID。 列を識別する Guid を使用しないプロバイダーを返す必要があります**NULL**この列にします。|  
-|**COLUMN_PROPID**|**DBTYPE_UI4**||列のプロパティ ID。 列を含むプロパティ Id に関連付けないプロバイダーを返す必要があります**NULL**この列にします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]返します**NULL**この列にします。|  
+|**COLUMN_PROPID**|**DBTYPE_UI4**||列のプロパティ ID。 列を含むプロパティ Id に関連付けないプロバイダーを返す必要があります**NULL**この列にします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 返します**NULL**この列にします。|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||列の序数。 列には 1 から始まる連番が付けられます。 **NULL**列に安定した序数がない場合。|  
 |**COLUMN_HASDEFAULT**|**DBTYPE_BOOL**||この列に既定値があるかどうかを示すブール値。<br /><br /> **TRUE**列に既定値がある場合。<br /><br /> **FALSE**列には、既定値がない場合、またはそれが不明の場合、列が既定値を持つかどうか。|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||列の既定値です。 プロバイダーが公開される**DBCOLUMN_DEFAULTVALUE**ではなく**DBCOLUMN_HASDEFAULT** (ISO テーブル用) によって返される行セットで**icolumnsrowset::getcolumnsrowset**です。<br /><br /> 既定値は場合**NULL**、 **COLUMN_HASDEFAULT**は**TRUE**と**COLUMN_DEFAULT**列が、 **NULL**値。|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||列の特性を記述するビットマスク。 **DBCOLUMNFLAGS**列挙型は、対応するビットマスクのビットを指定します。 この列を含めることはできません、 **NULL**値。 有効な値は次のとおりです。<br /><br /> **DBCOLUMNFLAGS_ISNULLABLE** (**0x20**)<br /><br /> **DBCOLUMNFLAGS_MAYBENULL** (**0x40**)<br /><br /> **DBCOLUMNFLAGS_ISLONG** (**0x80**)|  
-|**によって IS_NULLABLE**|**DBTYPE_BOOL**||この列に既定値があるかどうかを示すブール値。<br /><br /> **TRUE**列を含めることができる場合**NULL**です。**FALSE**、それ以外の場合。|  
-|**DATA_TYPE**|**DBTYPE_UI2**||列のデータ型のインジケーターです。 例 :<br /><br /> "**テーブル**"= **DBTYPE_HCHAPTER**<br /><br /> "**テキスト**"= **DBTYPE_WCHAR**<br /><br /> "**長い**"= **DBTYPE_I8**<br /><br /> "**二重**"= **DBTYPE_R8**<br /><br /> "**日付**"= **DBTYPE_DATE**|  
+|**IS_NULLABLE**|**DBTYPE_BOOL**||この列に既定値があるかどうかを示すブール値。<br /><br /> **TRUE**列を含めることができる場合**NULL**です。**FALSE**、それ以外の場合。|  
+|**DATA_TYPE**|**DBTYPE_UI2**||列のデータ型のインジケーターです。 以下に例を示します。<br /><br /> "**テーブル**"= **DBTYPE_HCHAPTER**<br /><br /> "**テキスト**"= **DBTYPE_WCHAR**<br /><br /> "**長い**"= **DBTYPE_I8**<br /><br /> "**二重**"= **DBTYPE_R8**<br /><br /> "**日付**"= **DBTYPE_DATE**|  
 |**TYPE_GUID**|**DBTYPE_GUID 型**||列のデータ型の GUID。 データ型を識別する Guid を使用しないプロバイダーを返す必要があります**NULL**この列にします。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**||列に格納できる値の最大の長さ。 文字、バイナリ、またはビットの列の場合、これは次のいずれかになります。<br /><br /> 長さが定義されている場合は、列の最大の長さ (単位は文字、バイト、またはビット)。 たとえば、SQL テーブルの `CHAR(5)` 列は、最大の長さが 5 になります。<br /><br /> 列の長さが定義されていない場合は、データ型の最大の長さ (単位は文字、バイト、またはビット)。<br /><br /> 列にもデータ型にも最大の長さが定義されていない場合はゼロ (0) になります。<br /><br /> **NULL**他のすべての型の列です。|  
 |**CHARACTER_OCTET_LENGTH**|**DBTYPE_UI4**||列の型が文字またはバイナリである場合は、列の最大の長さ (単位はオクテット (バイト))。 ゼロ (0) の値は、列に最大の長さがないことを意味します。 **NULL**他のすべての型の列です。|  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBindCol
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 23df3fff2ff88ecf62b332f0fca752f608894ef6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 関数
 **準拠**  
@@ -108,7 +107,7 @@ SQLRETURN SQLBindCol(
   
  インジケーターのバッファー長バッファーと別のバッファーには、長バッファーは、その他のすべての値を返すことができますが、インジケーター バッファーはのみの SQL_NULL_DATA を返すことができます。  
   
- 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+ 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する。](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
  場合*StrLen_or_IndPtr*は null ポインター、いない長さまたはインジケーターの値を使用します。 これは、データとデータのフェッチが NULL の場合のエラーです。  
   
@@ -247,7 +246,7 @@ SQLRETURN SQLBindCol(
 |*アドレスをバインドします。*|データ バッファーの指定したアドレス、 *TargetValuePtr*引数**SQLBindCol**です。<br /><br /> 長さ/インジケーター バッファーの指定したアドレス、 *StrLen_or_IndPtr*引数**SQLBindCol**です。 詳細については、"記述子および SQLBindCol"セクションの「追加コメント」を参照してください。<br /><br /> バインドされたアドレスが 0 でのデータ値が返されない場合でも、前の式で計算されたアドレスは 0 以外。|  
 |*オフセットのバインド*|行方向のバインドを使用する場合 SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性を持つアドレスに格納された値を指定します。<br /><br /> 列方向のバインドを使用する場合、または SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の値が null ポインターで*バインディング オフセット*は 0 です。|  
 |*行番号*|1 から始まる行セットの行の数。 単一行のフェッチは、既定値は、これは 1 です。|  
-|*要素のサイズ*|バインドの配列内の要素のサイズ。<br /><br /> 列方向のバインドを使用すると、これは**sizeof(SQLINTEGER)**長さ/インジケーター バッファーの場合。 値では、データ バッファーを*BufferLength*引数**SQLBindCol**場合は、データ型が固定長データ型が変数の長さ、およびデータ型のサイズの場合。<br /><br /> 場合は行方向のバインドを使用すると、これは、両方のデータと長さ/インジケーター バッファーの SQL_ATTR_ROW_BIND_TYPE ステートメント属性の値。|  
+|*要素のサイズ*|バインドの配列内の要素のサイズ。<br /><br /> 列方向のバインドを使用すると、これは**sizeof(SQLINTEGER)** 長さ/インジケーター バッファーの場合。 値では、データ バッファーを*BufferLength*引数**SQLBindCol**場合は、データ型が固定長データ型が変数の長さ、およびデータ型のサイズの場合。<br /><br /> 場合は行方向のバインドを使用すると、これは、両方のデータと長さ/インジケーター バッファーの SQL_ATTR_ROW_BIND_TYPE ステートメント属性の値。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>記述子および SQLBindCol  
  次のセクションで説明する方法**SQLBindCol**記述子と対話します。  
@@ -289,7 +288,7 @@ SQLRETURN SQLBindCol(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションの実行、**選択**名前により、結果セットを返す、顧客の Id、名前、および電話番号、Customers テーブルでのステートメントが並べ替えられます。 呼び出して**SQLBindCol**のローカル バッファーにデータの列をバインドします。 アプリケーションが最後を使用してデータの各行をフェッチ**SQLFetch**各顧客の名前、ID、および電話番号を出力します。  
   
- コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数。](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
 ```  
 // SQLBindCol_ref.cpp  

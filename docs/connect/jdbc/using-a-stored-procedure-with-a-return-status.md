@@ -3,26 +3,22 @@ title: 戻り値を持つストアド プロシージャを使用して |Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c87821768fe558da9496f84d51fbe80ffec20567
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 29bb95c06d86ad4d6e45002da1429f6c7d5a5c9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>状態の戻り値があるストアド プロシージャの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

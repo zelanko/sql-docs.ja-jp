@@ -3,26 +3,22 @@ title: 入力パラメーターを使用してストアド プロシージャを
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 64bf5a293cbe0f9fd9287a03084d66044a54337a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>入力パラメーターがあるストアド プロシージャの使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

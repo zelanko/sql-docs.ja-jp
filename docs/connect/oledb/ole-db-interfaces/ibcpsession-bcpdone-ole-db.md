@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fd48f79a9c56f69d00eef7205e3904a1352f5e6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: be47a1af02449515eeea9e5c395796f602bbcf0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 HRESULT BCPDone(void);  
 ```  
@@ -55,7 +53,7 @@ HRESULT BCPDone(void);
   
  このサンプルを実行する前に、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] を実行する必要があります。  
   
-```  
+```sql  
 create table fltest(col1 int, col2 int, col3 image)  
 insert into fltest values (1, 1, 0x0FF)  
 insert into fltest values (2, 2, 0xF00)  
@@ -71,9 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  **bcp マスター.outfile.dat-n-t-s で fltest** *サーバー*  
   
- このサンプルをコンパイルするときに、msoledbsql.lib を指定する必要があります。  
-  
-```  
+```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
 #define INITGUID  
 #define MAX_ROWS  100  

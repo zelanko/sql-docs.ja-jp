@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_SERVICES 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_SERVICES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_SERVICES rowset
-ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5e01e9a31c182ffc68800b1c159f88d26c9611ac
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]プロバイダーがサポートする各データ マイニング アルゴリズムの説明を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  プロバイダーでサポートされている各データ マイニング アルゴリズムについて記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DMSCHEMA_MINING_SERVICES**行セットには、次の列が含まれています。  
@@ -39,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 |列名|型を表すインジケーター|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|アルゴリズムの名前。 この列はプロバイダー固有のものです。|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|この列には、マイニング サービスについて記述したビットマップが含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]値は次のいずれかでは、この列に設定します。<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|この列には、マイニング サービスについて記述したビットマップが含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] この列に、次の値のいずれかを設定します。<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|ローカライズ可能なアルゴリズムの表示名。|  
 |**SERVICE_GUID**|**DBTYPE_GUID 型**|アルゴリズムの GUID。|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|アルゴリズムについてのわかりやすい説明。|  

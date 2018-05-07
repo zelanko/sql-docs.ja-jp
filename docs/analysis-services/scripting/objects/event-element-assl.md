@@ -1,41 +1,23 @@
 ---
 title: Event 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Event Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EVENT
-helpviewer_keywords:
-- Event element
-ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
-caps.latest.revision: 37
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31131575d34d11c7292f86e10d39e39eb71631f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c198100ef89ee88ec9c5338f6176e0c42ab697c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-element-assl"></a>Event 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義、**イベント**の一部としてキャプチャする、[トレース](../../../analysis-services/scripting/objects/trace-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義、**イベント**の一部としてキャプチャする、[トレース](../../../analysis-services/scripting/objects/trace-element-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,11 +33,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|1-n : 必須要素で、複数回の出現が可能です|  
+|Cardinality|1-n : 必須要素で、複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -68,7 +50,7 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.TraceEvent>します。  
   
 ## <a name="see-also"></a>参照  
- [Trace 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/trace-element-assl.md)   
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Trace 要素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/trace-element-assl.md)   
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

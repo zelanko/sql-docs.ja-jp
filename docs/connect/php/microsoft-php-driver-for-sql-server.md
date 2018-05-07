@@ -3,29 +3,27 @@ title: Microsoft Drivers for PHP for SQL Server |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: f46806b705a069164d01accf4efd2169563442db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[SQL 用の PHP のドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Microsoft Drivers for PHP for SQL Server は、PHP アプリケーションの SQL Server との統合を有効にします。 ドライバーは、PHP スクリプトから SQL Server データの書き込みと読み取りを許可する PHP 拡張機能です。 ドライバーは、後で (Express Editions を含む) と SQL Server 2005 のすべてのエディションでの Azure SQL データベースでデータにアクセスするためのインターフェイスを提供します。 ドライバーは、PHP の機能を使用して、ラージ オブジェクトを読み書きする PHP ストリームを含むを確認します。  
   
@@ -45,7 +43,7 @@ Microsoft Drivers for PHP for SQL Server は、PHP アプリケーションの S
 * [サポート リソースを Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>ダウンロード  
-* ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[SQL 用 PHP driver のダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+* ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[for PHP sql ドライバーをダウンロードするには](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>サンプル  
 * [Microsoft Drivers for PHP for SQL Server のサンプル コード](code-samples-for-php-sql-driver.md)

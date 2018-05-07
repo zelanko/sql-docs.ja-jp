@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_HIERARCHIES 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_HIERARCHIES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_HIERARCHIES rowset
-ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
-caps.latest.revision: 34
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ecdc6817c5a2d7e1e88b909080a3156c55f40eb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 213d6899267c4397ecb33d078f33fee661ae2067
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemahierarchies-rowset"></a>MDSCHEMA_HIERARCHIES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]特定のディメンション内の各階層をについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  特定のディメンション内の各階層について記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_HIERARCHIES**行セットには、次の列が含まれています。  
@@ -84,6 +70,6 @@ ms.lasthandoff: 01/08/2018
 |**HIERARCHY_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 有効な値は次のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

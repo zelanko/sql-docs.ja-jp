@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBulkOperations
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: efc1d363d11982e0732fc50ca66a665520b59c39
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3f0e2dd99a350d3bb1bfb17d6d9ccdba46f9473e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
 **準拠**  
@@ -64,7 +63,7 @@ SQLRETURN SQLBulkOperations(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE です。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLBulkOperations** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられた SQLSTATE 値を返しますを呼び出すことによって取得できます**SQLGetDiagRec**で、 *HandleType*のSQL_HANDLE_STMT と*処理*の*StatementHandle*です。 次の表に、によって通常返される SQLSTATE 値**SQLBulkOperations**ですこの関数のコンテキストでは、各フォルダーについて説明しますと表記"(DM)"の前に、ドライバー マネージャーによって返される SQLSTATEs の説明. SQLSTATE 値ごとに関連付けられている戻り値のコードは、特に明記しない限り、SQL_ERROR です。  
+ ときに**SQLBulkOperations** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられた SQLSTATE 値を返しますを呼び出すことによって取得できます**SQLGetDiagRec**で、 *HandleType*のSQL_HANDLE_STMT と*処理*の*StatementHandle*です。 次の表に、によって通常返される SQLSTATE 値**SQLBulkOperations**ですこの関数のコンテキストでは、各フォルダーについて説明しますと表記"(DM)"の前に、ドライバー マネージャーによって返される SQLSTATEs の説明。 SQLSTATE 値ごとに関連付けられている戻り値のコードは、特に明記しない限り、SQL_ERROR です。  
   
  すべてこれら SQLSTATEs SQL_SUCCESS_WITH_INFO または SQL_ERROR (を除く 01xxx SQLSTATEs) を返すことができる、SQL_SUCCESS_WITH_INFO が返されますでエラーが発生した場合は、SQL_ERROR が返されます複数行の操作の 1 つまたは複数の、は、すべての行にエラーが発生した場合、。単一行の操作です。  
   
@@ -262,7 +261,7 @@ SQLRETURN SQLBulkOperations(
  アプリケーションを呼び出す場合**SQLCancel**ドライバーでは、実行時データ列のデータが引き続き必要があります、中に、ドライバー操作をキャンセルします。 アプリケーションが呼び出すことができますし、 **SQLBulkOperations**再度を取り消すには影響しません、カーソルの状態または現在のカーソル位置。  
   
 ## <a name="row-status-array"></a>行の状態配列  
- 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**です。 ドライバーでは、この配列に状態の値を設定への呼び出し後**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations**。 この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって参照されます。 行の状態配列内の要素の数は、(で定義されている、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性)、行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)です。  
+ 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**です。 ドライバーでは、この配列に状態の値を設定への呼び出し後**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations。**. この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって参照されます。 行の状態配列内の要素の数は、(で定義されている、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性)、行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)です。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、Customers テーブルから一度に 10 行のデータをフェッチします。 ユーザーにアクションを実行し、メッセージが表示されます。 ネットワーク トラフィックを減らすためは、例のバッファーは、更新、削除、し、バインドの配列では、過去の行セットのデータ オフセット位置にローカルに挿入します。 コードが適切にオフセット、バインドを設定しを呼び出す場合、ユーザーは、更新、削除、送信するによって選択され、データ ソースへの挿入、 **SQLBulkOperations**です。 わかりやすくするため、ユーザーは、10 個より多くの更新、削除、または挿入バッファーことはできません。  

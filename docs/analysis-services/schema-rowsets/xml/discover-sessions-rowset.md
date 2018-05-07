@@ -1,34 +1,23 @@
 ---
 title: DISCOVER_SESSIONS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_SESSIONS rowset
-ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbbc74e9241d7501371008ef5bae73f092022e11
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]サーバーで現在開いているセッションに関するリソース使用状況とアクティビティ情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  サーバー上で現在開いているセッションに関するリソース使用量と利用状況の情報を提供します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_SESSIONS**行セットには、次の列が含まれています。  
@@ -76,6 +65,6 @@ ms.lasthandoff: 01/08/2018
 |SESSION_STATUS|DBTYPE_I4|省略可。|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

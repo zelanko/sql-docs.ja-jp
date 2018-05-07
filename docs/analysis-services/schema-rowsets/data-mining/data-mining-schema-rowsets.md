@@ -1,38 +1,23 @@
 ---
-title: "データ マイニング スキーマ行セット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ マイニング スキーマ行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- schema rowsets [Analysis Services]
-- rowsets [Analysis Services], data mining
-- data mining [Analysis Services], schema rowsets
-ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: de34fa80e547b38216ca83458501347888488774
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ee1f8d3288d884f7322fa578d8cd9b58919c335b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-mining-schema-rowsets"></a>データ マイニング スキーマ行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-実行しているサーバー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次のデータ マイニング スキーマ行セットをサポートしています。 確認するには、特定の XML/A プロバイダーが特定の行セットをサポートしているかどうかを使用して、 [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドです。  
+  実行しているサーバー [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]次のデータ マイニング スキーマ行セットをサポートしています。 確認するには、特定の XML/A プロバイダーが特定の行セットをサポートしているかどうかを使用して、 [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)を含む行セット、 [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md)メソッドです。  
   
  また、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では、Transact-SQL 言語においてデータ マイニング スキーマ行セットが $SYSTEM スキーマのテーブルとして公開されます。 たとえば、Analysis Services インスタンスに対する次のクエリでは、現在のインスタンスで使用できるスキーマの一覧が返されます。  
   
@@ -59,6 +44,6 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のスキーマ行セット](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [データ マイニング スキーマ行セット &#40;です。SSAs &#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
+ [データ マイニング スキーマ行セット&#40;SSAs&#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
   
   

@@ -1,47 +1,36 @@
 ---
 title: DISCOVER_COMMAND_OBJECTS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMAND_OBJECTS rowset
-ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f97592e50485bdd26c55eb62fb9b4649acb545b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 789f1bf7bb4ba9c85ecc1a09a69d1542255f184b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]参照先のコマンドによって使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  参照先のコマンドによって使用中のオブジェクトに関するリソース使用状況とアクティビティ情報を提供します。  
   
- **適用されます:**表形式モデル、多次元モデル  
+ **適用されます:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_COMMAND_OBJECTS**行セットには、次の列が含まれています。  
   
 |列名|型を表すインジケーター|制限|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**SESSION_SPID**|**DBTYPE_I4**|可|セッション ID。|  
-|**SESSION_ID**|**DBTYPE_WSTR**|可|GUID としてのセッションの一意識別子。|  
+|**SESSION_SPID**|**DBTYPE_I4**|はい|セッション ID。|  
+|**SESSION_ID**|**DBTYPE_WSTR**|はい|GUID としてのセッションの一意識別子。|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||コマンドのシーケンス番号。|  
-|**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|可|現在のオブジェクトの親へのパス。|  
-|**OBJECT_ID**|**DBTYPE_WSTR**|可|作成したときに定義されたオブジェクトの ID。|  
+|**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|はい|現在のオブジェクトの親へのパス。|  
+|**OBJECT_ID**|**DBTYPE_WSTR**|はい|作成したときに定義されたオブジェクトの ID。|  
 |**OBJECT_VERSION**|**DBTYPE_I4**||オブジェクトのメタデータ バージョン番号。この番号は、オブジェクトが変更されるたびに変わります。|  
 |**OBJECT_DATA_VERSION**|**DBTYPE_I4**||オブジェクト内のデータの系列番号。 この番号は、オブジェクトが処理されるたびに増加します。|  
 |**OBJECT_CPU_TIME_MS**|**DBTYPE_I8**||コマンドの開始以降にオブジェクトによって使用された CPU 時間 (ミリ秒単位)。|  
@@ -68,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|CommandObjects|  
   
 ## <a name="see-also"></a>参照  
- [XML for Analysis Schema 行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis スキーマ行セット](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

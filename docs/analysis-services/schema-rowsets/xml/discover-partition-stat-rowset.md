@@ -1,35 +1,25 @@
 ---
-title: DISCOVER_PARTITION_STAT Rowset | Microsoft Docs
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_PARTITION_STAT 行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 649475fa5fd1a4e0bb2a6c734f916270ac7f9a64
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a00b6ce9f05b0e22da8ab096d54744602ea2c1b8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-特定のパーティションの集計に関する統計を返します。  
+  特定のパーティションの集計に関する統計を返します。  
   
- **適用されます:**表形式モデル、多次元モデル  
+ **適用されます:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_PARTITION_STAT**行セットには、次の列が含まれています。  

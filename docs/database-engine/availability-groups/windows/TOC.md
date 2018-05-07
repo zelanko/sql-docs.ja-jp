@@ -44,6 +44,7 @@
 #### [[パブリッシャーのプロパティ]](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
 ### [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
 ### [Service Broker](service-broker-with-always-on-availability-groups-sql-server.md)  
+## [リース、クラスター、および正常性チェックのタイムアウト](availability-group-lease-healthcheck-timeout.md)
 ## [リスナー、クライアント、フェールオーバー](listeners-client-connectivity-application-failover.md)  
 ## [ログインとジョブ](logins-and-jobs-for-availability-group-databases.md)  
 ## [レプリカ間のセッション中に発生する可能性のあるエラー](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  

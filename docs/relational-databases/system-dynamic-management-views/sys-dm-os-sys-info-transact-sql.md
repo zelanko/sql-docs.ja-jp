@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 82efa511456eb0340ba2bb717ff9d15acbfbd8f9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f867d3c994187afaa411a19687eda36a039557f4
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -82,9 +80,9 @@ ms.lasthandoff: 05/03/2018
 |**sql_memory_model**|**int**|**適用されます:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br />によって使用されるメモリ モデルを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てられません。 Null を許容しません。<br /><br />1 = コンベンショナル メモリ モデル<br />2 = lock Pages in Memory<br /> 3 = メモリ内のラージ ページ|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用されます:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br />によって使用されるメモリ モデルを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てられません。 Null を許容しません。<br /><br />**従来** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てるコンベンショナル メモリ モデルが使用されています。 これは、既定の sql メモリ モデル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントがページのロック メモリ特権での起動中にします。<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てることのメモリ内のページのロックが使用されます。 これは、SQL Server サービス アカウントは、SQL Server の起動中に Memory 特権でのページのロックを所有しているときの既定の sql のメモリ マネージャーです。<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して大きなページ メモリ内でメモリを割り当てられません。 SQL Server では、大きなページ アロケーターを使用して、サーバーの起動時に、トレース フラグ 834 がオンにすると、SQL Server サービス アカウントが Memory 特権でのページのロックを持つときに、Enterprise edition でのみメモリを割り当てます。|
 |**pdw_node_id**|**int**|**適用されます:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この分布はでは、ノードの識別子。|  
-|**socket_count** |**int** | **適用されます:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP2[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br />システム上の利用可能なプロセッサ ソケット数を指定します。 |  
-|**cores_per_socket** |**int** | **適用されます:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP2[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br />システム上の 1 つのソケットの使用可能なプロセッサの数を指定します。 |  
-|**numa_node_count** |**int** | **適用されます:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP2[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、ソフト numa ノードだけでなく、物理 numa ノードが含まれています。 |  
+|**socket_count** |**int** | **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システム上の利用可能なプロセッサ ソケット数を指定します。 |  
+|**cores_per_socket** |**int** | **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システム上の 1 つのソケットの使用可能なプロセッサの数を指定します。 |  
+|**numa_node_count** |**int** | **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、ソフト numa ノードだけでなく、物理 numa ノードが含まれています。 |  
   
 ## <a name="permissions"></a>権限
 

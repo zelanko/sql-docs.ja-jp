@@ -1,33 +1,23 @@
 ---
-title: "RelationshipEndTranslation 要素 (ASSL) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: RelationshipEndTranslation 要素 (ASSL) |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8d679235d66f38366dc4fe1a5aad03e360e15fc9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 58e982fe24e4388f8e22dd757df7582f7c879854
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationshipendtranslation-element-assl"></a>RelationshipEndTranslation 要素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-ローカライズされた翻訳を表すプリミティブ データ型を定義、 [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)要素。  
+  ローカライズされた翻訳を表すプリミティブ データ型を定義、 [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)要素。  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,6 +51,6 @@ ms.lasthandoff: 02/15/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Translation>します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

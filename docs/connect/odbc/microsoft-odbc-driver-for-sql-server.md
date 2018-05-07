@@ -3,29 +3,26 @@ title: Microsoft ODBC Driver for SQL Server |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 5142268f69db446dc588af17d7b532ba680c24d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
-![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[ODBC ドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC は、SQL Server の C および C++ で記述されたアプリケーションのプライマリ ネイティブ データ アクセス API です。 ほとんどのデータ ソース用の ODBC ドライバーがあります。 ODBC を使用できるその他の言語には、COBOL、Perl、PHP、および Python が含まれます。 ODBC は、データ統合のシナリオで広く使用されます。
 
@@ -33,15 +30,15 @@ ODBC ドライバーは、ツールが付属など[ **sqlcmd** ](../../tools/sql
 
 ## <a name="code-example-in-c"></a>C++ でのコード例
 
-ODBC を使用する C + + プログラムのソース コードを含む小さな .zip ファイルがあります。
+次の C++ のサンプルでは、ODBC Api を使用してに接続し、データベースにアクセスする方法を示します。
 
 - [ODBC を使用して、C++ コードの例](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>ダウンロード
 
-- ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[ODBC ドライバーをダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![ダウンロード DownArrow 丸](../../ssdt/media/download.png)[ODBC ドライバーをダウンロードするには](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>ドキュメント  
+## <a name="documentation"></a>ドキュメント
 
 ### <a name="features"></a>機能のインストール
 

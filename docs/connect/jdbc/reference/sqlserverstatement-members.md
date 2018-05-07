@@ -3,13 +3,10 @@ title: SQLServerStatement のメンバー |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
@@ -17,9 +14,9 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8a22ca95f835f2eec139359f24a486e15cbee2e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 77161ec9693615eb50d4e62fb9cd1f6f185d23fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -46,12 +43,12 @@ ms.lasthandoff: 05/03/2018
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|このコマンドの現在のリストに渡された SQL コマンドを追加[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|これによって現在実行されている SQL ステートメントを取り消します[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
-|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|この SQL コマンドの現在のリストを空に[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
+|[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトに対する SQL コマンドの現在の一覧を空にします。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|これで報告されたすべての警告をクリア[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|このリリース[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクトのデータベースと JDBC リソースを待たずにすぐに自動的に解放します。|  
 |[execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|実行するコマンド バッチをデータベースに送信します。 すべてのコマンドが正常に実行されている場合は、更新数の配列が返されます。|  
-|[さらに executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|渡された SQL ステートメントを実行し、1 つを返します[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。|  
+|[さらに executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|渡された SQL ステートメントを実行し、1 つの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを返します。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)|渡された SQL ステートメントを実行します。ステートメントは INSERT、UPDATE、MERGE、DELETE、または SQL DDL ステートメントのような何も返さない SQL ステートメントが可能です。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|取得、 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)をこれを生成したオブジェクト[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|これから生成された結果セットの既定値は、データベース テーブルから行をフェッチの方向を取得[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)オブジェクト。|  

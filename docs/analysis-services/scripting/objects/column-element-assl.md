@@ -1,41 +1,23 @@
 ---
 title: Column 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Column Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Column
-helpviewer_keywords:
-- Column element
-ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60a0c8bd38d280d267b85148e3d40f2bac4967cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1d2fc5505eb9e65414b4b26ddcdd15cd7ef81950
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-element-assl"></a>Column 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]親要素に関連付けられている列のコレクション内の列について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  親要素に関連付けられた列コレクション内の列を記述します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -68,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  **基数**  
   
-|先祖または親|基数|  
+|先祖または親|Cardinality|  
 |------------------------|-----------------|  
 |[イベント](../../../analysis-services/scripting/objects/event-element-assl.md)|1-n : 必須要素で、複数回の出現が可能です|  
 |他のすべて|0-1 : 省略可能な要素で、出現する場合は 1 回だけの出現が可能です|  
@@ -81,6 +63,6 @@ ms.lasthandoff: 01/08/2018
 |子要素|なし|  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

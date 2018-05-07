@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_DIMENSIONS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_DIMENSIONS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_DIMENSIONS rowset
-ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cf0198759485452fc3fd6d82cdd2642df92b440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aab53e53edeee81f57914ac67cb88078d663c3ac
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データベース内の共有とプライベート ディメンションをについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  データベース内の共有ディメンションとプライベート ディメンションについて記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_DIMENSIONS**行セットには、次の列が含まれています。  
@@ -72,6 +58,6 @@ ms.lasthandoff: 01/08/2018
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 有効な値は次のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

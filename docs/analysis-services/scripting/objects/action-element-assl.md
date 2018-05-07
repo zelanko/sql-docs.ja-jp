@@ -1,41 +1,23 @@
 ---
 title: Action 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Action Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Action
-helpviewer_keywords:
-- Action element
-ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 80a0bdc56107980b9865015f07abd8b213d1021c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 84f143b41499ec8eb4071d634a23b414af242d03
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="action-element-assl"></a>Action 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用できるアクションに関する情報が含まれています、[キューブ](../../../analysis-services/scripting/objects/cube-element-assl.md)要素または[パースペクティブ](../../../analysis-services/scripting/objects/perspective-element-assl.md)要素。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) 要素または [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) 要素で使用できるアクションに関する情報を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|次の表を参照してください。|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 |先祖または親|データ型|  
 |------------------------|---------------|  
@@ -74,9 +56,9 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Action>します。  
   
 ## <a name="see-also"></a>参照  
- [Cube 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Perspective 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
- [PerspectiveAction データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Cube 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Perspective 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/perspective-element-assl.md)   
+ [PerspectiveAction データ型 & #40 です。ASSL & #41;](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md)   
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

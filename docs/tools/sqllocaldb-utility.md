@@ -1,34 +1,36 @@
 ---
-title: "SqlLocalDB ユーティリティ |Microsoft ドキュメント"
-ms.custom: 
+title: SqlLocalDB ユーティリティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqllocaldb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 18c5c10465a56b6d7081612df2ce079dcdaa77b5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: eb541c1423302963d7b970811734fdfca3de9f5c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB ユーティリティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]使用して、 **SqlLocalDB**のインスタンスを作成するユーティリティ[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**です。 **SqlLocalDB** ユーティリティ (SqlLocalDB.exe) は、ユーザーおよび開発者が [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを作成および管理できるようにするシンプルなコマンド ライン ツールです。 **LocalDB** の使用方法の詳細については、「[SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB** のインスタンスを作成するには、**SqlLocalDB** ユーティリティを使用します。 **SqlLocalDB** ユーティリティ (SqlLocalDB.exe) は、ユーザーおよび開発者が [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを作成および管理できるようにするシンプルなコマンド ライン ツールです。 **LocalDB** の使用方法の詳細については、「[SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +52,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>引数  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* **[-s]**  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** の新しいインスタンスを作成します。 **SqlLocalDB**のバージョンを使用して[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]で指定されたバイナリ*\<インスタンスのバージョン >*引数。 バージョン番号は、1 桁以上の 10 進数の数値書式で指定します。 マイナー バージョン番号 (サービス パック) は省略可能です。 たとえば、11.0 と 11.0.1186 という 2 つのバージョン番号のどちらも使用できます。 指定したバージョンがコンピューターにインストールされている必要があります。 指定しなかった場合、バージョン番号は既定で **SqlLocalDB** ユーティリティのバージョンに設定されます。 **–s** を追加した場合、 **LocalDB**の新しいインスタンスが起動します。  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** の新しいインスタンスを作成します。 **SqlLocalDB** では、*\<instance-version>* 引数で指定された [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] バイナリのバージョンを使用します。 バージョン番号は、1 桁以上の 10 進数の数値書式で指定します。 マイナー バージョン番号 (サービス パック) は省略可能です。 たとえば、11.0 と 11.0.1186 という 2 つのバージョン番号のどちらも使用できます。 指定したバージョンがコンピューターにインストールされている必要があります。 指定しなかった場合、バージョン番号は既定で **SqlLocalDB** ユーティリティのバージョンに設定されます。 **–s** を追加した場合、 **LocalDB**の新しいインスタンスが起動します。  
   
  [ **share** | **h** ]  
  指定された共有名を使用して、 **LocalDB** の指定されたプライベート インスタンスを共有します。 ユーザー SID またはアカウント名を省略した場合、既定で現在のユーザーになります。  
@@ -70,7 +72,7 @@ SqlLocalDB.exe
  [ **info** | **i** ] [ *\<instance-name>* ]  
  現在のユーザーが所有する [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のすべてのインスタンスを一覧表示します。  
   
- *\<インスタンス名 >*名を返しますバージョン、状態 (実行中または停止)、最後の開始時刻の指定されたインスタンス[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**とのローカル パイプ名、 **LocalDB**です。  
+ *\<instance-name>* を指定すると、[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** の指定したインスタンスの名前、バージョン、状態 (Running または Stopped)、および最後の起動時刻に加え、**LocalDB** のローカル パイプ名が返されます。  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** を指定すると、現在のユーザーに対して **SqlLocalDB** の API 呼び出しのトレースが有効になります。 **trace off** はトレースを無効にします。  
@@ -78,7 +80,7 @@ SqlLocalDB.exe
  **-?**  
  各 **SqlLocalDB** オプションの簡単な説明が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  引数 *instance name* は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子のルールに従っているか、二重引用符で囲む必要があります。  
   
  引数を指定せずに SqlLocalDB を実行すると、ヘルプ テキストが返されます。  

@@ -1,36 +1,37 @@
 ---
-title: "sqlps ユーティリティ |Microsoft ドキュメント"
-ms.custom: 
+title: sqlps ユーティリティ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: sqlps
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3f6a9e7c98535e21057a3d1213c7572d8826d42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlps-utility"></a>sqlps ユーティリティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps**ユーティリティは、Windows PowerShell セッションを起動し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みし、登録します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントを使用する PowerShell コマンドやスクリプトを入力して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとそのオブジェクトを操作できます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlps** ユーティリティは、Windows PowerShell セッションを起動し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットの読み込みと登録を行います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントを使用する PowerShell コマンドやスクリプトを入力して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとそのオブジェクトを操作できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]使用して、 **sqlps** PowerShell モジュール代わりにします。 **sqlps** モジュールの詳細については、「 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 代わりに **sqlps** PowerShell モジュールを使用してください。 **sqlps** モジュールの詳細については、「 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -72,15 +73,15 @@ sqlps
  **-Command-** は、 **sqlps** ユーティリティで入力を標準入力から読み取ることを指定します。  
   
  *script_block* [ **-args***argument_array* ]  
- PowerShell コマンドのブロックを実行することを指定します。ブロックは中かっこ {} で囲む必要があります。 *Script_block* を指定できるのは、 **sqlps** ユーティリティを **PowerShell** または他の **sqlps** ユーティリティ セッションから呼び出すときだけです。 *argument_array* は、 *script_block*内の PowerShell コマンドの引数を含む PowerShell 変数の配列です。  
+ 実行する PowerShell コマンドのブロックを指定します。ブロックは中かっこ {} で囲む必要があります。 *Script_block* を指定できるのは、 **sqlps** ユーティリティを **PowerShell** または他の **sqlps** ユーティリティ セッションから呼び出すときだけです。 *argument_array* は、 *script_block*内の PowerShell コマンドの引数を含む PowerShell 変数の配列です。  
   
  *string* [ *command_parameters* ]  
- 実行する PowerShell コマンドを含む文字列を指定します。 形式を使用して**"& {***コマンド***}"**です。 引用符は文字列を示し、呼び出し演算子 (&) は **sqlps** ユーティリティにコマンドを実行させます。  
+ 実行する PowerShell コマンドを含む文字列を指定します。 **"&{***command***}"** という形式を使用します。 引用符は文字列を示し、呼び出し演算子 (&) は **sqlps** ユーティリティにコマンドを実行させます。  
   
  [ **-?** | **-Help** ]  
  **sqlps** ユーティリティ オプションの構文の概要を表示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sqlps** ユーティリティは、PowerShell 環境 (PowerShell.exe) を起動し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell モジュールを読み込みます。 このモジュール ( **sqlps**) は、以下の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインの読み込みと登録を行います。  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -106,19 +107,19 @@ sqlps
  **および** に採用されていたバージョンの [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ユーティリティは、Windows PowerShell 1.0 のミニシェルとして実装されていました。 ミニシェルには特定の制限があります。たとえば、ミニシェルによって読み込まれているスナップイン以外、ユーザーは読み込むことができません。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のバージョンのユーティリティは、 **sqlps** モジュールを使用するように変更されており、このような制限は適用されません。  
   
 ## <a name="examples"></a>使用例  
- **A.既定でに sqlps ユーティリティを実行する著作権画面を表示せず、対話モード**  
+ **A.既定の対話モードで著作権画面を表示せずに sqlps ユーティリティを実行する**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B.コマンド プロンプトから SQL Server PowerShell スクリプトを実行します。**  
+ **B.コマンド プロンプトから SQL Server PowerShell スクリプトを実行する**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C.コマンド プロンプトから SQL Server PowerShell スクリプトを実行し、スクリプト完了後も実行してください。**  
+ **C.コマンド プロンプトから SQL Server PowerShell スクリプトを実行し、スクリプト完了後も実行を続ける**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

@@ -1,45 +1,31 @@
 ---
 title: DMSCHEMA_MINING_MODEL_CONTENT 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT rowset
-ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3051859883cd3343f11aecff66fb37ff3ba8c12
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]により、クライアント アプリケーションは、データ マイニング モデルのコンテンツを参照します。 クライアント アプリケーションは、このトピックの最後に説明する特殊なツリー操作制限を使用して、マイニング モデルのコンテンツに移動できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  クライアント アプリケーションでデータ マニング モデルのコンテンツを参照できるようにします。 クライアント アプリケーションは、このトピックの最後に説明する特殊なツリー操作制限を使用して、マイニング モデルのコンテンツに移動できます。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DMSCHEMA_MINING_MODEL_CONTENT**行セットには、次の列が含まれています。  
   
 |列名|型を表すインジケーター|長さ|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||カタログ名。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]モデルがメンバーであるデータベースの名前を持つこの列に設定します。|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**||修飾されていないスキーマ名。 は、この列はサポートされていない[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 常に含まれている**VT_**です。|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||カタログ名。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モデルがメンバーであるデータベースの名前を持つこの列を追加します。|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**||修飾されていないスキーマ名。 は、この列はサポートされていない[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 常に含まれている**VT_** です。|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||この行に記述されているコンテンツが関連付けられているモデルの名前。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||このノードに対応する属性の名前です。|  
 |**NODE_NAME**|**DBTYPE_WSTR**||ノードの名前。 現在、この列と同じ値を含む**NODE_UNIQUE_NAME**可能性があります将来のリリース変更、します。|  

@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_COLUMNS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_COLUMNS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_COLUMNS rowset
-ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 73c0ad513c6665355c98a40409ecd694b19adffb
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]すべてのデータ マイニング モデルの個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 この行セットは、現在のカタログに制限されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  すべてのデータ マイニング モデルの個々 の列について説明します[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 この行セットは、現在のカタログに制限されます。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DMSCHEMA_MINING_COLUMNS**行セットには、次の列が含まれています。  
@@ -48,13 +34,13 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_HAS_DEFAULT**|**DBTYPE_BOOL**|列に既定値があるかどうかを示すブール値。<br /><br /> **TRUE** 、列がそれ以外の場合、既定値を持つ場合**FALSE**です。|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**|列の既定値です。<br /><br /> 既定値は場合、 **NULL**値、 **COLUMN_HASDEFAULT**が含まれています**TRUE**、この列が含まれています**NULL**です。|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**|列の特性を記述するビットマスク。 **DBCOLUMNFLAGS**列挙型は、対応するビットマスクのビットを指定します。 この列が空になることはありません。|  
-|**によって IS_NULLABLE**|**DBTYPE_BOOL**|列で NULL 値が許容されるかどうかを示すブール値。<br /><br /> **FALSE**に null 値、それ以外の列がわかっている場合**TRUE**です。|  
+|**IS_NULLABLE**|**DBTYPE_BOOL**|列で NULL 値が許容されるかどうかを示すブール値。<br /><br /> **FALSE**に null 値、それ以外の列がわかっている場合**TRUE**です。|  
 |**DATA_TYPE**|**DBTYPE_UI2**|列のデータ型のインジケーターです。 次の一覧に、返されるインジケーターの種類の例を示します。<br /><br /> "**テーブル**"を返します**DBTYPE_HCHAPTER**です。<br /><br /> "**テキスト**"を返します**DBTYPE_WCHAR**です。<br /><br /> "**長い**"を返します**DBTYPE_I8**です。<br /><br /> "**二重**"を返します**DBTYPE_R8**です。<br /><br /> "**日付**"を返します**DBTYPE_DATE**です。|  
-|**TYPE_GUID**|**DBTYPE_GUID 型**|列のデータ型の GUID。 は、この列はサポートされていない[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 常に含まれている**VT_**です。|  
+|**TYPE_GUID**|**DBTYPE_GUID 型**|列のデータ型の GUID。 は、この列はサポートされていない[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 常に含まれている**VT_** です。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**|列に格納できる値の最大の長さ。 文字、バイナリ、またはビットの列の場合、これは次のいずれかになります。<br /><br /> 長さが定義されている場合は、列の最大の長さを列の種類に応じて文字数、バイト数、またはビット数で表したものになります。 たとえば、 **char (5)** SQL テーブル内の列が 5 の最大長。<br /><br /> 列の長さが定義されていない場合は、データ型の最大の長さを列の種類に応じて文字数、バイト数、またはビット数で表したものになります。<br /><br /> 列にもデータ型にも最大の長さが定義されていない場合はゼロ (0) になります。<br /><br /> **NULL**他のすべての型の列|  
 |**CHARACTER_OCTET_LENGTH**|**DBTYPE_UI4**|列の型が文字またはバイナリである場合は、列の最大の長さ (単位はオクテット (バイト))。 ゼロ (0) の値は、列に最大の長さがないことを意味します。 この列に含まれる**NULL**他のすべての型の列です。|  
 |**NUMERIC_PRECISION**|**DBTYPE_UI2**|列のデータ型は、数値データ型以外の場合は、列の最大有効桁数**VARNUMERIC**です。<br /><br /> **NULL**かどうか、列のデータ型が数値でない、 **VARNUMERIC**です。<br /><br /> データ型を持つ列の有効桁数**DBTYPE_DECIMAL**または**DBTYPE_NUMERIC**列定義に依存します。|  
-|**NUMERIC_SCALE**|**DBTYPE_I2**|列の型インジケーターがある場合、小数点の右側にある数字の数**DBTYPE_DECIMAL**、 **DBTYPE_NUMERIC**、または**DBTYPE_VARNUMERIC**です。 それ以外の場合、この列に含まれる**VT_**です。|  
+|**NUMERIC_SCALE**|**DBTYPE_I2**|列の型インジケーターがある場合、小数点の右側にある数字の数**DBTYPE_DECIMAL**、 **DBTYPE_NUMERIC**、または**DBTYPE_VARNUMERIC**です。 それ以外の場合、この列に含まれる**VT_** です。|  
 |**DATETIME_PRECISION**|**DBTYPE_UI4**|列のデータ型は DateTime または interval 型である場合は、列の日付/時刻有効桁数 (秒部分の数字の数)それ以外の場合、 **NULL**です。|  
 |**CHARACTER_SET_CATALOG**|**DBTYPE_WSTR**|文字セットが定義されているカタログ名。 は、この列はサポートされていない[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 常に含まれている**NULL**です。|  
 |**CHARACTER_SET_SCHEMA**|**DBTYPE_WSTR**|文字セットが定義されている非修飾スキーマ名。 は、この列はサポートされていない[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 常に含まれている**NULL**です。|  

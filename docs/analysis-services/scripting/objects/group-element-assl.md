@@ -1,41 +1,23 @@
 ---
 title: 要素 (ASSL) をグループ化 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Group Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- GROUP
-helpviewer_keywords:
-- Group element
-ms.assetid: 7df4ba90-b39f-4d8a-8db1-b73639a522a6
-caps.latest.revision: 34
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 11dda5222c4ba4262b741633b7763ae0040ee6f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3e7b57f7e17f359ab819fabaa56e57de2d1d9b08
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-element-assl"></a>Group 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]属性にバインドされているメンバーのグループを定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  属性にバインドされているメンバーのグループを定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,11 +33,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|1-n : 必須要素で、複数回の出現が可能です|  
+|Cardinality|1-n : 必須要素で、複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -68,7 +50,7 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Group>します。  
   
 ## <a name="see-also"></a>参照  
- [UserDefinedGroupBinding データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/userdefinedgroupbinding-data-type-assl.md)   
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [UserDefinedGroupBinding データ型 & #40 です。ASSL & #41;](../../../analysis-services/scripting/data-type/userdefinedgroupbinding-data-type-assl.md)   
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

@@ -1,30 +1,30 @@
 ---
 title: SQL Server のドキュメントへの接続の更新 |Microsoft ドキュメント
-description: 最近変更したドキュメントについては、Microsoft SQL Server への接続の更新されたコンテンツのスニペットを表示します。
+description: Microsoft SQL Server への接続に関して、最近変更されたドキュメントの更新されたコンテンツのスニペットを示します。
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: connect
 ms.date: 02/03/2018
-ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: b7f3307feb3e17ec342c9693c5b70d07866b383f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-connect-to-sql-server"></a>新規または最近更新された: SQL Server に接続
 
 
 
-ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
+ほとんど毎日、Microsoft は [Docs.Microsoft.com](http://docs.microsoft.com/) ドキュメント Web サイトの既存記事の一部を更新しています。 この記事では、最近更新された記事からの抜粋を示します。 新しい記事へのリンクも示される場合があります。
 
-この記事は、定期的に再実行しているプログラムによって生成されます。 場合によっては抜粋を付けること不完全な書式設定、マークダウンとしてソース アーティクルからです。 イメージはここでは表示されません。
+この記事は、定期的に再実行されるプログラムによって生成されます。 場合によっては、抜粋の形式が不完全であったり、ソース記事からのマークダウンとして表示されることがあります。 イメージはここでは表示されません。
 
-最新の更新プログラムは、次の日付範囲とサブジェクトの報告されます。
+最近の更新として次の日付範囲と対象のものが報告されます。
 
 
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2018
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>最近作成された新しい情報の記事
+## <a name="new-articles-created-recently"></a>最近新しく作成された記事
 
 以下のリンクは、最近追加された新しい記事に移動します。
 
@@ -47,13 +47,13 @@ ms.lasthandoff: 04/08/2018
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>更新されたアーティクルの抜粋が
+## <a name="updated-articles-with-excerpts"></a>更新された記事と抜粋
 
 このセクションでは、最近大幅な更新があった記事から収集された更新の抜粋を示します。
 
-ここに表示される抜粋は、適切なセマンティック コンテキストから区切りが表示されます。 また、区切ることもあります抜粋が実際の資料の周囲にある重要なマークダウン構文からです。 したがってこれらの抜粋は、一般的なガイダンスのみです。 のみの抜粋を使用するをクリックし、実際の資料を参照してくださいに時間がかかって各自の興味を保証するかどうかを把握できます。
+ここで示す抜粋は、適切なセマンティック コンテキストから切り離されて表示されます。 また、実際の記事で抜粋を囲んでいる重要なマークダウン構文から切り離されていることもあります。 したがって、これらの抜粋は一般的なガイダンス専用です。 抜粋は、クリックして実際の記事を参照する価値があるかどうかを判断するためだけに使用できます。
 
-これらおよびその他の理由は、これらの抜粋からコードをコピーしない場合と受け取らない正確な情報源として任意のテキストの抜粋です。 代わりに、実際の資料を参照してください。
+これらおよびその他の理由から、これらの抜粋からコードをコピーしたり、テキストの抜粋を正確な情報源と考えたりしないでください。 代わりに、実際の記事を参照してください。
 
 
 
@@ -63,11 +63,11 @@ ms.lasthandoff: 04/08/2018
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>最近更新されたアーティクルの圧縮のリスト
+### <a name="compact-list-of-articles-updated-recently"></a>最近更新された記事の簡易一覧
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。](#TitleNum_1)
+1. [SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する](#TitleNum_1)
 
 
 
@@ -78,9 +78,9 @@ ms.lasthandoff: 04/08/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1.&nbsp; [SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。](odbc/using-always-encrypted-with-the-odbc-driver.md)
+### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1.&nbsp; [SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する](odbc/using-always-encrypted-with-the-odbc-driver.md)
 
-*最終更新日: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+"*更新日: 2018 年 1 月 22 日*" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
 <!-- Source markdown line 524.  ms.author= "v-chojas".  -->
 
@@ -149,16 +149,16 @@ SQLPutData を使用してパーツでは、データを挿入または比較を
 
 
 - [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
-- [新しい + 更新 (0 0 以降): **SQL のように、ActiveX データ オブジェクト (ADO)** docs](../ado/new-updated-ado.md)
+- [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
 - [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
-- [新しい + 更新 (0 0 以降): **SQL の Data Quality Services** docs](../data-quality-services/new-updated-data-quality-services.md)
-- [新しい + 更新 (0 0 以降):**データ マイニング拡張機能 (DMX) の SQL** docs](../dmx/new-updated-dmx.md)
+- [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
+- [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
-- [新しい + 更新 (0 0 以降): **SQL の多次元式 (MDX)** docs](../mdx/new-updated-mdx.md)
-- [新しい + 更新 (0 0 以降): **SQL に対する ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
-- [新しい + 更新 (0 0 以降): **SQL 用のサンプル**docs](../samples/new-updated-samples.md)
-- [新しい + 更新 (0 0 以降): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
+- [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
+- [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
+- [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
 - [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
-- [新しい + 更新 (0 0 以降): **SQL 用の XQuery** docs](../xquery/new-updated-xquery.md)
+- [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
 
 

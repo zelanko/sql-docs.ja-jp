@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 110e5af35638c0eddb5cf0610955a737965373e3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-表形式で実行される Analysis Services データベースによって使用されるストレージ テーブルに関する列およびセグメント レベルの情報を提供または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 この行セットは、主にトラブルシューティングや分析に使用されます。  
+  表形式で実行される Analysis Services データベースによって使用されるストレージ テーブルに関する列およびセグメント レベルの情報を提供または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 この行セットは、主にトラブルシューティングや分析に使用されます。  
   
  **適用対象:** テーブル モデル  
   
@@ -43,7 +33,7 @@ ms.lasthandoff: 02/15/2018
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||ディメンションの名前。|  
 |**TABLE_ID**|**DBTYPE_WSTR**||テーブル セグメントの内部 ID。|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||列の内部 ID。|  
-|**SEGMENT _NUMBER**|**DBTYPE_I8**||テーブル セグメントの序数。|  
+|**セグメント数 (_N)**|**DBTYPE_I8**||テーブル セグメントの序数。|  
 |**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||パーティションの序数。|  
 |**RECORDS_COUNT**|**DBTYPE_I8**||パーティション内のレコード数。|  
 |**ALLOCATED_SIZE**|**DBTYPE_UI8**||列セグメントに割り当てられたサイズ (バイト単位)。|  

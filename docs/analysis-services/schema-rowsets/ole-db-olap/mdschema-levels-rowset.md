@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_LEVELS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_LEVELS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_LEVELS rowset
-ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7eb78b431b77dadfe216db5e30e77e9d5722b2a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23773244a75bdac5019913917e17e6531ee220fa
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]特定の階層内の各レベルをについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  特定の階層内の各レベルについて記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_LEVELS**行セットには、次の列が含まれています。  
@@ -47,11 +33,11 @@ ms.lasthandoff: 01/08/2018
 |**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|適切にエスケープされたレベルの一意の名前。|  
 |**LEVEL_GUID**|**DBTYPE_GUID 型**|サポートされていません。|  
 |**LEVEL_CAPTION**|**DBTYPE_WSTR**|階層に関連付けられたラベルまたはキャプション。 主に表示のために使用されます。 キャプションが存在しない場合**LEVEL_NAME**が返されます。|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|階層のルートからレベルまでの距離。 ルート レベルはゼロ (**0)**です。|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|階層のルートからレベルまでの距離。 ルート レベルはゼロ (**0)** です。|  
 |**LEVEL_CARDINALITY**|**DBTYPE_UI4**|レベル内のメンバーの数。|  
 |**LEVEL_TYPE**|**DBTYPE_I4**|レベルの種類。<br /><br /> **MDLEVEL_TYPE_GEO_CONTINENT** (**0x2001**)<br /><br /> **MDLEVEL_TYPE_GEO_REGION** (**0x2002**)<br /><br /> **MDLEVEL_TYPE_GEO_COUNTRY** (**0x2003**)<br /><br /> **MDLEVEL_TYPE_GEO_STATE_OR_PROVINCE** (**0x2004**)<br /><br /> **MDLEVEL_TYPE_GEO_COUNTY** (**0x2005**)<br /><br /> **MDLEVEL_TYPE_GEO_CITY** (**0x2006**)<br /><br /> **MDLEVEL_TYPE_GEO_POSTALCODE** (**0x2007**)<br /><br /> **MDLEVEL_TYPE_GEO_POINT** (**0x2008**)<br /><br /> **MDLEVEL_TYPE_ORG_UNIT** (**0x1011**)<br /><br /> **MDLEVEL_TYPE_BOM_RESOURCE** (**0x1012**)<br /><br /> **MDLEVEL_TYPE_QUANTITATIVE** (**0x1013**)<br /><br /> **MDLEVEL_TYPE_ACCOUNT** (**0x1014**)<br /><br /> **MDLEVEL_TYPE_CUSTOMER** (**0x1021**)<br /><br /> **MDLEVEL_TYPE_CUSTOMER_GROUP** (**0x1022**)<br /><br /> **MDLEVEL_TYPE_CUSTOMER_HOUSEHOLD** (**0x1023**)<br /><br /> **MDLEVEL_TYPE_PRODUCT** (**0x1031**)<br /><br /> **MDLEVEL_TYPE_PRODUCT_GROUP** (**0x1032**)<br /><br /> **MDLEVEL_TYPE_SCENARIO** (**0x1015**)<br /><br /> **MDLEVEL_TYPE_UTILITY** (**0x1016**)<br /><br /> **MDLEVEL_TYPE_PERSON** (**0x1041**)<br /><br /> **MDLEVEL_TYPE_COMPANY** (**0x1042**)<br /><br /> **MDLEVEL_TYPE_CURRENCY_SOURCE** (**0x1051**)<br /><br /> **MDLEVEL_TYPE_CURRENCY_DESTINATION** (**0x1052**)<br /><br /> **MDLEVEL_TYPE_CHANNEL** (**0x1061**)<br /><br /> **MDLEVEL_TYPE_REPRESENTATIVE** (**0x1062**)<br /><br /> **MDLEVEL_TYPE_PROMOTION** (**0x1071**)|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|レベルに関して人が認識できる説明。 説明が存在しない場合は NULL になります。|  
-|**CUSTOM_ROLLUP_SETTINGS**|**DBTYPE_I4**|カスタム ロールアップ オプションを指定するビットマップ。<br /><br /> **MDLEVELS_CUSTOM_ROLLUP_EXPRESSION** (**0x01**) 式は、このレベルが存在することを示します。 (非推奨)。<br /><br /> **MDLEVELS_CUSTOM_ROLLUP_COLUMN** (**0x02**) このレベルのカスタム ロールアップ列があることを示します。<br /><br /> **MDLEVELS_SKIPPED_LEVELS** (**0x04**) このレベルのメンバーに関連付けられているスキップされたレベルがあることを示します。<br /><br /> **MDLEVELS_CUSTOM_MEMBER_PROPERTIES** (**0x08**) レベルのメンバーは、カスタム メンバー プロパティであることを示します。<br /><br /> **MDLEVELS_UNARY_OPERATOR** (**0x10**) レベルのメンバーに単項演算子があることを示します。|  
+|**CUSTOM_ROLLUP_SETTINGS**|**DBTYPE_I4**|カスタム ロールアップ オプションを指定するビットマップ。<br /><br /> **MDLEVELS_CUSTOM_ROLLUP_EXPRESSION** (**0x01**) 式は、このレベルが存在することを示します。 (非推奨)<br /><br /> **MDLEVELS_CUSTOM_ROLLUP_COLUMN** (**0x02**) このレベルのカスタム ロールアップ列があることを示します。<br /><br /> **MDLEVELS_SKIPPED_LEVELS** (**0x04**) このレベルのメンバーに関連付けられているスキップされたレベルがあることを示します。<br /><br /> **MDLEVELS_CUSTOM_MEMBER_PROPERTIES** (**0x08**) レベルのメンバーは、カスタム メンバー プロパティであることを示します。<br /><br /> **MDLEVELS_UNARY_OPERATOR** (**0x10**) レベルのメンバーに単項演算子があることを示します。|  
 |**LEVEL_UNIQUE_SETTINGS**|**DBTYPE_I4**|レベルに一意の名前またはキーを持つメンバーのみが含まれている場合に、一意の値を含んでいる列を示すビットマップ。 Msmd.h ファイルは、このビットマップに対して次のビット値定数を定義します。<br /><br /> **MDDIMENSIONS_MEMBER_KEY_UNIQUE** (**1**)<br /><br /> **MDDIMENSIONS_MEMBER_NAME_UNIQUE** (**2**)<br /><br /> <br /><br /> キーが内で一意では常にことに注意してください[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 名前が一意で、属性の設定がある場合がある**UniqueInDimension**または**UniqueInAttribute**|  
 |**LEVEL_IS_VISIBLE**|**DBTYPE_BOOL**|レベルが表示されるかどうかを示すブール値。<br /><br /> 常に True を返します。 レベルが表示されていない場合は、スキーマ行セットに含まれません。|  
 |**LEVEL_ORDERING_PROPERTY**|**DBTYPE_WSTR**|レベルの並べ替えに使用する属性の ID。|  
@@ -83,6 +69,6 @@ ms.lasthandoff: 01/08/2018
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|(省略可能)既定の制限は、1 の値です。 次の値のいずれかのビットマップ。<br /><br /> 1 表示<br /><br /> 2 not 表示|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

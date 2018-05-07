@@ -1,37 +1,23 @@
 ---
 title: DBSCHEMA_COLUMNS 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DBSCHEMA_COLUMNS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_COLUMNS rowset
-ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b19bae825db9403d705088d4c37c6309f689887b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定された制約条件を満たすすべての列の列情報を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定された制約条件を満たすすべての列の列情報を提供します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DBSCHEMA_COLUMNS**行セットには、次の列が含まれています。  
@@ -39,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 |列名|型を表すインジケーター|長さ|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**TABLE_CATALOG**|**DBTYPE_WSTR**||データベースの名前。|  
-|**TABLE_SCHEMA、**|**DBTYPE_WSTR**||サポートされていません。|  
+|**TABLE_SCHEMA**|**DBTYPE_WSTR**||サポートされていません。|  
 |**TABLE_NAME**|**DBTYPE_WSTR**||キューブの名前。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**||属性階層またはメジャーの名前。|  
 |**COLUMN_GUID**|**DBTYPE_GUID 型**||サポートされていません。|  
@@ -48,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_HAS_DEFAULT**|**DBTYPE_BOOL**||サポートされていません。|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||サポートされていません。|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||A **DBCOLUMNFLAGS**列のプロパティを示すビットマスク。 'DBCOLUMNFLAGS Enumerated Type」を参照してください[icolumnsinfo::getcolumninfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
-|**によって IS_NULLABLE**|**DBTYPE_BOOL**||常に返します**false**です。|  
+|**IS_NULLABLE**|**DBTYPE_BOOL**||常に返します**false**です。|  
 |**DATA_TYPE**|**DBTYPE_WSTR**<br /><br /> **DBTYPE_VARIANT**||列のデータ型。 ディメンション列の文字列とメジャーのバリアントが返ります。|  
 |**TYPE_GUID**|**DBTYPE_GUID 型**||サポートされていません。|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**||列内の値の可能な最大長。<br /><br /> これから取得されますが、 **DataSize**プロパティに、 **DataItem**です。|  
@@ -76,12 +62,12 @@ ms.lasthandoff: 01/08/2018
 |列名|型を表すインジケーター|制限の状態|  
 |-----------------|--------------------|-----------------------|  
 |**TABLE_CATALOG**|**DBTYPE_WSTR**|省略可|  
-|**TABLE_SCHEMA、**|**DBTYPE_WSTR**|省略可|  
+|**TABLE_SCHEMA**|**DBTYPE_WSTR**|省略可|  
 |**TABLE_NAME**|**DBTYPE_WSTR**|省略可|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**|省略可|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|省略可|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB Schema 行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

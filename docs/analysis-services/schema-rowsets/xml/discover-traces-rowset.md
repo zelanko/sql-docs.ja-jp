@@ -1,35 +1,25 @@
 ---
-title: "DISCOVER_TRACES 行セット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_TRACES 行セット |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 1be6a035-ffc9-489e-9d4d-7391b3e384e2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c79aa16cc7dc0d232c3acaa4407588932befc124
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 986cc5c34a1e6f047f7276d6dbef49c10a303056
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovertraces-rowset"></a>DISCOVER_TRACES 行セット
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-サーバー上で現在アクティブになっているトレースに関する情報を提供します。  
+  サーバー上で現在アクティブになっているトレースに関する情報を提供します。  
   
- **適用されます:**表形式モデル、多次元モデル  
+ **適用されます:** 表形式モデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DISCOVER_TRACES**行セットには、次の列が含まれています。  
@@ -42,8 +32,8 @@ ms.lasthandoff: 02/15/2018
 |**LogFileSize**|**DBTYPE_I4**|トレース ログ ファイルのサイズです。|  
 |**LogFileRollover**|**DBTYPE_BOOL**|true の場合、ログ ファイルをロールオーバーする必要があることを示します。それ以外の場合は false です。|  
 |**AutoRestart**|**DBTYPE_BOOL**|true の場合、自動再起動オプションが有効になっていることを示します。それ以外の場合は false です。|  
-|**CreationTime**|**DBTYPE_TIME**|トレースが作成された日付と時刻です。|  
-|**StopTime**|**DBTYPE_TIME**|トレースの停止時刻です。|  
+|**CreationTime**|**DBTYPE_TIME 型**|トレースが作成された日付と時刻です。|  
+|**StopTime**|**DBTYPE_TIME 型**|トレースの停止時刻です。|  
 |**型**|**PF_DBTYPE_WSTR**|トレースの種類です。|  
   
  このスキーマ行セットは並べ替えられません。  

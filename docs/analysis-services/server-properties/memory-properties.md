@@ -1,40 +1,19 @@
 ---
-title: "メモリのプロパティ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/23/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- LowMemoryLimit property
-- MinimumAllocatedMemory property
-- MidMemoryPrice property
-- MemoryHeapType property
-- memory [Analysis Services]
-- DefaultPagesCountToReuse property
-- TotalMemoryLimit property
-- SessionMemoryLimit property
-- VirtualMemoryLimit property
-- WaitCountIfHighMemory property
-- HighMemoryPrice property
-- HeapTypeForObjects property
-ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 
-author: Minewiskan
+title: メモリのプロパティ |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e538c44e636fcc3c6928fdb485671491de028bd0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +44,7 @@ HardMemoryLimit | Analysis Services がメモリ不足のために、完全に�
 
 次のプロパティは、それ以外に指定されない限り、テーブルと多次元の両方のモードに適用されます。
 
- 1 ～ 100 の値は、 **[物理メモリの合計]** または **[仮想アドレス領域]**のどちらか少ない方に対する割合を示します。 100 を超える値はメモリ制限を示します (単位: バイト)。
+ 1 ～ 100 の値は、 **[物理メモリの合計]** または **[仮想アドレス領域]** のどちらか少ない方に対する割合を示します。 100 を超える値はメモリ制限を示します (単位: バイト)。
   
  **LowMemoryLimit**  
  64 ビットの符号付き倍精度浮動小数点数のプロパティです。Analysis Services が優先度の低いオブジェクトのメモリ (使用頻度の低いキャッシュなど) を解放し始める最初のしきい値を定義します。 メモリを割り当てると、サーバーはこの制限より下のメモリを解放することはありません。 既定値は 65 です。これは、物理メモリまたは仮想アドレス空間の 65% (どちらか少ない方) を超えたらメモリ不足とすることを示します。  

@@ -1,41 +1,23 @@
 ---
 title: AggregationDesign 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- AggregationDesign Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationDesign
-helpviewer_keywords:
-- AggregationDesign element
-ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
-caps.latest.revision: 37
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 535cf75969963c8b94992fa267034bf4f73c9735
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da7013f6e6b3e35ebf58b35c902471b8f86076d0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データベース内の複数のパーティションで共有できる集計定義のセットを定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  データベース内の複数のパーティションで共有できる一連の集計定義を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,11 +39,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -74,9 +56,9 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.AggregationDesign>します。  
   
 ## <a name="see-also"></a>参照  
- [Partition 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Aggregation 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Aggregations 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [要素をパーティション分割&#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Aggregation 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Aggregations 要素&#40;ASSL&#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

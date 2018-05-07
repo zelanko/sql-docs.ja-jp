@@ -1,36 +1,36 @@
 ---
-title: "SQL フルテキスト フィルター デーモン ランチャー ([サービス] タブ) |Microsoft ドキュメント"
-ms.custom: 
+title: SQL フルテキスト フィルター デーモン ランチャー ([サービス] タブ) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61c90f8579a4656ba3bc5be5e111afd2dabf7487
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 366a60d753cb31bdc066051e9a3d84a8d8229a60
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL フルテキスト フィルター デーモン ランチャー ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索で SQL フルテキスト フィルター デーモン ランチャー (FDHOST ランチャー) サービスが使用されます。 フルテキスト検索を使用する場合はこのサービスが実行されている必要があります。 フィルター デーモン ホスト プロセスの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「フルテキスト検索のアーキテクチャ」を参照してください。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索で SQL フルテキスト フィルター デーモン ランチャー (FDHOST ランチャー) サービスが使用されます。 フルテキスト検索を使用する場合はこのサービスが実行されている必要があります。 フィルター デーモン ホスト プロセスの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「フルテキスト検索のアーキテクチャ」を参照してください。  
   
- **[SQL フルテキスト フィルター デーモン ランチャーのプロパティ]**ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  
+ **[SQL フルテキスト フィルター デーモン ランチャーのプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
  **[バイナリ パス]**  
  このサービスで使用するプログラム ファイルの場所を一覧表示します。  
   
@@ -52,16 +52,16 @@ ms.lasthandoff: 02/03/2018
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **[開始モード]**  
+ **開始モード**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   「手動」: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   [手動]: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   「自動」: このサービスは、コンピューターの起動時に開始を試みます。  
+-   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
   
--   「無効」: このサービスは開始できません。  
+-   \[無効]: このサービスは開始できません。  
   
  **状態**  
- このサービスが実行中か、停止しているか、無効になっているかが表示されます。 **[...]**の場合は、状態の変更が保留になっています。  
+ このサービスが実行中か、停止しているか、無効になっているかが表示されます。 **[...]** の場合は、状態の変更が保留になっています。  
   
   

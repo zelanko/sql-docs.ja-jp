@@ -2,23 +2,20 @@
 title: SQL Server 用 PHP ドライバーで Always Encrypted を使用して |Microsoft ドキュメント
 ms.date: 01/08/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- drivers
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.workload: Inactive
-ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 93b14d81411e3045d9d6f3a67ce03db281f41f68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 用 PHP ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

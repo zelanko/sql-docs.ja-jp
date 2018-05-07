@@ -1,41 +1,23 @@
 ---
 title: Hierarchy 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Hierarchy Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Hierarchy
-helpviewer_keywords:
-- Hierarchy element
-ms.assetid: ac54d74a-5e6c-4c24-83bf-766440478f6c
-caps.latest.revision: 38
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c826dcf5fd63e1bdc4af4a98ae7039b5868ba06a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 05e86932f53477924659437f6bdafb49b43d01b8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hierarchy-element-assl"></a>Hierarchy 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]ディメンションの階層を定義します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  ディメンションの階層を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,15 +36,15 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|次の表を参照してください。|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 |先祖または親|データ型|  
 |------------------------|---------------|  
-|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[Hierarchy](../../../analysis-services/scripting/data-type/hierarchy-data-type-assl.md)|  
+|[ディメンション](../../../analysis-services/scripting/objects/dimension-element-assl.md)|[階層](../../../analysis-services/scripting/data-type/hierarchy-data-type-assl.md)|  
 |[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)|[CubeHierarchy](../../../analysis-services/scripting/data-type/cubehierarchy-data-type-assl.md)|  
 |[PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md)|[PerspectiveHierarchy](../../../analysis-services/scripting/data-type/perspectivehierarchy-data-type-assl.md)|  
 |[RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|[MeasureGroupHierarchy](../../../analysis-services/scripting/data-type/measuregrouphierarchy-data-type-assl.md)|  
@@ -78,6 +60,6 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は、<xref:Microsoft.AnalysisServices.Hierarchy>、<xref:Microsoft.AnalysisServices.CubeHierarchy>、および <xref:Microsoft.AnalysisServices.PerspectiveHierarchy> です。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

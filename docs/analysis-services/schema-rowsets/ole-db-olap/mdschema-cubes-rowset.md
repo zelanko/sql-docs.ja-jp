@@ -1,37 +1,23 @@
 ---
 title: MDSCHEMA_CUBES 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_CUBES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_CUBES rowset
-ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 82a07fda14984582ae9461d861df0fa47920b527
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データベース内のキューブの構造について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  データベース内のキューブの構造について記述します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **MDSCHEMA_CUBES**行セットには、次の列が含まれています。  
@@ -41,7 +27,7 @@ ms.lasthandoff: 01/08/2018
 |**CATALOG_NAME**|**DBTYPE_WSTR**|データベースの名前。|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|サポートされていません。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|キューブまたはディメンションの名前。 ディメンション名の先頭にはドル記号 ($) が付いています。<br /><br /> 注: サーバーとデータベース管理者のみに対する権限、ディメンションから作成されたキューブを参照してください。|  
-|**CUBE_TYPE**|**DBTYPE_WSTR**|キューブの種類。 有効な値は、<br /><br /> **キューブ**<br /><br /> **ディメンション**|  
+|**CUBE_TYPE**|**DBTYPE_WSTR**|キューブの種類。 以下の値が有効です。<br /><br /> **キューブ**<br /><br /> **ディメンション**|  
 |**CUBE_GUID**|**DBTYPE_GUID 型**|サポートされていません。|  
 |**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|サポートされていません。|  
 |**LAST_SCHEMA_UPDATE**|**DBTYPE_DBTIMESTAMP**|キューブの最終処理時刻。|  
@@ -71,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 |**基本 Cube_Name**|**DBTYPE_WSTR**|省略可。|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB for OLAP Schema 行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

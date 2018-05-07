@@ -1,37 +1,23 @@
 ---
 title: DBSCHEMA_PROVIDER_TYPES 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
-ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6bf7447b90c6bcb789aa9ae1414410017c959ec8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]データ プロバイダーでサポートされている (基本) データ型を識別します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  データ プロバイダーによってサポートされている (基本) データ型を識別します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DBSCHEMA_PROVIDER_TYPES**行セットには、次の列が含まれています。  
@@ -43,8 +29,8 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_SIZE**|**DBTYPE_UI4**|プロバイダーによってこの型に対して定義された最大値または長さのいずれかを表す非数値の列またはパラメーターの長さ。 文字データの場合、これは最大値または定義済みの長さを文字数で表したものです。 DateTime 型の場合、これは文字列の長さです (秒部分に許容される最大有効桁数を想定)。<br /><br /> データ型が Numeric の場合、これはデータ型の有効桁数の上限値です。|  
 |**LITERAL_PREFIX**|**DBTYPE_WSTR**|テキスト コマンドでこの型のリテラルのプレフィックスとして使用する文字または文字列。|  
 |**LITERAL_SUFFIX**|**DBTYPE_WSTR**|テキスト コマンドでこの型のリテラルのサフィックスとして使用する文字または文字列。|  
-|**CREATE_PARAMS**|**DBTYPE_WSTR**|このデータ型の列の作成時にコンシューマーによって指定された作成パラメーター。 SQL データ型など、 **10 進数、** precision と scale が必要です。 この場合、作成パラメーターには文字列 "precision,scale" を使用できます。 作成するテキスト コマンドで、 **DECIMAL** 10 の有効桁数と小数点以下桁数は 2 の値を列、 **TYPE_NAME**列があります**DECIMAL()**と完全な型仕様がなります**DECIMAL(10,2)**です。<br /><br /> 作成パラメーターは、値をコンマで区切った一覧として表示されます。値は指定された順に表示され、かっこで囲まれません。 作成パラメーターが length、maximum length、precision、scale、seed、または increment の場合は、それぞれ "length"、"max length"、"precision"、"scale"、"seed"、および "increment" を使用します。 作成パラメーターがその他の値の場合は、作成パラメーターの記述に使用するテキストはプロバイダーによって決定されます。<br /><br /> データ型に作成パラメーターが必要な場合は、型名に "()" が含まれます。 これは、作成パラメーターを挿入する位置を示します。 型名に "()" が含まれない場合、作成パラメーターはかっこで囲まれ、データ型名に追加されます。|  
-|**によって IS_NULLABLE**|**DBTYPE_BOOL**|データ型で NULL 値が許容されるかどうかを示すブール値。<br /><br /> **VARIANT_TRUE**データ型が null 許容であることを示します。<br /><br /> **VARIANT_FALSE**データ型が null 許容でないことを示します。<br /><br /> **NULL**— ことかが不明のデータ型が null 許容かどうかを示します。|  
+|**CREATE_PARAMS**|**DBTYPE_WSTR**|このデータ型の列の作成時にコンシューマーによって指定された作成パラメーター。 SQL データ型など、 **10 進数、** precision と scale が必要です。 この場合、作成パラメーターには文字列 "precision,scale" を使用できます。 作成するテキスト コマンドで、 **DECIMAL** 10 の有効桁数と小数点以下桁数は 2 の値を列、 **TYPE_NAME**列があります**DECIMAL()** と完全な型仕様がなります**DECIMAL(10,2)** です。<br /><br /> 作成パラメーターは、値をコンマで区切った一覧として表示されます。値は指定された順に表示され、かっこで囲まれません。 作成パラメーターが length、maximum length、precision、scale、seed、または increment の場合は、それぞれ "length"、"max length"、"precision"、"scale"、"seed"、および "increment" を使用します。 作成パラメーターがその他の値の場合は、作成パラメーターの記述に使用するテキストはプロバイダーによって決定されます。<br /><br /> データ型に作成パラメーターが必要な場合は、型名に "()" が含まれます。 これは、作成パラメーターを挿入する位置を示します。 型名に "()" が含まれない場合、作成パラメーターはかっこで囲まれ、データ型名に追加されます。|  
+|**IS_NULLABLE**|**DBTYPE_BOOL**|データ型で NULL 値が許容されるかどうかを示すブール値。<br /><br /> **VARIANT_TRUE**データ型が null 許容であることを示します。<br /><br /> **VARIANT_FALSE**データ型が null 許容でないことを示します。<br /><br /> **NULL**— ことかが不明のデータ型が null 許容かどうかを示します。|  
 |**CASE_SENSITIVE**|**DBTYPE_BOOL**|データ型が文字型で、大文字と小文字が区別されるかどうかを示すブール値。<br /><br /> **VARIANT_TRUE**データ型が文字型であり、大文字小文字を区別ことを示します。<br /><br /> **VARIANT_FALSE**データ型が文字型ではないか、小文字は区別されないことを示します。|  
 |**検索可能**|**DBTYPE_UI4**|データ型できますで使用する方法の検索プロバイダーをサポートしている場合を示す整数**ICommandText**、それ以外の**NULL**です。 この列は、次の値をとります。<br /><br /> **DB_UNSEARCHABLE**でデータ型を使用できないことを示す、**場所**句。<br /><br /> **DB_LIKE_ONLY**でデータ型を使用できることを示す、**場所**句でのみ、**と同様に**述語。<br /><br /> **DB_ALL_EXCEPT_LIKE**でデータ型を使用できることを示す、**場所**を除くすべての比較演算子を含む句**と同様に**です。<br /><br /> **DB_SEARCHABLE**でデータ型を使用できることを示す、**場所**任意の比較演算子を含む句。|  
 |**UNSIGNED_ATTRIBUTE**|**DBTYPE_BOOL**|データ型が符号なしかどうかを示すブール値。<br /><br /> **VARIANT_TRUE**データ型が符号付きであることを示します。<br /><br /> **VARIANT_FALSE**データ型が署名されていることを示します。<br /><br /> **NULL**データ型に適用ではないことを示します。|  
@@ -71,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
 ## <a name="see-also"></a>参照  
- [OLE DB Schema 行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [OLE DB スキーマ行セット](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

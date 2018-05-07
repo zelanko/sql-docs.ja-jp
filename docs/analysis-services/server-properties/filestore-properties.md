@@ -1,41 +1,19 @@
 ---
-title: "Filestore プロパティ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- Income property
-- InitialBonus property
-- PercentScanPerPrice property
-- FileStore properties
-- BackgroundTrimCost property
-- Tax property
-- PerformanceTrace property
-- MinimumBalance property
-- UnbufferedThreshold property
-- BackgroundTrimAmount property
-- MaximumBalance property
-- MemoryLimitMin property
-- MemoryLimit property
-ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
-caps.latest.revision: 
-author: Minewiskan
+title: Filestore プロパティ |Microsoft ドキュメント
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 24a18751c7686de2d3d3731806374fe7a6db2080
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ec29a17677032a764ae4604368ccc8cec243c11c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filestore-properties"></a>FileStore プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
  特に、大容量メモリ リソースと複数の NUMA ノードがあるハイエンド システムでは、ランダム ファイル アクセスを使用すると便利な場合があります。 ランダム アクセス モードでは、Windows はディスクからシステム ファイル キャッシュにデータを読み込むページ マッピング操作をバイパスするため、キャッシュの競合が減少します。  
   
- このプロパティを変更したためにクエリのパフォーマンスが向上したかどうかを判断するには、比較テストを実行する必要があります。 キャッシュの消去、一般的な間違いの回避など、比較テストの実行に関するベスト プラクティスについては、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。 このプロパティを使用する際に発生するトレードオフの詳細については、 [http://support.microsoft.com/kb/2549369](http://support.microsoft.com/kb/2549369)をご覧ください。  
+ このプロパティを変更したためにクエリのパフォーマンスが向上したかどうかを判断するには、比較テストを実行する必要があります。 キャッシュの消去、一般的な間違いの回避など、比較テストの実行に関するベスト プラクティスについては、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。 このプロパティを使って、トレードオフの詳細については、次を参照してください。 [ http://support.microsoft.com/kb/2549369](http://support.microsoft.com/kb/2549369)です。  
   
  Management Studio でこのプロパティを表示または変更するには、サーバーのプロパティ ページで詳細プロパティの一覧を有効にします。 また、msmdsrv.ini ファイルで変更することもできます。 このプロパティを設定したら、サーバーを再起動することをお勧めします。再起動しない場合、既に開いているファイルへのアクセスは、引き続き以前のモードで行われます。  
   

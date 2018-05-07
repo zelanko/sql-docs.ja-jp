@@ -3,15 +3,13 @@ title: '方法: 指定されたポートで接続 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, specifying a port
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
@@ -19,12 +17,11 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b17dd2bb8df3f7274cb8eea36faf3ee5f320f983
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 4c744ded8b11ea659d632e996a611edb5e2ec70c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>方法: 指定されたポートで接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

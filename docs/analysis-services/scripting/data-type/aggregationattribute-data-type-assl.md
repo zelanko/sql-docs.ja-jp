@@ -1,41 +1,23 @@
 ---
 title: AggregationAttribute データ型 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- AggregationAttribute Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationAttribute
-helpviewer_keywords:
-- AggregationAttribute data type
-ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
-caps.latest.revision: 42
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92fab692a95d928088fbe62a8006db034651ced8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f63f055c024d746484b5829617a0e34bee1ba5b0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregationattribute-data-type-assl"></a>AggregationAttribute データ型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]間の関連付けを表すプリミティブ データ型を定義、[集計](../../../analysis-services/scripting/objects/aggregation-element-assl.md)要素と属性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  間の関連付けを表すプリミティブ データ型を定義、[集計](../../../analysis-services/scripting/objects/aggregation-element-assl.md)要素と属性。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +31,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>データ型の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |基本データ型|なし|  
 |派生データ型|なし|  
@@ -66,7 +48,7 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応するクラスは <xref:Microsoft.AnalysisServices.AggregationAttribute> です。  
   
 ## <a name="see-also"></a>参照  
- [Aggregation 要素 &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Analysis Services スクリプト言語の XML データ型 &#40;です。ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Aggregation 要素 & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Analysis Services スクリプト言語の XML データ型 & #40 です。ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

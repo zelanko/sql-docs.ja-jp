@@ -3,26 +3,22 @@ title: SQL Server 用 ODBC ドライバーで Always Encrypted を使用して |
 ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.workload: On Demand
-ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: e78ced26aba0f755184d6f6bb9e16ab073a7509e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーで Always Encrypted を使用します。
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

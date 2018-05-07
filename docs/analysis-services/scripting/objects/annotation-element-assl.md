@@ -1,41 +1,23 @@
 ---
 title: Annotation 要素 (ASSL) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Annotation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Annotation
-helpviewer_keywords:
-- Annotation element
-ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
-caps.latest.revision: 43
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 09cafc5c5dcbafd48047995b03082a4d15e84288
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 882e3a5521a8f4359c770c7fba129418ec5620fa
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="annotation-element-assl"></a>Annotation 要素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services スクリプト言語 (ASSL) スキーマを拡張するために使用する要素が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Analysis Services スクリプト言語 (ASSL) スキーマを拡張するために使用される要素を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|Description|  
+|特性|説明|  
 |--------------------|-----------------|  
 |データ型と長さ|なし|  
 |既定値|なし|  
-|基数|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
+|Cardinality|0-n : 省略可能な要素で、出現する場合は複数回の出現が可能です|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -65,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |親要素|[注釈](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
 |子要素|[名前](../../../analysis-services/scripting/properties/name-element-assl.md)、[値](../../../analysis-services/scripting/properties/value-element-assl.md)、[可視性](../../../analysis-services/scripting/properties/visibility-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **注釈**要素は複合データ型を定義するためだけに使用されるもの以外のすべてのオブジェクトに対して、ASSL スキーマの拡張機能を提供します。 **値**の要素、**注釈**要素は、次のルールに従って、ASSL 以外の XML 名前空間から有効な XML を含めることができます。  
   
 -   XML には要素のみを使用できます。  
@@ -79,6 +61,6 @@ ms.lasthandoff: 01/08/2018
  分析管理オブジェクト (AMO) オブジェクト モデルで対応する要素は<xref:Microsoft.AnalysisServices.Annotation>します。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト &#40;です。ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [オブジェクト & #40 です。ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

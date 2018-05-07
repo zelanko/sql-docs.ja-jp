@@ -3,13 +3,10 @@ title: SQLServerResultSet のメンバー |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
@@ -17,9 +14,9 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b89a2fa6131229470720120decaf9587456007
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: cf318137b6d3f23a2161de97999df29b7f29ed8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]読み取り/書き込み行ロックなしでオプティミスティック同時実行制御の種類。|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]読み取り/書き込み行ロックなしでオプティミスティック同時実行制御の種類。|  
-|[CONCUR_SS_SCROLL_LOCKS](../../../connect/jdbc/reference/concur-ss-scroll-locks-field-sqlserverresultset.md)|指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]読み取り/書き込み行ロックでオプティミスティック同時実行制御の種類。|  
+|[CONCUR_SS_SCROLL_LOCKS](../../../connect/jdbc/reference/concur-ss-scroll-locks-field-sqlserverresultset.md)|行ロックを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。|  
 |[TYPE_SS_DIRECT_FORWARD_ONLY](../../../connect/jdbc/reference/type-ss-direct-forward-only-field-sqlserverresultset.md)|指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]高速順方向専用、読み取り専用のカーソルの種類。|  
 |[TYPE_SS_SCROLL_DYNAMIC](../../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md)|指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]動的カーソルの種類。|  
 |[TYPE_SS_SCROLL_KEYSET](../../../connect/jdbc/reference/type-ss-scroll-keyset-field-sqlserverresultset.md)|指定するため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]キーセット カーソルの種類。|  

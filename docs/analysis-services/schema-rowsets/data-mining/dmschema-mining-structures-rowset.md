@@ -1,37 +1,23 @@
 ---
 title: DMSCHEMA_MINING_STRUCTURES 行セット |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_STRUCTURES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_STRUCTURES rowset
-ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e75e8c17baba84bd690ec51605ffac9f577de35c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5a40c44722108d8377eb98d050f3af528c23c0e5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingstructures-rowset"></a>DMSCHEMA_MINING_STRUCTURES 行セット
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]現在のカタログ内のマイニング構造に関する情報を列挙します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  現在のカタログ内のマイニング構造に関する情報を列挙します。  
   
 ## <a name="rowset-columns"></a>行セットの列  
  **DMSCHEMA_MINING_STRUCTURES**行セットには、次の列が含まれています。  
