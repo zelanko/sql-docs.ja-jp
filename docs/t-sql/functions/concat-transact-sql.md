@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71f52ba08f2fd5fe94af4b16dbcac06746564e09
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c802ef123e146261f8404167dcf54e57d755e0ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-2 つ以上の文字列値を連結した結果の文字列を返します。 (連結時に区切り値を追加するには、「[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)」をご覧ください。)
+この関数は、連結の結果、またはエンド ツー エンドの方法で 2 つ以上の文字列値の結合の結果の文字列を返します。 (連結時に区切り値を追加するには、「[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)」をご覧ください。)
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,28 +47,29 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 ## <a name="arguments"></a>引数  
 *string_value*  
-他の値に連結する文字列値です。
+他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value*引数が必要です*。*
   
-## <a name="return-types"></a>戻り値の型
-入力に依存する文字列、長さ、および型です。
+## <a name="return-types"></a>戻り値の型  
+*string_value*  
+長さと型を入力に依存する文字列値。
   
 ## <a name="remarks"></a>Remarks  
-**CONCAT** は、文字列引数の可変数を取得して、1 つの文字列に連結します。 最小で 2 つの入力値が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 Null 値は暗黙的に空の文字列に変換されます。 すべての引数が NULL の場合、**varchar(1)** 型の空の文字列が返されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換についての詳細については、を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+`CONCAT` は、文字列引数の可変数を取得して、1 つの文字列に連結 (または結合) します。 最小で 2 つの入力値が必要です。それ以外の場合は、`CONCAT` でエラーが発生します。 `CONCAT` は連結する前に、すべての引数を文字列型に暗黙的に変換します。 `CONCAT` は null 値を空の文字列に暗黙的に変換します。 `CONCAT` はすべて **NULL** 値の引数を受け取ると、**varchar**(1) 型の空の文字列を返します。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
   
 戻り値の型は、引数の種類によって異なります。 次の表に、マッピングを示します。
   
 |入力型|出力型と長さ|  
 |---|---|
-|引数が SQL CLR システム型、SQL CLR UDT、または `nvarchar(max)` の場合|**nvarchar(max)**|  
-|それ以外の場合、引数が **varbinary (max)** または **varchar (max)** の場合|**varchar(max)**。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、結果は **nvarchar (max)** です。|  
-|それ以外の場合、引数が **nvarchar**(<= 4000) の場合|**nvarchar**(<= 4000)|  
-|それ以外の他のすべての場合|**varchar**(<= 8000)。ただし、いずれかのパラメーターが任意の長さの nvarchar である場合を除きます。 この場合、結果は **nvarchar (max)** です。|  
+|1.次の任意の引数<br><br />SQL-CLR システム型<br><br />SQL CLR UDT<br><br />内の複数の<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />内の複数の<br><br />**varchar(max)**|**varchar(max)**。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
+|3.それ以外の場合、最大 4,000 文字の **nvarchar** 型の任意の引数<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
+|4.その他のすべての場合|**varchar**(<= 8000) (最大 8,000 文字の **varchar**)。ただし、いずれかのパラメーターが任意の長さの nvarchar である場合を除きます。 その場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
   
-引数が **nvarchar** では <= 4000 の場合、または **varchar** では <= 8000 の場合、暗黙的な変換は結果の長さに影響を与えます。 他のデータ型は、暗黙的に文字列に変換された場合は異なる長さになります。 たとえば、**int** (14) の文字列の長さは 12 ですが、**float** の長さは 32 です。 このように 2 つの整数を連結した結果としての長さは少なくとも 24 です。
+`CONCAT` が 4000 文字以下の長さの **nvarchar** 入力引数、または 8000 文字以下の長さの **varchar** 入力引数を受け取ると、暗黙的な変換が結果の長さに影響する可能性があります。 他のデータ型は、暗黙的に文字列に変換された場合は異なる長さになります。 たとえば、**int** (14) の文字列の長さは 12 ですが、**float** の長さは 32 です。 そのため、2 つの整数の連結は、24 以上の長さを持つ結果を返します。
   
-入力引数がサポートされるラージ オブジェクト (LOB) の型ではない場合、戻り値の型に関係なく、戻り値の型は長さ 8000 に切り詰められます。 この切り捨てではスペースが保持され、効率的なプラン生成をサポートします。
+入力引数がサポートされるラージ オブジェクト (LOB) の型ではない場合、戻り値の型に関係なく、戻り値の型は長さ 8000 文字に切り詰められます。 この切り捨てによりスペースが保持され、効率的なプラン生成をサポートします。
   
-バージョンでは、リンク サーバー上には CONCAT 関数をリモートで実行することができます [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 古いバージョンのリンク サーバー、CONCAT 操作が実行されるローカルで、非連結された値が、リンク サーバーから返された後です。
+CONCAT 関数は、バージョン [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のリンク サーバーでリモートで実行することができます。 古いバージョンのリンク サーバーでは、リンク サーバーが非連結された値を返した後で、CONCAT 操作がローカルに実行されます。
   
 ## <a name="examples"></a>使用例  
   
@@ -100,7 +101,7 @@ INSERT INTO #temp VALUES( 'Name', NULL, 'Lastname' );
 SELECT CONCAT( emp_name, emp_middlename, emp_lastname ) AS Result  
 FROM #temp;  
 ```  
-  
+
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```sql
