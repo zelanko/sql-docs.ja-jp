@@ -38,11 +38,11 @@ ms.lasthandoff: 04/16/2018
   1、0、または NULL の値をとる整数型です。  
   
 ## <a name="remarks"></a>Remarks  
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の記憶域を最適化**bit** 列です。 8 つ以内がある場合 **ビット** 列、テーブル内の列は 1 バイトとして格納します。 9 ～ 16 がある場合 **bit** 列、列 2 バイトとして格納されている場合は、およびなどです。
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は **bit** 列の記憶域を最適化します。 テーブル内に 8 つ以内の **ビット** 列がある場合、列は 1 バイトとして格納されます。 **bit** 列が 9 ～ 16 ある場合には、列は 2 バイトとして格納されます。
   
-変換できる文字列値 TRUE および FALSE **bit** 値: TRUE は 1 に変換して、FALSE は 0 に変換されます。
-  
-bit 型に変換すると、0 以外の値はすべて 1 になります。
+文字列値 TRUE および FALSE は **bit** 値へ変換することができます: TRUE は 1 へ、FALSE は 0 へと変換されます。
+
+bit 型への変換において、0 以外の値はすべて 1 へと変換されます。
   
 ## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
