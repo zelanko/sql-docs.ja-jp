@@ -1,31 +1,23 @@
 ---
-title: "ディスク領域使用率 (Power Pivot for SharePoint) の構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ディスク領域使用率 (Power Pivot for SharePoint) の構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7388a8f44b3dc60729674a6cd14014d4bbfa15f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースをキャッシュします。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースをキャッシュします。 後で再読み込みをすばやく実行して新しい要求を処理できるように、メモリに読み込まれているすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが最初にディスクにキャッシュされます。 既定では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、利用可能なすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
   
  このトピックでは、ディスク領域の使用量を制限する方法について説明します。  
   
@@ -49,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
  Backup フォルダーは、ローカル コンピューターのメモリに読み込まれる任意の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースに共通のキャッシュ ストレージです。 ファームで複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを定義した場合、各アプリケーションはローカル サーバーを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを読み込み、キャッシュすることができます。 データの読み込みとキャッシュは、どちらも Analysis Services サーバーの操作です。 したがって、ディスクの合計使用量は、Backup フォルダーにおいて Analysis Services インスタンス レベルで管理されます。 このため、ディスク使用量を制限する構成設定は、SharePoint アプリケーション サーバー上で実行される単一の SQL Server Analysis Services インスタンスで設定します。  
   
- キャッシュには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースのみが格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 下にある GUID フォルダー  **\<serviceApplicationName >**の親フォルダーには、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベース。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
+ キャッシュには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースのみが格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 下にある GUID フォルダー  **\<serviceApplicationName >** の親フォルダーには、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データベース。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データはファーム内の Analysis Services インスタンスに読み込まれることがあるため、同じデータがファーム内の複数のコンピューターにキャッシュされる可能性があります。 この処理ではディスク領域の使用率よりパフォーマンスを優先していますが、その代わりに、既にディスク上で使用可能になっているデータにユーザーが迅速にアクセスできます。  
   
@@ -57,17 +49,17 @@ ms.lasthandoff: 02/15/2018
   
  システム レベルでは、ディスク領域が少なくなったときに通知する電子メールによる警告を作成できます。 Microsoft System Center には、電子メール警告機能があります。 また、ファイル サーバー リソース マネージャー、タスク スケジューラ、または PowerShell スクリプトを使用して、警告を設定することもできます。 次のリンクでは、ディスク領域不足に関する通知を設定するための有用な情報が提供されています。  
   
--   [ファイル サーバー リソース マネージャーの新機能](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [ファイル サーバー リソース マネージャーの新](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)です。  
   
--   [ステップ バイ ステップ ガイド - Windows Server 2008 R2 のファイル サーバー リソース マネージャー](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [Windows Server 2008 r2 ステップ バイ ステップ ガイドをファイル サーバー リソース マネージャー](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)です。  
   
--   [Windows Server 2008 でのディスク領域不足に関する警告の設定](http://go.microsoft.com/fwlink/?LinkID=204870) (http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 でディスクの空き領域のアラートの設定](http://go.microsoft.com/fwlink/?LinkID=204870)(http://go.microsoft.com/fwlink/?LinkID=204870)です。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サーバーのサービスの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サーバーのサービスの管理]** をクリックします。  
   
-2.  **[SQL Server Analysis Services]**をクリックします。  
+2.  **[SQL Server Analysis Services]** をクリックします。  
   
      制限は、サービス アプリケーション レベルではなく、物理サーバー上で実行される Analysis Services インスタンスに対して設定されます。 ローカルの Analysis Services インスタンスを使用するすべてのサービス アプリケーションが、そのインスタンスに設定されている 1 つの最大ディスク領域の制限の対象となります。  
   
@@ -79,11 +71,11 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>データベースがキャッシュ内に保持される期間を制限する方法  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  **[既定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション]** をクリックして、管理ダッシュボードを開きます。  
   
-3.  [アクション] で **[サービス アプリケーションの設定の構成]**をクリックします。  
+3.  [アクション] で **[サービス アプリケーションの設定の構成]** をクリックします。  
   
 4.  [ディスク キャッシュ] セクションで、新しい要求を処理するために非アクティブなデータベースをメモリ内に保持する期間 (既定では 48 時間) およびキャッシュ内に保持する期間 (既定では 120 時間) を指定できます。  
   

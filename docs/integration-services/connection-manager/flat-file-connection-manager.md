@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.ffileconnection.general.f1
 - sql13.dts.designer.ffileconnection.columns.f1
@@ -29,12 +28,11 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d785e1053932bbce4b8a6df8f196d6b82c54e01f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fe024751fe5e9510cb7fd4a69e7bbd120a1539b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
   フラット ファイル接続マネージャーを使用すると、パッケージはフラット ファイルのデータにアクセスできます。 たとえば、フラット ファイルの変換元と変換先は、フラット ファイル接続マネージャーを使用して、データの抽出および読み込みを行うことができます。  

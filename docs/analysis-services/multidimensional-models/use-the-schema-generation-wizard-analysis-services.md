@@ -1,34 +1,23 @@
 ---
-title: "スキーマ生成ウィザード (Analysis Services) の使用 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: スキーマ生成ウィザード (Analysis Services) の使用 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, steps
-- relational schema [Analysis Services], Schema Generation Wizard
-ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4b80fef5f104590c6c4c4c71341979dfa451aa81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザードの使用 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-スキーマ生成ウィザードが生成フェーズで必要とする情報の量は限られています。 スキーマ生成ウィザードでリレーショナル スキーマを生成するために必要な情報のほとんどは、プロジェクトで既に作成した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションから抽出されます。 また、サブジェクト領域データベース スキーマの生成方法とスキーマ内のオブジェクトの名前付け方法をカスタマイズすることもできます。  
+  スキーマ生成ウィザードが生成フェーズで必要とする情報の量は限られています。 スキーマ生成ウィザードでリレーショナル スキーマを生成するために必要な情報のほとんどは、プロジェクトで既に作成した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションから抽出されます。 また、サブジェクト領域データベース スキーマの生成方法とスキーマ内のオブジェクトの名前付け方法をカスタマイズすることもできます。  
   
 ## <a name="start-the-wizard"></a>ウィザードの起動  
  スキーマ生成ウィザードを開くには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で次のいずれかの方法を使用します。  
@@ -54,14 +43,14 @@ ms.lasthandoff: 02/15/2018
  スキーマの所有者は、 **[所有しているスキーマ]** の値を有効な文字列に設定して指定できます。 スキーマの既定の所有者は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトですが、任意のスキーマの所有者を指定できます。  
   
 ### <a name="specifying-primary-keys-indexes-and-constraints"></a>主キー、インデックス、および制約の指定  
- 既定では、スキーマ生成ウィザードはサブジェクト領域データベースの各ディメンション テーブルに主キー制約を作成します。 主キーは、対応する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ディメンションのキー属性として指定された属性に対応します。 この制約によって、ほとんどの環境で処理パフォーマンスが向上し、コストは最小化されます。 主キーをサブジェクト領域データベースに作成しない場合でも、論理主キーは常にデータ ソース ビューに作成されます。 ディメンション テーブルで主キー制約を定義するには、 **[ディメンション テーブルに主キーを作成する]**を選択します。  
+ 既定では、スキーマ生成ウィザードはサブジェクト領域データベースの各ディメンション テーブルに主キー制約を作成します。 主キーは、対応する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ディメンションのキー属性として指定された属性に対応します。 この制約によって、ほとんどの環境で処理パフォーマンスが向上し、コストは最小化されます。 主キーをサブジェクト領域データベースに作成しない場合でも、論理主キーは常にデータ ソース ビューに作成されます。 ディメンション テーブルで主キー制約を定義するには、 **[ディメンション テーブルに主キーを作成する]** を選択します。  
   
- また、既定では、ウィザードによって各ファクト テーブルの外部キー列にインデックスが作成されます。 これらのインデックスによって、ほとんどの環境で処理パフォーマンスが向上します。 新しいデータをサブジェクト領域データベースから取得するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が生成した処理クエリには、通常、ファクト テーブルとディメンション テーブルの間の JOIN ステートメントが非常に多く含まれているので、一般的にパフォーマンスが向上します。 各ファクト テーブルの外部キー列にインデックスを定義するには、 **[インデックスを作成する]**を選択します。  
+ また、既定では、ウィザードによって各ファクト テーブルの外部キー列にインデックスが作成されます。 これらのインデックスによって、ほとんどの環境で処理パフォーマンスが向上します。 新しいデータをサブジェクト領域データベースから取得するために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が生成した処理クエリには、通常、ファクト テーブルとディメンション テーブルの間の JOIN ステートメントが非常に多く含まれているので、一般的にパフォーマンスが向上します。 各ファクト テーブルの外部キー列にインデックスを定義するには、 **[インデックスを作成する]** を選択します。  
   
- 最後に、既定ではウィザードによってファクト テーブルと各ディメンション テーブルの間の参照整合性が保証されます。 参照整合性を保証しない場合でも、スキーマ生成ウィザードはデータベースおよびデータ ソース ビューにこれらのリレーションシップを作成します。 参照整合性を保証するには、 **[参照整合性を適用する]**を選択します。  
+ 最後に、既定ではウィザードによってファクト テーブルと各ディメンション テーブルの間の参照整合性が保証されます。 参照整合性を保証しない場合でも、スキーマ生成ウィザードはデータベースおよびデータ ソース ビューにこれらのリレーションシップを作成します。 参照整合性を保証するには、 **[参照整合性を適用する]** を選択します。  
   
 ### <a name="preserving-data-for-incremental-generation"></a>増分生成のデータの保存  
- 既定では、スキーマ生成ウィザードは、データベース スキーマが再生成されるときにデータを保存しようとします。 スキーマが変更されてスキーマ生成ウィザードで行を削除する必要がある場合は、行を削除する前に警告が表示されます。 たとえば、ディメンションを削除した場合や、ディメンションの属性を変更したときにデータ型が変わった場合には、行を削除して参照整合性の問題を解決する必要があります。 データベース スキーマを再生成するときにデータを保存するには、 **[再生成時にデータを保存する]**を選択します。  
+ 既定では、スキーマ生成ウィザードは、データベース スキーマが再生成されるときにデータを保存しようとします。 スキーマが変更されてスキーマ生成ウィザードで行を削除する必要がある場合は、行を削除する前に警告が表示されます。 たとえば、ディメンションを削除した場合や、ディメンションの属性を変更したときにデータ型が変わった場合には、行を削除して参照整合性の問題を解決する必要があります。 データベース スキーマを再生成するときにデータを保存するには、 **[再生成時にデータを保存する]** を選択します。  
   
 ## <a name="step-4-specify-naming-conventions"></a>手順 4: 名前付け規則の指定  
  スキーマ生成ウィザードの **[名前付け規則の指定]** ページで、サブジェクト領域データベースに特定のオブジェクトを生成するときにウィザードが使用する名前付け規則を定義できます。 **[名前付け規則の指定]** ページで使用できるオプションの詳細については、「[[名前付け規則の指定] &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b)」を参照してください。  

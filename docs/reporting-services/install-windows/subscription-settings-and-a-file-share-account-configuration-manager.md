@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
@@ -18,19 +17,18 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8faf295d4afa2967adaa1bcb922f8b360bbc138e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f556e8d26ab7652edfdef620d30de00bd0a0b7db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (構成マネージャー)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、2 つのワークフローがあります。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] リリースから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理者が構成した 1 つのファイル共有アカウントから、1 つ以上 (多数も可能) のサブスクリプションを使用することが可能になりました。 **[ファイル共有アカウントの指定]**を構成し、個々のサブスクリプションの構成ページで、ユーザーが **[ファイル共有アカウントを使用]**を選択します。  
+-   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] リリースから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理者が構成した 1 つのファイル共有アカウントから、1 つ以上 (多数も可能) のサブスクリプションを使用することが可能になりました。 **[ファイル共有アカウントの指定]** を構成し、個々のサブスクリプションの構成ページで、ユーザーが **[ファイル共有アカウントを使用]** を選択します。  
   
 -   個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。  
   

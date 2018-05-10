@@ -1,32 +1,19 @@
 ---
-title: "ADOMD.NET クライアント機能 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- functionality [ADOMD.NET]
-- ADOMD.NET, functionality
-ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: 
-author: Minewiskan
+title: ADOMD.NET クライアント機能 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59d5086aaba3fbf1ebe8581031f30f3313a51938
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c754b19a1cce0e3fb68a852c2cfdb3fb98617a65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET のクライアント機能
   ADOMD.NET は、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework データ プロバイダーと同様、アプリケーションとデータ ソースの間の仲介役となります。 ただし、分析データを扱うという点で、他の .NET Framework データ プロバイダーとは異なります。 分析データを操作する ADOMD.NET では、サポートされている機能が他の .NET Framework データ プロバイダーとは大きく違っています。 データを取得するだけでなく、メタデータを取得したり、分析データ ストアの構造を変更したりすることができます。  
@@ -44,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  **分析データの構造を変更します。**  
  ADOMD.NET を使用すると、分析データ ストアの構造を実際に変更することもできます。 この操作は、分析管理オブジェクト (AMO) オブジェクト モデルを通じて行われるのが一般的ですが、ADOMD.NET を使用すると、Analysis Services Scripting Language (ASSL) コマンドを送信してサーバーのオブジェクトを作成、変更、または削除できます。  
   
- 詳細については:[を実行するコマンドに対して、分析データ ソース](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)、[分析管理オブジェクト &#40; を使用した開発AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)、 [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 詳細については:[を実行するコマンドに対して、分析データ ソース](../../analysis-services/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source.md)、 [Analysis Management Objects を使用した開発&#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)、 [Analysis Services スクリプト言語&#40;の ASSL を XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  メタデータの取得、データの取得、およびデータ構造の変更は、それぞれ一般的な ADOMD.NET アプリケーションのワークフローの特定の段階で行われます。  
   

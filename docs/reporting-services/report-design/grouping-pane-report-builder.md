@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
@@ -20,18 +19,17 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: acd7441b030da16ee289c09914ab5cabb02d2f65
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b2c7dcafacac12207e98931cf12f5b6e59bc8536
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grouping-pane-report-builder"></a>グループ化ペイン (レポート ビルダー)
   グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインには、行グループ ペインと列グループ ペインが含まれています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
->  グループ化ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]**グループで、 **[グループ化]**をクリックします。  
+>  グループ化ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[グループ化]** をクリックします。  
   
  行グループ領域と列グループ領域のセルは、Tablix の行グループまたは列グループの静的メンバーまたは動的メンバーです。 静的メンバーはグループごとに 1 回繰り返され、通常、ラベルまたは合計が格納されています。 動的メンバーはグループ インスタンスごとに 1 回繰り返され、通常、グループ式の固有の値が格納されています。 行グループ領域または列グループ領域で Tablix セルを選択すると、対応するグループ メンバーが行グループ ペインまたは列グループ ペインで選択されます。 反対に、グループ化ペインでグループを選択すると、そのグループ メンバーに関連した対応するセルがデザイン画面で選択されます。 Tablix の行グループ領域と列グループ領域の詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/09/2018
  詳細設定モードでは、行グループ ペインと列グループ ペインに、静的メンバーと動的メンバーを含む、すべてのグループの階層ビューが表示されます。 メンバーを選択すると、現在選択されている Tablix メンバーのプロパティが [プロパティ] ペインに表示されます。  
   
 > [!NOTE]  
->  **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]**をクリックします。  
+>  **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]** をクリックします。  
   
  ほとんどの場合、静的および動的グループ行とグループ列の表示を制御するプロパティは、グループの作成時または合計の追加時に自動設定されます。 既定値を編集するには、行グループ ペインまたは列グループ ペインでグループ メンバーを選択し、[プロパティ] ウィンドウでプロパティ値を変更する必要があります。 使用できるプロパティは次のとおりです。  
   

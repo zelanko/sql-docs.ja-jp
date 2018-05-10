@@ -1,16 +1,15 @@
 ---
-title: "暗号化キーの削除と再作成 (SSRS 構成マネージャー) | Microsoft Docs"
-ms.custom: 
+title: 暗号化キーの削除と再作成 (SSRS 構成マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
 - encryption keys [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 744a0c4536283a9143bc423c123da319d0ce05a6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8f179b9474d715ad0e94cb0261af35c4829f947c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーの削除と再作成
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  Reporting Services 構成ツールを起動して、構成するレポート サーバー インスタンスに接続します。  
   
-3.  [暗号化キー] ページで、 **[変更]**をクリックします。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  [暗号化キー] ページで、 **[変更]** をクリックします。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  レポート サーバー Windows サービスを再開します。 レポート サーバーのスケールアウト配置に対する暗号化キーを再作成する場合、すべてのインスタンスでサービスを再起動します。  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  Reporting Services 構成ツールを起動して、構成するレポート サーバー インスタンスに接続します。  
   
-2.  **[暗号化キー]**をクリックし、 **[削除]**をクリックします。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  **[暗号化キー]** をクリックし、 **[削除]** をクリックします。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  レポート サーバー Windows サービスを再開します。 スケールアウト配置の場合は、すべてのレポート サーバー インスタンスについてこの作業を行います。  
   

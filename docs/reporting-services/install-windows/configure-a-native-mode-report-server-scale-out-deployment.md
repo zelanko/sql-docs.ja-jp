@@ -1,31 +1,29 @@
 ---
-title: "ネイティブ モード レポート サーバーのスケールアウト配置の構成 | Microsoft Docs"
-ms.custom: 
+title: ネイティブ モード レポート サーバーのスケールアウト配置の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 10c05be9afbf0f9e272e35f73957ddb3a19c65f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成
 
@@ -109,19 +107,19 @@ An error occurred within the report server database.  This may be due to a conne
   
     1.  **[データベース]** をクリックして、[データベース] ページを開きます。  
   
-    2.  **[データベースの変更]**をクリックします。  
+    2.  **[データベースの変更]** をクリックします。  
   
-    3.  **[既存のレポート サーバー データベースを選択する]**をクリックします。  
+    3.  **[既存のレポート サーバー データベースを選択する]** をクリックします。  
   
     4.  使用するレポート サーバー データベースをホストする SQL Server データベース エンジン インスタンスのサーバー名を入力します。 前の作業で接続したサーバーの名前を入力する必要があります。  
   
-    5.  **[接続テスト]**をクリックし、 **[次へ]**をクリックします。  
+    5.  **[接続テスト]** をクリックし、 **[次へ]** をクリックします。  
   
-    6.  **[レポート サーバー データベース]**で、最初のレポート サーバー用に作成したデータベースを選択し、 **[次へ]**をクリックします。 既定の名前は ReportServer です。 ReportServerTempDB は選択しないでください。ReportServerTempDB は、レポート処理時に一時データを格納するためにのみ使用されます。 データベースの一覧が空の場合は、前の 4 つの手順を繰り返してサーバーへの接続を確立します。  
+    6.  **[レポート サーバー データベース]** で、最初のレポート サーバー用に作成したデータベースを選択し、 **[次へ]** をクリックします。 既定の名前は ReportServer です。 ReportServerTempDB は選択しないでください。ReportServerTempDB は、レポート処理時に一時データを格納するためにのみ使用されます。 データベースの一覧が空の場合は、前の 4 つの手順を繰り返してサーバーへの接続を確立します。  
   
     7.  [資格情報] ページで、レポート サーバーがレポート サーバー データベースに接続する際に使用するアカウントと資格情報の種類を選択します。 最初のレポート サーバー インスタンスと同一の資格情報、または別の資格情報を使用できます。 **[次へ]** を選択します。  
   
-    8.  **[概要]** をクリックし、 **[完了]**をクリックします。  
+    8.  **[概要]** をクリックし、 **[完了]** をクリックします。  
   
 4.  レポート サーバー **Web サービスの URL**を構成します。 URL のテストはまだ行わないでください。 URL は、レポート サーバーがスケールアウト配置に参加するまで解決されません。  
   
@@ -135,7 +133,7 @@ An error occurred within the report server database.  This may be due to a conne
   
      ![[スケール アウト配置] ページの部分的なスクリーン ショット](../../reporting-services/install-windows/media/scaloutscreen.gif "[スケール アウト配置] ページの部分的なスクリーン ショット")  
   
-3.  [スケールアウト配置] ページで、配置への参加を待機しているレポート サーバー インスタンスを選択し、 **[サーバーの追加]**をクリックします。  
+3.  [スケールアウト配置] ページで、配置への参加を待機しているレポート サーバー インスタンスを選択し、 **[サーバーの追加]** をクリックします。  
   
     > [!NOTE]  
     >  **問題:** Reporting Services レポート サーバー インスタンスをスケールアウト配置に追加しようとすると、アクセス拒否のようなエラー メッセージが表示される場合があります。  

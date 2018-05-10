@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot BI セマンティック モデル接続 (.bism) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot BI セマンティック モデル接続 (.bism) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78b908cfe8e5601ecd5d8fcea6c6816459d6e73a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f6387089a7950716121254c265b33e28504fa9bc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI セマンティック モデル接続 (.bism)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-BI セマンティック モデル接続 (.bism) は、Excel または Power View レポートを Analysis Services テーブル モデル データベースまたは多次元モードの Analysis Services インスタンスに接続する、移植可能な接続です。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
+  BI セマンティック モデル接続 (.bism) は、Excel または Power View レポートを Analysis Services テーブル モデル データベースまたは多次元モードの Analysis Services インスタンスに接続する、移植可能な接続です。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  
   
  BI セマンティック モデル接続は、SharePoint 経由で作成およびアクセスされます。 BI セマンティック モデル接続を作成すると、ライブラリの BI セマンティック モデル接続でサイド リンク バー コマンドが有効になります。 サイド リンク バー コマンドは、新しい Excel ブックまたは接続ファイルを編集するためのオプションを開きます。 Reporting Services がインストールされている場合は、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを作成するためのコマンドも表示されます。  
   
@@ -34,7 +26,7 @@ BI セマンティック モデル接続 (.bism) は、Excel または Power Vie
 ##  <a name="bkmk_prereq"></a> サポートされるデータベース  
  BI セマンティック モデル接続は、テーブル モデル データを参照します。 このデータには、次の 3 つのソースがあります。  
   
--   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
+-   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック。 Excel ブックに埋め込まれた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが、スタンドアロン Analysis Services 表形式モード サーバーで実行されるテーブル モデル データベースに相当します。 既に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用している場合は、SharePoint ライブラリ内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを参照する BI セマンティック モデル接続を定義し、既存の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] データを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] レポートを作成できます。  SQL Server 2008 R2 または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成されたブックを使用できます。  
   

@@ -1,37 +1,23 @@
 ---
-title: "メジャー グループのリンク |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: メジャー グループのリンク |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- linked measure groups [Analysis Services]
-- referencing measure groups
-- Linked Measure Group Wizard
-- measure groups [Analysis Services], linked
-- linked dimensions [Analysis Services]
-ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b46eaa063b2a0c00c25c7442a8bdc3758e4e91e4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linked-measure-groups"></a>リンク メジャー グループ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-リンク メジャー グループは、同じデータベースまたは別の Analysis Services データベースにある別のキューブ内の別のメジャー グループに基づいています。 複数のキューブ内にある一連のメジャー、および対応するデータ値を再使用する場合は、リンク メジャー グループを使用することができます。  
+  リンク メジャー グループは、同じデータベースまたは別の Analysis Services データベースにある別のキューブ内の別のメジャー グループに基づいています。 複数のキューブ内にある一連のメジャー、および対応するデータ値を再使用する場合は、リンク メジャー グループを使用することができます。  
   
  同じサーバー上で実行されるソリューションに、元のメジャー グループとリンク メジャー グループが存在することをお勧めします。 リモート サーバー上のメジャー グループへのリンクは、将来のリリースで非推奨になる予定です (「 [SQL Server 2016 に含まれている非推奨の Analysis Services 機能](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)」を参照してください)。  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  ソリューション エクスプローラーで、リンク メジャー グループを追加するキューブをダブルクリックします。 この手順により、キューブ デザイナーでキューブが開かれます。  
   
-3.  キューブ デザイナーの [メジャー] ペインまたは [ディメンション] ペインで、どちらかのペインの任意の場所を右クリックし、 **[新しいリンク オブジェクト]**をクリックします。 この結果、リンク オブジェクト ウィザードが開始されます。  
+3.  キューブ デザイナーの [メジャー] ペインまたは [ディメンション] ペインで、どちらかのペインの任意の場所を右クリックし、 **[新しいリンク オブジェクト]** をクリックします。 この結果、リンク オブジェクト ウィザードが開始されます。  
   
 4.  最初のページで、データ ソースを指定します。 この結果、元のメジャー グループの場所が確立されます。 既定値は、現在のデータベース内にある現在のキューブですが、別の Analysis Services データベースを選択することもできます。  
   

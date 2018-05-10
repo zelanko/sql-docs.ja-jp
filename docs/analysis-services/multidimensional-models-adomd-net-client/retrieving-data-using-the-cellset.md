@@ -1,33 +1,19 @@
 ---
-title: "セルセットを使用してデータを取得する |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- CellSet object
-- retrieving data
-- data retrieval [ADOMD.NET], CellSet object
-ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 
-author: Minewiskan
+title: セルセットを使用してデータを取得する |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 20dea89569c845332def257d0ae72f9d470dee60
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 01fee3784b60b6b36c8e1ad5b187fb6786c168dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>セルセットを使用したデータの取得
   分析データを取得する際、対話性と柔軟性に最も優れている方法が <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトです。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは階層データおよびメタデータのインメモリ キャッシュであり、これらのデータの元の次元を保持します。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは、接続された状態でも、接続されていない状態でもスキャンすることができます。 非接続状態でもアクセス可能なことから、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用すれば、データやメタデータを任意の順序で表示することができ、データ取得の最も包括的なオブジェクト モデルといえます。 一方で、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトはオーバーヘッドが非常に大きく、最も低速な ADOMD.NET データ取得オブジェクト モデルでもあります。  

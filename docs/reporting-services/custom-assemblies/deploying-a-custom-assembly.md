@@ -1,33 +1,32 @@
 ---
-title: "カスタム アセンブリの配置 | Microsoft Docs"
-ms.custom: 
+title: カスタム アセンブリの配置 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-assemblies
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], deploying
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ebc370eb54874c8e8bf37d17b854585138bfe612
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d6cf3865befe7c7d717130ddd442eea1d9d9bce9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploying-a-custom-assembly"></a>カスタム アセンブリの配置
   カスタム アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に配置するには、レポート デザイナーとレポート サーバーの両方のアプリケーション フォルダーにアセンブリを入れます。 既定では、カスタム アセンブリには [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の **Execution** アクセス許可が付与されます。 カスタム アセンブリに Execute アクセス許可よりも上位のアクセス許可を付与するには、レポート サーバーの rssrvpolicy.config 構成ファイルとレポート デザイナー プレビュー ウィンドウの rspreviewpolicy.config 構成ファイルを編集する必要があります。 または、グローバル アセンブリ キャッシュ (GAC) にカスタム アセンブリをインストールできます。  

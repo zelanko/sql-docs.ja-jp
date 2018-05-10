@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reports
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
@@ -18,12 +17,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 285a9a4e1dc3d7babca92270ccc2db665afbdda0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fb71665a683c050aafcaf1df18c3cdeec6507b50
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>レポート内のテキスト、数値、または日付を検索する
   レポートのコンテンツは、単語や語句を入力して検索できます (検索用語の最大文字数は 256 文字です)。 検索は、レポート内にある一致する値を検出し、その値の位置にカーソルを移動するナビゲーション技法です。  
@@ -44,9 +42,9 @@ ms.lasthandoff: 01/09/2018
   
      レポート ツール バーが表示されない場合は、意図的に非表示に設定されているため、レポート ツール バーの機能を使用することはできません。 このツール バーが表示されるかどうかは、レポート ビューアー Web パーツのプロパティで指定されます。  
   
-3.  **[検索]**をクリックします。  
+3.  **[検索]** をクリックします。  
   
-4.  同じ値で引き続き検索を続ける場合は、 **[次へ]**をクリックします。  
+4.  同じ値で引き続き検索を続ける場合は、 **[次へ]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

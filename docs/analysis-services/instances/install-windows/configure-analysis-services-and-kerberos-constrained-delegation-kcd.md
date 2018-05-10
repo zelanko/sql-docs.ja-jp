@@ -1,31 +1,23 @@
 ---
-title: "分析を構成するサービスと Kerberos の制約付き委任 (KCD) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 分析を構成するサービスと Kerberos の制約付き委任 (KCD) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 644ac2ac09f331bf60be08ac7aacecd16734ba0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services と Kerberos の制約付き委任 (KCD) の構成
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Kerberos の制約付き委任 (KCD) は、環境全体にわたってクライアントの資格情報をサービス間で委任するために Windows 認証で構成できる認証プロトコルです。 KCD には、ドメイン コントローラーなどの追加のインフラストラクチャと環境の追加構成が必要です。 KCD は、SharePoint 2016 で [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータが関係する一部のシナリオの要件となっています。 SharePoint 2016 では、Excel Services が SharePoint ファームの外部にある別の新しいサーバーである **Office Online Server**に移動しました。 Office Online Server は独立しているため、一般的な 2 つのホップ シナリオでクライアントの資格情報を委任する方法の必要性が高まります。  
+  Kerberos の制約付き委任 (KCD) は、環境全体にわたってクライアントの資格情報をサービス間で委任するために Windows 認証で構成できる認証プロトコルです。 KCD には、ドメイン コントローラーなどの追加のインフラストラクチャと環境の追加構成が必要です。 KCD は、SharePoint 2016 で [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータが関係する一部のシナリオの要件となっています。 SharePoint 2016 では、Excel Services が SharePoint ファームの外部にある別の新しいサーバーである **Office Online Server**に移動しました。 Office Online Server は独立しているため、一般的な 2 つのホップ シナリオでクライアントの資格情報を委任する方法の必要性が高まります。  
   
 ## <a name="overview"></a>概要  
  KCD により、アカウントは、リソースにアクセスできるようにするために別のアカウントの権限を借用できます。 権限を借用する側のアカウントは、Web アプリケーションに割り当てられたサービス アカウントまたは Web サーバーのコンピューター アカウントであり、権限を借用される側のアカウントは、リソースへのアクセスを必要とするユーザー アカウントです。 KCD はサービス レベルで機能するため、権限を借用する側のアカウントによってサーバー上の選択されたサービスにアクセス権を付与できます。同じサーバー上の他のサービスや他のサーバー上のサービスはアクセスを拒否されます。  
@@ -72,23 +64,23 @@ Kerberos の制約付き委任 (KCD) は、環境全体にわたってクライ�
   
 -   IPv4 と IPv6 の両方のアドレスを構成することをお勧めします。 これは、Windows コントロール パネルで構成できます。  
   
-    1.  **[ネットワークと共有センター]**をクリックします。  
+    1.  **[ネットワークと共有センター]** をクリックします。  
   
     2.  イーサネット接続をクリックします。  
   
-    3.  **[プロパティ]**をクリックします。  
+    3.  **[プロパティ]** をクリックします。  
   
-    4.  **[インターネット プロトコル バージョン 6 (TCP/IPv6)]**をクリックします。  
+    4.  **[インターネット プロトコル バージョン 6 (TCP/IPv6)]** をクリックします。  
   
-    5.  **[プロパティ]**をクリックします。  
+    5.  **[プロパティ]** をクリックします。  
   
-    6.  **[次の DNS サーバーのアドレスを使う]**をクリックします。  
+    6.  **[次の DNS サーバーのアドレスを使う]** をクリックします。  
   
     7.  ipconfig コマンドで取得した IP アドレスを入力します。  
   
     8.  **[詳細設定]** をクリックし、 **[DNS]** タブをクリックして DNS サフィックスが正しいことを確認します。  
   
-    9. **[以下の DNS サフィックスを順に追加する]**をクリックします。  
+    9. **[以下の DNS サフィックスを順に追加する]** をクリックします。  
   
     10. IPv4 でこれらの手順を繰り返します。  
   

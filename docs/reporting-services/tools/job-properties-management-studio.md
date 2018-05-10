@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
@@ -18,17 +17,16 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 54fd700c21148803ce21ae83ee473753de139bd6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e5b9083049d09da625fbd4040e028aac77ac6d12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="job-properties-management-studio"></a>[ジョブのプロパティ]\(Management Studio)
   **[ジョブのプロパティ]** ページを使用して、進行中のレポートまたはサブスクリプションを取り消す前にそれらの情報を表示できます。  
   
- このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動して、レポート サーバーに接続し、 **[ジョブ]** フォルダーを開きます。 実行中のジョブを右クリックし、 **[プロパティ]**をクリックします。  
+ このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動して、レポート サーバーに接続し、 **[ジョブ]** フォルダーを開きます。 実行中のジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services ではサポートされません。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]を実行している場合、このページは表示されません。  
@@ -38,22 +36,22 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート サーバーのフォルダーを開きます。  
   
-2.  **[ジョブ]**を右クリックし、 **[更新]**をクリックします。  
+2.  **[ジョブ]** を右クリックし、 **[更新]** をクリックします。  
   
-3.  ジョブが表示されたら、ジョブを右クリックして、 **[プロパティ]**をクリックします。  
+3.  ジョブが表示されたら、ジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
 ## <a name="options"></a>および  
  **[ジョブ ID]**  
  処理中にジョブに割り当てられる GUID。 この値は、レポートまたはサブスクリプションが実行されるたびにランダムに生成されます。  
   
  **[ジョブの状態]**  
- 有効な値は、 **[新規]** および **[実行中]**です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]**に変わります。 変更を確認するには、ページを更新する必要があります。  
+ 有効な値は、 **[新規]** および **[実行中]** です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]** に変わります。 変更を確認するには、ページを更新する必要があります。  
   
  **ジョブの種類**  
- 有効な値は、 **[ユーザー]** および **[システム]**です。 ユーザー ジョブは、各ユーザーによって開始される任意のジョブです。 このジョブには、要求時のレポートの実行、レポート履歴スナップショットの手動生成、またはレポート実行スナップショットの手動作成が含まれます。 実行中の標準サブスクリプションも、ユーザー ジョブです。 システム ジョブは、レポート サーバーで開始されるジョブです。 システム ジョブには、スケジュールでトリガーされるレポートの処理が含まれます。  
+ 有効な値は、 **[ユーザー]** および **[システム]** です。 ユーザー ジョブは、各ユーザーによって開始される任意のジョブです。 このジョブには、要求時のレポートの実行、レポート履歴スナップショットの手動生成、またはレポート実行スナップショットの手動作成が含まれます。 実行中の標準サブスクリプションも、ユーザー ジョブです。 システム ジョブは、レポート サーバーで開始されるジョブです。 システム ジョブには、スケジュールでトリガーされるレポートの処理が含まれます。  
   
  **ジョブの操作**  
- レポートの場合、この列には実行中のレポート実行処理が表示されます。 この値は常に **[表示]**です。  
+ レポートの場合、この列には実行中のレポート実行処理が表示されます。 この値は常に **[表示]** です。  
   
  **[ジョブの説明]**  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、既定ではジョブの説明は表示されません。  

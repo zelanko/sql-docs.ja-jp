@@ -1,36 +1,23 @@
 ---
-title: "パーティションの書き戻しの設定 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: パーティションの書き戻しの設定 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- write-enabled partitions [Analysis Services]
-- partitions [Analysis Services], writeback
-- partitions [Analysis Services], write-enabled
-- writeback [Analysis Services], partitions
-ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 66b06d7c6dabeeb83707dabe1d454267f6c4bf3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-partition-writeback"></a>パーティションの書き戻しの設定
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-メジャー グループを書き込み許可にすると、エンド ユーザーはキューブを参照しているときにキューブ データを変更できます。この場合、変更内容は、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルに保存されます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
+  メジャー グループを書き込み許可にすると、エンド ユーザーはキューブを参照しているときにキューブ データを変更できます。この場合、変更内容は、キューブ データやソース データではなく、書き戻しテーブルという別個のテーブルに保存されます。 書き込み許可パーティションを参照しているエンド ユーザーは、そのパーティションの書き戻しテーブルを見れば、すべての変更の最終結果を確認できます。  
   
  書き戻しデータは、参照または削除できます。 また、書き戻しデータをパーティションに変換することもできます。 書き込み許可パーティションの場合、キューブ ロールを使用して、ユーザーまたはユーザー グループに読み取り/書き込みアクセス権を許可し、パーティション内の特定のセルまたはセル グループへのアクセスを制限できます。  
   
@@ -42,9 +29,9 @@ ms.lasthandoff: 02/15/2018
 ## <a name="how-to-write-enable-a-partition"></a>パーティションを書き込み許可にする方法  
  パーティションのメジャー グループを書き込み許可にするには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のキューブ デザイナーでパーティション自体に書き込み許可を設定します。  
   
--   キューブ デザイナーの [パーティション] タブで、パーティションを右クリックし、 **[書き戻しの設定]**をクリックします。  
+-   キューブ デザイナーの [パーティション] タブで、パーティションを右クリックし、 **[書き戻しの設定]** をクリックします。  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、データベース | キューブ | メジャー グループを展開し、 **[書き戻し]** を右クリックして、 **[書き戻しの有効化]**をクリックします。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、データベース | キューブ | メジャー グループを展開し、 **[書き戻し]** を右クリックして、 **[書き戻しの有効化]** をクリックします。  
   
  書き戻しは、SUM 集計を使用するメジャーに対してのみサポートされます。 AdventureWorks サンプル データベースでは、Sales Targets メジャー グループを使用して、書き戻しの動作をテストできます。  
   

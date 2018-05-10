@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f80aebe1158d3ac4d64bd49c683b43719ab1a6f3
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: 9927a7cdf05e82f48fb43bd954534c04f9a32dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト
 
@@ -302,18 +300,18 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
  **SharePoint モード:**  
   
-1.  **[サイトの設定]**を参照します。  
+1.  **[サイトの設定]** を参照します。  
   
-2.  **[Reporting Services]** グループで、 **[共有スケジュールの管理]**をクリックします。  
+2.  **[Reporting Services]** グループで、 **[共有スケジュールの管理]** をクリックします。  
   
 ### <a name="roles-and-groups"></a>ロールとグループ  
  **Native Mode**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、ネイティブ モード レポート サーバーに接続します。  
   
-2.  **オブジェクト エクスプローラー** で **[セキュリティ]**をクリックします。  
+2.  **オブジェクト エクスプローラー** で **[セキュリティ]** をクリックします。  
   
-3.  **[ロール]**をクリックします。  
+3.  **[ロール]** をクリックします。  
   
 ##  <a name="bkmk_troubleshoot"></a> トラブルシューティング  
  より詳細な情報が表示されるようにするには、トレース フラグ **–t** を使用します。 たとえば、スクリプトを実行し、次のようなメッセージが表示されたとします。  

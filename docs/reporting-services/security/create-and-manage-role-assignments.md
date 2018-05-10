@@ -1,16 +1,15 @@
 ---
-title: "ロールの割り当てを作成および管理する | Microsoft Docs"
-ms.custom: 
+title: ロールの割り当てを作成および管理する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - roles [Reporting Services], assignments
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0e8cc3d577c678b60ead9a5e5e7983980059a728
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d247f3cc6e469eec21d92a4cb337d68ece8fd6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  
@@ -65,7 +64,7 @@ ms.lasthandoff: 01/09/2018
  ロールの割り当ては、一度に 1 つのみ変更できます。 グローバルな検索および置換操作を実行して、ロールの定義名またはロールの割り当ての設定を変更したり、特定のユーザーまたはグループを含むすべてのロールの割り当てを検索することはできません。  
   
 ## <a name="deleting-a-role-assignment"></a>ロールの割り当ての削除  
- 削除する各ロールの割り当てのチェック ボックスをオンにして、 **[削除]**をクリックすることにより、ロールの割り当てを削除できます。 また、 **[親のセキュリティに戻す]**をクリックして、ロールの割り当てを削除することもできます。 このボタンをクリックすると、アイテムの既存のロールの割り当てが削除され、代わりに親アイテムから提供されるロールの割り当てが使用されます。  
+ 削除する各ロールの割り当てのチェック ボックスをオンにして、 **[削除]** をクリックすることにより、ロールの割り当てを削除できます。 また、 **[親のセキュリティに戻す]** をクリックして、ロールの割り当てを削除することもできます。 このボタンをクリックすると、アイテムの既存のロールの割り当てが削除され、代わりに親アイテムから提供されるロールの割り当てが使用されます。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

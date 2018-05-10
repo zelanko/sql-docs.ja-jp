@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services のインストールの移行 (ネイティブ モード) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services のインストールの移行 (ネイティブ モード) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
 - Report Server Windows service
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - upgrading Reporting Services
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b05058e8d0254939f0c2018a484a12f458213f0b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 005021b6de95f2238c6108833a9fa15f7326a2a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -146,7 +144,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 
 ## <a name="bkmk_install_ssrs"></a> SQL Server Reporting Services のインストール
 
- 新しいレポート サーバー インスタンスを、既定値以外の値で構成できるように、ファイルのみのモードでインストールします。 コマンド ラインからインストールする場合は、 **FilesOnly** 引数を使用します。 インストール ウィザードでは、 **[サーバーを構成せずにインストールする]**を選択します。  
+ 新しいレポート サーバー インスタンスを、既定値以外の値で構成できるように、ファイルのみのモードでインストールします。 コマンド ラインからインストールする場合は、 **FilesOnly** 引数を使用します。 インストール ウィザードでは、 **[サーバーを構成せずにインストールする]** を選択します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新しいインスタンスのインストール手順については、次のいずれかのリンクをクリックして参照してください。  
   

@@ -1,30 +1,28 @@
 ---
-title: "HTML ビューアーとレポート ツール バー | Microsoft Docs"
+title: HTML ビューアーとレポート ツール バー | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 |------------------------------|-|--------|  
 |![ページ ナビゲーション コントロール](../reporting-services/media/htmlviewer-pagenav.gif "ページ ナビゲーション コントロール")|**ページ ナビゲーション コントロール**|レポートの最初または最後のページを開き、レポートをページごとにスクロールし、レポートの特定のページを開きます。 特定のページを表示するには、ページ番号を入力して Enter キーを押します。|  
 |![ページ表示コントロール](../reporting-services/media/htmlviewer-pagesize.gif "ページ表示コントロール")|**ページ表示コントロール**|レポート ページのサイズを拡大または縮小します。 パーセンテージ ベースの変更以外に、 **[ページの幅]** を選択してレポート ページの幅をブラウザー ウィンドウに合わせるか、 **[ページ全体]** を選択してレポートの高さをブラウザー ウィンドウに合わせることができます。 **[ズーム]** オプションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 以降のバージョンでサポートされています。|  
-|![検索フィールド](../reporting-services/media/htmlviewer-search.gif "検索フィールド")|**検索フィールド**|検索する語または句を入力してレポートの内容を検索します (最大文字数は、256 文字です)。 検索は大文字と小文字を区別せず、現在選択されているページまたはセクションから開始されます。 検索対象は、表示可能な内容だけです。 同じ値で引き続き検索を続ける場合は、 **[次へ]**をクリックします。|  
+|![検索フィールド](../reporting-services/media/htmlviewer-search.gif "検索フィールド")|**検索フィールド**|検索する語または句を入力してレポートの内容を検索します (最大文字数は、256 文字です)。 検索は大文字と小文字を区別せず、現在選択されているページまたはセクションから開始されます。 検索対象は、表示可能な内容だけです。 同じ値で引き続き検索を続ける場合は、 **[次へ]** をクリックします。|  
 |![エクスポート形式](../reporting-services/media/htmlviewer-export.GIF "エクスポート形式")|**エクスポート形式**|新しいブラウザー ウィンドウを開いて、選択した形式でレポートを表示します。 レポート サーバーにインストールされている表示拡張機能によって、使用可能な形式が決まります。 印刷には、TIFF を使用することをお勧めします。 選択した形式でレポートを表示するには、 **[エクスポート]** をクリックします。|  
 |![ドキュメント マップ アイコン](../reporting-services/media/htmlviewer-docmap.GIF "ドキュメント マップ アイコン")|**ドキュメント マップ アイコン**|ドキュメント マップを含んだレポート内のドキュメント マップ ペインの表示と非表示を切り替えます。 ドキュメント マップは、Web サイトのナビゲーション ウィンドウに類似したレポート ナビゲーション コントロールです。 ドキュメント マップ内のアイテムをクリックして、特定のグループ、ページ、またはサブレポートに移動することができます。|  
 |![プリンターのアイコン](../reporting-services/media/printer-icon.gif "プリンターのアイコン")|**プリンターのアイコン**|[印刷] ダイアログ ボックスが表示され、印刷オプションの指定と、レポートの印刷ができます。 最初に使用する際、このアイコンをクリックすると、印刷コントロールをダウンロードするよう求められます。|  

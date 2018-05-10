@@ -1,28 +1,27 @@
 ---
-title: "レッスン 4 : レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 4 : レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: "64"
+caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3f6b048b66f575746c47c1fc083ecc266305684c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 01bd9d8d6f5891e440dd54460b946b97c83fa79c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4 : レポートへのテーブルの追加 (Reporting Services)
 データセットを定義したら、レポートのデザインを開始できます。 レポートのレイアウトを作成するには、データ領域、テキスト ボックス、画像、およびレポートに含めるその他のアイテムを、デザイン画面にドラッグ アンド ドロップします。  
@@ -31,11 +30,11 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>[テーブル] データ領域とフィールドをレポート レイアウトに追加するには  
   
-1.  **[ツールボックス]**で **[テーブル]**をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。 **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]**を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。**[ツールボックス]** が表示されない場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。
+1.  **[ツールボックス]** で **[テーブル]** をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。 **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]** を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。**[ツールボックス]** が表示されない場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。
   
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
-  デザイン画面からレポートにテーブルを追加することもできます。  デザイン画面を右クリックし、 **[挿入]** 、 **[テーブル]**の順にクリックします。
+  デザイン画面からレポートにテーブルを追加することもできます。  デザイン画面を右クリックし、 **[挿入]** 、 **[テーブル]** の順にクリックします。
 2.  **[レポート データ]** ペインで、 **AdventureWorksDataset** データセットを展開してフィールドを表示します。  
   
 3.  *[Date]* フィールドを、 **[レポート データ]** ペインからテーブルの最初の列にドラッグします。  

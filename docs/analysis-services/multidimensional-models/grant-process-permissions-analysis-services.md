@@ -1,34 +1,23 @@
 ---
-title: "権限の付与処理 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 権限の付与処理 (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], process
-- process permissions [Analysis Services]
-ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b2cde8f68861eb47766b13cf95fb51a4fd2a6969
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>処理権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-管理者は、Analysis Services 処理操作専用のロールを作成して、その特定のタスクを他のユーザーまたは自動スケジューリング処理用のアプリケーションに委任できます。 処理権限はデータベース、キューブ、ディメンション、およびマイニング構造レベルで許可することができます。 非常に大きなキューブまたは表形式データベースで作業している場合を除き、相互に依存関係にあるものなどすべてのオブジェクトを含めて、データベース レベルで処理権限を付与することをお勧めします。  
+  管理者は、Analysis Services 処理操作専用のロールを作成して、その特定のタスクを他のユーザーまたは自動スケジューリング処理用のアプリケーションに委任できます。 処理権限はデータベース、キューブ、ディメンション、およびマイニング構造レベルで許可することができます。 非常に大きなキューブまたは表形式データベースで作業している場合を除き、相互に依存関係にあるものなどすべてのオブジェクトを含めて、データベース レベルで処理権限を付与することをお勧めします。  
   
  権限は、オブジェクトを権限および Windows ユーザーアカウントまたはグループ アカウントに関連付けるロールによって付与されます。 権限は加算的であることに注意してください。 あるロールによってキューブを処理する権限が付与され、別のロールによって同じユーザーにディメンションを処理する権限が付与される場合、この 2 種類のロールによる権限が組み合わされ、キューブを処理する権限とそのデータベース内の指定のディメンションを処理する権限の両方がユーザーに付与されます。  
   
@@ -67,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
     -   **[キューブ]** ペインで、各キューブの **[処理]** チェック ボックスをオンにします。  
   
-    -   **[ディメンション]** ペインで、 **[すべてのデータベース ディメンション]**を選択し、各ディメンションの **[処理]** チェック ボックスをオンにします。 あるいは、すべての行を選択し、シフトクリックを使用してチェック ボックスの選択を切り替えます。  
+    -   **[ディメンション]** ペインで、 **[すべてのデータベース ディメンション]** を選択し、各ディメンションの **[処理]** チェック ボックスをオンにします。 あるいは、すべての行を選択し、シフトクリックを使用してチェック ボックスの選択を切り替えます。  
   
 5.  **[メンバーシップ]** ペインで、これらのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
@@ -79,7 +68,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  [データベース] フォルダーを開き、データベースを選択します。 アカウントにメンバーシップが付与されているロールで表示可能なデータベースのみが表示されます。  
   
-3.  キューブまたはディメンションを右クリックし、 **[処理]**を選択します。 処理オプションを選択します。 オブジェクトのすべての組み合わせについて、すべてのオプションをテストします。 オブジェクトが見つからないためにエラーが発生した場合は、そのオブジェクトをロールに追加します。  
+3.  キューブまたはディメンションを右クリックし、 **[処理]** を選択します。 処理オプションを選択します。 オブジェクトのすべての組み合わせについて、すべてのオプションをテストします。 オブジェクトが見つからないためにエラーが発生した場合は、そのオブジェクトをロールに追加します。  
   
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>データ マイニング構造に対する処理権限の設定  
  データ マイニング構造を処理するための権限を付与するロールを作成できます。 これには、すべてのマイニング モデルの処理が含まれます。  
@@ -99,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [データベース、テーブル、またはパーティションの処理 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [データベースのアクセス許可を付与 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Grant 定義の読み取りアクセス許可オブジェクトのメタデータと #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [データベースのアクセス許可を付与 & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Grant 定義の読み取りアクセス許可オブジェクトのメタデータと #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -1,35 +1,27 @@
 ---
-title: "データ フィード (Power Pivot for SharePoint) の使用 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ フィード (Power Pivot for SharePoint) の使用 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8f0b6c60d3f68d7a643264d3e850b7ce6cd56c22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>データ フィードの使用 (PowerPivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上のデータ ストリームです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel を使用している場合、データ フィードを利用して、任意のデータ ソースにある既存の企業データやビジネス データを Excel 2010 ブック内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウに取り込むことができます。 ブックにデータ フィードをインポートすると、SharePoint サーバーでスケジュールしたデータ更新操作でデータ フィードを参照できます。  
+  データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上のデータ ストリームです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel を使用している場合、データ フィードを利用して、任意のデータ ソースにある既存の企業データやビジネス データを Excel 2010 ブック内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウに取り込むことができます。 ブックにデータ フィードをインポートすると、SharePoint サーバーでスケジュールしたデータ更新操作でデータ フィードを参照できます。  
   
  Atom データ フィードをサポートするアプリケーションで組み込みのエクスポート機能を使用しているか、カスタムのデータ サービスを作成して使用しているかに応じて、データ フィードの使用方法は変わってきます。 Atom XML データのパブリッシュおよび読み取りを行うことができるアプリケーションでは、データ フィードとデータ サービスの機構をユーザーに意識させることなく、データをシームレスに転送できます。 ユーザーにとっては、単にアプリケーション間でデータを移動しているだけです。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フィードで使用できるデータを提供する Microsoft SharePoint 2010 と[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブック。 このトピックでは、既存のレポートとリストのデータ フィードにアクセスする方法について説明します。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および Microsoft SharePoint 2010 では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックで使用できるデータ フィードを提供しています。 このトピックでは、既存のレポートとリストのデータ フィードにアクセスする方法について説明します。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -53,16 +45,16 @@ ms.lasthandoff: 02/15/2018
   
 1.  SharePoint サイトでリストを開きます。  
   
-2.  リスト ツールで、 **[リスト]**をクリックします。  
+2.  リスト ツールで、 **[リスト]** をクリックします。  
   
-3.  [接続とエクスポート] で、 **[データ フィードとしてエクスポート]**をクリックします。  
+3.  [接続とエクスポート] で、 **[データ フィードとしてエクスポート]** をクリックします。  
   
     > [!NOTE]  
     >  **[データ フィードとしてエクスポート]** ボタンは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]によって SharePoint に追加されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がインストールされていないか、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能をアクティブ化していない場合、このボタンは使用できません。  
   
 4.  **for Excel がローカルにインストールされている場合は** [開く] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をクリックします。また、後でインポート操作を行う場合は、 **[保存]** をクリックして .atomsvc ドキュメントをハード ドライブに保存します。  
   
-5.  **[開く]**をクリックした場合は、テーブルのインポート ウィザードを使用してデータ フィードをワークシートにインポートします。 データ フィードは新しいテーブルとして [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウに追加されます。  
+5.  **[開く]** をクリックした場合は、テーブルのインポート ウィザードを使用してデータ フィードをワークシートにインポートします。 データ フィードは新しいテーブルとして [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウに追加されます。  
   
  ADO.NET Data Services 3.5.1 が SharePoint サーバーにインストールされていない場合はエラーが発生します。 エラーとその解決方法の詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)」を参照してください。  
   
@@ -79,9 +71,9 @@ ms.lasthandoff: 02/15/2018
   
 1.  サイト管理者によって作成されたデータ フィード ライブラリを開きます。 詳細については、「[データ フィード ライブラリの作成またはカスタマイズ (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)」を参照してください。  
   
-2.  [ライブラリ ツール] で **[ドキュメント]**をクリックします。  
+2.  [ライブラリ ツール] で **[ドキュメント]** をクリックします。  
   
-3.  **[新しいドキュメント]**をクリックします。  
+3.  **[新しいドキュメント]** をクリックします。  
   
 4.  ファイル名と説明を指定します。  
   
@@ -93,7 +85,7 @@ ms.lasthandoff: 02/15/2018
   
          Web サービス URL には、データのサブセットを除外または選択するパラメーターを含めることができます。 フィードを提供するアプリケーションまたはサービスは、URL に指定するパラメーターをサポートしている必要があります。  
   
-6.  フィードごとに 1 つのテーブルの **[テーブル名]**を入力します。 この値は必須です。 テーブル名は、データ フィードを使用するクライアント アプリケーションによって利用されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel では、インポートしたデータを含む [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウのテーブルに名前を付ける際にこのテーブル名が使用されます。  
+6.  フィードごとに 1 つのテーブルの **[テーブル名]** を入力します。 この値は必須です。 テーブル名は、データ フィードを使用するクライアント アプリケーションによって利用されます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel では、インポートしたデータを含む [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ウィンドウのテーブルに名前を付ける際にこのテーブル名が使用されます。  
   
 ## <a name="see-also"></a>参照  
  [サイト コレクションを対象とした Power Pivot 機能の統合をサーバーの全体管理でアクティブ化する方法](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   

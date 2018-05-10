@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
@@ -19,12 +18,11 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b27acfdd0c881c6d13d76470e0d13b8ca0aba52
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
   ソース データのプロファイルを確認する前に、まずデータ プロファイル タスクを設定して実行します。 このタスクは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内に作成します。 データ プロファイル タスクを構成するには、[データ プロファイル タスク エディター] を使用します。 このエディターを使用すると、プロファイルの出力先と計算するプロファイルを選択できます。 タスクを設定したら、パッケージを実行してデータ プロファイルを計算します。  

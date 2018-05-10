@@ -1,39 +1,23 @@
 ---
-title: "データ マイニング モデル ビューアー |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング モデル ビューアー |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- displaying data mining models
-- mining models [Analysis Services], viewing
-- data mining [Analysis Services], models
-- viewing data mining models
-- mining model content
-- support [data mining]
-- exploring data mining models [Analysis Services]
-ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60d9d0bc1d8f78e4baa7c2d36291c76e00c88015
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 76dc68cc88dc8b27bf9569917f452e3230fbc6fa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-model-viewers"></a>データ マイニング モデル ビューアー
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルをトレーニングした後、そのモデルを調査して、興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルをトレーニングした後、そのモデルを調査して、興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
   
  モデルの作成に使用する各アルゴリズムからは、異なる種類の結果が返されます。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] にはアルゴリズムごとに個別のビューアーが用意されています。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でマイニング モデルを参照すると、モデルに適したビューアーを使用して、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。  
   

@@ -1,31 +1,23 @@
 ---
-title: "SharePoint に Powerpivot ソリューションの配置 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: SharePoint に Powerpivot ソリューションの配置 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7fec467c0823d7c2b4649dab307169f0d41de80b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-SharePoint Server 2010 環境に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を確認するには、「 [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
+  SharePoint Server 2010 環境に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を確認するには、「 [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)」を参照してください。  
   
  ソリューションの配置には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用することもできます。 シングル サーバー インストールでは構成ツールを使用するのが簡単で効率的ですが、使い慣れたツールを使用したい場合や、複数の機能を同時に構成する場合は、サーバーの全体管理と PowerShell を使用することもできます。 構成ツールの詳細については、「 [Power Pivot の構成ツール](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   
@@ -46,7 +38,7 @@ SharePoint Server 2010 環境に [!INCLUDE[ssGemini](../../includes/ssgemini-md.
  [Power Pivot ソリューションについて](#intro)  
   
 ##  <a name="bkmk_classic"></a> 前提条件: Web アプリケーションでクラシック モード認証が使用されていることを確認する  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされています。 アプリケーションがクラシック モードを使用しているかどうかを確認するから次の PowerShell コマンドレットを実行、 **SharePoint 2010 管理シェル**、 **http://\<最上位のサイト名 >**とSharePoint サイトの名前。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint は、Windows クラシック モード認証を使用する Web アプリケーションでのみサポートされています。 アプリケーションがクラシック モードを使用しているかどうかを確認するから次の PowerShell コマンドレットを実行、 **SharePoint 2010 管理シェル**、 **http://\<最上位のサイト名 >** とSharePoint サイトの名前。  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -105,26 +97,26 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 ##  <a name="deployUI"></a> 手順 3: 他の Web アプリケーションへの Power Pivot Web アプリケーション ソリューションの配置  
  前のタスクでは、Powerpivotwebapp.wsp をサーバーの全体管理に配置しました。 ここでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスをサポートする既存の各 Web アプリケーションに powerpivotwebapp.wsp を配置します。 後でさらに Web アプリケーションを追加する場合は、それらの追加の Web アプリケーションに対して、この手順を繰り返してください。  
   
-1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
   
-2.  **[powerpivotwebapp.wsp]**をクリックします。  
+2.  **[powerpivotwebapp.wsp]** をクリックします。  
   
-3.  **[ソリューションの配置]**をクリックします。  
+3.  **[ソリューションの配置]** をクリックします。  
   
-4.  **[配置先]**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能のサポートを追加する SharePoint Web アプリケーションを選択します。  
+4.  **[配置先]** で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能のサポートを追加する SharePoint Web アプリケーションを選択します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 6.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスをサポートする他の SharePoint Web アプリケーションに対して、この手順を繰り返します。  
   
 ##  <a name="retract"></a> ソリューションの再配置または取り消し  
  SharePoint サーバーの全体管理でソリューションの取り消しを実行できますが、インストールや修正プログラムの配置に関する問題のトラブルシューティングを体系的に行う場合を除いて、powerpivotwebapp.wsp ファイルを取り消す必要はありません。  
   
-1.  SharePoint 2010 サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]**をクリックします。  
+1.  SharePoint 2010 サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
   
-2.  **[powerpivotwebapp.wsp]**をクリックします。  
+2.  **[powerpivotwebapp.wsp]** をクリックします。  
   
-3.  **[ソリューションの取り消し]**をクリックします。  
+3.  **[ソリューションの取り消し]** をクリックします。  
   
  ファーム ソリューションに起因するサーバー配置の問題が発生した場合は、 **構成ツールで** [修復] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] オプションを実行することで再配置できます。 手動の手順が少なくて済むため、修復操作を行うときはこのツールを使用することをお勧めします。 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   

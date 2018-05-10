@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], altering
 - FileTables [SQL Server], dropping
@@ -21,12 +20,11 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e8df2d7fcac73f7ff11f68d5780d9ee54f2bb695
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ba8ada2a67db9c0f6ea4882fb6fd04b26caa4f9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +90,7 @@ GO
 ```  
   
  **SQL Server Management Studio を使用して FileTable を作成する**  
- オブジェクト エクスプローラーで、選択したデータベースのオブジェクトを展開し、 **[テーブル]** フォルダーを右クリックして **[新しい FileTable]**をクリックします。  
+ オブジェクト エクスプローラーで、選択したデータベースのオブジェクトを展開し、 **[テーブル]** フォルダーを右クリックして **[新しい FileTable]** をクリックします。  
   
  このオプションを選択すると、新しいスクリプト ウィンドウが開き、FileTable を作成するためにカスタマイズして実行できる Transact-SQL スクリプト テンプレートが表示されます。 **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** オプションを使用すると、スクリプトを簡単にカスタマイズできます。  
   
@@ -128,7 +126,7 @@ GO
 ```  
   
  **SQL Server Management Studio を使用して FileTable のディレクトリを変更する**  
- オブジェクト エクスプローラーで、FileTable を右クリックし、 **[プロパティ]** をクリックして、 **[テーブルのプロパティ]** ダイアログ ボックスを開きます。 **[FileTable]** ページで、 **[FileTable ディレクトリ名]**に新しい値を入力します。  
+ オブジェクト エクスプローラーで、FileTable を右クリックし、 **[プロパティ]** をクリックして、 **[テーブルのプロパティ]** ダイアログ ボックスを開きます。 **[FileTable]** ページで、 **[FileTable ディレクトリ名]** に新しい値を入力します。  
   
 ###  <a name="ReqAlter"></a> FileTable を変更するための要件と制限  
   

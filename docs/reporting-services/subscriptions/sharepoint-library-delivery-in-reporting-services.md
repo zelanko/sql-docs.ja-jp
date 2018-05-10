@@ -1,31 +1,29 @@
 ---
-title: "Reporting Services での SharePoint ライブラリへの配信 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services での SharePoint ライブラリへの配信 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea55ee6029eb4f8e75980baf4ee556fabe49c431
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c15986016792e0cc1f98f428e39ce9324b1ceb6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
@@ -57,9 +55,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポートへのアクセス元となる SharePoint サイトに移動します。  
   
-2.  レポートを選択し、レポートの横にある下向きの矢印をクリックして、 **[サブスクリプションの管理]**をクリックします。  
+2.  レポートを選択し、レポートの横にある下向きの矢印をクリックして、 **[サブスクリプションの管理]** をクリックします。  
   
-3.  **[作成]**、 **[編集]**、または **[削除]**をクリックします。  
+3.  **[作成]**、 **[編集]**、または **[削除]** をクリックします。  
   
  [サブスクリプションの管理] リストの状態メッセージに、サブスクリプションの現在の情報が表示されます。この情報には、サブスクリプションの状態や、サブスクリプションの最終実行日時などが含まれます。  
   
@@ -88,7 +86,7 @@ ms.lasthandoff: 01/09/2018
  同じファイル名と拡張子を持つファイルは、サブスクリプションの処理時に新しい方のバージョンに置き換えられます。 既存のファイルを新しいバージョンに置き換える場合、 **[上書き]** を選択します。 サブスクリプションでファイルを置き換えない場合には、 **[なし]** を選択します。 この場合、対象ファイルと名前と拡張子が同じであるファイルが存在すると、配信が実行されません。 ファイル名の末尾に数値を付加して、同じファイルの連続するバージョンを追加する場合は、 **[自動増分]** を選択します。  
   
  [自動コピー]  
- [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 **[自動増分]** または **[なし]**を指定した場合、配信が失敗し、 **rsDeliveryError** エラーが発生します。  
+ [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 **[自動増分]** または **[なし]** を指定した場合、配信が失敗し、 **rsDeliveryError** エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

@@ -1,30 +1,28 @@
 ---
-title: "グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
  この例では、 `MyField` の最大値は赤色になり、その他のすべてのデータ ポイントは緑色になります。 系列で **Fill** プロパティを使用して系列の色を指定する場合、パレットで指定された色は無効になります。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>グラフへのデータ ポイント ラベルの配置  
- すべての種類のグラフで、グラフを右クリックして **[データ ラベルの表示]**を選択すると、データ ポイント ラベルを表示できます。 データ ポイント ラベルの位置は、グラフの種類に応じて指定されます。  
+ すべての種類のグラフで、グラフを右クリックして **[データ ラベルの表示]** を選択すると、データ ポイント ラベルを表示できます。 データ ポイント ラベルの位置は、グラフの種類に応じて指定されます。  
   
 -   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 外側、左、中央、および右の 4 つの位置から選択できます。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>複数のデータ ポイントを持つグラフを読みやすくする  
  グラフに複数の系列が表示されると、グラフ データ ポイントがわかりにくくなることがあります。 複数の系列をグラフに追加する場合は、グラフの各系列を効率よく見分ける方法を検討してください。 詳細については、「 [グラフ上の複数の系列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md):  
   
- 便宜上、図形グラフを使用している場合は、データ フィールドとカテゴリ フィールドをそれぞれ 1 つだけ追加するようにしてください。 詳細については、「[図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)」を参照してください。 グラフに複数のデータ フィールドとカテゴリ フィールドが必要な場合は、グラフの種類を変更することを検討してください。 系列を右クリックし、 **[グラフの種類の変更]**をクリックします。  
+ 便宜上、図形グラフを使用している場合は、データ フィールドとカテゴリ フィールドをそれぞれ 1 つだけ追加するようにしてください。 詳細については、「[図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)」を参照してください。 グラフに複数のデータ フィールドとカテゴリ フィールドが必要な場合は、グラフの種類を変更することを検討してください。 系列を右クリックし、 **[グラフの種類の変更]** をクリックします。  
   
 ## <a name="inserting-data-point-markers"></a>データ ポイント マーカーの挿入  
  データ ポイント マーカーは、系列の各データ ポイントを目立たせるための視覚インジケーターです。 散布図の場合、個々のデータ ポイントの形状とサイズを示すためにマーカーが使用されます。 マーカーのサイズはグラフの種類に基づいて指定されます。 マーカーのサイズ、色、またはスタイルは変更できます。 範囲グラフおよび図形グラフ、サブタイプの積み上げグラフには、マーカーを使用できません。  

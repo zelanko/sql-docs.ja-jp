@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -43,12 +41,11 @@ caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 186ee73093ca80e547b61bb00ee81ca540fb600a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 270b2c8d85d9715cfde3f32003f60cf1867b245a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +130,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
  いくつかの例外を除き、テーブル ヒントは、FROM 句で WITH キーワードを使用して指定した場合にのみサポートされます。 また、テーブル ヒントはかっこを使用して指定する必要があります。  
   
 > [!IMPORTANT]  
->  WITH キーワードを省略することは推奨されていません。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  WITH キーワードの有無にかかわらず使用できるテーブル ヒントは、NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、および NOEXPAND です。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例 :  
   
@@ -150,7 +147,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  複数のテーブル ヒント間にはコンマを使用することをお勧めします。  
   
 > [!IMPORTANT]  
->  ヒントの分割にコンマの代わりにスペースを用いる方法は推奨されていません。[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+>  ヒントの分割にコンマの代わりにスペースを用いる方法は非推奨とされます。[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
  NOEXPAND  
  クエリ オプティマイザーがクエリを処理する場合に、インデックス付きビューが展開されず、基になるテーブルがアクセスされないことを指定します。 クエリ オプティマイザーは、ビューをクラスター化インデックスを持つテーブルのように取り扱います。 NOEXPAND はインデックス付きビューにのみ適用できます。 詳細については、「解説」を参照してください。  

@@ -1,28 +1,27 @@
 ---
-title: "チュートリアルの前提条件 (レポート ビルダー) | Microsoft Docs"
-ms.custom: 
+title: チュートリアルの前提条件 (レポート ビルダー) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 63dd6f1be616f092e689f5e1ce7ff2ed12e3ece6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c720c71a703cd7c0fcd436923e7a820d35f4622
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>チュートリアルの前提条件 (レポート ビルダー)
 
@@ -36,9 +35,9 @@ ms.lasthandoff: 01/09/2018
   
 -   レポート ビルダーへのアクセス。 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポート サーバーまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポート サーバーから、レポート ビルダーを実行できます。 これらの異なるサーバーでは、最初の手順であるレポート ビルダーを開く方法のみが異なります。  
   
-    レポート サーバーで、 **[新規]** > **[ページ分割されたレポート]**を選択します。
+    レポート サーバーで、 **[新規]** > **[ページ分割されたレポート]** を選択します。
   
-    SharePoint 統合モードのレポート サーバーで、 **[ドキュメント]** タブの **[新しいドキュメント]**を選択し、ドロップ ダウン リストから **[レポート ビルダー レポート]**を選択します。 たとえば、 `http://<servername>/sites/mySite/reports`のようにします。 SharePoint 管理者は、各ドキュメント ライブラリのレポート ビルダー レポート機能を有効にする必要があります。  
+    SharePoint 統合モードのレポート サーバーで、 **[ドキュメント]** タブの **[新しいドキュメント]** を選択し、ドロップ ダウン リストから **[レポート ビルダー レポート]** を選択します。 たとえば、 `http://<servername>/sites/mySite/reports`のようにします。 SharePoint 管理者は、各ドキュメント ライブラリのレポート ビルダー レポート機能を有効にする必要があります。  
   
 -   [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポート サーバーと統合されている SharePoint サイトの URL。 レポート、共有データ ソース、共有データセット、レポート パーツ、およびモデルを保存および表示する権限が必要です。 既定では、レポート サーバーの URL は `http://<servername>/reportserver`です。 既定では、SharePoint サイトの URL は `http://<sitename>` または `http://<server>/site`です。  
   

@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services のモバイル レポートでシミュレートされたデータを使用する | Microsoft Docs"
-ms.custom: 
+title: Reporting Services のモバイル レポートでシミュレートされたデータを使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 347abee7c61c43e8453f27df2c6bb3147c4d677c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6d6561f725477cef44d4794d74559f562e85f7e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Reporting Services のモバイル レポートでシミュレートされたデータを使用する
 デザイン サーフェイスにギャラリー要素を配置すると、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、その要素のシミュレートされたデータを即座に生成します。 このデータは、モバイル レポートを作成するときにさまざまな目的を果たします。   

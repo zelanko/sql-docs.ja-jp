@@ -1,25 +1,23 @@
 ---
-title: "レポート サーバー データベース接続の構成 (SSRS 構成マネージャー) | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー データベース接続の構成 (SSRS 構成マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 24384ab29267e9b2b8a19bf2e44afdabf2ef21c2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 388534f90bf084cc32caefb84c6b2131faff47a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
 
@@ -46,9 +44,9 @@ ms.lasthandoff: 01/09/2018
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 **System.Data.SqlClient** を使用して、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカル インスタンスを使用する場合、レポート サーバーは共有メモリを使用して接続を確立します。 リモートのデータベース サーバーをレポート サーバー データベースとして使用する場合は、使用中のエディションに応じてリモート接続を有効にする必要が生じる場合があります。 Enterprise Edition を使用している場合は、TCP/IP でのリモート接続が既定で有効になっています。  
   
- インスタンスがリモート接続を受け入れることを確認するには、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックし、各サービスで TCP/IP プロトコルが有効になっていることを確認します。  
+ インスタンスがリモート接続を受け入れることを確認するには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックし、各サービスで TCP/IP プロトコルが有効になっていることを確認します。  
   
- リモート接続を有効にすると、クライアント プロトコルおよびサーバー プロトコルも有効になります。 プロトコルが有効になっていることを確認するには、 **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。次に、 **[SQL Server ネットワークの構成]**をクリックし、 **[MSSQLSERVER のプロトコル]**をクリックします。 詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) サーバー ネットワーク プロトコルの有効化または無効化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+ リモート接続を有効にすると、クライアント プロトコルおよびサーバー プロトコルも有効になります。 プロトコルが有効になっていることを確認するには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。次に、 **[SQL Server ネットワークの構成]** をクリックし、 **[MSSQLSERVER のプロトコル]** をクリックします。 詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) サーバー ネットワーク プロトコルの有効化または無効化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ## <a name="defining-a-report-server-database-connection"></a>レポート サーバー データベース接続の定義  
  接続を構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャー ツールまたは **rsconfig** コマンド ライン ユーティリティを使用する必要があります。 レポート サーバーには、次の接続情報が必要です。  

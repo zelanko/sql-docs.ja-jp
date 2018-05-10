@@ -1,28 +1,27 @@
 ---
-title: "レッスン 8: データ フィルターを作成する | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 8: データ フィルターを作成する | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 906e435e8259a1d32c84f322795001f8ea38c8a7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5e6e2976cb21c2c6b1bd559282dcbfb1e403a9b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
 親レポートにドリルスルー アクションを追加した後は、子レポート用に定義したデータ テーブル用のデータ フィルターを作成します。  
@@ -42,9 +41,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  子レポートを開きます。  
   
-2.  Tablix の列見出しを選択します。列見出しの上の灰色のセルを右クリックし、 **[Tablix のプロパティ]**を選択します。  
+2.  Tablix の列見出しを選択します。列見出しの上の灰色のセルを右クリックし、 **[Tablix のプロパティ]** を選択します。  
   
-3.  **[フィルター]** ページを選択し、 **[追加]**を選択します。  
+3.  **[フィルター]** ページを選択し、 **[追加]** を選択します。  
   
 4.  **[式]** フィールドで、一覧から **[ProductID]** を選択します。 これは、フィルターを適用する列です。  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイナー ビューで Default.aspx を開きます。  
   
-2.  ReportViewer コントロールを右クリックし、 **[プロパティ]**を選択します。  
+2.  ReportViewer コントロールを右クリックし、 **[プロパティ]** を選択します。  
   
 3.  **[プロパティ]** ページで、 **[イベント]** アイコンを選択します。  
   
@@ -228,7 +227,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイナー ビューで Default.aspx を開きます。  
   
-2.  ReportViewer コントロールを右クリックし、 **[プロパティ]**を選択します。  
+2.  ReportViewer コントロールを右クリックし、 **[プロパティ]** を選択します。  
   
 3.  **[プロパティ]** ペインで、 **[イベント]** アイコンを選択します。  
   

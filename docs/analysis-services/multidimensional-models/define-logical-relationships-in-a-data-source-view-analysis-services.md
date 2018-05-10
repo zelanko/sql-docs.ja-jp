@@ -1,35 +1,23 @@
 ---
-title: "データ ソース ビュー (Analysis Services) に論理リレーションシップの定義 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ ソース ビュー (Analysis Services) に論理リレーションシップの定義 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- adding relationships
-- relationships [Analysis Services], data source views
-- data source views [Analysis Services], relationships
-ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1513a26fad3452bf71097ffac46be60a30c978af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) に追加されたテーブル間のリレーションシップが、基になるデータベース リレーションシップまたは指定した名前一致条件に基づき、自動的に定義されます。  
+  データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) に追加されたテーブル間のリレーションシップが、基になるデータベース リレーションシップまたは指定した名前一致条件に基づき、自動的に定義されます。  
   
  複数のデータ ソースのデータを使用する場合は、データ ソース ビューの論理リレーションシップを手動で定義して、自動的に定義されたリレーションシップを補完する必要があることもあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ファクト テーブルやディメンション テーブルの識別、基になるデータ ソースからデータやメタデータを取得するためのクエリの作成、および高度なビジネス インテリジェンス機能の利用において、リレーションシップが必要となります。  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  ソリューション エクスプローラーで **[データ ソース ビュー]** フォルダーを展開し、データ ソース ビューをダブルクリックして **データ ソース ビュー デザイナー**を開きます。  
   
-3.  **[テーブル]** ペインで、リレーションシップの追加先のテーブル、名前付きクエリ、またはビューを右クリックし、 **[新しいリレーションシップ]**をクリックします。  
+3.  **[テーブル]** ペインで、リレーションシップの追加先のテーブル、名前付きクエリ、またはビューを右クリックし、 **[新しいリレーションシップ]** をクリックします。  
   
     > [!NOTE]  
     >  テーブル、ビュー、または名前付きクエリを検索するには、 **[データ ソース ビュー]** メニューをクリックするか、 **テーブル** ペインまたは **ダイアグラム** ペインの空いている領域を右クリックして、 **[テーブルの検索]** をクリックします。  
@@ -73,7 +61,7 @@ ms.lasthandoff: 02/15/2018
   
     3.  **[基になる列]** および **[対象になる列]** 一覧から列を選択して、2 つのテーブル間のリレーションシップを作成します。  
   
-         基になるテーブル、ビュー、または名前付きクエリのデータをサンプリングすることで、誤った方向 (外部キーから主キーではなく、主キーから外部キー) にリレーションシップを定義したことが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって検出された場合は、順序を逆にするように要求されます。 順序を逆にするには、 **[反転]**をクリックします。  
+         基になるテーブル、ビュー、または名前付きクエリのデータをサンプリングすることで、誤った方向 (外部キーから主キーではなく、主キーから外部キー) にリレーションシップを定義したことが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって検出された場合は、順序を逆にするように要求されます。 順序を逆にするには、 **[反転]** をクリックします。  
   
          選択した列にリレーションシップが既に存在することが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] によって検出された場合は、メッセージが表示されます。 リレーションシップを重複して定義することはできません。  
   
@@ -81,15 +69,15 @@ ms.lasthandoff: 02/15/2018
   
 ##  <a name="bkmk_diagrampane"></a> [ダイアグラム] ペインでリレーションシップを表示または変更するには  
   
--   **データ ソース ビュー デザイナー** の **[ダイアグラム]**ペインで、表示するリレーションシップを右クリックし、 **[リレーションシップの編集]** をクリックするか、リレーションシップの矢印をダブルクリックします。  リレーションシップを変更するには、 **[リレーションシップの編集]** ダイアログ ボックスを使用します。  
+-   **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインで、表示するリレーションシップを右クリックし、 **[リレーションシップの編集]** をクリックするか、リレーションシップの矢印をダブルクリックします。  リレーションシップを変更するには、 **[リレーションシップの編集]** ダイアログ ボックスを使用します。  
   
 ##  <a name="bkmk_tablespane"></a> [テーブル] ペインでリレーションシップを表示または変更するには  
   
-1.  **データ ソース ビュー デザイナー** の **[テーブル]**ペインで、表示または変更するリレーションシップを含むテーブル、ビュー、または名前付きクエリを検索し、展開します。  
+1.  **データ ソース ビュー デザイナー** の **[テーブル]** ペインで、表示または変更するリレーションシップを含むテーブル、ビュー、または名前付きクエリを検索し、展開します。  
   
 2.  **[リレーションシップ]** フォルダーを展開します。  選択したテーブル、ビュー、または名前付きクエリと他のテーブル、ビュー、および名前付きクエリ間のリレーションシップが、リレーションシップ列と共に表示されます。  
   
-3.  変更するリレーションシップを右クリックし、 **[リレーションシップの編集]**をクリックします。  
+3.  変更するリレーションシップを右クリックし、 **[リレーションシップの編集]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

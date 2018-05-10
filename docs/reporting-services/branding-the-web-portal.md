@@ -1,25 +1,23 @@
 ---
-title: "Web ポータルのブランド化 | Microsoft Docs"
-ms.custom: 
+title: Web ポータルのブランド化 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c01c3c7f6c05e0005f92addf82fb7e45d142b338
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6f4893d2044676078d102cbd776de03815b8354e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -129,7 +127,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  **[ブランド化]**を選択します。  
+3.  **[ブランド化]** を選択します。  
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   

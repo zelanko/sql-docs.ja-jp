@@ -1,38 +1,30 @@
 ---
 title: "'Microsoft.analysisservices.sharepoint.integration' を読み込めませんでした |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0854f5c3cdf740c68b8f83dcb3d847cefc256edd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b90fd2a99bd6321936c0cef399ec115baceced0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Microsoft.AnalysisServices.SharePoint.Integration を読み込むことができませんでした。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がある SharePoint 2010 環境で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のアプリケーション レベルのソリューションが正しく配置されていない場合にこのエラーが発生します。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がある SharePoint 2010 環境で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のアプリケーション レベルのソリューションが正しく配置されていない場合にこのエラーが発生します。  
   
 ## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
 |適用対象|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[製品バージョン]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|Powerpivotwebapp ソリューションが配置されていないか、配置が正しくありません。|  
 |メッセージ テキスト|ファイルまたはアセンブリ 'Microsoft.AnalysisServices.SharePoint.Integration' を読み込めませんでした|  
   
@@ -42,15 +34,15 @@ ms.lasthandoff: 02/15/2018
 ## <a name="user-action"></a>ユーザーの操作  
  ソリューション パッケージを配置します。  
   
-1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
   
-2.  **[Powerpivotwebapp]**をクリックします。  
+2.  **[Powerpivotwebapp]** をクリックします。  
   
-3.  **[ソリューションの配置]**をクリックします。  
+3.  **[ソリューションの配置]** をクリックします。  
   
 4.  このエラーが発生している Web アプリケーションを選択します。 複数の Web アプリケーションがある場合は、そのすべてについてソリューションを再配置します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint への Power Pivot ソリューションの配置](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  

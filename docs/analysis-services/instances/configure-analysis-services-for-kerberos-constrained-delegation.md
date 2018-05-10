@@ -1,31 +1,23 @@
 ---
-title: "Kerberos の制約付き委任用に Analysis Services の構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Kerberos の制約付き委任用に Analysis Services の構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 277372a74d58ece125c4d7e7b8a2b59a447031ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Kerberos 認証用に Analysis Services を構成する際は、通常、データを照会するときに Analysis Services でユーザー ID の権限を借用すること、Analysis Services でユーザー ID を下位レベル サービスに委任すること、またはその両方を実現することが重要になります。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
+  Kerberos 認証用に Analysis Services を構成する際は、通常、データを照会するときに Analysis Services でユーザー ID の権限を借用すること、Analysis Services でユーザー ID を下位レベル サービスに委任すること、またはその両方を実現することが重要になります。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Kerberos に関する接続性の問題のトラブルシューティングに役立つ診断ツールです。 Kerberos 認証の詳細については、「 [Microsoft® Kerberos Configuration Manager for SQL Server®](http://www.microsoft.com/download/details.aspx?id=39046)」をご覧ください。  
@@ -73,19 +65,19 @@ Kerberos 認証用に Analysis Services を構成する際は、通常、デー�
   
  両方の前提条件が満たされたら、次の手順を実行します。 制約付き委任を設定するには、ドメイン管理者である必要があります。  
   
-1.  [Active Directory ユーザーとコンピューター] で、Analysis Services サービスが実行されているサービス アカウントを見つけます。 サービス アカウントを右クリックし、 **[プロパティ]**を選択します。  
+1.  [Active Directory ユーザーとコンピューター] で、Analysis Services サービスが実行されているサービス アカウントを見つけます。 サービス アカウントを右クリックし、 **[プロパティ]** を選択します。  
   
      わかりやすくするために、以降のスクリーン ショットでは、OlapSvc と SQLSvc を使用して Analysis Services と SQL Server をそれぞれ表しています。  
   
      OlapSvc は、SQLSvc への制約付き委任用に構成されるアカウントです。 このタスクを完了すると、データを要求するときに元の呼び出し元の権限を借用して、サービス チケットの委任された資格情報を SQLSvc に渡す権限が OlapSvc に与えられます。  
   
-2.  [委任] タブで、 **[指定されたサービスへの委任でのみこのユーザーを信頼する]**を選択し、 **[Kerberos のみを使う]**を選択します。 Analysis Services による資格情報の委任を許可するサービスを指定するために、 **[追加]** をクリックします。  
+2.  [委任] タブで、 **[指定されたサービスへの委任でのみこのユーザーを信頼する]** を選択し、 **[Kerberos のみを使う]** を選択します。 Analysis Services による資格情報の委任を許可するサービスを指定するために、 **[追加]** をクリックします。  
   
      [委任] タブは、ユーザー アカウント (OlapSvc) がサービス (Analysis Services) に割り当てられ、このサービスの SPN が登録されている場合にのみ表示されます。 SPN を登録するには、このサービスが実行されている必要があります。  
   
      ![SSAS_Kerberos_1_AccountProperties](../../analysis-services/instances/media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
   
-3.  [サービスの追加] ページで、 **[ユーザーまたはコンピューター]**をクリックします。  
+3.  [サービスの追加] ページで、 **[ユーザーまたはコンピューター]** をクリックします。  
   
      ![SSAS_Kerberos_2_](../../analysis-services/instances/media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
   
@@ -123,6 +115,6 @@ Kerberos 認証用に Analysis Services を構成する際は、通常、デー�
  [Kerberos を使用した相互認証](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Analysis Services に接続します。](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services インスタンスに対する SPN の登録](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [接続文字列のプロパティ &#40;です。Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [接続文字列のプロパティ & #40 です。Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

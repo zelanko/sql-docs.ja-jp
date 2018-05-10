@@ -1,35 +1,23 @@
 ---
-title: "Analysis Services データベースを移動 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services データベースを移動 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- moving databases [Anlysis Services]
-- moving databases
-- operations [Analysis Services - multidimensional data]
-ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 84c5085a6f43642bd59a88aef40bcb11172266e0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7f74a707efefe7b94122462a8a229c1585766207
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が多次元式またはテーブル モデル データベースを別の場所に移動することは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) が多次元式またはテーブル モデル データベースを別の場所に移動することは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。  
   
  データベースの移動方法は多数あります。 このドキュメントでは、次の一般的なシナリオについて説明します。  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  SSMS の左側または右側のペインで、移動するデータベースを探します。  
   
-2.  データベースを右クリックし、 **[デタッチ]**をクリックします。  
+2.  データベースを右クリックし、 **[デタッチ]** をクリックします。  
   
 3.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
@@ -58,7 +46,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  SSMS の左側または右側のペインで、 **[データベース]** フォルダーを探します。  
   
-6.  **[データベース]** フォルダーを右クリックし、 **[アタッチ]**をクリックします。  
+6.  **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
   
 7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 または、参照ボタン (**[…]**) を使用して、データベース フォルダーを探すこともできます。  
   

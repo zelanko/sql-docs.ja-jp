@@ -1,31 +1,23 @@
 ---
-title: "リモート処理 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: リモート処理 (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e59011361e6dad623fa5f5cab71d262eb5eb8338
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-processing-analysis-services"></a>リモート処理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-あるコンピューターから発行された処理要求を同じネットワーク上の別のコンピューターで実行する場合、スケジュールされた処理や自動処理をリモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで実行できます。  
+  あるコンピューターから発行された処理要求を同じネットワーク上の別のコンピューターで実行する場合、スケジュールされた処理や自動処理をリモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで実行できます。  
   
 ## <a name="prerequisites"></a>前提条件  
   
@@ -38,11 +30,11 @@ ms.lasthandoff: 02/15/2018
 -   リモート処理を試みる前に、既存のローカル処理エラーを解決します。 処理要求がローカルの場合、外部リレーショナル データ ソースからデータを正常に取得できることを確認します。 データの取得に使用する資格情報を指定する手順については、「[権限借用オプションの設定 &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)」をご覧ください。  
   
 ## <a name="on-demand-remote-processing"></a>オンデマンドのリモート処理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者権限を持つユーザー アカウントまたはアプリケーション アカウントからの処理要求を受け入れます。 管理者は、リモート インスタンスに接続し、リモート接続でデータベースを手動で処理できることを確認します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]持つユーザーまたはアプリケーション アカウントから処理要求を受け入れます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理者のアクセス許可。 管理者は、リモート インスタンスに接続し、リモート接続でデータベースを手動で処理できることを確認します。  
   
 1.  処理のスケジュールを設定する際に使用するコンピューターで、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動し、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続します。  
   
-2.  データベースを右クリックして **[処理]**を選択し、 **[スクリプト]** をポイントして **[スクリプト操作を新規クエリ ウィンドウに保存]**を選択します。 処理の呼び出しに使用するコマンドがクエリ ウィンドウに表示されます。  
+2.  データベースを右クリックして **[処理]** を選択し、 **[スクリプト]** をポイントして **[スクリプト操作を新規クエリ ウィンドウに保存]** を選択します。 処理の呼び出しに使用するコマンドがクエリ ウィンドウに表示されます。  
   
 3.  **[OK]** をクリックして、処理を開始します。  
   
@@ -65,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続します。  
   
-2.  サーバー名を右クリックして**[プロパティ]**をクリックし、 **[セキュリティ]**をクリックします。  
+2.  サーバー名を右クリックして **[プロパティ]** をクリックし、 **[セキュリティ]** をクリックします。  
   
 3.  **[追加]** をクリックして、SQL Server エージェント アカウントを追加します。  
   
@@ -73,11 +65,11 @@ ms.lasthandoff: 02/15/2018
   
 1.  Management Studio で、ローカルのデータベース エンジン インスタンスに接続します。 SQL Server エージェントは、オブジェクト エクスプローラー内の最後のアイテムです。 必要に応じて、サービスを開始します。  
   
-2.  **[ジョブ]**を右クリックして **[新しいジョブ]** をクリックし、名前を入力します。  
+2.  **[ジョブ]** を右クリックして **[新しいジョブ]** をクリックし、名前を入力します。  
   
 3.  [ステップ] で **[新規作成]** をクリックし、名前を入力します。  
   
-4.  [種類] で **[SQL Server Analysis Services コマンド]**を選択します。  
+4.  [種類] で **[SQL Server Analysis Services コマンド]** を選択します。  
   
 5.  [サーバー] で、リモートの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前を入力します。  
   
@@ -93,15 +85,15 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="run-the-job"></a>ジョブの実行  
   
-1.  ジョブの実行に使用するコンピューターで、ジョブが基本操作を実行できることを確認します。 オブジェクト エクスプローラーで、SQL Server エージェントの下の **[ジョブ]**を展開し、作成したジョブを右クリックして **[ステップでジョブを開始]**をクリックします。 ジョブがすぐに開始されます。 SQL Server Profiler で進行状況を監視できます。  
+1.  ジョブの実行に使用するコンピューターで、ジョブが基本操作を実行できることを確認します。 オブジェクト エクスプローラーで、SQL Server エージェントの下の **[ジョブ]** を展開し、作成したジョブを右クリックして **[ステップでジョブを開始]** をクリックします。 ジョブがすぐに開始されます。 SQL Server Profiler で進行状況を監視できます。  
   
 2.  最後の手順として、ジョブを管理するために必要な警告や通知を追加して、定義したスケジュールで実行するようにジョブを変更します。 また、処理スクリプトを調整したり、ジョブ内に複数のステップを作成してオブジェクトを個別に処理したりできます。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェント コンポーネント](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [SQL Server エージェントで SSAS 管理タスクのスケジュール設定](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [バッチ処理 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [バッチ処理 & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [オブジェクトの処理 &#40;です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [オブジェクトの処理 & #40 です。XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

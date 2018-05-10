@@ -1,36 +1,23 @@
 ---
-title: "データ ソースのない時間テーブルを生成することによって、ディメンションを作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ ソースのない時間テーブルを生成することによって、ディメンションを作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data sources [Analysis Services], dimensions without data source
-- dimensions [Analysis Services], standard
-- dimensions [Analysis Services], creating without data source
-- standard dimensions [Analysis Services]
-ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e4c37f93352f149a1368081170ce47dc80d4aa04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して、既存のデータ ソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して、既存のデータ ソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
   
  ディメンション ウィザードで提供されるサンプルのディメンション テンプレートから、一般的に使用される種類のディメンションを構築できます。 次のディメンションの種類から選択できます。  
   
@@ -83,9 +70,9 @@ ms.lasthandoff: 02/15/2018
 ## <a name="specify-dimension-type"></a>ディメンションの種類の指定  
  ディメンション ウィザードの **[ディメンションの種類を指定]** ページでは、ディメンションの種類を指定できます。 テンプレートを基にディメンションを構築している場合、ディメンションの種類は自動的に定義されます。 このページでは、指定したディメンションの種類に標準的な属性があれば、選択することもできます。  
   
- ディメンションの種類に対応するテンプレートを選択した場合は、そのディメンションの種類のオプションでこのページが作成されます。 テンプレートを選択しなかった場合や、該当するディメンションの種類がない場合、既定のディメンションの種類は **[標準]**です。 ディメンションの種類がまだ選択されていない場合は、作成するディメンションに最適な種類を選択します。 適切な種類が **[ディメンションの種類]**の一覧に表示されていない場合は、 **[標準]**を使用します。  
+ ディメンションの種類に対応するテンプレートを選択した場合は、そのディメンションの種類のオプションでこのページが作成されます。 テンプレートを選択しなかった場合や、該当するディメンションの種類がない場合、既定のディメンションの種類は **[標準]** です。 ディメンションの種類がまだ選択されていない場合は、作成するディメンションに最適な種類を選択します。 適切な種類が **[ディメンションの種類]** の一覧に表示されていない場合は、 **[標準]** を使用します。  
   
- ディメンションの種類を選択すると、そのディメンションに適用する属性の型が **[ディメンションの属性]**ボックスの一覧に表示されます。 属性の型を選択するには、属性の型の横にある **[追加]** チェック ボックスをオンにし、 **[ディメンションの属性]**で属性名を入力します。 既定の名前は、 **[属性の型]**の値と同じです。  
+ ディメンションの種類を選択すると、そのディメンションに適用する属性の型が **[ディメンションの属性]** ボックスの一覧に表示されます。 属性の型を選択するには、属性の型の横にある **[追加]** チェック ボックスをオンにし、 **[ディメンションの属性]** で属性名を入力します。 既定の名前は、 **[属性の型]** の値と同じです。  
   
 ## <a name="identify-key-attribute-and-changing-dimensions"></a>キー属性と変化するディメンションの識別  
  **[ディメンションのキーおよび種類を指定]** ページで、ディメンションのキー属性とする属性を選択します。 通常、キー属性はメイン ディメンション テーブルの主キー列に対応しており、ディメンションのリーフ メンバーのインデックスを作成します。  
@@ -108,7 +95,7 @@ ms.lasthandoff: 02/15/2018
  ディメンション デザイナーを使用すると、緩やかに変化するディメンションのプロパティを構成できます。  
   
 ## <a name="completing-the-dimension-wizard"></a>ディメンション ウィザードの完了  
- **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を表示します。 **[完了]** をクリックした後にスキーマ生成ウィザードを開始するには、 **[今すぐスキーマを生成する]**チェック ボックスをオンにします。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 このチェック ボックスを選択しない場合は、ディメンション デザイナーを使用して後でスキーマを作成できます。  
+ **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を表示します。 **[完了]** をクリックした後にスキーマ生成ウィザードを開始するには、 **[今すぐスキーマを生成する]** チェック ボックスをオンにします。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 このチェック ボックスを選択しない場合は、ディメンション デザイナーを使用して後でスキーマを作成できます。  
   
 ## <a name="see-also"></a>参照  
  [時間テーブルを生成することによって時間ディメンションを作成します。](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   

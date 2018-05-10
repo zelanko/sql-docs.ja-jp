@@ -1,25 +1,23 @@
 ---
-title: "SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード) | Microsoft Docs"
-ms.custom: 
+title: SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: abb1ef1edc25cd97a112dd5d9138af2a6ada3a95
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: abbc88bd4dea96968cdbcd80a95ecdf5afd4cdb3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)
 
@@ -41,13 +39,13 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>レポート定義またはレポート モデルをライブラリに追加する
   
-1.  ライブラリまたはライブラリ内のフォルダーを開きます。 まだライブラリが開いていない場合は、サイド リンク バーでライブラリの名前をクリックします。 ライブラリの名前が表示されていない場合は、 **[すべてのサイト コンテンツの表示]**をクリックし、ライブラリの名前をクリックします。  
+1.  ライブラリまたはライブラリ内のフォルダーを開きます。 まだライブラリが開いていない場合は、サイド リンク バーでライブラリの名前をクリックします。 ライブラリの名前が表示されていない場合は、 **[すべてのサイト コンテンツの表示]** をクリックし、ライブラリの名前をクリックします。  
   
-2.  **[アップロード]** メニューの **[ドキュメントのアップロード]**をクリックします。  
+2.  **[アップロード]** メニューの **[ドキュメントのアップロード]** をクリックします。  
   
-3.  1 つのレポート ファイルまたはレポート モデル ファイルをアップロードするには、レポート定義 (.rdl) ファイルまたはレポート モデル (.smdl) ファイルを選択し、 **[OK]**をクリックします。  
+3.  1 つのレポート ファイルまたはレポート モデル ファイルをアップロードするには、レポート定義 (.rdl) ファイルまたはレポート モデル (.smdl) ファイルを選択し、 **[OK]** をクリックします。  
   
-     レポート定義で共有データ ソース (.rsds) ファイルを使用して接続情報を外部データ ソースに格納している場合は、.rdl ファイルと .rsds ファイルを同時にアップロードできます。 これには、 **[複数のドキュメントのアップロード]**をクリックし、両方のファイルを指定して、 **[OK]**をクリックします。  
+     レポート定義で共有データ ソース (.rsds) ファイルを使用して接続情報を外部データ ソースに格納している場合は、.rdl ファイルと .rsds ファイルを同時にアップロードできます。 これには、 **[複数のドキュメントのアップロード]** をクリックし、両方のファイルを指定して、 **[OK]** をクリックします。  
   
  共有データ ソース、レポート モデル、またはサブレポートへの参照が含まれているレポートをアップロードすると、ファイルのアップロード時にレポート内で参照が破損します。 参照のリセット方法の詳細については、「[共有データ ソースを作成および管理する &#40;Reporting Services の SharePoint 統合モード&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
   

@@ -3,15 +3,12 @@ title: データベース エンジン アクセスのファイル システム 
 ms.custom: ''
 ms.date: 06/06/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file system permissions
 - service account [SQL Server], file system permissions
@@ -21,12 +18,11 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 202e5c7558fa79835447055b6f9498bb1a17bb12
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7438b2ba6a1a908d47dec55c6773645a4f3ead85
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>データベース エンジン アクセスのファイル システム権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,18 +32,18 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="to-grant-file-system-permission-to-the-per-service-sid"></a>サービスごとの SID にファイル システム権限を付与するには  
   
-1.  エクスプローラーを使用して、データベース ファイルが格納されているファイル システムの場所に移動します。 ファイル システム フォルダーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  エクスプローラーを使用して、データベース ファイルが格納されているファイル システムの場所に移動します。 ファイル システム フォルダーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[セキュリティ]** タブで **[編集]**をクリックし、 **[追加]**をクリックします。  
+2.  **[セキュリティ]** タブで **[編集]** をクリックし、 **[追加]** をクリックします。  
   
-3.  **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスで、場所の一覧の上部にある **[場所]**をクリックし、コンピューター名を選択して、 **[OK]**をクリックします。  
+3.  **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスで、場所の一覧の上部にある **[場所]** をクリックし、コンピューター名を選択して、 **[OK]** をクリックします。  
   
 4.  **[選択するオブジェクト名を入力してください]** ボックスに、オンライン ブックのトピック「 [**Windows サービス アカウントと権限の構成**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」に記載されているサービスごとの SID の名前を入力します。 ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービスごとの SID の名前の場合、既定のインスタンスには **NT SERVICE\MSSQLSERVER** 、指定のインスタンスには **NT SERVICE\MSSQL$InstanceName** を使用します。)  
   
-5.  **[名前の確認]** をクリックして、このエントリを検証します。 (検証に失敗した場合、名前が見つからないと示されることがあります。 **[OK]**をクリックすると、 **[複数の名前が見つかりました]** ダイアログ ボックスが表示されます。 ここで、サービスごとの SID の名前として **MSSQLSERVER** または **NT SERVICE\MSSQL$InstanceName**を選択し、 **[OK]**をクリックします。  **[OK]** を再度クリックして、 **[権限]** ダイアログ ボックスに戻ります。)   
+5.  **[名前の確認]** をクリックして、このエントリを検証します。 (検証に失敗した場合、名前が見つからないと示されることがあります。 **[OK]** をクリックすると、 **[複数の名前が見つかりました]** ダイアログ ボックスが表示されます。 ここで、サービスごとの SID の名前として **MSSQLSERVER** または **NT SERVICE\MSSQL$InstanceName**を選択し、 **[OK]** をクリックします。  **[OK]** を再度クリックして、 **[権限]** ダイアログ ボックスに戻ります。)   
 6.  **[グループまたはユーザー名]** ボックスで、サービスごとの SID を選択します。**[\<名前> のアクセス許可]** ボックスで、**[フル コントロール]** の **[許可]** チェック ボックスをオンにします。  
   
-7. **[適用]**をクリックし、 **[OK]** を 2 回クリックして終了します。  
+7. **[適用]** をクリックし、 **[OK]** を 2 回クリックして終了します。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン サービスの管理](../../database-engine/configure-windows/manage-the-database-engine-services.md)   

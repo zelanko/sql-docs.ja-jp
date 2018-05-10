@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 構成マネージャー (ネイティブ モード) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 構成マネージャー (ネイティブ モード) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -19,12 +18,11 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 760ed8d1793610dff2c15654b4d64cacfb3ae693
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1017185b0176b329308b049cb84fea1a1a50aeea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
 
@@ -78,21 +76,21 @@ Reporting Services 構成マネージャーは、SQL Server Reporting Services �
 
     - Windows のスタート画面から「**Reporting** 」と入力し、検索結果から "**Reporting Services 構成マネージャー**" を選択します。
 
-    - **[スタート]**を選択し、 **[すべてのプログラム]**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]**の順にポイントします。
+    - **[スタート]** を選択し、 **[すべてのプログラム]**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]** の順にポイントします。
 
          以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からレポート サーバー インスタンスを構成する場合は、そのバージョンのプログラム フォルダーを開きます。 たとえば、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] サーバー コンポーネントの構成ツールを開くには、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] ではなく [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] をポイントします。
 
          **Reporting Services 構成マネージャー**を選択します。
 
-2. **[Reporting Services 構成の接続]** ダイアログ ボックスが表示されたら、構成するレポート サーバー インスタンスを選択できます。 **[接続]**を選択します。
+2. **[Reporting Services 構成の接続]** ダイアログ ボックスが表示されたら、構成するレポート サーバー インスタンスを選択できます。 **[接続]** を選択します。
 
-3. **[サーバー名]**ボックスに、レポート サーバー インスタンスがインストールされているコンピューターの名前を指定します。 ローカル コンピューターの名前が既定で表示されますが、リモート コンピューターにインストールされているレポート サーバーに接続する場合は、リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力できます。
+3. **[サーバー名]** ボックスに、レポート サーバー インスタンスがインストールされているコンピューターの名前を指定します。 ローカル コンピューターの名前が既定で表示されますが、リモート コンピューターにインストールされているレポート サーバーに接続する場合は、リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力できます。
 
 4. リモート コンピューターを指定する場合は、 **[検索]** を選択して接続を確立します。
 
 5. **Report Server stance**で、構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスを選択します。 この一覧には、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー インスタンスのみが表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を構成することはできません。
 
-6. **[接続]**を選択します。
+6. **[接続]** を選択します。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -1,30 +1,23 @@
 ---
-title: "Merge-partition コマンドレット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Merge-partition コマンドレット |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 897104785c82686879a83811d070c3e1ce8391ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e5ca667b3172de982ea98a6d13c1fe6f810377b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-partition-cmdlet"></a>Merge-Partition コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]先パーティションに 1 つまたは複数のソース パーティションのデータをマージし、元のパーティションを削除します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  1 つ以上のマージ元パーティションのデータをマージ先パーティションにマージします。その後、マージ元パーティションを削除します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -45,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-name-string"></a>-名前\<文字列 >  
+### <a name="-name-string"></a>-Name \<string>  
  マージ元パーティション データをマージするマージ先パーティションを指定します。 このパーティションは既に存在している必要があります。  
   
 |||  
@@ -62,12 +55,12 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |必須/省略可能|true|  
-|位置|@shouldalert|  
+|位置|1|  
 |既定値||  
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-database-string"></a>-データベース\<文字列 >  
+### <a name="-database-string"></a>-Database \<string>  
  パーティションが属するデータベースを指定します。  
   
 |||  
@@ -100,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-server-string"></a>-サーバー\<文字列 >  
+### <a name="-server-string"></a>-Server \<string>  
  コマンドレットが接続して実行する Analysis Services インスタンスを指定します。 サーバー名が指定されていない場合は、localhost に接続されます。 既定のインスタンスの場合は、サーバー名のみを指定します。 名前付きインスタンスの場合は、servername \instancename 形式を使用します。 HTTP 接続では、http[s]://server[:port]/virtualdirectory/msmdpump.dll 形式を使用します。  
   
 |||  
@@ -111,8 +104,8 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- このパラメーターは、HTTP アクセス用に構成したインスタンスに対して、Analysis Service インスタンスへの HTTP 接続を使用するときに、ユーザー名とパスワードを渡すために使用されます。 詳細については、次を参照してください。 [Analysis Services 上にインターネット インフォメーション サービス (&) #40 です。 IIS"&"#41 への HTTP アクセスの構成; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)の HTTP 接続です。  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
+ このパラメーターは、HTTP アクセス用に構成したインスタンスに対して、Analysis Service インスタンスへの HTTP 接続を使用するときに、ユーザー名とパスワードを渡すために使用されます。 詳細については、次を参照してください。[インターネット インフォメーション サービスでの Analysis Services への HTTP アクセスの構成&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)の HTTP 接続です。  
   
  このパラメーターを指定した場合は、指定された Analysis Server インスタンスへの接続にユーザー名とパスワードが使用されます。 資格情報を指定していない場合は、ツールを実行しているユーザーの既定の Windows アカウントが使用されます。  
   
@@ -137,7 +130,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|true|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

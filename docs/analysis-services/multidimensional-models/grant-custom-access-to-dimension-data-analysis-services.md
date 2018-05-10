@@ -1,43 +1,23 @@
 ---
 title: 付与 (Analysis Services) のディメンション データへのカスタム アクセス |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f6a10ec3bab74c2bd5c540b1816d77c2dcbd104c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブに対する読み取りアクセス権を有効にした後は、明示的に許可またはディメンション メンバー (すべてのキューブで使用するメジャーを含む、Measures ディメンション内に含まれるメジャーを含む) へのアクセスを拒否する追加のアクセス許可を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  キューブに対する読み取りアクセスを有効にすると、ディメンション メンバー (キューブで使用されるすべてのメジャーを含むメジャー ディメンションのメジャーを含む) へのアクセスを明示的に許可または拒否する追加の権限を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
   
  ![ピボット テーブルとディメンション メンバーなし](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "ピボット テーブルとディメンション メンバーなし")  
   
@@ -50,12 +30,12 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  次の手順では、MDX でクエリを発行するクライアント接続を想定しています。 クライアントが Power BI の Power View などの DAX を使用する場合、ディメンションのセキュリティはクエリ結果で明らかになりません。 詳細については、「[多次元モデルの Power View について](understanding-power-view-for-multidimensional-models.md)」を参照してください。
       
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  すべてのメジャーまたはディメンション メンバーがカスタム アクセス シナリオで使用できる訳ではありません。 ロールが既定のメジャーまたはメンバーへのアクセスを制限したり、メジャー式の一部であるメジャーへのアクセスを制限したりすると、接続は失敗します。  
   
  **ディメンション セキュリティに対する障害 (既定のメジャー、既定のメンバー、メジャー式に使用されるメジャー) を確認します。**  
   
-1.  SQL Server Management Studio でキューブを右クリックし、 **[キューブをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]**の順にクリックします。  
+1.  SQL Server Management Studio でキューブを右クリックし、 **[キューブをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 2.  **DefaultMeasure**を探します。 キューブに対して 1 つと、パースペクティブごとに 1 つ見つかります。 ディメンション セキュリティを定義する際、既定のメジャーへのアクセスを制限しないようにしてください。  
   
@@ -69,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
      ロールは、既にキューブへの読み込みアクセス権を持っている必要があります。 詳細については、「 [Grant cube or model permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) を参照してください。  
   
-2.  **[ディメンション データ]** | **[基本]**で、権限を設定するディメンションを選択します。  
+2.  **[ディメンション データ]** | **[基本]** で、権限を設定するディメンションを選択します。  
   
 3.  属性階層を選択します。 属性の一部は、利用できない場合があります。 **[AttributeHierarchyEnabled]** を持つ属性のみが、 **[属性階層]** の一覧に表示されます。  
   
@@ -106,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  AllowedSet を作成すると、属性が複数階層に参加する際に波及効果があります。 たとえば、ロールが Washington 州へのアクセスを許可するとします (ロールから、Washington 州 にある会社の営業部門に権限が付与されるというシナリオを想定します)。 このロールを使用して接続しているユーザーの場合、先祖 (United States) または子孫 (Seattle および Redmond) を含むクエリに対しては、Washington 州を含むチェーンにあるメンバーのみが表示されます。 他の州は明示的に許可されていないため、与える影響は拒否された場合と同じです。  
   
 > [!NOTE]  
->  空の属性メンバー セット ({}) を定義した場合、属性メンバーはデータベース ロールにはまったく表示されません。 許可されたセットが存在しない場合は、空のセットが存在するものとして解釈されます。  
+>  空のセットを定義する場合 ({}) の属性メンバーの属性のメンバーは表示されません、データベース ロールにします。 許可されたセットが存在しない場合は、空のセットが存在するものとして解釈されます。  
   
  **[拒否されたメンバー セット]**  
  DeniedSet プロパティは、空のメンバー、すべてのメンバー (既定)、または一部の属性メンバーに解決されます。 拒否されたセットに特定の属性メンバーのセットのみが含まれている場合、データベース ロールに対しては、それらの特定のメンバーと子孫 (属性が複数階層にある場合) へのアクセスのみが拒否されます。 Washington 州の営業部門の例を考えてみましょう。 Washington が DeniedSet に配置されている場合、このロールを使用して接続しているユーザーには、Washington 以外のすべての州とそれらの子孫の属性が表示されます。  
@@ -136,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [セルのデータ &#40; へのカスタム アクセスを許可します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [データ マイニング構造およびモデル &#40; に対する権限を付与します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [データ マイニング構造およびモデルに対する権限を与える&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [データ ソース オブジェクト & #40; に対する権限を付与します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "データ マイニング サービスとデータ ソース |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング サービスとデータ ソース |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ad48f9f2f3a769dad964fb47cae33618f3b4ecb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
+  データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
   
  このトピックには、データ マイニング モデルの作成、処理、配置、またはクエリのために SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続する際に知っておく必要がある情報が含まれています。  
   
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
  そのほか、サーバーをチューニングしたりクライアントの利用に関するセキュリティを制御したりするためのプロパティを設定することもできます。 詳細については、「 [機能プロパティ](../../analysis-services/server-properties/feature-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションによるプラグイン アルゴリズムのサポートの詳細については、「 [SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473) 」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  各エディションによるプラグイン アルゴリズムのサポートの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>データ マイニング オブジェクトへのプログラムによるアクセス  
  以下のオブジェクト モデルを使用して、Analysis Services データベースへの接続を作成し、データ マイニング オブジェクトを操作できます。  
@@ -131,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [物理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理アーキテクチャ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [物理アーキテクチャ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [オブジェクトとデータ マイニング ソリューションの管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

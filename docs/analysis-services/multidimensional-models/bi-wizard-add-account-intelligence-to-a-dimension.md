@@ -1,35 +1,23 @@
 ---
-title: "ディメンションに勘定科目インテリジェンスを追加 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ディメンションに勘定科目インテリジェンスを追加 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], account intelligence
-- account intelligence [Analysis Services]
-ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6f8d62ccc2fe1a5ec8983c406f7c47153744eeed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションに勘定科目インテリジェンスを追加します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時間の経過と共に勘定科目が集計を分類を使用することができます。  
+  勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時間の経過と共に勘定科目が集計を分類を使用することができます。  
   
 > [!NOTE]  
 >  勘定科目インテリジェンスは、既存のデータ ソースに基づくディメンションにのみ使用できます。 データ ソースを使用せずに作成されたディメンションに対しては、勘定科目インテリジェンスを追加する前に、スキーマ生成ウィザードを使用してデータ ソース ビューを作成する必要があります。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 02/15/2018
  ウィザードの **[ディメンションの属性の構成]** ページで、選択した勘定科目ディメンションの勘定科目属性を指定します。 最初に、 **[追加]** 列で、ディメンション内のディメンション属性にマッピングする勘定科目属性の各種類の横にあるチェック ボックスをオンにします。 次に、 **[ディメンションの属性]** 列で、ドロップダウン リストを展開し、選択した属性の種類に対応するディメンション内の属性を選択します。 リストから属性を選択すると、その勘定科目属性の **Type** プロパティが設定されます。  
   
 ## <a name="mapping-account-types"></a>勘定科目の種類のマッピング  
- **勘定科目インテリジェンスの定義** の 2 ページ目では、ディメンション テーブルの勘定科目の種類の値を、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって認識される勘定科目の種類にマッピングします。 このページは、ディメンションに **[勘定科目の種類]** ディメンション属性を含めた場合にのみ表示されます。 **[勘定科目の種類]** ディメンションを含めるには、ウィザードの **[ディメンションの属性の構成]** ページで、 **[勘定科目の種類]**の横にあるチェック ボックスをオンにし、適切な属性を選択します。  
+ **勘定科目インテリジェンスの定義** の 2 ページ目では、ディメンション テーブルの勘定科目の種類の値を、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって認識される勘定科目の種類にマッピングします。 このページは、ディメンションに **[勘定科目の種類]** ディメンション属性を含めた場合にのみ表示されます。 **[勘定科目の種類]** ディメンションを含めるには、ウィザードの **[ディメンションの属性の構成]** ページで、 **[勘定科目の種類]** の横にあるチェック ボックスをオンにし、適切な属性を選択します。  
   
  **勘定科目インテリジェンスの定義** の 2 ページ目には、次の 2 つの列があります。  
   
@@ -66,9 +54,9 @@ ms.lasthandoff: 02/15/2018
   
  データベースの各勘定科目の種類にマッピングされる既定の集計を変更するには、データベース デザイナーを使用します。  
   
-1.  ソリューション エクスプローラーで [Analysis Services] プロジェクトを右クリックし、 **[データベースの編集]**をクリックします。  
+1.  ソリューション エクスプローラーで [Analysis Services] プロジェクトを右クリックし、 **[データベースの編集]** をクリックします。  
   
-2.  **[勘定科目の種類のマッピング]** ボックスで、 **[名前]**から勘定科目の種類を選択します。  
+2.  **[勘定科目の種類のマッピング]** ボックスで、 **[名前]** から勘定科目の種類を選択します。  
   
 3.  **[別名]** ボックスに、この勘定科目の種類の別名を入力します。  
   

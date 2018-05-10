@@ -3,15 +3,12 @@ title: デバイスからのバックアップ復元 (SQL Server) | Microsoft Do
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], device restores
 - backup devices [SQL Server], restoring from
@@ -22,12 +19,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 8671aac12b1b6d39541a73782e69861586a463f7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 68f17a7ccaa0321da4c72700db0d01327e04e539
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>デバイスからのバックアップ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +59,17 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
+2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]**をポイントし、 **[復元]**をクリックします。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
 4.  実行する復元操作の種類 (**[データベース]**、 **[ファイルとファイル グループ]**、または **[トランザクション ログ]**) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
   
-5.  **[全般]** ページの **[復元用のソース]** セクションで、 **[デバイスから]**をクリックします。  
+5.  **[全般]** ページの **[復元用のソース]** セクションで、 **[デバイスから]** をクリックします。  
   
 6.  **[デバイスから]** ボックスの参照ボタン ([...]) をクリックします。 **[バックアップの指定]** ダイアログ ボックスが開きます。  
   
-7.  **[バックアップ メディア]** ボックスの一覧で、 **[バックアップ デバイス]**をクリックします。次に、 **[追加]** をクリックして **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
+7.  **[バックアップ メディア]** ボックスの一覧で、 **[バックアップ デバイス]** をクリックします。次に、 **[追加]** をクリックして **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
   
 8.  **[バックアップ デバイス]** ボックスで、復元操作に使用するデバイスを選択します。  
   
@@ -83,7 +79,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで、バックアップ操作に使用する論理バックアップ デバイスまたは物理バックアップ デバイスを、次のように指定します。 この例は、物理名が `Z:\SQLServerBackups\AdventureWorks2012.bak`というディスク ファイルから復元します。  
   

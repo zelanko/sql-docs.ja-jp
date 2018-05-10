@@ -1,27 +1,25 @@
 ---
-title: "ユーザーおよび警告管理者にアクセス許可を付与する | Microsoft Docs"
-ms.custom: 
+title: ユーザーおよび警告管理者にアクセス許可を付与する | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9a4aa4f2ce4b9b69035fe45642a8247794f1e395
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 136406ea820f89ff52df5921511227af80178054
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>ユーザーおよび警告管理者に権限を付与する
 
@@ -42,19 +40,19 @@ SharePoint 権限の詳細については、「 [ユーザー権限とアクセ�
   
 1.  権限を付与する SharePoint サイトに移動します。  
   
-2.  ツール バーの **[サイトの操作]** をクリックし、 **[サイトの権限]**をクリックします。  
+2.  ツール バーの **[サイトの操作]** をクリックし、 **[サイトの権限]** をクリックします。  
   
      このオプションが表示されない場合は、他のユーザーに権限を付与する権限がありません。  
   
-3.  **[アクセス許可の付与]**をクリックします。  
+3.  **[アクセス許可の付与]** をクリックします。  
   
-4.  **[ユーザー/グループ]**ボックスに、権限を付与するユーザー名、グループ名、または電子メール アドレスを入力します。  
+4.  **[ユーザー/グループ]** ボックスに、権限を付与するユーザー名、グループ名、または電子メール アドレスを入力します。  
   
 5.  **[SharePoint グループへのユーザーの追加]** または **[ユーザーにアクセス許可を直接付与する]** をクリックします。 **[SharePoint グループへのユーザーの追加]** と **[ユーザーにアクセス許可を直接付与する]** のどちらを選択したかに応じて、次のいずれかを実行します。  
   
-    -   **[SharePoint グループへのユーザーの追加]**をクリックした場合は、ドロップダウン リストで権限レベルを選択します。  
+    -   **[SharePoint グループへのユーザーの追加]** をクリックした場合は、ドロップダウン リストで権限レベルを選択します。  
   
-    -   **[ユーザーにアクセス許可を直接付与する]**をクリックした場合は、権限レベルを選択します。  
+    -   **[ユーザーにアクセス許可を直接付与する]** をクリックした場合は、権限レベルを選択します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 

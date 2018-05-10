@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services での URL アクセスまたは SOAP の選択 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services での URL アクセスまたは SOAP の選択 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 593cbfc543087123ff8760ce47fb973f3d46e795
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dbb294c04f82661c2f7a1ebd736ec0ad2ceb143f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Reporting Services での URL アクセスまたは SOAP の選択
 
@@ -28,7 +26,7 @@ ms.lasthandoff: 01/09/2018
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションへ統合するのは、必ずしも容易な作業ではありません。 ただし、その原因はプログラミング モデルや API が複雑なためではなく、統合方法が多数存在することです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はもともと開発者向けプラットフォームとして設計されているので、プログラミングを柔軟に行えるようになっています。 柔軟性を得るには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート ナビゲーション機能と管理機能を既存ビジネス アプリケーションに統合することに関して重要な意思決定を行う必要があります。
 
 > [!NOTE]
-> SQL Server 2017 Reporting Services 以降では、ソリューションの開発に REST API アクセスを使用できます。 SOAP API アクセスは推奨されません。 詳細については、「[Develop with the REST APIs for Reporting Services](../developer/rest-api.md)」 (Reporting Services の REST API による開発) を参照してください。
+> SQL Server 2017 Reporting Services 以降では、ソリューションの開発に REST API アクセスを使用できます。 SOAP API アクセスは非推奨とされます。 詳細については、「[Develop with the REST APIs for Reporting Services](../developer/rest-api.md)」 (Reporting Services の REST API による開発) を参照してください。
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションに統合するには、URL アクセスと Reporting Services SOAP API という 2 つの方法があります。 どちらの方法を使用するかは、いくつかの要因によって異なります。 状況によっては、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム ビジネス アプリケーションに統合する場合に URL アクセスと SOAP の両方が必要です。 決定に際して、次の事項を考慮する必要があります。  
   

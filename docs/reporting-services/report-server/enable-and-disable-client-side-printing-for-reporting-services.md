@@ -1,32 +1,30 @@
 ---
-title: "Reporting Services のクライアント側印刷機能の有効化と無効化 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services のクライアント側印刷機能の有効化と無効化 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - pdf
 - viewer
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ada6514fe7efa57bea6e6d0ac6e484d4a4a88a7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 54ed6dbd9c8f8a39be49ad9c979431e8666783df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
 
@@ -41,10 +39,10 @@ ms.lasthandoff: 01/09/2018
   
 |||  
 |-|-|  
-|最初のダイアログ ボックスは、すべてのブラウザーで同じです。印刷の向きなどの基本的なレイアウト プロパティを変更できます。 **[印刷]**をクリックしたときの動作は、使用しているブラウザーによって多少異なります。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
+|最初のダイアログ ボックスは、すべてのブラウザーで同じです。印刷の向きなどの基本的なレイアウト プロパティを変更できます。 **[印刷]** をクリックしたときの動作は、使用しているブラウザーによって多少異なります。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Chrome では、詳細なブラウザーの印刷ダイアログ ボックスが開きます。   印刷設定を変更したり、印刷を実行したり、オペレーティング システムの印刷ダイアログ ボックスを開いたりすることができます。|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |PDF リーダー アプリケーションがインストール済みの場合、印刷ボタンをクリックすると PDF ファイルのプレビュー ウィンドウが表示され、PDF ファイルを保存または印刷することができます。||  
-|PDF リーダー アプリケーションがインストールされていない場合は、次の 2 種類の動作になります。<br /><br /> レポートが自動的に表示され、使用しているブラウザーのダウンロード プロセスを使用して PDF ファイルがダウンロードされます。   **注:** 複雑なレポートになるほど、 **[印刷]** をクリックしてからブラウザーのダウンロード通知が表示されるまでの時間が長くなります。 **[レポートの PDF を表示するには、ここをクリックしてください。]**をクリックして、PDF ファイルを再度ダウンロードすることもできます。<br /><br /> **[レポートの PDF を表示するには、ここをクリックしてください。]**をクリックして、PDF ファイルをダウンロードします。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|PDF リーダー アプリケーションがインストールされていない場合は、次の 2 種類の動作になります。<br /><br /> レポートが自動的に表示され、使用しているブラウザーのダウンロード プロセスを使用して PDF ファイルがダウンロードされます。   **注:** 複雑なレポートになるほど、 **[印刷]** をクリックしてからブラウザーのダウンロード通知が表示されるまでの時間が長くなります。 **[レポートの PDF を表示するには、ここをクリックしてください。]** をクリックして、PDF ファイルを再度ダウンロードすることもできます。<br /><br /> **[レポートの PDF を表示するには、ここをクリックしてください。]** をクリックして、PDF ファイルをダウンロードします。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> クライアント側印刷機能のトラブルシューティング  
  レポート ビューアーのツールバーで印刷ボタンが無効になっている場合は、次のことを確認します。  
@@ -66,31 +64,31 @@ ms.lasthandoff: 01/09/2018
   
     2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でレポート サーバー インスタンスに接続します。  
   
-    3.  レポート サーバー ノードを右クリックして、 **[プロパティ]**をクリックします。 **[プロパティ]** オプションが無効になっている場合は、管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始したことを確認してください。  
+    3.  レポート サーバー ノードを右クリックして、 **[プロパティ]** をクリックします。 **[プロパティ]** オプションが無効になっている場合は、管理者特権を使用して [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開始したことを確認してください。  
   
-    4.  **[詳細設定]**をクリックします。  
+    4.  **[詳細設定]** をクリックします。  
   
-    5.  **[EnableClientPrinting]**を選択します。  
+    5.  **[EnableClientPrinting]** を選択します。  
   
-    6.  True または False に設定して、 **[OK]**をクリックします。  
+    6.  True または False に設定して、 **[OK]** をクリックします。  
   
          ![ssrs_ssmsproperties_clientprinting](../../reporting-services/report-server/media/ssrs-ssmsproperties-clientprinting.png "ssrs_ssmsproperties_clientprinting")  
   
 -   **SharePoint モードのレポート サーバー**の場合:  
   
-    1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]**をクリックします。  
+    1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** をクリックします。  
   
-    2.  **[サービス アプリケーションの管理]**をクリックします。  
+    2.  **[サービス アプリケーションの管理]** をクリックします。  
   
     3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前をクリックし、SharePoint リボンで **[管理]** をクリックします。  
   
-    4.  **[システム設定]**をクリックします。  
+    4.  **[システム設定]** をクリックします。  
   
-    5.  **[クライアントの印刷を有効にする]**を選択します。 **[クライアントの印刷を有効にする]** オプションは、ページの下部付近にあります。  
+    5.  **[クライアントの印刷を有効にする]** を選択します。 **[クライアントの印刷を有効にする]** オプションは、ページの下部付近にあります。  
   
     6.  **[OK]** をクリックします。  
   
--   レポート サーバー システム プロパティの **EnableClientPrinting** を **false.**に設定するスクリプトまたはコードを記述します。  
+-   レポート サーバー システム プロパティの **EnableClientPrinting** を **false.** に設定するスクリプトまたはコードを記述します。  
   
  次のサンプル スクリプトは、クライアント側印刷機能を無効にする方法の一例を示しています。 この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コードをコンパイルして実行すると、 **EnableClientPrinting** プロパティが **False**に設定されます。 コードの実行後、IIS を再起動してください。  
   

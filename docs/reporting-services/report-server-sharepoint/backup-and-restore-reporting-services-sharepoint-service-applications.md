@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services SharePoint サービス アプリケーションのバックアップと復元 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services SharePoint サービス アプリケーションのバックアップと復元 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1fdb9373108a28559f252cb57eb452a9f99d7e60
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 09da0857743d49cb90a074c95190dd8809e7efbb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
 
@@ -67,13 +65,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  SharePoint サーバーの全体管理で、**[バックアップおよび復元]** グループの **[バックアップの実行]** を選択します。  
   
-2.  **[共有サービス]** ノードで、 **[共有サービス アプリケーション]** を展開し、サービス アプリケーションを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション]**になります。  
+2.  **[共有サービス]** ノードで、 **[共有サービス アプリケーション]** を展開し、サービス アプリケーションを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション]** になります。  
   
 3.  **[次へ]** を選択します。  
   
-4.  **[バックアップの場所]** にパスを入力し、**[バックアップの開始]**を選択します。  
+4.  **[バックアップの場所]** にパスを入力し、**[バックアップの開始]** を選択します。  
   
-5.  上記のプロセスを繰り返します。ただし、サービス アプリケーションを選択する代わりに、 **[共有サービス プロキシ]** ノードを展開し、サービス アプリケーション プロキシを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション プロキシ]**になります。  
+5.  上記のプロセスを繰り返します。ただし、サービス アプリケーションを選択する代わりに、 **[共有サービス プロキシ]** ノードを展開し、サービス アプリケーション プロキシを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション プロキシ]** になります。  
   
  詳細については、 SharePoint のドキュメントの次のトピックを参照してください。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  **[Reporting Services (SSRS) サービス データベース]** セクションの内容を確認します。  
   
-4.  **[Windows 認証]**をクリックします。  
+4.  **[Windows 認証]** をクリックします。  
   
 5.  アカウントとパスワードを入力します。 必要に応じて、 **[Windows 資格情報として使用する]** を選択します。  
   

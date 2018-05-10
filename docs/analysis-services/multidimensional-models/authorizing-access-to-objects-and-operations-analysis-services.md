@@ -1,40 +1,23 @@
 ---
-title: "オブジェクトと操作 (Analysis Services) へのアクセスの承認 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: オブジェクトと操作 (Analysis Services) へのアクセスの承認 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.general.f1
-- sql13.asvs.roledesignerdialog.membership.f1
-helpviewer_keywords:
-- access rights [Analysis Services], users
-- permissions [Analysis Services], users
-- security [Analysis Services], user access
-- user access rights [Analysis Services]
-- granting permissions [Analysis Services], users
-ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5a8dc16e1f2885141f20395cbe5e150996919e06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、ユーザーまたはグループが属している各データベース ロールに関連付けられている権限を組み合わせて、特定の Windows ユーザーまたはグループに有効な権限を判断します。 その結果、1 つのデータベース ロールでディメンション、メジャー、または属性を表示するためのユーザーまたはグループ権限を付与していなくても、別のデータベース ロールでそのユーザーまたはグループ権限を付与している場合、そのユーザーまたはグループにはオブジェクトを表示する権限が与えられます。  
   
@@ -44,7 +27,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="list-roles-defined-for-your-database"></a>データベースに対して定義されたロールの一覧表示  
  管理者は、SQL Server Management Studio から簡単な DMV クエリを実行することにより、サーバー上で定義されたすべてのロールの一覧を取得できます。  
   
-1.  SSMS でデータベースを右クリックし、 **[新しいクエリ]** | **[MDX]**の順に選択します。  
+1.  SSMS でデータベースを右クリックし、 **[新しいクエリ]** | **[MDX]** の順に選択します。  
   
 2.  次のクエリを入力し、F5 キーを押して実行します。  
   

@@ -1,30 +1,28 @@
 ---
-title: "Reporting Services 機能の有効化と無効化 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 機能の有効化と無効化 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a2b22762e13566c3ae7a9b9ce6861c96a86f75a7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: edb78cc093837b8eb2beb1c3afc882a723e9a138
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
   運用レポート サーバーに対する外部からの攻撃の危険性を低減するためのロックダウン ストラテジには含まれないレポート サーバー機能を無効にできます。 ほとんどの場合は、複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を同時に実行して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で提供される機能をすべて利用します。 ただし、配置モデルによっては、不要な機能を無効にすることができます。 たとえば、すべてのレポート処理をスケジュールに従って実行するように構成すると、バックグラウンド処理だけを有効にすることもできます。 同様に、対話型の要求時レポートだけが必要な場合は、レポート サーバー Web サービスだけを実行することもできます。  
@@ -65,11 +63,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]**をポイントして、 **[ファセット]**をクリックします。  
+2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]** をポイントして、 **[ファセット]** をクリックします。  
   
-3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]**を選択します。  
+3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
   
-4.  **[ファセットのプロパティ]**で次の操作を行います。  
+4.  **[ファセットのプロパティ]** で次の操作を行います。  
   
     -   レポート サーバー Web サービスを有効にするには、 **WebServiceAndHTTPAccessEnabled** を **True**に設定します。  
   
@@ -108,11 +106,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]**をポイントして、 **[ファセット]**をクリックします。  
+2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]** をポイントして、 **[ファセット]** をクリックします。  
   
-3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]**を選択します。  
+3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
   
-4.  **[ファセットのプロパティ]**で次の操作を行います。  
+4.  **[ファセットのプロパティ]** で次の操作を行います。  
   
     -   定期的なイベントおよび配信を有効にするには、 **ScheduleEventsAndReportDeliveryEnabled** を **True**に設定します。  
   
@@ -125,7 +123,8 @@ ms.lasthandoff: 01/09/2018
   
 ##  <a name="WebPortal"></a> Web ポータル
   
-以前のバージョンでは、**IsReportManagerEnabled** を false に設定することで、レポート マネージャーを無効にすることができました。 **IsReportManagerEnabled** は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で廃止されました。 Web ポータルは常に有効になります。
+以前のバージョンでは、**IsReportManagerEnabled** を false に設定することで、レポート マネージャーを無効にすることができました。 
+  **IsReportManagerEnabled** は、SQL Server 2016 Reporting Services 累積更新プログラム 2 の時点で非推奨とされました。 Web ポータルは常に有効になります。
   
 ##  <a name="ReportBuilder"></a> レポート ビルダー  
   
@@ -133,9 +132,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[プロパティ]**をクリックします。  
+2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]**で **[セキュリティ]**をクリックします。  
+3.  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]** で **[セキュリティ]** をクリックします。  
   
     -   レポート ビルダーを有効にするには、 **[アドホック レポート実行を有効にする]** オプションを選択します。  
   
@@ -149,9 +148,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[プロパティ]**をクリックします。  
+2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]**で **[セキュリティ]**をクリックします。  
+3.  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]** で **[セキュリティ]** をクリックします。  
   
     -   Windows 統合セキュリティを有効にするには、 **[レポート データ ソースで Windows 統合セキュリティを有効にする]** オプションを選択します。  
   

@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services キャッシュのクリア |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services キャッシュのクリア |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 19055dc68ebd1e9baa2fa1b1330370d01f7d864a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d5c736d07a6bac184e255e38abbe6d3f3afa416d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services キャッシュのクリア
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services は、クエリのパフォーマンス向上のためにデータをキャッシュします。 このトピックでは、MDX クエリへの応答で作成されたキャッシュを、XMLA ClearCache コマンドを使用してクリアするための推奨事項について説明します。 ClearCache を実行した場合の効果は、テーブル モデルまたは多次元モデルのどちらを使用しているかによって異なります。  
+  Analysis Services は、クエリのパフォーマンス向上のためにデータをキャッシュします。 このトピックでは、MDX クエリへの応答で作成されたキャッシュを、XMLA ClearCache コマンドを使用してクリアするための推奨事項について説明します。 ClearCache を実行した場合の効果は、テーブル モデルまたは多次元モデルのどちらを使用しているかによって異なります。  
   
  **多次元モデルのキャッシュをクリアする場合**  
   
@@ -55,13 +47,13 @@ Analysis Services は、クエリのパフォーマンス向上のためにデ�
   
 #### <a name="step-1-get-the-object-identifier"></a>手順 1: オブジェクトの識別子を取得する  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でオブジェクトを右クリックし、 **[プロパティ]**を選択して、 **[プロパティ]** ペインの ID プロパティの値をコピーします。 この方法は、データベース、キューブ、ディメンション、またはテーブルに使用できます。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でオブジェクトを右クリックし、 **[プロパティ]** を選択して、 **[プロパティ]** ペインの ID プロパティの値をコピーします。 この方法は、データベース、キューブ、ディメンション、またはテーブルに使用できます。  
   
-2.  メジャー グループの ID を取得するには、メジャー グループを右クリックし、 **[メジャー グループをスクリプト化]**を選択します。 **[作成]** または **[変更]**のいずれかを選択し、クエリをウィンドウに送信します。 メジャー グループの ID は、オブジェクト定義に表示されます。 オブジェクト定義の ID をコピーします。  
+2.  メジャー グループの ID を取得するには、メジャー グループを右クリックし、 **[メジャー グループをスクリプト化]** を選択します。 **[作成]** または **[変更]** のいずれかを選択し、クエリをウィンドウに送信します。 メジャー グループの ID は、オブジェクト定義に表示されます。 オブジェクト定義の ID をコピーします。  
   
 #### <a name="step-2-run-the-query"></a>手順 2: クエリを実行する  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でデータベースを右クリックし、 **[新しいクエリ]**をポイントして、 **[XMLA]**を選択します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でデータベースを右クリックし、 **[新しいクエリ]** をポイントして、 **[XMLA]** を選択します。  
   
 2.  XMLA クエリ ウィンドウに次のコードをコピーします。 **DatabaseID** を現在の接続のデータベース ID に変更します。  
   

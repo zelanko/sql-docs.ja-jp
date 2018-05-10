@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
@@ -18,12 +17,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 5753323aaf5d0dad99354441a6d44bbaecb2e845
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5a2f13d7a3931656ba166a14a71ef45f7c8b83ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、ローカル レポート サーバー インスタンスに接続します。  
   
-2.  **[Web サービス URL]**をクリックします。  
+2.  **[Web サービス URL]** をクリックします。  
   
 3.  仮想ディレクトリを指定します。 仮想ディレクトリ名によって、要求を受信するアプリケーションが識別されます。 IP アドレスとポートは複数のアプリケーションで共有される可能性があるため、どのアプリケーションが要求を受信するのかを仮想ディレクトリ名で指定します。  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 01/09/2018
   
      レポート サーバー Web サービスの既定の仮想ディレクトリ名は、 **ReportServer**です。  
   
-4.  ネットワーク上のレポート サーバー コンピューターを一意に識別する IP アドレスを指定します。 ホスト ヘッダーを指定したり、同じアプリケーション インスタンスに対して追加の URL を定義したりする場合は、 **[詳細設定]**をクリックする必要があります。 URL の詳細プロパティを設定する方法については、このトピックで後ほど説明します。 詳細プロパティを設定しない場合は、 **[Web サービス URL]** ページを使用して値を次の中から選択します。  
+4.  ネットワーク上のレポート サーバー コンピューターを一意に識別する IP アドレスを指定します。 ホスト ヘッダーを指定したり、同じアプリケーション インスタンスに対して追加の URL を定義したりする場合は、 **[詳細設定]** をクリックする必要があります。 URL の詳細プロパティを設定する方法については、このトピックで後ほど説明します。 詳細プロパティを設定しない場合は、 **[Web サービス URL]** ページを使用して値を次の中から選択します。  
   
     -   **[すべて割り当て]** は、レポート サーバー アプリケーションを指す URL に、コンピューターに割り当てられている IP アドレスをどれでも使用できることを示します。 コンピューターに割り当てられている IP アドレスに対してドメイン ネーム サーバーによって解決されるわかりやすいホスト名 (コンピューター名など) も、この値の対象に含まれます。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL の既定値です。  
   
@@ -156,9 +154,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>URL の詳細プロパティを設定するには  
   
-1.  **[Web サービスの URL]** ページまたは **[Web ポータルの URL]** ページで、 **[詳細設定]**をクリックします。  
+1.  **[Web サービスの URL]** ページまたは **[Web ポータルの URL]** ページで、 **[詳細設定]** をクリックします。  
   
-2.  **[追加]**をクリックします。  
+2.  **[追加]** をクリックします。  
   
 3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、`http://www` を含む URL 全体を指定します。  
   

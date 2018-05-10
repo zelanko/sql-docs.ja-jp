@@ -1,35 +1,23 @@
 ---
-title: "増分生成の理解 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 増分生成の理解 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- incremental generation [Analysis Services]
-- Schema Generation Wizard, incremental generation
-- relational schema [Analysis Services], incremental generation
-ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0f1ebc1bbe60bc40d798ba3c3a9c2c21e4f98f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-スキーマを初めて生成した後は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
+  スキーマを初めて生成した後は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
   
 -   ウィザードによってテーブルが以前に生成されている場合、そのテーブルは上書きされます。 ウィザードによって生成されたテーブルが上書きされないようにするには、データ ソース ビューのテーブルの **AllowChangesDuringGeneration** プロパティを **false**に変更します。 テーブルのコントロールを取得すると、テーブルはユーザー定義による他のテーブルと同じように取り扱われ、再生成中に影響を受けなくなります。 テーブルを生成から除外したら、後でデータ ソース ビューのテーブルの **AllowChangesDuringGeneration** プロパティを **true** に変更し、テーブルを再び開いて、ウィザードによる変更を反映させることができます。 詳細については、「[データ ソース ビューのプロパティの変更 (Analysis Services)](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
@@ -92,6 +80,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [データ ソース ビューとデータ ソースへの変更を管理します。](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [スキーマ生成ウィザード &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [スキーマ生成ウィザード & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

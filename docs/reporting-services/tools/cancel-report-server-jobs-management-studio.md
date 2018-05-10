@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
@@ -18,12 +17,11 @@ caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d0ea49d4e9d399f5027f235bce8b895d063ed4e7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ad15367b678ae9a304feb3d5a384d0611d6a9c9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>[レポート サーバー ジョブのキャンセル] (Management Studio)
   実行中のレポートの表示や実行のキャンセルを行うには、 **[レポート サーバー ジョブのキャンセル]** ダイアログ ボックスを使用します。 このダイアログ ボックスには、レポート サーバーで現在実行中のすべてのジョブが表示されます。 現在処理中のジョブを一時停止または再開することはできませんが、すべてのジョブ、または時間がかかりすぎて完了できない場合は個々のジョブをキャンセルできます。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
 -   システム ジョブは、レポート サーバーで開始されるジョブです。 システム ジョブには、スケジュールされたレポート処理が含まれます。  
   
- このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバーに接続し、 **[ジョブ]**を右クリックして **[すべてのジョブのキャンセル]**をクリックします。 または、 **[ジョブ]**を開き、レポート サーバーで実行中のジョブを右クリックして、 **[ジョブのキャンセル]**をクリックします。  
+ このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバーに接続し、 **[ジョブ]** を右クリックして **[すべてのジョブのキャンセル]** をクリックします。 または、 **[ジョブ]** を開き、レポート サーバーで実行中のジョブを右クリックして、 **[ジョブのキャンセル]** をクリックします。  
   
  ジョブを取り消す前に、そのプロパティを表示し、ジョブがいつ開始されたかを確認します。 詳細については、「[ジョブのプロパティ &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)」を参照してください。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
  レポートの名前が表示されます。 サブスクリプションは、説明で識別されます。  
   
  **型**  
- 有効な値は、 **[ユーザー]** または **[システム]**です。  
+ 有効な値は、 **[ユーザー]** または **[システム]** です。  
   
  **Start Time**  
  ジョブの開始時刻が表示されます。  
@@ -55,7 +53,7 @@ ms.lasthandoff: 01/09/2018
  ユーザーによって開始されたジョブの場合、この列には処理を開始したユーザーの名前が表示されます。  
   
  **ステータス**  
- ジョブの状態が表示されます。 有効な値は、 **[新規]** および **[実行中]**です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]**に変わります。 変更を確認するには、ページを更新する必要があります。  
+ ジョブの状態が表示されます。 有効な値は、 **[新規]** および **[実行中]** です。 ジョブの開始時の状態は常に **[新規]** です。 60 秒後に、状態は **[実行中]** に変わります。 変更を確認するには、ページを更新する必要があります。  
   
  **[OK]**  
  1 つのジョブまたは複数のジョブを取り消します。 ジョブはすぐに取り消され、再開することはできません。 誤ってジョブを取り消した場合は、レポートまたはサブスクリプションを再度要求して新しいジョブを開始する必要があります。  

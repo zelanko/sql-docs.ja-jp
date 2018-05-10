@@ -1,38 +1,23 @@
 ---
-title: "日付型ディメンションの作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 日付型ディメンションの作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- adding time intelligence
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- time intelligence [Analysis Services]
-ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2e42e3d8a3a3f33840d1004119b84fbe4a247888
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>データベース ディメンション - 日付型ディメンションの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
   
  通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のキューブには、さまざまな形式の時間ディメンションが組み込まれています。 データの粒度とレポート要件によっては、各キューブに、複数の時間ディメンションまたは同じ時間ディメンションの複数の階層が含まれている場合があります。 ただし、すべてのキューブに時間ディメンションを組み込む必要があるわけではありません。 利用状況に基づくディメンションでは、時間ではなく利用状況に基づいてコストが設定されるので、利用状況に基づいてコストを設定する場合など、一部の OLAP アプリケーションでは時間ディメンションを使用する必要がありません。  
   

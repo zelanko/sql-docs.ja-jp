@@ -1,15 +1,14 @@
 ---
-title: "データ警告デザイナー | Microsoft Docs"
-ms.custom: 
+title: データ警告デザイナー | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - editing, data alerts
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b412c5beb8de29b1d51ab3db2240608f1c7b50f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 85b6bb9304d9ff29e80a58a84facfce055d560e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
 
@@ -147,9 +145,9 @@ ms.lasthandoff: 01/09/2018
   
 -   文字列データ型の比較: **である**、 **ではない**、および **含む**  
   
- ルールを作成する際には、 **[値入力モード]** または **[フィールドの選択モード]**を選択して、値とフィールドのどちらを比較に使用するかを指定します。 **[値入力モード]**を選択した場合は、比較する値のリストを指定します。 複数の OR 句を含む比較は、 [!INCLUDE[tsql](../includes/tsql-md.md)]の IN 論理比較 (一致項目に対してテストする値のリスト) と非常によく似ています。 詳細については、「[IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
+ ルールを作成する際には、 **[値入力モード]** または **[フィールドの選択モード]** を選択して、値とフィールドのどちらを比較に使用するかを指定します。 **[値入力モード]** を選択した場合は、比較する値のリストを指定します。 複数の OR 句を含む比較は、 [!INCLUDE[tsql](../includes/tsql-md.md)]の IN 論理比較 (一致項目に対してテストする値のリスト) と非常によく似ています。 詳細については、「[IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md)」を参照してください。  
   
- **[フィールドの選択モード]**を選択した場合、比較は 2 つのフィールド間で行ごとに行われます。 2 つのフィールドは互換性のあるデータ型 (2 つの数値フィールドなど) である必要があります。互換性がない場合、比較は無効になります。 **[フィールドの選択モード]**を選択すると、フィールドのリストが自動的に表示されます。  
+ **[フィールドの選択モード]** を選択した場合、比較は 2 つのフィールド間で行ごとに行われます。 2 つのフィールドは互換性のあるデータ型 (2 つの数値フィールドなど) である必要があります。互換性がない場合、比較は無効になります。 **[フィールドの選択モード]** を選択すると、フィールドのリストが自動的に表示されます。  
   
  ルールを伴わないデータ警告も有効です。 このタイプの警告は、非常に有用な場合があります。 たとえば、レポート データ フィードにデータがある場合のみ通知されるというシナリオがあるとします。 データ フィードは出席者の情報を格納しますが、フィードは出席者がキャンセルするまで空です。 このシナリオでは、最初のキャンセルで警告の通知が開始されます。  
   
@@ -204,7 +202,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="EditAlert"></a> データ警告定義の編集  
  データ警告定義は、保存後に再度開いてデータ警告デザイナーで編集することができます。 ルールや句を追加、変更、または削除したり、スケジュールや電子メール設定を変更することができます。 警告で使用するレポート データ フィードに変更があり、警告ルールで参照するフィールドが提供されなくなった場合、またはデータ型などフィールドのメタデータに変更があった場合は、警告の定義が有効ではなくなるので、再度保存するには定義を修正する必要があります。 異なるデータ フィードを使用する場合は、新しい警告の定義を作成する必要があります。  
   
- データ警告定義を編集するには、データ警告マネージャーで目的の定義を右クリックし、 **[編集]**をクリックします。 次の図は、データ警告マネージャーでの、データ警告のショートカット メニューを示しています。  
+ データ警告定義を編集するには、データ警告マネージャーで目的の定義を右クリックし、 **[編集]** をクリックします。 次の図は、データ警告マネージャーでの、データ警告のショートカット メニューを示しています。  
   
  ![[編集] をクリックしてデータ警告デザイナーを開く](../reporting-services/media/rs-alertmanageriwopendesigner.gif "[編集] をクリックしてデータ警告デザイナーを開く")  
   

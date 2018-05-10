@@ -1,27 +1,25 @@
 ---
-title: "ページ分割されたレポートの使用 (Web ポータル) | Microsoft Docs"
-ms.custom: 
+title: ページ分割されたレポートの使用 (Web ポータル) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e7036050c715f1c53275cdad4cd2f3069d7b6f8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
@@ -35,7 +33,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 1.  メニュー バーから [新規] を選択します。  
   
-2.  **[ページ分割されたレポート]**を選択します。  
+2.  **[ページ分割されたレポート]** を選択します。  
   
     ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
   
@@ -60,7 +58,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 ## <a name="properties"></a>[プロパティ]  
   
-プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[リンク レポートの作成]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、または **[置換]**を選択することもできます。  
+プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[リンク レポートの作成]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、または **[置換]** を選択することもできます。  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
@@ -87,7 +85,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
     data source=(a SQL Server instance);initial catalog=MyData  
   
-接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、Web ポータル上で定義、表示、変更できません。 ただし、 **[既定値より優先]** をクリックして静的な接続文字列を入力することで、データ ソースの式を置き換えることができます。 式に戻す場合は、 **[既定値に戻す]**をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
+接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、Web ポータル上で定義、表示、変更できません。 ただし、 **[既定値より優先]** をクリックして静的な接続文字列を入力することで、データ ソースの式を置き換えることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
   
 **[資格情報]**  
   
@@ -166,9 +164,9 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 以上のキャッシュ オプションを適用した後は、キャッシュ更新計画を定義できます。 そのためには、キャッシュの設定を適用した後で表示される **[更新計画の管理]** リンクを選択します。 キャッシュ更新計画のページが表示されます。   
   
-新しいキャッシュ更新計画を作成するには、 **[新しいキャッシュ更新計画]**を選択します。 計画の名前を入力し、スケジュールを指定します。 データセットでパラメーターが定義されている場合、その一覧が表示され、読み取り専用以外のパラメーターには値を指定できます。  
+新しいキャッシュ更新計画を作成するには、 **[新しいキャッシュ更新計画]** を選択します。 計画の名前を入力し、スケジュールを指定します。 データセットでパラメーターが定義されている場合、その一覧が表示され、読み取り専用以外のパラメーターには値を指定できます。  
   
-完了したら、 **[キャッシュ更新計画の作成]**を選択します。  
+完了したら、 **[キャッシュ更新計画の作成]** を選択します。  
   
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   

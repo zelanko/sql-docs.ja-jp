@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: af700470aaa18c5e8588dd817b3fa0111364875f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -92,7 +90,7 @@ ms.lasthandoff: 03/20/2018
  
  2. **SharePoint 2016 管理シェル** を、管理者として起動します。 
   
-    **[SharePoint 2016 管理シェル]** を右クリックし、 **[管理者として実行]**を選びます。
+    **[SharePoint 2016 管理シェル]** を右クリックし、 **[管理者として実行]** を選びます。
 
 3. PowerShell コマンド プロンプトで、次のコマンドを実行します。
 
@@ -107,13 +105,13 @@ ms.lasthandoff: 03/20/2018
 
         Get-SPServer SERVERNAME 
  
- 6. **[ロール]** の一覧に **[ユーザー定義]**が含まれているはずです。
+ 6. **[ロール]** の一覧に **[ユーザー定義]** が含まれているはずです。
  
  ### <a name="install-reporting-services"></a>Reporting Services のインストール
   
 1.  SQL Server インストール ウィザード (Setup.exe) を実行します。  
   
-2.  ウィザードの左側の **[インストール]** を選び、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]**を選びます。  
+2.  ウィザードの左側の **[インストール]** を選び、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選びます。  
 
 3.  **[プロダクト キー]** ページが表示されたら、キーを入力するか、既定の "Enterprise Evaluation" を受け入れます。  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 03/20/2018
   
      **[次へ]** を選択します。  
 
-5.  **[Microsoft Update を使用して更新プログラムを確認する (推奨)]**を選ぶことをお勧めします。 これは省略可能です。
+5.  **[Microsoft Update を使用して更新プログラムを確認する (推奨)]** を選ぶことをお勧めします。 これは省略可能です。
   
      **[次へ]** を選択します。   
   
@@ -133,7 +131,7 @@ ms.lasthandoff: 03/20/2018
   
     -   **[次へ]** を選択します。  
   
-7.  **[インストール ルール]** ページが表示されたら、 警告やインストールの障害となる問題を確認します。 **[次へ]**を選択します。
+7.  **[インストール ルール]** ページが表示されたら、 警告やインストールの障害となる問題を確認します。 **[次へ]** を選択します。
  
 8. **[機能の選択]** ページで、次のオプションを選択します。  
   
@@ -147,15 +145,15 @@ ms.lasthandoff: 03/20/2018
   
      ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
-9. データベース エンジン サービスを選択した場合は、 **[インスタンスの構成]** ページで **MSSQLSERVER** の既定のインスタンスを受け入れて、 **[次へ]**をクリックします。  
+9. データベース エンジン サービスを選択した場合は、 **[インスタンスの構成]** ページで **MSSQLSERVER** の既定のインスタンスを受け入れて、 **[次へ]** をクリックします。  
   
      ![メモ](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ")Reporting Services SharePoint サービス アーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server "インスタンス" に基づいていません。  
   
-10. **[サーバーの構成]** ページが表示されたら、適切な資格情報を入力します。 Reporting Services のデータ警告機能またはサブスクリプション機能を使う場合は、SQL Server エージェントの **[スタートアップの種類]** を **[自動]**に変更する必要があります。 コンピューターに既にインストールされている内容によっては、 **[サーバーの構成]** ページは表示されない場合があります。  
+10. **[サーバーの構成]** ページが表示されたら、適切な資格情報を入力します。 Reporting Services のデータ警告機能またはサブスクリプション機能を使う場合は、SQL Server エージェントの **[スタートアップの種類]** を **[自動]** に変更する必要があります。 コンピューターに既にインストールされている内容によっては、 **[サーバーの構成]** ページは表示されない場合があります。  
   
      **[次へ]** を選択します。  
   
-11. データベース エンジン サービスを選択した場合は、 **[データベース エンジンの構成]** ページが表示されるので、SQL 管理者の一覧に適切なアカウントを追加して、 **[次へ]**を選びます。  
+11. データベース エンジン サービスを選択した場合は、 **[データベース エンジンの構成]** ページが表示されるので、SQL 管理者の一覧に適切なアカウントを追加して、 **[次へ]** を選びます。  
   
 12. **[Reporting Services の構成]** ページで、 **[インストールのみ]** オプションをクリックします。 このオプションはレポート サーバー ファイルをインストールするもので、Reporting Services 用の SharePoint 環境は構成されません。  
   
@@ -166,7 +164,7 @@ ms.lasthandoff: 03/20/2018
   
 13. 警告があればそれを確認し、このページで停止する場合は、 **[機能構成ルール]** ページで **[次へ]** を選びます。  
   
-14. **[インストールの準備完了]** ページで、インストールの概要を確認します。 概要には、 **SharePointFilesOnlyMode** の値を示す **[Reporting Services SharePoint モード]**子ノードが含まれます。 **[インストール]**を選択します。  
+14. **[インストールの準備完了]** ページで、インストールの概要を確認します。 概要には、 **SharePointFilesOnlyMode** の値を示す **[Reporting Services SharePoint モード]** 子ノードが含まれます。 **[インストール]** を選択します。  
   
 15. インストールには数分かかります。 機能の一覧と各機能の状態が表示された **[完了]** ページが表示されます。 コンピューターの再起動が必要であることを示す情報ダイアログが表示される場合もあります。  
   
@@ -190,10 +188,10 @@ ms.lasthandoff: 03/20/2018
   
 2.  **[Microsoft SharePoint 2016 製品]** または **[Microsoft SharePoint 2013 製品]** グループを選びます。  
   
-3.  **[SharePoint 2016 管理シェル]**または **[SharePoint 2013 管理シェル]**を右クリックし、 **[管理者として実行]**を選びます。 
+3.  **[SharePoint 2016 管理シェル]** または **[SharePoint 2013 管理シェル]** を右クリックし、 **[管理者として実行]** を選びます。 
 
     > [!NOTE]
-    > SharePoint コマンドは、標準の Windows PowerShell ウィンドウでは認識されません。 **[SharePoint 管理シェル]**を使います。  
+    > SharePoint コマンドは、標準の Windows PowerShell ウィンドウでは認識されません。 **[SharePoint 管理シェル]** を使います。  
   
 4.  次の PowerShell コマンドを実行して、Reporting Services SharePoint サービスをインストールします。 コマンドが正常に完了すると、管理シェルの表示が改行されます。 コマンドが正常に完了しても、管理シェルに**メッセージは表示されません** 。  
   
@@ -226,19 +224,19 @@ ms.lasthandoff: 03/20/2018
   
 2.  **[SQL Server Reporting Services サービス]** を探して、[アクション] 列の **[開始]** をクリックします。  
   
-3.  Reporting Services サービスのステータスが **[停止]** から **[開始]**に変わります。 Reporting Services サービスが一覧にない場合は、PowerShell を使用してサービスをインストールします。  
+3.  Reporting Services サービスのステータスが **[停止]** から **[開始]** に変わります。 Reporting Services サービスが一覧にない場合は、PowerShell を使用してサービスをインストールします。  
   
     > [!NOTE]  
-    >  Reporting Services サービスが **[開始中]** ステータスのままで、 **[開始]**に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
+    >  Reporting Services サービスが **[開始中]** ステータスのままで、 **[開始]** に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 手順 3: Reporting Services サービス アプリケーションの作成  
  ここでは、既存のサービス アプリケーションを確認している場合に、サービス アプリケーションおよびプロパティの説明を作成する手順について説明します。  
   
-1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** グループの **[サービス アプリケーションの管理]**を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  SharePoint リボンで、 **[新規作成]** ボタンを選びます。  
   
-3.  [新規作成] メニューで、 **[SQL Server Reporting Services サービス アプリケーション]**を選びます。  
+3.  [新規作成] メニューで、 **[SQL Server Reporting Services サービス アプリケーション]** を選びます。  
   
     > [!IMPORTANT]  
     >  Reporting Services オプションが一覧に表示されない場合は、**Reporting Services 共有サービスがインストールされていない**ことを示しています。 前のセクションの、PowerShell コマンドレットを使って Reporting Services サービスをインストールする方法を確認してください。  
@@ -249,11 +247,11 @@ ms.lasthandoff: 03/20/2018
   
      そのアプリケーション プールのセキュリティ アカウントを選択または作成します。 必ずドメイン ユーザー アカウントを指定してください。 ドメイン ユーザー アカウントにより、パスワードやアカウント情報をまとめて更新できる SharePoint のマネージ アカウント機能を使用できるようになります。 ドメイン アカウントは、配置をスケールアウトして、同じ ID で実行されるサービス インスタンスを追加する場合にも必要です。  
   
-6.  **[データベース サーバー]**で、現在のサーバーを使用するか、または別の SQL Server を選択することができます。  
+6.  **[データベース サーバー]** で、現在のサーバーを使用するか、または別の SQL Server を選択することができます。  
   
 7.  **[データベース名]** の既定値は " `ReportingService_<guid>`" で、これは一意のデータベース名です。 新しい値を入力する場合は、一意の値を入力します。 これは、サービス アプリケーションを明確な対象として作成される新しいデータベースです。  
   
-8.  **[データベース認証]**の既定値は、"Windows 認証" です。 **[SQL 認証]**を選択する場合は、SharePoint のドキュメントを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
+8.  **[データベース認証]** の既定値は、"Windows 認証" です。 **[SQL 認証]** を選択する場合は、SharePoint のドキュメントを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
 9. **[Web アプリケーションの関連付け]** セクションで、現在の Reporting Services サービス アプリケーションによるアクセス用に準備する Web アプリケーションを選択します。 1 つの Reporting Services サービス アプリケーションを 1 つの Web アプリケーションに関連付けることができます。 現在のすべての Web アプリケーションが既に Reporting Services サービス アプリケーションと関連付けられている場合は、警告メッセージが表示されます。  
   
@@ -281,13 +279,13 @@ ms.lasthandoff: 03/20/2018
   
 2.  **[設定]** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") を選びます。  
   
-3.  **[サイトの設定]**を選びます。  
+3.  **[サイトの設定]** を選びます。  
   
-4.  **[サイト コレクションの管理]** グループで **[サイト コレクションの機能]**を選びます。  
+4.  **[サイト コレクションの管理]** グループで **[サイト コレクションの機能]** を選びます。  
   
 5.  一覧で **[Power View 統合機能]** を探します。  
   
-6.  **[アクティブ化]**を選びます。 機能の状態が **[アクティブ]**に変化します。  
+6.  **[アクティブ化]** を選びます。 機能の状態が **[アクティブ]** に変化します。  
   
  この手順は、サイト コレクションごとに実行します。 詳しくは、「 [SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)」をご覧ください。  
   

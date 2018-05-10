@@ -1,25 +1,23 @@
 ---
-title: "SQL Server Reporting Services レポート サーバーの構成と管理 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Reporting Services レポート サーバーの構成と管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: efb98dd68a61c2952de23dde6d6c61086d5e4207
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: bee75418d6c2ede62169ec1ef3b42770881499e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>SQL Server Reporting Services レポート サーバーの構成と管理
 
@@ -38,7 +36,7 @@ SQL Server Reporting Services は、組織で利用するレポートの作成�
   
     -   [SharePoint ユーザー用のデータ警告マネージャー](../../reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [SharePoint モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [レポート データ ソース内の資格情報を SharePoint サイトから更新する](../../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   

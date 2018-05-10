@@ -1,38 +1,19 @@
 ---
-title: "AMO の他のクラスとメソッド |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- AmoException class [AMO]
-- Analysis Management Objects, backup and restore
-- assembly objects [AMO]
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 
-author: Minewiskan
+title: AMO の他のクラスとメソッド |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9923daa4b7cb9b504fde047f073579279b3d05e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO のその他のクラスとメソッド
   このセクションには、OLAP またはデータ マイニングに限定されないことと、管理でオブジェクトの管理に役立つ、共通のクラスが含まれています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 これらのクラスは、ストアド プロシージャ、トレース、例外、およびバックアップと復元などの機能を対象としています。  
@@ -53,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
  ![AMO クラスの他の](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "AMO の他のクラス")  
   
-##  <a name="Assembly">アセンブリ オブジェクト</a>  
+##  <a name="Assembly"></a> アセンブリ オブジェクト  
  <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを作成するには、サーバーのアセンブリ コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを更新します。  
   
  <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを削除するには、<xref:Microsoft.AnalysisServices.Assembly> オブジェクトの Drop メソッドを使用してこれを削除する必要があります。 データベースのアセンブリのコレクションから <xref:Microsoft.AnalysisServices.Assembly> オブジェクトを削除しても、そのアセンブリはアプリケーションを次回実行するまで見えなくなるだけで、削除されません。  
@@ -63,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  COM アセンブリにより、セキュリティ上のリスクが生じる可能性があります。 このリスクやその他の考慮事項により、 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]では、COM アセンブリが推奨されていません。 COM アセンブリは、今後のリリースではサポートされない可能性があります。  
   
-##  <a name="Backup">バックアップと復元方法</a>  
+##  <a name="Backup"></a> バックアップと復元方法  
  Backup と Restore は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースをコピーし、そのコピーを使用してデータベースを復旧するためのメソッドです。 Backup メソッドは <xref:Microsoft.AnalysisServices.Database> オブジェクトに属し、Restore メソッドは <xref:Microsoft.AnalysisServices.Server> オブジェクトに属します。  
   
  データベースのバックアップの実行を許可されているのは、サーバーおよびデータベースの管理者だけです。 バックアップ元とは別のサーバー上にデータベースを復元できるのは、サーバー管理者だけです。 データベース管理者は、自分が所有しているデータベースについてのみ、そのデータベースを上書きすることによってデータベースを復元できます。 元のセキュリティ定義を使用してデータベースを復元した場合、データベース管理者が復元後のデータベースにアクセスできなくなる可能性があります。  
@@ -116,7 +97,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **パスワード**空白でないこと、サーバーは、バックアップ ファイルの暗号化を指定する場合は、します。  
   
-##  <a name="Traces">トレース オブジェクト</a>  
+##  <a name="Traces"></a> トレース オブジェクト  
  Trace は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスを監視、再生、管理するためのフレームワークです。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] などのクライアント アプリケーションはトレースをサブスクライブし、サーバーはトレース定義での指定に従ってトレース イベントを返します。  
   
  各イベントは、イベント クラスによって記述されます。 イベント クラスは生成されたイベントの種類を記述します。 イベント クラス内では、イベントのサブクラスによって、より詳細なレベルの分類が記述されます。 各イベントは、多くの列によって記述されます。 トレース イベントを記述する列は、すべてのイベントに対して一貫しており、SQL トレースの構造に準拠しています。 各列に記録される情報は、イベント クラスに応じて異なる可能性があります。つまり、定義済みの列のセットは各トレースに対して定義されますが、列の意味はイベント クラスに応じて異なる可能性があります。 たとえば、TextData 列は、すべてのステートメント イベントに対する元の ASSL を記録するために使用されます。  
@@ -155,14 +136,14 @@ ms.lasthandoff: 02/15/2018
   
 6.  アプリケーションを続行します。  
   
-##  <a name="CaptureLog">CaptureLog クラスと CaptureXML 属性</a>  
+##  <a name="CaptureLog"></a> CaptureLog クラスと CaptureXML 属性  
  AMO によって実行されるすべてのアクションは、XMLA メッセージとしてサーバーに送信されます。 AMO によって、SOAP ヘッダーを持たないこれらのメッセージをすべてキャプチャする手段が提供されます。 詳細については、次を参照してください。 [AMO クラスの導入](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)です。 CaptureLog は、オブジェクトと操作をスクリプト出力するための AMO 内のメカニズムです。オブジェクトと操作のスクリプトは XMLA で作成されます。  
   
  CaptureXML サーバー オブジェクトのプロパティを XML のキャプチャを開始するに設定する必要があります**true**です。 その後、サーバーに送信されるすべてのアクションが、サーバーに送信されることなく、CaptureLog クラスでキャプチャされるようになります。 CaptureLog にはキャプチャ ログを消去するために使用する Clear メソッドがあるため、CaptureLog はクラスと見なされます。  
   
  ログを読み取るには、文字列コレクションを取得し、それらの文字列の反復処理を開始します。 また、サーバー オブジェクト メソッド ConcatenateCaptureLog を使用して、すべてのログを 1 つの文字列に連結することもできます。 ConcatenateCaptureLog には、3 つのパラメーターがあり、そのうち 2 つは必須です。 必要なパラメーターが*トランザクション*のブール型、および*並列*、ブール型のです。 場合*トランザクション*に設定されている**true**、各コマンドの中ではなく、単一のトランザクションが個別のトランザクションとして扱われる XML バッチ ファイルが作成されることを示します。 場合*並列*に設定されている**true**、記録されたと、バッチ ファイル内のすべてのコマンドは順番にではなく、同時実行記録することを示します。  
   
-##  <a name="AMO">AMOException 例外クラス</a>  
+##  <a name="AMO"></a> AMOException 例外クラス  
  AMOException 例外クラスを使用して、AMO によってスローされるアプリケーション内の例外を簡単にキャッチできます。  
   
  AMO は、さまざまな問題が検出されるたびに例外をスローします。 次の表は、AMO によって処理される例外の種類を示しています。 例外は <xref:Microsoft.AnalysisServices.AmoException> クラスから派生します。  
@@ -178,7 +159,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -1,27 +1,25 @@
 ---
-title: "レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: ce02663b3fd39c18e692b56473afb302788c5605
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fea148cc4148b4beaf14c8b31d7bd23aad734a0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
 
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  **[インストール済み]** > **[テンプレート]** > **[ビジネス インテリジェンス]**で、 **[Reporting Services]**をクリックします。
+3.  **[インストール済み]** > **[テンプレート]** > **[ビジネス インテリジェンス]** で、 **[Reporting Services]** をクリックします。
 
     ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/09/2018
 
    >**注**: **[ビジネス インテリジェンス]** または **[レポート サーバー プロジェクト]** オプションが表示されない場合、ビジネス インテリジェンス テンプレートを使用して SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
   
-5.  **[名前]**に「 **utorial**」と入力します。  
+5.  **[名前]** に「 **utorial**」と入力します。  
 
     既定では、新しいディレクトリの Visual Studio 2015\Projects フォルダーに作成されます。
     
@@ -63,21 +61,21 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-create-a-new-report-definition-file"></a>新しいレポート定義ファイルを作成するには  
   
-1.  **[ソリューション エクスプローラー]** ウィンドウで、 **[レポート] を右クリックし、** > **[追加]** > **[新しいアイテム]**の順に選択します。 
+1.  **[ソリューション エクスプローラー]** ウィンドウで、 **[レポート] を右クリックし、** > **[追加]** > **[新しいアイテム]** の順に選択します。 
 
-    >**ヒント**: **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]** メニューの **[ソリューション エクスプローラー]**をクリックします。 
+    >**ヒント**: **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
 2.  **[新しいアイテムの追加]** ウィンドウで、 **[レポート]** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png)でレポート サーバー プロジェクトを作成する方法を学習します。  
   
-3.  **[名前]**に「 **Sales Orders.rdl** 」と入力して、 **[追加]**をクリックします。  
+3.  **[名前]** に「 **Sales Orders.rdl** 」と入力して、 **[追加]** をクリックします。  
   
     レポート デザイナーを開き、デザイン ビューで新しい .rdl ファイルを表示します。  
     
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     レポート デザイナーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で実行される [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]コンポーネントです。 **[デザイン]** ビューと **[プレビュー]**ビューの 2 つのビューがあります。 ビューを変更するには該当するタブをクリックします。  
+     レポート デザイナーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で実行される [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]コンポーネントです。 **[デザイン]** ビューと **[プレビュー]** ビューの 2 つのビューがあります。 ビューを変更するには該当するタブをクリックします。  
   
     **[レポート データ]** ペインでデータを定義します。 **[デザイン]** ビューではレポートのレイアウトを定義します。 **[プレビュー]** ビューではレポートを実行して結果を確認できます。  
   

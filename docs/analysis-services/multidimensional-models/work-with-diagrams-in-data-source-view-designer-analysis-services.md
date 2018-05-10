@@ -1,38 +1,23 @@
 ---
-title: "データ ソース ビュー デザイナー (Analysis Services) でのダイアグラムの操作 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ ソース ビュー デザイナー (Analysis Services) でのダイアグラムの操作 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.findtable.f1
-- sql13.asvs.dsvdesigner.diagramorganizerpane.f1
-- sql13.asvs.dsvdesigner.diagrampane.f1
-helpviewer_keywords:
-- data source views [Analysis Services], diagrams
-- diagrams [Analysis Services]
-ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 99390ff49d6c0a868826cc860439ebd644f18777
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ ソース ビュー (DSV) ダイアグラムは、DSV でのオブジェクトの視覚的イメージです。 対話的な操作で特定のオブジェクトを追加、非表示、削除、または変更できます。 また、同じ DSV で複数のダイアグラムを作成して、オブジェクトのサブセットに焦点を絞ることができます。  
+  データ ソース ビュー (DSV) ダイアグラムは、DSV でのオブジェクトの視覚的イメージです。 対話的な操作で特定のオブジェクトを追加、非表示、削除、または変更できます。 また、同じ DSV で複数のダイアグラムを作成して、オブジェクトのサブセットに焦点を絞ることができます。  
   
  ダイアグラム ペインに表示されるダイアグラムの領域を変更するには、ペインの右下隅で 4 方向の矢印をクリックし、選択する領域がダイアグラム ペインに表示されるまで、サムネイル ダイアグラム上で選択ボックスをドラッグします。  
   
@@ -51,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_add"></a> ダイアグラムの追加  
  DSV ダイアグラムは、DSV を作成すると自動的に作成されます。 DSV の作成後、追加のダイアグラムの作成と削除を行ったり、または特定のオブジェクトを非表示にしたりして、DSV を管理しやすい表示にすることができます。  
   
- 新しいダイアグラムを作成するには、 **[ダイアグラム オーガナイザー]** ペイン内を右クリックし、 **[新しいダイアグラム]**をクリックします。  
+ 新しいダイアグラムを作成するには、 **[ダイアグラム オーガナイザー]** ペイン内を右クリックし、 **[新しいダイアグラム]** をクリックします。  
   
  すべてのテーブルとデータ ソース ビューに追加したビューを追加、Analysis Services プロジェクトで初めてデータ ソース ビュー (DSV) を定義すると、\<すべてのテーブル > ダイアグラム。 このダイアグラムはデータ ソース ビュー デザイナーの [ダイアグラム オーガナイザー] ペインに表示され、このダイアグラム内のテーブルおよびその列とリレーションシップが [テーブル] ペインに一覧表示され、さらにスキーマ ペインにグラフィック表示されます。 ただし、するとしてテーブル、ビュー、および名前付きクエリを追加、\<すべてのテーブル > 図では、このダイアグラム内のオブジェクト数が非常に多いため困難になってリレーションシップを視覚化する — 特に複数のファクト テーブルは、図に追加され、ディメンションテーブルは、複数のファクト テーブルに関連します。  
   
@@ -77,7 +62,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **[ダイアグラム]** ペインのテーブル ロケーター : **[ダイアグラム]** ペインの右下隅、垂直スクロール バーと水平スクロール バーが交差する位置に、4 方向の矢印を描いたアイコンで表されるテーブル ロケーターがあります。 その中で、ダイアグラム ペインに表示されている現在のダイアグラムのサムネイルが表示されます。 このサムネイルを使用すると、ダイアグラム ペインの表示をダイアグラム上の任意の位置に変更できます。  
   
--   **[テーブルの検索]** ダイアログ ボックスの使用 - ダイアグラム ペイン内の空いている領域を右クリックし、 **[テーブルの検索]**をクリックします。 または、ツール バーか **[データ ソース ビュー]** メニューの **[テーブルの検索]** をクリックします。  
+-   **[テーブルの検索]** ダイアログ ボックスの使用 - ダイアグラム ペイン内の空いている領域を右クリックし、 **[テーブルの検索]** をクリックします。 または、ツール バーか **[データ ソース ビュー]** メニューの **[テーブルの検索]** をクリックします。  
   
      [フィルター] ボックスに文字列およびワイルドカード文字を入力すると、ダイアグラム内のテーブルのサブセットを表示できます。  
   
@@ -97,6 +82,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [データ ソース ビュー デザイナー &#40;です。Analysis Services - 多次元データ &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
+ [データ ソース ビュー デザイナー & #40 です。Analysis Services - 多次元データ & #41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

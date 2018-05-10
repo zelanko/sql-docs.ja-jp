@@ -1,31 +1,19 @@
 ---
-title: "Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- ReadOnly property
-- ReadWriteMode command
-- operations [Analysis Services - multidimensional data]
-ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c53754f5ba059cfd790a015b7a1c77bd4de81b73
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: bb7d87db7f561f0f238b692b95522e21d3828b4b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,15 +29,15 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>Management Studio を使用してデータベースの読み取り/書き込みモードを対話的に切り替える  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。  
   
      場所を書き留めます。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
-2.  データベースを右クリックし、 **[デタッチ]**をクリックします。  
+2.  データベースを右クリックし、 **[デタッチ]** をクリックします。  
   
 3.  デタッチするデータベースにパスワードを割り当て、 **[OK]** をクリックしてデタッチ コマンドを実行します。  
   
-4.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを右クリックし、 **[アタッチ]**をクリックします。  
+4.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
   
 5.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 または、参照ボタン (**[…]**) を使用して、データベース フォルダーを探すこともできます。  
   
@@ -100,11 +88,11 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
 ## <a name="switch-the-readwrite-mode-to-a-database-by-script-using-xmla"></a>XMLA を使用したスクリプトでデータベースの読み取り/書き込みモードを切り替える  
  次の手順は、互換モードが 1050、1100、または 1103 の多次元データベースと表形式データベースに適用されます。  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。  
   
      場所を書き留めます。 データベースのストレージの場所が空の場合は、データベース フォルダーがサーバー データ フォルダー内にあることを示しています。  
   
-2.  データベースを右クリックし、 **[デタッチ]**をクリックします。  
+2.  データベースを右クリックし、 **[デタッチ]** をクリックします。  
   
 3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、新しい XMLA タブを開きます。  
   

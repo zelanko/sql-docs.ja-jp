@@ -1,27 +1,25 @@
 ---
-title: "ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77b2487bf741c7be1a232aaefa4396b17a1ba897
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 74928d39b6a658cecff715bab0aab58922fe15c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
   
  既に 1 つのスケールがあるゲージに 2 番目のスケールを追加すると、最初のスケールの外観プロパティが 2 番目のスケールに複製されます。  
   
- スケールのプロパティを設定するには、スケールのラベルまたは目盛りを右クリックし、 **[放射状スケールのプロパティ]** または **[線形スケールのプロパティ]**を選択します。 それぞれの種類のゲージには、同じプロパティ セットを持つスケールが少なくとも 1 つ含まれます。 また、それぞれの種類のゲージに固有のプロパティもあります。  
+ スケールのプロパティを設定するには、スケールのラベルまたは目盛りを右クリックし、 **[放射状スケールのプロパティ]** または **[線形スケールのプロパティ]** を選択します。 それぞれの種類のゲージには、同じプロパティ セットを持つスケールが少なくとも 1 つ含まれます。 また、それぞれの種類のゲージに固有のプロパティもあります。  
   
 -   放射状ゲージでは、放射状スケールの半径、開始角度、および掃引角度を指定できます。  
   

@@ -1,31 +1,23 @@
 ---
-title: "組 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 組 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 00353a4a955b631fda3e0fb6521ecad764f1328c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 57bccce70e7e5b90061ebe0ab79730e001dcc2fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tuples"></a>組
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-組はキューブからデータのスライスを一意に識別します。 組は、同じ階層に属するメンバーが複数存在しない限り、ディメンション メンバーを組み合わせて作成されます。  
+  組はキューブからデータのスライスを一意に識別します。 組は、同じ階層に属するメンバーが複数存在しない限り、ディメンション メンバーを組み合わせて作成されます。  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>組の暗黙的または既定の属性メンバー  
  MDX クエリまたは式で組を定義する際に、すべての属性階層の属性メンバーを明示的に含める必要はありません。 属性階層のメンバーをクエリまたは式に明示的に含めなかった場合、その属性階層の既定のメンバーが暗黙的に組に含められます。 (All) メンバーが存在する場合、キューブで他に明示的に定義されていない限り、(All) メンバーがすべての属性階層の既定のメンバーになります。 属性階層に (All) メンバーが存在しない場合、属性階層の最上位のメンバーが既定のメンバーになります。 既定のメジャーを明示的に定義している場合を除き、キューブ内で指定された最初のメジャーが既定のメジャーになります。 詳細については、「[既定メンバーの定義](../../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)」および「[DefaultMember (MDX)](../../../mdx/defaultmember-mdx.md)」を参照してください。  
@@ -73,9 +65,9 @@ FROM [Adventure Works]
 >  属性メンバーは、メンバー名またはメンバー キーで参照できます。 上記の例で、[CY 2004] への参照を &[2004] としてもかまいません。  
   
 ## <a name="see-also"></a>参照  
- [MDX &#40; の主な概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [メンバー、組、およびセット &#40; の操作MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [メンバー、組、およびセット & #40; の操作MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

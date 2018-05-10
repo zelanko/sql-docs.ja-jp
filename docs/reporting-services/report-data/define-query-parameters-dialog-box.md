@@ -1,30 +1,28 @@
 ---
-title: "[クエリ パラメーターの定義] ダイアログ ボックス | Microsoft Docs"
-ms.custom: 
+title: '[クエリ パラメーターの定義] ダイアログ ボックス | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5827e2d7ebe9525e0c72a0ffb4a91c61cdf61b47
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9b06cbb646ad58446a4c2def9f24e148262c362a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-query-parameters-dialog-box"></a>[クエリ パラメーターの定義] ダイアログ ボックス
   **[クエリ パラメーターの定義]** ダイアログ ボックスを使用すると、デザイン時にクエリ デザイナーでクエリを実行する際のパラメーター値を指定できます。この設定によって、サンプル データを表示させることができます。 クエリ パラメーターを使用すると、データ ソースのデータをフィルター処理し、レポートが処理するデータの量を制限できます。 これらの値は、レポート定義に保存されません。  

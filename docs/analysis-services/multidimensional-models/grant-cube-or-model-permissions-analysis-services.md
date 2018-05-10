@@ -1,37 +1,23 @@
 ---
 title: 権限の付与キューブまたはモデル (Analysis Services) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cubes
-- cubes [Analysis Services], security
-- read/write permissions
-- permissions [Analysis Services], cubes
-ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e15e73da6c4c4a064a6730873dd866b87d5727d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 75b810d559b167e3f6db6ff6bdd22b41e397f6a9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>キューブ権限またはモデル権限の付与 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブまたは表形式モデルは、Analysis Services データ モデルの主要なクエリ オブジェクトです。 アドホック データ探索のために Excel から多次元データまたは表形式データに接続する場合、ユーザーは、通常、最初に、ピボット レポート オブジェクトの基礎となるデータ構造として、特定のキューブまたは表形式モデルを選択します。 このトピックでは、キューブまたは表形式データへのアクセスに必要な権限を付与する方法について説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  キューブまたは表形式モデルは、Analysis Services データ モデルの主要なクエリ オブジェクトです。 アドホック データ探索のために Excel から多次元データまたは表形式データに接続する場合、ユーザーは、通常、最初に、ピボット レポート オブジェクトの基礎となるデータ構造として、特定のキューブまたは表形式モデルを選択します。 このトピックでは、キューブまたは表形式データへのアクセスに必要な権限を付与する方法について説明します。  
   
  既定では、サーバー管理者とデータベース管理者を除いて、データベースのクエリ キューブに対する権限を持ちません。 管理者以外がキューブにアクセスするには、キューブが含まれているデータベースのために作成されたロールでのメンバーシップが必要です。 メンバーシップは、Active Directory またはローカル コンピューターに定義された、Windows ユーザー アカウントまたはグループ アカウントに対してサポートされています。 開始する前に、作成するロールではどのアカウントにメンバーシップが割り当てられるかを判別します。  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  オブジェクト エクスプローラーで **[データベース]** フォルダーを開き、データベースを選択します。  
   
-3.  **[ロール]** を右クリックし、 **[新しいロール]**を選択します。 ロールがデータベース レベルで作成され、データベース内のオブジェクトに適用されることに注意してください。 データベース間でロールを共有することはできません。  
+3.  **[ロール]** を右クリックし、 **[新しいロール]** を選択します。 ロールがデータベース レベルで作成され、データベース内のオブジェクトに適用されることに注意してください。 データベース間でロールを共有することはできません。  
   
 4.  **[全般]** ペインで、名前を入力し、必要に応じて説明を入力します。 また、このペインには、フル コントロール、データベースの処理、定義の読み取りなど、いくつかのデータベース権限も含まれています。 これらのいずれの権限も、キューブまたは表形式モデルに対するクエリの実行には必要ありません。 これらの権限の詳細については、「[データベース権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)」をご覧ください。  
   
@@ -66,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  **[キューブ]** ペインで、キューブを選択し、 **[読み取り]** アクセス権または **[読み取り/書き込み]** アクセス権をクリックします。  
   
-     ほとんどの操作は**[読み取り]** アクセス権で十分です。 **[読み取り/書き込み]** は、処理ではなく書き戻しにのみ使用します。 この機能の詳細については、「 [パーティションの書き戻しの設定](../../analysis-services/multidimensional-models/set-partition-writeback.md) 」をご覧ください。  
+     ほとんどの操作は **[読み取り]** アクセス権で十分です。 **[読み取り/書き込み]** は、処理ではなく書き戻しにのみ使用します。 この機能の詳細については、「 [パーティションの書き戻しの設定](../../analysis-services/multidimensional-models/set-partition-writeback.md) 」をご覧ください。  
   
      複数のキューブのほか、[ロールの作成] ダイアログ ボックスで使用可能なその他のオブジェクトも選択できることに注意してください。 キューブに対する権限を付与すると、そのキューブに関連付けられたディメンションおよびパースペクティブへのアクセスが承認されます。 キューブに既に表されているオブジェクトを手動で追加する必要はありません。  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  この時点で **[OK]** をクリックすると、このロールのすべてのメンバーが、指定した権限レベルでキューブにアクセスできるようになります。  
   
-     **[キューブ]** ペインでは、 **[ドリルスルーとローカル キューブ]**を使用してサーバー キューブからローカル キューブを作成するための権限をユーザーに付与したり、 **[ドリルスルー]** 権限を使用してドリルスルーのみを許可したりできることに注意してください。  
+     **[キューブ]** ペインでは、 **[ドリルスルーとローカル キューブ]** を使用してサーバー キューブからローカル キューブを作成するための権限をユーザーに付与したり、 **[ドリルスルー]** 権限を使用してドリルスルーのみを許可したりできることに注意してください。  
   
      さらに、このペインでは、キューブに対する **[データベースの処理]** 権限を付与して、このロールのすべてのメンバーがこのキューブのデータを処理できるようにすることができます。 処理は通常制限付きの操作であるため、そのタスクを管理者に委ねるか、または特にそのタスク用に別途ロールを定義することをお勧めします。 処理権限のベスト プラクティスの詳細については、「[処理権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)」をご覧ください。  
   
@@ -99,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  SSMS で、 **[ロール]** フォルダーに移動し、既存のロールを右クリックします。  
   
-3.  **[ロールをスクリプト化]** | **[CREATE TO]** | **[ファイル]**の順に選択します。  
+3.  **[ロールをスクリプト化]** | **[CREATE TO]** | **[ファイル]** の順に選択します。  
   
 4.  拡張子を .xmla にしてファイルを保存します。 スクリプトをテストするには、現在のロールを削除し、SSMS でファイルを開き、F5 キーを押してスクリプトを実行します。  
   
@@ -108,7 +94,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [データ マイニング構造およびモデル &#40; に対する権限を付与します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [データ マイニング構造およびモデルに対する権限を与える&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [データ ソース オブジェクト & #40; に対する権限を付与します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

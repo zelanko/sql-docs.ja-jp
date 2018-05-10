@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
@@ -18,12 +17,11 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 974897a7498eb9032bbe43933b9e9931f5969449
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 617abb0133a09cb348571509e105b1795be258cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-properties-general-page"></a>[レポート サーバーのプロパティ] ([全般] ページ)
   このページを使用すると、レポート マネージャーで使用されるタイトルの表示と変更、個人用レポートの有効化と無効化、個人用レポートのセキュリティに関するロール定義の選択、およびクライアントの印刷コントロールの有効化または無効化ができます。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 01/09/2018
  **このページを開くには:**
  1) コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  2) レポート サーバー インスタンスに接続します。
- 3) レポート サーバー名を右クリックして、 **[プロパティ]**をクリックします。  
+ 3) レポート サーバー名を右クリックして、 **[プロパティ]** をクリックします。  
   
  サーバー モードによって、設定できるサーバー プロパティが決まります。 SharePoint 統合モード用に構成されたレポート サーバーを管理している場合は、個人用レポートを有効にしたり、Web ポータルのタイトルを設定したりすることができません。  
   

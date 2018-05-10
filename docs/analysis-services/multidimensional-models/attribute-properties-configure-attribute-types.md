@@ -1,38 +1,23 @@
 ---
-title: "属性の種類の構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 属性の種類の構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- attributes [Analysis Services], types
-- slowly changing dimensions
-- account dimensions [Analysis Services]
-- currency dimensions [Analysis Services]
-- Type property
-ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: bebde638f28d2bf0301c3cf19b3fdd8ada5b1112
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>属性のプロパティ - 属性の種類を構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、属性の型を使用して、ビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、属性の型を使用して、ビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
   
 ##  <a name="setting_attibute_types"></a> 属性の型の設定  
  属性の型は、その属性の **Type** プロパティの値によって決まります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のいくつかのウィザードでは、ディメンションまたは属性の定義時に属性の型を設定します。 これらの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ウィザードでは、ウィザードによってディメンションに機能が追加された場合にも属性の型を設定します。 たとえば、ビジネス インテリジェンス ウィザードでは、ディメンション内の勘定科目の名前、コード、番号、構造を含んでいる属性を識別するための勘定科目インテリジェンスの追加時に、ディメンション内の属性に複数の属性の型を適用します。 また、ビジネス インテリジェンス ウィザードでは、通貨換算などにも属性の型を使用します。 詳細については、「 [通貨ディメンションの作成](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)」を参照してください。  

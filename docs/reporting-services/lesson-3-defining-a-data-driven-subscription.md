@@ -1,28 +1,27 @@
 ---
-title: "レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e17d01c4ec9d288a3385c96645a3a8080487a201
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] チュートリアル レッスンでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルのデータ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  
@@ -33,28 +32,28 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="bkmk_startwizard"></a>データ ドリブン サブスクリプション ウィザードの開始  
   
-1.  [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルで **[ホーム]**をクリックして、 **Sales Orders** レポートのあるフォルダーに移動します。  
+1.  [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルで **[ホーム]** をクリックして、 **Sales Orders** レポートのあるフォルダーに移動します。  
   
-2.  レポートのショートカット メニュー ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) で **[管理]**をクリックし、左側ペインで **[サブスクリプション]** をクリックします。  
+2.  レポートのショートカット メニュー ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) で **[管理]** をクリックし、左側ペインで **[サブスクリプション]** をクリックします。  
   
-3.  **[新しいサブスクリプション]**をクリックします。 このボタンが表示されない場合は、コンテンツ マネージャーの権限がありません。 
+3.  **[新しいサブスクリプション]** をクリックします。 このボタンが表示されない場合は、コンテンツ マネージャーの権限がありません。 
   
 ## <a name="define-a-description"></a>説明の定義  
 1.  説明に「 **Sales Order delivery** 」と入力します。
 ## <a name="type"></a>説明に「
-1.  **[データ ドリブン サブスクリプション]**をクリックします。  
+1.  **[データ ドリブン サブスクリプション]** をクリックします。  
 ## <a name="schedule"></a>[スケジュール]
-1. スケジュール セクションで、 **[レポート固有のスケジュール]**をクリックします。
-2. **[スケジュールの編集]**をクリックします。
-3.  **[スケジュールの詳細]**で、 **[一度だけ]**をクリックします。  
+1. スケジュール セクションで、 **[レポート固有のスケジュール]** をクリックします。
+2. **[スケジュールの編集]** をクリックします。
+3.  **[スケジュールの詳細]** で、 **[一度だけ]** をクリックします。  
 4.  開始時刻として、現在の時刻から数分後を指定します。  
-5.  **[適用]**をクリックします。
+5.  **[適用]** をクリックします。
 ## <a name="destination"></a>[Destination]  
 1.  [転送先] セクションで、配信方法に対して **[Windows ファイル共有]** を選択します。  
 
 ## <a name="dataset"></a>データセット
-1. **[データセットの編集]**をクリックします。
-2. **[カスタム データ ソース]**をクリックします。
+1. **[データセットの編集]** をクリックします。
+2. **[カスタム データ ソース]** をクリックします。
 3. データ ソースの **[接続]** の種類として、 **[Microsoft SQL Server]** をクリックします。
 4. [接続文字列] に、次のように入力します。 *[サブスクライバー]* はレッスン 1 で作成したデータベースです。 
   
@@ -63,9 +62,9 @@ ms.lasthandoff: 01/09/2018
     ```
     
  ## <a name="credentials"></a>[資格情報]
- 1. **[次の資格情報を使用する]**を選択します。
- 2. **[Windows ユーザー名とパスワード]**を選択します。
- 3.  **[ユーザー名]** と **[パスワード]**に、ドメイン ユーザー名とパスワードを入力します。 **[ユーザー名]**には、ドメインとユーザー アカウントの両方を指定します。
+ 1. **[次の資格情報を使用する]** を選択します。
+ 2. **[Windows ユーザー名とパスワード]** を選択します。
+ 3.  **[ユーザー名]** と **[パスワード]** に、ドメイン ユーザー名とパスワードを入力します。 **[ユーザー名]** には、ドメインとユーザー アカウントの両方を指定します。
      > [!NOTE]  
     > サブスクライバー データ ソースへの接続に使用する資格情報は、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に返されません。 後でサブスクリプションを変更する場合は、データ ソースへの接続に使用するパスワードをこのページで再入力する必要があります。
 ## <a name="query"></a>[クエリ]      
@@ -77,7 +76,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  30 秒のタイムアウトを指定します。  
   
-3.  **[クエリの検証]**をクリックし、 **[適用]**をクリックします。
+3.  **[クエリの検証]** をクリックし、 **[適用]** をクリックします。
 ## <a name="delivery-options"></a>配信オプション
 次の値を入力します。
 
@@ -92,8 +91,8 @@ ms.lasthandoff: 01/09/2018
 **Password** | 値を入力 | パスワードを入力
 
 ## <a name="report-parameters"></a>レポート パラメーター
- 1. **[OrderNumber]** フィールドには、 **[データセットから値を取得]**を選択します。 [値] で、 **[注文]**をクリックします。 
- 2. **[サブスクリプションの作成]**をクリックします。
+ 1. **[OrderNumber]** フィールドには、 **[データセットから値を取得]** を選択します。 [値] で、 **[注文]** をクリックします。 
+ 2. **[サブスクリプションの作成]** をクリックします。
    
 ## <a name="next-steps"></a>Next Steps  
 サブスクリプションを実行すると、 *Subscribers* データ ソースの注文ごとに 1 つずつ、4 つのレポート ファイルが、指定したファイル共有に配信されます。 各配信では、データ (注文固有のデータ)、表示形式、ファイル形式がそれぞれ異なっています。 各レポートを共有フォルダーから開き、定義したサブスクリプション オプションに基づいて各バージョンがカスタマイズされているかどうかを確認できます。  

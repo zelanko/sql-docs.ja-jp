@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services インストール時の問題解決 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services インストール時の問題解決 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d71e0f0bfd70ec17552a6114c4378bd79bdfff25
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: a9e470347f20649c3ef42a93e862e32cb046171a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
 
@@ -144,7 +142,7 @@ ms.lasthandoff: 01/19/2018
  
  - SSRS サービス アプリケーションは、この Web アプリケーションにマップされていません。 SSRS サービス アプリケーションのページを使用して SSRS サービス アプリケーション プロキシをこの Web アプリケーションのアプリケーション プロキシ グループに関連付けてください。 
   
- **解決方法:** このエラー メッセージに、この問題を修正するための 3 つの推奨手順が含まれています。 メッセージ "レポート サーバーの URL が構成されていません" の最初の推奨事項は、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]よりも前のレポート サーバー バージョンとの統合に関連します。 以前のレポート サーバー バージョンの SharePoint 構成は、 **SQL Server Reporting Services (2008 および 2008 R2)** を使用して **[アプリケーションの全体設定]**ページで完了されます。  
+ **解決方法:** このエラー メッセージに、この問題を修正するための 3 つの推奨手順が含まれています。 メッセージ "レポート サーバーの URL が構成されていません" の最初の推奨事項は、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]よりも前のレポート サーバー バージョンとの統合に関連します。 以前のレポート サーバー バージョンの SharePoint 構成は、 **SQL Server Reporting Services (2008 および 2008 R2)** を使用して **[アプリケーションの全体設定]** ページで完了されます。  
   
  **その他の情報:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスへの接続が必要な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能のいずれかを使用しようとすると、このエラー メッセージが表示されます。 この機能には、次が含まれます。  
   
@@ -226,13 +224,13 @@ ms.lasthandoff: 01/19/2018
   
 1.  レジストリ エディターを開きます。  
   
-    1.  **[スタート]**ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
     2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** ボックスに「 **regedit**」と入力します。  
   
 2.  レジストリ エディターで、次のレジストリ キーを選択します。 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  **[Performance]** ノードを右クリックし、 **[新規]**をポイントして **[複数行文字列値]**をクリックします。  
+3.  **[Performance]** ノードを右クリックし、 **[新規]** をポイントして **[複数行文字列値]** をクリックします。  
   
 4.  「 **Counter Names** 」と入力して Enter キーを押します。  
   
@@ -240,7 +238,7 @@ ms.lasthandoff: 01/19/2018
   
 6.  次のレジストリ キーに移動します。 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  **[Performance]** ノードを右クリックし、 **[新規]**をポイントして **[複数行文字列値]**をクリックします。  
+7.  **[Performance]** ノードを右クリックし、 **[新規]** をポイントして **[複数行文字列値]** をクリックします。  
   
 8.  「 **Counter Names** 」と入力して Enter キーを押します。  
   

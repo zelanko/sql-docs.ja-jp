@@ -3,15 +3,12 @@ title: AlwaysOn 可用性グループの有効化と無効化 (SQL Server) | Mic
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
@@ -22,12 +19,11 @@ caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: df71630d1e461b2d1757c558c3e1960135fd3aea
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d86ed7bb53c0d1382e94331d9e2e9909aa11e86f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループの有効化と無効化 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +78,7 @@ ms.lasthandoff: 04/16/2018
 ###  <a name="SSMS1Procedure"></a> SQL Server Management Studio の使用  
  **AlwaysOn 可用性グループが有効になっているかどうかを調べるには**  
   
-1.  オブジェクト エクスプローラーでサーバー インスタンスを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーでサーバー インスタンスを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[サーバーのプロパティ]** ダイアログ ボックスの **[全般]** ページをクリックします。 **[HADR が有効]** プロパティに、次のいずれかの値が表示されます。  
   
@@ -111,7 +107,7 @@ ms.lasthandoff: 04/16/2018
 ###  <a name="PowerShell1Procedure"></a> PowerShell の使用  
  **AlwaysOn 可用性グループが有効になっているかどうかを調べるには**  
   
-1.  **が有効であるかどうかを確認するサーバー インスタンスを既定の操作対象に設定 (**cd [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ) します。  
+1.  **が有効であるかどうかを確認するサーバー インスタンスを既定の操作対象に設定 (** cd [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ) します。  
   
 2.  PowerShell コマンド **Get-Item** を入力します。  
   
@@ -138,7 +134,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  対象の (AlwaysOn 可用性グループを有効にする) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスがホストされている Windows Server フェールオーバー クラスタリング (WSFC) ノードに接続します。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 3.  **SQL Server 構成マネージャー**で、**[SQL Server のサービス]** をクリックし、SQL Server (**\<***instance name***>)** を右クリックして、**[プロパティ]** をクリックします。**\<***instance name***>** は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
@@ -146,7 +142,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  **[Windows フェールオーバー クラスター名]** フィールドに、ローカル フェールオーバー クラスターの名前が表示されていることを確認します。 このフィールドが空白の場合、このサーバー インスタンスは現在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートしていません。 ローカル コンピューターがクラスター ノードではないか、WSFC クラスターがシャットダウンされています。または、このエディションの [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]がサポートされません。  
   
-6.  **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオンにし、 **[OK]**をクリックします。  
+6.  **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存されます。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを手動で再起動する必要があります。 業務上の要件に合った時間帯を選んで再起動することができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動されると、AlwaysOn が有効になり、 **IsHadrEnabled** サーバー プロパティが 1 に設定されます。  
   
@@ -167,7 +163,7 @@ ms.lasthandoff: 04/16/2018
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ####  <a name="ExmplEnable-SqlHadrServic"></a> 例: Enable-SqlAlwaysOn  
- 次の PowerShell コマンドは、SQL Server のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer*Instance*\\*) の*を有効にします。  
+ 次の PowerShell コマンドは、SQL Server のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer*Instance*\\ *) の*を有効にします。  
   
 ```  
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -202,11 +198,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  対象の (AlwaysOn 可用性グループを無効にする) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスがホストされている Windows Server フェールオーバー クラスタリング (WSFC) ノードに接続します。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 3.  **SQL Server 構成マネージャー**で、**[SQL Server のサービス]** をクリックし、SQL Server (**\<***instance name***>)** を右クリックして、**[プロパティ]** をクリックします。**\<***instance name***>** は、AlwaysOn 可用性グループを無効にするローカル サーバー インスタンスの名前です。  
   
-4.  **[AlwaysOn 高可用性]**タブで、 **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオフにし、 **[OK]**をクリックします。  
+4.  **[AlwaysOn 高可用性]** タブで、 **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオフにし、 **[OK]** をクリックします。  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーによって変更内容が保存され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動すると、AlwaysOn が無効になり、 **IsHadrEnabled** サーバー プロパティは、AlwaysOn 可用性グループが無効であることを示す 0 に設定されます。  
   

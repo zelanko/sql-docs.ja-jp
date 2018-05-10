@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
 - sql13.swb.new.datatype.properties.general.f1
@@ -22,13 +21,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 411b717866ff137b498d12aff3994e2a7436101d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-user-defined-data-type"></a>ユーザー定義データ型を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[データベース]**を展開し、データベースを展開します。次に、 **[プログラミング]**、 **[種類]**を順に展開し、 **[ユーザー定義データ型]**を右クリックして、 **[新しいユーザー定義データ型]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[データベース]** を展開し、データベースを展開します。次に、 **[プログラミング]**、 **[種類]** を順に展開し、 **[ユーザー定義データ型]** を右クリックして、 **[新しいユーザー定義データ型]** をクリックします。  
   
      **[NULL を許容]**  
      ユーザー定義データ型が NULL 値を受け入れるかどうかを指定します。 既存のユーザー定義データ型に対する NULL 値の許容/非許容は編集できません。  
@@ -101,7 +99,7 @@ ms.lasthandoff: 04/16/2018
     |20 ～ 28|13|  
     |29 ～ 38|17|  
   
-     **nchar** データ型および **nvarchar** データ型の場合、ストレージ値は常に **[長さ]**の値の 2 倍です。  
+     **nchar** データ型および **nvarchar** データ型の場合、ストレージ値は常に **[長さ]** の値の 2 倍です。  
   
      ストレージは、 **nvarchar (max)**、 **varchar (max)**、 **varbinary (max)** の各データ型に対しては表示されません。  
   
@@ -123,9 +121,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、システムから提供されている `varchar` データ型に基づいて、データ型の別名を作成します。 データ型の別名 `ssn` 型は、11 桁の社会保障番号 (999-99-9999) を格納する列で使用されます。 この列で NULL 値は許容されません。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、システムから提供されている `varchar` データ型に基づいて、データ型の別名を作成します。 データ型の別名 `ssn` 型は、11 桁の社会保障番号 (999-99-9999) を格納する列で使用されます。 この列で NULL 値は許容されません。  
   
 ```sql  
 CREATE TYPE ssn  

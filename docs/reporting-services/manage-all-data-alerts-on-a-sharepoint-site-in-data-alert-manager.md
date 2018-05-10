@@ -1,30 +1,28 @@
 ---
-title: "データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する | Microsoft Docs"
-ms.custom: 
+title: データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 64a4ead7995cb03d63daced6c3f218b3aae13e29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8f94551859d29a56de8b528bf31bd62839fb32bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する
 
@@ -41,11 +39,11 @@ SharePoint 警告管理者は、サイト ユーザーによって作成され�
   
 1.  データ警告定義が保存されている SharePoint サイトに移動します。  
   
-2.  ホーム ページで、 **[サイトの操作]**をクリックします。  
+2.  ホーム ページで、 **[サイトの操作]** をクリックします。  
   
-3.  一覧の一番下までスクロールし、 **[サイトの設定]**をクリックします。  
+3.  一覧の一番下までスクロールし、 **[サイトの設定]** をクリックします。  
   
-4.  **[Reporting Services]**で、 **[データ警告の管理]**をクリックします。  
+4.  **[Reporting Services]** で、 **[データ警告の管理]** をクリックします。  
   
 5.  **[ユーザー用の警告の表示]** の一覧で下矢印をクリックし、警告を表示するユーザーを選択します。  
   
@@ -55,7 +53,7 @@ SharePoint 警告管理者は、サイト ユーザーによって作成され�
   
 ## <a name="delete-an-alert-definition"></a>警告の定義を削除する  
   
--   削除するデータ警告を右クリックして、 **[削除]**をクリックします。  
+-   削除するデータ警告を右クリックして、 **[削除]** をクリックします。  
   
     > [!NOTE]  
     >  警告を削除すると、それ以降、警告メッセージは送信されません。 ただし、警告データベースを照会すると、警告の定義がまだ存在している場合があります。 警告サービスではスケジュールに基づいてクリーンアップが実行され、警告の定義は次回のクリーンアップで完全に削除されます。 既定のクリーンアップ間隔は 20 分です。 クリーンアップ間隔は設定可能です。 詳細については、「 [Reporting Services のデータ警告](../reporting-services/reporting-services-data-alerts.md)」を参照してください。  

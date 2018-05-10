@@ -1,30 +1,28 @@
 ---
-title: "レポート サーバー ExecutionLog と ExecutionLog3 ビュー | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー ExecutionLog と ExecutionLog3 ビュー | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前をクリックします。  
   
-3.  **[システム設定]**をクリックします。  
+3.  **[システム設定]** をクリックします。  
   
 4.  **[ログ記録]** セクションで **[実行のログ記録を有効にする]** を選択します。  
   
@@ -90,11 +88,11 @@ ms.lasthandoff: 01/09/2018
   
 2.  目的のレポート サーバーに接続します。  
   
-3.  サーバー名を右クリックし、 **[プロパティ]**をクリックします。 [プロパティ] オプションが無効になっている場合は、SQL Server Management Studio を管理者特権で実行したことを確認してください。  
+3.  サーバー名を右クリックし、 **[プロパティ]** をクリックします。 [プロパティ] オプションが無効になっている場合は、SQL Server Management Studio を管理者特権で実行したことを確認してください。  
   
 4.  **[ログ記録]** ページをクリックします。  
   
-5.  **[レポート実行のログ記録を有効にする]**を選択します。  
+5.  **[レポート実行のログ記録を有効にする]** を選択します。  
   
  **詳細ログを有効にするには**  
   

@@ -1,38 +1,19 @@
 ---
-title: "AMO の補足的なクラスとメソッドのプログラミング |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- assemblies [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- programming [AMO]
-- Analysis Management Objects, backup and restore
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 
-author: Minewiskan
+title: AMO の補足的なクラスとメソッドのプログラミング |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 8972d0659180558689302c77994f0c14f931593d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>AMO の補足的なクラスとメソッドのプログラミング
   このトピックには、次のセクションが含まれます。  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [CaptureLog クラスと CaptureXML 属性](#CL)  
   
-##  <a name="Assembly">アセンブリ クラス</a>  
+##  <a name="Assembly"></a> アセンブリ クラス  
  アセンブリにより、ユーザーの機能を拡張[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]によって新しいストアド プロシージャや多次元式 (MDX) 関数を追加します。 詳細については、次を参照してください。 [AMO のその他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)です。  
   
  アセンブリの追加や削除は簡単で、オンラインで実行できます。 アセンブリをデータベースに追加するにはデータベース管理者である必要があり、サーバー オブジェクトに追加するにはサーバー管理者である必要があります。  
@@ -106,7 +87,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Trace クラス</a>  
+##  <a name="TRC"></a> Trace クラス  
  サーバーの利用状況を監視するには、セッション トレースとサーバー トレースの 2 種類のトレースを使用する必要があります。 サーバーをトレースすると、現在のタスクがサーバーでどのように処理されているかを確認したり (セッション トレース)、サーバーの全体的な利用状況をサーバーに接続せずに確認したり (サーバー トレース) できます。  
   
  現在の利用状況のトレース (セッション トレース) では、現在のアプリケーションがサーバーで発生させているイベントに関する通知がサーバーからそのアプリケーションに送信されます。 イベントは、現在のアプリケーションのイベント ハンドラーを使用してキャプチャされます。 セッション トレースを開始するには、まず、イベントを処理するルーチンを <xref:Microsoft.AnalysisServices.SessionTrace> オブジェクトに割り当てます。  
@@ -287,8 +268,8 @@ static public string TestCaptureLog(Server svr)
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO の他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [多次元モデルの処理&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

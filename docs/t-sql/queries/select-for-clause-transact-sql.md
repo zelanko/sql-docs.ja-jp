@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +26,11 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f996681218f6fa493cf36fa094d978852f08448
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f7fd468db672b9c38d463d1b1d5a1784c0a0dcda
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +194,7 @@ JSON
  インライン XDR スキーマを返します。ただし、結果にルート要素は追加されません。 XMLDATA を指定すると、XDR スキーマはドキュメントに追加されます。  
   
 > [!IMPORTANT]  
->  XMLDATA ディレクティブは非推奨です。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
  インライン XSD スキーマを返します。 このディレクティブを指定する場合は、必要に応じて、対象名前空間の URI を指定することもできます。指定した場合は、スキーマにある指定した名前空間が返されます。 詳細については、「 [Generate an Inline XSD Schema](../../relational-databases/xml/generate-an-inline-xsd-schema.md)」を参照してください。  

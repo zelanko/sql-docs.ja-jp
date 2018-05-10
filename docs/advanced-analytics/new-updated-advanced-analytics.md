@@ -1,21 +1,26 @@
 ---
 title: 更新 - SQL Server ドキュメントの Advanced Analytics |Microsoft ドキュメント
 description: 更新されたコンテンツで最近変更したドキュメントについては、Microsoft SQL Server の高度な分析のためのスニペットを表示します。
+manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.technology: release-landing
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 058278df1ee54a6440f8225ea15f727857df76f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.prod_service: sql-non-specified
+ms.component: advanced-analytics
+ms.date: 04/28/2018
+ms.openlocfilehash: bbce32579b54647e167c25d2708a80027ae0e678
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>新規または最近更新された: SQL Server の Advanced Analytics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+
 
 ほとんど毎日 Microsoft への更新プログラムの既存のアーティクルのいくつかの[Docs.Microsoft.com](http://docs.microsoft.com/)ドキュメント web サイトです。 この記事では、最近更新された文書からの抜粋を表示します。 新しい情報の記事へのリンクも表示される可能性があります。
 
@@ -25,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 
 
-- *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
+- *更新プログラムの日付範囲:* &nbsp; **2018-02-03** &nbsp;対&nbsp; **2018-04-28**
 - *サブジェクト領域:* &nbsp; **for SQL Server の Advanced Analytics**です。
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -39,7 +44,17 @@ ms.lasthandoff: 04/16/2018
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [SQL Server に新しい Python パッケージをインストールする](python/install-additional-python-packages-on-sql-server.md)
+1. [Windows サービス (In-database) を学習の SQL Server 2017 マシンをインストールします。](install/sql-machine-learning-services-windows-install.md)
+2. [Windows Server (スタンドアロン) を学習の SQL Server 2017 マシンをインストールします。](install/sql-machine-learning-standalone-windows-install.md)
+3. [コマンドラインから machine learning の SQL Server コンポーネントをインストールします。](install/sql-ml-component-commandline-install.md)
+4. [SQL Server コンピューターがインターネットにアクセスできないコンポーネントの学習をインストールします。](install/sql-ml-component-install-without-internet-access.md)
+5. [SQL Server 2016 R Services (In-database) のインストールします。](install/sql-r-services-windows-install.md)
+6. [SQL Server 2016 R Server (スタンドアロン) のインストールします。](install/sql-r-standalone-windows-install.md)
+7. [SQL Server の Machine Learning で使用するためのクライアント ツールの Python の設定します。](python/setup-python-client-tools-sql.md)
+8. [SQL で Python モデルをトレーニングおよびスコア付けを使用します。](tutorials/train-score-using-python-in-tsql.md)
+9. [ストアド プロシージャでの Python コードを折り返す](tutorials/wrap-python-in-tsql-stored-procedure.md)
+10. [SQL Server Machine Learning Services とは](what-is-sql-server-machine-learning.md)
+11. [PREDICT ステートメントを監視するための拡張イベント](xe-event-predict-tsql.md)
 
 
 
@@ -65,9 +80,12 @@ ms.lasthandoff: 04/16/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [Machine Learning のサービスの既知の問題](#TitleNum_1)
-2. [データベース内の実行の R コードの変換](#TitleNum_2)
-3. [SQL Server にインストールされている R パッケージを確認します。](#TitleNum_3)
+1. [R の表示または SQL Server にインストールされている Python パッケージ](#TitleNum_1)
+2. [事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。](#TitleNum_2)
+3. [SQL Server での R 開発用のデータ サイエンス クライアントのセットアップします。](#TitleNum_3)
+4. [SQL Server コンピューターの学習と R Services (In-database)](#TitleNum_4)
+5. [T-SQL を使用して実行の Python](#TitleNum_5)
+6. [Revoscalepy で Python を使用してモデルを作成するには](#TitleNum_6)
 
 
 
@@ -78,42 +96,46 @@ ms.lasthandoff: 04/16/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-known-issues-in-machine-learning-servicesknown-issues-for-sql-server-machine-learning-servicesmd"></a>1.&nbsp; [Machine Learning のサービスの既知の問題](known-issues-for-sql-server-machine-learning-services.md)
+### <a name="1-nbsp-viewing-r-or-python-packages-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>1.&nbsp; [R の表示または SQL Server にインストールされている Python パッケージ](r/determine-which-packages-are-installed-on-sql-server.md)
 
-*最終更新日: 2018-02-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
+*最終更新日: 2018-04-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次](#TitleNum_2))
 
-<!-- Source markdown line 163.  ms.author= "jeannt".  -->
+<!-- Source markdown line 208.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c6f46adcf795c43f818120b88407a3a89304cb27 c781562605f5cd77f6c43bfe5e89810cb72ceae0  (PR=4789  ,  Filename=known-issues-for-sql-server-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\  ,  MergeCommitSha40=386bfb688843bac7fa4d83dc1cfef94dd19db110) -->
+<!-- git diff --ignore-all-space --unified=0 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f ec6859ac91b27539dc36f21aec82c99937c0187a  (PR=5610  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f1f96a990644c0d6cfa5a1d88ccee959cab6c2b2) -->
 
 
 
-追加既知の問題を R ソリューションを与える可能性がありますを参照してください、 [Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/resources-known-issues)サイトです。
-
-**アクセスは、既定以外の場所に SQL Server で R スクリプトを実行するときに警告を拒否されました**
+**Python**
 
 
-SQL Server のインスタンスがインストールされている場合、既定以外の場所になどの外部、`Program Files`フォルダー、ACCESS_DENIED は、パッケージをインストールするスクリプトを実行しようとしたときに発生する警告です。 以下に例を示します。
+この例には、Python に含まれるフォルダーの一覧が返されます`sys.path`変数。 一覧には、現在のディレクトリ、および標準ライブラリ パスが含まれています。
 
-> *NormalizePath(path.expand(path)、winslash、mustWork) パス [2] ="~ExternalLibraries/R/8/1": アクセスが拒否されました。*
+```
+EXEC sp_execute_external_script
+  @language =N'Python',
+  @script=N'import sys; print("\n".join(sys.path))'
+```
 
-その理由は R 関数は、パスを読み取ろうとすると、失敗した場合、組み込みのユーザー グループ**SQLRUserGroup**は読み取りアクセスがありません。 生成される警告は、現在の R スクリプトの実行をブロックしませんが、ユーザーがその他の R スクリプトを実行するたびに、警告が繰り返し再発可能性があります。
+**結果**
 
-で既定の場所に SQL Server をインストールする場合は、このエラーは発生しません、すべての Windows ユーザーのアクセス許可を読み取りがであるため、`Program Files`フォルダーです。
+```
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\python35.zip
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\DLLs
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Sphinx-1.5.4-py3.5.egg
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Pythonwin
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
+```
 
-この問題は、次のサービス リリースで解決されます。 この問題を回避するには、提供、グループ**SQLRUserGroup**のすべての親フォルダーに対して読み取りアクセス権を持つ`ExternalLibraries`します。
-
-**RevoScaleR の新旧のバージョン間でシリアル化エラー**
-
-
-リモート SQL Server インスタンスをシリアル化された形式を使用して、モデルを渡す際にエラーが発生する可能性があります。
-
-> *MemDecompress でエラー (データ、種類 = 圧縮解除) memDecompress(2) で内部エラー-3 です。*
-
-シリアル化の関数の最新バージョンを使用して、モデルを保存した場合、このエラーは発生[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)モデルの逆シリアル化する、SQL Server インスタンスが、古いバージョンの SQL からの RevoScaleR ApiServer 2017 CU2 以前のバージョン。
+変数の詳細については`sys.path`モジュールの検索パスのインタープリターの設定を使用する方法を参照してくださいおよび、 [Python ドキュメント。](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 
 
@@ -125,45 +147,43 @@ SQL Server のインスタンスがインストールされている場合、既
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-converting-r-code-for-execution-in-databaserconverting-r-code-for-use-in-sql-servermd"></a>2.&nbsp; [データベース内の実行の R コードの変換](r/converting-r-code-for-use-in-sql-server.md)
+### <a name="2-nbsp-install-pre-trained-machine-learning-models-on-sql-serverrinstall-pretrained-models-sql-servermd"></a>2.&nbsp; [事前トレーニング済みの機械学習の SQL Server 上のモデルをインストールします。](r/install-pretrained-models-sql-server.md)
 
-*最終更新日: 2018-01-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [次](#TitleNum_3))
+*最終更新日: 2018-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_1) | [次](#TitleNum_3))
 
-<!-- Source markdown line 136.  ms.author= "jeannt".  -->
+<!-- Source markdown line 140.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 a1d156fac1af5813ef75965071686b177e2aede7 fc8beff0aa0d7ea298e493b90984875e81e9143e  (PR=4493  ,  Filename=converting-r-code-for-use-in-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f486d12078a45c87b0fcf52270b904ca7b0c7fc8) -->
+<!-- git diff --ignore-all-space --unified=0 aa03623d819750d4919feb7910b07ec1875bb509 7382228fa68b04b500a5fde73c29995e12aa20ac  (PR=5504  ,  Filename=install-pretrained-models-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
 
 
 
-**ストアド プロシージャで R コードをパッケージ化します。**
+1. いずれかの Windows ベースの独立したインストーラーを起動して[R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)または[Machine Learning サーバー](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)です。
 
-+ コードが比較的単純な場合に埋め込んだりできます、改変の有無 T-SQL は、ユーザー定義関数でこれらのサンプル」の説明に従って。
+2. 更新、および選択する言語を選択して、 **Pre-trained モデル**オプション。
 
-    + [RxExec で実行されている R 関数を作成します。](r/../tutorials/deepdive-create-a-simple-simulation.md)
-    + [T-SQL と R を使用して特徴エンジニア リング](r/../tutorials/sqldev-create-data-features-using-t-sql.md)
+    > [!TIP]
+    > 以前を R Server (スタンドアロン) を更新して、事前トレーニング済みモデルを追加するだけのインストーラーを実行した場合は、前のすべての選択のままに**は**、プレだけを選択し、**-モデルをトレーニング**オプション. **そうしない**以前選択したオプションの選択を解除; インストーラーが、コンポーネントを削除してこれを行う場合。
 
-+ コードがより複雑な場合は、R パッケージを使用して**sqlrutils**コードに変換します。 経験豊富な R ユーザーの適切なストアド プロシージャのコードの記述には、このパッケージは設計されています。
+    モデルの場所の既定の設定をそのまま使用することをお勧めします。
 
-    最初の手順では、明確に定義された入力と出力と 1 つの関数として、R コードを書き直してください。
+3. **[続行]** をクリックします。
 
-    次に、使用、 **sqlrutils**正しい形式で入力と出力を生成するパッケージ。 **Sqlrutils**パッケージは、ストアド プロシージャの完全なコードを生成し、データベースでストアド プロシージャを登録することもできます。
+4. 使用許諾契約書を含む、他のすべてのメッセージをそのまま使用します。
 
-    詳細と例については、次を参照してください。 [SqlRUtils](r/../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)です。
+インストールが完了したら、事前トレーニング済みモデルを登録する追加の手順を実行する必要があります。
 
-**他のワークフローとの統合します。**
+1. Windows コマンド プロンプトを開き**管理者として**です。
 
-+ ETL プロセスの T-SQL でツールを活用できます。 特徴エンジニア リング、特徴を抽出、およびデータのワークフローの一部としてデータ クレンジングを事前に実行します。
+2. Microsoft R インストーラーが含まれる R Server (スタンドアロン) のセットアップ ブートス トラップ フォルダーに移動します。
 
-    Visual Studio または RStudio の R ツールなど、専用の R 開発環境で作業するときする可能性がありますをコンピューターにデータをプル、繰り返し、データの分析を書き込むしたり結果を表示します。
+3. 実行`RSetup.exe`し、インストールするコンポーネント、バージョン、およびこの構文を使用して、モデルのソース ファイルを含むフォルダーを指定します。
 
-    ただし、スタンドアロン R コードを SQL Server に移行すると、このプロセスの多くする簡略化したり、他の SQL Server のツールに委任できます。
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
 
-+ セキュリティで保護された、非同期の視覚エフェクトの戦略を使用します。
-
-    多くの場合、SQL Server のユーザーは、サーバー上のファイルにアクセスできないし、SQL クライアント ツールは通常、R のグラフィックス デバイスをサポートしています。 ソリューションの一部としてプロットやその他のグラフィックスを生成する場合は、バイナリ データとして、プロットをエクスポートして、テーブルへの保存または書き込みを検討してください。
+    バージョン パラメーターは、次の値がサポートされています。
 
 
 
@@ -175,52 +195,215 @@ SQL Server のインスタンスがインストールされている場合、既
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-determine-which-r-packages-are-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>3.&nbsp; [SQL Server にインストールされている R パッケージを確認します。](r/determine-which-packages-are-installed-on-sql-server.md)
+### <a name="3-nbsp-set-up-a-data-science-client-for-r-development-on-sql-serverrset-up-a-data-science-clientmd"></a>3.&nbsp; [SQL Server での R 開発用のデータ サイエンス クライアントのセットアップします。](r/set-up-a-data-science-client.md)
 
-*最終更新日: 2018-01-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2))
+*最終更新日: 2018-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_2) | [次](#TitleNum_4))
 
-<!-- Source markdown line 78.  ms.author= "jeannt".  -->
+<!-- Source markdown line 39.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9a065066398843a4bed318fa46d4982d712915a9 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f  (PR=4715  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=9e6a029456f4a8daddb396bc45d7874a43a47b45) -->
+<!-- git diff --ignore-all-space --unified=0 0583f8febcedc5dc2e14ca1a8073ca204ca37987 3d50ad8f35f2985944741a9b2211a461df2c13e4  (PR=5504  ,  Filename=set-up-a-data-science-client.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
+
+
+
+**R のツール**
+
+
+いずれかでインストールされているのと同じ R ツールを取得する SQL Server で R をインストールするときに**基本**RGui、Rterm などの R のインストール。 このため実際があるすべてのツールを開発し、R コードをテストする必要があります。
+
+次の標準的な R ツールが含まれている、*基本インストール*R のし、そのため、既定でインストールされます。
+
++ **RTerm**: R スクリプトを実行するためのコマンド ライン ターミナル
+
++ **RGui.exe**:  R のための単純な対話型エディター。コマンドライン引数は RGui.exe と RTerm で同じです。
+
++ **RScript**: R スクリプトをバッチ モードで実行するためのコマンドライン ツール。
+
+これらのツールを検索するには、SQL Server または機能を学習するスタンドアロンのマシンを設定するときにインストールされた R ライブラリを決定します。 たとえば、既定のインストールでは、R ツールはこれらのフォルダーにあります。
+
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server のスタンドアロン: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 マシン サービスを学習します。 `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 機械学習のサーバー (スタンドアロン)。 `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+R ツールのヘルプを必要がある場合は、開く**RGui**をクリックして**ヘルプ**オプションのいずれかを選択
+
+**Microsoft R Client**
+
+
+Microsoft R クライアントは、開発用に、RevoScaleR パッケージに対するアクセスを提供する無料でダウンロードします。 R のクライアントをインストールするには、SQL Server データベース内の分析、および Hadoop、Spark、または Machine Learning のサーバーを使用して Linux 上の分散 R コンピューティングを含む、すべてのサポートされているコンピューティング コンテキストで実行できる R ソリューションを作成できます。
+
+別の R 開発環境が既にインストールされている場合 RStudio などは、ライブラリおよび Microsoft R クライアントによって提供される実行可能ファイルを使用する環境を再構成します。 により、RevoScaleR パッケージのすべての機能を使用することができますが、パフォーマンスが制限されます。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### <a name="4-nbsp-sql-server-machine-learning-and-r-services-in-databasersql-server-r-servicesmd"></a>4.&nbsp; [SQL Server コンピューターの学習と R Services (In-database)](r/sql-server-r-services.md)
+
+*最終更新日: 2018-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_3) | [次](#TitleNum_5))
+
+<!-- Source markdown line 83.  ms.author= heidist.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b1a95a7f6d391a518762eb271e8ea7e0d684d403 7fbfabf62917e03e2bcb99d297e1c9d0f0604440  (PR=5504  ,  Filename=sql-server-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
+
+
+
+タスクに最適な言語を選択します。 R は、SQL を使用して実装するが困難な統計の計算に最適です。 データに対するセットベースの操作での活用 *{含まれている-コンテンツの移動のここ}* 最大限のパフォーマンスを実現するためにします。 列にわたって非常に高速計算用のメモリ内のデータベース エンジンを使用します。
+
+**手順 4: ソリューションを最適化します。**
+
+
+モデルの企業データにスケール アウトする準備ができたらなどのプロセスを最適化するために、データベース管理者または SQL の開発者に多くの場合、データ サイエンティストは動作します。
+
++ 機能エンジニアリング
++ データの取り込みやデータの変換
++ ポイントの計算
+
+従来 R を使用するデータ サイエンティストは、特に大規模なデータセットを使用する場合に、パフォーマンスとスケールの両方の問題を必要があります。 一般的なランタイムの実装はシングル スレッドし、ローカル コンピューターで使用可能なメモリに収まらないデータ セットのみに対応できるためです。 SQl Server マシン学習サービスとの統合より多くのデータのパフォーマンスを向上させるため、複数の機能を提供します。
+
++ **RevoScaleR**: この R パッケージには、最も一般的な R 関数、並列処理とスケールのために再設計のいくつかの実装が含まれています。 パッケージには、計算をプッシュしてパフォーマンスとスケールをさらに向上させる機能も含まれています、 *{含まれている-コンテンツの移動のここ}* コンピューターは、通常ははるかに大きなメモリと演算能力を利用します。
+
++ **revoscalepy**です。 この Python ライブラリは、SQL Server 2017 で使用できるは、リモート計算コンテキストなど RevoScaleR で最も人気のある関数を実装しをサポートする多くのアルゴリズムが処理を分散します。
+
+**リソース**
+
++ [パフォーマンスのケース スタディ]
++ [R とデータの最適化]
+
+**手順 5: 展開し、使用**
 
 
 
 
-**ライブラリの場所とバージョンを取得します。**
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### <a name="5-nbsp-run-python-using-t-sqltutorialsrun-python-using-t-sqlmd"></a>5.&nbsp; [T-SQL を使用して実行の Python](tutorials/run-python-using-t-sql.md)
+
+*最終更新日: 2018-04-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_4) | [次](#TitleNum_6))
+
+<!-- Source markdown line 306.  ms.author= heidist.  -->
+
+&nbsp;
 
 
-次の例では、RevoScaleR のローカル コンピューティング コンテキストでパッケージのバージョンのライブラリの場所を取得します。
+<!-- git diff --ignore-all-space --unified=0 bde8c6476df259d225847c08224cefd02f3529d5 cad56997abe7928b588ac4a0302384c5edc1ede5  (PR=5497  ,  Filename=run-python-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=86c4e1879c5914676b9da384ab101b50b4a63bf1) -->
+
+
+
+2. Data.frame から特定の値を取得するインデックスを使用する場合でも、インデックス値が出力をされないことに注意してください。
+
+    **結果**
+
+    |ResultValue|
+    |------|
+    |0.5|
+    |2|
+
+**インデックスを使用して data.frame に出力値**
+
+
+単純な算術演算の結果を含む、2 つの系列が、data.frame への変換のしくみを見てみましょう。 最初には、Python によって生成される連続した値のインデックスがあります。 2 つ目は、文字列値の任意のインデックスを使用します。
+
+1. この例では、整数インデックスを使用する系列の値を取得します。
 
 ```
-rxFindPackage(RevoScaleR, "local")
-packageVersion("RevoScaleR")
+    EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s, index=[1])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
 ```
 
-**SQL Server で使用されるライブラリのパスを確認します。**
+自動生成されたインデックスは 0 から始まることに注意してください。 範囲外のインデックス値を使用してくださいし、何が起こるかを確認します。
 
-
-機械学習のバインディングを使用してコンポーネントをアップグレードした場合、R ライブラリへのパスを変更する可能性があります。 この場合、R ツールを以前のショートカットは、以前のバージョンを参照場合があります。 確認するため、パスとパッケージのバージョンの SQL Server で使用される、次などのコマンドを実行できます。
+2. 今すぐみましょう文字列インデックスを持つ他のデータ フレームから 1 つの値を取得します。
 
 ```
-EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    sql_r_path <- rxSqlLibPaths("local")
-      print(sql_r_path)
-    version_info <-packageVersion("RevoScaleR")
-      print(version_info)'
+    EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    df = pd.DataFrame(s, index=["simple math example 1"])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
 ```
 
 **結果**
 
-```
-STDOUT message(s) from external script:
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
-[1] '9.2.1'
-```
+|ResultValue|
+|------|
+|0.5|
+
+エラーが発生したこのシリーズの値を取得する数値のインデックスを使用しようとする場合。
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### <a name="6-nbsp-use-python-with-revoscalepy-to-create-a-modeltutorialsuse-python-revoscalepy-to-create-modelmd"></a>6.&nbsp; [Revoscalepy で Python を使用してモデルを作成するには](tutorials/use-python-revoscalepy-to-create-model.md)
+
+*最終更新日: 2018-04-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([以前](#TitleNum_5))
+
+<!-- Source markdown line 22.  ms.author= heidist.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5b642b391ca571412c30c8470875d3d4d3c57246 bd83387eb8a1076a1396bbd48dca12872843aa2f  (PR=5497  ,  Filename=use-python-revoscalepy-to-create-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=86c4e1879c5914676b9da384ab101b50b4a63bf1) -->
+
+
+
+SQL Server 2017 のプレリリース版をインストールした場合に更新するには、少なくとも RTM バージョン。 以降のサービス リリースを展開し、Python の機能を向上させるきました。 このチュートリアルの一部の機能は、以前のプレリリース バージョン動かないことがあります。
+
++ この例は、定義済みの Python 環境という名前を使用して`PYTEST_SQL_SERVER`です。 格納する環境が構成されて**revoscalepy**と他の必要なライブラリです。
+
+    場合は、環境を Python を実行するように構成することはありません、行う必要がありますとは別にします。 Python 環境を変更または作成する方法の詳細については、このチュートリアルの対象外です。 正しいライブラリが含まれている Python クライアントを設定する方法の詳細については、次を参照してください。 [Python のインストール クライアント](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)と[ツールへのリンクの Python](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)です。
+
+**リモート計算コンテキストと revoscalepy**
+
+
+このサンプルでは、リモートで Python モデルの作成のプロセス_計算コンテキスト_をクライアントから作業は、SQL Server、Spark、Machine Learning サーバーなどのリモート環境を選択することができますを操作が実際に実行されます。 計算コンテキストを使用すると、1 回のコードの記述をすべてサポートされている環境に配置してやすくなります。
+
+SQL Server での Python コードを実行する必要があります、 **revoscalepy**パッケージです。 これと同様に、Microsoft によって提供される特殊な Python パッケージ、 **RevoScaleR** R 言語用のパッケージです。 **Revoscalepy**パッケージ計算コンテキストの作成をサポートし、ローカルのワークステーションとリモート サーバーの間でデータとモデルを渡すためのインフラストラクチャを提供します。 **Revoscalepy**関数は、データベース内でコードが実行をサポートする[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)です。
 
 
 
@@ -233,40 +416,36 @@ STDOUT message(s) from external script:
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ある*" 対象領域
 
-
-- [新規 + 更新 (1 + 3):&nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (12 + 1): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (6 + 2):&nbsp;**Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (15 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (2 + 9):&nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (1 + 0):&nbsp;**SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (1 + 1):&nbsp;**SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新規 + 更新 (1 + 1):&nbsp;**Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (1 + 2):&nbsp;**SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 2):&nbsp;**Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新しい + 更新 (11 + 6): &nbsp; &nbsp; **SQL の Advanced Analytics** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新しい + 更新 (18 + 0): &nbsp; &nbsp; **SQL 用に Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (218 + 14): **SQL への接続**docs](../connect/new-updated-connect.md)
+- [新しい + 更新 (14 + 0): &nbsp; &nbsp; **SQL のデータベース エンジン**docs](../database-engine/new-updated-database-engine.md)
+- [新しい + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [新しい + 更新 (3 + 3): &nbsp; &nbsp; **SQL の Linux** docs](../linux/new-updated-linux.md)
+- [新しい + 更新 (7 + 10): &nbsp; &nbsp;**リレーショナル データベースを SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [新しい + 更新 (0 + 2): &nbsp; &nbsp; **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [新しい + 更新 (1 + 3): &nbsp; &nbsp; **SQL 操作 Studio** docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新しい + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [新しい + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [新しい + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [新しい + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [新しい + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ない*" 対象領域
 
-
-- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
-- [新しい + 更新 (0 0 以降): **SQL のように、ActiveX データ オブジェクト (ADO)** docs](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新しい + 更新 (0 0 以降): **sql 分析プラットフォーム システム**docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新しい + 更新 (0 0 以降): **SQL の Data Quality Services** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [新しい + 更新 (0 0 以降):**データ マイニング拡張機能 (DMX) の SQL** docs](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新しい + 更新 (0 0 以降): **SQL の多次元式 (MDX)** docs](../mdx/new-updated-mdx.md)
 - [新しい + 更新 (0 0 以降): **SQL に対する ODBC (Open Database Connectivity)** docs](../odbc/new-updated-odbc.md)
+- [新しい + 更新 (0 0 以降): **SQL 用の PowerShell** docs](../powershell/new-updated-powershell.md)
 - [新しい + 更新 (0 0 以降): **SQL 用のサンプル**docs](../samples/new-updated-samples.md)
 - [新しい + 更新 (0 0 以降): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新しい + 更新 (0 0 以降): **SQL 用の XQuery** docs](../xquery/new-updated-xquery.md)
-
 

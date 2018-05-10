@@ -1,32 +1,23 @@
 ---
 title: リフト チャート、利益チャート、または分類マトリックスを作成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], mining structures
-ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 20
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b16770ad1bf8ca0052f7b8b6af22df02d4e4392f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a136b9e3fe14b742a6c73c20ea0cd354bba3a106
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>リフト チャート、利益チャート、または分類マトリックスの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]精度チャートを作成することができます、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 5 つの基本的な手順でデータ マイニング モデル。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルの精度チャートを作成するには、次の 5 つの基本手順に従います。  
   
 -   比較するマイニング モデルが含まれているマイニング構造を選択します。  
   
@@ -69,13 +60,13 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="select-testing-data"></a>テスト データの選択  
   
-1.  **[マイニング精度チャート]** タブにある **[入力の選択]** タブで、 **[精度チャートに使用するデータセットの選択]**のいずれかのオプションを選択することによって、グラフの生成に使用するデータのソースを指定します。  
+1.  **[マイニング精度チャート]** タブにある **[入力の選択]** タブで、 **[精度チャートに使用するデータセットの選択]** のいずれかのオプションを選択することによって、グラフの生成に使用するデータのソースを指定します。  
   
-    -   マイニング構造のテスト ケースとモデルの作成時に適用されたフィルターの積集合で定義されているケースのサブセットを使用する場合は、 **[マイニング モデルのテスト ケースを使用する]**オプションを選択します。  
+    -   マイニング構造のテスト ケースとモデルの作成時に適用されたフィルターの積集合で定義されているケースのサブセットを使用する場合は、 **[マイニング モデルのテスト ケースを使用する]** オプションを選択します。  
   
-    -   マイニング構造の予約データ セットの一部として定義されたテスト ケースの完全なセットを使用するには、 **[マイニング モデルのテスト ケースを使用する]**オプションを選択します。  
+    -   マイニング構造の予約データ セットの一部として定義されたテスト ケースの完全なセットを使用するには、 **[マイニング モデルのテスト ケースを使用する]** オプションを選択します。  
   
-    -   外部データを使用する場合は、 **[別のデータセットを指定する]**オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   参照 (**[…]**) ボタンをクリックして、精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)」を参照してください。  
+    -   外部データを使用する場合は、 **[別のデータセットを指定する]** オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   参照 (**[…]**) ボタンをクリックして、精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)」を参照してください。  
   
          外部データセットを使用する場合、必要に応じて入力データセットをフィルター選択できます。 詳細については、「 [モデルのテスト データへのフィルターの適用](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)」を参照してください。  
   
@@ -90,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  **分類マトリックス**の場合は、 **[分類マトリックス]** タブをクリックします。それ以上の設定は不要です。グラフは、選択した入力データおよびモデルに基づいて自動的に生成されます。  
   
-4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。**[グラフの種類]** ボックスの一覧から **[利益チャート]**を選択します。  
+4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。**[グラフの種類]** ボックスの一覧から **[利益チャート]** を選択します。  
   
      **[利益チャートの設定]** ダイアログ ボックスで次の設定を入力します。  
   
@@ -117,7 +108,7 @@ ms.lasthandoff: 01/08/2018
      成功した各販売に関連する収益です。  
   
 ## <a name="see-also"></a>参照  
- [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [分類マトリックス (Analysis Services - データ マイニング)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [リフト チャートと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

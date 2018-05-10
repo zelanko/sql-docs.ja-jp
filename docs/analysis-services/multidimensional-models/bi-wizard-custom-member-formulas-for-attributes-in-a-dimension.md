@@ -1,37 +1,23 @@
 ---
-title: "ディメンションの属性に対するカスタム メンバー式の設定 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ディメンションの属性に対するカスタム メンバー式の設定 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Business Intelligence enhancements [Analysis Services], custom member formulas
-- member formulas [Analysis Services]
-- dimensions [Analysis Services], Business Intelligence enhancements
-- custom member formulas [Analysis Services]
-- CustomRollupColumn property
-ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: acec3f91c8229acc6c17f5989b63677b394b6129
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 275d3db686926c779fca7b5b8ca7a291615ee1d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI ウィザード - ディメンションの属性に対するカスタム メンバー式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します  (この拡張機能により、ディメンションの指定した属性で **CustomRollupColumn** プロパティが設定されます)。  
+  キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します  (この拡張機能により、ディメンションの指定した属性で **CustomRollupColumn** プロパティが設定されます)。  
   
 > [!NOTE]  
 >  カスタム メンバー式は、既存のデータ ソースを基にしたディメンションのみに使用できます。 データ ソースを使用せずに作成されたディメンションに対しては、スキーマ生成ウィザードを実行し、データ ソース ビューを作成してからカスタム メンバー式を追加する必要があります。  

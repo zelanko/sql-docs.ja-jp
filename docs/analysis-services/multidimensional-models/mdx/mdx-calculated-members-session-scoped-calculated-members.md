@@ -1,34 +1,23 @@
 ---
-title: "セッション スコープを作成する計算されるメンバー (MDX) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: セッション スコープを作成する計算されるメンバー (MDX) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- CREATE MEMBER statement
-- session-scoped calculated members [MDX]
-ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 273553132fd9a3cd32900fef28800d28c9f6c1d5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1f587c6a34d69da4ad3a218678eaa5b3f026f01b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX の計算されるメンバーのセッション スコープの計算されるメンバー
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、CREATE MEMBER ステートメントの構文は非常に単純で使いやすいものです。  
   
@@ -59,6 +48,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>参照  
- [計算されるメンバー &#40; のクエリ スコープの作成MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+ [計算されるメンバー & #40; のクエリ スコープの作成MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

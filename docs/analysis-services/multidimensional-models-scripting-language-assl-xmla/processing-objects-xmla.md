@@ -1,40 +1,19 @@
 ---
-title: "オブジェクト (XMLA) の処理 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- errors [XML for Analysis]
-- objects [XML for Analysis]
-- XML for Analysis, objects
-- XMLA, partitions
-- partitions [Analysis Services], XML for Analysis
-- XML for Analysis, partitions
-- writeback [Analysis Services], XML for Analysis
-- out-of-line bindings
-- processing objects [XML for Analysis]
-- XMLA, objects
-ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 
-author: Minewiskan
+title: オブジェクト (XMLA) の処理 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 58150b6b74fd3a58fb09f44818b724214a64b8b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-objects-xmla"></a>オブジェクトの処理 (XMLA)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]処理は、手順つまたは一連のオンであるデータをビジネス分析のための情報にします。 処理内容はオブジェクトの種類によって異なりますが、データを情報に変換する処理の一部として必ず実行されます。  
@@ -75,14 +54,14 @@ ms.lasthandoff: 02/15/2018
 |*ProcessClearStructureOnly*|マイニング構造|  
 |*ProcessScriptCache*|Cube|  
   
- 処理の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、オブジェクトを参照してください[多次元モデル &#40; の処理Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 処理の詳細については[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、オブジェクトを参照してください[多次元モデルの処理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)です。  
   
 ## <a name="specifying-objects-to-be-processed"></a>処理対象のオブジェクトの指定  
  [オブジェクト](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)のプロパティ、**プロセス**コマンドには、処理するオブジェクトのオブジェクト識別子が含まれています。 1 つのオブジェクトを指定することができます、**プロセス**の子オブジェクトも処理コマンドしますが、オブジェクトを処理します。 たとえば、キューブ内のメジャー グループを処理すると、そのメジャー グループのすべてのパーティションが処理されます。また、データベースを処理すると、キューブ、ディメンション、およびマイニング構造など、そのデータベースに含まれるすべてのオブジェクトが処理されます。  
   
  設定した場合、 **ProcessAffectedObjects**の属性、**プロセス**関連する、指定したオブジェクトを処理することで影響を受けるオブジェクトの処理も true の場合、コマンドします。 たとえばを使用して、ディメンションの増分更新、 *ProcessUpdate*処理オプション、**プロセス**コマンド、任意のパーティションの集計がメンバーによって無効になる中追加または削除しても、処理されます[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]場合**ProcessAffectedObjects**が設定を true にします。 この場合は、1 つの**プロセス**コマンドで複数のオブジェクトを処理できる、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、インスタンスが、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で指定された 1 つのオブジェクトだけでなくオブジェクトが決定、**プロセス**コマンドを処理もする必要があります。  
   
- ただし、複数を使用して、同時にディメンションなど、複数のオブジェクトを処理することができます**プロセス**コマンドの中で、**バッチ**コマンド。 バッチ操作では、オブジェクトの直列または並列処理のため、細かいレベルの制御を提供に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを使用するより、 **ProcessAffectedObjects**属性がありの処理方法をチューニングできる大きな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行 &#40;です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ ただし、複数を使用して、同時にディメンションなど、複数のオブジェクトを処理することができます**プロセス**コマンドの中で、**バッチ**コマンド。 バッチ操作では、オブジェクトの直列または並列処理のため、細かいレベルの制御を提供に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスを使用するより、 **ProcessAffectedObjects**属性がありの処理方法をチューニングできる大きな[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。 バッチ操作の実行の詳細については、次を参照してください。[バッチ操作の実行&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)です。  
   
 ## <a name="specifying-out-of-line-bindings"></a>不一致バインドの指定  
  場合、**プロセス**でコマンドが含まれていない、**バッチ**コマンド内の行外のバインディング オプションで指定できます、[バインド](../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md)、[データソース](../../analysis-services/xmla/xml-elements-properties/datasource-element-xmla.md)、および[DataSourceView](../../analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla.md)のプロパティ、**プロセス**コマンドを処理するオブジェクト。 アウトオブ ライン バインドは、データ ソース、データ ソース ビュー、およびその他のオブジェクトの実行時にのみ存在するバインドへの参照、**プロセス**コマンド、およびに関連付けられている既存のバインドを上書きします処理中のオブジェクト。 不一致バインドが指定されていない場合、処理対象のオブジェクトに現在関連付けられているバインドが使用されます。  
@@ -93,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
 -   データ フロー タスクを使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ディメンション、マイニング モデル、またはパーティションの処理中にデータを提供します。  
   
- 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL での不一致バインドの詳細については、次を参照してください。[データ ソースとのバインド &#40;です。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ 不一致バインドは、Analysis Services Scripting Language (ASSL) の一部として記述されます。 ASSL での不一致バインドの詳細については、次を参照してください。[データ ソースとバインド&#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)です。  
   
 ### <a name="incrementally-updating-partitions"></a>パーティションの増分更新  
  通常、既に処理されているパーティションを増分更新する場合は、不一致バインドが必要です。これは、パーティションに対して指定されているバインドが、既にパーティション内で集計されているファクト テーブル データを参照するためです。 使用して既に処理されているパーティションを増分更新する場合、**プロセス**コマンド、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、次の操作を実行します。  
@@ -104,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 -   一時パーティションを、選択された既存のパーティションにマージします。  
   
- XML for Analysis (XMLA) を使用してパーティションのマージに関する詳細については、次を参照してください。[パーティションのマージと #40 です。XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
+ XML for Analysis (XMLA) を使用してパーティションのマージに関する詳細については、次を参照してください。[パーティションのマージ&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)です。  
   
 ## <a name="handling-processing-errors"></a>処理エラーの処理  
  [ErrorConfiguration](../../analysis-services/xmla/xml-elements-properties/errorconfiguration-element-xmla.md)のプロパティ、**プロセス**コマンドでは、オブジェクトの処理中に発生したエラーの処理方法を指定できます。 たとえば、ディメンションの処理時に、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がキー属性のキー列で重複した値を検出したとします。 属性キーは一意である必要があるため、重複するレコードは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって破棄されます。 に基づいて、 [KeyDuplicate](../../analysis-services/scripting/properties/keyduplicate-element-assl.md)プロパティ**ErrorConfiguration**、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でした。  

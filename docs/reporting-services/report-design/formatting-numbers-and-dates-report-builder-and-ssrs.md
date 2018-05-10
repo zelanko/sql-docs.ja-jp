@@ -1,16 +1,15 @@
 ---
-title: "数値と日付の書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 数値と日付の書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.placeholderproperties.number.f1
 - "10127"
@@ -21,25 +20,24 @@ f1_keywords:
 - "10285"
 - sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: de538e4d272355c1d694d4a79fa0a66424062360
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4e9bd2b13be48ff2d244f6b313b6da8a48bb9f4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
   
- テキスト ボックスのレポート アイテム内の書式文字列を指定するには、書式を設定するアイテムを選択して右クリックし、 **[テキスト ボックスのプロパティ]**を選択してから **[数値]**をクリックする必要があります。 テーブルまたはマトリックスのセルは個別のテキスト ボックスであるため、同じ方法でテーブル データ領域またはマトリックス データ領域の個別のセルを書式設定できます。  
+ テキスト ボックスのレポート アイテム内の書式文字列を指定するには、書式を設定するアイテムを選択して右クリックし、 **[テキスト ボックスのプロパティ]** を選択してから **[数値]** をクリックする必要があります。 テーブルまたはマトリックスのセルは個別のテキスト ボックスであるため、同じ方法でテーブル データ領域またはマトリックス データ領域の個別のセルを書式設定できます。  
   
- グラフ データ領域では、通常、カテゴリ軸 (x 軸) に日付が示され、値軸 (y 軸) に値が示されます。 グラフの書式を指定するには、軸を右クリックし、 **[軸のプロパティ]**を選択します。 値軸では、数値の書式しか指定できません。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
+ グラフ データ領域では、通常、カテゴリ軸 (x 軸) に日付が示され、値軸 (y 軸) に値が示されます。 グラフの書式を指定するには、軸を右クリックし、 **[軸のプロパティ]** を選択します。 値軸では、数値の書式しか指定できません。 詳細については、「[グラフの軸ラベルの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
- ゲージのデータ領域で書式を指定するには、ゲージのスケールを右クリックし、 **[放射状のスケールのプロパティ]** または **[線形スケールのプロパティ]**を選択します。  
+ ゲージのデータ領域で書式を指定するには、ゲージのスケールを右クリックし、 **[放射状のスケールのプロパティ]** または **[線形スケールのプロパティ]** を選択します。  
   
 > [!NOTE]  
 >  目的の書式設定オプションがグレー表示されている場合、その書式設定オプションと、データ ソースに設定されているフィールドのデータ型に互換性がないことを示します。 たとえば、フィールドに格納されているデータが数値であっても、フィールドのデータ型が文字列である場合、通貨型や 10 進数型などの数値データ書式設定オプションを適用できません。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/09/2018
   
 -   同じテキスト ボックスで数字と文字が混在するテキストの書式を設定する場合、プレースホルダーを使用して、テキストの数値以外の部分とは別に数値の書式を設定します。 詳細については、「 [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)をクリックする必要があります。 テキスト ボックスで Format プロパティについて指定された書式設定文字列が正しくない場合、書式設定文字列は無視されます。 グラフまたはゲージで Format プロパティについて指定された書式設定文字列が正しくない場合、指定した書式設定文字列は文字列として解釈され、書式設定は適用されません。  
   
--   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]**をオンにすると、 **[千]**、 **[百万]**、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
+-   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]**、 **[百万]**、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
   
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   

@@ -1,27 +1,25 @@
 ---
-title: "ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ceda107e852b2eb8da6f036a51b341c48cccd1e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e8cfdf6d3fb75391895d3ce9ea1b6db46c79019d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>ストリップ ラインの追加によるグラフのデータの強調表示 (レポート ビルダーおよび SSRS)
   ストリップ ライン (ストリップ) は、一定の間隔またはカスタムの間隔でグラフの背景を網掛け表示にする、横方向または縦方向の帯です。 ストリップ ラインを使用すると、次のことが可能になります。  
@@ -39,9 +37,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>インターレース ストリップ ラインを一定間隔でグラフに表示するには  
   
-1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、 **[縦軸のプロパティ]**をクリックします。  
+1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、 **[縦軸のプロパティ]** をクリックします。  
   
-     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、 **[横軸のプロパティ]**をクリックします。  
+     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、 **[横軸のプロパティ]** をクリックします。  
   
 2.  **[インターレースを使用する]** チェック ボックスをオンにします。 グラフにグレーのストリップ ラインが表示されます。  
   
@@ -49,9 +47,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>インターレース ストリップ ラインをカスタムの間隔でグラフに表示するには  
   
-1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、 **[縦軸のプロパティ]**をクリックします。  
+1.  横方向のストリップ ラインを表示するには、グラフの縦軸を右クリックし、 **[縦軸のプロパティ]** をクリックします。  
   
-     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、 **[横軸のプロパティ]**をクリックします。  
+     縦方向のストリップ ラインを表示するには、グラフの横軸を右クリックし、 **[横軸のプロパティ]** をクリックします。  
   
      軸のプロパティが [プロパティ] ウィンドウに表示されます。  
   

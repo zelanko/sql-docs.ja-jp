@@ -1,31 +1,29 @@
 ---
-title: "レポート定義スキーマのバージョンを確認する (SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポート定義スキーマのバージョンを確認する (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XML schemas [Reporting Services]
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b61c09e7c5fb4bd0a894247ed77878e80cc91285
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ebdae6ba0b9b188256823fd2d682b6163aed7a58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>レポート定義スキーマのバージョンを確認する (SSRS)
 
@@ -48,15 +46,15 @@ ms.lasthandoff: 01/09/2018
   
 1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 SQL Server では、複数のスキーマ バージョンがサポートされています。 詳細については、「[SQL Server データ ツールの配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)」を参照してください。  
   
-2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  **[テンプレート]** ペインで **[レポート]**をクリックします。  
+3.  **[テンプレート]** ペインで **[レポート]** をクリックします。  
   
-4.  **[名前]**にレポートの名前を入力するか、既定の名前をそのまま使用します。  
+4.  **[名前]** にレポートの名前を入力するか、既定の名前をそのまま使用します。  
   
-5.  **[追加]**をクリックします。 レポート デザイナーの [デザイン] ビューに新しい空のレポートが表示されます。  
+5.  **[追加]** をクリックします。 レポート デザイナーの [デザイン] ビューに新しい空のレポートが表示されます。  
   
-6.  **[表示]** メニューの **[コード]**をクリックします。 レポート定義が XML ファイルとして表示されます。  
+6.  **[表示]** メニューの **[コード]** をクリックします。 レポート定義が XML ファイルとして表示されます。  
   
      スキーマ名前空間は XML の Report 要素で指定されます。 たとえば、次の Report 要素では、レポート デザイナーの名前空間とレポート定義の名前空間が指定されています。  
   

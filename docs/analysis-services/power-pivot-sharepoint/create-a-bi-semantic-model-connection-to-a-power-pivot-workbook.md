@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot ブックへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot ブックへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: abf47bc1e00a810eb82dfc2e34a95a60d05e84c4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 18123ce53ecc6858443819e46ebb5de8b83e5d1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Power Pivot ブックへの BI セマンティック モデル接続の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、同一ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
+  このトピックでは、同一ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
   
  BI セマンティック モデル接続を作成して SharePoint 権限を構成したら、その接続を Excel または [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートのデータ ソースとして使用できます。  
   
@@ -73,27 +65,27 @@ ms.lasthandoff: 02/15/2018
   
  権限を変更するには、サイト所有者である必要があります。  
   
-1.  [サイトの操作] の **[サイトの権限]**をクリックします。  
+1.  [サイトの操作] の **[サイトの権限]** をクリックします。  
   
 2.  **[グループの作成]** をクリックして、新しいグループの名前を「 **BISM ユーザー**」と指定します。  
   
-3.  **[読み取り]** 権限レベルを選択し、 **[作成]**をクリックします。  
+3.  **[読み取り]** 権限レベルを選択し、 **[作成]** をクリックします。  
   
 4.  [ユーザーとグループ] の **[BISM ユーザー]** を選択します。  
   
-5.  [新規作成] をポイントして **[ユーザーの追加]**をクリックし、ユーザー アカウントまたはグループ アカウントを追加します。  
+5.  [新規作成] をポイントして **[ユーザーの追加]** をクリックし、ユーザー アカウントまたはグループ アカウントを追加します。  
   
      これで、追加したユーザーおよびグループに、サイト レベルから権限を継承するすべてのライブラリとリストを含むサイト全体の読み取り権限が付与されます。 この権限レベルでは高すぎる場合は、必要に応じて特定のライブラリ、リスト、またはアイテムからこのグループを削除できます。  
   
  アイテム レベルで権限を選択的に削除するには、次の操作を行います。  
   
-1.  ライブラリで、ドキュメントを選択します。 右側の下矢印をクリックし、 **[権限の管理]**をクリックします。  
+1.  ライブラリで、ドキュメントを選択します。 右側の下矢印をクリックし、 **[権限の管理]** をクリックします。  
   
-2.  既定では、アイテムは権限を継承します。 このライブラリ内の個々のドキュメントの権限を変更するには、 **[権限の継承を中止]**をクリックします。  
+2.  既定では、アイテムは権限を継承します。 このライブラリ内の個々のドキュメントの権限を変更するには、 **[権限の継承を中止]** をクリックします。  
   
-3.  **[BISM ユーザー]**の横にあるチェック ボックスをオンにします。  
+3.  **[BISM ユーザー]** の横にあるチェック ボックスをオンにします。  
   
-4.  **[ユーザー権限の削除]**をクリックします。  
+4.  **[ユーザー権限の削除]** をクリックします。  
   
 ##  <a name="bkmk_userdb"></a> ブックへの SharePoint 権限の構成  
  Excel ブック内で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースを使用している場合、BI セマンティック モデル接続を介したデータ アクセスは Excel ブックに対する SharePoint 権限によって決まります。 ブックを外部データ ソースとして使用するには、ブックにアクセスするすべてのユーザーにブックに対する読み取り権限が必要です。  

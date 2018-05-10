@@ -3,15 +3,14 @@ title: SQL Server 2016 で廃止されたデータベース エンジンの機�
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
 - unsupported features [SQL Server]
@@ -40,12 +39,11 @@ caps.latest.revision: 100
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0ed643a14b287350c5f6b2588aa77a9bf429caff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 024986a082bee4e823d66fdb588e65fc6d4f4c88
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 で廃止されたデータベース エンジンの機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +67,9 @@ ms.lasthandoff: 04/16/2018
 -   [SQL Server 2008 で廃止されたデータベース エンジンの機能](https://msdn.microsoft.com/library/ms144262\(v=sql.100\))  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2016 データベース エンジンの非推奨機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server レプリケーションの非推奨機能](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
+ 
+  [SQL Server 2016 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ 
+  [SQL Server レプリケーションの非推奨の機能](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
   
  

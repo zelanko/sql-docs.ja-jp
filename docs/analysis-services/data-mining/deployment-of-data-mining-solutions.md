@@ -1,37 +1,23 @@
 ---
-title: "データ マイニング ソリューションの配置 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング ソリューションの配置 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], deploying
-- deploying [Analysis Services], production environments
-- deploying [Analysis Services - data mining]
-- solutions [Analysis Services], deploying
-- models [Analysis Services], data mining
-ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bfbfd44f7acd1b029d0b841ef2e291e5b26b6c07
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 192601b35384308e4c75e8a62294cf383c75f29c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-of-data-mining-solutions"></a>データ マイニング ソリューションの配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング プロセスの最後の手順は、実稼働環境へのモデルの配置です。 配置は、モデルをユーザーが使用できるようにし、次のようなタスクを実行できるようになるという点で重要です。  
+  データ マイニング プロセスの最後の手順は、実稼働環境へのモデルの配置です。 配置は、モデルをユーザーが使用できるようにし、次のようなタスクを実行できるようになるという点で重要です。  
   
 -   モデルを使用して予測を作成し、業務上の意思決定を行います。 クエリの作成に使用できるツールの詳細については、「 [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)」をご覧ください。  
   
@@ -57,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_Reqs"></a> データ マイニング ソリューションの配置の要件  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
- したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]**テンプレートを必ず使用してください。  
+ したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   
@@ -91,6 +77,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [処理の要件と考慮事項 (&) #40 です。 データ マイニング &#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件と考慮事項 (&) #40 です。 データ マイニング & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

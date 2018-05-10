@@ -1,32 +1,30 @@
 ---
-title: "レポート サーバー サービスの開始と停止 | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー サービスの開始と停止 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
 - Report Server Windows service, starting
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-caps.latest.revision: "55"
+caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 48d0f1dddabd461401027633a70a0d51b9efa345
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5a93f4759fb0c079b843235bd7fb0491fa802e95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Start and Stop the Report Server Service
   レポート サーバーは、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションを含んだ Windows サービスとして実装されます。 レポート サーバーのなんらかの機能を使用するには、このサービスが実行されている必要があります。 このサービスを停止すると、すべてのレポート サーバー処理が停止されます。  
@@ -43,11 +41,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバーに接続します。  
   
-2.  [レポート サーバーの状態] ページで、 **[停止]** または **[開始]**をクリックします。  
+2.  [レポート サーバーの状態] ページで、 **[停止]** または **[開始]** をクリックします。  
   
 ### <a name="to-start-or-stop-the-service-using-services-in-administrative-tools"></a>管理ツールの [サービス] を使用してサービスを開始または停止するには  
   
--   [管理ツール] の [サービス] を開きます。次に、 **[SQL Server Reporting Services (MSSQLSERVER)]**を右クリックし、 **[停止]** または **[再起動]**をクリックします。  
+-   [管理ツール] の [サービス] を開きます。次に、 **[SQL Server Reporting Services (MSSQLSERVER)]** を右クリックし、 **[停止]** または **[再起動]** をクリックします。  
   
  複数のインスタンスを実行しているか、レポート サーバーが名前付きインスタンスとして実行されている場合は、かっこ内のインスタンス名が、停止または再起動するレポート サーバー インスタンスに対応していることを確認してください。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを起動します。  
   
-2.  [SQL Server のサービス] を選択し、 **[SQL Server Reporting Services]**を右クリックして、 **[停止]** または **[再起動]**をクリックします。  
+2.  [SQL Server のサービス] を選択し、 **[SQL Server Reporting Services]** を右クリックして、 **[停止]** または **[再起動]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

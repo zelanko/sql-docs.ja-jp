@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
 helpviewer_keywords:
@@ -20,12 +19,11 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 84fc2d366101e410f301bf76cbccc8e61eea6b38
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 722890bcdd6b8f412052f87f38eea279b8f0c05f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
 Reporting Services にはメール配信拡張機能があり、メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
@@ -59,7 +57,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 
 1. Reporting Services 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。
 
-2. **[送信者アドレス]**に、生成されるメールの **[送信者]** フィールドに使用するメール アドレスを入力します。 
+2. **[送信者アドレス]** に、生成されるメールの **[送信者]** フィールドに使用するメール アドレスを入力します。 
 
      SMTP サーバーからメールを送信する権限のあるユーザー アカウントを指定する必要があります。 **[送信者アドレス]** に入力した値は、rsreportserver.config ファイルの `<From>` フィールドに保存されます。  
 
@@ -186,17 +184,17 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 
 ### <a name="to-configure-a-local-smtp-service-for-the-report-server"></a>ローカル SMTP サービスをレポート サーバー用に構成するには
 
-1. コントロール パネルで、 **[Windows の機能の有効化または無効化]** を選び、 **[役割と機能の追加ウィザード]**を開始します。
+1. コントロール パネルで、 **[Windows の機能の有効化または無効化]** を選び、 **[役割と機能の追加ウィザード]** を開始します。
 
-2. **[役割ベースまたは機能ベースのインストール]** 、 **[次へ]**の順に選びます。
+2. **[役割ベースまたは機能ベースのインストール]** 、 **[次へ]** の順に選びます。
 
-3. インターネット インフォメーション サーバー (IIS) 上にインストールするサーバーを選んで、 **[次へ]**を選びます。
+3. インターネット インフォメーション サーバー (IIS) 上にインストールするサーバーを選んで、 **[次へ]** を選びます。
 
-4. **[サーバーの役割]** * ページで *[次へ]*を選びます。
+4. **[サーバーの役割]** * ページで *[次へ]* を選びます。
      
-5. *[機能]* ページで、 **[SMTP サーバー]** 、 **[次へ]**の順に選びます。
+5. *[機能]* ページで、 **[SMTP サーバー]** 、 **[次へ]** の順に選びます。
 
-     SMTP サーバーに必要な機能を追加するよう求めるメッセージが表示されたら、 **[機能の追加]**を選びます。
+     SMTP サーバーに必要な機能を追加するよう求めるメッセージが表示されたら、 **[機能の追加]** を選びます。
 
 6. **[Web サーバーの役割 (IIS)]** ページで、 *[次へ]* を選びます。
 

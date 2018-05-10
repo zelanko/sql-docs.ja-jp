@@ -1,36 +1,23 @@
 ---
-title: "計算されるメンバーを作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 計算されるメンバーを作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- calculated members [Analysis Services]
-- custom measures [Analysis Services]
-- members [Analysis Services], calculated
-- calculations [Analysis Services], calculated members
-ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e819f86b102dd979f529a4eb3ffd9cc12966482b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
+  キューブ データ、算術演算子、数値、関数などを組み合わせることによって、「計算されるメンバー」と呼ばれる、カスタマイズされたメジャーまたはディメンション メンバーを作成できます。 たとえば、既存のドル メジャーに換算率を掛けて、ドルをユーロに換算する、Euro という計算されるメンバーを作成できます。 Euro は、別個の行または列に表示されます。  
   
  計算されるメンバーの定義は格納されますが、その値はメモリにしか存在しません。 上記の例では、Euro の値はエンド ユーザーに表示されますが、キューブ データとしては格納されません。  
   
@@ -83,7 +70,7 @@ ms.lasthandoff: 02/15/2018
  キューブ コンポーネントは、 **[計算ツール]** ペインの **[メタデータ]** タブから計算式ペインの **[式]** ボックスにコピーまたはドラッグできます。 関数は、 **[計算ツール]** ペインの **[関数]** タブから計算式ペインの **[式]** ボックスにコピーまたはドラッグできます。  
   
 ## <a name="addressing-calculated-members"></a>計算されるメンバーのアドレス指定  
- **キューブ デザイナー** の **[計算]**タブで、計算されるメンバーを作成する場合は、そのメンバーを格納する親階層を指定します。 親階層では、次の規則に従って、計算されるメンバーのアドレス指定方法を決定します。  
+ **キューブ デザイナー** の **[計算]** タブで、計算されるメンバーを作成する場合は、そのメンバーを格納する親階層を指定します。 親階層では、次の規則に従って、計算されるメンバーのアドレス指定方法を決定します。  
   
 -   計算されるメンバーがメジャー ディメンションで作成された場合、そのメンバーはそのディメンション内でアドレス指定可能です。  
   

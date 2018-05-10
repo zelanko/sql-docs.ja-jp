@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services モバイル レポートの共有データセットからデータを取得する | Microsoft Docs"
-ms.custom: 
+title: Reporting Services モバイル レポートの共有データセットからデータを取得する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2cfe0cdb9290b4de7fdeac76ad2319807422693
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fb83dd013101b14ad45da1fb9ef091dcbea727d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートの共有データセットからデータを取得する
 SQL Server Mobile Report Publisher では、[Excel ファイルからのデータの読み込み](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)以外にも、ほぼすべてのソースからのデータにアクセスできます。 データへのアクセスには、Reporting Services Web ポータルで構成された共有データ ソースが必要です。 詳細については、 [共有データ ソースの作成](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) についてのページと、 [共有データセットの作成](../../reporting-services/report-data/manage-shared-datasets.md)についてのページを参照してください。  
@@ -30,9 +28,9 @@ SQL Server Mobile Report Publisher では、[Excel ファイルからのデー�
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] から [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]サーバーへの接続が完了したら、モバイル レポートを共有データセットに接続するのは簡単です。   
   
-1. **[データ]** タブで **[データの追加]**を選択します。  
+1. **[データ]** タブで **[データの追加]** を選択します。  
   
-2. **[レポート サーバー]**を選択します。   
+2. **[レポート サーバー]** を選択します。   
   
 3.  サーバーに接続するのが初めての場合、サーバー名、名前、パスワードを入力します。 次の形式でサーバー アドレス ボックスにサーバー名を入力します。  
   
@@ -55,7 +53,7 @@ SQL Server Mobile Report Publisher では、[Excel ファイルからのデー�
   
 既にレポート サーバーに接続している場合は、[データ] タブで **[データの追加]** を選択しても、別のレポート サーバーを追加するオプションは表示されません。 代わりに、次の手順を実行します。  
   
-1. 左上隅の **[接続]**を選択します。  
+1. 左上隅の **[接続]** を選択します。  
   
    ![SSMRP_AddConnectionIcon](../../reporting-services/mobile-reports/media/ssmrp-addconnectionicon.png)  
      

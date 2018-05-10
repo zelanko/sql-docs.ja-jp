@@ -1,16 +1,15 @@
 ---
-title: "ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成 | Microsoft Docs"
-ms.custom: 
+title: ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - windows server 2008
 - Vista
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b6b522f7f7a0de5dbf979f51a3289a2ab820fdbc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 13c1ff4ab348cdf4f01b4dcbf29f603c85198cb1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
   レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、「[インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」および「[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
@@ -79,41 +77,41 @@ ms.lasthandoff: 01/09/2018
   
 ###  <a name="bkmk_site_settings"></a> ブラウザー内の信頼済みサイトの設定  
   
-1.  [管理者として実行] の権限を使用してブラウザー ウィンドウを開きます。 **[スタート]** メニューの **[すべてのプログラム]**をクリックし、 **[Internet Explorer]**を右クリックして **[管理者として実行]**をクリックします。  
+1.  [管理者として実行] の権限を使用してブラウザー ウィンドウを開きます。 **[スタート]** メニューの **[すべてのプログラム]** をクリックし、 **[Internet Explorer]** を右クリックして **[管理者として実行]** をクリックします。  
   
 2.  **[許可]** をクリックして続行します。  
   
 3.  URL アドレスにレポート マネージャーの URL を入力します。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[レポート マネージャー (SSRS ネイティブ モード)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)」を参照してください。  
   
-4.  **[ツール]**をクリックします。  
+4.  **[ツール]** をクリックします。  
   
-5.  **[インターネット オプション]**をクリックします。  
+5.  **[インターネット オプション]** をクリックします。  
   
-6.  **[セキュリティ]**をクリックします。  
+6.  **[セキュリティ]** をクリックします。  
   
-7.  **[信頼済みサイト]**をクリックします。  
+7.  **[信頼済みサイト]** をクリックします。  
   
-8.  **[サイト]**をクリックします。  
+8.  **[サイト]** をクリックします。  
   
 9. `http://<your-server-name>`を追加します。  
   
 10. 既定のサイトに HTTPS を使用していない場合は、 **[ゾーンのすべてのサイトにサーバー証明書 (https:) を必要とする]** チェック ボックスをオフにします。  
   
-11. **[追加]**をクリックします。  
+11. **[追加]** をクリックします。  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ###  <a name="bkmk_configure_folder_settings"></a> レポート マネージャーのフォルダーの設定  
   
-1.  レポート マネージャーのホーム ページで、 **[フォルダー設定]**をクリックします。  
+1.  レポート マネージャーのホーム ページで、 **[フォルダー設定]** をクリックします。  
   
-2.  [フォルダー設定] ページの **[セキュリティ]**をクリックします。  
+2.  [フォルダー設定] ページの **[セキュリティ]** をクリックします。  
   
-3.  **[新しいロールの割り当て]**をクリックします。  
+3.  **[新しいロールの割り当て]** をクリックします。  
   
 4.  **[グループ名またはユーザー名]** フィールドに、 `<domain>\<user>`という形式で自分 (レポート サーバー管理者) の Windows ユーザー アカウントを入力します。  
   
-5.  **[コンテンツ マネージャー]**を選択します。  
+5.  **[コンテンツ マネージャー]** を選択します。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -126,34 +124,34 @@ ms.lasthandoff: 01/09/2018
     > [!TIP]  
     >  **注:** **[サイトの設定]** オプションが表示されない場合は、ブラウザーを閉じて、管理者特権を使用してもう一度開き、レポート マネージャーを参照してください。  
   
-3.  **[セキュリティ]**をクリックします。  
+3.  **[セキュリティ]** をクリックします。  
   
-4.  **[新しいロールの割り当て]**をクリックします。  
+4.  **[新しいロールの割り当て]** をクリックします。  
   
 5.  **[グループ名またはユーザー名]** フィールドに、 `<domain>\<user>`という形式で自分 (レポート サーバー管理者) の Windows ユーザー アカウントを入力します。  
   
-6.  **[システム管理者]**を選択します。  
+6.  **[システム管理者]** を選択します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  レポート マネージャーを閉じます。  
   
-9. **[管理者として実行]**を使用せずに再び Internet Explorer でレポート マネージャーを開きます。  
+9. **[管理者として実行]** を使用せずに再び Internet Explorer でレポート マネージャーを開きます。  
   
 ##  <a name="bkmk_configure_ssms"></a> ローカル レポート サーバー管理を行う目的で SQL Server Management Studio (SSMS) を構成するには  
  既定では、管理者権限を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開始した場合以外は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で使用できるレポート サーバー プロパティのいずれにもアクセスできません。  
   
-  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度なアクセス許可で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度なアクセス許可で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
   
--   **[スタート]** メニューの **[すべてのプログラム]**をクリックし、 **[SQL Server 2014]**をクリックし、 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**を右クリックして **[管理者として実行]**をクリックします。  
+-   **[スタート]** メニューの **[すべてのプログラム]** をクリックし、 **[SQL Server 2014]** をクリックし、 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** を右クリックして **[管理者として実行]** をクリックします。  
   
 -   ローカル [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーへの接続  
   
--   **[セキュリティ]** ノードで、 **[システム ロール]**をクリックします。  
+-   **[セキュリティ]** ノードで、 **[システム ロール]** をクリックします。  
   
--   **[システム管理者]** を右クリックし、 **[プロパティ]**をクリックします。  
+-   **[システム管理者]** を右クリックし、 **[プロパティ]** をクリックします。  
   
--   **[システム ロールのプロパティ]** ページで、 **[レポート サーバーのプロパティを表示]**を選択します。 システム管理者ロールを持つメンバーに割り当てる他のすべてのプロパティを選択します。  
+-   **[システム ロールのプロパティ]** ページで、 **[レポート サーバーのプロパティを表示]** を選択します。 システム管理者ロールを持つメンバーに割り当てる他のすべてのプロパティを選択します。  
   
 -   **[OK]** をクリックします。  
   
@@ -172,11 +170,11 @@ ms.lasthandoff: 01/09/2018
   
  **SSDT を開くときに高度な権限を毎回使用するには:**  
   
-1.  スタート画面から「 **sql server** 」と入力し、 **[SQL Server Data Tools]**を右クリックします。 **[管理者として実行]**をクリックします  
+1.  スタート画面から「 **sql server** 」と入力し、 **[SQL Server Data Tools]** を右クリックします。 **[管理者として実行]** をクリックします  
   
-2.  **[続行]**をクリックします。  
+2.  **[続行]** をクリックします。  
   
-3.  **[プログラムの実行]**をクリックします。  
+3.  **[プログラムの実行]** をクリックします。  
   
  これで、レポートやその他のアイテムをローカル レポート サーバーに配置できるようになります。  
   

@@ -1,31 +1,23 @@
 ---
-title: "Excel での BI セマンティック モデル接続を使用するか、Reporting Services |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Excel での BI セマンティック モデル接続を使用するか、Reporting Services |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8fc3d2ae19c9b8237593d1b4e1b559f22c5da1ed
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5f7141cb88a69df946fc7ae1d344cf0a2723bd7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel または Reporting Services での BI セマンティック モデル接続の使用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成したことがない場合、「 [Power Pivot ブックへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 」と「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
+  このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成したことがない場合、「 [Power Pivot ブックへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 」と「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
   
 ##  <a name="bkmk_connect"></a> Excel からの接続  
  BI セマンティック モデル接続は、Analysis Services テーブル モデル データを使用する Excel などのビジネス アプリケーションでデータ ソースとして指定できます。 ここでは、Excel を使用して BI セマンティック モデル データに接続する 2 つの方法を説明します。  
@@ -34,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
  **SharePoint からの起動**  
   
--   ライブラリ内の BI セマンティック モデル接続を右クリックし、 **[Excel の起動]**をクリックします。  
+-   ライブラリ内の BI セマンティック モデル接続を右クリックし、 **[Excel の起動]** をクリックします。  
   
  ![スクリーン ショットの BISM サイド リンク バー コマンド](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "スクリーン ショットの BISM サイド リンク バー コマンド")  
   
@@ -42,15 +34,15 @@ ms.lasthandoff: 02/15/2018
   
  **Excel からの起動**  
   
-1.  Excel を起動し、ブックを開きます。 [データ] タブの [外部データの取り込み] で、 **[その他のデータ ソース]**をクリックします。  
+1.  Excel を起動し、ブックを開きます。 [データ] タブの [外部データの取り込み] で、 **[その他のデータ ソース]** をクリックします。  
   
 2.  **[Analysis Services から]** をクリックし、データ接続ウィザードを使用して、データをインポートします。  
   
-3.  BI セマンティック モデル接続ファイルの SharePoint URL ( `http://mysharepoint/shared documents/myData.bism`など) を入力します。 既定のログオン資格情報オプション **[Windows 認証を使用する]**を受け入れます。 **[次へ]**をクリックします。  
+3.  BI セマンティック モデル接続ファイルの SharePoint URL ( `http://mysharepoint/shared documents/myData.bism`など) を入力します。 既定のログオン資格情報オプション **[Windows 認証を使用する]** を受け入れます。 **[次へ]** をクリックします。  
   
 4.  次のページで **[次へ]** を再度クリックします。 データベースを選択するように求められますが、使用できるのは BI セマンティック モデル接続で指定されている 1 つのデータベースのみです。  
   
-5.  最後のページで、表示名と説明を入力できます。 **[完了]**をクリックし、[データのインポート] ダイアログ ボックスで **[OK]** をクリックして、データをインポートします。  
+5.  最後のページで、表示名と説明を入力できます。 **[完了]** をクリックし、[データのインポート] ダイアログ ボックスで **[OK]** をクリックして、データをインポートします。  
   
  接続を成功させるには、クライアント コンピューターに Excel 2010 および MSOLAP.5.dll をインストールする必要があります。 このリリースの最新バージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel をインストールするとプロバイダーを取得できます。または、 [Feature Pack ダウンロード ページ](http://go.microsoft.com/fwlink/?linkid=214066)から Analysis Services OLE DB プロバイダーをダウンロードすることもできます。  
   

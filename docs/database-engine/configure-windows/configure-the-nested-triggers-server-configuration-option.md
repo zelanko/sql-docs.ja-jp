@@ -3,15 +3,12 @@ title: nested triggers サーバー構成オプションの構成 | Microsoft Do
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
@@ -19,12 +16,11 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8aea6708a910aaa50c1df1ee8c23e8e1618a1370
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b3d9e2bf10d777d311a93ba77335b5a22beceb0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>nested triggers サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +52,9 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-nested-triggers-option"></a>nested triggers オプションを構成するには  
   
-1.  **オブジェクト エクスプローラー**で、サーバーを右クリックし、 **[プロパティ]**を選択します。  
+1.  **オブジェクト エクスプローラー**で、サーバーを右クリックし、 **[プロパティ]** を選択します。  
   
-2.  **[詳細設定]** ページで、 **[トリガーから他のトリガーの起動を許可する]** オプションを **[True]** (既定) または **[False]**に設定します。  
+2.  **[詳細設定]** ページで、 **[トリガーから他のトリガーの起動を許可する]** オプションを **[True]** (既定) または **[False]** に設定します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -66,9 +62,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `nested triggers` オプションの値を `0`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `nested triggers` オプションの値を `0`に設定する方法を示します。  
   
 ```wmimof  
 USE AdventureWorks2012 ;  

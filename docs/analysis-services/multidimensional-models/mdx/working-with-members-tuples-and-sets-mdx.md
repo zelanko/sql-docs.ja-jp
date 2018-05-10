@@ -1,48 +1,23 @@
 ---
-title: "メンバー、組、およびセット (MDX) での作業 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: メンバー、組、およびセット (MDX) での作業 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- MDX [Analysis Services], tuples
-- member keys [MDX]
-- MDX [Analysis Services], sets
-- calculated members [MDX]
-- members [MDX]
-- Multidimensional Expressions [Analysis Services], members
-- named sets [MDX]
-- Multidimensional Expressions [Analysis Services], tuples
-- member functions [MDX]
-- sets [MDX]
-- MDX [Analysis Services], members
-- member names [MDX]
-- Multidimensional Expressions [Analysis Services], sets
-- tuple functions
-- tuples
-- set functions [MDX]
-ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a38de43b77e4b028c7dae24095ac2b556b64a217
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>メンバー、組、およびセットの操作 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-MDX には、1 つ以上のメンバー、組、またはセットを返す操作や、メンバー、組、またはセットに対する操作を行うための関数が各種用意されています。  
+  MDX には、1 つ以上のメンバー、組、またはセットを返す操作や、メンバー、組、またはセットに対する操作を行うための関数が各種用意されています。  
   
 ## <a name="member-functions"></a>メンバー関数  
  MDX には、ディメンション、レベル、セット、組などの他の MDX エンティティからメンバーを取得するための関数がいくつかあります。 たとえば、 [FirstChild](../../../mdx/firstchild-mdx.md) 関数はメンバーに対して操作を実行してメンバーを返す関数です。  
@@ -133,8 +108,8 @@ FROM [Adventure Works]
  文字列関数は、MDX 式に対して操作を実行して文字列を返します。 たとえば、[UniqueName &#40;MDX&#41;](../../../mdx/uniquename-mdx.md) 関数は、ディメンション、階層、レベル、メンバーの一意の名前を格納した文字列値を返します。 文字列関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [MDX &#40; の主な概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
+ [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
   
   

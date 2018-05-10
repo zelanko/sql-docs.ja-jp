@@ -1,15 +1,14 @@
 ---
-title: "SQL Server 2016 における SQL Server Reporting Services の非推奨機能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2016 における SQL Server Reporting Services の非推奨の機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -17,38 +16,39 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 712771ebadce6b25825d3ecbeb6b5c12e56b2923
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 94917fe4165b0d6d3fdd498c1aa3b482e4fff745
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 における SQL Server Reporting Services の非推奨機能
+# <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 における SQL Server Reporting Services の非推奨の機能
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-このトピックでは、SQL Server Reporting Services の非推奨機能について説明します。 非推奨になったリリースで機能を引き続き使用できますが、これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。
+このトピックでは、SQL Server Reporting Services の非推奨の機能について説明します。 非推奨とされたリリースで機能を引き続き使用できますが、これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。
 
 ## <a name="features-not-supported-in-the-next-version-of-sql-server-reporting-services"></a>SQL Server Reporting Services の次のバージョンでサポートされない機能
 
 SQL Server の次のバージョンでは、以下の SQL Server Reporting Services 機能はサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。
 
-|カテゴリ|非推奨機能|
+|カテゴリ|非推奨の機能|
 |--------------|------------------------| 
 |レポート サーバー|HTML4.0 レンダラー HTML5 レンダラー を使用します。|
 
 ## <a name="features-not-supported-in-previous-versions-of-sql-server-reporting-services"></a>SQL Server Reporting Services の前のバージョンでサポートされない機能
 
-- [SQL Server 2014 Reporting Services の非推奨機能](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+- 
+  [SQL Server 2014 Reporting Services の非推奨の機能](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
 
-- [SQL Server 2012 Reporting Services の非推奨機能](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+- 
+  [SQL Server 2012 Reporting Services の非推奨の機能](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
 
 ## <a name="next-steps"></a>次の手順
 

@@ -1,35 +1,23 @@
 ---
-title: "クラスタ リング モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: クラスタ リング モデルのクエリ例 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- clustering [Data Mining]
-- content queries [DMX]
-- clustering algorithms [Analysis Services]
-ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a3a59f8e64dcdefc69c70c3025ed2af3dea0767b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustering-model-query-examples"></a>クラスタリング モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成すると、モデルに関するメタデータを取得できます。また、分析で検出されたパターンに関する詳細を取得するためのコンテンツ クエリも作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
+  データ マイニング モデルに対するクエリを作成すると、モデルに関するメタデータを取得できます。また、分析で検出されたパターンに関する詳細を取得するためのコンテンツ クエリも作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
@@ -380,17 +368,17 @@ NATURAL PREDICTION JOIN
 |[Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md)|入力ケースを含んでいる可能性が最も高いクラスターを返します。|  
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|指定されたクラスターと入力したケース間の距離を返します。ただしクラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。<br /><br /> 入力ケースが指定されたクラスターに所属する確率を返します。|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|入力ケースが指定されたクラスターに所属する確率を返します。|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
-|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
+|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[IsInNode (&) #40";"DMX"&"#41;](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
+|[PredictAdjustedProbability & #40";"DMX"&"#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
+|[PredictAssociation & #40";"DMX"&"#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|入力したケースが既存のモデル内に収まる確率値を返します。|  
 |[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|指定された列に対して、予測された標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
+|[PredictNodeId & #40";"DMX"&"#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
+|[PredictProbability & #40";"DMX"&"#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
+|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|指定された列に対して、予測された標準偏差を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
  特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   

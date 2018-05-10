@@ -1,31 +1,23 @@
 ---
-title: "多次元モデルではパーティション |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多次元モデルではパーティション |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: af280f01614ae565406a269df348a5913dc1eeb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>多次元モデル内のパーティション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、*パーティション*は、メジャー グループに読み込まれるファクト データの物理ストレージを提供します。 各メジャー グループに対して 1 つのパーティションが自動的に作成されますが、さらにデータを分割する追加のパーティションを作成するのが一般的です。そうすることで、処理効率が上がり、クエリ パフォーマンスが向上します。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、*パーティション*は、メジャー グループに読み込まれるファクト データの物理ストレージを提供します。 各メジャー グループに対して 1 つのパーティションが自動的に作成されますが、さらにデータを分割する追加のパーティションを作成するのが一般的です。そうすることで、処理効率が上がり、クエリ パフォーマンスが向上します。  
   
  処理効率が上がるのは、1 つ以上のサーバーでパーティションを個別に処理することも並列処理することもできるためです。 クエリの実行速度が向上するのは、各パーティションを、結果として応答時間が短縮されるストレージ モードと集計の最適化を使用するように構成できるためです。 たとえば、新しいデータが含まれるパーティションに MOLAP ストレージを選択すると、通常は ROLAP よりも高速になります。 同様に、日付でパーティション分割する場合、新しいデータが含まれるパーティションは、アクセス頻度の低い古いデータが含まれるパーティションよりもさらに最適化されます。 パーティションごとにストレージと集計デザインが異なると、その後のマージ操作に悪影響を及ぼします。 個々のパーティションを最適化する前に、マージがパーティション管理の戦略に必要な要素であるかどうかを必ず検討してください。  
   
@@ -53,11 +45,11 @@ ms.lasthandoff: 02/15/2018
   
 |トピック|Description|  
 |-----------|-----------------|  
-|[作成し、ローカル パーティション &#40; を管理Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|データが重複しないようにフィルターまたは異なるファクト テーブルを使用してデータをパーティション分割する方法について説明します。|  
-|[パーティション ストレージの設定 &#40;です。Analysis Services - 多次元 &#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|パーティションのストレージの構成方法について説明します。|  
-|[編集またはパーティション &#40; を削除します。Analyisis Services - 多次元 &#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|パーティションを表示し、編集する方法について説明します。|  
-|[Analysis Services &#40; 内のパーティションをマージします。SSAS - 多次元 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|データが重複しないように異なるファクト テーブルまたはデータ スライスを持つパーティションをマージする方法について説明します。|  
+|[作成し、ローカル パーティション & #40; を管理Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|データが重複しないようにフィルターまたは異なるファクト テーブルを使用してデータをパーティション分割する方法について説明します。|  
+|[パーティション ストレージの設定 & #40 です。Analysis Services - 多次元 & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|パーティションのストレージの構成方法について説明します。|  
+|[編集またはパーティション & #40; を削除します。Analyisis Services - 多次元 & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|パーティションを表示し、編集する方法について説明します。|  
+|[Analysis Services & #40; 内のパーティションをマージします。SSAS - 多次元 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|データが重複しないように異なるファクト テーブルまたはデータ スライスを持つパーティションをマージする方法について説明します。|  
 |[パーティションの書き戻しを設定します。](../../analysis-services/multidimensional-models/set-partition-writeback.md)|パーティションへの書き込みを許可する手順について説明します。|  
-|[作成し、管理、リモート パーティションと #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|リモート パーティションを作成して管理する方法について説明します。|  
+|[作成し、管理、リモート パーティションと #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|リモート パーティションを作成して管理する方法について説明します。|  
   
   

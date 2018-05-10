@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング | Microsoft Docs"
-ms.custom: 
+title: Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
 このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
@@ -54,11 +52,11 @@ SQL Server に接続している場合、既定の設定では SQL Server によ
 このエラーを解決するには、サーバー名を使用するよう接続文字列を変更するか、SQL Server サービスで TCP/IP を有効にします。 TCP/IP を有効にするには、次の手順を実行します。  
   
 1. SQL Server 構成マネージャーを起動します。  
-2. **[SQL Server ネットワークの構成]**を展開します。  
-3. **[MSSQLSERVER のプロトコル]**を選択します。  
-4. **[TCP/IP]**を右クリックし、 **[有効化]**を選択します。  
-5. **[SQL Server のサービス]**を選択します。  
-6. **[SQL Server (MSSQLSERVER)]**を右クリックし、 **[再起動]**をクリックします。  
+2. **[SQL Server ネットワークの構成]** を展開します。  
+3. **[MSSQLSERVER のプロトコル]** を選択します。  
+4. **[TCP/IP]** を右クリックし、 **[有効化]** を選択します。  
+5. **[SQL Server のサービス]** を選択します。  
+6. **[SQL Server (MSSQLSERVER)]** を右クリックし、 **[再起動]** をクリックします。  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続したときの WMI エラー  
 Management Studio がレポート サーバーとの接続を確立する際、既定では、Reporting Services Windows Management Instrumentation (WMI) プロバイダーが使用されます。 WMI プロバイダーが正しくインストールされていない場合、レポート サーバーに接続しようとしたときに次のエラーが表示されます。  
@@ -67,7 +65,7 @@ Management Studio がレポート サーバーとの接続を確立する際、�
   
 このエラーを解決するにはソフトウェアを再インストールする必要があります。 それ以外の場合、一時的な回避策として、レポート サーバーに SOAP エンドポイント経由で接続する方法があります。  
   
-* Management Studio の **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]**にレポート サーバーの URL を入力します。 既定では `http://<your server name>/reportserver`です。 または、SQL Server 2008 Express with Advanced Services を使用している場合は、 `http://<your server name>/reportserver$sqlexpress`です。  
+* Management Studio の **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** にレポート サーバーの URL を入力します。 既定では `http://<your server name>/reportserver`です。 または、SQL Server 2008 Express with Advanced Services を使用している場合は、 `http://<your server name>/reportserver$sqlexpress`です。  
   
 エラーを解決して、WMI プロバイダーを使って接続できるようにするには、セットアップを実行して Reporting Services を修復するか、Reporting Services を再インストールする必要があります。  
   

@@ -1,35 +1,23 @@
 ---
-title: "名前付きクエリ、データ ソース ビューで定義 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 名前付きクエリ、データ ソース ビューで定義 (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- named queries [Analysis Services], creating
-- modifying named queries
-- data source views [Analysis Services], named queries
-ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5ea1c777a0e7d03b5b85148e1158d1f428bd4f38
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの名前付きクエリの定義 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-名前付きクエリは、テーブルとして表現されている SQL 式です。 名前付きクエリでは、1 つ以上のデータ ソースの 1 つ以上のテーブルから返される行および列を選択する SQL 式を指定できます。 名前付きクエリは、式に基づいていることを除いて、行とリレーションシップを持つデータ ソース ビュー (DSV) 内の他のテーブルに似ています。  
+  名前付きクエリは、テーブルとして表現されている SQL 式です。 名前付きクエリでは、1 つ以上のデータ ソースの 1 つ以上のテーブルから返される行および列を選択する SQL 式を指定できます。 名前付きクエリは、式に基づいていることを除いて、行とリレーションシップを持つデータ ソース ビュー (DSV) 内の他のテーブルに似ています。  
   
  名前付きクエリを使用すると、基になるデータ ソースを変更せずに、DSV 内の既存のテーブルのリレーショナル スキーマを拡張できます。 たとえば、一連の名前付きクエリを使用して、複雑なディメンション テーブルを、データベース ディメンション用により小さく単純なディメンション テーブルに分割できます。 名前付きクエリは、1 つ以上のデータ ソースの複数のデータベース テーブルを 1 つのデータ ソース ビュー テーブルに結合するために使用することもできます。  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  ソリューション エクスプローラーで、 **[データ ソース ビュー]** フォルダーを展開し、データ ソース ビューをダブルクリックします。  
   
-3.  **[テーブル]** ペインまたは **ダイアグラム** ペインの空いている領域を右クリックし、 **[新しい名前付きクエリ]**をクリックします。  
+3.  **[テーブル]** ペインまたは **ダイアグラム** ペインの空いている領域を右クリックし、 **[新しい名前付きクエリ]** をクリックします。  
   
 4.  **[名前付きクエリの作成]** ダイアログ ボックスで、次の操作を行います。  
   
@@ -65,10 +53,10 @@ ms.lasthandoff: 02/15/2018
     > [!NOTE]  
     >  クエリ作成ユーザー インターフェイス (UI) はデータ ソースによって異なります。 グラフィカルな UI ではなく、テキスト ベースの一般的な UI を入手できます。 これらのさまざまな UI の機能は同じですが、使用方法は異なります。 詳細については、「[[名前付きクエリの作成] または [名前付きクエリの編集] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941)」をご覧ください。  
   
-5.  **[OK]**をクリックします。 重なった 2 つのテーブルを示すアイコンがテーブル ヘッダーに表示され、そのテーブルが名前付きクエリに置換されたことを示します。  
+5.  **[OK]** をクリックします。 重なった 2 つのテーブルを示すアイコンがテーブル ヘッダーに表示され、そのテーブルが名前付きクエリに置換されたことを示します。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [データ ソース ビュー &#40; での名前付き計算を定義します。Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビュー & #40; での名前付き計算を定義します。Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

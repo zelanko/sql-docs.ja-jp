@@ -1,32 +1,23 @@
 ---
 title: マイニング モデルからのフィルターの削除 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- filters [Analysis Services]
-ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6352491a172ce751ed2cec28038a085a22c96654
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bce8cf010b253f8a45b75fdda8e5252d357f4d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>マイニング モデルからのフィルターの削除
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]マイニング モデルにフィルターを作成するときに、データ ソース ビュー内のデータのサブセットでモデルを作成できます。 フィルターは、元のデータのサブセットでモデルの精度をテストするためにも役立ちます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  マイニング モデルに対するフィルターを作成する場合は、データ ソース ビュー内のデータのサブセットに対するモデルを作成できます。 フィルターは、元のデータのサブセットでモデルの精度をテストするためにも役立ちます。  
   
  ただし、ケースの完全なセットを再度表示する場合は、フィルターを削除する必要があります。 この手順では、フィルターの条件を削除する方法や、フィルターを完全に削除する方法について説明します。  
   
@@ -40,7 +31,7 @@ ms.lasthandoff: 01/08/2018
   
      または  
   
-     モデルを選択します。 **[マイニング モデル]** メニューの **[モデル フィルターの設定]**をクリックします。  
+     モデルを選択します。 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
 4.  **[モデル フィルター]** ダイアログ ボックスで、削除する条件が含まれているグリッドの行を右クリックします。  
   
@@ -48,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>フィルター エディターのダイアログ ボックスからマイニング モデルのフィルターを消去するには  
   
--   **[フィルター エディター]** ダイアログ ボックスで、グリッドの任意の行を右クリックし、 **[すべて削除]**をクリックします。  
+-   **[フィルター エディター]** ダイアログ ボックスで、グリッドの任意の行を右クリックし、 **[すべて削除]** をクリックします。  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>[プロパティ] ウィンドウを使用したモデル フィルターの操作  
  フィルター全体を削除する場合、フィルター エディターのダイアログ ボックスを開く必要はありません。 作成したフィルター条件は、マイニング モデルの **Filter** プロパティで使用できます。  
@@ -60,13 +51,13 @@ ms.lasthandoff: 01/08/2018
   
 1.  ソリューション エクスプローラーで、フィルターが含まれているマイニング モデルをクリックします。  
   
-2.  **[プロパティ]** ウィンドウで、 **Filter** プロパティのフィルター テキストを右クリックし、 **[すべて選択]**をクリックします。  
+2.  **[プロパティ]** ウィンドウで、 **Filter** プロパティのフィルター テキストを右クリックし、 **[すべて選択]** をクリックします。  
   
 3.  BackSpace キーまたは Del キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデルからケース データへのドリルスルー](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
+ [マイニング モデルからケース データにドリルスルーします。](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [マイニング モデルのフィルター (Analysis Services - データ マイニング)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

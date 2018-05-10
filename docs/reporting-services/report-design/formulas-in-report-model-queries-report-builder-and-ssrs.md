@@ -1,29 +1,27 @@
 ---
-title: "レポート モデル クエリの数式 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポート モデル クエリの数式 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f2cfbf236eb77cd97f53f0104889f7872177d32c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>レポート モデル クエリの数式 (レポート ビルダーおよび SSRS)
   レポート モデルをデータ ソースとして使用するレポートでは、式の計算が値に対して実行されます。 レポート モデル データ ソースのクエリを定義する際に、レポート モデル クエリ デザイナーの **[式の定義]** ダイアログ ボックスで式を定義します。 式には、関数、演算子、定数、フィールドまたはエンティティの参照を含めることができます。 式を使用すると、数値データとテキスト データの結合、集計、フィルター、および評価を行うことができます。 式を作成して新しいフィールドとして保存することも、既存のフィールドの式を変更することもできます。  

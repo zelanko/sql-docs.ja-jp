@@ -1,32 +1,23 @@
 ---
 title: データ マイニング (SSAS) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
-ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 82b5649d8893714b72aa38be381f8d2fbd0833fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-ssas"></a>データ マイニング (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000年リリース以降のデータ マイニングを提供することによって予測分析でリーダーが行われた[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングの組み合わせにより、データ クレンジングと準備、機械学習、およびレポート作成機能を備えた、予測分析の統合プラットフォームを提供しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングには、EM および K-Means クラスタリング モデル、ニューラル ネットワーク、ロジスティック回帰と線形回帰、デシジョン ツリー、Naive Bayes 分類子など、複数の標準的なアルゴリズムが含まれています。 すべてのモデルに視覚エフェクトが統合されており、モデルの開発、調整、および評価が簡単に行えます。  データ マイニングをビジネス インテリジェンス ソリューションに統合することで、複雑な問題に関して合理的な意思決定を行う場合に、この情報を役立てることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にデータ マイニング機能を提供することで、バージョン 2000 のリリース以降、予測分析の分野をリードしてきました。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングの組み合わせにより、データ クレンジングと準備、機械学習、およびレポート作成機能を備えた、予測分析の統合プラットフォームを提供しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングには、EM および K-Means クラスタリング モデル、ニューラル ネットワーク、ロジスティック回帰と線形回帰、デシジョン ツリー、Naive Bayes 分類子など、複数の標準的なアルゴリズムが含まれています。 すべてのモデルに視覚エフェクトが統合されており、モデルの開発、調整、および評価が簡単に行えます。  データ マイニングをビジネス インテリジェンス ソリューションに統合することで、複雑な問題に関して合理的な意思決定を行う場合に、この情報を役立てることができます。  
   
 ## <a name="benefits-of-data-mining"></a>データ マイニングの利点  
  データ マイニング (予測分析と機械学習とも呼ばれます) では、詳細な研究に基づいた統計原則を使用してデータ内のパターンを検出します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング アルゴリズムをデータに適用することにより、傾向の予測、パターンの識別、およびルールや提案の作成を行い、複雑なデータ セット内でイベントの順序を分析し、新しい見識を得ることができます。  
@@ -57,9 +48,9 @@ ms.lasthandoff: 01/08/2018
   
 -   [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)  
   
--   [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+-   [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [マイニング モデル &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   

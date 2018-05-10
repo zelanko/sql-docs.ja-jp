@@ -1,34 +1,23 @@
 ---
-title: "データベース アクセス許可 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データベース アクセス許可 (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], full control
-- full control permissions [Analysis Services]
-ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e3b51e9b5a0571be3050b89c80e376d2510eee7a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>データベース権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-リレーショナル データベースのバックグラウンドを持つ方が Analysis Services データベース管理を始める場合に、まず理解する必要があることは、データ アクセスの観点で、データベースは Analysis Services の主要なセキュリティ保護可能なオブジェクトではないということです。  
+  リレーショナル データベースのバックグラウンドを持つ方が Analysis Services データベース管理を始める場合に、まず理解する必要があることは、データ アクセスの観点で、データベースは Analysis Services の主要なセキュリティ保護可能なオブジェクトではないということです。  
   
  Analysis Services の主要なクエリ構造はキューブ (または表形式モデル) であり、それらの特定のオブジェクトにユーザー権限が設定されます。 リレーショナル データベース エンジンではデータベース ログインおよびユーザー権限 (多くの場合 **db_datareader**) がデータベース自体に対して設定されるのとは対照的に、Analysis Services データベースは大部分がデータ モデルの主要なクエリ オブジェクトのコンテナーとなります。 当面の目的がキューブまたは表形式モデルに対するデータ アクセスを有効にすることである場合、ここではデータベース権限をバイパスし、すぐに次のトピックに進むことができます: [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
@@ -47,7 +36,7 @@ ms.lasthandoff: 02/15/2018
   
  **データベースの処理** : この権限は、データベース レベルで処理を委任するために使用します。 管理者は、別のユーザーまたはサービスにデータベース内の任意のオブジェクトに対する処理操作の呼び出しを許可するロールを作成して、このタスクの負担を軽減できます。 また、特定のオブジェクトに対する処理を可能にするロールも作成できます。 詳細については、「 [処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md) 」を参照してください。  
   
- **定義の読み取り** : この権限によって、オブジェクト メタデータを読み取ることができるようになりますが、関連するデータを表示することはできません。 通常、この権限は専用の処理用に作成されたロールで使用され、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] などのツールを使用してデータベースを対話的に処理できるようにします。 **[定義の読み取り]**権限がない場合、 **[データベースの処理]** 権限は、スクリプト化されたシナリオでのみ有効になります。 SSIS や他のスケジューラなどで処理を自動化する場合は、 **[データベースの処理]** 権限があり、 **[定義の読み取り]**権限がないロールを作成することをお勧めします。 それ以外の場合は、2 つのプロパティを同じロールに結合することで、ユーザー インターフェイスにデータ モデルを視覚化する SQL Server ツールを使用して自動処理と対話型処理の両方をサポートすることを検討してください。  
+ **定義の読み取り** : この権限によって、オブジェクト メタデータを読み取ることができるようになりますが、関連するデータを表示することはできません。 通常、この権限は専用の処理用に作成されたロールで使用され、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] などのツールを使用してデータベースを対話的に処理できるようにします。 **[定義の読み取り]** 権限がない場合、 **[データベースの処理]** 権限は、スクリプト化されたシナリオでのみ有効になります。 SSIS や他のスケジューラなどで処理を自動化する場合は、 **[データベースの処理]** 権限があり、 **[定義の読み取り]** 権限がないロールを作成することをお勧めします。 それ以外の場合は、2 つのプロパティを同じロールに結合することで、ユーザー インターフェイスにデータ モデルを視覚化する SQL Server ツールを使用して自動処理と対話型処理の両方をサポートすることを検討してください。  
   
 ## <a name="full-control-administrator-permissions"></a>フル コントロール (管理者) 権限  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベース管理者はフル コントロール (管理者) 権限が含まれているロールに割り当てられた Windows ユーザー ID です。 データベース管理者は、データベース内で次のようなタスクを実行できます。  
@@ -72,20 +61,20 @@ ms.lasthandoff: 02/15/2018
   
 2.  **[全般]** ペインで、DBAdmin などのような名前を入力します。  
   
-3.  キューブの **[フル コントロール (管理者)]** チェック ボックスをオンにします。 **[データベースの処理]** と **[定義の読み取り]** が自動的に選択されます。 どちらの権限も、 **[フル コントロール]**を含むロールに常に含まれます。  
+3.  キューブの **[フル コントロール (管理者)]** チェック ボックスをオンにします。 **[データベースの処理]** と **[定義の読み取り]** が自動的に選択されます。 どちらの権限も、 **[フル コントロール]** を含むロールに常に含まれます。  
   
 4.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
 5.  **[OK]** をクリックして、ロールの作成を終了します。  
   
 ## <a name="process-database"></a>[データベースの処理]  
- データベース権限を付与するロールを定義するときは、 **[フル コントロール]** をスキップし、 **[データベースの処理]**のみを選択できます。 この権限はデータベース レベルで設定され、データベース内のすべてのオブジェクトに対する処理を許可します。 詳細については、「 [処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ データベース権限を付与するロールを定義するときは、 **[フル コントロール]** をスキップし、 **[データベースの処理]** のみを選択できます。 この権限はデータベース レベルで設定され、データベース内のすべてのオブジェクトに対する処理を許可します。 詳細については、「 [処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
 ## <a name="read-definition"></a>[定義の読み取り]  
- **[データベースの処理]**と同じく、データベース レベルで **[定義の読み取り]** 権限を設定すると、データベース内の他のオブジェクトに連鎖的に影響を及ぼします。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。  
+ **[データベースの処理]** と同じく、データベース レベルで **[定義の読み取り]** 権限を設定すると、データベース内の他のオブジェクトに連鎖的に影響を及ぼします。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [処理権限の Grant &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [処理権限の Grant & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

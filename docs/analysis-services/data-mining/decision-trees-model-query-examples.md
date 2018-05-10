@@ -1,35 +1,23 @@
 ---
-title: "デシジョン ツリー モデルのクエリ例 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: デシジョン ツリー モデルのクエリ例 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- decision tree algorithms [Analysis Services]
-- content queries [DMX]
-- decision trees [Analysis Services]
-ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 123de8ac0fd3b29be624528b063056caca12a650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>デシジョン ツリー モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、デシジョン ツリー モデルでコンテンツ クエリを使用すると、ツリーの各レベルのケースの数に関する統計や、ケースを区別するルールを取得できます。 一方、予測クエリを使用すると、モデルを新しいデータにマップして、提案や分類などを生成することができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
+  データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、デシジョン ツリー モデルでコンテンツ クエリを使用すると、ツリーの各レベルのケースの数に関する統計や、ケースを区別するルールを取得できます。 一方、予測クエリを使用すると、モデルを新しいデータにマップして、提案や分類などを生成することができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
   
  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づくモデルに対するクエリの作成方法について説明します。  
   
@@ -186,7 +174,7 @@ WHERE [Bike Buyer] = 1
 AND PredictProbability([Bike Buyer]) >'.05'  
 ```  
   
- 既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、入れ子になったテーブルを列ラベル **[Expression]**を使用して返します。 このラベルを変更するには、返される列に別名を付けます。 その別名 (この例の場合は **Results**) は、列見出しと、入れ子になったテーブルの値の両方に使用されます。 結果を表示するには、入れ子になったテーブルを展開する必要があります。  
+ 既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、入れ子になったテーブルを列ラベル **[Expression]** を使用して返します。 このラベルを変更するには、返される列に別名を付けます。 その別名 (この例の場合は **Results**) は、列見出しと、入れ子になったテーブルの値の両方に使用されます。 結果を表示するには、入れ子になったテーブルを展開する必要があります。  
   
  **Bike Buyer** = 1 を使用した結果の例:  
   
@@ -265,16 +253,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
-|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
-|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|指定された列に対して、予測された標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
+|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[IsInNode (&) #40";"DMX"&"#41;](../../dmx/isinnode-dmx.md)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
+|[PredictAdjustedProbability & #40";"DMX"&"#41;](../../dmx/predictadjustedprobability-dmx.md)|重み付け確率を返します。|  
+|[PredictAssociation & #40";"DMX"&"#41;](../../dmx/predictassociation-dmx.md)|結合データセットのメンバーシップを予測します。|  
+|[PredictHistogram (&) #40";"DMX"&"#41;](../../dmx/predicthistogram-dmx.md)|現在の予測値に関連する値のテーブルを返します。|  
+|[PredictNodeId & #40";"DMX"&"#41;](../../dmx/predictnodeid-dmx.md)|各ケースの Node_ID を返します。|  
+|[PredictProbability & #40";"DMX"&"#41;](../../dmx/predictprobability-dmx.md)|予測値の確率を返します。|  
+|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|指定された列に対して、予測された標準偏差を返します。|  
+|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -282,6 +270,6 @@ WHERE NODE_TYPE = 25
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [デシジョン ツリー モデル &#40; のマイニング モデル コンテンツAnalysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

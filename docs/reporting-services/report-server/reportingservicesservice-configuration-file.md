@@ -1,31 +1,29 @@
 ---
-title: "ReportingServicesService 構成ファイル | Microsoft Docs"
-ms.custom: 
+title: ReportingServicesService 構成ファイル | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e848cffab72a3523d0a63617f5ebbb5bb5717559
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 071650750724cf8a58c4ac6377f9e2b1f635fe12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
  ||  
@@ -91,7 +89,7 @@ ReportingServicesService.exe.config ファイルには、トレースを構成�
 |**Prefix**|あるログのインスタンスを別のログのインスタンスと区別するために生成する値を指定します。 既定では、トレース ログ ファイル名にタイムスタンプの値が追加されます。 この値は、" tid, time " に設定されます。 この設定は変更しないでください。|  
 |**TraceListeners**|トレース ログ コンテンツの出力先を指定します。 複数の出力先を指定する場合、各出力先をコンマで区切ってください。 有効な値は次のとおりです。<br /><br /> DebugWindow (既定値)<br /><br /> File (既定値)<br /><br /> StdOut|  
 |**TraceFileMode**|トレース ログに 24 時間データを含めるかどうかを指定します。 コンポーネントごとに、毎日 1 つ、一意のトレース ログが必要です。 この値は、"Unique (既定値)" に設定されます。 この値は変更しないでください。|  
-|**コンポーネント**|トレース ログを作成するコンポーネントを指定します。 既定値は **[すべて]**です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
+|**コンポーネント**|トレース ログを作成するコンポーネントを指定します。 既定値は **[すべて]** です。 この設定に対する他の有効な値には、内部コンポーネントの名前があります。 この値は変更しないでください。|  
 |**ランタイム**|以前のバージョンとの下位互換性をサポートする構成設定を指定します。 Microsoft.ReportingServices.Interfaces の以前のバージョンを対象とする要求を新しいバージョンにリダイレクトするには、Runtime 設定を使用します。<br /><br /> このセクションの構成設定は、すべて [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントで説明されています。 詳細については、MSDN Web サイトまたは [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの「ランタイム設定スキーマ」を参照してください。|  
   
 ## <a name="see-also"></a>参照  

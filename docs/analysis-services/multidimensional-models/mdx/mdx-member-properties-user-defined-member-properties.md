@@ -1,32 +1,23 @@
 ---
 title: ユーザー定義メンバー プロパティ (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- custom member properties [MDX]
-ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
-caps.latest.revision: 33
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 08576f10739533850f04a9e64fa052bf7c6bfeec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 26139ee397c9dbaca27eb3ef8236c3e242b98890
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>MDX メンバーのプロパティ - ユーザー定義メンバー プロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]ユーザー定義メンバー プロパティは、特定の属性リレーションシップとして名前付きディメンションのレベルに追加できます。 ユーザー定義メンバー プロパティは、階層の **(All)** レベル、または階層そのものには追加できません。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティは、階層の **(All)** レベル、または階層そのものには追加できません。  
   
 ## <a name="creating-user-defined-member-properties"></a>ユーザー定義メンバー プロパティの作成  
  以下のように、ユーザー インターフェイスを使用して、またはプログラムによって、サーバー ベースのディメンションまたはキューブにユーザー定義メンバー プロパティを追加できます。  
@@ -73,7 +64,7 @@ FROM [Adventure Works]
  計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [メンバー プロパティの使用 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [プロパティ &#40;です。MDX と #41 です。](../../../mdx/properties-mdx.md)  
+ [メンバーのプロパティ & #40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [プロパティ & #40 です。MDX と #41 です。](../../../mdx/properties-mdx.md)  
   
   

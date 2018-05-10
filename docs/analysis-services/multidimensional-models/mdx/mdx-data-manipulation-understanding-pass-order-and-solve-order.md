@@ -1,39 +1,23 @@
 ---
-title: "パス順序と解決順序 (MDX) の理解 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: パス順序と解決順序 (MDX) の理解 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- evaluation order [MDX]
-- calculation order [MDX]
-- SOLVE_ORDER property
-- queries [MDX], solve orders
-- solve orders [MDX]
-- pass orders [MDX]
-- expressions [MDX], solve orders
-ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 522c76ebc4f76e382f12490872e2e8ba54e5fe94
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX データ操作のパスを理解する順序し、解決順序
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  
+  MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  
   
  計算パスは、計算パス番号と呼ばれる序数で表すこともできます。 キューブのセルすべてを完全に計算するために必要な計算パスの数を、キューブの計算パスの深さと呼びます。  
   
@@ -66,7 +50,7 @@ MDX スクリプトの結果としてキューブが計算される場合、計�
  解決順序の値を設定するときは、正の整数のみを使用することを強くお勧めします。 前の表に示されている解決順序の値よりも低い値を割り当てると、計算パスが予測不能になることがあります。 たとえば、計算されるメンバーの計算に、解決順序の値として既定のカスタム ロールアップ式の値である -5119 より低い値を割り当てるとします。 このように低い解決順序の値を持つ計算されるメンバーはカスタム ロールアップ式より先に計算され、正確な結果が得られないことがあります。  
   
 ### <a name="creating-and-changing-solve-order"></a>解決順序の作成と変更  
- キューブ デザイナーでは、 **[計算]**ペインで計算の順序を変更することによって、計算されるメンバーと計算されるセルの解決順序を変更できます。  
+ キューブ デザイナーでは、 **[計算]** ペインで計算の順序を変更することによって、計算されるメンバーと計算されるセルの解決順序を変更できます。  
   
  MDX では、計算されるメンバーや計算されるセルを作成または変更するときに **SOLVE_ORDER** キーワードを使用できます。  
   
@@ -220,9 +204,9 @@ FROM [Adventure Works]
  解決順序の問題は、計算されるメンバー、カスタム ロールアップ式、または計算されるセルの関係するディメンションが多数あるキューブの場合は特に、非常に複雑になります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が MDX クエリを評価するとき、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、MDX クエリで指定されているキューブのディメンションも含め、特定のパスに関係するものすべての解決順序の値を考慮します。  
   
 ## <a name="see-also"></a>参照  
- [CalculationCurrentPass &#40;です。MDX と #41 です。](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue &#40;です。MDX と #41 です。](../../../mdx/calculationpassvalue-mdx.md)   
- [MEMBER ステートメント &#40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-member.md)   
- [操作に使用するデータ &#40;です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass & #40 です。MDX と #41 です。](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue & #40 です。MDX と #41 です。](../../../mdx/calculationpassvalue-mdx.md)   
+ [MEMBER ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-member.md)   
+ [操作に使用するデータ & #40 です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

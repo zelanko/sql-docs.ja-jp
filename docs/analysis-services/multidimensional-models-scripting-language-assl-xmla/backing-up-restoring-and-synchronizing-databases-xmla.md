@@ -1,35 +1,19 @@
 ---
-title: "バックアップの復元、データベース、および同期 (XMLA) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restoring databases [XML for Analysis]
-- backing up databases [XML for Analysis]
-- database backups [XML for Analysis]
-- synchronization [XML for Analysis]
-- database restores [XML for Analysis]
-ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 
-author: Minewiskan
+title: バックアップの復元、データベース、および同期 (XMLA) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6a7b9d3c850052cf1d6a4548764482a287bf671c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
   XML for Analysis には、データベースのバックアップ、復元、および同期を行う 3 つのコマンドがあります。  
@@ -67,9 +51,9 @@ ms.lasthandoff: 02/15/2018
   
  値、**セキュリティ**プロパティは、次の表に示す文字列の 1 つに制限されます。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|バックアップ ファイルにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
+|*skipMembership*|バックアップ ファイルにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|バックアップ ファイルにセキュリティ定義とメンバーシップ情報を含めます。|  
 |*IgnoreSecurity*|バックアップ ファイルからセキュリティ定義を除外します。|  
   
@@ -99,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 |値|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
+|*skipMembership*|データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|データベースにセキュリティ定義とメンバーシップ情報を含めます。|  
 |*IgnoreSecurity*|データベースからセキュリティ定義を除外します。|  
   
@@ -137,7 +121,7 @@ ms.lasthandoff: 02/15/2018
   
 |値|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|同期先データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
+|*skipMembership*|同期先データベースにセキュリティ定義を含めますが、メンバーシップ情報は除外します。|  
 |*CopyAll*|同期先データベースにセキュリティ定義とメンバーシップ情報を含めます。|  
 |*IgnoreSecurity*|同期先データベースからセキュリティ定義を除外します。|  
   
@@ -155,8 +139,8 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [バックアップの要素と &#40; です。XMLA と &#41; です。](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [要素 &#40; を復元します。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [要素 &#40; を同期します。XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [要素 & #40; を復元します。XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [要素 & #40; を同期します。XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

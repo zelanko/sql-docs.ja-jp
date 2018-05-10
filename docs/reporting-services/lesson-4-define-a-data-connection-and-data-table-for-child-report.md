@@ -1,28 +1,27 @@
 ---
-title: "レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5a9893a646617d3f3bca68c7c22de1a7a10d7455
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d7aa269db14390739e0d9a161819b78793fd8474
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する
 親レポートを設計した後は、子レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
@@ -45,9 +44,9 @@ ms.lasthandoff: 01/09/2018
   
         既定の SQL Server Express インスタンスは **(local)\sqlexpress**です。  
   
-    2.  **[サーバーへのログオン]** セクションで、データへのアクセスを提供するオプションを選択します。 既定は**[Windows 認証を使用する]** です。  
+    2.  **[サーバーへのログオン]** セクションで、データへのアクセスを提供するオプションを選択します。 既定は **[Windows 認証を使用する]** です。  
   
-    3.  **[データベース名の選択または入力]** ドロップダウン リストで、 **[AdventureWorks2014]**を選択します。  
+    3.  **[データベース名の選択または入力]** ドロップダウン リストで、 **[AdventureWorks2014]** を選択します。  
   
     4.  **[OK]** を選択し、**[次へ]** を選択します。  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/09/2018
   
 7.  **[接続文字列をアプリケーション構成ファイルに保存する]** ページで、接続文字列の名前を入力するか、既定値の **AdventureWorks2014ConnectionString**をそのまま使用します。 **[次へ]** を選択します。  
   
-8.  **[コマンドの種類を選択します]** ページで、 **[SQL ステートメントを使用する]**を選択し、 **[次へ]**を選択します。  
+8.  **[コマンドの種類を選択します]** ページで、 **[SQL ステートメントを使用する]** を選択し、 **[次へ]** を選択します。  
   
 9. [ **SQL ステートメントの入力]** ページで、 **AdventureWorks2014** データベースからデータを取得するための次の Transact-SQL クエリを入力し、**[次へ]** を選択します。  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 01/09/2018
   
 11. ファイルを保存します。  
   
-12. データをプレビューするには、 **[データ]** メニューの **[データのプレビュー]** を選択し、 **[プレビュー]**を選択します。  
+12. データをプレビューするには、 **[データ]** メニューの **[データのプレビュー]** を選択し、 **[プレビュー]** を選択します。  
   
 ## <a name="next-task"></a>次の作業  
 これで、子レポートのデータ接続とデータ テーブルを作成できました。 次は、レポート ウィザードを使用して子レポートを設計します。 [「レッスン 5: レポート ウィザードを使用して子レポートを設計する」](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)を参照してください。  

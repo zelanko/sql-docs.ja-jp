@@ -1,30 +1,23 @@
 ---
-title: "Restore-asdatabase コマンドレット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Restore-asdatabase コマンドレット |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9730e74afa160e952723894a6b4ad1d72c762f28
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services インスタンスに、Multidimensional または Tabular データベース バックアップ ファイル (.abf) を復元します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  多次元形式または表形式のデータベース バックアップ ファイル (.abf) から Analysis Services インスタンスを復元します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -50,13 +43,13 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-name-string"></a>-名前\<文字列 >  
+### <a name="-name-string"></a>-Name \<string>  
  復元対象の Analysis Services データベースを指定します。  
   
 |||  
 |-|-|  
 |必須/省略可能|true|  
-|位置|@shouldalert|  
+|位置|1|  
 |既定値||  
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
@@ -116,7 +109,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-server-string"></a>-サーバー\<文字列 >  
+### <a name="-server-string"></a>-Server \<string>  
  コマンドレットが接続して実行する Analysis Services インスタンスを指定します。 サーバー名が指定されていない場合は、localhost に接続されます。 既定のインスタンスの場合は、サーバー名のみを指定します。 名前付きインスタンスの場合は、servername \instancename 形式を使用します。 HTTP 接続では、http[s]://server[:port]/virtualdirectory/msmdpump.dll 形式を使用します。  
   
 |||  
@@ -127,7 +120,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
+### <a name="-credential-pscredential"></a>-Credential \<PSCredential>  
  Windows ユーザー名とパスワードを提供する PSCredential オブジェクトを指定します。 基本認証を使用して、HTTP アクセスに対する Analysis Services インスタンスを構成している場合のみ、このパラメーターを指定します。 統合セキュリティを使用するネイティブ接続では、このパラメーターは無視されます。  
   
  このパラメーターが存在する場合、パラメーターで提供される資格情報は接続文字列に付加されます。 IIS は、Analysis Services に接続する際、このユーザー ID を借用します。 資格情報を指定していない場合は、ツールを実行しているユーザーの既定の Windows アカウントが使用されます。  
@@ -144,7 +137,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|True (ByValue)|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

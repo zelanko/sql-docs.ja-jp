@@ -1,32 +1,19 @@
 ---
-title: "クロス検証 (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: クロス検証 (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
-- cross-validation [data mining]
-- scoring [data mining]
-- accuracy testing [data mining]
-ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3cac76036969ad837035a69a12b108623bb6f248
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>相互検証 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -95,7 +82,7 @@ ms.lasthandoff: 02/15/2018
   
  対象の状態の選択は、返されるメジャーに影響します。 モデルで予測する特定の値を選択するのではなく、列名を対象の属性として指定した場合、既定では、モデルは最も可能性の高い状態の予測に対して評価されます。  
   
- クラスター モデルに対してクロス検証を使用する場合、予測可能列は存在しません。この場合は、 **[対象の属性]** ボックスの一覧から **[#Cluster]** を選択します。 このオプションを選択すると、 **[対象の状態]**などの、クラスター モデルに関連しない他のオプションは無効になります。 マイニング構造に関連付けられたすべてのクラスター モデルが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってテストされます。  
+ クラスター モデルに対してクロス検証を使用する場合、予測可能列は存在しません。この場合は、 **[対象の属性]** ボックスの一覧から **[#Cluster]** を選択します。 このオプションを選択すると、 **[対象の状態]** などの、クラスター モデルに関連しない他のオプションは無効になります。 マイニング構造に関連付けられたすべてのクラスター モデルが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によってテストされます。  
   
 ## <a name="tools-for-cross-validation"></a>クロス検証のためのツール  
  クロス検証は、データ マイニング デザイナーから使用できるほか、ストアド プロシージャを実行することによって行うこともできます。  
@@ -118,17 +105,17 @@ ms.lasthandoff: 02/15/2018
   
  最初のフェーズでは、指定した数のパーティションをデータセット内に作成し、各パーティションに対して精度の結果を返すシステム ストアド プロシージャを呼び出します。 それぞれの基準について、パーティションの平均と標準偏差が Analysis Services によって計算されます。  
   
--   [SystemGetCrossValidationResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
  **データセット全体の基準の生成**  
   
  2 番目のフェーズでは、先ほどとは異なる一連のストアド プロシージャを呼び出します。 これらのストアド プロシージャは、データセットのパーティション分割を行わずに、指定したデータセット全体の精度の結果を生成します。 マイニング構造のパーティション分割と処理を既に終えている場合は、この 2 つ目の一連のストアド プロシージャを呼び出すだけで結果を得ることができます。  
   
--   [SystemGetAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 #### <a name="defining-the-testing-data"></a>テスト データの定義  
  精度を計算するクロス検証ストアド プロシージャ (SystemGetAccuracyResults または SystemGetClusterAccuracyResults) を実行する際、クロス検証時のテストに使用するデータのソースを指定できます。 このオプションは、ユーザー インターフェイスでは使用できません。  
@@ -191,10 +178,10 @@ ms.lasthandoff: 02/15/2018
 |SQL Server Development Studio でクロス検証のパラメーターを設定する方法について説明します。|[クロス検証」 タブと &#40; です。マイニング精度チャート」 ビューと &#41; です。](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
 |クロス検証によって得られるメトリックについて説明します。|[クロス検証の式](../../analysis-services/data-mining/cross-validation-formulas.md)|  
 |クロス検証レポートの形式について説明し、モデルの種類ごとに用意されている統計的尺度を明らかにします。|[クロス検証レポート内のメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
-|クロス検証の統計値を計算するためのストアド プロシージャを一覧にしています。|[データ マイニングのストアド プロシージャと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|クロス検証の統計値を計算するためのストアド プロシージャを一覧にしています。|[データ マイニングのストアド プロシージャと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
 |マイニング構造および関連するモデルのテスト データセットの作成方法について説明します。|[トレーニング セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|他の種類の精度チャートの例を紹介します。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|他の種類の精度チャートの例を紹介します。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |各種の精度チャートを作成する手順について説明します。|[テストおよび検証タスクと操作方法 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  

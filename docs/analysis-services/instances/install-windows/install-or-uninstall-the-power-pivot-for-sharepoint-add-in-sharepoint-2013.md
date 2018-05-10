@@ -1,27 +1,19 @@
 ---
-title: "インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2013) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: インストールまたは Power Pivot の SharePoint アドインのアンインストール (SharePoint 2013) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7066ed9aafe287f5ed4a2bb5ed2981d27bd0e35f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dc528f442d908d344ba1200d3681438dc183ddda
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -39,9 +31,9 @@ ms.lasthandoff: 02/15/2018
   
 -   **アプリケーション サーバー:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能には、データ ソースとしてのブックの使用、定期データ更新、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードなどが含まれます。  
   
-     [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] Analysis Services クライアント ライブラリを配置し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール ファイルをコンピューターにコピーする**Windows インストーラー パッケージ (**spPowerpivot.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] ) です。 インストーラーは、SharePoint での [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能の配置や構成は行いません。 既定では、次のコンポーネントがインストールされます。  
+     [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] Analysis Services クライアント ライブラリを配置し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インストール ファイルをコンピューターにコピーする**Windows インストーラー パッケージ (** spPowerpivot.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] ) です。 インストーラーは、SharePoint での [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 機能の配置や構成は行いません。 既定では、次のコンポーネントがインストールされます。  
   
-    -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013。このコンポーネントには、PowerShell スクリプト (.ps1 ファイル)、SharePoint ソリューション パッケージ (.wsp)、および SharePoint 2013 ファームに [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] を配置するための [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2013 構成ツールが含まれています。  
+    -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013.このコンポーネントには、PowerShell スクリプト (.ps1 ファイル)、SharePoint ソリューション パッケージ (.wsp)、および SharePoint 2013 ファームに [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] を配置するための [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 2013 構成ツールが含まれています。  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Analysis Services (MSOLAP)。  
   
@@ -89,16 +81,16 @@ ms.lasthandoff: 02/15/2018
   
 2.  ウェルカム ページで **[次へ]** をクリックします。  
   
-3.  使用許諾契約書を確認して同意し、 **[次へ]**をクリックします。  
+3.  使用許諾契約書を確認して同意し、 **[次へ]** をクリックします。  
   
 4.  **[機能の選択]** ページでは、すべての機能が既定で選択されています。  
   
-5.  **[次へ]**をクリックします。  
+5.  **[次へ]** をクリックします。  
   
 6.  **[インストール]** をクリックしてインストールを実行し、インストールを終了します。  
   
 ### <a name="command-line-installation"></a>コマンド ライン インストール  
- コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot.msi**を実行します。 例:  
+ コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot.msi**を実行します。 以下に例を示します。  
   
  `Msiexec.exe /i SpPowerPivot.msi`」を参照してください。  
   
@@ -164,11 +156,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  **Or**  
   
-1.  **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**をポイントします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントします。  
   
 2.  [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]をクリックします。  
   
-3.  **[構成ツール]**をクリックします。  
+3.  **[構成ツール]** をクリックします。  
   
 4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 の構成**をクリックします。  
   
@@ -181,7 +173,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をアンインストールまたは修復するには、次のいずれかの方法を使用します。  
   
-1.  **Windows コントロール パネル:** [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**] を選択します。 **[アンインストール]** または **[修復]**をクリックします。  
+1.  **Windows コントロール パネル:** [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**] を選択します。 **[アンインストール]** または **[修復]** をクリックします。  
   
 2.  spPowerPivot.msi を実行し、 **[削除]** または **[修復]** を選択します。  
   

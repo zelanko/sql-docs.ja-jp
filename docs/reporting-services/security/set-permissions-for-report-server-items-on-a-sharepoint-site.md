@@ -1,30 +1,28 @@
 ---
-title: "SharePoint サイト上のレポート サーバー アイテムに対するアクセス許可の設定 | Microsoft Docs"
-ms.custom: 
+title: SharePoint サイト上のレポート サーバー アイテムに対するアクセス許可の設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b82638222e8fcf0a0fe6867954fc1e6f38dd071
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fbf0ecedbc5b5b698f32f3c7d5549a604a03e1f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint サイト上のレポート サーバー アイテムに対する権限の設定
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  
@@ -39,17 +37,17 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-set-permissions-on-an-individual-report-model-or-data-source"></a>レポート、モデル、またはデータ ソースに対して個別に権限を設定するには  
   
-1.  まだライブラリが開いていない場合は、サイド リンク バーでライブラリの名前をクリックします。 ライブラリの名前が表示されていない場合は、 **[すべてのサイト コンテンツの表示]**をクリックし、ライブラリの名前をクリックします。  
+1.  まだライブラリが開いていない場合は、サイド リンク バーでライブラリの名前をクリックします。 ライブラリの名前が表示されていない場合は、 **[すべてのサイト コンテンツの表示]** をクリックし、ライブラリの名前をクリックします。  
   
 2.  レポート、レポート モデル、または共有データ ソース ファイルをポイントします。  
   
-3.  下矢印をクリックし、メニューの **[権限の管理]**をクリックします。  
+3.  下矢印をクリックし、メニューの **[権限の管理]** をクリックします。  
   
-4.  **[アクション]** メニューの **[権限の編集]**をクリックし、 **[OK]** をクリックして操作を確定します。  
+4.  **[アクション]** メニューの **[権限の編集]** をクリックし、 **[OK]** をクリックして操作を確定します。  
   
-5.  そのファイルを使用する権限がないユーザーまたはグループに権限を与えるには、 **[新規作成]**をクリックし、 **[ユーザーの追加]**をクリックします。  
+5.  そのファイルを使用する権限がないユーザーまたはグループに権限を与えるには、 **[新規作成]** をクリックし、 **[ユーザーの追加]** をクリックします。  
   
-6.  既存のユーザーまたはグループの権限を削除または変更するには、まずユーザーまたはグループの横にあるチェック ボックスをオンにします。次に、 **[アクション]**をクリックし、 **[ユーザー権限の削除]** または **[ユーザー権限の編集]**をクリックします。  
+6.  既存のユーザーまたはグループの権限を削除または変更するには、まずユーザーまたはグループの横にあるチェック ボックスをオンにします。次に、 **[アクション]** をクリックし、 **[ユーザー権限の削除]** または **[ユーザー権限の編集]** をクリックします。  
   
 ### <a name="to-set-permissions-that-enable-model-item-security"></a>モデル アイテム セキュリティを有効にする権限を設定するには  
   
@@ -59,21 +57,21 @@ ms.lasthandoff: 01/09/2018
   
 3.  モデルをポイントします。  
   
-4.  モデルの横にある下矢印をクリックし、 **[権限の管理]**をクリックします。  
+4.  モデルの横にある下矢印をクリックし、 **[権限の管理]** をクリックします。  
   
-5.  **[アクション]**をクリックします。  
+5.  **[アクション]** をクリックします。  
   
-6.  **[権限を編集]**をクリックします。 **[OK]** をクリックします。  
+6.  **[権限を編集]** をクリックします。 **[OK]** をクリックします。  
   
-7.  **[新規作成]**をクリックします。  
+7.  **[新規作成]** をクリックします。  
   
-8.  **[ユーザーの追加]**をクリックします。  
+8.  **[ユーザーの追加]** をクリックします。  
   
 9. [ユーザー/グループ] で、ユーザー アカウントを入力します。  
   
-10. **[ユーザーへの権限の直接付与]**を選択します。  
+10. **[ユーザーへの権限の直接付与]** を選択します。  
   
-11. **[フル コントロール]**をクリックします。  
+11. **[フル コントロール]** をクリックします。  
   
 12. **[OK]** をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
   

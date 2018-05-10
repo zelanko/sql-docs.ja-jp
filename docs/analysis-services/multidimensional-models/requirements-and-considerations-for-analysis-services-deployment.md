@@ -1,45 +1,26 @@
 ---
-title: "サービスの展開の要件と分析に関する考慮事項 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: サービスの展開の要件と分析に関する考慮事項 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- memory [Analysis Services]
-- scalability [Analysis Services]
-- space [Analysis Services]
-- Analysis Services deployments, requirements
-- deploying [Analysis Services], requirements
-- disk space [Analysis Services]
-- requirements [Analysis Services]
-- processors [Analysis Services]
-- system requirements [Analysis Services]
-- availability [Analysis Services]
-ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 88b91944e1ffb99d684e53bda09465d995b416f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
+  あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
   
 ## <a name="memory-and-processor-requirements"></a>メモリおよびプロセッサの要件  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次のような場合、より大きなメモリおよびプロセッサ リソースが必要です。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]次の場合に多くのメモリおよびプロセッサ リソースが必要です。  
   
 -   大規模または複雑なキューブを処理する場合。 このようなキューブには、小規模または単純なキューブよりも大きなメモリおよびプロセッサ リソースが必要です。  
   

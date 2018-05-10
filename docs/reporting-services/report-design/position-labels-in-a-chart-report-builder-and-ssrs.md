@@ -1,27 +1,25 @@
 ---
-title: "グラフへのラベルの配置 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: グラフへのラベルの配置 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 670ab7c23576cfae562e07ba0401ad4f1b9bc562
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ad70c035a04e6537bdb7b155599d00880e8108ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>グラフへのラベルの配置 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのグラフはその種類によって形状が異なるので、グラフが見やすい位置にデータ ポイント ラベルを配置する必要があります。 ラベルの既定の位置は、グラフの種類によって異なります。  
@@ -43,9 +41,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  円グラフを作成します。  
   
-2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]**をクリックします。  
+2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]**をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、グラフをクリックします。 グラフのプロパティが [プロパティ] ペインに表示されます。  
   
@@ -57,9 +55,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  じょうごグラフまたはピラミッド グラフを作成します。  
   
-2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]**をクリックします。  
+2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]**をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、グラフをクリックします。 グラフのプロパティが [プロパティ] ペインに表示されます。  
   
@@ -74,9 +72,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  横棒グラフを作成します。  
   
-2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]**をクリックします。  
+2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]**をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、グラフをクリックします。 グラフのプロパティが [プロパティ] ペインに表示されます。  
   
@@ -90,13 +88,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  面グラフ、縦棒グラフ、折れ線グラフ、または散布図を作成します。  
   
-2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]**をクリックします。  
+2.  デザイン画面で、グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。  
   
-3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]**をクリックします。  
+3.  プロパティ ペインを開きます。 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 4.  デザイン画面で、系列をクリックします。 系列のプロパティが [プロパティ] ペインに表示されます。  
   
-5.  **[データ]** セクションで、 **[DataPoint]** ノードを展開し、 **[Label]**ノードを展開します。  
+5.  **[データ]** セクションで、 **[DataPoint]** ノードを展開し、 **[Label]** ノードを展開します。  
   
 6.  Position プロパティの値を選択します。  
   

@@ -1,42 +1,19 @@
 ---
-title: "パーティション ストレージ (Analysis Services - 多次元) の設定 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: パーティション ストレージ (Analysis Services - 多次元) の設定 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- low latency MOLAP
-- standard storage [Analysis Services]
-- hybrid OLAP
-- automatic MOLAP
-- relational OLAP
-- multidimensional OLAP
-- scheduled MOLAP [Analysis Services]
-- partitions [Analysis Services], storage
-- HOLAP
-- MOLAP
-- real time ROLAP
-- real time HOLAP
-- ROLAP
-- medium latency MOLAP
-ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42823cdd118d3fb52df6265671eaca0fd25be96c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 744c0995e982cbe841a711523e2523c852bf781f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +49,7 @@ ms.lasthandoff: 02/15/2018
 |[MOLAP]|プロアクティブ キャッシュは有効になりません。 詳細データと集計は、多次元形式で格納されます。 データが変更されてもサーバーは通知を受信しません。 処理は、スケジュールするか、手動で実行する必要があります。<br /><br /> この設定は通常、クライアント アプリケーションを定期的に更新する必要がなく、高いパフォーマンスを得ることが非常に重要なデータ ソースに対して使用します。<br /><br /> アプリケーションに最新のデータが必要ない場合、プロアクティブ キャッシュを使用しない MOLAP ストレージは最高のパフォーマンスを提供します。 更新されたオブジェクトの処理にはダウンタイムが必要ですが、ステージング サーバーでキューブを更新および処理し、更新および処理した MOLAP オブジェクトをデータベースの同期を使用して実稼働サーバーにコピーすることで、ダウンタイムを最小限にとどめることができます。|  
   
 ## <a name="custom-storage-options"></a>カスタム ストレージ オプション  
- 標準のストレージ設定のいずれかを使用する代わりに、ストレージおよびプロアクティブ キャッシュを手動で設定できます。 カスタム ストレージ設定を作成する前に、 **[標準設定]** オプションをクリックし、使用する構成に最も近い標準設定にスライダーを移動してください。 次に、 **[カスタム設定]** オプション、 **[オプション]**の順にクリックしてカスタム構成を作成します。  
+ 標準のストレージ設定のいずれかを使用する代わりに、ストレージおよびプロアクティブ キャッシュを手動で設定できます。 カスタム ストレージ設定を作成する前に、 **[標準設定]** オプションをクリックし、使用する構成に最も近い標準設定にスライダーを移動してください。 次に、 **[カスタム設定]** オプション、 **[オプション]** の順にクリックしてカスタム構成を作成します。  
   
 -   データ ソースが変更された場合にキャッシュを更新するかどうかを指定できます。 許容可能なレベルの動きを許可するには、データ ソース更新後のサイレント状態 (アクティビティがない状態) の最小間隔を指定します。 また、データ ソースの変更間隔がサイレント状態の最小間隔に満たない場合、指定期間後にキャッシュを更新する、サイレント状態のオーバーライド間隔を指定することもできます。  
   

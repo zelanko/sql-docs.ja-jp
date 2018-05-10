@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services の概念 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services の概念 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 048406ef86bc2442e4d065f5461f85dbbd328495
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: edbf80dce6c749551d8955e52aa1c09794dc0cd8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 01/09/2018
  レポート サーバー アイテムには、改ページ調整されたレポートおよびモバイル レポート、KPI、共有データ ソース、共有データセット、レポート サーバーにパブリッシュ、アップロード、または保存できるレポートなどがあります。 アイテムは、ネイティブのレポート サーバーではレポート サーバーの階層フォルダー構造に、SharePoint サイトでは SharePoint コンテンツ ライブラリに整理します。 詳細については、「[レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)」を参照してください。  
   
 ### <a name="folders"></a>フォルダー
- ネイティブのレポート サーバーでは、フォルダーによって、レポート サーバーに格納されたすべてのアクセス可能なアイテムの階層ナビゲーション構造とパスが提供されます。 レポート サーバー アイテムへのアクセスを制御するには、フォルダー階層、およびサイトとフォルダーの権限を使用します。これは、" *アイテムレベルのセキュリティ*" と呼ばれます。 既定では、特定のフォルダーに定義するロールの割り当ては、そのフォルダー階層内の子フォルダーに継承されます。 フォルダーに特定のロールを割り当てる場合は、この継承ルールは適用されません。 フォルダー構造は、 **"ホーム"**という名前のルート ノードと、省略可能な **個人用レポート** 機能をサポートする予約済みフォルダーで構成されます。 ブラウザーでは、ルート ノードはレポート サーバーの仮想ディレクトリの名前です (例: `http://myreportserver/reports`)。 詳細については、「 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)」を参照してください。  
+ ネイティブのレポート サーバーでは、フォルダーによって、レポート サーバーに格納されたすべてのアクセス可能なアイテムの階層ナビゲーション構造とパスが提供されます。 レポート サーバー アイテムへのアクセスを制御するには、フォルダー階層、およびサイトとフォルダーの権限を使用します。これは、" *アイテムレベルのセキュリティ*" と呼ばれます。 既定では、特定のフォルダーに定義するロールの割り当ては、そのフォルダー階層内の子フォルダーに継承されます。 フォルダーに特定のロールを割り当てる場合は、この継承ルールは適用されません。 フォルダー構造は、 **"ホーム"** という名前のルート ノードと、省略可能な **個人用レポート** 機能をサポートする予約済みフォルダーで構成されます。 ブラウザーでは、ルート ノードはレポート サーバーの仮想ディレクトリの名前です (例: `http://myreportserver/reports`)。 詳細については、「 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)」を参照してください。  
   
  SharePoint サイトでは、ドキュメント ライブラリとコンテンツ ライブラリ内の SharePoint フォルダーを使用してアイテムを整理します。  
   

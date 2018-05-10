@@ -1,30 +1,23 @@
 ---
-title: "呼び出す ProcessASDatabase |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 呼び出す ProcessASDatabase |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08d7ab5ef918b64fb7570ce5a407c23718fc6f03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]実施、**プロセス**に、指定した操作**データベース**特定**ProcessType**または**RefreshType**に応じて、基になるメタデータの型。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  基になるメタデータの種類に応じて、特定の **ProcessType** または **RefreshType** の指定した **Database** に対して **Process** 操作を実行します。  
   
  多次元メタデータを含むデータベースには、 **ProcessType** を使用します (互換性レベル 1050、1100、または 1103 の表形式のデータベースが含まれます)。  
   
@@ -49,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-databasename-string"></a>-DatabaseName\<文字列 >  
+### <a name="-databasename-string"></a>-DatabaseName \<string>  
  処理対象の表形式または多次元データベースを指定します。  
   
 |||  
@@ -60,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>-サーバー\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  必要に応じて、コンテキストに **SQLAS** プロバイダー ディレクトリを使用しない場合に接続する先のサーバー インスタンスを指定します。  
   
 |||  
@@ -77,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |必須/省略可能|true|  
-|位置|@shouldalert|  
+|位置|1|  
 |既定値||  
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
@@ -88,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |必須/省略可能|true|  
-|位置|@shouldalert|  
+|位置|1|  
 |既定値||  
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  

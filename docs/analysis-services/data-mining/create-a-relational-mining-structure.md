@@ -1,37 +1,23 @@
 ---
-title: "リレーショナル マイニング構造を作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: リレーショナル マイニング構造を作成 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], creating
-- relational mining models [Analysis Services]
-- OLAP mining models [Analysis Services]
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7d5898485017bc2d1be59e1e5db7b147926ea5b3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>リレーショナル マイニング構造の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
+  ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
   
  リレーショナル マイニング構造では、さまざまなソースからデータを取得できます。 生データは、データ ソース ビューの一部として定義可能であれば、テーブル、ファイル、またはリレーショナル データベース システムに格納できます。 たとえば、データが Excel、SQL Server データ ウェアハウス データベース、または SQL Server レポート データベースにある場合、あるいは OLE DB プロバイダーまたは ODBC プロバイダー経由でアクセスする外部ソースにある場合は、リレーショナル マイニング構造を使用する必要があります。  
   
@@ -55,9 +41,9 @@ ms.lasthandoff: 02/15/2018
  次に、データ ソース ビュー ウィザードを使用して、必要なデータを 1 つのデータ ソース ビューにまとめます。 データ ソース ビューでデータを選択、変換、フィルター選択、または管理する方法の詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」をご覧ください。  
   
 ##  <a name="BKMK_Relational_Structure"></a> プロセスの概要  
- ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、 **[新しいマイニング構造の追加]**を選択して、データ マイニング ウィザードを起動します。 ウィザードでは、次の手順に従って新しいリレーショナル マイニング モデルの構造を作成します。  
+ ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、 **[新しいマイニング構造の追加]** を選択して、データ マイニング ウィザードを起動します。 ウィザードでは、次の手順に従って新しいリレーショナル マイニング モデルの構造を作成します。  
   
-1.  **[定義方法の選択]**: データ ソースの種類を選択し、 **[リレーショナル データベースまたはデータ ウェアハウスを使用する]**を選択します。  
+1.  **[定義方法の選択]**: データ ソースの種類を選択し、 **[リレーショナル データベースまたはデータ ウェアハウスを使用する]** を選択します。  
   
 2.  **[データ マイニング構造の作成]**: 構造のみを作成するか、構造と共にマイニング モデルも作成するかを決定します。  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
- [データ マイニング ウィザード &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [データ マイニング ウィザード & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   
  [マイニング構造列および構造列のプロパティ](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

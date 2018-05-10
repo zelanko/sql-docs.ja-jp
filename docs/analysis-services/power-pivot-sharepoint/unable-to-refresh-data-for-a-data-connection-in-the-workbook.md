@@ -1,31 +1,23 @@
 ---
-title: "ブック内のデータ接続のデータを更新できません |。Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: ブック内のデータ接続のデータを更新できません |。Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>ブック内のデータ接続に関するデータを更新できません
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックで、Excel Services は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックで、Excel Services は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
   
 ## <a name="details"></a>詳細  
   
@@ -67,7 +59,7 @@ ms.lasthandoff: 02/15/2018
   
  この問題を回避するには、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーと同じドメインにコンピューターを所属させるか、ローカル コンピューターにドメイン コントローラーをインストールします。 2 番目の解決策として、ドメイン コントローラーのインストールを行う場合は、すべてのサービスとユーザーのローカル ドメイン アカウントを作成することが必要になります。 それには、サービス アカウントを構成して、定義したアカウントの SharePoint 権限を構成する必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をオフラインで使用する方法の詳細については、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241) で "サーバーのオフライン化" に関するブログ エントリを参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 使用する方法の詳細な手順について[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]オフライン、ブログ エントリを参照してください"を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]はネットワークからサーバー"で[ http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241)です。  
   
  **シナリオ 4: 不安定なサーバー**  
   

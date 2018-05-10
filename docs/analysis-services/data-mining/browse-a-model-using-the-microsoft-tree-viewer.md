@@ -1,44 +1,23 @@
 ---
-title: "Microsoft ツリー ビューアーを使用してモデルを参照 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Microsoft ツリー ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Tree Viewer [Analysis Services]
-- predictions [Analysis Services], discrete attributes
-- mining model content, viewing
-- predictions [Analysis Services], continuous attributes
-- mining legend [Analysis Services]
-- discrete attributes [Analysis Services]
-- Microsoft Decision Trees algorithm [Analysis Services]
-- decision tree algorithms [Analysis Services]
-- Microsoft Tree Viewer
-- decision trees [Analysis Services]
-- dependencies [Analysis Services]
-- continuous attributes
-ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6477ccf19b3f2e626f098e455fc999fd07c565dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft ツリー ビューアーを使用したモデルの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して作成されたデシジョン ツリーが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、分類と回帰の両方をサポートする複合的なデシジョン ツリー アルゴリズムです。 したがって、このビューアーには [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムに基づくモデルを表示できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングに使用します。 このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して作成されたデシジョン ツリーが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、分類と回帰の両方をサポートする複合的なデシジョン ツリー アルゴリズムです。 したがって、このビューアーには [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムに基づくモデルを表示できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングに使用します。 このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)」を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)」を参照してください。  
@@ -66,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 -   ポピュラリティ順に並べられた、予測可能な属性の状態の分布を表すヒストグラム  
   
- **[ヒストグラム]** オプションを使用すると、ツリーのヒストグラムに表示される状態の数を変更できます。 これは、予測可能な属性に多数の状態が含まれている場合に便利です。 ヒストグラムには、状態がポピュラリティ順に左から右に表示されます。表示するように選択した状態の数が属性内の状態の総数よりも少ない場合は、最も一般的でない状態がまとめて灰色で表示されます。 ノードの各状態の正確な数を表示するには、ノードにポインターを合わせてヒントを表示するか、またはノードを選択して **[マイニング凡例]**に詳細を表示します。  
+ **[ヒストグラム]** オプションを使用すると、ツリーのヒストグラムに表示される状態の数を変更できます。 これは、予測可能な属性に多数の状態が含まれている場合に便利です。 ヒストグラムには、状態がポピュラリティ順に左から右に表示されます。表示するように選択した状態の数が属性内の状態の総数よりも少ない場合は、最も一般的でない状態がまとめて灰色で表示されます。 ノードの各状態の正確な数を表示するには、ノードにポインターを合わせてヒントを表示するか、またはノードを選択して **[マイニング凡例]** に詳細を表示します。  
   
  各ノードの背景色は、 **[背景]** オプションを使用して選択した特定の属性状態のケースの集中度を表しています。 このオプションを使用して、関心のある特定の対象が含まれたノードを強調表示できます。  
   
@@ -74,9 +53,9 @@ ms.lasthandoff: 02/15/2018
  予測可能な連続属性を使用してツリーを作成した場合、ビューアーにはヒストグラムの代わりにツリーの各ノードのダイヤモンド チャートが表示されます。 ダイヤモンド チャートには、属性の範囲を表す線があります。 ダイヤモンドはノードの中間にあり、ダイヤモンドの幅がそのノードの属性の分散を表します。 ダイヤモンドの幅が狭いほど、そのノードでより正確な予測を作成できることを示します。 また、ビューアーには、ノード内の分割を決定するために使用される回帰式も表示されます。  
   
 #### <a name="additional-decision-tree-display-options"></a>その他のデシジョン ツリー表示オプション  
- デシジョン ツリー モデルのドリルスルーが有効な場合は、ツリーでノードを右クリックして **[ドリルスルー]**を選択すると、ノードをサポートするトレーニング ケースにアクセスできます。 ドリルスルーを有効にするには、データ マイニング ウィザード内で設定するか、または **[マイニング モデル]** タブでマイニング モデルのドリルスルー プロパティを調整します。  
+ デシジョン ツリー モデルのドリルスルーが有効な場合は、ツリーでノードを右クリックして **[ドリルスルー]** を選択すると、ノードをサポートするトレーニング ケースにアクセスできます。 ドリルスルーを有効にするには、データ マイニング ウィザード内で設定するか、または **[マイニング モデル]** タブでマイニング モデルのドリルスルー プロパティを調整します。  
   
- **[デシジョン ツリー]** タブのズーム オプションを使用すると、ツリーを拡大または縮小できます。 **[サイズの自動調整]** を使用すると、モデル全体をビューアー画面に合わせることができます。 ツリーが大きすぎて画面に合うようにサイズを調整できない場合は、 **[ナビゲーション]**オプションを使用してツリー内を移動できます。 **[ナビゲーション]** をクリックすると、表示するモデルのセクションを選択できる別のナビゲーション ウィンドウが開きます。  
+ **[デシジョン ツリー]** タブのズーム オプションを使用すると、ツリーを拡大または縮小できます。 **[サイズの自動調整]** を使用すると、モデル全体をビューアー画面に合わせることができます。 ツリーが大きすぎて画面に合うようにサイズを調整できない場合は、 **[ナビゲーション]** オプションを使用してツリー内を移動できます。 **[ナビゲーション]** をクリックすると、表示するモデルのセクションを選択できる別のナビゲーション ウィンドウが開きます。  
   
  ツリー ビューの画像をクリップボードにコピーして、ドキュメントや画像操作ソフトウェアに貼り付けることができます。 ビューアーに表示されているツリーのセクションだけをコピーするには、 **[グラフ ビューのコピー]** を使用します。ツリーで展開されているすべてのノードをコピーするには、 **[グラフ全体のコピー]** を使用します。  
   
