@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
 - disaster recovery [SQL Server], moving database files
@@ -34,12 +33,11 @@ caps.latest.revision: 62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9b177196b7b97b07aafc79095328e1b4f4c9067
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 96f8d859d0ff673cc459e4d7bd81307334ee6971
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,9 +149,9 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="master"></a> master データベースの移動  
  master データベースを移動するには、次の手順を実行します。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]**の順にポイントし、 **[SQL Server 構成マネージャー]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントし、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]**) を右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]**) を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[SQL Server (***instance_name***) のプロパティ]** ダイアログ ボックスで、**[起動時のパラメーター]** タブをクリックします。  
   
@@ -207,19 +205,19 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="change-the-sql-server-agent-log-path"></a>SQL Server エージェントのログ パスの変更  
   
-1.  SQL Server Management Studio のオブジェクト エクスプローラーで、 **[SQL Server エージェント]**を展開します。  
+1.  SQL Server Management Studio のオブジェクト エクスプローラーで、 **[SQL Server エージェント]** を展開します。  
   
-2.  **[エラー ログ]** を右クリックし、 **[構成]**をクリックします。  
+2.  **[エラー ログ]** を右クリックし、 **[構成]** をクリックします。  
   
 3.  **SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は、C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\ です。  
   
 #### <a name="change-the-database-default-location"></a>データベースの既定の場所の変更  
   
-1.  SQL Server Management Studio のオブジェクト エクスプローラーで、SQL Server のサーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  SQL Server Management Studio のオブジェクト エクスプローラーで、SQL Server のサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[サーバーのプロパティ]** ダイアログ ボックスで、 **[データベースの設定]**を選択します。  
+2.  **[サーバーのプロパティ]** ダイアログ ボックスで、 **[データベースの設定]** を選択します。  
   
-3.  **[データベースの既定の場所]**で、データ ファイルとログ ファイルの両方の新しい場所を参照します。  
+3.  **[データベースの既定の場所]** で、データ ファイルとログ ファイルの両方の新しい場所を参照します。  
   
 4.  変更を完了するため、SQL Server サービスをいったん停止してから開始します。  
   

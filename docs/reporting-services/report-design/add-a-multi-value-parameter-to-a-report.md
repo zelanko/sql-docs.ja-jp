@@ -1,27 +1,25 @@
 ---
-title: "複数の値を持つパラメーターのレポートへの追加 | Microsoft Docs"
-ms.custom: 
+title: 複数の値を持つパラメーターのレポートへの追加 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f470964c5df5d20d39537f65baf7d20d85f68cc5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 62cddfc4975dfc4d48bfe6d821db50b48645e872
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
   ユーザーがパラメーター値として複数の値を選択できるパラメーターをレポートに追加できます。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート ビルダーで、複数の値を持つパラメーターを追加するレポートを開きます。  
   
-2.  レポート データセットを右クリックし、 **[データセットのプロパティ]**をクリックします。  
+2.  レポート データセットを右クリックし、 **[データセットのプロパティ]** をクリックします。  
   
 3.  **[クエリ]** ボックスでクエリ テキストを編集するか、クエリ デザイナーを使用してフィルターを追加することで、データセット クエリに変数を追加します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/09/2018
   
     埋め込みデータセットまたは共有データセットのデータセット パラメーターは、クエリ変数に対して自動的に作成されます。 レポート パラメーターは、データセット パラメーターに対して自動的に作成されます。  
   
-4.  **レポート データ** ペインで **[パラメーター]** ノードを展開し、データセット パラメーターに対して自動的に生成されたレポート パラメーターを右クリックして、 **[パラメーターのプロパティ]**をクリックします。  
+4.  **レポート データ** ペインで **[パラメーター]** ノードを展開し、データセット パラメーターに対して自動的に生成されたレポート パラメーターを右クリックして、 **[パラメーターのプロパティ]** をクリックします。  
   
 5.  **[全般]** タブで、 **[複数の値を許可]** を選択して、パラメーターに複数の値を選択できるようにします。  
   

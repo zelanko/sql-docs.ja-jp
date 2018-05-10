@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,13 +27,12 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0d07b9fec8168a21ff492ac216f08881ff278932
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="arguments"></a>引数  
 **char** [ ( *n* ) ] 固定長の Unicode 以外の文字列データです。 *n* では文字列の長さを定義し、指定できる値の範囲は 1 ～ 8,000 です。 ストレージのサイズは *n* バイトです。 **char** の ISO シノニムは、**character** です。
   
-**varchar** [ ( *n* | **max** ) ] 可変長の Unicode 以外の文字列データです。 *n* では文字列の長さを定義し、指定できる値の範囲は 1 ～ 8,000 です。 **max** はストレージの最大サイズが 2^31-1 バイト (2 GB) であることを示します。 ストレージのサイズは、入力したデータの実際の長さ + 2 バイトとなります。 **varchar** の ISO シノニムは、**charvarying** または **charactervarying** です。
+**varchar** [ ( *n* | **max** ) ] 可変長の Unicode 以外の文字列データです。 *n* では文字列の長さを定義し、指定できる値の範囲は 1 ～ 8,000 です。 **max** は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 **varchar** の ISO シノニムは、**charvarying** または **charactervarying** です。
   
 ## <a name="remarks"></a>Remarks  
 データ定義または変数宣言ステートメントで *n* を指定しないと、既定の長さは 1 になります。 CAST 関数および CONVERT 関数で *n* を指定しない場合は、既定の長さは 30 になります。
@@ -59,7 +56,7 @@ COLLATE 句で特定の照合順序を指定しない限り、**char** 型また
   
 CREATE TABLE または ALTER TABLE 実行時に SET ANSI_PADDING が OFF に設定されている場合、NULL として定義されている **char** 型の列は **varchar** 型として扱われます。
   
-照合順序のコード ページで 2 バイト文字が使用されている場合、ストレージのサイズは *n* バイトのままです。 文字列によって、*n* バイトのストレージ サイズは *n* 文字未満になる可能性があります。
+照合順序のコード ページで 2 バイト文字が使用されている場合、記憶領域のサイズは *n* バイトのままです。 文字列によって、*n* バイトのストレージ サイズは *n* 文字未満になる可能性があります。
 
 > [!WARNING]
 > Null 以外の varchar(max) または nvarchar(max) の各列には、24 バイトの追加の固定割り当てが必要で、これは並べ替え操作中の 8,060 バイトの行制限におけるカウント対象となります。 これにより、テーブル内に作成できる Null 以外の varchar(max) または nvarchar(max) の列数について、暗黙的な制限が生じます。  

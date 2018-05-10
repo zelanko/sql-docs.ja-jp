@@ -1,27 +1,25 @@
 ---
-title: "ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9ae85cf2e8a27dda8d4a6d6a280160ffd8263d01
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 
@@ -58,11 +56,11 @@ ms.lasthandoff: 01/09/2018
 2.  プロパティ ペインで、ドキュメント マップに表示するテキストを **DocumentMapLabel** プロパティに入力するか、ラベルになる式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
   
     > [!NOTE]  
-    >  [プロパティ] ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[プロパティ]**を選択します。  
+    >  [プロパティ] ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[プロパティ]** を選択します。  
   
 3.  ドキュメント マップに表示するレポート アイテムごとに手順 1. と手順 2. を繰り返します。  
   
-4.  **[実行]**をクリックします。 レポートが実行され、作成したラベルがドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
+4.  **[実行]** をクリックします。 レポートが実行され、作成したラベルがドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
 
   
 ##  <a name="AddUniqueValuesToMap"></a>   
@@ -70,9 +68,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン ビューで、ドキュメント マップに表示するグループを格納するテーブル、マトリックス、または一覧を選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
-2.  行グループ ペインで、グループを右クリックし、 **[グループの編集]**をクリックします。 **[Tablix グループのプロパティ]** ダイアログ ボックスの **[全般]** ページが開きます。  
+2.  行グループ ペインで、グループを右クリックし、 **[グループの編集]** をクリックします。 **[Tablix グループのプロパティ]** ダイアログ ボックスの **[全般]** ページが開きます。  
   
-3.  **[詳細設定]**をクリックします。  
+3.  **[詳細設定]** をクリックします。  
   
 4.  **[ドキュメント マップ]** ボックスで、グループ式に一致する式を入力するか、選択します。  
   
@@ -80,7 +78,7 @@ ms.lasthandoff: 01/09/2018
   
 6.  ドキュメント マップに表示するグループごとに手順 1. ～ 4. を繰り返します。  
   
-7.  **[実行]**をクリックします。 レポートが実行され、グループ値がドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
+7.  **[実行]** をクリックします。 レポートが実行され、グループ値がドキュメント マップに表示されます。 任意のリンクをクリックすると、このレポート アイテムが配置されたレポート ページに移動します。  
   
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>レポートを表示する場合にドキュメント マップを非表示にするには  

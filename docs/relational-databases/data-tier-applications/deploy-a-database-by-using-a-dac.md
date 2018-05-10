@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
 - sql13.swb.dbdeployment.progress.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 576cfec0d53ea575f1a8ad70ad2b5b36dc17e5aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d87f60bc73ff969aa2f3f6ef42264ea8cb93b23c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  **[データベース]** ノードを展開します。  
   
-4.  配置するデータベースを右クリックして **[タスク]**を選択し、 **[SQL Azure へのデータベースの配置]**をクリックします。  
+4.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[SQL Azure へのデータベースの配置]** をクリックします。  
   
 5.  ウィザードの各ダイアログを完了します。  
   
@@ -120,7 +118,7 @@ ms.lasthandoff: 04/16/2018
 -   一時ファイル (BACPAC アーカイブ ファイル) のローカル ディレクトリを指定します。 このファイルは指定した場所に作成され、操作の完了後もそのまま残されます。  
   
 ##  <a name="Summary"></a> [概要] ページ  
- このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]**をクリックします。 配置操作をキャンセルしてウィザードを終了するには、 **[キャンセル]**をクリックします。  
+ このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]** をクリックします。 配置操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
 ##  <a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  

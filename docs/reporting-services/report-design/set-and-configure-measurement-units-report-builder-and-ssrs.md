@@ -1,27 +1,25 @@
 ---
-title: "測定単位の設定および構成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 測定単位の設定および構成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 350f8da6d0a011461f6349247cdca30867b62305
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 86607db4b618c0d56ab7684f9d3223721b306858
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>測定単位の設定および構成 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、インジケーターはパーセンテージか数値のいずれかの計測単位を使用します。   
@@ -34,11 +32,11 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-use-the-numeric-state-measurement-unit"></a>数値の状態測定単位を使用するには  
   
-1.  変更するインジケーターを右クリックし、 **[インジケーターのプロパティ]**をクリックします。  
+1.  変更するインジケーターを右クリックし、 **[インジケーターのプロパティ]** をクリックします。  
   
 2.  左ペインの **[値と状態]** をクリックします。  
   
-3.  **[状態の単位]** の一覧で、 **[数値]**をクリックします。  
+3.  **[状態の単位]** の一覧で、 **[数値]** をクリックします。  
   
      必要に応じて、 **[式]** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  
   
@@ -53,15 +51,15 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-use-the-percentage-measurement-unit"></a>パーセンテージの状態測定単位を使用するには  
   
-1.  変更するインジケーターを右クリックし、 **[インジケーターのプロパティ]**をクリックします。  
+1.  変更するインジケーターを右クリックし、 **[インジケーターのプロパティ]** をクリックします。  
   
 2.  左ペインの **[値と状態]** をクリックします。  
   
-3.  **[状態の単位]** の一覧で、 **[パーセント]**をクリックします。  
+3.  **[状態の単位]** の一覧で、 **[パーセント]** をクリックします。  
   
      必要に応じて、 **[式]** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  
   
-4.  インジケーターが使用するデータの最小値と最大値を自動検出する代わりに、必要に応じて、 **[最小値]** および **[最大値]** オプションを変更して特定の値を使用できます。 **[最小値]** は、 **[最大値]**より小さい値に設定する必要があります。  
+4.  インジケーターが使用するデータの最小値と最大値を自動検出する代わりに、必要に応じて、 **[最小値]** および **[最大値]** オプションを変更して特定の値を使用できます。 **[最小値]** は、 **[最大値]** より小さい値に設定する必要があります。  
   
     > [!NOTE]  
     >  最小値と最大値を明示的に設定すると、インジケーターはデータ内の実際の最小値と最大値に関係なく、設定した値の範囲を使用します。 つまり、最小値より小さい値と最大値より大きい値は、レポートに表示するインジケーター アイコンを決定する評価から除外されます。  

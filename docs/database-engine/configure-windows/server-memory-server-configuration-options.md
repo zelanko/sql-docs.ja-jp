@@ -3,15 +3,12 @@ title: サーバー メモリに関するサーバー構成オプション | Mic
 ms.custom: ''
 ms.date: 11/27/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -28,12 +25,11 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 080707d94aca7e645f0ccfe0dab4b9f715511753
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>固定量のメモリを構成する手順 (非推奨)  
 固定量のメモリを設定するには:  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[メモリ]** ノードをクリックします。  
   
@@ -97,19 +93,19 @@ ms.lasthandoff: 04/16/2018
 ### <a name="to-enable-lock-pages-in-memory"></a>Lock Pages in Memory を有効にするには  
 lock pages in memory オプションを有効にするには:  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。 **[開く]** ボックスに「 **gpedit.msc**」と入力します。  
+1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[開く]** ボックスに「 **gpedit.msc**」と入力します。  
   
      **[グループ ポリシー]** ダイアログ ボックスが開きます。  
   
-2.  **[グループ ポリシー]** コンソールで **[コンピューターの構成]**を展開し、次に **[Windows の設定]**を展開します。  
+2.  **[グループ ポリシー]** コンソールで **[コンピューターの構成]** を展開し、次に **[Windows の設定]** を展開します。  
   
-3.  **[セキュリティの設定]**を展開し、 **[ローカル ポリシー]**を展開します。  
+3.  **[セキュリティの設定]** を展開し、 **[ローカル ポリシー]** を展開します。  
   
 4.  **[ユーザー権利の割り当て]** フォルダーをクリックします。  
   
      ポリシーが詳細ペインに表示されます。  
   
-5.  詳細ペインで、 **[メモリ内のページのロック]**をダブルクリックします。  
+5.  詳細ペインで、 **[メモリ内のページのロック]** をダブルクリックします。  
   
 6.  **[ローカル セキュリティ ポリシーの設定]** ダイアログ ボックスで、sqlservr.exe の実行権限のあるアカウント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始アカウント) を追加します。  
   

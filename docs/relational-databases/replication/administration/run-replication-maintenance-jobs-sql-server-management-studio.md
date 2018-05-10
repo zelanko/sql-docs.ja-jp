@@ -1,30 +1,30 @@
 ---
-title: "レプリケーション メンテナンス ジョブの実行 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: レプリケーション メンテナンス ジョブの実行 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - jobs [SQL Server replication]
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0b2bac35ceff766f1088872b60659faa91c0370
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: c7c9983bc7a2b09cecaac8b55d98941d54bec452
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>レプリケーション メンテナンス ジョブの実行 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  ジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]**をクリックします。  
+3.  ジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-replication-monitor"></a>レプリケーション モニターでレプリケーション メンテナンス ジョブを開始または停止するには  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[エージェント]** タブをクリックします。  
   
-3.  グリッド内のジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]**をクリックします。  
+3.  グリッド内のジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-management-studio"></a>Management Studio でレプリケーション メンテナンス ジョブのプロパティを表示および変更するには  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  ジョブを右クリックし、 **[プロパティ]**をクリックします。  
+3.  ジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスで、必要に応じてプロパティを変更し、**[OK]** をクリックします。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[エージェント]** タブをクリックします。  
   
-3.  グリッド内のジョブを右クリックし、 **[プロパティ]**をクリックします。  
+3.  グリッド内のジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスで、必要に応じてプロパティを変更し、**[OK]** をクリックします。  
   

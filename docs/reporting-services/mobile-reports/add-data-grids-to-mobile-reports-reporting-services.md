@@ -1,27 +1,25 @@
 ---
-title: "モバイル レポートにデータ グリッドを追加する | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: モバイル レポートにデータ グリッドを追加する | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 656c40ea8c8bc7d20fd2fe9de0a189f451731ae5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0c08955e837eec891a44982f930c6e76eb8b4671
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>モバイル レポートにデータ グリッドを追加する | Reporting Services
 最善の視覚化がデータ自体である場合があります。 ここでは、 *に使用できる次種類*データ グリッド [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]つまりテーブルについて説明します。
@@ -52,9 +50,9 @@ ms.lasthandoff: 01/09/2018
 
 1. インジケーター データ グリッドを **[レイアウト]** タブからデザイン グリッドにドラッグし、目的のサイズに調整します。
 
-2. **[データ]** タブの **[列]** ペインで、 **[ゲージ列の追加]**を選択します。 
+2. **[データ]** タブの **[列]** ペインで、 **[ゲージ列の追加]** を選択します。 
 
-3. **[オプション]**を選択し、 **[ゲージの種類]**を選択します。 
+3. **[オプション]** を選択し、 **[ゲージの種類]** を選択します。 
 
 4. **[値]** フィールドと **[比較]** フィールドを設定し、 **モバイル レポートに直接追加するゲージ**と同じように [[値の方向]](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)を設定します。
 
@@ -69,19 +67,19 @@ ms.lasthandoff: 01/09/2018
 
 1. グラフのデータ グリッドを **[レイアウト]** タブからデザイン グリッドにドラッグし、目的のサイズに調整します。
 
-2. **[データ]** タブの **[列]** ペインで、 **[グラフ列の追加]**を選択します。 
+2. **[データ]** タブの **[列]** ペインで、 **[グラフ列の追加]** を選択します。 
 
 3. まだ行っていない場合は、 [Excel または共有データセットからデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) を取得し、メイン データ テーブルとフィールドを共有する第 2 のデータ テーブルを追加します。
 
-4. **[データのプロパティ]**の **[グリッド ビューのデータ]**でメイン データ テーブルを選択し、 **[グラフの視覚化の参照データ]**で第 2 のテーブルを選択します。
+4. **[データのプロパティ]** の **[グリッド ビューのデータ]** でメイン データ テーブルを選択し、 **[グラフの視覚化の参照データ]** で第 2 のテーブルを選択します。
 
-5. **[オプション]**を選択し、 **[グラフの種類]**を選択します。
+5. **[オプション]** を選択し、 **[グラフの種類]** を選択します。
  
-6. **[Chart data field (グラフのデータ フィールド)]**、 **[ソースのルックアップ]**、 **[対象のルックアップ]**を選択します。 
+6. **[Chart data field (グラフのデータ フィールド)]**、 **[ソースのルックアップ]**、 **[対象のルックアップ]** を選択します。 
    これらの 3 つのプロパティは、データ グリッドから列内の各グラフへのデータの提供方法を指定します。
    
-   *   **[ソースのルックアップ]** には、 **[グリッド ビューのデータ]**で選択したデータ テーブルのフィールドを設定します。 このフィールドは、各行の埋め込みグラフにデータを提供するためにグラフの参照データ テーブルに適用される、行ごとのフィルターとして機能します。 
-   * **[対象のルックアップ]** は、 **[グラフの視覚化の参照データ]**で選択したデータ テーブルのフィールドです。 各行のグラフのデータは、これらの 2 つのフィールドで結合されます。   
+   *   **[ソースのルックアップ]** には、 **[グリッド ビューのデータ]** で選択したデータ テーブルのフィールドを設定します。 このフィールドは、各行の埋め込みグラフにデータを提供するためにグラフの参照データ テーブルに適用される、行ごとのフィルターとして機能します。 
+   * **[対象のルックアップ]** は、 **[グラフの視覚化の参照データ]** で選択したデータ テーブルのフィールドです。 各行のグラフのデータは、これらの 2 つのフィールドで結合されます。   
    * **[Chart data field (グラフのデータ フィールド)]** は、各行のグラフで Y 軸の値または系列として使用される、 **[グラフの視覚化の参照データ]** のデータ テーブル内のメトリックを決定します。  
 
 ## <a name="see-also"></a>参照 

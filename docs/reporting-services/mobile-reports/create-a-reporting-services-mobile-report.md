@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services モバイル レポートの作成 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services モバイル レポートの作成 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 73de345a79e96800bf194c73bc17d70de7bd4055
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 65f20d39e13c3c388b5fbe873d5a3c7491a6da38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
 SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server 2016 Reporting Services モバイル レポートをすばやく作成できます。  
@@ -48,12 +46,12 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
 5. 右上隅の **[データの追加]** を選択します。  
   
-6. **[ローカル Excel]** または **[レポート サーバー]**を選択します。  
+6. **[ローカル Excel]** または **[レポート サーバー]** を選択します。  
   
    >**ヒント**: Excel からデータを追加する場合、次を確認します。  
     >* モバイル レポートで作業できるよう、 [Excel データを準備します](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) 。  
     >* まずファイルを閉じます。  
-7. 目的のワークシートを選択し、 **[インポート]**を選択します。   
+7. 目的のワークシートを選択し、 **[インポート]** を選択します。   
    ブックから一度に 1 つ以上のワークシートを追加できます。  
     
      ![SSMRP_AddExcelData](../../reporting-services/mobile-reports/media/ssmrp-addexceldata.png)  
@@ -62,13 +60,13 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
    ![SSMRP_DataProps](../../reporting-services/mobile-reports/media/ssmrp-dataprops.png)  
   
-9. **[レイアウト]** タブに戻り、 **[表示プロパティ]** ボックスで、 **[タイトル]**、 **[時間の単位]**、 **[数値書式]**などのプロパティを設定します。  
+9. **[レイアウト]** タブに戻り、 **[表示プロパティ]** ボックスで、 **[タイトル]**、 **[時間の単位]**、 **[数値書式]** などのプロパティを設定します。  
   
    ![SSMRP_ChartVizProps](../../reporting-services/mobile-reports/media/ssmrp-chartvizprops.png)  
     
 10. 左上の **[プレビュー]** を選択し、レポートがどのように整形されたか確認します。  
   
-11. 次にレポートを保存します。 左上隅の [保存] アイコンを選択して、 **[ローカルに保存]** または **[サーバーに保存]**を選択します。  
+11. 次にレポートを保存します。 左上隅の [保存] アイコンを選択して、 **[ローカルに保存]** または **[サーバーに保存]** を選択します。  
   
    サーバーに保存するには、SQL Server 2016 Reporting Services レポート サーバーにアクセスできる必要があります。  
      

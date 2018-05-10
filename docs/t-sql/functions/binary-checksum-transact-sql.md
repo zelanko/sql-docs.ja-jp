@@ -2,14 +2,12 @@
 title: BINARY_CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,12 +23,12 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9ff8368877b3fb2153685554f1484b5fbbcc7c3a
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2b493b23ef0726dbc34a2073c7a50c7d1abb1b37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -47,27 +45,45 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>引数  
 *\**  
-&#42;テーブルのすべての列、計算があることを指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の列は無視されます。 比較できないデータ型を含める **テキスト**, 、**ntext**, 、**イメージ**, 、**カーソル**, 、**xml**, 、および比較できない共通言語ランタイム (CLR) ユーザー定義型です。
+計算がすべてのテーブルの列に対して行われることを指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の列は無視されます。 比較できないデータ型は次のとおりです。  
+* **カーソル (cursor)**  
+* **image**  
+* **ntext**  
+* **text**  
+* **xml**  
+
+および比較できない共通言語ランタイム (CLR) ユーザー定義型です。
   
 *式 (expression)*  
-任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の式は無視されます。
+任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。 BINARY_CHECKSUM の計算では、比較できないデータ型の式は無視されます。
 
 ## <a name="return-types"></a>戻り値の型  
  **int**
   
 ## <a name="remarks"></a>Remarks  
-BINARY_CHECKSUM(*) をテーブルの行に対して実行した場合、行が変更されていなければ同じ値が返されます。 BINARY_CHECKSUM はハッシュ関数のプロパティとなります。BINARY_CHECKSUM を任意の 2 つの式に適用した場合、その 2 つに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合に等しければ、同じ値が返されます。 この定義では、指定した型が NULL 値である場合、これらの値は等しいものとして比較されます。 いずれかの式の値を変更した場合は通常、そのリストのチェックサムも変わりますが、 チェックサムが変わらない場合もわずかですがあります。 したがって、アプリケーションで値の変更をすべて検出する必要がある場合は、値の変更の検出に BINARY_CHECKSUM を使用しないことをお勧めします。 使用を検討して HashBytes 代わりにします。 MD5 ハッシュ アルゴリズムを指定した場合は、HashBytes から 2 つの異なる入力に対して同じ結果が返される可能性が BINARY_CHECKSUM よりもはるかに低くなります。
+BINARY_CHECKSUM(*) をテーブルの行に対して実行した場合、行が変更されていなければ同じ値が返されます。 BINARY_CHECKSUM はハッシュ関数のプロパティとなります。BINARY_CHECKSUM を 2 つの式のリストに適用した場合、その 2 つに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合に等しければ、同じ値が返されます。 この定義では、指定した型が NULL 値であるとすると、等しい値として比較されます。 式リストのいずれかの値を変更した場合は、その式のチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出するには、アプリケーションが変更を検出できないことを許容できる場合のみ、BINARY_CHECKSUM の使用をお勧めします。 それ以外の場合は、代わりに HashBytes を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、HashBytes から 2 つの異なる入力に対して同じ結果が返される可能性が BINARY_CHECKSUM よりもはるかに低くなります。
   
-BINARY_CHECKSUM は式のリストに適用でき、指定したリストに対しては同じ値が返されます。 BINARY_CHECKSUM を 2 つの式のリストに適用した場合、2 つのリストの対応する要素が同じ型と同じバイト表現であれば、同じ値が返されます。 この定義では、指定した型の値が NULL であった場合、これらの値は同じバイト表現として扱われます。
+BINARY_CHECKSUM は式のリスト全体を処理でき、指定したリストに対しては同じ値が返されます。 BINARY_CHECKSUM を 2 つの式のリストに適用した場合、2 つのリストの対応する要素が同じ型と同じバイト表現であれば、同じ値が返されます。 この定義では、指定した型の値が NULL であった場合、これらの値は同じバイト表現として扱われます。
   
-BINARY_CHECKSUM と CHECKSUM は類似した関数で、どちらも式のリストに対するチェックサム値の計算に使用でき、式の順序が結果の値に影響します。 BINARY_CHECKSUM(*) で使用される列の順序は、テーブルまたはビュー定義で指定された列の順序です。 これには計算列も含まれます。
+BINARY_CHECKSUM と CHECKSUM は類似した関数で、どちらも式のリストに対するチェックサム値の計算に使用でき、式の順序が結果の値に影響します。 BINARY_CHECKSUM(*) で使用される列の順序は、テーブルまたはビュー定義で指定された列の順序です。 これには、計算列が含まれます。
   
-ロケールによっては、異なる表現の文字列が同じものと判断される場合があります。このような場合、CHECKSUM と BINARY_CHECKSUM では文字列型に対して異なる値が返されます。 文字列のデータ型は **char**, 、**varchar**, 、**nchar**, 、**nvarchar**, 、または **sql_variant** (基本データ型の場合 **sql_variant** は文字列データ型)。 たとえば、文字列 "McCavity" と "Mccavity" の BINARY_CHECKSUM 値は異なります。 これに対し、大文字小文字が区別されないサーバーの場合、CHECKSUM では 2 つの文字列に同じチェックサム値が返されます。 CHECKSUM 値を BINARY_CHECKSUM 値と比較しないでください。
+ロケールによっては、異なる表現の文字列が等しいとして比較される場合があります。このような場合、BINARY_CHECKSUM と CHECKSUM では文字列データ型に対して異なる値が返されます。 文字列データ型は次のとおりです。  
+
+* **char**  
+* **nchar**  
+* **nvarchar**  
+* **varchar**  
+
+内の複数の  
+
+* **sql_variant** (**sql_variant** の基本データ型が文字列データ型の場合)。  
+  
+たとえば、文字列 "McCavity" と "Mccavity" の BINARY_CHECKSUM 値は異なります。 これに対し、大文字小文字が区別されないサーバーの場合、CHECKSUM ではこれらの文字列に同じチェックサム値が返されます。 CHECKSUM 値と BINARY_CHECKSUM 値の比較を避ける必要があります。
  
 BINARY_CHECKSUM は、最大 8,000 の **varbinary(max)** 型の文字と、最大 255 の **nvarchar(max)** 型の文字をサポートします。
   
 ## <a name="examples"></a>使用例  
-次の例では、`BINARY_CHECKSUM` を使用して、テーブルの行に変更がないかどうかを確認します。
+この例では、`BINARY_CHECKSUM` を使用して、テーブル行の変更を検出します。
   
 ```sql
 USE AdventureWorks2012;  

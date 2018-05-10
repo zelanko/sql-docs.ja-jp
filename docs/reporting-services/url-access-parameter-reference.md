@@ -1,30 +1,28 @@
 ---
-title: "URL アクセス パラメーター リファレンス | Microsoft Docs"
-ms.custom: 
+title: URL アクセス パラメーター リファレンス | Microsoft Docs
+ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f7e0be913313c56b8f05eeb24e43534407ceec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
 -   [レポート ビューアー Web パーツのコマンド (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML ビューアーのコマンド (rc:)  
- HTML ビューアー コマンドは HTML ビューアーを対象として使用されます (たとえば、レポート マネージャーから)。接頭辞として *rc:*が付きます。  
+ HTML ビューアー コマンドは HTML ビューアーを対象として使用されます (たとえば、レポート マネージャーから)。接頭辞として *rc:* が付きます。  
   
 -   *[ツール バー]* :  
                   ツール バーの表示と非表示を切り替えます。 このパラメーターの値が **false**の場合、残りのオプションすべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。 このパラメーターの既定値は **true**です。  
@@ -284,7 +282,7 @@ ms.lasthandoff: 01/09/2018
                   レポートのセクションの表示と非表示を切り替えます。 切り替えるセクションを表す正の整数を指定します。  
   
 ##  <a name="bkmk_webpart"></a> レポート ビューアー Web パーツのコマンド (rv:)  
- 次の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート パラメーター名は予約されており、SharePoint と統合されているレポート ビューアー Web パーツをターゲットとするために使用されます。 これらのパラメーター名の先頭には *rv:*が付いています。 レポート ビューアー Web パーツでは、 *rs:ParameterLanguage* パラメーターも受け取ります。  
+ 次の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート パラメーター名は予約されており、SharePoint と統合されているレポート ビューアー Web パーツをターゲットとするために使用されます。 これらのパラメーター名の先頭には *rv:* が付いています。 レポート ビューアー Web パーツでは、 *rs:ParameterLanguage* パラメーターも受け取ります。  
   
 -   *Toolbar*: レポート ビューアー Web パーツのツール バーの表示を制御します。 既定値は **Full**です。 値は次のとおりです。  
   
@@ -362,15 +360,15 @@ ms.lasthandoff: 01/09/2018
   
     -   32 (0x20): **[Atom フィード]** ボタン  
   
-    -   64 (0x40): **[アクション]** の **[印刷]**メニュー オプション  
+    -   64 (0x40): **[アクション]** の **[印刷]** メニュー オプション  
   
-    -   128 (0x80): **[アクション]** の **[エクスポート]**サブメニュー  
+    -   128 (0x80): **[アクション]** の **[エクスポート]** サブメニュー  
   
-    -   256 (0x100): **[アクション]** の **[レポート ビルダーで開く]**メニュー オプション  
+    -   256 (0x100): **[アクション]** の **[レポート ビルダーで開く]** メニュー オプション  
   
-    -   512 (0x200): **[アクション]** の **[サブスクライブ]**メニュー オプション  
+    -   512 (0x200): **[アクション]** の **[サブスクライブ]** メニュー オプション  
   
-    -   1024 (0x400): **[アクション]** の **[新しいデータの警告]**メニュー オプション  
+    -   1024 (0x400): **[アクション]** の **[新しいデータの警告]** メニュー オプション  
   
      **SharePoint** モードで、 **[戻る]** ボタン、テキスト検索コントロール、ページ ナビゲーション コントロール、 **[更新]** ボタンのみを表示する例。  
   

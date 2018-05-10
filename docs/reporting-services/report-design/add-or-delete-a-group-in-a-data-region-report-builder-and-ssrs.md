@@ -1,27 +1,25 @@
 ---
-title: "データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6462484e8665b1b124275d51e0a85790f2c27446
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f6109f996e719784a393fa7fc7864ecbcf8e0f8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートで、計算や表示の対象として、特定の値または式のセットによってデータを整理する場合は、グループをデータ領域に追加します。 グループには、データセットのどのデータがそのグループに含まれるかを示す名前と式を割り当てます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
 1.  フィールドを、 **[レポート データ]** ペインから **[行グループ]** ペインまたは **[列グループ]** ペインにドラッグします。  
   
     > [!NOTE]  
-    >  グループ化ペインが表示されない場合は、[表示] タブの **[グループ化]**をクリックします。  
+    >  グループ化ペインが表示されない場合は、[表示] タブの **[グループ化]** をクリックします。  
   
 2.  グループを既存のグループの親グループまたは子グループとして配置するには、ガイド バーを使用してグループの上位または下位の階層にフィールドをドロップします。  
   
@@ -48,11 +46,11 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-an-adjacent-row-or-column-group-to-a-tablix-data-region"></a>隣接する行または列グループを Tablix データ領域に追加するには  
   
-1.  グループ化ペインで、追加するグループを右クリックします。 **[グループの追加]**をクリックし、 **[前に隣接]** または **[後に隣接]** をクリックして、グループを追加する場所を指定します。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
+1.  グループ化ペインで、追加するグループを右クリックします。 **[グループの追加]** をクリックし、 **[前に隣接]** または **[後に隣接]** をクリックして、グループを追加する場所を指定します。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
   
-2.  **[名前]**に、グループの名前を入力します。  
+2.  **[名前]** に、グループの名前を入力します。  
   
-3.  **[グループ式]**で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
+3.  **[グループ式]** で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -60,11 +58,11 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-details-group-to-a-tablix-data-region"></a>詳細グループを Tablix データ領域に追加するには  
   
-1.  グループ化ペインで、最も内側の子グループであり、 **詳細** グループではないグループを右クリックします。 **[グループの追加]**をクリックし、 **[子グループ]**をクリックします。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
+1.  グループ化ペインで、最も内側の子グループであり、 **詳細** グループではないグループを右クリックします。 **[グループの追加]** をクリックし、 **[子グループ]** をクリックします。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
   
-2.  **[グループ式]**で式を空白のままにします。 詳細グループには式がありません。  
+2.  **[グループ式]** で式を空白のままにします。 詳細グループには式がありません。  
   
-3.  **[詳細データの表示]**をクリックします。  
+3.  **[詳細データの表示]** をクリックします。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -74,11 +72,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート デザイン画面で、Tablix データ領域の任意の場所をクリックして選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
-2.  グループを右クリックし、 **[グループのプロパティ]**をクリックします。  
+2.  グループを右クリックし、 **[グループのプロパティ]** をクリックします。  
   
-3.  **[名前]**ボックスに、グループの名前を入力します。  
+3.  **[名前]** ボックスに、グループの名前を入力します。  
   
-4.  **[グループ式]**で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
+4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
   
 5.  **[追加]** をクリックして追加の式を作成します。 指定するすべての式が論理 AND を使用して結合され、このグループのデータを指定します。  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-delete-a-group-from-a-tablix-data-region"></a>Tablix データ領域からグループを削除するには  
   
-1.  グループ化ペインで、グループを右クリックし、 **[グループの削除]**をクリックします。  
+1.  グループ化ペインで、グループを右クリックし、 **[グループの削除]** をクリックします。  
   
 2.  **[グループの削除]** ダイアログ ボックスで、次のいずれかのオプションを選択します。  
   
@@ -108,7 +106,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-delete-a-details-group-from-a-tablix-data-region"></a>Tablix データ領域から詳細グループを削除するには  
   
-1.  グループ化ペインで、詳細グループを右クリックし、 **[グループの削除]**をクリックします。  
+1.  グループ化ペインで、詳細グループを右クリックし、 **[グループの削除]** をクリックします。  
   
 2.  **[グループの削除]** ダイアログ ボックスで、次のいずれかのオプションを選択します。  
   

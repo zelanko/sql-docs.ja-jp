@@ -1,32 +1,19 @@
 ---
-title: "接続とセッションを ADOMD.NET での操作 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- sessions [ADOMD.NET]
-- connections [ADOMD.NET]
-ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: 
-author: Minewiskan
+title: 接続とセッションを ADOMD.NET での操作 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a4f51a9e0939612e490ed96c93c06a6931fa3f21
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 857a9c40d423b082b968506229b1e255139b346f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>ADOMD.NET で接続とセッションの操作での接続
   XML for Analysis (XMLA) では、分析データにアクセスする際のステートフルな操作をセッションがサポートします。 セッションは、分析データ ソースに対して実行するコマンドおよびトランザクションのスコープとコンテキストを決定します。 セッションを管理するために使用する XMLA 要素は[BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md)、[セッション](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)、および[EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)です。  

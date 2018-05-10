@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
@@ -18,19 +17,18 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ecb0a252a500086bf3b802d4c63085472543745c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4170454a934fb8f35fff8c353f4bfa42eeec589d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>グラフの効果 - 3D、ベベルなど (レポート ビルダー)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたグラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
   
  3 次元効果は個々のグラフに適用することができます。また、2 次元グラフと 3 次元グラフの両方を同じレポートに表示することもできます。  
   
- すべての種類のグラフでは、 **[グラフ領域のプロパティ]** ダイアログ ボックスで **[3D の有効化]**チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。 詳細については、「 [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。  
+ すべての種類のグラフでは、 **[グラフ領域のプロパティ]** ダイアログ ボックスで **[3D の有効化]** チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。 詳細については、「 [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)チェック ボックスをオンにすることにより、グラフ領域に 3 次元効果を適用できます。  
   
  グラフの視覚的な効果を高めるには、傾斜、エンボス、およびテクスチャのスタイルを横棒グラフ、縦棒グラフ、円グラフ、およびドーナツ グラフに追加する方法もあります。 詳細については、「[グラフへの傾斜、エンボス、およびテクスチャのスタイルの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)」を参照してください。  
   

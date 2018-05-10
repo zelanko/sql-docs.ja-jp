@@ -1,27 +1,25 @@
 ---
-title: "レポート パーツの参照と既定のフォルダーの設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポート パーツの参照と既定のフォルダーの設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4fa1d660d6c66d7611846a4fb7489c41a3dbd554
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 473ff7e9344534bde01fd95a0d5c16a245f3d3dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>レポート パーツの参照と既定のフォルダーの設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを作成する最も簡単な方法は、テーブルやグラフなどの既存のレポート アイテムをレポート パーツ ギャラリーからレポートに追加することです。 レポートにレポート パーツを追加すると、動作に必要なアイテムもすべて追加されます。 たとえば、データを表示するレポート パーツは、クエリやデータ ソースへの接続などのデータセットに依存しています。 レポートにレポート パーツを追加した後、必要に応じてそのレポート パーツを変更できます。  
@@ -32,9 +30,9 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-browse-for-report-parts"></a>レポート パーツを参照するには  
   
-1.  **[挿入]** メニューの **[レポート パーツ]**をクリックします。  
+1.  **[挿入]** メニューの **[レポート パーツ]** をクリックします。  
   
-     まだ接続していない場合は、 **[レポート サーバーへの接続]**をクリックし、名前を入力します。  
+     まだ接続していない場合は、 **[レポート サーバーへの接続]** をクリックし、名前を入力します。  
   
     > [!NOTE]  
     >  レポート パーツを参照するには、レポート サーバーに接続している必要があります。  
@@ -53,14 +51,14 @@ ms.lasthandoff: 01/09/2018
   
     -   型  
   
-     たとえば、画像を検索するには、 **[条件の追加]**、 **[種類]**の順にクリックします。 ドロップダウン ボックスの **[画像]** チェック ボックスをオンにし、Enter キーを押してから、検索の虫眼鏡アイコンをクリックします。  
+     たとえば、画像を検索するには、 **[条件の追加]**、 **[種類]** の順にクリックします。 ドロップダウン ボックスの **[画像]** チェック ボックスをオンにし、Enter キーを押してから、検索の虫眼鏡アイコンをクリックします。  
   
     > [!NOTE]  
     >  **[作成者]** と **[最終更新元]** の値については、レポート サーバーを使用しているユーザー名を検索してください。  
   
 ## <a name="to-set-a-default-folder-for-report-parts"></a>レポート パーツの既定のフォルダーを設定するには  
   
-1.  **[レポート ビルダー]**をクリックし、 **[オプション]**をクリックします。  
+1.  **[レポート ビルダー]** をクリックし、 **[オプション]** をクリックします。  
   
 2.  **[オプション]** ダイアログ ボックスの **[設定]** タブで、 **[レポート パーツをパブリッシュする既定のフォルダー]** ボックスにフォルダー名を入力します。  
   

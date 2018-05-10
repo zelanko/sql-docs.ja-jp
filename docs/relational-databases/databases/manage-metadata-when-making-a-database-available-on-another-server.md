@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -41,12 +40,11 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b3faf3d48d2e5799d203300e45f098895aab8295
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -266,7 +264,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="logins"></a> ログイン  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインするには、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが必要です。 このログインは、プリンシパルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続できるかどうかを確認する認証プロセスで使用されます。 対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが未定義のデータベース ユーザー、またはサーバー インスタンスで適切に定義されていないデータベース ユーザーは、インスタンスにログインできません。 このようなユーザーは、そのサーバー インスタンスのデータベースの *孤立ユーザー* と呼ばれます。 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスに復元、アタッチ、またはコピーした後、データベース ユーザーが孤立する可能性があります。  
   
- 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[スクリプト ログイン]** オプションを **[True]**に設定することで作成できます。  
+ 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[スクリプト ログイン]** オプションを **[True]** に設定することで作成できます。  
   
 > **注:** ミラー化されたデータベースのログインを設定する方法については、「[データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)」および「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」をご覧ください。  
   
@@ -281,7 +279,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>システム オブジェクトに対する GRANT 権限、REVOKE 権限、または DENY 権限  
  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限は、 **master** データベースに格納されるので、対象のサーバー インスタンスで構成する必要があります。  
   
- 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]**に設定することで作成できます。  
+ 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]** に設定することで作成できます。  
   
 > **重要!!** ログインのスクリプトを作成する場合、パスワードはスクリプトに含まれません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインがある場合、対象のサーバー インスタンスでスクリプトを変更する必要があります。  
   

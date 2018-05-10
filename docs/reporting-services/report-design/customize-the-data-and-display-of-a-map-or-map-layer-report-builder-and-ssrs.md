@@ -1,16 +1,15 @@
 ---
-title: "マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10521"
 - sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
@@ -25,16 +24,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f0c131fe26b5f7ab05a774ed7c66f54db0d816bb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2965210603f3727edd2563d5f0b9301e31efee0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)
   ウィザードを使用してマップまたはマップ レイヤーを [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートに追加した後、必要に応じてレポート内のマップの体裁を変更することができます。 改善のヒントを次に示します。  
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/09/2018
   
 -   影を指定して奥行を表す。  
   
- これらのオプションを変更するには、マップを右クリックして **[マップ]**をクリックし、オプションを変更します。  
+ これらのオプションを変更するには、マップを右クリックして **[マップ]** をクリックし、オプションを変更します。  
   
 ##  <a name="Viewport"></a> ビューポートのオプションを変更する  
  レポートに表示されるマップの表示を変更するには、ビューポートのオプションを使用します。  
@@ -125,7 +123,7 @@ ms.lasthandoff: 01/09/2018
  レイヤーの詳細については、「[マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="DataGrouping"></a> レイヤーのデータ グループを変更する  
- 独自の図形の空間データをどのように集計するかをカスタマイズできます。 レイヤーのグループ プロパティを設定するには、レイヤーのマップ ペインおよびプロパティ ペインでレイヤーを選択し、 **[グループ]**をクリックしてから参照ボタン ([…]) をクリックし、グループ プロパティを開きます。 このダイアログ ボックスでは、グループ式の指定、グループ変数の作成、およびグループ化に使用するデータのフィルター処理を行うことができます。  
+ 独自の図形の空間データをどのように集計するかをカスタマイズできます。 レイヤーのグループ プロパティを設定するには、レイヤーのマップ ペインおよびプロパティ ペインでレイヤーを選択し、 **[グループ]** をクリックしてから参照ボタン ([…]) をクリックし、グループ プロパティを開きます。 このダイアログ ボックスでは、グループ式の指定、グループ変数の作成、およびグループ化に使用するデータのフィルター処理を行うことができます。  
   
  グループ式は、空間データとの間にリレーションシップを持つ分析データをレイヤー上の各マップ要素に対してどのように集計するかを指定します。 既定では、グループ式は、空間データと分析データの間のリレーションシップに対して指定された対応フィールドのセットです。 たとえば、国または地域の市区町村の場所と人口規模を表示するバブル マップの場合、同じ名前を持つ複数の市区町村が存在する可能性があるため、対応フィールドには、市区町村名を示す [City] と地域名を示す [Region] が含まれます。 対応するグループ式には、[City] と [Region] の 2 つのフィールドが含まれます。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, export policy
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
@@ -19,12 +18,11 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58e4a509dbb48aef071a6b5904490a09318e9de2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92eca685c0d7ee7198b5d1f9bf804414efcff7c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのエクスポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +53,14 @@ ms.lasthandoff: 04/16/2018
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  プラス記号をクリックして **[ポリシー管理]**を展開します。  
+3.  プラス記号をクリックして **[ポリシー管理]** を展開します。  
   
 4.  プラス記号をクリックして **[ポリシー]** フォルダーを展開します。  
   
-5.  エクスポートするポリシーを右クリックし、 **[ポリシーのエクスポート]**をクリックします。  
+5.  エクスポートするポリシーを右クリックし、 **[ポリシーのエクスポート]** をクリックします。  
   
 6.  **[ポリシーのエクスポート]** ダイアログ ボックスで、アドレス バーにファイルのパスと名前を入力します。 または、ダイアログ ボックスのナビゲーション ウィンドウでファイルの適切な場所を見つけ、 **[ファイル名]** ボックスに XML ファイルの名前を入力します。  
   
-7.  完了したら、 **[保存]**をクリックします。  
+7.  完了したら、 **[保存]** をクリックします。  
   
   

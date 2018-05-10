@@ -1,30 +1,28 @@
 ---
-title: "ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs"
-ms.custom: 
+title: ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 86daba14047f2cc0f86fc77dc73d9d2474540305
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースの作成
 
@@ -66,13 +64,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  リモートの [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを使用している場合は、データベース サーバーにログオンして、TCP/IP 接続を確認するか有効にします。  
   
-2.  **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **[SQL Server ネットワークの構成]**を開きます。  
+3.  **[SQL Server ネットワークの構成]** を開きます。  
   
 4.  データベース インスタンスを選択します。  
   
-5.  **[TCP/IP]** を右クリックし、 **[有効]**を選択します。  
+5.  **[TCP/IP]** を右クリックし、 **[有効]** を選択します。  
   
 6.  サービスを再起動します。  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」で確認します。  
   
-2.  [データベース] ページの **[データベースの変更]**を選択します。  
+2.  [データベース] ページの **[データベースの変更]** を選択します。  
   
-3.  **[新しいレポート サーバー データベースを作成する]**を選択し、 **[次へ]**を選択します。  
+3.  **[新しいレポート サーバー データベースを作成する]** を選択し、 **[次へ]** を選択します。  
   
 4.  レポート サーバー データベースの作成およびホストに使用する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
@@ -102,7 +100,7 @@ ms.lasthandoff: 01/09/2018
   
     2.  ロールの定義および個人用レポートの表示に使用する言語を選択します。  
   
-    3.  [レポート サーバー モード] は常に **[ネイティブ]**に設定されます。  
+    3.  [レポート サーバー モード] は常に **[ネイティブ]** に設定されます。  
   
     4.  **[次へ]** を選択します。  
   
@@ -118,7 +116,7 @@ ms.lasthandoff: 01/09/2018
   
     2.  **[次へ]** を選択します。  
   
-7.  [概要] ページの情報で設定が正しいことを確認し、 **[次へ]**を選択します。  
+7.  [概要] ページの情報で設定が正しいことを確認し、 **[次へ]** を選択します。  
   
 8.  [レポート サーバー URL] ページまたは [レポート マネージャー URL] ページで URL を選択し、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、ブラウザー ウィンドウにレポート サーバーのフォルダー階層またはレポート マネージャーが表示されます。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
 
@@ -128,7 +126,7 @@ ms.lasthandoff: 01/09/2018
 
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
-2.  [データベース] ページの **[資格情報の変更]**を選択します。 
+2.  [データベース] ページの **[資格情報の変更]** を選択します。 
 
 3.  レポート サーバー データベースの作成およびホストに使用する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
@@ -150,9 +148,9 @@ ms.lasthandoff: 01/09/2018
   
     2.  **[次へ]** を選択します。 
 
-5. 設定を確認し、 **[次へ]**を選択します。
+5. 設定を確認し、 **[次へ]** を選択します。
 
-6. 変更を行ってから、 **[完了]**を選択します。
+6. 変更を行ってから、 **[完了]** を選択します。
 
 ## <a name="next-steps"></a>次の手順
 

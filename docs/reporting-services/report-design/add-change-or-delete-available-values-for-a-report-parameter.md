@@ -1,31 +1,29 @@
 ---
-title: "レポート パラメーターの値の追加、変更、または削除 | Microsoft Docs"
-ms.custom: 
+title: レポート パラメーターの値の追加、変更、または削除 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.availablevalues.f1
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ff3ae7e2e01eab4629fa30f4ab188ac714d4fd2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4d3466964e2b2550e5b0dd6b90cbaac3a063e68e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>レポート パラメーターの値の追加、変更、または削除
   レポート パラメーターを作成した後、ユーザーに対して表示する使用可能な値の一覧を指定できます。 使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。  
@@ -41,12 +39,12 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を追加または変更するには  
   
-1.  レポート データ ペインで [パラメーター] ノードを展開します。 パラメーターを右クリックし、 **[パラメーターのプロパティ]**をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  レポート データ ペインで [パラメーター] ノードを展開します。 パラメーターを右クリックし、 **[パラメーターのプロパティ]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  レポート データ ペインが表示されていない場合は、 **[表示]** をクリックしてから **[レポート データ]**をクリックします。  
+    >  レポート データ ペインが表示されていない場合は、 **[表示]** をクリックしてから **[レポート データ]** をクリックします。  
   
-2.  **[使用できる値]**をクリックします。 使用可能な値のオプションを選択します。  
+2.  **[使用できる値]** をクリックします。 使用可能な値のオプションを選択します。  
   
     -   **[値の指定]** をクリックして値のリストを手動で設定し、必要に応じて値の表示名 (ラベル) を設定します。  
   
@@ -59,11 +57,11 @@ ms.lasthandoff: 01/09/2018
         > [!IMPORTANT]  
         >  同じデータセットに、レポート パラメーターに対応するクエリ パラメーターが含まれている場合は、レポートを実行しようとするとエラー メッセージが表示されます。 このエラーを解決するには、別のデータセットを使用して値を取得します。  
   
-         **[データセット]**で、データセットの名前を選択します。  
+         **[データセット]** で、データセットの名前を選択します。  
   
-         **[値フィールド]**で、パラメーター値を指定するフィールドの名前を選択します。  
+         **[値フィールド]** で、パラメーター値を指定するフィールドの名前を選択します。  
   
-         **[ラベル フィールド]**には、パラメーターの表示名を指定するフィールドの名前を選択します。 表示名に個別のフィールドがない場合は、 **[値]** フィールドに選択したものと同じフィールドを選択します。  
+         **[ラベル フィールド]** には、パラメーターの表示名を指定するフィールドの名前を選択します。 表示名に個別のフィールドがない場合は、 **[値]** フィールドに選択したものと同じフィールドを選択します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -71,11 +69,11 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-remove-the-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を削除するには  
   
-1.  レポート データ ペインで [パラメーター] ノードを展開します。 パラメーターを右クリックし、 **[パラメーターのプロパティ]**をクリックします。 **[レポート パラメーター]** ダイアログ ボックスが表示されます。  
+1.  レポート データ ペインで [パラメーター] ノードを展開します。 パラメーターを右クリックし、 **[パラメーターのプロパティ]** をクリックします。 **[レポート パラメーター]** ダイアログ ボックスが表示されます。  
   
-2.  **[使用できる値]**をクリックします。  
+2.  **[使用できる値]** をクリックします。  
   
-3.  **[次のオプションから 1 つを選択]**で **[なし]**をクリックします。  
+3.  **[次のオプションから 1 つを選択]** で **[なし]** をクリックします。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
