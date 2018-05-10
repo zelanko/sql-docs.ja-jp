@@ -1,34 +1,19 @@
 ---
-title: "プログラミング AMO OLAP オブジェクトの詳細 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
-caps.latest.revision: 
-author: Minewiskan
+title: プログラミング AMO OLAP オブジェクトの詳細 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32457c48afcad9d40c901b78252afdf476df31e4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c07ee6b4289c015b0c42a1bc9981bec29cd49483
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>高度な AMO OLAP オブジェクトのプログラミング
   このトピックでは、高度な OLAP オブジェクトの分析管理オブジェクト (AMO) プログラミングの詳細について説明します。 このトピックには、次のセクションが含まれます。  
@@ -43,7 +28,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Translation オブジェクト](#Transl)  
   
-##  <a name="Action">Action オブジェクト</a>  
+##  <a name="Action"></a> Action オブジェクト  
  アクション クラスは、キューブの特定領域の参照時に、アクティブな応答を作成するために使用します。 Action オブジェクトは AMO を使用して定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。 アクションにはさまざまな種類があり、その種類に応じて作成する必要があります。 アクションの種類は次のとおりです。  
   
 -   ドリルスルー アクション。このアクションが発生したキューブで選択されているセル内のデータを表す行セットを返します。  
@@ -64,7 +49,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  アクションをキューブ コレクションに追加してキューブを更新します。 アクションは更新可能なオブジェクトではありません。  
   
- アクションのテストには別のプログラム アプリケーションが必要です。 アクションは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でテストできます。 最初に、インストールする必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サンプルを参照してください[多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ アクションのテストには別のプログラム アプリケーションが必要です。 アクションは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でテストできます。 最初に、インストールする必要があります[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サンプルを参照してください[多次元モデルの処理&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)です。  
   
  次のサンプル コードでは、Adventure Works Analysis Services Project サンプルから 3 つの異なるアクションをレプリケートします。 次のサンプルを使用して作成したアクションは "My" から始まるため、アクションを区別することができます。  
   
@@ -191,7 +176,7 @@ static public void CreateActions(Cube cube)
 }  
 ```  
   
-##  <a name="KPI">Kpi オブジェクト</a>  
+##  <a name="KPI"></a> Kpi オブジェクト  
  主要業績評価指標 (KPI) はキューブ内のメジャー グループに関連付けられた、ビジネスの成功の評価に使用される計算のコレクションです。 <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。  
   
  作成する、<xref:Microsoft.AnalysisServices.Kpi>オブジェクトには、次の手順が必要です。  
@@ -350,7 +335,7 @@ static public void CreateKPIs(Cube cube)
 }.  
 ```  
   
-##  <a name="Persp">Perspective オブジェクト</a>  
+##  <a name="Persp"></a> Perspective オブジェクト  
  <xref:Microsoft.AnalysisServices.Perspective> オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。  
   
  作成する、<xref:Microsoft.AnalysisServices.Perspective>オブジェクトには、次の手順が必要です。  
@@ -413,7 +398,7 @@ static public void CreatePerspectives(Cube cube)
 }  
 ```  
   
-##  <a name="PC">ProactiveCaching オブジェクト</a>  
+##  <a name="PC"></a> ProactiveCaching オブジェクト  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> オブジェクトは AMO で定義できます。  
   
  作成する、<xref:Microsoft.AnalysisServices.ProactiveCaching>オブジェクトには、次の手順が必要です。  
@@ -470,7 +455,7 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl">Translation オブジェクト</a>  
+##  <a name="Transl"></a> Translation オブジェクト  
  Translation オブジェクトは AMO で定義できます。ただし、このオブジェクトはデータを参照するクライアント アプリケーションから使用されます。 Translation オブジェクトのコーディングは簡単です。 オブジェクトのキャプションの翻訳は、ロケール識別子とキャプションの翻訳の組によって提供されます。 すべてのキャプションで複数の翻訳を使用できます。 ディメンション、属性、階層、キューブ、メジャー グループ、メジャーなど、ほとんどの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトに対して翻訳を提供できます。  
   
  次のコード サンプルでは、属性 Product Name の名前をスペイン語に翻訳します。  
@@ -493,9 +478,9 @@ static public void CreateTranslations(Database db)
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [多次元モデル &#40; の処理Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [多次元モデルの処理&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトをインストールします。](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

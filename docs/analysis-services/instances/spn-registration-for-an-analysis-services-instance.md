@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services インスタンスに対する SPN の登録 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services インスタンスに対する SPN の登録 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f210d29986e325c0b444ab30430afbe64d1ff38b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services インスタンスの SPN 登録
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-クライアントとサービス ID の相互認証に Kerberos が使用されている場合、サービス プリンシパル名 (SPN) は、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
+  クライアントとサービス ID の相互認証に Kerberos が使用されている場合、サービス プリンシパル名 (SPN) は、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
   
  Kerberos 認証を通じて Analysis Services に接続するクライアント アプリケーションの場合、Analysis Services クライアント ライブラリは、接続文字列のホスト名と、Analysis Services のどのリリースでも固定されているその他のよく知られている変数 (サービス クラスなど) を使用して、SPN を構築します。  
   

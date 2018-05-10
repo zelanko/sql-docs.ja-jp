@@ -1,27 +1,25 @@
 ---
-title: "図形グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 図形グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 339028127ce757f08aed35ee0868da28c69a5355
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 06335772043251b1e1a2923444e432f910ef22b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
   図形グラフでは、全体に占める割合 (パーセント) として値データが表示されます。 図形グラフは、通常、セット内の異なる値間での相対的な比較を示すために使用されます。 カテゴリは、図形の個々のセグメントによって表されます。 セグメントのサイズは、値によって決まります。 図形グラフは円グラフに用途が似ていますが、カテゴリは大きい方から順に並べられます。  

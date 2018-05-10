@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.condition
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ab9494af8164ad8bb0d7647da4379f6f8c39545
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 19c1d34034d2e7739a9ce2a5241ae472651a9ffb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-breakpoint-condition"></a>ブレークポイント条件の指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,10 +45,10 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[ブレークポイントの条件]** ダイアログ ボックスで、 **[条件]** ボックスに有効なブール式を入力します。  
   
-3.  式が **true** に評価されたときにブレークするようにする場合は、 **[true の場合]**を選択します。式の値が変更されたときにブレークするようにする場合は、 **[変更された場合]** を選択します。  
+3.  式が **true** に評価されたときにブレークするようにする場合は、 **[true の場合]** を選択します。式の値が変更されたときにブレークするようにする場合は、 **[変更された場合]** を選択します。  
   
     > [!NOTE]  
-    >  デバッガーは、初めてブレークポイントに達するまでブール式を評価しません。 **[変更された場合]**を選択した場合、デバッガーは最初の評価を変更とは見なさないため、最初の評価でブレークすることはありません。  
+    >  デバッガーは、初めてブレークポイントに達するまでブール式を評価しません。 **[変更された場合]** を選択した場合、デバッガーは最初の評価を変更とは見なさないため、最初の評価でブレークすることはありません。  
   
 ## <a name="see-also"></a>参照  
  [ヒット カウントの指定](../../relational-databases/scripting/specify-a-hit-count.md)   

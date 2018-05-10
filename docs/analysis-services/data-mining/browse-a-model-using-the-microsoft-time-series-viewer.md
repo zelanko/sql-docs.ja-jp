@@ -1,39 +1,23 @@
 ---
-title: "Microsoft タイム シリーズ ビューアーを使用してモデルを参照 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Microsoft タイム シリーズ ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], continuous columns
-- mining model content, viewing
-- Microsoft Time Series Viewer
-- charts [Analysis Services]
-- Time Series Viewer [Analysis Services]
-- continuous columns
-- regression algorithms [Analysis Services]
-ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6eaa320911fbba0f46472750bde9293b36430b46
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ed8d8dcafcc906eb445fd832f023b7d0b100c318
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft タイム シリーズ ビューアーを使用したモデルの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
   
 -   ARTxp アルゴリズム。短期的な予測に適しています。  
   
@@ -62,7 +46,7 @@ ms.lasthandoff: 02/15/2018
   
  ARTxp だけを使用してモデルを作成した場合、ルート ノードの **[マイニング凡例]** には、ケースの合計数だけが含まれています。 ルート以外の各ノードの **[マイニング凡例]** には、その分割ツリーに関する詳細情報が含まれています。たとえば、ノードの式やケースの数が表示されます。 凡例の *ルール* には、系列を識別する情報、およびルールが適用されるタイム スライスが含まれます。 たとえば、 `M200 Europe Amount -2` という凡例テキストは、2 タイム スライス前の期間における M200 Europe 系列のモデルをノードが表すことを示します。  
   
- ARIMA だけを使用してモデルを作成した場合、 **[モデル]** タブには、 **[すべて]**というキャプションの 1 つのノードが含まれています。 ルート ノードの **[マイニング凡例]** には、ARIMA 式が含まれています。  
+ ARIMA だけを使用してモデルを作成した場合、 **[モデル]** タブには、 **[すべて]** というキャプションの 1 つのノードが含まれています。 ルート ノードの **[マイニング凡例]** には、ARIMA 式が含まれています。  
   
  アルゴリズムを混用するモデルを作成した場合、ルート ノードには、ケースの数と ARIMA 式だけが含まれています。 ルート ノードの後、ツリーは周期的構造ごとに個別のノードに分かれます。 ルート以外の各ノードの [マイニング凡例] には、ARTxp と ARIMA の両方のアルゴリズム、ノードの式、およびノード内のケースの数が含まれています。 最初に ARTxp 式が表示され、ツリー ノード式のラベルが付いています。 その後に ARIMA 式が表示されます。 この情報を解釈する方法の詳細については、「 [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)」(Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス) を参照してください。  
   
@@ -88,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
  表示する時間の範囲はズーム オプションを使用して調整できます。 また、特定の時間範囲を表示することもできます。その場合は、グラフをクリックし、グラフ上で時間の選択をドラッグし、再びクリックして選択した範囲を拡大します。  
   
- モデル内に表示する将来の時間 **ステップ** の数を選択するには、 **[予測期間]**を使用します。 **[偏差の表示]** チェック ボックスをオンにすると、ビューアーに誤差範囲が表示され、予測値の精度を確認できるようになります。  
+ モデル内に表示する将来の時間 **ステップ** の数を選択するには、 **[予測期間]** を使用します。 **[偏差の表示]** チェック ボックスをオンにすると、ビューアーに誤差範囲が表示され、予測値の精度を確認できるようになります。  
   
  [トップに戻る](#BKMK_ViewerTabs)  
   

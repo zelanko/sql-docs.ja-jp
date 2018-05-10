@@ -3,15 +3,12 @@ title: バックアップ デバイスの削除 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], deleting devices
 - backup devices [SQL Server], deleting
@@ -23,12 +20,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d52b2e7ca98258701d9e0cfa360b39812dd52be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d696ba7eb94023eb72f16c01f6a79d3d0c3c61ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-backup-device-sql-server"></a>バックアップ デバイスの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +55,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスへの接続後、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[サーバー オブジェクト]**を展開し、 **[バックアップ デバイス]**を展開します。  
+2.  **[サーバー オブジェクト]** を展開し、 **[バックアップ デバイス]** を展開します。  
   
-3.  削除するデバイスを右クリックし、 **[削除]**をクリックします。  
+3.  削除するデバイスを右クリックし、 **[削除]** をクリックします。  
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、 **[オブジェクト名]** 列に正しいデバイス名が表示されていることを確認します。  
   
@@ -73,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  次の例をコピーし、クエリに貼り付けます。 この例では、 [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) を使用して、バックアップ デバイスを削除する方法を示します。 1 つ目の例を実行して、 `mybackupdisk` バックアップ デバイス と物理名 `c:\backup\backup1.bak`を作成します。 **sp_dropdevice** を実行して、 `mybackupdisk` バックアップ デバイスを削除します。 `delfile` パラメーターは物理名を削除します。  
   

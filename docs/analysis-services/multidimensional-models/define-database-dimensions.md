@@ -1,32 +1,23 @@
 ---
 title: データベース ディメンションの定義 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], defining
-ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc42f36439973607f4f0d45ea7a18c0160de5ced
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 31d56175095ce7b58ff2fddc5ee19bff34a7cb8c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-database-dimensions"></a>データベース ディメンションの定義
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ディメンション デザイナーを使用して[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内の既存のデータベース ディメンションを構成する、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトまたはデータベース。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトまたはデータベースの既存のデータベース ディメンションを構成するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
   
 -   ディメンションレベルのプロパティを構成します。  
   
@@ -58,10 +49,10 @@ ms.lasthandoff: 01/08/2018
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  ディメンションの属性を定義して構成する方法を説明します。  
   
- [ユーザー定義階層の作成](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
+ [ユーザー定義階層を作成します。](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  ユーザー定義階層を定義して構成する方法を説明します。  
   
- [属性リレーションシップの定義](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
+ [属性リレーションシップを定義します。](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  属性のリレーションシップを定義して構成する方法を説明します。  
   
  [ビジネス インテリジェンス ウィザードを使用したディメンションの拡張](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  

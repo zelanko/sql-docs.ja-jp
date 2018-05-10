@@ -1,37 +1,19 @@
 ---
-title: "AMO 基本オブジェクトのプログラミング |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- server objects [AMO]
-- programming [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 基本オブジェクトのプログラミング |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2bc8a2cf279f204d76e96657bfb25c0ebfe14329
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基本オブジェクトのプログラミング
   基本オブジェクトは、一般に、単純で簡単なオブジェクトです。 これらのオブジェクトは、通常、作成およびインスタンス化され、その後、必要がなくなると、ユーザーによって切断されます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。 AMO 基本オブジェクトの中で唯一の複雑なオブジェクトは、<xref:Microsoft.AnalysisServices.DataSourceView> です。これは、データ ソース ビューを表す抽象モデルを構築するために詳細を必要とします。  
@@ -196,7 +178,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource">DataSource オブジェクト</a>  
+##  <a name="DataSource"></a> DataSource オブジェクト  
  <xref:Microsoft.AnalysisServices.DataSource> オブジェクトとは、データが存在するデータベースと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] との間のリンクです。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の基になるモデルを表すスキーマは、<xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトによって定義されます。 <xref:Microsoft.AnalysisServices.DataSource> オブジェクトは、データが存在するデータベースに対する接続文字列と見なすことができます。  
   
  次のサンプル コードは、<xref:Microsoft.AnalysisServices.DataSource> オブジェクトの作成方法を示します。 このサンプルでは、サーバーが依然として存在していること、<xref:Microsoft.AnalysisServices.Server> オブジェクトが接続されていること、およびデータベースが存在していることを確認します。 <xref:Microsoft.AnalysisServices.DataSource> オブジェクトが存在する場合、そのオブジェクトを削除して再作成します。 同じ名前と内部 ID を持つ <xref:Microsoft.AnalysisServices.DataSource> オブジェクトを作成します。 このサンプルでは、検証のために接続文字列に対して確認を実行しません。  
@@ -219,7 +201,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV">DataSourceView オブジェクト</a>  
+##  <a name="DSV"></a> DataSourceView オブジェクト  
  <xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のスキーマ モデルを保持する役割を担います。 <xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトがスキーマを保持するには、まず、スキーマを作成する必要があります。 スキーマは、DataSet オブジェクトを経由して、System.Data 名前空間から作成されます。  
   
  次のサンプル コードは、AdventureWorks に基づく Analysis Services サンプル プロジェクトに含まれるスキーマの一部を作成します。 この現サンプルは、テーブル、計算列、リレーション、および複合リレーションに対するスキーマ定義を作成します。 スキーマは、保存されるデータセットです。  
@@ -563,7 +545,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 基礎クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

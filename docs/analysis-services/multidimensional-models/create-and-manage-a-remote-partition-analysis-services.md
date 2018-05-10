@@ -1,34 +1,23 @@
 ---
-title: "作成し、管理、リモート パーティション (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 作成し、管理、リモート パーティション (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb19c147010f0492122e88b21bd12efb43c05376
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>リモート パーティションの作成と管理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-メジャー グループをパーティション分割する場合は、パーティションのストレージとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスでセカンダリ データベースを構成できます。  
+  メジャー グループをパーティション分割する場合は、パーティションのストレージとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスでセカンダリ データベースを構成できます。  
   
  キューブ (master データベースと呼ばれます) のリモート パーティションは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンス上の専用の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース (セカンダリ データベースと呼ばれます) に格納されています。  
   
@@ -63,31 +52,31 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>キューブの配置に有効なサーバー名を指定する (SSDT)  
   
-1.  マスター サーバー: ソリューション エクスプローラーでソリューション名を右クリックし、 **[プロパティ]**をクリックします。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、マスター サーバーの名前を設定します。  
+1.  マスター サーバー: ソリューション エクスプローラーでソリューション名を右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、マスター サーバーの名前を設定します。  
   
-2.  下位サーバー: ソリューション エクスプローラーでソリューション名を右クリックし、 **[プロパティ]**をクリックします。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、下位サーバーの名前を設定します。  
+2.  下位サーバー: ソリューション エクスプローラーでソリューション名を右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、下位サーバーの名前を設定します。  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>セカンダリ データベースを作成および配置する (SSDT)  
   
 1.  下位サーバー: ストレージ データベース用に新しい Analysis Services プロジェクトを作成します。  
   
-2.  下位サーバー: ソリューション エクスプローラーで、キューブ データベース db-master を指す新しいデータ ソースを作成します。 プロバイダーに **[ネイティブ OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0]**を使用します。  
+2.  下位サーバー: ソリューション エクスプローラーで、キューブ データベース db-master を指す新しいデータ ソースを作成します。 プロバイダーに **[ネイティブ OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0]** を使用します。  
   
 3.  下位サーバー: ソリューションを配置します。  
   
 #### <a name="enable-features-in-ssms"></a>機能を有効にする (SSMS)  
   
-1.  下位サーバー: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、接続している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを右クリックし、 **[プロパティ]**をクリックします。 **[機能\LinkToOtherInstanceEnabled]** と **[機能\LinkFromOtherInstanceEnabled]** の両方を **[True]**に設定します。  
+1.  下位サーバー: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、接続している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを右クリックし、 **[プロパティ]** をクリックします。 **[機能\LinkToOtherInstanceEnabled]** と **[機能\LinkFromOtherInstanceEnabled]** の両方を **[True]** に設定します。  
   
-2.  下位サーバー: オブジェクト エクスプローラーでサーバー名を右クリックして **[再起動]**をクリックし、サーバーを再起動します。  
+2.  下位サーバー: オブジェクト エクスプローラーでサーバー名を右クリックして **[再起動]** をクリックし、サーバーを再起動します。  
   
-3.  マスター サーバー: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、接続している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを右クリックし、 **[プロパティ]**をクリックします。 **[機能\LinkToOtherInstanceEnabled]** と **[機能\LinkFromOtherInstanceEnabled]** の両方を **[True]**に設定します。  
+3.  マスター サーバー: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、接続している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを右クリックし、 **[プロパティ]** をクリックします。 **[機能\LinkToOtherInstanceEnabled]** と **[機能\LinkFromOtherInstanceEnabled]** の両方を **[True]** に設定します。  
   
-4.  マスター サーバー: オブジェクト エクスプローラーでサーバー名を右クリックして **[再起動]**をクリックし、サーバーを再起動します。  
+4.  マスター サーバー: オブジェクト エクスプローラーでサーバー名を右クリックして **[再起動]** をクリックし、サーバーを再起動します。  
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>リモート サーバーで MasterDataSourceID データベース プロパティを設定する (SSMS)  
   
-1.  下位サーバー: ストレージ データベース db-storage を右クリックし、 **[データベースをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]**をポイントします。  
+1.  下位サーバー: ストレージ データベース db-storage を右クリックし、 **[データベースをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]** をポイントします。  
   
 2.  **[MasterDataSourceID]** を XMLA に追加して、キューブ データベース db-master の ID を値として指定します。 XMLA は次のようになります。  
   
@@ -119,11 +108,11 @@ ms.lasthandoff: 02/15/2018
   
 1.  マスター サーバー: キューブ デザイナーでキューブを開き、 **[パーティション]** タブをクリックします。メジャー グループを展開します。 メジャー グループが既に複数のパーティションに対して構成されている場合は **[新しいパーティション]** をクリックします。または、[基になる列] の参照ボタン (. の同一のリモート インスタンスに存在する場合に限り、複数のセカンダリ データベースを使用できます。 ) をクリックして既存のパーティションを編集します。  
   
-2.  パーティション ウィザードの **[基になる情報の指定]**で、元のデータ ソース ビューとファクト テーブルを選択します。  
+2.  パーティション ウィザードの **[基になる情報の指定]** で、元のデータ ソース ビューとファクト テーブルを選択します。  
   
 3.  クエリ バインドを使用する場合は、作成する新しいパーティションにデータを分割する WHERE 句を指定します。  
   
-4.  **[処理およびストレージの場所]**の **[処理場所]**で、 **[リモート Analysis Services データ ソース]** を選択し、 **[新規作成]** をクリックして、下位データベース db-storage を指す新しいデータ ソースを作成します。  
+4.  **[処理およびストレージの場所]** の **[処理場所]** で、 **[リモート Analysis Services データ ソース]** を選択し、 **[新規作成]** をクリックして、下位データベース db-storage を指す新しいデータ ソースを作成します。  
   
     > [!NOTE]  
     >  データ ソースがコレクションに存在しないことを示すエラーが発生した場合は、ストレージ データベース db-storage のプロジェクトを開き、master データベース db-master を指すデータ ソースを作成する必要があります。  
@@ -131,7 +120,7 @@ ms.lasthandoff: 02/15/2018
 5.  マスター サーバー: ソリューション エクスプローラーでキューブ名を右クリックし、 **[処理]** を選択してキューブを完全に処理します。  
   
 ## <a name="administering-remote-partitions"></a>リモート パーティションの管理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、リモート パーティションの並列処理と順次処理をサポートします。 パーティションが定義された master データベースは、キューブのパーティション処理に参加するすべてのインスタンスのトランザクションを調整します。 処理のレポートは、パーティションを処理するすべてのインスタンスに送信されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]リモート パーティションの処理を並列および順次の両方をサポートしています。 パーティションが定義された master データベースは、キューブのパーティション処理に参加するすべてのインスタンスのトランザクションを調整します。 処理のレポートは、パーティションを処理するすべてのインスタンスに送信されます。  
   
  リモート パーティションを含むキューブは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の 1 つのインスタンスでそのパーティションと共に管理されます。 ただし、リモート パーティションのメタデータは、パーティションとその親キューブが定義された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスでのみ表示および更新できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のリモート インスタンスではリモート パーティションを表示または更新できません。  
   

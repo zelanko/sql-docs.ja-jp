@@ -1,34 +1,19 @@
 ---
-title: "書き込み許可ディメンション |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords:
-- write-enabled dimensions [Analysis Services]
-- dimensions [Analysis Services], write-enabled
-- dimension writeback [Analysis Services]
-- write-enabled cubes [Analysis Services]
-- writeback [Analysis Services], dimensions
-ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: "38"
-author: Minewiskan
+title: 書き込み許可ディメンション |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8fddc4501d692f4b11ade511f5f56066b81af8c8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write-enabled-dimensions"></a>書き込み許可ディメンション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  書き戻しディメンションの既存のすべてのメンバーを変更または削除できます。 メンバーを削除すると、子のメンバーもすべて連鎖的に削除されます。 たとえば、CountryRegion、Province、City、および Customer 属性を含む Customer ディメンションで、国または地域を削除すると、その国または地域に属する都道府県、市町村、および顧客もすべて削除されます。 国または地域に都道府県が 1 つしか含まれていない場合、その都道府県を削除すると、国または地域も削除されます。  
   
- 書き戻しディメンションのメンバーは、同じレベル内でのみ移動できます。 たとえば、市町村は別の国または地域、あるいは都道府県の City レベルに移動できますが、Province レベルまたは CountryRegion レベルには移動できません。 親子階層のすべてのメンバーがリーフ メンバー、したがってメンバー可能性がありますに移動する任意のレベル以外の場合、 **(すべて)**レベル。  
+ 書き戻しディメンションのメンバーは、同じレベル内でのみ移動できます。 たとえば、市町村は別の国または地域、あるいは都道府県の City レベルに移動できますが、Province レベルまたは CountryRegion レベルには移動できません。 親子階層のすべてのメンバーがリーフ メンバー、したがってメンバー可能性がありますに移動する任意のレベル以外の場合、 **(すべて)** レベル。  
   
  親子階層のメンバーを削除すると、メンバーの子はメンバーの親に移動します。 削除するメンバーに対してはリレーショナル テーブルの更新権限が必要ですが、移動するメンバーに対しては権限は必要ありません。 アプリケーションで親子階層内のメンバーを移動するときは、メンバーの子孫をメンバーと共に移動するか、メンバーの親に移動するかを UPDATE 操作で指定できます。 親子階層内のメンバーを再帰的に削除するには、そのメンバーとメンバーのすべての子孫に対するリレーショナル テーブルの更新権限が必要です。  
   
@@ -62,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  ディメンションの書き戻しはリンク ディメンションではサポートされていません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  書き込み許可ディメンションを更新できるビジネス ユーザーは、そのディメンションへの読み取り/書き込みアクセスが許可されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールに属するユーザーだけです。 ロールごとに、更新できるメンバーと更新できないメンバーを管理できます。 ビジネス ユーザーが書き込み許可ディメンションを更新するには、そのクライアント アプリケーションでこの機能がサポートされている必要があります。 このようなユーザーの場合、書き込み許可ディメンションを、その前回の変更以後に処理されたキューブに含める必要があります。 詳細については、「[オブジェクトと操作へのアクセスの承認 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)」を参照してください。  
   
  管理者ロールに含まれているユーザーとグループは、書き込み許可ディメンションがキューブに含まれていなくても、その書き込み許可ディメンションの属性メンバーを更新できます。  
@@ -70,6 +55,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>参照  
  [データベース ディメンションのプロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [ディメンション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンションと #40 です。Analysis Services - 多次元データ & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

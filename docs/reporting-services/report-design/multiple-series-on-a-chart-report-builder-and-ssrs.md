@@ -1,27 +1,25 @@
 ---
-title: "グラフ上の複数の系列 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: グラフ上の複数の系列 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb205dc96ea7279ce4fc9048ab09b738fc38051d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0c599349386352fdbf48390476f8014eaca34192
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>グラフ上の複数の系列 (レポート ビルダーおよび SSRS)
   グラフ上に複数の系列がある場合は、系列を比較する最適な方法を決定する必要があります。 積み上げグラフを使用すると、各系列の相対的な割合を表示できます。 共通のカテゴリの X 軸を共有する 2 つの系列のみを比較する場合は、セカンダリ軸を使用します。 これは、価格と売買高や収入と税金など、データの関連する 2 つの系列を表示するときに役立ちます。 グラフが読み取れなくなった場合は、複数のグラフ領域を使用して、各系列間の間隔を広げることを検討してください。  

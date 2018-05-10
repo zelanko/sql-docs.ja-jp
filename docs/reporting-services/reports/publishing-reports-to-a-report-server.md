@@ -1,16 +1,15 @@
 ---
-title: "レポート サーバーへのレポートのパブリッシュ | Microsoft Docs"
-ms.custom: 
+title: レポート サーバーへのレポートのパブリッシュ | Microsoft Docs
+ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9a69b67fcbc9d047526ff0c30883731543a826a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>レポート サーバーへのレポートのパブリッシュ
   1 つまたは複数のレポートのデザインおよびテストが完了したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の組み込みのデプロイ機能を使用してレポート サーバーにレポートをパブリッシュします。 個々のレポート、または複数のレポートとデータ ソースを含めることができるレポート サーバー プロジェクトを発行することができます。 複数のレポートをパブリッシュする最も簡単な方法は、レポート サーバー プロジェクトをパブリッシュする方法です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、" *パブリッシュ*" の代わりに、" *配置*" という用語が使用されます。 この 2 つの用語は同義です。  
@@ -58,18 +56,18 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-publish-all-reports-in-a-project"></a>プロジェクトのすべてのレポートをパブリッシュするには  
   
-**[ビルド]** メニューで **[\<レポート プロジェクト名> の配置]** をクリックします。 または、ソリューション エクスプローラーでレポート プロジェクトを右クリックして、 **[配置]**をクリックします。 パブリッシュ処理の状態が、[出力] ウィンドウに表示されます。  
+**[ビルド]** メニューで **[\<レポート プロジェクト名> の配置]** をクリックします。 または、ソリューション エクスプローラーでレポート プロジェクトを右クリックして、 **[配置]** をクリックします。 パブリッシュ処理の状態が、[出力] ウィンドウに表示されます。  
   
 レポート サーバー プロジェクトを配置すると、レポート プロジェクトの共有データ ソースも配置されます。 すべてのレポートは、同じプロジェクト構成を使用して同じレポート サーバー、サーバー上の同じフォルダーというように配置されます。 異なるサーバーにレポートを配置するには、これらのレポートを 1 つずつパブリッシュするか、レポート サーバー プロジェクトに必要なレポートのみを含めます。 ソリューションには、複数のレポート サーバー プロジェクトを含めることができます。複数のプロジェクトを使用すると、異なる構成を使用してさまざまなプロジェクトを配置できるため、レポートの配置を簡単に管理できます。 
   
 ## <a name="to-publish-a-single-report"></a>1 つのレポートをパブリッシュするには  
   
-ソリューション エクスプローラーで、レポートを右クリックし、 **[配置]**をクリックします。 パブリッシュ処理の状態が、[出力] ウィンドウに表示されます。  
+ソリューション エクスプローラーで、レポートを右クリックし、 **[配置]** をクリックします。 パブリッシュ処理の状態が、[出力] ウィンドウに表示されます。  
   
  レポートをパブリッシュするときは、レポートが使用する共有データ ソースを配置する必要もあります。   
- プロジェクト内のすべてのレポートをパブリッシュしない場合、単一のレポートのみのパブリッシュを選択できます。 この操作を行うには、レポートを配置する構成 (たとえば、Release 構成など) を選択し、レポートを右クリックして、 **[配置]**をクリックします。  
+ プロジェクト内のすべてのレポートをパブリッシュしない場合、単一のレポートのみのパブリッシュを選択できます。 この操作を行うには、レポートを配置する構成 (たとえば、Release 構成など) を選択し、レポートを右クリックして、 **[配置]** をクリックします。  
   
- レポートが共有データ ソースを使用する場合は、共有データ ソースを配置する必要もあります。共有データ ソースを配置しないと、配置されたレポートが実行されません。 共有データ ソースを右クリックし、 **[配置]**をクリックします。  
+ レポートが共有データ ソースを使用する場合は、共有データ ソースを配置する必要もあります。共有データ ソースを配置しないと、配置されたレポートが実行されません。 共有データ ソースを右クリックし、 **[配置]** をクリックします。  
   
  レポート サーバーのターゲット サーバー URL を指定する必要があります。レポートおよび共有データ ソースが配置される既定のフォルダーは変更できます。  
 

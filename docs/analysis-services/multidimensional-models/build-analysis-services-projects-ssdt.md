@@ -1,34 +1,23 @@
 ---
-title: "Analysis Services プロジェクト (SSDT) のビルド |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services プロジェクト (SSDT) のビルド |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- projects [Analysis Services], building
-- Business Intelligence Development Studio, project building [Analysis Services]
-ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a6895d06c363cd63833cb27450faef33af13d1bb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services プロジェクトのビルド (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成方法は、Visual Studio を使用したプログラミング プロジェクトの作成方法とほとんど同じです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成方法は、Visual Studio を使用したプログラミング プロジェクトの作成方法とほとんど同じです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
   
 ## <a name="building-a-project"></a>プロジェクトの作成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、プロジェクト内のすべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース オブジェクトを作成するために必要なすべての ASSL コマンドが含まれた完全な XML ファイル セットを出力フォルダー内に作成します。 そのプロジェクトが既に作成済みであり、その有効な構成について増分配置が指定されている場合、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、配置されたオブジェクトの増分更新を実行する ASSL コマンドを含んでいる XML ファイルも作成します。 この XML ファイルは、プロジェクトの ..\obj\\< アクティブ構成\> フォルダーに書き込まれます。 プロジェクトを増分作成すると、大容量のプロジェクトやデータベースの配置および処理時間を短縮できます。  
@@ -54,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 |*Projectname*.configsettings|配置の際に使用された構成設定値 (データ ソースの接続文字列など) が格納されます。この設定値は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用して変更したりできます。|  
 |*Projectname*.deploymenttargets|配置の際に使用された配置先の設定 (サーバーおよびデータベース名) が格納されます。この設定は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用して変更したりできます。|  
 |*Projectname*.deploymentoptions|配置の際に使用されたさまざまなオプション設定 (ストレージ場所など) が格納されます。この設定は、直接変更したり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置ウィザードを使用したりして変更できます。|  
-|*Assemblyname*/*dllname.*dll|参照されたアセンブリ別の個別のフォルダー。各フォルダーには、アセンブリの DLL、すべての参照されたアセンブリ、出力デバッグ情報が記録された関連 .pdb ファイルが格納されます。|  
+|*Assemblyname*/*dllname.* dll|参照されたアセンブリ別の個別のフォルダー。各フォルダーには、アセンブリの DLL、すべての参照されたアセンブリ、出力デバッグ情報が記録された関連 .pdb ファイルが格納されます。|  
   
 |ファイル (obj フォルダー内)|Description|  
 |-----------------------------|-----------------|  

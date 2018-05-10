@@ -1,16 +1,15 @@
 ---
-title: "インジケーター (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: インジケーター (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -19,16 +18,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 314cee09dcbd20bef860ad8ca2e3c84809f878de
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f749eb41503046fcea5495af2267c5bb5046ff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
@@ -95,7 +93,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> テーブルおよびマトリックスでのインジケーターの使用  
  インジケーターをテーブルおよびマトリックスで使用する場合、単純な図形が理想的です。 インジケーターは、サイズが小さくても効果があります。 そのため、レポートの詳細やグループの行で使用できます。  
   
- 次の図は、売上を示すために方向インジケーター セット **[4 つの矢印 (色付き)]**を使用するテーブルを含むレポートを示しています。 レポートのインジケーター アイコンは、既定の赤、黄、緑の代わりに青の網掛けを使用するように構成されています。  
+ 次の図は、売上を示すために方向インジケーター セット **[4 つの矢印 (色付き)]** を使用するテーブルを含むレポートを示しています。 レポートのインジケーター アイコンは、既定の赤、黄、緑の代わりに青の網掛けを使用するように構成されています。  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   

@@ -3,15 +3,13 @@ title: データベース ミラーリング - セッションの確立 - Window
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
@@ -20,12 +18,11 @@ caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a3f3693577ca93afe7379f3924a67b844afdc5e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 882dbea7185d4e2aa5f14e7e4abd61ffcfbc0521
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>データベース ミラーリング - セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  サーバー インスタンスによりデータベースのミラーリングに使用される認証の形式は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリングのトランスポートには、Windows 認証と証明書ベースの認証の 2 種類のセキュリティを使用できます。 詳細については、「[データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)」を参照してください。  
   
-     各パートナー サーバーで、データベース ミラーリング用のエンドポイントが存在していることを確認します。 サポートするミラーリング セッションの数にかかわらず、サーバー インスタンスではデータベース ミラーリング エンドポイントを 1 つしか持つことができません。 このサーバー インスタンスをデータベース ミラーリング セッションでパートナー専用に使用する場合は、パートナーのロールをエンドポイントに割り当てることができます (ROLE**=**PARTNER)。 また、このサーバーを他のデータベース ミラーリング セッションのミラーリング監視サーバーとしても使用する場合は、エンドポイントのロールを ALL として割り当てます。  
+     各パートナー サーバーで、データベース ミラーリング用のエンドポイントが存在していることを確認します。 サポートするミラーリング セッションの数にかかわらず、サーバー インスタンスではデータベース ミラーリング エンドポイントを 1 つしか持つことができません。 このサーバー インスタンスをデータベース ミラーリング セッションでパートナー専用に使用する場合は、パートナーのロールをエンドポイントに割り当てることができます (ROLE**=** PARTNER)。 また、このサーバーを他のデータベース ミラーリング セッションのミラーリング監視サーバーとしても使用する場合は、エンドポイントのロールを ALL として割り当てます。  
   
      SET PARTNER ステートメントを実行するには、両方のパートナーのエンドポイントの STATE が、STARTED に設定されている必要があります。  
   
@@ -77,7 +74,7 @@ ms.lasthandoff: 04/16/2018
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   

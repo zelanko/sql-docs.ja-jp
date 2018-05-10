@@ -1,16 +1,15 @@
 ---
-title: "レポート履歴へのスナップショットの追加 (レポート マネージャー) | Microsoft Docs"
-ms.custom: 
+title: レポート履歴へのスナップショットの追加 (レポート マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], adding snapshots
 - historical data [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - adding snapshots to report history
 - report snapshots [Reporting Services], adding
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77af3abf53f81bf7dd85ec763981ef177f27e72c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3cf4f07b6070cc0cc0dc364292a285c51f9e2787
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート スナップショットは、特定の時点で取得されたレイアウト情報およびクエリ結果を含むレポートです。 レポートを選択したときに最新のクエリ結果を取得する要求時レポートとは異なり、レポート スナップショットはスケジュールに従って処理され、その後、レポート サーバーに保存されます。 表示するレポート スナップショットを選択すると、レポート サーバーによってレポート サーバー データベースに格納されたレポートが取得され、スナップショット作成時点のレポートで最新だったデータとレイアウトを表示します。  
@@ -38,14 +36,14 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、履歴を表示するアイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
-2.  ドロップダウン メニューの **[レポート履歴の表示]**をクリックします。  
+2.  ドロップダウン メニューの **[レポート履歴の表示]** をクリックします。  
   
-3.  **[新しいスナップショット]**をクリックします。 **[実行時]** 列に新しいスナップショットが作成されます。  
+3.  **[新しいスナップショット]** をクリックします。 **[実行時]** 列に新しいスナップショットが作成されます。  
   
     > [!NOTE]  
-    >  レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]**に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../../reporting-services/reports/limit-report-history-report-manager.md)をクリックします。  
+    >  レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../../reporting-services/reports/limit-report-history-report-manager.md)をクリックします。  
   
-4.  **[適用]**をクリックします。  
+4.  **[適用]** をクリックします。  
   
 ### <a name="to-automatically-add-all-snapshots-to-report-history"></a>レポート履歴にすべてのスナップショットを自動で追加するには  
   
@@ -53,29 +51,29 @@ ms.lasthandoff: 01/09/2018
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、履歴を表示するアイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
-3.  ドロップダウン メニューの **[管理]**をクリックします。  
+3.  ドロップダウン メニューの **[管理]** をクリックします。  
   
-4.  **[スナップショット オプション]**をクリックします。  
+4.  **[スナップショット オプション]** をクリックします。  
   
-5.  **[すべてのレポート実行スナップショットを履歴に格納する]**チェック ボックスをオンにします。  
+5.  **[すべてのレポート実行スナップショットを履歴に格納する]** チェック ボックスをオンにします。  
   
-6.  **[適用]**をクリックします。  
+6.  **[適用]** をクリックします。  
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>スケジュールを基にスナップショットを自動でレポート履歴に追加するには  
   
 1.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、履歴を表示するアイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
-2.  ドロップダウン メニューの **[管理]**をクリックします。  
+2.  ドロップダウン メニューの **[管理]** をクリックします。  
   
-3.  **[スナップショット オプション]**をクリックします。  
+3.  **[スナップショット オプション]** をクリックします。  
   
-4.  **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]**チェック ボックスをオンにします。 次のいずれかを実行します。  
+4.  **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]** チェック ボックスをオンにします。 次のいずれかを実行します。  
   
-    -   **[レポート固有のスケジュール]**をクリックします。 スケジュールの詳細を入力し、スケジュールの開始日と終了日を選択して、 **[OK]**をクリックします。  
+    -   **[レポート固有のスケジュール]** をクリックします。 スケジュールの詳細を入力し、スケジュールの開始日と終了日を選択して、 **[OK]** をクリックします。  
   
-    -   **[共有スケジュール]**を選択します。 一覧から適切なスケジュールを選択します。  
+    -   **[共有スケジュール]** を選択します。 一覧から適切なスケジュールを選択します。  
   
-5.  **[適用]**をクリックします。  
+5.  **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポートの実行プロパティを構成する (レポート マネージャー)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   

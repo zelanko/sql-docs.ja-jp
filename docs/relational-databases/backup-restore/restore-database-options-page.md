@@ -3,15 +3,12 @@ title: データベースの復元 ([オプション] ページ) | Microsoft Doc
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
@@ -19,12 +16,11 @@ caps.latest.revision: 68
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 28b95a2a33bde272ca34132f5b2cf7e18bcc0eb1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b042bc9b6088f988b96715ba24847ee23d681ccd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-database-options-page"></a>[データベースの復元] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.lasthandoff: 04/16/2018
  復元操作の動作の特徴を変更するには、 **[復元オプション]** パネルのオプションを使用します。  
   
  **[既存のデータベースを上書きする [WITH REPLACE]]**  
- データベースの名前が、 **[データベースの復元]**ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページにある **[復元先]** フィールドで指定した名前と同じ場合は、そのデータベースのファイルが上書きされます。 別のデータベースのバックアップを既存のデータベース名に復元する場合でも、既存のデータベースのファイルが上書きされます。 このオプションを選択することは、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で REPLACE オプションを使用することと同じです。  
+ データベースの名前が、 **[データベースの復元]** ダイアログ ボックスの [[全般]](../../relational-databases/backup-restore/restore-database-general-page.md) ページにある **[復元先]** フィールドで指定した名前と同じ場合は、そのデータベースのファイルが上書きされます。 別のデータベースのバックアップを既存のデータベース名に復元する場合でも、既存のデータベースのファイルが上書きされます。 このオプションを選択することは、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で REPLACE オプションを使用することと同じです。  
   
 > [!CAUTION]  
 >  このオプションは、十分な検討を行った場合に限り使用してください。 詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
@@ -68,7 +64,7 @@ ms.lasthandoff: 04/16/2018
  復元操作後にデータベースの状態を確認するには、 **[復旧状態]** パネルのいずれかのオプションを選択する必要があります。  
   
  **RESTORE WITH RECOVERY**  
- **[全般]**ページの [[復元するバックアップ セット]](../../relational-databases/backup-restore/restore-database-general-page.md)グリッドでチェック ボックスがオンになっている最後のバックアップを復元した後に、データベースを復旧します。 これは既定のオプションで、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH RECOVERY を指定することと同じです。  
+ **[全般]** ページの [[復元するバックアップ セット]](../../relational-databases/backup-restore/restore-database-general-page.md)グリッドでチェック ボックスがオンになっている最後のバックアップを復元した後に、データベースを復旧します。 これは既定のオプションで、 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH RECOVERY を指定することと同じです。  
   
 > [!NOTE]  
 >  完全復旧モデルまたは一括ログ復旧モデルでは、すべてのログ ファイルを復元する場合にのみこのオプションを選択してください。  
@@ -110,9 +106,9 @@ ms.lasthandoff: 04/16/2018
  **[各バックアップを復元する前に確認する]**  
  各バックアップが復元された後、復元シーケンスを続行するかどうかを確認する **[復元の続行]** ダイアログ ボックスを表示することを指定します。 このダイアログ ボックスには、次のメディア セットの名前 (既知の場合) および次のバックアップ セットの名前と説明が表示されます。  
   
- このオプションを使用すると、バックアップの復元後に復元シーケンスを一時停止できます。 メディア セットごとにテープを交換する必要がある場合 (サーバーにテープ デバイスが 1 台しかない場合など) に特に便利です。 続行する準備ができたら、 **[OK]**をクリックします。  
+ このオプションを使用すると、バックアップの復元後に復元シーケンスを一時停止できます。 メディア セットごとにテープを交換する必要がある場合 (サーバーにテープ デバイスが 1 台しかない場合など) に特に便利です。 続行する準備ができたら、 **[OK]** をクリックします。  
   
- **[いいえ]**をクリックすると、復元シーケンスを中断できます。 これにより、データベースが復元状態のままになります。 その後、都合のよいときに、 **[復元の続行]** ダイアログ ボックスに表示されている次のバックアップから再開することで、復元シーケンスを続行できます。 次のバックアップを復元する方法は、そのバックアップに含まれているのがデータかトランザクション ログかによって、次のように異なります。  
+ **[いいえ]** をクリックすると、復元シーケンスを中断できます。 これにより、データベースが復元状態のままになります。 その後、都合のよいときに、 **[復元の続行]** ダイアログ ボックスに表示されている次のバックアップから再開することで、復元シーケンスを続行できます。 次のバックアップを復元する方法は、そのバックアップに含まれているのがデータかトランザクション ログかによって、次のように異なります。  
   
 -   次のバックアップが完全バックアップまたは差分バックアップの場合は、 **[データベースの復元]** タスクを再度使用します。  
   

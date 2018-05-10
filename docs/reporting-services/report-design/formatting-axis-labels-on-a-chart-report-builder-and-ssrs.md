@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
 - sql13.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -33,17 +32,16 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c5fd2ef17552e0f27fd2206b4a14acdb1e1231bd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
   
- 軸の書式設定を行うには、 **[軸のプロパティ]** ダイアログ ボックスを使用するか、[プロパティ] ペインを使用します。 書式を設定する軸を右クリックして、 **[軸のプロパティ]** をクリックし、軸のテキスト、数値と日付の形式、目盛りと補助目盛り、ラベルの自動調整、および軸線の幅、色、スタイルに関する値を変更します。 軸のタイトルの値を変更するには、軸のタイトルを右クリックして、 **[軸のタイトルのプロパティ]**をクリックします。  
+ 軸の書式設定を行うには、 **[軸のプロパティ]** ダイアログ ボックスを使用するか、[プロパティ] ペインを使用します。 書式を設定する軸を右クリックして、 **[軸のプロパティ]** をクリックし、軸のテキスト、数値と日付の形式、目盛りと補助目盛り、ラベルの自動調整、および軸線の幅、色、スタイルに関する値を変更します。 軸のタイトルの値を変更するには、軸のタイトルを右クリックして、 **[軸のタイトルのプロパティ]** をクリックします。  
   
  軸ラベルによって、グラフのグリッド線の間隔が指定されます。 既定では、テキストが重ならないようラベルを軸上で適切に配置する方法を決定するためのアルゴリズムが使用されます。  
   

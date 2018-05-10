@@ -1,35 +1,23 @@
 ---
-title: "マイニング モデルのテストに使用する列の選択 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: マイニング モデルのテストに使用する列の選択 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], predictable mining columns
-- Mining Accuracy Chart [Analysis Services], columns
-- predictable mining columns [Analysis Services]
-ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea1fbd3d7522c08b025d6c8fb6c4595e6fe4e63e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 30896ea2f3dd1ec8fbb7f07087552e17612ed3ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>マイニング モデルのテストに使用する列の選択
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-マイニング モデルの精度を測定する前に、評価するのがどの結果なのかを決定する必要があります。 多くのデータ マイニング モデルでは、モデルの作成時に、予測可能な属性として使用する少なくとも 1 つの列を選択する必要があります。 そのため、モデルの精度をテストするときに、通常はその属性をテスト対象として選択する必要があります。  
+  マイニング モデルの精度を測定する前に、評価するのがどの結果なのかを決定する必要があります。 多くのデータ マイニング モデルでは、モデルの作成時に、予測可能な属性として使用する少なくとも 1 つの列を選択する必要があります。 そのため、モデルの精度をテストするときに、通常はその属性をテスト対象として選択する必要があります。  
   
  次の一覧では、テストに使用する予測可能な属性を選択する際のいくつかの追加の考慮事項について説明します。  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 02/15/2018
   
 -   クラスター モデルなど、他の種類のマイニング モデルには、予測可能な属性がなくてもかまいません。 予測可能な属性がない場合、クラスター モデルはテストできません。  
   
--   散布図を作成するか、回帰モデルの精度を測定するには、連続する予測可能な属性を結果として選択する必要があります。 その場合、対象の値は指定できません。 散布図以外のものを作成する場合は、基になるマイニング構造列のコンテンツの種類も、 **[不連続]** または **[分離]**である必要があります。  
+-   散布図を作成するか、回帰モデルの精度を測定するには、連続する予測可能な属性を結果として選択する必要があります。 その場合、対象の値は指定できません。 散布図以外のものを作成する場合は、基になるマイニング構造列のコンテンツの種類も、 **[不連続]** または **[分離]** である必要があります。  
   
 -   不連続属性を予測可能な結果として選択した場合は、対象の値を指定することも、 **[予測値]** フィールドを空のままにすることもできます。 **予測値**を含める場合、グラフは対象の値の予測でのモデルの効果だけを測定します。 対象となる結果を指定しない場合、モデルはすべての結果の予測で精度が測定されます。  
   
@@ -45,7 +33,7 @@ ms.lasthandoff: 02/15/2018
   
 -   クロス検証レポートを作成する場合は、同じ予測可能な属性を持つすべてのモデルが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に分析されます。  
   
--   オプションの **[予測列と値の同期]**が選択されている場合は、同じ名前および一致するデータ型を持つ予測可能列が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に選択されます。 列がこれらの基準を満たさない場合は、このオプションをオフにして、手動で予測可能列を選択できます。 モデルとは異なる列を持つ外部データ セットのモデルをテストしている場合は、このように操作しなければならないことがあります。 ただし、不適切なデータ型の列を選択すると、エラーが発生するか、正しい結果を得ることができません。  
+-   オプションの **[予測列と値の同期]** が選択されている場合は、同じ名前および一致するデータ型を持つ予測可能列が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって自動的に選択されます。 列がこれらの基準を満たさない場合は、このオプションをオフにして、手動で予測可能列を選択できます。 モデルとは異なる列を持つ外部データ セットのモデルをテストしている場合は、このように操作しなければならないことがあります。 ただし、不適切なデータ型の列を選択すると、エラーが発生するか、正しい結果を得ることができません。  
   
 ### <a name="specify-the-outcome-to-predict"></a>予測する結果の指定  
   
@@ -55,9 +43,9 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[入力の選択]** タブを選択します。  
   
-4.  **[入力の選択]** タブの **[予測可能列名]**で、グラフに含めるモデルごとに予測可能列を選択します。  
+4.  **[入力の選択]** タブの **[予測可能列名]** で、グラフに含めるモデルごとに予測可能列を選択します。  
   
-     **[予測可能列名]** ボックスに表示されるマイニング モデル列は、使用法が **[予測]** または **[予測のみ]**に設定されている列だけです。  
+     **[予測可能列名]** ボックスに表示されるマイニング モデル列は、使用法が **[予測]** または **[予測のみ]** に設定されている列だけです。  
   
 5.  モデルのリフト値を指定する場合は、 **[予測値]** の一覧から、測定する特定の結果値を選択する必要があります。  
   

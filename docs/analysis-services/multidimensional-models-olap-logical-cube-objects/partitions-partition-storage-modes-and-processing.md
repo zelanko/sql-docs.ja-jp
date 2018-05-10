@@ -1,44 +1,23 @@
 ---
-title: "パーティションのストレージ モードと処理 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: パーティションのストレージ モードと処理 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>パーティションのパーティションのストレージ モードと処理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-パーティションのストレージ モードは、クエリと処理のパフォーマンス、ストレージの要件、パーティションおよびその親メジャー グループと親キューブのストレージ場所に影響します。 また、ストレージ モードの選択内容は、処理の選択内容にも影響します。  
+  パーティションのストレージ モードは、クエリと処理のパフォーマンス、ストレージの要件、パーティションおよびその親メジャー グループと親キューブのストレージ場所に影響します。 また、ストレージ モードの選択内容は、処理の選択内容にも影響します。  
   
  パーティションでは、次の 3 つの基本的なストレージ モードのうちいずれかを使用できます。  
   
@@ -53,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="molap"></a>[MOLAP]  
  MOLAP ストレージ モードを使用した場合は、パーティションの処理時、パーティションの集計とそのソース データのコピーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元構造に格納されます。 この MOLAP 構造は、クエリのパフォーマンスを最大限に高めるために高度に最適化されています。 ストレージの場所は、パーティションが定義されているコンピューター上、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行している別のコンピューター上に配置できます。 ソース データのコピーは多次元構造に存在するため、パーティションのソース データにアクセスしないでクエリを解決できます。 集計を使用すればクエリの応答時間を大幅に削減できます。 パーティションの MOLAP 構造の現在のデータは、最新のパーティションの処理によって決まります。  
   
- ソース データの変更に伴い、MOLAP ストレージ内のオブジェクトを定期的に処理して、その変更内容を組み込み、ユーザーが使用できるようにする必要があります。 処理することで、MOLAP 構造のデータは完全または段階的に更新されます。 ある処理から次の処理までの間に待機時間が発生し、その間は OLAP オブジェクトのデータがソース データと一致しない場合があります。 MOLAP ストレージのオブジェクトは、パーティションまたはキューブをオフラインにすることなく、段階的または完全に更新できます。 ただし、キューブをオフラインにして、OLAP オブジェクトへの特定の構造の変更を処理する必要がある場合があります。 MOLAP ストレージの更新に必要なダウンタイムを最小限に抑えるには、ステージング サーバーでキューブの更新と処理を行い、データベースの同期化を使用して、処理したオブジェクトを実稼働サーバーにコピーします。 また、プロアクティブ キャッシュを使用して、MOLAP ストレージのパフォーマンス面の利点を維持しながら、待機時間を最小限に抑えて可用性を最大限に高めることもできます。 詳細については、次を参照してください。[プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)、 [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)、および[多次元モデル &#40; の処理Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ ソース データの変更に伴い、MOLAP ストレージ内のオブジェクトを定期的に処理して、その変更内容を組み込み、ユーザーが使用できるようにする必要があります。 処理することで、MOLAP 構造のデータは完全または段階的に更新されます。 ある処理から次の処理までの間に待機時間が発生し、その間は OLAP オブジェクトのデータがソース データと一致しない場合があります。 MOLAP ストレージのオブジェクトは、パーティションまたはキューブをオフラインにすることなく、段階的または完全に更新できます。 ただし、キューブをオフラインにして、OLAP オブジェクトへの特定の構造の変更を処理する必要がある場合があります。 MOLAP ストレージの更新に必要なダウンタイムを最小限に抑えるには、ステージング サーバーでキューブの更新と処理を行い、データベースの同期化を使用して、処理したオブジェクトを実稼働サーバーにコピーします。 また、プロアクティブ キャッシュを使用して、MOLAP ストレージのパフォーマンス面の利点を維持しながら、待機時間を最小限に抑えて可用性を最大限に高めることもできます。 詳細については、次を参照してください[プロアクティブ キャッシュ&#40;パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)、 [Analysis Services データベースの同期](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)、および[多次元モデルの処理&#40;。Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)です。  
   
 ## <a name="rolap"></a>[ROLAP]  
  ROLAP ストレージ モードでは、パーティションの集計はパーティションのデータ ソース内で指定されたリレーショナル データベースのインデックス付きビューに格納されます。 MOLAP ストレージ モードとは異なり、ROLAP ではソース データのコピーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ フォルダーに格納されません。 代わりに、クエリ キャッシュから結果を取得できない場合は、クエリに応答するためにデータ ソースのインデックス付きビューへのアクセスが行われます。 通常、ROLAP ストレージ モードでは、MOLAP または HOLAP ストレージ モードよりもクエリ応答が遅くなります。 一般的に処理時間も遅くなります。 しかし、ROLAP によってユーザーはリアルタイムでデータを表示し、履歴だけのデータなど、クエリの頻度が低い大きなデータセットを使用して作業するときにストレージ領域を節約することができます。  
@@ -93,7 +72,7 @@ ms.lasthandoff: 02/15/2018
  HOLAP として格納されたパーティションのサイズは、ソース データを含まないため、同程度の MOLAP パーティションより小さく、要約データにアクセスするクエリの応答時間は ROLAP パーティションより高速です。 一般的に、要約データが大量のソース データで構成され、クエリに高速な応答が要求されるキューブのパーティションには、HOLAP ストレージ モードが適しています。 ただし、中央値の計算のようにリーフ レベル データを処理する必要のあるクエリをユーザーが生成する場合は、MOLAP の方が適しています。  
   
 ## <a name="see-also"></a>参照  
- [プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [プロアクティブ キャッシュ (&) #40 です。パーティション"&"#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Analysis Services データベースを同期します。](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   

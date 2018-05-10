@@ -1,31 +1,23 @@
 ---
-title: "インストール後の構成 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining - "setup-install"
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 
-author: Minewiskan
+title: インストール後の構成 (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6993aa4cea9c21b41e71048497cf524335b72366
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>インストール後の構成 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services のインストール後、サーバーを一般的な用途で使用できるように動作させるためには、追加の構成が必要です。 このセクションでは、インストールを完了するための追加の作業について説明します。 接続要件によっては、認証も構成する必要がある場合があります (「 [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)」を参照)。  
+  Analysis Services のインストール後、サーバーを一般的な用途で使用できるように動作させるためには、追加の構成が必要です。 このセクションでは、インストールを完了するための追加の作業について説明します。 接続要件によっては、認証も構成する必要がある場合があります (「 [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)」を参照)。  
   
  後で、データベースの配置の準備ができたら、追加の作業が必要になります。 つまり、データベースのロール メンバーシップをデータへのユーザー アクセスを許可するように構成し、データベースのバックアップおよび復旧の方法を設計すると共に、データを定期的に更新するためにスケジュールされた処理ワークロードが必要であるかどうかを判断することが求められます。 データベースの配置と管理の詳細については、これらのリンクで参照できます:[多次元モデル データベース](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)と[表形式モデル データベース](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)です。  
   

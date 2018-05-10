@@ -1,32 +1,23 @@
 ---
 title: 多対多リレーションシップと多対多リレーションシップのプロパティの定義 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- many-to-many relationships [Analysis Services]
-ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5377557da99938446a0746e0183e2adcf321dab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f0a8ee2b6ee9bb7d53234b6b21974978543bc4c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]このトピックでは、ときに使用して、それらを作成する方法を含め、Analysis Services の多対多ディメンションについて説明します。  
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多リレーションシップと多対多リレーションシップのプロパティの定義
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
   
 ## <a name="introduction"></a>概要  
  Analysis Services は、多対多ディメンションをサポートし、従来のスター スキーマで記述できる以上に複雑な分析に対応できます。 従来のスター スキーマでは、すべてのディメンションがファクト テーブル内で一対多のリレーションシップを持ちます。 各ファクトは 1 つのディメンション メンバーと結合しています。1 つのディメンション メンバーは複数のファクトに関連付けられます。  
@@ -89,7 +80,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="step-2-create-dimensions-and-measure-groups"></a>手順 2: ディメンションとメジャー グループの作成  
   
-1.  SQL Server データ ツールの多次元プロジェクトで、 **[ディメンション]** を右クリックし、 **[新しいディメンション]**をクリックします。  
+1.  SQL Server データ ツールの多次元プロジェクトで、 **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。  
   
 2.  既存のテーブル **DimSalesReason**に基づいて新しいディメンションを作成します。 ソースを指定するときに、すべての既定値をそのまま使用します。  
   
@@ -111,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
      ![ディメンションの名前変更を示すウィザード ページ](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "ディメンションの名前変更を示すウィザード ページ")  
   
-7.  **[キューブ]** を右クリックし、 **[新しいキューブ]**をクリックします。  
+7.  **[キューブ]** を右クリックし、 **[新しいキューブ]** をクリックします。  
   
 8.  メジャー グループ テーブルで、 **FactInternetSales** と **FactInternetSalesReason**を選択します。  
   
@@ -125,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
      [新しいディメンションの選択] ページで、 **Fact Internet Sales Dimension**に対応する新しいディメンションを作成するように要求されます。 このディメンションは必要ないため、リストからこのディメンションをクリアできます。  
   
-11. キューブに名前を付け、 **[完了]**をクリックします。  
+11. キューブに名前を付け、 **[完了]** をクリックします。  
   
 #### <a name="step-3-define-many-to-many-relationship"></a>手順 3: 多対多リレーションシップの定義  
   
@@ -190,9 +181,9 @@ ms.lasthandoff: 01/08/2018
  [チュートリアル : SQL Server Analysis Services を対象とする多対多ディメンションの例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>参照  
- [ディメンション リレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [ディメンションのリレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトをインストールします。](../../analysis-services/install-sample-data-and-projects.md)   
- [Analysis Services プロジェクト &#40; を展開します。SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Analysis Services プロジェクト & #40; を展開します。SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多次元モデルのパースペクティブ](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

@@ -1,31 +1,23 @@
 ---
-title: "データ マイニング プロジェクト |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング プロジェクト |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e01ea2027e95d3bb6e2635e48488df6b471bf238
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
+  データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
   
  ここでは、データ マイニング プロジェクトを理解し、作成するために必要な基本的な情報を提供します。  
   
@@ -204,7 +196,7 @@ ms.lasthandoff: 02/23/2018
   
   
 ##  <a name="bkmk_API"></a> データ マイニング オブジェクトへのプログラムによるアクセス  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、データ マイニング プロジェクトおよびその中のオブジェクトをプログラムで操作するためのいくつかのツールが提供されています。 DMX 言語に用意されているステートメントを使用して、データ ソースおよびデータ ソース ビューを作成することや、データ マイニング構造およびモデルを作成、トレーニング、および使用することができます。 詳細については、「[データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データ マイニング プロジェクトおよびその中のオブジェクトをプログラムで操作に使用できるいくつかのツールを提供します。 DMX 言語に用意されているステートメントを使用して、データ ソースおよびデータ ソース ビューを作成することや、データ マイニング構造およびモデルを作成、トレーニング、および使用することができます。 詳細については、「[データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)」を参照してください。  
   
  また、これらの作業は、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用して実行することもできます。 詳細については、「 [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)」を参照してください。  
   
@@ -215,7 +207,7 @@ ms.lasthandoff: 02/23/2018
 |処理手順|トピック|  
 |-----------|------------|  
 |マイニング構造列を操作する方法について説明します。|[リレーショナル マイニング構造を作成します。](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[マイニング モデル構造体 &#40; を追加します。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[マイニング モデル構造体 & #40; を追加します。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |マイニング モデルを作成するアルゴリズムのカスタマイズに役立つリソースへのリンクを提供します。|[マイニング モデルおよび構造体をカスタマイズします。](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |各マイニング モデル ビューアーに関する情報へのリンクを提供します。|[データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |リフト チャート、利益チャート、または分類マトリックスを作成する方法、またはマイニング構造をテストする方法について説明します。|[テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
@@ -224,7 +216,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
- [SQL Server Data Tools &#40; を使用して多次元モデルを作成します。SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [SQL Server Data Tools & #40; を使用して多次元モデルを作成します。SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [ワークスペース データベース](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

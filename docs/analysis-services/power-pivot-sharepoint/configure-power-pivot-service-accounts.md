@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot サービス アカウントの構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot サービス アカウントの構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c4e46bb4981da0f4c68e9f6ce1d00b0b02d4908c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot サービス アカウントの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** サービスは、アプリケーション サーバー上での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** サービスは、アプリケーション サーバー上での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
   
  SharePoint ファームのアプリケーション プール ID で実行される共有 Web サービスである [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション用に、アカウントをもう 1 つ指定する必要があります。 このアカウントは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]構成ツールまたは PowerShell を使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インストールを構成するときに指定します。  
   
@@ -51,51 +43,51 @@ ms.lasthandoff: 02/15/2018
   
 ##  <a name="bkmk_passwordssas"></a> SQL Server Analysis Services (Power Pivot) インスタンスの期限切れパスワードの更新  
   
-1.  [スタート] ボタンをクリックし、 **[管理ツール]**、 **[サービス]**の順にクリックします。 **[SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])]** をダブルクリックします。 **[ログオン]**をクリックし、アカウントの新しいパスワードを入力します。  
+1.  [スタート] ボタンをクリックし、 **[管理ツール]**、 **[サービス]** の順にクリックします。 **[SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])]** をダブルクリックします。 **[ログオン]** をクリックし、アカウントの新しいパスワードを入力します。  
   
-2.  サーバーの全体管理で、[セキュリティ] セクションの **[マネージ アカウントの構成]**をクリックします。  
+2.  サーバーの全体管理で、[セキュリティ] セクションの **[マネージ アカウントの構成]** をクリックします。  
   
 3.  **[編集]** をクリックして指定のアカウントを変更します。  
   
-4.  **[今すぐパスワードを変更]**をクリックします。  
+4.  **[今すぐパスワードを変更]** をクリックします。  
   
-5.  **[アカウント パスワードを新しい値に設定する]**をクリックします。 マネージ アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
+5.  **[アカウント パスワードを新しい値に設定する]** をクリックします。 マネージ アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
   
 ##  <a name="bkmk_passwordapp"></a> Power Pivot サービス アプリケーションの期限切れパスワードの更新  
   
-1.  サーバーの全体管理で、[セキュリティ] セクションの **[マネージ アカウントの構成]**をクリックします。  
+1.  サーバーの全体管理で、[セキュリティ] セクションの **[マネージ アカウントの構成]** をクリックします。  
   
 2.  **[編集]** をクリックして指定のアカウントを変更します。  
   
-3.  **[今すぐパスワードを変更]**をクリックします。  
+3.  **[今すぐパスワードを変更]** をクリックします。  
   
-4.  **[アカウント パスワードを新しい値に設定する]**をクリックします。 マネージ アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
+4.  **[アカウント パスワードを新しい値に設定する]** をクリックします。 マネージ アカウントで実行されるすべてのサービスで、更新された資格情報が使用されます。  
   
 ##  <a name="bkmk_newacct"></a> 各サービスの実行に使用するアカウントの変更  
   
-1.  サーバーの全体管理で、[セキュリティ] セクションの **[サービス アカウントの構成]**をクリックします。  
+1.  サーバーの全体管理で、[セキュリティ] セクションの **[サービス アカウントの構成]** をクリックします。  
   
 2.  **[Windows サービス - SQL Server Analysis Services]** を選択して、Analysis Services サービス アカウントを変更します。  
   
-3.  **[このサービスのアカウントを選択する]**で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
+3.  **[このサービスのアカウントを選択する]** で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
 4.  **[サービス アプリケーション プール - SharePoint Web サービスのシステム]** を選択して、既定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションのアプリケーション プール ID を変更します。 インストールの構成によっては、SharePoint サービス用に作成された既存のサービス アプリケーション プールでサービスが実行されている場合があります。 既定では、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールによって、サービスが**既定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション)** として登録されます。  
   
      サービスが SharePoint 管理者によって手動で構成された場合、サービスにはほとんどの場合に自身のサービス アプリケーション プールがあります。  
   
-5.  **[このサービスのアカウントを選択する]**で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
+5.  **[このサービスのアカウントを選択する]** で、既存のマネージ アカウントを選択するか、新規に作成します。 このアカウントは、ドメイン ユーザー アカウントであることが必要です。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ##  <a name="bkmk_appPool"></a> Power Pivot サービス アプリケーションのアプリケーション プールの作成または変更  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを選択します。ただし、クリックはしないでください。 アプリケーション名をクリックすると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードが開きます。このダッシュボードには、アプリケーション プールを指定するプロパティ ページへのリンクはありません。  行の空白部分をクリックするか、種類名をクリックすると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを選択できます。  
   
 3.  リボンの **[プロパティ]** をクリックします。  
   
-4.  **[新しいアプリケーション プールの作成]**をクリックします。 アプリケーション プールの名前を指定し、その ID のマネージ アカウントを指定します。  
+4.  **[新しいアプリケーション プールの作成]** をクリックします。 アプリケーション プールの名前を指定し、その ID のマネージ アカウントを指定します。  
   
 ##  <a name="requirements"></a> アカウント要件と権限  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置を計画するときには、次のサービス アカウントについて計画する必要があります。  
@@ -125,11 +117,11 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="updatemanually"></a> トラブルシューティング: 管理権限の手動による付与  
  資格情報を更新するユーザーがコンピューターのロカール管理者でない場合、管理者権限は更新されません。 この場合は、管理者権限を手動で付与できます。 最も簡単な方法でこの操作を行うには、サーバーの全体管理で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成タイマー ジョブを実行します。 この方法を使用すると、ファーム内のすべての [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの権限をリセットできます。 この方法は、SharePoint タイマー ジョブがファームの管理者およびコンピューターのローカル管理者の両方として実行されている場合にのみ使用できる点に注意してください。  
   
-1.  [監視] で、 **[ジョブ定義の確認]**をクリックします。  
+1.  [監視] で、 **[ジョブ定義の確認]** をクリックします。  
   
 2.  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成タイマー ジョブ**をクリックします。  
   
-3.  **[今すぐ実行]**をクリックします。  
+3.  **[今すぐ実行]** をクリックします。  
   
  最後の手段としては、Analysis Services システム管理権限を付与することで適切なアクセス許可を確認できます、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]サービス アプリケーション、および、具体的には、サービス アプリケーション id を SQLServerMSASUser$を追加\<servername > $PowerPivot Windows セキュリティ グループです。 SharePoint ファームに統合された各 Analysis Services インスタンスに対してこれらの手順を繰り返す必要があります。  
   
@@ -137,52 +129,52 @@ ms.lasthandoff: 02/15/2018
   
 1.  SQL Server Management Studio でとして Analysis Services インスタンスに接続\<サーバー名 > \POWERPIVOT です。  
   
-2.  サーバー名を右クリックし、 **[プロパティ]**をクリックします。  
+2.  サーバー名を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[セキュリティ]**をクリックします。  
+3.  **[セキュリティ]** をクリックします。  
   
-4.  **[追加]**をクリックします。  
+4.  **[追加]** をクリックします。  
   
-5.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールに使用するアカウントの名前を入力し、 **[OK]**をクリックします。  
+5.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールに使用するアカウントの名前を入力し、 **[OK]** をクリックします。  
   
-6.  [管理ツール] で、 **[コンピューターの管理]**をクリックします。  
+6.  [管理ツール] で、 **[コンピューターの管理]** をクリックします。  
   
-7.  **[ローカル ユーザーとグループ]**を開きます。  
+7.  **[ローカル ユーザーとグループ]** を開きます。  
   
-8.  **[グループ]**を開きます。  
+8.  **[グループ]** を開きます。  
   
 9. SQLServerMSASUser$ をダブルクリック\<servername > $PowerPivot です。  
   
-10. **[追加]**をクリックします。  
+10. **[追加]** をクリックします。  
   
-11. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールに使用するアカウントの名前を入力し、 **[OK]**をクリックします。  
+11. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールに使用するアカウントの名前を入力し、 **[OK]** をクリックします。  
   
 ##  <a name="expired"></a> トラブルシューティング: サーバーの全体管理または SharePoint Foundation Web アプリケーション サービスのパスワードの期限切れによる HTTP 503 エラーの解決  
  アカウントのリセットまたはパスワードの期限切れが原因で、サーバーの全体管理サービスまたは SharePoint Foundation Web アプリケーション サービスが停止する場合は、SharePoint サーバーの全体管理あるいは SharePoint サイトを開こうとすると、"サービスを利用できません" という HTTP 503 エラー メッセージが表示されます。 サーバーをオンラインに戻すには、次の手順を実行します。 サーバーの全体管理を使用できる場合は、続行して期限切れのアカウント情報を更新できます。  
   
-1.  [管理ツール] で、 **[インターネット インフォメーション サービス マネージャー]**をクリックします。  
+1.  [管理ツール] で、 **[インターネット インフォメーション サービス マネージャー]** をクリックします。  
   
 2.  サイトまたはサーバーの全体管理アプリケーション プールの ID が、期限切れのパスワードを持つドメイン ユーザー アカウントである場合は、次の手順を実行します。  
   
-    1.  アプリケーション プール名を右クリックし、 **[詳細設定]**をクリックします。  
+    1.  アプリケーション プール名を右クリックし、 **[詳細設定]** をクリックします。  
   
     2.  **[ID]** を選択し、[…] (省略記号) ボタンをクリックして、[アプリケーション プール ID] ダイアログ ボックスを開きます。  
   
-    3.  **[設定]**をクリックします。  
+    3.  **[設定]** をクリックします。  
   
     4.  ユーザー名とパスワードを入力します。  
   
 3.  IISRESET を実行します。 この操作を行うには、管理者コマンド プロンプトを開き、コマンドで「 **iisreset** 」と入力します。  
   
-4.  SharePoint サーバーの全体管理で、[セキュリティ] の **[マネージ アカウントの構成]**をクリックします。  
+4.  SharePoint サーバーの全体管理で、[セキュリティ] の **[マネージ アカウントの構成]** をクリックします。  
   
 5.  **[編集]** をクリックして、期限切れのパスワードを持つマネージ アカウントの情報を更新します。  
   
-6.  **[今すぐパスワードを変更]**をクリックします。  
+6.  **[今すぐパスワードを変更]** をクリックします。  
   
-7.  **[既存のパスワードを使用]**をクリックします。  
+7.  **[既存のパスワードを使用]** をクリックします。  
   
-8.  パスワードを入力し、 **[OK]**をクリックします。  
+8.  パスワードを入力し、 **[OK]** をクリックします。  
   
  Reporting Services がインストールされている場合は、Reporting Services 構成マネージャーを使用して、レポート サーバーのパスワードとレポート サーバー データベースへの接続に使用するパスワードを更新します。 詳細については、「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」を参照してください。  
   

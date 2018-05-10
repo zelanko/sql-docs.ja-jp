@@ -1,38 +1,19 @@
 ---
-title: "Analysis Services データベースのバックアップと復元 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services データベースのバックアップと復元 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.Restore.f1
-- sql13.asvs.ssmsimbi.Backup.f1
-helpviewer_keywords:
-- backing up databases [Analysis Services]
-- encryption [Analysis Services]
-- databases [Analysis Services], restoring
-- cryptography [Analysis Services]
-- databases [Analysis Services], backing up
-- restoring databases [Analysis Services]
-- recovery [Analysis Services]
-ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d744fbed12ab9231e044d879db2e168ab23fa22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +55,7 @@ ms.lasthandoff: 02/15/2018
  管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「 [Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 」と「 [Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]は SharePoint 環境で [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルの読み込みとクエリを実行する際に使用され、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、の読み込みとクエリを実行するために使用[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]データ モデルを SharePoint 環境では、SharePoint コンテンツ データベースからそのモデルを読み込みます。 これらのコンテンツ データベースはリレーショナル データベースであり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース エンジン上で動作します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ モデルについては、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のバックアップと復元の方法はありません。 SharePoint コンテンツ用のディザスター リカバリー計画がある場合、その計画では、コンテンツ データベースに格納されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ モデルが対象となります。  
   
  **リモート パーティション**  
   

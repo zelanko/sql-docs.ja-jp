@@ -1,27 +1,25 @@
 ---
-title: "別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード) | Microsoft Docs"
-ms.custom: 
+title: 別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e3449aa8547e62e89e3fc40ab893e1eb2fefcfd6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3830551f2f09567decad15f0c12de629e52cdee9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
@@ -55,13 +53,13 @@ ms.lasthandoff: 01/09/2018
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続を開きます。  
   
-4.  レポート サーバー データベースを右クリックし、[タスク] をポイントして **[デタッチ]**をクリックします。 レポート サーバーの一時データベースに対しても、この手順を行います。  
+4.  レポート サーバー データベースを右クリックし、[タスク] をポイントして **[デタッチ]** をクリックします。 レポート サーバーの一時データベースに対しても、この手順を行います。  
   
 5.  使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ フォルダーに .mdf ファイルおよび .ldf ファイルをコピーまたは移動します。 2 つのデータベースを移動するので、4 つのファイルがすべて移動またはコピーされていることを確認してください。  
   
 6.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、レポート サーバー データベースを新しくホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続を開きます。  
   
-7.  [データベース] ノードを右クリックし、 **[アタッチ]**をクリックします。  
+7.  [データベース] ノードを右クリックし、 **[アタッチ]** をクリックします。  
   
 8.  **[追加]** をクリックして、アタッチするレポート サーバー データベースの .mdf ファイルおよび .ldf ファイルを選択します。 レポート サーバーの一時データベースに対しても、この手順を行います。  
   
@@ -69,9 +67,9 @@ ms.lasthandoff: 01/09/2018
   
 10. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスへの接続を開きます。  
   
-11. [データベース] ページで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択し、 **[接続]**をクリックします。  
+11. [データベース] ページで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択し、 **[接続]** をクリックします。  
   
-12. 移動したレポート サーバー データベースを選択し、 **[適用]**をクリックします。  
+12. 移動したレポート サーバー データベースを選択し、 **[適用]** をクリックします。  
   
 13. [暗号化キー] ページで、[復元] をクリックします。 キーのバックアップ コピーが格納されているファイルとそのパスワードを指定し、ファイルのロックを解除します。  
   
@@ -208,17 +206,17 @@ GO
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスへの接続を開きます。  
   
-2.  [データベース] ページの **[データベースの変更]**をクリックします。 **[次へ]** をクリックします。  
+2.  [データベース] ページの **[データベースの変更]** をクリックします。 **[次へ]** をクリックします。  
   
-3.  **[既存のレポート サーバー データベースを選択する]**をクリックします。 **[次へ]** をクリックします。  
+3.  **[既存のレポート サーバー データベースを選択する]** をクリックします。 **[次へ]** をクリックします。  
   
-4.  現在レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、 **[接続テスト]**をクリックします。 **[次へ]** をクリックします。  
+4.  現在レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択し、 **[接続テスト]** をクリックします。 **[次へ]** をクリックします。  
   
 5.  [データベース名] で、使用するレポート サーバー データベースを選択します。 **[次へ]** をクリックします。  
   
 6.  レポート サーバーがレポート サーバー データベースに接続するときに使用する資格情報を [資格情報] に指定します。 **[次へ]** をクリックします。  
   
-7.  **[次へ]** 、 **[完了]**の順にクリックします。  
+7.  **[次へ]** 、 **[完了]** の順にクリックします。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスに **RSExecRole** ロールが含まれている必要があります。 ロールの作成、ログインの登録、およびロールの割り当ては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールでレポート サーバー データベースの接続を設定する際に行います。 別の方法 (特に、rsconfig.exe コマンド プロンプト ユーティリティを使用する場合) で接続を構成する場合は、レポート サーバーが非動作状態になります。 場合によっては、レポート サーバーを利用可能な状態にするための WMI コードを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  

@@ -3,15 +3,12 @@ title: priority boost サーバー構成オプションの構成 | Microsoft Doc
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - priority boost option
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
@@ -19,12 +16,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 993f47ac87af3be8dfbbda4d26941a0fbcb1a657
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 11e36e7d1a4bdb1492bb978d0334604e941f2458
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>priority boost サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +61,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-priority-boost-option"></a>priority boost オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[プロセッサ]** ノードをクリックします。  
   
-3.  **[スレッド]**の **[SQL Server の優先度を上げる]** チェック ボックスをオンにします。  
+3.  **[スレッド]** の **[SQL Server の優先度を上げる]** チェック ボックスをオンにします。  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を停止して再起動します。  
   
@@ -79,9 +75,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `priority boost` オプションの値を `1`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `priority boost` オプションの値を `1`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -1,32 +1,31 @@
 ---
-title: "カスタム アセンブリ オブジェクトの初期化 | Microsoft Docs"
-ms.custom: 
+title: カスタム アセンブリ オブジェクトの初期化 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-assemblies
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a68f5a72debf44282660d20ca2d092615f83c234
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 02c86872a99f56ad8c9a1454dee45a54a62ca2de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-custom-assembly-objects"></a>カスタム アセンブリ オブジェクトの初期化
   状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 そのためには、レポートの **Code** オブジェクトの **OnInit** メソッドをオーバーライドします。 **OnInit** にアクセスするには、レポート定義の **Code** 要素を使用します。 レポートで使用する予定のカスタム アセンブリのクラスのプロパティ値またはフィールド値を初期化する方法は 2 つあります。1 つは、**OnInit** を使用してクラスの新しいインスタンスを宣言し、作成する方法、もう 1 つは、**OnInit** を使用してパブリックに使用できるメソッドを呼び出す方法です。  

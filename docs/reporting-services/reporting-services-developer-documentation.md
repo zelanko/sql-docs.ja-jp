@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: reporting-services
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: eb27b156224ee5689794d549ef41dbe2af2ef7cc
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d11e62a8a0a1f90d894c32c82aef938f89a61851
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services の開発者向けのドキュメント
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、独自のアプリケーションで活用できるいくつかのプログラミング インターフェイスが用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の既存機能を使用して、カスタム レポート ツールと管理ツールを Web サイトや Windows アプリケーションに組み込むことができます。また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプラットフォームを拡張することもできます。  

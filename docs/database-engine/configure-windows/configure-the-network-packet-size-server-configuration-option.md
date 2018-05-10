@@ -3,15 +3,12 @@ title: network packet size サーバー構成オプションの構成 | Microsof
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default packet size
 - size [SQL Server], packets
@@ -22,12 +19,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d23600d5a25c4544872eb32d4b1b4c14336e13bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 831bfa31d5ca82afed2e2e4bbc131ac91911cecb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,11 +78,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-network-packet-size-option"></a>network packet size オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   
-3.  **[ネットワーク]**の **[ネットワーク パケット サイズ]** ボックスに値を指定します。  
+3.  **[ネットワーク]** の **[ネットワーク パケット サイズ]** ボックスに値を指定します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -94,9 +90,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `network packet size` オプションの値を `6500` バイトに設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `network packet size` オプションの値を `6500` バイトに設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -3,26 +3,22 @@ title: Microsoft Azure への SQL Server マネージ バックアップを無�
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1647dd21ba2e4d27f94fc58a049ae6dcbcf93551
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1117eaebd9e4ed5c44077966bc9b3d2874548248
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージ バックアップを無効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +31,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
 ```  
 EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -54,9 +50,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がインスタンス レベルで構成され、インスタンスのすべてのデータベースで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が有効になっているかどうかを識別し、システム ストアド プロシージャ **sp_backup_config_basic** を実行して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がインスタンス レベルで構成され、インスタンスのすべてのデータベースで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が有効になっているかどうかを識別し、システム ストアド プロシージャ **sp_backup_config_basic** を実行して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を無効にします。  
   
 ```  
 -- Create a working table to store the database names  
@@ -122,9 +118,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     EXEC msdb.managed_backup.sp_backup_config_basic  
@@ -141,9 +137,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
 ```  
 Use msdb;  
@@ -157,9 +153,9 @@ Go
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
 ```  
 Use msdb;  

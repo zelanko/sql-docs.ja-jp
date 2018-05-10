@@ -1,30 +1,29 @@
 ---
-title: "SQL Server Reporting Services のツリー マップとサンバースト グラフ | Microsoft Docs"
-ms.custom: 
+title: SQL Server Reporting Services のツリー マップとサンバースト グラフ | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリー マップおよびサンバースト視覚エフェクトは、階層データを視覚的に表現する上で非常に効果的です。 この記事では、ツリー マップまたはサンバースト グラフを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに追加する方法の概要を説明します。 この記事には、開始するための AdventureWorks サンプル クエリも含まれています。  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリー マップおよびサンバースト視覚エフェクトは、階層データを視覚的に表現する上で非常に効果的です。 この記事では、ツリー マップまたはサンバースト グラフを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに追加する方法の概要を説明します。 この記事には、開始するための AdventureWorks サンプル クエリも含まれています。  
   
 ##  <a name="bkmk_treemap_chart"></a> ツリー マップ グラフ  
 
@@ -105,7 +104,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  既定のグラフ タイトルを **区域別の売上と販売理由** に変更します。  
   
-6. サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、**[UseValueAsLabel]**を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、**LineTotal** の **[ラベル フォント]** プロパティを既定の **8pt** から **10pt** に変更します。
+6. サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、**[UseValueAsLabel]** を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、**LineTotal** の **[ラベル フォント]** プロパティを既定の **8pt** から **10pt** に変更します。
 
     ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
@@ -128,7 +127,7 @@ ms.lasthandoff: 01/09/2018
   
     1.  **[レポート データ]** で、**[データ ソース]** を右クリックし、**[データ ソースの追加]** を選択します。  
   
-    2.  **[レポートに埋め込まれた接続を使用する]**を選択します。  
+    2.  **[レポートに埋め込まれた接続を使用する]** を選択します。  
   
     3.  [接続の種類] で **[Microsoft SQL Server]** を選択します。  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 01/09/2018
   
     1. **[レポート データ]** で、**[データセット]** を右クリックし、**[データセットの追加]** を選択します。  
   
-    2. **[レポートに埋め込まれたデータセットを使用します]**を選択します。  
+    2. **[レポートに埋め込まれたデータセットを使用します]** を選択します。  
   
     3. 作成したデータ ソースを選択します。  
   

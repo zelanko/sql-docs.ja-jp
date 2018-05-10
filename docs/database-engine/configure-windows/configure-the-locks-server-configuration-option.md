@@ -3,15 +3,12 @@ title: locks サーバー構成オプションの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
@@ -19,12 +16,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66cbb76fc2c0022dc70e21887d43b9ae7a07b90c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dbe738bb44203f45b6d780b9beed9ec5dbb1dc29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +69,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-locks-option"></a>locks オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   
-3.  **[並列処理]**で、 **locks** オプションの目的の値を入力します。  
+3.  **[並列処理]** で、 **locks** オプションの目的の値を入力します。  
   
      **locks** オプションは、使用可能なロックの最大数を設定して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってロックに使用されるメモリの量を制限するために使用します。  
   
@@ -87,9 +83,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `locks` オプションの値を設定する方法を示します。使用できるロックの数をユーザー全体で `20000`に設定します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `locks` オプションの値を設定する方法を示します。使用できるロックの数をユーザー全体で `20000`に設定します。  
   
 ```sql  
 Use AdventureWorks2012 ;  

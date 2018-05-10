@@ -1,35 +1,23 @@
 ---
-title: "Grant 定義の読み取りアクセス許可オブジェクトのメタデータ (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Grant 定義の読み取りアクセス許可オブジェクトのメタデータ (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- metadata [Analysis Services]
-- permissions [Analysis Services], read metadata
-- read metadata permissions
-ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 24e661c0ba9bd5c143365c69282e2cdae91b174a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f95e5ea9522cecc44ac815c757296087cd1194be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>オブジェクト メタデータに対する定義の読み取り権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-管理者は、選択したオブジェクトのオブジェクト定義またはメタデータを読み取る権限を使用して、オブジェクトの定義の変更、オブジェクトの構造の変更、またはオブジェクトの実際のデータの表示を行う権限を付与することなく、オブジェクト情報を表示する権限を付与できます。 **[定義の読み取り]** 権限は、データベース、データ ソース、ディメンション、マイニング構造、マイニング モデルの各レベルで付与できます。 キューブの **[定義の読み取り]** 権限が必要である場合は、データベースの **[定義の読み取り]** を有効にする必要があります。権限は加算的であることに注意してください。 たとえば、あるロールではキューブのメタデータを読み取るための権限を付与し、別のロールでは同じユーザーにディメンションのメタデータを読み取るための権限を付与します。 これら 2 つの異なるロールの権限は組み合わされ、キューブのメタデータを読み取る権限と、そのデータベース内のディメンションのメタデータを読み取る権限をユーザーに与えることになります。  
+  管理者は、選択したオブジェクトのオブジェクト定義またはメタデータを読み取る権限を使用して、オブジェクトの定義の変更、オブジェクトの構造の変更、またはオブジェクトの実際のデータの表示を行う権限を付与することなく、オブジェクト情報を表示する権限を付与できます。 **[定義の読み取り]** 権限は、データベース、データ ソース、ディメンション、マイニング構造、マイニング モデルの各レベルで付与できます。 キューブの **[定義の読み取り]** 権限が必要である場合は、データベースの **[定義の読み取り]** を有効にする必要があります。権限は加算的であることに注意してください。 たとえば、あるロールではキューブのメタデータを読み取るための権限を付与し、別のロールでは同じユーザーにディメンションのメタデータを読み取るための権限を付与します。 これら 2 つの異なるロールの権限は組み合わされ、キューブのメタデータを読み取る権限と、そのデータベース内のディメンションのメタデータを読み取る権限をユーザーに与えることになります。  
   
 > [!NOTE]  
 >  データベースのメタデータを読み取る権限は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]データベースに接続するために必要な最小限の権限です。 また、メタデータを読み取る権限を持つユーザーは、DISCOVER_XML_METADATA スキーマ行セットを使用して、オブジェクトのクエリを行い、そのメタデータを表示できます。 詳細については、「 [DISCOVER_XML_METADATA 行セット](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)」を参照してください。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、 **[データベース]** フォルダーを開き、データベースを選択します。オブジェクト エクスプローラーでそのデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、または新しいデータベース ロールを作成します。  
   
-2.  **[全般]** ペインで、 **[定義の読み取り]**のデータベース権限を消去します。 この手順によって、権限継承が削除され、個々のオブジェクトに対する権限を設定できるようになります。  
+2.  **[全般]** ペインで、 **[定義の読み取り]** のデータベース権限を消去します。 この手順によって、権限継承が削除され、個々のオブジェクトに対する権限を設定できるようになります。  
   
 3.  **[定義の読み取り]** プロパティを指定するオブジェクトを選択します。  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 02/15/2018
 5.  **[OK]** をクリックして、ロールの作成を終了します。  
   
 ## <a name="see-also"></a>参照  
- [データベースのアクセス許可を付与 &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [処理権限の Grant &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [データベースのアクセス許可を付与 & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [処理権限の Grant & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

@@ -1,37 +1,29 @@
 ---
-title: "パフォーマンス カウンター (SSAS) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: パフォーマンス カウンター (SSAS) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d440c3f6c663abc4da4a873a85a7173c1e150480
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-ssas"></a>パフォーマンス カウンター (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-パフォーマンス モニターを使用すると、Microsoft SQL Server Analysis Services (SSAS) インスタンスのパフォーマンスをパフォーマンス カウンターで監視できます。  
+  パフォーマンス モニターを使用すると、Microsoft SQL Server Analysis Services (SSAS) インスタンスのパフォーマンスをパフォーマンス カウンターで監視できます。  
   
- パフォーマンス モニターは、リソース使用量を追跡する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインです。 この MMC スナップインを起動するには、コマンド プロンプトで「 **PerfMon** 」と入力するか、コントロール パネルで **[管理ツール]**をクリックして、 **[パフォーマンス モニター]**をクリックします。 パフォーマンス モニターを使用すると、定義済みのオブジェクトやカウンターを使用してサーバーおよびプロセスのパフォーマンスと利用状況を追跡でき、ユーザー定義のカウンターを使用するとイベントを監視できます。 パフォーマンス モニターでは、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、CPU の利用状況など、イベントに関する数が収集されます。 また、特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。  
+ パフォーマンス モニターは、リソース使用量を追跡する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) スナップインです。 この MMC スナップインを起動するには、コマンド プロンプトで「 **PerfMon** 」と入力するか、コントロール パネルで **[管理ツール]** をクリックして、 **[パフォーマンス モニター]** をクリックします。 パフォーマンス モニターを使用すると、定義済みのオブジェクトやカウンターを使用してサーバーおよびプロセスのパフォーマンスと利用状況を追跡でき、ユーザー定義のカウンターを使用するとイベントを監視できます。 パフォーマンス モニターでは、イベントに関するデータではなく、メモリの使用量、アクティブなトランザクションの数、CPU の利用状況など、イベントに関する数が収集されます。 また、特定のカウンターにしきい値を設定して、オペレーターに通知する警告を生成できます。  
   
  パフォーマンス モニターでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスとローカル インスタンスを監視できます。 詳細については、「 [パフォーマンス モニターを使用する](http://technet.microsoft.com/library/cc749115.aspx)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるカウンターの説明をパフォーマンス モニターに表示するには、 **[カウンターの追加]** ダイアログ ボックスを開き、パフォーマンス オブジェクトを選択して **[説明を表示する]**をクリックします。 最も重要なカウンターは、CPU の使用率、メモリの使用量、ディスクの入出力レートです。 最初はこれらの重要なカウンターを使用することから始めて、監視によってその他のものが改善される見込みが立った場合に、より詳細なカウンターの利用に移ることをお勧めします。 使用できるカウンターの詳細については、「 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるカウンターの説明をパフォーマンス モニターに表示するには、 **[カウンターの追加]** ダイアログ ボックスを開き、パフォーマンス オブジェクトを選択して **[説明を表示する]** をクリックします。 最も重要なカウンターは、CPU の使用率、メモリの使用量、ディスクの入出力レートです。 最初はこれらの重要なカウンターを使用することから始めて、監視によってその他のものが改善される見込みが立った場合に、より詳細なカウンターの利用に移ることをお勧めします。 使用できるカウンターの詳細については、「 [SQL Server 2008 R2 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  カウンターは、関連カウンターをより簡単に見つけることができるようにグループ化されます。  
   

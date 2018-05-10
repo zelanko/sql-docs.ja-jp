@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。 呼び出し元にソース データを表示する権限がなかった場合、エラー 208 (無効なオブジェクト名) が返されます。  
   
 ## <a name="remarks"></a>解説  
- 指定した LSN 範囲が、キャプチャ インスタンスの変更追跡時間外に該当した場合、エラー 208 (無効なオブジェクト名) が返されます。  
+ 指定した LSN 範囲が、キャプチャ インスタンスの変更追跡時間外に該当した場合、エラー 208 (無効なオブジェクト名) が返されます。
+
+ 行の一意識別子での変更には、削除による初期の UPDATE コマンドを表示し、コマンドを代わりに挿入 fn_cdc_get_net_changes が発生します。  この動作は前に、と変更後に、キーを追跡する必要があります。
   
 ## <a name="examples"></a>使用例  
  次の例は、関数を使用して`cdc.fn_cdc_get_net_changes_HR_Department`net に、ソース テーブルに加えられた変更を報告する`HumanResources.Department`特定の時間間隔中にします。  

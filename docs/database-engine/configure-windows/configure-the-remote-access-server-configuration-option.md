@@ -3,15 +3,12 @@ title: remote access サーバー構成オプションの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
@@ -19,17 +16,16 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c56dd8d2d882befbfc3cc55a0d5ab68f0fb489f2
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 2fcc2d8c7e3cb9b0a944619e22e5a9851bd4b179
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  このトピックは、"リモート アクセス"機能に関するものです。 この構成オプションは、わかりにくい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への通信機能であり、廃止される予定であるため、使用すべきではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続で問題があるため、それを解決するためにこのページに至った場合は、代わりに次のいずれかのページを参照してください。  
+  このトピックは、"リモート アクセス"機能に関するものです。 この構成オプションは、わかりにくい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への通信機能であり、非推奨であるため、使用すべきではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続で問題があるため、それを解決するためにこのページに至った場合は、代わりに次のいずれかのページを参照してください。  
   
 -   [チュートリアル : データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   

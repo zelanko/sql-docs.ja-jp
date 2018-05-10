@@ -1,33 +1,32 @@
 ---
-title: "レポート サーバー アイテムのプロパティ | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー アイテムのプロパティ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - item-specific properties [Reporting Services]
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services のプロパティ - レポート サーバー アイテムのプロパティ
   アイテム プロパティは、レポート サーバー データベースのアイテムに固有のプロパティです。 アイテム プロパティには、レポート、リンク レポート、フォルダー、リソース、モデル、データ ソースなどがあります。  

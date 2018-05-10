@@ -1,36 +1,23 @@
 ---
-title: "マイニング モデルにフィルターを適用 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/19/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: マイニング モデルにフィルターを適用 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- model filter [data mining]
-- filters [data mining]
-- filtering input rows [Analysis Services]
-- filtering data [Analysis Services]
-ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 57fedca20966d9ad7520b51ee850738e1e51b0e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a0becff140d0630b85f66345b9f7ac8a7db2730d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
+  入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
   
  次の手順は、ケース フィルター、入れ子になったテーブル行に適用するフィルターの両方を作成する方法を示しています。  
   
@@ -55,7 +42,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      または  
   
-     モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]**をクリックします。  
+     モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
 4.  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
   
@@ -99,7 +86,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      テキスト ボックスの左側のアイコンが変化して、選択されたアイテムがテーブルの名前であることが示されます。  
   
-3.  **[演算子]** ボックスをクリックし、 **[次の値を含む]** または **[次の値を含まない]**を選択します。  
+3.  **[演算子]** ボックスをクリックし、 **[次の値を含む]** または **[次の値を含まない]** を選択します。  
   
      ケース テーブルでは入れ子になったテーブルの特定の値を含むケースのみに制限しているため、 **[モデル フィルター]** ダイアログ ボックスで入れ子になったテーブルに対して選択できる条件はこれだけです。 次の手順で入れ子になったテーブルの条件に値を設定します。  
   
@@ -113,7 +100,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  **[値]** をクリックし、値を入力します。  
   
-     たとえば、 **[マイニング構造列]** には、 **[モデル]**を選択します。 **[演算子]**には、 **<>**を選択し、「 **Water Bottle**」という値を入力します。 この条件で次のフィルター式が作成されます。  
+     たとえば、 **[マイニング構造列]** には、 **[モデル]** を選択します。 **[演算子]** には、 **<>** を選択し、「 **Water Bottle**」という値を入力します。 この条件で次のフィルター式が作成されます。  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -132,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  フィルター式の一部を手動で変更すると、グリッドが無効になり、その後はテキスト編集モードでしかフィルター式を操作できなくなります。 グリッド編集モードに戻すには、フィルター式を消去して最初からやり直す必要があります。  
   
 ## <a name="see-also"></a>参照  
- [フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [フィルターをマイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからフィルターを削除します。](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
@@ -19,12 +18,11 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8965e5a3c3f2e2c0628469d6fd7d9d3a64a0e8c2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 00cb9d6fcb05f0e1ed0e0216785b28238942d424
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>複数のテーブルの増分読み込みを実行する
   「 [変更データ キャプチャによる増分読み込みの向上](../../integration-services/change-data-capture/change-data-capture-ssis.md)」の図は、1 つのみのテーブルの増分読み込みを実行する基本的なパッケージを示しています。 ただし、1 つのテーブルの読み込みよりも、複数のテーブルの増分読み込みを実行する必要がある場合の方が一般的です。  

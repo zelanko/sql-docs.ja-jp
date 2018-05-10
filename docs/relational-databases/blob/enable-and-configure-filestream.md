@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
@@ -19,12 +18,11 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 24b857d69f0b43b85839a96576181b37b220806f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0368a2a7c0e7b592c435252d548cca36025c03be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +32,23 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM の設定の有効化と変更  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  サービスの一覧で、 **[SQL Server のサービス]**を右クリックし、 **[開く]**をクリックします。  
+2.  サービスの一覧で、 **[SQL Server のサービス]** を右クリックし、 **[開く]** をクリックします。  
   
 3.  **[SQL Server 構成マネージャー]** スナップインで、FILESTREAM を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを探します。  
   
-4.  インスタンスを右クリックし、 **[プロパティ]**をクリックします。  
+4.  インスタンスを右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  **[SQL Server のプロパティ]** ダイアログ ボックスで、 **[FILESTREAM]** タブをクリックします。  
   
 6.  **[Transact-SQL アクセスに対して FILESTREAM を有効にする]** チェック ボックスをオンにします。  
   
-7.  Windows から FILESTREAM データの読み取りと書き込みを行う場合は、 **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]**をクリックします。 Windows 共有の名前を **[Windows 共有名]** ボックスに入力します。  
+7.  Windows から FILESTREAM データの読み取りと書き込みを行う場合は、 **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をクリックします。 Windows 共有の名前を **[Windows 共有名]** ボックスに入力します。  
   
-8.  この共有に格納された FILESTREAM データにリモート クライアントからアクセスする必要がある場合は、 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]**を選択します。  
+8.  この共有に格納された FILESTREAM データにリモート クライアントからアクセスする必要がある場合は、 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]** を選択します。  
   
-9. **[適用]**をクリックします。  
+9. **[適用]** をクリックします。  
   
 10. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[新しいクエリ]** をクリックしてクエリ エディターを表示します。  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 04/16/2018
     RECONFIGURE  
     ```  
   
-12. **[実行]**をクリックします。  
+12. **[実行]** をクリックします。  
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再開します。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
@@ -19,12 +18,11 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 49072466f5812de7b59ef40228a0847d329c48ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 04864b057ca9feb1cf2f4820d9a6adcc6b332ee3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-a-filestream-enabled-database"></a>FILESTREAM が有効なデータベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[新しいクエリ]** をクリックしてクエリ エディターを開きます。  
   
-2.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]**をクリックします。 このスクリプトは、FILESTREAM データベースで使用される物理データベース ファイルの場所を表示します。  
+2.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]** をクリックします。 このスクリプトは、FILESTREAM データベースで使用される物理データベース ファイルの場所を表示します。  
   
     ```sql  
     USE Archive  
@@ -45,7 +43,7 @@ ms.lasthandoff: 04/16/2018
     SELECT type_desc, name, physical_name from sys.database_files  
     ```  
   
-3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]**をクリックします。 このコードでは、 `Archive` データベースがオフラインに設定されます。  
+3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]** をクリックします。 このコードでは、 `Archive` データベースがオフラインに設定されます。  
   
     ```sql  
     USE master  
@@ -55,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  `C:\moved_location`というフォルダーを作成し、手順 2. で一覧表示されたファイルとフォルダーをそのフォルダーに移動します。  
   
-5.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]**をクリックします。 このスクリプトでは、 `Archive` データベースがオンラインに設定されます。  
+5.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]** をクリックします。 このスクリプトでは、 `Archive` データベースがオンラインに設定されます。  
   
     ```sql  
     CREATE DATABASE Archive ON  

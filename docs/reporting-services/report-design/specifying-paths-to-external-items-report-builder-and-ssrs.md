@@ -1,27 +1,25 @@
 ---
-title: "外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a30abcfc4bf69762cd46f3ff1941c6b2849db7c1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e1389b60c7aac94cddea21765c41bb715063fc0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)
   詳細レポート、サブレポート、画像ファイルなど、レポート定義ファイルの外部にあり、レポート サーバーに保存されるアイテムを参照するには、レポート アイテム プロパティに目的のアイテムへのパスを指定します。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **アイテムへの完全パス。**  
   
-    -   **レポート サーバーの場合** 、完全パスはホーム フォルダーである **/**から開始します。 たとえば、/Reports/AllSubreports/Subreport1 のように指定します。  
+    -   **レポート サーバーの場合** 、完全パスはホーム フォルダーである **/** から開始します。 たとえば、/Reports/AllSubreports/Subreport1 のように指定します。  
   
     -   **SharePoint サイトの場合** 、アイテムの完全な URL とファイル拡張子 .rdl を含めたレポート名を式で指定する必要があります。 たとえば、 `="http://server/site/library/folder/Report1.rdl"`のようにします。  
   

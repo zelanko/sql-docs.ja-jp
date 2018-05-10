@@ -1,37 +1,23 @@
 ---
-title: "データ マイニング クエリ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング クエリ |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>データ マイニング クエリ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング クエリは多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
+  データ マイニング クエリは多くの目的で役立ちます。 可能な代替手段としては以下の方法があります。  
   
 -   モデルを新しいデータに適用し、1 つまたは複数の予測を作成する。 入力値をパラメーターとして、またはバッチで提供する。  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_Understand"></a> データ マイニング クエリについて  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングでは、次の種類のクエリがサポートされています。  
   
--   [予測クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [予測クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      モデル内のパターンおよび入力データから推論するクエリ。  
   
@@ -68,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
      メタデータ、統計、およびその他、モデル自体の情報を返すクエリ。  
   
--   [ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [ドリルスルー クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      基になるケース データをモデルから取得できるクエリ。モデルで使用されていないデータさえ構造体から取得できます。  
   
@@ -155,7 +141,7 @@ ms.lasthandoff: 02/15/2018
   
  [ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [データ定義クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [データ定義クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)  
   

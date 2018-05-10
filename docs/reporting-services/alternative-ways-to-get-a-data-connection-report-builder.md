@@ -1,28 +1,27 @@
 ---
-title: "別の方法でデータ接続を取得する (レポート ビルダー) | Microsoft Docs"
-ms.custom: 
+title: 別の方法でデータ接続を取得する (レポート ビルダー) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82eb2c26504cee7920e0c0d67fb6faa00af70b26
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d84cb434338e8174fe74f7466be768bc344e2fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>別の方法でデータ接続を取得する (レポート ビルダー)
 データ接続には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 通常、使用する接続情報と資格情報の種類はデータ ソースの所有者から提供されます。  
@@ -54,13 +53,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  [新しいテーブル/マトリックス] または [新しいグラフ] ウィザードの **[データセットの選択]** ページで、**[データセットの作成]** を選択し、**[次へ]** をクリックします。 **[データ ソースへの接続の選択]** ページが開きます。  
   
-2.  **[参照]**をクリックします。 **[データ ソースの選択]** ダイアログ ボックスが表示されます。  
+2.  **[参照]** をクリックします。 **[データ ソースの選択]** ダイアログ ボックスが表示されます。  
   
 3.  **[検索対象]** ドロップダウン リストから **[最近使ったサイトとサーバー]** を選択します。 データ ソース ウィンドウでサーバーの URL をクリックし、**[開く]** をクリックします。  
   
     データ ソースまたはモデルの一覧が表示されます。  
   
-4.  または、**[名前]** にレポート サーバーの URL を入力します。 **[開く]**をクリックします。  
+4.  または、**[名前]** にレポート サーバーの URL を入力します。 **[開く]** をクリックします。  
   
     レポート ビルダーがレポート サーバーに接続され、ルート フォルダーにある使用可能なデータ ソースが読み込まれます。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/09/2018
   
     **[データ ソースへの接続の選択]** ページに戻ります。  
   
-6.  データ ソースに接続できることを確認するために、 **[接続テスト]**をクリックします。  
+6.  データ ソースに接続できることを確認するために、 **[接続テスト]** をクリックします。  
   
     "接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

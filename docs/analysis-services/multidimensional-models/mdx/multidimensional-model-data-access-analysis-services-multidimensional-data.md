@@ -1,41 +1,23 @@
 ---
-title: "多次元モデルのデータ アクセス (Analysis Services - 多次元データ) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多次元モデルのデータ アクセス (Analysis Services - 多次元データ) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- SSAS, data access interfaces
-- objects [Analysis Services], data access interfaces
-- Analysis Services data access interfaces
-- data retrieval [Analysis Services]
-- retrieving data
-- metadata [Analysis Services]
-- data access interfaces [Analysis Services]
-- manipulating objects [Analysis Services]
-- Analysis Services data access interfaces, about data access interfaces
-ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 01e59cc12667dd5ecba52649c056800b51d186fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
+  このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services への接続](../../../analysis-services/instances/connect-to-analysis-services.md)   
- [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Services スクリプト言語の分析の使用による開発&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Analysis Services の XMLA による開発](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [表形式モデルのデータ アクセス](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

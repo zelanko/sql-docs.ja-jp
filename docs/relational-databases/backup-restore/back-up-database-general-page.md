@@ -3,15 +3,12 @@ title: '[データベースのバックアップ] ([全般] ページ) | Microso
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
@@ -19,12 +16,11 @@ caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aaccb17dbf576074ac482092ae0ab4a2216f8ddd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1715f116d875a0037a926ab36900e52701b7bf98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +78,7 @@ ms.lasthandoff: 04/16/2018
 |||  
 |-|-|  
 |**[データベース]**|データベース全体がバックアップされるように指定します。|  
-|**[ファイルおよびファイル グループ]**|指定したファイルやファイル グループがバックアップされるように指定します。<br /><br /> このオプションをクリックすると、 **[ファイルおよびファイル グループの選択]** ダイアログ ボックスが表示されます。 バックアップするファイル グループまたはファイルを選択して **[OK]**をクリックすると、選択した項目が **[ファイルおよびファイル グループ]** ボックスに表示されます。|  
+|**[ファイルおよびファイル グループ]**|指定したファイルやファイル グループがバックアップされるように指定します。<br /><br /> このオプションをクリックすると、 **[ファイルおよびファイル グループの選択]** ダイアログ ボックスが表示されます。 バックアップするファイル グループまたはファイルを選択して **[OK]** をクリックすると、選択した項目が **[ファイルおよびファイル グループ]** ボックスに表示されます。|  
   
 ### <a name="destination"></a>[Destination]  
  **[バックアップ先]** パネルのオプションでは、バックアップ操作で使用するバックアップ デバイスの種類を指定して、既存の論理バックアップ デバイスまたは物理バックアップ デバイスを検索できます。  
@@ -112,7 +108,7 @@ ms.lasthandoff: 04/16/2018
  **目次**  
 選択したデバイスにメディア コンテンツがある場合、これを表示します。  **URL** が指定されている場合は、機能が実行されません。 
    
-**[バックアップ先の選択]** ダイアログ ボックス **[バックアップ先の選択]** ダイアログ ボックスは、 **[追加]**を選択すると表示されます。   オプションの表示は、選択したバックアップ先の種類によって異なります。 
+**[バックアップ先の選択]** ダイアログ ボックス **[バックアップ先の選択]** ダイアログ ボックスは、 **[追加]** を選択すると表示されます。   オプションの表示は、選択したバックアップ先の種類によって異なります。 
 
 バックアップ先として **[ディスク]** または **[テープ]** を選択すると、次のオプションが表示されます。  
 

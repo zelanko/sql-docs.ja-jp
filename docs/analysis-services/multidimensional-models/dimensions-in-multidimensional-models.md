@@ -1,35 +1,23 @@
 ---
-title: "多次元モデル内のディメンション |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多次元モデル内のディメンション |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- OLAP [Analysis Services], dimensions
-- dimensions [Analysis Services], about dimensions
-- OLAP objects [Analysis Services], dimensions
-ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ae68ab8b879656940827bf8ebffb5c1f40cfa0b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f2a58f5db400792b09cabafc12ae2a521e0f1776
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多次元モデル内のディメンション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データベース ディメンションとは、ファクト データに関する情報を 1 つまたは複数のキューブで提供するための、属性と呼ばれる関連オブジェクトが集まったものです。 たとえば、Product ディメンションの一般的な属性としては、製品名、製品カテゴリ、製品ライン、製品サイズ、製品価格などがあります。 これらのオブジェクトは、データ ソース ビューのテーブル内の列にバインドされており、 既定では、これらの属性は、属性階層として表示され、キューブ内のファクト データを理解する際に使用できます。 属性はユーザー定義階層にまとめることができます。これらの階層には、ユーザーがキューブ内のデータを参照する際に使用できるナビゲーション パスが含まれています。  
+  データベース ディメンションとは、ファクト データに関する情報を 1 つまたは複数のキューブで提供するための、属性と呼ばれる関連オブジェクトが集まったものです。 たとえば、Product ディメンションの一般的な属性としては、製品名、製品カテゴリ、製品ライン、製品サイズ、製品価格などがあります。 これらのオブジェクトは、データ ソース ビューのテーブル内の列にバインドされており、 既定では、これらの属性は、属性階層として表示され、キューブ内のファクト データを理解する際に使用できます。 属性はユーザー定義階層にまとめることができます。これらの階層には、ユーザーがキューブ内のデータを参照する際に使用できるナビゲーション パスが含まれています。  
   
  キューブには、ユーザーがファクト データの分析の基準として使用する、すべてのディメンションが含まれています。 キューブ内のデータベース ディメンションのインスタンスは、キューブ ディメンションと呼ばれ、キューブ内の 1 つ以上のメジャー グループに関連しています。 データベース ディメンションは、キューブで何度も使用できます。 たとえば、ファクト テーブルに時間関連のファクトが複数含まれている場合は、時間関連の各ファクトを分析するために別々のキューブ ディメンションを定義できます。 ただし、時間関連のデータベース ディメンションは 1 つしか必要ありません。つまり、時間に基づく複数のキューブ ディメンションをサポートするために、時間関連のリレーショナル データベースも 1 つしか必要となりません。  
   

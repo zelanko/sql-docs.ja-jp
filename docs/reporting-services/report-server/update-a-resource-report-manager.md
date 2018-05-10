@@ -1,30 +1,28 @@
 ---
-title: "リソースの更新 (レポート マネージャー) | Microsoft Docs"
-ms.custom: 
+title: リソースの更新 (レポート マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f994471cffe26d346c8a747fd1460df6bb8319a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-a-resource-report-manager"></a>リソースの更新 (レポート マネージャー)
   リソースを新しいバージョンに置換すると、リソースを更新することができます。 リソースは、レポート サーバーに格納されたアイテムです。このアイテムには、アップロードするファイルのコンテンツが含まれます。 新しいコンテンツまたは異なるコンテンツをインポートすると、既存のリソースを置換できます。 リソースの更新は、既存のプロパティやリソース上のセキュリティ設定を保持しながらコンテンツを更新する方法を提供します。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  **[置換]** をクリックすると、 **[リソースのインポート]** ページが開きます。  
   
-6.  **[参照]**をクリックします。  
+6.  **[参照]** をクリックします。  
   
 7.  使用するファイルを選択して、現在のリソースを置換します。 更新されたバージョンのリソース ファイルを使用したり、名前やファイル タイプの異なるファイルを指定することができます。  
   

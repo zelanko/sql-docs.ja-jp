@@ -1,32 +1,23 @@
 ---
 title: 多次元モデル (Analysis Services) での翻訳 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
-ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cc30acc4714029cd91a4c35028835ae99d561140
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多次元モデルの翻訳 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]翻訳を定義する[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の適切なデザイナーを使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳するオブジェクト。 翻訳を定義すると、該当する **オブジェクトに関連付けられた** Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳を定義すると、該当する **オブジェクトに関連付けられた** Translation [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>多言語データ モデルの要素  
  多言語ソリューションで使用するデータ モデルには、単にラベル (フィールド名と説明) を翻訳する以上の処置が必要になります。 また、さまざまな言語スクリプトで表記したデータ値を提供する必要もあります。 多言語ソリューションを実現するには、個々の属性に外部データベース内の列をバインドし、データを取得する必要があります。  
@@ -41,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  dimDate、dimProduct、dimProductCategory、または dimProductSubcateogry を検索します。 これらのすべてのディメンションには、月、曜日、製品名、カテゴリ名などの、翻訳されたメンバーの属性が含まれています。  
   
-4.  任意のフィールドを右クリックし、 **[データの探索]**を選択します。 各メンバーの英語、スペイン語、およびフランス語の翻訳が表示されます。  
+4.  任意のフィールドを右クリックし、 **[データの探索]** を選択します。 各メンバーの英語、スペイン語、およびフランス語の翻訳が表示されます。  
   
  日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと **FormatString** プロパティを使用します。 「[通貨換算 (Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](../../analysis-services/scripting/properties/formatstring-element-assl.md)」をご覧ください。  
   
@@ -79,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
 3.  翻訳した値を提供する列に属性をバインドするには、次の手順を実行します。  
   
-    1.  ディメンション デザイナーの **[翻訳]**タブを表示した状態のまま、新しい翻訳を追加します。 言語を選択します。 ページに新しい列が表示され、翻訳した値を入力できます。  
+    1.  ディメンション デザイナーの **[翻訳]** タブを表示した状態のまま、新しい翻訳を追加します。 言語を選択します。 ページに新しい列が表示され、翻訳した値を入力できます。  
   
-    2.  属性のいずれかに隣接する空のセルにカーソルを置きます。 属性をキーにすることはできませんが、その他のすべての属性は有効な選択肢です。 ドットが表示された小さいボタンが表示されているはずです。 そのボタンをクリックして、 **[属性データの翻訳]**ダイアログ ボックスを開きます。  
+    2.  属性のいずれかに隣接する空のセルにカーソルを置きます。 属性をキーにすることはできませんが、その他のすべての属性は有効な選択肢です。 ドットが表示された小さいボタンが表示されているはずです。 そのボタンをクリックして、 **[属性データの翻訳]** ダイアログ ボックスを開きます。  
   
     3.  キャプションの翻訳を入力します。 これは、対象言語のデータのラベルとして使用されます。たとえば、ピボット テーブルのフィールド一覧のフィールド名です。  
   
@@ -127,6 +118,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [言語および照合順序と #40 です。Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [言語および照合順序&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

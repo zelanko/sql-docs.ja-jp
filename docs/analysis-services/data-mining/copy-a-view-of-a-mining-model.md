@@ -1,35 +1,23 @@
 ---
-title: "マイニング モデルのビューをコピー |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: マイニング モデルのビューをコピー |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- clipboards [data mining]
-- Mining Model Viewer [Analysis Services], clipboards
-- copying mining models to clipboard
-ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1b439df2696fc44552d42680e1d4642e4728aa9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 914452628de925303a4f2ca0e00579fba68e2c2b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>マイニング モデルの表示のコピー
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブでは、マイニング モデルの種類ごとに異なるビューアーを使用します。 これらのビューアーの一部には、コンテンツをクリップボードにコピーし、そこからドキュメントやイメージ操作ソフトウェアに貼り付けるためのコンポーネントがあります。 この機能は次のコンポーネントで使用可能です。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブでは、マイニング モデルの種類ごとに異なるビューアーを使用します。 これらのビューアーの一部には、コンテンツをクリップボードにコピーし、そこからドキュメントやイメージ操作ソフトウェアに貼り付けるためのコンポーネントがあります。 この機能は次のコンポーネントで使用可能です。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーのクラスター ダイアグラムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター ビューアー  
   
@@ -64,13 +52,13 @@ ms.lasthandoff: 02/15/2018
   
 1.  **[マイニング モデル ビューアー]** タブの **[マイニング モデル]** リストで、表示するマイニング モデルを選択します。  
   
-2.  **[ビューアー]** ボックスの一覧で **[Microsoft 汎用コンテンツ ツリー ビューアー]**をクリックします。  
+2.  **[ビューアー]** ボックスの一覧で **[Microsoft 汎用コンテンツ ツリー ビューアー]** をクリックします。  
   
 3.  **[ノードのキャプション (一意の ID)]** ペインでノードをクリックします。  
   
-4.  **[ノードの詳細]** ペインを右クリックし、 **[すべて選択]**をクリックします。  
+4.  **[ノードの詳細]** ペインを右クリックし、 **[すべて選択]** をクリックします。  
   
-5.  **[ノードの詳細]** ペインをもう一度右クリックし、 **[コピー]**をクリックします。  
+5.  **[ノードの詳細]** ペインをもう一度右クリックし、 **[コピー]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  

@@ -1,40 +1,23 @@
 ---
-title: "主要業績評価指標 (Kpi) 多次元モデルの |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 主要業績評価指標 (Kpi) 多次元モデルの |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f7c49068db1ee60a6b417b7ef2bc4348693fc500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。  
+  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]における KPI は、キューブ内のメジャー グループに関連付けられた、ビジネスの成功の評価に使用される計算のコレクションです。 これらの計算は通常、多次元式 (MDX) または計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="parent-kpis"></a>親 KPI  
  組織は、異なるレベルの異なるビジネス基準を追跡することがあります。 たとえば、会社全体のビジネス上の成功を計測するために 2 ～ 3 の KPI を使用し、それらの KPI が、会社内のビジネス単位で追跡したその他 3 ～ 4 の KPI に基づいている場合があります。 また、会社内のビジネス単位は、同じ KPI の計算に異なる統計を使用する可能性があり、その結果が会社全体の KPI にロール アップされます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、KPI 間に親子リレーションシップを定義できます。 この親子リレーションシップにより、子 KPI の結果を親 KPI の結果の計算に使用できます。 さらに、クライアント アプリケーションはこのリレーションシップを使用して、親子 KPI を正しく表示できます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Kpi の間の親子リレーションシップを定義できます。 この親子リレーションシップにより、子 KPI の結果を親 KPI の結果の計算に使用できます。 さらに、クライアント アプリケーションはこのリレーションシップを使用して、親子 KPI を正しく表示できます。  
   
 ## <a name="weights"></a>重み  
  重みは子 KPI にも割り当てることができます。 重みにより、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、親 KPI の値の計算時に子 KPI の結果を比例的に調整できます。  

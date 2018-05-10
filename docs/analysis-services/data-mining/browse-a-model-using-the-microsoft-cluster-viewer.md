@@ -1,43 +1,23 @@
 ---
-title: "Microsoft クラスター ビューアーを使用してモデルを参照 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Microsoft クラスター ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- clusters [Analysis Services]
-- discrimination [Analysis Services]
-- names [Analysis Services], clusters
-- Microsoft Cluster Viewer
-- mining model content, viewing
-- comparing clusters
-- viewing clusters
-- displaying clusters
-- data mining [Analysis Services], clusters
-- Cluster Viewer [Analysis Services]
-- mining models [Analysis Services], clusters
-ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b8216212444fc320600a9625f1929e8bc20a0516
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f5940771add97a0ccc5925a1be4632b5932f7059
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Microsoft クラスター ビューアーを使用したモデルの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムは、データの異常を特定したり予測を作成したりするときにデータを調べるための分割アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft クラスタリング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムは、データの異常を特定したり予測を作成したりするときにデータを調べるための分割アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft クラスタリング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)」を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)」を参照してください。  
@@ -58,16 +38,16 @@ ms.lasthandoff: 02/15/2018
   
  既定では、網掛けはクラスターの母集団を表します。 **[シェーディング変数]** オプションと **[状態]** オプションを使用すると、網掛けによって、属性と状態のどの組み合わせを表すかを選択できます。 網掛けが濃いほど、対応する状態の属性分布は広くなります。 網掛けが薄くなるほど、分布は狭くなります。  
   
- クラスターの名前を変更するには、そのノードを右クリックして **[クラスター名の変更]**を選択します。 新しい名前はサーバーに保存されます。  
+ クラスターの名前を変更するには、そのノードを右クリックして **[クラスター名の変更]** を選択します。 新しい名前はサーバーに保存されます。  
   
- ダイアグラムの表示部分をクリップボードにコピーするには、 **[グラフ ビューのコピー]**をクリックします。 ダイアグラム全体をコピーするには、 **[グラフ全体のコピー]**をクリックします。 **[拡大]** と **[縮小]**を使用してダイアグラムを拡大または縮小することも、 **[ウィンドウに合わせてダイアグラムの倍率を変更します]**を使用してダイアグラムを画面に合わせて調整することもできます。  
+ ダイアグラムの表示部分をクリップボードにコピーするには、 **[グラフ ビューのコピー]** をクリックします。 ダイアグラム全体をコピーするには、 **[グラフ全体のコピー]** をクリックします。 **[拡大]** と **[縮小]** を使用してダイアグラムを拡大または縮小することも、 **[ウィンドウに合わせてダイアグラムの倍率を変更します]** を使用してダイアグラムを画面に合わせて調整することもできます。  
   
  [トップに戻る](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> クラスターのプロファイル  
  **[クラスターのプロファイル]** タブには、モデルのアルゴリズムによって作成されるクラスターの概要が表示されます。 このビューには、各クラスター内の属性の分布と共に各属性が表示されます。 各セルのヒントには分布統計が表示され、各列見出しのヒントにはクラスターの母集団が表示されます。 不連続属性は色分けされたバーとして表示され、連続属性は各クラスター内の平均偏差および標準偏差を表すダイヤモンド チャートとして表示されます。 **[ヒストグラム バー]** オプションでは、ヒストグラムに表示されるバーの数を制御します。 指定した数よりも多くのバーが存在する場合は、重要度が最も高いバーが保持され、残りのバーは灰色のバケットにまとめられます。  
   
- クラスターの既定の名前は、よりわかりやすい名前に変更できます。 クラスター名を変更するには、クラスターの列見出しを右クリックして、 **[クラスター名の変更]**を選択します。 **[列の非表示]**を選択すると、クラスターを非表示にすることもできます。  
+ クラスターの既定の名前は、よりわかりやすい名前に変更できます。 クラスター名を変更するには、クラスターの列見出しを右クリックして、 **[クラスター名の変更]** を選択します。 **[列の非表示]** を選択すると、クラスターを非表示にすることもできます。  
   
  より広範かつ詳細なクラスターのビューをウィンドウで開くには、 **[状態]** 列のセルまたはビューアーのヒストグラムをダブルクリックします。  
   

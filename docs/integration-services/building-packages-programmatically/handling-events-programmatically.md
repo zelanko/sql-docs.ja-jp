@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -32,12 +31,11 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e16cdfb2d8da440ab342d74a692c9bf6eb98c21a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 95f028ab1faaf801eb59ede8fc6deec47faa5798
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 1 つは、あるクラスに <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装し、このクラスをパラメーターとして、パッケージの **Execute** および **Validate** メソッドに渡す方法です。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> に属するイベントが発生したときに実行される、他の [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  

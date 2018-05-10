@@ -1,34 +1,19 @@
 ---
-title: "AMO データ マイニング オブジェクトをプログラミング |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 
-author: Minewiskan
+title: AMO データ マイニング オブジェクトをプログラミング |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>AMO データ マイニング オブジェクトのプログラミング
   AMO を使用すれば、データ マイニング オブジェクトを簡単にプログラミングできます。 まず、マイニング プロジェクトをサポートするデータ構造モデルを作成します。 次に、マイニング アルゴリズムをサポートするデータ マイニング モデルを作成します。マイニング アルゴリズムは、データに含まれる未知のリレーションシップを予測または検出するために使用します。 構造やアルゴリズムなどのマイニング プロジェクトを作成したら、マイニング モデルを処理することにより、後でクライアント アプリケーションからクエリや予測を行うときに使用するトレーニングされたモデルを取得できます。  
@@ -41,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [MiningModel オブジェクト](#MiningModel)  
   
-##  <a name="MiningStructure">MiningStructure オブジェクト</a>  
+##  <a name="MiningStructure"></a> MiningStructure オブジェクト  
  マイニング構造は、すべてのマイニング モデルの作成に使用するデータ構造の定義です。 マイニング構造には、データベースで定義されたデータ ソース ビューへのバインドと、マイニング モデル内のすべての列定義が含まれます。 マイニング構造には複数のマイニング モデルを含めることができます。  
   
  作成する、<xref:Microsoft.AnalysisServices.MiningStructure>オブジェクトには、次の手順が必要です。  
@@ -94,7 +79,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">MiningModel オブジェクト</a>  
+##  <a name="MiningModel"></a> MiningModel オブジェクト  
  マイニング モデルは、マイニング アルゴリズムで使用されるすべての列および列定義のリポジトリです。  
   
  作成する、<xref:Microsoft.AnalysisServices.MiningModel>オブジェクトには、次の手順が必要です。  
@@ -149,7 +134,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [AMO 基礎クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO データ マイニング クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

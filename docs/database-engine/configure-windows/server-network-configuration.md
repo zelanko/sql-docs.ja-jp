@@ -3,15 +3,12 @@ title: サーバー ネットワークの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -25,12 +22,11 @@ caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 43467af34ad8e6fde2fc8874ace1e6f7f2fa17e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-network-configuration"></a>サーバー ネットワークの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.lasthandoff: 04/16/2018
  動的ポート向けに構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用されるポートは、起動のたびに変更される可能性があります。 ファイアウォールを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって使用されるポートを開く必要があります。 また、特定のポートを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成して、サーバーへの通信を許可するようにファイアウォールを構成できます。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
 ### <a name="changing-a-named-pipe"></a>名前付きパイプの変更  
- 指定した名前付きパイプでリッスンするように名前付きパイプ プロトコルを構成できます。 既定では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスはパイプ \\\\.\pipe\sql\query で、名前付きインスタンスの場合はパイプ \\\\.\pipe\MSSQL$*\<instancename>*\sql\query でそれぞれリッスンします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンできる名前付きパイプは 1 つのみですが、必要に応じてパイプの名前を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、クライアントが接続時にパイプを識別するのに役立ちます。 詳細については、「[代替パイプをリッスンするサーバーの構成  &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)」を参照してください。  
+ 指定した名前付きパイプでリッスンするように名前付きパイプ プロトコルを構成できます。 既定では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスはパイプ \\\\.\pipe\sql\query で、名前付きインスタンスの場合はパイプ \\\\.\pipe\MSSQL$*\<instancename>* \sql\query でそれぞれリッスンします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンできる名前付きパイプは 1 つのみですが、必要に応じてパイプの名前を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、クライアントが接続時にパイプを識別するのに役立ちます。 詳細については、「[代替パイプをリッスンするサーバーの構成  &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)」を参照してください。  
   
 ## <a name="force-encryption"></a>[強制的に暗号化]  
  クライアント アプリケーションとの通信時に暗号化を要求するように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を構成できます。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  

@@ -1,15 +1,14 @@
 ---
-title: "警告デザイナーでのデータ警告の編集 | Microsoft Docs"
-ms.custom: 
+title: 警告デザイナーでのデータ警告の編集 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - editing, data alerts
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - editing, alerts
 - updating, alerts
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 96f7e76c666772bca9d7a7e156f615a75898ffb4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: af970c1ee5f270758ac0a91f9e937702eea88596
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>警告デザイナーでのデータ警告の編集
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-edit-a-data-alert-definition-in-data-alert-designer"></a>データ警告デザイナーでデータ警告定義を編集するには  
   
-1.  データ警告マネージャーで、編集するデータ警告定義を右クリックし、 **[編集]**をクリックします。  
+1.  データ警告マネージャーで、編集するデータ警告定義を右クリックし、 **[編集]** をクリックします。  
   
      データ警告デザイナーに警告定義が表示されます。  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 01/09/2018
     > [!NOTE]  
     >  別のデータ フィードを選択することはできません。 異なるデータ フィードを使用するには、新しいデータ警告定義を作成する必要があります。  
   
-3.  **[保存]**をクリックします。  
+3.  **[保存]** をクリックします。  
   
     > [!NOTE]  
     >  レポートが変更され、レポートから生成されたデータ フィードが変更されている場合、警告の定義が無効になっている可能性があります。 この状況が生じるのは、警告定義のルールで参照される列がレポートから削除された場合、列のデータ型が変更された場合、またはレポートが削除または移動された場合です。 無効な警告定義は開くことはできますが、基になるレポート データ フィードの現行バージョンに基づいて有効になるまでは再保存できません。 レポートからデータ フィードが生成される方法の詳細については、「[複数のレポートからのデータ フィードの生成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)」を参照してください。  

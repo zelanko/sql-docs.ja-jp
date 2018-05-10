@@ -1,36 +1,19 @@
 ---
-title: "クライアント アーキテクチャの要件の Analysis Services の開発 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- local mining models [Analysis Services]
-- Analysis Services, architecture
-- providers [Analysis Services]
-- data pumps [Analysis Services]
-- client architecture [Analysis Services]
-- local cubes [Analysis Services]
-ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 
-author: Minewiskan
+title: クライアント アーキテクチャの要件の Analysis Services の開発 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 63ba4a3a70f7fe763c33e05c30f186efa809d19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開発に関するクライアント アーキテクチャの要件
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +36,7 @@ ms.lasthandoff: 02/15/2018
 |.NET 言語|ADO MD.NET|  
 |SOAP をサポートするすべての言語|XML for Analysis (XML for Analysis)|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 大小両方の組織で展開を完全にスケーラブルな中間層で Web アーキテクチャがあります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、Web サービスへの広範な中間層のサポートが用意されています。 ASP アプリケーションはサポートされて OLE DB で OLAP および ADO MD、ASP.NET アプリケーションは ADOMD.NET によってサポートされています。 次の図のように、中間層は、多数の同時ユーザーに対応できるスケーラブルな層です。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、小規模な組織と大規模な組織の両方の配置に対応できる完全にスケーラブルな中間層を使用した Web アーキテクチャが装備されています。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] には、Web サービスへの広範な中間層のサポートが用意されています。 ASP アプリケーションはサポートされて OLE DB で OLAP および ADO MD、ASP.NET アプリケーションは ADOMD.NET によってサポートされています。 次の図のように、中間層は、多数の同時ユーザーに対応できるスケーラブルな層です。  
   
  ![中間層アーキテクチャの論理図](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "中間層アーキテクチャの論理図")  
   
@@ -62,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>テーブル モードまたは SharePoint モードの Analysis Services  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、表形式データベースと、xVelocity メモリ内分析エンジン (VertiPaq) モードで、サーバーを起動する[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]SharePoint サイトにパブリッシュされたブック。  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] および[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]作成と SharePoint モードまたは表形式モードをそれぞれを使用するインメモリ データベースのクエリがサポートされている唯一のクライアント環境です。 埋め込まれた[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]、Excel を使用して作成したデータベースおよび[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ツールは、Excel ブック内に含まれ、Excel .xlsx ファイルの一部として保存されます。  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] は、それぞれ SharePoint モードまたは表形式モードを使用するインメモリ データベースの作成とクエリがサポートされる、ただ 1 つのクライアント環境です。 埋め込まれた[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]、Excel を使用して作成したデータベースおよび[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ツールは、Excel ブック内に含まれ、Excel .xlsx ファイルの一部として保存されます。  
   
  ただし、キューブ データをブックにインポートすると、従来のキューブに格納されたデータを [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックで使用できます。 また、SharePoint サイトにパブリッシュされている場合、別の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックからデータをインポートすることもできます。  
   

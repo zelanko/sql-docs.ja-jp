@@ -1,39 +1,23 @@
 ---
-title: "ストアド プロシージャの作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- registering assemblies
-- database assemblies [Analysis Services]
-- server assemblies [Analysis Services]
-- stored procedures [Analysis Services], creating
-- assemblies [Analysis Services]
-ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
-caps.latest.revision: 
-author: Minewiskan
+title: ストアド プロシージャの作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 913b2cbb8fbf93be08b1854051024492e691bdea
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: beeda3159c18ac9032576e3d0c1fbfed16ac603b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-stored-procedures"></a>ストアド プロシージャの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-ストアド プロシージャを使用するには、これを共通言語ランタイム (CLR) クラスまたはコンポーネント オブジェクト モデル (COM) クラスに関連付ける必要があります。 クラスは、サーバーにインストールする必要があります: 通常の形式で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® ダイナミック リンク ライブラリ (DLL) — サーバー上またはアセンブリとして登録されていると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。  
+  ストアド プロシージャを使用するには、これを共通言語ランタイム (CLR) クラスまたはコンポーネント オブジェクト モデル (COM) クラスに関連付ける必要があります。 クラスは、サーバーにインストールする必要があります: 通常の形式で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® ダイナミック リンク ライブラリ (DLL) — サーバー上またはアセンブリとして登録されていると、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。  
   
  ストアド プロシージャはサーバーまたはデータベースに登録されています。 サーバーのストアド プロシージャは、どのクエリ コンテキストからでも呼び出すことができます。 データベースのストアド プロシージャは、データベース コンテキストが、ストアド プロシージャが定義されているデータベースの場合にのみアクセスできます。 あるアセンブリの関数が別のアセンブリの関数を呼び出す場合は、両方のアセンブリを同じコンテキスト (サーバーまたはデータベース) に登録する必要があります。 サーバーまたは、展開済みの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース サーバーでは、使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]アセンブリを登録します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの場合は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] デザイナーを使用してプロジェクトにアセンブリを登録できます。  
   

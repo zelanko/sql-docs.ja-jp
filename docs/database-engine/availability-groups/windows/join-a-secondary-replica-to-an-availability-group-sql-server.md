@@ -3,15 +3,12 @@ title: 可用性グループへのセカンダリ レプリカの参加 (SQL Ser
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.joinreplica.f1
 helpviewer_keywords:
@@ -23,12 +20,11 @@ caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c40410f42d499f31a33225a80182bfe4e30cdcb8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c08b3d3dad3d9e0a61521c26accc38539992d4f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>可用性グループへのセカンダリ レプリカの参加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,11 +73,11 @@ ms.lasthandoff: 04/16/2018
   
 3.  接続先のセカンダリ レプリカの可用性グループを選択します。  
   
-4.  セカンダリ レプリカを右クリックし、 **[可用性グループへの参加]**をクリックします。  
+4.  セカンダリ レプリカを右クリックし、 **[可用性グループへの参加]** をクリックします。  
   
 5.  これにより、 **[可用性グループへのレプリカの追加]** ダイアログ ボックスが開きます。  
   
-6.  セカンダリ レプリカを可用性グループに参加させるには、 **[OK]**をクリックします。  
+6.  セカンダリ レプリカを可用性グループに参加させるには、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性グループに可用性レプリカを参加させるには**  

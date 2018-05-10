@@ -1,27 +1,19 @@
 ---
 title: SharePoint 2013 への Power Pivot の移行 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 18
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 308b69e4da122bd409c4cbd12ec9196cb2da8317
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013 への Power Pivot の移行
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -54,15 +46,15 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="bkmk_backup_restore"></a>バックアップ、コピー、およびデータベースを復元します。  
  "SharePoint のデータベース接続アップグレード" プロセスとは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 関連のコンテンツとサービス アプリケーション データベースを SharePoint 2013 ファームにバックアップ、コピー、および復元する一連の手順です。  
   
-1.  **データベースを読み取り専用に設定する** : [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[プロパティ]**をクリックします。 **[オプション]** ページで、 **[読み取り専用データベース]** プロパティを **[True]**に設定します。  
+1.  **データベースを読み取り専用に設定する** : [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[プロパティ]** をクリックします。 **[オプション]** ページで、 **[読み取り専用データベース]** プロパティを **[True]** に設定します。  
   
-2.  **バックアップする** : SharePoint 2013 ファームに移行する各コンテンツ データベースとサービス アプリケーション データベースをバックアップします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[タスク]**、 **[バックアップ]**を順にクリックします。  
+2.  **バックアップする** : SharePoint 2013 ファームに移行する各コンテンツ データベースとサービス アプリケーション データベースをバックアップします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[タスク]**、 **[バックアップ]** を順にクリックします。  
   
 3.  データベース バックアップ ファイル (.bak) をバックアップ先サーバーにファイル コピーします。  
   
 4.  **復元する** : データベースを復元先の [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に復元します。 この手順は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して行うことができます。  
   
-5.  **データベースを読み取り/書き込み用に設定する** : **[読み取り専用データベース]** を **[False]**に設定します。  
+5.  **データベースを読み取り/書き込み用に設定する** : **[読み取り専用データベース]** を **[False]** に設定します。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>Web アプリケーションとマウント コンテンツ データベースを準備します。  
  次の手順の詳細については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)です。  
@@ -71,15 +63,15 @@ ms.lasthandoff: 04/16/2018
   
      SharePoint サーバーの全体管理を使用して、SharePoint 2013 の各コンテンツ データベースをオフラインにします。 コンテンツ データベースを、コピーしたデータベースに置き換えます。 使用環境にとってどのシーケンスが最適かを検討してください。 次のコンテンツ データベースをオフラインにする前に、各データベースをオフラインにして、関連する置換データベースをマウントすることを検討します。 もう 1 つの方法として、すべてのコンテンツ データベースをグループとしてオフラインにします。  
   
-    1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]**をクリックします。  
+    1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** をクリックします。  
   
-    2.  **[コンテンツ データベースの管理]**をクリックします。  
+    2.  **[コンテンツ データベースの管理]** をクリックします。  
   
     3.  データベース名をクリックします。  
   
-    4.  **[コンテンツ データベース設定の管理]**で、 **[データベースの状態]** を **[オフライン]**に設定します。  
+    4.  **[コンテンツ データベース設定の管理]** で、 **[データベースの状態]** を **[オフライン]** に設定します。  
   
-    5.  **[コンテンツ データベースの削除]**を選択します。 コンテンツ データベースに格納されているサイトにアクセスできなくなるという警告に注意してください。  
+    5.  **[コンテンツ データベースの削除]** を選択します。 コンテンツ データベースに格納されているサイトにアクセスできなくなるという警告に注意してください。  
   
 -   **コンテンツ データベースをマウントする:**  
   
@@ -110,11 +102,11 @@ ms.lasthandoff: 04/16/2018
   
  SharePoint サーバーの全体管理で、コピーした前のサービス アプリケーション データベースを使用するように [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションを構成します。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービスによって、サービス アプリケーション データベースが新しいスキーマにアップグレードされます。  
   
-1.  SharePoint サーバーの全体管理で **[サービス アプリケーションの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション ("既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション" など) を探して、サービス アプリケーション名をクリックし、SharePoint リボンの **[プロパティ]** をクリックします。  
   
-3.  データベース サーバーの名前付きインスタンスとデータベース名を、 バックアップ、コピー、および復元したデータベースの正しい名前に更新します。 **[OK]**をクリックすると、サービス アプリケーション データベースがアップグレードされます。 エラーは ULS ログに格納されます。  
+3.  データベース サーバーの名前付きインスタンスとデータベース名を、 バックアップ、コピー、および復元したデータベースの正しい名前に更新します。 **[OK]** をクリックすると、サービス アプリケーション データベースがアップグレードされます。 エラーは ULS ログに格納されます。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] スケジュールのアップグレード**  
   
@@ -145,11 +137,11 @@ ms.lasthandoff: 04/16/2018
   
     2.  ショートカット メニューを開き、**[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータ更新の管理]** をクリックします。  
   
-    3.  **[定期更新]** セクションで、 **[有効化]**をクリックします。  
+    3.  **[定期更新]** セクションで、 **[有効化]** をクリックします。  
   
-    4.  **[さらに、できるだけ早く更新を行います]**を選択できます。 このオプションでは、[OK] をクリックするとすぐに更新のインスタンスが 1 つキューに追加されます。 通常の更新スケジュールも適切な時間にトリガーされます。  
+    4.  **[さらに、できるだけ早く更新を行います]** を選択できます。 このオプションでは、[OK] をクリックするとすぐに更新のインスタンスが 1 つキューに追加されます。 通常の更新スケジュールも適切な時間にトリガーされます。  
   
-    5.  **[OK]**をクリックします。 これで、更新ページに更新履歴が表示されるようになり、スケジュールは通常の時間に実行されます。  
+    5.  **[OK]** をクリックします。 これで、更新ページに更新履歴が表示されるようになり、スケジュールは通常の時間に実行されます。  
   
  **SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブック**  
   

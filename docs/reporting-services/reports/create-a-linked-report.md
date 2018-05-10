@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reports
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
@@ -18,12 +17,11 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 509e5164f16d6fb5e2c537500d668633954b7b05
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d666a071193ad436cadb83c24692231e10ab2857
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-linked-report"></a>リンク レポートを作成する
   リンク レポートは、既存のレポートへのアクセス ポイントとなるレポート サーバー アイテムです。 概念的には、プログラムを実行したりファイルを開くのに使用する、プログラム ショートカットに似ています。  
@@ -36,11 +34,11 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-create-a-linked-report"></a>リンク レポートを作成するには  
   
-1.  レポート マネージャーで、リンク先のレポートのあるフォルダーに移動し、オプション メニューを開いて、 **[リンク レポートの作成]**をクリックします。  
+1.  レポート マネージャーで、リンク先のレポートのあるフォルダーに移動し、オプション メニューを開いて、 **[リンク レポートの作成]** をクリックします。  
   
 2.  新規リンク レポートの名前を入力します。 必要に応じて、説明を入力します。  
   
-3.  レポートを別のフォルダーに保存するには、 **[場所の変更]**をクリックします。 保存先のフォルダーをクリックするか、または **[場所]** ボックスにフォルダー名を入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 別のフォルダーを指定しない場合、現在のフォルダー (リンク先のレポートが保存されているフォルダー) にリンク レポートが作成されます。  
+3.  レポートを別のフォルダーに保存するには、 **[場所の変更]** をクリックします。 保存先のフォルダーをクリックするか、または **[場所]** ボックスにフォルダー名を入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 別のフォルダーを指定しない場合、現在のフォルダー (リンク先のレポートが保存されているフォルダー) にリンク レポートが作成されます。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] リンク レポートが表示されます。  
   

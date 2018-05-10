@@ -1,16 +1,15 @@
 ---
-title: "レポート サーバーへのユーザー アクセスを許可する | Microsoft Docs"
-ms.custom: 
+title: レポート サーバーへのユーザー アクセスを許可する | Microsoft Docs
+ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0e4e04ae2e783a7ef02da4e393c4fe0e4f6e98be
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e4b791188a0af8143ed25841906f7192f0417546
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-user-access-to-a-report-server"></a>レポート サーバーへのユーザー アクセスを許可する
 
@@ -62,9 +61,9 @@ ms.lasthandoff: 01/09/2018
 
 2. 右上にある*歯車*アイコンを選択します。
 
-3. **[サイトの設定]**を選択します。
+3. **[サイトの設定]** を選択します。
 
-4. **[セキュリティ]**を選択します。
+4. **[セキュリティ]** を選択します。
 
 5. **[グループまたはユーザーの追加]** を選択します。
 
@@ -87,7 +86,7 @@ ms.lasthandoff: 01/09/2018
 
 3. ドロップダウン メニューで、**[管理]** を選択します。
 
-4. **[セキュリティ]**を選択します。
+4. **[セキュリティ]** を選択します。
 
 5. **[グループまたはユーザーの追加]** を選択します。
 

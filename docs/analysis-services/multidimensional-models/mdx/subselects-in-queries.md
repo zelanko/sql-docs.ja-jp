@@ -1,31 +1,23 @@
 ---
-title: "クエリのサブセレクト |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: クエリのサブセレクト |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 66511a7fb1306f5168bb3476a58017c16e9762ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
+  サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
   
 ## <a name="subselects-by-example"></a>サブセレクトの例  
  表示させたい結果を生成するために、サブセレクトがどのように機能するかを示す例を見てみましょう。 上位 10 製品の数年間の販売動向を示す表を生成するように要求されたとします。  
@@ -356,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) 関数式を使用します。  
   
--   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ &#40;です。XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
+-   既定では計算されるメンバーでは許可されませんサブセレクトです。ただし、この制限は、セッション単位でに値を割り当てることによって、**サブクエリ**で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または**DBPROP_MSMD_SUBQUERIES** 内のプロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)です。 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) または **DBPROP_MSMD_SUBQUERIES** の値に基づく計算されたメンバーの動作の詳細については、「 **サブセレクトとサブキューブで計算されるメンバー**」を参照してください。  
   
   

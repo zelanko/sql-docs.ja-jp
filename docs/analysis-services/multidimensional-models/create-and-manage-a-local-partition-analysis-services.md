@@ -1,40 +1,28 @@
 ---
-title: "作成し、ローカル パーティション (Analysis Services) の管理 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 作成し、ローカル パーティション (Analysis Services) の管理 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- local partitions [Analysis Services]
-- partitions [Analysis Services], local
-- partitions [Analysis Services], creating
-ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 114f093cfe6531a0a2fc52b874730f1e4105f1d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>ローカル パーティションの作成と管理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-メジャー グループに追加のパーティションを作成すると、処理パフォーマンスを向上させることができます。 複数のパーティションがあると、ローカル サーバーとリモート サーバー上の対応する数の物理データ ファイルにファクト データを割り当てることができます。 Analysis Services では、パーティションを個別に処理することも並列に処理することもできるため、サーバー上の処理ワークロードをより細かく制御できます。  
+  メジャー グループに追加のパーティションを作成すると、処理パフォーマンスを向上させることができます。 複数のパーティションがあると、ローカル サーバーとリモート サーバー上の対応する数の物理データ ファイルにファクト データを割り当てることができます。 Analysis Services では、パーティションを個別に処理することも並列に処理することもできるため、サーバー上の処理ワークロードをより細かく制御できます。  
   
  パーティションは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でモデルのデザイン時に作成するか、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または XMLA を使用してソリューションを配置した後に作成することができます。 方法を 1 つだけ選択することをお勧めします。 ツールを何度も切り替えると、後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] からソリューションを再配置したときに、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で配置されたデータベースに対して行った変更が上書きされることがあります。  
   
 ## <a name="before-you-start"></a>開始前の準備  
- Business Intelligence Edition または Enterprise Edition を持っているかどうかを確認します。 Standard Edition では、複数のパーティションがサポートされていません。 エディションを確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサーバー ノードを右クリックし、 **[レポート]** | **[全般]**を選択します。 使用できる機能の詳細については、「 [SQL Server 2016 の各エディションでサポートされる機能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」を参照してください。  
+ Business Intelligence Edition または Enterprise Edition を持っているかどうかを確認します。 Standard Edition では、複数のパーティションがサポートされていません。 エディションを確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサーバー ノードを右クリックし、 **[レポート]** | **[全般]** を選択します。 使用できる機能の詳細については、「 [SQL Server 2016 の各エディションでサポートされる機能](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)」を参照してください。  
   
  パーティションを後でマージする場合は、パーティションで同じ集計デザインを共有する必要があることを最初に理解しておくことが重要です。 パーティションをマージできるのは、集計デザインとストレージ モードが同じ場合のみです。  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 02/15/2018
   
      ![[パーティション] ペイン内のソース列](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "[パーティション] ペイン内のソース列")  
   
-4.  [バインドの種類] で **[クエリ バインド]**を選択します。 データを選択する SQL クエリが自動的に表示されます。  
+4.  [バインドの種類] で **[クエリ バインド]** を選択します。 データを選択する SQL クエリが自動的に表示されます。  
   
 5.  下部にある WHERE 句で、このパーティションのデータを分割するフィルターを追加します。  
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 02/15/2018
   
 7.  最後の [ウィザードの完了] ページで、パーティションにわかりやすい名前を指定します。  
   
-8.  **[完了]**をクリックします。  
+8.  **[完了]** をクリックします。  
   
 9. 前の手順を繰り返して残りのパーティションを作成し、毎回次のデータ スライスを選択するように別の名前付きクエリを選択します。  
   
@@ -131,6 +119,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services &#40; 内のパーティションをマージします。SSAS - 多次元 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services & #40; 内のパーティションをマージします。SSAS - 多次元 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

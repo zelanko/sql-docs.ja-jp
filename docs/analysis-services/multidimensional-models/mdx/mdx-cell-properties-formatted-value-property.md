@@ -1,31 +1,23 @@
 ---
-title: "LANGUAGE と FORMAT_STRING FORMATTED_VALUE の |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: LANGUAGE と FORMAT_STRING FORMATTED_VALUE の |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4066cc4626de5cca04eac5b91b55e46fa9a2e5cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>MDX のセルのプロパティ - FORMATTED_VALUE プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
+  FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
   
 ## <a name="value-formatstring-language-properties"></a>VALUE プロパティ、FORMAT_STRING プロパティ、LANGUAGE プロパティ  
  これらのプロパティを組み合わせて使用するための準備として、次の表に各プロパティの概要を示します。  
@@ -150,8 +142,8 @@ FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および
   
 ## <a name="see-also"></a>参照  
  [FORMAT_STRING の内容と #40 です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [セルのプロパティ &#40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [作成とプロパティの値 &#40; を使用MDX と #41 です。](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [セルのプロパティ & #40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [作成とプロパティの値 & #40; を使用MDX と #41 です。](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

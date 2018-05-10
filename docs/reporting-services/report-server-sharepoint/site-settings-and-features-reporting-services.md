@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services のサイト設定とサイト機能 (SharePoint モード) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services のサイト設定とサイト機能 (SharePoint モード) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3bc11b3c437f6a596e3778b4ccf43b54d9668bf2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services のサイト設定とサイト機能 (SharePoint モード)
 
@@ -40,9 +38,9 @@ Reporting Services の SharePoint モードには、SharePoint の [サイトの
   
 ## <a name="open-the-reporting-services-site-settings-page"></a>[Reporting Services のサイト設定] ページを開く
   
-1.  SharePoint サイトの **[サイトの操作]** メニューの **[サイトの設定]**を選びます。  
+1.  SharePoint サイトの **[サイトの操作]** メニューの **[サイトの設定]** を選びます。  
   
-2.  **[Reporting Services]** セクションで、 **[Reporting Services のサイト設定]**を選びます。  
+2.  **[Reporting Services]** セクションで、 **[Reporting Services のサイト設定]** を選びます。  
   
 ## <a name="options-for-reporting-services-site-settings"></a>[Reporting Services のサイト設定] のオプション
   

@@ -3,15 +3,12 @@ title: media retention サーバー構成オプションの構成 | Microsoft Do
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup retention duration [SQL Server]
 - backup sets [SQL Server], retention duration
@@ -21,12 +18,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54fa0bee65e8dff4b0d709651259830e143fe2f6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1542361217e54fa1fb7a5826c79e9c173bde3756
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>media retention サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,11 +68,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-media-retention-option"></a>media retention オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[データベースの設定]** ノードをクリックします。  
   
-3.  **[バックアップと復元]**の **[バックアップ メディアの既定の保有期間 (日)]** ボックスで、0 ～ 365 の値を入力または選択します。ここで指定した日数が、データベース バックアップまたはトランザクション ログ バックアップの後にバックアップ メディアを保持する日数となります。  
+3.  **[バックアップと復元]** の **[バックアップ メディアの既定の保有期間 (日)]** ボックスで、0 ～ 365 の値を入力または選択します。ここで指定した日数が、データベース バックアップまたはトランザクション ログ バックアップの後にバックアップ メディアを保持する日数となります。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -84,9 +80,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `media retention` オプションの値を `60` 日に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `media retention` オプションの値を `60` 日に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

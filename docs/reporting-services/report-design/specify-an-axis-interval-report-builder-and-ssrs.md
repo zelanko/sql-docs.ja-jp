@@ -1,27 +1,25 @@
 ---
-title: "軸の間隔の指定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 軸の間隔の指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2db644cc97d36a8d081bee0503cd88de50d8195b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f3f228b9c0f6010c0db3654f81aa297d169a425d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割されたレポートで軸の間隔を設定して、グラフのカテゴリ (x) 軸に表示するラベル数と目盛り数を変更する方法について説明します。
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 
 ![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  カテゴリ軸を右クリックし、 **[横軸のプロパティ]**をクリックします。   
+1.  カテゴリ軸を右クリックし、 **[横軸のプロパティ]** をクリックします。   
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定では、軸の間隔は自動に設定されます。この手順では、既定値に設定を戻す方法について説明します。 
   
-1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]**をクリックします。 
+1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 
   
 2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、**[間隔]** を **[自動]** に設定して、すべてのカテゴリ グループ ラベルを表示します。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
   

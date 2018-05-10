@@ -1,30 +1,28 @@
 ---
-title: "レポート サーバー アプリケーションのアプリケーション ドメイン | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー アプリケーションのアプリケーション ドメイン | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fad2f5fd529550e7d5ed1f6101f271d15753364a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>レポート サーバー アプリケーションのアプリケーション ドメイン
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションを含んだ単一のサービスとしてレポート サーバーが実装されます。 それぞれのアプリケーションは、単一のレポート サーバー プロセス内の独自のアプリケーション ドメインで実行されます。 ほとんどの場合、アプリケーション ドメインは内部的に作成、構成、および管理されます。 ただし、レポート サーバーのアプリケーション ドメインがどのようにリサイクルされるのかを理解しておくと、パフォーマンスまたはメモリの問題を調査したり、中断したサービスをトラブルシューティングしたりする際に、その知識を役立てることができます。  

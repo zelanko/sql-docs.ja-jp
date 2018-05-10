@@ -1,16 +1,15 @@
 ---
-title: "レポート履歴を制限する (レポート マネージャー) | Microsoft Docs"
-ms.custom: 
+title: レポート履歴を制限する (レポート マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing report history
 - report history [Reporting Services], viewing history
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - historical data [Reporting Services]
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d3ad60e360d2144bd80b8243dd154941d9072bae
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 60b6cf98639259e909af0ee2c6424158cee0b952
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="limit-report-history-report-manager"></a>レポート履歴を制限する (レポート マネージャー)
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート履歴は必要時に作成できるほか、どの程度の頻度でスナップショットを作成し、レポート履歴に追加するかをスケジュールで設定することもできます。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  すべてのレポート履歴を制限なく保持する場合は、 **[レポート履歴に無制限の数のスナップショットを保持する]** を選択します。 それ以外の場合は、 **[レポート履歴のコピーの数を制限する]** を選択し、特定のレポートに対して保持できるスナップショットの最大数を指定します。  
   
-3.  **[適用]**をクリックします。  
+3.  **[適用]** をクリックします。  
   
 ### <a name="to-configure-report-history-for-a-specific-report"></a>特定のレポートのレポート履歴を構成するには  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  **[履歴]** タブをクリックします。  
   
-4.  レポートのオプションを選択し、 **[適用]**をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。  
+4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   

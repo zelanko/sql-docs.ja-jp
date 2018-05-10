@@ -1,49 +1,23 @@
 ---
-title: "キューブ セル (Analysis Services - 多次元データ) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storing data [Analysis Services], cells
-- hierarchies [Analysis Services], cells
-- OLAP objects [Analysis Services], cells
-- data members [Analysis Services]
-- cubes [Analysis Services], cells
-- empty cells [Analysis Services]
-- nonleaf members
-- cubes [Analysis Services], examples
-- storage [Analysis Services], cells
-- nonleaf cells
-- calculated cells [Analysis Services]
-- dimensions [Analysis Services], cells
-- cells [Analysis Services]
-- leaf members
-- leaf cells
-ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: 
-author: Minewiskan
+title: キューブ セル (Analysis Services - 多次元データ) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6542727b42e98fa73f2e485f0bf88426c442df2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 077e0631a6b2557525a436d3fd4448ccda23b82d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>キューブ セル (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-キューブはメジャー グループとディメンションで編成されたセルで構成されています。 セルは、キューブ内の各ディメンションの 1 メンバーのキューブ内の論理的な一意の交差部分を表します。 たとえば、次のダイアグラムで示すキューブには、Source、Route、Time という 3 つのディメンションで編成された 2 つのメジャーを持つメジャー グループが 1 つ含まれています。  
+  キューブはメジャー グループとディメンションで編成されたセルで構成されています。 セルは、キューブ内の各ディメンションの 1 メンバーのキューブ内の論理的な一意の交差部分を表します。 たとえば、次のダイアグラムで示すキューブには、Source、Route、Time という 3 つのディメンションで編成された 2 つのメジャーを持つメジャー グループが 1 つ含まれています。  
   
  ![1 つのセルを示すキューブ図](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "1 つのセルを示すキューブ図")  
   
@@ -85,13 +59,13 @@ ms.lasthandoff: 02/15/2018
   
  ![空のセルを示すキューブ図](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro7.gif "空のセルを示すキューブ図")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、空のセルはセルを特別な性質を持ちます。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、次を参照してください。[多次元式 &#40;です。MDX と #41 です。参照](../../mdx/multidimensional-expressions-mdx-reference.md)、および[重要な概念で MDX &#40;です。Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、空のセルはセルを特別な性質を持ちます。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、次を参照してください。[多次元式&#40;MDX&#41;参照](../../mdx/multidimensional-expressions-mdx-reference.md)、および[MDX の主な概念&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)です。  
   
 ## <a name="security"></a>セキュリティ  
- セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、次を参照してください[データ &#40; をディメンションにカスタムのアクセスを許可。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)、および[データ &#40; をセルにカスタムのアクセスを許可Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
+ セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、次を参照してください。[ディメンション データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)、および[セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)です。  
   
 ## <a name="see-also"></a>参照  
- [キューブのストレージと #40 です。Analysis Services - 多次元データ &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [キューブのストレージ&#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

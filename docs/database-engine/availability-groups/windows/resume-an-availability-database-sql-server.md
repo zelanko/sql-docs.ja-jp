@@ -3,15 +3,12 @@ title: 可用性データベースの再開 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.resumedatamove.f1
 helpviewer_keywords:
@@ -24,12 +21,11 @@ caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1a96c489595c3d8bbdb5543715756158f420d843
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccd7831f84c0cca28e564084f8d51b84d56eceeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resume-an-availability-database-sql-server"></a>可用性データベースの再開 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,9 +79,9 @@ ms.lasthandoff: 04/16/2018
   
 3.  可用性グループを展開します。  
   
-4.  **[可用性データベース]** ノードを展開し、データベースを右クリックして、 **[データ移動の再開]**をクリックします。  
+4.  **[可用性データベース]** ノードを展開し、データベースを右クリックして、 **[データ移動の再開]** をクリックします。  
   
-5.  **[データ移動の再開]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+5.  **[データ移動の再開]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 > [!NOTE]  
 >  このレプリカの場所で他のデータベースを再開するには、データベースごとに手順 4. と手順 5. を繰り返します。  

@@ -1,36 +1,23 @@
 ---
-title: "サービス アカウント (Analysis Services) の構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: サービス アカウント (Analysis Services) の構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b2a6f76cc85c4e595f05d372b6318a862534408a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-製品全体のアカウントの準備については、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を含めて、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに関する包括的なサービス アカウントの情報を提供するトピック、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
+  製品全体のアカウントの準備については、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を含めて、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに関する包括的なサービス アカウントの情報を提供するトピック、「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
   
  このトピックでは、テーブルおよびクラスター化インストールに必要な追加の権限など、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の補足情報を提供します。 また、サーバー操作をサポートするために必要な権限についても説明します。 たとえば、サービス アカウントの下で実行するように処理およびクエリ操作を構成できます。その場合、これを機能させるには追加の権限を付与する必要があります。  
   
@@ -52,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
  内部操作の場合、Analysis Services の権限保有者はログオン アカウントではなく、セットアップによって作成された、サービスごとの SID が含まれているローカル Windows セキュリティ グループです。 Analysis Services では、以前のバージョンから一貫して、アクセス許可をセキュリティ グループに割り当てるようになっています。 また、ログオン アカウントは時間の経過と共に変更できますが、サービスごとの SID とローカル セキュリティ グループはサーバーのインストールの有効期間にわたって一定です。 そのため、Analysis Services の場合、アクセス許可を保持するための選択肢として、ログオン アカウントよりもセキュリティ グループの方が優れています。 手動でサービス インスタンスに権限を付与するときには、ファイル システム権限と Windows の特権のどちらであっても、必ずサーバー インスタンスのために作成されたローカル セキュリティ グループにアクセス許可を与えます。  
   
- セキュリティ グループの名前は、一定のパターンに従います。 プレフィックスは常に **SQLServerMSASUser$**であり、その後にコンピューター名が続き、最後にインスタンス名が付きます。 既定のインスタンスは **MSSQLSERVER**です。 名前付きインスタンスは、セットアップ時に指定した名前です。  
+ セキュリティ グループの名前は、一定のパターンに従います。 プレフィックスは常に **SQLServerMSASUser$** であり、その後にコンピューター名が続き、最後にインスタンス名が付きます。 既定のインスタンスは **MSSQLSERVER**です。 名前付きインスタンスは、セットアップ時に指定した名前です。  
   
  ローカル セキュリティ設定でこのセキュリティ グループを確認できます。  
   
@@ -81,11 +68,11 @@ ms.lasthandoff: 02/15/2018
   
 1.  GPEDIT.msc を実行し、[ローカル コンピューター ポリシー] | [コンピューターの構成] | [Windows の設定] | [セキュリティの設定] | [ローカル ポリシー] | [ユーザー権利の割り当て] を選択します。  
   
-2.  **SQLServerMSASUser$**が含まれている既存のポリシーを確認します。 これは、Analysis Services がインストール済みのコンピューター上にあるローカル セキュリティ グループです。 Windows 特権とファイル フォルダー権限の両方が、このセキュリティ グループに付与されています。 **[サービスとしてログオン]** ポリシーをダブルクリックすると、セキュリティ グループがシステムにどのように指定されているかが表示されます。 セキュリティ グループの完全名は、Analysis Services を名前付きインスタンスとしてインストールしたかどうかによって異なります。 アカウントの特権を追加する場合は、実際のサービス アカウントではなく、このセキュリティ グループを使用してください。  
+2.  **SQLServerMSASUser$** が含まれている既存のポリシーを確認します。 これは、Analysis Services がインストール済みのコンピューター上にあるローカル セキュリティ グループです。 Windows 特権とファイル フォルダー権限の両方が、このセキュリティ グループに付与されています。 **[サービスとしてログオン]** ポリシーをダブルクリックすると、セキュリティ グループがシステムにどのように指定されているかが表示されます。 セキュリティ グループの完全名は、Analysis Services を名前付きインスタンスとしてインストールしたかどうかによって異なります。 アカウントの特権を追加する場合は、実際のサービス アカウントではなく、このセキュリティ グループを使用してください。  
   
-3.  GPEDIT でアカウントの特権を追加するには、 **[プロセス ワーキング セットの増加]** を右クリックし、 **[プロパティ]**を選択します。  
+3.  GPEDIT でアカウントの特権を追加するには、 **[プロセス ワーキング セットの増加]** を右クリックし、 **[プロパティ]** を選択します。  
   
-4.  **[ユーザーまたはグループの追加]**をクリックします。  
+4.  **[ユーザーまたはグループの追加]** をクリックします。  
   
 5.  Analysis Services インスタンスのユーザー グループを入力します。 サービス アカウントはローカル セキュリティ グループのメンバーであり、そのためアカウントのドメインとしてローカル コンピューター名を付加する必要があることに注意してください。  
   
@@ -95,7 +82,7 @@ ms.lasthandoff: 02/15/2018
   
     -   SQL01-WIN12\SQL01-WIN12$SQLServerMSASUser$TABULAR  
   
-6.  **[プロセスに対してメモリ クォータを調整する]**のほか、必要に応じて **[メモリ内のページのロック]** または **[スケジューリング優先順位の繰り上げ]**に対しても、この手順を繰り返します。  
+6.  **[プロセスに対してメモリ クォータを調整する]** のほか、必要に応じて **[メモリ内のページのロック]** または **[スケジューリング優先順位の繰り上げ]** に対しても、この手順を繰り返します。  
   
 > [!NOTE]  
 >  以前のバージョンのセットアップでは、Analysis Services サービス アカウントが **Performance Log Users** グループに誤って追加されていました。 この欠陥は修正されましたが、既存のインストールにこの不必要なグループ メンバーシップが存在する可能性があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントでは **Performance Log Users** グループのメンバーシップを必要としないので、グループから削除できます。  
@@ -132,7 +119,7 @@ ms.lasthandoff: 02/15/2018
 3.  **[Windows エクスプローラー]** | **[Program Files]** | **[Microsoft SQL Server]** | Msasxx.mssqlserver | **[OLAP]** | **[bin]** を使用して、フォルダーのセキュリティ プロパティが、手順 2 のセキュリティ グループに付与されていることを確認します。  
   
 > [!NOTE]  
->  SID は削除したり変更したりしないでください。 誤って削除したサービスごとの SID を復元する場合については、 [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)を参照してください。  
+>  SID は削除したり変更したりしないでください。 誤って削除したサービスごとの SID を復元するには、次を参照してください。 [ http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)です。  
   
  **サービスごとの SID の詳細**  
   
@@ -143,7 +130,7 @@ ms.lasthandoff: 02/15/2018
  SID は不変であるため、サービスのインストール時に作成されたファイル システム ACL を、サービス アカウントの変更頻度に関係なく、無期限に使用できます。 SID により権限を指定する ACL では、セキュリティのための措置を強化するために、同じアカウントで他のサービスが実行する場合でも、プログラムの実行可能プログラムおよびデータ フォルダーがサービスの単一のインスタンスによってのみアクセスされることが保証されます。  
   
 ##  <a name="bkmk_tasks"></a> 特定のサーバー操作に対する追加の Analysis Services 権限の付与  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、一部のタスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を開始するために使用されるサービス アカウント (またはログオン アカウント) のセキュリティ コンテキストに従って実行され、他のタスクは、そのタスクを要求しているユーザーのセキュリティ コンテキストに従って実行されます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]起動に使用するサービス アカウント (またはログオン アカウント) のセキュリティ コンテキストでいくつかのタスクを実行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、し、タスクを要求しているユーザーのセキュリティ コンテキストでその他のタスクを実行します。  
   
  次の表に、サービス アカウントとして実行するタスクをサポートするために必要な追加権限を示します。  
   

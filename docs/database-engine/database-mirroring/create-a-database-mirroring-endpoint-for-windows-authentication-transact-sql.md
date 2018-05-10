@@ -3,15 +3,13 @@ title: Windows 認証でのデータベース ミラーリング エンドポイ
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -23,12 +21,11 @@ caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6043d585b7b402ba51bf22693b871215572c4932
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2ad5e6b94c35a7f6013e03752ede0ea787ab91b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.lasthandoff: 04/16/2018
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
   
 > [!IMPORTANT]  
->  RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
+>  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
 ####  <a name="Permissions"></a> Permissions  
  CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
@@ -131,7 +128,7 @@ ms.lasthandoff: 04/16/2018
          AES RC4 では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、AES アルゴリズムを優先することが示されます。 RC4 AES では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、RC4 アルゴリズムを優先することが示されます。 両方のエンドポイントで両方のアルゴリズムを異なる順序で指定した場合、接続を受け入れた方のエンドポイントが優先されます。  
   
         > [!NOTE]  
-        >  RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
+        >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
     -   \<*role*> では、サーバーが実行できるロールが定義されます。 ROLE の指定は必須です。 ただし、エンドポイントのロールが適用されるのは、データベース ミラーリングの場合のみです。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、エンドポイントのロールが無視されます。  
   

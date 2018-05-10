@@ -1,35 +1,23 @@
 ---
-title: "マイニング構造に列を追加 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: マイニング構造に列を追加 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], columns
-- columns [data mining], mining structure columns
-- adding columns
-ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5dfeade08192456bae474b633af9bd401dfa0fde
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 53b88835bc2efbc009c6d4e667ae585568a7f2d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-mining-structure"></a>マイニング構造への列の追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング ウィザードで定義したマイニング構造に列を追加するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーを使用します。 マイニング構造の定義に使用したデータ ソース ビューに存在する列はどれでも追加できます。  
+  データ マイニング ウィザードで定義したマイニング構造に列を追加するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーを使用します。 マイニング構造の定義に使用したデータ ソース ビューに存在する列はどれでも追加できます。  
   
 > [!NOTE]  
 >  マイニング構造に列のコピーを複数追加することもできます。ただし、同じモデル内で 1 つの列のインスタンスが複数にならないようにし、ソースと派生列の間に誤った相関関係ができるのを防ぐ必要があります。  
@@ -38,13 +26,13 @@ ms.lasthandoff: 02/15/2018
   
 1.  データ マイニング デザイナーで **[マイニング構造]** タブを選択します。  
   
-2.  マイニング構造を右クリックして **[列の追加]**を選択します。  
+2.  マイニング構造を右クリックして **[列の追加]** を選択します。  
   
      **[列の選択]** ダイアログ ボックスが開きます。  
   
-3.  **[基になるテーブル]**で、列が格納されているデータ ソース ビュー内のテーブルを選択します。  
+3.  **[基になるテーブル]** で、列が格納されているデータ ソース ビュー内のテーブルを選択します。  
   
-4.  **[基になる列]**で、マイニング構造に追加する列を選択します。  
+4.  **[基になる列]** で、マイニング構造に追加する列を選択します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

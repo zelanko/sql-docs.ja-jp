@@ -1,33 +1,19 @@
 ---
-title: "分析データ ソースに対してコマンドを実行 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AdomdCommand object
-- commands [ADOMD.NET]
-- ADOMD.NET, commands
-ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
-caps.latest.revision: 
-author: Minewiskan
+title: 分析データ ソースに対してコマンドを実行 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23c14b71b321ee8358d542bd10f8b6cb73ee9a9f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b2255f699edf57b1416191383b216875a7f13bb5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-commands-against-an-analytical-data-source"></a>分析データ ソースに対するコマンドの実行
   分析データ ソースへの接続を確立した後、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> オブジェクトを使用して、そのデータ ソースに対してコマンドを実行し、結果を取得することができます。 これらのコマンドによるデータ取得には、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、さらには SQL の一部の構文も使用できます。 また、Analysis Services Scripting Language (ASSL) コマンドを使用して、基になるデータベースを変更することもできます。  

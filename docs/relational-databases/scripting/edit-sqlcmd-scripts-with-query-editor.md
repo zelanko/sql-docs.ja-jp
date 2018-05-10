@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
 - SQLCMD scripts
@@ -23,13 +21,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 383564a5aed33b7263c0c4ade4b0339f9afbfe87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eea43371071a0664c5aece98541cc37977c4867f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,9 +55,9 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>データベース エンジンのクエリ エディター ウィンドウを SQLCMD モードに切り替えるには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックして **[新しいクエリ]**をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディター ウィンドウを新しく開きます。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックして **[新しいクエリ]** をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディター ウィンドウを新しく開きます。  
   
-2.  **[クエリ]** メニューの **[SQLCMD モード]**をクリックします。  
+2.  **[クエリ]** メニューの **[SQLCMD モード]** をクリックします。  
   
      クエリ エディター ウィンドウのコンテキストで **sqlcmd** ステートメントが実行されます。  
   
@@ -95,7 +92,7 @@ ms.lasthandoff: 04/16/2018
  SQLCMD の実行方法の詳細については、「 [sqlcmd Utility](../../tools/sqlcmd-utility.md)」または SQLCMD のチュートリアルを参照してください。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>SQLCMD スクリプト操作を既定で有効にする方法  
- SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]**をクリックし、 **[クエリ実行]**、 **[SQL Server]**の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
+ SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]**、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>SQLCMD スクリプトの作成と編集  
  スクリプト モードを有効にしたら、SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。 この場合に当てはまる規則を以下に示します。  

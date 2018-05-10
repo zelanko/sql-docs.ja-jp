@@ -1,32 +1,30 @@
 ---
-title: "グループ式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: グループ式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
 - grouping data
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 73fdc770af41d60a5dd8cb1882340ecd04a90fac
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 60639da2f409f6468c909cc341c0880150ba144c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>グループ式の例 (レポート ビルダーおよび SSRS)
   データ領域では、1 つのフィールドでデータをグループ化することも、グループ化の基準となるデータを識別する、より複雑な式を作成することもできます。 複合式には、複数のフィールドやパラメーター、条件ステートメント、またはカスタム コードなどへの参照が含まれます。 データ領域に対してグループを定義する場合、これらの式を **[グループ]** プロパティに追加します。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  

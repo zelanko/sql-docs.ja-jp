@@ -1,31 +1,23 @@
 ---
-title: "標準アクションの追加 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 標準アクションの追加 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e19398c0e1507273abf218b4a49255bd8ce910dc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-standard-action"></a>標準アクションの追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-アクションをデータベースに追加するには、キューブ デザイナーの [アクション] ビューを使用します。 このビューには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 作成されたアクションは、関連キューブの再処理後、使用可能になります。 詳細については、「 [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
+  アクションをデータベースに追加するには、キューブ デザイナーの [アクション] ビューを使用します。 このビューには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。 作成されたアクションは、関連キューブの再処理後、使用可能になります。 詳細については、「 [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
   
 ### <a name="to-create-an-action"></a>アクションを作成するには  
   
@@ -33,9 +25,9 @@ ms.lasthandoff: 02/15/2018
   
 2.  ツール バーの **[新しいアクション]** アイコンをクリックし、式ペインで次の手順を実行します。  
   
-    -   **[名前]**にアクションの名前を入力します。  
+    -   **[名前]** にアクションの名前を入力します。  
   
-    -   **[対象になる種類]** ボックスの一覧で、アクションをアタッチするオブジェクトの種類を選択します。 **[対象になる種類]** で選択したオブジェクトによって、 **[対象になるオブジェクト]**で指定できるオブジェクトと選択できる種類が決定します。 次の表に、対象になる種類ごとに有効な **[対象になるオブジェクト]** の選択肢を示します。  
+    -   **[対象になる種類]** ボックスの一覧で、アクションをアタッチするオブジェクトの種類を選択します。 **[対象になる種類]** で選択したオブジェクトによって、 **[対象になるオブジェクト]** で指定できるオブジェクトと選択できる種類が決定します。 次の表に、対象になる種類ごとに有効な **[対象になるオブジェクト]** の選択肢を示します。  
   
         |選択した対象になる種類|[対象になるオブジェクト] で選択できる項目|  
         |---------------------------------------------|---------------------------------------------------|  
@@ -62,7 +54,7 @@ ms.lasthandoff: 02/15/2018
         |ステートメントから削除してください。|OLE DB コマンドを実行します。|  
         |[URL]|インターネット ブラウザーで Web ページを表示します。|  
   
-    -   **[アクションの式]**で、アクションを定義する式を作成します。 式の評価結果は文字列になる必要があります。 式は手動で入力するか、**[メタデータ]** タブおよび **[関数]** タブからアイテムをドラッグします。  
+    -   **[アクションの式]** で、アクションを定義する式を作成します。 式の評価結果は文字列になる必要があります。 式は手動で入力するか、**[メタデータ]** タブおよび **[関数]** タブからアイテムをドラッグします。  
   
 3.  オプションです。**[追加のプロパティ]** を展開して、次のいずれかの手順を実行します。  
   
@@ -74,16 +66,16 @@ ms.lasthandoff: 02/15/2018
         |Batch|アクションはバッチ操作で実行されます。|  
         |オープン時|アクションはユーザーがキューブを開いたときに実行されます。|  
   
-    -   **[アプリケーション]**にアクションに関連付けられたアプリケーションの名前を入力します。 たとえば、ユーザーを特定の Web サイトに移動するアクションを作成する場合、アクションに関連付けられるアプリケーションは Microsoft Internet Explorer または他の Web ブラウザーになります。  
+    -   **[アプリケーション]** にアクションに関連付けられたアプリケーションの名前を入力します。 たとえば、ユーザーを特定の Web サイトに移動するアクションを作成する場合、アクションに関連付けられるアプリケーションは Microsoft Internet Explorer または他の Web ブラウザーになります。  
   
         > [!NOTE]  
-        >  **[アプリケーション]**で指定した名前と一致するアクションのみを返すスキーマの行セットをクライアント アプリケーションが明示的に制限する場合を除き、独自のアクションがサーバーに返されることはありません。  
+        >  **[アプリケーション]** で指定した名前と一致するアクションのみを返すスキーマの行セットをクライアント アプリケーションが明示的に制限する場合を除き、独自のアクションがサーバーに返されることはありません。  
   
-    -   **[アクションの内容]**では、URL の種類を使用する場合、"http://www.adventure-works.com" のように、インターネット アドレスを引用符で囲みます。  
+    -   **アクション コンテンツ**URL の種類を使用している場合は、引用符で囲むなどのインターネット アドレスを囲む"http://www.adventure-works.com"です。  
   
-    -   **[説明]**には、アクションの説明を入力します。  
+    -   **[説明]** には、アクションの説明を入力します。  
   
-    -   **[キャプション]**には、キャプションまたは評価結果がキャプションになる MDX 式を入力します。 このキャプションは、アクションが開始されたときにエンド ユーザーに表示されます。 キャプションを指定していない場合は、代わりにアクションの名前が使用されます。  
+    -   **[キャプション]** には、キャプションまたは評価結果がキャプションになる MDX 式を入力します。 このキャプションは、アクションが開始されたときにエンド ユーザーに表示されます。 キャプションを指定していない場合は、代わりにアクションの名前が使用されます。  
   
     -   **[キャプションに MDX を使用]** ボックスの一覧では、キャプションが MDX かどうかを指定します。 このフィールドは、サーバーに対して **[キャプション]** の内容を MDX 式として評価するかどうかを示します。  
   

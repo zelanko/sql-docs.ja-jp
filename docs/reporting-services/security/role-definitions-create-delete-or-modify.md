@@ -1,16 +1,15 @@
 ---
-title: "ロールを作成、削除、または変更する (Management Studio) | Microsoft Docs"
-ms.custom: 
+title: ロールを作成、削除、または変更する (Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - deleting roles
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6029146092b3aabb2861cafa9ce4cdffa4a397ac
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df9601235ca6538447b577154fe629f9e6e6719a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>ロールの定義 - 作成、削除、または変更
   Reporting Services には、レポート サーバーへのアクセス レベルをあらかじめ定義したロールが用意されています。 レポート サーバーにアクセスする各ユーザーまたはグループは、実行できるタスクが定義されたロールを介して、レポート サーバーにアクセスすることになります。 ロールは、レポート サーバー全体に対して定義されます。 レポート サーバーの特定の部分についてロール定義を変更したり、状況に依存するようなロールを指定したりすることはできません。  
@@ -47,9 +45,9 @@ ms.lasthandoff: 01/09/2018
   
 2.  [セキュリティ] フォルダーを展開します。  
   
-3.  アイテムレベルのロールの定義を作成する場合は、 **[ロール]**を右クリックし、 **[新しいロール]**をポイントします。  
+3.  アイテムレベルのロールの定義を作成する場合は、 **[ロール]** を右クリックし、 **[新しいロール]** をポイントします。  
   
-     また、システム レベルのロールの定義を作成する場合は、 **[システム ロール]**を右クリックし、 **[新しいシステム ロール]**をポイントします。  
+     また、システム レベルのロールの定義を作成する場合は、 **[システム ロール]** を右クリックし、 **[新しいシステム ロール]** をポイントします。  
   
 4.  ロールに対する一意の名前を入力します。 名前には、少なくとも 1 つの文字が含まれている必要があります。 スペースおよび記号を含めることもできますが、; ? : @ & = + , $ / * < > | " または / は含めることができません。  
   
@@ -67,17 +65,17 @@ ms.lasthandoff: 01/09/2018
   
 3.  アイテムレベルのロールの定義を削除または変更するには、[ロール] フォルダーを展開します。 次のいずれかを実行します。  
   
-    1.  ロールの定義を削除するには、アイテムを右クリックし、 **[削除]**をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  ロールの定義を削除するには、アイテムを右クリックし、 **[削除]** をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]**をクリックします。 **[ユーザー ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
+    2.  ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]** をクリックします。 **[ユーザー ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
   
-         このロールのメンバーが実行できるタスクを選択し、 **[OK]**をクリックします。  
+         このロールのメンバーが実行できるタスクを選択し、 **[OK]** をクリックします。  
   
 4.  システム レベルのロールの定義を削除または変更するには、 **[システム ロール]** フォルダーを展開します。 次のいずれかを実行します。  
   
-    1.  システム ロールの定義を削除するには、アイテムを右クリックし、 **[削除]**をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+    1.  システム ロールの定義を削除するには、アイテムを右クリックし、 **[削除]** をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-    2.  システム ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]**をクリックします。 **[システム ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
+    2.  システム ロールの定義を変更するには、アイテムを右クリックし、 **[プロパティ]** をクリックします。 **[システム ロールのプロパティ]** ダイアログ ボックスの [全般] ページが表示されます。  
   
          このロールのメンバーが実行できるタスクを選択し、 **[OK]** をクリックして変更を適用します。  
   

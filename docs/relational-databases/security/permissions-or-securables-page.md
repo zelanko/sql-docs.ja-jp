@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.common.permissions.f1
 - sql13.swb.SecurableAndEffectPermissions.f1
@@ -23,17 +22,16 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8f26b252efab2f41c086049a988a41f440099a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b4ee922c02ec87f4d8908b597f694328703366cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissions-or-securables-page"></a>[権限] ページまたは [セキュリティ保護可能なリソース] ページ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **[権限]** ページまたは **[セキュリティ保護可能なリソース]** ページを使用すると、セキュリティ保護可能なリソースに対する権限を表示または設定できます。 このページは、さまざまな場面で開くことができます。 このページの内容は、ページを開くときの状況やページに含まれているアイテムによって多少異なる場合があります。 ページの先頭にあるグリッドは、ページを開いたときに設定されます。それ以外では、空になる場合があります。 アイテムを上のグリッドに追加するには、 **[検索]**をクリックします。 上のグリッドでアイテムを選択した後、 **[明示的]** タブで適切な権限を設定します。集計された権限を表示するには、**[有効]** タブを使用します。  
+  **[権限]** ページまたは **[セキュリティ保護可能なリソース]** ページを使用すると、セキュリティ保護可能なリソースに対する権限を表示または設定できます。 このページは、さまざまな場面で開くことができます。 このページの内容は、ページを開くときの状況やページに含まれているアイテムによって多少異なる場合があります。 ページの先頭にあるグリッドは、ページを開いたときに設定されます。それ以外では、空になる場合があります。 アイテムを上のグリッドに追加するには、 **[検索]** をクリックします。 上のグリッドでアイテムを選択した後、 **[明示的]** タブで適切な権限を設定します。集計された権限を表示するには、**[有効]** タブを使用します。  
   
  セキュリティ保護可能なリソースとプリンシパルの有効な組み合わせの詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」に記載されている、セキュリティ保護可能なリソース別の構文に関するリンク先を参照してください。 詳細については、「[セキュリティ保護可能](../../relational-databases/security/securables.md)」を参照してください。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 04/16/2018
  この権限をログインに対して拒否する場合はオンにします。 この権限を取り消す場合はオフにします。  
   
  **[列権限]**  
- 列を含むオブジェクト (テーブル、ビュー、テーブル値関数など) の場合、 **[列権限]** ボタンをクリックすると、 **[列権限]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、テーブルまたはビューの各列に対して **[許可]**、 **[許容]**または **[拒否]** の権限を設定できます。 このオプションは、すべての種類のオブジェクトや権限で使用できるとは限りません。  
+ 列を含むオブジェクト (テーブル、ビュー、テーブル値関数など) の場合、 **[列権限]** ボタンをクリックすると、 **[列権限]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、テーブルまたはビューの各列に対して **[許可]**、 **[許容]** または **[拒否]** の権限を設定できます。 このオプションは、すべての種類のオブジェクトや権限で使用できるとは限りません。  
   
 ## <a name="effective-tab"></a>[有効] タブ  
  プリンシパルがセキュリティ保護可能なリソースに関連付けた権限は、複数の異なるプリンシパルに設定されている権限から継承されている場合があります。 たとえば、ログインは個別に権限が与えられるだけでなく、グループのメンバーとしても権限が与えられる場合があります。 **[有効]** タブでは、明示的な権限と、グループまたはロールのメンバーシップから受け取る権限を組み合わせた結果が表示されます。 許可の権限は集計されます。 また、すべての許可の権限よりも拒否の権限が優先されます。  

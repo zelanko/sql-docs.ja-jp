@@ -3,15 +3,12 @@ title: suspect_pages テーブルの管理 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
 - restoring pages [SQL Server]
@@ -25,12 +22,11 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e42b62f8732722495337f0ac18de3ddb6acc671a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b09fd93843050d71c59f1b7bef9a026bb773f32a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,11 +128,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]**を展開します。  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
-2.  **[システム データベース]**、 **[msdb]**、 **[テーブル]**、 **[システム テーブル]**の順に展開します。  
+2.  **[システム データベース]**、 **[msdb]**、 **[テーブル]**、 **[システム テーブル]** の順に展開します。  
   
-3.  **[dbo.suspect_pages]** を展開し、 **[上位 200 行の編集]**を右クリックします。  
+3.  **[dbo.suspect_pages]** を展開し、 **[上位 200 行の編集]** を右クリックします。  
   
 4.  クエリ ウィンドウで、目的の行を編集、更新、または削除します。  
   
@@ -146,9 +142,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例は、 `suspect_pages` テーブルからいくつかの行を削除します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例は、 `suspect_pages` テーブルからいくつかの行を削除します。  
   
 ```  
 -- Delete restored, repaired, or deallocated pages.  

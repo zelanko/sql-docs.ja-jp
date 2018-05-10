@@ -1,31 +1,23 @@
 ---
-title: "データベースの Analysis Services については、整合性チェック (DBCC) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データベースの Analysis Services については、整合性チェック (DBCC) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4a25919df6cb26609e008b6910ae6fb67bafba84
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 用 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-DBCC には、Analysis Services インスタンスの多次元および表形式データベース向けに、オンデマンドのデータベース検証機能が用意されています。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
+  DBCC には、Analysis Services インスタンスの多次元および表形式データベース向けに、オンデマンドのデータベース検証機能が用意されています。 SQL Server Management Studio (SSMS) の MDX または XMLA クエリ ウィンドウで DBCC を実行し、SSMS の SQL Server Profiler または xEvent セッションで DBCC 出力をトレースできます。  
 このコマンドはオブジェクト定義を受け取り、空の結果セットを返します。オブジェクトが破損している場合は詳細なエラー情報を返します。   この記事では、コマンドの実行方法、結果の解釈方法、発生した問題に対処する方法について説明します。  
   
  表形式データベースの場合、DBCC で実行する整合性チェックは、データベースの再読み込み、同期、復元のたびに自動実行される組み込みの検証と同等です。  対照的に、多次元データベースの整合性チェックは、オンデマンドで DBCC を実行した場合にのみ実行されます。  
@@ -109,7 +101,7 @@ DBCC には、Analysis Services インスタンスの多次元および表形式
  場合によっては、最後のサービスが再起動した後に発生した破損エラーを取得するために、サービスの再起動が必要です。 サーバーに再接続するだけでは、変更を取得できません。  
   
 ### <a name="run-dbcc-commands-in-management-studio"></a>Management Studio で DBCC コマンドを実行する  
- アドホック クエリの場合、SQL Server Management Studio で MDX または XMLA クエリ ウィンドウを開きます。 この操作を行うには、データベースをクリックし、 **[新しいクエリ]** | **[XMLA]**の順にクリックしてコマンドを実行し、出力を読み取ります。  
+ アドホック クエリの場合、SQL Server Management Studio で MDX または XMLA クエリ ウィンドウを開きます。 この操作を行うには、データベースをクリックし、 **[新しいクエリ]** | **[XMLA]** の順にクリックしてコマンドを実行し、出力を読み取ります。  
   
  ![Management Studio での DBCC XML コマンド](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "Management Studio での DBCC XML コマンド")  
   

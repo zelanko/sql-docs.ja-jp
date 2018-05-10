@@ -1,29 +1,28 @@
 ---
-title: "レポート サーバーで基本認証を構成する | Microsoft Docs"
-ms.custom: 
+title: レポート サーバーで基本認証を構成する | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 999ebd9aad00dff3418e48d3768588cd16d3fbbb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-     このファイルは、*drive>:\<:*\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer にあります。  
+     このファイルは、*drive>:\<:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer にあります。  
   
 2.  \<**Authentication**> を検索します。  
   

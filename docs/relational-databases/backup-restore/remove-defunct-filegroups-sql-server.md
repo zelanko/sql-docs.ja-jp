@@ -3,15 +3,12 @@ title: 機能していないファイル グループの削除 (SQL Server) | Mi
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - piecemeal restores [SQL Server], defunct filegroups
 - defunct filegroups
@@ -24,12 +21,11 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9d0cb3c27dba7951fa1ee79c1253cd748154357d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a9dc4bb9c9dec6b865bef7028d88a0861d0b7fde
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>機能していないファイル グループの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,15 +72,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、ファイルを削除するデータベースを右クリックして、 **[プロパティ]**をクリックします。  
+2.  **[データベース]** を展開し、ファイルを削除するデータベースを右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  **[ファイル]** ページをクリックします。  
   
-4.  **[データベース ファイル]** グリッドで、削除するファイルを選択し、 **[削除]**をクリックした後 **[OK]**をクリックします。  
+4.  **[データベース ファイル]** グリッドで、削除するファイルを選択し、 **[削除]** をクリックした後 **[OK]** をクリックします。  
   
 5.  **[ファイル グループ]** ページをクリックします。  
   
-6.  **[行]** グリッドで、削除するファイル グループを選択し、 **[削除]**をクリックした後 **[OK]**をクリックします。  
+6.  **[行]** グリッドで、削除するファイル グループを選択し、 **[削除]** をクリックした後 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -92,9 +88,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 (**注:** この例では、ファイルとファイル グループが既に存在することを前提としています。 これらのオブジェクトを作成するには、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」トピックの例 B を参照してください)。最初の例では、`test1dat3` ステートメントと `test1dat4` 句を使用して、`ALTER DATABASE` ファイルと `REMOVE FILE` ファイルを機能していないファイル グループから削除します。 2 番目の例では、`Test1FG1` 句を使用して、機能していないファイル グループ `REMOVE FILEGROUP` を削除します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 (**注:** この例では、ファイルとファイル グループが既に存在することを前提としています。 これらのオブジェクトを作成するには、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」トピックの例 B を参照してください)。最初の例では、`test1dat3` ステートメントと `test1dat4` 句を使用して、`ALTER DATABASE` ファイルと `REMOVE FILE` ファイルを機能していないファイル グループから削除します。 2 番目の例では、`Test1FG1` 句を使用して、機能していないファイル グループ `REMOVE FILEGROUP` を削除します。  
   
 ```sql  
 USE master;  

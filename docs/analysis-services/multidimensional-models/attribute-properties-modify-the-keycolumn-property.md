@@ -1,35 +1,23 @@
 ---
-title: "属性の KeyColumn プロパティを変更する |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 属性の KeyColumn プロパティを変更する |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- binding attributes [Analysis Services]
-- attributes [Analysis Services], binding
-- key columns [Analysis Services]
-ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e745159dbb8a8e329ad5cbdee64831ce284439c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 70928d88ac4138eda6c7a4da7b3195005c308f31
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---modify-the-keycolumn-property"></a>属性のプロパティ - KeyColumn プロパティの変更
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-属性の **KeyColumns** プロパティは変更できます。 たとえば、単一キーではなく複合キーをその属性のキーとして指定する場合があります。  
+  属性の **KeyColumns** プロパティは変更できます。 たとえば、単一キーではなく複合キーをその属性のキーとして指定する場合があります。  
   
 ### <a name="to-modify-the-keycolumns-property-of-an-attribute"></a>属性の KeyColumns プロパティを変更するには  
   
@@ -37,11 +25,11 @@ ms.lasthandoff: 02/15/2018
   
 2.  次のいずれかの手順を実行して、ディメンション デザイナーを開きます。  
   
-    -   **ソリューション エクスプローラー**では、 **[ディメンション]** フォルダー内のディメンションを右クリックし、 **[開く]** または **[デザイナーの表示]**をクリックします。  
+    -   **ソリューション エクスプローラー**では、 **[ディメンション]** フォルダー内のディメンションを右クリックし、 **[開く]** または **[デザイナーの表示]** をクリックします。  
   
          または  
   
-    -   キューブ デザイナーで、上、 **キューブ構造**  タブで、キューブ ディメンションを展開し、**ディメンション**ペインをクリック**編集\<ディメンション >**です。  
+    -   キューブ デザイナーで、上、 **キューブ構造**  タブで、キューブ ディメンションを展開し、**ディメンション**ペインをクリック**編集\<ディメンション >** です。  
   
 3.  **[ディメンション構造]** タブの **[属性]** ペインで、変更する **KeyColumns** プロパティを含む属性をクリックします。  
   

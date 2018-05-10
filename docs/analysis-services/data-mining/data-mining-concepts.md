@@ -1,45 +1,23 @@
 ---
-title: "データ マイニングの概念 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニングの概念 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Analysis Services, data mining
-- cleaning data
-- predictive analytics
-- learning algorithms
-- data mining [Analysis Services], concepts
-- inductive learning
-- data mining [Analysis Services], about data mining
-- mining models [Analysis Services]
-- data access [Analysis Services]
-- machine learning algorithms [Analysis Services]
-- mining models [Analysis Services], about data mining
-- SSAS, data mining
-- Analysis Services, data mining
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7a625cb7ec0aa187a825dbc02b742d82afa83065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-concepts"></a>データ マイニングの概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニングとは、大規模なデータ セットから実用的な情報を検出するプロセスです。 データ マイニングでは、数学的分析を使用して、データに内在するパターンおよび傾向を抽出します。 通常、これらのパターンは、従来のデータ探索では検出できません。これは、リレーションシップが非常に複雑であるか、またはデータ量が多すぎるためです。  
+  データ マイニングとは、大規模なデータ セットから実用的な情報を検出するプロセスです。 データ マイニングでは、数学的分析を使用して、データに内在するパターンおよび傾向を抽出します。 通常、これらのパターンは、従来のデータ探索では検出できません。これは、リレーションシップが非常に複雑であるか、またはデータ量が多すぎるためです。  
   
  これらのパターンと傾向を合わせて収集し、 *データ マイニング モデル*として定義できます。 マイニング モデルは、次のような特定のシナリオに適用できます。  
   
@@ -156,7 +134,7 @@ ms.lasthandoff: 02/15/2018
   
  モデルを運用環境に配置する前に、モデルのパフォーマンスをテストする必要があります。 また、モデルを作成する場合、通常は構成が異なる複数のモデルを作成し、どのモデルが問題およびデータに最も適した結果をもたらすかを調べるためにすべてのモデルをテストします。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データをトレーニング データセットとテスト データセットに分割できるツールがあります。これにより、すべてのモデルのパフォーマンスを同じデータに対して正確に評価できます。 トレーニング データセットを使用してモデルを作成し、テスト データセットを使用して予測クエリを作成することによってモデルの精度をテストします。 このパーティション分割を行うことができます、マイニング モデルの作成中に自動的にします。 詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]トレーニング セットとテスト データセットを同じデータに対してすべてのモデルのパフォーマンスを正確に評価できるように、データを分割するのに役立つツールを提供します。 トレーニング データセットを使用してモデルを作成し、テスト データセットを使用して予測クエリを作成することによってモデルの精度をテストします。 このパーティション分割を行うことができます、マイニング モデルの作成中に自動的にします。 詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のデータ マイニング デザイナーのビューアーを使用して、アルゴリズムで検出された傾向およびパターンを調べることができます。 詳細については、「 [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)」を参照してください。 また、リフト チャートや分類マトリックスなどのデザイナーのツールを使用して、モデルがどの程度予測を作成できるかをテストすることもできます。 モデルがデータに固有のものであるか、一般的な母集団の推定に使用できるものであるかを確認する場合は、*クロス検証*と呼ばれる統計手法を使用できます。この手法を使用すると、データのサブセットが自動的に作成され、各サブセットに対してモデルがテストされます。 詳細については、「[テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)」を参照してください。  
   

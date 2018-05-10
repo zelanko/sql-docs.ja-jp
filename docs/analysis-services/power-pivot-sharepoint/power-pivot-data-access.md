@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot データ アクセス |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot データ アクセス |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0485e78db0c1e338c5f6680cefc0fa87583505b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-data-access"></a>Power Pivot データ アクセス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、SharePoint ライブラリにパブリッシュされる [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得する方法について説明します。  
+  このトピックでは、SharePoint ライブラリにパブリッシュされる [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得する方法について説明します。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは Excel ブック内に格納されます。 接続文字列は、SharePoint サイト上のブックの URL です。  
   

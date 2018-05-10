@@ -3,15 +3,12 @@ title: サーバー ネットワーク プロトコルの有効化または無�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
 - remote connections [SQL Server], enabling using Configuration Manager
@@ -27,12 +24,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8245d396dac75dc09fdc3ae6bab41d582ef1c790
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 97344d3661908192839a732a38487af4b93c86a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +52,13 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-enable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルを有効にするには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]**を展開します。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
   
 2.  コンソール ペインで、**[***\<インスタンス名> のプロトコル]* をクリックします。  
   
-3.  詳細ペインで、変更するプロトコルを右クリックし、 **[有効化]** または **[無効化]**をクリックします。  
+3.  詳細ペインで、変更するプロトコルを右クリックし、 **[有効化]** または **[無効化]** をクリックします。  
   
-4.  コンソール ペインで、 **[SQL Server のサービス]**をクリックします。  
+4.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
 5.  詳細ペインで **[SQL Server (***\<インスタンス名>***)]** を右クリックします。次に、**[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止し、再起動します。  
   

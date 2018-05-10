@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
@@ -19,13 +16,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d6c2822097b4f900034006a01e70b1c81e977981
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ae7d0dd3dc6e7e3d77b2ea452f205fc8f8e1fd85
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 ###  <a name="NewColumn"></a> 新しい計算列を追加するには  
   
-1.  **オブジェクト エクスプローラー**で、新しい計算列を追加するテーブルを展開します。 **[列]** を右クリックして **[新しい列]**をクリックします。  
+1.  **オブジェクト エクスプローラー**で、新しい計算列を追加するテーブルを展開します。 **[列]** を右クリックして **[新しい列]** をクリックします。  
   
 2.  列名を入力し、既定のデータ型 (**nchar**(10)) をそのまま使用します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、計算列のデータ型は、数式で指定された式のデータ型のうち優先順位が高い方になります。 たとえば、式で **money** 型の列と **int**型の列を参照する場合、 **money** 型の方が優先順位が高いため、計算列はそのデータ型になります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
@@ -82,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、変更する列が含まれているテーブルを右クリックし、 **[列]** フォルダーを展開します。  
   
-2.  計算列の数式を指定する列を右クリックし、 **[削除]**をクリックします。 **[OK]** をクリックします。  
+2.  計算列の数式を指定する列を右クリックし、 **[削除]** をクリックします。 **[OK]** をクリックします。  
   
 3.  前の手順に従って、新しい列を追加し、計算列の数式を指定して、新しい計算列を追加します。  
   
@@ -92,9 +88,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -119,9 +115,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -132,9 +128,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 次の例では、前の例で追加した列を変更します。  
+3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で追加した列を変更します。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  

@@ -1,36 +1,19 @@
 ---
-title: "接続およびセッション (XMLA) の管理 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statefulness [XML for Analysis]
-- statelessness [XML for Analysis]
-- XML for Analysis, sessions
-- states [XML for Analysis]
-- XMLA, sessions
-- sessions [XML for Analysis]
-ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 
-author: Minewiskan
+title: 接続およびセッション (XMLA) の管理 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 761618d7a0d651fb24257e03c5fcb261fde051c6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4c11bc2a626f619c42df8bd22226fd59cb900749
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
   *状態保持*id とメソッドの呼び出しの間のクライアントのコンテキスト、サーバーを保持する状態します。 *状態を保持しない*をサーバーが保存されていません id およびクライアントのコンテキストをメソッド呼び出しの完了後に、条件は、します。  

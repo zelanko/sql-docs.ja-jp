@@ -1,27 +1,25 @@
 ---
-title: "SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト | Microsoft Docs"
-ms.custom: 
+title: SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e3ae4f8b7a1abe9950ce2110da6914cc2b401438
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f89e7e03b56678a97176db31369d6a4aa7ec3afa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して複数のディスクを使用できるように、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、フェールオーバー クラスタリングをサポートしています。 フェールオーバー クラスタリングは、レポート サーバー データベースでのみサポートされています。つまり、フェールオーバー クラスターの一部としてレポート サーバー サービスを実行することはできません。  

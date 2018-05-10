@@ -1,32 +1,23 @@
 ---
-title: "チェックリスト: PowerShell を使用して、SharePoint の Power Pivot を確認する |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
+title: 'チェックリスト: PowerShell を使用して、SharePoint の Power Pivot を確認する |Microsoft ドキュメント'
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5450a5dad589bc9fce5ad0d1a423788f596df615
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
+  [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
   
 ![PowerShell 関連コンテンツ](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")完全な PowerShell スクリプトは、トピックの最後に記載されています。 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の完全な配置を監査するためのカスタム スクリプトを構築するには、完全なスクリプトをひな形として使用します。
   
@@ -56,7 +47,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![sharepoint アプリケーションの全般設定で powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "で powerpivot の sharepoint アプリケーションの全般設定")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを使用することで、サーバーの全体管理の大半のコンポーネントを必要に応じて確認できます。 サーバーの全体管理でダッシュボードを開くには、 **[アプリケーションの全般設定]**をクリックし、 **の** [管理ダッシュボード] **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**をクリックします。 ダッシュボードの詳細については、「 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。|  
+|![sharepoint アプリケーションの全般設定で powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "で powerpivot の sharepoint アプリケーションの全般設定")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを使用することで、サーバーの全体管理の大半のコンポーネントを必要に応じて確認できます。 サーバーの全体管理でダッシュボードを開くには、 **[アプリケーションの全般設定]** をクリックし、 **の** [管理ダッシュボード] **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** をクリックします。 ダッシュボードの詳細については、「 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。|  
   
 ##  <a name="bkmk_symptoms"></a> 現象と推奨される操作  
  次の表は、現象や問題、および問題解決に役立つこのトピックの推奨されるセクションを示しています。  
@@ -279,7 +270,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows と ULS のログ  
  **Windows イベント ログ**  
   
- 次のコマンドは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連するイベントの Windows イベント ログを検索します。 イベントを無効にする方法やイベント レベルの変更については、次を参照してください。[構成し、SharePoint ログ ファイルの表示と診断ログ記録 (&) #40 です。Power Pivot for SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 次のコマンドは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連するイベントの Windows イベント ログを検索します。 イベントを無効にする方法やイベント レベルの変更については、次を参照してください[構成し、SharePoint ログ ファイルの表示と診断ログ&#40;Power Pivot for SharePoint。&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **サービス名:** MSOLAP$POWERPIVOT  
   
@@ -428,7 +419,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> 手動による検証手順  
  このセクションでは、PowerShell コマンドレットでは実行できない検証手順について説明します。  
   
- **定期データ更新:** ブックの更新スケジュールを構成します ( **[さらに、できるだけ早く更新を行います]**を設定)。  詳細については、「[定期データ送信と Windows 認証をサポートしないデータ ソース &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)」のデータ更新の確認に関するセクションを参照してください。   
+ **定期データ更新:** ブックの更新スケジュールを構成します ( **[さらに、できるだけ早く更新を行います]** を設定)。  詳細については、「[定期データ送信と Windows 認証をサポートしないデータ ソース &#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)」のデータ更新の確認に関するセクションを参照してください。   
   
 ##  <a name="bkmk_more_resources"></a> その他のリソース  
  [Windows PowerShell での Web サーバー (IIS) の管理コマンドレット](http://technet.microsoft.com/library/ee790599.aspx)  

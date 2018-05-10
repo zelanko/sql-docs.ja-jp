@@ -3,15 +3,12 @@ title: remote query timeout サーバー構成オプションの構成 | Microso
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time limit for remote queries [SQL Server]
 - remote query timeout option
@@ -20,12 +17,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d49a6b7ae5647c6faef5c1c80e504724a671ddfe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 10c9e6e858f12e439b7fe0f95e3680ccf3246443
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>remote query timeout サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +63,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-remote-query-timeout-option"></a>remote query timeout オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[接続]** ノードをクリックします。  
   
-3.  **[リモート サーバー接続]**の **[リモート クエリ タイムアウト]** ボックスで、0 ～ 2,147,483,647 の値を入力するか選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がタイムアウトするまでの最大秒数を設定します。  
+3.  **[リモート サーバー接続]** の **[リモート クエリ タイムアウト]** ボックスで、0 ～ 2,147,483,647 の値を入力するか選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がタイムアウトするまでの最大秒数を設定します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -79,9 +75,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `remote query timeout` オプションの値を `0` に設定し、タイムアウトを無効にする方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `remote query timeout` オプションの値を `0` に設定し、タイムアウトを無効にする方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

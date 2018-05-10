@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - Distributors [SQL Server replication], modifying
@@ -22,12 +21,11 @@ caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e9f637f62860fecbacbba63506fa9b77c84a60f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cbf020925e52b107867723494bc6cbf0ca563f62
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,31 +62,31 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でディストリビューターに接続して、サーバー ノードを展開します。  
   
-2.  **[レプリケーション]** フォルダーを右クリックし、 **[ディストリビューターのプロパティ]**をクリックします。  
+2.  **[レプリケーション]** フォルダーを右クリックし、 **[ディストリビューターのプロパティ]** をクリックします。  
   
 3.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで、プロパティを表示および変更します。  
   
     -   ディストリビューション データベースのプロパティを表示および変更するには、ダイアログ ボックスの **[全般]** ページにあるデータベースのプロパティ ボタン (**[...]**) をクリックします。  
   
-    -   ディストリビューターと関連付けられたパブリッシャーのプロパティを表示および変更するには、ダイアログ ボックスの**[パブリッシャー]**ページでパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。  
+    -   ディストリビューターと関連付けられたパブリッシャーのプロパティを表示および変更するには、ダイアログ ボックスの **[パブリッシャー]** ページでパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。  
   
     -   レプリケーション エージェントのプロファイルにアクセスするには、ダイアログ ボックスの **[全般]** ページの **[プロファイルの既定値]** をクリックします。 詳しくは、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
     -   パブリッシャーで管理用のストアド プロシージャを実行したり、ディストリビューターで情報を更新したりするときに使用するアカウントのパスワードを変更するには、ダイアログ ボックスの **[パブリッシャー]** ページで **[パスワード]** ボックスおよび **[パスワードの確認入力]** ボックスに新しいパスワードを入力します。 詳細については、「[ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)」を参照してください。  
   
-4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>パブリッシャーのプロパティを表示および変更するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
   
-2.  **[レプリケーション]** フォルダーを右クリックし、 **[パブリッシャーのプロパティ]**をクリックします。  
+2.  **[レプリケーション]** フォルダーを右クリックし、 **[パブリッシャーのプロパティ]** をクリックします。  
   
 3.  **[パブリッシャーのプロパティ - < Publisher >]** ダイアログ ボックスで、パブリッシャーのプロパティを表示および変更します。  
   
     -   固定サーバー ロール **sysadmin** のユーザーは、 **[パブリケーション データベース]** のページでデータベースのレプリケーションを有効化できます。 データベースを有効化しても、そのデータベースがパブリッシュされるわけではありません。固定データベース ロール **db_owner** の任意のユーザーが、1 つ以上のパブリケーションをデータベースに作成できるようになります。  
   
-4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリッシャーとディストリビューターのプロパティは、プログラムからレプリケーション ストアド プロシージャを使用して表示できます。  

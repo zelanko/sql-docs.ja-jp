@@ -1,27 +1,25 @@
 ---
-title: "共有データセットのキャッシュ | Microsoft Docs"
-ms.custom: 
+title: 共有データセットのキャッシュ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 167e448c51792ca91dfcdf01dd7e9ae32c1c82c7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 10f5008e71cb358700bd3713396cbe23862cb380
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cache-a-shared-dataset"></a>共有データセットのキャッシュ
   パフォーマンスを向上させる方法の 1 つに、共有データセットのキャッシュ プロパティを構成するという方法があります。 共有データセットをキャッシュに格納した場合、クエリ結果のコピーが指定の時間、保存されます。 共有データセットを使用するレポートを要求した 1 人目のユーザーは、クエリ結果とすべての処理が完了しないとレポートを閲覧できません。 それ以降、同じレポートを要求したユーザーは、キャッシュの保持時間内であれば、クエリと処理が既に完了しているため、すぐにレポートを閲覧できます。 キャッシュ更新計画を指定してクエリを実行し、指定したキャッシュ有効期限まで結果をキャッシュしておくこともできます。  
@@ -36,18 +34,18 @@ ms.lasthandoff: 01/09/2018
   
 2.  レポート マネージャーで、キャッシュ プロパティを設定する共有データセットに移動し、アイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
-3.  ドロップダウン メニューの **[管理]**をクリックします。  
+3.  ドロップダウン メニューの **[管理]** をクリックします。  
   
-4.  左フレームの **[キャッシュ]**をクリックします。  
+4.  左フレームの **[キャッシュ]** をクリックします。  
   
     > [!NOTE]  
     >  **「共有データセットを実行するための資格情報が保存されていません」**というエラーが発生する場合は、共有データセットのキャッシュ オプションが無効になっています。 資格情報を保存するようにデータ ソースを変更するか、または資格情報が保存されている別のデータ ソースを使用するように共有データセットを変更する必要があります。  
   
-5.  **[共有データセットのキャッシュ]**をクリックします。  
+5.  **[共有データセットのキャッシュ]** をクリックします。  
   
 6.  30 分後にキャッシュが期限切れになるようにオプションを選択します。 キャッシュが指定のスケジュールに従って期限切れになるように選択することもできます。  
   
-7.  **[適用]**をクリックします。  
+7.  **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  

@@ -3,15 +3,12 @@ title: 新しい場所へのファイルの復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring files [SQL Server], how-to topics
 - restoring databases [SQL Server], moving
@@ -24,12 +21,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9fe47ad1dd3df481de41c58b2d4dd89ed7456a4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cfad9617e3ed48aa97cafcfa906567191f895220
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>新しい場所へのファイルの復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +69,9 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-restore-files-to-a-new-location"></a>ファイルを新しい場所に復元するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]**を展開します。  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
-2.  目的のデータベースを右クリックし、 **[タスク]**、 **[復元]**の順にポイントし、 **[ファイルおよびファイル グループ]**をクリックします。  
+2.  目的のデータベースを右クリックし、 **[タスク]**、 **[復元]** の順にポイントし、 **[ファイルおよびファイル グループ]** をクリックします。  
   
 3.  **[全般]** ページの **[復元先データベース]** ボックスに、復元するデータベースの名前を入力します。 新しいデータベースを入力するか、ドロップダウン リストから既存のデータベースを選択します。 このリストには、システム データベース **master** および **tempdb**を除いた、サーバー上のすべてのデータベースが表示されます。  
   
@@ -87,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **[復元元デバイス]**  
   
-         参照ボタンをクリックします。 **[バックアップ デバイスの指定]** ダイアログ ボックスで、 **[バックアップ メディアの種類]** ボックスの一覧からいずれかのデバイスの種類を選択します。 **[バックアップ メディア]** ボックスに 1 つまたは複数のデバイスを選択するには、 **[追加]**をクリックします。  
+         参照ボタンをクリックします。 **[バックアップ デバイスの指定]** ダイアログ ボックスで、 **[バックアップ メディアの種類]** ボックスの一覧からいずれかのデバイスの種類を選択します。 **[バックアップ メディア]** ボックスに 1 つまたは複数のデバイスを選択するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -98,7 +94,7 @@ ms.lasthandoff: 04/16/2018
     |**[復元]**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前です。|  
     |**[ファイルの種類]**|バックアップに含まれるデータの種類として、 **データ**、 **ログ**、 **FILESTREAM データ**のいずれかを指定します。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
-    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]**のいずれかを指定します。|  
+    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  

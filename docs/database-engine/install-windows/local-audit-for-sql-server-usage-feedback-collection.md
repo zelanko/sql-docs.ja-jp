@@ -3,15 +3,12 @@ title: SQL Server Usage Feedback Collection の Local Audit | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
@@ -19,12 +16,11 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f69dfadfb4de412794beba72f69b22fdc8a39287
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2600f74d31b7daa6587575cdaf070417956f8817
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server Usage Feedback Collection の Local Audit
 
@@ -66,11 +62,11 @@ Local Audit を有効にする前に、システム管理者には次の準備�
  
 1. **[サービス]** を起動します ( **[Windows]**  ボタンをクリックし、「 *services.msc*」と入力します) 
 
-2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、 **SQL Server CEIP service \<インスタンス名\>**にキーを作成します。 Analysis Services の場合、**SQL Server Analysis Services CEIP \<インスタンス名\>** を探します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス 13** を探します。
+2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、 **SQL Server CEIP service \<インスタンス名\>** にキーを作成します。 Analysis Services の場合、**SQL Server Analysis Services CEIP \<インスタンス名\>** を探します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス 13** を探します。
 
-3. サービスを右クリックし、 **[プロパティ]**を選択します。 
+3. サービスを右クリックし、 **[プロパティ]** を選択します。 
 
-4. **[ログオン]** タブをクリックします。ログオン アカウントは **[このアカウント]**に表示されます。 
+4. **[ログオン]** タブをクリックします。ログオン アカウントは **[このアカウント]** に表示されます。 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Local Audit ファイル用の新しいフォルダーを構成する。    
 
@@ -90,15 +86,15 @@ Local Audit がログを出力する新しいフォルダー (Local Audit ディ
   
 1. **エクスプローラー**で、新しいフォルダーがある場所に移動します。  
 
-1. 新しいフォルダーを右クリックし、 **[プロパティ]**をクリックします。 
+1. 新しいフォルダーを右クリックし、 **[プロパティ]** をクリックします。 
 
-1. **[セキュリティ]**タブの **[編集]** をクリックし、権限を管理します。
+1. **[セキュリティ]** タブの **[編集]** をクリックし、権限を管理します。
 
 1. **[追加]** をクリックし、SQL Server CEIP テレメトリ サービスの資格情報を入力します (例: `NT Service\SQLTELEMETRY`)。   
 
-1. **[名前の確認]** をクリックして入力した名前を検証し、 **[OK]**をクリックします。 
+1. **[名前の確認]** をクリックして入力した名前を検証し、 **[OK]** をクリックします。 
 
-1. **[権限]** ダイアログ ボックスで、SQL Server CEIP テレメトリ サービスのログオン アカウントを選択し、 **[フォルダーの内容の一覧表示]**、 **[読み取り]** 、 **[書き込み]**をクリックします。  
+1. **[権限]** ダイアログ ボックスで、SQL Server CEIP テレメトリ サービスのログオン アカウントを選択し、 **[フォルダーの内容の一覧表示]**、 **[読み取り]** 、 **[書き込み]** をクリックします。  
 
 1. **[OK]** をクリックすると、権限の変更が直ちに適用されます。 
   
@@ -112,7 +108,7 @@ Local Audit がログを出力する新しいフォルダー (Local Audit ディ
     
     Analysis Services の場合、*HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANCENAME\>\\CPE* を使用します。
 
-1. CPE パスを右クリックし、 **[新規]**を選択します。 **[文字列値]**をクリックします。
+1. CPE パスを右クリックし、 **[新規]** を選択します。 **[文字列値]** をクリックします。
 
 1. 新しいレジストリ キーに `UserRequestedLocalAuditDirectory`と名前を付けます。 
  
@@ -128,7 +124,7 @@ Local Audit がログを出力する新しいフォルダー (Local Audit ディ
     
     Analysis Services の場合、*HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANCENAME\>\\CPE* を使用します。
 
-1. **[UserRequestedLocalAuditDirectory]** を右クリックし、 *[変更]*をクリックします。 
+1. **[UserRequestedLocalAuditDirectory]** を右クリックし、 *[変更]* をクリックします。 
 
 1. Local Audit を有効にするには、Local Audit のパスを入力します (例: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*)。
  

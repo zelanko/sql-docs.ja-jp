@@ -3,15 +3,12 @@ title: '[概要] ページ (AlwaysOn 可用性グループ ウィザード) | Mi
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.newagwizard.summary.f1
 - sql13.swb.adddatabasewizard.summary.f1
@@ -22,19 +19,18 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bd2009d1acc567e5a7ad5425cb07b5664daf2287
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dd02395c6192bc8ef38a37ad1ed5affc60920a30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>[概要] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 <a name="Top"></a>  
   
-  このヘルプ トピックでは、 **[概要]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページのグリッドを使用して、新しい可用性グループに対して選択した内容を確認します。 変更が必要な場合は、 **[戻る]** をクリックして、該当するページに戻ります。 準備ができたら、 **[次へ]** をクリックして、 **[概要]** ページに戻ります。 選択内容に問題がなければ、 **[完了]**をクリックします。  
+  このヘルプ トピックでは、 **[概要]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページのグリッドを使用して、新しい可用性グループに対して選択した内容を確認します。 変更が必要な場合は、 **[戻る]** をクリックして、該当するページに戻ります。 準備ができたら、 **[次へ]** をクリックして、 **[概要]** ページに戻ります。 選択内容に問題がなければ、 **[完了]** をクリックします。  
   
 ##  <a name="PageOptions"></a> [概要] ページのオプション  
  **[スクリプト]**  

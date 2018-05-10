@@ -3,15 +3,12 @@ title: 代替パイプで受信待ちするようにサーバーを構成する 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - listening [SQL Server], pipes
@@ -22,12 +19,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e6cba52b0d3c4ccfbda4dd1968d6911ef25c242d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f4f656d7598a44ce667a980916b5fc920a45fb81
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>代替パイプで受信待ちするようにサーバーを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +43,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  SQL Server 構成マネージャーのコンソール ペインで、**[SQL Server ネットワークの構成]** を展開し、**[\<*インスタンス名*> のプロトコル]** をクリックして展開します。  
   
-2.  詳細ペインで **[名前付きパイプ]**を右クリックし、 **[プロパティ]**をクリックします。  
+2.  詳細ペインで **[名前付きパイプ]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[プロトコル]** タブで、 **[パイプ名]** ボックスに [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってリッスンされるパイプを入力し、 **[OK]**をクリックします。  
+3.  **[プロトコル]** タブで、 **[パイプ名]** ボックスに [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってリッスンされるパイプを入力し、 **[OK]** をクリックします。  
   
-4.  コンソール ペインで、 **[SQL Server のサービス]**をクリックします。  
+4.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
 5.  詳細ペインで **[SQL Server (**\<インスタンス名>**)]** を右クリックします。次に、**[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
   

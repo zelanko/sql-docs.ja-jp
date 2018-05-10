@@ -1,35 +1,23 @@
 ---
-title: "データ ソース ビュー (Analysis Services) で名前付き計算の定義 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ ソース ビュー (Analysis Services) で名前付き計算の定義 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying named calculations
-- data source views [Analysis Services], named calculations
-- named calculations [Analysis Services]
-ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 958cbd16ed777f77b9829eb0b99071a64b65bd06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの名前付き計算の定義 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-名前付き計算は、計算される列として表現されている SQL 式です。 この式は、テーブル内の列として表示され動作します。 名前付き計算を使用すると、基になるデータ ソースのテーブルやビューを変更しなくても、データ ソース ビュー内の既存のテーブルまたはビューのリレーショナル スキーマを拡張できます。 次の例を考えてみます。  
+  名前付き計算は、計算される列として表現されている SQL 式です。 この式は、テーブル内の列として表示され動作します。 名前付き計算を使用すると、基になるデータ ソースのテーブルやビューを変更しなくても、データ ソース ビュー内の既存のテーブルまたはビューのリレーショナル スキーマを拡張できます。 次の例を考えてみます。  
   
 -   ファクト テーブルの複数の列から派生した 1 つの名前付き計算を作成します (たとえば、税率に販売価格を乗算して Tax Amount を作成します)。  
   
@@ -68,7 +56,7 @@ FROM
   
 2.  ソリューション エクスプローラーで、 **[データ ソース ビュー]** フォルダーを展開し、データ ソース ビューをダブルクリックします。  
   
-3.  **[テーブル]** ペインまたは **[ダイアグラム]** ペインで、名前付き計算を定義するテーブルを右クリックし、 **[新しい名前付き計算]**をクリックします。 必ず、属性ではなくテーブル名を右クリックします。 メニューは以下のようになります。  
+3.  **[テーブル]** ペインまたは **[ダイアグラム]** ペインで、名前付き計算を定義するテーブルを右クリックし、 **[新しい名前付き計算]** をクリックします。 必ず、属性ではなくテーブル名を右クリックします。 メニューは以下のようになります。  
   
      ![ダイアグラム ワークスペースのスクリーン ショットの右クリック メニュー](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "スクリーン ショット ダイアグラム ワークスペースのショートカット メニュー")  
   
@@ -83,7 +71,7 @@ FROM
   
     -   **[式]** テキスト ボックスに、データ プロバイダーに適した SQL 言語仕様で新しい列の内容をもたらす式を入力します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
      名前付き計算の列がデータ ソース ビュー テーブルの最後の列に表示されます。 名前付き計算を含む列は、計算機の記号で示されます。  
   
@@ -91,6 +79,6 @@ FROM
  名前付き計算を削除しようとすると、削除するかどうかを確認するメッセージが、削除によって無効になるプロジェクトまたはデータベースに定義されているオブジェクトのリストと共に表示されます。 計算を削除する前に、リストを慎重に確認します。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース ビュー &#40; で名前付きクエリを定義します。Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビュー & #40; で名前付きクエリを定義します。Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

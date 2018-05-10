@@ -1,30 +1,28 @@
 ---
-title: "パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード | Microsoft Docs"
-ms.custom: 
+title: パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 537dfe4f3ef8f6f73cf7bcdeda5c26a0b91265a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 - SharePoint 統合モード
   パラメーター化されたレポートとは、レポートの実行時にデータのフィルター処理に使用する入力値を受け取るレポートです。 パラメーターは、レポートの作成時に定義します。 レポート定義でレポート パラメーターがどのように定義されているかによって、単一の値、複数の値、または動的な値を受け入れることができます。動的な値は、直前の選択に応じて変化します (たとえば、製品カテゴリを選択したとき、次の選択ではそのカテゴリの特定の製品を選択するなど)。 パラメーターには既定値を指定することもできます。フィルター選択したレポートを自動的に実行する場合に既定値を使用することも、既定値を別の値に置き換えることもできます。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  レポートをポイントして、下向きの矢印をクリックします。  
   
-3.  **[パラメーターの管理]**をクリックします。 レポートにパラメーターが含まれている場合、ページに各パラメーターが一覧表示されます。 一覧には、パラメーターの名前、データ型、既定で使用されるデータ値、およびレポートを開いたときにパラメーター領域を表示するかどうかが示されます。  
+3.  **[パラメーターの管理]** をクリックします。 レポートにパラメーターが含まれている場合、ページに各パラメーターが一覧表示されます。 一覧には、パラメーターの名前、データ型、既定で使用されるデータ値、およびレポートを開いたときにパラメーター領域を表示するかどうかが示されます。  
   
 4.  一覧で、設定を変更するパラメーターをクリックします。  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 01/09/2018
   
     3.  既定値を使用し、パラメーター領域にもサブスクリプション ページにもパラメーターを表示しない場合には、 **[内部]** を選択します。  
   
-7.  **[適用]**をクリックします。  
+7.  **[適用]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

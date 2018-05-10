@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 616cd4b40eb04ef19e5f9b2325a56786c94e8bed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 76399038b0eb0b5e62eb1fe8d5efcf0c3e4ee905
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-hit-count"></a>ヒット カウントの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[ブレークポイントのヒット カウント]** ダイアログ ボックスで、 **[ブレークポイントをヒットした時]** ボックスから目的の動作を選択します。  
   
-     **[常に中断]**以外の設定を選択すると、一覧の右側にテキスト ボックスが表示されます。 テキスト ボックスに整数を入力して、目的のヒット カウントを指定します。  
+     **[常に中断]** 以外の設定を選択すると、一覧の右側にテキスト ボックスが表示されます。 テキスト ボックスに整数を入力して、目的のヒット カウントを指定します。  
   
 3.  **[OK]** をクリックして変更を適用するか、 **[キャンセル]** をクリックして変更を適用せずに終了します。  
   

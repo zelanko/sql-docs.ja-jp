@@ -1,36 +1,23 @@
 ---
-title: "データ マイニング ウィザード (Analysis Services - データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング ウィザード (Analysis Services - データ マイニング) |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- OLAP [Analysis Services], mining models
-- Data Mining Wizard
-- relational mining models [Analysis Services]
-ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 653b13b0fa697c1882f164cbdc09210b4ef87f82
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
   
  ウィザードの最後のフェーズでは、オプションでデータをトレーニング セットとテスト セットに分けることができ、ドリルスルーなどの機能を有効にすることができます。  
   
@@ -52,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
 -   ソリューションでデータ マイニングの準備ができている場合は、ソリューション エクスプローラーで **[マイニング構造]** ノードを右クリックし、 **[新しいマイニング構造]** を選択すると、ウィザードが開始されます。  
   
--   ソリューションに既存のプロジェクトが含まれていない場合は、新しいデータ マイニング プロジェクトを追加できます。 **[ファイル]** メニューの **[新規作成]**を選択し、 **[プロジェクト]**をクリックします。 必ず **[Analysis Services 多次元およびデータ マイニング プロジェクト]**テンプレートを選択してください。  
+-   ソリューションに既存のプロジェクトが含まれていない場合は、新しいデータ マイニング プロジェクトを追加できます。 **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** をクリックします。 必ず **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを選択してください。  
   
 -   既存のデータ マイニング ソリューションからメタデータを取得するために、Analysis Services インポート ウィザードを使用することもできます。 ただし、インポートする個々のオブジェクトを選択することはできません。すべてのキューブ、データ ソース ビューなどを含む、データベース全体がインポートされます。また、インポートを通じて作成される新しいソリューションは、ローカルの既定のデータベースを使用するように自動的に構成されることにも注意してください。 オブジェクトを処理または表示する前に、これを他のインスタンスに変更しなければならない場合があります。以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] からインポートする場合は、プロバイダーへの参照を更新しなければならない場合もあります。  
   
@@ -77,7 +64,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="choosing-an-algorithm"></a>アルゴリズムの選択  
  次に、データの処理に使用するアルゴリズムを決定する必要があります。 この決定は、難しい場合があります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されている各アルゴリズムは、機能が異なり、異なる結果を生成します。そのため、自分のデータとビジネスの問題にどれが最も適しているかを判断する前に、いくつかのモデルを試してみることができます。 各アルゴリズムに最適なタスクの説明については、以下のトピックを参照してください。  
   
- [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  前に述べたように、異なるアルゴリズムを使用して複数のモデルを作成したり、アルゴリズムのパラメーターを変更して異なるモデルを作成したりできます。 選択したアルゴリズムだけにこだわらず、同じデータで複数の異なるモデルを作成してみることをお勧めします。  
   
@@ -100,9 +87,9 @@ ms.lasthandoff: 02/15/2018
 ### <a name="completing-the-wizard"></a>ウィザードの完了  
  ウィザードでの最後の手順として、マイニング構造と関連マイニング モデルに名前を付けます。 作成したモデルの種類に応じて、次の重要なオプションも提示される場合があります。  
   
--   **[ドリルスルーを許可する]**を選択すると、 *ドリルスルー* 機能がモデルで有効になります。 ドリルスルーを使用すると、適切な権限を持つユーザーが、モデルの作成に使用するソース データを調査できるようになります。  
+-   **[ドリルスルーを許可する]** を選択すると、 *ドリルスルー* 機能がモデルで有効になります。 ドリルスルーを使用すると、適切な権限を持つユーザーが、モデルの作成に使用するソース データを調査できるようになります。  
   
--   OLAP モデルを作成している場合は、 **[新しいデータ マイニング キューブの作成]**または **[データ マイニング ディメンションの作成]**オプションを選択できます。 どちらのオプションも、完成したモデルの参照と、基になるデータへのドリルスルーを容易にします。  
+-   OLAP モデルを作成している場合は、 **[新しいデータ マイニング キューブの作成]** または **[データ マイニング ディメンションの作成]** オプションを選択できます。 どちらのオプションも、完成したモデルの参照と、基になるデータへのドリルスルーを容易にします。  
   
  データ マイニング ウィザードを完了したら、データ マイニング デザイナーを使用してマイニング構造およびモデルを変更し、モデルの精度の表示、構造およびモデルの特性の表示、またはモデルを使用した予測の作成を行います。  
   
@@ -111,15 +98,15 @@ ms.lasthandoff: 02/15/2018
 ## <a name="related-content"></a>関連コンテンツ  
  データ マイニング モデルの作成時に決定する必要がある事項の詳細については、次のリンクを参照してください。  
   
- [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [データ マイニング アルゴリズムと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [コンテンツの種類 (&) #40 です。 データ マイニング &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [コンテンツの種類 (&) #40 です。 データ マイニング (&) #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [データ型 &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [データ型 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [機能の選択 &#40;データ マイニング&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [機能の選択 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [欠損値 &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [欠損値 & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [マイニング モデルのドリルスルー](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   

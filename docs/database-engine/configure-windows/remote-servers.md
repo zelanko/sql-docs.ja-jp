@@ -3,15 +3,12 @@ title: リモート サーバー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
 - remote servers [SQL Server], configuring
@@ -23,12 +20,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1c662eb0ba6ba239f53b8983864f3d861d21e092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 868cd0d8d68103afe5f6e50ae1519c11c52ff0f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-servers"></a>リモート サーバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
  通常は、リモート サーバーの構成オプションを設定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカル コンピューターとリモート コンピューターの両方にリモート サーバー接続を可能にする既定値が設定されます。  
   
- リモート サーバー アクセスが機能するには、ローカルとリモートの両方のコンピューターで **remote access** 構成オプションが 1 に設定されている必要があります。 (これは既定の設定です)。  **remote access** は、リモート サーバーからのログインを制御するオプションです。 この構成オプションを再設定するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** stored procedure or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してこのオプションを設定する場合は、 **[サーバーのプロパティ]** の [接続] ページで **[このサーバーへのリモート接続を許可する]**チェック ボックスをオンにします。 **[サーバーのプロパティ]** の [接続] ページにアクセスするには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]**をクリックします。 **[サーバーのプロパティ]** ページで、 **[接続]** ページをクリックします。  
+ リモート サーバー アクセスが機能するには、ローカルとリモートの両方のコンピューターで **remote access** 構成オプションが 1 に設定されている必要があります。 (これは既定の設定です)。  **remote access** は、リモート サーバーからのログインを制御するオプションです。 この構成オプションを再設定するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** stored procedure or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してこのオプションを設定する場合は、 **[サーバーのプロパティ]** の [接続] ページで **[このサーバーへのリモート接続を許可する]** チェック ボックスをオンにします。 **[サーバーのプロパティ]** の [接続] ページにアクセスするには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。 **[サーバーのプロパティ]** ページで、 **[接続]** ページをクリックします。  
   
  ローカル サーバーからリモート サーバー構成を無効にすると、組になっているリモート サーバー上のユーザーはそのローカル サーバーにアクセスできなくなります。  
   

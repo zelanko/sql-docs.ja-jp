@@ -3,15 +3,12 @@ title: バックアップ テープまたはバックアップ ファイルの�
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup devices [SQL Server], tapes
 - displaying backup content
@@ -24,12 +21,11 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 033ab83100ff5ddac9a0510def6bb504fd2adaec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1aba266320d3da0ff1ef308ae70ac24960de9e6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>バックアップ テープまたはバックアップ ファイルの内容の表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,15 +61,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
+2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  バックアップするデータベースを右クリックし、 **[タスク]**をポイントして、 **[バックアップ]**をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
+3.  バックアップするデータベースを右クリックし、 **[タスク]** をポイントして、 **[バックアップ]** をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
   
-4.  **[全般]** ページの **[バックアップ先]** セクションで、 **[ディスク]** または **[テープ]**のいずれかをクリックします。 **[バックアップ先]** ボックスの一覧で、ディスク ファイルまたはテープを検索します。  
+4.  **[全般]** ページの **[バックアップ先]** セクションで、 **[ディスク]** または **[テープ]** のいずれかをクリックします。 **[バックアップ先]** ボックスの一覧で、ディスク ファイルまたはテープを検索します。  
   
-     ディスク ファイルまたはテープがボックスの一覧に表示されない場合、 **[追加]**をクリックします。 ファイル名またはテープ ドライブを選択します。 **[バックアップ先]** ボックスの一覧に追加するには、 **[OK]**をクリックします。  
+     ディスク ファイルまたはテープがボックスの一覧に表示されない場合、 **[追加]** をクリックします。 ファイル名またはテープ ドライブを選択します。 **[バックアップ先]** ボックスの一覧に追加するには、 **[OK]** をクリックします。  
   
-5.  **[バックアップ先]** ボックスの一覧で、表示するディスクまたはテープ ドライブのパスを選択し、 **[コンテンツ]**をクリックします。 これにより、 **[デバイス コンテンツ]** ダイアログ ボックスが開きます。  
+5.  **[バックアップ先]** ボックスの一覧で、表示するディスクまたはテープ ドライブのパスを選択し、 **[コンテンツ]** をクリックします。 これにより、 **[デバイス コンテンツ]** ダイアログ ボックスが開きます。  
   
 6.  選択したテープまたはファイル上にあるメディア セットやバックアップ セットに関する情報が、右側のペインに表示されます。  
   
@@ -83,7 +79,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用します。 この例は、 `AdventureWorks2012-FullBackup.bak`というファイルに関する情報を返します。  
   

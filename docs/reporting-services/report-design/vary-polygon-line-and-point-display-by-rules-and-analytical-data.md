@@ -1,16 +1,15 @@
 ---
-title: "ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 | Microsoft Docs"
-ms.custom: 
+title: ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10538"
 - "10537"
@@ -22,16 +21,15 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   マップ レイヤー上の多角形、線、およびポイントの表示オプションを制御する方法として、レイヤーのオプションを設定する方法、レイヤー上のマップ要素ルールを設定する方法、およびレイヤー上の特定の埋め込みマップ要素のオプションをオーバーライドする方法があります。  

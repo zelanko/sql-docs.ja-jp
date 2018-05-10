@@ -3,15 +3,12 @@ title: cursor threshold サーバー構成オプションの構成 | Microsoft D
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cursor threshold option
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
@@ -19,12 +16,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1435afb0c27222ccc5877b30712571959032420e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a533d0cd1c640cf62abc0d0bedfa0cd83f9d3c00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>cursor threshold サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,11 +68,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-cursor-threshold-option"></a>cursor threshold オプションを設定するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   
-3.  **[その他]**の **[カーソルのしきい値]** オプションを目的の値に変更します。  
+3.  **[その他]** の **[カーソルのしきい値]** オプションを目的の値に変更します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -84,9 +80,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `cursor threshold` オプションを `0` に設定して、カーソル キーセットを非同期に生成する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `cursor threshold` オプションを `0` に設定して、カーソル キーセットを非同期に生成する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

@@ -1,32 +1,23 @@
 ---
 title: テンプレートから単一予測クエリを作成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- singleton query predictions [DMX]
-ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 021faf311132e7bd104c66f02340159a9a8b290c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d88b4abff562214ec971410835ec1978232302f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>テンプレートからの単一予測クエリの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]単一クエリは、外部入力データ セットにマップしたり一括予測を行ったりしないが、使用、予測に使用するモデルがある場合に便利です。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  単一クエリは、予測に使用するモデルがあり、それを外部入力データ セットにマップしたり一括予測を行ったりしない場合に役立ちます。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
   
  たとえば、次の DMX クエリは、メーリング対象モデル TM_Decision_Tree に対する単一クエリを表しています。  
   
@@ -41,19 +32,19 @@ AS [t]
   
 ### <a name="to-open-the-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio で Analysis Services テンプレートを開くには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
-2.  キューブ アイコンをクリックして、 **[分析サーバー]**テンプレートを開きます。  
+2.  キューブ アイコンをクリックして、 **[分析サーバー]** テンプレートを開きます。  
   
 ### <a name="to-open-a-prediction-query-template"></a>予測クエリ テンプレートを開くには  
   
-1.  **[テンプレート エクスプローラー]**の分析サーバー テンプレートの一覧から **[DMX]**を展開し、 **[予測クエリ]**を展開します。  
+1.  **[テンプレート エクスプローラー]** の分析サーバー テンプレートの一覧から **[DMX]** を展開し、 **[予測クエリ]** を展開します。  
   
-2.  **[単一予測]**をダブルクリックします。  
+2.  **[単一予測]** をダブルクリックします。  
   
 3.  **[Analysis Services への接続]** ダイアログ ボックスで、クエリの対象であるマイニング モデルを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのあるサーバー名を入力します。  
   
-4.  **[接続]**をクリックします。  
+4.  **[接続]** をクリックします。  
   
 5.  指定したデータベースでテンプレートが開き、データ マイニング関数と、データ マイニング構造および関連するモデルの一覧を示す、マイニング モデルのオブジェクト ブラウザーが表示されます。  
   
@@ -65,7 +56,7 @@ AS [t]
   
      マイニング モデルの列の一覧がオブジェクト ブラウザーの **[メタデータ]** ペインに表示されます。  
   
-3.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]**をクリックします。  
+3.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
 4.  **select list** 行に「*」と入力するとすべての列が返され、列と式のコンマ区切りの一覧を入力すると特定の列が返されます。  
   
@@ -94,11 +85,11 @@ AS [t]
   
 10. クエリのテキスト ペインで、コンマと省略記号の下に構文エラーを示す赤い波線がある箇所を見つけます。 省略記号を削除し、必要なクエリ条件を追加します。 他の条件を追加しない場合はコンマを削除します。  
   
-     このトピックの冒頭に示したサンプル コードでは、追加のクエリ条件として **'45' as [Age]**を設定していました。  
+     このトピックの冒頭に示したサンプル コードでは、追加のクエリ条件として **'45' as [Age]** を設定していました。  
   
-11. **[実行]**をクリックします。  
+11. **[実行]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測の作成 &#40;基本的なデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+ [予測 & #40; を作成します。基本的なデータ マイニング チュートリアル & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

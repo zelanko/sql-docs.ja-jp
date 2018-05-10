@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -25,12 +24,11 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68a62828a3806493f587db281c8622ef04a0fca9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 3bfa1f25ed3dbedf92340112a806bd91de6c0158
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>プログラムによるタスクの接続
   優先順位制約は、<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> クラスとしてオブジェクト モデル内に表されるもので、パッケージ内での <xref:Microsoft.SqlServer.Dts.Runtime.Executable> オブジェクトの実行順序を確立します。 優先順位制約を使用すると、パッケージ内のコンテナーやタスクを、直前のコンテナーやタスクの実行結果に依存して実行させることができます。 2 つの <xref:Microsoft.SqlServer.Dts.Runtime.Executable> オブジェクト間の優先順位制約は、コンテナー オブジェクトの <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> コレクションにある <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> メソッドを呼び出すことによって確立されます。 2 つの実行可能オブジェクト間の制約を作成したら、<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> プロパティを設定して、制約で定義されている 2 番目の実行可能オブジェクトを実行する条件を設定します。  

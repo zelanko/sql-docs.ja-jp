@@ -3,25 +3,22 @@ title: Power Pivot for SharePoint のアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 29c01e9972997459764933b25a23f8e0b085deb5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6eb36f679c18a86f25d0f894208f81def02fa9b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 
@@ -87,11 +84,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  SharePoint モードで [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を実行するバックエンド サーバー上で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] セットアップを実行します。 サーバーで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の複数のインスタンスがホストされている場合は、少なくとも **POWERPIVOT** インスタンスをアップグレードします。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のアップグレードに関連するセットアップ ウィザードの手順の概要を次に示します。  
   
-    1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードで、 **[インストール]**をクリックします。  
+    1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ウィザードで、 **[インストール]** をクリックします。  
   
-    2.  **[SQL Server 2005、SQL Server 2008、または SQL Server 2008 R2 からのアップグレード]**をクリックします。  
+    2.  **[SQL Server 2005、SQL Server 2008、または SQL Server 2008 R2 からのアップグレード]** をクリックします。  
   
-    3.  **[インスタンスの選択]** ページで、 **POWERPIVOT** インスタンス名を選択し、 **[次へ]**をクリックします。  
+    3.  **[インスタンスの選択]** ページで、 **POWERPIVOT** インスタンス名を選択し、 **[次へ]** をクリックします。  
   
     4.  詳細については、「[インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)」を参照してください。  
   
@@ -107,11 +104,11 @@ ms.lasthandoff: 04/16/2018
   
          スイッチまたは  
   
-         **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 2013 構成**の順にクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
+         **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 2013 構成**の順にクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
   
     2.  起動時、構成ツールにより、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファーム ソリューションと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションのアップグレード状態がチェックされます。 これらのソリューションの古いバージョンが検出されると、メッセージ "**新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション ファイルが検出されました。ファームをアップグレードするために、アップグレード オプションを選択してください。**" と表示されます。 **[OK]** をクリックし、システムの検証メッセージを閉じます。  
   
-    3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]**をクリックし、 **[OK]**をクリックします。  
+    3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]** をクリックし、 **[OK]** をクリックします。  
   
     4.  左側のペインにあるタスク一覧内のアクションを確認し、ツールで実行しないアクションを除外します。 既定ではすべてのアクションが含まれています。 アクションを削除するには、左側のタスク一覧でアクションを選択し、 **[パラメーター]** ページの **[この操作をタスク一覧に含めます]** チェック ボックスをオフにします。  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 04/16/2018
     6.  **[検証]** をクリックして、それぞれのアクションが有効かどうかを確認します。 **[検証]** が使用不可能な場合、システムにおいてすべてのアクションが有効であることを意味します。 **[検証]** が使用可能な場合は、入力値 (たとえば、Excel サービス アプリケーション名) を変更している可能性があるか、または特定のアクションを実行できないことがツールによって検出された可能性があります。 アクションを実行できない場合は、そのアクションを除外するか、またはアクションが無効であることを示すフラグが設定された原因となっている根本的な条件を解決してください。  
   
         > [!IMPORTANT]  
-        >  最初のアクションである **[ファーム ソリューションのアップグレード]**は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
+        >  最初のアクションである **[ファーム ソリューションのアップグレード]** は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
   
     7.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "**ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。続行しますか?**”。  
   
@@ -175,11 +172,11 @@ ms.lasthandoff: 04/16/2018
   
 7.  **SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) サービスを実行する最初の SharePoint アプリケーション サーバーで、** 構成ツールを実行[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]して、SharePoint のソリューションと Web サービスをアップグレードします。 この手順にサーバーの全体管理を使用することはできません。  
   
-    1.  **[スタート]** メニューの **[すべてのプログラム]**をポイントし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]**をクリックし、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール**をクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
+    1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール**をクリックします。 このツールは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] がローカル サーバーにインストールされている場合にのみ表示されることに注意してください。  
   
     2.  起動時、構成ツールにより、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ファーム ソリューションと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web アプリケーション ソリューションのアップグレード状態がチェックされます。 これらのソリューションの古いバージョンが検出されると、メッセージ "新しいバージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション ファイルが検出されました。 ファームをアップグレードするために、アップグレード オプションを選択してください。" と表示されます。 **[OK]** をクリックして、このメッセージを閉じます。  
   
-    3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]**をクリックし、 **[OK]** をクリックして続行します。  
+    3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]** をクリックし、 **[OK]** をクリックして続行します。  
   
     4.  次の警告が表示されます: " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードのブックを最新のバージョンにアップグレードしようとしています。 既存のブックに加えたカスタマイズは失われます。 続行しますか?"  
   
@@ -200,9 +197,9 @@ ms.lasthandoff: 04/16/2018
     7.  **[検証]** をクリックして、それぞれのアクションが有効かどうかを確認します。 **[検証]** が使用不可能な場合、システムにおいてすべてのアクションが有効であることを意味します。 **[検証]** が使用可能な場合は、入力値 (たとえば、Excel サービス アプリケーション名) を変更している可能性があるか、または特定のアクションを実行できないことがツールによって検出された可能性があります。 アクションを実行できない場合は、そのアクションを除外するか、またはアクションが無効であることを示すフラグが設定された原因となっている根本的な条件を解決してください。  
   
         > [!IMPORTANT]  
-        >  最初のアクションである **[ファーム ソリューションのアップグレード]**は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
+        >  最初のアクションである **[ファーム ソリューションのアップグレード]** は、常に最初に処理する必要があります。 このアクションを実行すると、サーバーの構成に使用する PowerShell コマンドレットを登録できます。 このアクションを実行したときにエラーが発生する場合は、続行しないでください。 タスク一覧の残りのアクションを処理する前に、エラーとして返された情報に基づいて問題を診断し、解決してください。  
   
-    8.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]**をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。 続行しますか?"  
+    8.  **[実行]** をクリックして、このタスクで有効なすべてのアクションを実行します。 **[実行]** は、検証チェックに合格した後でのみ使用可能になります。 **[実行]** をクリックすると、アクションがバッチ モードで処理されることを示す次の警告が表示されます: "ツールで有効としてフラグが立てられている構成設定はすべて SharePoint ファームに適用されます。 続行しますか?"  
   
     9. **[はい]** をクリックして続行します。  
   
@@ -232,7 +229,7 @@ ms.lasthandoff: 04/16/2018
         Stsadm –o canceldeployment –id “<GUID>”  
         ```  
   
-    4.  構成ツールで **[検証]** に続けて **[実行]**をクリックして、タスクを再試行します。  
+    4.  構成ツールで **[検証]** に続けて **[実行]** をクリックして、タスクを再試行します。  
   
      他のエラーについては、ULS ログを確認します。 詳細については、「[SharePoint ログ ファイルと診断ログの構成と表示 &#40;Power Pivot for SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)」を参照してください。  
   
@@ -261,9 +258,9 @@ Get-PowerPivotSystemService
   
 1.  **インスタンスの** Bin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] フォルダーに移動します。 たとえば、 `C:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\bin`があります。  
   
-2.  `msmdsrv.exe`を右クリックし、 **[プロパティ]**をクリックします。  
+2.  `msmdsrv.exe`を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[詳細]**をクリックします。  
+3.  **[詳細]** をクリックします。  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ファイル バージョンは 13.00.\<メジャー ビルド>.\<マイナー ビルド> です。  
   
@@ -298,11 +295,11 @@ Get-PowerPivotSystemService
 ### <a name="verify-the-msolap-data-provider-version-on-sharepoint"></a>SharePoint での MSOLAP データ プロバイダーのバージョン確認  
  Excel Services によって信頼されている Analysis Services OLE DB プロバイダーのバージョンを確認するには、次の手順に従います。 Excel Services の信頼できるデータ プロバイダーの設定を確認するには、ファームまたはサービス アプリケーションの管理者である必要があります。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  Excel Services サービス アプリケーションの名前 (たとえば **ExcelServiceApp1**) をクリックします。  
   
-3.  **[信頼できるデータ プロバイダー]**をクリックします。 MSOLAP.5 (Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)) が表示されます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードした場合、以前のバージョンの MSOLAP.4 も表示されます。  
+3.  **[信頼できるデータ プロバイダー]** をクリックします。 MSOLAP.5 (Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)) が表示されます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をアップグレードした場合、以前のバージョンの MSOLAP.4 も表示されます。  
   
 4.  詳細については、「 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)」を参照してください。  
   
@@ -335,9 +332,9 @@ Get-PowerPivotSystemService
   
 2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを起動します。  
   
-3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]**をクリックし、 **[OK]**をクリックします。  
+3.  **[機能、サービス、アプリケーション、およびソリューションのアップグレード]** をクリックし、 **[OK]** をクリックします。  
   
-4.  アップグレード タスクに含まれているアクションを確認し、 **[検証]**をクリックします。  
+4.  アップグレード タスクに含まれているアクションを確認し、 **[検証]** をクリックします。  
   
 5.  **[実行]** をクリックしてアクションを適用します。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
@@ -19,12 +18,11 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6691390fea6e32f050e9a2b08d6cfc91773f1196
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b46cf88708ea82b468a5d20f31b944e39665b189
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは **datetime** 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  

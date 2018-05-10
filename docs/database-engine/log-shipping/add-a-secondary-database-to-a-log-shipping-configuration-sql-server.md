@@ -3,15 +3,13 @@ title: ログ配布構成へのセカンダリ データベースの追加 (SQL 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding secondary databases
 - secondary databases [SQL Server], in log shipping
@@ -22,12 +20,11 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 21cd6757445961a96f6ffc2071f8ea057c39c221
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f6da92384490ae4907390dbeceee8da4564f153d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>ログ配布構成へのセカンダリ データベースの追加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +55,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>ログ配布セカンダリ データベースを追加するには  
   
-1.  ログ配布構成のプライマリ データベースとして使用するデータベースを右クリックし、 **[プロパティ]**をクリックします。  
+1.  ログ配布構成のプライマリ データベースとして使用するデータベースを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[ページの選択]**の **[トランザクション ログの配布]**をクリックします。  
+2.  **[ページの選択]** の **[トランザクション ログの配布]** をクリックします。  
   
-3.  **[セカンダリ サーバー インスタンスとデータベース]**の **[追加]**をクリックします。  
+3.  **[セカンダリ サーバー インスタンスとデータベース]** の **[追加]** をクリックします。  
   
 4.  **[接続]** をクリックし、セカンダリ サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
@@ -70,19 +67,19 @@ ms.lasthandoff: 04/16/2018
   
 6.  **[セカンダリ データベースの初期化]** タブで、セカンダリ データベースを初期化するためのオプションを選択します。  
   
-7.  **[ファイルのコピー]**タブの **[ファイルのコピー先フォルダー]** に、トランザクション ログ バックアップのコピー先フォルダーのパスを入力します。 多くの場合、セカンダリ サーバー上のフォルダーを指定します。  
+7.  **[ファイルのコピー]** タブの **[ファイルのコピー先フォルダー]** に、トランザクション ログ バックアップのコピー先フォルダーのパスを入力します。 多くの場合、セカンダリ サーバー上のフォルダーを指定します。  
   
-8.  **[復元ジョブ]** の **[スケジュール]**ボックスにコピー スケジュールの一覧が表示されます。 スケジュールをカスタマイズする場合、 **[スケジュール]** をクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。 このスケジュールはバックアップ スケジュールに近い設定にします。  
+8.  **[復元ジョブ]** の **[スケジュール]** ボックスにコピー スケジュールの一覧が表示されます。 スケジュールをカスタマイズする場合、 **[スケジュール]** をクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。 このスケジュールはバックアップ スケジュールに近い設定にします。  
   
-9. **[復元]** タブの **[バックアップ復元時のデータベース状態]**で、 **[復旧モードなし]** または **[スタンバイ モード]** を選択します。  
+9. **[復元]** タブの **[バックアップ復元時のデータベース状態]** で、 **[復旧モードなし]** または **[スタンバイ モード]** を選択します。  
   
 10. **[スタンバイ モード]** を選択する場合は、復元操作の進行中にセカンダリ データベースからユーザーを切断するかどうかを選択します。  
   
-11. セカンダリ サーバーの復元処理を遅延させる場合、 **[バックアップの復元を最低限次の期間遅延する]**で遅延時間を選択します。  
+11. セカンダリ サーバーの復元処理を遅延させる場合、 **[バックアップの復元を最低限次の期間遅延する]** で遅延時間を選択します。  
   
-12. **[復元が次の期間内に行われない場合は警告する]**で警告のしきい値を選択します。  
+12. **[復元が次の期間内に行われない場合は警告する]** で警告のしきい値を選択します。  
   
-13. **[復元ジョブ]** の **[スケジュール]**ボックスに表示される復元スケジュールを確認します。 スケジュールをカスタマイズする場合、 **[スケジュール]** をクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。 このスケジュールはバックアップ スケジュールに近い設定にします。  
+13. **[復元ジョブ]** の **[スケジュール]** ボックスに表示される復元スケジュールを確認します。 スケジュールをカスタマイズする場合、 **[スケジュール]** をクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。 このスケジュールはバックアップ スケジュールに近い設定にします。  
   
 14. **[OK]** をクリックします。  
   

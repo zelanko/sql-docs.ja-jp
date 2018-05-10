@@ -1,30 +1,23 @@
 ---
-title: "開始または SharePoint サーバーに対して Stop a Power Pivot |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 開始または SharePoint サーバーに対して Stop a Power Pivot |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
-caps.latest.revision: "8"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c581135e13811e82535fa7735f1116f413d6752
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファームでの連携要求とデータ処理をサポートするために同じローカル アプリケーション サーバーに同時に動作します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスと [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスは、同じローカル アプリケーション サーバー上で同時に動作し、SharePoint ファーム内での連携要求とデータ処理をサポートします。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -48,9 +41,9 @@ ms.lasthandoff: 01/08/2018
   
  特定の Web アプリケーションに対する [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳しくは、「 [サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」をご覧ください。  
   
-1.  サーバーの全体管理で、 **[システム設定]**の **[サーバーのサービスの管理]**をクリックします。  
+1.  サーバーの全体管理で、 **[システム設定]** の **[サーバーのサービスの管理]** をクリックします。  
   
-2.  ページの上部にある [サーバー] の下矢印をクリックし、 **[サーバーの変更]**をクリックします。  
+2.  ページの上部にある [サーバー] の下矢印をクリックし、 **[サーバーの変更]** をクリックします。  
   
 3.  開始または停止する [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスまたは [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] インスタンスがある SharePoint サーバーを選択します。  
   

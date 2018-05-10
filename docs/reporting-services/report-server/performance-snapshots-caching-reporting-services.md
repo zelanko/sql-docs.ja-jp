@@ -1,30 +1,28 @@
 ---
-title: "パフォーマンス、スナップショット、キャッシュ (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: パフォーマンス、スナップショット、キャッシュ (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 90444a549b665fb1577b829df3ddae46687565fa
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 24c182e366b52e57baf73027112cf4c8314c4271
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>パフォーマンス、スナップショット、キャッシュ (Reporting Services)
   レポート サーバーのパフォーマンスには、ハードウェア、レポートに同時にアクセスするユーザー数、レポートのデータ量、出力形式など、さまざまな要因が絡み合って影響を与えます。 環境に固有のパフォーマンス要因を把握し、期待した結果を得るための対策を講じるには、ベースライン データを用意し、テストを実行する必要があります。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](http://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  

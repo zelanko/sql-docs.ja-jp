@@ -1,27 +1,25 @@
 ---
 title: Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 99fedd6b1dd298f545b578342b79ca91aafc0eef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -58,17 +56,17 @@ ms.lasthandoff: 01/09/2018
   
 1.  SharePoint サーバーの全体管理で、以下の操作を行います。  
   
-2.  **[監視]**をクリックします。  
+2.  **[監視]** をクリックします。  
   
 3.  **[レポート]** グループの **[診断ログの構成]** をクリックします。  
   
 4.  カテゴリの一覧で **[SQL Server Reporting Services]** を探します。  
   
-5.  プラス記号 (+) をクリックして、 **[SQL Server Reporting Services]**の下のサブカテゴリを展開します。  
+5.  プラス記号 (+) をクリックして、 **[SQL Server Reporting Services]** の下のサブカテゴリを展開します。  
   
 6.  トレース ログに追加するサブカテゴリを選択します。  
   
-7.  カテゴリの一覧の下部で、 **[トレース ログの記録対象となる重要度の最も低いイベント]**のイベント レベルを選択します。 トレースを無効にするには、 **[なし]** を選択します。  
+7.  カテゴリの一覧の下部で、 **[トレース ログの記録対象となる重要度の最も低いイベント]** のイベント レベルを選択します。 トレースを無効にするには、 **[なし]** を選択します。  
   
 > [!NOTE]  
 >  **[イベント ログの記録対象となる重要度の最も低いイベント]** オプションは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ではサポートされません。 オプションは無視されます。  
@@ -80,7 +78,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **SOAP クライアント プロキシ**  
   
--   構成に関する問題が発生する場合は、 **[構成ページ]**を追加します。  
+-   構成に関する問題が発生する場合は、 **[構成ページ]** を追加します。  
   
  現在のファームの診断ログ設定は、すべて次の PowerShell コマンドレットで確認できます。  
   

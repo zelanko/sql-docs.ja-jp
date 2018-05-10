@@ -3,15 +3,12 @@ title: ビューの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: views
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], renaming
 - views [SQL Server], modifying
@@ -22,13 +19,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a5413185e4903fc7994dab9a1e4e5228f563d28d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e4a1df9dc02b3566315436ec8c82cdd466cf25fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-views"></a>ビューの変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -69,15 +65,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、ビューがあるデータベースの横にあるプラス記号をクリックし、 **[ビュー]** フォルダーの横にあるプラス記号をクリックします。  
   
-2.  変更するビューを右クリックし、 **[デザイン]**を選択します。  
+2.  変更するビューを右クリックし、 **[デザイン]** を選択します。  
   
 3.  クエリ デザイナーのダイアグラム ペインで、次の方法を使用してビューを変更します。  
   
     1.  追加または削除する要素のチェック ボックスをオンまたはオフにします。  
   
-    2.  ダイアグラム ペイン内で右クリックし、 **[テーブルの追加]**を選択します。次に、 **[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
+    2.  ダイアグラム ペイン内で右クリックし、 **[テーブルの追加]** を選択します。次に、 **[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
   
-    3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]**をクリックします。  
+    3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]** をクリックします。  
   
 4.  **[ファイル]** メニューの *[*view name の保存***]* をクリックします。  
   
@@ -87,9 +83,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、ビューを作成した後、ALTER VIEW を使用してビューを変更します。 ビュー定義に WHERE 句が追加されています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、ビューを作成した後、ALTER VIEW を使用してビューを変更します。 ビュー定義に WHERE 句が追加されています。  
   
     ```  
     USE AdventureWorks2012 ;  

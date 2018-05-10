@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
@@ -19,12 +18,11 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 328214976c50ff07b92376ae8061f97870980b24
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ Microsoft Azure Blob Storage サービスでの SQL Server 2016 の使用に関�
 SQL Server による Microsoft Azure Blob Storage サービスの統合のサポートは、SQL Server 2012 Service Pack 1 CU2 の拡張機能として開始され、SQL Server 2014 および SQL Server 2016 でさらに強化されました。 この機能の概要と使用した場合利点については、「 [Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」を参照してください。 ライブ デモについては、 [特定の時点での復元に関するデモ](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)を参照してください。  
   
   
-**ダウンロード**<br /><br />**>>**  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**にアクセスしてください。<br /><br />**>>**  Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
+**ダウンロード**<br /><br />**>>**  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** にアクセスしてください。<br /><br />**>>**  Azure アカウントをすでにお持ちですか?  すでにお持ちの場合は、 **[こちら](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルでは、複数のレッスンに分けて、Microsoft Azure Blob Storage サービスで SQL Server データ ファイルを使用する方法を説明します。 各レッスンでは特定のタスクに重点を置いており、レッスンは順番に完了する必要があります。 まず、格納済みアクセス ポリシーと Shared Access Signature で Blob ストレージに新しいコンテナーを作成する方法を学習します。 次に、SQL Server を Azure Blob Storage と統合するための SQL Server 資格情報を作成する方法を学習します。 さらに、Blob ストレージにデータベースをバックアップし、Azure の仮想マシンに復元します。 SQL Server 2016 のファイル スナップショットのトランザクション ログ バックアップを使用して、特定の時点、または新しいデータベースに復元することができます。 最後に、このチュートリアルでは、ファイル スナップショットのバックアップについて理解し、使用できるようにするために、メタ データ システムのストアド プロシージャと関数の使用方法を紹介します。  

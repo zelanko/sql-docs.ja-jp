@@ -1,27 +1,25 @@
 ---
-title: "レポート ビルダーをアンインストールする | Microsoft Docs"
-ms.custom: 
+title: レポート ビルダーをアンインストールする | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ca635948940ec0a8921444d2b7928d53e16c70f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4f9f1383b05ab332fd9c713c8acf6f5c18cab7e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-report-builder"></a>レポート ビルダーをアンインストールする
 
@@ -33,19 +31,19 @@ ms.lasthandoff: 01/09/2018
 
 ### <a name="to-uninstall-report-builder-from-the-control-panel"></a>レポート ビルダーをコントロール パネルからアンインストールするには
 
-1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。  
   
-2.  コントロール パネルで、 **[プログラムと機能]**をクリックします。  
+2.  コントロール パネルで、 **[プログラムと機能]** をクリックします。  
   
 3.  **[名前]** の一覧で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 レポート ビルダーを見つけてクリックします。  
   
-4.  **[アンインストール]**をクリックします。  
+4.  **[アンインストール]** をクリックします。  
   
-5.  レポート ビルダーをアンインストールするかどうかを確認するメッセージが表示された場合は、 **[はい]**をクリックします。  
+5.  レポート ビルダーをアンインストールするかどうかを確認するメッセージが表示された場合は、 **[はい]** をクリックします。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>レポート ビルダーをコマンド ラインからアンインストールするには  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。  
+1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
 2.  **[名前]** ボックスに「 **cmd**」と入力します。  
   

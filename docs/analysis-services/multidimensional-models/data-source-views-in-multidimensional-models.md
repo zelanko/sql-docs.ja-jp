@@ -1,39 +1,23 @@
 ---
-title: "データ ソース ビューの多次元モデルで |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ ソース ビューの多次元モデルで |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services]
-- data source views [Analysis Services], about data source views
-- SQL Server Analysis Services, data source views
-- data source views [Analysis Services], multiple
-- Analysis Services, data source views
-- multiple data source views
-- SSAS, data source views
-ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6c65164c136e55ea7149427cce4c69606e6f5d75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多次元モデル内のデータ ソース ビュー
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ ソース ビュー (DSV) は、リレーショナル データ ソースを抽象化し、多次元プロジェクト内でキューブやディメンションを作成する基礎となります。 DSV の目的は、プロジェクトで使用するデータ構造をユーザーが制御できるようにすることと、基になるデータ ソースから独立して動作することです (たとえば、元のデータ ソースを変更せずに、列の名前の変更や列の連結を行うことができます)。  
+  データ ソース ビュー (DSV) は、リレーショナル データ ソースを抽象化し、多次元プロジェクト内でキューブやディメンションを作成する基礎となります。 DSV の目的は、プロジェクトで使用するデータ構造をユーザーが制御できるようにすることと、基になるデータ ソースから独立して動作することです (たとえば、元のデータ ソースを変更せずに、列の名前の変更や列の連結を行うことができます)。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベースでは 1 つまたは複数のデータ ソースに関する複数のデータ ソース ビューを構築して、各ソリューションの要件を各ビューが満たすようにすることができます。  
   

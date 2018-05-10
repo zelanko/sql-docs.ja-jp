@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -30,12 +28,11 @@ caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 932f8139685c5af4bdf92288ff937529286a1549
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6ee7492ffa3c18730ac1bb10ce11ea11b0bfbc7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +109,7 @@ ENCRYPTION BY *\<key_name_in_provider>* キーを暗号化する方法を指定�
  ALGORITHM = \<algorithm>  
  指定できるアルゴリズムは、RSA_4096、RSA_3072、RSA_2048、RSA_1024、RSA_512 の 5 つです。  
   
- RSA_1024 と RSA_512 は非推奨です。 RSA_1024 または RSA_512 を使う場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
+ RSA_1024 と RSA_512 は非推奨とされました。 RSA_1024 または RSA_512 を使う場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
  PASSWORD = '*password*'  
  秘密キーを暗号化するパスワードを指定します。 この句がない場合、秘密キーはデータベースのマスター キーで暗号化されます。 *password* は最大 128 文字です。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  

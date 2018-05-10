@@ -1,27 +1,25 @@
 ---
-title: "行の挿入または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 行の挿入または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 04517d85601da473c5660e4ed76813e630fbbd2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9bddaad898b87e97aafbcd6fa7f856e373373a3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>行の挿入または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの Tablix データ領域では、行を追加したり削除したりできます。 Tablix データ領域は、テーブル、マトリックス、一覧のいずれかです。 次の手順は、グラフおよびゲージのデータ領域には適用されません。  
@@ -39,29 +37,29 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>選択したデータ領域に行を挿入するには  
   
--   行の挿入位置にある行ハンドルを右クリックし、 **[行を挿入]**をクリックして、 **[上]** または **[下]**をクリックします。  
+-   行の挿入位置にある行ハンドルを右クリックし、 **[行を挿入]** をクリックして、 **[上]** または **[下]** をクリックします。  
   
      \- - または -  
   
--   行の挿入位置にあるデータ領域のセルを右クリックし、 **[行を挿入]**をクリックし、 **[上]** または **[下]**をクリックします。  
+-   行の挿入位置にあるデータ領域のセルを右クリックし、 **[行を挿入]** をクリックし、 **[上]** または **[下]** をクリックします。  
   
 ## <a name="to-delete-a-row-from-a-selected-data-region"></a>選択したデータ領域から行を削除するには  
   
--   削除する行を選択し、選択した行のうち 1 つのハンドルを右クリックして、 **[行の削除]**をクリックします。  
+-   削除する行を選択し、選択した行のうち 1 つのハンドルを右クリックして、 **[行の削除]** をクリックします。  
   
      \- - または -  
   
--   行の削除位置にあるデータ領域のセルを右クリックし、 **[行の削除]**をクリックします。  
+-   行の削除位置にあるデータ領域のセルを右クリックし、 **[行の削除]** をクリックします。  
   
 ## <a name="to-insert-a-row-in-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループに行を挿入するには  
   
--   Tablix データ領域の行グループ領域で、行の挿入位置の行グループのセルを右クリックし、 **[行を挿入]**をクリックした後、 **[上 - 外側のグループ]**、 **[上 - 内側のグループ]**、 **[下 - 内側のグループ]**、または **[下 - 外側のグループ]**をクリックします。  
+-   Tablix データ領域の行グループ領域で、行の挿入位置の行グループのセルを右クリックし、 **[行を挿入]** をクリックした後、 **[上 - 外側のグループ]**、 **[上 - 内側のグループ]**、 **[下 - 内側のグループ]**、または **[下 - 外側のグループ]** をクリックします。  
   
      クリックした行グループのセルに対応するグループの内側または外側に行が追加されます。  
   
 ## <a name="to-delete-a-row-from-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループから行を削除するには  
   
--   Tablix データ領域の行グループ領域で、行の削除位置にある行グループ セルを右クリックし、 **[行の削除]**をクリックします。  
+-   Tablix データ領域の行グループ領域で、行の削除位置にある行グループ セルを右クリックし、 **[行の削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
@@ -18,12 +17,11 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e29acdb16ec95fa3e2504cef099e26f55b82b792
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 19da4c4bbd828af5bb5100d495f6c8565d17b989
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、レポート ウィザードを使用するか、新しい空のレポートをプロジェクトに追加することによって、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割された新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>レポート ウィザードを使って新しいレポートを追加するには  
   
-1.  ソリューション エクスプローラーで [レポート] フォルダーを右クリックし、 **[新しいレポートの追加]**をクリックします。 **[レポート ウィザード]** ダイアログ ボックスが表示されます。  
+1.  ソリューション エクスプローラーで [レポート] フォルダーを右クリックし、 **[新しいレポートの追加]** をクリックします。 **[レポート ウィザード]** ダイアログ ボックスが表示されます。  
   
      ウィザードの手順に従うことで、データ ソースを作成したり、クエリでデータセットを作成したり、グループを定義したり、レイアウトを指定したり、レポートを作成したりできます。 次のような手順で構成されます。  
   
@@ -49,19 +47,19 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-new-blank-report"></a>新しい空のレポートを追加するには  
   
-1.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-2.  **[テンプレート]**の **[レポート]**をクリックします。  
+2.  **[テンプレート]** の **[レポート]** をクリックします。  
   
-3.  **[追加]**をクリックします。  
+3.  **[追加]** をクリックします。  
   
      新しい空のレポートがプロジェクトに追加され、デザイン画面に表示されます。  
   
 ## <a name="to-add-an-existing-report"></a>既存のレポートを追加するには  
   
-1.  **[プロジェクト]** メニューの **[追加]**をクリックし、  **[既存の項目]**をクリックします。  
+1.  **[プロジェクト]** メニューの **[追加]** をクリックし、  **[既存の項目]** をクリックします。  
   
-2.  .rdl ファイルがある場所に移動して、ファイルを選択し、 **[追加]**をクリックします。  
+2.  .rdl ファイルがある場所に移動して、ファイルを選択し、 **[追加]** をクリックします。  
   
      レポートがプロジェクトの **[レポート]** フォルダーに追加されます。 プロジェクトを閉じてから開き直すと、一連のレポートがアルファベット順に並べ替えられます。  
   

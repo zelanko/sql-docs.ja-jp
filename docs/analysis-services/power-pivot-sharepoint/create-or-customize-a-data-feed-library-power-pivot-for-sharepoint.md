@@ -1,34 +1,23 @@
 ---
-title: "データ フィード ライブラリ (Power Pivot for SharePoint) のカスタマイズを作成または |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ フィード ライブラリ (Power Pivot for SharePoint) のカスタマイズを作成または |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-helpviewer_keywords:
-- data feed library
-- data feeds [Analysis Services with SharePoint]
-ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4ff044886256d7e174299c20a36735de61419275
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>データ フィード ライブラリの作成またはカスタマイズ (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*データ フィード ライブラリ* は、特殊な用途の SharePoint ライブラリです。このライブラリでは、Atom データ サービス ドキュメント (.atomsvc) を登録して共有できます。 これらのドキュメントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Atom データ フィード形式をサポートするその他のクライアント アプリケーションに XML データ フィードを提供します。 データ フィード ライブラリは、以下を実行できる点で他の SharePoint ライブラリとは異なります。  
+  *データ フィード ライブラリ* は、特殊な用途の SharePoint ライブラリです。このライブラリでは、Atom データ サービス ドキュメント (.atomsvc) を登録して共有できます。 これらのドキュメントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Atom データ フィード形式をサポートするその他のクライアント アプリケーションに XML データ フィードを提供します。 データ フィード ライブラリは、以下を実行できる点で他の SharePoint ライブラリとは異なります。  
   
 -   特定のフィードへの HTTP 接続を指定するために使用される *データ サービス ドキュメント*を作成または編集できます。  
   
@@ -58,13 +47,13 @@ ms.lasthandoff: 02/15/2018
   
 1.  ページの左上にある **[サイトの操作]** をクリックします。  
   
-2.  **[その他のオプション…]**をクリックします。  
+2.  **[その他のオプション…]** をクリックします。  
   
-3.  [ライブラリ] の **[データ フィード ライブラリ]**をクリックします。  
+3.  [ライブラリ] の **[データ フィード ライブラリ]** をクリックします。  
   
 4.  名前、説明、起動、およびバージョン設定を入力します。 このライブラリがデータ サービス ドキュメントのストレージであることがユーザーにわかるように説明情報を入力してください。  
   
-5.  **[作成]**をクリックします。  
+5.  **[作成]** をクリックします。  
   
  データ フィード ライブラリへのリンクが、現在のサイトのナビゲーションのクイック起動ペインに表示されます。  
   
@@ -81,29 +70,29 @@ ms.lasthandoff: 02/15/2018
   
 1.  複数のコンテンツ タイプを有効にする対象のドキュメント ライブラリを開きます。  
   
-2.  SharePoint リボンで、[ライブラリ ツール] の **[ライブラリ]**をクリックします。  
+2.  SharePoint リボンで、[ライブラリ ツール] の **[ライブラリ]** をクリックします。  
   
-3.  **[設定]**をクリックします。  
+3.  **[設定]** をクリックします。  
   
-4.  **[ライブラリの設定]**をクリックします。  
+4.  **[ライブラリの設定]** をクリックします。  
   
-5.  [全般設定] の **[詳細設定]**をクリックします。  
+5.  [全般設定] の **[詳細設定]** をクリックします。  
   
-6.  [コンテンツ タイプ] の [コンテンツ タイプの管理を許可する] セクションで **[はい]**をクリックします。  
+6.  [コンテンツ タイプ] の [コンテンツ タイプの管理を許可する] セクションで **[はい]** をクリックします。  
   
-7.  **[OK]**をクリックします。  
+7.  **[OK]** をクリックします。  
   
 #### <a name="step-2-add-the-data-service-document-content-type"></a>手順 2: データ サービス ドキュメント コンテンツ タイプを追加する  
   
-1.  [コンテンツ タイプ] セクションの **[既存のサイト コンテンツ タイプから追加]**をクリックします。 このページが表示されない場合は、サイトに戻って [ライブラリ ツール] の **[ライブラリ]** をクリックし、 **[ライブラリの設定]**をクリックします。  
+1.  [コンテンツ タイプ] セクションの **[既存のサイト コンテンツ タイプから追加]** をクリックします。 このページが表示されない場合は、サイトに戻って [ライブラリ ツール] の **[ライブラリ]** をクリックし、 **[ライブラリの設定]** をクリックします。  
   
-2.  [コンテンツ タイプ] の **[既存のサイト コンテンツ タイプから追加]**をクリックします。  
+2.  [コンテンツ タイプ] の **[既存のサイト コンテンツ タイプから追加]** をクリックします。  
   
-3.  [サイト コンテンツ タイプの選択元] で **[ビジネス インテリジェンス]**をクリックします。  
+3.  [サイト コンテンツ タイプの選択元] で **[ビジネス インテリジェンス]** をクリックします。  
   
-4.  [利用可能なサイト コンテンツ タイプ] で **[データ サービス ドキュメント]**をクリックしてから **[追加]** をクリックし、選択したコンテンツ タイプを [追加するコンテンツ タイプ] ボックスの一覧に追加します。  
+4.  [利用可能なサイト コンテンツ タイプ] で **[データ サービス ドキュメント]** をクリックしてから **[追加]** をクリックし、選択したコンテンツ タイプを [追加するコンテンツ タイプ] ボックスの一覧に追加します。  
   
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>手順 3: データ サービス ドキュメントの構成を確認する  
   
@@ -111,9 +100,9 @@ ms.lasthandoff: 02/15/2018
   
 2.  ライブラリを開きます。  
   
-3.  SharePoint リボンで、 **[ドキュメント]**をクリックします。  
+3.  SharePoint リボンで、 **[ドキュメント]** をクリックします。  
   
-4.  [新しいドキュメント] の下矢印をクリックし、 **[データ サービス ドキュメント]**をクリックします。 [新しいデータ サービス ドキュメント] ページが表示されます。  
+4.  [新しいドキュメント] の下矢印をクリックし、 **[データ サービス ドキュメント]** をクリックします。 [新しいデータ サービス ドキュメント] ページが表示されます。  
   
 ## <a name="see-also"></a>参照  
  [データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   

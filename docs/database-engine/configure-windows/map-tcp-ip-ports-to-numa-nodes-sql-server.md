@@ -3,15 +3,12 @@ title: NUMA ノードへの TCP/IP ポートのマッピング (SQL Server) | Mi
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - memory [SQL Server], NUMA
@@ -27,12 +24,11 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2546e6fb835370d476405f6d51433de5a98b64a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6481a8eabffc9459aa742e28400db7fe1442c701
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA ノードへの TCP/IP ポートのマッピング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +54,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、**[SQL Server ネットワークの構成]** を展開し、**[\<インスタンス名>** *のプロトコル]* をクリックします。  
   
-2.  詳細ペインで、 **[TCP/IP]**をダブルクリックします。  
+2.  詳細ペインで、 **[TCP/IP]** をダブルクリックします。  
   
-3.  **[IP アドレス]** タブで、構成する IP アドレスに対応するセクションの **[TCP ポート]** ボックスで、ポート番号の後に NUMA ノード識別子を角かっこで囲んで追加します。 たとえば、TCP ポート 1500 とノード 0 番、2 番、および 5 番の場合、 **1500[37]**または **1500[0x25]**を使用します。  
+3.  **[IP アドレス]** タブで、構成する IP アドレスに対応するセクションの **[TCP ポート]** ボックスで、ポート番号の後に NUMA ノード識別子を角かっこで囲んで追加します。 たとえば、TCP ポート 1500 とノード 0 番、2 番、および 5 番の場合、 **1500[37]** または **1500[0x25]** を使用します。  
   
 ## <a name="see-also"></a>参照  
  [ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

@@ -1,35 +1,23 @@
 ---
-title: "Analysis Services のアクセスを許可する Windows ファイアウォールの構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services のアクセスを許可する Windows ファイアウォールの構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- ports [Analysis Services]
-- Windows Firewall [Analysis Services]
-- firewall systems [Analysis Services]
-ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a65481f7f3bb911fd57e91b32c71860a0ceee0ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services のアクセスを許可するための Windows ファイアウォールの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] や [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をネットワーク上で利用できるようにするための重要な最初の手順は、ファイアウォールのポートのブロックを解除する必要があるかどうかを判断することです。 ほとんどのインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への接続を許可する受信ファイアウォール ルールを少なくとも 1 つ作成する必要があります。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] や [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をネットワーク上で利用できるようにするための重要な最初の手順は、ファイアウォールのポートのブロックを解除する必要があるかどうかを判断することです。 ほとんどのインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]への接続を許可する受信ファイアウォール ルールを少なくとも 1 つ作成する必要があります。  
   
  ファイアウォールの構成要件は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインストール方法によって異なります。  
   
@@ -85,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_default"></a> Analysis Services の既定のインスタンスに対する Windows ファイアウォールの構成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスは TCP ポート 2383 でリッスンします。 既定のインスタンスがインストールされている場合にこのポートを使用するには、Windows ファイアウォールで TCP ポート 2383 への受信アクセスを解除し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスへのリモート アクセスを有効にする必要があります。 既定のインスタンスがインストールされているときに、固定ポートでリッスンするようにサービスを構成する場合は、このトピックの「 [Analysis Services の既定のインスタンスまたは名前付きインスタンスに対する固定ポートの使用](#bkmk_fixed) 」を参照してください。  
   
- このサービスが既定のインスタンス (MSSQLServerOLAPService) として動作しているかどうか確認するには、SQL Server 構成マネージャーでサービスの名前を確認します。 Analysis Services の既定のインスタンスは、常に **[SQL Server Analysis Services (MSSQLSERVER)]**という名前で表示されます。  
+ このサービスが既定のインスタンス (MSSQLServerOLAPService) として動作しているかどうか確認するには、SQL Server 構成マネージャーでサービスの名前を確認します。 Analysis Services の既定のインスタンスは、常に **[SQL Server Analysis Services (MSSQLSERVER)]** という名前で表示されます。  
   
 > [!NOTE]  
 >  Windows オペレーティング システムの種類によっては、Windows ファイアウォールを構成する別のツールが用意されています。 ほとんどのツールでは、特定のポートとプログラム実行可能ファイルのどちらを開くかを選択できます。 プログラム実行可能ファイルを指定する必要がなければ、ポートを指定することをお勧めします。  
@@ -94,19 +82,19 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]**をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]**の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]**をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
-2.  **[受信の規則]** を右クリックし、 **[新しい規則]**をクリックします。  
+2.  **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
-3.  [規則の種類] で、 **[ポート]** をクリックした後、 **[次へ]**をクリックします。  
+3.  [規則の種類] で、 **[ポート]** をクリックした後、 **[次へ]** をクリックします。  
   
 4.  [プロトコルおよびポート] で、 **[TCP]** をクリックし、 **[特定のローカル ポート]** に「 **2383**」と入力します。  
   
-5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]**をクリックします。  
+5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
-6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]**をクリックします。  
+6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]** をクリックします。  
   
-7.  [名前] で、この規則のわかりやすい名前 (たとえば、 **SQL Server Analysis Services (tcp-in) 2383**) を入力し、 **[完了]**をクリックします。  
+7.  [名前] で、この規則のわかりやすい名前 (たとえば、 **SQL Server Analysis Services (tcp-in) 2383**) を入力し、 **[完了]** をクリックします。  
   
 8.  リモート接続が有効になっているかどうかを検証するには、SQL Server Management Studio または Excel を異なるコンピューター上で開き、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [サーバー名] **に表示されているサーバーのネットワーク名を指定して**に接続します。  
   
@@ -147,19 +135,19 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]**をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]**の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]**をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
-2.  SQL Server Browser サービスへのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]**をクリックします。  
+2.  SQL Server Browser サービスへのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
-3.  [規則の種類] で、 **[ポート]** をクリックした後、 **[次へ]**をクリックします。  
+3.  [規則の種類] で、 **[ポート]** をクリックした後、 **[次へ]** をクリックします。  
   
 4.  [プロトコルおよびポート] で、 **[TCP]** をクリックし、 **[特定のローカル ポート]** に「 **2382**」と入力します。  
   
-5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]**をクリックします。  
+5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
-6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]**をクリックします。  
+6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]** をクリックします。  
   
-7.  [名前] に、この規則のわかりやすい名前 ( **SQL Server Browser Service (tcp-in) 2382**など) を入力し、 **[完了]**をクリックします。  
+7.  [名前] に、この規則のわかりやすい名前 ( **SQL Server Browser Service (tcp-in) 2382**など) を入力し、 **[完了]** をクリックします。  
   
 8.  リモート接続が有効になっていることを確認するには、別のコンピューターで SQL Server Management Studio または Excel を開くし、形式で、サーバーのネットワーク名とインスタンス名を指定して、Analysis Services に接続します\<サーバー名 >。\\< instancename\>です。 たとえば、名前付きインスタンス **Finance** のある **AW-SRV01**という名前の付けられたサーバーでは、サーバー名は **AW-SRV01\Finance**となります。  
   
@@ -171,19 +159,19 @@ ms.lasthandoff: 02/15/2018
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]**をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]**の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]**をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
-2.  Analysis Services へのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]**をクリックします。  
+2.  Analysis Services へのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
-3.  [規則の種類] で、 **[ポート]** をクリックした後、 **[次へ]**をクリックします。  
+3.  [規則の種類] で、 **[ポート]** をクリックした後、 **[次へ]** をクリックします。  
   
-4.  [プロトコルおよびポート] で、 **[TCP]** をクリックし、 **[特定のローカル ポート]**に固定ポートの番号を入力します。  
+4.  [プロトコルおよびポート] で、 **[TCP]** をクリックし、 **[特定のローカル ポート]** に固定ポートの番号を入力します。  
   
-5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]**をクリックします。  
+5.  [操作] で、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
-6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]**をクリックします。  
+6.  [プロファイル] で、規則を適用しないネットワークの場所のチェック ボックスをオフにした後、 **[次へ]** をクリックします。  
   
-7.  [名前] に、この規則のわかりやすい名前 ( **ポート 54321 上の SQL Server Analysis Services**など) を入力し、 **[完了]**をクリックします。  
+7.  [名前] に、この規則のわかりやすい名前 ( **ポート 54321 上の SQL Server Analysis Services**など) を入力し、 **[完了]** をクリックします。  
   
 8.  リモート接続が有効になっていることを確認するには、別のコンピューターで SQL Server Management Studio または Excel を開くし、形式で、サーバーとポート番号のネットワーク名を指定して、Analysis Services に接続します\<servername >:。\<portnumber >。  
   

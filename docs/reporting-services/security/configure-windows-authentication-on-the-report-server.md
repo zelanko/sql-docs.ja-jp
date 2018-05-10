@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e5ea30da8f6267bd864509ad48940b0a80f3d8c8
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: dac2d8d4500fd6180e8285b3be28cfc36b5801a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -205,7 +204,7 @@ ms.lasthandoff: 03/20/2018
 ###### <a name="lan-and-proxy-settings-on-the-client"></a>クライアントでの LAN とプロキシの設定  
  Internet Explorer での LAN とプロキシの設定によって、NTLM が Kerberos の代わりに選択されるかどうかが決まります。 ただし、LAN とプロキシの設定は組織間で異なるため、Kerberos 認証エラーがどの設定に起因するかを正確に特定することは不可能です。 たとえば所属する組織で、URL を、イントラネット URL から完全修飾ドメイン名 URL (インターネット接続経由で解決される URL) に変換するようなプロキシ設定が実施されているとします。 種類の異なる URL に種類の異なる認証プロバイダーが使用されると、失敗すると予想した接続が成功することがあります。  
   
- 認証の失敗が原因と考えられる接続エラーが発生した場合は、問題の原因を特定するために、LAN とプロキシの設定の組み合わせを変えてみてください。 Internet Explorer では、LAN とプロキシの設定を **[ローカル エリア ネットワーク (LAN) の設定]** ダイアログ ボックスで行います。このダイアログ ボックスを開くには、 **[インターネット オプション]** の **[接続]** タブで **[LAN の設定]**をクリックします。  
+ 認証の失敗が原因と考えられる接続エラーが発生した場合は、問題の原因を特定するために、LAN とプロキシの設定の組み合わせを変えてみてください。 Internet Explorer では、LAN とプロキシの設定を **[ローカル エリア ネットワーク (LAN) の設定]** ダイアログ ボックスで行います。このダイアログ ボックスを開くには、 **[インターネット オプション]** の **[接続]** タブで **[LAN の設定]** をクリックします。  
   
 ## <a name="external-resources"></a>外部リソース  
   

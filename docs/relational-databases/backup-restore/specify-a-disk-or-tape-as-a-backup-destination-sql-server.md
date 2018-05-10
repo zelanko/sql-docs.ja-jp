@@ -3,15 +3,12 @@ title: バックアップ先としてディスクまたはテープを指定す�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup devices [SQL Server], tapes
 - backing up databases [SQL Server], tapes
@@ -27,12 +24,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ac38a37c0f3e6b50cc7f0c96c2753264ffc43758
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 69b01a20f429c1c9612a1a64c0ddc2a57bca3243
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>バックアップ先としてディスクまたはテープを指定する (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +65,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
+2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]**をポイントし、 **[バックアップ]**をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[バックアップ]** をクリックします。 **[データベースのバックアップ]** ダイアログ ボックスが表示されます。  
   
-4.  **[全般]** ページの **[バックアップ先]** セクションで、 **[ディスク]** または **[テープ]**をクリックします。 1 つのメディア セットを含んでいる最大 64 個のディスク ドライブまたはテープ ドライブのパスを選択するには、 **[追加]**をクリックします。  
+4.  **[全般]** ページの **[バックアップ先]** セクションで、 **[ディスク]** または **[テープ]** をクリックします。 1 つのメディア セットを含んでいる最大 64 個のディスク ドライブまたはテープ ドライブのパスを選択するには、 **[追加]** をクリックします。  
   
-     バックアップ先を削除するには、バックアップ先を選択して **[削除]**をクリックします。 バックアップ先の内容を表示するには、バックアップ先を選択して **[内容]**をクリックします。  
+     バックアップ先を削除するには、バックアップ先を選択して **[削除]** をクリックします。 バックアップ先の内容を表示するには、バックアップ先を選択して **[内容]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -83,7 +79,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントは、ファイルまたはデバイスとその物理名を指定します。 この例では、 `AdventureWorks2012` データベースをディスク ファイル `Z:\SQLServerBackups\AdventureWorks2012.Bak`にバックアップします。  
   

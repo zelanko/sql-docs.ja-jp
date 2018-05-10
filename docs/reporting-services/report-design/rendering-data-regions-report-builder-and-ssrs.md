@@ -1,27 +1,25 @@
 ---
-title: "データ領域の表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: データ領域の表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 142d8fe5fcf57b96355a71ff3aeb586a7ccf553e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 567bb447bec9e6ff59269aa23d7ab7fc88fc89e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>データ領域の表示 (レポート ビルダーおよび SSRS)
   データ領域には、すべてのレポート アイテムに適用される一般的な表示動作に加えて、そのデータ領域が従う改ページ動作および表示動作があります。 データ領域固有の表示規則には、データ領域の拡張方法、特殊なセル (コーナーのセルやヘッダー セルなど) の表示方法、およびデータ領域を右から左に記述して表示する方法が含まれます。 ここでは、データ領域のさまざまな部分の表示方法について説明します。  

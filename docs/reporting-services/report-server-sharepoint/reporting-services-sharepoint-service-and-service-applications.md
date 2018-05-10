@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services の SharePoint サービスとサービス アプリケーション | Microsoft Docs"
-ms.custom: 
+title: Reporting Services の SharePoint サービスとサービス アプリケーション | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9eb45bb1f33cb781907e8c2c39fc9a9b2b4e524
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d1db1758c979ae3582d562c47690e12af72171cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services の SharePoint サービスとサービス アプリケーション
 
@@ -38,27 +36,27 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>プロキシ グループを使用したサービス アプリケーションの関連付けの変更
 
- サービス アプリケーションを作成するための [新規作成] ページには、 **[Web アプリケーションの関連付け]**セクションがあります。 このセクションでは、サービス アプリケーションの作成時に関連付けを行うことができます。 関連付けを変更してカスタム構成をサービス アプリケーションに割り当てるには、次の手順を使用します。 同じ一般的なプロセスは、サービス アプリケーションとカスタム グループとの関連付けを変更せずに、プロキシを既定のグループに追加する場合にも使用できます。  
+ サービス アプリケーションを作成するための [新規作成] ページには、 **[Web アプリケーションの関連付け]** セクションがあります。 このセクションでは、サービス アプリケーションの作成時に関連付けを行うことができます。 関連付けを変更してカスタム構成をサービス アプリケーションに割り当てるには、次の手順を使用します。 同じ一般的なプロセスは、サービス アプリケーションとカスタム グループとの関連付けを変更せずに、プロキシを既定のグループに追加する場合にも使用できます。  
   
-1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの関連付けの構成]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの関連付けの構成]** をクリックします。  
   
-2.  [サービス アプリケーションの関連付け] ページで、ビューを **[サービス アプリケーション]**に変更します。  
+2.  [サービス アプリケーションの関連付け] ページで、ビューを **[サービス アプリケーション]** に変更します。  
   
 3.  新しい Reporting Services サービス アプリケーションの名前を探してクリックします。 アプリケーション プロキシ グループ名 **[既定]** をクリックして、次の手順を完了せずに、プロキシを既定のグループに追加することもできます。  
   
-4.  **[編集する接続グループ]** 選択ボックスで、 **[カスタム]**をクリックします。  
+4.  **[編集する接続グループ]** 選択ボックスで、 **[カスタム]** をクリックします。  
   
-5.  プロキシのチェック ボックスをオンにして、 **[OK]**をクリックします。  
+5.  プロキシのチェック ボックスをオンにして、 **[OK]** をクリックします。  
   
 ## <a name="edit-service-application-properties"></a>サービス アプリケーションのプロパティの編集
 
  サービス アプリケーションのプロパティ ページを開き直してプロパティを変更することができます。  
   
-1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  サービス アプリケーションを選択するには、型列をクリックして行全体を選択します。 アプリケーションの名前をクリックすると、サービス アプリケーションのプロパティが開く代わりに、サービスの管理オプション ページが開きます。  
   
-3.  [サービス アプリケーション] リボンで、 **[プロパティ]**をクリックします。  
+3.  [サービス アプリケーション] リボンで、 **[プロパティ]** をクリックします。  
   
 ## <a name="create-a-reporting-services-service-application-using-powershell"></a>PowerShell を使用して Reporting Services サービス アプリケーションを作成する
 

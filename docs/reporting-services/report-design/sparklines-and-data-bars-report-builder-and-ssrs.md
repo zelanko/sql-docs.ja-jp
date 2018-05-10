@@ -1,30 +1,28 @@
 ---
-title: "スパークラインとデータ バー (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: スパークラインとデータ バー (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fcca620035420f293cda90a0481380efdd4d2c25
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6bde9dbc2bc91c5de90b65c0173d4b691e888086
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。   
@@ -77,7 +75,7 @@ ms.lasthandoff: 01/09/2018
  スパークラインまたはデータ バーをテーブルまたはマトリックスに追加する場合、この操作をあるデータ領域を別のデータ領域に *入れ子にする* といいます。 入れ子とは、スパークラインまたはデータ バーに渡されたデータが、テーブルまたはマトリックスを構成するデータセットと、テーブルまたはマトリックス内の配置場所によって制御されることを指します。 詳細については、「 [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="ConvertSparklinetoChart"></a> スパークラインまたはデータ バーの完全なグラフへの変換  
- スパークラインとデータ バーはグラフの一種であるため、完全なグラフの機能を使用する必要がある場合は、それらを右クリックし、 **[完全なグラフに変換]**をクリックすると、完全なグラフに変換できます。 この変換を行うと、軸の線、ラベル、目盛り、および凡例が自動的に追加されます。  
+ スパークラインとデータ バーはグラフの一種であるため、完全なグラフの機能を使用する必要がある場合は、それらを右クリックし、 **[完全なグラフに変換]** をクリックすると、完全なグラフに変換できます。 この変換を行うと、軸の線、ラベル、目盛り、および凡例が自動的に追加されます。  
   
 > [!NOTE]  
 >  1 回のクリックで、完全なグラフをスパークラインまたはデータ バーに変換することはできません。 しかし、スパークラインまたはデータ バーにないグラフ要素をすべて削除すれば、完全なグラフからスパークラインまたはデータ バーを作成できます。  

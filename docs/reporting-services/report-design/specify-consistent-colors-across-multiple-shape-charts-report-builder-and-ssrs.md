@@ -1,27 +1,25 @@
 ---
-title: "複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fecb8cd6e36040876e21baa9e1789d95fb5dba49
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fddd1c4466b3b30976bd1008ec7f6d616b71ba89
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
   改ページ調整されたレポートの図形以外のグラフの場合、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] によって、グラフの系列のインデックスに基づいてパレットから新しい色が選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  
@@ -39,15 +37,15 @@ ms.lasthandoff: 01/09/2018
   
 1.  グラフをクリックして、グラフ データ ペインを表示します。  
   
-2.  **[カテゴリ グループ]** 領域内のカテゴリを右クリックし、 **[カテゴリ グループのプロパティ]**をクリックします。  
+2.  **[カテゴリ グループ]** 領域内のカテゴリを右クリックし、 **[カテゴリ グループのプロパティ]** をクリックします。  
   
-3.  [全般] タブの **[グループの同期]** ボックスで、色を同期させるカテゴリの名前をクリックし、 **[OK]**をクリックします。  
+3.  [全般] タブの **[グループの同期]** ボックスで、色を同期させるカテゴリの名前をクリックし、 **[OK]** をクリックします。  
   
 ## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>複数の図形グラフで色を統一するには  
   
-1.  レポート本文の外側を右クリックし、 **[レポートのプロパティ]**を選択します。  
+1.  レポート本文の外側を右クリックし、 **[レポートのプロパティ]** を選択します。  
   
-2.  **[コード]**のテキスト ボックスに次のコードを入力します。  
+2.  **[コード]** のテキスト ボックスに次のコードを入力します。  
   
     ```  
     Private colorPalette As String() = {"Color1", "Color2", "Color3"}  
@@ -69,9 +67,9 @@ ms.lasthandoff: 01/09/2018
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  図形グラフ上を右クリックし、 **[系列のプロパティ]**を選択します。  
+4.  図形グラフ上を右クリックし、 **[系列のプロパティ]** を選択します。  
   
-5.  **[塗りつぶし]**の **式** (*[fx]*) ボタンをクリックして、 **Color** プロパティの式を編集します。  
+5.  **[塗りつぶし]** の **式** (*[fx]*) ボタンをクリックして、 **Color** プロパティの式を編集します。  
   
 6.  次の式を入力します。ここで、"MyCategoryField" は、 **[カテゴリ グループ]** 領域に表示されるフィールドです。  
   

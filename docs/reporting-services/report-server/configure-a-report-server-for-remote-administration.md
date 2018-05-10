@@ -1,16 +1,15 @@
 ---
-title: "リモート管理用のレポート サーバーの構成 | Microsoft Docs"
+title: リモート管理用のレポート サーバーの構成 | Microsoft Docs
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4a76d3c8635716d072ac977ddf54989ec10b22f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー インスタンスをローカルでもリモートでも構成できます。 リモートのレポート サーバー インスタンスを構成するには、Reporting Services 構成ツールを使用するか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI (Windows Management Instrumentation) プロバイダーを利用するカスタム コードを作成します。 Reporting Services 構成ツールには WMI プロバイダーのグラフィカル インターフェイスが用意されているので、コードを記述しなくてもレポート サーバーの構成を行えます。 このツールを起動する際に、接続先のリモート サーバーを指定できます。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="tasks"></a>処理手順  
  リモートのレポート サーバー構成を有効にするタスクは次のとおりです。  
   
--   Windows ファイアウォールでポートを有効にし、レポート サーバーおよび SQL Server データベース エンジン インスタンスによって使用されるポートで要求が許可されるようにします。  「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 」および「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
+-   Windows ファイアウォールでポートを有効にし、レポート サーバーおよび SQL Server データベース エンジン インスタンスによって使用されるポートで要求が許可されるようにします。  「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 」および「 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
 -   レポート サーバー データベースをホストするデータベース エンジン インスタンスへのリモート接続を有効にします。 リモート接続は、レポート サーバー データベース接続の構成と暗号化キーの管理のために必要です。  
   
@@ -66,9 +64,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>レポート サーバー データベースへのリモート接続を構成するには  
   
-1.  **[スタート]**ボタンをクリックし、 **[プログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  左側のペインで、 **[SQL Server ネットワークの構成]**を展開し、 **のインスタンスの** [プロトコル] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクリックします。  
+2.  左側のペインで、 **[SQL Server ネットワークの構成]** を展開し、 **のインスタンスの** [プロトコル] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクリックします。  
   
 3.  詳細ペインで TCP/IP プロトコルおよび名前付きパイプ プロトコルを有効にし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動します。  
   
@@ -96,9 +94,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>DCOM 権限を設定して管理者以外のユーザーによるリモート WMI アクセスを有効にするには  
   
-1.  [スタート] メニューで、 **[管理ツール]**をポイントし、 **[コンポーネント サービス]**をクリックします。  
+1.  [スタート] メニューで、 **[管理ツール]** をポイントし、 **[コンポーネント サービス]** をクリックします。  
   
-     Windows Vista の場合は、[スタート] メニューの **[すべてのプログラム]**、 **[ファイル名を指定して実行]**の順にクリックし、「 **mmc comexp.msc**」と入力します。  
+     Windows Vista の場合は、[スタート] メニューの **[すべてのプログラム]**、 **[ファイル名を指定して実行]** の順にクリックし、「 **mmc comexp.msc**」と入力します。  
   
 2.  [コンポーネント サービス] フォルダーを開きます。  
   
@@ -106,27 +104,27 @@ ms.lasthandoff: 01/09/2018
   
 4.  [マイ コンピューター] を選択します。  
   
-5.  **[操作]** メニューの **[プロパティ]**を選択します。  
+5.  **[操作]** メニューの **[プロパティ]** を選択します。  
   
-6.  **[COM セキュリティ]**をクリックします。  
+6.  **[COM セキュリティ]** をクリックします。  
   
-7.  **[起動とアクティブ化のアクセス許可]**で、 **[制限の編集]**をクリックします。  
+7.  **[起動とアクティブ化のアクセス許可]** で、 **[制限の編集]** をクリックします。  
   
-8.  **[起動許可]**に自分の名前が表示されない場合は、 **[追加]**をクリックします。  
+8.  **[起動許可]** に自分の名前が表示されない場合は、 **[追加]** をクリックします。  
   
-9. 自分のアカウントの名前を入力して、 **[OK]**をクリックします。  
+9. 自分のアカウントの名前を入力して、 **[OK]** をクリックします。  
   
 10. **[\<ユーザーまたはグループ のアクセス許可>]** で、**[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、**[OK]** をクリックします。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
   
-1.  [スタート] メニューで、 **[管理ツール]**をポイントし、 **[コンピューターの管理]**をクリックします。  
+1.  [スタート] メニューで、 **[管理ツール]** をポイントし、 **[コンピューターの管理]** をクリックします。  
   
 2.  [サービスとアプリケーション] フォルダーを開きます。  
   
-3.  **[WMI コントロール]**を右クリックし、 **[プロパティ]**をクリックします。  
+3.  **[WMI コントロール]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[セキュリティ]**をクリックします。  
+4.  **[セキュリティ]** をクリックします。  
   
 5.  Root フォルダーを開きます。  
   
@@ -140,11 +138,11 @@ ms.lasthandoff: 01/09/2018
   
 10. v10 フォルダーを開きます。  
   
-11. Admin フォルダーを選択し、 **[セキュリティ]**をクリックします。  
+11. Admin フォルダーを選択し、 **[セキュリティ]** をクリックします。  
   
-12. **[追加]**をクリックして、サーバーを管理するために使用するユーザー アカウントを入力します。  
+12. **[追加]** をクリックして、サーバーを管理するために使用するユーザー アカウントを入力します。  
   
-13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]**をオンにして、 **[OK]**をクリックします。  
+13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]** をオンにして、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

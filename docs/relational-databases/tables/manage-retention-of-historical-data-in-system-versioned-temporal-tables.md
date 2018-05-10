@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f62f76c78e8fb709436b65b657732380407e3060
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e612894249f42ef081f989eda29b3d2f8900cc80
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,7 +71,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Stretch ウィザードを利用し、履歴テーブル全体をストレッチする  
  初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。  
   
-1.  データベースを右クリックし、 **[タスク]**をポイントし、 **[Stretch]**をポイントします。それから、 **[有効化]** をクリックしてウィザードを起動します。  
+1.  データベースを右クリックし、 **[タスク]** をポイントし、 **[Stretch]** をポイントします。それから、 **[有効化]** をクリックしてウィザードを起動します。  
   
 2.  **[テーブルの選択]** ウィンドウで、一時的な履歴テーブルのチェック ボックスを選択し、[次へ] をクリックします。  
   

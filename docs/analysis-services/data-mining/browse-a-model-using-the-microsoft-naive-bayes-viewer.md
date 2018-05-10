@@ -1,43 +1,23 @@
 ---
-title: "Microsoft Naive Bayes ビューアーを使用してモデルを参照 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Microsoft Naive Bayes ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- discrimination [Analysis Services]
-- naive bayes model [Analysis Services]
-- Bayesian classifiers
-- mining model content, viewing
-- predictive modeling [Analysis Services]
-- Naive Bayes Viewer [Analysis Services]
-- data mining [Analysis Services], predictive modeling
-- Microsoft Naive Bayes Viewer
-- histograms [Analysis Services]
-- mining models [Analysis Services], predictive modeling
-- dependencies [Analysis Services]
-ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77b9857488d3574338f7eaee0815082ea3ac690c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1e501269dfea1c72416236f750f451122b36dc40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes ビューアーを使用したモデルの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)」を参照してください。  
   
  Naive Bayes モデルの主な目的の 1 つはデータセット内のデータを短時間で調査できるようにすることなので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ビューアーには、予測可能属性および入力属性の相互関係を表示するための手段がいくつか用意されています。  
   
@@ -65,11 +45,11 @@ ms.lasthandoff: 02/15/2018
  [トップに戻る](#BKMK_ViewerTabs)  
   
 ##  <a name="BKMK_Profiles"></a> 属性のプロファイル  
- **[属性のプロファイル]** タブでは、グリッドにヒストグラムが表示されます。 このグリッドを使用すると、 **[予測可能]** ボックスで選択した予測可能属性を、モデル内の他のすべての属性と比較できます。 タブ内の各列は、予測可能属性の状態を表します。 予測可能属性に多くの状態がある場合は、 **[ヒストグラム バー]**を調整して、ヒストグラムに表示される状態の数を変更できます。 選択した数が属性内の状態の総数よりも少ない場合、状態はサポートされている順に一覧表示され、残りの状態は 1 つの灰色のバケットにまとめられます。  
+ **[属性のプロファイル]** タブでは、グリッドにヒストグラムが表示されます。 このグリッドを使用すると、 **[予測可能]** ボックスで選択した予測可能属性を、モデル内の他のすべての属性と比較できます。 タブ内の各列は、予測可能属性の状態を表します。 予測可能属性に多くの状態がある場合は、 **[ヒストグラム バー]** を調整して、ヒストグラムに表示される状態の数を変更できます。 選択した数が属性内の状態の総数よりも少ない場合、状態はサポートされている順に一覧表示され、残りの状態は 1 つの灰色のバケットにまとめられます。  
   
  ヒストグラムの色を属性の状態に関連付けるマイニング凡例を表示するには、 **[凡例の表示]** チェック ボックスをオンにします。 マイニング凡例には、選択した属性と値の各ペアに関するケースの分布も表示されます。  
   
- グリッドの内容を HTML テーブルとしてクリップボードにコピーするには、 **[属性のプロファイル]** タブを右クリックして **[コピー]**を選択します。  
+ グリッドの内容を HTML テーブルとしてクリップボードにコピーするには、 **[属性のプロファイル]** タブを右クリックして **[コピー]** を選択します。  
   
  [トップに戻る](#BKMK_ViewerTabs)  
   
@@ -88,10 +68,10 @@ ms.lasthandoff: 02/15/2018
  **[属性]** 列の属性の値が表示されます。  
   
  **[優先]\<値 1 >**  
- **[値 1]**の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
+ **[値 1]** の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
   
  **[優先]\<数値 2 >**  
- **[値 2]**の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
+ **[値 2]** の予測可能な属性値が優先される度合いを示す、色分けされたバーが表示されます。  
   
  [トップに戻る](#BKMK_ViewerTabs)  
   

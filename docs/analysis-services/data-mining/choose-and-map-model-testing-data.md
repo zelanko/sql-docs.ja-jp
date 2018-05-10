@@ -1,36 +1,23 @@
 ---
-title: "選択し、モデルのテスト データをマップ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 選択し、モデルのテスト データをマップ |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], mining accuracy charts
-- Mining Accuracy Chart [Analysis Services], column mappings
-- input column mapping [Analysis Services]
-- mapping input columns [Analysis Services]
-ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d74352fcb3564eda40257430ff442f622fcec89e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
   
  既定では、予約データ セットをマイニング構造の構築時に作成した場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではマイニング モデルのテスト データが使用されます。 予約テスト セットを作成すると、列名とデータ型は常にモデルと一致し、データの分布が類似することを合理的に想定できるため、同じマイニング構造に基づくモデルを最も簡単にテストできます。 また、デザイナーでは入力列とモデル列間のリレーションシップが自動的に作成されます。  
   
@@ -70,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
      **[別のデータセットを指定する]**  
   
-4.  **[別のデータセットを指定する]**を選択した場合は、必要に応じて **[フィルター エディターを開く]** をクリックし、入力データセットのフィルター条件を作成します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  **[別のデータセットを指定する]** を選択した場合は、必要に応じて **[フィルター エディターを開く]** をクリックし、入力データセットのフィルター条件を作成します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  **[リフト チャート]** タブまたは **[分類マトリックス]** タブをクリックすると、指定したテスト データを使用して自動的にチャートが作成されます。  
   
@@ -80,11 +67,11 @@ ms.lasthandoff: 02/15/2018
   
 2.  **[マイニング精度チャート]** タブを選択し、次に **[入力の選択]** タブを選択します。  
   
-3.  **[入力の選択]** タブの **[精度チャートに使用するデータセットの選択]**で、 **[別のデータセットを指定する]**を選択します。  
+3.  **[入力の選択]** タブの **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
 4.  参照ボタン ( **[...]** ) をクリックしてダイアログ ボックスを開き、外部データ セットの定義を作成します。  
   
-5.  **[マイニング構造の選択]** ダイアログ ボックスで、操作するモデルを含んでいるマイニング構造を選択し、 **[OK]**をクリックします。  
+5.  **[マイニング構造の選択]** ダイアログ ボックスで、操作するモデルを含んでいるマイニング構造を選択し、 **[OK]** をクリックします。  
   
 6.  **[マイニング精度チャート]** タブにある **[入力テーブルの選択]** テーブルで、 **[ケース テーブルの選択]** をクリックして、 **[テーブルの選択]** ダイアログ ボックスを開きます。  
   
@@ -104,11 +91,11 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[入力の選択]** タブをクリックします。  
   
-4.  **[精度チャートに使用するデータセットの選択]**で、 **[別のデータセットを指定する]**を選択します。  
+4.  **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
 5.  参照ボタン ( **[...]** ) をクリックしてダイアログ ボックスを開き、外部データ ソースの定義を作成します。  
   
-6.  **[列マッピングの指定]** ダイアログ ボックスで、 **[ケース テーブルの選択]**をクリックします。  
+6.  **[列マッピングの指定]** ダイアログ ボックスで、 **[ケース テーブルの選択]** をクリックします。  
   
 7.  [テーブルの選択] ダイアログ ボックスで、一覧からデータ ソース ビューを選択し、ケース データが含まれているテーブルを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -116,11 +103,11 @@ ms.lasthandoff: 02/15/2018
   
 9. マイニング モデルに入れ子になったテーブルが含まれている場合は、**[入れ子になったテーブルの選択]** をクリックし、データ ソース ビューのテーブルの一覧から入れ子になったテーブルを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. 変更するマッピングの結合線を選択し、 **[接続の変更]**をクリックします。  
+10. 変更するマッピングの結合線を選択し、 **[接続の変更]** をクリックします。  
   
      **[マッピングの変更]** ダイアログ ボックスが開きます。 このダイアログ ボックスのテーブルの **[マイニング構造列]** には、選択されたマイニング構造に含まれている各列が一覧表示され、 **[テーブル列]** には、マイニング構造内の列にマップされている入力テーブルの列が一覧表示されます。  
   
-11. **[テーブル列]**で、リレーションシップを変更する **[マイニング構造列]** の下の行に対応する行を選択します。 一覧から新しい列を選択するか、一覧から空白エントリを選択して列を削除します。  
+11. **[テーブル列]** で、リレーションシップを変更する **[マイニング構造列]** の下の行に対応する行を選択します。 一覧から新しい列を選択するか、一覧から空白エントリを選択して列を削除します。  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

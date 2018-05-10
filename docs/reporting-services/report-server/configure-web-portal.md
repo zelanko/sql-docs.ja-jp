@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: report-server
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
@@ -18,12 +17,11 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0a6316978d5799462526a28c196bd70100bf3c09
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 22785efbc453e966dff209633e6d0aceeaff328f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
@@ -56,7 +54,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 3. Web ポータルの一意の仮想ディレクトリ名を入力します。
 
-4. **[適用]**をクリックします。
+4. **[適用]** をクリックします。
 
 5. [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] または Windows Server 2008 を使用している場合は、Web ポータルを使用する前に追加の手順が必要になることがあります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。
 
@@ -90,9 +88,9 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 3. Web ポータルの URLを入力します。 既定では、http://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は http://\<**your-server-name**>/reports\<**_instancename**> になります。
 
-4. **[サイトの設定]**を選択します。
+4. **[サイトの設定]** を選択します。
 
-5. **[全般]** タブの **[名前]**で、 **SQL Server Reporting Services** を別の名前に置き換えます。
+5. **[全般]** タブの **[名前]** で、 **SQL Server Reporting Services** を別の名前に置き換えます。
 
 6. **[適用]** を選択します。
 

@@ -1,25 +1,23 @@
 ---
-title: "SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化 | Microsoft Docs"
-ms.custom: 
+title: SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9e463bbaf3e74706d49e7815c7e02da7f0706f53
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c6c6c314ec55a01fb6f2884cd6a5baace396efaf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化
 
@@ -44,33 +42,33 @@ ms.lasthandoff: 01/09/2018
   
 1.  ブラウザーで、Reporting Services の機能をアクティブ化するサイトを開きます。  
   
-2.  **[サイトの操作]**をクリックします。  
+2.  **[サイトの操作]** をクリックします。  
   
-3.  **[サイトの設定]**をクリックします。  
+3.  **[サイトの設定]** をクリックします。  
   
 4.  [サイト コレクションの管理] グループで **[サイト コレクションの機能]** をクリックします。  
   
 5.  一覧で **[レポート サーバーの統合機能]** または **[Power View 統合機能]** を見つけます。  
   
-6.  **[アクティブ化]**をクリックします。  
+6.  **[アクティブ化]** をクリックします。  
   
- 機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]**をクリックする点を除き、同じ手順を実行します。  
+ 機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]** をクリックする点を除き、同じ手順を実行します。  
   
 ## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>Reporting Services の全体管理のサイト コレクション機能をアクティブ化または非アクティブ化する
   
 1.  ブラウザーで SharePoint サーバーの全体管理を開きます。  
   
-2.  **[サイトの操作]**をクリックします。  
+2.  **[サイトの操作]** をクリックします。  
   
-3.  **[サイトの設定]**をクリックします。  
+3.  **[サイトの設定]** をクリックします。  
   
 4.  [サイト コレクションの管理] グループで **[サイト コレクションの機能]** をクリックします。  
   
 5.  一覧で **[レポート サーバーの全体管理機能]** を見つけます。  
   
-6.  **[アクティブ化]**をクリックします。  
+6.  **[アクティブ化]** をクリックします。  
   
- 機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]**をクリックする点を除き、同じ手順を実行します。  
+ 機能を非アクティブ化するには、 **[アクティブ化]** ではなく **[非アクティブ化]** をクリックする点を除き、同じ手順を実行します。  
   
 ## <a name="next-steps"></a>次の手順
 

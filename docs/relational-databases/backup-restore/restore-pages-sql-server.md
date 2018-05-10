@@ -3,15 +3,12 @@ title: ページ復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restorepage.general.f1
 helpviewer_keywords:
@@ -26,12 +23,11 @@ caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d9105a5ac3520514f3998841ca24cf1de7e9a2dc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ad3206ff6ccec7db89dcf745b4dd03066e076589
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,9 +116,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]**を展開してシステム データベースを選択します。  
+2.  **[データベース]** を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックし、 **[タスク]**、 **[復元]**の順にポイントし、 **[ページ]**をクリックします。 **[ページの復元]** ダイアログ ボックスが開きます。  
+3.  データベースを右クリックし、 **[タスク]**、 **[復元]** の順にポイントし、 **[ページ]** をクリックします。 **[ページの復元]** ダイアログ ボックスが開きます。  
   
      **復元**  
      このセクションでは、 **[データベースの復元]\([全般] ページ)** の [[復元先]](../../relational-databases/backup-restore/restore-database-general-page.md)と同じ機能を実行します。  
@@ -139,11 +135,11 @@ ms.lasthandoff: 04/16/2018
      **バックアップ セット**  
      このセクションには、復元に関連するバックアップ セットが表示されます。  
   
-    |Header|値|  
+    |[ヘッダー]|値|  
     |------------|------------|  
     |**名前**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、または **[\<空白>]**\(トランザクション ログ用) のいずれかを指定します。|  
-    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]**のいずれかを指定します。|  
+    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、または **[\<空白>]** \(トランザクション ログ用) のいずれかを指定します。|  
+    |**型**|実行するバックアップの種類です。 **[完全]**、 **[差分]**、または **[トランザクション ログ]** のいずれかを指定します。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**[位置]**|ボリューム内でのバックアップ セットの位置。|  
@@ -159,18 +155,18 @@ ms.lasthandoff: 04/16/2018
   
      **[確認]** をクリックして、ページ復元操作の実行に必要なバックアップ ファイルの整合性を確認します。  
   
-4.  破損したページを識別するには、 **[データベース]** ボックスで適切なデータベースを選択した状態で、 **[データベース ページの確認]**をクリックします。 この操作の実行には時間がかかります。  
+4.  破損したページを識別するには、 **[データベース]** ボックスで適切なデータベースを選択した状態で、 **[データベース ページの確認]** をクリックします。 この操作の実行には時間がかかります。  
   
     > [!WARNING]  
     >  破損していない特定のページを復元するには、 **[追加]** をクリックし、復元するページの **[ファイル ID]** と **[ページ ID]** を入力します。  
   
-5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]**をクリックします。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
+5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
   
 6.  **[バックアップ セット]** グリッドに、既定の復元プランのバックアップ セットが一覧表示されます。 必要に応じて **[確認]** をクリックし、バックアップが読み取り可能かどうか、また、バックアップ セットに不備がないかどうかを、実際には復元せずに確認します。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。  
   
      **[ページ]**  
   
-7.  ページ グリッドに一覧表示されたページを復元するには、 **[OK]**をクリックします。  
+7.  ページ グリッドに一覧表示されたページを復元するには、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  RESTORE DATABASE ステートメントでページを指定するには、ページを含むファイルのファイル ID とページのページ ID が必要です。 必須の構文は次のとおりです。  

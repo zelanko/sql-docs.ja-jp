@@ -1,37 +1,23 @@
 ---
-title: "データ マイニング デザイナー |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニング デザイナー |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], modifying
-- data mining editor [Analysis Services]
-- Data Mining Designer
-- data mining [Analysis Services], modifying
-ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4f14ec670668253fa9e37db9647d5ef511150816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-designer"></a>データ マイニング デザイナー
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-データ マイニング デザイナーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
+  データ マイニング デザイナーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
   
 -   最初にデータ マイニング ウィザードで作成したマイニング構造とマイニング モデルを変更する。  
   
@@ -57,7 +43,7 @@ ms.lasthandoff: 02/15/2018
   
  マイニング モデルの操作の詳細については、次のトピックを参照してください。  
   
- [マイニング モデルと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   

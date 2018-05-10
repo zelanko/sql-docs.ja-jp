@@ -3,15 +3,12 @@ title: データベース エンジン サービスの管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
 - Database Engine [SQL Server], services
@@ -31,12 +28,11 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 64afcc7dc374d60460444887a762c49f778a2645
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b3275cf1deed00bb838144825b8cef243a6aa8e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +51,11 @@ ms.lasthandoff: 04/16/2018
   
  **SQL Server 構成マネージャーを使用するには**  
   
--   **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**の順にポイントして、 **[SQL Server 構成マネージャー]**をクリックします。  
+-   **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
  **Windows 8 を使用して SQL Server 構成マネージャーにアクセスするには**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]**の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( **の場合は「** SQLServerManager11.msc [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]」、 **の場合は「** SQLServerManager10.msc[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]」と入力し)、 **Enter**キーを押します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]** の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( **の場合は「** SQLServerManager11.msc [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]」、 **の場合は「** SQLServerManager10.msc[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]」と入力し)、 **Enter**キーを押します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

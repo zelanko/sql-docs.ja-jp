@@ -3,15 +3,12 @@ title: リモート サーバー接続オプションの表示または構成 (S
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], connection options
 - servers [SQL Server], remote
@@ -21,12 +18,11 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 429e7d1ee33bb1d140ad5d5608bbd82397fe6187
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3b3b1bbea20c4f2008168373b56b161c91f63c1d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>リモート サーバー接続オプションの表示または構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>リモート サーバー接続オプションを表示または構成するには  
   
-1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[サーバーのプロパティ - \<***server_name***>]** ダイアログ ボックスで、**[接続]** をクリックします。  
   
@@ -71,9 +67,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) を使用して、すべてのリモート サーバーに関する情報を返します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md) を使用して、すべてのリモート サーバーに関する情報を返します。  
   
 ```sql  
 USE master;  
@@ -85,9 +81,9 @@ EXEC sp_helpserver ;
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) を使用して、リモート サーバーを構成する方法を示します。 この例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスに対応するリモート サーバー `SEATTLE3`を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカル インスタンスと互換性のある照合順序になるように構成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) を使用して、リモート サーバーを構成する方法を示します。 この例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスに対応するリモート サーバー `SEATTLE3`を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカル インスタンスと互換性のある照合順序になるように構成します。  
   
 ```sql  
 USE master;  

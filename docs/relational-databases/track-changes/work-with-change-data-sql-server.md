@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: track-changes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
 - change data capture [SQL Server], query function scenarios
@@ -22,12 +21,11 @@ caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 87c61066969b8a83b1f69f345ed02bc01dc61c1c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e179185cd629e8bf36a0e805b7fe54713654d67b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +66,7 @@ ms.lasthandoff: 04/16/2018
  これらの既知の TVF エラーを受け取り、そのエラーに関する有益情報を返す例については、"TRY CATCH を使用した差分変更の列挙" テンプレートを参照してください。  
   
 > [!NOTE]  
->  SQL Server Management Studio で変更データ キャプチャ テンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックし、 **[SQL Server テンプレート]** を展開し、 **[変更データ キャプチャ]** フォルダーを展開します。  
+>  SQL Server Management Studio で変更データ キャプチャ テンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックし、 **[SQL Server テンプレート]** を展開し、 **[変更データ キャプチャ]** フォルダーを展開します。  
   
 ##  <a name="Functions"></a> クエリ関数  
  追跡されているソース テーブルの特性とそのキャプチャ インスタンスの構成方法に応じて、変更データのクエリのための TVF が 1 つまたは 2 つ生成されます。  

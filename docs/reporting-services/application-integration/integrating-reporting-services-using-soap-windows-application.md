@@ -1,33 +1,32 @@
 ---
-title: "Windows アプリケーションでの SOAP API の使用 | Microsoft Docs"
-ms.custom: 
+title: Windows アプリケーションでの SOAP API の使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0fcc9818a98957a475885aead617b50315d7b383
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7654e12f0455a938cfb3a0761dba1aa3c4219401
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP を使用した Reporting Services の統合 - Windows アプリケーション
   Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスです。したがって、SOAP API に容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 Windows アプリケーションの Web サービスにアクセスするには、サービスへの呼び出しを作成するコードを記述します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用すると、プロキシ クラスを生成して、Web サービスのプロパティとメソッドを表示し、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の技術に基づいたビジネス アプリケーションを構築できます。  

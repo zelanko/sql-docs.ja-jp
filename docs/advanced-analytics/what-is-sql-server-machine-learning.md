@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>SQL Server マシン学習サービスとは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ Machine Learning のサービスのキーの価値提案は、スケール、お
 SQL Server で machine learning の機能を使用するための 2 つのオプションがあります。 
 
 + [**SQL Server マシン ラーニング Services (In-database)** ](r/sql-server-r-services.md)データベース エンジン インスタンス、データベース エンジンと、計算エンジンが完全に統合されている範囲内で動作します。 ほとんどのインストールは、このオプションです。
-+ [**SQL Server マシン ラーニング サーバー (スタンドアロン)** ](r/r-server-standalone.md)非 SQL インストールします。 サーバーをインストールする SQL Server セットアップを使用すると、SQL Server から完全に分離します。 機能的には、これは、SQL 以外に相当[Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)です。
++ [**SQL Server マシン ラーニング サーバー (スタンドアロン)** ](r/r-server-standalone.md)は、マシン学習の Windows サーバー、データベース エンジンとは無関係に実行しています。 SQL Server セットアップを使用して、サーバーをインストールする機能はインスタンス対応はありません。 これは機能的には、非 SQL Server に相当[Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)です。
 
 ## <a name="r-and-python-packages"></a>R、Python パッケージ
 

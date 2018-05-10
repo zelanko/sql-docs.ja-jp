@@ -1,17 +1,17 @@
 ---
-title: "レポート サーバー Web サービス | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー Web サービス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - SSIS, Web service
 - Web service [Reporting Services]
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services]
 - Report Server Web service
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9d3da908870f8aac0d56217514625e055ae24d27
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 931bc8fccedfc7147d75a0e5dc9c08d8eb62f2b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-web-service"></a>レポート サーバー Web サービス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] により、レポート サーバー Web サービスを通じて、レポート サーバーのすべての機能を使用できます。 レポート サーバー Web サービスは、SOAP API を使用した XML Web サービスです。 SOAP over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能します。 Web サービスは 2 つのエンドポイントを提供します。1 つはレポートを実行するためのもので、もう 1 つはレポートを管理するためのものです。加えて、レポート サーバーの機能を公開するメソッドが用意されています。このメソッドにより、レポートのライフ サイクルの任意の時点に対するカスタム ツールを作成できます。  

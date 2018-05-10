@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services の改ページ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services の改ページ (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: dfaf5fec90d334ef19dcf3b5de715322164253e9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 537755f62b654301392f209a3dad8a866b18c0bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
   ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 01/09/2018
 ### <a name="margins"></a>余白  
  余白は、物理ページの寸法の端を基準とし、指定された余白設定に達するまで内側に向かって描画されます。 余白領域にはみ出たレポート アイテムはクリッピングされ、重なり合う領域はレンダリングされません。 ページの水平方向または垂直方向の幅がゼロになるような余白サイズを指定した場合は、余白設定が既定でゼロに設定されます。 余白は、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用して指定できるほか、 **[プロパティ]** ペインで TopMargin、BottomMargin、LeftMargin、RightMargin の各プロパティを変更することによって指定できます。 レポートで定義されている余白サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の余白サイズを指定することにより上書きできます。  
   
- 余白、列の間隔、およびページ ヘッダーとページ フッターの領域を割り当てた後に残っている物理ページ領域を *"使用可能なページ領域"*といいます。 余白は、レポートをハード改ページ レンダラー形式でレンダリングまたは印刷した場合にのみ適用されます。 次の画像は、物理ページの余白および使用可能なページ領域を示しています。  
+ 余白、列の間隔、およびページ ヘッダーとページ フッターの領域を割り当てた後に残っている物理ページ領域を *"使用可能なページ領域"* といいます。 余白は、レポートをハード改ページ レンダラー形式でレンダリングまたは印刷した場合にのみ適用されます。 次の画像は、物理ページの余白および使用可能なページ領域を示しています。  
   
  ![余白と使用可能領域のある物理ページ](../../reporting-services/report-design/media/rspagemargins.gif "余白と使用可能領域のある物理ページ")  
   

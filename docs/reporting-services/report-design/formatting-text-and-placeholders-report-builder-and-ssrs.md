@@ -1,16 +1,15 @@
 ---
-title: "テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
 - "10118"
@@ -19,16 +18,15 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 54f5a77395aa11b52ee55d71de4d89e239a9201f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)
   テキスト ボックスは、データ領域内のレポート アイテムまたは個々のセルであり、テキスト、計算フィールド、データベース内のフィールドへのポインター、またはこの 3 つのアイテムの組み合わせが格納されます。 フォントと色の組み合わせ、太字や斜体のスタイルの追加、整列配置やぶら下げインデントなどの段落スタイルの使用が可能です。 また、テキスト ボックス全体の書式を設定することも、テキスト ボックス内の特定のテキスト、数値、式、またはフィールドの書式を設定することも可能です。  
@@ -51,14 +49,14 @@ ms.lasthandoff: 01/09/2018
   
 -   **レポート データ** ペインからテキスト ボックスにフィールドをドラッグしてドロップします。 レポート本文のその他の場所に式をドラッグした場合は、プレースホルダーを含んだ新しいテキスト ボックスが作成されます。 このプレースホルダーの値は、ドロップされたフィールドに対応するフィールド式になります。  
   
--   テキスト ボックス内で右クリックし、 **[プレースホルダーの挿入]**を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスで、プレースホルダーの値として式を指定できます。 詳細については、「 [[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)」をご覧ください。  
+-   テキスト ボックス内で右クリックし、 **[プレースホルダーの挿入]** を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスで、プレースホルダーの値として式を指定できます。 詳細については、「 [[全般] ([プレースホルダーのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)」をご覧ください。  
   
 -   任意の単純型または複合型の式をテキスト ボックスに入力します。 たとえば、テキスト ボックスに「 **Name: [Name]** 」と入力すると、式 **を表すプレースホルダーとして** [Name] `=Fields!Name.Value`というテキストが表示されます。  
   
 -   空のテキスト ボックスに、等号 (=) で始まる式を入力します。 テキスト ボックスからフォーカスを切り替えると、結果の式が編集可能なプレースホルダーに変換されます。 テキスト ボックスが空でない場合や、テキスト ボックス内のテキストが等号 (=) で始まっていない場合は、等号が文字列リテラルとして解釈され、プレースホルダーが作成されません。 単純型または複合型の式の定義方法については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>テキスト ボックス内のプレースホルダーと静的テキストの書式設定  
- **[プレースホルダーのプロパティ]** ダイアログ ボックスを使用してプレースホルダーの書式を設定できます。 書式設定できるのは、プレースホルダーの一部ではなく、プレースホルダー全体です。 基になる式を確認する場合は、プレースホルダーにポインターを合わせます。 基になる式を変更するには、プレースホルダーをダブルクリックするか、プレースホルダーを右クリックして **[プレースホルダーのプロパティ]**を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスの **[全般]** にある **[ラベル]** プロパティを使用すると、UI ラベルも指定できます。 これは、デザイン時に表示されるプレースホルダーのテキストになります。  
+ **[プレースホルダーのプロパティ]** ダイアログ ボックスを使用してプレースホルダーの書式を設定できます。 書式設定できるのは、プレースホルダーの一部ではなく、プレースホルダー全体です。 基になる式を確認する場合は、プレースホルダーにポインターを合わせます。 基になる式を変更するには、プレースホルダーをダブルクリックするか、プレースホルダーを右クリックして **[プレースホルダーのプロパティ]** を選択します。 **[プレースホルダーのプロパティ]** ダイアログ ボックスの **[全般]** にある **[ラベル]** プロパティを使用すると、UI ラベルも指定できます。 これは、デザイン時に表示されるプレースホルダーのテキストになります。  
   
  ![rs_MixedTextnPlaceholder](../../reporting-services/report-design/media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 01/09/2018
  混合書式設定の詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="aligning-horizontal-text-using-general"></a>全般を使用した横方向のテキストの配置  
- **[テキスト ボックスのプロパティ]** ダイアログ ボックスの **[配置]** では、テキストを横方向に配置する方法を指定できます。 配置の値を指定しなければ、配置の既定値は **[既定]**になります。 つまり、テキストはプレースホルダーの値のフィールド タイプに基づいて配置されます。 非数など、文字列以外に評価される式を指定すると、テキストが右揃えになります。 数値など、式が文字列に評価される場合は、テキストが左揃えになります。  
+ **[テキスト ボックスのプロパティ]** ダイアログ ボックスの **[配置]** では、テキストを横方向に配置する方法を指定できます。 配置の値を指定しなければ、配置の既定値は **[既定]** になります。 つまり、テキストはプレースホルダーの値のフィールド タイプに基づいて配置されます。 非数など、文字列以外に評価される式を指定すると、テキストが右揃えになります。 数値など、式が文字列に評価される場合は、テキストが左揃えになります。  
   
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

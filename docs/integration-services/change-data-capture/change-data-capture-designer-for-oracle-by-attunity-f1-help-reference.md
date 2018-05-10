@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f2e8e89873652a0c2d48b524e84709ab0ced8fd6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 7ee0c024e172072ed89c64e10c3e1cacaac3e2e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity の F1 ヘルプ参照
   Change Data Capture Designer for Oracle by Attunity は、Oracle CDC インスタンスの作成および管理に使用します。 このセクションのトピックでは、CDC デザイナー コンソールで利用可能なタスクを実行する方法について説明します。  

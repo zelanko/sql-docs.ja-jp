@@ -1,32 +1,23 @@
 ---
 title: 多次元モデル内のメジャーおよびメジャー グループの作成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services], defining
-ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d0ec47db104d9d37a0114c30b55d52178312e44f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A*メジャー*数値の合計、カウント、最小、最大、平均値、または作成したカスタム MDX 式などのデータ値の集計です。 *メジャー グループ* は、1 つ以上のメジャーに対応するコンテナーです。 すべてのメジャーは、メジャーが 1 つしかない場合を含め、1 つのメジャー グループ内に存在します。 キューブには、少なくとも 1 つのメジャーとメジャー グループが必要です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  *メジャー* は、合計値、度数、最小値、最大値、平均値、または自ら作成したカスタム MDX 式のように、数値のデータ値を集計したものです。 *メジャー グループ* は、1 つ以上のメジャーに対応するコンテナーです。 すべてのメジャーは、メジャーが 1 つしかない場合を含め、1 つのメジャー グループ内に存在します。 キューブには、少なくとも 1 つのメジャーとメジャー グループが必要です。  
   
  このトピックのセクションは次のとおりです。  
   
@@ -57,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**source**|ほとんどのメジャーは、AdventureWorks データ ウェアハウス内の Internet Sales (インターネット売上) や Reseller Sales (販売店売上) テーブルにある Sales Amount 列など、外部データ ウェアハウス内のファクト テーブルの数値列に由来していますが、定義する計算全体に基づいてメジャーを新規作成することもできます。<br /><br /> ディメンション テーブルの属性列は、メジャーの定義に使用できますが、これらのメジャーの集計動作は、通常、準加法または非加法です。 準加法の動作の詳細については、「 [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)」を参照してください。|  
 |**集計 (aggregation)**|既定では、各ディメンションに従ってメジャーが集計されます。 ただし、 **AggregateFunction** プロパティを使用するとこの動作を変更できます。 一覧については [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) を参照してください。|  
-|**[プロパティ]**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
+|**プロパティ**|プロパティの追加説明については [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) を参照してください。|  
   
 ##  <a name="bkmk_modeling"></a> ファクトとファクト テーブルでのメジャーとメジャー グループのモデリング  
  ウィザードを実行する前に、メジャーの定義の背後にあるモデリングの原則を理解するのに役立ちます。  
@@ -90,8 +81,8 @@ ms.lasthandoff: 01/08/2018
   
  キューブ デザイナーの **[ディメンションの使用法]** タブを使用すると、特定のディメンションに関してメジャー グループの粒度を指定できます。 ディメンションのリレーションシップの詳細については、「 [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+## <a name="see-also"></a>「  
+ [多次元モデル内のキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
+ [メジャーとメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

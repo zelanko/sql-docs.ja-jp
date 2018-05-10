@@ -3,15 +3,12 @@ title: フェールオーバー クラスタリングと Always On 可用性グ�
 ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -24,15 +21,16 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 20cd2f3d0b8a034a1f7f1d689f106216b161ec38
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4df759c9abc55c6f8c987fdf294bdb417b97524c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で導入された [!INCLUDE[sssql11](../../../includes/sssql11_md.md)] (High Availability and Disaster Recovery) ソリューションには、Windows Server フェールオーバー クラスタリング (WSFC) が必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー クラスタリングには依存しませんが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、フェールオーバー クラスタリング インスタンス (FCI) を使用して、可用性グループの可用性レプリカをホストすることもできます。 実際に [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境を設計する際は、それぞれのクラスタリング テクノロジの役割を知り、注意点を把握しておくことが大切です。  
   
@@ -60,11 +58,6 @@ ms.lasthandoff: 04/16/2018
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] レジストリ キーは WSFC クラスターのサブキーです。 WSFC クラスターを削除してから再作成した場合は、元の WSFC クラスター上の可用性レプリカをホストしていた [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の各インスタンスについて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能を無効にしてから再度有効にする必要があります。  
   
  Windows Server フェールオーバー クラスタリング (WSFC) ノードでの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の実行および WSFC クォーラムについては、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41;  と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」を参照してください。  
-  
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>OS アップグレードのための Always On 可用性グループのクラスター間での移行  
- [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]から、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、新しい Windows Server フェールオーバー クラスタリング (WSFC) クラスターに配置するために行う可用性グループのクラスター間での移行が新たにサポートされています。 クラスター間の移行では、ダウンタイムを最小限に抑えながら、1 つの可用性グループを (または複数の可用性グループを一括して) 新しい移行先 WSFC クラスターに移行します。 クラスター間の移行プロセスを使用すると、 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] クラスターへのアップグレード時にサービス レベル契約 (SLA) を維持できます。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 移行先の WSFC クラスターに、(またはそれ以降のバージョン) をインストールし、Always On 用に有効にする必要があります。 クラスター間での移行を成功させるには、移行先 WSFC クラスターを綿密に計画し、準備することが必要です。  
-  
- 詳細については、「 [OS アップグレードのための AlwaysOn 可用性グループのクラスター間での移行](http://msdn.microsoft.com/library/jj873730.aspx)」を参照してください。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) と可用性グループ  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングを WSFC クラスターと共に実装することにより、サーバー インスタンス レベルで第 2 のフェールオーバー レイヤーをセットアップできます。 可用性レプリカは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスまたは FCI インスタンスでホストできます。 特定の可用性グループのレプリカをホストできる FCI パートナーは 1 つに限られます。 可用性レプリカが FCI で実行されている場合、可用性グループの有効な所有者の一覧には、アクティブな FCI ノードだけが含まれます。  

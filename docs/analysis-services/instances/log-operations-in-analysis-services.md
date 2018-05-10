@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services での操作をログ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services での操作をログ |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4a4968a3c66100fd40871fa5e8231f19711361e2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services インスタンスは、msmdsrv.log ファイルにサーバーの通知、エラー、および警告のログを記録します。インストールするインスタンスごとに実行します。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 [ログ記録の機能強化](http://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  
+  Analysis Services インスタンスは、msmdsrv.log ファイルにサーバーの通知、エラー、および警告のログを記録します。インストールするインスタンスごとに実行します。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 [ログ記録の機能強化](http://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  
   
  組み込みのログ記録機能以外にも、多くの管理者および開発者が、Analysis Services コミュニティが提供する **ASTrace**などのツールを使用して、サーバー操作に関するデータを収集しています。 ダウンロードのリンクについては、「 [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) 」 (Microsoft SQL Server コミュニティ サンプル: Analysis Services) を参照してください。  
   
@@ -116,7 +108,7 @@ Analysis Services インスタンスは、msmdsrv.log ファイルにサーバ�
   
 2.  Analysis Services のサービス アカウントに、データベースに対する十分なアクセス許可を付与します。 アカウントには、テーブルの作成、テーブルへの書き込み、テーブルからの読み取りの権限が必要です。  
   
-3.  SQL Server Management Studio で、 **[Analysis Services]** | **[プロパティ]** | **[全般]**の順にクリックして、 **[CreateQueryLogTable]** を [true] に設定します。  
+3.  SQL Server Management Studio で、 **[Analysis Services]** | **[プロパティ]** | **[全般]** の順にクリックして、 **[CreateQueryLogTable]** を [true] に設定します。  
   
 4.  (省略可能) クエリを異なるレートでサンプリングする場合、またはテーブルに異なる名前を使用する場合は、 **QueryLogSampling** または **QueryLogTableName** を変更します。  
   
@@ -159,7 +151,7 @@ Analysis Services インスタンスは、msmdsrv.log ファイルにサーバ�
   
  最も変更される可能性が高い構成設定は、メモリ ダンプ ファイルを生成するかどうかの指定に使用する **CreateAndSendCrashReports** の設定です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0|メモリ ダンプ ファイルをオフにします。 「Exception (例外)」セクションの他のすべての設定は無視されます。|  
 |1|(既定) メモリ ダンプ ファイルを有効にしますが送信しません。|  

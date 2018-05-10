@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
@@ -21,12 +20,11 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05b85e0985b81e092a5011f142e93437245cb6d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8eb5da1b801a492be4844967833373f80881f782
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +66,9 @@ ms.lasthandoff: 04/16/2018
   
      論理レコード リレーションシップは、行フィルターを拡張する結合フィルターに関連付けられます。 したがって、先に行フィルターが定義されていないと、行フィルターを結合で拡張して論理レコード リレーションシップを適用することはできません。 1 つの結合フィルターが定義されると、この結合フィルターを別の結合フィルターを使用して拡張できます。 結合フィルターの定義の詳細については、「 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
-2.  **[追加]**をクリックし、 **[選択したフィルターを拡張するために結合を追加する]**をクリックします。  
+2.  **[追加]** をクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
-3.  **[結合の追加]** ダイアログ ボックスで結合フィルターを定義してから、 **[論理レコード]**チェック ボックスをオンにします。  
+3.  **[結合の追加]** ダイアログ ボックスで結合フィルターを定義してから、 **[論理レコード]** チェック ボックスをオンにします。  
   
 4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
     1.  パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の論理レコード リレーションシップに関連付けられている結合フィルターを選択し、**[編集]** をクリックします。  
   
-    2.  **[結合の編集]** ダイアログ ボックスで、 **[論理レコード]**チェック ボックスをオフにします。  
+    2.  **[結合の編集]** ダイアログ ボックスで、 **[論理レコード]** チェック ボックスをオフにします。  
   
     3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

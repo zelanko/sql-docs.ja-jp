@@ -3,15 +3,12 @@ title: ログ シーケンス番号への復旧 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log sequence numbers [SQL Server]
 - STOPBEFOREMARK option [RESTORE statement]
@@ -28,12 +25,11 @@ caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a4f7bf02ef09eb623afc88d4c36da3cbc31056d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 441daeb74bcc141c148edef396b04bf75aff3f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>ログ シーケンス番号への復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,11 +67,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN に復元するための Transact-SQL 構文  
  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用して、次のように LSN または LSN の直前まで復元できます。  
   
--   WITH STOPATMARK **='**lsn:*<lsn_number>***'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
+-   WITH STOPATMARK **='** lsn:*<lsn_number>***'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
   
      STOPATMARK によって LSN までロールフォワードされ、そのログ レコードがロールフォワードに含められます。  
   
--   WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
+-   WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
   
      STOPBEFOREMARK では、LSN までロールフォワードされますが、指定されたログ レコードはロールフォワードから除外されます。  
   

@@ -1,36 +1,25 @@
 ---
 title: Analysis Services プロジェクトのプロパティ (SSDT) の構成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
-helpviewer_keywords:
-- projects [Analysis Services], properties
-ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
-caps.latest.revision: 24
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1715c22cf3976a3ad888081436bb322b38451308
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aa56475a9b5ff1e71649e4d249afa7f9851d6bfc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services プロジェクトのプロパティの構成 (SSDT)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトがビルドと展開に影響する既定のプロパティで定義されている、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの構築と配置に影響する既定のプロパティで定義されています。  
   
- プロジェクト プロパティを変更するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトを右クリックし、 **[プロパティ]**をクリックします。 または、[プロジェクト] メニューの **[プロパティ]** をクリックすることもできます。  
+ プロジェクト プロパティを変更するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト オブジェクトを右クリックし、 **[プロパティ]** をクリックします。 または、[プロジェクト] メニューの **[プロパティ]** をクリックすることもできます。  
   
 ## <a name="property-description"></a>[プロパティの説明]  
  次の表に、プロジェクトの各プロパティの説明、それらの既定値、および値の変更に関する情報を示します。  
@@ -46,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 |配置 / 処理オプション|既定値|既定では、オブジェクトの変更を配置するときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で必要な処理方法が決定されます。 通常は、これで配置時間が最速になりますが、 配置のたびに完全処理を実行するか処理を実行しないかを選択することもできます。|  
 |配置 / トランザクション配置|False|既定では、変更されたオブジェクトまたはすべてのオブジェクトの配置は、それらを配置した後の処理とトランザクション関係がありません。 処理に失敗しても、配置は成功して持続できます。 この既定を変更して、配置と処理を 1 つのトランザクションに組み込むこともできます。|  
 |配置 / 対象サーバー|localhost|既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内のデータベース オブジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用しているローカル コンピューター上の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の既定のインスタンスに配置されます。 ローカル コンピューター上の特定のインスタンスを指定するか、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のオブジェクトを作成する権限のあるリモート コンピューター上の任意のインスタンスを指定するには、この既定を変更します。|  
-|配置 / データベース|\<プロジェクト名 >|既定では、配置後に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのオブジェクトをインスタンス化する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを定義したときの名前です。 Server プロパティで指定されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上のデータベース名を変更するには、このプロパティを変更します。|  
+|配置 / データベース|\<プロジェクト名 >|既定では、配置後に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのオブジェクトをインスタンス化する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを定義したときの名前です。 Server プロパティで指定されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上のデータベース名を変更するには、このプロパティを変更します。|  
   
 ## <a name="property-configurations"></a>プロパティの構成  
  プロパティは構成ごとに定義します。 プロジェクトを構成すると、開発者はビルド、デバッグ、配置設定などが異なる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のプロジェクトを、基の XML プロジェクト ファイルを編集せずに操作できるようになります。  
@@ -57,6 +46,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services プロジェクトの展開 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -3,15 +3,12 @@ title: 論理バックアップ デバイスのプロパティと内容の表示
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying backup content
 - viewing backup content
@@ -27,12 +24,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8c3e386731fc751e7a7ad243be2ef56c1e550715
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 191eefe8086c7f093a6f21b6283d912d8061ee67
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>論理バックアップ デバイスのプロパティと内容の表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +61,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[サーバー オブジェクト]**を展開し、 **[バックアップ デバイス]**を展開します。  
+2.  **[サーバー オブジェクト]** を展開し、 **[バックアップ デバイス]** を展開します。  
   
-3.  デバイスをクリックし、 **[プロパティ]**を右クリックして **[バックアップ デバイス]** ダイアログ ボックスを開きます。  
+3.  デバイスをクリックし、 **[プロパティ]** を右クリックして **[バックアップ デバイス]** ダイアログ ボックスを開きます。  
   
 4.  **[全般]** ページにデバイス名とバックアップ先が表示されます。これはテープ ドライブまたはファイル パスです。  
   
-5.  **[ページの選択]** ペインで **[メディアの内容]**をクリックします。  
+5.  **[ページの選択]** ペインで **[メディアの内容]** をクリックします。  
   
 6.  右側のペインに次のプロパティ パネルが表示されます。  
   
@@ -94,7 +90,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) ステートメントを使用します。 この例は、 `AdvWrks2008R2Backup` 論理バックアップ デバイスに関する情報を返します。  
   

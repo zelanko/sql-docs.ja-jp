@@ -1,27 +1,19 @@
 ---
 title: IIS 8.0 で Analysis Services への HTTP アクセスの構成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce49893c7811bf3c829c0bbdf554a1cf7bdc4b36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスの構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -126,11 +118,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  IIS マネージャーを起動します。  
   
-2.  サーバーのフォルダーを開き、 **[アプリケーション プール]** を右クリックし、 **[アプリケーション プールの追加]**をクリックします。 マネージ パイプライン モードを **[クラシック]**に設定し、.NET Framework を使用して、 **OLAP**という名前のアプリケーション プールを作成します。  
+2.  サーバーのフォルダーを開き、 **[アプリケーション プール]** を右クリックし、 **[アプリケーション プールの追加]** をクリックします。 マネージ パイプライン モードを **[クラシック]** に設定し、.NET Framework を使用して、 **OLAP**という名前のアプリケーション プールを作成します。  
   
      ![スクリーン ショットのアプリケーション プールの追加 ダイアログ](../../analysis-services/instances/media/ssas-httpaccess.PNG "スクリーン ショットのアプリケーション プールの追加 ダイアログ")  
   
-3.  既定では、IIS はセキュリティ ID として **ApplicationPoolIdentity** を使用してアプリケーション プールを作成します (これは、Analysis Services への HTTP アクセスの有効な選択肢です)。 ID を変更しなければならない特別な理由があれば、 **[OLAP]**を右クリックし **[詳細設定]**を選択します。 **[ApplicationPoolIdentity]** を選択します。 このプロパティの **[変更]** をクリックして、ビルトイン アカウントを目的のカスタム アカウントに置き換えます。  
+3.  既定では、IIS はセキュリティ ID として **ApplicationPoolIdentity** を使用してアプリケーション プールを作成します (これは、Analysis Services への HTTP アクセスの有効な選択肢です)。 ID を変更しなければならない特別な理由があれば、 **[OLAP]** を右クリックし **[詳細設定]** を選択します。 **[ApplicationPoolIdentity]** を選択します。 このプロパティの **[変更]** をクリックして、ビルトイン アカウントを目的のカスタム アカウントに置き換えます。  
   
      ![高度な設定のスクリーン ショット] プロパティ ページ](../../analysis-services/instances/media/ssas-httpaccess-advsettings.PNG "プロパティ ページの [詳細設定のスクリーン ショット")  
   
@@ -142,13 +134,13 @@ ms.lasthandoff: 04/16/2018
   
      ![アプリにする前に、OLAP フォルダーが変換](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "アプリに変換する前に、OLAP フォルダー")  
   
-2.  フォルダーを右クリックし、 **[アプリケーションに変換]**を選択します。  
+2.  フォルダーを右クリックし、 **[アプリケーションに変換]** を選択します。  
   
 3.  [アプリケーションの追加] でエイリアスの **OLAP** を入力します。 **[選択]** をクリックして、OLAP アプリケーション プールを選択します。 C:\inetpub\wwwroot\OLAP に物理パスを設定する必要があります。  
   
      ![アプリケーションへの変換の設定を](../../analysis-services/instances/media/ssas-httpaccess-convertedapp.png "アプリケーションへの変換の設定")  
   
-4.  **[OK]**をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
+4.  **[OK]** をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
   
      ![アプリケーションに変換後の OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderafter.png "アプリケーションへの変換後の OLAP フォルダー")  
   
@@ -178,7 +170,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>認証の種類の設定とスクリプト マップの追加  
   
-1.  IIS マネージャーで、 **[サイト]**を開き、 **[既定の Web サイト]**を開いて、 **OLAP** 仮想ディレクトリを選択します。  
+1.  IIS マネージャーで、 **[サイト]** を開き、 **[既定の Web サイト]** を開いて、 **OLAP** 仮想ディレクトリを選択します。  
   
 2.  メイン ページの [IIS] セクションで、 **[認証]** をダブルクリックします。  
   
@@ -202,15 +194,15 @@ ms.lasthandoff: 04/16/2018
     > [!IMPORTANT]  
     >  通常、匿名認証は、ファイル システムのアクセス制御リストによってユーザーのアクセスが許可または拒否される、厳密に制御された環境で使用されます。 ベスト プラクティスについては、「 [匿名認証 (IIS 7) を有効にする](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)」を参照してください。  
   
-6.  **OLAP** 仮想ディレクトリをクリックして、メイン ページを開きます。 **[ハンドラー マッピング]**をダブルクリックします。  
+6.  **OLAP** 仮想ディレクトリをクリックして、メイン ページを開きます。 **[ハンドラー マッピング]** をダブルクリックします。  
   
      ![ハンドラー マッピング アイコン](../../analysis-services/instances/media/ssas-httpaccess-handlermapping.png "ハンドラー マッピング アイコン")  
   
-7.  ページ上の任意の場所を右クリックし、 **[スクリプト マップの追加]**を選択します。 [スクリプト マップの追加] ダイアログ ボックスで、要求パスとして「 **\*.dll** 」を指定し、実行可能ファイルとして「c:\inetpub\wwwroot\OLAP\msmdpump.dll」を指定し、名前として「 **OLAP** 」を入力します。 このスクリプト マップに関連付けられている既定のすべての制限を維持します。  
+7.  ページ上の任意の場所を右クリックし、 **[スクリプト マップの追加]** を選択します。 [スクリプト マップの追加] ダイアログ ボックスで、要求パスとして「 **\*.dll** 」を指定し、実行可能ファイルとして「c:\inetpub\wwwroot\OLAP\msmdpump.dll」を指定し、名前として「 **OLAP** 」を入力します。 このスクリプト マップに関連付けられている既定のすべての制限を維持します。  
   
      ![スクリーン ショットのスクリプト マップの追加 ダイアログ ボックス](../../analysis-services/instances/media/ssas-httpaccess-addscript.png "スクリーン ショットのスクリプト マップの追加 ダイアログ ボックス")  
   
-8.  ISAPI 拡張機能を許可するように求めるメッセージが表示されたら、 **[はい]**をクリックします。  
+8.  ISAPI 拡張機能を許可するように求めるメッセージが表示されたら、 **[はい]** をクリックします。  
   
      ![ISAPI 拡張機能を追加する確認のスクリーン ショット](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "ISAPI 拡張機能を追加する確認のスクリーン ショット")  
   
@@ -286,7 +278,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  ログオン資格情報については、Windows 統合セキュリティ、NTLM、または匿名ユーザーを使用する場合は **[Windows 認証を使用する]** を選択します。  
   
-     基本認証の場合は、 **[以下のユーザー名とパスワードを使用する]**を選択し、サインオンに使用する資格情報を指定します。 指定した資格情報が接続文字列として Analysis Services に渡されます。  
+     基本認証の場合は、 **[以下のユーザー名とパスワードを使用する]** を選択し、サインオンに使用する資格情報を指定します。 指定した資格情報が接続文字列として Analysis Services に渡されます。  
   
  **AMO を使用した接続テスト**  
   

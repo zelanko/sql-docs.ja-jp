@@ -1,32 +1,23 @@
 ---
 title: 予測関数をモデルに適用する |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Prediction [Analysis Services], selecting mining models
-ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f1bbde465ec10e9a218ab096ba9b920bd68bdda
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>モデルへの予測関数の適用
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]予測クエリを作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ マイニング クエリの基になるマイニング モデル最初に選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ マイニングで予測クエリを作成するには、クエリの基になるマイニング モデルを選択する必要があります。 現在のプロジェクトに存在するマイニング モデルを選択できます。  
   
  モデルを選択した後は、クエリに " *予測関数* " を追加します。 予測関数を使用して予測を取得する以外に、予測値の確率や、予測の生成に使用された情報など、関連する統計情報を返す予測関数を追加することもできます。  
   
@@ -50,19 +41,19 @@ ms.lasthandoff: 01/08/2018
   
 ### <a name="choose-a-mining-model-to-use-for-prediction"></a>予測に使用するマイニング モデルの選択  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデルを右クリックし、 **[予測クエリの作成]**を選択します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデルを右クリックし、 **[予測クエリの作成]** を選択します。  
   
      -- または --  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[マイニング モデル予測]**タブをクリックし、 **[マイニング モデル]** テーブルの  **[モデルの選択]** をクリックします。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[マイニング モデル予測]** タブをクリックし、 **[マイニング モデル]** テーブルの  **[モデルの選択]** をクリックします。  
   
-2.  **[マイニング モデルの選択]** ダイアログ ボックスでマイニング モデルを選択し、 **[OK]**をクリックします。  
+2.  **[マイニング モデルの選択]** ダイアログ ボックスでマイニング モデルを選択し、 **[OK]** をクリックします。  
   
      現在の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内の任意のモデルを選択できます。 別のデータベース内のモデルを使用してクエリを作成するには、そのデータベースのコンテキストで新しいクエリ ウィンドウを開くか、そのモデルを含んでいるソリューション ファイルを開く必要があります。  
   
 ### <a name="add-prediction-functions-to-a-query"></a>クエリへの予測関数の追加  
   
-1.  **[予測クエリ ビルダー]**で、 **[単一クエリ入力]** ダイアログ ボックスで値を指定するか、モデルを外部データ ソースにマップして、予測に使用する入力データを構成します。  
+1.  **[予測クエリ ビルダー]** で、 **[単一クエリ入力]** ダイアログ ボックスで値を指定するか、モデルを外部データ ソースにマップして、予測に使用する入力データを構成します。  
   
      詳細については、「 [予測クエリの入力データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)」を参照してください。  
   
@@ -80,15 +71,15 @@ ms.lasthandoff: 01/08/2018
 3.  各関数または式の追加後は、DMX ビューに切り替えて、関数がどのように DMX ステートメント内に追加されたかを確認します。  
   
     > [!WARNING]  
-    >  予測クエリ ビルダーでは、 **[結果]**をクリックするまで、DMX は検証されません。 クエリ ビルダーによって生成された式は、有効な DMX でないことがよくあります。 主な原因は、予測可能列に関連付けられていない列の参照や、入れ子になったテーブル内の列の予測 (サブ SELECT ステートメントが必要) です。 この時点で、DMX ビューに切り替えて、ステートメントの編集を続行できます。  
+    >  予測クエリ ビルダーでは、 **[結果]** をクリックするまで、DMX は検証されません。 クエリ ビルダーによって生成された式は、有効な DMX でないことがよくあります。 主な原因は、予測可能列に関連付けられていない列の参照や、入れ子になったテーブル内の列の予測 (サブ SELECT ステートメントが必要) です。 この時点で、DMX ビューに切り替えて、ステートメントの編集を続行できます。  
   
 ### <a name="example-create-a-query-on-a-clustering-model"></a>例: クラスター モデルに対するクエリの作成  
   
 1.  このサンプル クエリを作成するために使用できるクラスター モデルがない場合は、 [基本的なデータ マイニング チュートリアル](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)を使用して、モデルの [TM_Clustering] を作成してください。  
   
-2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデルの [TM_Clustering] を右クリックし、 **[予測クエリの作成]**を選択します。  
+2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデルの [TM_Clustering] を右クリックし、 **[予測クエリの作成]** を選択します。  
   
-3.  **[マイニング モデル]** メニューの **[単一クエリ]**を選択します。  
+3.  **[マイニング モデル]** メニューの **[単一クエリ]** を選択します。  
   
 4.  **[単一クエリ入力]** ダイアログ ボックスで、入力として次の値を設定します。  
   
@@ -96,15 +87,15 @@ ms.lasthandoff: 01/08/2018
   
     -   Commute Distance = 5-10 miles  
   
-5.  クエリ グリッドの **[ソース]**で TM_Clustering マイニング モデルを選択し、列の [Bike Buyer] を追加します。  
+5.  クエリ グリッドの **[ソース]** で TM_Clustering マイニング モデルを選択し、列の [Bike Buyer] を追加します。  
   
-6.  **[ソース]**で **[予測関数]**を選択し、関数の **Cluster**を追加します。  
+6.  **[ソース]** で **[予測関数]** を選択し、関数の **Cluster**を追加します。  
   
-7.  **[ソース]**で **[予測関数]**を選択し、関数の **PredictSupport**を追加して、モデル列の [Bike Buyer] を **[条件と引数]** ボックスにドラッグします。 **[別名]** 列に「 **Support** 」と入力します。  
+7.  **[ソース]** で **[予測関数]** を選択し、関数の **PredictSupport**を追加して、モデル列の [Bike Buyer] を **[条件と引数]** ボックスにドラッグします。 **[別名]** 列に「 **Support** 」と入力します。  
   
      予測関数を表す式および列参照を **[条件と引数]** ボックスからコピーします。  
   
-8.  **[ソース]**で **[カスタム式]**を選択し、別名を入力してから、次の構文を使用して Excel の CEILING 関数を参照します。  
+8.  **[ソース]** で **[カスタム式]** を選択し、別名を入力してから、次の構文を使用して Excel の CEILING 関数を参照します。  
   
     ```  
     Excel![CEILING](<arguments) as <return type>  

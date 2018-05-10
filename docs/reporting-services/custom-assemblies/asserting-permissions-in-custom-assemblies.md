@@ -1,17 +1,17 @@
 ---
-title: "カスタム アセンブリでのアクセス許可のアサート | Microsoft Docs"
-ms.custom: 
+title: カスタム アセンブリでのアクセス許可のアサート | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-assemblies
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a1f75514d0b1984a5296c8fad54d4654fbaea57c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d258a83f7c36baf7cab148661ad5cab91972233
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>カスタム アセンブリでの権限のアサート
   既定では、カスタム アセンブリ コードは、限定された **Execution** アクセス許可セットに基づいて実行されます。 ただし、場合によっては、(ファイルやレジストリなど) セキュリティ システムで保護されたリソースを安全に呼び出すカスタム アセンブリを実装する必要が生じる場合もあります。 そのためには、次の操作を実行する必要があります。  

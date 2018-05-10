@@ -3,25 +3,23 @@ title: データベース エンジンのアップグレード方法の選択 | 
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9049db61b062dc9211b47094886b831bc6667890
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f3ac9ae5a47adce9d5c46de99d00d7463becd590
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 
@@ -33,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
  **ダウンロード**  
   
--   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)**に移動してください。  
+-   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)** に移動してください。  
   
 -   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、**[こちら](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** にアクセスして、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition がインストール済みの仮想マシンをすぐにご利用いただけます。  
   

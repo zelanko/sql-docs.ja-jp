@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ErrorList
 dev_langs:
@@ -24,13 +22,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 82c928a2e2513064fd7e1d4eef175e0d3db0eb1a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ba5eb16f922bebc46784b36079060506d1322078
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL デバッガー - [エラー一覧] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,18 +42,18 @@ ms.lasthandoff: 04/16/2018
   
 -   どのエントリを表示するか、および各エントリにどの情報列を表示するかをフィルター選択できます。  
   
--   エラーを修正すると、そのエラー エントリが **[エラー一覧]**から削除されます。  
+-   エラーを修正すると、そのエラー エントリが **[エラー一覧]** から削除されます。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルのタブを閉じると、そのファイルのエラーが **[エラー一覧]**から削除されます。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルのタブを閉じると、そのファイルのエラーが **[エラー一覧]** から削除されます。  
   
 ## <a name="working-with-the-error-list"></a>[エラー一覧] の操作  
- **[エラー一覧]**を表示するには、次のいずれかの操作を行います。  
+ **[エラー一覧]** を表示するには、次のいずれかの操作を行います。  
   
--   **[表示]** メニューの **[エラー一覧]**をクリックします。  
+-   **[表示]** メニューの **[エラー一覧]** をクリックします。  
   
 -   Ctrl キーを押しながら\\キーを押し、次に Ctrl キーを押しながら E キーを押します。  
   
- **[エラー一覧]**が開いたら、次の操作を行うことで表示をカスタマイズできます。  
+ **[エラー一覧]** が開いたら、次の操作を行うことで表示をカスタマイズできます。  
   
 -   一覧を並べ替えるには、任意の列ヘッダーをクリックします。 並べ替えに使用する列を追加するには、&lt;localizedText&gt;Shift&lt;/localizedText&gt; キーを押しながら、他の列ヘッダーをクリックします。  
   
@@ -73,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **クエリ エディター ウィンドウの下部にある** [メッセージ] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] スクリプトの実行時に [!INCLUDE[tsql](../../includes/tsql-md.md)] から返されたすべてのエラーとメッセージが表示されます。 この一覧は、スクリプトが再び実行されるまで変更されません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、1 つまたは 2 つのコンパイル エラーを検出すると、バッチの解析を停止します。そのため、 **[メッセージ]** タブにはスクリプトのすべてのエラーが一覧表示されない可能性があります。  
   
- エラーが両方の場所に一覧表示されることがあります。 たとえば、 **[エラー一覧]**に表示されている構文エラーがスクリプト ファイルに含まれている場合があります。 このスクリプトを、エラーを修正する前に実行すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] パーサーが同じ状態を検出し、エラー メッセージの別のコピーを **[メッセージ]** タブに返す可能性があります。  
+ エラーが両方の場所に一覧表示されることがあります。 たとえば、 **[エラー一覧]** に表示されている構文エラーがスクリプト ファイルに含まれている場合があります。 このスクリプトを、エラーを修正する前に実行すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] パーサーが同じ状態を検出し、エラー メッセージの別のコピーを **[メッセージ]** タブに返す可能性があります。  
   
 > [!NOTE]  
 >  **[エラー一覧]** に表示されるのは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターからのエラーのみです。MDX、DMX、または XML/A エディターからのエラーは表示されません。 MDX、DMX、および XML/A のすべてのエラーは、それらのエディターの **[メッセージ]** タブに表示されます。  

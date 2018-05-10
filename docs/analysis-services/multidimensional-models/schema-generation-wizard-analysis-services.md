@@ -1,32 +1,23 @@
 ---
 title: スキーマ生成ウィザード (Analysis Services) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- relational schema [Analysis Services]
-ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92996e941d5ac3a96bf684ef499f9de663df0a24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 653e28218cf7a89a7a8b4fae7735b16d3b875f61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザード (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内のオブジェクトは OLAP を定義するときに、リレーショナル スキーマの操作の 2 つのメソッドをサポートしている、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトまたはデータベース。 一般的に、OLAP オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内のデータ ソース ビューで作成される論理データ モデルに基づいて定義します。 このデータ ソース ビューは、データ ソース ビューでカスタマイズされる、1 つ以上のリレーショナル データ ソースのスキーマ要素に基づいて定義されます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内で OLAP プロジェクトを定義する際の、2 種類のリレーショナル スキーマ操作方法をサポートしています。 一般的に、OLAP オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内のデータ ソース ビューで作成される論理データ モデルに基づいて定義します。 このデータ ソース ビューは、データ ソース ビューでカスタマイズされる、1 つ以上のリレーショナル データ ソースのスキーマ要素に基づいて定義されます。  
   
  または、OLAP オブジェクトを最初に定義してから、これらの OLAP オブジェクトをサポートするデータ ソース ビュー、データ ソース、および基になるリレーショナル データベース スキーマを生成することもできます。 このリレーショナル データベースは、サブジェクト領域データベースと呼ばれます。  
   
@@ -50,8 +41,8 @@ ms.lasthandoff: 01/08/2018
 |[増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|スキーマ生成ウィザードの増分生成機能について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [多次元モデルのデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [多次元モデル内のデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [サポートされるデータ ソース &#40;SSASSSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

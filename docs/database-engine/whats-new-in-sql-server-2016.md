@@ -3,15 +3,14 @@ title: データベース エンジンの新機能 - SQL Server 2016 | Microsoft
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
@@ -20,12 +19,11 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 329ddc437d53421f93fb4c18c0b4f138ebdbd5e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7248163e857df49e8c23ab49bd89f435c897dd78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -449,7 +447,7 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールでは、前提条件として .NET 4.6.1 をインストールする必要があります。 .NET 4.6.1 は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストール時のセットアップに応じて自動的にインストールされます。
 
 ####  <a name="UA"></a> アップグレード アドバイザー
-SQL Server 2016 Upgrade Advisor プレビューはスタンドアロン ツールです。これにより、以前のバージョンのユーザーは、SQL Server データベースに対して一連のアップグレード ルールを実行し、重大な動作変更や使用されていない機能を検出でき、Stretch Database などの新機能の採用に役立ちます。
+SQL Server 2016 Upgrade Advisor プレビューはスタンドアロン ツールです。これにより、以前のバージョンのユーザーは、SQL Server データベースに対して一連のアップグレード ルールを実行し、重大な動作変更や非推奨の機能を検出でき、Stretch Database などの新機能の採用に役立ちます。
 
  Upgrade Advisor プレビューは [ここ](https://www.microsoft.com/en-us/download/details.aspx?id=48119) からダウンロードできます。また、Web Platform Installer を使用してインストールすることもできます。
 

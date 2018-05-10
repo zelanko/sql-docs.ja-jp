@@ -1,16 +1,15 @@
 ---
-title: "レポート パラメーター (レポート ビルダーおよびレポート デザイナー) | Microsoft Docs"
-ms.custom: 
+title: レポート パラメーター (レポート ビルダーおよびレポート デザイナー) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
 - sql13.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
@@ -152,7 +150,7 @@ ms.lasthandoff: 01/09/2018
 |データ型|レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> **[Boolean]**。 オプション ボタンから True または False を選択します。<br /><br /> **[DateTime]**。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> **[Text]**。 テキスト ボックスに値を入力します。<br /><br /> パラメーターに有効な値を定義した場合は、データ型が **DateTime**であっても、ユーザーはドロップダウン リストから値を選択することになります。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
 |[空白の値を許可]|パラメーターの値に空の文字列 (空白) を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に空白を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に空白が有効な値に含まれるわけではありません。|  
 |[NULL 値を許可]|パラメーターの値に NULL 値を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に NULL を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に NULL が有効な値に含まれるわけではありません。|  
-|[複数の値を許可]|使用可能な値を指定して、ユーザーがドロップダウン リストから値を選択できるようにすると、 データセット クエリで有効な値のみが送信されるようにすることができます。<br /><br /> パラメーターの値に、ドロップダウン リストに表示される複数の値を指定できる場合に選択します。 NULL 値は許容されません。 このチェック ボックスがオンの場合、パラメーターのドロップダウン リストで、使用可能な値の一覧にチェック ボックスが追加されます。 一覧の一番上には、 **[すべて選択]**チェック ボックスが表示されます。 ユーザーは、必要な値のチェック ボックスをオンにすることができます。<br /><br /> 値を提供するデータが急速に変化する場合は、ユーザーに最新の一覧が表示されるとは限りません。|  
+|[複数の値を許可]|使用可能な値を指定して、ユーザーがドロップダウン リストから値を選択できるようにすると、 データセット クエリで有効な値のみが送信されるようにすることができます。<br /><br /> パラメーターの値に、ドロップダウン リストに表示される複数の値を指定できる場合に選択します。 NULL 値は許容されません。 このチェック ボックスがオンの場合、パラメーターのドロップダウン リストで、使用可能な値の一覧にチェック ボックスが追加されます。 一覧の一番上には、 **[すべて選択]** チェック ボックスが表示されます。 ユーザーは、必要な値のチェック ボックスをオンにすることができます。<br /><br /> 値を提供するデータが急速に変化する場合は、ユーザーに最新の一覧が表示されるとは限りません。|  
 |[表示]|レポートの実行時にレポートの上部にレポート パラメーターを表示する場合に選択します。 このオプションを選択すると、実行時にパラメーター値を選択できます。|  
 |[非表示]|パブリッシュ済みレポート内のレポート パラメーターを非表示にする場合に選択します。 このレポート パラメーターの値は、レポートの URL やサブスクリプション定義で設定できます。また、レポート サーバーで設定することもできます。|  
 |Internal|レポート パラメーターを非表示にする場合に選択します。 パブリッシュ済みレポートでは、レポート パラメーターはレポート定義でのみ参照できます。|  

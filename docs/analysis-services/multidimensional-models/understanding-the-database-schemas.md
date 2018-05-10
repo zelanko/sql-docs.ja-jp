@@ -1,38 +1,23 @@
 ---
-title: "データベース スキーマの理解 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データベース スキーマの理解 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, database schema
-- database schema [Analysis Services]
-- relational schema [Analysis Services], database schema
-- subject area schema options [Analysis Services]
-- staging area schema options [Analysis Services]
-- denormalized schemas
-ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: aff2fa15822aa4a6b38d46bc6a8cd8497be5fa6c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-スキーマ生成ウィザードでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
+  スキーマ生成ウィザードでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
   
 ## <a name="validation"></a>検証  
  基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  

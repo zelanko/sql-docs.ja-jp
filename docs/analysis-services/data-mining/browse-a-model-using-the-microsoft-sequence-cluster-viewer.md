@@ -1,41 +1,23 @@
 ---
-title: "Microsoft シーケンス クラスター ビューアーを使用してモデルを参照 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Microsoft シーケンス クラスター ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Sequence Cluster Viewer
-- clusters [Analysis Services]
-- data mining [Analysis Services], sequences
-- discrimination [Analysis Services]
-- mining model content, viewing
-- mining models [Analysis Services], sequences
-- Microsoft Sequence Cluster Viewer
-- sequence [Analysis Services]
-- transitions [Analysis Services]
-ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6553c3d5077b485d0736f2ffd8589d17a81edc33
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9d35f028903e4304365810428249b35354689590
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft シーケンス クラスター ビューアーを使用したモデルの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、パス ( *シーケンス*) をたどることによってリンクできるイベントが含まれているデータを探索するためのシーケンス分析アルゴリズムです。 このアルゴリズムの詳細については、 [「Microsoft シーケンス クラスター アルゴリズム」](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] シーケンス クラスター ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] シーケンス クラスター アルゴリズムは、パス ( *シーケンス*) をたどることによってリンクできるイベントが含まれているデータを探索するためのシーケンス分析アルゴリズムです。 このアルゴリズムの詳細については、 [「Microsoft シーケンス クラスター アルゴリズム」](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)」を参照してください。  
@@ -61,9 +43,9 @@ ms.lasthandoff: 02/15/2018
   
  既定では、網掛けはクラスターの母集団を表します。 **[シェーディング変数]** オプションと **[状態]** オプションを使用すると、網掛けによって、属性と状態のどの組み合わせを表すかを選択できます。 網掛けが濃いほど、対応する状態の属性分布は広くなります。 網掛けが薄くなるほど、分布は狭くなります。  
   
- クラスターの名前を変更するには、そのノードを右クリックして **[クラスター名の変更]**を選択します。 新しい名前はサーバーに保存されます。  
+ クラスターの名前を変更するには、そのノードを右クリックして **[クラスター名の変更]** を選択します。 新しい名前はサーバーに保存されます。  
   
- ダイアグラムの表示部分をクリップボードにコピーするには、 **[グラフ ビューのコピー]**をクリックします。 ダイアグラム全体をコピーするには、 **[グラフ全体のコピー]**をクリックします。 **[拡大]** と **[縮小]**を使用してダイアグラムを拡大または縮小することも、 **[ウィンドウに合わせてダイアグラムの倍率を変更します]**を使用してダイアグラムを画面に合わせて調整することもできます。  
+ ダイアグラムの表示部分をクリップボードにコピーするには、 **[グラフ ビューのコピー]** をクリックします。 ダイアグラム全体をコピーするには、 **[グラフ全体のコピー]** をクリックします。 **[拡大]** と **[縮小]** を使用してダイアグラムを拡大または縮小することも、 **[ウィンドウに合わせてダイアグラムの倍率を変更します]** を使用してダイアグラムを画面に合わせて調整することもできます。  
   
  [トップに戻る](#BKMK_ViewerTabs)  
   
@@ -72,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  **[ヒストグラム バー]** オプションでは、ヒストグラムに表示されるバーの数を制御します。 指定した数よりも多くのバーが存在する場合は、重要度が最も高いバーが保持され、残りのバーは灰色のバケットにまとめられます。  
   
- クラスターの既定の名前は、よりわかりやすい名前に変更できます。 クラスター名を変更するには、クラスターの列見出しを右クリックして、 **[クラスター名の変更]**を選択します。 **[列の非表示]**を選択するとクラスターを非表示にでき、列をドラッグしてビューアー内の順序を変更することもできます。  
+ クラスターの既定の名前は、よりわかりやすい名前に変更できます。 クラスター名を変更するには、クラスターの列見出しを右クリックして、 **[クラスター名の変更]** を選択します。 **[列の非表示]** を選択するとクラスターを非表示にでき、列をドラッグしてビューアー内の順序を変更することもできます。  
   
  より広範かつ詳細なクラスターのビューをウィンドウで開くには、 **[状態]** 列のセルまたはビューアーのヒストグラムをダブルクリックします。  
   

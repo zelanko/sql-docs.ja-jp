@@ -1,31 +1,19 @@
 ---
-title: "AMO による管理タスクをプログラミング |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, programming
-ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 
-author: Minewiskan
+title: AMO による管理タスクをプログラミング |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 918d65dd0bb6114483515addb3dddcbe02307a96
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ac932c68e218ecbaf4fdd19c1e77b491ab444feb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>AMO による管理タスクのプログラミング
   分析管理オブジェクト (AMO) は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] を管理するためにクライアント アプリケーションから使用されるプログラミング ライブラリです。 ここでは、AMO オブジェクトを使用したプログラミング方法について説明します。  
@@ -46,6 +34,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices>   
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

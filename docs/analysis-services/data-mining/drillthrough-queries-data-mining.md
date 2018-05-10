@@ -1,35 +1,23 @@
 ---
-title: "ドリルスルー クエリ (データ マイニング) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: ドリルスルー クエリ (データ マイニング) |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- AllowDrillThrough property
-- drillthrough [Analysis Services]
-- drillthrough [DMX]
-ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 804497bfe94c6d6d93f63d9b8a2242246122c034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>ドリルスルー クエリ (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*ドリルスルー クエリ* を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
+  *ドリルスルー クエリ* を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングは、ドリルスルーの次の 2 つのオプションを提供します。  
   
@@ -102,8 +90,8 @@ ms.lasthandoff: 02/15/2018
 |----------|----------|  
 |データ マイニング デザイナーでのドリルスルーの使用を記述するプロシージャ|[マイニング モデルからケース データにドリルスルーします。](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |既存のマイニング モデルを変更してドリルスルーを許可するには|[マイニング モデルのドリルスルーを有効にします。](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|DMX WITH DRILLTHROUGH 句を使用してマイニング構造のドリルスルーを有効にする|[マイニング構造 &#40;DMX&#41; を作成します。](../../dmx/create-mining-structure-dmx.md)|  
-|マイニング構造とマイニング モデルにドリルスルーを適用する権限の割り当ての詳細について|[データ マイニング構造およびモデル &#40; に対する権限を付与します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|DMX WITH DRILLTHROUGH 句を使用してマイニング構造のドリルスルーを有効にする|[マイニング構造 (&) #40";"DMX"&"#41; を作成します。](../../dmx/create-mining-structure-dmx.md)|  
+|マイニング構造とマイニング モデルにドリルスルーを適用する権限の割り当ての詳細について|[データ マイニング構造およびモデル & #40; に対する権限を付与します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   

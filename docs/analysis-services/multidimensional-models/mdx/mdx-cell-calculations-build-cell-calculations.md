@@ -1,39 +1,23 @@
 ---
-title: "MDX (MDX) でのセル計算の作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDX (MDX) でのセル計算の作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- calculated cells [MDX]
-- queries [MDX], cell calculations
-- cells [MDX]
-- MDX [Analysis Services], calculations
-- calculation subcubes [MDX]
-- calculated values [MDX]
-- Multidimensional Expressions [Analysis Services], cell calculations
-ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8e2e963c47746a85e760b3b4464edd5cbe39f1fe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ce753e2961a07dd4224e40fdfde29cc93488e4b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-calculations---build-cell-calculations"></a>ビルドのセル計算の MDX セル計算
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-多次元式 (MDX) では、計算されるメンバー、カスタム ロールアップ、およびカスタム メンバーなど、計算値を生成するための多数のツールを使用できます。 しかし、これらの機能を使用して特定のセル セットや、さらには単一セルに影響を与えるのは困難です。  
+  多次元式 (MDX) では、計算されるメンバー、カスタム ロールアップ、およびカスタム メンバーなど、計算値を生成するための多数のツールを使用できます。 しかし、これらの機能を使用して特定のセル セットや、さらには単一セルに影響を与えるのは困難です。  
   
  セルに対して個別に計算値を生成するには、MDX の計算されるセル機能を使用する必要があります。 計算されるセルを使用すると、 *計算サブキューブ*と呼ばれる特定のセル スライスを定義し、計算サブキューブ内のすべてのセルに個別に式を適用できます。  
   
@@ -50,9 +34,9 @@ ms.lasthandoff: 02/15/2018
      CREATE CELL CALCULATION または ALTER CUBE ステートメントを使用してセッションでの計算されるセルを作成する方法の詳細については、「 [セッション スコープの計算されるセルの作成](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ALTER CUBE ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-alter-cube.md)   
- [CELL CALCULATION ステートメント &#40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [クエリ スコープのセル計算 &#40; を作成します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [ALTER CUBE ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [CELL CALCULATION ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [クエリ スコープのセル計算 & #40; を作成します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

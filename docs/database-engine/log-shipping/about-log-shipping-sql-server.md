@@ -3,15 +3,13 @@ title: ログ配布について (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - secondary servers [SQL Server]
 - log shipping [SQL Server], jobs
@@ -32,15 +30,17 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 37b541c7ed4e7bf86ced1a9d2051b4e4fff47283
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d507c250cdf26f2bcbafebcb14b31df83623e2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ配布を使用すると、トランザクション ログ バックアップを、 *プライマリ サーバー* インスタンスの *プライマリ データベース* から、別の *セカンダリ サーバー* インスタンスの 1 つ以上の *セカンダリ データベース* に自動的に送信できます。 トランザクション ログ バックアップはセカンダリ データベースごとに個別に適用されます。 オプションで用意する 3 台目のサーバー インスタンス ( *監視サーバー*) では、バックアップ操作と復元操作の履歴と状態が記録されます。また、これらの操作がスケジュールどおりに実行されなかった場合に警告を通知することもできます。  
   
  **このトピックの内容**  

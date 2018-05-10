@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
@@ -19,13 +18,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5d7b31819c88265f3b12a7e118a795d2e4417714
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 33171b25d40b444c0f5f89c6f54bbcf15345937c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +47,7 @@ ms.lasthandoff: 04/16/2018
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**Integer Data**|**int**|ハッシュ、並べ替え、インデックス作成などの操作を実行するためにクエリに与えられた "ワークスペース メモリ" の量 (KB 単位)。 このメモリは、実行中に必要に応じて取得されます。|25|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\\*\username*という形式の Windows ログイン資格情報)。|11|はい|  
+|**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\\ *\username*という形式の Windows ログイン資格情報)。|11|はい|  
 |**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  

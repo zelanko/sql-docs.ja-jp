@@ -1,42 +1,23 @@
 ---
-title: "多次元モデルでの計算 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多次元モデルでの計算 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- calculations [Analysis Services], creating
-- deleting calculations
-- calculations [Analysis Services], scripts
-- Cube Designer
-- modifying scripts
-- removing calculations
-- calculations [Analysis Services], deleting
-- scripts [Analysis Services], calculations
-- cubes [Analysis Services], calculations
-- solve orders [Analysis Services]
-ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8b82aa83deb8d2b428972fb65a64383c6a3d7271
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 897eae64c89203a7d0e507862866d95a8bfe530d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-キューブ デザイナーの **[計算]** タブを使用して、計算されるメンバー、名前付きセット、およびその他の多次元式 (MDX) 計算を作成します。  
+  キューブ デザイナーの **[計算]** タブを使用して、計算されるメンバー、名前付きセット、およびその他の多次元式 (MDX) 計算を作成します。  
   
  **[計算]** タブには、次の 3 つのペインがあります。  
   
@@ -50,14 +31,14 @@ ms.lasthandoff: 02/15/2018
 >  MDX スクリプティングの詳細については、「 [Microsoft SQL Server 2005 の MDX スクリプトの紹介](http://go.microsoft.com/fwlink/?LinkId=81892)」、および Microsoft TechNet Web サイトの「 [SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) 」ページにある「その他のリソース」セクションを参照してください。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
   
 ## <a name="creating-a-new-calculation"></a>新しい計算の作成  
- 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]**をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「 [名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
+ 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「 [名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
   
 ## <a name="editing-scripts"></a>スクリプトの編集  
  **[計算]** タブの計算式ペインでスクリプトを編集します。計算式ペインには、スクリプト ビューとフォーム ビューの 2 つのビューがあります。 フォーム ビューには、1 つのコマンドの式およびプロパティが表示されます。 MDX スクリプトを編集する場合、式ボックスがフォーム ビュー全体に表示されます。  
   
  スクリプト ビューには、スクリプトを編集するためのコード エディターが用意されています。 計算式ペインがスクリプト ビューにある場合、 **[スクリプト オーガナイザー]** ペインは表示されません。 スクリプト ビューには、色分け表示、かっこの対応、オートコンプリート、MDX コード領域などの機能が用意されています。 MDX コード領域は、編集しやすいように折りたたんだり展開したりできます。  
   
- **[キューブ]** メニューをクリックし、 **[計算を表示]**をポイントして、 **[スクリプト]** または **[フォーム]**をクリックして、フォーム ビューとスクリプト ビューを切り替えることができます。 また、ツール バーの **[フォーム ビュー]** または **[スクリプト ビュー]** をクリックすることもできます。  
+ **[キューブ]** メニューをクリックし、 **[計算を表示]** をポイントして、 **[スクリプト]** または **[フォーム]** をクリックして、フォーム ビューとスクリプト ビューを切り替えることができます。 また、ツール バーの **[フォーム ビュー]** または **[スクリプト ビュー]** をクリックすることもできます。  
   
 ## <a name="changing-solve-order"></a>解決順序の変更  
  計算は、 **[スクリプト オーガナイザー]** ペインに一覧表示されている順序で解決されます。 計算を右クリックし、ショートカット メニューの **[上へ移動]** または **[下へ移動]** をクリックして、計算の順序を変更できます。 また、計算をクリックし、ツール バーの **[上へ移動]** ボタンまたは **[下へ移動]** ボタンをクリックすることもできます。  

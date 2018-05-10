@@ -1,43 +1,23 @@
 ---
-title: "ディメンションのリレーションシップ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- relationships [Analysis Services]
-- member groups [Analysis Services]
-- regular dimensions [Analysis Services]
-- many-to-many relationships [Analysis Services]
-- cubes [Analysis Services], relationships
-- reference dimensions
-- dimensions [Analysis Services], relationships
-- fact dimensions [Analysis Services]
-- relationships [Analysis Services], dimensions
-ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: 
-author: Minewiskan
+title: ディメンションのリレーションシップ |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0ba0ea6e2797d15134dc6bfbf9a595a1ef83c583
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 02395302dec93b270bb49291f858ab33755f6bbf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimension-relationships"></a>ディメンション リレーションシップ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-ディメンションを使用する場合は、キューブ内にある、キューブ ディメンションとメジャー グループ間のリレーションシップが定義されます。 キューブ ディメンションとは、特定のキューブで使用されるデータベース ディメンションのインスタンスです。 キューブにはキューブ ディメンションを含めることができ、実際、多くの場合は含んでいます。キューブ ディメンションはメジャー グループと直接には関連付けられていませんが、別のディメンションまたは別のメジャー グループを介して間接的にメジャー グループと関連付けられることがあります。 データベース ディメンションまたはメジャー グループがキューブに追加するときに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を調べて、ディメンション テーブルと、キューブのデータ ソース ビュー内のファクト テーブル間のリレーションシップを確認するにはディメンションの使用法を判別しようとしています。ディメンションの属性間のリレーションシップ。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、検出できるリレーションシップのディメンションの使用法を自動設定します。  
+  ディメンションを使用する場合は、キューブ内にある、キューブ ディメンションとメジャー グループ間のリレーションシップが定義されます。 キューブ ディメンションとは、特定のキューブで使用されるデータベース ディメンションのインスタンスです。 キューブにはキューブ ディメンションを含めることができ、実際、多くの場合は含んでいます。キューブ ディメンションはメジャー グループと直接には関連付けられていませんが、別のディメンションまたは別のメジャー グループを介して間接的にメジャー グループと関連付けられることがあります。 データベース ディメンションまたはメジャー グループがキューブに追加するときに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を調べて、ディメンション テーブルと、キューブのデータ ソース ビュー内のファクト テーブル間のリレーションシップを確認するにはディメンションの使用法を判別しようとしています。ディメンションの属性間のリレーションシップ。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、検出できるリレーションシップのディメンションの使用法を自動設定します。  
   
  ディメンションとメジャー グループ間のリレーション シップは、そのリレーション シップに参加しているディメンション テーブルとファクト テーブル、および特定のメジャー グループに含まれているディメンションの粒度を指定する粒度属性で構成されます。  
   
@@ -93,6 +73,6 @@ ms.lasthandoff: 02/15/2018
  多対多リレーションシップの詳細については、次を参照してください。[定義多対多リレーションシップと多対多リレーションシップのプロパティ](../../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)です。  
   
 ## <a name="see-also"></a>参照  
- [ディメンションと #40 です。Analysis Services - 多次元データ &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [ディメンションと #40 です。Analysis Services - 多次元データ & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

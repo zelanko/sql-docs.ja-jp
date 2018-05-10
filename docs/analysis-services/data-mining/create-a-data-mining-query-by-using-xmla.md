@@ -1,32 +1,23 @@
 ---
 title: XMLA を使用して、データ マイニング クエリを作成 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa60ad8ee91839e04c424c5fe2d23723e495bbd4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8732b3f366d5805f6321b4e07fe0de1dbc73fb42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]AMO、DMX、または XML を使用して、さまざまなデータ マイニング オブジェクトに対するクエリを作成することができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  AMO、DMX、または XML/A を使用すると、データ マイニング オブジェクトに対するさまざまなクエリを作成できます。  
   
  Analysis Services サーバーとすべてのクライアントの間の通信には、XML が使用されます。 したがって、一般には DMX を使用してコンテンツ クエリを作成する方がはるかに簡単ですが、SOAP プロトコルをサポートするクライアントを使用するか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で XML/A クエリを作成することにより、XML/A で DISCOVER および COMMAND ステートメントを使用してクエリを作成できます。  
   
@@ -36,21 +27,21 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-open-an-xmla-template"></a>XML/A テンプレートを開くには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
 2.  キューブ アイコンをクリックして、Analysis Services テンプレートの一覧を開きます。  
   
-3.  テンプレート カテゴリの一覧で **[XMLA]**、 **[スキーマ行セット]**の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
+3.  テンプレート カテゴリの一覧で **[XMLA]**、 **[スキーマ行セット]** の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
   
-4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]**をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
+4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
   
 #### <a name="to-discover-column-names-from-the-mining-model-content-schema-rowset"></a>MINING MODEL CONTENT スキーマ行セットから列名を検出するには  
   
-1.  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]**をクリックします。  
+1.  **[スキーマ行セットの発見]** テンプレートを開き、 **[実行]** をクリックします。  
   
      **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
-2.  **クエリ** ウィンドウで、後にカーソルを置き**\<制限一覧 >**し、enter キーを押して新しい行を追加します。  
+2.  **クエリ** ウィンドウで、後にカーソルを置き**\<制限一覧 >** し、enter キーを押して新しい行を追加します。  
   
 3.  カーソルを置き、空白行と種類 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
@@ -66,7 +57,7 @@ ms.lasthandoff: 01/08/2018
   
      `</Restrictions>`  
   
-4.  **[実行]**をクリックします。  
+4.  **[実行]** をクリックします。  
   
      **[結果]** ペインに、指定したスキーマ行セットの列名の一覧が表示されます。  
   
@@ -100,12 +91,12 @@ ms.lasthandoff: 01/08/2018
   
      `</Restrictions>`  
   
-5.  **[実行]**をクリックします。  
+5.  **[実行]** をクリックします。  
   
      [結果] ペインに、スキーマ定義および指定したモデルの値が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング スキーマ行セット](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

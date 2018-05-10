@@ -1,33 +1,19 @@
 ---
-title: "AMO OLAP クラス |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 
-author: Minewiskan
+title: AMO OLAP クラス |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f4544efdf6a569bcb89f7c8236b69bf0d7916912
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP クラス
   分析管理オブジェクト (AMO) OLAP クラスは、キューブやディメンションに加えて、主要業績評価指標 (KPI)、アクション、プロアクティブ キャッシュなどの関連オブジェクトを作成、変更、削除、および処理する際に役立ちます。  
@@ -82,24 +68,24 @@ ms.lasthandoff: 02/15/2018
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Cube>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="MeasureGroups">MeasureGroup オブジェクト</a>  
+###  <a name="MeasureGroups"></a> MeasureGroup オブジェクト  
  メジャー グループを作成するには、キューブのメジャー グループ コレクションに新しいメジャー グループを追加した後、独自の Update メソッドを使用して、サーバー上の <xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトを更新します。 <xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトを削除するには、独自の Drop メソッドを使用します。  
   
  <xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトは、作成後に処理できます。 <xref:Microsoft.AnalysisServices.MeasureGroup> は、独自の Process メソッドを使用して処理するか、親オブジェクトがそれ自体を独自の Process メソッドで処理する際に処理することができます。  
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.MeasureGroup>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="Partition">Partition オブジェクト</a>  
+###  <a name="Partition"></a> Partition オブジェクト  
  <xref:Microsoft.AnalysisServices.Partition> オブジェクトの作成は、親メジャー グループのパーティション コレクションにこれを追加し、Update メソッドを使用してサーバーに対して <xref:Microsoft.AnalysisServices.Partition> オブジェクトを更新することにより行われます。 <xref:Microsoft.AnalysisServices.Partition> オブジェクトを削除するには、Drop メソッドを使用します。  
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Partition>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="AggregationDesign">AggregationDesign オブジェクト</a>  
+###  <a name="AggregationDesign"></a> AggregationDesign オブジェクト  
  集計デザインは、<xref:Microsoft.AnalysisServices.AggregationDesign> オブジェクトの AggregationDesign メソッドを使用して構築します。  
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.AggregationDesign>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="Aggregation">Aggregation オブジェクト</a>  
+###  <a name="Aggregation"></a> Aggregation オブジェクト  
  <xref:Microsoft.AnalysisServices.Aggregation> オブジェクトを作成するには、親メジャー グループの集計デザイン コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上の親メジャー グループ オブジェクトを更新します。 集計を <xref:Microsoft.AnalysisServices.AggregationCollection> から削除するには、Remove メソッドまたは RemoveAt メソッドを使用します。  
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Aggregation>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
@@ -119,7 +105,7 @@ ms.lasthandoff: 02/15/2018
   
  この拡張された動作の定義設定には AMO を使用しますが、実際の操作性は、これらすべての機能強化を実装したブラウザー クライアントによって定義されます。  
   
-###  <a name="Action">Action オブジェクト</a>  
+###  <a name="Action"></a> Action オブジェクト  
  <xref:Microsoft.AnalysisServices.Action> オブジェクトを作成するには、キューブのアクション コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で <xref:Microsoft.AnalysisServices.Cube> オブジェクトを更新します。 キューブの更新メソッドには、パラメーター UpdateOptions.ExpandFull を含めることができます。このパラメーターでは、この更新アクションによって、キューブ内で変更されたすべてのオブジェクトがサーバーに対して更新されます。  
   
  削除する、<xref:Microsoft.AnalysisServices.Action>オブジェクトをコレクションから削除する必要があり、親キューブを更新する必要があります。  
@@ -137,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Kpi>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="Perspective">Perspective オブジェクト</a>  
+###  <a name="Perspective"></a> Perspective オブジェクト  
  <xref:Microsoft.AnalysisServices.Perspective> オブジェクトを作成するには、キューブのパースペクティブコレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、サーバー上で <xref:Microsoft.AnalysisServices.Cube> オブジェクトを更新します。 キューブの Update メソッドには、パラメーター UpdateOptions.ExpandFull を含めることができます。このパラメーターでは、この更新アクションによって、キューブ内で変更されたすべてのオブジェクトがサーバーに対して更新されます。  
   
  <xref:Microsoft.AnalysisServices.Perspective> オブジェクトを削除するには、コレクションからこれを削除し、親キューブを更新する必要があります。  
@@ -146,14 +132,14 @@ ms.lasthandoff: 02/15/2018
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Perspective>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="Translation">Translation オブジェクト</a>  
+###  <a name="Translation"></a> Translation オブジェクト  
  <xref:Microsoft.AnalysisServices.Translation> オブジェクトを作成するには、対象オブジェクトの翻訳コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、最も近い主要な親オブジェクトをサーバー上で更新します。 最も近い親オブジェクトの Update メソッドには、パラメーター UpdateOptions.ExpandFull を含めることができます。このパラメーターでは、この更新アクションによって、変更されたすべての子オブジェクトがサーバーに対して更新されます。  
   
  <xref:Microsoft.AnalysisServices.Translation> オブジェクトを削除するには、コレクションからこれを削除し、最も近い親オブジェクトを更新する必要があります。  
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Translation>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   
-###  <a name="ProactiveCaching">ProactiveCaching オブジェクト</a>  
+###  <a name="ProactiveCaching"></a> ProactiveCaching オブジェクト  
  <xref:Microsoft.AnalysisServices.ProactiveCaching> オブジェクトを作成するには、ディメンションまたはパーティションのプロアクティブ キャッシュ オブジェクト コレクションに新しいオブジェクトを追加した後、Update メソッドを使用して、ディメンション オブジェクトまたはパーティション オブジェクトをサーバー上で更新します。  
   
  <xref:Microsoft.AnalysisServices.ProactiveCaching> オブジェクトを削除するには、コレクションからこれを削除し、親オブジェクトを更新する必要があります。  
@@ -167,7 +153,7 @@ ms.lasthandoff: 02/15/2018
  [AMO クラスの概要](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO OLAP 基本オブジェクトのプログラミング](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)   
  [プログラミング AMO OLAP オブジェクトの詳細](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

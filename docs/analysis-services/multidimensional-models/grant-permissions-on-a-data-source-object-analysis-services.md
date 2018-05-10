@@ -1,38 +1,23 @@
 ---
 title: データ ソース オブジェクト (Analysis Services) に対するアクセス許可を与える |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.datasources.f1
-helpviewer_keywords:
-- read/write permissions
-- user access rights [Analysis Services], data sources
-- security [Analysis Services], data sources
-- connection strings [Analysis Services]
-- data sources [Analysis Services], security
-ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cd02446a61b7ff1c8d9fdaa2803c30ee81a6e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b2babe1792bed9932921cc9035e5ab1db8fb215e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>データ ソース オブジェクトに対する権限の付与 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ほとんどのユーザーの通常、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の基になるデータ ソースへのアクセスは必要ありません、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクト。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 句または [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  通常、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザーは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの基になるデータ ソースへのアクセスを必要とすることはほとんどありません。 ユーザーは通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内部のデータを要求するクエリを発行するだけです。 ただし、データ マイニングのコンテキストでは、マイニング モデルに基づいた予測の実行など、マイニング モデルの登録済みデータをユーザーが入力したデータに結合しなければならない場合があります。 ユーザーが入力したデータが含まれているデータ ソースに接続するには、[OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 句または [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 句を含んでいるデータ マイニング拡張機能 (DMX) クエリを使用します。  
   
  データ ソースに接続する DMX クエリを実行するには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のデータ ソース オブジェクトに対するアクセス権が必要です。 既定では、サーバー管理者またはデータベース管理者のみが、データ ソース オブジェクトにアクセスできます。 つまり、ユーザーは管理者から権限を付与されている場合を除いてデータ ソース オブジェクトにアクセスできません。  
   
@@ -60,11 +45,11 @@ ms.lasthandoff: 01/08/2018
      OLE DB またはその他のクライアント コンポーネントの権限借用レベル プロパティを通じての権限借用をクライアントが許可していない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、基になるデータ ソースに匿名接続しようとします。 リモート データ ソースへの匿名接続が成功することはほとんどありません。これは、大部分のデータ ソースで匿名アクセスが許可されないためです。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [接続文字列のプロパティ &#40;です。Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [多次元モデル内のデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [接続文字列のプロパティ & #40 です。Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [データ &#40; をディメンションにカスタムのアクセスを許可します。Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [データ & #40; をディメンションにカスタムのアクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [キューブまたはモデル権限 & #40; を許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [セルのデータ & #40; へのカスタム アクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

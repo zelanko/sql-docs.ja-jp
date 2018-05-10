@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
 - workbench view modes [SQL Server Management Studio]
@@ -27,13 +25,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f83c9d801232f7e971c8c9f4aad799cba0e2676
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7b7b511dfb299b6089523984a0d60b72b4f81e46
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,9 +43,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[環境]**をクリックします。 **[全般]**をクリックします。  
+2.  **[環境]** をクリックします。 **[全般]** をクリックします。  
   
-3.  **[タブ付きドキュメント]** または **[MDI 環境]**をクリックします。  
+3.  **[タブ付きドキュメント]** または **[MDI 環境]** をクリックします。  
   
     > [!NOTE]  
     >  変更内容を有効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を再起動する必要があります。  
@@ -73,11 +70,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]**をクリックします。  
+2.  **[テキスト エディター]** をクリックします。  
   
 3.  適切な言語フォルダーを開きます (または **[すべての言語]** ですべての言語を対象にします)。  
   
-4.  **[右端で折り返す]**を選択します。  
+4.  **[右端で折り返す]** を選択します。  
   
 ## <a name="enabling-virtual-space-mode"></a>仮想空間モードの有効化  
  **仮想空間** モードの場合、エディターは、各行の終わり以降の空間が無数のスペースで埋められているかのような処理を行い、コード行は画面の表示可能領域を超えて 1 行で表示されます。  
@@ -86,11 +83,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]**をクリックします。  
+2.  **[テキスト エディター]** をクリックします。  
   
 3.  適切な言語フォルダーを開きます (または **[すべての言語]** ですべての言語を対象にします)。  
   
-4.  **[仮想空間を使用]**を選択します。  
+4.  **[仮想空間を使用]** を選択します。  
   
  仮想空間モードが無効な場合、カーソルは、ある行の最後から次の行の最初の文字に折り返されます。逆の場合も同様です。  
   
@@ -104,13 +101,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]**をクリックします。  
+2.  **[テキスト エディター]** をクリックします。  
   
-3.  **[すべての言語]**をクリックします。  
+3.  **[すべての言語]** をクリックします。  
   
-4.  **[全般]**をクリックします。  
+4.  **[全般]** をクリックします。  
   
-5.  **[行番号]**を選択します。  
+5.  **[行番号]** を選択します。  
   
  一部のプログラミング言語のみで行番号を指定するには、該当する言語フォルダーの **[行番号]** を選択します。  
   

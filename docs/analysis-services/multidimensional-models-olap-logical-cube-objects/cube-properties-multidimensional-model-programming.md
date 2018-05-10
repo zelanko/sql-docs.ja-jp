@@ -1,59 +1,28 @@
 ---
-title: "キューブのプロパティ - 多次元モデルのプログラミング |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Collation property
-- ID property
-- ErrorConfiguration property
-- cubes [Analysis Services], properties
-- Description property
-- DefaultMeasure property
-- ProcessingMode property
-- AggregationPrefix property
-- EstimatedRows property
-- Visible property
-- StorageLocation property
-- StorageMode property
-- ScriptErrorHandlingMode property
-- Source property
-- ScriptCacheProcessingMode property
-- Language property
-- Name property
-- properties [Analysis Services], cubes
-- ProcessingPriority property
-- ProactiveCaching property
-ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: 
-author: Minewiskan
+title: キューブのプロパティ - 多次元モデルのプログラミング |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7dd5d6a976c21b7413b24ba59310cdd95c6fd13e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>キューブのプロパティ - 多次元モデルのプログラミング
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-キューブには、キューブ全体の動作に影響するように設定できる多数のプロパティがあります。 次の表は、これらのプロパティについてまとめたものです。  
+  キューブには、キューブ全体の動作に影響するように設定できる多数のプロパティがあります。 次の表は、これらのプロパティについてまとめたものです。  
   
 > [!NOTE]  
 >  キューブの作成時に自動的に設定され、変更できないプロパティもあります。  
   
- キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー &#40;です。Analysis Services - 多次元データ &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
+ キューブのプロパティを設定する方法の詳細については、次を参照してください。[キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96)です。  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
@@ -80,6 +49,6 @@ ms.lasthandoff: 02/15/2018
 >  Null 値やその他のデータ整合性の問題を操作するとき、ErrorConfiguration プロパティの値の設定の詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](http://go.microsoft.com/fwlink/?LinkId=81891)です。  
   
 ## <a name="see-also"></a>参照  
- [プロアクティブ キャッシュ (&) #40 です。パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
+ [プロアクティブ キャッシュ (&) #40 です。パーティション"&"#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   

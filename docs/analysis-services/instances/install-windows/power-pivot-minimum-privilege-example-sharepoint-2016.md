@@ -1,34 +1,26 @@
 ---
-title: "Power Pivot の最小限の特権の例 - SharePoint 2016 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot の最小限の特権の例 - SharePoint 2016 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 35757f68-7bfc-4906-a985-f369690b9237
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 683a00ae0c3c300ee5734b9e9d45b05c9c4b1442
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 1eea5ef5a8e0a3296618320640ee8e54910c600d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot の最小限の特権の例 - SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、最小限の特権を使用する [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成の例について説明します。 この構成では、3 種類のコンポーネントごとに個別のアカウントを使用します。各アカウントには最小レベルの特権を指定します。  
+  このトピックでは、最小限の特権を使用する [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 構成の例について説明します。 この構成では、3 種類のコンポーネントごとに個別のアカウントを使用します。各アカウントには最小レベルの特権を指定します。  
   
 ## <a name="summary-of-accounts"></a>アカウントの概要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、「 [Windows サービス アカウントと権限の構成](http://msdn.microsoft.com/library/ms143504.aspx) 」(http://msdn.microsoft.com/library/ms143504.aspx) を参照してください。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、次を参照してください。 [Windows サービス アカウントの構成とアクセス許可](http://msdn.microsoft.com/library/ms143504.aspx)(http://msdn.microsoft.com/library/ms143504.aspx)です。  
   
  次の表は、最小限の特権の構成の例で使用する 3 種類のアカウントをまとめたものです。  
   
@@ -55,19 +47,19 @@ ms.lasthandoff: 02/15/2018
   
  **SharePoint Service アカウントとして使用する新しいドメイン アカウント SPsvc を作成するには**  
   
-1.  SharePoint のサーバーの全体管理で **[セキュリティ]**を選択します。  
+1.  SharePoint のサーバーの全体管理で **[セキュリティ]** を選択します。  
   
-2.  **[サービス アカウントの構成]**を選択します。  
+2.  **[サービス アカウントの構成]** を選択します。  
   
-3.  **[新しい管理アカウントの登録]**を選択します。  
+3.  **[新しい管理アカウントの登録]** を選択します。  
   
  **SPSvc** アカウントにはローカル管理者権限はなく、SharePoint データベースに関する権限もありません。 SPsvc に必要な唯一の特権は、Analysis Services の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンスの管理権限です。  
   
  **SPsvc アカウントを使用する適切なアプリケーション プールを構成するには**  
   
-1.  SharePoint のサーバーの全体管理で **[セキュリティ]**を選択します。  
+1.  SharePoint のサーバーの全体管理で **[セキュリティ]** を選択します。  
   
-2.  **[サービス アカウントの構成]**を選択します。  
+2.  **[サービス アカウントの構成]** を選択します。  
   
 3.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションで使用するサービス アプリケーション プールを選択します。 次に、SPSvc アカウントを選択します。  
   

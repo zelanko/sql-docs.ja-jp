@@ -1,30 +1,28 @@
 ---
-title: "レポート サーバー アクセスに対するファイアウォールの構成 | Microsoft Docs"
-ms.custom: 
+title: レポート サーバー アクセスに対するファイアウォールの構成 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: db5bce7f89d6fc820ea81f7f460db83e9c37abee
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8299143ebb885c2ac6ee7e60382efb84b27c869b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー アプリケーションとパブリッシュされたレポートには、IP アドレス、ポート、および仮想ディレクトリを指定した URL を通じてアクセスします。 Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 リモート クライアント コンピューターから **レポート マネージャー** を開こうとしたときに空白のページが表示される場合、またはレポート要求後に空白の Web ページが表示される場合は、ポートが閉じている可能性があります。  
@@ -44,25 +42,25 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-open-port-80"></a>ポート 80 を開くには  
   
-1.  **[スタート]** メニューの **[コントロール パネル]**をクリックし、 **[システムとセキュリティ]**、 **[Windows ファイアウォール]**の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]**を選択するだけでかまいません。  
+1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]**、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
   
-2.  **[詳細な設定]**をクリックします。  
+2.  **[詳細な設定]** をクリックします。  
   
-3.  **[受信の規則]**をクリックします。  
+3.  **[受信の規則]** をクリックします。  
   
 4.  **[操作]** ウィンドウで **[新しい規則]** をクリックします**。**  
   
-5.  **[ポート]** の **[規則の種類]**をクリックします。  
+5.  **[ポート]** の **[規則の種類]** をクリックします。  
   
 6.  **[次へ]** をクリックします。  
   
-7.  **[プロトコルおよびポート]** ページで、 **[TCP]**をクリックします。  
+7.  **[プロトコルおよびポート]** ページで、 **[TCP]** をクリックします。  
   
 8.  **[特定のローカル ポート]** を選択し、「 **80**」という値を入力します。  
   
 9. **[次へ]** をクリックします。  
   
-10. **[操作]** ページで、 **[接続を許可する]**をクリックします。  
+10. **[操作]** ページで、 **[接続を許可する]** をクリックします。  
   
 11. **[次へ]** をクリックします。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
 14. **[名前]** ページで、「**ReportServer (TCP on port 80)**」という名前を入力します。  
   
-15. **[完了]**をクリックします。  
+15. **[完了]** をクリックします。  
   
 16. コンピューターを再起動します。  
   

@@ -1,28 +1,27 @@
 ---
-title: "レッスン 5: レポート ウィザードを使用して子レポートを設計する | Microsoft Docs"
-ms.custom: 
+title: 'レッスン 5: レポート ウィザードを使用して子レポートを設計する | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6acdafc42b25aad09c08d1957319051f009830ea
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0582e17cb9b77356eb689504db5b8560684aedc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
 子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
@@ -31,13 +30,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  **ソリューション エクスプローラー**でトップレベル Web サイトが選択されていることを確認します。  
   
-2.  Web サイトを右クリックし、 **[新しい項目の追加]**を選択します。  
+2.  Web サイトを右クリックし、 **[新しい項目の追加]** を選択します。  
   
-3.  **[新しい項目の追加]** ダイアログ ボックスで、 **[レポート ウィザード]**をクリックします。レポート ファイルの名前を入力し、 **[追加]**を選択します。  
+3.  **[新しい項目の追加]** ダイアログ ボックスで、 **[レポート ウィザード]** をクリックします。レポート ファイルの名前を入力し、 **[追加]** を選択します。  
   
     これにより、レポート ウィザードが起動します。  
   
-4.  **[データセットのプロパティ]** ページで、 **[データ ソース]** ボックスの **[DataSet2]**を選択します。  
+4.  **[データセットのプロパティ]** ページで、 **[データ ソース]** ボックスの **[DataSet2]** を選択します。  
   
     作成した DataTable で **[使用できるデータセット]** ボックスが自動的に更新されます。  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 01/09/2018
   
 8.  .rdlc ファイルが開かれた状態で、次の手順を実行してパラメーターを追加します。  
   
-    1.  **レポート データ** ペインの **[パラメーター]** を右クリックし、 **[パラメーターの追加]**を選択します。  
+    1.  **レポート データ** ペインの **[パラメーター]** を右クリックし、 **[パラメーターの追加]** を選択します。  
   
     2.  **[名前]** ボックスに **productid** を入力します。  
   

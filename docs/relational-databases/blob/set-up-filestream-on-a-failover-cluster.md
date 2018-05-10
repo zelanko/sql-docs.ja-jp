@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], setting up on a failover cluster
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
@@ -19,12 +18,11 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d738480648fc9427707ca3949672a9311fe5f2e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 85ae37e539e081d262dfe2bce412d7f349c21e0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>フェールオーバー クラスターでの FILESTREAM の設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  フェールオーバー クラスターのプライマリ ノードを設定します。  
   
-     設定が完了したら、 **SQL Server 構成マネージャー**を使用してプライマリ ノードで FILESTREAM を有効にします。 これにより、Windows Admin 権限を必要とする設定が有効になります。 リモート アクセスが必要な場合は、 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]**を選択します。 これにより、ファイル共有クラスター リソースが作成されます。  
+     設定が完了したら、 **SQL Server 構成マネージャー**を使用してプライマリ ノードで FILESTREAM を有効にします。 これにより、Windows Admin 権限を必要とする設定が有効になります。 リモート アクセスが必要な場合は、 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]** を選択します。 これにより、ファイル共有クラスター リソースが作成されます。  
   
 2.  パッシブ ノードを設定します。  
   

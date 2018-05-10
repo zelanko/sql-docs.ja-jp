@@ -9,15 +9,14 @@ ms.service: sql-data-warehouse
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: data-services
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: 6be9111a29156c7bea74dc27bbb0ca5351259018
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して SQL Server から Azure SQL Data Warehouse にデータを読み込む
 
@@ -92,7 +91,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
    2. **[サーバー名]** に SQL Server の名前を入力します。
    3. **[サーバー ログオン]** セクションで、認証情報を選択または入力します。
    4. **[データベースへの接続]** セクションで、AdventureWorks サンプル データベースを選択します。
-   5. **[接続テスト]**をクリックします。
+   5. **[接続テスト]** をクリックします。
       
        ![][06]
    6. 接続テストの結果をレポートするダイアログ ボックスで、**[OK]** をクリックして、**[接続マネージャー]** ダイアログ ボックスに戻ります。
@@ -126,7 +125,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
    2. **[サーバー名]** に、SQL Data Warehouse の名前を入力します。
    3. **[サーバー ログオン]** セクションで、**[SQL Server 認証を使用する]** を選択し、認証情報を選択または入力します。
    4. **[データベースへの接続]** セクションで、既存の SQL Data Warehouse データベースを選択します。
-   5. **[接続テスト]**をクリックします。
+   5. **[接続テスト]** をクリックします。
    6. 接続テストの結果をレポートするダイアログ ボックスで、**[OK]** をクリックして、**[接続マネージャー]** ダイアログ ボックスに戻ります。
    7. **[接続マネージャー]** ダイアログ ボックスで、**[OK]** をクリックして **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスに戻ります。
 5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、**[OK]** をクリックして、**ADO.NET 変換先エディター**に戻ります。

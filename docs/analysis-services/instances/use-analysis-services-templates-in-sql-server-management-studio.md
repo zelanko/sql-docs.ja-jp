@@ -1,27 +1,19 @@
 ---
 title: SQL Server Management Studio で Analysis Services テンプレートを使用して |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2f4f817acd9c83264ea1cb472bf9d39d898b120
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1b7781ece8d5bd9feb014ebbaf7d067654a56d23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -39,13 +31,13 @@ ms.lasthandoff: 04/16/2018
   
  ![Analysis Services テンプレート エクスプ ローラーで、フィルター処理されていて](../../analysis-services/instances/media/ssas-templateexplorer.gif "テンプレート エクスプ ローラーで、Analysis Services に対してフィルター処理")  
   
- テンプレートを開くには、テンプレート名を右クリックして **[開く]**をクリックするか、開いているクエリ ウィンドウにテンプレートをドラッグします。 クエリ ウィンドウが開かれた後は、ツール バーまたは [クエリ] メニューのコマンドを使用してステートメントを構築できます。  
+ テンプレートを開くには、テンプレート名を右クリックして **[開く]** をクリックするか、開いているクエリ ウィンドウにテンプレートをドラッグします。 クエリ ウィンドウが開かれた後は、ツール バーまたは [クエリ] メニューのコマンドを使用してステートメントを構築できます。  
   
--   クエリの構文を検査するには、 **[解析]**をクリックします。  
+-   クエリの構文を検査するには、 **[解析]** をクリックします。  
   
--   クエリを実行するには、 **[実行]**をクリックします。  
+-   クエリを実行するには、 **[実行]** をクリックします。  
   
-     実行中のクエリを停止するには、 **[クエリ実行のキャンセル]**をクリックします。  
+     実行中のクエリを停止するには、 **[クエリ実行のキャンセル]** をクリックします。  
   
 -   画面の下部の **[結果]** タブに表示されるクエリの結果を確認します。  
   
@@ -59,19 +51,19 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="create-an-mdx-query-from-a-template"></a>MDX クエリをテンプレートから作成する  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするテーブル モデルが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]**をポイントして **[MDX]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするテーブル モデルが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[MDX]** をクリックします。  
   
-2.  テンプレート ブラウザーで、Analysis Services テンプレートで **[MDX]**を開き、 **[クエリ]**を開きます。 クエリ ウィンドウに **[基本のクエリ]** をドラッグします。  
+2.  テンプレート ブラウザーで、Analysis Services テンプレートで **[MDX]** を開き、 **[クエリ]** を開きます。 クエリ ウィンドウに **[基本のクエリ]** をドラッグします。  
   
 3.  **メタデータ エクスプローラー**を使用して、次のフィールドとメジャーをクエリ テンプレートにドラッグします。  
   
-    1.  置き換える\<row_axis, mdx_set > を**[Product Category] です [。Product Category Name]**です。  
+    1.  置き換える\<row_axis, mdx_set > を **[Product Category] です [。Product Category Name]** です。  
   
-    2.  置き換える\<column_axis, mdx_set > を**[Date] です [。Calendar Year] です。[Calendar Year]**.  
+    2.  置き換える\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]**.  
   
-    3.  置き換える\<from_clause, mdx_name > を**[Internet Sales]**です。  
+    3.  置き換える\<from_clause, mdx_name > を **[Internet Sales]** です。  
   
-    4.  置き換える\<where_clause、mdx_set > を**[Measures] です [。Internet Total Sales]**です。  
+    4.  置き換える\<where_clause、mdx_set > を **[Measures] です [。Internet Total Sales]** です。  
   
 4.  クエリはそのまま実行できますが、特定のメンバーを返す関数を追加するなど、変更を加えることもできます。 たとえば、 **[Product Category].[Product Category Name]** の後に「 **.members**」と入力します。 詳細については、「 [メンバー式の使用](../../mdx/using-member-expressions.md)」をご覧ください。  
   
@@ -90,7 +82,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="create-a-backup-command-script-from-a-template"></a>バックアップ コマンド スクリプトをテンプレートから作成する  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]**をポイントして **[XMLA]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[XMLA]** をクリックします。  
   
     > [!WARNING]  
     >  制限リストを変更することで、または接続ダイアログでデータベースを指定することで、XMLA クエリのコンテキストを設定することはできません。 クエリを行うデータベースから XMLA クエリ ウィンドウを開く必要があります。  
@@ -132,16 +124,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 #### <a name="get-a-list-of-data-sources-for-a-tabular-model-using-a-schema-rowset-query"></a>スキーマ行セット クエリを使用してテーブル モデルのデータ ソースの一覧を取得する  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]**をポイントして **[XMLA]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、クエリするデータベースが含まれているインスタンスを開きます。 データベース アイコンを右クリックし、 **[新しいクエリ]** をポイントして **[XMLA]** をクリックします。  
   
     > [!WARNING]  
     >  制限リストを変更することで、または接続ダイアログでデータベースを指定することで、XMLA クエリのコンテキストを設定することはできません。 クエリを行うデータベースから XMLA クエリ ウィンドウを開く必要があります。  
   
-2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]**テンプレートを空のクエリ ウィンドウにドラッグします。  
+2.  **テンプレート エクスプローラー**を開き、 **[スキーマ行セットの発見]** テンプレートを空のクエリ ウィンドウにドラッグします。  
   
 3.  テンプレートで、置換、 [RequestType 要素&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)要素を次のテキスト。 `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
-4.  **[実行]**をクリックします。  
+4.  **[実行]** をクリックします。  
   
      期待される結果:  
   
@@ -163,12 +155,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |カテゴリ|項目テンプレート|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します*\<モデル >*です。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
-||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >*ステートメントを DMX **RangeMin**と**RangeMax**のセットを取得する関数指定されたマイニング モデルの連続列から指定された範囲内の値。|  
-||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >*ステートメントで指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
+|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します*\<モデル >* です。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
+||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントを DMX **RangeMin**と**RangeMax**のセットを取得する関数指定されたマイニング モデルの連続列から指定された範囲内の値。|  
+||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントで指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
 ||ドリルスルー クエリ|DMX SELECT * FROM Model.CASES ステートメントを DMX IsInNode 関数と共に使用してドリルスルー クエリを実行する方法を示します。|  
 ||モデル属性|DMX System.GetModelAttributes 関数を使用して、モデルで使用される属性の一覧を返す方法を示します。|  
-||PMML コンテンツ|DMX SELECT を使用する方法を示します\*FROM *\<モデル >*です。PMML ステートメントをこの機能をサポートするアルゴリズム、マイニング モデルの Predictive Model Markup Language (PMML) 表記を取得します。|  
+||PMML コンテンツ|DMX SELECT を使用する方法を示します\*FROM *\<モデル >* です。PMML ステートメントをこの機能をサポートするアルゴリズム、マイニング モデルの Predictive Model Markup Language (PMML) 表記を取得します。|  
 |DMX\モデル管理|モデルの追加|DMX ALTER MINING MODEL STRUCTURE ステートメントを使用してマイニング モデルを追加する方法を示します。|  
 ||モデルの削除|DMX DELETE * FROM MINING MODEL ステートメントを使用して、指定されたマイニング モデルのコンテンツを削除する方法を示します。|  
 ||構造ケースの削除|DMX DELETE FROM MINING STRUCTURE ステートメントを使用して、マイニング モデル構造ケースを削除する方法を示します。|  
@@ -188,7 +180,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||構造のトレーニング|DMX INSERT INTO MINING STRUCTURE 構造と OPENQUERY ソース データ クエリを組み合わせ、マイニング構造をトレーニングする方法を示します。|  
 |DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行します。既存のデータ ソースです。|  
 ||入れ子になった予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを SHAPE および OPENQUERY ソース データ クエリを含む入れ子になったデータを使用してマイニング モデルに対して予測クエリを実行するにはこのテーブルを使用して、既存のデータ ソースからクエリを使用して取得します。|  
-||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >*列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前には、マイニング モデル内の列が一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブルの値のセットが含まれています。|  
+||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >* 列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前には、マイニング モデル内の列が一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブルの値のセットが含まれています。|  
 ||単一予測|DMX SELECT FROM を使用する方法を示します\<モデル > NATURAL PREDICTION JOIN ステートメント内の列と同じ名前の列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行するにはマイニング モデルです。|  
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|  
 |MDX\式|移動平均 - 固定|MDX の **ParallelPeriod** 関数および **CurrentMember** 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  

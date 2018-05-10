@@ -1,39 +1,23 @@
 ---
-title: "データ ソース (SSAS 多次元) を作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: データ ソース (SSAS 多次元) を作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.impersonationinfo.f1
-- sql13.asvs.connectionmanager.f1
-- sql13.asvs.datasourcedesigner.f1
-helpviewer_keywords:
-- impersonation [Analysis Services]
-- data sources [Analysis Services], creating
-- security [Analysis Services], data source connections
-ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4c7f24ee1d0a22b6f3a3bb62a88650afaca1162f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元モデルでは、データ ソース オブジェクトが、処理 (またはインポート) するデータを持つデータ ソースへの接続を表します。 多次元モデルには少なくとも 1 つのデータ ソース オブジェクトが含まれている必要がありますが、複数のデータ ウェアハウスのデータを結合するために、データ ソース オブジェクトをさらに追加することもできます。 このトピックで説明する手順に従って、モデルのデータ ソース オブジェクトを作成します。 このオブジェクトのプロパティの設定の詳細については、「[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)」を参照してください。  
   
  このトピックのセクションは次のとおりです。  
   
@@ -100,7 +84,7 @@ ms.lasthandoff: 02/15/2018
         > [!IMPORTANT]  
         >  接続マネージャーには、SQL Server 認証を使用する接続のための **[パスワードを保存する]** チェック ボックスがあります。 チェック ボックスは常に表示されていますが、常に使用されるわけではありません。  
         >   
-        >  Analysis Services がこのチェック ボックスを使用しないのは、アクティブな Analysis Services データベースで使用されている SQL Server のリレーショナル データを更新または処理する場合などです。 **[パスワードを保存する]**をオフまたはオンのどちらにするかに関係なく、Analysis Services は常にパスワードを暗号化して保存します。 パスワードは、暗号化されて、.abf ファイルとデータ ファイルの両方に格納されます。 このような動作が行われるのは、Analysis Services がサーバーへのセッションベースのパスワードの保存をサポートしないためです。  
+        >  Analysis Services がこのチェック ボックスを使用しないのは、アクティブな Analysis Services データベースで使用されている SQL Server のリレーショナル データを更新または処理する場合などです。 **[パスワードを保存する]** をオフまたはオンのどちらにするかに関係なく、Analysis Services は常にパスワードを暗号化して保存します。 パスワードは、暗号化されて、.abf ファイルとデータ ファイルの両方に格納されます。 このような動作が行われるのは、Analysis Services がサーバーへのセッションベースのパスワードの保存をサポートしないためです。  
         >   
         >  この動作は、データベースが a) Analysis Services サーバー インスタンスに保存され、b) リレーショナル データを更新または処理するために SQL Server 認証を使用する場合にのみ適用されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でセットアップする、セッションの期間内だけ使用されるデータ ソース接続には、適用されません。 既に保存されているパスワードを削除する方法はありませんが、異なる資格情報または Windows 認証を使用して、現在データベースで保存されているユーザー情報を上書きできます。  
   
@@ -108,13 +92,13 @@ ms.lasthandoff: 02/15/2018
   
     4.  ダイアログ ボックスの左側で **[すべて]** をクリックして、このプロバイダーのすべての既定の設定など、この接続の追加の設定を表示します。  
   
-    5.  使用環境に応じて設定を変更し、 **[OK]**をクリックします。  
+    5.  使用環境に応じて設定を変更し、 **[OK]** をクリックします。  
   
          データ ソース ウィザードの **[接続の定義方法を選択します]** ページにある **[データ接続]** ペインに新しい接続が表示されます。  
   
-6.  **[次へ]**をクリックします。  
+6.  **[次へ]** をクリックします。  
   
-7.  **[権限借用情報]**で、Analysis Services が外部データ ソースに接続する際に使用する Windows 資格情報またはユーザー ID を指定します。 データベース認証を使用する場合、接続でこれらの設定は無視されます。  
+7.  **[権限借用情報]** で、Analysis Services が外部データ ソースに接続する際に使用する Windows 資格情報またはユーザー ID を指定します。 データベース認証を使用する場合、接続でこれらの設定は無視されます。  
   
      権限借用のオプションを選択するためのガイドラインは、データ ソースをどのように使用するかによって異なります。 処理タスクの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスは、データ ソースへの接続の際に、そのサービス アカウントまたは指定されたユーザー アカウントのいずれかのセキュリティ コンテキストで実行する必要があります。  
   
@@ -124,9 +108,9 @@ ms.lasthandoff: 02/15/2018
   
      指定するアカウントは、データ ソースに対する読み取り権限を持っている必要があります。  
   
-8.  **[次へ]**をクリックします。  **[ウィザードの完了]**で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
+8.  **[次へ]** をクリックします。  **[ウィザードの完了]** で、データ ソースの名前を入力するか、既定の名前を使用します。 既定の名前は、接続で指定されたデータベース名になっています。 この新しいデータ ソースの接続文字列が **[プレビュー]** ペインに表示されます。  
   
-9. **[完了]**をクリックします。  ソリューション エクスプローラーの **[データ ソース]** フォルダーに、新しいデータ ソースが表示されます。  
+9. **[完了]** をクリックします。  ソリューション エクスプローラーの **[データ ソース]** フォルダーに、新しいデータ ソースが表示されます。  
   
 ##  <a name="bkmk_connection"></a> 既存の接続を使用したデータ ソースの作成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトで作業する際、データ ソースは、ソリューション内の既存のデータ ソースに基づく場合も、別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに基づく場合もあります。 データ ソース ウィザードには、同じプロジェクトの既存の接続を使用するオプションなど、データ ソース オブジェクトを作成するためのオプションがいくつか用意されています。  
@@ -144,7 +128,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のソリューション エクスプローラーで、データ ソース オブジェクトをダブルクリックします。  
   
-2.  **[編集]**をクリックし、左側のナビゲーション ウィンドウで **[すべて]** をクリックします。  
+2.  **[編集]** をクリックし、左側のナビゲーション ウィンドウで **[すべて]** をクリックします。  
   
 3.  プロパティ グリッドが表示され、使用しているデータ プロバイダーの使用可能なプロパティが示されます。 これらのプロパティの詳細については、プロバイダーの製品ドキュメントを参照してください。  SQL Server Native Client については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
@@ -172,11 +156,11 @@ ms.lasthandoff: 02/15/2018
   
 2.  データ ソースとして SQL Server のリレーショナル データベースを使用して、データ ソース ビューを作成します。 これがプライマリ データ ソースになります。  
   
-3.  データ ソース ビュー デザイナーで、作成したデータ ソース ビューを使用して、作業領域の任意の場所を右クリックし、 **[テーブルの追加と削除]**を選択します。  
+3.  データ ソース ビュー デザイナーで、作成したデータ ソース ビューを使用して、作業領域の任意の場所を右クリックし、 **[テーブルの追加と削除]** を選択します。  
   
 4.  2 番目のデータ ソースを選択し、追加するテーブルを選択します。  
   
-5.  追加したテーブルを探し、選択します。 テーブルを右クリックし、 **[新しいリレーションシップ]**を選択します。 一致するデータを含む、基になる列と対象になる列を選択します。  
+5.  追加したテーブルを探し、選択します。 テーブルを右クリックし、 **[新しいリレーションシップ]** を選択します。 一致するデータを含む、基になる列と対象になる列を選択します。  
   
 ## <a name="see-also"></a>参照  
  [サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   

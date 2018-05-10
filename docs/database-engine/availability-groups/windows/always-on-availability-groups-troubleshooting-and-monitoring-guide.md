@@ -2,23 +2,22 @@
 title: Always On 可用性グループのトラブルシューティングと監視のガイド (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 05/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性グループのトラブルシューティングと監視のガイド
  このガイドは、Always On 可用性グループの監視と可用性グループのいくつかの一般的な問題のトラブルシューティング作業を開始するために役立ちます。 オリジナルのコンテンツに加えて、他の場所で公開されている役に立つ情報のランディング ページを提供します。 このガイドでは、可用性グループの大きな領域で発生する可能性があるすべての問題を完全に説明することはできませんが、根本原因の分析と問題の解決に関して正しい方向を示すことができます。 

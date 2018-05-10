@@ -3,25 +3,22 @@ title: SysPrep を使用した SQL Server のインストールに関する注�
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 864c23937935a7a8c8695bb60dffd1aea7fde95c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2f57e592af1d91ab215a18f2cac3ac5bca1a17ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
 
@@ -99,7 +96,7 @@ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 - [スタート] メニューのショートカットを使用します。  
   
-- **[インストール センター]** の **[詳細設定]** ページにある **[準備済みスタンドアロン インスタンスのイメージの完了]**をクリックします。  
+- **[インストール センター]** の **[詳細設定]** ページにある **[準備済みスタンドアロン インスタンスのイメージの完了]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)  

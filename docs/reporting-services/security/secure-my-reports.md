@@ -1,16 +1,15 @@
 ---
-title: "個人用レポートをセキュリティで保護する | Microsoft Docs"
-ms.custom: 
+title: 個人用レポートをセキュリティで保護する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
 - private folders [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1777c84f25373806c3aab4f1c05a0a676b78097f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: db7ab6718c89132a0aabbfdda826db786628dc68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-my-reports"></a>個人用レポートをセキュリティで保護する
   個人用レポート機能により、ユーザーが管理するレポート処理用のワークスペースが提供されます。 [個人用レポート] フォルダーは、その性質上、他の汎用的な用途のフォルダーよりも権限の制限を緩める必要があります。 他のフォルダーのレポートを表示および実行する権限しか持たないユーザーが、[個人用レポート] フォルダーおよび自らが所有するコンテンツを管理するためには、より強い権限が必要となります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのための特別なロールの割り当てとロールの定義が用意されています。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
  **個人用レポート** ロールの割り当ては、次の要素で構成されています。  
   
--   Users フォルダー\\*\<ユーザー名>*\個人用レポート フォルダーにある、ユーザーの [個人用レポート] フォルダー。  
+-   Users フォルダー\\*\<ユーザー名>* \個人用レポート フォルダーにある、ユーザーの [個人用レポート] フォルダー。  
   
 -   [個人用レポート] フォルダーをアクティブ化するときに判別されたユーザー アカウント。 フォルダーがアクティブ化されるのは、ユーザーがレポート マネージャーの [個人用レポート] フォルダーをクリックするか、レポート デザイナーから [個人用レポート] フォルダーにレポートをパブリッシュしたときです。 ユーザーが [個人用レポート] リンクでプロパティを要求する場合も、このフォルダーはアクティブ化されます。  
   

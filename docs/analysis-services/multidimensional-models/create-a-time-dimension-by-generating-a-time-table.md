@@ -1,39 +1,23 @@
 ---
-title: "時間テーブルを生成することによって時間ディメンションを作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 時間テーブルを生成することによって時間ディメンションを作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- time periods [Analysis Services]
-- range-based time dimensions [Analysis Services]
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- table-based time dimensions [Analysis Services]
-ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7c437b381faae56438376a93355adec76b28d7e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2c5526075c563bfea107592c6e0d583feff3fde2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>時間テーブルの生成による時間ディメンションの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、ソース データベースに使用できる時間テーブルがない場合に、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、ソース データベースに使用できる時間テーブルがない場合に、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
   
 -   **[データ ソースに時間テーブルを生成]** 基になるデータ ソースにオブジェクトを作成する権限がある場合に、このオプションを選択します。 ウィザードによって時間テーブルが生成され、このテーブルがデータ ソースに格納されます。 次に、ウィザードによってこの時間テーブルから時間ディメンションが作成されます。  
   
@@ -46,7 +30,7 @@ ms.lasthandoff: 02/15/2018
   
  年、半期、四半期、三半期、月、10 日間、週、日付など、ウィザードで階層を作成する際に使用し、データに適用する時間間隔を選択します。 最短でも、日付以上の時間間隔を選択する必要があります。 Date 属性はディメンションのキー属性であるので、この属性がないとディメンションは機能できません。  
   
- **[時間メンバー名の言語]**の横で、ディメンションのメンバーのラベル付けに使用する言語を選択します。  
+ **[時間メンバー名の言語]** の横で、ディメンションのメンバーのラベル付けに使用する言語を選択します。  
   
  日付範囲に基づいた時間ディメンションを作成した後は、ディメンション デザイナーを使用して、時間属性を追加または削除できます。 Date 属性はこのディメンションのキー属性であるため、この属性を削除することはできません。 Date 属性をユーザーに対して非表示にするには、この属性の **AttributeHierarchyVisible** プロパティを **False**に設定します。  
   

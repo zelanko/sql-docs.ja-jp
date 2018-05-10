@@ -1,31 +1,23 @@
 ---
-title: "計算コンテキスト |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 計算コンテキスト |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fde665f7dea3efe26d61d6d183f8ca35834f732e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 193855717a055fbe0ae4d1b49ae98e30e44b86a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculation-context"></a>計算コンテキスト
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-計算コンテキストとは、式が評価され、すべての座標が明示的に知られているか、または式から派生することができる、キューブの既知のサブ空間です。  
+  計算コンテキストとは、式が評価され、すべての座標が明示的に知られているか、または式から派生することができる、キューブの既知のサブ空間です。  
   
 ## <a name="determining-the-calculation-context"></a>計算コンテキストの決定  
  すべてのセット、メンバー、組、数値関数は、MDX 式またはステートメント全体のコンテキストで実行されます。 組などの引数を関数に渡す際には、キューブ空間内の一部の座標のみが明示的に指定されます。 その他の座標は現在の計算コンテキストを基に取得されます。  
@@ -45,7 +37,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  各軸上のキューブ セルまたはサブキューブ セル : 軸上の空の組が削除され、HAVING 句が適用されます。  
   
-6.  詳細については、次を参照してください[クエリ &#40; 内のキューブ コンテキストの確立。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
+6.  詳細については、次を参照してください[クエリ & #40; 内のキューブ コンテキストの確立。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   
  次のクエリでは、WHERE 句で指定されている Country 属性のメンバーと Calendar Year 属性のメンバーによって、行軸の計算コンテキストを制限しています。  
   
@@ -77,8 +69,8 @@ WHERE (Customer.Country.France,
 >  クエリのパフォーマンスを向上するには、解決プロセスのできるだけ早い段階でメンバーおよび組を削除してください。 こうすることで、最終的なメンバーのセットに対するクエリ時の複雑な計算を、最小限のセルに対して行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [クエリ &#40; 内のキューブ コンテキストの確立MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX クエリの基礎と #40 です。Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX &#40; の主な概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [クエリ & #40; 内のキューブ コンテキストの確立MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

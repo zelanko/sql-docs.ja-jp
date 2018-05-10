@@ -1,34 +1,19 @@
 ---
-title: "Analysis Services の SQL Server Management Studio でのスクリプト プロジェクト |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services の SQL Server Management Studio でのスクリプト プロジェクト |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- scripts [Analysis Services]
-- scripts [Analysis Services], projects
-- projects [Analysis Services], Analysis Server Scripts project
-- projects [Analysis Services], creating
-- Analysis Server Scripts project
-- items [Analysis Services]
-ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2b8652fbb1028fa58f06d7ff165b02dc8f5fdc02
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 86b6090d2f781d1db835752c95907fa1be182963
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services スクリプト プロジェクト
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +22,7 @@ ms.lasthandoff: 02/15/2018
   
  次の基本的な手順を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で Analysis Services スクリプト プロジェクトを作成します。  
   
-1.  [ファイル] メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+1.  [ファイル] メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
      **[Analysis Services スクリプト]** プロジェクト テンプレートをクリックし、新しいプロジェクトの名前と場所を指定します。  
   
@@ -47,7 +32,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  **[クエリ]** を右クリックし、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、および XML for Analysis (XMLA) スクリプトを、ソリューション エクスプローラーの Analysis Services スクリプト プロジェクトの [スクリプト] フォルダーに作成します。
   
-4.  プロジェクトを右クリックし、 **[追加]**をポイントします。次に、 **[既存の項目]** をクリックしてプロジェクトの注釈が書かれているテキスト ファイルなどのその他のファイルを、ソリューション エクスプローラーの Analysis Services スクリプト プロジェクトの **[その他]** フォルダーに追加します。 これらのファイルは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では無視されます。  
+4.  プロジェクトを右クリックし、 **[追加]** をポイントします。次に、 **[既存の項目]** をクリックしてプロジェクトの注釈が書かれているテキスト ファイルなどのその他のファイルを、ソリューション エクスプローラーの Analysis Services スクリプト プロジェクトの **[その他]** フォルダーに追加します。 これらのファイルは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では無視されます。  
   
 ## <a name="file-types"></a>ファイルの種類  
  1 つの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ソリューションで、複数のファイルの種類を使用できます。ファイルの種類は、ソリューションに含まれるプロジェクトおよびそのソリューションの各プロジェクトに含まれるアイテムによって異なります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でのソリューション用のファイルの種類については、「 [ソリューションとプロジェクトを管理するためのファイル](http://msdn.microsoft.com/library/e19d2859-0b97-4727-ac27-c4c226d86b2f)」を参照してください。 通常、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ソリューションの各プロジェクトのファイルは、ソリューションのフォルダー内でプロジェクト別に異なるフォルダーに保存されます。  
@@ -66,9 +51,9 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [多次元式 &#40;です。MDX と #41 です。参照](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [多次元式 & #40 です。MDX と #41 です。参照](../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services スクリプト言語 &#40;です。ASSL を XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services スクリプト言語&#40;の ASSL を XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

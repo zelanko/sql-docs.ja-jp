@@ -1,31 +1,19 @@
 ---
-title: "ADOMD.NET での開発 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ADOMD.NET
-ms.assetid: abaf33aa-db55-43bf-8f30-15547559be1d
-caps.latest.revision: 
-author: Minewiskan
+title: ADOMD.NET での開発 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: adomd
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 67251d077156d608e249ec44125002bc7cc3cda9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 69f937bd8842d2e89d25527587342978ab8686bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-with-adomdnet"></a>ADOMD.NET での開発
   ADOMD.NET は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework データ プロバイダーと通信するように設計された[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 ADOMD.NET は、XML for Analysis プロトコルを使用して分析データ ソースとやり取りします。その際、TCP/IP 接続または HTTP 接続を使用して、XML for Analysis 仕様準拠の SOAP 要求と応答を送受信します。 コマンドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、Analysis Services スクリプト言語 (ASSL)、または SQL の一部の構文で送ることができ、結果を返さない場合があります。 分析データ、主要業績評価指標 (KPI)、マイニング モデルは、ADOMD.NET オブジェクト モデルを使用することによって、取得と操作を行うことができます。 ADOMD.NET を使用すると、OLE DB 準拠のスキーマ行セットを取得するか、ADOMD.NET オブジェクト モデルを使用することによって、メタデータを表示および操作することもできます。  
@@ -42,10 +30,10 @@ ms.lasthandoff: 02/15/2018
 |<xref:Microsoft.AnalysisServices.AdomdClient>|含まれているオブジェクトの詳細、 **Microsoft.AnalysisServices.AdomdClient**名前空間。|  
   
 ## <a name="see-also"></a>参照  
- [多次元式 &#40;です。MDX と #41 です。参照](../../../mdx/multidimensional-expressions-mdx-reference.md)   
- [データ マイニング拡張機能 &#40;DMX&#41;参照](../../../dmx/data-mining-extensions-dmx-reference.md)   
+ [多次元式 & #40 です。MDX と #41 です。参照](../../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services のスキーマ行セット](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [Analysis Services スクリプト言語 &#40; を使用した開発ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [多次元モデルのデータ アクセスと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Services スクリプト言語の分析の使用による開発&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [多次元モデルのデータ アクセス&#40;Analysis Services - 多次元データ&#41;](../../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
   

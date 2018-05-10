@@ -1,38 +1,19 @@
 ---
-title: "AMO の概念とオブジェクト モデル |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AMO, classes
-- Analysis Management Objects, classes
-- objects [Analysis Management Objects]
-- AMO, objects
-- classes [AMO]
-- AMO
-- Analysis Management Objects
-- Analysis Management Objects, objects
-ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 
-author: Minewiskan
+title: AMO の概念とオブジェクト モデル |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fb57ba499669e09d177892eb861ad8994819e85
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 778007f9cdf5b2c0eea94d9d202545e95476d1c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO の概念とオブジェクト モデル
   このトピックは、分析管理オブジェクト (AMO) の定義を提供 AMO が他のツールとのアーキテクチャで提供されるライブラリに関連するどの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]AMO 内のすべての主要なオブジェクトの概念について説明します。  
@@ -53,10 +34,10 @@ ms.lasthandoff: 02/15/2018
   
  [AMO による管理タスクを自動化します。](#AutomatingAdministrativeTaskswithAMO)  
   
-##  <a name="AMOintheAnalysisServicesArchitecture">Analysis Services のアーキテクチャの AMO</a>  
+##  <a name="AMOintheAnalysisServicesArchitecture"></a> Analysis Services のアーキテクチャの AMO  
  AMO はオブジェクト管理のみを用途として設計されており、データのクエリは用途外です。 ユーザーが必要な場合のクエリ[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]クライアント アプリケーションからデータをクライアント アプリケーションで使用する必要があります[ADOMD.NET での開発](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)です。  
   
-##  <a name="AMOArchitecture">AMO のアーキテクチャ</a>  
+##  <a name="AMOArchitecture"></a> AMO のアーキテクチャ  
  AMO のインスタンスを管理するためのクラスの完全なライブラリ[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は .NET Framework version 2.0 でマネージ コードでクライアント アプリケーションからです。  
   
  AMO クラス ライブラリの設計上、クラス間に階層関係があり、コードを記述する際、一部のクラスをインスタンス化してからその他のクラスを使用する必要があります。 また、コード内でいつでもインスタンス化できる補助クラスもあります。ただし、多くの場合、いずれかの補助クラスを使用する前に、1 つ以上の階層クラスが既にインスタンス化されています。  
@@ -86,11 +67,11 @@ ms.lasthandoff: 02/15/2018
 |[AMO セキュリティ クラス](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|他のオブジェクトへのアクセスを制御し、セキュリティのメンテナンスを可能にするためのクラス。|  
 |[AMO のその他のクラスとメソッド](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|OLAP またはデータ マイニングの管理者の日常的業務の遂行に役立つ、クラスおよびメソッド。|  
   
-##  <a name="bkmk_UsingAMO">AMO を使用してください。</a>  
+##  <a name="bkmk_UsingAMO"></a> AMO を使用してください。  
  AMO は、繰り返しタスクの自動化に非常に役立ちます。たとえば、ファクト テーブルの新しいデータに基づいてメジャー グループに新しいパーティションを作成する場合や、新しいデータに基づいてマイニング モデルを再調整する場合などです。 新しいオブジェクトを作成するこれらのタスクは、通常、毎月、毎週、または四半期ごとに実行され、アプリケーションで新しいオブジェクトに新しいデータに基づく名前を付けることも簡単です。  
   
 ##### <a name="analysis-services-administrators"></a>Analysis Services 管理者  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理者は、AMO を使用しての処理を自動化する[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]データベース。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースの設計および配置には、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] を使用してください。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理者は、AMO を使用して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースの処理を自動化できます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベースの設計および配置には、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] を使用してください。  
   
 ##### <a name="developers"></a>開発者  
  開発者は、AMO を使用して、指定したユーザー セット用の管理インターフェイスを開発できます。 これらのインターフェイスでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクトへのアクセスを制限し、ユーザーが特定のタスクのみを使用できるようにできます。 たとえば、AMO を使用すると、すべてのデータベース オブジェクトの表示、データベースのいずれかの選択、および指定したデバイス セットのいずれかのデバイスへのバックアップをユーザーに許可する、バックアップ アプリケーションを作成できます。  
@@ -103,7 +84,7 @@ ms.lasthandoff: 02/15/2018
 ##### <a name="data-mining-advanced-users"></a>データ マイニングの上級ユーザー  
  データ マイニングの上級ユーザーにとって、定期的な再調整を必要とするモデル セットが大量にある場合に、AMO が非常に役立ちます。  
   
-##  <a name="AutomatingAdministrativeTaskswithAMO">AMO による管理タスクを自動化します。</a>  
+##  <a name="AutomatingAdministrativeTaskswithAMO"></a> AMO による管理タスクを自動化します。  
  ほとんどの繰り返しタスクは、どのような言語のアプリケーションとして開発するよりも [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] を使用して開発した方が、設計、配置、および保守に適しています。 しかし、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] を使用しても自動化できない繰り返しタスクには、AMO を使用できます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] を使用して、ビジネス インテリジェンス用に専門性の高いアプリケーションを開発する際にも、AMO が役立ちます。  
   
 ##### <a name="automatic-object-management"></a>自動オブジェクト管理  

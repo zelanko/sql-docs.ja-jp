@@ -1,33 +1,19 @@
 ---
-title: "SQL Server Profiler による Analysis Services の監視の概要 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 01/23/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: SQL Server Profiler による Analysis Services の監視の概要 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Profiler, Analysis Services
-- monitoring Analysis Services [SQL Server]
-- performance [Analysis Services]
-- performance [Analysis Services], SQL Server Profiler
-- Profiler [SQL Server Profiler], Analysis Services
-ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 193b7d2907fe41c35560f23e204a3f56e209802d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e9ea003dafa721277f7562696f4b6be254d281be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server Profiler による Analysis Services の監視の概要
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -49,7 +35,7 @@ ms.lasthandoff: 02/15/2018
 -   キャプチャされたイベントに関するデータの画面表示、各イベントに関するデータのキャプチャ、および今後の分析や再生を目的としたファイルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルへのデータの保存。 データを再生する場合は、保存されているイベントを当初の発生時と同じ状態で、リアルタイムまたは 1 ステップずつ再実行できます。  
   
 ## <a name="using-sql-server-profiler"></a>SQL Server Profiler の使用  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成または再生するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーでなければなりません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーであれば、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [スタート] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   **プログラム グループから** を起動できます。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成または再生するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーでなければなりません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーであれば、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [スタート] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  ** プログラム グループから** を起動できます。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用する場合は、次の点に注意してください。  
   
@@ -68,6 +54,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [Analysis Services トレース イベント](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [プロファイラー トレースの再生 &#40; の作成します。Analysis Services &#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [プロファイラー トレースの再生 & #40; の作成します。Analysis Services & #41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

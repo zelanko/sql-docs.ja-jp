@@ -1,38 +1,30 @@
 ---
-title: "ファイルまたは Microsoft Data Services アセンブリを読み込めませんでした |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
-caps.latest.revision: 
-author: Minewiskan
+title: ファイルまたは Microsoft Data Services アセンブリを読み込めませんでした |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0daa7111e93a81c367fda433cc7b530a4c90e8f4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1de8cd48bcce0b2c66a555358fc7c73182999f0f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>ファイルまたは Microsoft Data Services アセンブリを読み込めませんでした。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がある SharePoint 2010 環境では、データ フィードのエクスポートを実行しようとした場合に必要なバージョンの Microsoft ADO.NET Data Services がないと、このエラーが発生します。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がある SharePoint 2010 環境では、データ フィードのエクスポートを実行しようとした場合に必要なバージョンの Microsoft ADO.NET Data Services がないと、このエラーが発生します。  
   
 ## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
 |適用対象|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[製品バージョン]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|ADO.NET Data Services 3.5 SP1 が見つかりませんでした。|  
 |メッセージ テキスト|ファイルまたはアセンブリ 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'、またはその依存関係の 1 つが読み込めませんでした。 指定されたファイルが見つかりません|  
   
@@ -43,7 +35,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="user-action"></a>ユーザーの操作  
   
-1.  SharePoint 2010 のハードウェアおよびソフトウェアの要件に関するドキュメント「 [ハードウェアおよびソフトウェアの要件の決定 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) 」(http://go.microsoft.com/fwlink/?LinkId=169734) を開きます。  
+1.  SharePoint 2010 のハードウェアとソフトウェア要件のドキュメントに移動して[決定 Hardware and Software Requirements (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)です。  
   
 2.  「 **前提条件となっているソフトウェアをインストールする**」で、使用しているオペレーティング システムに対応する ADO.NET Data Services 3.5 のリンクを見つけます。  
   

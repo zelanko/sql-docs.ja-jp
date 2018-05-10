@@ -2,23 +2,22 @@
 title: Always On 可用性グループの拡張イベント (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c8783a42bc64b340858daa8c84f51633f09ffd4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b6152a89af59acd56478b6dabee5d29f8d009f9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Always On 可用性グループの拡張イベント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ alwayson_health でカバーされているイベントの一部については�
   
 1.  **オブジェクト エクスプローラー**で **[管理]**、**[拡張イベント]**、および **[セッション]** の順に展開します。  
   
-2.  **[セッション]** を右クリックし、 **[新しいセッション]**をクリックします。 または、**[Alwayson_health]** を右クリックし、**[プロパティ]** を選択します。  
+2.  **[セッション]** を右クリックし、 **[新しいセッション]** をクリックします。 または、**[Alwayson_health]** を右クリックし、**[プロパティ]** を選択します。  
   
 3.  **[ページの選択]** ウィンドウで **[イベント]** をクリックします。  
   

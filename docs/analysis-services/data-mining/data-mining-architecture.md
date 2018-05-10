@@ -1,31 +1,23 @@
 ---
-title: "データ マイニングのアーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: データ マイニングのアーキテクチャ |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a26a81ee0d0d2ca6bf64c2aca0d1b5f752b5f52c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2398ec410ee577e255b30348c927656037327df9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-architecture"></a>データ マイニングのアーキテクチャ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-ここでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスでホストされているデータ マイニング ソリューションのアーキテクチャについて説明します。 このセクションのトピックでは、データ マイニングをサポートする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの論理および物理アーキテクチャについて説明します。さらに、データ マイニング サーバーとの通信およびデータ マイニング オブジェクトのローカルまたはリモート操作に使用できるクライアント、プロバイダー、およびプロトコルに関する情報を提供します。  
+  ここでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスでホストされているデータ マイニング ソリューションのアーキテクチャについて説明します。 このセクションのトピックでは、データ マイニングをサポートする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの論理および物理アーキテクチャについて説明します。さらに、データ マイニング サーバーとの通信およびデータ マイニング オブジェクトのローカルまたはリモート操作に使用できるクライアント、プロバイダー、およびプロトコルに関する情報を提供します。  
   
  一般に、SQL Server データ マイニングは、多次元モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの一部として提供されるサービスとして動作します。したがって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元ソリューションの操作、メンテナンス、および構成について説明しているオンライン ブックの次のセクションも参照することをお勧めします。  
   
@@ -40,15 +32,15 @@ ms.lasthandoff: 02/15/2018
  ビジネス インテリジェンス ソリューションにデータ マイニングを実装する方法の詳細については、MSDN ライブラリの「ソリューション ガイド」セクションをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [論理アーキテクチャと #40 です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [物理アーキテクチャ &#40;です。Analysis Services - データ マイニング &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [物理アーキテクチャ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
  [データ マイニング サービスとデータ ソース](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
  [オブジェクトとデータ マイニング ソリューションの管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [セキュリティの概要 &#40;データ マイニング&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [セキュリティの概要 & #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>「  
  [多次元モデルのプログラミング](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
