@@ -1,17 +1,16 @@
 ---
-title: '[データベースのプロパティ]([ミラーリング] ページ) | Microsoft Docs'
+title: '[データベースのプロパティ] ([ミラーリング] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
@@ -19,14 +18,13 @@ caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d706b8cdb3ee366aa60a7324f949132a0acaa7bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a14e748959ca5553dc6a8e2af6d26700ab418e7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] \([ミラーリング] ページ)
+# <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] ([ミラーリング] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページにはプリンシパル データベースからアクセスし、データベース ミラーリングのプロパティを構成および変更します。 また、データベース ミラーリング セキュリティ構成ウィザードを起動し、ミラーリング セッションの状態の確認やデータベース ミラーリング セッションの一時停止または削除を行うこともできます。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], renaming
 - renaming databases
@@ -20,13 +19,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 235b7c4b793db9bec3f82844b9f446fbae13a639
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f6ffe861f520bd0d580b3be540ad39b622cf4918
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,9 +68,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  データベースを使用している人がいないことを確認し、 [データベースをシングル ユーザー モードに設定します](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。  
   
-3.  **[データベース]**を展開し、名前を変更するデータベースを右クリックして、 **[名前の変更]**をクリックします。  
+3.  **[データベース]** を展開し、名前を変更するデータベースを右クリックして、 **[名前の変更]** をクリックします。  
   
-4.  新しいデータベース名を入力し、 **[OK]**をクリックします。  
+4.  新しいデータベース名を入力し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -80,9 +78,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 `AdventureWorks2012` データベースの名前を `Northwind`に変更します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `AdventureWorks2012` データベースの名前を `Northwind`に変更します。  
   
 ```sql  
 USE master;  

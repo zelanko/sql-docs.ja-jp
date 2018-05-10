@@ -1,27 +1,25 @@
 ---
-title: "共有データセットの操作 (Web ポータル) | Microsoft Docs"
-ms.custom: 
+title: 共有データセットの操作 (Web ポータル) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4e72c48f816752530abddb6246410e4936ac20a6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 97b787e06c3979e8e41586804164edcccc9cd0a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>共有データセットの操作 - Web ポータル
 
@@ -37,7 +35,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 1.  メニュー バーから [新規] を選択します。  
   
-2.  **[データセット]**を選択します。  
+2.  **[データセット]** を選択します。  
   
     ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
   
@@ -45,7 +43,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 4.  **[新しいレポートまたはデータセット]** ダイアログで、このデータセットに使用するデータ ソース接続を選択します。 共有データ ソースの場所を参照することが必要な場合があります。  
   
-5.  **[作成]**を選択します。  
+5.  **[作成]** を選択します。  
   
 6.  データセットを作成し、画面左上の **[保存]** アイコンを選択してデータセットをレポート サーバーに保存します。  
   
@@ -66,7 +64,7 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 ## <a name="properties"></a>[プロパティ]
   
-プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、 **[置換]**を選択することもできます。  
+プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、 **[置換]** を選択することもできます。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
@@ -101,9 +99,9 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
 以上のキャッシュ オプションを適用した後は、キャッシュ更新計画を定義できます。 そのためには、キャッシュの設定を適用した後で表示される **[更新計画の管理]** リンクを選択します。 キャッシュ更新計画のページが表示されます。   
   
-新しいキャッシュ更新計画を作成するには、 **[新しいキャッシュ更新計画]**を選択します。 計画の名前を入力し、スケジュールを指定します。 データセットでパラメーターが定義されている場合、その一覧が表示され、読み取り専用以外のパラメーターには値を指定できます。  
+新しいキャッシュ更新計画を作成するには、 **[新しいキャッシュ更新計画]** を選択します。 計画の名前を入力し、スケジュールを指定します。 データセットでパラメーターが定義されている場合、その一覧が表示され、読み取り専用以外のパラメーターには値を指定できます。  
   
-完了したら、 **[キャッシュ更新計画の作成]**を選択します。  
+完了したら、 **[キャッシュ更新計画の作成]** を選択します。  
   
 ![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.shrinkfile.f1
 helpviewer_keywords:
@@ -26,12 +25,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5e39262f670e7fd06327971db700376f0f40bdc9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abd60ff1981bf53cb486c12624f020fea4c138d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,13 +76,13 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
-3.  **[タスク]**、 **[圧縮]**の順にポイントし、 **[ファイル]**をクリックします。  
+3.  **[タスク]**、 **[圧縮]** の順にポイントし、 **[ファイル]** をクリックします。  
   
      **[データベース]**  
      選択しているデータベースの名前が表示されます。  
   
      **ファイルの種類**  
-     ファイルの種類を選択します。 選択できるファイルの種類は **[データ]** および **[ログ]** です。 既定の選択は **[データ]**です。 別のファイル グループの種類を選択すると、その選択に応じて他のフィールドの選択が変更されます。  
+     ファイルの種類を選択します。 選択できるファイルの種類は **[データ]** および **[ログ]** です。 既定の選択は **[データ]** です。 別のファイル グループの種類を選択すると、その選択に応じて他のフィールドの選択が変更されます。  
   
      **ファイル グループ**  
      上記で選択した **[ファイルの種類]** に関連付けられたファイル グループの一覧から、ファイル グループを選択します。 別のファイル グループを選択すると、その選択に応じて他のフィールドの選択が変更されます。  
@@ -137,9 +135,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) を使用して、 `DataFile1` データベースに存在する `UserDB` という名前のデータ ファイルのサイズを 7 MB に圧縮します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) を使用して、 `DataFile1` データベースに存在する `UserDB` という名前のデータ ファイルのサイズを 7 MB に圧縮します。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

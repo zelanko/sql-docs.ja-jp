@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: df4757b69eeb025149cdd8a160e64abb87f0a682
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 09255d7a04063de609a7f54c395f50f83e765643
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>データベースのパブリッシュ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +36,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>Web サービスにデータベースをパブリッシュするには  
   
-1.  オブジェクト エクスプローラーで **[データベース]**を展開してデータベースを右クリックし、 **[タスク]**をポイントして **[スクリプトの生成とパブリッシュ]**をクリックします。 ウィザードの手順に従って、パブリッシュするデータベース オブジェクトのスクリプトを作成します。  
+1.  オブジェクト エクスプローラーで **[データベース]** を展開してデータベースを右クリックし、 **[タスク]** をポイントして **[スクリプトの生成とパブリッシュ]** をクリックします。 ウィザードの手順に従って、パブリッシュするデータベース オブジェクトのスクリプトを作成します。  
   
 2.  **[オブジェクトの選択]** ページで、Web ホスティング サービスにパブリッシュするオブジェクトを選択します。  
   
-3.  **[スクリプト作成オプションの設定]** ページで、 **[Web サービスにパブリッシュ]**を選択します。  
+3.  **[スクリプト作成オプションの設定]** ページで、 **[Web サービスにパブリッシュ]** を選択します。  
   
     1.  **[プロバイダー]** ボックスで、使用する Web サービスのプロバイダーを指定します。 Web ホスティング プロバイダーを構成していない場合は、 **[プロバイダーの管理]** をクリックして **[プロバイダーの管理]** ダイアログ ボックスを表示し、使用する Web サービスのプロバイダーを構成します。  
   

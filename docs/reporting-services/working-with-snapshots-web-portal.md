@@ -1,33 +1,31 @@
 ---
-title: "スナップショットの操作 (Web ポータル) | Microsoft Docs"
-ms.custom: 
+title: スナップショットの操作 (Web ポータル) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51abaf6facdb6c9dbb9ed360d371057a0274de3f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 33fb57b26b883d7515c6c0bfc8640ed67be3994d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])**、**[管理]** と選択し、**[キャッシュ]** または **[履歴スナップショット]**を選択します。  
+レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])**、**[管理]** と選択し、**[キャッシュ]** または **[履歴スナップショット]** を選択します。  
   
 > [!NOTE]
 > SQL Server エージェント サービスを開始する必要があります。  
@@ -48,7 +46,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="create-modify-and-delete-history-snapshots"></a>履歴スナップショットの作成、変更および削除  
   
-履歴スナップショットを使用するには、レポートの管理で **[履歴スナップショット]**を選択します。  
+履歴スナップショットを使用するには、レポートの管理で **[履歴スナップショット]** を選択します。  
   
 **[履歴スナップショット]** ページには、一定期間に生成および保存したレポート スナップショットが表示されます。 レポート サーバーで設定されているオプションによっては、新しいスナップショットのみが履歴に保存されます。  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/09/2018
   
 ![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
-1.  履歴スナップショットを作成するには、 **[新しい履歴スナップショット]**を選択します。 レポートが処理され、一覧にエントリが追加されます。  
+1.  履歴スナップショットを作成するには、 **[新しい履歴スナップショット]** を選択します。 レポートが処理され、一覧にエントリが追加されます。  
   
 2.  スケジュールと保持ポリシーを定義するには、設定に移動します。  
   

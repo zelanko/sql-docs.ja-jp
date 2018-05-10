@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deploydacwizard.introduction.f1
 - sql13.swb.deploydacwizard.deploydac.f1
@@ -29,12 +28,11 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2fd672802745041f161282821f21cef040c3581
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eaf008f10525d45c79345dbf9db5fd146097590a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
 ## <a name="managed-instances"></a>マネージ インスタンス  
- データベース エンジンのマネージ インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
+ データベース エンジンのマネージ インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
   
 ###  <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、DAC を配置するインスタンスのノードを展開します。  
   
-2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]**をクリックします。  
+2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]** をクリックします。  
   
 3.  ウィザードのダイアログを完了し、[完了] をクリックします。
 以下は、ウィザード ページの詳細の一部です。 
@@ -92,7 +90,7 @@ ms.lasthandoff: 04/16/2018
  **[説明]** : DAC が作成されたとき、またはデータベースから抽出されたときに記述された説明が表示される読み取り専用のボックスです。  
   
 ### <a name="validating-the-dac-package"></a>DAC パッケージの検証  
- 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。 DAC パッケージが検証されると、 **[DAC パッケージの選択]** ページの最終状態に進み、検証の結果を確認できます。 ファイルが有効な DAC パッケージでない場合は、 **[DAC パッケージの選択]**が表示されたままになります。 別の有効な DAC パッケージを選択するか、ウィザードを取り消して新しい DAC パッケージを生成してください。  
+ 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。 DAC パッケージが検証されると、 **[DAC パッケージの選択]** ページの最終状態に進み、検証の結果を確認できます。 ファイルが有効な DAC パッケージでない場合は、 **[DAC パッケージの選択]** が表示されたままになります。 別の有効な DAC パッケージを選択するか、ウィザードを取り消して新しい DAC パッケージを生成してください。  
   
   ### <a name="review-policy-page"></a>[ポリシーの確認] ページ  
  DAC にポリシーが含まれている場合に DAC サーバーの選択ポリシーを評価した結果を確認します。 DAC サーバーの選択ポリシーは、省略可能で、Visual Studio で DAC を作成するときに割り当てられます。 このポリシーでは、サーバーの選択ポリシーのファセットを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスで DAC をホストするために満たす必要がある条件を指定します。  
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/16/2018
   
  データベース名を変更した場合、データ ファイルとログ ファイルの名前も新しいデータベース名に合わせて変更されます。  
   
- また、データベース名は、DAC インスタンスの名前としても使用されます。 インスタンス名は、 **オブジェクト エクスプローラー** の **[データ層アプリケーション]**ノードまたは **ユーティリティ エクスプローラー** の **[配置済みのデータ層アプリケーション]**ノードの下にある、DAC のノードに表示されます。  
+ また、データベース名は、DAC インスタンスの名前としても使用されます。 インスタンス名は、 **オブジェクト エクスプローラー** の **[データ層アプリケーション]** ノードまたは **ユーティリティ エクスプローラー** の **[配置済みのデータ層アプリケーション]** ノードの下にある、DAC のノードに表示されます。  
   
  次のオプションは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]には適用されず、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の配置時には表示されません。  
   

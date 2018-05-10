@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: database-mail
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
 - sql13.swb.sqlimail.newaccount.f1
@@ -46,12 +45,11 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b1df9d91458211d66722ac1b844e5d938690acc3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[管理]** ノードを展開します。  
   
-3.  **[データベース メール]**を右クリックして、 **[データベース メールの構成]**をクリックします。  
+3.  **[データベース メール]** を右クリックして、 **[データベース メールの構成]** をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 04/16/2018
  ウィザードを使用するたびに、 **[構成タスクの選択]** ページを使用して、完了するタスクを指定します。 ウィザードを完了する前に変更が必要になった場合は、**[戻る]** ボタンを使用してこのページに戻り、別のタスクを選択します。  
   
 > [!NOTE]  
->  データベース メール機能が有効になっていない場合は、"**データベース メール機能は使用できません。有効にしますか? " というメッセージが表示されます。** ここで **[はい]**をクリックすることは、 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション** を使用してデータベース メールを有効にすることと同じです。  
+>  データベース メール機能が有効になっていない場合は、"**データベース メール機能は使用できません。有効にしますか? " というメッセージが表示されます。** ここで **[はい]** をクリックすることは、 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション** を使用してデータベース メールを有効にすることと同じです。  
   
  **[次のタスクを実行してデータベース メールをセットアップする]**  
  データベース メールを初めてセットアップするときに必要なタスクをすべて実行します。 このオプションには、他の 3 つのオプションがすべて含まれています。  
@@ -308,7 +306,7 @@ ms.lasthandoff: 04/16/2018
  [データベース メール構成ウィザードの使用](#DBWizard)  
   
 ###  <a name="AddAccount"></a> Add Account to Profile Page  
- このページを使用すると、プロファイルに追加するアカウントを選択できます。 既存のアカウントを **[アカウント名]** ボックスから選択するか、 **[新しいアカウント]**をクリックします。  
+ このページを使用すると、プロファイルに追加するアカウントを選択できます。 既存のアカウントを **[アカウント名]** ボックスから選択するか、 **[新しいアカウント]** をクリックします。  
   
  **アカウント名**  
  プロファイルに追加するアカウントの名前を選択します。  
@@ -399,7 +397,7 @@ ms.lasthandoff: 04/16/2018
  添付ファイルの最大サイズ (バイト単位)。  
   
  **[禁止する添付ファイルの拡張子]**  
- 電子メールへの添付ファイルとして送信できない拡張子のコンマ区切りのリスト。 **[...]**ボタンをクリックして新たに拡張子を追加できます。  
+ 電子メールへの添付ファイルとして送信できない拡張子のコンマ区切りのリスト。 **[...]** ボタンをクリックして新たに拡張子を追加できます。  
   
  **[データベース メール実行可能ファイルの最短有効期間 (秒)]**  
  外部メール処理がアクティブな状態にとどまる最小時間 (秒単位)。 電子メールがデータベース メール キューに入っている間は、プロセスはアクティブな状態のままです。 このパラメーターは、処理するメッセージがない場合にプロセスがアクティブな状態を維持する秒数を指定します。  
@@ -453,13 +451,13 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="Template"></a> テンプレートの使用  
  **データベース メール構成スクリプトを作成するには**  
   
-1.  **[表示]** メニューの **[テンプレート エクスプローラー]**をクリックします。  
+1.  **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
 2.  **[テンプレート エクスプローラー]** ウィンドウで、 **[Database Mail]** フォルダーを展開します。  
   
-3.  **[Simple Database Mail Configuration]**をダブルクリックします。 テンプレートが新しいクエリ ウィンドウに開きます。  
+3.  **[Simple Database Mail Configuration]** をダブルクリックします。 テンプレートが新しいクエリ ウィンドウに開きます。  
   
-4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]**をクリックします。 **[テンプレート パラメーターの値の指定]** ウィンドウが開きます。  
+4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。 **[テンプレート パラメーターの値の指定]** ウィンドウが開きます。  
   
 5.  **profile_name**、 **account_name**、 **SMTP_servername**、 **email_address**、および **display_name**の値を入力します。 SQL Server Management Studio によって、テンプレートに入力値が書き込まれます。  
   

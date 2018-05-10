@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: collations
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], view
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
@@ -19,13 +18,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 45b540eabcc97b8dba9bfb6e52283ddd0a829274
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dde0f2278511cfe905bbc64d3b6d142ebad93e9b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-collation-information"></a>照合順序情報の表示
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,28 +42,28 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  インスタンスを右クリックし、 **[プロパティ]**をクリックします。  
+2.  インスタンスを右クリックし、 **[プロパティ]** をクリックします。  
   
  **データベースの照合順序設定をオブジェクト エクスプローラーで表示するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、データベースを右クリックして、 **[プロパティ]**をクリックします。  
+2.  **[データベース]** を展開し、データベースを右クリックして、 **[プロパティ]** をクリックします。  
   
  **列の照合順序設定をオブジェクト エクスプローラーで表示するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、データベースを展開して、 **[テーブル]**を展開します。  
+2.  **[データベース]** を展開し、データベースを展開して、 **[テーブル]** を展開します。  
   
-3.  目的の列を含んだテーブルを展開し、 **[列]**を展開します。  
+3.  目的の列を含んだテーブルを展開し、 **[列]** を展開します。  
   
-4.  列を右クリックし、 **[プロパティ]**をクリックします。 照合順序プロパティが空の場合、列が文字データ型ではありません。  
+4.  列を右クリックし、 **[プロパティ]** をクリックします。 照合順序プロパティが空の場合、列が文字データ型ではありません。  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **サーバーの照合順序設定を表示するには**  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]** をクリックします。  
   
 2.  クエリ ウィンドウで、SERVERPROPERTY システム関数を使用した次のステートメントを入力します。  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 04/16/2018
   
  **サポートされているすべての照合順序を表示するには [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]** をクリックします。  
   
 2.  クエリ ウィンドウで、SERVERPROPERTY システム関数を使用した次のステートメントを入力します。  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
  **データベースの照合順序設定を表示するには**  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]** をクリックします。  
   
 2.  クエリ ウィンドウで、sys.databases システム カタログ ビューを使用した次のステートメントを入力します。  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 04/16/2018
   
  **列の照合順序設定を表示するには**  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、ツール バーの **[新しいクエリ]** をクリックします。  
   
 2.  クエリ ウィンドウで、sys.columns システム カタログ ビューを使用した次のステートメントを入力します。  
   

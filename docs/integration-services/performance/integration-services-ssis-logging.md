@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
 - sql13.dts.designer.configuredtslogs.loggingdetails.f1
@@ -36,17 +35,16 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](#server_logging)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](#server_logging)」を参照してください。  
   
  **dtexec** コマンド プロンプト ユーティリティを使用してパッケージを実行する際にも、ログ記録を使用できます。 ログ記録をサポートするコマンド プロンプトの引数の詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
@@ -385,7 +383,7 @@ ms.lasthandoff: 04/26/2018
   
 9. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+## <a name="server_logging"></a> SSIS サーバーでのパッケージ実行のログ記録を有効にする
   このトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを実行するときに、パッケージのログ記録レベルを設定または変更する方法について説明します。 パッケージを実行するときに設定したログ記録レベルは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]での設計時に構成したパッケージのログ記録レベルよりも優先されます。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](#ssdt) 」を参照してください。  
   
  SQL Server の **[サーバーのプロパティ]** のサーバーの **[ログ記録レベル]** プロパティで、既定のサーバー全体のログ記録レベルを選択できます。 このトピックで説明している組み込みのログ記録レベルのいずれかを選択するか、既存のカスタマイズしたログ記録レベルを選択できます。 選択したログ記録レベルは、既定で SSIS カタログに展開されているすべてのパッケージに適用されます。 また、既定で SSIS パッケージを実行する SQL エージェント ジョブにも適用されます。  

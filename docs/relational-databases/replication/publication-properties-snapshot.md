@@ -1,30 +1,30 @@
 ---
-title: "[パブリケーションのプロパティ]、[スナップショット] | Microsoft Docs"
-ms.custom: 
+title: '[パブリケーションのプロパティ]、[スナップショット] | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 596f9a4aca99a91f89edc1e80b3dfb565dabf4c1
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: ee2cdb54da4e68ba59789245a4e17e83ed98265e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publication-properties-snapshot"></a>[パブリケーションのプロパティ]、[スナップショット]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/08/2018
 -   既定の場所の代わり、または既定の場所に加えて代替位置を指定する場合は、 **[ファイルを次のフォルダーに保存する]** を選択します。 テキスト ボックスにパスを入力するか、 **[参照]** をクリックしてその場所に移動します。 スナップショットの代替場所のファイルを圧縮する場合は、 **[スナップショット ファイルをこのフォルダーに圧縮]** を選択します。 他のサーバー、ネットワーク ドライブ、または CD-ROM やリムーバブル ディスクなどのリムーバブル メディアに代替位置を設定できます。 詳細については、「 [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md) 」および「 [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md)」を参照してください。  
   
  **[追加スクリプトの実行]**  
- サブスクライバーでスナップショットが適用される前後で実行するスクリプトを指定します。 **[スナップショットの形式]** が **[文字]**である場合は、スクリプトを指定できません。  
+ サブスクライバーでスナップショットが適用される前後で実行するスクリプトを指定します。 **[スナップショットの形式]** が **[文字]** である場合は、スクリプトを指定できません。  
   
  スクリプトはオプションです。スクリプトを使用すると、サブスクライバーでのコマンドの実行や管理上の変更の適用を容易に行うことができます。 スクリプトの実行の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)」を参照してください。  
   

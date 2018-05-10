@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
@@ -19,12 +18,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae429ff2ebcaa64c2e30a0558ed2c7296548591e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 774aa0280fbf94f723710188d984fe637b9ee513
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ GO
 #### <a name="enabling-contained-databases-using-management-studio"></a>Management Studio を使用して包含データベースを有効にする  
  次の例では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にします。  
   
-1.  オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[詳細設定]** ページの **[包含]** セクションで、 **[包含データベースを有効にする]** オプションを **True**に設定します。  
   
@@ -93,9 +91,9 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Management Studio を使用してデータベースを部分的包含に変換する  
  次の例では、データベースを部分的包含データベースに変換します。  
   
-1.  オブジェクト エクスプローラーで、 **[データベース]**を展開し、変換するデータベースを右クリックして、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[データベース]** を展開し、変換するデータベースを右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  **[オプション]** ページで、 **[包含の種類]** オプションを **[部分]**に変更します。  
+2.  **[オプション]** ページで、 **[包含の種類]** オプションを **[部分]** に変更します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

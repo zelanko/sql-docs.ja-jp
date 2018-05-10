@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
 - adding data files
@@ -25,12 +24,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a74f168643fb7e5cab638e4952c2cf0e05fbe560
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1f3580606c11cad2b7535de8838b5da34c176759
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>データベースに対するデータ ファイルまたはログ ファイルの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +67,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、ファイルを追加するデータベースを右クリックして、 **[プロパティ]**をクリックします。  
+2.  **[データベース]** を展開し、ファイルを追加するデータベースを右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[ファイル]** ページをクリックします。  
   
-4.  データ ファイルまたはトランザクション ログ ファイルを追加するには、 **[追加]**をクリックします。  
+4.  データ ファイルまたはトランザクション ログ ファイルを追加するには、 **[追加]** をクリックします。  
   
 5.  **[データベース ファイル]** グリッドに、ファイルの論理名を入力します。 このファイル名は、データベース内で一意になる必要があります。  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  ファイルの初期サイズを指定します。 データベースに格納するデータの予想最大量に基づいて、データ ファイルのサイズを可能な限り大きく設定しておきます。  
   
-9. ファイルの拡張方法を指定するには、**[自動拡張]**列で参照ボタン ( **[...]** ) をクリックします。 次のオプションから選択します。  
+9. ファイルの拡張方法を指定するには、**[自動拡張]** 列で参照ボタン ( **[...]** ) をクリックします。 次のオプションから選択します。  
   
     1.  データ領域の追加が必要になったときに、現在選択されているファイルを拡張できるようにするには、 **[自動拡張を有効にする]** チェック ボックスをオンにして、次のオプションから選択します。  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 04/16/2018
   
     1.  ファイルを拡張できる最大サイズを指定するには、 **[ファイル拡張の制限 (MB)]** をクリックして、値を指定します。  
   
-    2.  必要なだけファイルを拡張できるようにするには、 **[ファイルを無制限に拡張]**をクリックします。  
+    2.  必要なだけファイルを拡張できるようにするには、 **[ファイルを無制限に拡張]** をクリックします。  
   
     3.  ファイルの拡張を禁止するには、 **[自動拡張を有効にする]** チェック ボックスをオフにします。 このように設定しておくと、ファイルのサイズが、 **[初期サイズ (MB)]** 列に指定した値より大きくなることはありません。  
   
@@ -115,9 +113,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、2 つのファイルから成るファイル グループをデータベースに追加します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに `Test1FG1` ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、2 つのファイルから成るファイル グループをデータベースに追加します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに `Test1FG1` ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

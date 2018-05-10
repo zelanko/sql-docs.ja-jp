@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: database-mail
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], SQL Server Agent Mail
 - SQL Server Agent Mail
@@ -20,12 +19,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: dd0b4ebffd6d2a87044994bcbb35936d1a198575
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>データベース メールを使用するように SQL Server エージェント メールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +61,15 @@ ms.lasthandoff: 04/16/2018
   
 -   オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを展開します。  
   
--   **[SQL Server エージェント]**を右クリックし、 **[プロパティ]**をクリックします。  
+-   **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
--   **[警告システム]**をクリックします。  
+-   **[警告システム]** をクリックします。  
   
--   **[メール プロファイルを有効にする]**チェック ボックスをオンにします。  
+-   **[メール プロファイルを有効にする]** チェック ボックスをオンにします。  
   
--   **[メール システム]** ボックスの一覧で、 **[データベース メール]**を選択します。  
+-   **[メール システム]** ボックスの一覧で、 **[データベース メール]** を選択します。  
   
--   **[メール プロファイル]**ボックスの一覧で、データベース メールのメール プロファイルを選択します。  
+-   **[メール プロファイル]** ボックスの一覧で、データベース メールのメール プロファイルを選択します。  
   
 -   SQL Server エージェントを再起動します。  
   
