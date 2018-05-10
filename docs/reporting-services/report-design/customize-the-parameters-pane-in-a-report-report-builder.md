@@ -1,27 +1,25 @@
 ---
-title: "レポートのパラメーター ペインをカスタマイズする (レポート ビルダー) | Microsoft Docs"
-ms.custom: 
+title: レポートのパラメーター ペインをカスタマイズする (レポート ビルダー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0cd8a2752084f8b4f6be1675b657e5a6b5e3dfb3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1e71c691c37311616a7d19286885e57ed78e4280
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   レポート ビルダーでパラメーターを使用して改ページ調整されたレポートを作成するときに、パラメーター ペインをカスタマイズできます。 レポート デザイン ビューで、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。  
@@ -38,11 +36,11 @@ ms.lasthandoff: 01/09/2018
   
 2.  ペインにパラメーターを追加するには、次のいずれかの操作を行います。  
   
-    -   パラメーター ペインで空のセルを右クリックし、 **[パラメーターの追加]**をクリックします。  
+    -   パラメーター ペインで空のセルを右クリックし、 **[パラメーターの追加]** をクリックします。  
   
          ![パラメーター ペインから新しいパラメーターを追加する](../../reporting-services/report-design/media/ssrs-customizeparameter-addnewparameter.png "パラメーター ペインから新しいパラメーターを追加する")  
   
-    -   **レポート データ** ペインの **[パラメーター]** を右クリックし、 **[パラメーターの追加]**をクリックします。  
+    -   **レポート データ** ペインの **[パラメーター]** を右クリックし、 **[パラメーターの追加]** をクリックします。  
   
 3.  パラメーターをパラメーター ペインの新しい場所に移動するには、ペインの異なるセルにパラメーターをドラッグします。  
   
@@ -50,11 +48,11 @@ ms.lasthandoff: 01/09/2018
   
 4.  パラメーターのプロパティにアクセスするには、次のいずれかの操作を行います。  
   
-    -   パラメーター ペインでパラメーターを右クリックし、 **[パラメーターのプロパティ]**をクリックします。  
+    -   パラメーター ペインでパラメーターを右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
          ![パラメーター ペインからパラメーターのプロパティにアクセスする](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "パラメーター ペインからパラメーターのプロパティにアクセスする")  
   
-    -   **レポート データ** ペインでパラメーターを右クリックし、 **[パラメーターのプロパティ]**をクリックします。  
+    -   **レポート データ** ペインでパラメーターを右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
 5.  ペインに新しい列や行を追加するには、または既存の行や列を削除するには、パラメーター ペインのどこかを右クリックし、表示されるメニューでコマンドをクリックします。  
   
@@ -65,11 +63,11 @@ ms.lasthandoff: 01/09/2018
   
 6.  ペインとレポートからパラメーターを削除するには、次のいずれかの操作を行います。  
   
-    -   パラメーター ペインでパラメーターを右クリックし、  **[削除]**をクリックします。  
+    -   パラメーター ペインでパラメーターを右クリックし、  **[削除]** をクリックします。  
   
          ![パラメーター ペインからパラメーターを削除する](../../reporting-services/report-design/media/ssrs-customparameter-deleteparameter.png "パラメーター ペインからパラメーターを削除する")  
   
-    -   **レポート データ** ペインでパラメーターを右クリックし、 **[削除]**をクリックします。  
+    -   **レポート データ** ペインでパラメーターを右クリックし、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

@@ -1,17 +1,16 @@
 ---
-title: '[統計の更新タスク](メンテナンス プラン) | Microsoft Docs'
+title: '[統計の更新タスク] (メンテナンス プラン) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.statistics.f1
 helpviewer_keywords:
@@ -21,14 +20,13 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bba2c07ae95ac58a6c76c8b62242d2da30c314ba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2f8bbeeb45f6d49589dc2b20a32bd8614ae82f71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="update-statistics-task-maintenance-plan"></a>[統計の更新タスク] \(メンテナンス プラン)
+# <a name="update-statistics-task-maintenance-plan"></a>[統計の更新タスク] (メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[統計の更新タスク]** ダイアログ ボックスを使用して、テーブルおよびインデックスのデータに関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情報を更新します。 このタスクでは、データベース内のユーザー テーブルに定義されている各インデックスの分布統計のサンプル データを取り直します。 分布統計は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを処理する際のテーブル内の移動の最適化に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、分布統計を自動的に作成するために、各インデックスに対応するテーブルのデータを定期的にサンプリングしています。 サンプリングするサイズは、テーブルに含まれる行数とデータ更新の頻度に基づいて決められます。 このオプションを使用すると、サンプリングされるテーブル データの比率を指定して、サンプリングを追加実行することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この情報を使用してより適切なクエリ プランを作成します。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
@@ -18,13 +17,12 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d24c9e652e5971757f93976b951b26989c7e5562
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime C から SQL へのデータ型変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
   このトピックは C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントのサーバーで定義されているパラメーターとは異なる小数秒の有効桁数が指定されている場合、クライアントの変換が成功する可能性がありますが、サーバーには、エラーが返されます場合**SQLExecute**または**SQLExecuteDirect**と呼びます。 一方、ODBC で秒の小数部の切り捨てをエラーとして扱う具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作に丸めるたとえば、丸め処理を行うときに発生から移動した**datetime2(6)**に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントのサーバーで定義されているパラメーターとは異なる小数秒の有効桁数が指定されている場合、クライアントの変換が成功する可能性がありますが、サーバーには、エラーが返されます場合**SQLExecute**または**SQLExecuteDirect**と呼びます。 一方、ODBC で秒の小数部の切り捨てをエラーとして扱う具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]動作に丸めるたとえば、丸め処理を行うときに発生から移動した**datetime2(6)** に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  

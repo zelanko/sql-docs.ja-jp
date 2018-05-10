@@ -1,33 +1,34 @@
 ---
-title: "[オブジェクトの依存関係] | Microsoft Docs"
-ms.custom: 
+title: '[オブジェクトの依存関係] | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c3d4333e6debffe471ff7ba8d917f3dcd203d3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 02e2a338f42abcbe8c2708f53287091b946ceb0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係] ([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係] ([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
   
 現在のオブジェクトの **[オブジェクトの依存関係] ([詳細設定] ページ)** には、オブジェクトに依存する [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] データベース オブジェクトおよび [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] オブジェクトが一覧表示されます。 それらのオブジェクトは、別のサーバーに格納されている場合もあります。  
   

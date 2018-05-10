@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
 - merge replication [SQL Server replication], dynamic filters
@@ -27,12 +26,11 @@ caps.latest.revision: 69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 48b3f674ace0cd6217767fb8ee72b33d1f9f0ce0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7cf73ea957e5a918618b1172b65a905439831689
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>パラメーター化されたフィルター - パラメーター化された行フィルター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +120,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   マージ レプリケーションによるフィルターの処理方法。" **パーティション グループを使用** " および " **パーティションの変更を保持**" の 2 つのパブリケーション設定のいずれかで制御されます。  
   
--   サブスクライバー間でのデータの共有方法。アーティクル設定の **[パーティションのオプション]**で指定する必要があります。  
+-   サブスクライバー間でのデータの共有方法。アーティクル設定の **[パーティションのオプション]** で指定する必要があります。  
   
  フィルター選択オプションを設定するには、「 [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md)」を参照してください。  
   
@@ -168,7 +166,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   アーティクルを論理レコードの一部にすることはできません。  
   
--   代替同期パートナーはサポートされません (この機能は推奨されていません)。  
+-   代替同期パートナーはサポートされません (この機能は非推奨とされます)。  
   
 -   サブスクライバーはパラメーター化されたフィルターで参照されている列を更新できません。  
   

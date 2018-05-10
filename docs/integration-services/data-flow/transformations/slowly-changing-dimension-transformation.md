@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
@@ -24,12 +23,11 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c9dc7013eb987c04417088a0b36af24684edb0d6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 7d19c71d2bc62499294e8ba7b16b3072bfb46df8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  

@@ -1,27 +1,25 @@
 ---
-title: "ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6bf3a7865337f616cf2897919a76b3689c9fa5bd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2e7ac07834e56d5c713d886fa51398030d028ab5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
   レポートのページ ヘッダーまたはページ フッターにページ番号、レポート タイトル、ファイル名、およびその他のレポート プロパティを簡単に追加できます。 これらのプロパティは、レポート データ ペインの [組み込みフィールド] フォルダーのフィールドとして保存されます。  
@@ -55,12 +53,12 @@ ms.lasthandoff: 01/09/2018
 1.  レポート データ ペインで [組み込みフィールド] フォルダーを展開します。  
   
     > [!NOTE]  
-    >  [レポート データ] ペインが表示されていない場合は、[表示] タブの **[レポート データ]**をオンにします。  
+    >  [レポート データ] ペインが表示されていない場合は、[表示] タブの **[レポート データ]** をオンにします。  
   
 2.  **[ページ番号]** フィールドを、[レポート データ] ペインからレポート ヘッダーまたはレポート フッターにドラッグします。  
   
     > [!NOTE]  
-    >  ページ フッターはレポートに自動的に追加されます。 ページ ヘッダーを追加するには、 **[挿入]** タブで、 **[ヘッダー]**をクリックして **[ヘッダーの追加]**をクリックします。  
+    >  ページ フッターはレポートに自動的に追加されます。 ページ ヘッダーを追加するには、 **[挿入]** タブで、 **[ヘッダー]** をクリックして **[ヘッダーの追加]** をクリックします。  
     >   
     >  [&PageNumber] という単純な式が含まれているテキスト ボックスが追加されます。  
   
@@ -78,11 +76,11 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-total-number-of-pages-after-the-page-number"></a>ページ番号の後ろに総ページ数を追加するには  
   
-1.  式が含まれているテキスト ボックスを右クリックし、 **[式]**をクリックします。  
+1.  式が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
 2.  式の末尾に「**&"/"&**」と入力します。  
   
-3.  [カテゴリ] ペインで、 **[組み込みフィールド]** を展開し、 **[TotalPages]**をダブルクリックします。  
+3.  [カテゴリ] ペインで、 **[組み込みフィールド]** を展開し、 **[TotalPages]** をダブルクリックします。  
   
      式は、="ページ "&Globals!PageNumber &"/"&Globals!TotalPages となります。  
   

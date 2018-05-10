@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ddl
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
@@ -20,13 +19,12 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8098038f2ae0ca35224f71e19284de073663f7c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 19e89c5b3a6f496a724461e112d24a25ed3bd1da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 関数の使用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -136,7 +134,7 @@ GO
 > [!NOTE]  
 >  イベント データを返す場合は、 **query()** メソッドの代わりに XQuery の **value()** を使用してください。 **query()** メソッドでは、XML およびアンパサンドでエスケープされる復帰と改行 (CRLF) インスタンスが出力に返されます。一方 **value()** メソッドでは、CRLF インスタンスが出力に返されますが、表示はされません。  
   
- 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]**をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
+ 同様の DDL トリガーの例を、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースで提供しています。 この例を入手するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して Database Triggers フォルダーを探します。 このフォルダーは **データベースの** [プログラミング] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] フォルダーにあります。 **ddlDatabseTriggerLog** を右クリックし、 **[データベース トリガーをスクリプト化]** をクリックします。 既定では、DDL トリガー **ddlDatabseTriggerLog** は無効になっています。  
   
 ## <a name="see-also"></a>参照  
  [DDL イベント](../../relational-databases/triggers/ddl-events.md)   

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ column_name AS computed_column_expression
     >  テーブル内の各行は、計算列に含まれる列について、異なる値を格納している可能性があるため、計算列の結果がすべての行で同じとは限りません。  
   
 PERSISTED  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、計算値をテーブルに物理的に保存し、依存する計算列のいずれかが更新された場合にその値を更新するように指定します。 計算列に PERSISTED とマークを付けることで、計算列に対し、完全ではないものの決定性のあるインデックスを作成することができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用する計算列は、明示的に PERSISTED のマークを付ける必要があります。 PERSISTED が指定されている場合、*computed_column_expression* は決定的である必要があります。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、計算値をテーブルに物理的に保存し、依存する計算列のいずれかが更新された場合にその値を更新するように指定します。 計算列に PERSISTED とマークを付けることで、計算列に対し、完全ではないものの決定性のあるインデックスを作成することができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用する計算列は、明示的に PERSISTED のマークを付ける必要があります。 PERSISTED が指定されている場合、*computed_column_expression* は決定的である必要があります。 
+
 NULL | NOT NULL  
  列で NULL 値を許容するかどうかを指定します。 NULL は厳密には制約ではありませんが、NOT NULL と同じように指定することができます。 計算列で NOT NULL を指定できるのは、同時に PERSISTED も指定した場合だけです。  
   
@@ -116,7 +114,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  テーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行される操作を指定します。 既定値は NO ACTION です。  
   
 NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] がエラーを生成し、親テーブルでの行の削除操作がロールバックされます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] がエラーを生成し、親テーブルでの行の削除操作がロールバックされます。
+
 CASCADE  
  親テーブルから行が削除された場合に、参照元テーブルからもその行が削除されます。  
   
@@ -155,5 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

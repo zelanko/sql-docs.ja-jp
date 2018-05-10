@@ -1,27 +1,19 @@
 ---
-title: "Power Pivot 管理ダッシュ ボードと使用状況データ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot 管理ダッシュ ボードと使用状況データ |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 86abcef9066cbe153ef30441cb7034cb4b924650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +47,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="open-the-dashboard-from-a-power-pivot-service-application"></a>Power Pivot サービス アプリケーションからダッシュボードを開く  
   
-1.  サーバーの全体管理で、 **[アプリケーション構成の管理]**の **[サービス アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの名前をクリックします。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードに、現在のサービス アプリケーションの業務データが表示されます。  
   
@@ -64,7 +56,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードの上部で、現在のサービス アプリケーションの名前 ("**既定の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション**" など) を確認します。  
   
-2.  **[アクション]** ダッシュボードで、 **[サービス アプリケーションの一覧を表示する]**をクリックします。  
+2.  **[アクション]** ダッシュボードで、 **[サービス アプリケーションの一覧を表示する]** をクリックします。  
   
 3.  管理ダッシュボードのレポートを表示する [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの名前をクリックします。  
   
@@ -102,27 +94,27 @@ ms.lasthandoff: 02/15/2018
   
 5.  テキスト エディターで .odc ファイルを開きます。  
   
-6.  **\<Odc:ConnectionString >**要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =**です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
+6.  **\<Odc:ConnectionString >** 要素、削除の行の最後までスクロール**データが埋め込まれた = False**、し、削除**編集モードの 0 を =** です。 文字列の最後の文字がセミコロンである場合は、ここで削除します。  
   
 7.  このファイルを保存します。 残りの手順は、使用している [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] と Excel のバージョンによって異なります。  
   
 8.  1.  Excel 2013 を起動します。  
   
-    2.  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** リボンで、 **[管理]**をクリックします。  
+    2.  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** リボンで、 **[管理]** をクリックします。  
   
-    3.  **[外部データの取り込み]** をクリックし、 **[既存の接続]**をクリックします。  
+    3.  **[外部データの取り込み]** をクリックし、 **[既存の接続]** をクリックします。  
   
     4.  .ODC ファイルが表示されている場合はそのファイルをクリックします。 .ODC ファイルが表示されない場合は、 **[参照]** をクリックし、ファイル パスで .odc ファイルを指定します。  
   
-    5.  **[開く]**をクリックします。  
+    5.  **[開く]** をクリックします。  
   
     6.  **[接続のテスト]** をクリックして、接続に成功したことを確認します。  
   
-    7.  接続の名前を指定して、 **[次へ]**をクリックします。  
+    7.  接続の名前を指定して、 **[次へ]** をクリックします。  
   
     8.  [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集します。 **Edit Mode プロパティ名の形式が正しくありません。** というエラー メッセージが表示される場合は、.ODC ファイルを編集していることを確認してください。  
   
-    9. **[OK]** をクリックし、 **[完了]**をクリックします。  
+    9. **[OK]** をクリックし、 **[完了]** をクリックします。  
   
     10. ピボットテーブル レポートまたはピボットグラフ レポートを作成して、データを Excel で表示します。  
   
@@ -130,17 +122,17 @@ ms.lasthandoff: 02/15/2018
   
     2.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] リボンで、**[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ウィンドウの起動]** をクリックします。  
   
-    3.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ウィンドウのデザイン リボンで、 **[既存の接続]**をクリックします。  
+    3.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ウィンドウのデザイン リボンで、 **[既存の接続]** をクリックします。  
   
-    4.  **[参照]**をクリックします。  
+    4.  **[参照]** をクリックします。  
   
     5.  ファイル パスで、.odc ファイルを指定します。  
   
-    6.  **[開く]**をクリックします。 使用状況データを含む [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックへの接続文字列を使用して、テーブルのインポート ウィザードが開始されます。  
+    6.  **[開く]** をクリックします。 使用状況データを含む [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックへの接続文字列を使用して、テーブルのインポート ウィザードが開始されます。  
   
     7.  **[接続テスト]** をクリックして、アクセス権があることを確認します。  
   
-    8.  接続の表示名を入力し、 **[次へ]**をクリックします。  
+    8.  接続の表示名を入力し、 **[次へ]** をクリックします。  
   
     9. [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集してから、ピボットテーブル レポートまたはピボットグラフ レポートを作成して、データを Excel で表示します。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
@@ -20,12 +19,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 957dee75abdbe09455972bc28fc89a40af892a0f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 829c629dd2c2736674d660553e19d89670f7b31a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含むリソース プールまで **[管理]** ノードを再帰的に展開します。  
   
-2.  **[ワークロード グループ]** フォルダーを右クリックし、 **[新しいワークロード グループ]**をクリックします。  
+2.  **[ワークロード グループ]** フォルダーを右クリックし、 **[新しいワークロード グループ]** をクリックします。  
   
 3.  **[リソース プール]** グリッドに、ワークロード グループを追加するリソース プールが強調表示されていることを確認します。  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  既定値から変更する場合は、その対象となる行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
-7.  変更を保存するには、 **[OK]**をクリックします。  
+7.  変更を保存するには、 **[OK]** をクリックします。  
   
 ##  <a name="CreRPTSQL"></a> Transact-SQL を使用してワークロード グループを作成する  
  **ワークロード グループを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

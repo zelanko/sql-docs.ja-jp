@@ -1,31 +1,29 @@
 ---
-title: "[フィルター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs"
-ms.custom: 
+title: '[フィルター] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.filters.f1
 - "10170"
 - "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7df325a93902e8c1cd3414b562b30c27864dd372
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d751e5434a5737c418991f066ea9a5789fc3ab6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>[フィルター] ([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィルター]** を選択すると、データセットに対するフィルターを作成できます。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
  フィルターを適用する式を入力または選択します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
   
  **データ型**  
- **[値]**のデータ型を選択します。 可能であれば、 **[式]**のデータ型と一致するデータ型を選択します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
+ **[値]** のデータ型を選択します。 可能であれば、 **[式]** のデータ型と一致するデータ型を選択します。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
  **[演算子]**  
  式と値の比較に使用する演算子を選択します。  

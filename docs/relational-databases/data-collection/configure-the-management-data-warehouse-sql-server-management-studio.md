@@ -3,15 +3,11 @@ title: 管理データ ウェアハウスの構成 (SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dc.datacollection.wizard_completecfg.f1
 - sql13.swb.dc.datacollection.wizard_config.f1
@@ -27,15 +23,14 @@ helpviewer_keywords:
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d34ed103c530e6cb6dcf9eda3670b99c150d9488
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48225263d322b901baa87084b47bedaf36fcc601
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
-3.  **[データ コレクション]**を右クリックし、 **[タスク]**を展開して **[管理データ ウェアハウスの構成]**をクリックします。  
+3.  **[データ コレクション]** を右クリックし、 **[タスク]** を展開して **[管理データ ウェアハウスの構成]** をクリックします。  
   
 4.  [管理データ ウェアハウス構成ウィザード](#Wizard) で、管理データ ウェアハウスを作成し、ログインを構成します。次に、データ コレクションを有効化し、 **システム データ コレクション セット**を開始します。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
     -   管理データ ウェアハウス構成ウィザードを使用して、既存の管理データ ウェアハウス用にデータ コレクションを構成します。  
   
-    -   **[データ コレクション]**を右クリックし、 **[プロパティ]**をクリックします。 **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
+    -   **[データ コレクション]** を右クリックし、 **[プロパティ]** をクリックします。 **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
   
 6.  データ コレクターを使用するすべてのデータベース インスタンスが共有管理データ ウェアハウスにデータをアップロードするように構成されるまで、手順 5. を繰り返します。  
   
@@ -115,7 +110,7 @@ ms.lasthandoff: 04/16/2018
   
  **[ウィザードの完了] ページ**  
   
- このページを使用すると、データ コレクションの構成を確認して完了できます。 表示ウィンドウに表示されるツリーは、適用される構成と、 **[完了]**をクリックしたときに実行されるアクションを示します。  
+ このページを使用すると、データ コレクションの構成を確認して完了できます。 表示ウィンドウに表示されるツリーは、適用される構成と、 **[完了]** をクリックしたときに実行されるアクションを示します。  
   
  **[データ コレクション構成ウィザードの進行状況] ページ**  
   

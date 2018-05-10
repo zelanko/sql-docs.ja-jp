@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -31,12 +30,11 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8cb55c70d4f30ced2538bea128672dfc66563916
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a54468923df0f3f41e00feac831e6e39f67c3676
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
   コンポーネントがそのデータ ソースから切断されると、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> インターフェイスを使用することによって、入力および出力列のコレクション内の列を、その外部データ ソースの列に対して検証できます。 このインターフェイスを使用すると、外部データ ソースの列のスナップショットを保持し、これらの列をコンポーネントの入力および出力列コレクションの列にマップできます。  

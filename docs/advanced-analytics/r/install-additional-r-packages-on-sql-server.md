@@ -1,19 +1,20 @@
 ---
-title: SQL Server に追加の R パッケージをインストール |Microsoft ドキュメント
+title: SQL Server の Machine Learning のサービスに新しい R パッケージをインストール |Microsoft ドキュメント
+description: SQL Server 2016 の R Services または SQL Server 2017 Machine Learning Services (In-database) に新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0ac316f4870482b15700395eb44b3adef934f2ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="install-additional-r-packages-on-sql-server"></a>SQL Server に追加の R パッケージをインストールします。
+# <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。

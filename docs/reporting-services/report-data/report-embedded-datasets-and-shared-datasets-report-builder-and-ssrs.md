@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
@@ -18,12 +17,11 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 64a0926d87c12bc84c73e9f10f766a5e79c78975
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  

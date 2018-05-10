@@ -3,15 +3,12 @@ title: '[オブジェクト エクスプローラーの詳細] を使用した�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -23,12 +20,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ca1b9266bd24bd8b6a276fa1ca85f90d0d2893f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5525a27e67c6096713f4487ee3e5f4aae898190
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性グループ、可用性レプリカ、および可用性データベースを監視するには**  
   
-1.  [表示] メニューの **[オブジェクト エクスプローラーの詳細]**をクリックするか、 **F7** キーを押します。  
+1.  [表示] メニューの **[オブジェクト エクスプローラーの詳細]** をクリックするか、 **F7** キーを押します。  
   
 2.  オブジェクト エクスプローラーで、可用性グループを監視する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、サーバー名をクリックしてサーバー ツリーを展開します。  
   
@@ -135,7 +131,7 @@ ms.lasthandoff: 04/16/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注: 非同期コミット モードでは、同期の状態は常に **[同期中]**です。|  
+|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注: 非同期コミット モードでは、同期の状態は常に **[同期中]** です。|  
 |||  
   
  **中断**  

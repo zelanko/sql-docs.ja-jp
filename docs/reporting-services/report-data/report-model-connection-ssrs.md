@@ -1,27 +1,25 @@
 ---
-title: "レポート モデルの接続 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポート モデルの接続 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a4fe779b3bae2a10452e9ae9c26ade7f8e8ea68a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ef0da61aaa868cafbb95b2db4618ce9e3a6763b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-model-connection-ssrs"></a>レポート モデルの接続 (SSRS)
   レポート モデルのデータを含めるには、レポート モデルに基づいたデータセットがデータ ソースとして必要です。 他のレポート データ ソースとは異なり、レポート モデルにはデータ拡張機能がありません。 レポート ビルダーでは、レポート サーバーを参照して、モデルを直接選択します。 レポート デザイナーでは、レポート モデルへの URL を指定します。  

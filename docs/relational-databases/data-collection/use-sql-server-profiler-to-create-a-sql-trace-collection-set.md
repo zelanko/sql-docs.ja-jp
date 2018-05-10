@@ -3,28 +3,23 @@ title: SQL Server Profiler の使用による SQL トレース コレクショ�
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f37dded42ab6e244ba3dd57f75b94d0c65c1b6b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 77d12f8026e33eecb3288ef462b4ce6e91d7f2c8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>SQL Server Profiler の使用による SQL トレース コレクション セットの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,21 +37,21 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="create-and-export-a-sql-server-profiler-trace"></a>SQL Server Profiler トレースの作成とエクスポート  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を開きます ( **[ツール]** メニューの **[SQL Server Profiler]**をクリックします)。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を開きます ( **[ツール]** メニューの **[SQL Server Profiler]** をクリックします)。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]**をクリックします。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
   
 3.  このシナリオでは、実行時間の値が既定でミリ秒で表示されるように設定されていることを確認します。 これを行うには、次の手順を実行します。  
   
-    1.  **[ツール]** メニューの **[オプション]**をクリックします。  
+    1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
     2.  **[表示オプション]** 領域で、[実行時間列の値をマイクロ秒で表示する] チェック ボックスがオフになっていることを確認します。  
   
     3.  **[OK]** をクリックして **[全般オプション]** ダイアログ ボックスを閉じます。  
   
-4.  **[ファイル]** メニューの **[新しいトレース]**をクリックします。  
+4.  **[ファイル]** メニューの **[新しいトレース]** をクリックします。  
   
-5.  **[サーバーへの接続]** ダイアログ ボックスで、接続するサーバーを選択して **[接続]**をクリックします。  
+5.  **[サーバーへの接続]** ダイアログ ボックスで、接続するサーバーを選択して **[接続]** をクリックします。  
   
      **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
@@ -64,11 +59,11 @@ ms.lasthandoff: 04/16/2018
   
     1.  **[トレース名]** ボックスに、トレースに使用する名前を入力します。 この例では、トレース名は「 **SPgt80**」です。  
   
-    2.  **[使用するテンプレート]**ボックスの一覧でトレースに使用するテンプレートを選択します。 この例では、 **[TSQL_SPs]**をクリックします。  
+    2.  **[使用するテンプレート]** ボックスの一覧でトレースに使用するテンプレートを選択します。 この例では、 **[TSQL_SPs]** をクリックします。  
   
 7.  **[イベントの選択]** タブで、次の操作を行います。  
   
-    1.  トレースに使用するイベントを指定します。 この例では、 **[ExistingConnection]** と **[SP:Completed]** を除く **[イベント]**列のすべてのチェック ボックスをオフにします。  
+    1.  トレースに使用するイベントを指定します。 この例では、 **[ExistingConnection]** と **[SP:Completed]** を除く **[イベント]** 列のすべてのチェック ボックスをオフにします。  
   
     2.  右上隅の **[すべての列を表示する]** チェック ボックスを選択します。  
   
@@ -78,15 +73,15 @@ ms.lasthandoff: 04/16/2018
   
 8.  右下隅の **[列フィルター]** をクリックし、 **[フィルターの編集]** ダイアログ ボックスを開きます。 **[フィルターの編集]** ダイアログ ボックスで、次の操作を行います。  
   
-    1.  フィルター一覧で、 **[実行時間]**をクリックします。  
+    1.  フィルター一覧で、 **[実行時間]** をクリックします。  
   
-    2.  ブール演算子ウィンドウで、 **[次の値以上]** ノードを展開し、値として「 **80** 」と入力し、 **[OK]**をクリックします。  
+    2.  ブール演算子ウィンドウで、 **[次の値以上]** ノードを展開し、値として「 **80** 」と入力し、 **[OK]** をクリックします。  
   
 9. **[実行]** をクリックしてトレースを開始します。  
   
-10. ツール バーの **[選択されたトレースの停止]** または **[選択されたトレースの一時停止]**をクリックします。  
+10. ツール バーの **[選択されたトレースの停止]** または **[選択されたトレースの一時停止]** をクリックします。  
   
-11. **[ファイル]** メニューで **[エクスポート]**、 **[トレース定義のスクリプト]**の順にポイントし、 **[SQL トレース コレクション セット]**をクリックします。  
+11. **[ファイル]** メニューで **[エクスポート]**、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
   
 12. **[名前を付けてファイルを保存]** ダイアログ ボックスの **[ファイル名]** ボックスに、トレース定義に使用する名前を入力し、目的の場所に保存します。 この例では、ファイル名はトレース名 (SPgt80) と同じです。  
   
@@ -94,7 +89,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="script-a-new-collection-set-from-a-sql-server-profiler-trace"></a>SQL Server Profiler トレースに基づく新しいコレクション セットのスクリプト化  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]**をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  **[ファイルを開く]** ダイアログ ボックスで、前の手順で作成したファイル (SPgt80) を探して開きます。  
   
@@ -110,9 +105,9 @@ ms.lasthandoff: 04/16/2018
   
 5.  [オブジェクト エクスプローラー] で、コレクション セットが作成されたことを確認します。 これを行うには、次の手順を実行します。  
   
-    1.  **[管理]**を右クリックし、 **[更新]**をクリックします。  
+    1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
-    2.  **[管理]**、 **[データ コレクション]**の順に展開します。  
+    2.  **[管理]**、 **[データ コレクション]** の順に展開します。  
   
      **[SPROC_CollectionSet]** コレクション セットは、 **[システム データ コレクション セット]** ノードと同じレベルに表示されます。 既定では、このコレクション セットは無効になっています。  
   

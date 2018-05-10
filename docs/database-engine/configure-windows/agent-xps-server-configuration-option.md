@@ -3,15 +3,12 @@ title: Agent XP サーバー構成オプション | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Agent XPs option
 - extended stored procedures [SQL Server], SQL Server Agent
@@ -20,12 +17,11 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 03123a141d044080c6be80be0af596c48e1097f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 42ebfa153ab481531ff0641ff0ab960114b9d1ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XP サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +46,9 @@ ms.lasthandoff: 04/16/2018
 
 1. Microsoft SQL Server Management Studio から、データベース エンジンに接続します。
 
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。
 
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 
   
 ```sql 
 sp_configure 'show advanced options', 1;  

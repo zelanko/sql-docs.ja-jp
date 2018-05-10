@@ -3,29 +3,24 @@ title: カスタム コレクション セットの作成 - ジェネリック T
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 caps.latest.revision: 26
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ea1d43ae4ace0b7d2ed06f17bc9903f08fbe43c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f423496dca0ce8cb3269b3b2de4d97615c78af06
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +118,7 @@ ms.lasthandoff: 04/16/2018
     GO  
     ```  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で目視で確認することもできます。 オブジェクト エクスプローラーで、 **[管理]** ノードを展開し、 **[データ コレクション]**を展開します。 新しいコレクション セットが表示されます。 コレクション セットに赤い円のアイコンが付いている場合、コレクション セットが停止されていることを示します。  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で目視で確認することもできます。 オブジェクト エクスプローラーで、 **[管理]** ノードを展開し、 **[データ コレクション]** を展開します。 新しいコレクション セットが表示されます。 コレクション セットに赤い円のアイコンが付いている場合、コレクション セットが停止されていることを示します。  
   
 ## <a name="example"></a>例  
  次のコード サンプルは、上記の手順で説明されている例を組み合わせたものです。 コレクション セットのコレクション モードはキャッシュ モード (0) に設定されているため、コレクション アイテムに設定された収集頻度 (5 秒) は無視されます。 詳細については、「 [Data Collection](../../relational-databases/data-collection/data-collection.md)」を参照してください。  

@@ -1,30 +1,28 @@
 ---
-title: "データ ソースの変換 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: データ ソースの変換 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b2bf27f67645387e78806cddf7fc195d0d4904ef
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 24c829493a6312452f5aad981d279fe87ef0c3f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>データ ソースの変換 (レポート ビルダーおよび SSRS)
   レポート データ ペインの各データ ソースは、レポートに固有のものとして埋め込まれている場合と、共有されている場合とがあります。 レポート ビルダーにおける共有データ ソースの参照先は、レポート サーバー上または SharePoint サイト上にパブリッシュされた共有データ ソースです。 レポート デザイナーにおける共有データ ソースの参照先は、ソリューション エクスプローラーの **[共有データ ソース]** フォルダーに表示される共有データ ソースです。  
@@ -40,16 +38,16 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>埋め込みデータ ソースから共有データ ソースに変換するには  
   
--   レポート データ ペインでデータ ソースを右クリックし、 **[共有データ ソースに変換]**をクリックします。  
+-   レポート データ ペインでデータ ソースを右クリックし、 **[共有データ ソースに変換]** をクリックします。  
   
     > [!NOTE]  
-    >  レポート データ ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]**をクリックします。 ペインがフローティング ウィンドウとして開く場合は、ドッキングすることができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
+    >  レポート データ ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。 ペインがフローティング ウィンドウとして開く場合は、ドッキングすることができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
   
      レポート データ ペインでデータ ソース アイコンが共有データ ソースのアイコンに変わります。 ソリューション エクスプローラーでは、同じ名前の共有データ ソースが **[共有データ ソース]** フォルダーに表示されます。  
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>共有データ ソースを埋め込みデータ ソースに変換するには  
   
--   レポート データ ペインでデータ ソースを右クリックし、 **[データ ソースのプロパティ]** ダイアログ ボックスを開いて、 **[埋め込み接続]**をクリックします。 必要な情報を入力します。  
+-   レポート データ ペインでデータ ソースを右クリックし、 **[データ ソースのプロパティ]** ダイアログ ボックスを開いて、 **[埋め込み接続]** をクリックします。 必要な情報を入力します。  
   
      レポート データ ペインでデータ ソース アイコンが共有データ ソースのアイコンに変わります。  
   
@@ -57,13 +55,13 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>埋め込みデータ ソースから共有データ ソースに変換するには  
   
--   レポート データ ペインでデータ ソースを右クリックし、 **[データ ソースのプロパティ]** ダイアログ ボックスを開いて、 **[埋め込み接続]**をクリックします。 必要な情報を入力します。  
+-   レポート データ ペインでデータ ソースを右クリックし、 **[データ ソースのプロパティ]** ダイアログ ボックスを開いて、 **[埋め込み接続]** をクリックします。 必要な情報を入力します。  
   
      レポート データ ペインでデータ ソース アイコンが共有データ ソースのアイコンに変わります。  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>共有データ ソースを埋め込みデータ ソースに変換するには  
   
--   レポート データ ペインでデータ ソースを右クリックし、 **[データ ソースのプロパティ]** ダイアログ ボックスを開いて、 **[埋め込み接続]**をクリックします。 必要な情報を入力します。  
+-   レポート データ ペインでデータ ソースを右クリックし、 **[データ ソースのプロパティ]** ダイアログ ボックスを開いて、 **[埋め込み接続]** をクリックします。 必要な情報を入力します。  
   
      レポート データ ペインでデータ ソース アイコンが共有データ ソースのアイコンに変わります。  
   

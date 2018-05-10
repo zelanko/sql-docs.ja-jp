@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
@@ -19,12 +18,11 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17032ed9eefad04f37e008f051125009b074d80f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a81a560d7324f4be5ad957347a6f3573fd428a82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>[テーブル作成 SQL ステートメント] (SQL Server インポートおよびエクスポート ウィザード)
 **[変換先テーブルを作成する]** を選択してから **[列マッピング]** ダイアログ ボックスで **[SQL の編集]** を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[テーブル作成 SQL ステートメント]** ダイアログ ボックスが表示されます。 このページでは、**CREATE TABLE** コマンドを確認し、必要に応じてカスタマイズします。このコマンドは、新しいターゲット テーブルを作成するためにウィザードで実行されます。

@@ -1,27 +1,25 @@
 ---
-title: "レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 668cf69ec377fa01b494aacde2a56f0579deed1e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0af8a88162eabd7058d81ef72586da8309cf36be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>レポートへのドリルスルー アクションの追加 (レポート ビルダーおよび SSRS)
   メイン レポートのリンクをクリックすると開くレポートが *詳細レポート*です。 このドリルスルー リンクを使用すると、ドリルスルー アクションを実行できます。  
@@ -35,26 +33,26 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-a-drillthrough-action"></a>ドリルスルー アクションを追加するには  
   
-1.  デザイン ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、 **[プロパティ]**をクリックします。  
+1.  デザイン ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  アイテムの **[プロパティ]** ダイアログ ボックスで **[アクション]**をクリックします。  
+2.  アイテムの **[プロパティ]** ダイアログ ボックスで **[アクション]** をクリックします。  
   
-3.  **[レポートに移動する]**を選択します。 このオプションのダイアログ ボックスに追加のセクションが表示されます。  
+3.  **[レポートに移動する]** を選択します。 このオプションのダイアログ ボックスに追加のセクションが表示されます。  
   
-4.  **[レポートの指定]**で、 **[参照]** をクリックして移動先レポートを指定するか、移動先レポートの名前を入力します。 または、式 (**[fx]**) ボタンをクリックしてレポート名の式を作成します。  
+4.  **[レポートの指定]** で、 **[参照]** をクリックして移動先レポートを指定するか、移動先レポートの名前を入力します。 または、式 (**[fx]**) ボタンをクリックしてレポート名の式を作成します。  
   
      詳細レポートのパスの形式は、ネイティブ モードと SharePoint 統合モードとで異なります。 参照によってレポートを指定した場合は、パスが正しい形式で指定されます。 詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
      詳細レポートのパラメーターを指定する必要がある場合は、次の手順に従ってください。  
   
-5.  **[レポートの実行に以下のパラメーターを使用]**で、 **[追加]**をクリックします。 パラメーター グリッドに、新しい行が追加されます。  
+5.  **[レポートの実行に以下のパラメーターを使用]** で、 **[追加]** をクリックします。 パラメーター グリッドに、新しい行が追加されます。  
   
     -   **[名前]** ボックスで、詳細レポートのレポート パラメーターの名前を一覧から選択するか入力します。  
   
         > [!NOTE]  
         >  パラメーターの一覧にある名前は、対象となるレポートで予測されるパラメーターと完全に一致する必要があります。 たとえば、パラメーター名の大文字と小文字の違いも一致する必要があります。 これらの名前が一致しない場合、または予測されるパラメーターが一覧にない場合は、詳細レポートは失敗します。  
   
-    -   **[値]**に、詳細レポートのパラメーターに渡す値を入力するか、選択します。  
+    -   **[値]** に、詳細レポートのパラメーターに渡す値を入力するか、選択します。  
   
         > [!NOTE]  
         >  レポート パラメーターに渡す値には、結果が値になる式を指定できます。 値の一覧にある式には、現在のレポートのフィールドの一覧が含まれています。  

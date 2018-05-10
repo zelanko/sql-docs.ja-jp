@@ -3,15 +3,12 @@ title: index create memory サーバー構成オプションの構成 | Microsof
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
@@ -19,12 +16,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 453a1bd741739d6606e7f67799e09eafaa1d2c87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5fe7481737a1f57391a3d9c06e9f3086ebccdfdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,11 +72,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-index-create-memory-option"></a>index create memory オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[メモリ]** ノードをクリックします。  
   
-3.  **[インデックス作成メモリ]**で、index create memory オプションの目的の値を入力または選択します。  
+3.  **[インデックス作成メモリ]** で、index create memory オプションの目的の値を入力または選択します。  
   
      **index create memory** オプションは、インデックス作成時の並べ替えに使用するメモリの量を制御する場合に使用します。 **index create memory** オプションは自動構成型で、ほとんどの場合、調整を行わなくても機能します。 ただし、インデックスを正常に作成できない場合は、必要に応じて、このオプションの値を実行値より大きくしてください。 クエリの並べ替えは、 **min memory per query** オプションを使用して制御します。  
   
@@ -90,9 +86,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `index create memory` オプションの値を `4096`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `index create memory` オプションの値を `4096`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

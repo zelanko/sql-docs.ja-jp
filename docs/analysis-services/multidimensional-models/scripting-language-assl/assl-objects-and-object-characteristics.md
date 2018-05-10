@@ -1,42 +1,23 @@
 ---
-title: "ASSL オブジェクトとオブジェクトの特性 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- reference exceptions [Analysis Services Scripting Language]
-- ASSL, objects
-- inheritance [Analysis Services Scripting Language]
-- localized names [Analysis Services Scripting Language]
-- objects [Analysis Services Scripting Language]
-- names [Analysis Services Scripting Language]
-- Analysis Services Scripting Language, objects
-- expansion [Analysis Services Scripting Language]
-ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: 
-author: Minewiskan
+title: ASSL オブジェクトとオブジェクトの特性 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51c9b6140396cfc5080e3aee21cd8e708c05eb69
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 17b88ba72205f2364a65f2d6cc88fe19b820985e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL オブジェクトとオブジェクトの特性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services スクリプト言語 (ASSL) のオブジェクトは、オブジェクト グループ、継承、名前付け、展開、および処理に関して特定のガイドラインに従います。  
+  Analysis Services スクリプト言語 (ASSL) のオブジェクトは、オブジェクト グループ、継承、名前付け、展開、および処理に関して特定のガイドラインに従います。  
   
 ## <a name="object-groups"></a>オブジェクト グループ  
  すべて[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクトが、XML 表現を作成します。 オブジェクトは 2 つのグループに分けられます。  
@@ -107,6 +88,6 @@ Analysis Services スクリプト言語 (ASSL) のオブジェクトは、オブ
 ## <a name="object-processing"></a>オブジェクト処理  
  ASSL には、読み取り専用の要素またはプロパティが含まれています (たとえば、 **LastProcessed**) から読み取ることができる、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスがインスタンスにコマンド スクリプトが送信されるときに省略されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  では、読み取り専用の要素の変更された値を無視し、警告やエラーを返しません。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 検証エラーは生成せず、不適切なや無関係なプロパティを無視します。 たとえば、Y 要素に特定の値がある場合、X 要素は存在する必要があります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスでは、X 要素を無視し、Y 要素の値に対して X 要素を検証しません。  
+ また、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、不適切なプロパティや無関係なプロパティは無視し、検証エラーを返しません。 たとえば、Y 要素に特定の値がある場合、X 要素は存在する必要があります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスでは、X 要素を無視し、Y 要素の値に対して X 要素を検証しません。  
   
   

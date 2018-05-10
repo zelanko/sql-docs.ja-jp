@@ -1,27 +1,25 @@
 ---
-title: "用語集 (レポート ビルダー) | Microsoft Docs"
-ms.custom: 
+title: 用語集 (レポート ビルダー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8951dbb1d2ecfe434f60ab0937861e5b83eba5ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/09/2018
 |計算列 (calculated column)|格納されたデータではなく、式の結果を表示するテーブル内の列。|  
 |計算フィールド (calculated field)|格納されたデータではなく、式の結果を表示するクエリ内で定義されたフィールド。|  
 |計算されるメンバー (calculated member)|式を使用して実行時に計算される値を持つ、ディメンションのメンバー。|  
-|基数 (cardinality)|親エンティティごとに許可される (または必要とされる) 子エンティティのインスタンス数を定義します。|  
+|カーディナリティ (cardinality)|親エンティティごとに許可される (または必要とされる) 子エンティティのインスタンス数を定義します。|  
 |カスケード型パラメーター (cascading parameters)|使用可能な値が、前のパラメーターの選択によって決まるパラメーター。 カスケード型パラメーターは、一連のパラメーター値にフィルターを適用するために使用されます。|  
 |カテゴリ (x) 軸 (category (x) axis)|グラフ内のデータをグループ化する軸。通常は横軸を指します。 例外として、横棒グラフでは軸が逆になるため、y 軸でデータがグループ化されます。|  
 |証明書 (certificate)|認証のため、およびネットワーク上の情報をセキュリティで保護するために一般に使用されるデジタル ドキュメント。 証明書によって、公開キーが、対応する秘密キーを持つエンティティにバインドされます。 証明書は、その証明書を発行する証明機関によってデジタル署名され、ユーザー、コンピューター、またはサービスに対して発行できます。|  

@@ -3,15 +3,13 @@ title: データベース ミラーリングの監視 (SQL Server) | Microsoft D
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
@@ -20,12 +18,11 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 96e9a421b1ec2ffd0e8b02cd24a9142fbc3fea07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cca36cb11728e9a50f37d0d9e9945535e327e971
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +113,7 @@ ms.lasthandoff: 04/16/2018
 >  状態テーブルは、 **[データベース ミラーリング モニターのジョブ]** が存在し、 **エージェントが実行されている場合にのみ、自動的に更新されます。ただし、データベース ミラーリング モニターが** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールのメンバーによって使用中の場合は除きます。  
   
 #### <a name="database-mirroring-monitor-job"></a>データベース ミラーリング モニターのジョブ  
- データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]**の動作は、データベース ミラーリング モニターとは独立した動作です。 **[データベース ミラーリング モニターのジョブ]** は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング セッションを開始した場合にのみ、自動的に作成されます。 常に ALTER DATABASE *database_name* SET PARTNER コマンドを使用してミラーリングを開始している場合、このジョブは、システム管理者が **sp_dbmmonitoraddmonitoring** ストアド プロシージャを実行した場合にのみ存在します。  
+ データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]** の動作は、データベース ミラーリング モニターとは独立した動作です。 **[データベース ミラーリング モニターのジョブ]** は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング セッションを開始した場合にのみ、自動的に作成されます。 常に ALTER DATABASE *database_name* SET PARTNER コマンドを使用してミラーリングを開始している場合、このジョブは、システム管理者が **sp_dbmmonitoraddmonitoring** ストアド プロシージャを実行した場合にのみ存在します。  
   
  **[データベース ミラーリング モニターのジョブ]** が作成されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている場合、このジョブは既定により 1 分間に 1 回呼び出されます。 次に、このジョブによって **sp_dbmmonitorupdate** システム ストアド プロシージャが呼び出されます。  
   
@@ -143,7 +140,7 @@ ms.lasthandoff: 04/16/2018
  **dbm_monitor** 固定データベース ロールのメンバーは、 **[データベース ミラーリング モニターのジョブ]** を使用して定期的に状態テーブルを更新します。 ジョブが存在しない場合や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態が急速に古くなり、ミラーリング セッションの構成を反映しなくなることがあります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>データベース ミラーリング モニターのジョブの削除  
- データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]**は、削除するまでなくなりません。 監視ジョブは、システム管理者が管理する必要があります。 **[データベース ミラーリング モニターのジョブ]**を削除するには、 **sp_dbmmonitordropmonitoring**を使用します。 詳細については、「 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)」を参照してください。  
+ データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]** は、削除するまでなくなりません。 監視ジョブは、システム管理者が管理する必要があります。 **[データベース ミラーリング モニターのジョブ]** を削除するには、 **sp_dbmmonitordropmonitoring**を使用します。 詳細については、「 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)」を参照してください。  
   
 ###  <a name="perf_metrics_of_dbm_monitor"></a> データベース ミラーリング モニターに表示される状態  
  データベース ミラーリング モニターの **[状態]** ページには、パートナーと、ミラーリング セッションの状態が表示されます。 この情報には、トランザクション ログの状態、フェールオーバーを完了するために必要な時間を推測するのに役立つその他の情報、データ損失の可能性 (セッションが同期されていない場合) などのパフォーマンス基準が含まれます。 さらに、 **[状態]** ページには、ミラーリング セッションに関する一般的な状態と情報が表示されます。  

@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot の認証と承認 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot の認証と承認 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 710db3b55eb8e3bd1e885dfd71e2bde15360092c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot の認証および承認
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-SharePoint 2010 ファーム内で実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
+  SharePoint 2010 ファーム内で実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連のすべての操作はファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のコンテンツや操作にまで及ぶことになります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
   
  セルフサービス型のデータ分析には Excel Services との統合が必要となるため、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーをセキュリティで保護する場合、Excel Services のセキュリティについても理解している必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへのデータ接続があるピボットテーブルに対してユーザーがクエリを実行すると、データ接続要求が Excel Services からファームの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーに転送され、データが読み込まれます。 サーバー間のこの連携では、両方のサーバーのセキュリティ設定を構成する方法を理解している必要があります。  
   
@@ -59,11 +51,11 @@ SharePoint 2010 ファーム内で実行される [!INCLUDE[ssGemini](../../incl
   
  既存の Web アプリケーションの場合は、次の手順に従って、Windows 認証を使用するように Web アプリケーションが構成されていることを確認します。  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[Web アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[Web アプリケーションの管理]** をクリックします。  
   
 2.  Web アプリケーションを選択します。  
   
-3.  **[認証プロバイダー]**をクリックします。  
+3.  **[認証プロバイダー]** をクリックします。  
   
 4.  各ゾーンに 1 つのプロバイダーがあり、既定のゾーンが Windows に設定されていることを確認します。  
   
@@ -110,8 +102,8 @@ SharePoint 2010 ファーム内で実行される [!INCLUDE[ssGemini](../../incl
 |領域|設定|Description|  
 |----------|-------------|-----------------|  
 |[Web アプリケーション]|Windows 認証プロバイダー|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] は、Excel Services から取得した要求トークンを Windows ユーザー ID に変換します。 Excel Services をリソースとして使用する Web アプリケーションは、Windows 認証プロバイダーを使用するように構成されている必要があります。|  
-|信頼できる場所|場所の種類|この値は、 **[Microsoft SharePoint Foundation]**に設定されている必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーは、.xlsx ファイルのコピーを取得して、それをファーム内の Analysis Services サーバーに読み込みます。 このサーバーはコンテンツ ライブラリから .xlsx ファイルのみを取得できます。|  
-||外部データの許可|この値は、 **[信頼できるデータ接続ライブラリと、埋め込まれている接続]**に設定されている必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ接続は、ブックに埋め込まれています。 埋め込み接続を禁止した場合、ユーザーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] キャッシュは表示できますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを操作することはできなくなります。|  
+|信頼できる場所|場所の種類|この値は、 **[Microsoft SharePoint Foundation]** に設定されている必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーは、.xlsx ファイルのコピーを取得して、それをファーム内の Analysis Services サーバーに読み込みます。 このサーバーはコンテンツ ライブラリから .xlsx ファイルのみを取得できます。|  
+||外部データの許可|この値は、 **[信頼できるデータ接続ライブラリと、埋め込まれている接続]** に設定されている必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ接続は、ブックに埋め込まれています。 埋め込み接続を禁止した場合、ユーザーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] キャッシュは表示できますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを操作することはできなくなります。|  
 ||更新時の警告|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを使用してブックやレポートを格納している場合は、この値を無効にする必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーには、[開くときに更新する] と [更新時の警告] の両方がオフになっているときに最適に動作するドキュメント プレビュー機能が含まれています。|  
 |信頼できるデータ プロバイダー|MSOLAP.4<br /><br /> MSOLAP.5|既定では MSOLAP.4 が含まれますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスでは、MSOLAP.4 プロバイダーが SQL Server 2008 R2 バージョンである必要があります。<br /><br /> MSOLAP.5 は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] for SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] バージョンと共にインストールされます。<br /><br /> これらのプロバイダーは、信頼できるデータ プロバイダー一覧から削除しないでください。 場合によっては、ファーム内の別の SharePoint サーバーにもこのプロバイダーの追加のコピーをインストールすることが必要になることもあります。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。|  
 |信頼できるデータ接続ライブラリ|省略可。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックでは、Office データ接続 (.odc) ファイルを使用できます。 .odc ファイルを使用してローカル [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに接続情報を提供する場合、同じ .odc ファイルをこのライブラリに追加できます。|  

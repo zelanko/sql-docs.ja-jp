@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 688a557bd8cb6456e17ca9f39c18e15921171f7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b3962dadb308cedebdd45e9e9a5001d8d527c0f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -138,7 +136,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- 代わりに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でプロシージャ名を選択し、 **[推定実行プランの表示]**をクリックすることもできます。  
+ 代わりに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でプロシージャ名を選択し、 **[推定実行プランの表示]** をクリックすることもできます。  
   
  ネイティブ コンパイル ストアド プロシージャに対応する推定実行プランでは、プロシージャ内に存在するクエリに関するクエリ演算子と式が表示されます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対して、すべての SHOWPLAN_XML をサポートしているわけではありません。 たとえば、クエリ オプティマイザー コストに関連する属性は、プロシージャに対応する SHOWPLAN_XML の一部ではありません。  
   

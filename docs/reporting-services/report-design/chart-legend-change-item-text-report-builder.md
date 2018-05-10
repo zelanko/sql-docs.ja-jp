@@ -1,27 +1,25 @@
 ---
-title: "凡例アイテムのテキストの変更 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 凡例アイテムのテキストの変更 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9e5b23ce9d8055822fc4d32fb4be5794e7ecf3b1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 96bf59c33e72a6271b5b1f6421df2101839f5a1a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>グラフの凡例 - 項目テキストの変更 (レポート ビルダー)
   グラフの [値] 領域にフィールドを配置すると、このフィールドの名前を含む凡例アイテムが自動的に生成されます。 すべての凡例アイテムは、グラフ上の個々の系列に接続されています。ただし、図形グラフの場合は例外で、凡例は個々の系列ではなく個々のデータ ポイントに接続されています。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>図形グラフの凡例に表示されるテキストを変更するには  
   
-1.  系列を右クリックするか、 **[値]** 領域のフィールドを右クリックし、 **[系列のプロパティ]**をクリックします。  
+1.  系列を右クリックするか、 **[値]** 領域のフィールドを右クリックし、 **[系列のプロパティ]** をクリックします。  
   
 2.  **[凡例]** をクリックし、 **[凡例のユーザー定義テキスト]** ボックス内をクリックして、キーワードを入力します。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>図形以外のグラフで凡例に表示されるテキストを変更するには  
   
-1.  系列を右クリックするか、 **[値]** 領域のフィールドを右クリックし、 **[系列のプロパティ]**をクリックします。  
+1.  系列を右クリックするか、 **[値]** 領域のフィールドを右クリックし、 **[系列のプロパティ]** をクリックします。  
   
 2.  **[凡例]** をクリックし、 **[凡例のユーザー定義テキスト]** ボックス内をクリックして、凡例ラベルを入力します。 シリーズは、テキストで更新されます。  
   

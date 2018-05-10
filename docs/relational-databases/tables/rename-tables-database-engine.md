@@ -3,15 +3,12 @@ title: テーブル名の変更 (データベース エンジン) | Microsoft Do
 ms.custom: ''
 ms.date: 02/23/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table renaming [SQL Server]
 - table names [SQL Server]
@@ -20,13 +17,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c96ad974288ec9c8bbaf09ae9405c40b47cb5e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8fed6de787e9c6f3c39c6aa58a68beb84abd2ec2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-tables-database-engine"></a>テーブル名の変更 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
 1.  オブジェクト エクスプローラーで、名前を変更するテーブルを右クリックし、ショートカット メニューの **[デザイン]** をクリックします。  
   
-2.  **[表示]** メニューの **[プロパティ]**をクリックします。  
+2.  **[表示]** メニューの **[プロパティ]** をクリックします。  
   
 3.  **[プロパティ]** ウィンドウの **[オブジェクト名]** ボックスに、テーブルの新しい名前を入力します。  
   
@@ -82,9 +78,9 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例では、 `SalesTerritory` スキーマの `SalesTerr` テーブルの名前を `Sales` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例では、 `SalesTerritory` スキーマの `SalesTerr` テーブルの名前を `Sales` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;   

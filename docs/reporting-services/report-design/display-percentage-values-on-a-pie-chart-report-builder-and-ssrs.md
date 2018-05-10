@@ -1,27 +1,25 @@
 ---
-title: "円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 001cb9073f23e2c464d09087ca7d733d69f22b5b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8bc9aca45c63ce8813504f10b3990df91aa2b7f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、既定で凡例にカテゴリが表示されます。 凡例にパーセンテージまたはパイ スライス自体を表示することもできます。   
@@ -35,9 +33,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポートに円グラフを追加します。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
-2.  デザイン画面で、円グラフを右クリックし、 **[データ ラベルの表示]**をクリックします。 円グラフの各スライス内にデータ ラベルが表示されます。  
+2.  デザイン画面で、円グラフを右クリックし、 **[データ ラベルの表示]** をクリックします。 円グラフの各スライス内にデータ ラベルが表示されます。  
   
-3.  デザイン画面で、ラベルを右クリックし、 **[系列ラベルのプロパティ]**をクリックします。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
+3.  デザイン画面で、ラベルを右クリックし、 **[系列ラベルのプロパティ]** をクリックします。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
   
 4.  **[ラベル データ]** オプションに **#PERCENT** と入力します。  
   
@@ -45,9 +43,9 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>円グラフの凡例にパーセンテージを表示するには  
   
-1.  デザイン画面で、円グラフを右クリックし、 **[系列のプロパティ]**をクリックします。 **[系列のプロパティ]** ダイアログ ボックスが表示されます。  
+1.  デザイン画面で、円グラフを右クリックし、 **[系列のプロパティ]** をクリックします。 **[系列のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[凡例]**の **[凡例のユーザー定義テキスト]** プロパティに **#PERCENT** と入力します。  
+2.  **[凡例]** の **[凡例のユーザー定義テキスト]** プロパティに **#PERCENT** と入力します。  
   
 ## <a name="see-also"></a>参照  
 * [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)

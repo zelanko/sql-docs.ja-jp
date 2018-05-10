@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
@@ -23,13 +22,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec97d1903bd5b3123c72e16052c98c0e9b7bd544
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ace7cc5ca437a6ad67c5f7bf8cd138e470d0047
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Always Encrypted の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +105,7 @@ SSN が `char(11)` テーブルで暗号化された `Patients` 列であると�
 >  2.   **[接続]** > **[接続の変更]** の順に選択します。 
 >  3.   **[オプション]** をクリックします。
 >  4.   **[追加のプロパティ]** タブを選択し、`Column Encryption Setting=Enabled` を入力する (Always Encrypted の動作を有効にする) か、設定を削除します (Always Encrypted の動作を無効にする)。   
->  5.   **[接続]**をクリックします。   
+>  5.   **[接続]** をクリックします。   
    
 ### <a name="param"></a>Always Encrypted のパラメーター化   
  
@@ -128,16 +126,16 @@ WHERE [SSN] = @SSN
 
 現在のクエリ エディター ウィンドウで Always Encrypted のパラメーター化を有効化/無効化するには、次のようにします。   
 1.  メイン メニューから **[クエリ]** を選択します。   
-2.  **[クエリ オプション...]**を選択します。   
-3.  **[実行]** > **[詳細]**の順に移動します。   
-4.  **[Always Encrypted のパラメーター化を有効にする]**を選択または選択解除します。   
+2.  **[クエリ オプション...]** を選択します。   
+3.  **[実行]** > **[詳細]** の順に移動します。   
+4.  **[Always Encrypted のパラメーター化を有効にする]** を選択または選択解除します。   
 5.  **[OK]** をクリックします。   
 
 今後のクエリ エディター ウィンドウで Always Encrypted のパラメーター化を有効化/無効化する場合は、次のようにします。   
 1.  メイン メニューから **[ツール]** を選択します。   
-2.  **[オプション...]**を選択します。   
-3.  **[クエリ実行]** > **[SQL Server]** > **[詳細]**の順に移動します。   
-4.  **[Always Encrypted のパラメーター化を有効にする]**を選択または選択解除します。   
+2.  **[オプション...]** を選択します。   
+3.  **[クエリ実行]** > **[SQL Server]** > **[詳細]** の順に移動します。   
+4.  **[Always Encrypted のパラメーター化を有効にする]** を選択または選択解除します。   
 5.  **[OK]** をクリックします。   
 
 Always Encrypted が有効な状態のデータベース接続を使用するクエリ エディター ウィンドウでクエリを実行する場合に、パラメーター化がクエリ エディター ウィンドウで有効になっていないと、有効にするよう求められます。   
@@ -180,9 +178,9 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio では Intellisense を使用して、正常にパラメーター化できた変数と失敗したパラメーター化の試行 (およびその理由) を通知します。   
 
-クエリ エディターでは、正常にパラメーター化できた変数の宣言に警告の下線が付けられます。 警告の下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果が表示されます。これには、結果の [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクト (変数に対応する) の主要なプロパティ ( [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、 [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、 [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、 [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、 [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)) の値が含まれます。 また、 **[エラー一覧]** ビューの **[警告]** タブには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]**を選択します。    
+クエリ エディターでは、正常にパラメーター化できた変数の宣言に警告の下線が付けられます。 警告の下線が付いた宣言ステートメントにカーソルを置くと、パラメーター化プロセスの結果が表示されます。これには、結果の [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) オブジェクト (変数に対応する) の主要なプロパティ ( [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)、 [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx)、 [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx)、 [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx)、 [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx)) の値が含まれます。 また、 **[エラー一覧]** ビューの **[警告]** タブには、正常にパラメーター化されたすべての変数の完全な一覧も表示されます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。    
 
-SQL Server Management Studio が変数のパラメーター化を試みたときに、パラメーター化が失敗した場合には、変数の宣言にエラーの下線が付けられます。 エラーの下線が付けられた宣言ステートメントにカーソルを置くと、エラーに関する結果が表示されます。 また、 **[エラー一覧]** ビューの **[エラー]** タブで、すべての変数のパラメーター化エラーの完全な一覧を表示することもできます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]**を選択します。   
+SQL Server Management Studio が変数のパラメーター化を試みたときに、パラメーター化が失敗した場合には、変数の宣言にエラーの下線が付けられます。 エラーの下線が付けられた宣言ステートメントにカーソルを置くと、エラーに関する結果が表示されます。 また、 **[エラー一覧]** ビューの **[エラー]** タブで、すべての変数のパラメーター化エラーの完全な一覧を表示することもできます。 **[エラー一覧]** ビューを開くには、メイン メニューから **[ビュー]** を選択し、 **[エラー一覧]** を選択します。   
 
 下のスクリーン ショットは、6 つの変数宣言の例を示しています。 SQL Server Management Studio は、最初の 3 つの変数を正常にパラメーター化しています。 最後の 3 つの変数はパラメーター化の前提条件を満たさなかったため、SQL Server Management Studio はそれらのパラメーター化を試行していません (宣言にはまったくマークが付けられていません)。   
 
@@ -235,12 +233,12 @@ WHERE [SSN] = @SSN;
 4.  キー ストアを選択します。
     - **証明書ストア – 現在のユーザー** – Windows 証明書ストアでの現在のユーザーの証明書ストアの場所を示します。これは個人的なストアです。 
     - **証明書ストア – ローカル コンピューター** – Windows 証明書ストアでのローカル コンピューターの証明書ストアの場所を示します。 
-    - **Azure Key Vault** – Azure にサインインする必要があります ( **[サインイン]**をクリックしてください)。 サインインすると、Azure サブスクリプションのいずれかとキー資格情報コンテナーを選択できるようになります。
+    - **Azure Key Vault** – Azure にサインインする必要があります ( **[サインイン]** をクリックしてください)。 サインインすると、Azure サブスクリプションのいずれかとキー資格情報コンテナーを選択できるようになります。
     - **キー ストア プロバイダー (CNG)** – Cryptography Next Generation (CNG) API を実装するキー ストア プロバイダー (KSP) を介してアクセスできるキー ストアを示します。 通常、この種のストアは、ハードウェア セキュリティ モジュール (HSM) となります。 このオプションを選択したら、KSP を選択する必要があります。 既定では、**Microsoft ソフトウェア キー ストア プロバイダー** が選択されます。 HSM に格納されている列マスター キーを使用する場合は、デバイス用の KSP を選択します (ダイアログを開く前に、コンピューターにインストールし、構成しておく必要があります)。
     -   **暗号化サービス プロバイダー (CAPI)** - 暗号化 API (CAPI) を実装する暗号化サービス プロバイダー (CSP) を介してアクセスできるキー ストアです。 通常、そのようなストアは、ハードウェア セキュリティ モジュール (HSM) です。 このオプションを選択したら、CSP を選択する必要があります。  HSM に格納されている列マスター キーを使用する場合は、デバイス用の CSP を選択します (ダイアログを開く前に、コンピューターにインストールし、構成しておく必要があります)。
     
     >   [!NOTE]
-    >   CAPI は非推奨 API であるため、既定では暗号化サービス プロバイダー (CAPI) オプションは無効になります。 これを有効にするには、Windows レジストリの **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** キーの下に CAPI Provider Enabled DWORD 値を作成し、これを 1 に設定します。 キー ストアで CNG がサポートされていない場合は、CAPI ではなく CNG を使用する必要があります。
+    >   CAPI は非推奨の API であるため、既定では暗号化サービス プロバイダー (CAPI) オプションは無効になります。 これを有効にするには、Windows レジストリの **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** キーの下に CAPI Provider Enabled DWORD 値を作成し、これを 1 に設定します。 キー ストアで CNG がサポートされていない場合は、CAPI ではなく CNG を使用する必要があります。
    
     上記キー ストアの詳細については、 [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(列マスター キーの作成と格納 (Always Encrypted)) を参照してください。
 
@@ -256,7 +254,7 @@ SQL Server Management Studio により、データベースに列マスター �
 **[新しい列の暗号化キー]** ダイアログでは、列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースに列暗号化キーのメタデータを作成することができます。
 
 1.  **オブジェクト エクスプローラー**を使用して、データベースの下にあるフォルダーを **[セキュリティ]、[Always Encrypted キー]** の順に移動します。
-2.  **[列暗号化キー]** フォルダーを右クリックし、 **[新しい列の暗号化キー]**を選択します。 
+2.  **[列暗号化キー]** フォルダーを右クリックし、 **[新しい列の暗号化キー]** を選択します。 
 3.  **[新しい列の暗号化キー]** ダイアログで、列暗号化キーのメタデータ オブジェクトの名前を入力します。
 4.  データベースの列マスター キーを表すメタデータ オブジェクトを選択します。
 5.  **[OK]** をクリックします。 
@@ -365,14 +363,14 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 > 回転するキーで暗号化された列を含むテーブルが大きい場合、列暗号化キーの回転には長い時間がかかることがあります。 データが再暗号化されている間、アプリケーションは影響を受けるテーブルへの書き込みを行うことができません。 したがって、組織で列暗号化キーを回転する場合は、慎重に計画を立てる必要があります。
 列暗号化キーを回転するには、Always Encrypted ウィザードを使用します。
 
-1.  データベースのウィザードを開きます。それには、データベースを右クリックして **[タスク]**をポイントし、 **[列の暗号化]**をクリックします。
-2.  **[概要]** ページの内容を確認し、 **[次へ]**をクリックします。
+1.  データベースのウィザードを開きます。それには、データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックします。
+2.  **[概要]** ページの内容を確認し、 **[次へ]** をクリックします。
 3.  **[列の選択]** ページで、テーブルを展開し、古い列暗号化キーで現在暗号化されている列で、置換する列をすべて特定します。
 4.  古い列暗号化キーで暗号化されたそれぞれの列について、 **[暗号化キー]** を新しい自動生成キーに設定します。 **注:** あるいは、ウィザードを実行する前に、新しい列暗号化キーを作成しておくこともできます。前述の *"列暗号化キーのプロビジョニング* " セクションを参照してください。
-5.  **[マスター キーの構成]** ページで、新しいキーを格納する場所を選択し、マスター キー ソースを選択し、 **[次へ]**をクリックします。 **注:** 既存の列暗号化キーを使用する (自動生成されたものではなく) 場合、このページで実行するアクションはありません。
-6.  **[検証]**ページで、スクリプトをすぐに実行するか PowerShell スクリプトを作成するかを選択し、 **[次へ]**をクリックします。
+5.  **[マスター キーの構成]** ページで、新しいキーを格納する場所を選択し、マスター キー ソースを選択し、 **[次へ]** をクリックします。 **注:** 既存の列暗号化キーを使用する (自動生成されたものではなく) 場合、このページで実行するアクションはありません。
+6.  **[検証]** ページで、スクリプトをすぐに実行するか PowerShell スクリプトを作成するかを選択し、 **[次へ]** をクリックします。
 7.  **[概要]** ページで、選択したオプションを確認し、完了したら **[完了]** をクリックしてウィザードを閉じます。
-8.  **オブジェクト エクスプローラー**で **[セキュリティ]、[Always Encrypted キー]、[列暗号化キー]** フォルダーの順に移動し、データベースから削除する古い列暗号化キーを探します。 キーを右クリックし、 **[削除]**をクリックします。
+8.  **オブジェクト エクスプローラー**で **[セキュリティ]、[Always Encrypted キー]、[列暗号化キー]** フォルダーの順に移動し、データベースから削除する古い列暗号化キーを探します。 キーを右クリックし、 **[削除]** をクリックします。
 
 ### <a name="permissions"></a>アクセス許可
 

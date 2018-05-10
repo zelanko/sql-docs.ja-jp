@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: ''
 ms.suite: sql
@@ -31,12 +30,11 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 46e9fe6edb867d04e33c44239605a1137a3be0d6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6d9d226dc4018ea517a477be3b3103120dc5b371
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>非同期出力型のカスタム変換コンポーネントの開発
   非同期出力型変換コンポーネントは、変換が入力行をすべて受け取るまで行を出力できないようにする場合や、変換が入力として受信した各行に対して必ずしも 1 つずつ出力行を生成しない場合に使用します。 たとえば、集計変換では、行をすべて読み込むまではすべての行の合計を計算できません。 これに対し、同期出力型コンポーネントは、データが渡されるたびに各データ行を変更する場合に使用します。 各行のデータを順に変更したり、1 つまたは複数の列を新規作成して、各列にすべての入力行ごとの値を設定したりできます。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  

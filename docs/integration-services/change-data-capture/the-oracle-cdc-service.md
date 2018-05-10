@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25b308788b7249f052cd877ac7e4b801f50eb5e4
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8df4a1f29d0b5d0f864362cf0658f23eeb26b0e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  

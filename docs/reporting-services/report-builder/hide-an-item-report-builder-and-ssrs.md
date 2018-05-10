@@ -1,30 +1,28 @@
 ---
-title: "項目の非表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 項目の非表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3135ec02eb0f52e7d5c1155caa7966eb0732329b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 496efbdb099f6e9611b4b6d9be5a3a303ad82411
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>アイテムを非表示にする (レポート ビルダーおよび SSRS)
   レポート パラメーターやその他の式を指定して、アイテムを条件付きで非表示にする場合は、レポート アイテムの表示/非表示を設定します。  
@@ -41,17 +39,17 @@ ms.lasthandoff: 01/09/2018
 1.  レポート デザイン ビューで、レポート アイテムを右クリックし、 **[プロパティ]** ページを開きます。  
   
     > [!NOTE]  
-    >  テーブルまたはマトリックス データ領域全体を選択するには、領域内をクリックして選択し、行ハンドル、列ハンドル、またはコーナー ハンドルを右クリックして、 **[Tablix のプロパティ]**をクリックします。  
+    >  テーブルまたはマトリックス データ領域全体を選択するには、領域内をクリックして選択し、行ハンドル、列ハンドル、またはコーナー ハンドルを右クリックして、 **[Tablix のプロパティ]** をクリックします。  
   
-2.  **[表示]**をクリックします。  
+2.  **[表示]** をクリックします。  
   
-3.  **[レポートの初期実行時]**で、レポートを初めて表示する際にアイテムを非表示にするかどうかを指定します。  
+3.  **[レポートの初期実行時]** で、レポートを初めて表示する際にアイテムを非表示にするかどうかを指定します。  
   
-    -   アイテムを表示する場合は、 **[表示]**をクリックします。  
+    -   アイテムを表示する場合は、 **[表示]** をクリックします。  
   
-    -   アイテムを非表示にする場合は、 **[非表示]**をクリックします。  
+    -   アイテムを非表示にする場合は、 **[非表示]** をクリックします。  
   
-    -   実行時に評価される式を指定するには、 **[式を基に表示/非表示を切り替える]**をクリックします。 **[式]**ダイアログ ボックスで、式を入力するか、式 ( **[fx]** ) ボタンをクリックして式を作成します。  
+    -   実行時に評価される式を指定するには、 **[式を基に表示/非表示を切り替える]** をクリックします。 **[式]** ダイアログ ボックスで、式を入力するか、式 ( **[fx]** ) ボタンをクリックして式を作成します。  
   
         > [!NOTE]  
         >  表示/非表示を設定する式を指定する場合、次の図のように、レポート アイテムの Hidden プロパティを設定します。 この値が False の場合、式の評価によってレポート アイテムが表示され、値が True の場合、レポート アイテムは非表示になります。   
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート デザイン ビューで、テーブル、マトリックス、または一覧をクリックし、行ハンドルおよび列ハンドルを表示します。  
   
-2.  行ハンドルを右クリックし、 **[行表示]**をクリックします。 **[行表示]** ダイアログ ボックスが開きます。  
+2.  行ハンドルを右クリックし、 **[行表示]** をクリックします。 **[行表示]** ダイアログ ボックスが開きます。  
   
 3.  表示/非表示を設定するには、最初の手順の 3. ～ 4. に従います。  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  [デザイン] ビューで、テーブル、マトリックス、または一覧を選択し、行ハンドルおよび列ハンドルを表示します。  
   
-2.  列ハンドルを右クリックし、 **[列表示]**をクリックします。  
+2.  列ハンドルを右クリックし、 **[列表示]** をクリックします。  
   
 3.  **[列表示]** ダイアログ ボックスで、最初の手順の 3 ～ 4 に従います。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -25,12 +24,11 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5abbc2d243cf324abd3940d1d2fac7c82376770c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 40acc806d038e85c206d0861bb28575085483ade
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  

@@ -1,27 +1,25 @@
 ---
-title: "複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: f9c2cc9c26644cb4671f5a601ad4c755ff2a1019
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1865c120f784d7e184e24ede5ccb6943b7ba439f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域 (テーブル、マトリックス、リスト) が複数のページにわたる場合、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの各ページで行ヘッダーおよび列ヘッダーを繰り返すかどうかを制御できます。
@@ -36,17 +34,17 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>複数のページに行ヘッダーを表示するには  
   
-1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]**をクリックします。  
+1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]** をクリックします。  
   
-2.  **[行のヘッダー]**の **[すべてのページにヘッダー行を表示する]**を選択します。  
+2.  **[行のヘッダー]** の **[すべてのページにヘッダー行を表示する]** を選択します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>複数のページに列ヘッダーを表示するには  
   
-1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]**をクリックします。  
+1.  Tablix データ領域の行、列、またはコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]** をクリックします。  
   
-2.  **[列のヘッダー]**の **[すべてのページにヘッダー列を表示する]**を選択します。  
+2.  **[列のヘッダー]** の **[すべてのページにヘッダー列を表示する]** を選択します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -54,11 +52,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン画面で、Tablix データ領域の行ハンドルまたは列ハンドルをクリックして選択します。 グループ化ペインに行グループと列グループが表示されます。  
   
-2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]**をクリックします。 行グループ ペインに、行グループ階層の静的メンバーおよび動的メンバーが階層的に表示され、列グループ ペインに、列グループ階層のメンバーが同様に表示されます。  
+2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]** をクリックします。 行グループ ペインに、行グループ階層の静的メンバーおよび動的メンバーが階層的に表示され、列グループ ペインに、列グループ階層のメンバーが同様に表示されます。  
   
 3.  スクロール中も表示したままにする静的メンバー (行または列) に対応する静的メンバーをクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
-     プロパティ ペインが表示されない場合は、レポート ビルダー ウィンドウの上部にある **[表示]** タブをクリックし、 **[プロパティ]**をクリックします。  
+     プロパティ ペインが表示されない場合は、レポート ビルダー ウィンドウの上部にある **[表示]** タブをクリックし、 **[プロパティ]** をクリックします。  
   
 4.  プロパティ ペインで、 **RepeatOnNewPage** を True に設定します。  
   

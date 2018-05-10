@@ -1,16 +1,15 @@
 ---
-title: "チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 'チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, tutorials
 - Reporting Services, tools
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 5fb39a5bfeab9dc2ad3b78c94238c66e174d3395
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
 
@@ -52,23 +50,23 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 構成マネージャーを起動するには  
   
-1.  Windows のスタート画面で、「 **reporting** 」と入力し、 **[アプリ]** の検索結果で **[Reporting Services 構成マネージャー]**をクリックします。  
+1.  Windows のスタート画面で、「 **reporting** 」と入力し、 **[アプリ]** の検索結果で **[Reporting Services 構成マネージャー]** をクリックします。  
   
      ![Reporting Services 構成マネージャーの起動](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Reporting Services 構成マネージャーの起動")  
   
      **Or**  
   
-     **[スタート]**ボタンをクリックして、 **[プログラム]**をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[Reporting Services 構成マネージャー]**の順にクリックします。  
+     **[スタート]** ボタンをクリックして、 **[プログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[Reporting Services 構成マネージャー]** の順にクリックします。  
   
      **[レポート サーバー インスタンスの選択]** ダイアログ ボックスが表示されます。このダイアログ ボックスでは構成するレポート サーバー インスタンスを選択します。  
   
-2.  **[サーバー名]**ボックスに、レポート サーバー インスタンスがインストールされているコンピューターの名前を指定します。 既定ではローカル コンピューターの名前が設定されていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート インスタンスの名前を入力することもできます。  
+2.  **[サーバー名]** ボックスに、レポート サーバー インスタンスがインストールされているコンピューターの名前を指定します。 既定ではローカル コンピューターの名前が設定されていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート インスタンスの名前を入力することもできます。  
   
      リモート コンピューターを指定する場合は、 **[検索]** をクリックして接続を確立します。 ここで指定するレポート サーバーは、リモートで管理するための構成が事前に行われている必要があります。 詳細については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
   
 3.  **stance Name**で、構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスを選択します。 この一覧には、SQL Server 2008 以降を実行しているレポート サーバー インスタンスのみが表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を構成することはできません。  
   
-4.  **[接続]**をクリックします。  
+4.  **[接続]** をクリックします。  
   
 5.  ツールが起動したかどうかを確認するには、次の図と比較します。  
   
@@ -98,21 +96,21 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには  
   
-1.  Windows のスタート画面から「 **sql server** 」と入力し、 **[アプリ]** の検索結果で **[SQL Server Management Studio]**をクリックします。  
+1.  Windows のスタート画面から「 **sql server** 」と入力し、 **[アプリ]** の検索結果で **[SQL Server Management Studio]** をクリックします。  
   
      ![Windows のスタート画面の Management Studio](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Windows のスタート画面の Management Studio")  
   
      **Or**  
   
-     **[スタート]**、 **[すべてのプログラム]**とクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[SQL Server Management Studio]**の順にクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
+     **[スタート]**、 **[すべてのプログラム]** とクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[SQL Server Management Studio]** の順にクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスが表示されない場合は、 **[オブジェクト エクスプローラー]**で **[接続]** をクリックし、 **[Reporting Services]**を選択します。  
+2.  **[サーバーへの接続]** ダイアログ ボックスが表示されない場合は、 **[オブジェクト エクスプローラー]** で **[接続]** をクリックし、 **[Reporting Services]** を選択します。  
   
-3.  **[サーバーの種類]** ボックスの一覧で、 **[Reporting Services]**を選択します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が一覧に表示されない場合、Reporting Services はインストールされていません。  
+3.  **[サーバーの種類]** ボックスの一覧で、 **[Reporting Services]** を選択します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] が一覧に表示されない場合、Reporting Services はインストールされていません。  
   
 4.  **[サーバー名]** ボックスの一覧で、レポート サーバーのインスタンスを選択します。 一覧にはローカル インスタンスが表示されますが、 リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力することもできます。  
   
-5.  **[接続]**をクリックします。 ルート ノードを展開して、サーバーのプロパティを設定したり、ロールの定義を変更したり、レポート サーバー機能をオフにすることができます。  
+5.  **[接続]** をクリックします。 ルート ノードを展開して、サーバーのプロパティを設定したり、ロールの定義を変更したり、レポート サーバー機能をオフにすることができます。  
   
 ##  <a name="bkmk_ssdt"></a> レポート デザイナーとレポート ウィザードが統合された SQL Server データ ツール  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の改ページ調整されたレポートを作成するためのツールには、レポート デザイナーと [レポート ビルダー](#bkmk_report_builder)の 2 つがあります。  
@@ -125,11 +123,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  **SQL Server Data Tools**を開きます。  
   
-2.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  **[プロジェクトの種類]** ボックスの一覧で、 **[ビジネス インテリジェンス プロジェクト]**をクリックします。  
+3.  **[プロジェクトの種類]** ボックスの一覧で、 **[ビジネス インテリジェンス プロジェクト]** をクリックします。  
   
-4.  **[テンプレート]** ボックスの一覧で、 **[レポート サーバー プロジェクト]**をクリックします。 次の図は、プロジェクトのテンプレートがダイアログ ボックスに表示された状態を示しています。  
+4.  **[テンプレート]** ボックスの一覧で、 **[レポート サーバー プロジェクト]** をクリックします。 次の図は、プロジェクトのテンプレートがダイアログ ボックスに表示された状態を示しています。  
   
      ![新しいプロジェクト テンプレートのダイアログ ボックス](../../reporting-services/tools/media/rs-ui-newrsproject.gif "新しいプロジェクト テンプレートのダイアログ ボックス")  
   
@@ -146,7 +144,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>を開始するには [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルの  **[新規]** メニューで、 **[改ページ調整されたレポート]**を選択します。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルの  **[新規]** メニューで、 **[改ページ調整されたレポート]** を選択します。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
@@ -165,7 +163,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>を開始するには [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルの  **[新規]** メニューで、 **[モバイル レポート]**を選択します。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルの  **[新規]** メニューで、 **[モバイル レポート]** を選択します。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   

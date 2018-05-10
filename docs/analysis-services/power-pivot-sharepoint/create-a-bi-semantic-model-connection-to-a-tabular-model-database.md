@@ -1,31 +1,23 @@
 ---
-title: "テーブル モデル データベースへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: テーブル モデル データベースへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 9141a382cf30157849de3cb0d54bff882790b48d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>テーブル モデル データベースへの BI セマンティック モデル接続の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-このトピックでは、SharePoint ファーム外の Analysis Services インスタンスで実行しているテーブル モデル データベースにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
+  このトピックでは、SharePoint ファーム外の Analysis Services インスタンスで実行しているテーブル モデル データベースにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
   
  BI セマンティック モデル接続を作成して SharePoint 権限および Analysis Services 権限を構成したら、その接続を Excel または [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートのデータ ソースとして使用できます。  
   
@@ -77,9 +69,9 @@ ms.lasthandoff: 02/23/2018
   
 1.  SQL Server Management Studio で Analysis Services インスタンスに接続します。  
   
-2.  サーバー名を右クリックし、 **[プロパティ]**をクリックします。  
+2.  サーバー名を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[セキュリティ]**をクリックして、 **[追加]**をクリックします。 サービス アプリケーションを実行する Windows ユーザー アカウントを入力します。  
+3.  **[セキュリティ]** をクリックして、 **[追加]** をクリックします。 サービス アプリケーションを実行する Windows ユーザー アカウントを入力します。  
   
      ID を確認するには、サーバーの全体管理を使用できます。 [セキュリティ] セクションの **[サービス アカウントの構成]** を開き、各アプリケーションで使用されるサービス アプリケーション プールにどの Windows アカウントが関連付けられているかどうかを確認します。次に、このトピックの手順に従って、アカウントに管理権限を付与します。  
   
@@ -90,9 +82,9 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="assign-role-membership"></a>ロールのメンバーシップの割り当て  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーでデータベースを展開し、さらに **[ロール]**を展開します。 既に定義されているロールが表示されます。 ロールが存在しない場合は、モデルの作成者に連絡してロールの追加を依頼します。 Management Studio でロールを表示するには、モデルを再配置する必要があります。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーでデータベースを展開し、さらに **[ロール]** を展開します。 既に定義されているロールが表示されます。 ロールが存在しない場合は、モデルの作成者に連絡してロールの追加を依頼します。 Management Studio でロールを表示するには、モデルを再配置する必要があります。  
   
-2.  ロールを右クリックし、 **[プロパティ]**をクリックします。  
+2.  ロールを右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  [メンバーシップ] ページで、アクセスする必要がある Windows グループ アカウントおよびユーザー アカウントを追加します。  
   
@@ -124,27 +116,27 @@ ms.lasthandoff: 02/23/2018
   
  権限を変更するには、サイト所有者である必要があります。  
   
-1.  [サイトの操作] の **[サイトの権限]**をクリックします。  
+1.  [サイトの操作] の **[サイトの権限]** をクリックします。  
   
 2.  **[グループの作成]** をクリックして、新しいグループの名前を「 **BISM ユーザー**」と指定します。  
   
-3.  **[読み取り]** 権限レベルを選択し、 **[作成]**をクリックします。  
+3.  **[読み取り]** 権限レベルを選択し、 **[作成]** をクリックします。  
   
 4.  [ユーザーとグループ] の **[BISM ユーザー]** を選択します。  
   
-5.  [新規作成] をポイントして **[ユーザーの追加]**をクリックし、ユーザー アカウントまたはグループ アカウントを追加します。  
+5.  [新規作成] をポイントして **[ユーザーの追加]** をクリックし、ユーザー アカウントまたはグループ アカウントを追加します。  
   
      これで、追加したユーザーおよびグループに、サイト レベルから権限を継承するすべてのライブラリとリストを含むサイト全体の読み取り権限が付与されます。 この権限レベルでは高すぎる場合は、必要に応じて特定のライブラリ、リスト、またはアイテムからこのグループを削除できます。  
   
  アイテム レベルで権限を選択的に削除するには、次の操作を行います。  
   
-1.  ライブラリで、ドキュメントを選択します。 右側の下矢印をクリックし、 **[権限の管理]**をクリックします。  
+1.  ライブラリで、ドキュメントを選択します。 右側の下矢印をクリックし、 **[権限の管理]** をクリックします。  
   
-2.  既定では、アイテムは権限を継承します。 このライブラリ内の個々のドキュメントの権限を変更するには、 **[権限の継承を中止]**をクリックします。  
+2.  既定では、アイテムは権限を継承します。 このライブラリ内の個々のドキュメントの権限を変更するには、 **[権限の継承を中止]** をクリックします。  
   
-3.  **[BISM ユーザー]**の横にあるチェック ボックスをオンにします。  
+3.  **[BISM ユーザー]** の横にあるチェック ボックスをオンにします。  
   
-4.  **[ユーザー権限の削除]**をクリックします。  
+4.  **[ユーザー権限の削除]** をクリックします。  
   
 ##  <a name="bkmk_next"></a> 次の手順  
  BI セマンティック モデル接続を作成し、セキュリティで保護したら、データ ソースとして指定できます。 詳細については、「 [Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)」を参照してください。  

@@ -1,27 +1,25 @@
 ---
-title: "埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c5106507d97ee357f2c88ad565a00c87a7c8964d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d4cca525b1549ad37388f6c4f0c45676c750d0cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 外部データ ソースに関する情報はデータ接続に含まれており、データセットは、そのデータ接続によって異なります。 レポート定義にデータそのものは含まれていません。 データセットには、クエリ コマンド、フィールド コレクション、パラメーター、フィルター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。 データセットには次の 2 種類があります。  

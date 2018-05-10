@@ -1,34 +1,23 @@
 ---
-title: "Analysis Services (SSAS - 多次元) 内のパーティションをマージ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services (SSAS - 多次元) 内のパーティションをマージ |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], merging
-- merging partitions [Analysis Services]
-ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5048828c306adbd803a822601150f8cca4e82f4f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services でのパーティションのマージ (SSAS - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のパーティションをマージして、同じメジャー グループの複数のパーティションからファクト データを統合することができます。  
+  既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のパーティションをマージして、同じメジャー グループの複数のパーティションからファクト データを統合することができます。  
   
  [一般的なシナリオ](#bkmk_Scenario)  
   
@@ -122,7 +111,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  パーティションをマージする前に、まず、データのフィルター情報 (多くの場合は、SQL クエリに基づくフィルターの WHERE 句) をコピーしてください。 その後、マージが完了したら、蓄積されたファクト データを含むパーティションのパーティション ソース プロパティを更新する必要があります。  
   
-1.  オブジェクト エクスプローラーで、マージするパーティションが含まれているキューブの **[メジャー グループ]** ノードを展開し、 **[パーティション]**を展開して、マージ操作の対象となるパーティションを右クリックします。 たとえば、年間のファクト データを格納するパーティションに四半期のファクト データを移動する場合は、年間のファクト データが含まれているパーティションを選択します。  
+1.  オブジェクト エクスプローラーで、マージするパーティションが含まれているキューブの **[メジャー グループ]** ノードを展開し、 **[パーティション]** を展開して、マージ操作の対象となるパーティションを右クリックします。 たとえば、年間のファクト データを格納するパーティションに四半期のファクト データを移動する場合は、年間のファクト データが含まれているパーティションを選択します。  
   
 2.  をクリックして**パーティションのマージ**を開くには、**パーティションのマージ\<パーティション名 >**  ダイアログ ボックス。  
   
@@ -131,7 +120,7 @@ ms.lasthandoff: 02/15/2018
     > [!NOTE]  
     >  基になるパーティションは、対象パーティションにマージされた直後に削除されます。 マージが完了したら、[パーティション] フォルダーを更新してその内容を更新します。  
   
-4.  蓄積したデータが含まれるパーティションを右クリックし、 **[プロパティ]**をクリックします。  
+4.  蓄積したデータが含まれるパーティションを右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  **Source** プロパティを開き、マージしたパーティション データを含むように WHERE 句を変更します。 **Source** プロパティは自動的に更新されないことに注意してください。 最初に **Source**を更新せずに再処理すると、必要なデータの一部が取得されない場合があります。  
   
@@ -141,8 +130,8 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>参照  
  [処理の Analysis Services オブジェクト](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
  [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [作成し、ローカル パーティション &#40; を管理Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [作成し、管理、リモート パーティションと #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [作成し、ローカル パーティション & #40; を管理Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [作成し、管理、リモート パーティションと #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [パーティションの書き戻しを設定します。](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [ディメンションおよびパーティションの文字列ストレージを構成します。](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  

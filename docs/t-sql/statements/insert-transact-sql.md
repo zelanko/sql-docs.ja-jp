@@ -1,16 +1,16 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INSERT_TSQL
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], INSERT statement
 - inserting data
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-caps.latest.revision: 
+caps.latest.revision: 136
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dedd8b75eac1bc7ffc6cb64cd699583126061b04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -251,7 +252,7 @@ OUTPUT 句
   
 -   マージ レプリケーションや、トランザクション レプリケーションの更新可能なサブスクリプションに加えることはできません。  
   
- データベース互換性レベルを 100 以上に設定する必要があります。 詳細については、を参照してください。 OUTPUT 句と #40 です。TRANSACT-SQL と #41;[](../../t-sql/queries/output-clause-transact-sql.md).  
+ データベース互換性レベルを 100 以上に設定する必要があります。 詳細については、を参照してください。 [OUTPUT 句と #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  \<select_list>  
  Output 句から返された列のどれを挿入するかを指定するコンマ区切りのリストです。 \<select_list> 内の列は、値の挿入先である列と互換である必要があります。 \<select_list> では、集計関数または TEXTPTR を参照できません。 
@@ -434,7 +435,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
  このセクションの例では、最低限必要な構文を使用して INSERT ステートメントの基本機能を示します。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 1 行のデータを挿入する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません。**   
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Production.UnitMeasure` テーブルに 1 行を挿入します。 このテーブルの列は、`UnitMeasureCode`、`Name`、および `ModifiedDate` です。 すべての列の値が指定され、テーブルの列と同じ順序で並んでいるため、列名を列リストで指定する必要はありません*。*  
   
 ```  
 INSERT INTO Production.UnitMeasure  
@@ -879,7 +880,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S.  TABLOCK ヒントを使用してロック手法を指定する  
  次の例では、Production.Location テーブルに対して排他 (X) ロックを使用することと、このロックを INSERT ステートメントの終了まで保持することを指定します。  
   
-**適用対象**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]､[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
+**適用対象**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
 ```  
 INSERT INTO Production.Location WITH (XLOCK)  

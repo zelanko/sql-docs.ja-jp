@@ -1,16 +1,15 @@
 ---
-title: "レポートにコードを追加する (SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポートにコードを追加する (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - adding code
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: af3ca4fdc6db5647288eeddb4da5d8d7e63edcf9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e43e8209cf28a6d5ef0ddde5095d29588fec5395
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-code-to-a-report-ssrs"></a>レポートにコードを追加する (SSRS)
   どの式でも独自のカスタム コードを呼び出すことができます。 次の 2 つの方法でコードを提供できます。  
@@ -38,11 +36,11 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-embedded-code-to-a-report"></a>レポートに埋め込みコードを追加するには  
   
-1.  **[デザイン]** ビューで、デザイン画面のレポートの罫線の外を右クリックし、 **[レポートのプロパティ]**をクリックします。  
+1.  **[デザイン]** ビューで、デザイン画面のレポートの罫線の外を右クリックし、 **[レポートのプロパティ]** をクリックします。  
   
-2.  **[コード]**をクリックします。  
+2.  **[コード]** をクリックします。  
   
-3.  **[カスタム コード]**でコードを入力します。 コード内にエラーがあると、レポートの実行時に警告が生成されます。 次の例では、" `ChangeWord` " という単語を "`Bike`" で置き換える`Bicycle`という名前のカスタム関数が作成されます。  
+3.  **[カスタム コード]** でコードを入力します。 コード内にエラーがあると、レポートの実行時に警告が生成されます。 次の例では、" `ChangeWord` " という単語を "`Bike`" で置き換える`Bicycle`という名前のカスタム関数が作成されます。  
   
     ```  
     Public Function ChangeWord(ByVal s As String) As String  

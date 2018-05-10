@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: xml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
@@ -19,12 +17,11 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b94d0528a7112fe9a1f1278501b6faaf46cfaa1b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-with-a-name"></a>名前のある列
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +118,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>列名がアット マーク (@) で始まらず、スラッシュ (/) を含む場合  
- 列名がアット マーク (@) で始まらず、スラッシュ (/) を含んでいる場合、列名は XML 階層を示します。 たとえば、列名を "Name1/Name2/Name3.../Name***n*** " とすると、Name***i*** は、i = 1 の場合は現在の行要素の入れ子である要素を表し、それ以外の場合は Name***i-1***要素の下にある要素を表します。 Name***n*** が (@) で始まる場合は、Name***n-1*** 要素の属性にマップされます。   
+ 列名がアット マーク (@) で始まらず、スラッシュ (/) を含んでいる場合、列名は XML 階層を示します。 たとえば、列名を "Name1/Name2/Name3.../Name***n*** " とすると、Name***i*** は、i = 1 の場合は現在の行要素の入れ子である要素を表し、それ以外の場合は Name***i-1***要素の下にある要素を表します。 Name***n*** が '@' で始まる場合は、Name***n-1*** 要素の属性にマップされます。  
   
  たとえば次のクエリは、従業員の ID と名前を返します。従業員名は、First、Middle、および Last から構成される複合型の要素 EmpName で表現されます。  
   

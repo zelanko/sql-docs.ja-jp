@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transferdatabasetask.f1
 - sql13.dts.designer.transferdatabasetask.general.f1
@@ -25,12 +24,11 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80291a770d9e9c42cc9cd5d6a796bd357be52826
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0b66f3db5c3c4017cc8022e6f1cc30f24347e803
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
   データベース転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのインスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを転送します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーして転送するだけの他のタスクに対し、データベース転送タスクでは、データベースをコピーまたは移動できます。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  

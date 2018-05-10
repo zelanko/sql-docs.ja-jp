@@ -1,16 +1,15 @@
 ---
-title: "スケールアウト配置に関する暗号化キーの追加と削除 | Microsoft Docs"
-ms.custom: 
+title: スケールアウト配置に関する暗号化キーの追加と削除 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - deleting encryption keys
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0b7c90c1760c555f0099d9a6ea8fc675d0bd0719
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c2da984572976c511a2d373b7f2d50a923a96ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>スケールアウト配置に関する暗号化キーの追加と削除
   1 つのレポート サーバー データベースを複数のレポート サーバーで共有するように構成すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をスケールアウト配置モデルで実行できます。 スケールアウト配置でのメンバーシップは、レポート サーバーがレポート サーバー データベースに暗号化キーを格納するかどうかに基づいています。 特定のレポート サーバー インスタンスの暗号化キーを追加および削除することで、スケールアウト配置のメンバーシップを制御できます。 配置からノードを削除する場合は、それらを任意の順序で削除できます。 配置にノードを追加する場合は、既に配置の一部になっているレポート サーバーのすべての新しいインスタンスを結合する必要があります。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート サーバー スケールアウト配置のメンバーであるレポート サーバーをホストするコンピューターで、 **rskeymgmt.exe** をローカルに実行します。  
   
-2.  **-j** 引数を使用して、レポート サーバーをレポート サーバー データベースに結合します。 共有レポート サーバー データベースを使用するようにレポート サーバー インスタンスを初期化するには、 **-m** 引数と **-n** 引数を使用して、配置に追加するリモート レポート サーバー インスタンスを指定します。 **-u** 引数と **-v** 引数を使用して、リモート コンピューター上の管理者アカウントを指定します。 同じコンピューター上の複数のレポート サーバー インスタンスを使用してスケールアウト配置を作成する場合、使用する構文は若干異なります。 使用する必要がある構文の詳細については、「[rskeymgmt ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)」を参照してください。  
+2.  **-j** 引数を使用して、レポート サーバーをレポート サーバー データベースに結合します。 **-m** 引数と **-n** 引数を使用して、配置に追加するリモート レポート サーバー インスタンスを指定します。 **-u** 引数と **-v** 引数を使用して、リモート コンピューター上の管理者アカウントを指定します。 同じコンピューター上の複数のレポート サーバー インスタンスを使用してスケールアウト配置を作成する場合、使用する構文は若干異なります。 使用する必要がある構文の詳細については、「[rskeymgmt ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)」を参照してください。  
   
      次の例は、リモート レポート サーバーをスケールアウト配置に結合する場合に指定する必要がある引数を示しています (リモート コンピューターでの管理者権限がある場合は、資格情報を省略できます)。  
   

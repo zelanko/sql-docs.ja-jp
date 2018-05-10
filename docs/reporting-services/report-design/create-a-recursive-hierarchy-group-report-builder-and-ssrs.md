@@ -1,27 +1,25 @@
 ---
-title: "再帰型階層グループの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 再帰型階層グループの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 55996678941459c5f6797e02bfc30d82331a718f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00af8f5e46f2423714d396cb462dd81fde7f9dd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -35,13 +33,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン ビューで、テーブルを追加して、表示するデータセット フィールドをドラッグします。 通常、階層として表示する必要のあるフィールドは最初の列にあります。  
   
-2.  テーブル内の任意の場所を右クリックして選択します。 選択したテーブルの詳細グループがグループ化ペインに表示されます。 行グループ ペインで、 **[詳細]**を右クリックし、 **[グループの編集]**をクリックします。 **[グループのプロパティ]** ダイアログ ボックスが表示されます。  
+2.  テーブル内の任意の場所を右クリックして選択します。 選択したテーブルの詳細グループがグループ化ペインに表示されます。 行グループ ペインで、 **[詳細]** を右クリックし、 **[グループの編集]** をクリックします。 **[グループのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  **[グループ式]**の **[追加]**をクリックします。 新しい行がグリッドに表示されます。  
+3.  **[グループ式]** の **[追加]** をクリックします。 新しい行がグリッドに表示されます。  
   
 4.  **[グループ化の条件]** ボックスで、グループ化するフィールドを入力または選択します。  
   
-5.  **[詳細設定]**をクリックします。  
+5.  **[詳細設定]** をクリックします。  
   
 6.  **[再帰的な親]** ボックスで、グループ化で親として使用するフィールドを入力または選択します。  
   

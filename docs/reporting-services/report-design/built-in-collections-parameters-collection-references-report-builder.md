@@ -1,27 +1,25 @@
 ---
-title: "Parameters コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: Parameters コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6f4f702b15f214c43a5d866f27eba0519932d6f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>組み込みコレクション - Parameters コレクションの参照 (レポート ビルダー)
   レポート パラメーターは、式から参照できる組み込みコレクションの 1 つです。 パラメーターを式に含めると、レポートのデータと外観をユーザーの選択に基づいてカスタマイズできます。 式は、(*Fx*) オプションまたは [\<**式**>] オプションを利用できる、すべてのレポート アイテム プロパティやテキスト ボックス プロパティで使用できます。 式は、他の方法でレポートの内容と外観を制御する場合にも使用されます。 詳細については、「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)」を参照してください。  

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reporting-services
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,12 +22,11 @@ caps.latest.revision: 70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 24f4671203d4efecd58cfd9e613bf3dd9dbb8bba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
@@ -46,7 +44,7 @@ SQL Server Reporting Services は、レポートを作成、パブリッシュ�
 
 SQL Server 2016 の Reporting Services では、更新された製品スイートが提供されます。
 
-* 更新されたツールと新しい作成機能で現代風のレポートを作成できる、新しくなった**"従来の" ページ分割されたレポート** 。
+* 更新されたツールと新しい作成機能で現代風のレポートを作成できる、新しくなった **"従来の" ページ分割されたレポート** 。
 * さまざまなデバイスと持ち方に適応できる対応性の高いレイアウトの**新しいモバイル レポート** 。
 * 最新のブラウザーで表示できる**新しい Web ポータル** 。 新しいポータルでは、モバイルやページ分割された Reporting Services レポートや KPI を整理および表示することができます。 ポータルで Excel ブックを保存することもできます。
 

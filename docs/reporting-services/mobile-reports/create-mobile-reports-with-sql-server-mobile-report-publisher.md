@@ -1,28 +1,26 @@
 ---
-title: "SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する | Microsoft Docs"
-description: "オンプレミス データに接続するモバイル デバイス用の Reporting Services モバイル レポートについて説明します。これらレポートには多様なデータ視覚エフェクトが用意されています。"
-ms.custom: 
+title: SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する | Microsoft Docs
+description: オンプレミス データに接続するモバイル デバイス用の Reporting Services モバイル レポートについて説明します。これらレポートには多様なデータ視覚エフェクトが用意されています。
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5109bc0d5fddfa5a69f0880b2167615ac860f3ba
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ef6d130944b67f35140652fcf81be27d1e4aae91
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
 多様なデータ視覚エフェクトが含まれる [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートについて学びます。これらのレポートはモバイル デバイス用に最適化されており、オンプレミス データに接続します。 

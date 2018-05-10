@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -25,12 +24,11 @@ caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fce885002fc8dd2870480327ed575b77332ed0d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  

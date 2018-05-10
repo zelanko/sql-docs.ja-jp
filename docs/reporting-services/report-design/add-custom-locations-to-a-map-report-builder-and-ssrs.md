@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-design
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
@@ -18,12 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d4f6fe4d4ba90117cbb6db930419e272d210ccb5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dcc9cd3aabc8b68f144e181735d9249b95358e1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>カスタムの場所のマップへの追加 (レポート ビルダーおよび SSRS)
   マップを [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートに追加した後、ポイントの場所を独自に追加できます。  
@@ -42,23 +40,23 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポート デザイン画面で、マップをクリックして選択し、マップ ペインを表示します。  
   
-2.  ツール バーの **[レイヤーの追加]**をクリックします。  
+2.  ツール バーの **[レイヤーの追加]** をクリックします。  
   
-3.  ボックスの一覧から、 **[ポイント レイヤーの追加]**をクリックします。 ポイントが定義されていないポイント レイヤーがマップに追加されます。 既定では、ポイント レイヤーは埋め込みポイントに対応します。  
+3.  ボックスの一覧から、 **[ポイント レイヤーの追加]** をクリックします。 ポイントが定義されていないポイント レイヤーがマップに追加されます。 既定では、ポイント レイヤーは埋め込みポイントに対応します。  
   
 ## <a name="to-add-a-custom-point"></a>カスタム ポイントを追加するには  
   
 1.  レポート デザイン画面で、マップをクリックして選択し、マップ ペインを表示します。  
   
-2.  マップ ペインで、種類が **[埋め込み]**のポイント レイヤーを右クリックし、 **[ポイントの追加]**をクリックします。 カーソルが十字に変化します。  
+2.  マップ ペインで、種類が **[埋め込み]** のポイント レイヤーを右クリックし、 **[ポイントの追加]** をクリックします。 カーソルが十字に変化します。  
   
 3.  ポイントの追加先として、マップ上の場所をクリックします。 選択したレイヤー上のクリックした場所に、埋め込みポイントが追加されます。  
   
 ## <a name="to-customize-the-display-for-an-embedded-point"></a>埋め込みポイントの表示をカスタマイズするには  
   
-1.  ポイントを右クリックし、 **[ポイントのプロパティ]**をクリックします。 **[マップの埋め込みポイントのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  ポイントを右クリックし、 **[ポイントのプロパティ]** をクリックします。 **[マップの埋め込みポイントのプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[このレイヤーのポイント オプションをオーバーライドする]**をクリックします。 左ペインに複数のプロパティ ページが表示されます。  
+2.  **[このレイヤーのポイント オプションをオーバーライドする]** をクリックします。 左ペインに複数のプロパティ ページが表示されます。  
   
 3.  ページをクリックし、このポイントに適用する表示プロパティを設定します。  
   

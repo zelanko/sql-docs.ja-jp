@@ -1,27 +1,25 @@
 ---
-title: "多次元データのパラメーター値の非表示データセットの表示 | Microsoft Docs"
-ms.custom: 
+title: 多次元データのパラメーター値の非表示データセットの表示 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fe04cae6783949c517a9a75a715ea4250577643c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e95fd161dfadcab075a770e8e6ab6001da6c07e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>多次元データのパラメーター値の非表示データセットの表示
   既定ではレポート データ ペインに表示されない、自動的に生成されたデータセット (非表示のデータセット) がレポートに含まれる場合があります。 これらのデータセットは次のような場合に作成されます。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-display-hidden-datasets"></a>非表示のデータセットを表示するには  
   
--   レポート データ ペインで、[データセット] フォルダーを右クリックし、 **[非表示データセットの表示]**をクリックします。  
+-   レポート データ ペインで、[データセット] フォルダーを右クリックし、 **[非表示データセットの表示]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   

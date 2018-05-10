@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
@@ -20,12 +19,11 @@ caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5ada9a491160ae119ac4792f26640854fcacc0f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d849d3fdf5c0242c8d3b5f09af78d3649cb1d1f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,11 +107,11 @@ ms.lasthandoff: 04/16/2018
   
  ディストリビューターで SQL\*PLUS を検索してください。 Oracle 10g クライアント インストールの場合、この実行可能ファイルの名前は sqlplus.exe です。 通常は %ORACLE_HOME%/bin にインストールされています。 SQL\*PLUS のパスがシステム パスに含まれていることを確認するには、システム変数 **Path** の値を調べます。  
   
-1.  **[マイ コンピューター]**を右クリックし、 **[プロパティ]**をクリックします。  
+1.  **[マイ コンピューター]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[詳細設定]** タブをクリックし、 **[環境変数]**をクリックします。  
+2.  **[詳細設定]** タブをクリックし、 **[環境変数]** をクリックします。  
   
-3.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** ボックスで、 **[Path]** 変数をクリックし、 **[編集]**をクリックします。  
+3.  **[環境変数]** ダイアログ ボックスの **[システム環境変数]** ボックスで、 **[Path]** 変数をクリックし、 **[編集]** をクリックします。  
   
 4.  **[システム変数の編集]** ダイアログ ボックスで、 **[変数値]** ボックスに sqlplus.exe を含むフォルダーへのパスが表示されていない場合は、このパスを含むように文字列を編集します。  
   
@@ -159,17 +157,17 @@ ms.lasthandoff: 04/16/2018
   
  レジストリ設定を表示および変更するには、次の手順を実行します。  
   
-1.  **[スタート]**ボタンをクリックし、 **[ファイル名を指定して実行]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **regedit**」と入力し、 **[OK]**をクリックします。  
+2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **regedit**」と入力し、 **[OK]** をクリックします。  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>*\Providers に移動します。  
+3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers に移動します。  
   
-     [Providers] の下に、[OraOLEDB.Oracle] という名前のフォルダーがあります。 このフォルダーの中に、 **[AllowInProcess]**という名前の DWORD 値があり、値は **1**になっている必要があります。  
+     [Providers] の下に、[OraOLEDB.Oracle] という名前のフォルダーがあります。 このフォルダーの中に、 **[AllowInProcess]** という名前の DWORD 値があり、値は **1**になっている必要があります。  
   
 4.  **[AllowInProcess]** が **0**に設定されている場合は、このレジストリ エントリを **1**に更新します。  
   
-    1.  エントリを右クリックし、 **[変更]**をクリックします。  
+    1.  エントリを右クリックし、 **[変更]** をクリックします。  
   
     2.  **[文字列の編集]** ダイアログ ボックスで、 **[値のデータ]** ボックスに「 **1** 」と入力します。  
   
@@ -239,11 +237,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>パブリッシャーの再構成が必要になる変更  
  レプリケーション メタデータ テーブルまたはプロシージャを変更した場合は、パブリッシャーを削除して再構成する必要があります。 パブリッシャーを再構成するには、パブリッシャーを削除し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、Transact-SQL、または RMO を使用してパブリッシャーを再構成する必要があります。 パブリッシャーの構成の詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
   
- **Oracle パブリッシャーを削除するには (**SQL Server Management Studio**)**  
+ **Oracle パブリッシャーを削除するには (** SQL Server Management Studio **)**  
   
 1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の Oracle パブリッシャーのディストリビューターに接続し、サーバー ノードを展開します。  
   
-2.  **[レプリケーション]**を右クリックし、 **[ディストリビューターのプロパティ]**をクリックします。  
+2.  **[レプリケーション]** を右クリックし、 **[ディストリビューターのプロパティ]** をクリックします。  
   
 3.  **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで、Oracle パブリッシャーのチェック ボックスをオフにします。  
   

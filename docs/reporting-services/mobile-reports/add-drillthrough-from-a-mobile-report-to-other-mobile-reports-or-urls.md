@@ -1,27 +1,25 @@
 ---
-title: "モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する | Microsoft Docs"
-ms.custom: 
+title: モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する | Microsoft Docs
+ms.custom: ''
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 27f8b92c77a5251e2d52e8af85e4aeb759a5ce8a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: aec03b03918964a474e04568384f70626d7ab4ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポート内の任意のゲージ、グラフ、またはデータ グリッドから、別のモバイル レポートまたはカスタム URL にドリルスルーを追加することができます。 
@@ -66,7 +64,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
   
    *カスタム URL プロパティへにドリルスルーする*  
   
-4. **[適用]**をクリックします。  
+4. **[適用]** をクリックします。  
 
   
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]のモバイル レポートをプレビューすると、ドリルスルーで視覚化をクリックした場合には、ドリルスルーが無効になっている旨のメッセージが表示されます。 モバイル レポートを保存または公開してからそれを表示すると、その後は、ターゲットへは実際にドリルスルーするしかなく、 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] のレイアウト モードまたはプレビュー モードでのドリルスルーはできません。  

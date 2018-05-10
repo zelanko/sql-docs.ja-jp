@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - grouping containers
 - tasks [Integration Services], grouping
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9fd4deab1f2dde19f6d5ec91fe72f10a2e71135d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d46c384df741705288b2a57f7d5759ee6455393c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-or-ungroup-components"></a>コンポーネントのグループ化とグループの解除
   **デザイナーの**[制御フロー] **、**[データ フロー] **、および** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブでは、折りたたみ可能なグループ化がサポートされています。 パッケージに多数のコンポーネントがある場合、タブは過密状態になることがあります。このような状態になると、すべてのコンポーネントを一度に表示するのが難しくなり、操作する項目を探すのも困難になります。 折りたたみ可能なグループ化機能を使用すると、作業画面上の領域を節約でき、大きなパッケージの処理が容易になります。  

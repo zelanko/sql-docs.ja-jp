@@ -3,15 +3,11 @@ title: システム データ コレクション セット レポート | Micros
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], server activity
 - server activity [SQL Server]
@@ -24,15 +20,14 @@ helpviewer_keywords:
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a7edb1ffcbc2a1679bdae6f01ff0fed50562704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5c859efbcfd431ee2a88f25746debb85ff21746e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-data-collection-set-reports"></a>システム データ コレクション セット レポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="Disk"></a> ディスク使用量の概要レポート  
  ディスク使用量の概要レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。 このレポートに表示されるデータは、ジェネリック T-SQL Query コレクター型を使用するディスク使用量コレクション セットを使用して取得されます。  
   
- ディスク使用量の概要レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]**を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]**の順にポイントし、 **[ディスク使用量の概要]**をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
+ ディスク使用量の概要レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]** の順にポイントし、 **[ディスク使用量の概要]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
   
 ### <a name="disk-usage-collection-set-report"></a>ディスク使用量コレクション セット レポート  
  ディスク使用量コレクション セット レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内のすべてのデータベースで使用されるディスク使用量と、それらの各データベースのデータ ファイルとログ ファイルの拡張傾向の概要が示されます。  
@@ -82,7 +77,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="Query"></a> クエリ統計の履歴レポート  
  クエリ統計の履歴レポートには、クエリ実行の統計が示されます。 このレポートで使用されるデータは、Query Activity コレクター型を使用するクエリ統計情報コレクション セットを使用して取得されます。  
   
- クエリ統計の履歴レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]**を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]**の順にポイントし、 **[クエリ統計の履歴]**をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
+ クエリ統計の履歴レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]** の順にポイントし、 **[クエリ統計の履歴]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
   
 ### <a name="selecting-data-to-include-in-the-report"></a>レポートに含めるデータの選択  
  このレポートには、データ コレクション期間全体のクエリ実行の統計が含まれます。 データ コレクション タイムライン内を移動して、表示するデータのセグメントを選択するには、2 つの方法があります。  
@@ -96,14 +91,14 @@ ms.lasthandoff: 04/16/2018
  カレンダー ボタンを使用すると、レポート対象にするデータの開始日、開始時刻、および実行時間を指定できます。  
   
 #### <a name="query-statistics-history-report"></a>クエリ統計の履歴レポート  
- 総 CPU 時間ごとの上位のクエリのグラフには、選択した時間範囲の各クエリの相対的な負荷が総 CPU 使用率に基づいて示されます。 クエリの相対的な負荷の別のビューを表示するには、グラフの下にある **[実行時間]**、 **[I/O の合計数]**、 **[物理読み取り数]**、または **[論理書き込み数]**のいずれかのハイパーリンクをクリックします。  
+ 総 CPU 時間ごとの上位のクエリのグラフには、選択した時間範囲の各クエリの相対的な負荷が総 CPU 使用率に基づいて示されます。 クエリの相対的な負荷の別のビューを表示するには、グラフの下にある **[実行時間]**、 **[I/O の合計数]**、 **[物理読み取り数]**、または **[論理書き込み数]** のいずれかのハイパーリンクをクリックします。  
   
  グラフの下にあるテーブルには、追加のクエリ データが示されます。 このテーブルには、グラフ化された各クエリのテキストの一覧と、詳細な統計情報が表示されます。 テーブルに示された各クエリと同様にグラフ棒もアクティブなリンクになっていることに注意してください。 アクティブなリンクをクリックすると、そのクエリに対応するクエリの詳細サブレポートが開きます。  
   
 #### <a name="query-details-subreport"></a>クエリの詳細サブレポート  
  クエリの詳細サブレポートには、クエリ テキスト全体が表示されます。 クエリの隣には、 **[クエリ テキストの編集]** ハイパーリンクがあります。 このリンクをクリックすると、クエリをクエリ エディターで開くことができます。 クエリの下にある表には、クエリの実行ごとの平均実行時間など、クエリ実行の統計が示されます。  
   
- クエリ プランと実行ごとの平均実行時間のグラフが表示されます。 クエリ プランの相対的なコストの別のビューを表示するには、グラフの下にある **[実行時間]**、 **[物理読み取り数]**、または **[論理書き込み数]**のいずれかのハイパーリンクをクリックします。 グラフ線はアクティブで、任意の箇所をクリックするとクエリ プランの詳細サブレポートを開くことができます。  
+ クエリ プランと実行ごとの平均実行時間のグラフが表示されます。 クエリ プランの相対的なコストの別のビューを表示するには、グラフの下にある **[実行時間]**、 **[物理読み取り数]**、または **[論理書き込み数]** のいずれかのハイパーリンクをクリックします。 グラフ線はアクティブで、任意の箇所をクリックするとクエリ プランの詳細サブレポートを開くことができます。  
   
  グラフの下にあるテーブルには、実行ごとの CPU 使用率に基づく上位 10 のクエリ プランが示されます。 **[プラン番号]** 列の各番号はアクティブなリンクで、クリックするとクエリ プランの詳細サブレポートを開くことができます。  
   
@@ -113,7 +108,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="server-activity-history-report"></a>サーバーの利用状況の履歴レポート  
  サーバーの利用状況の履歴レポートには、サーバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのリソース消費とサーバー利用状況に関するデータが示されます。 このレポートに表示されるデータは、ジェネリック T-SQL Query コレクター型およびパフォーマンス カウンター コレクター型を使用するサーバー利用状況コレクション セットによって収集されます。  
   
- サーバーの利用状況の履歴レポートには、オブジェクト エクスプローラーからアクセスできます。 オブジェクト エクスプローラーで、 **[管理]** フォルダーを展開し、 **[データ コレクション]**を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]**の順にポイントし、 **[サーバーの利用状況の履歴]**をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
+ サーバーの利用状況の履歴レポートには、オブジェクト エクスプローラーからアクセスできます。 オブジェクト エクスプローラーで、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]** の順にポイントし、 **[サーバーの利用状況の履歴]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
   
 ### <a name="selecting-data-to-include-in-the-report"></a>レポートに含めるデータの選択  
  このレポートには、データ コレクション期間全体のサーバーの利用状況が含まれます。 データ コレクション タイムライン内を移動して、表示するデータのセグメントを選択するには、2 つの方法があります。  

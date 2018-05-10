@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/02/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
@@ -20,13 +19,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 669ebc67b412d751cfe599b7fbbc8ce220e6643f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ffc32787570449c192f7a24b56b03cfa7e2bbdd7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +47,7 @@ ms.lasthandoff: 04/16/2018
  **のインストール時に** [管理ツール - 基本] **または** [管理ツール - 詳細] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。    
   
 ## <a name="transaction-performance-analysis-reports"></a>トランザクション パフォーマンス分析レポート  
- **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]**、 **[標準レポート]**、 **[トランザクション パフォーマンス分析の概要]**の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
+ **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]**、 **[標準レポート]**、 **[トランザクション パフォーマンス分析の概要]** の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
   
 ### <a name="tables"></a>テーブル
   
@@ -114,7 +112,7 @@ ms.lasthandoff: 04/16/2018
   
 **UI コマンドを使用して移行チェックリストを生成するには**  
   
-1.  **オブジェクト エクスプ ローラー**で、システム データベース以外のデータベースを右クリックし、 **[タスク]**をクリックしてから、 **[インメモリ OLTP 移行チェックリストの生成]**をクリックします。  
+1.  **オブジェクト エクスプ ローラー**で、システム データベース以外のデータベースを右クリックし、 **[タスク]** をクリックしてから、 **[インメモリ OLTP 移行チェックリストの生成]** をクリックします。  
   
 2.  [インメモリ OLTP 移行チェックリストの生成] ダイアログ ボックスで [次へ] をクリックし、 **[チェックリスト生成オプションの構成]** ページに移動します。 このページで、次の操作を行います。  
   
@@ -128,13 +126,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  **[次へ]** をクリックし、タスクの一覧が、 **[チェックリスト生成オプションの構成]** ページの設定と一致することを確認します。  
   
-4.  **[完了]**をクリックし、移行チェックリスト レポートが、選択したオブジェクトに対してのみ生成されたことを確認します。  
+4.  **[完了]** をクリックし、移行チェックリスト レポートが、選択したオブジェクトに対してのみ生成されたことを確認します。  
   
  このレポートを、メモリ最適化アドバイザー ツールおよびネイティブ コンパイル アドバイザー ツールによって生成されたレポートと比較して、レポートの精度を確認できます。 詳細については、「 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 」および「 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)」を参照してください。  
   
 **SQL Server PowerShell を使用して移行チェックリストを生成するには**  
   
-1.  **オブジェクト エクスプ ローラー**で、データベースをクリックし、 **[PowerShell の起動]**をクリックします。 次のようなプロンプトが表示されることを確認します。  
+1.  **オブジェクト エクスプ ローラー**で、データベースをクリックし、 **[PowerShell の起動]** をクリックします。 次のようなプロンプトが表示されることを確認します。  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

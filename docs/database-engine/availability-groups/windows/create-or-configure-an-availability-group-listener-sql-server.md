@@ -3,15 +3,12 @@ title: 可用性グループ リスナーの作成または構成 (SQL Server) |
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Active
-ms.openlocfilehash: 746cdda3b75aee4f15f7c03f9754614f15c68434
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b1106913af5e7b6c2e9cd4a2e8b329efa0d596a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +140,7 @@ ms.lasthandoff: 04/16/2018
   
     -   リスナーを作成するには、 **[可用性グループ リスナー]** ノードを右クリックし、 **[新しいリスナー]** をクリックします。 これにより、 **[新しい可用性グループ リスナー]** ダイアログ ボックスが開きます。 詳細については、このトピックの「 [[新しい可用性グループ リスナー] (ダイアログ ボックス)](#AddAgListenerDialog)」を参照してください。  
   
-    -   既存のリスナーのポート番号を変更するには、 **[可用性グループ リスナー]** ノードを展開し、リスナーを右クリックして、 **[プロパティ]** をクリックします。 **[ポート]** フィールドに新しいポート番号を入力し、 **[OK]**をクリックします。  
+    -   既存のリスナーのポート番号を変更するには、 **[可用性グループ リスナー]** ノードを展開し、リスナーを右クリックして、 **[プロパティ]** をクリックします。 **[ポート]** フィールドに新しいポート番号を入力し、 **[OK]** をクリックします。  
   
 ###  <a name="AddAgListenerDialog"></a> [新しい可用性グループ リスナー] (ダイアログ ボックス)  
  **[リスナーの DNS 名]**  
@@ -167,7 +163,7 @@ ms.lasthandoff: 04/16/2018
  **[静的 IP]**  
  リスナーは、1 つまたは複数の静的 IP アドレスを使用します。 必要に応じて追加の IP アドレスを指定できます。 複数のサブネットにわたる可用性グループ リスナーを作成するには、各サブネットのリスナー構成に静的 IP アドレスを指定する必要があります。 これらの静的 IP アドレスを取得するには、ネットワーク管理者に問い合わせてください。  
   
- **[静的 IP]** を選択した場合、 **[ネットワーク モード]** フィールドの下にサブネット グリッドが表示されます。 このグリッドに、この可用性グループ リスナーによってアクセスできる各サブネットについての情報が表示されます。 このグリッドは、 **[追加]**をクリックして静的 IP アドレスを追加するまでは空です。  
+ **[静的 IP]** を選択した場合、 **[ネットワーク モード]** フィールドの下にサブネット グリッドが表示されます。 このグリッドに、この可用性グループ リスナーによってアクセスできる各サブネットについての情報が表示されます。 このグリッドは、 **[追加]** をクリックして静的 IP アドレスを追加するまでは空です。  
   
  次の列で構成されます。  
   
@@ -282,9 +278,9 @@ ms.lasthandoff: 04/16/2018
   
 -   クラスター リソースを操作する権限がない場合は、接続タイムアウトを 30 秒に設定します (この値は結果として、20 秒の TCP タイムアウトと 10 秒のバッファーになります)。  
   
-     **長所:**クロスサブネット フェールオーバーが発生した場合、クライアントの復旧時間が短くなります。  
+     **長所:** クロスサブネット フェールオーバーが発生した場合、クライアントの復旧時間が短くなります。  
   
-     **短所:**半数のクライアント接続に 20 秒以上要します。  
+     **短所:** 半数のクライアント接続に 20 秒以上要します。  
   
 -   クラスター リソースを操作する権限がある場合は、可用性グループ リスナーのネットワーク名を `RegisterAllProvidersIP=0`に設定する方法をお勧めします。 詳細については、このセクションの「RegisterAllProvidersIP の設定」を参照してください。  
   

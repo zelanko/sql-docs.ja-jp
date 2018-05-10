@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
 - transaction locking and row versioning guide
@@ -22,13 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0c8e2320325a00e0729562c07aa328ef8ddafe0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -459,7 +457,7 @@ GO
   
  キー範囲ロックを使用すると、ファントム読み取りを回避できます。 各行のキー範囲を保護することで、トランザクションからアクセスされるレコード セットへのファントム挿入も回避されます。  
   
- キー範囲ロックは、キー範囲の開始値と終了値を指定して、インデックスに対して設定されます。 このロックでは、範囲内のキー値を持つ行を挿入、更新、または削除する操作がブロックされます。挿入操作、更新操作、または削除操作では、最初にインデックスに対するロックを取得する必要があるためです。 たとえば、シリアル化可能なトランザクションでは、**'**AAA**'** と **'**CZZ**'** の間のキー値を持つすべての行を読み取る SELECT ステートメントを実行できます。 **'**AAA**'** から **'**CZZ**'** の範囲内のキー値にキー範囲ロックをかけると、他のトランザクションからは **'**ADG**'**、**'**BBD**'**、**'**CAL**'** など、その範囲内のキー値を持つ行は挿入されません。  
+ キー範囲ロックは、キー範囲の開始値と終了値を指定して、インデックスに対して設定されます。 このロックでは、範囲内のキー値を持つ行を挿入、更新、または削除する操作がブロックされます。挿入操作、更新操作、または削除操作では、最初にインデックスに対するロックを取得する必要があるためです。 たとえば、シリアル化可能なトランザクションでは、**'** AAA **'** と **'** CZZ **'** の間のキー値を持つすべての行を読み取る SELECT ステートメントを実行できます。 **'** AAA **'** から **'** CZZ **'** の範囲内のキー値にキー範囲ロックをかけると、他のトランザクションからは **'** ADG **'**、**'** BBD **'**、**'** CAL **'** など、その範囲内のキー値を持つ行は挿入されません。  
   
 #### <a name="key_range_modes"></a> キー範囲ロック モード  
  キー範囲ロックには、範囲-行形式で指定される範囲と行のコンポーネントが含まれています。  
@@ -515,7 +513,7 @@ GO
  キー範囲ロックを実行する前に次の条件を満たしておく必要があります。  
   
 -   トランザクション分離レベルを SERIALIZABLE に設定する。  
--   クエリ プロセッサではインデックスを使用して範囲フィルター述語を実装する必要があります。 たとえば、SELECT ステートメントで WHERE 句を使用すると、ColumnX BETWEEN N**'**AAA**'** AND N**'**CZZ**'** 述語を使用して範囲条件を設定できます。 **ColumnX** がインデックス キーに含まれている場合、キー範囲ロックだけを取得できます。  
+-   クエリ プロセッサではインデックスを使用して範囲フィルター述語を実装する必要があります。 たとえば、SELECT ステートメントで WHERE 句を使用すると、ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** 述語を使用して範囲条件を設定できます。 **ColumnX** がインデックス キーに含まれている場合、キー範囲ロックだけを取得できます。  
   
 #### <a name="examples"></a>使用例  
  次のテーブルとインデックスは、この後のキー範囲ロックの例の基準として使用されます。  

@@ -3,15 +3,12 @@ title: 付加列インデックスの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
 - index keys [SQL Server]
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b3f9d4311ad0cf14254e2b5f4efe5930b1a74f51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 75ceb2087d4c46080ad9fa3af96f1eeb710e8897
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,23 +86,23 @@ ms.lasthandoff: 04/16/2018
   
 3.  プラス記号をクリックして、非キー列を含むインデックスの作成先となるテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]**をポイントし、 **[非クラスター化インデックス...]**を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス...]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  **[インデックス キー列]** タブで、 **[追加]**をクリックします。  
+6.  **[インデックス キー列]** タブで、 **[追加]** をクリックします。  
   
 7.  *[テーブル名から列を選択]* ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
-9. **[付加列]** タブで、 **[追加]**をクリックします。  
+9. **[付加列]** タブで、 **[追加]** をクリックします。  
   
 10. *[<テーブル名> から列を選択]* ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 11. **[OK]** をクリックします。  
   
-12. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+12. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -114,9 +110,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```sql  
     USE AdventureWorks2012;  

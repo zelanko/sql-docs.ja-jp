@@ -1,27 +1,25 @@
 ---
-title: "改ページの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 改ページの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f264f0fc3f601ba9433f5ec591674bfa03b07779
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 41dbc6f3609ac6ff16baf67995e8ee348019ce0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>改ページの追加 (レポート ビルダーおよび SSRS)
   四角形、データ領域、またはデータ領域内のグループに改ページを追加して、各ページの情報量を制御することができます。 改ページを追加すると、レポートを表示する際に各ページのアイテムのみを処理すればよいので、パブリッシュされたレポートのパフォーマンスが向上します。 レポート全体が 1 ページで構成されている場合は、レポートを表示する前にすべてのアイテムを処理する必要があります。  
@@ -31,9 +29,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-a-page-break-to-a-data-region"></a>データ領域に改ページを追加するには  
   
-1.  デザイン画面で、データ領域のコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]**をクリックします。  
+1.  デザイン画面で、データ領域のコーナー ハンドルを右クリックし、 **[Tablix のプロパティ]** をクリックします。  
   
-2.  **[全般]** タブの **[改ページのオプション]**で、次のいずれかのオプションを選択します。  
+2.  **[全般]** タブの **[改ページのオプション]** で、次のいずれかのオプションを選択します。  
   
     -   **[前に改ページを追加する]**: テーブルの前に改ページを追加する場合は、このチェック ボックスをオンにします。  
   
@@ -43,9 +41,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-a-page-break-to-a-rectangle"></a>四角形に改ページを追加するには  
   
-1.  デザイン画面で、改ページを追加する四角形を右クリックし、 **[四角形のプロパティ]**をクリックします。  
+1.  デザイン画面で、改ページを追加する四角形を右クリックし、 **[四角形のプロパティ]** をクリックします。  
   
-2.  **[全般]** タブの **[改ページのオプション]**で、次のいずれかのオプションを選択します。  
+2.  **[全般]** タブの **[改ページのオプション]** で、次のいずれかのオプションを選択します。  
   
     -   **[前に改ページを追加する]**: 四角形の前に改ページを追加する場合は、このチェック ボックスをオンにします。  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-a-page-break-to-a-row-group-in-a-table-matrix-or-list"></a>テーブル、マトリックス、または一覧の行グループに改ページを追加するには  
   
-1.  グループ化ペインで、行グループを右クリックし、 **[グループのプロパティ]**をクリックします。  
+1.  グループ化ペインで、行グループを右クリックし、 **[グループのプロパティ]** をクリックします。  
   
     > [!NOTE]  
     >  列グループでは改ページは無視されます。  

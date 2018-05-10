@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2a2dd43daafdefd2c11785f90a8527b22f1a2440
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2dbe11fd8837bf84fa7f1e3195f6831e33c2ebd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>SQL Server のインスタンス間での UCP の移動 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  データの収集と集計の操作が完了するまで約 1 時間待機します。  
   
-9. データを更新するには、 **ユーティリティ エクスプローラー** で **[マネージ インスタンス]**ノードを右クリックし、 **[更新]**をクリックします。 リスト ビューのデータは、**ユーティリティ エクスプローラー**のコンテンツ ウィンドウに表示されます。 詳細については、「[リソース正常性ポリシーの結果の表示 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)」を参照してください。  
+9. データを更新するには、 **ユーティリティ エクスプローラー** で **[マネージ インスタンス]** ノードを右クリックし、 **[更新]** をクリックします。 リスト ビューのデータは、**ユーティリティ エクスプローラー**のコンテンツ ウィンドウに表示されます。 詳細については、「[リソース正常性ポリシーの結果の表示 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

@@ -3,15 +3,11 @@ title: コレクション セット レポートの表示 (SQL Server Management
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dc.reporthistory.calendar.f1
 helpviewer_keywords:
@@ -19,15 +15,14 @@ helpviewer_keywords:
 - reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0876f2150f70ace06aa0253814a4f8e6ea3a277
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bb7a176096a2f94ea4453dfbd53ba71657630c87
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>コレクション セット レポートの表示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +38,9 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-view-a-collection-set-report"></a>コレクション セットのレポートを表示するには  
   
-1.  レポートのテーブルは、収集したデータの初回アップロード時に作成されます。 この初回アップロード以前にレポートを表示しようとするとエラーが発生し、レポートは表示されません。 ディスク使用量コレクション セットのデータをアップロードするには、オブジェクト エクスプローラーで、 **[管理]** フォルダー、 **[データ コレクション]**、 **[システム データ コレクション セット]**の順に展開し、 **[ディスク使用量]** コレクション セットを右クリックして、 **[今すぐ収集してアップロード]**をクリックします。  
+1.  レポートのテーブルは、収集したデータの初回アップロード時に作成されます。 この初回アップロード以前にレポートを表示しようとするとエラーが発生し、レポートは表示されません。 ディスク使用量コレクション セットのデータをアップロードするには、オブジェクト エクスプローラーで、 **[管理]** フォルダー、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開し、 **[ディスク使用量]** コレクション セットを右クリックして、 **[今すぐ収集してアップロード]** をクリックします。  
   
-2.  レポートを表示するには、オブジェクト エクスプローラーで、 **[管理]** フォルダーを展開し、 **[データ コレクション]**を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]**の順にポイントし、 **[ディスク使用量の概要]**をクリックします。  
+2.  レポートを表示するには、オブジェクト エクスプローラーで、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]** の順にポイントし、 **[ディスク使用量の概要]** をクリックします。  
   
     > [!NOTE]  
     >  一部のレポートでは、データ コレクション タイムラインの下にカレンダーのボタンが表示される場合があります。 このボタンをクリックして、 **データ コレクション レポート カレンダー**にアクセスします。  

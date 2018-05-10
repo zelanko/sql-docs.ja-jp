@@ -1,30 +1,28 @@
 ---
-title: "レポートへの画像の埋め込み (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポートへの画像の埋め込み (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 79f6ff70c869da699a7505bdbe5b4b1490e9eb23
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3491139efe3708e58878116018b1032956630833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)
   レポートには、画像を埋め込むことができます。 画像の埋め込みには、レポートの画像を常に利用可能な状態にできるというメリットはありますが、レポート定義 (レポートを定義するファイル) のサイズは大きくなる可能性があります。 レポートに埋め込まれた画像は、レポート データ ペインに一覧表示されます。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-embed-an-image-in-a-report"></a>レポートに画像を埋め込むには  
   
-1.  レポート デザイン ビューの **[挿入]** タブで、 **[画像]**をクリックします。  
+1.  レポート デザイン ビューの **[挿入]** タブで、 **[画像]** をクリックします。  
   
 2.  デザイン画面で、ボックスをクリックし、画像の目的のサイズにドラッグします。  
   
@@ -44,13 +42,13 @@ ms.lasthandoff: 01/09/2018
   
 4.  (省略化) **[ツールヒント]** ボックスで、ユーザーが表示レポートの画像の上にマウスを置いたときに表示されるテキストを入力します。  
   
-5.  **[画像ソースの選択]**で、 **[埋め込み]**を選択します。  
+5.  **[画像ソースの選択]** で、 **[埋め込み]** を選択します。  
   
 6.  **[次の画像を使用]** ボックスの横にある **[インポート]** ボタンをクリックします。  
   
-7.  **[ファイルの種類]**で画像ファイルの種類を選択し、ファイルに移動し、 **[開く]**をクリックします。  
+7.  **[ファイルの種類]** で画像ファイルの種類を選択し、ファイルに移動し、 **[開く]** をクリックします。  
   
-8.  **[画像のプロパティ]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+8.  **[画像のプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
      デザイン画面に描画したボックス内に画像が表示され、レポート データ ペインの [画像] フォルダー内にファイルが表示されます。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 01/09/2018
 2.  デザイン画面で画像を選択します。 **プロパティ** ペインに画像のプロパティが表示されます。  
   
     > [!NOTE]  
-    >  プロパティ ペインが表示されていない場合は、 **[表示]** タブの **[プロパティ]**をクリックします。  
+    >  プロパティ ペインが表示されていない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
 3.  **[MIMEType]** プロパティの横にあるボックス内をクリックし、ボックスの一覧から新しい MIME の種類を選択します。  
   

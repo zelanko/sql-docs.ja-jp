@@ -1,27 +1,25 @@
 ---
-title: "共有データセットの管理 |Microsoft ドキュメント"
-ms.custom: 
+title: 共有データセットの管理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9a7cc41553ca20061bebb29a5956cf48ebede673
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7bd03c804791c67128d81eb3d7a6dbc64373e03b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  

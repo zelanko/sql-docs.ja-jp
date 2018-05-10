@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
@@ -20,13 +19,12 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a623c59bbc78503c7cf6bcbf190ed342763727c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +80,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 -  **SPA (Single-page Allocator/単一ページ アロケータ)**。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで 8KB 以下のメモリ割り当てのみ含む。 構成オプションの *max server memory (MB)* と *min server memory (MB)* によって、SPA が利用する物理メモリの上限が決められていました。 同時にバッファー プールが SPA のメカニズムであり、これが単一ページ割り当てを最も多く利用していました。
 -  **MPA (Multi-Page Allocator/複数ページ アロケータ)**。8KB より多くを要求するメモリ割り当て用。
 -  **CLR アロケータ**。CLR 初期化中に作成される SQL CLR ヒープとそのグローバル割り当てを含む。
--  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの**[スレッド スタック](../relational-databases/memory-management-architecture-guide.md#stacksizes)**のメモリ割り当て。
+-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの**[スレッド スタック](../relational-databases/memory-management-architecture-guide.md#stacksizes)** のメモリ割り当て。
 -  **DWA (Direct Windows allocations/直接 Windows 割り当て)**。Windows に直接行われるメモリ割り当て要求。 モジュールによって行われ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスに読み込まれる、Windows のヒープ使用量と直接仮想割り当てが含まれます。 このようなメモリ割り当ての例としては、たとえば、拡張ストアド プロシージャ DLL からの割り当て、オートメーション プロシージャ (sp_OA 呼び出し) で作成されたオブジェクト、リンク サーバー プロバイダーからの割り当てがあります。
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、SPA、MPA、CLR 割り当てがすべて統合され、**"あらゆるサイズの" ページ アロケータ**になります。これは、構成オプションの *max server memory (MB)* と *min server memory (MB)* によって制御されるメモリ上限に含まれます。 この変更によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーを通過するすべてのメモリ要件において、より正確にサイズを調整できるようになりました。 

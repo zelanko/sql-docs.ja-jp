@@ -1,17 +1,16 @@
 ---
-title: パブリケーション情報、[エージェント](トランザクション パブリケーション) | Microsoft Docs
+title: パブリケーション情報、[エージェント] (トランザクション パブリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.downlevelagents.tran.f1
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
@@ -19,14 +18,13 @@ caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26d41c277b0c1e1252f874d25864b7ddf69793e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 132168871b03f873d8c961df52b726d159034230
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] \(トランザクション パブリケーション)
+# <a name="publication-information-agents-transactional-publication"></a>パブリケーション情報、[エージェント] (トランザクション パブリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[エージェント]** タブには、選択したパブリケーションにおけるエージェントの要約情報が表示されます。 すべてのトランザクション パブリケーションのスナップショット エージェントとログ リーダー エージェントの情報が表示されます。 キュー更新サブスクリプション用に有効になっているトランザクション パブリケーションについては、キュー リーダー エージェントに関する情報が表示されます。  
   

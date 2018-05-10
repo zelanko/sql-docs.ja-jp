@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
 - subscriptions [SQL Server replication], push
@@ -21,13 +20,12 @@ caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ec0242fba19e776769b915518e26eef6f768fac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7824143f566b66ff6458994e21aea3699e126a7e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,11 +54,11 @@ ms.lasthandoff: 04/16/2018
   
 3.  サブスクリプションを同期するパブリケーションを展開します。  
   
-4.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]**をクリックします。  
+4.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
 5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
-6.  **[閉じる]**をクリックします。  
+6.  **[閉じる]** をクリックします。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Management Studio で要求時にプッシュ サブスクリプションを同期するには (サブスクライバー側)  
   
@@ -68,13 +66,13 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル サブスクリプション]** フォルダーを展開します。  
   
-3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]**をクリックします。  
+3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
 4.  ディストリビューターへの接続の確立に関するメッセージが表示されます。 **[OK]** をクリックします。  
   
 5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
-6.  **[閉じる]**をクリックします。  
+6.  **[閉じる]** をクリックします。  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-replication-monitor"></a>レプリケーション モニターで要求時にプッシュ サブスクリプションを同期するには  
   
@@ -82,9 +80,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
-3.  同期するサブスクリプションを右クリックし、 **[同期の開始]**をクリックします。  
+3.  同期するサブスクリプションを右クリックし、 **[同期の開始]** をクリックします。  
   
-4.  同期の進行状況を見るには、サブスクリプションを右クリックして **[詳細表示]**をクリックします。  
+4.  同期の進行状況を見るには、サブスクリプションを右クリックして **[詳細表示]** をクリックします。  
   
 ##  <a name="ReplProg"></a> レプリケーション エージェントの使用  
  コマンド プロンプトから適切なレプリケーション エージェント実行可能ファイルを呼び出すことにより、プッシュ サブスクリプションを要求時にプログラムで同期できます。 呼び出されるレプリケーション エージェント実行可能ファイルは、プッシュ サブスクリプションが属するパブリケーションの種類によって異なります。  

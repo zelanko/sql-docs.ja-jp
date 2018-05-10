@@ -1,34 +1,23 @@
 ---
-title: "ツールとアプローチの処理 (Analysis Services) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ツールとアプローチの処理 (Analysis Services) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- process [Analysis Services]
-- processing [Analysis Services]
-ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 57600dd49938217fa3bf65cff86f64e03bb16b52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-"処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
+  "処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
   
  Analysis Services のシステム管理者は、以下の方法で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの処理の実行と監視を行うことができます。  
   
@@ -53,13 +42,13 @@ ms.lasthandoff: 02/23/2018
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理の詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション &#40;です。Analysis Services &#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[データ処理](../../analysis-services/tabular-models/process-data-ssas-tabular.md)です。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理の詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[プロセス データ](../../analysis-services/tabular-models/process-data-ssas-tabular.md)です。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、Analysis Services に接続します。  
   
-2.  処理対象の Analysis Services オブジェクトを右クリックし、 **[処理]**をクリックします。 データ処理は、以下のレベルで行うことができます。  
+2.  処理対象の Analysis Services オブジェクトを右クリックし、 **[処理]** をクリックします。 データ処理は、以下のレベルで行うことができます。  
   
     -   データベース  
   
@@ -81,7 +70,7 @@ ms.lasthandoff: 02/23/2018
   
 5.  必要に応じて、 **[設定の変更]** をクリックし、処理順序や特定の種類のエラーに関する処理の動作などの設定を変更します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
      [処理の進行状況] ダイアログ ボックスに、各コマンドの進行状況が表示されます。 ステータス メッセージが切り詰められている場合は、 **[詳細表示]** をクリックすると、メッセージ全体を確認できます。  
   
@@ -91,13 +80,13 @@ ms.lasthandoff: 02/23/2018
   
 2.  ソリューション エクスプローラーで、配置されたプロジェクトの **[ディメンション]** フォルダーを展開します。  
   
-3.  ディメンションを右クリックし、 **[プロセス]**をクリックします。 複数のディメンションを右クリックして、一度に複数のオブジェクトを処理することができます。 詳細については、「[バッチ処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
+3.  ディメンションを右クリックし、 **[プロセス]** をクリックします。 複数のディメンションを右クリックして、一度に複数のオブジェクトを処理することができます。 詳細については、「[バッチ処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
   
-4.  **[ディメンションの処理]** ダイアログ ボックスにある **[オブジェクト一覧]** の **[処理オプション]** 列で、この列のオプションが **[完全処理]** であることを確認します。 別のオプションが設定されている場合、 **[処理オプション]**列のオプションをクリックし、表示される一覧から **[完全処理]** を選択します。  
+4.  **[ディメンションの処理]** ダイアログ ボックスにある **[オブジェクト一覧]** の **[処理オプション]** 列で、この列のオプションが **[完全処理]** であることを確認します。 別のオプションが設定されている場合、 **[処理オプション]** 列のオプションをクリックし、表示される一覧から **[完全処理]** を選択します。  
   
-5.  **[実行]**をクリックします。  
+5.  **[実行]** をクリックします。  
   
-6.  処理が完了したら、 **[閉じる]**をクリックします。  
+6.  処理が完了したら、 **[閉じる]** をクリックします。  
   
 ##  <a name="bkmk_impactanalysis"></a> オブジェクトの依存関係や操作のスコープを識別する影響分析の実行  
   
@@ -105,13 +94,13 @@ ms.lasthandoff: 02/23/2018
   
 2.  ディメンション、キューブ、メジャー グループ、またはパーティションを右クリックし、 **[処理オブジェクト]** ダイアログ ボックスを開きます。  
   
-3.  **[影響の分析]**をクリックします。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、モデルをスキャンし、処理対象として選択したオブジェクトに関連するオブジェクトの再処理の要件をレポートします。  
+3.  **[影響の分析]** をクリックします。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、モデルをスキャンし、処理対象として選択したオブジェクトに関連するオブジェクトの再処理の要件をレポートします。  
   
 ### <a name="processing-objects-using-xmla"></a>XMLA を使用したオブジェクトの処理  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、Analysis Services に接続します。  
   
-2.  処理するオブジェクトを右クリックし、 **[処理]**をクリックします。  
+2.  処理するオブジェクトを右クリックし、 **[処理]** をクリックします。  
   
 3.  **[処理]** ダイアログ ボックスで、使用する処理オプションを選択します。 必要に応じて他の設定も変更します。 必要な変更は、影響分析を実行して特定できます。  
   
@@ -123,7 +112,7 @@ ms.lasthandoff: 02/23/2018
   
 6.  同じバッチ内で他のオブジェクトを処理する場合は、スクリプトに続けて追加できます。 続行するには、前の手順を繰り返し、生成されたスクリプトを追加します。それにより、すべての処理操作を行う 1 つのスクリプトを作成できます。 例を表示するには、「 [SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)」を参照してください。  
   
-7.  メニュー バーの **[クエリ]**をクリックし、 **[実行]**をクリックします。  
+7.  メニュー バーの **[クエリ]** をクリックし、 **[実行]** をクリックします。  
   
 ### <a name="processing-objects-using-powershell"></a>PowerShell を使用したオブジェクトの処理  
   
@@ -159,7 +148,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]で Analysis Services 処理タスクを使用するパッケージを作成して、ソース リレーショナル データベースの定期更新を実行するときに、オブジェクトに新しいデータを自動的に設定できます。  
   
-2.  **[SSIS ツールボックス]**で **[Analysis Services 処理]** をダブルクリックしてパッケージに追加します。  
+2.  **[SSIS ツールボックス]** で **[Analysis Services 処理]** をダブルクリックしてパッケージに追加します。  
   
 3.  オブジェクトを処理するデータベースへの接続を指定するタスク、および処理のオプションを編集します。 このタスクの実装方法については、「 [Analysis Services 処理タスク](../../integration-services/control-flow/analysis-services-processing-task.md)」を参照してください。  
   

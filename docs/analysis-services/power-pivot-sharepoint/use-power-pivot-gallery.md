@@ -1,27 +1,19 @@
 ---
-title: "Power Pivot ギャラリーを使用して |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 08/31/2015
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot ギャラリーを使用して |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c6397bfd177a5d5901fdda29f4b34c9f6b7ffa7d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2369362b366e19886ff0e5c99fed97f033c67427
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-power-pivot-gallery"></a>Power Pivot ギャラリーを使用する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
 > [!NOTE]  
 >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
-> Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]**に変更します。    
+> Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]** に変更します。    
 > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
 >  Microsoft Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
   
@@ -77,11 +69,11 @@ ms.lasthandoff: 02/15/2018
   
 2.  1.  **Excel 2010**: [ファイル] メニューの **[保存して送信]** をクリックします。  
   
-    2.  **[SharePoint に保存]**をクリックします。  
+    2.  **[SharePoint に保存]** をクリックします。  
   
     3.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[発行オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
-    1.  **Excel 2013:**  [ファイル] メニューの **[上書き保存]**をクリックします。  
+    1.  **Excel 2013:**  [ファイル] メニューの **[上書き保存]** をクリックします。  
   
     2.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[ブラウザー ビュー オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
@@ -102,9 +94,9 @@ ms.lasthandoff: 02/15/2018
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
   
-2.  [ライブラリ] リボンで **[ドキュメント]**をクリックします。  
+2.  [ライブラリ] リボンで **[ドキュメント]** をクリックします。  
   
-3.  **[ドキュメントのアップロード]**で、アップロード オプションを選択し、アップロードするファイルの名前と場所を入力します。 ライブラリの設定によってドキュメントの表示位置が決まります。 ブラウザー ウィンドウを更新しないと、直前に追加したドキュメントが表示されないことがあります。  
+3.  **[ドキュメントのアップロード]** で、アップロード オプションを選択し、アップロードするファイルの名前と場所を入力します。 ライブラリの設定によってドキュメントの表示位置が決まります。 ブラウザー ウィンドウを更新しないと、直前に追加したドキュメントが表示されないことがあります。  
   
 ##  <a name="newdocs"></a> パブリッシュ済みの Power Pivot ブックに基づいて新しいレポートまたはブックを作成する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをパブリッシュすると、そのブックを接続先データ ソースとして使用する追加のブックまたは Reporting Services レポートを作成できます。  
@@ -136,7 +128,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
   
-2.  リボンで、 **[ライブラリ]**をクリックします。  
+2.  リボンで、 **[ライブラリ]** をクリックします。  
   
 3.  [ビューの管理] で、[現在のビュー] ボックスの一覧の下矢印をクリックし、[すべてのドキュメント] を選択します。  
   
@@ -147,13 +139,13 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="image"></a> サムネイル画像を更新する  
  次の手順を使用して、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーのドキュメントのサムネイル画像を再生成します。  
   
-1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを [すべてのドキュメント] ビューに切り替えます。 実行するには、リボンの **[ライブラリ]** をクリックし、 **[現在のビュー]** を **[すべてのドキュメント]**に変更します。  
+1.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを [すべてのドキュメント] ビューに切り替えます。 実行するには、リボンの **[ライブラリ]** をクリックし、 **[現在のビュー]** を **[すべてのドキュメント]** に変更します。  
   
 2.  サムネイル画像を更新するブックまたはレポートを選択します。  
   
-3.  右側にある下矢印をクリックし、 **[プロパティの編集]**を選択します。  
+3.  右側にある下矢印をクリックし、 **[プロパティの編集]** を選択します。  
   
-4.  **[保存]**をクリックします。 ドキュメントを保存すると、スナップショット サービスにより強制的にプレビュー画像が再生成されます。  
+4.  **[保存]** をクリックします。 ドキュメントを保存すると、スナップショット サービスにより強制的にプレビュー画像が再生成されます。  
   
 ##  <a name="bkmk_known_issues"></a> 既知の問題  
   

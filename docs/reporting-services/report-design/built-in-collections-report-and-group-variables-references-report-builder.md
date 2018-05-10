@@ -1,16 +1,15 @@
 ---
-title: "レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - "10083"
@@ -21,16 +20,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d26444b6232558c09d694c523d21e70f1d5d9475
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9dbc763b4e1def5d6ed6243d5d22d458f611ee65
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>組み込みコレクション - レポート変数とグループ変数の参照 (レポート ビルダー)
   レポート内の式で複数回使用される複雑な計算があれば、変数を作成した方がよい場合があります。 このような場合は、レポート変数またはグループ変数を作成できます。 変数名は、レポート内で一意である必要があります。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="report-variables"></a>レポート変数  
  レポート変数は、為替レートやタイム スタンプなどの時間に依存する計算や、複数回参照される複雑な計算で、値を保持するために使用します。 既定では、レポート変数は 1 回計算すると、レポート全体の式で使用できます。 レポート変数は既定では読み取り専用です。 既定を変更して、レポート変数を読み書き可能にすることもできます。 レポート変数の値はセッション全体で維持され、次回レポートを処理するときまで変わりません。  
   
- レポート変数を追加するには、 **[レポートのプロパティ]** ダイアログ ボックスを開き、 **[変数]**をクリックして、名前と値を指定します。 文字で始まり、空白を含まない名前を入力します。名前の文字列は大文字と小文字が区別されます。 名前に含めることができるのは、文字、数字、またはアンダースコア (_) だけです。  
+ レポート変数を追加するには、 **[レポートのプロパティ]** ダイアログ ボックスを開き、 **[変数]** をクリックして、名前と値を指定します。 文字で始まり、空白を含まない名前を入力します。名前の文字列は大文字と小文字が区別されます。 名前に含めることができるのは、文字、数字、またはアンダースコア (_) だけです。  
   
  式で変数を参照するには、 `=Variables!CustomTimeStamp.Value`などのグローバル コレクション構文を使用します。 デザイン画面では、この値が `<<Expr>>`としてテキスト ボックスに表示されます。  
   
@@ -73,7 +71,7 @@ ms.lasthandoff: 01/09/2018
   
      このテキスト ボックスには、Food の税を使用した場合は Beverages と Bread、Clothing の税を使用した場合は Shirts と Hats の税の総額が表示されます。  
   
- グループ変数を追加するには、 **[Tablix グループのプロパティ]** ダイアログ ボックスを開き、 **[変数]**をクリックし、名前および値を指定します。 グループ変数は、一意のグループの値ごとに 1 回計算されます。  
+ グループ変数を追加するには、 **[Tablix グループのプロパティ]** ダイアログ ボックスを開き、 **[変数]** をクリックし、名前および値を指定します。 グループ変数は、一意のグループの値ごとに 1 回計算されます。  
   
  式で変数を参照するには、 `=Variables!GroupDescription.Value`などのグローバル コレクション構文を使用します。 デザイン画面では、この値が `<<Expr>>`としてテキスト ボックスに表示されます。  
   

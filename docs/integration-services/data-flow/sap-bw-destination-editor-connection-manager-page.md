@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
@@ -19,12 +18,11 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0e0efe7a56e05ae0e099a45bbc03f14bc9eaa51
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8fc3eb789b9f69196b2bb963ec714d5b94ec4f20
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  

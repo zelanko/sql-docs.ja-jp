@@ -1,16 +1,15 @@
 ---
-title: "ドリルダウン アクション (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: ドリルダウン アクション (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10249"
 - "10186"
@@ -42,16 +41,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
 - sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 28ae890e8f4c04522cf0bad9f6f65a9a0135855d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
   テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/09/2018
   
  この図では、レポートの正符号 (+) をクリックして詳細データを表示しています。  
   
- たとえば、行グループのあるテーブルの場合、外側のグループの概要行を除いて、最初にすべての行を非表示にすることができます。 それぞれの内部グループ (詳細グループを含む) に対して、グループ化セルの展開/折りたたみを切り替えるアイコンを対象グループに追加します。 レポートが表示されると、ユーザーはこのテキスト ボックスをクリックして、詳細データを展開したり折りたたんだりすることができます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
+ たとえば、行グループのあるテーブルの場合、外側のグループの概要行を除いて、最初にすべての行を非表示にすることができます。 それぞれの内部グループ (詳細グループを含む) に対して、グループ化セルの展開/折りたたみを切り替えるアイコンを対象グループに追加します。 レポートが表示されると、ユーザーはこのテキスト ボックスをクリックして、詳細データを展開したり折りたたんだりすることができます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS& #41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)」を参照してください。  
   
  アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。  
   

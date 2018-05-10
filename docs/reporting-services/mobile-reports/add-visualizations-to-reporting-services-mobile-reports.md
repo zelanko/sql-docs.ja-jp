@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services モバイル レポートへの視覚エフェクトの追加 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services モバイル レポートへの視覚エフェクトの追加 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: be7412693c221c8436e0751414c5c615b6d23448
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへの視覚エフェクトの追加
 グラフは、データの視覚化における重要な部分です。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートで使用可能な、幅広いシナリオに対応した各種グラフについて説明します。 
@@ -70,7 +68,7 @@ ms.lasthandoff: 01/09/2018
 
 3. レポートにまだ存在していないデータがグラフで必要な場合は、**[データ]** タブ、**[データの追加]** の順に選択して、[Excel または共有データセットからデータを取得](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)します。
 
-3. **[データ プロパティ]** ペインに表示される **[主要な系列]** は **[SimulatedTable]**です。 ボックス内の矢印を選択し、テーブルを選択します。
+3. **[データ プロパティ]** ペインに表示される **[主要な系列]** は **[SimulatedTable]** です。 ボックス内の矢印を選択し、テーブルを選択します。
 
 5. **[データ構造]** を **[列ごと]** に設定した場合 (**[レイアウト]** タブで、**[ビジュアルのプロパティ]** ウィンドウを選択)、**[データ プロパティ]** ウィンドウでは、数値の複数の列を選択することができます。
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 01/09/2018
 
 比較グラフでは、系列の主要値および比較値に対して同じグラフ色を使用するようにすることができます。
 
-* **[ビジュアルのプロパティ]** ウィンドウで、**[比較系列上の色の再利用]** を**[オン]** に設定します。
+* **[ビジュアルのプロパティ]** ウィンドウで、**[比較系列上の色の再利用]** を **[オン]** に設定します。
 
    **[オン]** に設定した場合、主要系列と比較系列の描画の合間にカラー パレットが再起動するため、主要系列と比較系列の関連する値は同じになります。 
 
@@ -184,7 +182,7 @@ ms.lasthandoff: 01/09/2018
 
     ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  **[データ]** タブをクリックし、 **[データのプロパティ]** ペインで、データから **[Category Coordinate]**(カテゴリ座標) のカテゴリ フィールドと **[主要な系列]**の数値フィールドを選択します。 
+2.  **[データ]** タブをクリックし、 **[データのプロパティ]** ペインで、データから **[Category Coordinate]**(カテゴリ座標) のカテゴリ フィールドと **[主要な系列]** の数値フィールドを選択します。 
 
     ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     

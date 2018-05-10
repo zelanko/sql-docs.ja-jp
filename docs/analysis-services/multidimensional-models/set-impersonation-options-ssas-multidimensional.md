@@ -1,34 +1,23 @@
 ---
 title: 権限借用の設定 (SSAS - 多次元) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords:
-- Impersonation Information dialog box
-ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 91971d02c7a5def697049af142734ea4ba0e9468
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]作成するときに、**データソース**Analysis Services モデルにオブジェクトの権限借用のオプションは、構成する必要がある設定のいずれか。 このオプションでは、接続関連のローカルの操作 (OLE DB データ プロバイダーの読み込みや、移動プロファイルをサポートする環境でのユーザー プロファイル情報の解決など) を実行するときに、Analysis Services で特定の Windows ユーザー アカウントの ID を使用するかどうかを指定します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Analysis Services モデルで**データ ソース** オブジェクトを作成するときに構成する必要がある設定の 1 つに、権限借用オプションがあります。 このオプションでは、接続関連のローカルの操作 (OLE DB データ プロバイダーの読み込みや、移動プロファイルをサポートする環境でのユーザー プロファイル情報の解決など) を実行するときに、Analysis Services で特定の Windows ユーザー アカウントの ID を使用するかどうかを指定します。  
   
  Windows 認証を使用する接続の場合、権限借用オプションにより、外部データ ソースに対するクエリを実行する際のユーザー ID も決まります。 たとえば、権限借用オプションを **contoso\dbuser**に設定した場合、処理時にデータの取得に使用されるクエリはデータベース サーバーの **contoso\dbuser** として実行されます。  
   
@@ -43,7 +32,7 @@ ms.lasthandoff: 01/08/2018
 3.  このトピックの「 [権限借用のオプション](#bkmk_options) 」で説明するオプションを選択します。  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Management Studio での権限借用オプションの設定  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のダイアログ ボックスのプロパティの参照ボタン ( **[...]** ) をクリックして、**[権限借用情報]**ダイアログ ボックスを開きます。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のダイアログ ボックスのプロパティの参照ボタン ( **[...]** ) をクリックして、**[権限借用情報]** ダイアログ ボックスを開きます。  
   
 -   **[データベースのプロパティ]** ダイアログ ボックスの、[データ ソースの権限借用情報] プロパティ。  
   
@@ -55,7 +44,7 @@ ms.lasthandoff: 01/08/2018
  ダイアログ ボックスのすべてのオプションを使用できますが、すべてのオプションが各シナリオに適しているわけではありません。 以下の情報を参考にして、シナリオに最適なオプションを判断してください。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- このオプションを選択する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用: *\<ドメイン名 >*  **\\**  *\<ユーザー アカウント名 >*です。  
+ このオプションを選択する、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用: *\<ドメイン名 >***\\***\<ユーザーアカウント名 >* です。  
   
  データ アクセスのために特別に作成した専用の最小特権 Windows ユーザー ID を使用する場合に、このオプションを選択します。 たとえば、レポートで使用されるデータを取得するための汎用アカウントを定期的に作成している場合は、ここでそのアカウントを指定できます。  
   
@@ -92,9 +81,9 @@ ms.lasthandoff: 01/08/2018
   
  データベース レベルで Windows ユーザー名とパスワードを指定するには、次の操作を行います。  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でデータベースを右クリックし、 **[プロパティ]**をクリックします。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でデータベースを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[データ ソースの権限借用情報]**で、Windows ユーザー名とパスワードを指定します。  
+2.  **[データ ソースの権限借用情報]** で、Windows ユーザー名とパスワードを指定します。  
   
 3.  各データ ソースを右クリックし、プロパティを表示して、データ ソースが **[継承]** オプションを使用していることを確認します。  
   
@@ -106,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>参照  
  [データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [データ ソース プロパティの設定 & #40 です。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

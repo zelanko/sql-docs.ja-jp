@@ -1,32 +1,23 @@
 ---
 title: 集計関数を使用して |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2f882fb21fddd829be4cdc13793c4ca8b7f3cd02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-aggregate-functions"></a>集計関数の使用
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]メジャーをスライスするディメンションを使用すると、ときに、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum**になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は **Sum**になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
   
  Analysis Services において作成するすべてのメジャーは、対応する集計関数によりその動作が決まります。 定義済みの集計の種類には、**Sum****Min****Max****Count****Distinct Count**、およびその他複数の特化した関数があります。 または、複雑な数式やカスタムの数式に基づいて集計を必要とする場合は、構築済みの集計関数を代わりに使用して、MDX の計算を作成できます。 たとえば、割合の値のためのメジャーを定義する場合、計算されるメジャーを使用して MDX でそれを実行します。 「[CREATE MEMBER ステートメント &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)」を参照してください。  
   
@@ -73,8 +64,8 @@ ms.lasthandoff: 01/08/2018
  メンバーをカウントする個別のカウント メジャーは、ファクト テーブル内の外部キー列に基づきます  (つまり、メジャーの **Source Column** プロパティでこの列を識別します)。この列は、個別のカウント メジャーによってカウントされたメンバーを識別するディメンション テーブル列と結合します。  
   
 ## <a name="see-also"></a>参照  
- [メジャーおよびメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../mdx/mdx-function-reference-mdx.md)   
- [準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [メジャーとメジャー グループ](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../mdx/mdx-function-reference-mdx.md)   
+ [準加法の動作を定義します。](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

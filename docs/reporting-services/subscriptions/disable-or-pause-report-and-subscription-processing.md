@@ -1,16 +1,15 @@
 ---
-title: "レポートとサブスクリプションの処理を無効化または一時停止する | Microsoft Docs"
-ms.custom: 
+title: レポートとサブスクリプションの処理を無効化または一時停止する | Microsoft Docs
+ms.custom: ''
 ms.date: 09/29/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - subscriptions [Reporting Services], pausing
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 570d6f884ee1e5b2949c38a5e61873d31a646dc5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dfddb0368d8c674c7f0148a395f97088d9143228
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポートやサブスクリプションの処理を無効化または一時停止するには、複数の方法があります。 このトピックで説明する範囲は、サブスクリプションの無効化から、データ ソース接続の中断までです。 両方の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードですべての方法を使用することはできません。次の表は、方法とサポートされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードをまとめたものです。  
@@ -128,9 +126,9 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> 共有スケジュールを一時停止する  
  レポートまたはサブスクリプションが共有スケジュールから実行される場合、スケジュールを一時停止して処理を中止できます。 一時停止したスケジュールで実行されるすべてのレポートおよびサブスクリプションの処理は、スケジュールが再開されるまで延期されます。  
   
--   **SharePoint モード:** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") **[サイトの設定]** で **[共有スケジュールの管理]** を選択します。 スケジュールを選択し、 **[選択したスケジュールの一時停止]**をクリックします。  
+-   **SharePoint モード:** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") **[サイトの設定]** で **[共有スケジュールの管理]** を選択します。 スケジュールを選択し、 **[選択したスケジュールの一時停止]** をクリックします。  
   
--   **ネイティブ モード:** レポート マネージャーで、 **[サイトの設定]**をクリックします。 スケジュールを選択し、 **[一時停止]**をクリックします。  
+-   **ネイティブ モード:** レポート マネージャーで、 **[サイトの設定]** をクリックします。 スケジュールを選択し、 **[一時停止]** をクリックします。  
   
 ##  <a name="bkmk_disable_shared_datasource"></a> 共有データ ソースを無効にする  
  共有データ ソースを使用する利点の 1 つは、共有データ ソースを無効にして、レポートまたはデータ ドリブン サブスクリプションの実行を中止できることです。 共有データ ソースを無効にすると、レポートは外部ソースから切断されます。 共有データ ソースが無効な間は、すべてのレポートと共有データ ソースを使用するサブスクリプションで共有データ ソースを使用できません。  

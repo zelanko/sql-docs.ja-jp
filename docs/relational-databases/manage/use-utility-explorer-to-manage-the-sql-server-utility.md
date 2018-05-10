@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c5714ee80d2c95fd89d2acf9e63f7784195e902
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0ad1044ab981ced7802b050988ab2780c98cce10
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +30,12 @@ ms.lasthandoff: 04/16/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを使用する前に、ユーティリティ コントロール ポイントを作成する必要があります。 詳細については、「[SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」または「[SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)」を参照してください。  
   
 ## <a name="enroll-an-instance-of-sql-server-or-a-data-tier-application-from-utility-explorer"></a>ユーティリティ エクスプローラーからの SQL Server インスタンスまたはデータ層アプリケーションの登録  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに簡単に登録することができます。 ユーティリティ エクスプローラーで、 **[マネージ インスタンス]** ノードを右クリックし、 **[マネージ インスタンスの追加]**をクリックします。 操作を完了するには、ウィザードの手順に従います。 詳細については、「[SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに簡単に登録することができます。 ユーティリティ エクスプローラーで、 **[マネージ インスタンス]** ノードを右クリックし、 **[マネージ インスタンスの追加]** をクリックします。 操作を完了するには、ウィザードの手順に従います。 詳細については、「[SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。  
   
- データ層アプリケーションを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスに配置するには、**[オブジェクト エクスプローラー]** タブをクリックし、**[管理]** ノードを展開して、**[データ層アプリケーション]** を右クリックします。 右クリックで表示されるメニューで、 **[データ層アプリケーションの配置]**をクリックします。 詳細については、「 [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)」を参照してください。  
+ データ層アプリケーションを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージ インスタンスに配置するには、**[オブジェクト エクスプローラー]** タブをクリックし、**[管理]** ノードを展開して、**[データ層アプリケーション]** を右クリックします。 右クリックで表示されるメニューで、 **[データ層アプリケーションの配置]** をクリックします。 詳細については、「 [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)」を参照してください。  
   
 ## <a name="viewing-utility-explorer"></a>ユーティリティ エクスプローラーの表示  
- ユーティリティ エクスプローラーは、既定では、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に表示されません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ユーザー インターフェイスにユーティリティ エクスプローラーが表示されない場合は、 **[表示]** メニューの **[ユーティリティ エクスプローラー]**をクリックしてください。 ユーティリティ エクスプローラーのコンテンツ ウィンドウを表示するには、 **[表示]** メニューの **[ユーティリティ エクスプローラーのコンテンツ]**をクリックします。  
+ ユーティリティ エクスプローラーは、既定では、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に表示されません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ユーザー インターフェイスにユーティリティ エクスプローラーが表示されない場合は、 **[表示]** メニューの **[ユーティリティ エクスプローラー]** をクリックしてください。 ユーティリティ エクスプローラーのコンテンツ ウィンドウを表示するには、 **[表示]** メニューの **[ユーティリティ エクスプローラーのコンテンツ]** をクリックします。  
   
 ## <a name="viewing-objects-in-utility-explorer"></a>ユーティリティ エクスプローラーでのオブジェクトの表示  
  ユーティリティ エクスプローラーのナビゲーション ウィンドウとユーティリティ エクスプローラーのコンテンツ ウィンドウでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理されるデータ、オブジェクト、およびポリシーが表示されます。 ナビゲーション ウィンドウを使用して、ダッシュボードとビューポイントに表示する情報を指定したら、コンテンツ ウィンドウおよび詳細タブを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティで管理されているオブジェクトのデータとポリシー情報にアクセスします。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 04/16/2018
  1 つのノードに多数のオブジェクトが含まれていると、対象のオブジェクトを見つけるのが難しくなります。 そのような場合は、ユーティリティ エクスプローラーのフィルター機能を使用して、一覧のサイズを小さく絞り込みます。 たとえば、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスや、ファイル領域の使用率の低いコンピューターだけを見つけるとします。 フィルター処理を行うフォルダーを右クリックし、[フィルター] ボタンをクリックして、 **[フィルターの設定]** をクリックして [ユーティリティ エクスプローラーのフィルターの設定] ダイアログ ボックスを開きます。 名前、コンピューターの CPU、インスタンスの CPU、ファイル領域、ボリューム領域、ポリシーの優先設定、または最終報告日時で、一覧をフィルター処理できます。 **[演算子]** 列および **[値]** 列のボックスの一覧には、追加のフィルター演算子が表示されます。  
   
 ### <a name="starting-powershell"></a>PowerShell の起動  
- PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[Powershell の起動]**をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell サポートが有効になった Powershell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の Powershell 環境で Powershell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」を参照してください。  
+ PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[Powershell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell サポートが有効になった Powershell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の Powershell 環境で Powershell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」を参照してください。  
   
  PowerShell には F1 ヘルプがありませんが、 **Get-Help** コマンドレットで PowerShell の使用に関する情報を参照することができます。 詳細については、「 [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
   

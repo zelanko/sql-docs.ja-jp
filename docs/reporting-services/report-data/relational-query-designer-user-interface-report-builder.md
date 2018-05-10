@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
      レポート データセットのフィールド コレクションを表示するには、レポート データ ペインを使用します。 これらのフィールドは、レポートを表示するときにテーブル、グラフ、およびその他のレポート アイテムに表示できるデータを表します。  
   
--   **グループ化と集計** : クエリでのグループ化機能と集計機能の使用を切り替えます。 グループ化と集計を追加した後にグループ化と集計の機能をオフにすると、グループ化と集計が削除されます。 **[(なし)]**は、グループ化と集計を使用しないことを示します。 グループ化と集計の機能を再びオンにすると、以前のグループ化と集計が復元されます。  
+-   **グループ化と集計** : クエリでのグループ化機能と集計機能の使用を切り替えます。 グループ化と集計を追加した後にグループ化と集計の機能をオフにすると、グループ化と集計が削除されます。 **[(なし)]** は、グループ化と集計を使用しないことを示します。 グループ化と集計の機能を再びオンにすると、以前のグループ化と集計が復元されます。  
   
 -   **フィールドの削除** : 選択したフィールドを削除します。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **左テーブル** : 結合リレーションシップの一部である最初のテーブルの名前を表示します。  
   
--   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]**と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 JOIN の種類の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンラインブック](http://go.microsoft.com/fwlink/?LinkId=141687) の「結合の基礎」を参照してください。  
+-   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 JOIN の種類の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンラインブック](http://go.microsoft.com/fwlink/?LinkId=141687) の「結合の基礎」を参照してください。  
   
 -   **右テーブル** : 結合リレーションシップの 2 番目のテーブルの名前を表示します。  
   
@@ -197,10 +195,10 @@ ms.lasthandoff: 01/09/2018
 |**[クエリの実行]**|クエリを実行します。 クエリ結果ペインに結果セットが表示されます。|  
   
 ## <a name="understanding-automatically-generated-queries"></a>自動的に生成されたクエリについて  
- データベース ビュー ペインでテーブルおよび列またはストアド プロシージャおよびビューを選択すると、クエリ デザイナーによって基になる主キーと外部キーのリレーションシップがデータベース スキーマから取得されます。 クエリ デザイナーでは、これらのリレーションシップを分析することによって 2 つのテーブル間のリレーションシップが検出され、クエリに結合が追加されます。 その後、グループと集計の追加、リレーションシップの追加または変更、フィルターの追加を行うことでクエリを変更できます。 データの取得元である列、テーブル間の結合、グループまたは集計を示すクエリ テキストを表示するには、 **[テキストとして編集]**をクリックします。  
+ データベース ビュー ペインでテーブルおよび列またはストアド プロシージャおよびビューを選択すると、クエリ デザイナーによって基になる主キーと外部キーのリレーションシップがデータベース スキーマから取得されます。 クエリ デザイナーでは、これらのリレーションシップを分析することによって 2 つのテーブル間のリレーションシップが検出され、クエリに結合が追加されます。 その後、グループと集計の追加、リレーションシップの追加または変更、フィルターの追加を行うことでクエリを変更できます。 データの取得元である列、テーブル間の結合、グループまたは集計を示すクエリ テキストを表示するには、 **[テキストとして編集]** をクリックします。  
   
 ## <a name="text-based-query-designer"></a>テキストベースのクエリ デザイナー  
- クエリを詳細に渡って制御するには、テキスト ベースのクエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]**をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、リレーショナル クエリ デザイナーは使用できなくなります。 その後、クエリは常にテキスト ベースのクエリ デザイナーで開かれるようになります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
+ クエリを詳細に渡って制御するには、テキスト ベースのクエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、リレーショナル クエリ デザイナーは使用できなくなります。 その後、クエリは常にテキスト ベースのクエリ デザイナーで開かれるようになります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイナー &#40;レポート ビルダー&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  

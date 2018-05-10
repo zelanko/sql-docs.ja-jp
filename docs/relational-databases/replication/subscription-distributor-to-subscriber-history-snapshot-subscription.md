@@ -1,17 +1,16 @@
 ---
-title: サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴](スナップショット サブスクリプション) | Microsoft Docs
+title: サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.subscription.pubtodist.snapshot.f1
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
@@ -19,15 +18,14 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5b1a837fbc39c6881dc7d5f200411bb5712e1784
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3c6e1e3c15e9574487ac5b65d3c11b3706c7b1cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴]\(スナップショット サブスクリプション)
+# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **[ディストリビューターからサブスクライバーまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ディストリビューション エージェントの詳細情報が表示されます。  
   

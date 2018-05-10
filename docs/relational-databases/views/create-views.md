@@ -3,15 +3,12 @@ title: ビューの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: views
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
@@ -19,13 +16,12 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 793939c45a05c084eb8a7c80fcc5c6ed83a6b5f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 899bf2cdab8716927806042c1fce6532f8670dfa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-views"></a>ビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -69,11 +65,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** を右クリックし、 **[新しいビュー]**をクリックします。  
+2.  **[ビュー]** を右クリックし、 **[新しいビュー]** をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   
-4.  **[追加]**をクリックし、 **[閉じる]**をクリックします。  
+4.  **[追加]** をクリックし、 **[閉じる]** をクリックします。  
   
 5.  **ダイアグラム ペイン**で、新しいビューに含める列またはその他の要素を選択します。  
   
@@ -81,7 +77,7 @@ ms.lasthandoff: 04/16/2018
   
 7.  **[ファイル]** メニューの *[*view name の保存***]* をクリックします。  
   
-8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]**をクリックします。  
+8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]** をクリックします。  
   
      クエリおよびビュー デザイナーの詳細については、「[クエリおよびビュー デザイナー &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
   
@@ -91,9 +87,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012 ;   

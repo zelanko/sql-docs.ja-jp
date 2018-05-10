@@ -1,34 +1,32 @@
 ---
-title: "埋め込みデータ ソースを作成および変更する | Microsoft Docs"
-ms.custom: 
+title: 埋め込みデータ ソースを作成および変更する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c55223a992c7965dcb247aaaa36b53a7649b6a31
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6cd7dff5dc1d9ee6ba3b0d46296cd1f6fcebfe73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>埋め込みデータ ソースを作成および変更する
   埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。  
   
 ## <a name="to-create-an-embedded-data-source-in-report-designer"></a>レポート デザイナーで埋め込みデータ ソースを作成するには  
   
-1.  ツール バーのレポート データ ペインで、 **[新規作成]** 、 **[データ ソース]**の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  ツール バーのレポート データ ペインで、 **[新規作成]** 、 **[データ ソース]** の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
     >  レポート データ ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  **[埋め込み接続]** が選択されていることを確認し、以下のことを行います。  
   
-    1.  **[種類]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]**など) を選択します。  
+    1.  **[種類]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]** など) を選択します。  
   
     2.  次の選択肢の 1 つを使用して、接続文字列を指定します。  
   
@@ -49,7 +47,7 @@ ms.lasthandoff: 01/09/2018
   
              データ ソースの種類に合わせて **[接続のプロパティ]** ダイアログ ボックスのフィールドに入力します。 接続のプロパティには、データ ソースの種類、データ ソースの名前、および使用する資格情報が含まれます。 このダイアログ ボックスで値を指定した後、 **[接続テスト]** をクリックして、データ ソースが使用可能であること、および指定した資格情報が正しいことを確認します。 特定のデータ ソースの種類の詳細については、「[外部データ ソースのデータを追加する (SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)」のトピックを参照してください。  
   
-    3.  **[資格情報]**をクリックします。  
+    3.  **[資格情報]** をクリックします。  
   
          このデータ ソースに使用する資格情報を指定します。 サポートされる資格情報の種類は、データ ソースの所有者によって選択されます。  
   
@@ -57,13 +55,13 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-create-an-embedded-data-source-in-report-builder"></a>レポート ビルダーで埋め込みデータ ソースを作成するには  
   
-1.  ツール バーのレポート データ ペインで、 **[新規作成]**、 **[データ ソース]**の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  ツール バーのレポート データ ペインで、 **[新規作成]**、 **[データ ソース]** の順にクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** ボックスにデータ ソースの名前を入力するか、既定値をそのまま使用します。  
   
 3.  **[個人用レポートに埋め込まれている接続を使用]** がオンになっていることを確認します。  
   
-    1.  **[接続の種類の選択]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]**など) を選択します。  
+    1.  **[接続の種類の選択]** ボックスの一覧から、データ ソースの種類 ( **[Microsoft SQL Server]** や **[OLE DB]** など) を選択します。  
   
     2.  次の選択肢の 1 つを使用して、接続文字列を指定します。  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/09/2018
   
              データ ソースの種類に合わせて **[接続のプロパティ]** ダイアログ ボックスのフィールドに入力します。 接続のプロパティには、データ ソースの種類、データ ソースの名前、および使用する資格情報が含まれます。 このダイアログ ボックスで値を指定した後、 **[接続テスト]** をクリックして、データ ソースが使用可能であること、および指定した資格情報が正しいことを確認します。  
   
-4.  **[資格情報]**をクリックします。  
+4.  **[資格情報]** をクリックします。  
   
      このデータ ソースに使用する資格情報を指定します。 サポートされる資格情報の種類は、データ ソースの所有者によって選択されます。 詳細については、「 [レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   

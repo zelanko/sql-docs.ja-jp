@@ -1,16 +1,15 @@
 ---
-title: "rsconfig ユーティリティ (SSRS) | Microsoft Docs"
-ms.custom: 
+title: rsconfig ユーティリティ (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - rsconfig utility
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a7af70640cf19ddeb205a5cc345ce2c45d8a73fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  
@@ -54,7 +52,7 @@ rsconfig {-?}
 |項目|省略可/必須|定義|  
 |----------|------------------------|----------------|  
 |**-?**|省略可。|Rsconfig.exe の引数の構文を表示します。|  
-|**-c**|**-e** 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> **-c** と共に指定する引数には、 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**、および**-t**があります。|  
+|**-c**|**-e** 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> **-c** と共に指定する引数には、 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**、および **-t**があります。|  
 |**-e**|**-c** 引数を使用しない場合は必須。|自動的にレポートを実行する場合のアカウントを指定します。<br /><br /> この引数は値を取りません。 ただし、構成ファイルで暗号化されている値を指定する場合は、コマンド ラインに追加の引数を追加する必要があります。<br /><br /> **-e** と共に指定する引数には、 **-u** および **-p**があります。 **-t**を設定することもできます。|  
 |**-m**  *computername*|リモート レポート サーバー インスタンスを構成する場合は必須。|レポート サーバーをホストするコンピューターの名前を指定します。 この引数が省略された場合、既定は **localhost**です。|  
 |**-s**  *servername*|必須。|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  

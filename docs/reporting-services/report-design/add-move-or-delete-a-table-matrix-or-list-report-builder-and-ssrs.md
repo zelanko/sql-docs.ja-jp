@@ -1,27 +1,25 @@
 ---
-title: "テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eed251030c22506725ceace9dacc5100f911e12d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 989e39e411129bef0af9b1af14548286927c2655
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのデータ領域には、レポート データセットのデータが表示されます。 またデータ領域には、テーブル、マトリックス、一覧、グラフ、およびゲージが含まれます。 1 つのデータ領域を別のデータ領域内に入れ子にするには、各データ領域を個別に追加し、子データ領域を親データ領域にドラッグします。  
@@ -30,7 +28,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-table-or-matrix-to-a-report-by-using-the-new-table-or-new-matrix-wizard"></a>テーブルまたはマトリックスの新規作成ウィザードを使用してレポートにテーブルまたはマトリックスを追加するには  
   
-1.  **[挿入]** タブの **[テーブル]** または **[マトリックス]**をクリックし、次に **[テーブル ウィザード]** または **[マトリックス ウィザード]**をクリックします。  
+1.  **[挿入]** タブの **[テーブル]** または **[マトリックス]** をクリックし、次に **[テーブル ウィザード]** または **[マトリックス ウィザード]** をクリックします。  
   
 2.  **[新しいテーブル]** または **[マトリックスの新規作成]** ウィザードの手順に従って操作します。  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-data-region"></a>データ領域を追加するには  
   
-1.  **[データ領域]**グループの **[リボン]** で、追加するデータ領域をクリックします。  
+1.  **[データ領域]** グループの **[リボン]** で、追加するデータ領域をクリックします。  
   
 2.  デザイン画面をクリックし、次にマウスをドラッグして、必要なサイズのデータ領域のボックスを作成します。  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/09/2018
   
      1 つの選択ハンドルと 8 つのサイズ変更ハンドルが表示されます。  
   
-     入れ子になったデータ領域では、領域内を右クリックし、 **[選択]**をクリックして、目的のレポート アイテムを選択します。 どのレポート アイテムが選択されているかを確認するには、プロパティ ペインを使用します。 デザイン画面で選択したアイテムの名前が、プロパティ ペインのツール バーに表示されます。  
+     入れ子になったデータ領域では、領域内を右クリックし、 **[選択]** をクリックして、目的のレポート アイテムを選択します。 どのレポート アイテムが選択されているかを確認するには、プロパティ ペインを使用します。 デザイン画面で選択したアイテムの名前が、プロパティ ペインのツール バーに表示されます。  
   
 ## <a name="to-move-a-data-region"></a>データ領域を移動するには  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-delete-a-data-region"></a>データ領域を削除するには  
   
--   データ領域を選択し、領域内を右クリックして **[削除]**をクリックします。  
+-   データ領域を選択し、領域内を右クリックして **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Tablix データ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

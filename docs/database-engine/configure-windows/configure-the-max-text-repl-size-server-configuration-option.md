@@ -3,15 +3,12 @@ title: max text repl size サーバー構成オプションの構成 | Microsoft
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
@@ -19,17 +16,16 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cc87f0eb16265a9196a6bc324069d5062d70b525
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1e09b3b342100446a97d3421376fc6a64504df6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **max text repl size** オプションは、単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT の各ステートメント内のレプリケート対象列またはキャプチャ対象列に追加できる **text**型、 **ntext**型、 **varchar(max)**型、 **nvarchar(max)**型、 **varbinary(max)**型、 **xml**型、 **image** 型のデータの最大サイズ (バイト単位) を指定します。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  
+  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **max text repl size** オプションは、単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT の各ステートメント内のレプリケート対象列またはキャプチャ対象列に追加できる **text**型、 **ntext**型、 **varchar(max)** 型、 **nvarchar(max)** 型、 **varbinary(max)** 型、 **xml**型、 **image** 型のデータの最大サイズ (バイト単位) を指定します。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  
   
  **このトピックの内容**  
   
@@ -62,11 +58,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>max text repl size オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]**をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   
-3.  **[その他]**の **[テキスト レプリケーションの最大サイズ]** オプションを目的の値に変更します。  
+3.  **[その他]** の **[テキスト レプリケーションの最大サイズ]** オプションを目的の値に変更します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -74,9 +70,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max text repl size` オプションを `-1`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max text repl size` オプションを `-1`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

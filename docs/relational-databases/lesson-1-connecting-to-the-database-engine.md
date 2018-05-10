@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +16,11 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +46,8 @@ ms.lasthandoff: 04/16/2018
 サンプル データベースとサンプルは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に付属していません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックで説明されているほとんどの例では、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースを使用しています。  
 
 ##### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには
-- 現在のバージョンの Windows では、 **スタート** ページで「SSMS」と入力し、 **[Microsoft SQL Server Management Studio]**をクリックします。  
-- 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]**をクリックします。  
+- 現在のバージョンの Windows では、 **スタート** ページで「SSMS」と入力し、 **[Microsoft SQL Server Management Studio]** をクリックします。  
+- 以前のバージョンの Windows では、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] の順にポイントして、 **[SQL Server Management Studio]** をクリックします。  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
 - 現在のバージョンの Windows では、 **[スタート]** ページで「 **Configuration Manager**] の順にポイントして、 **[SQL Server *&lt;バージョン&gt;* Configuration Manager**から無料でダウンロードできます。   
@@ -64,24 +62,24 @@ ms.lasthandoff: 04/16/2018
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>データベース エンジン インスタンスの名前を確認するには  
 
 1.  Administrators グループのメンバーとして Windows にログインし、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を起動します。  
-2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]**をクリックします。  
-3.  [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]**をクリックします。
-4.  [登録済みサーバー] ツール バーで **[データベース エンジン]** を選択した状態で、 **[データベース エンジン]**を展開して **[ローカル サーバー グループ]**を右クリックし、 **[タスク]**をポイントして **[ローカル サーバーの登録]**をクリックします。 コンピューターにインストールされている [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのインスタンスが表示されます。 既定のインスタンスには名前がなく、コンピューター名で表示されます。 名前付きインスタンスは、コンピューター名の後に円記号 (\\)、その後にインスタンスの名前が続く形式で表示されます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の場合は、セットアップ中に変更されない限り、インスタンス名は*<computer_name>*\sqlexpress の形式になります。  
+2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
+3.  [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。
+4.  [登録済みサーバー] ツール バーで **[データベース エンジン]** を選択した状態で、 **[データベース エンジン]** を展開して **[ローカル サーバー グループ]** を右クリックし、 **[タスク]** をポイントして **[ローカル サーバーの登録]** をクリックします。 コンピューターにインストールされている [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのインスタンスが表示されます。 既定のインスタンスには名前がなく、コンピューター名で表示されます。 名前付きインスタンスは、コンピューター名の後に円記号 (\\)、その後にインスタンスの名前が続く形式で表示されます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の場合は、セットアップ中に変更されない限り、インスタンス名は *<computer_name>* \sqlexpress の形式になります。  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>データベース エンジンが実行されていることを確認するには
 
 1.  登録済みサーバーで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前の隣に白い矢印付きの緑色のドットが表示されていれば、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は実行されています。それ以上の操作は必要ありません。  
 
-2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前の隣に白い正方形の付いた赤いドットが表示されている場合、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は停止しています。 [!INCLUDE[ssDE](../includes/ssde-md.md)]の名前を右クリックし、 **[サービス コントロール]**をクリックしてから **[開始]**をクリックします。 確認のダイアログ ボックスが表示された後に [!INCLUDE[ssDE](../includes/ssde-md.md)] が起動し、丸印が白い矢印付きの緑色に変わります。  
+2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前の隣に白い正方形の付いた赤いドットが表示されている場合、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は停止しています。 [!INCLUDE[ssDE](../includes/ssde-md.md)]の名前を右クリックし、 **[サービス コントロール]** をクリックしてから **[開始]** をクリックします。 確認のダイアログ ボックスが表示された後に [!INCLUDE[ssDE](../includes/ssde-md.md)] が起動し、丸印が白い矢印付きの緑色に変わります。  
 
 ##### <a name="to-connect-to-the-database-engine"></a>データベース エンジンに接続するには  
 
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] をインストールしたときに、少なくとも 1 人の管理者アカウントが選択されています。 管理者として Windows にログインした状態で、次の手順を実行します。
 
-1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]の **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]**をクリックします。 
+1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]の **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]** をクリックします。 
 - **[サーバーへの接続]** ダイアログ ボックスが開きます。 **[サーバーの種類]** ボックスに、最後に使用したコンポーネントの種類が表示されます。  
 
-2.  **[データベース エンジン]**を選択します。
+2.  **[データベース エンジン]** を選択します。
 
 ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
 
@@ -89,7 +87,7 @@ ms.lasthandoff: 04/16/2018
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  **[接続]**をクリックします。
+4.  **[接続]** をクリックします。
 
 > [!NOTE]
 > このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を初めて使用し、接続時に特別な問題がないことを想定しています。 このような前提はほとんどのユーザーにとって十分であり、このチュートリアルが単純であるのはこのためです。 詳細なトラブルシューティングの手順については、「 [SQL Server データベース エンジンへの接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)」を参照してください。 
@@ -102,15 +100,15 @@ ms.lasthandoff: 04/16/2018
 
 ##### <a name="create-a-windows-authentication-login"></a>Windows 認証ログインを作成するには 
 
-1.  前の作業で、 [!INCLUDE[ssDE](../includes/ssde-md.md)] を使用して [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に接続しました。 次に、オブジェクト エクスプローラーでサーバー インスタンスを開き、 **[セキュリティ]**を展開して **[ログイン]**を右クリックし、 **[新しいログイン]**をクリックします。 **[ログイン - 新規作成]** ダイアログ ボックスが表示されます。  
+1.  前の作業で、 [!INCLUDE[ssDE](../includes/ssde-md.md)] を使用して [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に接続しました。 次に、オブジェクト エクスプローラーでサーバー インスタンスを開き、 **[セキュリティ]** を展開して **[ログイン]** を右クリックし、 **[新しいログイン]** をクリックします。 **[ログイン - 新規作成]** ダイアログ ボックスが表示されます。  
 
 2.  **[全般]** ページの **[ログイン名]** ボックスに、次の形式で Windows ログインを入力します。 `<domain>\\<login>`
 
 ![new-login](../relational-databases/media/new-login.png)
 
-3.  **[既定のデータベース]** ボックスで、[ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ] が有効な場合はこれを選択します。 有効でない場合は **[master]**を選択します。  
-4.  **[サーバー ロール]** ページで、新しいログインを管理者として設定する場合は **[sysadmin]**をクリックします。管理者として設定しない場合は空白にします。  
-5.  **[ユーザー マッピング]** ページで、 **データベースが有効な場合はこのデータベースに対し** [Map] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] を選択します。 有効でない場合は **[master]**を選択します。 ここで、 **[ユーザー]** ボックスにログインが表示されたことに注目してください。 ダイアログ ボックスを閉じると、データベースにこのユーザーが作成されます。  
+3.  **[既定のデータベース]** ボックスで、[ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ] が有効な場合はこれを選択します。 有効でない場合は **[master]** を選択します。  
+4.  **[サーバー ロール]** ページで、新しいログインを管理者として設定する場合は **[sysadmin]** をクリックします。管理者として設定しない場合は空白にします。  
+5.  **[ユーザー マッピング]** ページで、 **データベースが有効な場合はこのデータベースに対し** [Map] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] を選択します。 有効でない場合は **[master]** を選択します。 ここで、 **[ユーザー]** ボックスにログインが表示されたことに注目してください。 ダイアログ ボックスを閉じると、データベースにこのユーザーが作成されます。  
 6.  **[既定のスキーマ]** ボックスに「 **dbo** 」と入力し、ログインをデータベース所有者スキーマにマップします。   
 7.  **[セキュリティ保護可能なリソース]** ボックスと **[状態]** ボックスには既定の設定をそのまま使用します。 **[OK]** をクリックするとログインが作成されます。  
 

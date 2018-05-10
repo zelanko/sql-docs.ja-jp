@@ -1,27 +1,25 @@
 ---
-title: "レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 89e9878b39d78abd4983bbf49df0c6d9ae157a15
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5cba98e1d3aacddfe191dfec324d664e905fc1f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)
   レポート パラメーターは、レポート データの選択、他のレポートとの関連付け、レポートの表示方法の変更などの用途に使用されます。 既定値や使用可能な値のリストを指定できるほか、ユーザーに選択内容を変更させることもできます。  
@@ -35,27 +33,27 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>レポート パラメーターを追加または編集するには  
   
-1.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーの **レポート データ** ペインで、 **[パラメーター]** ノードを右クリックし、 **[パラメーターの追加]**をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーの **レポート データ** ペインで、 **[パラメーター]** ノードを右クリックし、 **[パラメーターの追加]** をクリックします。 **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[名前]**にパラメーターの名前を入力するか、既定の名前をそのまま使用します。  
+2.  **[名前]** にパラメーターの名前を入力するか、既定の名前をそのまま使用します。  
   
-3.  **[表示名]**に、レポートの実行時にパラメーター テキスト ボックスの隣に表示する文字列を入力します。  
+3.  **[表示名]** に、レポートの実行時にパラメーター テキスト ボックスの隣に表示する文字列を入力します。  
   
-4.  **[データ型]**で、パラメーター値のデータ型を選択します。  
+4.  **[データ型]** で、パラメーター値のデータ型を選択します。  
   
-5.  空白の値を含めることができる場合は、 **[空白の値を許可]**をオンにします。  
+5.  空白の値を含めることができる場合は、 **[空白の値を許可]** をオンにします。  
   
-6.  パラメーターに NULL 値を含めることができる場合は、 **[NULL 値を許可]**をオンにします。  
+6.  パラメーターに NULL 値を含めることができる場合は、 **[NULL 値を許可]** をオンにします。  
   
-7.  パラメーターに複数の値を選択できるようにする場合は、 **[複数の値を許可]**を選択します。  
+7.  パラメーターに複数の値を選択できるようにする場合は、 **[複数の値を許可]** を選択します。  
   
 8.  表示オプションを設定します。  
   
-    -   パラメーターをレポート上部のツール バーに表示する場合は、 **[表示]**を選択します。  
+    -   パラメーターをレポート上部のツール バーに表示する場合は、 **[表示]** を選択します。  
   
-    -   パラメーターがツール バーに表示されないようにする場合は、 **[非表示]**を選択します。  
+    -   パラメーターがツール バーに表示されないようにする場合は、 **[非表示]** を選択します。  
   
-    -   レポートのパブリッシュ後はパラメーターを非表示にし、レポート サーバーで変更できないよう保護する場合は、 **[内部]**を選択します。 レポート パラメーターは、レポート定義でのみ参照できます。 このオプションを選択した場合は、既定値を設定するか、パラメーターで Null 値を許可するように設定する必要があります。  
+    -   レポートのパブリッシュ後はパラメーターを非表示にし、レポート サーバーで変更できないよう保護する場合は、 **[内部]** を選択します。 レポート パラメーターは、レポート定義でのみ参照できます。 このオプションを選択した場合は、既定値を設定するか、パラメーターで Null 値を許可するように設定する必要があります。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  **レポート データ** ペインで **[パラメーター]** ノードを展開します。  
   
-2.  レポート パラメーターを右クリックし、 **[削除]**をクリックします。  
+2.  レポート パラメーターを右クリックし、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート パラメーターの値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)   

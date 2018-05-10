@@ -1,16 +1,15 @@
 ---
-title: "Power BI Report Server の統合 (構成マネージャー) | Microsoft Docs"
-ms.custom: 
+title: Power BI Report Server の統合 (構成マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - pbi
 - power bi
@@ -18,12 +17,11 @@ f1_keywords:
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31f8285fbb05ccf34f2da81c5e9aaf7c768d2b1b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: faefb316ad92738fac2ceb3570782bfe65ad705e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/09/2018
 
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合ページを選択します。
 
-2. **[Power BI に登録]**を選択します。
+2. **[Power BI に登録]** を選択します。
 
 3. [!INCLUDE[msCoName](../../includes/msconame-md.md)] サインイン ダイアログで、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]へのサインインに使用する資格情報を入力します。
 
@@ -87,17 +85,17 @@ ms.lasthandoff: 01/09/2018
 
 レポート サーバーの構成を変更した場合は、 **[登録の更新]** を使用します。 たとえば、ユーザーが [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]を参照する際に使用する URL を追加または削除する場合は、次の手順を実行します。
 
-- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで、 **[Web ポータルの URL]**を選択します。
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで、 **[Web ポータルの URL]** を選択します。
 
-     **[詳細設定]**を選択します。
+     **[詳細設定]** を選択します。
 
-- **[追加]** を選択して、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の新しい HTTP ID を追加し、 **[OK]**を選択します。
+- **[追加]** を選択して、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の新しい HTTP ID を追加し、 **[OK]** を選択します。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] アイコンが変更され、サーバー構成が変更されたことが示されます。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
-- **[Power BI 統合]** ページで、 **[登録の更新]**を選択します。
+- **[Power BI 統合]** ページで、 **[登録の更新]** を選択します。
 
-     Azure AD へのログインを求められます。 ページが更新され、 **[リダイレクト URL]**に新しい URL が表示されます。
+     Azure AD へのログインを求められます。 ページが更新され、 **[リダイレクト URL]** に新しい URL が表示されます。
 
 ##  <a name="bkmk_integration_process"></a> Power BI の統合とピン留めのプロセスの概要
 

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
@@ -19,12 +18,11 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d6b328abc5c415b66b6b020ea99212e3a2c19af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ef71b6ececd5d78f79ae2e7cde530eb314e836e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-resource-governor"></a>リソース ガバナーの有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +50,18 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="RGOnObjEx"></a> オブジェクト エクスプローラーを使用してリソース ガバナーを有効にする  
  **オブジェクト エクスプローラーを使用してリソース ガバナーを有効にするには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]**を右クリックし、 **[有効化]**をクリックします。  
+2.  **[リソース ガバナー]** を右クリックし、 **[有効化]** をクリックします。  
   
 ##  <a name="RGOnProp"></a> リソース ガバナーのプロパティを使用してリソース ガバナーを有効にする  
  **[リソース ガバナーのプロパティ] ページでリソース ガバナーを有効にするには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]**をクリックすると、 **[リソース ガバナーのプロパティ]** ページが開きます。  
+2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]** をクリックすると、 **[リソース ガバナーのプロパティ]** ページが開きます。  
   
-3.  **[リソース ガバナーの有効化]** チェック ボックスをオンにしてから、 **[OK]**をクリックします。  
+3.  **[リソース ガバナーの有効化]** チェック ボックスをオンにしてから、 **[OK]** をクリックします。  
   
 ##  <a name="RGOnTSQL"></a> Transact-SQL を使用してリソース ガバナーを有効にする  
  **Transact-SQL を使用してリソース ガバナーを有効にするには**  

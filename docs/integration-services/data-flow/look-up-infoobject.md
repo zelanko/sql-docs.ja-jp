@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 29ad3ac66e80b573f973cb83a03b6fa1e8518b70
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 20ae53246cc057d7a454363269a51e839639e355
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
   SAP Netweaver BW システムで定義されたインフォオブジェクトを参照する場合、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、SAP BW 変換先で関連するオプションに必要な値が設定されます。  

@@ -1,27 +1,25 @@
 ---
-title: "行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6f36396d8db92285c7ba5ec841867098f549a9ee
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c731a73e7d409bbc178901165140f694596887ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>行の高さまたは列の幅の変更 (レポート ビルダーおよび SSRS)
   行の高さを設定することは、表示されるレポートの行の最大の高さを指定することです。 ただし、既定では、行のテキスト ボックスは実行時に格納するデータに合わせて縦方向に拡張されるように設定されているので、行の高さが指定した高さを超える場合があります。 行の高さを固定するには、行の高さが自動的に拡張されないようにテキスト ボックスのプロパティを変更する必要があります。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/09/2018
 3.  プロパティ ペインで、CanGrow を **False**に設定します。  
   
     > [!NOTE]  
-    >  プロパティ ペインが表示されない場合は、 **[表示]** メニューの **[プロパティ]**をクリックします。  
+    >  プロパティ ペインが表示されない場合は、 **[表示]** メニューの **[プロパティ]** をクリックします。  
   
 ### <a name="to-change-column-width"></a>列の幅を変更するには  
   

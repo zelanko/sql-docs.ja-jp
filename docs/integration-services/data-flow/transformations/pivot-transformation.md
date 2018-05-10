@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.pivottrans.f1
 helpviewer_keywords:
@@ -25,12 +24,11 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: befe1a3cf4056076d97715015a9e0f6d4bdd49e5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: f67b7eca9e4d3c5adbe20021784dfb82a6b96e69
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pivot-transformation"></a>ピボット変換
   ピボット変換は、入力データを列の値でピボットすることにより、正規化されたデータセットを、正規化の度合は低いがより圧縮された形に設定します。 たとえば、顧客名、製品、購入した数量を一覧表示する、正規化された **Orders** データセットには、通常、複数の製品を購入した顧客に対して複数の行があり、その顧客に対する各行には製品ごとに注文の詳細が示されています。 ピボット変換では、データセットを製品列でピボットすることにより、各顧客のデータセットを単一行で出力できます。 その行では顧客のすべての購入情報が一覧となり、列名に製品名が表示され、製品列の値には購入した数量が表示されます。 すべての顧客がすべての製品を購入するわけではないので、多くの列に NULL 値が含まれることがあります。  

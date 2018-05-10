@@ -1,27 +1,25 @@
 ---
-title: "レポート デザインとレポートの展開の計画 |Reporting Services | Microsoft Docs"
-ms.custom: 
+title: レポート デザインとレポートの展開の計画 |Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4d4a2081da55117fa6fa6b6ad84ac4ec21b84ee6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 912d8f3035df4c5698deb9dc78321770f23fdaf2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、ページ分割されたレポートの作成と配置に関していくつかのアプローチが用意されています。 レポートの作成とレポート サーバーを併用する環境を計画する方法について説明します。
@@ -74,7 +72,7 @@ ms.lasthandoff: 01/09/2018
   
  レポート定義をレポート サーバーにアップロードするか、既存のレポートが保存されたレポート サーバーをアップグレードすると、レポート定義は元の形式のまま維持されます。 レポート サーバー データベース内のレポートは、**初回使用時に**レポート サーバーによってバイナリ形式へとアップグレードされて初めて、閲覧が可能となります。 レポート定義 (.rdl) そのものはアップグレードされません。  
   
- レポート サーバーからレポート定義ファイル (.rdl) の読み取り専用コピーを抽出できます。 ネイティブ モード レポート サーバーで、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]を参照し、 **[ダウンロード]**をクリックします。 SharePoint モードの配置で、ドキュメント ライブラリを参照し、レポートを選択して、 **[コピーのダウンロード]**をクリックします。  
+ レポート サーバーからレポート定義ファイル (.rdl) の読み取り専用コピーを抽出できます。 ネイティブ モード レポート サーバーで、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]を参照し、 **[ダウンロード]** をクリックします。 SharePoint モードの配置で、ドキュメント ライブラリを参照し、レポートを選択して、 **[コピーのダウンロード]** をクリックします。  
   
  レポート定義をアップグレードするには、アップグレードするレポートをレポート作成環境 (SQL Server Data Tools、レポート ビルダーなど) で開いて保存する必要があります。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
@@ -19,12 +18,11 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dcd7c6840a6f4a12293d1c1716350093c676b986
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 9c493d453d11648f75eddd4a426ec3d9bdd26a45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>[変換の確認を伴わない型変換] (SQL Server インポートおよびエクスポート ウィザード)
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[変換の確認を伴わない型変換]** が表示される場合があります。 ウィザードで、変換元と変換先でデータ型のマップに必要なデータ型変換およびマッピング ファイルを 1 つ以上特定できない場合、このページが表示されます。 このページには、不足している事項を把握するために役立つ情報が掲載されています。

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - push subscriptions [SQL Server replication], properties
@@ -24,13 +23,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20608c501af867460f43ad00539a4afcc011d7ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6dd22ce134c7573e3a3e796f56df4150d376c611
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>プッシュ サブスクリプションのプロパティの表示または変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,9 +57,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  適切なパブリケーションを展開し、サブスクリプションを右クリックして、 **[プロパティ]**をクリックします。  
+3.  適切なパブリケーションを展開し、サブスクリプションを右クリックして、 **[プロパティ]** をクリックします。  
   
-4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 #### <a name="to-view-and-modify-push-subscription-properties-in-replication-monitor"></a>レプリケーション モニターでプッシュ サブスクリプション プロパティを表示および変更するには  
   
@@ -69,9 +67,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
-3.  サブスクリプションを右クリックし、 **[プロパティ]**をクリックします。  
+3.  サブスクリプションを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  プッシュ サブスクリプションのプロパティは、レプリケーションのストアド プロシージャを使用して、プログラムから変更できます。 使用するストアド プロシージャは、サブスクリプションが属するパブリケーションの種類によって異なります。  

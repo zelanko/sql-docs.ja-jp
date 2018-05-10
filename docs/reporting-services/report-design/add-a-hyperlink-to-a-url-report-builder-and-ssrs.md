@@ -1,27 +1,25 @@
 ---
-title: "URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: bfecbec1812a15ec582c8e5d91afb8e471f8de3d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 80fb8d9b4f416933e19931aeb29fdb33f533e9f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  のページ分割されたレポートでテキスト ボックス、画像、グラフ、ゲージにハイパーリンク アクションを追加する方法について説明します。 リンクで他のレポート、レポート内のブックマーク、静的または動的な URL に移動できます。 
@@ -41,13 +39,13 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-hyperlink-and"></a>ハイパーリンクを追加するには   
   
-1.  レポート デザイン ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、 **[プロパティ]**をクリックします。  
+1.  レポート デザイン ビューで、リンクを追加するテキスト ボックス、画像、またはグラフを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  [プロパティ] ダイアログ ボックスで、 **[アクション]** タブをクリックします。オプションの詳細については、読み進めてください。  
 
 ## <a name="-add-drillthrough-to-another-report"></a>別のレポートにドリルスルーを追加するには
 
-1. **[アクション]** タブで、 **[レポートに移動する]**を選択します。 
+1. **[アクション]** タブで、 **[レポートに移動する]** を選択します。 
 
 2. ターゲット レポートと使用するパラメーターを指定します。 パラメーター名は、対象のレポートで定義されているパラメーターと一致する必要があります。 
 
@@ -65,7 +63,7 @@ ms.lasthandoff: 01/09/2018
 
 現在のレポート内のある場所へのブックマークにリンクできます。 ブックマークにリンクするには、まずレポート アイテムの **Bookmark** プロパティを設定する必要があります。 **Bookmark** プロパティを設定するには、レポート アイテムを選択し、プロパティ ペインでブックマーク ID の値または式 (SalesChart、5TopSales など) を入力します。
 
-1. **[アクション]** タブで、 **[ブックマークに移動する]**を選択します。 
+1. **[アクション]** タブで、 **[ブックマークに移動する]** を選択します。 
 
 2. レポートのブックマーク ID を入力または選択し、そのブックマークに移動するようにします。 式を変更するには、式 ([fx]) ボタンをクリックします。 
 
@@ -77,9 +75,9 @@ ms.lasthandoff: 01/09/2018
 
 ## <a name="-add-a-hyperlink"></a>ハイパーリンクを追加するには 
   
-1. **[アクション]** タブで、 **[URL に移動する]**を選択します。 このオプションのダイアログ ボックスに追加のセクションが表示されます。  
+1. **[アクション]** タブで、 **[URL に移動する]** を選択します。 このオプションのダイアログ ボックスに追加のセクションが表示されます。  
   
-4.  **[Select URL]**ボックスで、URL または URL に評価される式を入力または選択するか、下矢印をクリックして URL が格納されているフィールドの名前をクリックします。 
+4.  **[Select URL]** ボックスで、URL または URL に評価される式を入力または選択するか、下矢印をクリックして URL が格納されているフィールドの名前をクリックします。 
 
     ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、 `http://<servername>/images/image1.jpg`のようにします。 
     

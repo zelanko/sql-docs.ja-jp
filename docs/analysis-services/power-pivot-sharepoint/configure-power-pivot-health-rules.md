@@ -1,27 +1,19 @@
 ---
-title: "Power Pivot の正常性ルールの構成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot の正常性ルールの構成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 854eb1c57531b2aa620e668f78e2eb32f75d0192
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Power Pivot の正常性ルールの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +46,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_view"></a> Power Pivot の正常性ルールの表示  
   
-1.  SharePoint サーバーの全体管理で、 **[監視]**をクリックし、 **[正常性アナライザー]** セクションの **[ルール定義の確認]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、 **[監視]** をクリックし、 **[正常性アナライザー]** セクションの **[ルール定義の確認]** をクリックします。  
   
 2.  [構成] セクションで、 **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:** というプレフィックスが付いているルールを検索します。 組み込みの SharePoint ルールと区別するために、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]に関連するすべての正常性ルールにはこのプレフィックスが付いています。  
   
@@ -67,13 +59,13 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 ##  <a name="bkmk_HR_SSAS"></a> サーバーの安定性を評価する正常性ルールの構成 (SQL Server Analysis Services)  
  Analysis Services インスタンスには、システム レベル (CPU、メモリ、およびキャッシュの目的で使用されるディスク領域) での問題を検出する正常性ルールが含まれています。 特定の正常性ルールをトリガーするしきい値を変更するには、次の手順に従います。  
   
-1.  SharePoint サーバーの全体管理で、 **[システム設定]** セクションの **[サーバーのサービスの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、 **[システム設定]** セクションの **[サーバーのサービスの管理]** をクリックします。  
   
-2.  ページの上部で、Analysis Services のインスタンスを持つ SharePoint ファーム内のサーバーを選択します (次の図では、サーバー名は AW-SRV033 です)。 サービスの一覧に**[SQL Server Analysis Services]** が表示されます。  
+2.  ページの上部で、Analysis Services のインスタンスを持つ SharePoint ファーム内のサーバーを選択します (次の図では、サーバー名は AW-SRV033 です)。 サービスの一覧に **[SQL Server Analysis Services]** が表示されます。  
   
      ![スクリーン ショットのサービスの管理サーバー ページで](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "スクリーン ショットのサービスの管理サーバー ページ")  
   
-3.  **[SQL Server Analysis Services]**をクリックします。  
+3.  **[SQL Server Analysis Services]** をクリックします。  
   
 4.  サービスのプロパティのページにある [正常性ルールの設定] で、次の設定を変更します。  
   
@@ -107,7 +99,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 ##  <a name="bkmk_evaluate_application_stability"></a> アプリケーションの安定性を評価する正常性ルールの構成 (Power Pivot サービス アプリケーション)  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  [サービス アプリケーション] ページで、**[既定の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション]** をクリックします。  
   

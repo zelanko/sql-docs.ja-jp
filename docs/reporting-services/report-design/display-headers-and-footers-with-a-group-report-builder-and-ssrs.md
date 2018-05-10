@@ -1,27 +1,25 @@
 ---
-title: "グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92f7c462be75d4557ab44216af1beb14d101029e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3068cf6494dfc790f2990f8e872dd9365e3594f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域では、グループに関連付けられている動的行と一緒に、静的行 (グループ ヘッダー、グループ フッターなど) を表示するかどうかを制御できます。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン画面で、Tablix データ領域の任意の場所をクリックして選択します。 グループ化ペインに、データ領域の行グループと列グループが表示されます。  
   
-2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]**をクリックします。 行グループ ペインには、行グループ階層の静的メンバーおよび動的メンバーが階層的に表示されます。  
+2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]** をクリックします。 行グループ ペインには、行グループ階層の静的メンバーおよび動的メンバーが階層的に表示されます。  
   
 3.  グループ行と共に維持する行ヘッダーまたは行フッターに対応する静的メンバーをクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン画面で、Tablix データ領域の任意の場所をクリックして選択します。 グループ化ペインに、データ領域の行グループと列グループが表示されます。  
   
-2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]**をクリックします。 列グループ ペインには、列グループ階層の静的メンバーおよび動的メンバーが階層的に表示されます。  
+2.  グループ化ペインの右側にある下矢印をクリックし、 **[詳細設定モード]** をクリックします。 列グループ ペインには、列グループ階層の静的メンバーおよび動的メンバーが階層的に表示されます。  
   
 3.  グループ列と共に維持する静的列に対応する静的メンバーをクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   

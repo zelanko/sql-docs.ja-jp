@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -34,12 +32,11 @@ caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0e2cefd0e5687429603ad80c75ee3cb7fa321b51
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c1b1f93da95e5c25f049426c6d619e5e11321448
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value* は、変数を参照できる定数式です。 これには、ユーザー定義型の変数、または関数およびユーザー定義関数が含まれます。 この定数式で [!INCLUDE[tsql](../../includes/tsql-md.md)] 式を参照することはできません。 *boundary_value* は、*input_parameter_type* に指定された対応するデータ型と同じであるか、そのデータ型に暗黙的に変換できる必要があります。また、暗黙的に変換している間は、対応する *input_parameter_type* と値のサイズおよび小数点以下桁数が異なる方法で切り捨てることはできません。  
   
 > [!NOTE]  
->  *boundary_value* に、**datetime** または **smalldatetime** 型のリテラルが含まれる場合、それらのリテラルは、セッション言語が us_english であることを前提に評価されます。 ただし、この動作は廃止予定となっています。 すべてのセッション言語でパーティション関数の定義が正しく認識されるようにするには、yyyymmdd 形式のようにすべての言語設定で同様に解釈される定数を使用するか、リテラルを特定の型に明示的に変換することをお勧めします。 サーバーのセッション言語を確認するには、`SELECT @@LANGUAGE` を実行してください。  
+>  *boundary_value* に、**datetime** または **smalldatetime** 型のリテラルが含まれる場合、それらのリテラルは、セッション言語が us_english であることを前提に評価されます。 ただし、この動作は非推奨とされます。 すべてのセッション言語でパーティション関数の定義が正しく認識されるようにするには、yyyymmdd 形式のようにすべての言語設定で同様に解釈される定数を使用するか、リテラルを特定の型に明示的に変換することをお勧めします。 サーバーのセッション言語を確認するには、`SELECT @@LANGUAGE` を実行してください。  
   
  *...n*  
  *boundary_value* で与えられる値の数を指定します。14,999 以下の数を指定する必要があります。 作成されるパーティションの数は *n* + 1 になります。 値を順序どおり指定する必要はありません。 値が順不同の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は値を並び替えて、関数を作成し、値が順に並んでいないという警告を返します。 *n* に重複値が含まれている場合、データベース エンジンはエラーを返します。  

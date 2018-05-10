@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.approle.general.f1
 helpviewer_keywords:
@@ -21,13 +20,12 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7cbf6e60d2d3c07efc51e98caefa6f224a270fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32e4421664cc920336eae9b4780615f44ecb5f40
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-application-role"></a>アプリケーション ロールの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,20 +63,20 @@ ms.lasthandoff: 04/16/2018
   
 3.  **[ロール]** フォルダーを展開します。  
   
-4.  **[アプリケーション ロール]** フォルダーを右クリックし、 **[新しいアプリケーション ロール]**をクリックします。  
+4.  **[アプリケーション ロール]** フォルダーを右クリックし、 **[新しいアプリケーション ロール]** をクリックします。  
   
-5.  **[アプリケーション ロール – 新規]** ダイアログ ボックスの **[全般]**ページで、 **[ロール名]** ボックスに、新しいアプリケーション ロールの名前を入力します。  
+5.  **[アプリケーション ロール – 新規]** ダイアログ ボックスの **[全般]** ページで、 **[ロール名]** ボックスに、新しいアプリケーション ロールの名前を入力します。  
   
 6.  **[既定のスキーマ]** ボックスで、オブジェクト名の入力によってこのロールが作成するオブジェクトを所有するスキーマを指定します。 または、省略記号 **[...]** をクリックして、 **[スキーマの検索]** ダイアログ ボックスを開きます。  
   
 7.  **[パスワード]** ボックスに、新しいロールのパスワードを入力します。 **[パスワードの確認]** ボックスに、パスワードを再度入力します。  
   
-8.  **[このロールが所有するスキーマ]**から、このロールが所有するスキーマを選択または表示します。 スキーマを所有できるのは、1 つのスキーマまたはロールのみです。  
+8.  **[このロールが所有するスキーマ]** から、このロールが所有するスキーマを選択または表示します。 スキーマを所有できるのは、1 つのスキーマまたはロールのみです。  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>追加オプション  
- **[アプリケーション ロール – 新規]** ダイアログ ボックスには、 **[セキュリティ保護可能なリソース]** と **[拡張プロパティ]**という 2 つのページもあり、それぞれにオプションが用意されています。  
+ **[アプリケーション ロール – 新規]** ダイアログ ボックスには、 **[セキュリティ保護可能なリソース]** と **[拡張プロパティ]** という 2 つのページもあり、それぞれにオプションが用意されています。  
   
 -   **[セキュリティ保護可能なリソース]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   
@@ -90,9 +88,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

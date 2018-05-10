@@ -3,15 +3,12 @@ title: インデックスと制約の無効化 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.disableindexes.f1
 helpviewer_keywords:
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab120c695381c48b8e7968a83872d91b6caa682a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eca111e19c0ab16b3f59c90ae42532b9b4192d7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,9 +108,9 @@ ms.lasthandoff: 04/16/2018
   
 4.  プラス記号をクリックして **[インデックス]** フォルダーを展開します。  
   
-5.  無効にするインデックスを右クリックし、 **[無効化]**を選択します。  
+5.  無効にするインデックスを右クリックし、 **[無効化]** を選択します。  
   
-6.  **[インデックスの無効化]** ダイアログ ボックスで、 **[無効にするインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
+6.  **[インデックスの無効化]** ダイアログ ボックスで、 **[無効にするインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。  
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>テーブルのすべてのインデックスを無効にするには  
   
@@ -124,9 +120,9 @@ ms.lasthandoff: 04/16/2018
   
 3.  プラス記号をクリックして、インデックスを無効にするテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、 **[すべて無効にする]**を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[すべて無効にする]** を選択します。  
   
-5.  **[インデックスの無効化]** ダイアログ ボックスで、 **[無効にするインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。 **[無効にするインデックス]** グリッドからインデックスを削除するには、インデックスを選択し、Del キーを押します。  
+5.  **[インデックスの無効化]** ダイアログ ボックスで、 **[無効にするインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。 **[無効にするインデックス]** グリッドからインデックスを削除するには、インデックスを選択し、Del キーを押します。  
   
  **[無効にするインデックス]** ダイアログ ボックスには、次の情報が表示されます。  
   
@@ -175,9 +171,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -192,9 +188,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  

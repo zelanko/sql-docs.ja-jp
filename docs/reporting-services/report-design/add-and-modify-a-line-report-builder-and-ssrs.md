@@ -1,27 +1,25 @@
 ---
-title: "罫線の追加および変更 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 罫線の追加および変更 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ff6b6ee59cfab574f8d94c54a73ba937e200909f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8ea4a1fd61e6fcd4ad882f4316db5ffb46ef8313
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>罫線の追加および変更 (レポート ビルダーおよび SSRS)
   グラフィック要素を使用してレポートのセクションを区切る場合は、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに罫線を追加できます。 色やスタイルなどの罫線のプロパティを編集して、罫線の外観をカスタマイズできます。 たとえば、企業の色をレポートに組み込むことができます。    
@@ -31,7 +29,7 @@ ms.lasthandoff: 01/09/2018
     
 ## <a name="to-add-a-line"></a>罫線を追加するには    
     
-1.  **[挿入]** タブで、 **[線]**をクリックします。    
+1.  **[挿入]** タブで、 **[線]** をクリックします。    
     
 2.  デザイン画面で、罫線の一方の端になる場所をクリックしてから、もう一方の端になる場所をクリックします。    
     

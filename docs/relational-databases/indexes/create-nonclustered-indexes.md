@@ -3,15 +3,12 @@ title: 非クラスター化インデックスの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
 - nonclustered indexes [SQL Server], creating
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01ad2fc13ed2fba75e4c5971f06b59708868f659
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f0735f394e7814e4916e79c88124c0a199dfeba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-nonclustered-indexes"></a>非クラスター化インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,17 +62,17 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[テーブル]** フォルダーを展開します。  
   
-3.  非クラスター化インデックスを作成するテーブルを右クリックし、 **[デザイン]**を選択します。  
+3.  非クラスター化インデックスを作成するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
-5.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]**をクリックします。  
+5.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
 6.  **[Selected Primary/Unique Key or Index (選択された主/一意キーまたはインデックス)]** ボックスで、新しいインデックスを選択します。  
   
-7.  グリッドで、 **[CLUSTERED として作成]**を選択し、プロパティ右のドロップダウン リストの **[いいえ]** を選択します。  
+7.  グリッドで、 **[CLUSTERED として作成]** を選択し、プロパティ右のドロップダウン リストの **[いいえ]** を選択します。  
   
-8.  **[閉じる]**をクリックします。  
+8.  **[閉じる]** をクリックします。  
   
 9. **[ファイル]** メニューの *[<テーブル名> の保存]* をクリックします。  
   
@@ -88,17 +84,17 @@ ms.lasthandoff: 04/16/2018
   
 3.  非クラスター化インデックスを作成するテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]**をポイントし、 **[非クラスター化インデックス...]**を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス...]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  **[インデックス キー列]**で、 **[追加]**をクリックします。  
+6.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
 7.  *[<テーブル名> から列を選択]* ダイアログ ボックスで、非クラスター化インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
-9. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]**をクリックします。  
+9. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -106,9 +102,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```sql  
     USE AdventureWorks2012;  

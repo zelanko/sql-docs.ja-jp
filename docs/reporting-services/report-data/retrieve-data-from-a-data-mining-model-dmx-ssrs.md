@@ -1,32 +1,30 @@
 ---
-title: "データ マイニング モデル (DMX) からデータを取得する (SSRS) | Microsoft Docs"
-ms.custom: 
+title: データ マイニング モデル (DMX) からデータを取得する (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
 - datasets [Reporting Services], with DMX queries
 - datasets [Reporting Services], Analysis Services
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 28317c69a8a015cef6fade6c9965664841c1c008
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 53fe62a48a40b768b730f1f16ab038703deda5ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>データ マイニング モデル (DMX) からデータを取得する (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルのデータをレポートで使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースと 1 つ以上のレポート データセットを定義する必要があります。 データ ソース定義を作成する場合、クライアント コンピューターからデータ ソースにアクセスできるように接続文字列と資格情報を指定する必要があります。  
@@ -41,13 +39,13 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-create-an-embedded-microsoft-sql-server-analysis-services-data-source"></a>埋め込み Microsoft SQL Server Analysis Services データ ソースを作成するには  
   
-1.  ツール バーのレポート データ ペインで、 **[新規作成]**、 **[データ ソース]**の順にクリックします。  
+1.  ツール バーのレポート データ ペインで、 **[新規作成]**、 **[データ ソース]** の順にクリックします。  
   
 2.  **[データ ソースのプロパティ]** ダイアログ ボックスの **[名前]** ボックスに名前を入力するか、既定の名前をそのまま使用します。  
   
 3.  **[埋め込み接続]** が選択されていることを確認します。  
   
-4.  **[種類]** ボックスで、 **[Microsoft SQL Server Analysis Services]**を選択します。  
+4.  **[種類]** ボックスで、 **[Microsoft SQL Server Analysis Services]** を選択します。  
   
 5.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに使用する接続文字列を指定します。  
   
@@ -57,12 +55,12 @@ ms.lasthandoff: 01/09/2018
     Data Source=localhost;Initial Catalog=AdventureWorksDW2012  
     ```  
   
-6.  **[資格情報]**をクリックします。  
+6.  **[資格情報]** をクリックします。  
   
      データ ソースへの接続に使用する資格情報を設定します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
     > [!NOTE]  
-    >  データ ソース接続をテストするには、 **[編集]**をクリックします。 **[接続プロパティ]** ダイアログ ボックスで、 **[接続テスト]**をクリックします。 テストが成功すると "接続テストに成功しました。" というメッセージが表示されます。 テストが失敗すると、その原因に関する詳しい情報を記載した警告メッセージが表示されます。  
+    >  データ ソース接続をテストするには、 **[編集]** をクリックします。 **[接続プロパティ]** ダイアログ ボックスで、 **[接続テスト]** をクリックします。 テストが成功すると "接続テストに成功しました。" というメッセージが表示されます。 テストが失敗すると、その原因に関する詳しい情報を記載した警告メッセージが表示されます。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,17 +68,17 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Microsoft SQL Server Analysis Services のデータセットを作成するには  
   
-1.  **レポート データ** ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続するデータ ソースの名前を右クリックし、 **[データセットの追加]**をクリックします。  
+1.  **レポート データ** ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続するデータ ソースの名前を右クリックし、 **[データセットの追加]** をクリックします。  
   
 2.  **[データセットのプロパティ]** ダイアログ ボックスで、 **[名前]** ボックスに名前を入力します。  
   
-3.  **[データ ソース]**ボックスに表示された名前が、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続するデータ ソースの名前であることを確認します。  
+3.  **[データ ソース]** ボックスに表示された名前が、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続するデータ ソースの名前であることを確認します。  
   
 4.  **[クエリ デザイナー]** をクリックしてグラフィカル クエリ デザイナーを開き、クエリを対話形式で作成します。 クエリ デザイナーが MDX モードで開いた場合は、ツール バーの **[コマンドの種類 DMX]** (![DMX クエリ言語ビューに変更](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) をクリックして、データ マイニング クエリ デザイナーに切り替えます。 詳細については、「 [Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)」をご覧ください。  
   
-     代わりに、既存の DMX クエリを別のレポートからインポートするには、 **[インポート]**をクリックし、DMX クエリを使用して .rdl ファイルに移動します。 .dmx ファイルからクエリをインポートすることはできません。  
+     代わりに、既存の DMX クエリを別のレポートからインポートするには、 **[インポート]** をクリックし、DMX クエリを使用して .rdl ファイルに移動します。 .dmx ファイルからクエリをインポートすることはできません。  
   
-5.  クエリを作成して実行した後、サンプルの結果を表示するには **[OK]**をクリックします。  
+5.  クエリを作成して実行した後、サンプルの結果を表示するには **[OK]** をクリックします。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

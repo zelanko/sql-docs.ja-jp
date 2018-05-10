@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.makemanaged.agentaccount.F1
 - sql13.SWB.makemanaged.welcome.F1
@@ -27,12 +26,11 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0d376edffe2ec77eac825c5cb9920c05625044f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ebe062a78caf3a0589afaef68b7cde988b8bcae4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,14 +93,14 @@ ms.lasthandoff: 04/16/2018
 -   [SQL Server インスタンスの登録](#Enrolling)  
   
 ##  <a name="Welcome"></a> インスタンスの登録ウィザードの概要  
- このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージ インスタンス]**ノードを右クリックして、 **[マネージ インスタンスの追加]**をクリックします。  
+ このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージ インスタンス]** ノードを右クリックして、 **[マネージ インスタンスの追加]** をクリックします。  
   
- 続行するには、 **[次へ]**をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Instance_name"></a> SQL Server インスタンスの指定  
- 接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]**をクリックします。 ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
+ 接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。 ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
   
- 続行するには、 **[次へ]**をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Connection_dialog"></a> 接続ダイアログ  
  [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  接続が暗号化されている場合、暗号化された接続が使用されます。 接続が暗号化されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは暗号化された接続を使用して再接続します。  
   
- 続行するには、 **[接続]**をクリックします。  
+ 続行するには、 **[接続]** をクリックします。  
   
 ##  <a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットを実行する Windows ドメイン アカウントを指定します。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントとして使用されます。 また、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントを使用することもできます。 検証の要件を満たすには、次のガイドラインに従ってアカウントを指定します。  
@@ -119,7 +117,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントには、ビルトイン アカウント (LocalSystem、NetworkService、LocalService など) ではなく、Windows ドメイン アカウントを指定する必要があります。  
   
- 続行するには、 **[次へ]**をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Validation_rules"></a> SQL Server インスタンスの検証  
  このリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで、次の条件が満たされている必要があります：  
@@ -132,7 +130,7 @@ ms.lasthandoff: 04/16/2018
 |別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP で登録されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは使用できません。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの一部として既に管理されている場合、そのインスタンスを別の UCP に登録することはできません。|  
 |既に UCP である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは使用できません。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが、接続先の UCP とは別の UCP の場合、インスタンスをこの UCP に登録することはできません。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットがインストールされている必要があります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再インストールします。|  
-|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのコレクション セットを停止する必要があります。|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの既存のコレクション セットを停止します。 データ コレクターが無効になっている場合は、それを有効にして、実行中のコレクション セットを停止し、UCP の作成操作に対して検証規則を再実行します。<br /><br /> データ コレクターを有効にするには :<br /><br /> オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。<br /><br /> **[データ コレクション]**を右クリックし、 **[データ コレクションの有効化]**をクリックします。<br /><br /> コレクション セットを停止するには :<br /><br /> オブジェクト エクスプローラーで、[管理] ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]**の順に展開します。<br /><br /> 停止するコレクション セットを右クリックして **[データ コレクション セットの停止]**をクリックします。<br /><br /> メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに赤い丸が付いている場合は、コレクション セットが停止していることを示します。|  
+|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのコレクション セットを停止する必要があります。|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの既存のコレクション セットを停止します。 データ コレクターが無効になっている場合は、それを有効にして、実行中のコレクション セットを停止し、UCP の作成操作に対して検証規則を再実行します。<br /><br /> データ コレクターを有効にするには :<br /><br /> オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。<br /><br /> **[データ コレクション]** を右クリックし、 **[データ コレクションの有効化]** をクリックします。<br /><br /> コレクション セットを停止するには :<br /><br /> オブジェクト エクスプローラーで、[管理] ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開します。<br /><br /> 停止するコレクション セットを右クリックして **[データ コレクション セットの停止]** をクリックします。<br /><br /> メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに赤い丸が付いている場合は、コレクション セットが停止していることを示します。|  
 |指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを開始する必要があります。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを開始します。 指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインスタンスである場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを手動で開始するように構成します。 それ以外の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に開始されるように構成します。|  
 |UCP の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを開始する必要があります。|UCP の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを開始します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインスタンスである場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを手動で開始するように構成します。 それ以外の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に開始されるように構成します。|  
 |WMI が正しく構成されている必要があります。|WMI の構成をトラブルシューティングするには、「 [SQL Server ユーティリティのトラブルシューティング](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。|  
@@ -146,7 +144,7 @@ ms.lasthandoff: 04/16/2018
   
  検証レポートを保存するには、 **[レポートの保存]** をクリックし、ファイルの場所を指定します。  
   
- 続行するには、 **[次へ]**をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Summary"></a> インスタンス登録の概要  
  概要ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに追加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの情報が表示されます。  
@@ -157,7 +155,7 @@ ms.lasthandoff: 04/16/2018
   
 -   ユーティリティ コレクション セットのアカウント: DomainName\UserName  
   
- 続行するには、 **[次へ]**をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Enrolling"></a> SQL Server インスタンスの登録  
  登録ページでは、次のように、処理の進行状況が表示されます。  
@@ -170,7 +168,7 @@ ms.lasthandoff: 04/16/2018
   
  登録処理に関するレポートを保存するには、 **[レポートの保存]** をクリックし、ファイルの場所を指定します。  
   
- ウィザードを完了するには、 **[完了]**をクリックします。  
+ ウィザードを完了するには、 **[完了]** をクリックします。  
   
 > [!NOTE]  
 >  登録する SQL Server のインスタンスに SQL Server 認証を使用して接続し、UCP があるドメインとは異なる Active Directory ドメインに属するプロキシ アカウントを指定した場合、インスタンスの検証には成功しますが、次のエラー メッセージが表示されて登録処理に失敗します。  
@@ -186,9 +184,9 @@ ms.lasthandoff: 04/16/2018
   
  インスタンスの登録ウィザードが完了したら、SSMS の **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで、 **[マネージ インスタンス]** ノードをクリックします。 登録済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、 **ユーティリティ エクスプローラー** のコンテンツ ウィンドウのリスト ビューに表示されます。  
   
- データ収集プロセスはすぐに開始されますが、ユーティリティ エクスプローラーのコンテンツ ウィンドウ内のダッシュボードとビューポイントに最初に表示されるまで最大 30 分かかる場合があります。 データの収集は 15 分間隔で続行されます。 データを更新するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージ インスタンス]** ノードを右クリックして **[更新]**をクリックするか、リスト ビューで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を右クリックして **[更新]**をクリックします。  
+ データ収集プロセスはすぐに開始されますが、ユーティリティ エクスプローラーのコンテンツ ウィンドウ内のダッシュボードとビューポイントに最初に表示されるまで最大 30 分かかる場合があります。 データの収集は 15 分間隔で続行されます。 データを更新するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージ インスタンス]** ノードを右クリックして **[更新]** をクリックするか、リスト ビューで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を右クリックして **[更新]** をクリックします。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージ インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージ インスタンス]** を選択してマネージ インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージ インスタンスを削除]**を選択します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージ インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージ インスタンス]** を選択してマネージ インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージ インスタンスを削除]** を選択します。  
   
 ##  <a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
  次の例を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録します:  

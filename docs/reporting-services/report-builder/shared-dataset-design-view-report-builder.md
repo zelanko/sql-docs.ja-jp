@@ -1,27 +1,25 @@
 ---
-title: "共有データセット デザイン ビュー (レポート ビルダー) | Microsoft Docs"
-ms.custom: 
+title: 共有データセット デザイン ビュー (レポート ビルダー) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 共有データセットはレポート サーバー上でパブリッシュされ、複数のレポートで使用できます。 他のユーザーと共有するデータセットを作成できます。 共有データセット デザイン ウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
@@ -94,7 +92,7 @@ ms.lasthandoff: 01/09/2018
   
   
 ##  <a name="Save"></a> 共有データセットの保存  
- 作成したクエリを保存するには、 **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]**をクリックします。 レポート サーバー上の適切なフォルダーに移動し、共有データセット定義を保存します。 レポート サーバーに保存しないと、共有データセットを他のユーザーが使用することはできません。  
+ 作成したクエリを保存するには、 **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]** をクリックします。 レポート サーバー上の適切なフォルダーに移動し、共有データセット定義を保存します。 レポート サーバーに保存しないと、共有データセットを他のユーザーが使用することはできません。  
   
   
 ## <a name="see-also"></a>参照  

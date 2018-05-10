@@ -1,27 +1,25 @@
 ---
-title: "対数スケールの指定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 対数スケールの指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 57d0078658267adbfa5d7e02f742a61b9f7ae697
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dd0d45392caaee0b046b7cfafa1da2dc8af5c7d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>対数スケールの指定 (レポート ビルダーおよび SSRS)
   対数比例するデータがある場合は、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートのグラフ上での対数スケールの使用を検討します。 これにより、データの管理が容易になり、グラフの外観が向上します。 ほとんどの対数スケールでは、底に 10 を使用します。  
@@ -35,9 +33,9 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-specify-a-logarithmic-scale"></a>対数スケールを指定するには  
   
-1.  グラフの Y 軸を右クリックし、 **[縦軸のプロパティ]**をクリックします。 **[縦軸のプロパティ]** ダイアログ ボックスが表示されます。  
+1.  グラフの Y 軸を右クリックし、 **[縦軸のプロパティ]** をクリックします。 **[縦軸のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **[軸のオプション]**で、 **[対数スケールを使用する]**を選択します。  
+2.  **[軸のオプション]** で、 **[対数スケールを使用する]** を選択します。  
   
 3.  **[対数の底]** ボックスに、対数の底を正の値で入力します。 値を指定しなかった場合、対数の底は既定値の 10 に設定されます。  
   

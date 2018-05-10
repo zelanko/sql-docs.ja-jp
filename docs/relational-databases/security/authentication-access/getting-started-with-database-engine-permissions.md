@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
@@ -19,13 +18,12 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 045067a2e564d9e7c04aa4542d3ef24491b1356a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -132,7 +130,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   管理者が `DENY SELECT ON OBJECT::OrderStatus TO Sales;` を間違った方法で実行すると、Sales に対する `SELECT` によって Ted 個人の `DENY` がオーバーライドされるため、Sales ロールのメンバーである Ted の  `GRANT`権限は拒否されます  
   
 > [!NOTE]  
->  権限は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して構成できます。 オブジェクト エクスプローラーでセキュリティ保護可能なリソースを探し、セキュリティ保護可能なリソース名を右クリックして、 **[プロパティ]**をクリックします。 **[権限]** ページを選択します。 権限ページの使用に関するヘルプについては、「 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)」を参照してください。  
+>  権限は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して構成できます。 オブジェクト エクスプローラーでセキュリティ保護可能なリソースを探し、セキュリティ保護可能なリソース名を右クリックして、 **[プロパティ]** をクリックします。 **[権限]** ページを選択します。 権限ページの使用に関するヘルプについては、「 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)」を参照してください。  
   
 ## <a name="permission-hierarchy"></a>権限の階層  
  権限には、親子階層があります。 つまり、データベースに `SELECT` 権限を付与すると、その権限にデータベース内のすべての (子) スキーマの `SELECT` 権限が含まれます。 スキーマに `SELECT` 権限を付与すると、その権限にスキーマ内のすべての (子) テーブルとビューの `SELECT` 権限が含まれます。 権限は推移的です。つまり、 `SELECT` 権限をデータベースに付与すると、その権限にすべての (子) スキーマとすべての (孫) テーブルとビューの `SELECT` 権限が含まれます。  

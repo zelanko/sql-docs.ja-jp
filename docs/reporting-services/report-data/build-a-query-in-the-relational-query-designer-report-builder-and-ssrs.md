@@ -1,27 +1,25 @@
 ---
-title: "リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 166a38397f8af03d0d146c9fdd46388ad128376f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d0ca2e4b18c0bfbb267aa0bcf79da69459dcdc2f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS)
   クエリ デザイナーでは、レポート データセットの外部データ ソースから取得するデータを指定できます。 クエリ デザイナーは、ウィザードでクエリを構築するときや、データセット クエリを作成するときに使用します。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-build-a-query-for-an-embedded-dataset-in-report-design-view"></a>レポート デザイン ビューで埋め込みデータセットに対するクエリを作成するには  
   
-1.  クエリ デザイナーを開きます。 レポート データ ペインでデータセットを右クリックし、 **[クエリ]**をクリックします。  
+1.  クエリ デザイナーを開きます。 レポート データ ペインでデータセットを右クリックし、 **[クエリ]** をクリックします。  
   
      データ ソースに関連付けられているクエリ デザイナーが開きます。  
   
@@ -71,13 +69,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  リレーショナル クエリ デザイナーで、フィールドを選択しており、それらのフィールドが **[選択されたフィールド]** ペインに表示されることを確認します。  
   
-2.  適用されたフィルター ペインのツール バーで、 **[フィルターの追加]**をクリックします。 新しいフィルター行が表示されます。  
+2.  適用されたフィルター ペインのツール バーで、 **[フィルターの追加]** をクリックします。 新しいフィルター行が表示されます。  
   
-3.  **[フィールド名]**で、クリックしてフィールドのドロップダウン リストを表示し、フィルター処理の基準にするフィールドの名前をクリックします。 たとえば、数量を基準にフィルター処理を行うには、アイテムの数を格納するフィールドをクリックします。  
+3.  **[フィールド名]** で、クリックしてフィールドのドロップダウン リストを表示し、フィルター処理の基準にするフィールドの名前をクリックします。 たとえば、数量を基準にフィルター処理を行うには、アイテムの数を格納するフィールドをクリックします。  
   
-4.  **[演算子]**で、クリックして演算子のドロップダウン リストを表示し、フィルターで使用する比較演算子を選択します。  
+4.  **[演算子]** で、クリックして演算子のドロップダウン リストを表示し、フィルターで使用する比較演算子を選択します。  
   
-5.  **[値]**に、フィルター処理の基準にする値を入力します。 たとえば、100 よりも大きい数量をフィルター処理の対象とするには、「100」と入力します。  
+5.  **[値]** に、フィルター処理の基準にする値を入力します。 たとえば、100 よりも大きい数量をフィルター処理の対象とするには、「100」と入力します。  
   
 6.  ユーザーがフィルター値を指定できるようにデータセット パラメーターを作成する場合は、この行のパラメーター オプションを選択します。 データセット パラメーターに対応するレポート パラメーターが自動的に生成されます。  
   
@@ -89,7 +87,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-view-a-query-result-set"></a>クエリの結果セットを表示するには  
   
-1.  クエリ デザイナーのツール バーで、 **[クエリの実行]\(!)**をクリックします。  
+1.  クエリ デザイナーのツール バーで、 **[クエリの実行]\(!)** をクリックします。  
   
     > [!NOTE]  
     >  クエリ デザイナーでは、デザイン時の資格情報を使用してクエリを実行し、結果セットを取得します。 詳細については、「 [レポート ビルダーでの資格情報の指定](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  

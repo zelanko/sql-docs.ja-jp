@@ -1,32 +1,19 @@
 ---
-title: "Analysis Services データベースの同期 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services データベースの同期 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services deployments, Synchronize Database Wizard
-- deploying [Analysis Services], Synchronize Database Wizard
-- Synchronize Database Wizard
-- synchronization [Analysis Services]
-ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c98f5e8ef089ecb28ff78aebbb09cb6a77068e0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,9 +71,9 @@ ms.lasthandoff: 02/15/2018
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、同期先データベースを実行する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 たとえば、実稼働サーバーにデータベースを配置する場合は、実稼働サーバーでウィザードを実行します。  
   
-2.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを右クリックし、 **[同期]**をクリックします。  
+2.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを右クリックし、 **[同期]** をクリックします。  
   
-3.  同期元サーバー名と同期元データベースを指定します。 [同期するデータベースの選択] ページの **[同期元サーバー]** と **[同期元データベース]**で、同期元サーバーと同期元データベースの名前を入力します。 たとえば、テスト環境から実稼働サーバーに配置する場合は、同期元は、ステージング サーバー上のデータベースです。  
+3.  同期元サーバー名と同期元データベースを指定します。 [同期するデータベースの選択] ページの **[同期元サーバー]** と **[同期元データベース]** で、同期元サーバーと同期元データベースの名前を入力します。 たとえば、テスト環境から実稼働サーバーに配置する場合は、同期元は、ステージング サーバー上のデータベースです。  
   
      **[同期先サーバー]** に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [同期元データベース] **で選択したデータベースのデータおよびメタデータの同期先となる** インスタンスの名前が表示されます。  
   
@@ -107,7 +94,7 @@ ms.lasthandoff: 02/15/2018
      **[同期先フォルダー]**  
      ローカル パーティションを同期する同期先 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのフォルダー名が表示されます。 列に "(既定値)" が含まれている場合は、同期先インスタンスの既定の場所にローカル パーティションが含まれています。  
   
-     **[...]**ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたローカル パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
+     **[...]** ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたローカル パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
   
     > [!NOTE]  
     >  同期元インスタンスの既定の場所に格納されているローカル パーティションを選択した場合、この列は変更できません。  
@@ -151,12 +138,12 @@ ms.lasthandoff: 02/15/2018
      **[同期先サーバー]**  
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [同期元サーバー] **と** [同期元フォルダー] **で指定された場所に格納されているリモート パーティションを同期する、** インスタンスの名前が表示されます。  
   
-     **[...]**ボタンをクリックして、 **[接続マネージャー]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを指定します。  
+     **[...]** ボタンをクリックして、 **[接続マネージャー]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを指定します。  
   
      **[同期先フォルダー]**  
      リモート パーティションを同期する同期先 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのフォルダー名が表示されます。 列に値 "(既定値)" が含まれている場合は、同期先インスタンスの既定の場所にリモート パーティションが含まれています。  
   
-     **[...]**ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
+     **[...]** ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
   
      **サイズ**  
      この場所に格納されたリモート パーティションの推定サイズが表示されます。  

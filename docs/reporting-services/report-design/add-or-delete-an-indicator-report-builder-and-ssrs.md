@@ -1,27 +1,25 @@
 ---
-title: "インジケーターの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: インジケーターの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a53a8c845916ca815e8e426ee3233d05c255bab7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1e5815f3d30e0c34b2cd9d481347eb69b637fc72
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
@@ -51,9 +49,9 @@ ms.lasthandoff: 01/09/2018
   
 2.  テーブルまたはマトリックスに列を挿入します。 詳細については、「[列の挿入または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)」を参照してください。  
   
-3.  必要に応じて、 **[挿入]** タブで **[四角形]**をクリックし、新しい列のセルをクリックします。  
+3.  必要に応じて、 **[挿入]** タブで **[四角形]** をクリックし、新しい列のセルをクリックします。  
   
-4.  **[挿入]** タブで、 **[インジケーター]**をクリックし、新しい列のセルをクリックします。  
+4.  **[挿入]** タブで、 **[インジケーター]** をクリックし、新しい列のセルをクリックします。  
   
      セルに四角形を追加した場合は、そのセルをクリックします。  
   
@@ -69,12 +67,12 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>テーブルまたはマトリックスからインジケーターを削除するには  
   
-1.  削除するインジケーターを右クリックし、 **[削除]**をクリックします。  
+1.  削除するインジケーターを右クリックし、 **[削除]** をクリックします。  
   
     > [!NOTE]  
     >  インジケーターは、他のインジケーターまたはゲージを含むゲージ パネル内に配置されている場合があります。 ゲージ パネルに複数の項目が含まれている場合は、ゲージ パネルではなく、削除するインジケーターをクリックするよう注意してください。 ゲージ パネルをクリックして削除すると、ゲージ パネルだけでなく、その中の項目がすべて削除されます。  
   
-2.  **[削除]**をクリックします。  
+2.  **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

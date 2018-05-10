@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -22,13 +20,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce2a12cedac9f347a18b0132b12cacb9c7421e0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b030c2174373a06fc41e8662567cff4441e4b11
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 |次のステートメントまたはモジュールにステップ インする。|**[デバッグ]** メニューの **[ステップ イン]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ イン]** ボタンをクリックする。<br /><br /> F11 キーを押す。|  
 |次のステートメントまたはモジュールにステップ オーバーする。|**[デバッグ]** メニューの **[ステップ オーバー]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ オーバー]** ボタンをクリックする。<br /><br /> F10 キーを押す。|  
 |モジュールからステップ アウトする。|**[デバッグ]** メニューの **[ステップ アウト]** をクリックする。<br /><br /> **[デバッグ]** ツール バーの **[ステップ アウト]** ボタンをクリックする。<br /><br /> Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F11&lt;/localizedText&gt; キーを押す。|  
-|現在のカーソル位置まで実行する。|クエリ エディター ウィンドウ内で右クリックし、 **[カーソルまで実行]**をクリックする。<br /><br /> Ctrl</localizedText> + <localizedText>F10</localizedText> キーを押す。|  
+|現在のカーソル位置まで実行する。|クエリ エディター ウィンドウ内で右クリックし、 **[カーソルまで実行]** をクリックする。<br /><br /> Ctrl</localizedText> + <localizedText>F10</localizedText> キーを押す。|  
   
 ## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)  

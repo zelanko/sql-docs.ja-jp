@@ -1,30 +1,28 @@
 ---
-title: "URL 内でレポート パラメーターを渡す | Microsoft Docs"
-ms.custom: 
+title: URL 内でレポート パラメーターを渡す | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9ed073313d11f6764bc845ff1f993994add14f60
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4f7efcc4ff59aa48e09ee1e053a9f9522fad49cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 > [!IMPORTANT]  
 >  SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
 >   
->  プロキシ構文を含めない場合は、パラメーターの先頭に *rp:*を付ける必要があります。  
+>  プロキシ構文を含めない場合は、パラメーターの先頭に *rp:* を付ける必要があります。  
   
  すべてのクエリ パラメーターには、対応するレポート パラメーターを指定できます。 クエリ パラメーターをレポートに渡すには、対応するレポート パラメーターを渡します。 詳細については、「[リレーショナル クエリ デザイナーでのクエリの作成 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)」を参照してください。  
   

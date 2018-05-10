@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b4a0a7f0aa62e57968fac4d2ca94d50c8ac5218
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +38,9 @@ ms.lasthandoff: 04/16/2018
  エディターまたはデザイナーに戻るたびに、 **[ツールボックス]** は最新のタブおよび選択されているアイテムに自動的にスクロールされます。 別のエディターまたはデザイナーにフォーカスを移すと、 **[ツールボックス]** 内の現在の選択も一緒に変わります。  
   
 ## <a name="customize-the-toolbox"></a>ツールボックスのカスタマイズ  
- タブ内のアイテムの再構成や、 **[ツールボックス]**へのカスタム タブやアイテムの追加は、簡単に行えます。  
+ タブ内のアイテムの再構成や、 **[ツールボックス]** へのカスタム タブやアイテムの追加は、簡単に行えます。  
   
- **[ツールボックス]** のアイテムを追加または削除するには、 **[ツール]** メニューの **[ツールボックス アイテムの選択]**をクリックします。 **[メンテナンス タスク]** だけが **[ツールボックス]** アイコンとして使用できます。 すべてのコンポーネントが常に使用できるのではありません。 たとえば、メンテナンス タスクは、メンテナンス プランを作成する場合のみ使用できます。  
+ **[ツールボックス]** のアイテムを追加または削除するには、 **[ツール]** メニューの **[ツールボックス アイテムの選択]** をクリックします。 **[メンテナンス タスク]** だけが **[ツールボックス]** アイコンとして使用できます。 すべてのコンポーネントが常に使用できるのではありません。 たとえば、メンテナンス タスクは、メンテナンス プランを作成する場合のみ使用できます。  
   
 ## <a name="add-azure-components-to-the-toolbox"></a>Azure のコンポーネントをツールボックスに追加する  
  Integration Services 用の Azure Feature Pack には、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 これらのアイテムをツールボックスに追加するには機能パックをインストールします。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  

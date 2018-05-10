@@ -1,27 +1,25 @@
 ---
-title: "モバイル レポートのデータを行または列によってグループ化する | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: モバイル レポートのデータを行または列によってグループ化する | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9fee1d3dc4099d73c2ed0af13333cdaa10a97b9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 17f93e01d074b243e7b40c708ac65dd1609d8841
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>モバイル レポートのデータを行または列によってグループ化する |Reporting Services
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]は、多数の種類のグラフのデータを列または行によって整理できます。 次の手順に従ってください。
@@ -38,13 +36,13 @@ ms.lasthandoff: 01/09/2018
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. **[データ プロパティ]** ペインに表示される **[主要な系列]** は **[SimulatedTable]**です。 **[主要な系列]**の横にあるボックスの矢印を選択すると、 **Metric1** ～ **Metric5** が選択されます。
+3. **[データ プロパティ]** ペインに表示される **[主要な系列]** は **[SimulatedTable]** です。 **[主要な系列]** の横にあるボックスの矢印を選択すると、 **Metric1** ～ **Metric5** が選択されます。
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    同様に、 **[比較対象系列]** -- **Comparison1** ～ **Comparison5** が選択されます。
    
-4. **[プレビュー]**を選択します。
+4. **[プレビュー]** を選択します。
 
    ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/09/2018
 
 5. プレビュー モードを終了するには、左上隅にある戻る矢印を選択します。
 
-6. **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[データ構造]** を **[By columns (列による)]** から **[By rows (行による)]**に変更します。  
+6. **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[データ構造]** を **[By columns (列による)]** から **[By rows (行による)]** に変更します。  
 
 7. **[データ]** タブを選択します。SimulatedTable テーブルに **Category** 列が追加され、**Metric** 列と **Comparison** 列が Category A ～ E 別に表示されます。 
 
@@ -62,7 +60,7 @@ ms.lasthandoff: 01/09/2018
 
     ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
-9. **[プレビュー]**を選択します。
+9. **[プレビュー]** を選択します。
 
    ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 

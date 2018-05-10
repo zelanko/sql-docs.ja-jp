@@ -3,15 +3,12 @@ title: Server Core インストールでの SQL Server の構成 | Microsoft Doc
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
@@ -20,11 +17,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d09246e56569160c46d245dc2d1150422ba109be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3a78a1d69cf27d0909d8300676b5e03e3169f4b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
 
@@ -105,7 +102,7 @@ AlwaysOn 可用性グループが有効になっていることは、サーバ�
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーをリモートで使用する  
 次の手順は、Windows のクライアント エディションを実行している PC、またはサーバー グラフィック シェルがインストールされている Windows Server で実行することを意図しています。  
   
-1. **[コンピューターの管理]** を開きます。 **[コンピューターの管理]** を開くには、**[スタート]** をクリックして、`compmgmt.msc` と入力し、**[OK]**をクリックします。    
+1. **[コンピューターの管理]** を開きます。 **[コンピューターの管理]** を開くには、**[スタート]** をクリックして、`compmgmt.msc` と入力し、**[OK]** をクリックします。    
   
 2. コンソール ツリーで、**[コンピューターの管理]** を右クリックし、**[別のコンピューターへ接続]** をクリックします。  
   
@@ -185,7 +182,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 1.  Windows Server Core を実行しているコンピューターで、**タスク マネージャー**を起動します。  
   
-2.  **[アプリケーション]** タブで、 **[新しいタスク]**をクリックします。  
+2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
   
 3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[開く]** フィールドに **sqlps.exe** と入力して、**[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
   

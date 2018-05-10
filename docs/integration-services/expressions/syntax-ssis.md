@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
@@ -20,12 +19,11 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ca475ed0b09541d379d227dff4df4fcc129a8e1d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: e22fa20555debe84e74ba99a289daf149ac3d823
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文は、C 言語および C# 言語が使用する構文と同様です。 式には、識別子 (列および変数)、リテラル、演算子、関数などの要素が含まれます。 このトピックでは、式エバリュエーターの構文がさまざまな式要素を適用する際の、一意の必要条件の概要について説明します。  

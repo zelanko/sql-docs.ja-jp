@@ -1,32 +1,30 @@
 ---
-title: "データ ドリブン サブスクリプションを作成、変更、および削除する | Microsoft Docs"
-ms.custom: 
+title: データ ドリブン サブスクリプションを作成、変更、および削除する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
 - queries [Reporting Services], data-driven subscriptions
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92aab81d1e8bb487b3cbf671c4e15034abe09341
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cb4b22c712593429a1ad3485e643af48626c5734
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>データ ドリブン サブスクリプションを作成、変更、および削除する
   データ ドリブン サブスクリプションは、サブスクリプションの処理に使用するデータ値を実行時に取得するためのクエリ ベースのサブスクリプションです。 データ ドリブン サブスクリプションが開始されると、クエリが実行され、受信者、レポート配信オプション、表示形式、およびパラメーター設定に関する最新情報が取得されます。 このクエリ結果がサブスクリプション定義に組み込まれ、既存のデータを使用する動的サブスクリプションが作成されます。この動的サブスクリプションは、従業員データベース、顧客データベースなど、サブスクライバーのデータ ソースとして利用可能なすべてのデータベースのデータを使用します。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_manage_and_delete"></a> データ ドリブン サブスクリプションの管理および削除  
  実行中のデータ ドリブン サブスクリプションは、レポート マネージャーの [ジョブの管理] ページで停止または削除できません。 そのため、共有スケジュールを使用してデータ ドリブン サブスクリプションを開始すると便利です。 一時的にサブスクリプションを処理しないようにする場合は、サブスクリプションを開始するスケジュールを一時停止できます。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)」を参照してください。  
   
- データ ドリブン サブスクリプションを削除するには、[個人用サブスクリプション] ページまたはレポートの [サブスクリプション] ページでサブスクリプションを選択して、 **[削除]**をクリックします。  
+ データ ドリブン サブスクリプションを削除するには、[個人用サブスクリプション] ページまたはレポートの [サブスクリプション] ページでサブスクリプションを選択して、 **[削除]** をクリックします。  
   
  データ ドリブン サブスクリプションを取り消す方法については、「 [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)」を参照してください。  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-create-a-data-driven-subscription-native-mode"></a>データ ドリブン サブスクリプションを作成するには (ネイティブ モード)  
   
-1.  レポート マネージャーで、レポートのあるフォルダーに移動し、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[管理]**をクリックします。  
+1.  レポート マネージャーで、レポートのあるフォルダーに移動し、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[管理]** をクリックします。  
   
 2.  **[サブスクリプション]** タブをクリックします。  
   
@@ -63,13 +61,13 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>データ ドリブン サブスクリプションを作成するには (SharePoint モード)  
   
-1.  SharePoint ドキュメント ライブラリで、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[サブスクリプションの管理]**をクリックします。  
+1.  SharePoint ドキュメント ライブラリで、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[サブスクリプションの管理]** をクリックします。  
   
-2.  **[データ ドリブン サブスクリプションの追加]**をクリックします。  
+2.  **[データ ドリブン サブスクリプションの追加]** をクリックします。  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>既存のデータ ドリブン サブスクリプションを変更するには (ネイティブ モード)  
   
-1.  レポート マネージャーで、レポートのあるフォルダーに移動し、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[管理]**をクリックします。  
+1.  レポート マネージャーで、レポートのあるフォルダーに移動し、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[管理]** をクリックします。  
   
 2.  **[サブスクリプション]** タブをクリックします。または、レポート マネージャーの上部にある **[個人用サブスクリプション]** リンクをクリックします。  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>既存のデータ ドリブン サブスクリプションを変更するには (SharePoint モード)  
   
-1.  SharePoint ドキュメント ライブラリで、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[サブスクリプションの管理]**をクリックします。  
+1.  SharePoint ドキュメント ライブラリで、レポートの上にマウス ポインターを移動し、オプション メニュー開いて、 **[サブスクリプションの管理]** をクリックします。  
   
 2.  変更するサブスクリプションを選択します。  
   

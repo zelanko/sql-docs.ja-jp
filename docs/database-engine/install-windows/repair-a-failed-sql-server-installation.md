@@ -3,25 +3,22 @@ title: 失敗した SQL Server のインストールの修復 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d98f17df1ea29f71a1f7d8f942e39ca08efc1747
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea35103d16dec83826a467a5c437d1aeca049c19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
 
@@ -70,9 +67,9 @@ ms.lasthandoff: 04/16/2018
   
 5. [インスタンスの選択] ページで、修復するインスタンスを選択し、 **[次へ]** をクリックします。 
   
-6. 修復ルールが実行され、操作が検証されます。 続行するには、 **[次へ]**をクリックします。 
+6. 修復ルールが実行され、操作が検証されます。 続行するには、 **[次へ]** をクリックします。 
   
-7. [修復の準備完了] ページで、操作を続行する準備ができたことが示されます。 続行するには、 **[修復]**をクリックします。 
+7. [修復の準備完了] ページで、操作を続行する準備ができたことが示されます。 続行するには、 **[修復]** をクリックします。 
   
 8. [修復の進行状況] ページに、修復操作の進行状況が表示されます。 [完了] ページでは、操作が完了したことが示されます。 
   

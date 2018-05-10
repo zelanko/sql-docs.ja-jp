@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: udf
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc1db3ef29e072edda79e31af4372ce8796a017e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1559e145230508fdc9ee05b54c6e030a7bfa356b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-user-defined-functions"></a>ユーザー定義関数名の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ ms.lasthandoff: 04/16/2018
   
     -   集計関数  
   
-4.  名前を変更する関数を右クリックし、 **[名前の変更]**を選択します。  
+4.  名前を変更する関数を右クリックし、 **[名前の変更]** を選択します。  
   
 5.  関数の新しい名前を入力します。  
   

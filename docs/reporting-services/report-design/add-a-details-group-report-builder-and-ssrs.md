@@ -1,27 +1,25 @@
 ---
-title: "詳細グループの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 詳細グループの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a097a31b4197009df2d6df636caf2d5bb70b5814
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b8c504724523a3e331a54137766504b3599587c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>詳細グループの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、レポート データセットの詳細データは、グループ式のないグループとして指定されます。 マトリックスの詳細データを表示したり、表や一覧から削除した詳細データを再び追加したり、詳細グループを追加したりするときは、既存の Tablix データ領域に詳細グループを追加します。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -33,11 +31,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン画面で、Tablix データ領域の任意の場所をクリックして選択します。 グループ化ペインに、選択したデータ領域の行グループと列グループが表示されます。  
   
-2.  [グループ化] ペインで、最も内側の子グループを右クリックします。 **[グループの追加]**をクリックし、 **[子グループ]**をクリックします。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
+2.  [グループ化] ペインで、最も内側の子グループを右クリックします。 **[グループの追加]** をクリックし、 **[子グループ]** をクリックします。 **[Tablix のグループ]** ダイアログ ボックスが表示されます。  
   
-3.  **[グループ式]**で式を空白のままにします。 詳細グループには式がありません。  
+3.  **[グループ式]** で式を空白のままにします。 詳細グループには式がありません。  
   
-4.  **[詳細データの表示]**をクリックします。  
+4.  **[詳細データの表示]** をクリックします。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

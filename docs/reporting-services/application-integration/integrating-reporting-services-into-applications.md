@@ -1,26 +1,25 @@
 ---
-title: "アプリケーションへの Reporting Services の統合 | Microsoft Docs"
-ms.custom: 
+title: アプリケーションへの Reporting Services の統合 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: application-integration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0185a0cb501242355d99369f3084eaa6f6a2e3da
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4b880674bb1a98c455f991218a21c9f39e9afe53
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrating-reporting-services-into-applications"></a>アプリケーションへの Reporting Services の統合
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 01/09/2018
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、拡張性のあるオープンなレポート プラットフォームであり、ソリューションを開発するための API の包括的なセットを開発者に提供するように設計されています。
 
 > [!NOTE]
-> SQL Server 2017 Reporting Services 以降では、ソリューションの開発に REST API アクセスを使用できます。 SOAP API アクセスは推奨されません。 詳細については、「[Develop with the REST APIs for Reporting Services](../developer/rest-api.md)」 (Reporting Services の REST API による開発) を参照してください。
+> SQL Server 2017 Reporting Services 以降では、ソリューションの開発に REST API アクセスを使用できます。 SOAP API アクセスは非推奨とされます。 詳細については、「[Develop with the REST APIs for Reporting Services](../developer/rest-api.md)」 (Reporting Services の REST API による開発) を参照してください。
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションに統合するには、レポート サーバー Web サービス ([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API ともいう)、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の ReportViewer コントロール、および URL アクセスの 3 つのオプションがあります。 アプリケーションに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する方法は、オプションごとに異なります。
   

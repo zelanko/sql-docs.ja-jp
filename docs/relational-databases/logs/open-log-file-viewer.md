@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: logs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
@@ -19,12 +16,11 @@ caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d698f51d09ae268aa58b9a1e701d70364cbdb47a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 19dfb08572ae79a3ca2d82609641426791957924
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,49 +56,49 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-view-logs-that-are-related-to-general-sql-server-activity"></a>SQL Server の一般的な動作に関連するログを表示するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]**を展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** を展開します。  
   
 2.  以下のいずれかを実行します。  
   
-    -   **[SQL Server ログ]**を右クリックし、 **[表示]**をポイントして、 **[SQL Server ログ]** または **[SQL Server および Windows ログ]**をクリックします。  
+    -   **[SQL Server ログ]** を右クリックし、 **[表示]** をポイントして、 **[SQL Server ログ]** または **[SQL Server および Windows ログ]** をクリックします。  
   
-    -   **[SQL Server ログ]**を展開し、任意のログ ファイルを右クリックして **[SQL Server ログの表示]**をクリックします。 任意のログ ファイルをダブルクリックすることもできます。  
+    -   **[SQL Server ログ]** を展開し、任意のログ ファイルを右クリックして **[SQL Server ログの表示]** をクリックします。 任意のログ ファイルをダブルクリックすることもできます。  
   
      ログには、 **データベース メール**、 **SQL Server**、 **SQL Server エージェント**、および **Windows NT**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-jobs"></a>ジョブに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで **[SQL Server エージェント]**を展開し、 **[ジョブ]**を右クリックして **[履歴の表示]**をクリックします。  
+-   オブジェクト エクスプローラーで **[SQL Server エージェント]** を展開し、 **[ジョブ]** を右クリックして **[履歴の表示]** をクリックします。  
   
      ログには、 **データベース メール**、 **ジョブ履歴**、および **SQL Server エージェント**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-maintenance-plans"></a>メンテナンス プランに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで **[管理]**を展開し、 **[メンテナンス プラン]**を右クリックして **[履歴の表示]**をクリックします。  
+-   オブジェクト エクスプローラーで **[管理]** を展開し、 **[メンテナンス プラン]** を右クリックして **[履歴の表示]** をクリックします。  
   
      ログには、 **データベース メール**、 **ジョブ履歴**、 **メンテナンス プラン**、 **リモート メンテナンス プラン**、および **SQL Server エージェント**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-data-collection"></a>データ コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで **[管理]**を展開し、 **[データ コレクション]**を右クリックして **[ログの表示]**をクリックします。  
+-   オブジェクト エクスプローラーで **[管理]** を展開し、 **[データ コレクション]** を右クリックして **[ログの表示]** をクリックします。  
   
      ログには、 **データ コレクション**、 **ジョブ履歴**、および **SQL Server エージェント**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-database-mail"></a>データベース メールに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[管理]**を展開し、 **[データベース メール]**を右クリックし、 **[データベース メール ログの表示]**をクリックします。  
+-   オブジェクト エクスプローラーで、 **[管理]** を展開し、 **[データベース メール]** を右クリックし、 **[データベース メール ログの表示]** をクリックします。  
   
      ログには、 **データベース メール、ジョブ履歴**、 **メンテナンス プラン**、 **リモート メンテナンス プラン**、 **SQL Server**、 **SQL Server エージェント**、および **Windows NT**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>監査コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]**の順に展開し、監査を右クリックして **[監査ログの表示]**をクリックします。  
+-   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
   
      ログには、 **監査コレクション** と **Windows NT**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>監査コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]**の順に展開し、監査を右クリックして **[監査ログの表示]**をクリックします。  
+-   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
   
      ログには、 **監査コレクション** と **Windows NT**が含まれます。  
   

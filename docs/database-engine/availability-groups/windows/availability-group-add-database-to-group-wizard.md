@@ -3,15 +3,12 @@ title: 可用性グループ - グループへのデータベースの追加ウ�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.adddatabasewizard.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a28e3c73df8e4f9e57ad7acbd5e52a913d8b782
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cdf5e432534ab7996f0e96432d1944f0da4f51f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>可用性グループ - グループへのデータベースの追加ウィザード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ ms.lasthandoff: 04/16/2018
   
          使用している環境が、初期データの同期を自動的に開始するための要件を満たす場合は、このオプションを選択します (詳細については、このトピックの「 [前提条件、制限事項、および推奨事項](#Prerequisites)」をご覧ください)。  
   
-         **[完全]**を選択すると、可用性グループを作成後、ウィザードはすべてのプライマリ データベースとそのトランザクション ログをネットワーク共有にバックアップし、セカンダリ レプリカをホストするすべてのサーバー インスタンスでそのバックアップを復元しようとします。 その後、ウィザードは、すべてのセカンダリ データベースを可用性グループに参加させます。  
+         **[完全]** を選択すると、可用性グループを作成後、ウィザードはすべてのプライマリ データベースとそのトランザクション ログをネットワーク共有にバックアップし、セカンダリ レプリカをホストするすべてのサーバー インスタンスでそのバックアップを復元しようとします。 その後、ウィザードは、すべてのセカンダリ データベースを可用性グループに参加させます。  
   
          **[すべてのレプリカからアクセス可能な共有ネットワーク場所を指定]** フィールドで、レプリカをホストするサーバー インスタンスが読み取り/書き込み権限を持つバックアップ共有を指定します。 ログ バックアップは、ログ バックアップ チェーンの一部になります。 ログ バックアップ ファイルは適切に保存してください。  
   
@@ -104,7 +100,7 @@ ms.lasthandoff: 04/16/2018
   
      詳細については、「[[最初のデータの同期を選択] ページ &#40;AlwaysOn 可用性グループ ウィザード#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)」を参照してください。  
   
-6.  **[既存のセカンダリ レプリカへの接続]** ページで、この可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがすべて同じユーザー アカウントのサービスとして実行されている場合、 **[すべて接続]**をクリックします。 サーバー インスタンスがサービスとして複数のアカウントで実行されている場合、各サーバー インスタンス名の右側の **[接続]** ボタンをクリックします。  
+6.  **[既存のセカンダリ レプリカへの接続]** ページで、この可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがすべて同じユーザー アカウントのサービスとして実行されている場合、 **[すべて接続]** をクリックします。 サーバー インスタンスがサービスとして複数のアカウントで実行されている場合、各サーバー インスタンス名の右側の **[接続]** ボタンをクリックします。  
   
      詳細については、「[既存のセカンダリ レプリカ ページへの接続 &#40;レプリカの追加ウィザード/データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)」を参照してください。  
   
@@ -116,7 +112,7 @@ ms.lasthandoff: 04/16/2018
   
      詳細については、「[[概要] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](../../../database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards.md)」を参照してください。  
   
-     選択内容に問題がなければ、[スクリプト] をクリックして、ウィザードが実行する手順のスクリプトを作成することもできます。 新しい可用性グループを作成して構成するには、 **[完了]**をクリックします。  
+     選択内容に問題がなければ、[スクリプト] をクリックして、ウィザードが実行する手順のスクリプトを作成することもできます。 新しい可用性グループを作成して構成するには、 **[完了]** をクリックします。  
   
 9. 可用性グループの作成手順 (エンドポイントの構成、可用性グループの作成、グループへのセカンダリ レプリカの参加) の進行状況が、**[進行状況]** ページに表示されます。  
   
