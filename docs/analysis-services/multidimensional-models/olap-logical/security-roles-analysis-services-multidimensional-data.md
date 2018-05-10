@@ -1,43 +1,23 @@
 ---
-title: "セキュリティ ロール (Analysis Services - 多次元データ) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], roles
-- Analysis Services objects, roles
-- security [Analysis Services], roles
-- roles [Analysis Services], about roles
-- server roles [Analysis Services]
-- database roles [Analysis Services]
-- roles [Analysis Services]
-- storing data [Analysis Services], roles
-- access rights [Analysis Services], roles
-ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 
-author: Minewiskan
+title: セキュリティ ロール (Analysis Services - 多次元データ) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9dfdaaf55bb4bf5eb71f15177985f0240ff95065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>セキュリティ ロール (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-ロールで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のセキュリティを管理する[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクトとデータ。 基本的な用語では、ロールは Microsoft Windows ユーザーと特定のアクセス権とアクセス許可のインスタンスによって管理されるオブジェクトの定義を持つグループのセキュリティ識別子 (Sid) を関連付けます。[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 2 つの種類のロールがで提供される[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  ロールで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のセキュリティを管理する[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]オブジェクトとデータ。 基本的な用語では、ロールは Microsoft Windows ユーザーと特定のアクセス権とアクセス許可のインスタンスによって管理されるオブジェクトの定義を持つグループのセキュリティ識別子 (Sid) を関連付けます。[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。 2 つの種類のロールがで提供される[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   サーバー ロール。管理者が [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスにアクセスできるようにするための固定ロールです。  
   
@@ -93,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 |Administer<br /><br /> 注: のみのデータベースのアクセス許可|{**true**, **false**}<br /><br /> 既定値 =**false**|メンバーがデータベースを管理できるかどうかを指定します。<br /><br /> **true** を指定した場合は、データベース内のすべてのオブジェクトへのアクセスが許可されます。<br /><br /> メンバーは特定のデータベースに対してのみ管理権限を持つことができます。他のデータベースを管理することはできません。|  
   
 ## <a name="see-also"></a>参照  
- [アクセス許可とアクセス権と #40 です。Analysis Services - 多次元データ &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
- [オブジェクトと操作 &#40; への認証のアクセスAnalysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [アクセス許可とアクセス権と #40 です。Analysis Services - 多次元データ & #41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
+ [オブジェクトと操作 & #40; への認証のアクセスAnalysis Services & #41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

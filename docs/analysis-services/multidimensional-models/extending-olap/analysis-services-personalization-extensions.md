@@ -1,34 +1,23 @@
 ---
 title: Analysis Services のパーソナル化拡張機能 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services のパーソナル化拡張機能
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、プラグイン アーキテクチャを実装するという概念の基盤です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、次を実現するためにできるようにする機能を提供します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] パーソナル化拡張機能は、プラグイン アーキテクチャを実装するという概念の基礎です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、次を実現するためにできるようにする機能を提供します。  
   
 -   **動的な設計と展開**設計し、展開後すぐに[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能のユーザー アクセス権を持つオブジェクトと機能を次のユーザー セッションの開始時です。  
   
@@ -40,7 +29,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のパーソナル化拡張機能の用途はさまざまです。 たとえば、会社の売上にさまざまな通貨が使用されているとします。 この場合、キューブにアクセスしている人物の現地通貨で連結売上を返す計算されるメンバーを作成します。 このメンバーをパーソナル化拡張機能として作成します。 その後、この計算されるメンバーをユーザー グループと共有します。 共有すると、ユーザーはサーバーに接続するとすぐに計算されるメンバーにアクセスできるようになります。 ユーザーは、計算されるメンバーの作成に使用されたインターフェイスと同じインターフェイスを使用していなくてもアクセスできます。  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能の既存のマネージ アセンブリ アーキテクチャに対する単純で簡潔な変更および全体で公開されます、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer>オブジェクト モデル、多次元式 (MDX) 構文、およびスキーマ行セット。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] パーソナル化拡張機能の既存のマネージ アセンブリ アーキテクチャに対する単純で簡潔な変更および全体で公開されます、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer>オブジェクト モデル、多次元式 (MDX) 構文、およびスキーマ行セット。  
   
 ## <a name="logical-architecture"></a>論理アーキテクチャ  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のパーソナル化拡張機能のアーキテクチャは、マネージ アセンブリ アーキテクチャと次の 4 つの基本要素に基づいています。  
@@ -84,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="new-adomdconnection-class"></a>新しい AdomdConnection クラス  
  新しく追加された <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> クラスは、プロパティとイベントの両方を介していくつかのパーソナル化拡張機能を公開します。  
   
- **[プロパティ]**  
+ **プロパティ**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>: 現在の接続のセッション ID を表す読み取り専用の文字列値です。  
   
@@ -108,7 +97,7 @@ ms.lasthandoff: 01/08/2018
 #### <a name="new-server-class"></a>新しい Server クラス  
  新しく追加された <xref:Microsoft.AnalysisServices.AdomdServer.Server> クラスは、クラスのプロパティとイベントの両方を介していくつかのパーソナル化拡張機能を公開します。  
   
- **[プロパティ]**  
+ **プロパティ**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>: サーバー名を表す読み取り専用の文字列値です。  
   
@@ -123,19 +112,19 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>AdomdCommand クラス  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> クラスで、次の MDX コマンドがサポートされるようになりました。  
   
--   [CREATE MEMBER ステートメント (MDX)](../../../mdx/mdx-data-definition-create-member.md)  
+-   [MEMBER ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [UPDATE MEMBER ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-update-member.md)  
+-   [UPDATE MEMBER ステートメント&#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP MEMBER ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER ステートメント&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [CREATE SET ステートメント (MDX)](../../../mdx/mdx-data-definition-create-set.md)  
+-   [SET ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [DROP SET ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [DROP SET ステートメント&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [KPI ステートメント &#40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [CREATE KPI ステートメント&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [DROP KPI ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [DROP KPI ステートメント&#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>MDX の拡張と強化  
  CREATE MEMBER コマンドがで強化され、**キャプション**プロパティ、 **display_folder**プロパティ、および**associated_measure_group**プロパティです。  

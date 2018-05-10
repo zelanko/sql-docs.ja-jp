@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
@@ -20,12 +19,11 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f0318dca8e19ff5b4aaba97cf65d6106b7e3a260
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52d1896a61c0238337d8730c4038861841fd6124
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +88,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="DeploymentLimitations"></a> データ配置の制限  
  SQL Server 2012 SP1 の DAC Framework データ配置エンジンには、忠実性に関してここで述べるような制限があることに注意してください。 制限が適用される DAC Framework 操作は、.dacpac ファイルの展開またはパブリッシュ、および .bacpac ファイルのインポートです。  
   
-1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、  **"DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。"**という警告メッセージが表示されます。  
+1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、  **"DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。"** という警告メッセージが表示されます。  
   
     -   MONEY、SMALLMONEY、NUMERIC、DECIMAL の各基本データ型: 有効桁数は保持されません。  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 04/16/2018
   
     -   スケールが 3 を超える DATETIME2 基本データ型: スケールが 3 に制限されます。  
   
-3.  sql_variant 列内で以下に述べる条件が成立すると、配置操作が失敗します。 影響を受ける場合は、  **"DAC Framework のデータ制限のため操作に失敗しました。"**というメッセージが表示されます。  
+3.  sql_variant 列内で以下に述べる条件が成立すると、配置操作が失敗します。 影響を受ける場合は、  **"DAC Framework のデータ制限のため操作に失敗しました。"** というメッセージが表示されます。  
   
     -   DATETIME2、SMALLDATETIME、DATE の各基本データ型: 値が DATETIME の範囲外である場合 (年が 1753 未満であるなど)。  
   

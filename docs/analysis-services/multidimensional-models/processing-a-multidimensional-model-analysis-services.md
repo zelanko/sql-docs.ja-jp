@@ -1,42 +1,23 @@
 ---
-title: "多次元モデル (Analysis Services) の処理 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 多次元モデル (Analysis Services) の処理 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- online mode [Analysis Services]
-- processing objects [Analysis Services]
-- partitions [Analysis Services], processing
-- jobs [Analysis Services]
-- objects [Analysis Services], processing
-- reprocessing objects
-- impact analysis [Analysis Services]
-- dimensions [Analysis Services], processing
-- project mode [Analysis Services]
-- cubes [Analysis Services], processing
-ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2782a29b4c37420d354da27c09e58ac8654025ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>多次元モデルの処理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-"処理" とは、Analysis Services がリレーショナル データ ソースから多次元モデルにデータを読み込む 1 つまたは一連のステップです。 MOLAP ストレージを使用するオブジェクトの場合、データはディスクのデータベース ファイル フォルダーに保存されます。 ROLAP ストレージの場合、処理は要求に応じて、オブジェクトに対する MDX クエリへの応答として発生します。 ROLAP ストレージを使用するオブジェクトの場合の処理とは、クエリ結果を返す前にキャッシュを更新する操作のことを指します。  
+  "処理" とは、Analysis Services がリレーショナル データ ソースから多次元モデルにデータを読み込む 1 つまたは一連のステップです。 MOLAP ストレージを使用するオブジェクトの場合、データはディスクのデータベース ファイル フォルダーに保存されます。 ROLAP ストレージの場合、処理は要求に応じて、オブジェクトに対する MDX クエリへの応答として発生します。 ROLAP ストレージを使用するオブジェクトの場合の処理とは、クエリ結果を返す前にキャッシュを更新する操作のことを指します。  
   
  既定では、処理は、サーバーにソリューションを配置するときに発生します。 また、ソリューションの全体または一部を、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] や [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]などのツールを使用して随時処理したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や SQL Server エージェントを使用してスケジュールに従って処理することもできます。 ディメンションの削除や互換性レベルの変更など、モデルの構造を変更するときは、モデルの物理的および論理的な構造を同期するために再度処理する必要があります。  
   
@@ -87,6 +68,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>参照  
  [論理アーキテクチャ (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト &#40;です。Analysis Services - 多次元データ &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

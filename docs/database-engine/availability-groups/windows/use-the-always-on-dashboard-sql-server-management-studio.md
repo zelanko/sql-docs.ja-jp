@@ -3,15 +3,12 @@ title: Always On 可用性グループ ダッシュボードの使用 (SQL Serve
 ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.agdashboard.f1
 helpviewer_keywords:
@@ -22,12 +19,11 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4645d6deeb80cc8c7bceeff685598cdfcff3841f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 16f45f93a171ccea1e41fab254395398a458ed13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,16 +68,16 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、Always On ダッシュボードを実行する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-2.  **[Always On 高可用性]** ノードを展開し、 **[可用性グループ]** ノードを右クリックして、 **[ダッシュボードの表示]**をクリックします。  
+2.  **[Always On 高可用性]** ノードを展開し、 **[可用性グループ]** ノードを右クリックして、 **[ダッシュボードの表示]** をクリックします。  
   
 ###  <a name="DashboardOptions"></a> Always On ダッシュボードのオプションを変更するには  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[オプション]** ダイアログ ボックスを使って、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On ダッシュボードの自動更新と自動定義 Always On ポリシーの有効化の動作を構成できます。  
   
-1.  **[ツール]** メニューの **[オプション]**をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  ダッシュボードを自動的に更新するには、 **[オプション]** ダイアログ ボックスで **[自動更新を有効にする]**を選択し、更新間隔を秒単位で入力して、接続の再試行の回数を入力します。  
+2.  ダッシュボードを自動的に更新するには、 **[オプション]** ダイアログ ボックスで **[自動更新を有効にする]** を選択し、更新間隔を秒単位で入力して、接続の再試行の回数を入力します。  
   
-3.  ユーザー定義ポリシーを有効にするには、 **[ユーザー定義の Always On ポリシーを有効にする]**を選択します。  
+3.  ユーザー定義ポリシーを有効にするには、 **[ユーザー定義の Always On ポリシーを有効にする]** を選択します。  
   
 ##  <a name="AvGroupsView"></a> 可用性グループの概要  
  可用性グループの画面には、接続されているサーバー インスタンスがホストしているレプリカの可用性グループごとに概要を示す行が表示されます。 このペインには、次の列が表示されます。  
@@ -214,7 +210,7 @@ ms.lasthandoff: 04/16/2018
 >  可用性レプリカのパフォーマンス カウンターの詳細については、「 [SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
 ##  <a name="AvDbDetails"></a> 可用性グループの情報をグループ化するには  
- 情報をグループ化するには、 **[グループ化]**をクリックし、次のいずれかを選択します。  
+ 情報をグループ化するには、 **[グループ化]** をクリックし、次のいずれかを選択します。  
   
 -   **可用性レプリカ**  
   
@@ -290,7 +286,7 @@ ms.lasthandoff: 04/16/2018
  Always On ポリシーのすべての問題の一覧は、「[Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)」を参照してください。  
   
  **中断**  
- データベースが **[中断状態]** であるか **[再開]**されたかを示します。 この値は既定で非表示になります。  
+ データベースが **[中断状態]** であるか **[再開]** されたかを示します。 この値は既定で非表示になります。  
   
  **中断の理由**  
  中断状態の理由を示します。 この値は既定で非表示になります。  

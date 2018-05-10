@@ -1,36 +1,25 @@
 ---
 title: オブジェクトの名前付け規則 (Analysis Services) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
-ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fd846b5c3441eb653017e843e4064dd464cf7556
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]このトピックは、予約語と同様に、オブジェクトの名前付け規則について説明し、いずれかで使用できない文字がオブジェクト名がコードで、またはスクリプトに[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]です。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
   
-##  <a name="bkmk_Names"></a>名前付け規則  
+##  <a name="bkmk_Names"></a> 名前付け規則  
  すべてのオブジェクトが、**名前**と**ID**プロパティを親コレクションのスコープ内で一意である必要があります。 たとえば、所属するデータベースが異なっていれば、2 つのディメンションが同じ名前であってもかまいません。  
   
  手動で指定できますが、 **ID**は通常自動生成されたオブジェクトを作成します。 変更しないで、 **ID**モデルの構築を開始した後です。 モデル内のすべてのオブジェクト参照がに基づいて、 **ID**です。 したがって、変更、 **ID**モデルの破損を招くことが容易にします。  
@@ -47,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 -   識別子の最初の文字に関する特別な要件はありません。 最初の文字は、有効な文字を使用できます。  
   
-##  <a name="bkmk_reserved"></a>予約語と文字  
+##  <a name="bkmk_reserved"></a> 予約語と文字  
  予約語は英語で、オブジェクト名に適用されます。キャプションには適用されません。 不注意で予約語をオブジェクト名に使用すると、検証エラーが発生します。 多次元モデルとデータ マイニング モデルでは、どのような場合でも、以下で説明する予約語をオブジェクト名で使用することはできません。  
   
  テーブル モデルでは、データベース互換性が 1103 に設定されている場合、一部のオブジェクトで検証ルールが緩められており、一部のクライアント アプリケーションの拡張文字要件と名前付け規則のためにルールに準拠していません。 これらの条件を満たすデータベースは、厳格でない検証ルールに従います。 この場合、制限された文字がオブジェクト名に使用されていても、検証に合格することがあります。  
@@ -74,13 +63,13 @@ ms.lasthandoff: 01/08/2018
   
  次の表では、特定のオブジェクトで無効な文字を示します。  
   
-|Object|無効な文字|  
+|オブジェクト|無効な文字|  
 |------------|------------------------|  
 |**[サーバー]**|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 参照してください[名前付け規則 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx)詳細についてはします。|  
-|**DataSource**|: / \ * &#124; ? " () [] {} &lt;&gt;|  
-|**レベル**または**属性**|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**ディメンション**または**階層**|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|他のすべてのオブジェクト|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
+|**DataSource**|: / \ * &#124; ? "() {} <>|  
+|**レベル**または**属性**|」をご覧ください。 , ; ' ` : / \ * &#124; ? " & % $ ! + = {} < >|  
+|**ディメンション**または**階層**|」をご覧ください。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  
+|他のすべてのオブジェクト|」をご覧ください。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} < >|  
   
  **例外処理: 場合の予約された文字が許可されます。**  
   
@@ -88,16 +77,16 @@ ms.lasthandoff: 01/08/2018
   
 |サーバー モードとデータベース互換性レベル|予約文字を使用できるか|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (すべてのバージョン)|不可|  
-|表形式の 1050|不可|  
-|表形式 - 1100|不可|  
-|表形式 – 1130 以上|可|  
+|MOLAP (すべてのバージョン)|いいえ|  
+|表形式の 1050|いいえ|  
+|表形式 - 1100|いいえ|  
+|表形式 – 1130 以上|はい|  
   
  データベースは既定の ModelType を持つことができます。 既定値は多次元モデルと同等です。そのため、列名での予約文字の使用はサポートされません。  
   
 ## <a name="see-also"></a>参照  
  [MDX の予約語](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services での翻訳のサポート](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis への準拠と #40 です。XMLA &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis への準拠&#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   

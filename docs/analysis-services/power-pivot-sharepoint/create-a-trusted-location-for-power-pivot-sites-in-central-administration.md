@@ -1,37 +1,29 @@
 ---
-title: "サーバーの全体管理で Power Pivot サイト用の信頼できる場所を作成 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: サーバーの全体管理で Power Pivot サイト用の信頼できる場所を作成 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3dabb6a62434ce2956a0c11a62f3b383104df698
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Excel Services では、SharePoint サーバーで開いたブックの有効なリポジトリの場所を指定できます。 これは「信頼できる場所」と呼ばれ、作成したそれぞれの信頼できる場所について異なる構成設定を使用できます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置の場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に信頼できる場所を作成し、ファームのその他の部分に対する既定値を保持しながら [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに対しては最適な設定を適用できるようにすることを検討してください。  
+  Excel Services では、SharePoint サーバーで開いたブックの有効なリポジトリの場所を指定できます。 これは「信頼できる場所」と呼ばれ、作成したそれぞれの信頼できる場所について異なる構成設定を使用できます。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置の場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが含まれるサイト用に信頼できる場所を作成し、ファームのその他の部分に対する既定値を保持しながら [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに対しては最適な設定を適用できるようにすることを検討してください。  
   
   
 ## <a name="prerequisites"></a>前提条件  
  URL を信頼できる場所として指定するには、ファームまたはサービスの管理者である必要があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーか、ブックが保存されているその他のライブラリが含まれる SharePoint サイトの URL アドレスがわかっていることが必要です。 アドレスを取得するには、ライブラリがあるサイトを開き、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**を右クリックして、 **[プロパティ]**をクリックします。次に、サーバー名とサイト パスを含む [アドレス (URL)] の最初の部分をコピーします。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーか、ブックが保存されているその他のライブラリが含まれる SharePoint サイトの URL アドレスがわかっていることが必要です。 アドレスを取得するには、ライブラリがあるサイトを開き、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**を右クリックして、 **[プロパティ]** をクリックします。次に、サーバー名とサイト パスを含む [アドレス (URL)] の最初の部分をコピーします。  
   
 ##  <a name="overview"></a> 概要  
  Excel Services の最初のインストールでは、'http://' が信頼できる場所として指定されます。このため、ファームのどのサイトからアクセスしたブックもサーバーで開くことができます。 信頼できると見なされる場所の制御を厳しくする必要がある場合は、ファームの特定のサイトにマップする信頼できる場所を新しく作成し、各場所の設定とアクセス許可を変更します。  
@@ -42,17 +34,17 @@ Excel Services では、SharePoint サーバーで開いたブックの有効な
   
 ##  <a name="create"></a> Power Pivot データ アクセス用の信頼できる場所の作成  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  Excel Services サービス アプリケーションをクリックします。  
   
-3.  **[信頼できるファイル保存場所]**をクリックします。  
+3.  **[信頼できるファイル保存場所]** をクリックします。  
   
-4.  **[信頼できるファイル保存場所の追加]**をクリックします。  
+4.  **[信頼できるファイル保存場所の追加]** をクリックします。  
   
 5.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリがあるサイトの URL を入力します。  
   
-6.  [場所の種類] で、 **[Microsoft SharePoint Foundation]**を選択します。  
+6.  [場所の種類] で、 **[Microsoft SharePoint Foundation]** を選択します。  
   
     > [!IMPORTANT]  
     >  UNC と HTTP の場所の種類は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスではサポートされていません。  
@@ -61,11 +53,11 @@ Excel Services では、SharePoint サーバーで開いたブックの有効な
   
 8.  [ブックのプロパティ] で、 **[ブックの最大サイズ]** を「 **50**」に設定します。 これにより、ブックのファイル サイズの上限が、親 Web アプリケーションへのファイル アップロードの上限と同じになります。 ブックのサイズが 50 MB を超える場合は、ファイル サイズの上限をさらに増やす必要があります。 詳細については、「[アップロードするファイルの最大サイズの構成 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)」を参照してください。  
   
-9. [外部データ] で、[外部データの許可] が **[信頼できるデータ接続ライブラリと、埋め込まれている接続]**に設定されていることを確認します。 この設定は、ブックでの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに必要です。  
+9. [外部データ] で、[外部データの許可] が **[信頼できるデータ接続ライブラリと、埋め込まれている接続]** に設定されていることを確認します。 この設定は、ブックでの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに必要です。  
   
-10. また、[外部データ] の [更新時の警告] で、 **[更新時の警告の有効化]**のチェック ボックスをオフにします。 このチェック ボックスをオフにすると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーで、定型の警告メッセージの代わりにブックのプレビュー イメージが表示されるようになります。  
+10. また、[外部データ] の [更新時の警告] で、 **[更新時の警告の有効化]** のチェック ボックスをオフにします。 このチェック ボックスをオフにすると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーで、定型の警告メッセージの代わりにブックのプレビュー イメージが表示されるようになります。  
   
-11. **[OK]**をクリックします。  
+11. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Power Pivot ギャラリー](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   

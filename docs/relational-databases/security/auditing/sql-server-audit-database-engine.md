@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -22,19 +21,18 @@ caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8adf7b836ac81c2a83390740f23cfac647860aca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] のインスタンスや個々のデータベースの *監査* を行うためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、サーバー レベルのイベントのためのサーバー監査仕様とデータベース レベルのイベントのためのデータベース監査仕様を含めることができる、サーバー監査を作成できます。監査イベントは、イベント ログまたは監査ファイルへ書き込むことができます。
-  
+  *のインスタンスや個々のデータベースの* 監査 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査では、サーバー レベルのイベント用のサーバー監査仕様とデータベース レベルのイベント用のデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルに書き込むことができます。  
+  
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、個々のインストール環境についての政府や標準による要件に応じて、複数のレベルの監査を使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査には、サーバーおよびデータベースのさまざまなオブジェクトの監査を有効化、保存、および表示するためのツールとプロセスが用意されています。  

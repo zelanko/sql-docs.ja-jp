@@ -5,24 +5,22 @@ ms.custom: ''
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3901d42e254aff571c28cc2137092f9614e5e1e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c266e716bbbaab50fa26c94cb7ee7836c010c5a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Scale Out ログのアカウントの変更
 Scale Out で SSIS パッケージを実行すると、イベント メッセージが、**##MS_SSISLogDBWorkerAgentLogin##** という名前の自動作成ユーザー アカウントで SSISDB データベースにログ記録されます。 このユーザーのログインでは、SQL Server 認証が使用されます。

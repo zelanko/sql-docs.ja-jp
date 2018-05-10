@@ -3,15 +3,12 @@ title: バックアップ中または復元中にバックアップ チェック
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup checksums [SQL Server]
 - disabling checksums
@@ -21,12 +18,11 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d8a69b2767c19c8facbcf7b1b46239bed09b4d2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 62e5678d459a3970bbb8a68aee205477c58764e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>バックアップ中または復元中にバックアップ チェックサムを有効または無効にする (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  「 [データベースのバックアップを作成する](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」の手順に従います。  
   
-2.  **[オプション]** ページの **[信頼性]** セクションで、 **[メディアに書き込む前にチェックサムを行う]**をクリックします。  
+2.  **[オプション]** ページの **[信頼性]** セクションで、 **[メディアに書き込む前にチェックサムを行う]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -74,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  [BACKUP](../../t-sql/statements/backup-transact-sql.md) ステートメントでバックアップ チェックサムを有効にするのには、WITH CHECKSUM オプションを指定します。 バックアップ チェックサムを無効にするには、WITH NO_CHECKSUM オプションを指定します。 これは圧縮されたバックアップ以外の既定の動作です。 次の例では、チェックサムを実行するように指定します。  
   
@@ -89,7 +85,7 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントでバックアップ チェックサムを有効にするのには、WITH CHECKSUM オプションを指定します。 これは圧縮されたバックアップの既定の動作です。 バックアップ チェックサムを無効にするには、WITH NO_CHECKSUM オプションを指定します。 これは圧縮されたバックアップ以外の既定の動作です。 次の例では、バックアップ チェックサムを実行するように指定します。  
   

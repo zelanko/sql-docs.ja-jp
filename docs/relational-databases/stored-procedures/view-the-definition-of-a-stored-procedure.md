@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], viewing
 - definition of stored procedure
@@ -22,13 +21,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 957378c88e815e96c5eea2221b50203485c0bf5b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 073a52659811663233da806541f220e2c6703e74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>ストアド プロシージャの定義の表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,11 +63,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]**を展開します。プロシージャを右クリックし、 **[ストアド プロシージャをスクリプト化]**を選択し、 **[CREATE]**、 **[ALTER]**、 **[DROP および CREATE]**のいずれかをクリックします。  
+3.  **[ストアド プロシージャ]** を展開します。プロシージャを右クリックし、 **[ストアド プロシージャをスクリプト化]** を選択し、 **[CREATE]**、 **[ALTER]**、 **[DROP および CREATE]** のいずれかをクリックします。  
   
-4.  **[新しいクエリ エディター ウィンドウ]**をクリックします。 プロシージャの定義が表示されます。  
+4.  **[新しいクエリ エディター ウィンドウ]** をクリックします。 プロシージャの定義が表示されます。  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **クエリ エディターでプロシージャの定義を表示するには**  
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
  システム ストアド プロシージャ: **sp_helptext**  
  1.  オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  ツール バーの **[新しいクエリ]**をクリックします。  
+2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  クエリ ウィンドウで、 **sp_helptext** システム ストアド プロシージャを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 04/16/2018
  システム関数: **OBJECT_DEFINITION**  
  1.  オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  ツール バーの **[新しいクエリ]**をクリックします。  
+2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  クエリ ウィンドウで、 **OBJECT_DEFINITION** システム関数を使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
@@ -103,7 +101,7 @@ ms.lasthandoff: 04/16/2018
  オブジェクト カタログ ビュー: **sys.sql_modules**  
  1.  オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  ツール バーの **[新しいクエリ]**をクリックします。  
+2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  クエリ ウィンドウで、 **sys.sql_modules** カタログ ビューを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   

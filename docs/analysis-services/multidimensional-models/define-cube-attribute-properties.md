@@ -1,32 +1,23 @@
 ---
 title: キューブ属性のプロパティの定義 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], defining
-ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
-caps.latest.revision: 13
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b87146458e6aee0cac066078f1d0dfb302f186d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1abf88d192413d70049da4dc9840d5f15bd8d9f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-cube-attribute-properties"></a>キューブ属性のプロパティの定義
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]キューブ属性のプロパティを使用すると、同じデータベース ディメンションに基づいたキューブ ディメンションのディメンションの属性に固有の設定を指定できます。 次の表では、キューブ属性のプロパティについて説明します。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  キューブ属性のプロパティにより、同じデータベース ディメンションに基づいたキューブ ディメンション内のディメンション属性に一意の設定を指定できます。 次の表では、キューブ属性のプロパティについて説明します。  
   
 |プロパティ|Description|  
 |--------------|-----------------|  
@@ -37,7 +28,7 @@ ms.lasthandoff: 01/08/2018
 |**AttributeID**|属性の一意識別子 (ID) を示します。|  
   
 ## <a name="see-also"></a>参照  
- [キューブ ディメンションのプロパティの定義](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
- [キューブ階層のプロパティの定義](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
+ [キューブ ディメンションのプロパティを定義します。](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
+ [キューブ階層のプロパティを定義します。](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   
   

@@ -1,30 +1,23 @@
 ---
-title: "Invoke-processpartition コマンドレット |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Invoke-processpartition コマンドレット |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f36ab9dbb5054c4014e03718a99fc28033e4d9ba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 78fe0596f30c99b772279a8ab13c0c31b39e5fae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processpartition-cmdlet"></a>Invoke-ProcessPartition コマンドレット
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]特定の処理の種類の変数を使用してパーティションを処理します。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  特定の処理の種類の変数を使用してパーティションを処理します。  
 
 >[!NOTE] 
 >この記事には、古くなった情報と例があります。 最新バージョンには、Get-help コマンドレットを使用します。
@@ -39,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>パラメーター  
   
-### <a name="-name-string"></a>-名前\<文字列 >  
+### <a name="-name-string"></a>-Name \<string>  
  処理するパーティションを指定します。  
   
 |||  
@@ -50,13 +43,13 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="-database-string"></a>-データベース\<文字列 >  
+### <a name="-database-string"></a>-Database \<string>  
  キューブが属するデータベースを指定します。  
   
 |||  
 |-|-|  
 |必須/省略可能|true|  
-|位置|@shouldalert|  
+|位置|1|  
 |既定値||  
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
@@ -105,7 +98,7 @@ ms.lasthandoff: 01/08/2018
 |パイプライン入力の受け入れ|オプション|  
 |ワイルドカード文字の受け入れ|オプション|  
   
-### <a name="commonparameters"></a>\<CommonParameters >  
+### <a name="commonparameters"></a>\<CommonParameters>  
  このコマンドレットは、-Verbose、-Debug、-ErrorAction、-ErrorVariable、-OutBuffer、および –OutVariable の共通パラメーターをサポートしています。 詳細については、「 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)」を参照してください。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  

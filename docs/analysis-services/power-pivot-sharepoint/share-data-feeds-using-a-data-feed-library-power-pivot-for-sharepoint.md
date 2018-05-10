@@ -1,32 +1,23 @@
 ---
 title: データ フィード ライブラリ (Power Pivot for SharePoint) を使用してデータ フィードの共有 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-helpviewer_keywords:
-- data feeds [Analysis Services with SharePoint]
-ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 26
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3c9b2b0c9ed6a70ce6e596bd1afe8bd2b49fc3a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6298382b8aa9fa61b197f2b220f10be85636a557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>データ フィード ライブラリを使用したデータ フィードの共有 (PowerPivot for SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]データ フィードとは、サービスまたは Atom ワイヤ形式でデータを公開するアプリケーションから生成される XML データ ストリームです。 データをアプリケーション間で転送したり、クライアント側のビューアーに転送したりするために使用されることが増えています。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、データ フィードを使用して、Atom 対応のアプリケーションまたはサービスからのデータを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに読み込みます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  データ フィードとは、データを Atom ワイヤ形式で公開するサービスまたはアプリケーションから生成される XML データ ストリームです。 データをアプリケーション間で転送したり、クライアント側のビューアーに転送したりするために使用されることが増えています。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の配置では、データ フィードを使用して、Atom 対応のアプリケーションまたはサービスからのデータを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースに読み込みます。  
   
  Atom 対応アプリケーションの組み合わせを既に使用している場合は、データがアプリケーション間でシームレスに転送されるので、フィードの生成方法と使用方法を理解する必要はありません。 ただし、カスタム ソリューションを使用して Atom フィードをパブリッシュする組織は、インフォメーション ワーカーがフィードを使用できるようにしなければならないことがよくあります。 これを実現する方法の 1 つに、フィードを生成するオンライン ソースへの接続が指定されるデータ サービス ドキュメント (.atomsvc) ファイルを作成して共有する方法があります。 データ フィード ライブラリと呼ばれる特別な用途のライブラリによって、SharePoint Web アプリケーションでのデータ サービス ドキュメントの作成と共有がサポートされます。  
   
@@ -61,9 +52,9 @@ ms.lasthandoff: 01/08/2018
   
 1.  SharePoint サイトで、データ フィード ライブラリ、またはデータ サービスのコンテンツ タイプを追加および構成した別のドキュメント ライブラリを開きます。 以前に作成したデータ フィード ライブラリを見つけるには、サイド リンク バーで **[すべて表示]** をクリックします。  
   
-2.  ページ上部のリボンの [ドキュメント ツール] で **[ドキュメント]**をクリックします。  
+2.  ページ上部のリボンの [ドキュメント ツール] で **[ドキュメント]** をクリックします。  
   
-3.  **[新しいドキュメント]** をクリックし、 **[データ サービス ドキュメント]**をクリックします。  
+3.  **[新しいドキュメント]** をクリックし、 **[データ サービス ドキュメント]** をクリックします。  
   
 4.  [新しいデータ サービス ドキュメント] ページで、次の情報を入力します。  
   

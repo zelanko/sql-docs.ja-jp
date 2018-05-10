@@ -1,32 +1,32 @@
 ---
-title: "サブスクリプションの再初期化 | Microsoft Docs"
-ms.custom: 
+title: サブスクリプションの再初期化 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3edcd8fcd26efd2c6b21bd19e235f88419eb3c81
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 325ddda96af9acabd0b5b879cf7d566052109cf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reinitialize-a-subscription"></a>サブスクリプションの再初期化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ ms.lasthandoff: 03/08/2018
   
 3.  再初期化するサブスクリプションが含まれているパブリケーションを展開します。  
   
-4.  サブスクリプションを右クリックし、 **[再初期化]**をクリックします。  
+4.  サブスクリプションを右クリックし、 **[再初期化]** をクリックします。  
   
-5.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]**をクリックします。  
+5.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]** をクリックします。  
   
 #### <a name="to-mark-a-single-pull-subscription-for-reinitialization-in-management-studio-at-the-subscriber"></a>Management Studio で単一のプル サブスクリプションに再初期化を設定するには (サブスクライバーで実行)  
   
@@ -78,9 +78,9 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル サブスクリプション]** フォルダーを展開します。  
   
-3.  サブスクリプションを右クリックし、 **[再初期化]**をクリックします。  
+3.  サブスクリプションを右クリックし、 **[再初期化]** をクリックします。  
   
-4.  表示される確認のダイアログ ボックスで、 **[はい]**をクリックします。  
+4.  表示される確認のダイアログ ボックスで、 **[はい]** をクリックします。  
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-management-studio"></a>Management Studio ですべてのサブスクリプションに再初期化を設定するには  
   
@@ -88,9 +88,9 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  サブスクリプションを再初期化するパブリケーションを右クリックし、 **[すべてのサブスクリプションの再初期化]**をクリックします。  
+3.  サブスクリプションを再初期化するパブリケーションを右クリックし、 **[すべてのサブスクリプションの再初期化]** をクリックします。  
   
-4.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]**をクリックします。  
+4.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]** をクリックします。  
   
 #### <a name="to-mark-a-single-push-or-pull-subscription-for-reinitialization-in-replication-monitor"></a>レプリケーション モニターで単一のプッシュ サブスクリプションまたはプル サブスクリプションに再初期化を設定するには  
   
@@ -98,17 +98,17 @@ ms.lasthandoff: 03/08/2018
   
 2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
-3.  再初期化するサブスクリプションを右クリックし、 **[サブスクリプションの再初期化]**をクリックします。  
+3.  再初期化するサブスクリプションを右クリックし、 **[サブスクリプションの再初期化]** をクリックします。  
   
-4.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]**をクリックします。  
+4.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]** をクリックします。  
   
 #### <a name="to-mark-all-subscriptions-for-reinitialization-in-replication-monitor"></a>レプリケーション モニターですべてのサブスクリプションに再初期化を設定するには  
   
 1.  レプリケーション モニターの左ペインでパブリッシャー グループを展開し、パブリッシャーを展開します。  
   
-2.  サブスクリプションを再初期化するパブリケーションを右クリックし、 **[すべてのサブスクリプションの再初期化]**をクリックします。  
+2.  サブスクリプションを再初期化するパブリケーションを右クリックし、 **[すべてのサブスクリプションの再初期化]** をクリックします。  
   
-3.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]**をクリックします。  
+3.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  サブスクリプションは、プログラムでレプリケーション ストアド プロシージャを使用して再初期化できます。 使用するストアド プロシージャは、サブスクリプションの種類 (プッシュまたはプル) およびサブスクリプションが属しているパブリケーションの種類によって変わります。  

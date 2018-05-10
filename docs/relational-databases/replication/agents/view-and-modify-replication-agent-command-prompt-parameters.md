@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
@@ -19,12 +18,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9d326818d7d916ae2fcc1e0e0b17437f4279da05
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ce887109d154f2d0940507d06950bf918ff2ab4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>レプリケーション エージェント コマンド プロンプト パラメーターの表示および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  ジョブを右クリックし、 **[プロパティ]**をクリックします。  
+3.  ジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
-3.  サブスクリプションを右クリックし、 **[詳細表示]**をクリックします。  
+3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
 4.  **[サブスクリプション < SubscriptionName>]** ウィンドウで、**[アクション]** をクリックし、**[\<AgentName> ジョブのプロパティ]** をクリックします。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[エージェント]** タブをクリックします。  
   
-3.  グリッド内のエージェントを右クリックし、 **[プロパティ]**をクリックします。  
+3.  グリッド内のエージェントを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
   

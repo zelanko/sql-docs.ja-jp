@@ -1,36 +1,23 @@
 ---
-title: "Analysis Services インスタンスの名前を変更 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Analysis Services インスタンスの名前を変更 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, renaming
-- renaming instances of Analysis Services
-- names [Analysis Services], renaming instances
-- names [Analysis Services]
-ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 48729d35a5c5c5e0e0808862f1317877b1ee3be6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services インスタンスの名前変更
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Management Studio (Web インストール) と共にインストールされる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** tool, installed with  Management Studio (Web install).  
+  Management Studio (Web インストール) と共にインストールされる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** tool, installed with  Management Studio (Web install).  
   
 > [!IMPORTANT]  
 >  インスタンスの名前を変更しているとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool が高度な特権で実行され、インスタンスに関連付けられている Windows サービス名、セキュリティ アカウント、およびレジストリ エントリが更新されます。 これらのアクションを確実に実行するため、このツールは必ずローカルのシステム管理者として実行してください。  
@@ -48,7 +35,7 @@ Management Studio (Web インストール) と共にインストールされる 
   
 3.  **[新しいインスタンス名]** ボックスに、インスタンスの新しい名前を入力します。  
   
-4.  ユーザー名とパスワードが正しいことを確認して、 **[名前の変更]**をクリックします。  
+4.  ユーザー名とパスワードが正しいことを確認して、 **[名前の変更]** をクリックします。  
   
      名前の変更には、Analysis Services インスタンスの停止と再起動が伴います。  
   

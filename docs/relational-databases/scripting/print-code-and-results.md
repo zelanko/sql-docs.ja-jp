@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
 - code printing [SQL Server Management Studio]
@@ -22,19 +20,18 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d198072951c81ab11c3258aab0be4bfb0d4c9819
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 10bd9a932ebaf2ddfa82de528c159bd1b13c37bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="print-code-and-results"></a>コードと結果の印刷
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   クエリまたはファイルの印刷時には、プリンターがカラー印刷をサポートしており、プリンターの設定でカラー印刷が有効になっている場合、色分けされた要素はカラーで印刷されます。  
   
- ただし、エディター内のテキストのフォントと色は、プリンターで印刷したときのテキストとは異なる場合があります。 **[ツール]** メニューの **[オプション]**をクリックします。 **[環境]**の **[フォントおよび色]**をクリックし、エディターで表示する項目のフォントと色、および印刷時に有効にするフォントと色を選択します。 これらの設定が異なっている場合、エディターでの表示と出力結果が異なります。  
+ ただし、エディター内のテキストのフォントと色は、プリンターで印刷したときのテキストとは異なる場合があります。 **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** の **[フォントおよび色]** をクリックし、エディターで表示する項目のフォントと色、および印刷時に有効にするフォントと色を選択します。 これらの設定が異なっている場合、エディターでの表示と出力結果が異なります。  
   
  エディターで行番号表示を有効にしている場合でも、 **[ファイル]** メニューの **[印刷]** ダイアログ ボックスで **[行番号を入れる]** をオンにしない限り、行番号は印刷されません。  
   

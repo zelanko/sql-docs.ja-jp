@@ -1,36 +1,23 @@
 ---
-title: "論理アーキテクチャの概要 (Analysis Services - 多次元データ) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], examples
-- cubes [Analysis Services], about cubes
-ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 
-author: Minewiskan
+title: 論理アーキテクチャの概要 (Analysis Services - 多次元データ) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4b4231e51818145a731c698848566d64562ba097
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
+  Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートします。 **SharePoint 統合モード**としてインストールされた Analysis Services のインスタンスを指す[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]の読み込みと Excel のクエリを実行するために使用 for SharePoint、または[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ブック内のデータ モデル。  
   
  このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 その他のモードの詳細については、次を参照してください。[テーブル モデリング](../../../analysis-services/tabular-models/tabular-models-ssas.md)と[を比較する表形式および多次元ソリューション](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)です。  
   
@@ -128,7 +115,7 @@ Analysis Services は、さまざまな種類の Analysis Services モデルで�
   
  上記の表に行のそれぞれがの値が同一、 **RouteKey**、 **SourceKey**、および**TimeKey**列、これらの行が同じキューブ セルに貢献ことを示すです。  
   
- ここで示す例は、非常に単純なキューブを表します。つまり、キューブに 1 つのメジャー グループがあり、すべてのディメンション テーブルがスター スキーマのファクト テーブルに結合されています。 別の一般的なスキーマとして、スノーフレーク スキーマがあります。このスキーマでは、1 つ以上のディメンション テーブルがファクト テーブルに直接結合されるのではなく、それぞれ別のディメンション テーブルに結合されます。 **関連トピック:**[ディメンションと #40 です。Analysis Services - 多次元データ &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ ここで示す例は、非常に単純なキューブを表します。つまり、キューブに 1 つのメジャー グループがあり、すべてのディメンション テーブルがスター スキーマのファクト テーブルに結合されています。 別の一般的なスキーマとして、スノーフレーク スキーマがあります。このスキーマでは、1 つ以上のディメンション テーブルがファクト テーブルに直接結合されるのではなく、それぞれ別のディメンション テーブルに結合されます。 **関連トピック:**[ディメンション&#40;Analysis Services - 多次元データ&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)です。  
   
  ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:**[ディメンション リレーションシップ](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)です。  
   

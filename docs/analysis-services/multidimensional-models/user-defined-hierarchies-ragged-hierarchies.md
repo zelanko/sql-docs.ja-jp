@@ -1,32 +1,23 @@
 ---
 title: 不規則階層 |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
-ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8def84c48c3764d81b9510c1ccf6f244e8efeec8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>ユーザー定義階層の不規則階層
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]不規則階層を持つ、不均一な数のレベルのユーザー定義階層です。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
   
  ディメンション内のほとんどの階層では、各レベルの上にあるメンバーの数は、同じレベルにある他のメンバーでも同じ数になります。 このような場合と異なり、不規則階層では、少なくとも 1 つのメンバーの論理上の親メンバーが、そのメンバーのすぐ上のレベルにありません。 この場合、階層は異なるドリル ダウン パスのさまざまなレベルに至ります。 クライアント アプリケーションでは、これによりドリルダウン パスが不必要に複雑になる可能性があります。  
   
@@ -58,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  SSDT で、ディメンションをダブルクリックし、ディメンション デザイナーでそのディメンションを開きます。 最初のタブである [ディメンション構造] の [階層] ペインには、属性階層が表示されます。  
   
-2.  階層内のメンバーを右クリックし、 **[プロパティ]**をクリックします。 **HideMemberIf** を、次に説明する値のいずれかに設定します。  
+2.  階層内のメンバーを右クリックし、 **[プロパティ]** をクリックします。 **HideMemberIf** を、次に説明する値のいずれかに設定します。  
   
     |HideMemberIf の設定値|Description|  
     |--------------------------|-----------------|  
@@ -80,6 +71,6 @@ ms.lasthandoff: 01/08/2018
  [ユーザー定義階層の作成](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [ユーザー階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [親子ディメンション](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [接続文字列プロパティ (Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [接続文字列のプロパティ & #40 です。Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

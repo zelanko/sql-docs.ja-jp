@@ -1,35 +1,23 @@
 ---
-title: "クライアント アプリケーション (Analysis Services) からの接続 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: クライアント アプリケーション (Analysis Services) からの接続 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-f1_keywords:
-- sql13.swb.connection.login.analysisserver.f1
-- sql13.swb.connecttoas.connectionproperties.f1
-- sql13.swb.connecttoas.login.f1
-ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 772d01c114f0eb276d063fb96e8bdd2a2fb54a05
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
+  Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
   
 -   [SQL Server Management Studio (SSMS) による接続](#bkmk_SSMS)  
   
@@ -45,7 +33,7 @@ Analysis Services を初めて使用する場合は、このトピックの情�
   
 -   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [オブジェクトと操作 &#40; への認証のアクセスAnalysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [オブジェクトと操作 & #40; への認証のアクセスAnalysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> SQL Server Management Studio (SSMS) による接続  
  サーバー インスタンスとデータベースを対話操作で管理するには、SSMS で Analysis Services に接続します。 また、XMLA クエリや MDX クエリを実行して、管理タスクの実行またはデータの取得を行うこともできます。 クエリの送信時にのみデータベースを読み込むツールやアプリケーションとは異なり、SSMS では、ユーザーがサーバーに接続すると、すべてのデータベースが読み込まれます (データベースを表示する権限がユーザーにある場合)。 これは、サーバー上に多数のテーブル データベースがある場合、SSMS を使用して接続するとすべてのデータベースがシステム メモリに読み込まれることを表します。  
@@ -60,7 +48,7 @@ Analysis Services を初めて使用する場合は、このトピックの情�
   
      名前付きインスタンスの場合は、servername\instancename の形式でサーバー名を指定する必要があります。 たとえば、サーバーのネットワーク名が ADV-SRV062 で、Finance という名前付きインスタンスとして Analysis Services がインストールされている場合、「ADV-SRV062\Finance」と入力します。  
   
-     フェールオーバー クラスター内に配置したサーバーの場合は、SSAS クラスターのネットワーク名を使用して接続します。 この名前は、SQL Server のセットアップ時に、 **[SQL Server のネットワーク名]**として指定されます。 Windows Server フェールオーバー クラスター (WSFC) に、名前付きインスタンスとして SSAS をインストールした場合、接続時にインスタンス名を追加することはできません。 これは SSAS 独自の処理です。これとは対照的に、クラスター化されたリレーショナル データベース エンジンの名前付きインスタンスには、インスタンス名が含まれています。 たとえば、SSAS とデータベース エンジンの両方を名前付きインスタンス (Contoso-Accounting) として、SQL-CLU という SQL Server のネットワーク名を使用してインストールした場合、"SQL-CLU" を使って SSAS に接続し、"SQL-CLU\Contoso-Accounting" というデータベース エンジンに接続することになります。 詳細と例については、「 [SQL Server Analysis Services をクラスター化する方法](http://go.microsoft.com/fwlink/p/?LinkId=396548) 」を参照してください。  
+     フェールオーバー クラスター内に配置したサーバーの場合は、SSAS クラスターのネットワーク名を使用して接続します。 この名前は、SQL Server のセットアップ時に、 **[SQL Server のネットワーク名]** として指定されます。 Windows Server フェールオーバー クラスター (WSFC) に、名前付きインスタンスとして SSAS をインストールした場合、接続時にインスタンス名を追加することはできません。 これは SSAS 独自の処理です。これとは対照的に、クラスター化されたリレーショナル データベース エンジンの名前付きインスタンスには、インスタンス名が含まれています。 たとえば、SSAS とデータベース エンジンの両方を名前付きインスタンス (Contoso-Accounting) として、SQL-CLU という SQL Server のネットワーク名を使用してインストールした場合、"SQL-CLU" を使って SSAS に接続し、"SQL-CLU\Contoso-Accounting" というデータベース エンジンに接続することになります。 詳細と例については、「 [SQL Server Analysis Services をクラスター化する方法](http://go.microsoft.com/fwlink/p/?LinkId=396548) 」を参照してください。  
   
      ネットワーク負荷分散クラスター内に配置したサーバーの場合は、NLB の仮想サーバー名を使用して接続します。  
   
@@ -89,13 +77,13 @@ Analysis Services を初めて使用する場合は、このトピックの情�
   
  Shift キーを押したまま **[Excel]** を右クリックして、 **[別のユーザーとして実行]** オプションにアクセスします。  
   
-1.  Excel の [データ] タブで、 **[その他のデータ ソース]**をクリックし、 **[Analysis Services]**をクリックします。 サーバー名を入力し、クエリを実行するキューブまたはパースペクティブを選択します。  
+1.  Excel の [データ] タブで、 **[その他のデータ ソース]** をクリックし、 **[Analysis Services]** をクリックします。 サーバー名を入力し、クエリを実行するキューブまたはパースペクティブを選択します。  
   
      負荷分散クラスター内に配置するサーバーの場合は、クラスターに割り当てた仮想サーバー名を使用します。  
   
-2.  Excel での接続を設定するときに、データ接続ウィザードの最後のページで、Excel Services の認証設定を指定できます。 Excel Services が存在する SharePoint サーバーにブックをアップロードするときには、これらの設定を使用してブックのプロパティが設定されます。 この設定は、データ更新操作で使用されます。 オプションとしては、 **[Windows 認証]**、 **[Secure Store Service]** (SSS)、 **[なし]**があります。  
+2.  Excel での接続を設定するときに、データ接続ウィザードの最後のページで、Excel Services の認証設定を指定できます。 Excel Services が存在する SharePoint サーバーにブックをアップロードするときには、これらの設定を使用してブックのプロパティが設定されます。 この設定は、データ更新操作で使用されます。 オプションとしては、 **[Windows 認証]**、 **[Secure Store Service]** (SSS)、 **[なし]** があります。  
   
-     **[なし]**を選択することは避けてください。 Analysis Services では、接続先のサーバーが HTTP アクセス用に構成されていないと、ユーザー名とパスワードを接続文字列に指定できません。 同様に、Analysis Services データベースに対するユーザー アクセス権を持った一連の Windows ユーザーの資格情報に SSS ターゲット アプリケーション ID がマップされていることがわかっている場合を除き、SSS は使用しないでください。 既定のオプションは Windows 認証であり、Excel から Analysis Services に接続するほとんどのシナリオに最適な選択肢です。  
+     **[なし]** を選択することは避けてください。 Analysis Services では、接続先のサーバーが HTTP アクセス用に構成されていないと、ユーザー名とパスワードを接続文字列に指定できません。 同様に、Analysis Services データベースに対するユーザー アクセス権を持った一連の Windows ユーザーの資格情報に SSS ターゲット アプリケーション ID がマップされていることがわかっている場合を除き、SSS は使用しないでください。 既定のオプションは Windows 認証であり、Excel から Analysis Services に接続するほとんどのシナリオに最適な選択肢です。  
   
  詳細については、「 [SQL Server Analysis Services のデータに接続する、または SQL Server Analysis Services のデータをインポートする](http://go.microsoft.com/fwlink/?linkID=215150)」を参照してください。  
   
@@ -142,6 +130,6 @@ Analysis Services を初めて使用する場合は、このトピックの情�
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [権限借用](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [データ ソース &#40; を作成します。SSAS 多次元 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソース & #40; を作成します。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

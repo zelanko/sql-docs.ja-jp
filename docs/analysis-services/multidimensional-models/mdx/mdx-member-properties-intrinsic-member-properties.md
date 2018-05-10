@@ -1,32 +1,23 @@
 ---
 title: 固有メンバー プロパティ (MDX) |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
-ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2fc65884048df6a4f5083edd4451e60dad039910
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバーのプロパティ - 固有メンバー プロパティ
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]固有プロパティをカスタム アプリケーションに追加のデータまたはメタデータを使用してを返すまたはモデルの調査や構築を支援するクエリに含めることができるディメンション メンバーを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、カスタム アプリケーションで使用する追加のデータまたはメタデータを返したり、モデルの調査や構築を支援したりするために、クエリに含めることができるディメンション メンバーの固有プロパティを公開します。 SQL Server クライアント ツールを使用している場合は、SQL Server Management Studio (SSMS) で固有プロパティを表示できます。  
   
  固有プロパティには **ID**、 **KEY**、 **KEYx**、 **NAME**など があります。これらは、各メンバーによって任意のレベルで公開されるプロパティです。 特に、 **LEVEL_NUMBER** や **PARENT_UNIQUE_NAME**などのように位置情報を返すこともできます。  
   
@@ -213,15 +204,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>参照  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
- [子と #40 です。MDX と #41 です。](../../../mdx/children-mdx.md)   
+ [子&#40;MDX&#41;](../../../mdx/children-mdx.md)   
  [Hierarchize (& a) #40 です。MDX と #41 です。](../../../mdx/hierarchize-mdx.md)   
- [Count (セット) (MDX)](../../../mdx/count-set-mdx.md)   
+ [カウント & #40 です。セット & #41;& #40 です。MDX と #41 です。](../../../mdx/count-set-mdx.md)   
  [フィルターと #40 です。MDX と #41 です。](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
- [プロパティ &#40;です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
- [PrevMember &#40;です。MDX と #41 です。](../../../mdx/prevmember-mdx.md)   
- [メンバー プロパティの使用 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 関数リファレンス &#40;です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
+ [AddCalculatedMembers & #40 です。MDX と #41 です。](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40 です。MDX と #41 です。](../../../mdx/drilldownlevel-mdx.md)   
+ [プロパティ & #40 です。MDX と #41 です。](../../../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
+ [メンバーのプロパティ & #40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 関数リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-function-reference-mdx.md)  
   
   

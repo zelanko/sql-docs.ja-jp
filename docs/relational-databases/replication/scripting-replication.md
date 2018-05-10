@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server replication], replication objects
 - merge replication scripting [SQL Server replication]
@@ -24,12 +23,11 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4a2795e0bd6ffb1277dbb8e13f0d92616f34b577
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fdbef6d34beb4eedcb7a7fea6f737d07bffc62f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scripting-replication"></a>レプリケーションのスクリプト作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,28 +86,28 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーまたは **[ローカル サブスクリプション]** フォルダーを展開します。  
   
-3.  パブリケーションまたはサブスクリプションを右クリックし、 **[スクリプトの生成]**をクリックします。  
+3.  パブリケーションまたはサブスクリプションを右クリックし、 **[スクリプトの生成]** をクリックします。  
   
 4.  **[SQL スクリプトの生成 - \<ReplicationObject>]** ダイアログ ボックスでオプションを指定します。  
   
-5.  **[スクリプトをファイルに保存]**をクリックします。  
+5.  **[スクリプトをファイルに保存]** をクリックします。  
   
-6.  **[スクリプト ファイルの場所]** ダイアログ ボックスでファイル名を入力し、 **[保存]**をクリックします。 状態メッセージが表示されます。  
+6.  **[スクリプト ファイルの場所]** ダイアログ ボックスでファイル名を入力し、 **[保存]** をクリックします。 状態メッセージが表示されます。  
   
-7.  **[OK]**をクリックし、 **[閉じる]**をクリックします。  
+7.  **[OK]** をクリックし、 **[閉じる]** をクリックします。  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>Management Studio から複数のオブジェクトのスクリプトを作成するには  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でディストリビューター、パブリッシャー、またはサブスクライバーに接続し、サーバー ノードを展開します。  
   
-2.  **[レプリケーション]** フォルダーを右クリックし、 **[スクリプトの生成]**をクリックします。  
+2.  **[レプリケーション]** フォルダーを右クリックし、 **[スクリプトの生成]** をクリックします。  
   
 3.  **[SQL スクリプトの生成]** ダイアログ ボックスでオプションを指定します。  
   
-4.  **[スクリプトをファイルに保存]**をクリックします。  
+4.  **[スクリプトをファイルに保存]** をクリックします。  
   
-5.  **[スクリプト ファイルの場所]** ダイアログ ボックスでファイル名を入力し、 **[保存]**をクリックします。 状態メッセージが表示されます。  
+5.  **[スクリプト ファイルの場所]** ダイアログ ボックスでファイル名を入力し、 **[保存]** をクリックします。 状態メッセージが表示されます。  
   
-6.  **[OK]** をクリックし、 **[閉じる]**をクリックします。  
+6.  **[OK]** をクリックし、 **[閉じる]** をクリックします。  
   
   

@@ -3,7 +3,6 @@ title: Microsoft Azure Virtual Machine の SQL Server データベースの配�
 ms.date: 07/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
@@ -11,7 +10,7 @@ ms.custom: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deploymentwizard.deploymentsettings.f1
 - sql13.swb.deploymentwizard.sourcesettings.f1
@@ -41,12 +40,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1bc6b5581f7744b983d558ee0cb6ca8f9f46c9a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3ad29084eda4f085e090ec9f436a5dd3f170429f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +90,7 @@ ms.lasthandoff: 04/16/2018
     ```    
 
     > [!NOTE]  
-    > MakeCert ツールを使用して管理証明書を作成することもできますが、MakeCert は推奨されなくなっています。  詳細については、「 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)」をご覧ください。
+    > MakeCert ツールを使用して管理証明書を作成することもできますが、MakeCert は非推奨とされます。  詳細については、「 [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968)」をご覧ください。
    
   -   ウィザードを実行するコンピューターで個人証明書ストアに保存された管理証明書。  
   
@@ -212,7 +210,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **オブジェクト エクスプローラー**で、インスタンス名を展開してから、 **データベース** ノードを展開します。  
   
-3.  配置するデータベースを右クリックして **[タスク]**を選択し、 **[Microsoft Azure 仮想マシンへのデータベースの配置]**をクリックします。  
+3.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[Microsoft Azure 仮想マシンへのデータベースの配置]** をクリックします。  
   
 ##  <a name="wizard_pages"></a> ウィザード ページ  
  以下のセクションでは、この操作の配置設定と構成の詳細に関する追加情報を示しています。  
@@ -284,7 +282,7 @@ ms.lasthandoff: 04/16/2018
 新しいデータベースの名前を指定または確認します。 対象の SQL Server インスタンスにデータベース名が既にある場合は、変更したデータベース名を指定することをお勧めします。  
   
 ##  <a name="Summary"></a> 概要
- このページを使用すると、操作について指定した設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]**をクリックします。 配置操作を取り消してウィザードを終了するには、 **[キャンセル]**をクリックします。  **[完了]** をクリックすると、 **[配置状況]** ページが表示されます。  `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`にあるログ ファイルから進行状況を見ることもできます。
+ このページを使用すると、操作について指定した設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]** をクリックします。 配置操作を取り消してウィザードを終了するには、 **[キャンセル]** をクリックします。  **[完了]** をクリックすると、 **[配置状況]** ページが表示されます。  `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`にあるログ ファイルから進行状況を見ることもできます。
   
  データベースの詳細を Windows Azure 仮想マシンの SQL Server データベースに配置するために手動の手順が必要になる場合があります。 これらの手順については概要を詳しく説明します。  
   

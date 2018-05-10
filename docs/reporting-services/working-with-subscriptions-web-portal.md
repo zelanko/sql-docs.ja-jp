@@ -1,27 +1,25 @@
 ---
-title: "サブスクリプションの操作 (Web ポータル) | Microsoft Docs"
-ms.custom: 
+title: サブスクリプションの操作 (Web ポータル) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bee70a9c4d77be578aae8c77af8772bdd2faadc0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 74ef317fc9546ec54008ac494571c9c00a16d753
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
    
 レポートの **[省略記号 (...)]**、**[管理]**、**[サブスクリプション]** の順に選択して、[サブスクリプション] ページにアクセスすることができます。  
   
-[サブスクリプション] ページで、 **[+ 新しいサブスクリプション]**を選択すると、新しいサブスクリプションを作成できます。 既存のサブスクリプションを編集したり、選択したサブスクリプションを削除したりすることもできます。  
+[サブスクリプション] ページで、 **[+ 新しいサブスクリプション]** を選択すると、新しいサブスクリプションを作成できます。 既存のサブスクリプションを編集したり、選択したサブスクリプションを削除したりすることもできます。  
   
 また、このページでは、実行したサブスクリプションの結果の状態も **[結果]** 列に示されます。 サブスクリプションのエラーが発生した場合、メッセージの内容を表示するには、最初に [結果] 列を確認する必要があります。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 01/09/2018
 サブスクリプションは、自動的に実行できるレポートでサポートされています。 少なくとも、レポートでは、格納された資格情報を使用するか、資格情報を使用しないようにする必要があります。 レポートでパラメーターを使用する場合、既定値を指定する必要があります。 レポート実行の設定を変更したり、パラメーター プロパティで使用される既定値を削除したりすると、サブスクリプションが非アクティブになることがあります。 詳細については、「ネイティブ モード レポート サーバーのサブスクリプションの作成と管理」を参照してください。  
   
 ### <a name="type-of-subscription"></a>サブスクリプションの種類  
-**[標準サブスクリプション]** と **[データ ドリブン サブスクリプション]**から選択できます。  
+**[標準サブスクリプション]** と **[データ ドリブン サブスクリプション]** から選択できます。  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
    

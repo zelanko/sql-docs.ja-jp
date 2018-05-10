@@ -1,16 +1,15 @@
 ---
-title: "実行中の処理を管理する | Microsoft Docs"
-ms.custom: 
+title: 実行中の処理を管理する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -29,16 +28,15 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 624f3aa0fd17e6d3fc119cad25997e4832be3cde
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 33dc3d4c22d3eb8ab898e680e33595ea1b83b89d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーで実行中のジョブの状態を監視します。 レポート サーバーは、一定の間隔で、実行中のジョブをスキャンし、レポート サーバー データベース (SharePoint モードの場合はサービス アプリケーション データベース) に状態情報を書き込みます。 リモートまたはローカル データベース サーバーでのクエリの実行、レポート処理、およびレポート表示のいずれかが行われている場合、ジョブは実行中です。  
@@ -85,7 +83,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  **[ジョブ]** フォルダーを開きます。  
   
-3.  レポートを右クリックし、 **[ジョブの取り消し]**をクリックします。  
+3.  レポートを右クリックし、 **[ジョブの取り消し]** をクリックします。  
   
 ### <a name="how-to-cancel-a-data-driven-subscription"></a>データ ドリブン サブスクリプションを取り消す方法  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  ファイルを保存します。  
   
-5.  レポート マネージャーで、レポートの [サブスクリプション] タブまたは **[個人用サブスクリプション]**からデータ ドリブン サブスクリプションを削除します。  
+5.  レポート マネージャーで、レポートの [サブスクリプション] タブまたは **[個人用サブスクリプション]** からデータ ドリブン サブスクリプションを削除します。  
   
 6.  サブスクリプションを削除したら、RSReportServer.config ファイルで **IsNotificationService** を探し、 **True**に設定します。  
   
@@ -111,11 +109,11 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>SharePoint モードでジョブを管理するには  
   
-1.  SharePoint サーバーの全体管理で **[サービス アプリケーションの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前を見つけてクリックし、アプリケーションの管理ページを開きます。  
   
-3.  **[ジョブの管理]**をクリックします。  
+3.  **[ジョブの管理]** をクリックします。  
   
 4.  **[ジョブ ID]** をクリックして、ジョブの詳細を表示します。  
   

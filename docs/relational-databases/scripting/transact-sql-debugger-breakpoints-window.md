@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpoints
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdede44d8789d75dbaf11551d14fa98835a36510
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c9953c6639aa32cfbcb76b476e12ac1b05fa473c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL デバッガー - [ブレークポイント] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +33,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="task-list"></a>タスク一覧  
  **[ブレークポイント] ウィンドウにアクセスするには**  
   
--   **[デバッグ]** メニューの **[ウィンドウ]**をポイントし、 **[ブレークポイント]**をクリックします。  
+-   **[デバッグ]** メニューの **[ウィンドウ]** をポイントし、 **[ブレークポイント]** をクリックします。  
   
 ## <a name="breakpoints-window-columns"></a>[ブレークポイント] ウィンドウの列  
  既定では、 **[ブレークポイント]** ウィンドウには次の列が表示されます。  
@@ -45,18 +42,18 @@ ms.lasthandoff: 04/16/2018
  ブレークポイントの名前が表示されます。 ブレークポイント名はデバッガーによって指定されます。 この名前には、そのブレークポイントを含むデータベース エンジンのクエリ エディター ウィンドウの名前、およびそのブレークポイントが設定されているクエリ エディター内の行番号が含まれます。  
   
  **条件**  
- **[(条件なし)]**が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント条件の設定をサポートしていません。  
+ **[(条件なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント条件の設定をサポートしていません。  
   
  **[ヒット カウント]**  
- **[breaks always (常に中断)]**が表示されます。  
+ **[breaks always (常に中断)]** が表示されます。  
   
  **[列]** ボックスの一覧で次の列を選択して、それらの列を追加したり、削除したりできます。  
   
  **Assert**  
- **[(なし)]**が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント フィルターの設定をサポートしていません。  
+ **[(なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント フィルターの設定をサポートしていません。  
   
  **[ヒット時]**  
- **[中断]**が表示されます。  
+ **[中断]** が表示されます。  
   
  **言語**  
  **を表す** [Transact-SQL] [!INCLUDE[tsql](../../includes/tsql-md.md)]が表示されます。  
@@ -83,10 +80,10 @@ ms.lasthandoff: 04/16/2018
  **[ブレークポイント]** ウィンドウに表示されているすべてのブレークポイントを削除します。  
   
  **[すべてのブレークポイントを無効にする]**  
- すべてのブレークポイントを無効にして、コードの実行が停止されなくなるようにします。ただし、ブレークポイントは削除されません。 すべてのブレークポイントを無効にすると、このボタンは **[すべてのブレークポイントを有効にする]**になります。  
+ すべてのブレークポイントを無効にして、コードの実行が停止されなくなるようにします。ただし、ブレークポイントは削除されません。 すべてのブレークポイントを無効にすると、このボタンは **[すべてのブレークポイントを有効にする]** になります。  
   
  **[すべてのブレークポイントを有効にする]**  
- すべてのブレークポイントを有効にして、コードの実行が停止されるようにします。 すべてのブレークポイントを有効にすると、このボタンは **[すべてのブレークポイントを無効にする]**になります。  
+ すべてのブレークポイントを有効にして、コードの実行が停止されるようにします。 すべてのブレークポイントを有効にすると、このボタンは **[すべてのブレークポイントを無効にする]** になります。  
   
  **[ソース コードへ移動]**  
  選択したブレークポイントを含むクエリ エディター内の行にカーソルを移動します。  

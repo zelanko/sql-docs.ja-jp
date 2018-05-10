@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
@@ -18,12 +17,11 @@ caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0fca00b134b3e17458933dfb6e3c14a61a1cc218
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 
@@ -115,7 +113,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **スタンドアロン プレビュー。** ブラウザーでローカル レポートを実行します。 デバッグ構成を使用すると、このモードを使用して、作成したカスタム アセンブリをデバッグすることもできます。 プロジェクトをデバッグ モードで実行するには 3 つの方法があります。  
   
-    -   **[デバッグ]** メニューの **[デバッグの開始]**をクリックします。  
+    -   **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
     -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の標準ツール バーの **[開始]** をクリックする。  
   
@@ -124,9 +122,9 @@ ms.lasthandoff: 01/09/2018
      レポートを作成しても配置しないプロジェクト構成を使用している場合は、現在の構成の **StartItem** プロパティで指定されたレポートが、別のプレビュー ウィンドウで開きます。  
   
     > [!NOTE]  
-    >  デバッグ モードを使用するには、開始アイテムを設定する必要があります。 ソリューション エクスプローラーでレポート プロジェクトを右クリックし、 **[プロパティ]**をクリックします。次に、 **[StartItem]**で、表示するレポートの名前を選択します。  
+    >  デバッグ モードを使用するには、開始アイテムを設定する必要があります。 ソリューション エクスプローラーでレポート プロジェクトを右クリックし、 **[プロパティ]** をクリックします。次に、 **[StartItem]** で、表示するレポートの名前を選択します。  
   
-     プロジェクトの開始アイテムではない特定のレポートをプレビューする場合は、レポートを作成しても配置しない構成 (DebugLocal 構成など) を選択し、レポートを右クリックして、 **[実行]**をクリックします。 レポートを配置しない構成を選択する必要があります。そうしないと、レポートはローカルのプレビュー ウィンドウに表示されずに、レポート サーバーにパブリッシュされます。  
+     プロジェクトの開始アイテムではない特定のレポートをプレビューする場合は、レポートを作成しても配置しない構成 (DebugLocal 構成など) を選択し、レポートを右クリックして、 **[実行]** をクリックします。 レポートを配置しない構成を選択する必要があります。そうしないと、レポートはローカルのプレビュー ウィンドウに表示されずに、レポート サーバーにパブリッシュされます。  
   
 -   **印刷プレビュー。**  
   
@@ -152,7 +150,7 @@ ms.lasthandoff: 01/09/2018
  レポート デザイナーでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の現在のバージョンの [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でサポートされているレポート定義スキーマを使用してレポートをデザインする点を理解しておくことが重要です。 特定のレポート サーバーまたは SharePoint サイトのプロジェクト配置プロパティを設定してから、レポートを保存すると、レポート デザイナーによって、対象レポート サーバーのバージョンと一致するスキーマ内のビルド ディレクトリにレポート定義が保存されます。 下位のレポート サーバー上でパブリッシュできるレポートを作成するために、レポート デザイナーは対象スキーマに存在しないレポート アイテムを削除します。 この処理は、メッセージが表示されずに自動的に行われます。 この場合、元のレポート定義はプロジェクト フォルダーに保持されます。 配置される変更済みのレポート定義は、ビルド フォルダーにあります。  
   
 > [!NOTE]  
->  式および配置エラーをデバッグする場合、ビルド フォルダー内のレポート定義を表示する必要があります。 **[ソースの表示]**は使用しないでください。 **[ソースの表示]** を使用すると、プロジェクト フォルダーのレポート定義ソースが表示されます。  
+>  式および配置エラーをデバッグする場合、ビルド フォルダー内のレポート定義を表示する必要があります。 **[ソースの表示]** は使用しないでください。 **[ソースの表示]** を使用すると、プロジェクト フォルダーのレポート定義ソースが表示されます。  
   
  詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
   

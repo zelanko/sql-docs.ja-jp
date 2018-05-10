@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [SQL Server], triggers
 - viewing DML triggers
@@ -24,13 +23,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52545d80fd62b966ea578439271e6eccdec88e88
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ed7aada845a81baee642a0f5f1b0b0f76a48dc2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,17 +66,17 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  目的のデータベースを展開し、 **[テーブル]**を展開します。次に、定義を表示するトリガーが格納されているテーブルを展開します。  
+2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、定義を表示するトリガーが格納されているテーブルを展開します。  
   
-3.  **[トリガー]**を展開します。目的のトリガーを右クリックし、 **[変更]**をクリックします。 DML トリガーの定義がクエリ ウィンドウに表示されます。  
+3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、 **[変更]** をクリックします。 DML トリガーの定義がクエリ ウィンドウに表示されます。  
   
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML トリガーの依存関係を表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  目的のデータベースを展開し、 **[テーブル]**を展開します。次に、表示するトリガーとその依存関係が格納されているテーブルを展開します。  
+2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、表示するトリガーとその依存関係が格納されているテーブルを展開します。  
   
-3.  **[トリガー]**を展開します。目的のトリガーを右クリックし、 **[依存関係の表示]**をクリックします。  
+3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、 **[依存関係の表示]** をクリックします。  
   
 4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、**[\<DML トリガー名 に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  **[依存関係]** 領域に表示されたオブジェクトに関する情報を取得するには、そのオブジェクトをクリックします。 **[選択したオブジェクト]** フィールドの **[名前]**、 **[種類]**、および **[依存関係の種類]** の各ボックスに情報が表示されます。  
   
-6.  **[オブジェクトの依存関係]** ウィンドウを閉じるには、 **[OK]**をクリックします。  
+6.  **[オブジェクトの依存関係]** ウィンドウを閉じるには、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -94,9 +92,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 それぞれの例は、 `iuPerson` トリガーの定義を表示する方法を示します。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 それぞれの例は、 `iuPerson` トリガーの定義を表示する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -127,9 +125,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 それぞれの例は、 `iuPerson` トリガーの依存関係を表示する方法を示します。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 それぞれの例は、 `iuPerson` トリガーの依存関係を表示する方法を示します。  
   
 ```  
 USE AdventureWorks2012;   
@@ -153,9 +151,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 それぞれの例は、データベース内の DML トリガー (`TR`) に関する情報を表示する方法を示します。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 それぞれの例は、データベース内の DML トリガー (`TR`) に関する情報を表示する方法を示します。  
   
 ```  
 USE AdventureWorks2012;   
@@ -189,9 +187,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 それぞれの例は、 `iuPerson` トリガーを起動するイベントを表示する方法を示します。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 それぞれの例は、 `iuPerson` トリガーを起動するイベントを表示する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012;   

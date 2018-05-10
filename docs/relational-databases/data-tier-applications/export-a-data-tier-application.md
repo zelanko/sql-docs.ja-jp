@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.exportdac.progress.f1
 - sql13.swb.exportdac.summary.f1
@@ -31,13 +30,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3902e91e5f4766afc32baa7a99a09501cd9ca1fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b744e81c80a1e5c817a0a7b9964007e9aec521d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  データベース名を右クリックします。  
   
-4.  **[タスク]** をクリックし、 **[データ層アプリケーションのエクスポート]**を選択します。  
+4.  **[タスク]** をクリックし、 **[データ層アプリケーションのエクスポート]** を選択します。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -109,10 +107,10 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="Validation"></a> [検証] ページ  
  [検証] ページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
   
- 続行するには、 **[次へ]**をクリックします。  
+ 続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="Summary"></a> [概要] ページ  
- このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でエクスポート操作を実行するには、 **[完了]**をクリックします。 エクスポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]**をクリックします。  
+ このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でエクスポート操作を実行するには、 **[完了]** をクリックします。 エクスポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
 ##  <a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - wizard [DAC], unpack
 - data-tier application [SQL Server], unpack
@@ -22,12 +21,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9cd9253e5bf8a84a4e4a40bc3518cff2d63d4a1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2e30fdb3d4fe97021ba89b710fd128ee9faaedec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unpack-a-dac-package"></a>DAC パッケージのアンパック
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
 -   [データ層アプリケーションのアンパック] ダイアログ ボックスを開くには、次の 2 つの方法のいずれかを使用します。  
   
-    1.  DAC パッケージ (.dacpac) ファイルを右クリックして、 **[アンパック]**をクリックします。  
+    1.  DAC パッケージ (.dacpac) ファイルを右クリックして、 **[アンパック]** をクリックします。  
   
     2.  DAC パッケージ ファイルをダブルクリックします。  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 04/16/2018
 ###  <a name="Browse"></a> [フォルダーの参照]  
  このページでは、アンパック操作の対象となるフォルダーを選択します。 また、必要に応じて、新しいフォルダーを作成することもできます。  
   
- **[フォルダー一覧]** : コンピューターのファイル階層を表示します。 ノードを展開し、DAC パッケージをアンパックするフォルダーに移動します。 フォルダーをクリックし、 **[OK]**をクリックします。  
+ **[フォルダー一覧]** : コンピューターのファイル階層を表示します。 ノードを展開し、DAC パッケージをアンパックするフォルダーに移動します。 フォルダーをクリックし、 **[OK]** をクリックします。  
   
  **[新しいフォルダーの作成]** : フォルダー階層で現在選択しているフォルダー内に作成する新しいフォルダーの名前を指定するダイアログ ボックスを開きます。  
   

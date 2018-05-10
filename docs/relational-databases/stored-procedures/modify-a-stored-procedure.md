@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying stored procedures
 - editing stored procedures
@@ -21,13 +20,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1086da5c6be1703f0064d641c546c3eee211140
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6f7bdabb6ae916b777f4df6c8965e29a0a4fca63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-a-stored-procedure"></a>ストアド プロシージャの変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,17 +60,17 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]**を展開し、変更するプロシージャを右クリックして、 **[変更]**をクリックします。  
+3.  **[ストアド プロシージャ]** を展開し、変更するプロシージャを右クリックして、 **[変更]** をクリックします。  
   
 4.  ストアド プロシージャのテキストを変更します。  
   
-5.  構文をテストするには、 **[クエリ]** メニューの **[解析]**をクリックします。  
+5.  構文をテストするには、 **[クエリ]** メニューの **[解析]** をクリックします。  
   
-6.  変更をプロシージャの定義に保存するには、 **[クエリ]** メニューの **[実行]**をクリックします。  
+6.  変更をプロシージャの定義に保存するには、 **[クエリ]** メニューの **[実行]** をクリックします。  
   
-7.  更新されたプロシージャの定義を [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとして保存するには、 **[ファイル]** メニューの **[名前を付けて保存]**をクリックします。 ファイル名をそのまま使用するか、または別の名前を入力し、 **[保存]**をクリックします。  
+7.  更新されたプロシージャの定義を [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとして保存するには、 **[ファイル]** メニューの **[名前を付けて保存]** をクリックします。 ファイル名をそのまま使用するか、または別の名前を入力し、 **[保存]** をクリックします。  
   
 > [!IMPORTANT]  
 >  すべてのユーザー入力を検証します。 ユーザー入力は検証するまで連結しないでください。 検証していないユーザー入力から作成されたコマンドは、絶対に実行しないでください。  
@@ -82,9 +80,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開します。 または、ツール バーの利用可能なデータベースの一覧からデータベースを選択します。 この例では [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを選択します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。 または、ツール バーの利用可能なデータベースの一覧からデータベースを選択します。 この例では [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを選択します。  
   
-3.  **[ファイル]** メニューの **[新しいクエリ]**をクリックします。  
+3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーし、クエリ エディターに貼り付けます。 この例では、 `uspVendorAllInfo` データベース内のすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返す [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] プロシージャが作成されます。  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/16/2018
   
     ```  
   
-5.  **[ファイル]** メニューの **[新しいクエリ]**をクリックします。  
+5.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
 6.  次の例をコピーし、クエリ エディターに貼り付けます。 この例では、 `uspVendorAllInfo` プロシージャが変更されます。 EXECUTE AS CALLER 句が削除され、指定した製品を供給するベンダーだけを返すようにプロシージャの本体が変更されます。 ここでは、 `LEFT` 関数および `CASE` 関数を使用して、結果セットの表示をカスタマイズします。  
   
@@ -143,9 +141,9 @@ ms.lasthandoff: 04/16/2018
   
     ```  
   
-7.  変更をプロシージャの定義に保存するには、 **[クエリ]** メニューの **[実行]**をクリックします。  
+7.  変更をプロシージャの定義に保存するには、 **[クエリ]** メニューの **[実行]** をクリックします。  
   
-8.  更新されたプロシージャの定義を [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとして保存するには、 **[ファイル]** メニューの **[名前を付けて保存]**をクリックします。 ファイル名をそのまま使用するか、または別の名前を入力し、 **[保存]**をクリックします。  
+8.  更新されたプロシージャの定義を [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとして保存するには、 **[ファイル]** メニューの **[名前を付けて保存]** をクリックします。 ファイル名をそのまま使用するか、または別の名前を入力し、 **[保存]** をクリックします。  
   
 9. 変更したストアド プロシージャを実行するには、次の例を実行します。  
   

@@ -3,15 +3,12 @@ title: '[レプリカの指定] ページ (新しい可用性グループ ウィ
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.newagwizard.listeners.f1
 - sql13.swb.addreplicawizard.specifyreplicas.f1
@@ -21,16 +18,15 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15d4a3a83018c2cc40c335aea3e475df30d03add
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23035b6eb4d2089917777d5bb19bb4a432e67164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード: レプリカの追加ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
+  このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
   
 |タブ|簡単な説明|  
 |---------|-----------------------|  
@@ -104,9 +100,9 @@ ms.lasthandoff: 04/16/2018
   
  この要件によって、以降の構成手順が決まります。  
   
--   すべてのサーバー インスタンスがドメイン サービス アカウントで実行されている場合、つまり、すべてのサーバー インスタンスの **[SQL Server サービス アカウント]** 列にドメイン サービス アカウントが表示されている場合は、 **[次へ]**をクリックします。  
+-   すべてのサーバー インスタンスがドメイン サービス アカウントで実行されている場合、つまり、すべてのサーバー インスタンスの **[SQL Server サービス アカウント]** 列にドメイン サービス アカウントが表示されている場合は、 **[次へ]** をクリックします。  
   
--   ドメイン サービス アカウントで実行されていないサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 この場合、 **[次へ]** をクリックすると、警告ダイアログ ボックスが表示されるので、 **[いいえ]**をクリックして、**[エンドポイント]** タブに戻ってください。**[レプリカの指定]** ページでウィザードを中断している間、 **[SQL Server サービス アカウント]** 列にドメイン サービス アカウント以外のアカウントが表示されている各サーバー インスタンスに対し、次のいずれかの変更を行います。  
+-   ドメイン サービス アカウントで実行されていないサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 この場合、 **[次へ]** をクリックすると、警告ダイアログ ボックスが表示されるので、 **[いいえ]** をクリックして、**[エンドポイント]** タブに戻ってください。**[レプリカの指定]** ページでウィザードを中断している間、 **[SQL Server サービス アカウント]** 列にドメイン サービス アカウント以外のアカウントが表示されている各サーバー インスタンスに対し、次のいずれかの変更を行います。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントをドメイン アカウントに変更する。 詳細については、「[SQL Server のサービス開始アカウントの変更 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)」を参照してください。  
   

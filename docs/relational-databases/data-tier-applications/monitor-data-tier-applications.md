@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
@@ -21,12 +20,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b6a0e42322db6ffc2e76c5ab316ce572db171f72
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f25b948403332fe5edf048e68bc210f786f9898c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  **[表示]** メニューの [ユーティリティ エクスプローラーの詳細] をクリックします。  
   
-4.  **ユーティリティ エクスプローラー** で **[配置済みのデータ層アプリケーション]**ノードをクリックします。  
+4.  **ユーティリティ エクスプローラー** で **[配置済みのデータ層アプリケーション]** ノードをクリックします。  
   
  **[配置済みのデータ層アプリケーション]** 詳細ページに表示される情報は、ユーティリティ管理データ ウェアハウスのデータから取得されます。データ ウェアハウスは、既定で 15 分ごとにデータを収集します。 この間隔も **[ユーティリティ管理]** 詳細ページで調整できます。  
   

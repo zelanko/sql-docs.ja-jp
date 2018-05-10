@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/04/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
@@ -23,13 +22,12 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a4c51eabac1ed59fcda896e84aef7525a4271228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd3233b7c6ffc70b0fad8ce71ace6501f79d371a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted ウイザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,10 +44,10 @@ ms.lasthandoff: 04/16/2018
  
  1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のオブジェクト エクスプローラー コンポーネントで [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]に接続します。  
    
- 2.  データベースを右クリックして **[タスク]**をポイントし、 **[列の暗号化]**をクリックします。  
+ 2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックします。  
    
  ## <a name="column-selection-page"></a>列の選択ページ  
- - テーブルと列を見つけ、選択した列の暗号化の種類 (決定性またはランダム) と暗号化鍵を選択します。 現在暗号化されている列の暗号化を解除するには、 **[プレーン テキスト]**を選択します。 列の暗号化鍵を回転させるには、別の暗号化鍵を選択します。ウィザードが列の暗号化を解除し、新しい鍵で列を再び暗号化します。 (テンポラル テーブルとインメモリ テーブルの暗号化は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされていますが、このウィザードでは構成できません。)  
+ - テーブルと列を見つけ、選択した列の暗号化の種類 (決定性またはランダム) と暗号化鍵を選択します。 現在暗号化されている列の暗号化を解除するには、 **[プレーン テキスト]** を選択します。 列の暗号化鍵を回転させるには、別の暗号化鍵を選択します。ウィザードが列の暗号化を解除し、新しい鍵で列を再び暗号化します。 (テンポラル テーブルとインメモリ テーブルの暗号化は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされていますが、このウィザードでは構成できません。)  
  
 ## <a name="master-key-configuration-page"></a>マスター キーの構成ページ  
  - Windows 証明書ストアまたは Azure Key Vault で列の新しいマスター キーを作成します。 詳細については、「キー ストレージ」以下のリンクを参照してください。  

@@ -3,15 +3,12 @@ title: データベース エンジン アクセスを有効にするための W
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
 - firewall systems, [Database Engine]
@@ -21,12 +18,11 @@ caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2bfee8aeb475cbd271a0cfa8f5b7a75ea226d556
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aa4d659caca70d7ff01168d40148d35f23d25908
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,35 +69,35 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access"></a>TCP アクセス用に Windows ファイアウォールのポートを開くには  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]** をクリックします。  
   
-2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
+2.  **[セキュリティが強化された Windows ファイアウォール]** の左ペインの **[受信の規則]** をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
-3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]**をクリックし、 **[次へ]**をクリックします。  
+3.  **[規則の種類]** ダイアログ ボックスで、 **[ポート]** をクリックし、 **[次へ]** をクリックします。  
   
-4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]**をクリックします。 **[特定のローカル ポート]**をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのポート番号を入力します。たとえば、既定のインスタンスの場合は「 **1433** 」と入力します。 **[次へ]** をクリックします。  
+4.  **[プロトコルおよびポート]** ダイアログ ボックスで、 **[TCP]** をクリックします。 **[特定のローカル ポート]** をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのポート番号を入力します。たとえば、既定のインスタンスの場合は「 **1433** 」と入力します。 **[次へ]** をクリックします。  
   
-5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
+5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
-6.  **[プロファイル]** ダイアログ ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続するときのコンピューター接続環境を表すプロファイルをすべて選択し、 **[次へ]**をクリックします。  
+6.  **[プロファイル]** ダイアログ ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続するときのコンピューター接続環境を表すプロファイルをすべて選択し、 **[次へ]** をクリックします。  
   
-7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]**をクリックします。  
+7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]** をクリックします。  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>動的ポートの使用時に SQL Server にアクセスするには  
   
-1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして**「WF.msc」**と入力し、 **[OK]** をクリックします。  
   
-2.  **[セキュリティが強化された Windows ファイアウォール]**の左ペインの **[受信の規則]**をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
+2.  **[セキュリティが強化された Windows ファイアウォール]** の左ペインの **[受信の規則]** をクリックし、[操作] ペインの **[新規の規則]** をクリックします。  
   
-3.  **[規則の種類]** ダイアログ ボックスで、 **[プログラム]**をクリックし、 **[次へ]**をクリックします。  
+3.  **[規則の種類]** ダイアログ ボックスで、 **[プログラム]** をクリックし、 **[次へ]** をクリックします。  
   
-4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]**をクリックします。 **[参照]**をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]**をクリックします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**にあります。 **[次へ]** をクリックします。  
+4.  **[プログラム]** ダイアログ ボックスで、 **[このプログラムのパス]** をクリックします。 **[参照]** をクリックし、ファイアウォール経由でアクセスする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに移動して、 **[開く]** をクリックします。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**にあります。 **[次へ]** をクリックします。  
   
-5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]**をクリックし、 **[次へ]**をクリックします。  
+5.  **[操作]** ダイアログ ボックスで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
-6.  **[プロファイル]** ダイアログ ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続するときのコンピューター接続環境を表すプロファイルをすべて選択し、 **[次へ]**をクリックします。  
+6.  **[プロファイル]** ダイアログ ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続するときのコンピューター接続環境を表すプロファイルをすべて選択し、 **[次へ]** をクリックします。  
   
-7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]**をクリックします。  
+7.  **[名前]** ダイアログ ボックスで、この規則の名前と説明を入力し、 **[完了]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [方法: ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  

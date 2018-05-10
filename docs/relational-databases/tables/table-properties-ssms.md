@@ -3,15 +3,12 @@ title: テーブルのプロパティ - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
@@ -23,13 +20,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f9f9d31974b90f04faca1164bdc3c0e3916a37b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23b4e9001a95da177b0b1f5a2d25fefa329ebfb3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,7 +87,7 @@ ms.lasthandoff: 04/16/2018
  ほとんどの場合でロック エスカレーションを禁止します。 テーブルレベルのロックは完全には禁止されません。 たとえば、SERIALIZABLE 分離レベルでクラスター化インデックスがないテーブルをスキャンしている場合は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でテーブル ロックを実行して、データの整合性を保護します。  
   
  **[レプリケートされるテーブル]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は、 **[True]** または **[False]**です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は、 **[True]** または **[False]** です。  
   
 ##  <a name="ChangeTracking"></a> [変更の追跡] ページ  
  **変更の追跡**  
@@ -142,7 +138,7 @@ ms.lasthandoff: 04/16/2018
  このテーブルを含むファイル グループの名前。  
   
  **[パーティション分割されるテーブル]**  
- 指定できる値は、 **[True]** および **[False]**です。  
+ 指定できる値は、 **[True]** および **[False]** です。  
   
  **[Filestream ファイル グループ]**  
  テーブルが FILESTREAM 属性がある **varbinary(max)** 列を持つ場合は、FILESTREAM データ ファイル グループの名前を指定します。 既定値は、既定の FILESTREAM データ ファイル グループです。  
@@ -151,7 +147,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="general"></a>全般  
  **[VarDecimal ストレージ形式が有効]**  
- **[True]**の場合、この読み取り専用の値は、 **10 進** および **数値** の各データ型が vardecimal ストレージ形式で格納されることを示します。 このオプションを変更するには、 **sp_tableoption** の [vardecimal ストレージ形式](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)オプションを使用します。 Vardecimal ストレージ形式は推奨されません。 代わりに行の圧縮を使用してください。  
+ **[True]** の場合、この読み取り専用の値は、 **10 進** および **数値** の各データ型が vardecimal ストレージ形式で格納されることを示します。 このオプションを変更するには、 **sp_tableoption** の [vardecimal ストレージ形式](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)オプションを使用します。 Vardecimal ストレージ形式は非推奨とされます。 代わりに行の圧縮を使用してください。  
   
  **[インデックス領域]**  
  インデックスがテーブル内で占有する領域の容量をメガバイト単位で表示します。 この値には、テーブルの XML インデックスの領域使用状況は含まれません。 テーブルに XML インデックスが含まれている場合は、代わりに [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) を使用してください。  

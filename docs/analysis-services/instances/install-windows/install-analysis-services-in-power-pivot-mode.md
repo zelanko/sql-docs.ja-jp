@@ -1,27 +1,19 @@
 ---
 title: Power Pivot モードで Analysis Services のインストール |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: setup-install
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 24bf58f255e20188b17ec53f0b75762a5e89a0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -70,33 +62,33 @@ ms.lasthandoff: 04/06/2018
   
 2.  左側のナビゲーション ウィンドウで、 **[インストール]** を選択します。  
   
-3.  **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]**を選択します。  
+3.  **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選択します。  
   
-4.  **[プロダクト キー]** ページが表示されたら、Evaluation Edition を指定するか、Enterprise Edition のライセンス コピーのプロダクト キーを入力します。 **[次へ]**を選択します。 エディションの詳細については、「 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
+4.  **[プロダクト キー]** ページが表示されたら、Evaluation Edition を指定するか、Enterprise Edition のライセンス コピーのプロダクト キーを入力します。 **[次へ]** を選択します。 エディションの詳細については、「 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
-5.  マイクロソフト ソフトウェア ライセンス条項を確認して同意し、 **[次へ]**を選択します。  
+5.  マイクロソフト ソフトウェア ライセンス条項を確認して同意し、 **[次へ]** を選択します。  
   
 6.  **[グローバル ルール]** ページが表示されたら、セットアップ ウィザードに表示されるすべてのルールの情報を確認します。  
   
-7.  **[Microsoft Update]** ページで、Microsoft Update を使用して更新プログラムを確認することをお勧めします。確認したら、 **[次へ]**を選択します。  
+7.  **[Microsoft Update]** ページで、Microsoft Update を使用して更新プログラムを確認することをお勧めします。確認したら、 **[次へ]** を選択します。  
   
-8.  **[セットアップ ファイルのインストール]** ページが数分間実行されます。 ルールの警告または失敗したルールを確認し、 **[次へ]**を選択します。  
+8.  **[セットアップ ファイルのインストール]** ページが数分間実行されます。 ルールの警告または失敗したルールを確認し、 **[次へ]** を選択します。  
   
-9. 別の **[セットアップ サポート ルール]**が表示されたら、警告を確認し、 **[次へ]**を選択します。  
+9. 別の **[セットアップ サポート ルール]** が表示されたら、警告を確認し、 **[次へ]** を選択します。  
   
      **注:** Windows ファイアウォールが有効になっているため、ポートを開いてリモート アクセスを有効にするよう求める警告が表示されます。  
   
-10. **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]**を選択します。  
+10. **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。  
   
      **[次へ]** を選択します。  
   
-11. [機能の選択] ページで、 **[Analysis Services]**を選択します。 このオプションを使用すると、3 つの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードのいずれかをインストールできます。 モードは後の手順で選択します。 **[次へ]** を選択します。  
+11. [機能の選択] ページで、 **[Analysis Services]** を選択します。 このオプションを使用すると、3 つの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードのいずれかをインストールできます。 モードは後の手順で選択します。 **[次へ]** を選択します。  
   
-12. **[インスタンスの構成]** ページで、 **[名前付きインスタンス]** を選択し、インスタンス名に **[POWERPIVOT]** を入力して、 **[次へ]**をクリックします。  
+12. **[インスタンスの構成]** ページで、 **[名前付きインスタンス]** を選択し、インスタンス名に **[POWERPIVOT]** を入力して、 **[次へ]** をクリックします。  
   
      ![SQL のセットアップ - インスタンスの構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL セットアップのインスタンスの構成のランディング ページ")  
   
-13. **[サーバー構成]** のページで、すべてのサービスの **[スタートアップの種類]**を [自動] に設定します。 **SQL Server Analysis Services**に必要なドメイン アカウントとパスワードを指定します。次の図の **(1)** です。  
+13. **[サーバー構成]** のページで、すべてのサービスの **[スタートアップの種類]** を [自動] に設定します。 **SQL Server Analysis Services**に必要なドメイン アカウントとパスワードを指定します。次の図の **(1)** です。  
   
     -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]では、 **ドメイン ユーザー** アカウントまたは **NetworkService** アカウントを使用できます。 LocalSystem アカウントまたは LocalService アカウントは使用しないでください。  
   
@@ -112,7 +104,7 @@ ms.lasthandoff: 04/06/2018
   
      **[次へ]** を選択します。  
   
-15. **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]**を選択します。  
+15. **[Analysis Services の構成]** ページの **[サーバー モード]** で、 **[PowerPivot モード]** を選択します。  
   
      ![SQL のセットアップ - Analysis Services の構成のランディング ページ](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL セットアップ - Analysis Services の構成のランディング ページ")  
   
@@ -125,13 +117,13 @@ ms.lasthandoff: 04/06/2018
   
      **[次へ]** を選択します。  
   
-17. **[エラー レポート]** ページで、 **[次へ]**を選択します。  
+17. **[エラー レポート]** ページで、 **[次へ]** を選択します。  
   
-18. **[インストールの準備完了]** ページで、 **[インストール]**を選択します。  
+18. **[インストールの準備完了]** ページで、 **[インストール]** を選択します。  
   
-19. **[コンピューターの再起動が必要です]**ダイアログ ボックスが表示されたら、 **[OK]**を選択します。  
+19. **[コンピューターの再起動が必要です]** ダイアログ ボックスが表示されたら、 **[OK]** を選択します。  
   
-20. インストールが完了したら、 **[閉じる]**を選択します。  
+20. インストールが完了したら、 **[閉じる]** を選択します。  
   
 21. コンピューターを再起動します。  
   
@@ -140,9 +132,9 @@ ms.lasthandoff: 04/06/2018
 ### <a name="verify-the-sql-server-installation"></a>SQL Server のインストールの確認  
  Analysis Services サービスが実行されているかどうかを確認します。  
   
-1.  Windows の **[スタート]**ボタンをクリックし、 **[すべてのプログラム]**を選択して、 **[Microsoft SQL Server 2016]** を選択します。  
+1.  Windows の **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** を選択して、 **[Microsoft SQL Server 2016]** を選択します。  
   
-2.  **[SQL Server Management Studio]**を選択します。  
+2.  **[SQL Server Management Studio]** を選択します。  
   
 3.  Analysis Services インスタンス (たとえば、**[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
@@ -157,11 +149,11 @@ ms.lasthandoff: 04/06/2018
   
 1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
   
-2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
+2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]** を選択します。  
   
      ![SSAS サーバーのプロパティを表示](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS サーバーのプロパティの表示")  
   
-3.  左ペインで、 **[セキュリティ]**を選択します。 Office Online Server がインストールされているマシン アカウントを追加します。  
+3.  左ペインで、 **[セキュリティ]** を選択します。 Office Online Server がインストールされているマシン アカウントを追加します。  
   
      ![SSAS サーバーのセキュリティ設定](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS サーバーのセキュリティ設定")  
   
@@ -185,29 +177,29 @@ ms.lasthandoff: 04/06/2018
   
 1.  Analysis Services サーバーで、SQL Server Management Studio を起動し、Analysis Services インスタンス (たとえば、`[MyServer]\POWERPIVOT`) に接続します。  
   
-2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]**を選択します。  
+2.  オブジェクト エクスプローラーで、インスタンス名を右クリックし、 **[プロパティ]** を選択します。  
   
      ![SSAS サーバーのプロパティを表示](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS サーバーのプロパティの表示")  
   
-3.  左ペインで、 **[セキュリティ]**を選択します。 手順 1. で Excel Services アプリケーション用に構成したドメイン ログインを追加します。  
+3.  左ペインで、 **[セキュリティ]** を選択します。 手順 1. で Excel Services アプリケーション用に構成したドメイン ログインを追加します。  
   
      ![SSAS サーバーのセキュリティ設定](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS サーバーのセキュリティ設定")  
   
 #### <a name="configure-excel-services-for-analysis-services-integration"></a>Analysis Services 統合のための Excel Services の構成  
   
-1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
-2.  サービス アプリケーションの名前をクリックします。既定の名前は **"Excel Services アプリケーション"**です。  
+2.  サービス アプリケーションの名前をクリックします。既定の名前は **"Excel Services アプリケーション"** です。  
   
-3.  **[Excel Services アプリケーションの管理]**ページで、 **[データ モデルの設定]**をクリックします。  
+3.  **[Excel Services アプリケーションの管理]** ページで、 **[データ モデルの設定]** をクリックします。  
   
-4.  **[サーバーの追加]**をクリックします。  
+4.  **[サーバーの追加]** をクリックします。  
   
-5.  **[サーバー名]**に、Analysis Services サーバー名と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンス名を入力します。 たとえば、 `MyServer\POWERPIVOT`があります。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンス名は必須です。  
+5.  **[サーバー名]** に、Analysis Services サーバー名と [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンス名を入力します。 たとえば、 `MyServer\POWERPIVOT`があります。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] インスタンス名は必須です。  
   
      説明を入力します。  
   
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
   
 7.  変更は数分で有効になりますが、 **Excel Calculation Services** サービスを **停止** および **開始**することもできます。 変換先  
   
@@ -229,13 +221,13 @@ ms.lasthandoff: 04/06/2018
   
 2.  Excel で新しいブックを開きます。  
   
-3.  [データ] タブの **[外部データの取り込み]** で、 **[その他のデータ ソース]**を選択します。  
+3.  [データ] タブの **[外部データの取り込み]** で、 **[その他のデータ ソース]** を選択します。  
   
-4.  **[SQL Server]**を選択します。  
+4.  **[SQL Server]** を選択します。  
   
 5.  **データ接続ウィザード**で、使用するデータベースがある SQL Server インスタンスの名前を入力します。  
   
-6.  [ログオン資格情報] で、 **[Windows 認証を使用する]** が選択されていることを確認し、 **[次へ]**をクリックします。  
+6.  [ログオン資格情報] で、 **[Windows 認証を使用する]** が選択されていることを確認し、 **[次へ]** をクリックします。  
   
 7.  使用するデータベースを選択します。  
   
@@ -245,11 +237,11 @@ ms.lasthandoff: 04/06/2018
   
 10. インポートするテーブルを選択します。  
   
-11. **[選択したテーブル間のリレーションシップをインポートする]**チェック ボックスをオンにし、 **[次へ]**を選択します。 リレーショナル データベースから複数のテーブルをインポートすると、既に関連付けられているテーブルを使用できます。 リレーションシップを手動で作成する必要がないため、手間を省くことができます。  
+11. **[選択したテーブル間のリレーションシップをインポートする]** チェック ボックスをオンにし、 **[次へ]** を選択します。 リレーショナル データベースから複数のテーブルをインポートすると、既に関連付けられているテーブルを使用できます。 リレーションシップを手動で作成する必要がないため、手間を省くことができます。  
   
-12. ウィザードの **[データ接続ファイルを保存して終了]** ページで、接続の名前を入力し、 **[完了]**を選択します。  
+12. ウィザードの **[データ接続ファイルを保存して終了]** ページで、接続の名前を入力し、 **[完了]** を選択します。  
   
-13. **[データのインポート]** ダイアログ ボックスが表示されます。 **[ピボットテーブル レポート]**を選択し、 **[OK]**を選択します。  
+13. **[データのインポート]** ダイアログ ボックスが表示されます。 **[ピボットテーブル レポート]** を選択し、 **[OK]** を選択します。  
   
 14. ブックにピボットテーブル フィールド リストが表示されます。   
     フィールド リストで、 **[すべて]** タブを選択します。  

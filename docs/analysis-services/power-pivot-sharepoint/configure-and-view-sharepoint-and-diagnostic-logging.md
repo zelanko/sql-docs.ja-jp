@@ -1,27 +1,19 @@
 ---
-title: "構成し、SharePoint と診断ログの表示 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 構成し、SharePoint と診断ログの表示 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b4e2842e06d26d1e9df60fac01b44f850aa758e7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>構成し、SharePoint と診断ログの表示
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,15 +35,15 @@ ms.lasthandoff: 02/15/2018
  LOGS フォルダーには、ログ ファイル (`.log`)、データ ファイル (`.txt`)、および使用状況ファイル (`.usage`) が保存されています。 SharePoint トレース ログのファイル名前付け規則では、サーバー名の後に日付とタイム スタンプが続きます。 SharePoint トレース ログは定期的に作成され、IISRESET が実行された場合も作成されます。 一般に、24 時間内で多数のトレース ログが作成されます。  
   
 ##  <a name="bkmk_modifyloglevels"></a> 個々のイベント カテゴリに対する診断ログ記録レベルの変更  
- 既定では、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] イベントの ULS ログは *中*に設定されています。 この設定は、SQL Server 2012 の新しい設定です。 サーバーを以前のリリースからアップグレードした場合、ログ レベルはまだ SQL Server 2008 R2 のデフォルト レベルの *"詳細"*が設定されている場合があります。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバーの使用状況に対する ULS ログを確認することに慣れている場合、この変更によって [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバーの操作に関する情報が少なくなっていることがわかります。  
+ 既定では、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] イベントの ULS ログは *中*に設定されています。 この設定は、SQL Server 2012 の新しい設定です。 サーバーを以前のリリースからアップグレードした場合、ログ レベルはまだ SQL Server 2008 R2 のデフォルト レベルの *"詳細"* が設定されている場合があります。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバーの使用状況に対する ULS ログを確認することに慣れている場合、この変更によって [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サーバーの操作に関する情報が少なくなっていることがわかります。  
   
  *高*タイプの例外を除くすべての [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] メッセージは、詳細カテゴリに分類されます。 サーバーのルーチン処理 (接続、要求、クエリ レポートなど) のログ エントリが必要な場合、ログ レベルを詳細に変更する必要があります。  
   
  個々のイベント カテゴリに対する診断ログ記録レベルを変更するには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で **[監視]**をクリックします。  
+1.  SharePoint サーバーの全体管理で **[監視]** をクリックします。  
   
-2.  **[診断ログの構成]**をクリックします。  
+2.  **[診断ログの構成]** をクリックします。  
   
 3.  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス**にスクロールします。  
   
@@ -71,7 +63,7 @@ ms.lasthandoff: 02/15/2018
   
 8.  **[詳細]** をクリックして、すべてのイベントをトレース ログに記録します。  
   
-9. **[OK]**をクリックします。  
+9. **[OK]** をクリックします。  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> SharePoint ログ ファイルの表示方法  
  ログ ファイルはテキスト ファイルであり、 テキスト エディターで開くことができます。 サードパーティのログ ビューアー アプリケーションを使用することもできます。  
@@ -104,9 +96,9 @@ ms.lasthandoff: 02/15/2018
   
      SharePoint ULS Log Viewer をダウンロードする場合は、ULSViewer.zip をダウンロード フォルダーに保存します。  
   
-6.  ダウンロード フォルダーで、ULSViewer.zip を右クリックして、 **[すべて展開]**をクリックします。  
+6.  ダウンロード フォルダーで、ULSViewer.zip を右クリックして、 **[すべて展開]** をクリックします。  
   
-7.  展開先フォルダーを指定し、 **[展開]**をクリックします。  
+7.  展開先フォルダーを指定し、 **[展開]** をクリックします。  
   
 8.  展開されたプログラム ファイルを含むフォルダーで、 **[ULSViewer]** をダブルクリックし、アプリケーションを実行します。  
   

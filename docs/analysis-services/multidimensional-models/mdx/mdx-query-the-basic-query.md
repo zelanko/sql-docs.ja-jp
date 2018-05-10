@@ -1,37 +1,23 @@
 ---
-title: "MDX の基本的なクエリ (MDX) |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDX の基本的なクエリ (MDX) |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- queries [MDX], SELECT statement
-- queries [MDX], about queries
-- cellsets [MDX]
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 188c1069047c050df50d81d2208e978b39a05706
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX クエリの基本的なクエリ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-多次元式 (MDX) の基本的なクエリは SELECT ステートメントであり、これは MDX で最も頻繁に使用するクエリでもあります。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
+  多次元式 (MDX) の基本的なクエリは SELECT ステートメントであり、これは MDX で最も頻繁に使用するクエリでもあります。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
   
 ## <a name="specifying-a-result-set"></a>結果セットの指定  
  MDX の SELECT ステートメントでは、キューブから返された多次元データのサブセットを格納した結果セットが指定されます。 結果セットを指定するには、MDX クエリに次の情報を含める必要があります。  
@@ -48,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
 -   SELECT 句。MDX の SELECT ステートメントのクエリ軸を指定します。 SELECT 句でクエリ軸を作成する方法の詳細については、「[クエリ軸の内容の指定(MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」を参照してください。  
   
--   FROM 句。クエリ対象のキューブを指定します。 FROM 句の詳細については、次を参照してください。[の SELECT ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
+-   FROM 句。クエリ対象のキューブを指定します。 FROM 句の詳細については、次を参照してください。[の SELECT ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
   
 -   省略可能な WHERE 句。スライサー軸で使用するメンバーまたは組を指定して、返されるデータを限定します。 WHERE 句でスライサー軸を作成する方法の詳細については、「[スライサー軸の内容の指定 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
@@ -67,7 +53,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX の SELECT ステートメントでは、WITH キーワードを使用する構文、軸またはスライサー軸に含める計算されたメンバーを作成するための MDX 関数を使用する構文、クエリの一部として特定のセル プロパティの値を返すための構文など、省略可能な構文をいくつかサポートしています。 MDX の SELECT ステートメントの詳細については、次を参照してください。[の SELECT ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
+ MDX の SELECT ステートメントでは、WITH キーワードを使用する構文、軸またはスライサー軸に含める計算されたメンバーを作成するための MDX 関数を使用する構文、クエリの一部として特定のセル プロパティの値を返すための構文など、省略可能な構文をいくつかサポートしています。 MDX の SELECT ステートメントの詳細については、次を参照してください。[の SELECT ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>MDX の SELECT ステートメントと SQL の構文の比較  
  MDX の SELECT ステートメントの構文形式は、SQL の構文とよく似ています。 ただし、次のような基本的な違いもいくつかあります。  
@@ -116,7 +102,7 @@ WHERE ( [Sales Territory].[Southwest] )
  詳細な例については、「[クエリ軸の内容の指定 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」および「[スライサー軸の内容の指定 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX &#40; の主な概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [SELECT ステートメント &#40;です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
+ [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [SELECT ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)  
   
   

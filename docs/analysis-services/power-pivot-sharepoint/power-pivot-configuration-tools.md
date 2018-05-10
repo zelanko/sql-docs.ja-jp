@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot Configuration Tools |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Power Pivot Configuration Tools |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e2df021da6f2cf8c32e0b0581c5d5d61a422d5ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b23576ac5e02d491d051646f0bdd4469106e9709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成ツールを使用すると、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を構成、修復、または削除できます。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の構成ツールを使用すると、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を構成、修復、または削除できます。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップ ウィザードでは、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールはインストールされません。 構成ツールは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の今後のリリースでダウンロードできるようになる予定です。  
   
@@ -100,7 +92,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  **[スタート]** 画面で、「 **powerpivot**」と入力します。  
   
-     **[スタート]** 画面で「 **powerpivot** 」と入力するか、 **[スタート]** メニューの **[すべてのプログラム]**をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]**をクリックし、次のいずれかをクリックします。  
+     **[スタート]** 画面で「 **powerpivot** 」と入力するか、 **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、次のいずれかをクリックします。  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール**。  
   
