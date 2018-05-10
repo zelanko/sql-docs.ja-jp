@@ -1,16 +1,15 @@
 ---
-title: "個人用レポートの有効化と無効化 | Microsoft Docs"
-ms.custom: 
+title: 個人用レポートの有効化と無効化 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
 - folders [Reporting Services], My Reports
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c874fc87e5f388b7b52fde156291f4357be2e06d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cbeea5fc6c8f8b162471d9afd758f5d740ab97e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
   個人用レポート機能では、ユーザーが所有しているレポートを個人用のフォルダーに保存できるように、レポート サーバー データベースに個人の記憶域を割り当てます。 レポート サーバー管理者として、この機能を有効化または無効化したり、セキュリティ設定を変更してユーザーがこの作業領域で実行できる操作を制御することで機能の動作を変更することができます。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/09/2018
   
  個人用レポートに使用されるロールの定義によって、個人用レポートの作業領域でサポートされる操作が決まります。 たとえば、個人用レポートのロールで [リンク レポートの作成] チェック ボックスをオフにしている場合、ユーザーは [個人用レポート] フォルダーでリンク レポートを作成できません。 詳細については、「 [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)」を参照してください。  
   
- 個人用レポートを非アクティブ化するには、 **[ユーザーごとに個人用レポート フォルダーを有効にする]**をオフにします。 個人用レポートを非アクティブ化すると、[個人用レポート] フォルダーでユーザーに表示されていたものがすべて非表示になります。 機能を無効にした後は、実際の記憶域を提供するフォルダー (つまり、[Users フォルダー] のサブフォルダー) を手動で削除する必要があります。  
+ 個人用レポートを非アクティブ化するには、 **[ユーザーごとに個人用レポート フォルダーを有効にする]** をオフにします。 個人用レポートを非アクティブ化すると、[個人用レポート] フォルダーでユーザーに表示されていたものがすべて非表示になります。 機能を無効にした後は、実際の記憶域を提供するフォルダー (つまり、[Users フォルダー] のサブフォルダー) を手動で削除する必要があります。  
   
 ### <a name="when-my-reports-is-activated"></a>個人用レポートをアクティブ化した場合  
  機能をアクティブ化すると、ルート フォルダーである [ホーム] の下に [個人用レポート] フォルダーが表示されます。 また、レポート サーバー管理者には、[個人用レポート] フォルダーの他に、各ユーザーのサブフォルダーが含まれている [Users フォルダー] フォルダーも表示されます。  

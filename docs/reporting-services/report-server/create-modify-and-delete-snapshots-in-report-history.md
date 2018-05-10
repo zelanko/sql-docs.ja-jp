@@ -1,30 +1,28 @@
 ---
-title: "レポート履歴のスナップショットの作成、変更および削除 | Microsoft Docs"
-ms.custom: 
+title: レポート履歴のスナップショットの作成、変更および削除 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d3f31eeab1cd9bf01b3d0525a1599678c7912ac7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2fe2a810926fba6a2dc13ab13151e528d3701b8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
   レポート履歴は、一連のレポート スナップショットです。 スナップショットの追加と削除、またはレポート履歴の記憶域に影響するプロパティの変更を行うことで、レポート履歴を管理できます。 レポート履歴は手動で、またはスケジュールに従って作成できます。  
@@ -57,7 +55,7 @@ ms.lasthandoff: 01/09/2018
   
 -   1 つずつ、またはまとめて、スナップショットを手動で削除します。  
   
-     レポート マネージャーで、[履歴] ページからスナップショットを削除できます。 レポートに移動して [履歴] をクリックし、削除するスナップショットの隣にあるチェック ボックスをオンにして、 **[削除]**をクリックします。  
+     レポート マネージャーで、[履歴] ページからスナップショットを削除できます。 レポートに移動して [履歴] をクリックし、削除するスナップショットの隣にあるチェック ボックスをオンにして、 **[削除]** をクリックします。  
   
 -   レポート履歴の制限を低くして、格納されているスナップショット数を減らします。 レポート履歴の制限は、レポート サーバーに対して、または特定のレポートに対して設定できます。 制限値を下げた場合、最も古いスナップショットが履歴から削除されます。  
   

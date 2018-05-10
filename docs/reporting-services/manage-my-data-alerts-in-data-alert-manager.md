@@ -1,30 +1,28 @@
 ---
-title: "データ警告マネージャーでのデータ警告の管理 | Microsoft Docs"
-ms.custom: 
+title: データ警告マネージャーでのデータ警告の管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ecf8caf5631ac722ade6a9ce753c856cb341a765
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 631ae460cbb2ca87393a34b25f90ff8ecf20b490
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>データ警告マネージャーでのデータ警告の管理
 
@@ -41,7 +39,7 @@ SharePoint ユーザーは、自分が作成したデータ警告と、それら
   
 1.  データ警告の作成対象のレポートが保存されている SharePoint ライブラリに移動します。  
   
-2.  レポートの展開ドロップダウン メニューのアイコンをクリックし、 **[データ警告の管理]**をクリックします。 ドロップダウン メニューを次の図に示します。  
+2.  レポートの展開ドロップダウン メニューのアイコンをクリックし、 **[データ警告の管理]** をクリックします。 ドロップダウン メニューを次の図に示します。  
   
      ![レポート コンテキスト メニューから警告マネージャーを開く](../reporting-services/media/rs-openalertmanager.gif "レポート コンテキスト メニューから警告マネージャーを開く")  
   
@@ -56,7 +54,7 @@ SharePoint ユーザーは、自分が作成したデータ警告と、それら
   
 ### <a name="to-edit-an-alert-definition"></a>警告定義を編集するには  
   
--   警告定義を編集するデータ警告を右クリックし、 **[編集]**をクリックします。  
+-   警告定義を編集するデータ警告を右クリックし、 **[編集]** をクリックします。  
   
      データ警告デザイナーに警告定義が表示されます。 詳しくは、「 [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md) 」および「 [データ警告デザイナー](../reporting-services/data-alert-designer.md)」をご覧ください。  
   
@@ -68,13 +66,13 @@ SharePoint ユーザーは、自分が作成したデータ警告と、それら
   
 ### <a name="to-delete-an-alert-definition"></a>警告の定義を削除するには  
   
--   削除するデータ警告を右クリックして、 **[削除]**をクリックします。  
+-   削除するデータ警告を右クリックして、 **[削除]** をクリックします。  
   
      警告を削除すると、それ以降、警告メッセージは送信されません。  
   
 ### <a name="to-run-an-alert"></a>警告を実行するには  
   
--   実行するデータ警告を右クリックして、 **[実行]**をクリックします。  
+-   実行するデータ警告を右クリックして、 **[実行]** をクリックします。  
   
      警告インスタンスが作成され、データ警告メッセージが直ちに送信されます。これは、データ警告デザイナーで指定したスケジュール オプションの内容にかかわらず実行されます。 たとえば、結果が変更された場合にのみ、週単位で送信されるよう構成された警告も同様です。  
 

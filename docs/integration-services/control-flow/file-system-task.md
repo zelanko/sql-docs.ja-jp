@@ -2,7 +2,7 @@
 title: ファイル システム タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: control-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 176f39cf7a5df57fad08a464212815f41affb1a6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f0bbb8deb2fd3a9ba529d846dd9a56df035b80fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/25/2018
   
  ファイル システム タスクは、1 つのファイルまたはディレクトリのみを処理できます。 したがって、このタスクでは、ワイルドカード文字を使用して複数のファイルに同じ処理を行うことはできません。 ファイル システム タスクが複数のファイルやディレクトリに対して同じ処理を繰り返し行うようにするには、次の手順に示すように、ファイル システム タスクを Foreach ループ コンテナー内に配置します。  
   
--   **Foreach ループ コンテナーの構成** [Foreach ループ エディター] の **[コレクション]** ページで **[Foreach File 列挙子]** に列挙子を設定して、 **[ファイル]**の列挙子の構成としてワイルドカード式を入力します。 [Foreach ループ エディター] の **[変数のマッピング]** ページで、ファイル名を一度に 1 つずつファイル システム タスクに渡すために使用する変数をマップします。  
+-   **Foreach ループ コンテナーの構成** [Foreach ループ エディター] の **[コレクション]** ページで **[Foreach File 列挙子]** に列挙子を設定して、 **[ファイル]** の列挙子の構成としてワイルドカード式を入力します。 [Foreach ループ エディター] の **[変数のマッピング]** ページで、ファイル名を一度に 1 つずつファイル システム タスクに渡すために使用する変数をマップします。  
   
 -   **ファイル システム タスクの追加と構成** ファイル システム タスクを Foreach ループ コンテナーに追加します。 [ファイル システム タスク エディター] の **[全般]** ページで、 **SourceVariable** プロパティまたは **DestinationVariable** プロパティに、Foreach ループ コンテナーで定義した変数を設定します。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/25/2018
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[ファイル システム タスク エディター] \([全般] ページ)](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
+-   [[ファイル システム タスク エディター] ([全般] ページ)](../../integration-services/control-flow/file-system-task-editor-general-page.md)  
   
 -   [[式] ページ](../../integration-services/expressions/expressions-page.md)  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/25/2018
  SourceConnection プロパティと DestinationConnection プロパティを設定して、ソースとターゲットの接続マネージャーを指定する必要があります。 タスクでソースまたはターゲットとして使用されるファイルを指すファイル接続マネージャーの名前を指定することも、ファイルのパスが変数に格納されていれば変数の名前を指定することもできます。 変数を使用してファイル パスを保存するには、最初に、IsSourcePathVariable オプション (ソース接続) および IsDestinationPatheVariable オプション (ターゲット接続) を **True**に設定しておく必要があります。 その後で、既存のシステム変数またはユーザー定義変数を選択するか、新しい変数を作成できます。 変数のスコープは、 **[変数の追加]** ダイアログ ボックスで構成および指定できます。 スコープは、ファイル システム タスクまたは親コンテナーにする必要があります。 詳細については、「[Integration Services (SSIS) Variables](../../integration-services/integration-services-ssis-variables.md)」(Integration Services (SSIS) の変数) と「[Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」(パッケージで変数を使用する) を参照してください。  
   
 > [!NOTE]  
->  **SourceConnection** プロパティと **DestinationConnection** プロパティに選択した変数をオーバーライドするには、**Source** プロパティと **Destination** プロパティに式を入力します。 式は、 **ファイル システム タスク エディター** の **[式]**ページで入力します。 たとえば、タスクで変換先として使用するファイルのパスを設定するには、特定の状況下では変数 A、別の状況下では変数 B を使用することがあります。  
+>  **SourceConnection** プロパティと **DestinationConnection** プロパティに選択した変数をオーバーライドするには、**Source** プロパティと **Destination** プロパティに式を入力します。 式は、 **ファイル システム タスク エディター** の **[式]** ページで入力します。 たとえば、タスクで変換先として使用するファイルのパスを設定するには、特定の状況下では変数 A、別の状況下では変数 B を使用することがあります。  
   
 > [!NOTE]  
 >  ファイル システム タスクは、1 つのファイルまたはディレクトリのみを処理できます。 したがって、このタスクでは、ワイルドカード文字を使用して複数のファイルまたはディレクトリに同じ処理を行うことはできません。 ファイル システム タスクが複数のファイルやディレクトリに対して同じ処理を繰り返し行うようにするには、ファイル システム タスクを Foreach ループ コンテナー内に配置します。 詳細については、「 [File System Task](../../integration-services/control-flow/file-system-task.md)」(ファイル システム タスク) を参照してください。  
@@ -104,8 +104,8 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]**が表示されます。|  
-|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationConnection]**が表示されます。|  
+|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
+|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationConnection]** が表示されます。|  
   
  **[OverwriteDestination]**  
  操作によって対象になるディレクトリ内のファイルを上書きできるかどうかを指定します。  
@@ -140,8 +140,8 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1||  
 |-----------|-|  
-|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[SourceVariable]**が表示されます。|  
-|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationVariable]**が表示されます。|  
+|**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
+|**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
   
 ### <a name="isdestinationpathvariable-dynamic-options"></a>[IsDestinationPathVariable] の動的オプション  
   

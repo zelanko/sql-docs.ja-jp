@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c992169db6fded7c2270fd4d324d7f25fd832d0
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ed2feb6afaa3665c18585e76f47e1d39485f9742
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの接続
   データ フロー タスクにコンポーネントを追加したら、コンポーネントを接続して、変換元から変換を経由して変換先に至るデータ フローを表す実行ツリーを作成します。 データ フロー内のコンポーネントを接続するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを使用します。  

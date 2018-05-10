@@ -3,15 +3,13 @@ title: データベース ミラーリング セッションの確立 - Windows 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
@@ -19,12 +17,11 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0c8403912f2d64cfdaa9f911bc765789ea1e5ecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 676250b166ea109432e1c4328039b9ce31940b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>データベース ミラーリング セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +46,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  プリンシパル サーバー インスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開し、ミラー化するデータベースを選択します。  
+2.  **[データベース]** を展開し、ミラー化するデータベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]**を選択し、 **[ミラー]**をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** を選択し、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  ミラーリングの構成を開始するには、 **[セキュリティの構成]** をクリックして、データベース ミラーリング セキュリティ構成ウィザードを起動します。  
   
@@ -79,9 +76,9 @@ ms.lasthandoff: 04/16/2018
   
     -   プリンシパル サーバー インスタンスとミラー サーバー インスタンスの完全修飾 TCP アドレスが、( **[サーバー ネットワーク アドレス]** セクションで) 指定されています。  
   
-    -   動作モードが **[自動フェールオーバーを伴う高い安全性 (同期)]**に設定されている場合、ミラーリング監視サーバー インスタンスの完全修飾 TCP アドレスも指定されています。  
+    -   動作モードが **[自動フェールオーバーを伴う高い安全性 (同期)]** に設定されている場合、ミラーリング監視サーバー インスタンスの完全修飾 TCP アドレスも指定されています。  
   
-8.  ミラーリングが開始された後でも、動作モードを変更して **[OK]**をクリックすることで変更を保存できます。 自動フェールオーバーを伴う高い安全性モードに切り替えることができるのは、先にミラーリング監視サーバーのアドレスを指定した場合のみです。  
+8.  ミラーリングが開始された後でも、動作モードを変更して **[OK]** をクリックすることで変更を保存できます。 自動フェールオーバーを伴う高い安全性モードに切り替えることができるのは、先にミラーリング監視サーバーのアドレスを指定した場合のみです。  
   
     > [!NOTE]  
     >  ミラーリング監視サーバーを削除するには、 **[ミラーリング監視]** フィールドからそのサーバー ネットワーク アドレスを削除します。 自動フェールオーバーを伴う高い安全性モードから高パフォーマンス モードに切り替えると、 **[ミラーリング監視]** フィールドの内容は自動的に消去されます。  

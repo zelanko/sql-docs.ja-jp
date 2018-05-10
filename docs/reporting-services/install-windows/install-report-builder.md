@@ -1,27 +1,25 @@
 ---
-title: "レポート ビルダーをインストールする | Microsoft Docs"
-ms.custom: 
+title: レポート ビルダーをインストールする | Microsoft Docs
+ms.custom: ''
 ms.date: 09/22/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 
+caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 395ec440e3cae0ac4013edc9c35af36e32a73d0c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3812692b30c5ff4436403d22de834e9fe8d6d73b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストール
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] はスタンドアロン アプリケーションです。ユーザーまたは管理者によってコンピューターにインストールされます。 Microsoft ダウンロード センター、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからインストールできます。  
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>統合された SharePoint サイト: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトで、 **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]**、 **[レポート ビルダーのモデル]**、および **[レポート データ ソース]**が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトで、 **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]**、 **[レポート ビルダーのモデル]**、および **[レポート データ ソース]** が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
  
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用する [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のインストール 
   
@@ -49,13 +47,13 @@ ms.lasthandoff: 01/09/2018
   
 ##  <a name="download"></a> ダウンロード サイトから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をインストールするには  
   
-1.  [Microsoft ダウンロード センターのレポート ビルダー ページ](http://go.microsoft.com/fwlink/?LinkID=734968) で、 **[ダウンロード]**をクリックします。  
+1.  [Microsoft ダウンロード センターのレポート ビルダー ページ](http://go.microsoft.com/fwlink/?LinkID=734968) で、 **[ダウンロード]** をクリックします。  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のダウンロードが完了したら、  **[実行]**をクリックします。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のダウンロードが完了したら、  **[実行]** をクリックします。  
   
      SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ウィザードが起動します。  
   
-3.  使用許諾契約書に同意して、 **[次へ]**をクリックします。  
+3.  使用許諾契約書に同意して、 **[次へ]** をクリックします。  
   
 4.  **[既定の対象サーバー]** ページで、必要に応じて対象レポート サーバーの URL を指定します (既定の URL と異なる場合)。 **[次へ]** をクリックします。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
      SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ウィザードが起動します。  
   
-3.  「 [ダウンロード サイトからレポート ビルダーをインストールするには](#download)」の残りの手順を完了します。  
+3.  「 [To install Report Builder from the download site](#download)」の残りの手順を完了します。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>コマンド ラインから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] をインストールするには 
 
@@ -80,11 +78,11 @@ ms.lasthandoff: 01/09/2018
   
  ユーザー インターフェイスをまったく操作しない完全なサイレント インストールを実行する場合は、 **/quiet** オプションを指定します。 quiet オプション フラグを使用するとインストール エラーが抑制されるように設計されています。 そのため、quiet オプションを使用する場合は、ログ記録を指定する **/l** オプションを含めることをお勧めします。   
   
-1.  [Microsoft ダウンロード センターのレポート ビルダー ページ](http://go.microsoft.com/fwlink/?LinkID=734968)で、 **[ダウンロード]**をクリックします。  
+1.  [Microsoft ダウンロード センターのレポート ビルダー ページ](http://go.microsoft.com/fwlink/?LinkID=734968)で、 **[ダウンロード]** をクリックします。  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のダウンロードが完了したら、  **[保存]**をクリックします。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] のダウンロードが完了したら、  **[保存]** をクリックします。  
   
-3.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。  
+3.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
 4.  **[開く]** ボックスに「 **cmd.**」と入力します。  
   
@@ -102,7 +100,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="set-includessrbnoversionincludesssrbnoversion-mdmd-defaults"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 既定値を設定する  
   
--   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]のインストール後に、一部の既定のオプションを設定できます。 **[ファイル]** > **[オプション]**をクリックします。  
+-   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]のインストール後に、一部の既定のオプションを設定できます。 **[ファイル]** > **[オプション]** をクリックします。  
   
      既定の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは SharePoint サイトを設定することをお勧めします。 詳細については、「 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)」を参照してください。  
   

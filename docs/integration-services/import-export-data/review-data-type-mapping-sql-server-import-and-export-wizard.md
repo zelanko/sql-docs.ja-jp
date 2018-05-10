@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
@@ -19,12 +18,11 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b7c05dcf7a4bd38a98637ecb4e9da576e74b8ab9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6552bb3f8b4294fed3a14eaaf71dab1575380dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
 指定したデータ型マッピングが **[列マッピング]** ダイアログ ボックスの **[マッピング]** 一覧で成功しなかった場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [インポートおよびエクスポート ウィザード] に **[データ型マッピングの確認]** ページが表示されます。 このページでは、変換元のデータと変換先のデータの互換性を確保するためにウィザードで実行する必要があるデータ型変換についての詳細情報を確認します。 この情報には、成功すると予測されるデータ型変換と、エラーまたは切り捨てが発生する可能性があるデータ型変換を区別するための視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりします。   

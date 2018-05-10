@@ -1,16 +1,16 @@
 ---
-title: "アプリケーションでの XML データの使用 | Microsoft Docs"
-ms.custom: 
+title: アプリケーションでの XML データの使用 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parameters [XML in SQL Server]
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0422e858859ee86c460a875b11b97c4f348efa94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0d79aa6e8822296de01caac7ae96551c1463e86c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-このトピックでは、アプリケーションで **xml** データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  
+  このトピックでは、アプリケーションで **xml** データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  
   
 -   ADO および **Native Client を使用した、** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型の列に含まれている XML の操作  
   

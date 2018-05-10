@@ -3,15 +3,12 @@ title: サーバーのプロパティ ([詳細設定] ページ) | Microsoft Doc
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
@@ -19,12 +16,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 69fccae4b0c44d9b71952e6de1361db22fa2266c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5776bd6e127c90555141826a0defa3a358f8934
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties---advanced-page"></a>サーバーのプロパティ - [詳細設定] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +76,7 @@ ms.lasthandoff: 04/16/2018
  選択肢は次のとおりです。  
   
  **[インポート]**  
- フルテキスト カタログがインポートされます。 この操作は、 **[再構築]**の場合よりも大幅に時間が短縮されます。 ただし、インポートされたフルテキスト カタログでは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]で導入された新しい拡張機能であるワード ブレーカーが使用されません。 したがって、最終的に、フルテキスト カタログを再構築する可能性があります。  
+ フルテキスト カタログがインポートされます。 この操作は、 **[再構築]** の場合よりも大幅に時間が短縮されます。 ただし、インポートされたフルテキスト カタログでは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]で導入された新しい拡張機能であるワード ブレーカーが使用されません。 したがって、最終的に、フルテキスト カタログを再構築する可能性があります。  
   
  フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースでのみ使用できます。  
   
@@ -95,13 +91,13 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  フルテキスト アップグレード オプションは、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)の upgrade_option 操作を使用して設定することもできます。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアタッチ、復元、またはコピーした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **"フルテキスト アップグレード オプション"** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]**に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]**に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **フルテキスト アップグレード オプション** プロパティの設定の表示と変更については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアタッチ、復元、またはコピーした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **"フルテキスト アップグレード オプション"** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]** に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]** に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **フルテキスト アップグレード オプション** プロパティの設定の表示と変更については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
  **[テキスト レプリケーションの最大サイズ]**  
- 単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT の各ステートメント内のレプリケート対象列またはキャプチャ対象列に追加できる **text**型、 **ntext**型、 **varchar(max)**型、 **nvarchar(max)**型、 **xml**型、 **image** 型のデータの最大サイズ (バイト単位) を指定します。 設定を変更すると即座に反映されます。 詳細については、「 [max text repl size サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)」を参照してください。  
+ 単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT の各ステートメント内のレプリケート対象列またはキャプチャ対象列に追加できる **text**型、 **ntext**型、 **varchar(max)** 型、 **nvarchar(max)** 型、 **xml**型、 **image** 型のデータの最大サイズ (バイト単位) を指定します。 設定を変更すると即座に反映されます。 詳細については、「 [max text repl size サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)」を参照してください。  
   
  **[スタートアップ プロシージャのスキャン]**  
- スタートアップ時のストアド プロシージャの自動実行が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でスキャンされるように指定します。 **[True]**に設定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、サーバーに定義された自動実行のストアド プロシージャをすべてスキャンして実行します。 **[False]** (既定) に設定された場合、スキャンは実行されません。 詳細については、「 [scan for startup procs サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)」を参照してください。  
+ スタートアップ時のストアド プロシージャの自動実行が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でスキャンされるように指定します。 **[True]** に設定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、サーバーに定義された自動実行のストアド プロシージャをすべてスキャンして実行します。 **[False]** (既定) に設定された場合、スキャンは実行されません。 詳細については、「 [scan for startup procs サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)」を参照してください。  
   
  **[2 桁表記の年の基準になる年]**  
  年を 2 桁で入力する場合の最大年が示されます。 表示された年からさかのぼって 99 年間を 2 桁で入力できます。 その他の年はすべて 4 桁で入力する必要があります。  

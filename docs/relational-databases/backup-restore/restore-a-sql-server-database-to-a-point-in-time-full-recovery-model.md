@@ -1,32 +1,32 @@
 ---
-title: "SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル) | Microsoft Docs"
-ms.custom: 
+title: SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-caps.latest.revision: 
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d3a7afa6acf10d26f64198f7064c2ff66cfee17f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 530f2d0d47c2ef429bd284bd52af83117b4db423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,9 @@ ms.lasthandoff: 02/23/2018
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の適切なインスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]**を展開してシステム データベースを選択します。  
+2.  **[データベース]** を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]**をポイントし、 **[復元]**をポイントして、 **[データベース]**をクリックします。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をポイントして、 **[データベース]** をクリックします。  
   
 4.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
     -   **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -91,11 +91,11 @@ ms.lasthandoff: 02/23/2018
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-5.  復元先のセクション**の** **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+5.  **復元先のセクション**の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
 6.  **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスします。  
   
-7.  **[復元先]** セクションで、 **[特定の日付と時刻]**をクリックします。  
+7.  **[復元先]** セクションで、 **[特定の日付と時刻]** をクリックします。  
   
 8.  **[日付]** と **[時刻]** ボックスを使用するか、スライダー バーを使用して、復元を止める特定の日付と時刻を指定します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

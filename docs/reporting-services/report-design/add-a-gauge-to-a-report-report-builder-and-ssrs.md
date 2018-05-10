@@ -1,27 +1,25 @@
 ---
-title: "レポートへのゲージの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポートへのゲージの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 115b8f60a66378458b05234386dade8df290ec7e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5f9c8467cb8ea31ef490cd21ff51e675abe1fd17
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>レポートへのゲージの追加 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの場合、データをビジュアル形式でまとめるにはゲージ データ領域を使用します。 ゲージ データ領域をデザイン画面に追加すると、ゲージのデータ ペインにレポート データセット フィールドをドラッグできるようになります。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  1 つのフィールドをデータセットからデータ フィールドのドロップ ゾーンに追加します。 追加できるフィールドは 1 つだけです。 複数のフィールドを表示する場合は、各フィールドに 1 つずつポインターを追加する必要があります。  
   
-     ゲージ スケールを右クリックし、 **[スケールのプロパティ]**を選択します。 スケールの **[最小]** および **[最大]** の値を入力します。 詳細については、「[ゲージへの最小値または最大値の設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)」を参照してください。  
+     ゲージ スケールを右クリックし、 **[スケールのプロパティ]** を選択します。 スケールの **[最小]** および **[最大]** の値を入力します。 詳細については、「[ゲージへの最小値または最大値の設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   

@@ -1,27 +1,25 @@
 ---
-title: "1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 15f5432325f202dde2136643eb0cdeca22cae100
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f94382305e69c90d2e2799f9a05ce57b395c4de1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
 
@@ -57,7 +55,7 @@ ms.lasthandoff: 01/09/2018
     > [!NOTE]  
     >  既定では、ドキュメント名がレポート名になります。  
   
-7.  ドキュメントの種類が、 **ATOMSVC ファイル**であることを確認し、 **[保存]**をクリックします。  
+7.  ドキュメントの種類が、 **ATOMSVC ファイル**であることを確認し、 **[保存]** をクリックします。  
   
 8.  必要に応じて、ブラウザーで、またはテキスト エディターか XML エディターで、.atomsvc ファイルを開きます。  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 01/09/2018
     > [!NOTE]  
     >  既定では、ドキュメント名がレポート名になります。 Atom サービス ドキュメントに複数のフィードがある場合、既定ではすべて同じ名前 (レポート名) が使用されます。 それらを区別するには、名前を変更してわかりやすい名前を使用してください。  
   
-7.  ドキュメントの種類が、 **ATOM ファイル**であることを確認し、 **[保存]**をクリックします。  
+7.  ドキュメントの種類が、 **ATOM ファイル**であることを確認し、 **[保存]** をクリックします。  
   
 8.  必要に応じて、ブラウザーで、またはテキスト エディターか XML エディターで、.atom ファイルを開きます。  
 

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
@@ -20,12 +19,11 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d12643c8d4759283ff71efd29f9f84b55730a338
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bb904d5e7c0804f4c0f9c84936bb3099c86e28be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +57,7 @@ ms.lasthandoff: 04/16/2018
  列インポート変換を使用すると、ファイル システムから FILESTREAM 列にファイルを読み込むことができます。 また、列エクスポート変換を使用すると、FILESTREAM 列からファイル システム内の別の場所にファイルを抽出できます。  
   
 ##  <a name="distqueries"></a> 分散クエリおよびリンク サーバー  
- FILESTREAM データは、 **varbinary(max)** データとして扱うことにより、分散クエリおよびリンク サーバーを介して利用することができます。 4 部構成の名前を使用する分散クエリでは、FILESTREAM の **PathName()** 関数を使用することはできません。その名前がローカル サーバーを指し示す場合も同様です。 ただし、 **OPENQUERY()** を使用するパススルー クエリの内側のクエリでは **PathName()**を使用できます。  
+ FILESTREAM データは、 **varbinary(max)** データとして扱うことにより、分散クエリおよびリンク サーバーを介して利用することができます。 4 部構成の名前を使用する分散クエリでは、FILESTREAM の **PathName()** 関数を使用することはできません。その名前がローカル サーバーを指し示す場合も同様です。 ただし、 **OPENQUERY()** を使用するパススルー クエリの内側のクエリでは **PathName()** を使用できます。  
   
 ##  <a name="encryption"></a> 暗号化  
  FILESTREAM データは、透過的なデータ暗号化が有効になっている場合でも暗号化されません。  

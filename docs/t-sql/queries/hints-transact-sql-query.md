@@ -2,7 +2,7 @@
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|queries
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: ''
+caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d937872a3c00b453a58932dd127c3e3acc99c9f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,15 +273,15 @@ ms.lasthandoff: 03/15/2018
 *  'DISABLE_PARAMETER_SNIFFING'  
  クエリをコンパイルするときに最初に使用されていたパラメーター値にクエリ プランが依存しないようにするため、1 つまたは複数のパラメーターを指定してクエリをコンパイルする際に、平均データ分布を使用するようにクエリ オプティマイザーに指示します。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を PARAMETER_SNIFFING=OFF に設定した場合と同じです。
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
- 相関関係を考慮する AND 述語フィルターを見積もるときに、最低限の選択度を使用して SQL Server にプランを生成させます。 これは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンの基数推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同じで、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンの基数推定モデルで使用した場合と同じ効果があります。
+ 相関関係を考慮する AND 述語フィルターを見積もるときに、最低限の選択度を使用して SQL Server にプランを生成させます。 これは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンのカーディナリティ推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同じで、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンのカーディナリティ推定モデルで使用した場合と同じ効果があります。
 *  'DISABLE_OPTIMIZER_ROWGOAL'  
  TOP、OPTION (FAST N)、IN、EXISTS のいずれかのキーワードを含むクエリで行の目標の調整を使用しないプランを SQL Server に生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 を指定した場合と同じです。
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- 基数推定が必要なすべての先頭のインデックス列に対して、クイック統計情報 (ヒストグラム修正) を自動的に生成できるようにします。 基数を推定するために使用されるヒストグラムは、この列の実際の最大値または最小値を考慮するクエリのコンパイル時に調整されます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 を指定した場合と同じです。 
+ カーディナリティ推定が必要なすべての先頭のインデックス列に対して、クイック統計情報 (ヒストグラム修正) を自動的に生成できるようにします。 カーディナリティを推定するために使用されるヒストグラムは、この列の実際の最大値または最小値を考慮するクエリのコンパイル時に調整されます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 を指定した場合と同じです。 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、SQL Server にクエリ プランを生成させます。 これは、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
- 現在のデータベース互換性レベルに対応する[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)の LEGACY_CARDINALITY_ESTIMATION=ON 設定または[トレース フラグ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 を上書きします。
+ 現在のデータベース互換性レベルに対応する[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)の LEGACY_CARDINALITY_ESTIMATION=ON 設定または[トレース フラグ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 を上書きします。
  
 > [!TIP]
 > ヒント名では大文字と小文字が区別されません。
@@ -291,7 +291,7 @@ ms.lasthandoff: 03/15/2018
 > [!IMPORTANT] 
 > 一部の USE HINT ヒントは、グローバルまたはセッション レベルで有効になっているトレース フラグや、データベース スコープ構成設定と競合する場合があります。 この場合、クエリ レベル ヒント (USE HINT) が常に優先されます。 USE HINT が別のクエリ ヒントまたはクエリ レベルで (QUERYTRACEON などによって) 有効になっているトレース フラグと競合する場合、クエリを実行しようとすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成されます。 
 
- USE PLAN N**'***xml_plan***'**     
+ USE PLAN N **'***xml_plan***'**     
  **'***xml_plan***'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** 指定されたテーブル ヒントを *exposed_object_name* に対応するテーブルまたはビューに適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  

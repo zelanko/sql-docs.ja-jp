@@ -3,15 +3,12 @@ title: レプリケートされたデータベースのアップグレード | M
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -23,11 +20,11 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 670b4f90c0461de12718fcf5a8cf2dfc97817b4d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1b5f722972c9d552c94a65985bd180d6d097972c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
 
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
     -   マージ パブリケーションのサブスクライバーは、パブリッシャーのバージョン以下であればどのバージョンでも使用できます。  
   
 > [!NOTE]  
->  この記事は、セットアップ ヘルプ ドキュメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで参照できます。 セットアップ ヘルプ ドキュメントで太字で表示されている記事のリンクは、オンライン ブックでのみ参照可能な記事を示しています。 **パブリッシャー、サブスクライバー、およびディストリビューターのアップグレード戦略は、こちらの[記事](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**に記載されているオプションを使用して設計できます。 
+>  この記事は、セットアップ ヘルプ ドキュメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックで参照できます。 セットアップ ヘルプ ドキュメントで太字で表示されている記事のリンクは、オンライン ブックでのみ参照可能な記事を示しています。 **パブリッシャー、サブスクライバー、およびディストリビューターのアップグレード戦略は、こちらの[記事](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)** に記載されているオプションを使用して設計できます。 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>アップグレードの前にトランザクション レプリケーション用にログ リーダー エージェントを実行する方法  
  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] をアップグレードする前に、パブリッシュされたテーブルからコミットされたすべてのトランザクションが、ログ リーダー エージェントによって処理されているかどうかを確認する必要があります。 すべてのトランザクションが処理されたことを確認するには、トランザクション パブリケーションを含んだ各データベースに対して次の手順を実行します。  

@@ -3,15 +3,13 @@ title: データベース ミラーリングの削除 (SQL Server) | Microsoft D
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], removing
 - removing database mirroring [SQL Server]
@@ -20,12 +18,11 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 66e77ce7e034625546d508879890053099598836
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 17d13bf98a6a558690f15aff3237fa405f0cbcdb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +57,22 @@ ms.lasthandoff: 04/16/2018
   
 1.  データベース ミラーリング セッション中にプリンシパル サーバー インスタンスに接続します。次に、オブジェクト エクスプローラーで、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開し、データベースを選択します。  
+2.  **[データベース]** を展開し、データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]**をポイントし、 **[ミラー]**をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
-4.  **[ページの選択]** ペインの **[ミラーリング]**をクリックします。  
+4.  **[ページの選択]** ペインの **[ミラーリング]** をクリックします。  
   
-5.  ミラーリングを削除するには、 **[ミラーリングの削除]**をクリックします。 確認を求めるメッセージが表示されます。 **[はい]**をクリックすると、セッションが停止し、データベースからミラーリングが削除されます。  
+5.  ミラーリングを削除するには、 **[ミラーリングの削除]** をクリックします。 確認を求めるメッセージが表示されます。 **[はい]** をクリックすると、セッションが停止し、データベースからミラーリングが削除されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- データベース ミラーリングを削除するには、 **[データベースのプロパティ]**を使用します。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用します。  
+ データベース ミラーリングを削除するには、 **[データベースのプロパティ]** を使用します。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページを使用します。  
   
 #### <a name="to-remove-database-mirroring"></a>データベース ミラーリングを削除するには  
   
 1.  いずれかのミラーリング パートナーの [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   

@@ -1,32 +1,30 @@
 ---
-title: "レポート ビルダーの起動 | Microsoft Docs"
-ms.custom: 
+title: レポート ビルダーの起動 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
 - launching Report Builder
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 53fba534d61d2fe1a1358daa1571ec66a1fab663
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9fd9da00fc99cc47c260c43faa9599b6d2e1d6d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-report-builder"></a>レポート ビルダーの起動
 
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定の URL は http://\<*servername*>/reports です。  
   
-2.  Web ポータルの上部のバーで、 **[新規]** > **[ページ分割されたレポート]**の順に選択します。  
+2.  Web ポータルの上部のバーで、 **[新規]** > **[ページ分割されたレポート]** の順に選択します。  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
@@ -60,15 +58,15 @@ ms.lasthandoff: 01/09/2018
   
 2.  ライブラリを開きます。  
   
-3.  **[ドキュメント]**をクリックします。  
+3.  **[ドキュメント]** をクリックします。  
   
-4.  **[新しいドキュメント]** メニューの **[レポート ビルダー レポート]**をクリックします。  
+4.  **[新しいドキュメント]** メニューの **[レポート ビルダー レポート]** をクリックします。  
   
      初めてこの項目を選択すると、SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ウィザードが起動します。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 」を参照してください。  
   
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] が開き、改ページ調整されたレポートを作成したり、レポート サーバー上のレポートを開いたりできます。  
   
-     **注**   **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]**、 **[レポート ビルダーのモデル]**、または **[レポート データ ソース]**が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
+     **注**   **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]**、 **[レポート ビルダーのモデル]**、または **[レポート データ ソース]** が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
 
 ## <a name="next-steps"></a>次の手順
 

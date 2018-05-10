@@ -1,16 +1,16 @@
 ---
-title: "データベースの差分バックアップの復元 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: データベースの差分バックアップの復元 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full differential backups [SQL Server]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - database restores [SQL Server], full differential backups
 - backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d5a965b04e6c09bfe067b3894cac0591fefd0247
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b466775d401b1180859eef9d14e7afc0eff6d1fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,11 +80,11 @@ ms.lasthandoff: 01/18/2018
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の適切なインスタンスに接続後、オブジェクト エクスプローラーでサーバー名をクリックして、サーバー ツリーを展開します。  
   
-2.  **[データベース]**を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]**を展開してシステム データベースを選択します。  
+2.  **[データベース]** を展開します。 復元するデータベースに応じて、ユーザー データベースを選択するか、 **[システム データベース]** を展開してシステム データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]**をポイントし、 **[復元]**をポイントして、 **[データベース]**をクリックします。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をポイントして、 **[データベース]** をクリックします。  
   
-4.  **[全般]** ページの **ソース** 復元元のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
+4.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
     -   **[データベース]**  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/18/2018
   
     -   **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   

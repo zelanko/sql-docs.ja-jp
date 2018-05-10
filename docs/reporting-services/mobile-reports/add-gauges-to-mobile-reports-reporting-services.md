@@ -1,27 +1,25 @@
 ---
-title: "モバイル レポートにゲージを追加する | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: モバイル レポートにゲージを追加する | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 985bde62deff88231ff889e1f403ad82edc55a0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>モバイル レポートにゲージを追加する | Reporting Services
 ゲージは、モバイル レポートで広く使用されている最も基本的なビジュアルです。 データセットに含まれる 1 つの値 (値自体か、目標値と比較した値) を表示します。
@@ -56,7 +54,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
   
 モバイル レポートにナビゲーターがある場合は、ゲージを 1 つ以上のナビゲーターにバインドしてフィルターを適用することができます。 ゲージの値と比較対象値は、1 つ以上の異なるナビゲーターにバインドできるため、ゲージのオプションをほとんど無制限に指定することができます。  
 
-1. ゲージを選択し、 **[データ]** タブの **[データのプロパティ]** ペインで、 **[主要な値]** または **[比較対象値]** の隣にある **[オプション]**をクリックします。
+1. ゲージを選択し、 **[データ]** タブの **[データのプロパティ]** ペインで、 **[主要な値]** または **[比較対象値]** の隣にある **[オプション]** をクリックします。
 
 2. [次に基づいてフィルター] の下で、ゲージをフィルターするナビゲーターを選択します。
 
@@ -67,7 +65,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 ゲージの要素をデータ フィールドに結び付けるデータのプロパティのほかにも、数多くの機能に関するプロパティやビジュアルのプロパティをカスタマイズできます。 
 
 ### <a name="set-value-direction-high-or-low-is-better"></a>値の方向を設定する: [大きい値が適当] または [低い値が適当]
-* ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[値の方向]** を **[大きい値が適当]** または **[低い値が適当]**に設定します。 
+* ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[値の方向]** を **[大きい値が適当]** または **[低い値が適当]** に設定します。 
 
 **[大きい値が適当]** を選択すると、正の数は緑色で表示され、望ましい良い変化であることを示し、低下した値は赤色で表示され、望ましくない悪い変化であることを示します。 
 
@@ -78,14 +76,14 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 ### <a name="set-range-stops-for-a-gauge"></a>ゲージの範囲停止を設定する
 ゲージ固有の 2 つ目の非データ プロパティは、範囲停止です。 
 
-* ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[範囲停止]**を選択します。
+* ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[範囲停止]** を選択します。
 
 範囲停止では、比較対象値がどの程度の割合に達すると、視覚エフェクトが目標内 (緑)、中間 (黄)、目標外 (赤) として表されるかを設定します (ゲージの比較対象値を目標とした場合)。 範囲停止がサポートされるのは、比較対象値を持つゲージのみです。  
 
 ### <a name="format-the-numbers-in-the-gauge"></a>ゲージの数値書式を設定する  
 他の多くの要素と共有される、ゲージ要素のもう 1 つの非データ プロパティは、数値形式です。 
 
-* ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[範囲停止]**を選択します。
+* ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[範囲停止]** を選択します。
 
 ここでは、[通貨]、[パーセント]、[時間]、または [一般] など、ゲージに表示される数値の書式を設定します。 モバイル レポートの各要素に対して数値書式を設定します。
   

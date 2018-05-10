@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
@@ -18,12 +17,11 @@ caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7645b04a492c182283c79c814be0c59baa23fbc6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4ebd9bc6f9c70eb670671082bfc5627f7b14b5a3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール
 
@@ -53,8 +51,8 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
 |`http://123.234.345.456:80/reports`|`http://123.234.345.456/reports` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `http://\<computername>/reports` に送信されたすべての要求が受信されます。|  
 |`http://+:80/reports`|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
 |`http://123.234.345.456:80`|`http://123.234.345.456` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `http://\<computername>` を指定するすべての要求が受信されます。|  
-|`http://+:80`|**[すべて割り当て]**にマップされたすべてのアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
-|`http://*:80`|**[すべて未割り当て]**にマップされたアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
+|`http://+:80`|**[すべて割り当て]** にマップされたすべてのアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
+|`http://*:80`|**[すべて未割り当て]** にマップされたアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
   
  ポートが競合している場合は、「System.IO.FileLoadException: ファイルが別のプロセスで使用されているため、プロセスはファイルにアクセスできません (HRESULT からの例外: 0x80070020)」というエラー メッセージが表示されます。  
   

@@ -1,27 +1,25 @@
 ---
-title: "データ領域にデータがないことを示すメッセージの設定 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: データ領域にデータがないことを示すメッセージの設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3e2253b0c7c90ebfbec9214023f50d768b37740
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e9504050aa1cd4923e03121615b525dbb3a08365
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>データ領域にデータがないことを示すメッセージの設定 (レポート ビルダーおよび SSRS)
   データのないデータ領域の代わりに表示レポートに表示するテキストを指定するときは、テーブル、マトリックス、または一覧データ領域に対して NoRowsMessage プロパティを、グラフ データ領域に対して NoDataMessage を、マップのカラー スケールに対して NoDataText を、それぞれ設定します。 実行時にレポート プロセッサによってレポートの各データセットに対しクエリが実行されますが、データセット クエリによって結果セットが生成されない場合があります。 空のデータセットにバインドされるデータ領域に対し、空のデータ領域を表示する代わりに表示するテキストを指定できます。 また、サブレポートのデータセットに実行時のデータがない場合、サブレポートに対し NoRowsMessage プロパティを設定することもできます。  
@@ -41,9 +39,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  [デザイン] ビューで、デザイン画面のグラフをクリックして選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  プロパティ ペインで **[NoDataMessage]**ノードを展開します。  
+2.  プロパティ ペインで **[NoDataMessage]** ノードを展開します。  
   
-3.  **[NoDataMessage]**プロパティ フィールドにメッセージとして表示するテキストを **[キャプション]** に入力します。  
+3.  **[NoDataMessage]** プロパティ フィールドにメッセージとして表示するテキストを **[キャプション]** に入力します。  
   
      または、ドロップダウン リストから **[式]** をクリックして **[式]** ダイアログ ボックスを開き、式を作成します。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  [デザイン] ビューで、マップのカラー スケールをクリックして選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  プロパティ ペインの **[NoDataText]**に、データ値を持たない色のラベルとして表示するテキストを入力します。  
+2.  プロパティ ペインの **[NoDataText]** に、データ値を持たない色のラベルとして表示するテキストを入力します。  
   
      または、ドロップダウン リストから **[式]** をクリックして **[式]** ダイアログ ボックスを開き、式を作成します。  
   

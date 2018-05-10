@@ -1,16 +1,15 @@
 ---
-title: "レポート サーバーを構成および管理する (SSRS ネイティブ モード) | Microsoft Docs"
-ms.custom: 
+title: レポート サーバーを構成および管理する (SSRS ネイティブ モード) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, components
 - deploying [Reporting Services], component options
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - components [Reporting Services], configuring
 - configuring servers [Reporting Services]
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 65416cceeafdb2664cc45b5accf6488dd9bab13b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00aaeca626ac2e2c8982d972bd64b01cc5574a99
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>レポート サーバーを構成および管理する (SSRS ネイティブ モード)
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を構成するための方法について説明します。 また、特定のコンポーネント、機能、サーバー機能の構成方法について説明しているトピックへのリストも記載されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は次の方法で構成できます。  

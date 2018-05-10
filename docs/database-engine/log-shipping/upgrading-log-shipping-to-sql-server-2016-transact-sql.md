@@ -2,7 +2,7 @@
 title: SQL Server 2016 へのログ配布のアップグレード (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: log-shipping
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5d0824b800c75e627ecafb1be8d30b3d53fef00d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成を新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス パック、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の累積的な更新プログラムにアップグレードする場合、適切な順序でログ配布サーバーをアップグレードすることで、ログ配布の障害復旧ソリューションが保持されます。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成を新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス パック、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の累積的な更新プログラムにアップグレードする場合、適切な順序でログ配布サーバーをアップグレードすることで、ログ配布の障害復旧ソリューションが保持されます。  
   
 > [!NOTE]  
 >  [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md) は [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]で導入されました。 アップグレードされたログ配布構成では、 **バックアップの圧縮の既定** サーバー レベル構成オプションを使用して、トランザクション ログ バックアップ ファイルにバックアップ圧縮を使用するかどうかを制御します。 ログ バックアップのバックアップ圧縮動作は、ログ配布構成ごとに指定できます。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。  

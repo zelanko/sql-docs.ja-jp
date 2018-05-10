@@ -1,16 +1,15 @@
 ---
-title: "SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備 | Microsoft Docs"
-ms.custom: 
+title: SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
 - SharePoint Mode [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9fe31f06921df5ef0c1f3272f2064c0464551a2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a4de22aefed2d4602e5ca331355ae7588394672e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   
  権限を更新するには、次の 3 つの方法のいずれかを使用してください。  
   
-1.  **[サブスクリプションと警告の準備]** ページで資格情報を入力し、 **[OK]**をクリックします。  
+1.  **[サブスクリプションと警告の準備]** ページで資格情報を入力し、 **[OK]** をクリックします。  
   
 2.  [サブスクリプションと警告の準備] ページの **[スクリプトのダウンロード]** をクリックして、権限の構成に使用できる Transact-SQL スクリプトをダウンロードします。  
   
@@ -55,11 +53,11 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-update-permissions-using-the-provision-page"></a>準備ページを使用して権限を更新するには  
   
-1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  リストからサービス アプリケーションを探し、アプリケーションの名前をクリックするか、または **[種類]** 列をクリックしてサービス アプリケーションを選択し、SharePoint リボンで **[管理]** ボタンをクリックします。  
   
-3.  **[Reporting Services アプリケーションの管理]** ページで、 **[サブスクリプションと警告の準備]**をクリックします。  
+3.  **[Reporting Services アプリケーションの管理]** ページで、 **[サブスクリプションと警告の準備]** をクリックします。  
   
 4.  SharePoint 管理者がマスター データベースとサービス アプリケーション データベースに対する十分な権限を持っている場合は、それらの資格情報を入力します。  
   
@@ -67,11 +65,11 @@ ms.lasthandoff: 01/09/2018
   
 ##  <a name="bkmk_download"></a> Transact-SQL スクリプトをダウンロードするには  
   
-1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]**をクリックします。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
   
 2.  リストからサービス アプリケーションを探し、アプリケーションの名前をクリックするか、または **[種類]** 列をクリックしてサービス アプリケーションを選択し、SharePoint リボンで **[管理]** ボタンをクリックします。  
   
-3.  **[Reporting Services アプリケーションの管理]** ページで、 **[サブスクリプションと警告の準備]**をクリックします。  
+3.  **[Reporting Services アプリケーションの管理]** ページで、 **[サブスクリプションと警告の準備]** をクリックします。  
   
 4.  **[状態の表示]** 領域で、SQL Server エージェントが実行中であることを確認します。  
   
@@ -81,9 +79,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  SharePoint 2016 または SharePoint 2013 の管理シェルで Windows PowerShell コマンドレットを使用して、Transact-SQL スクリプトを作成することもできます。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をクリックします。  
   
-3.  **[Microsoft SharePoint 2016 製品]** を展開し、 **[SharePoint 2016 管理シェル]**をクリックします。
+3.  **[Microsoft SharePoint 2016 製品]** を展開し、 **[SharePoint 2016 管理シェル]** をクリックします。
   
 4.  次の PowerShell コマンドレットの、レポート サーバー データベース名、アプリケーション プール アカウント、およびステートメント パスを置き換えます。  
   
@@ -96,32 +94,32 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>SQL Server Management Studio に Transact-SQL スクリプトを読み込むには  
   
-1.  SQL Server Management Studio を開くには、 **[スタート]** メニューで、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] をクリックし、 **[SQL Server Management Studio]**をクリックします。  
+1.  SQL Server Management Studio を開くには、 **[スタート]** メニューで、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] をクリックし、 **[SQL Server Management Studio]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -   **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]**をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]** をクリックします。  
   
-    -   **[サーバー名]**で、SQL Server エージェントの構成対象となる SQL Server インスタンスの名前を入力します。  
+    -   **[サーバー名]** で、SQL Server エージェントの構成対象となる SQL Server インスタンスの名前を入力します。  
   
     -   認証モードを選択します。  
   
     -   SQL Server 認証を使用して接続する場合は、ログイン名とパスワードを入力します。  
   
-3.  **[接続]**をクリックします。  
+3.  **[接続]** をクリックします。  
   
 #### <a name="to-run-the-transact-sql-statement"></a>Transact-SQL ステートメントを実行するには  
   
-1.  SQL Server Management Studio のツール バーで、 **[新しいクエリ]**をクリックします。  
+1.  SQL Server Management Studio のツール バーで、 **[新しいクエリ]** をクリックします。  
   
-2.  **[ファイル]** メニューの **[開く]**をポイントし、 **[ファイル]**をクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 3.  SharePoint 2016 または SharePoint 2013 の管理シェルで生成した Transact-SQL ステートメントの保存先フォルダーに移動します。  
   
-4.  ファイルをクリックし、 **[開く]**をクリックします。  
+4.  ファイルをクリックし、 **[開く]** をクリックします。  
   
      ステートメントがクエリ ウィンドウに追加されます。  
   
-5.  **[実行]**をクリックします。  
+5.  **[実行]** をクリックします。  
   
   

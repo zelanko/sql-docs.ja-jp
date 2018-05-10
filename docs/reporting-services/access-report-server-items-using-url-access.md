@@ -1,30 +1,28 @@
 ---
-title: "URL アクセスを使用したレポート サーバー アイテムへのアクセス | Microsoft Docs"
-ms.custom: 
+title: URL アクセスを使用したレポート サーバー アイテムへのアクセス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4098be3917c75bc0943e7a54722e86dc043f6896
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: edd381205ea4cb5f8ae3709543d4c6a50e8933df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
   このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。 実際にこのパラメーター文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  

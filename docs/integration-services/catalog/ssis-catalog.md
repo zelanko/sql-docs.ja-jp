@@ -1,17 +1,16 @@
 ---
 title: SSIS カタログ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -619,9 +617,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
   
 **新しい可用性グループ** ウィザードの **[データベースの選択]** ページで SSIS カタログを作成するときに指定したパスワードを入力します。
 
-**データの同期設定を選択**するように求められたら、**[最初のデータの同期をスキップ]** を選択します。
-  
- ![[データベースの選択]](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
+![[データベースの選択]](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
   
 ####  <a name="Step3"></a> 手順 3: Always On の SSIS サポートを有効にする  
  Integration Service カタログを作成した後に、**[Integration Service カタログ]** ノードを右クリックし、**[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]** をクリックします。  

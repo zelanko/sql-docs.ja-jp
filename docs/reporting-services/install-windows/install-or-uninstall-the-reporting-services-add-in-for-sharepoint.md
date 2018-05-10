@@ -1,27 +1,25 @@
 ---
-title: "SharePoint 用 Reporting Services アドインのインストールまたはアンインストール | Microsoft Docs"
-ms.custom: 
+title: SharePoint 用 Reporting Services アドインのインストールまたはアンインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6e8fd7999efdba906376abb35c0ae5d1db042b67
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/09/2018
 Rssharepoint.msi /?  
 ```  
   
-1.  **アドインのセットアップ プログラム (**rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) をダウンロードします。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+1.  **アドインのセットアップ プログラム (** rsSharepoint.msi [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) をダウンロードします。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
 2.  管理者は、 **rsSharepoint.msi** を実行して、インストール ウィザードを実行します。 ウィザードに、"ようこそ" ページ、ソフトウェア ライセンス条項、および登録情報ページが表示されます。 セットアップ時に、次のパスにフォルダーが作成され、そのフォルダーにファイルがコピーされます。  
   
@@ -163,11 +161,11 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>Windows のコントロール パネルからアンインストールを行うには  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコントロール パネルからウィザードを起動してアドインを削除するには、次の手順を実行します。  
   
-1.  コントロール パネルの **[プログラム]**で、 **[プログラムのアンインストール]**をクリックします。  
+1.  コントロール パネルの **[プログラム]** で、 **[プログラムのアンインストール]** をクリックします。  
   
-2.  **[SharePoint 用 Microsoft SQL Server RS アドイン]**を選択します。 コマンド プロンプトから、スイッチを指定せずに **rssharepoint.msi** を実行してアンインストール ウィザードを起動することもできます。  
+2.  **[SharePoint 用 Microsoft SQL Server RS アドイン]** を選択します。 コマンド プロンプトから、スイッチを指定せずに **rssharepoint.msi** を実行してアンインストール ウィザードを起動することもできます。  
   
-3.  **[削除]**をクリックします。  
+3.  **[削除]** をクリックします。  
   
 ### <a name="uninstall-from-the-command-line"></a>コマンド ラインからのアンインストール  
  アドインをコマンド ラインからアンインストールするには、次の手順を実行します。  
@@ -180,7 +178,7 @@ Rssharepoint.msi /?
     msiexec.exe /uninstall rsSharePoint.msi  
     ```  
   
-3.  確認メッセージ ボックスが表示されます。 **[はい]**をクリックします。  
+3.  確認メッセージ ボックスが表示されます。 **[はい]** をクリックします。  
   
 ### <a name="uninstall-the-add-in-from-the-local-server-only"></a>ローカル サーバーのみからのアドインのアンインストール  
  前に説明したアドインのアンインストール方法では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能とオブジェクトがファームから削除されます。 マルチサーバー ファームにおいて、ローカル コンピューターからのみアドインをアンインストールして、SharePoint ファームは稼働させておく場合は、次の手順を実行します。  

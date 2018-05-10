@@ -1,31 +1,31 @@
 ---
-title: "クエリ処理アーキテクチャ ガイド | Microsoft Docs"
-ms.custom: 
+title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
+ms.custom: ''
 ms.date: 02/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 1f1e2a721201fbc1e497cdd65daab9ec46ad9c06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -863,7 +863,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>クエリ実行プランのパーティション分割情報の表示
 
-パーティション テーブルとパーティション インデックスに対するクエリの実行プランは、Transact-SQL `SET` ステートメントの `SET SHOWPLAN_XML` または `SET STATISTICS XML`を使用するか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のグラフィカル実行プラン出力を使用して調べることができます。 たとえば、コンパイル時の実行プランを表示するにはクエリ エディターのツール バーの *[推定実行プランの表示]* をクリックし、実行時のプランを表示するには *[実際の実行プランを含める]*をクリックします。 
+パーティション テーブルとパーティション インデックスに対するクエリの実行プランは、Transact-SQL `SET` ステートメントの `SET SHOWPLAN_XML` または `SET STATISTICS XML`を使用するか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のグラフィカル実行プラン出力を使用して調べることができます。 たとえば、コンパイル時の実行プランを表示するにはクエリ エディターのツール バーの *[推定実行プランの表示]* をクリックし、実行時のプランを表示するには *[実際の実行プランを含める]* をクリックします。 
 
 これらのツールを使用すると、次の情報を確認できます。
 
@@ -1077,6 +1077,7 @@ GO
  [プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
- [基数推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ 
+  [カーディナリティ推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)   
  [演算子の優先順位](../t-sql/language-elements/operator-precedence-transact-sql.md)

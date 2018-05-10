@@ -1,27 +1,25 @@
 ---
-title: "レポートの検索、表示、管理 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: レポートの検索、表示、管理 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ca04c9558b827539bdb6dac8431a768e8d68f414
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d5928b1e7bc5850c2a235bb07f9ce87ec877c44c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -94,9 +92,9 @@ ms.lasthandoff: 01/09/2018
 ### <a name="refreshing-reports"></a>レポートの更新  
  レポートのデータは頻繁に変わるので、レポートを更新して最新のデータを表示する必要があります。 レポートは 3 種類の方法で更新できます。  
   
-|オプション|[結果]|  
+|オプション|結果|  
 |------------|------------|  
-|ブラウザー ウィンドウの**[更新]** ボタン|セッションのキャッシュに保存されているレポートを表示します。 セッションのキャッシュは、ユーザーがレポートを開いた時点で作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ブラウザー セッションを使用して、レポートが開いている間の表示状態の整合性を保ちます。|  
+|ブラウザー ウィンドウの **[更新]** ボタン|セッションのキャッシュに保存されているレポートを表示します。 セッションのキャッシュは、ユーザーがレポートを開いた時点で作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ブラウザー セッションを使用して、レポートが開いている間の表示状態の整合性を保ちます。|  
 |![[レポート] ツールバーのブラウザー更新ボタン](../../reporting-services/media/htmlviewer-refresh.GIF "[レポート] ツールバーのブラウザー更新ボタン")|[レポート] ツール バーで **[更新]** ボタンをクリックすると、レポート サーバーは、クエリを再実行し、レポートが要求時に実行される場合はレポート データを更新します。 レポートがキャッシュされる場合、またはスナップショットである場合は、 **[更新]** をクリックすると、レポート サーバー データベースに保存されているレポートが表示されます。|  
 |Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;F5&lt;/localizedText&gt; キー|[レポート] ツール バーで **[更新]** ボタンをクリックした場合と同じ結果になります。|  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 01/09/2018
  ![rs_SharePointRunReport](../../reporting-services/report-builder/media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>アクションによるアイテムの管理  
- 管理タスクは、各アイテムのドロップダウン メニューからアクションを選択することで実行できます。 権限に応じて、各アイテムには共通アクションが割り当てられます。これらは SharePoint ライブラリに格納されているアイテムに標準のものです。 **[プロパティの表示]** や **[プロパティの編集]** は共通アクションの例です。 カスタム アクションでは、アイテム固有の管理機能が提供されます。 次の図は、レポート定義のアクションを示しています。 レポート定義のカスタム アクションの例としては、 **[サブスクリプションの管理]** や **[処理オプションの管理]**などがあります。  
+ 管理タスクは、各アイテムのドロップダウン メニューからアクションを選択することで実行できます。 権限に応じて、各アイテムには共通アクションが割り当てられます。これらは SharePoint ライブラリに格納されているアイテムに標準のものです。 **[プロパティの表示]** や **[プロパティの編集]** は共通アクションの例です。 カスタム アクションでは、アイテム固有の管理機能が提供されます。 次の図は、レポート定義のアクションを示しています。 レポート定義のカスタム アクションの例としては、 **[サブスクリプションの管理]** や **[処理オプションの管理]** などがあります。  
   
  ![レポート サーバー アイテムのメニュー コマンド](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "レポート サーバー アイテムのメニュー コマンド")  
   

@@ -3,25 +3,23 @@ title: マスター データ サービスのアップグレード | Microsoft D
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4abb0b1083aab2b944636e838586a39990e6ad06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 216ea0f5416dd45f428d9cda336e7b5c194195c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
 
@@ -67,9 +65,9 @@ ms.lasthandoff: 04/16/2018
   
     1.  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] セットアップ ウィザードを開きます。  
   
-    2.  左ペインで、 **[インストール]**をクリックします。  
+    2.  左ペインで、 **[インストール]** をクリックします。  
   
-    3.  右ペインで、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加]**をクリックします。  
+    3.  右ペインで、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加]** をクリックします。  
   
     4.  **[機能の選択]** ページで、 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** とその他にインストールする機能を選択します。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 04/16/2018
         > [!IMPORTANT]  
         >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。  
   
-    2.  左ペインで **[データベース構成]**をクリックします。  
+    2.  左ペインで **[データベース構成]** をクリックします。  
   
     3.  右ペインで、**[データベースの選択]** をクリックし、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のデータベース インスタンスの情報を指定します。  
   
@@ -92,11 +90,11 @@ ms.lasthandoff: 04/16/2018
   
     1.  現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
-    2.  左ペインで **[Web の構成]**をクリックします。  
+    2.  左ペインで **[Web の構成]** をクリックします。  
   
     3.  右ペインで、 **[Web サイト]** ボックスの一覧から次のいずれかのオプションを選択します。  
   
-        -   **[既定の Web サイト]**。その後、 **[アプリケーションの作成]**をクリックします。  
+        -   **[既定の Web サイト]**。その後、 **[アプリケーションの作成]** をクリックします。  
   
         -   **[新しいサイトの作成]**。 Web サイトを作成すると、新しい Web アプリケーションが自動的に作成されます。  
   
@@ -107,11 +105,11 @@ ms.lasthandoff: 04/16/2018
   
 4.  新しい Web アプリケーションをアップグレード後の MDS データベースに関連付けます。  
   
-    1.  **[アプリケーションとデータベースの関連付け]** セクションで、 **[選択]**をクリックします。  
+    1.  **[アプリケーションとデータベースの関連付け]** セクションで、 **[選択]** をクリックします。  
   
     2.  MDS データベースを選択します。  
   
-    3.  **[適用]**をクリックします。  
+    3.  **[適用]** をクリックします。  
   
 ##  <a name="engine"></a> データベース エンジンのアップグレードを伴うアップグレード  
  このシナリオでは、データベース エンジンと[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アプリケーションの両方を、以前のバージョンから [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] のいずれかにアップグレードします。  
@@ -142,9 +140,9 @@ ms.lasthandoff: 04/16/2018
   
     1.  [!INCLUDE[sssnoversion](../../includes/ssnoversion-md.md)] セットアップ ウィザードを開きます。  
   
-    2.  左ペインで、 **[インストール]**をクリックします。  
+    2.  左ペインで、 **[インストール]** をクリックします。  
   
-    3.  右ペインで、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加]**をクリックします。  
+    3.  右ペインで、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加]** をクリックします。  
   
     4.  **[機能の選択]** ページで、 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** とその他にインストールする機能を選択します。  
   

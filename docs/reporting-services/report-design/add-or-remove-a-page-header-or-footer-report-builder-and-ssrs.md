@@ -1,27 +1,25 @@
 ---
-title: "ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e10b015647d513494b6a13d7f690953ca3728533
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 39bd8b96ddbb294fe98acd313a5c1bf542e0fd6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS)
   ページ ヘッダーまたはページ フッターには、静的テキスト、画像、線、四角形、および罫線を追加できます。 ヘッダーまたはフッターに変数または計算されたデータを使用する場合は、式およびデータバインド画像をテキスト ボックスに配置できます。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  レポートを開きます。  
   
-2.  デザイン画面で、レポートを右クリックし、 **[挿入]**をポイントして、 **[ヘッダー]** または **[フッター]**をクリックします。  
+2.  デザイン画面で、レポートを右クリックし、 **[挿入]** をポイントして、 **[ヘッダー]** または **[フッター]** をクリックします。  
   
 > [!NOTE]  
 >  **[ヘッダー]** オプションおよび **[フッター]** オプションが表示されるのは、ヘッダーまたはフッターがまだレポートに含まれていない場合のみです。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  デザイン画面で、ページ ヘッダーまたはページ フッターを右クリックします。  
   
-2.  **[挿入]**をポイントして、次のいずれかのアイテムをクリックし、そのアイテムをヘッダー領域またはフッター領域に追加します。  
+2.  **[挿入]** をポイントして、次のいずれかのアイテムをクリックし、そのアイテムをヘッダー領域またはフッター領域に追加します。  
   
     -   **テキスト ボックス**  
   
@@ -55,15 +53,15 @@ ms.lasthandoff: 01/09/2018
   
     -   **[イメージ]**  
   
-3.  ページ ヘッダーを右クリックして **[ヘッダーのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、ヘッダーの幅を調整したりします。 **[OK]**をクリックします。  
+3.  ページ ヘッダーを右クリックして **[ヘッダーのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、ヘッダーの幅を調整したりします。 **[OK]** をクリックします。  
   
-4.  ページ フッターを右クリックして **[フッターのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、フッターの幅を調整したりします。 **[OK]**をクリックします。  
+4.  ページ フッターを右クリックして **[フッターのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、フッターの幅を調整したりします。 **[OK]** をクリックします。  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>ページ ヘッダーまたはページ フッターを削除するには  
   
 1.  レポートを開きます。  
   
-2.  デザイン画面で、ページ ヘッダーまたはページ フッターを右クリックし、 **[削除]**をクリックします。  
+2.  デザイン画面で、ページ ヘッダーまたはページ フッターを右クリックし、 **[削除]** をクリックします。  
   
 > [!NOTE]  
 >  ページ ヘッダーまたはページ フッターを削除すると、レポートから消去されます。 それまでにページ ヘッダーまたはページ フッターに追加したアイテムは、後でページ ヘッダーまたはページ フッターを再び追加しても再表示されません。  

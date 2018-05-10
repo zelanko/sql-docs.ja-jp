@@ -3,30 +3,26 @@ title: インデックスの FILL FACTOR の指定 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fill factor [SQL Server]
 - page splits [SQL Server]
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 caps.latest.revision: 45
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 75a43edabb5f0189f2087458c3c816b785997364
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 251c250306d01eb14cdde76ce09cfd9b81fdf203
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,15 +75,15 @@ ms.lasthandoff: 04/16/2018
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、 **[デザイン]**を選択します。  
+3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
 5.  FILL FACTOR を指定するインデックスを選択します。  
   
-6.  **[FILL の指定]**を展開し、 **[FILL FACTOR]** 行を選択し、目的の FILL FACTOR を行に入力します。  
+6.  **[FILL の指定]** を展開し、 **[FILL FACTOR]** 行を選択し、目的の FILL FACTOR を行に入力します。  
   
-7.  **[閉じる]**をクリックします。  
+7.  **[閉じる]** をクリックします。  
   
 8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
   
@@ -101,9 +97,9 @@ ms.lasthandoff: 04/16/2018
   
 4.  プラス記号をクリックして **[インデックス]** フォルダーを展開します。  
   
-5.  FILL FACTOR を指定するインデックスを右クリックし、 **[プロパティ]**を選択します。  
+5.  FILL FACTOR を指定するインデックスを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[ページの選択]**の **[オプション]**を選択します。  
+6.  **[ページの選択]** の **[オプション]** を選択します。  
   
 7.  **[FILL FACTOR]** 行に、目的の FILL FACTOR を入力します。  
   
@@ -115,9 +111,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、既存のインデックスを再構築し、再構築処理中に指定された FILL FACTOR を適用します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、既存のインデックスを再構築し、再構築処理中に指定された FILL FACTOR を適用します。  
   
     ```  
     USE AdventureWorks2012;  
@@ -134,9 +130,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  

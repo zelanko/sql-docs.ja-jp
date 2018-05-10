@@ -1,27 +1,25 @@
 ---
-title: "列の挿入または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: 列の挿入または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 868fca6434a0d7d7740cc6e29f572fd092855787
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b6fbf5e25a982f511e3451cec07b7414ffced559
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>列の挿入または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの Tablix データ領域では、列を追加したり削除したりできます。 Tablix データ領域は、テーブル、マトリックス、一覧のいずれかです。 次の手順は、グラフおよびゲージのデータ領域には適用されません。  
@@ -39,29 +37,29 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-insert-a-column-in-a-selected-data-region"></a>選択したデータ領域に列を挿入するには  
   
--   列の挿入位置にある列ハンドルを右クリックし、 **[列の挿入]**をクリックして、 **[左]** または **[右]**をクリックします。  
+-   列の挿入位置にある列ハンドルを右クリックし、 **[列の挿入]** をクリックして、 **[左]** または **[右]** をクリックします。  
   
      -- または --  
   
--   データ領域で、行の挿入位置にあるセルを右クリックし、 **[列の挿入]**をクリックして、 **[左]** または **[右]**をクリックします。  
+-   データ領域で、行の挿入位置にあるセルを右クリックし、 **[列の挿入]** をクリックして、 **[左]** または **[右]** をクリックします。  
   
 ## <a name="to-delete-a-column-from-a-selected-data-region"></a>選択したデータ領域から列を削除するには  
   
--   削除する 1 つ以上の列を選択し、選択したいずれかの列のハンドルを右クリックして、 **[列の削除]**をクリックします。  
+-   削除する 1 つ以上の列を選択し、選択したいずれかの列のハンドルを右クリックして、 **[列の削除]** をクリックします。  
   
      -- または --  
   
--   データ領域で、列の削除位置にあるセルを右クリックして、 **[列の削除]**をクリックします。  
+-   データ領域で、列の削除位置にあるセルを右クリックして、 **[列の削除]** をクリックします。  
   
 ## <a name="to-insert-a-column-in-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループに列を挿入するには  
   
--   Tablix データ領域の列グループ領域で、列の挿入位置にある列グループ セルを右クリックし、 **[列の挿入]**をクリックした後、 **[左 - 外側のグループ]**、 **[左 - 内側のグループ]**、 **[右 - 内側のグループ]**、または **[右 - 外側のグループ]**をクリックします。  
+-   Tablix データ領域の列グループ領域で、列の挿入位置にある列グループ セルを右クリックし、 **[列の挿入]** をクリックした後、 **[左 - 外側のグループ]**、 **[左 - 内側のグループ]**、 **[右 - 内側のグループ]**、または **[右 - 外側のグループ]** をクリックします。  
   
      クリックした列グループのセルに対応するグループの内側または外側に列が追加されます。  
   
 ## <a name="to-delete-a-column-from-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループから列を削除するには  
   
--   Tablix データ領域の列グループ領域で、列の削除位置にある列グループ セルを右クリックし、 **[列の削除]**をクリックします。  
+-   Tablix データ領域の列グループ領域で、列の削除位置にある列グループ セルを右クリックし、 **[列の削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   

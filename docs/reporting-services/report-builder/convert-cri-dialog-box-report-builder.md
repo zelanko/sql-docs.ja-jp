@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-builder
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,12 +20,11 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd3431c71c80277a3bb119b328b2fd34ca2b7a3f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: acf14f5921a63b5fb27eb9027afb10235d590172
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>[CRI の変換] ダイアログ ボックス (レポート ビルダー)
   このレポートにはサポートされていない機能を持つカスタム レポート アイテム (CRI) が含まれています。 CRI は、レポートにデータを表示するカスタム オブジェクトをサポートするレポート定義言語 (RDL) の拡張機能です。 CRI には、サードパーティのソフトウェア ベンダーによって提供されるデザイン時コンポーネントおよび実行時コンポーネントが含まれます。  

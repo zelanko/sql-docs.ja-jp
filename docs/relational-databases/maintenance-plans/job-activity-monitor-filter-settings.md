@@ -1,17 +1,16 @@
 ---
-title: '[ジョブの利用状況モニター]([フィルターの設定]) | Microsoft Docs'
+title: '[ジョブの利用状況モニター] ([フィルターの設定]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
@@ -19,14 +18,13 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7155eeaedbbbcd0ac21629906e7c38b56d6577c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 76e11f1afb39cb8ddd82f99d74e2d2a21c776664
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
+# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
   

@@ -1,25 +1,24 @@
 ---
-title: R の表示または SQL Server にインストールされている Python パッケージ |Microsoft ドキュメント
+title: SQL Server の Machine Learning の R、Python のパッケージ情報の取得 |Microsoft ドキュメント
+description: R、Python のパッケージ バージョンを確認するのインストールを確認し、SQL Server R Services または Machine Learning のサービスにインストールされたパッケージの一覧を取得します。
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>R の表示または SQL Server にインストールされている Python パッケージ
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>SQL Server の Machine Learning の R、Python のパッケージ情報を取得します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python の複数の環境をインストールした複数の R ツールを使用するかは、簡単に間違ったライブラリまたは環境にパッケージをインストールして、後で検索することできません。 
-
-この記事では、いくつかのクエリを現在のバージョンを決定し、現在の SQL Server 環境にインストールされているパッケージを一覧表示を行うこともできますを提供します。
+Python の複数の環境をインストールした複数の R ツールを使用するかは、簡単に間違ったライブラリまたは環境にパッケージをインストールして、後で検索することできません。 この記事では、クエリと determininga パッケージのバージョン、および現在の SQL Server 環境にインストールされているパッケージを一覧表示する有効なガイダンスを提供します。
 
 ## <a name="verify-the-current-default-library"></a>現在の既定のライブラリを確認してください。
 

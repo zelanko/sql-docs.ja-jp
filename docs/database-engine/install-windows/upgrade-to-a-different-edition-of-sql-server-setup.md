@@ -3,25 +3,22 @@ title: SQL Server 2016 の別のエディションへのアップグレード (�
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 752c9439124331200af3ee7aeba09b4a895c7934
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1f23d04ecdaaafe3fdb2a7033a51e750eb61d519
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>SQL Server の別のエディションへのアップグレード (セットアップ)
 
@@ -49,23 +46,23 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックするか、構成ツールから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターを起動します。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] の既存のインスタンスを他のエディションにアップグレードするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターの **[メンテナンス]**をクリックし、 **[エディションのアップグレード]**をクリックします。  
+2.  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] の既存のインスタンスを他のエディションにアップグレードするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターの **[メンテナンス]** をクリックし、 **[エディションのアップグレード]** をクリックします。  
   
 3.  セットアップ サポート ファイルが必要な場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってインストールされます。 コンピューターの再起動を求めるメッセージが表示されたら、再起動してから続行します。  
   
-4.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]**をクリックします。  
+4.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 **[OK]** をクリックします。  
   
 5.  [プロダクト キー] ページで、オプション ボタンをクリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の無償のエディションにアップグレードするかどうか、または SQL Server の製品版の PID キーを持っているかどうかを指定します。 詳細については、[SQL Server のエディションとコンポーネント](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページと、「[サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
   
-6.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 続行するには、 **[次へ]**をクリックします。 セットアップを終了するには、 **[キャンセル]**をクリックします。  
+6.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 続行するには、 **[次へ]** をクリックします。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   
 7.  [インスタンスの選択] ページで、アップグレードする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。  
   
 8.  [エディション アップグレード ルール] ページでは、エディションのアップグレード操作が開始される前に、コンピューターの構成が検証されます。  
   
-9. [エディションのアップグレードの準備完了] ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[アップグレード]**をクリックします。  
+9. [エディションのアップグレードの準備完了] ページには、セットアップ時に指定したインストール オプションのツリー ビューが表示されます。 続行するには、 **[アップグレード]** をクリックします。  
   
-10. エディションのアップグレード処理時に、新しい設定内容が反映されるようにサービスを再起動する必要があります。 エディションのアップグレードが終了すると、[完了] ページにエディションのアップグレードについての概要ログ ファイルへのリンクが表示されます。 ウィザードを閉じるには、 **[閉じる]**をクリックします。  
+10. エディションのアップグレード処理時に、新しい設定内容が反映されるようにサービスを再起動する必要があります。 エディションのアップグレードが終了すると、[完了] ページにエディションのアップグレードについての概要ログ ファイルへのリンクが表示されます。 ウィザードを閉じるには、 **[閉じる]** をクリックします。  
   
 11. [完了] ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。  
   

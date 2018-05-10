@@ -1,27 +1,25 @@
 ---
-title: "フォルダーの作成、削除、または変更 (Web ポータル) | Microsoft Docs"
-ms.custom: 
+title: フォルダーの作成、削除、または変更 (Web ポータル) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a569bbb511fda6089ba8d3e14bad5858ab1bbf4b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>フォルダーの作成、削除、または変更 (Web ポータル)
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? : @ & = + , $ / * < > | など) は使用できません。 : @ & = + , $ / * < > |. フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
-4.  **[作成]**を選択します。  
+4.  **[作成]** を選択します。  
   
 #### <a name="to-modify-or-delete-a-folder"></a>フォルダーを変更または削除するには  
   
@@ -44,15 +42,15 @@ ms.lasthandoff: 01/09/2018
   
 2.  目的のフォルダーの **[...]** を選択します。  
   
-3.  コンテキスト メニューで、 **[管理]**を選択します。 [プロパティ] ページが開きます。  
+3.  コンテキスト メニューで、 **[管理]** を選択します。 [プロパティ] ページが開きます。  
   
 4.  以下の方法でフォルダーのプロパティを変更します。  
   
     -   フォルダーについて表示するテキストを変更するには、名前または説明を入力します。  
   
-    -   **[ホーム]** ページの既定の表示でフォルダーを表示するには、 **[タイルビューで非表示にする]**をオフにします。  
+    -   **[ホーム]** ページの既定の表示でフォルダーを表示するには、 **[タイルビューで非表示にする]** をオフにします。  
   
-5.  フォルダーとその内容を削除する場合には、 **[削除]**をクリックします。  
+5.  フォルダーとその内容を削除する場合には、 **[削除]** をクリックします。  
   
 6.  **[適用]** をクリックして変更を保存します。  
   

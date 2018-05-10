@@ -1,17 +1,17 @@
 ---
-title: "セキュリティ ポリシーの概要 | Microsoft Docs"
-ms.custom: 
+title: セキュリティ ポリシーの概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services], security policies
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e38526ea1804c4a38a1a2dccec1339c4718f290
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ea917eee66e6fea9fc374a2df6e5827b6a3bdc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-security-policies"></a>セキュリティ ポリシーの概要
   レポート サーバーが実行するすべてのコードは、特定のコード アクセス セキュリティ ポリシーの一部である必要があります。 これらのセキュリティ ポリシーは、証拠と名前付き権限セットとを対応付けるコード グループで構成されます。 多くの場合、コード グループは、そのグループ内のコードに対して与えることのできる権限が指定された名前付き権限セットに関連付けられます。 ランタイムは、信頼されるホストまたはローダーが提供した証拠を使用して、コードが属するコード グループ、およびコードに付与された権限を確認します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の共通言語ランタイム (CLR) によって定義された、このセキュリティ ポリシー アーキテクチャに準拠します。 ここでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の各種コードおよび関連付けられたポリシー ルールについて説明します。  

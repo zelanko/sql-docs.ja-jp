@@ -3,15 +3,13 @@ title: Windows 認証の使用によるデータベースのミラーリング�
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
@@ -21,12 +19,11 @@ caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac2992afd40c4890c5fe54da83d2a8528aedd4b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ca7ab8872d8205ae7120913a7c481b3422f05f3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-establish-a-witness"></a>ミラーリング監視を確立するには  
   
-1.  ミラーリング監視サーバーのインスタンスで、データベース ミラーリングのエンドポイントが存在することを確認します。 サポートされるミラーリング セッションの数に関係なく、サーバー インスタンスにはデータベース ミラーリング エンドポイントが 1 つだけ存在する必要があります。 このサーバー インスタンスをデータベース ミラーリング セッションのミラーリング監視専用に使用する場合、ミラーリング監視の役割をエンドポイントに割り当てます (ROLE**=**WITNESS)。 このサーバー インスタンスを 1 つ以上の他のデータベース ミラーリング セッションのパートナーとして使用する場合、エンドポイントの役割を ALL に割り当てます。  
+1.  ミラーリング監視サーバーのインスタンスで、データベース ミラーリングのエンドポイントが存在することを確認します。 サポートされるミラーリング セッションの数に関係なく、サーバー インスタンスにはデータベース ミラーリング エンドポイントが 1 つだけ存在する必要があります。 このサーバー インスタンスをデータベース ミラーリング セッションのミラーリング監視専用に使用する場合、ミラーリング監視の役割をエンドポイントに割り当てます (ROLE**=** WITNESS)。 このサーバー インスタンスを 1 つ以上の他のデータベース ミラーリング セッションのパートナーとして使用する場合、エンドポイントの役割を ALL に割り当てます。  
   
      SET WITNESS ステートメントを実行するには、データベース ミラーリング セッションが (パートナー間で) 既に開始されていて、ミラーリング監視のエンドポイントの STATE が STARTED に設定されている必要があります。  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   

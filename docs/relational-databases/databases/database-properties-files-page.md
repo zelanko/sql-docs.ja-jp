@@ -1,8 +1,8 @@
 ---
-title: 「データベースのプロパティ」 \([ファイル] ページ) | Microsoft Docs
+title: 「データベースのプロパティ」 ([ファイル] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: databases
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b1df5ff627018147e165af6f169e41b646ff2549
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="database-properties-files-page"></a>[データベースのプロパティ] \([ファイル] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] \([ファイル] ページ)** 、および **[新しいデータベース] \([全般] ページ)**に該当します。  
+# <a name="database-properties-files-page"></a>「データベースのプロパティ」 ([ファイル] ページ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  このページを使用すると、新しいデータベースを作成したり、選択したデータベースのプロパティを表示または変更したりできます。 このトピックは、既存のデータベースの **[データベースのプロパティ] ([ファイル] ページ)** 、および **[新しいデータベース] ([全般] ページ)** に該当します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **データベース名**  
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
  FILESTREAM ファイルの場合、このフィールドは無効です。  
   
- メモリ最適化ファイル グループのファイルの場合、このフィールド **[無制限]**にする必要があります。  
+ メモリ最適化ファイル グループのファイルの場合、このフィールド **[無制限]** にする必要があります。  
   
  **[パス]**  
  選択されているファイルのパスを表示します。 新しいファイルのパスを指定するには、ファイルのパスの横にある編集ボタンをクリックし、目的のフォルダーに移動します。 既存のファイルのパスは変更できません。  

@@ -1,31 +1,29 @@
 ---
-title: "定義済みのロール | Microsoft Docs"
-ms.custom: 
+title: 定義済みのロール | Microsoft Docs
+ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みのロール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
@@ -213,7 +211,7 @@ ms.lasthandoff: 01/09/2018
 |レポート サーバーのプロパティを表示|アプリケーション名、個人用レポートの有効/無効、レポート履歴の既定値など、レポート サーバーに適用するプロパティを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、[サイトの設定] ページを利用できなくなります。 また、各ページの上部にアプリケーションのタイトルが表示されません。 既定では、レポート マネージャーのタイトルは "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]" です。|  
 |共有スケジュールの表示|レポートの実行または更新に使用する共有スケジュールを表示します。<br /><br /> **システム ユーザー** ロールからこのタスクを削除すると、ユーザーはサブスクリプションおよびその他のスケジュールに設定された操作に使用する共有スケジュールを選択できなくなります。|  
   
- **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
+ **システム ユーザー** ロールを使用して、既定のセキュリティを補完できます。 このロールは、レポート サーバーへのアクセスをレポート ユーザーに許可する新しいロールの割り当てに含めることができます。 詳細については、「 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
