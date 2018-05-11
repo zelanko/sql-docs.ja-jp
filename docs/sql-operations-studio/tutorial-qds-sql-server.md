@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 5 つを有効にする速度が遅かったクエリ サンプル ウィジェット - SQL 操作 Studio (プレビュー) |Microsoft ドキュメント'
+title: 'チュートリアル: データベース ダッシュ ボードに *5 つの遅いクエリ* のサンプルウィジェットを追加する - SQL Operations Studio (プレビュー) |Microsoft ドキュメント'
 description: このチュートリアルは、5 つ最も低速なクエリのサンプル ダッシュ ボードのウィジェット、データベースを有効にする方法を示します。
 ms.custom: tools|sos
 ms.date: 03/15/2018
@@ -19,15 +19,15 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル: 追加、 *5 速度が遅かったクエリ*データベース ダッシュ ボードにウィジェットをサンプル
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル: データベース ダッシュ ボードに *5 つの遅いクエリ* のサンプルウィジェットを追加する
 
-このチュートリアルは、のいずれかの追加の手順を示します[!INCLUDE[name-sos](../includes/name-sos-short.md)]の組み込みサンプルするウィジェットを*データベース ダッシュ ボード*をすぐに、データベースの 5 つの最も低速なクエリを表示します。 低速のクエリの詳細を表示する方法についても説明し、クエリ プランを使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]の機能です。 このチュートリアルで学習する方法。
+このチュートリアルは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の組み込みサンプルウィジェットの 1 つを *データベース ダッシュ ボード* に追加して 5 つの低速なクエリを表示する手順を示します。ここでは、低速なクエリの詳細と [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用したクエリ プランを表示する方法についても学ぶことができます。
 
 > [!div class="checklist"]
 > * データベースでクエリ ストアを有効にします。
-> * データベース ダッシュ ボードに構築済みの洞察のウィジェットを追加します。
-> * データベースの速度が遅かったクエリに関する詳細を表示
-> * 低速のクエリのクエリ実行プランを表示します。
+> * データベース ダッシュ ボードに構築済みのインサイトウィジェットを追加します。
+> * データベースの遅延クエリに関する詳細を表示します。
+> * 遅延クエリに対するのクエリ実行プランを表示します。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] いくつか把握ウィジェットのすぐに含まれています。 このチュートリアルは、追加する方法を示します、*クエリのデータのストアの db の洞察を得る*ウィジェットが、手順は基本的に同じ任意のウィジェットを追加するためです。
 
