@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ffa7973757ce41a3975bcbb70170679109527e42
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 936b092684c8ab8a857b57fa88e2905b8efb0ffd
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-fundamental-classes"></a>AMO 基礎クラス
   基礎クラスは、分析管理オブジェクト (AMO) を操作するための開始点です。 これらのクラスを通じて、アプリケーションで使用するその他のオブジェクトのための環境を整えます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   メタデータの管理 (UpdateObjects、Validate)  
   
- サーバーに接続するには、ADOMD.NET や OLEDB で使用されるような標準の接続文字列が必要です。 詳細については、次を参照してください。<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>です。 サーバーの名前は接続文字列として指定できます。その際、接続文字列の形式を使用する必要はありません。  
+ サーバーに接続するには、ADOMD.NET や OLEDB で使用されるような標準の接続文字列が必要です。 詳細については、「<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>」を参照してください。 サーバーの名前は接続文字列として指定できます。その際、接続文字列の形式を使用する必要はありません。  
   
  利用可能なメソッドおよびプロパティの詳細については、「<xref:Microsoft.AnalysisServices.Server>」の「<xref:Microsoft.AnalysisServices>」を参照してください。  
   

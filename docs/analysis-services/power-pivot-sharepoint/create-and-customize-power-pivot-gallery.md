@@ -1,27 +1,19 @@
 ---
-title: "作成し、Power Pivot ギャラリーのカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 08/31/2015
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 
-author: Minewiskan
+title: 作成し、Power Pivot ギャラリーのカスタマイズ |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
     > [!NOTE]  
     >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
-    > Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]**に変更します。    
+    > Edge でライブラリ コンテンツを表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックして、ドキュメント ライブラリ ビューを **[すべてのドキュメント]** に変更します。    
     > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
     >  Microsoft Edge のサポート対象について詳しくは、Windows ブログ「 [過去からの離別、第 2 部: ActiveX、VBScript... に別れを告げる](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)」をご覧ください。  
   
@@ -73,19 +65,19 @@ ms.lasthandoff: 02/15/2018
   
 1.  1.  **SharePoint 2010**: サイトのホーム ページの左上にある **[サイトの操作]** をクリックします。  
   
-    2.  **[その他のオプション]**をクリックします。  
+    2.  **[その他のオプション]** をクリックします。  
   
     3.  [ライブラリ] の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**をクリックします。  
   
-    1.  **SharePoint 2013**: 設定アイコンをクリックして![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")です。 **[サイト コンテンツ]**をクリックします。  
+    1.  **SharePoint 2013**: 設定アイコンをクリックして![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")です。 **[サイト コンテンツ]** をクリックします。  
   
-    2.  **[アプリケーションの追加]**をクリックします。  
+    2.  **[アプリケーションの追加]** をクリックします。  
   
     3.  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー**をクリックします。  
   
 2.  ライブラリの名前を入力します。 このライブラリが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび Reporting Services レポートのリッチ プレビューであることがユーザーにわかるように説明情報を入力してください。  
   
-3.  **[作成]**をクリックします。  
+3.  **[作成]** をクリックします。  
   
 4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加するように、ファーム管理者またはサービス管理者に依頼します。 この手順は、ユーザーが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの更新をブックに構成した場合にエラーが発生するのを防ぐために必要です。 このタスクの詳細については、「 [サーバーの全体管理での Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
@@ -109,11 +101,11 @@ ms.lasthandoff: 02/15/2018
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
   
-2.  リボンで、 **[ライブラリ]**をクリックします。  
+2.  リボンで、 **[ライブラリ]** をクリックします。  
   
-3.  **SharePoint 2010:** [ユーザー設定のビュー] で、 **[このビューの変更]**をクリックします。  
+3.  **SharePoint 2010:** [ユーザー設定のビュー] で、 **[このビューの変更]** をクリックします。  
   
-     **SharePoint 2013:** **[ビューの管理]**で、 **[ビューの変更]**をクリックします。  
+     **SharePoint 2013:** **[ビューの管理]** で、 **[ビューの変更]** をクリックします。  
   
 4.  [並べ替え] で、一覧でのブックの表示方法を決定するために使用される基準を指定します。 既定では、ドキュメントは追加された順序で表示されます。  
   
@@ -149,7 +141,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  SharePoint サイトで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを開きます。  
   
-2.  リボンで、 **[ライブラリ]**をクリックします。  
+2.  リボンで、 **[ライブラリ]** をクリックします。  
   
 3.  [ビューの管理] の [現在のビュー] で、使用するビューを一覧から選択します。 デザイン済みのビューは、ギャラリー ビュー、シアター ビュー、およびカルーセル ビューです。 また、ライブラリのドキュメントを移動、削除、管理する場合は、[すべてのドキュメント] を選択することもできます。  
   

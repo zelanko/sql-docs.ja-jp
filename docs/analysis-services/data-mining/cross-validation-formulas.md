@@ -1,31 +1,23 @@
 ---
-title: "クロス検証の式 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: クロス検証の式 |Microsoft ドキュメント
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 
-author: Minewiskan
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 542e875d690d3698f942ef0d891f6f64c70cebfb
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cross-validation-formulas"></a>クロス検証の式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-生成したクロス検証レポートには、マイニング モデルの種類 (つまり、モデルの作成に使用したアルゴリズム)、予測可能な属性のデータ型、および予測可能な属性の値に応じて、モデルごとの精度のメジャーが含まれます。  
+  生成したクロス検証レポートには、マイニング モデルの種類 (つまり、モデルの作成に使用したアルゴリズム)、予測可能な属性のデータ型、および予測可能な属性の値に応じて、モデルごとの精度のメジャーが含まれます。  
   
  このセクションでは、クロス検証レポートで使用されるメジャーを示し、計算の方法について説明します。  
   
@@ -42,7 +34,7 @@ ms.lasthandoff: 02/15/2018
 |**True Negative**|不連続属性、値を指定|以下の条件を満たしているケースの数です。<br /><br /> 対象の値がケースに含まれていない。<br /><br /> 対象の値がケースに含まれていないことがモデルで予測された。|  
 |**偽陽性**|不連続属性、値を指定|以下の条件を満たしているケースの数です。<br /><br /> 実際の値が対象の値と等しい。<br /><br /> 対象の値がケースに含まれていることがモデルで予測された。|  
 |**False Negative**|不連続属性、値を指定|以下の条件を満たしているケースの数です。<br /><br /> 実際の値が対象の値と等しくない。<br /><br /> 対象の値がケースに含まれていないことがモデルで予測された。|  
-|**合格/不合格**|不連続属性、対象の指定なし|以下の条件を満たしているケースの数です。<br /><br /> 最も高い確率を持つ予測された状態が入力状態と同じであり、確率が **[状態のしきい値]**の値を超える場合は合格。<br /><br /> それ以外の場合は不合格。|  
+|**合格/不合格**|不連続属性、対象の指定なし|以下の条件を満たしているケースの数です。<br /><br /> 最も高い確率を持つ予測された状態が入力状態と同じであり、確率が **[状態のしきい値]** の値を超える場合は合格。<br /><br /> それ以外の場合は不合格。|  
 |**リフト**|不連続属性。 対象の値を指定できますが、必須ではありません。|対象の属性の値が含まれるすべての行の平均対数確率値。ここで、各ケースの対数確率値は Log(ActualProbability/MarginalProbability) として計算されます。 平均を計算するため、対数尤度の合計が入力データセットの行数で割られます。対象の属性の不足値がある行は除外されます。<br /><br /> Lift には正または負の値を指定できます。 正の値は、ランダムな推測を上回る効果的なモデルであることを示します。|  
 |**ログ スコア**|不連続属性。 対象の値を指定できますが、必須ではありません。|合計後に入力データセットの行数で割った、各ケースの実際の確率の対数。対象の属性の不足値がある行は除外されます。<br /><br /> 確率は小数で表されるので、ログ スコアは常に負の数値になります。 0 に近いほど、良いスコアになります。|  
 |**Case likelihood**|クラスター|パーティション内のケースの数で割った、すべてのケースのクラスター可能性スコアの合計。対象の属性の不足値がある行は除外されます。|  

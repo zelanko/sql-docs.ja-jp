@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: polybase
+ms.component: database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -22,15 +20,14 @@ helpviewer_keywords:
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
 caps.latest.revision: 78
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: 6233f7592f16dbe9541a4d166e2a407437f12cf5
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="get-started-with-polybase"></a>PolyBase の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux 上の Cloudera CDH 4.3  
   
--   Linux 上の Cloudera CDH 5.1 – 5.5、5.9 - 5.12  
+-   Linux 上の Cloudera CDH 5.1 – 5.5、5.9 - 5.13  
   
 -   Azure BLOB ストレージ  
  

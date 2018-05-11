@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot Usage Data Collection |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 
-author: Minewiskan
+title: Power Pivot Usage Data Collection |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0574c33cfc192669b52da0f19ee69a1918af6bb9
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Power Pivot 使用状況データ収集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用状況データ収集は、ファーム レベルの SharePoint 機能です。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint では、このシステムを使用および拡張して、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] のデータやサービスがどのように使用されているかを示すレポートが [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
+  使用状況データ収集は、ファーム レベルの SharePoint 機能です。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint では、このシステムを使用および拡張して、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] のデータやサービスがどのように使用されているかを示すレポートが [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードの使用状況データの詳細については、「 [PowerPivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
@@ -41,7 +33,7 @@ ms.lasthandoff: 02/15/2018
   
 |フェーズ|Description|  
 |-----------|-----------------|  
-|1|使用状況データ収集は、SharePoint 配置の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] コンポーネントと [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] データ プロバイダーで生成されるイベントによってトリガーされます。 有効または無効にできる構成可能なイベントには、接続要求、読み込み要求とアンロード要求、およびアプリケーション サーバー上の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービスによって監視されるクエリ応答タイミング イベントがあります。 その他のイベントは、サーバーのみによって管理され、無効にすることはできません。 このようなイベントには、データ更新イベントとサーバー状態イベントがあります。<br /><br /> 最初に、使用状況データは SharePoint システムのデータ収集機能を使用して収集され、ローカル ログ ファイルに格納されます。 ファイルとファイルの場所は、SharePoint の標準の使用状況データ収集システムの一部になります。 ファイルの場所は、ファーム内のすべてのサーバーで同じです。 ログ ディレクトリの場所を表示または変更するには、SharePoint サーバーの全体管理の **[監視]** に移動し、 **[Usage and Health data collection の構成]**をクリックします。|  
+|1|使用状況データ収集は、SharePoint 配置の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] コンポーネントと [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] データ プロバイダーで生成されるイベントによってトリガーされます。 有効または無効にできる構成可能なイベントには、接続要求、読み込み要求とアンロード要求、およびアプリケーション サーバー上の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービスによって監視されるクエリ応答タイミング イベントがあります。 その他のイベントは、サーバーのみによって管理され、無効にすることはできません。 このようなイベントには、データ更新イベントとサーバー状態イベントがあります。<br /><br /> 最初に、使用状況データは SharePoint システムのデータ収集機能を使用して収集され、ローカル ログ ファイルに格納されます。 ファイルとファイルの場所は、SharePoint の標準の使用状況データ収集システムの一部になります。 ファイルの場所は、ファーム内のすべてのサーバーで同じです。 ログ ディレクトリの場所を表示または変更するには、SharePoint サーバーの全体管理の **[監視]** に移動し、 **[Usage and Health data collection の構成]** をクリックします。|  
 |2|スケジュール設定された間隔 (既定では毎時) で、Microsoft SharePoint Foundation 利用状況データのインポート タイマー ジョブは、ローカル ファイルから [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション データベースに使用状況データを移動します。 ファーム内に複数の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションが存在する場合、それぞれが独自のデータベースを持ちます。 イベントには、イベントを生成した [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションを識別する内部情報が含まれます。 このアプリケーション識別子により、使用状況データがその作成元のアプリケーションにバインドされるようになります。|  
 |3|データは、サーバーの全体管理の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードで使用できる内部レポート データベースにコピーされます。|  
 |4|データ ソースは、Excel でカスタム レポートを作成するためにアクセスできる [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックです。 ソースとなるブックのインスタンスは 1 つだけです。 ローカライズされたレポートはすべて、同じソースのブックに基づいています。|  
@@ -60,7 +52,7 @@ ms.lasthandoff: 02/15/2018
 |データ更新|スケジュール設定されたデータ更新に応じて [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービスにより開始されるデータ更新操作。 データ更新の使用状況履歴は、運用レポート用にアプリケーション レベルで収集され、個々のブックの [データ更新の管理] ページに反映されます。<br /><br /> **注:** [!INCLUDE[ssSQL11SP1_md](../../includes/sssql11sp1-md.md)] および SharePoint 2013 の配置では、Analysis Services サーバーではなく Excel Services によってデータ更新が管理されます。|不可。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション用のデータ更新を有効にした場合、データ更新の使用状況データは常に収集されます。|  
   
 ##  <a name="servicesjobs"></a> サービスおよびタイマー ジョブ  
- 次の表に、使用状況データ収集システムのサービスとデータ コレクション ストアを示します。 サーバー状態と使用状況データのデータ更新を強制する手順については、タイマー ジョブ スケジュールを上書きする方法の[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理ダッシュ ボード レポートを参照してください[リンクは、ここの説明を入力](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)です。 タイマー ジョブは、SharePoint サーバーの全体管理で確認できます。 **[監視]**に移動し、 **[ジョブ状態の確認]**をクリックして、 **[ジョブ定義の確認]**をクリックします。  
+ 次の表に、使用状況データ収集システムのサービスとデータ コレクション ストアを示します。 サーバー状態と使用状況データのデータ更新を強制する手順については、タイマー ジョブ スケジュールを上書きする方法の[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]管理ダッシュ ボード レポートを参照してください[リンクは、ここの説明を入力](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)です。 タイマー ジョブは、SharePoint サーバーの全体管理で確認できます。 **[監視]** に移動し、 **[ジョブ状態の確認]** をクリックして、 **[ジョブ定義の確認]** をクリックします。  
   
 |コンポーネント|既定のスケジュール|Description|  
 |---------------|----------------------|-----------------|  

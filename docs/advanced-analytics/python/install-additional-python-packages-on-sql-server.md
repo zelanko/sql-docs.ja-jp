@@ -8,28 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2db7792c8c7a69647c0525c3d34bf94b090dd524
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server 2017 Machine Learning Services のインスタンスに新しい Python パッケージをインストールする方法について説明します。
+この記事では、SQL Server 2017 Machine Learning Services のインスタンスに新しい Python パッケージをインストールする方法について説明します。 一般に、新しいパッケージをインストールするためのプロセスは、標準の Python 環境でと似ています。 ただし、サーバーには、インターネット接続がない場合は、追加の手順が必要です。
 
-一般に、新しいパッケージをインストールするためのプロセスは、標準の Python 環境でと似ています。 ただし、サーバーには、インターネット接続がない場合は、追加の手順が必要です。
-
-パッケージがインストールされている、またはインストールされているパッケージを見つけ出し、ヘルプを参照してください。[表示するには、R または Python のパッケージがインストールされている](../r/determine-which-packages-are-installed-on-sql-server.md)です。
+パッケージがインストールされている、またはインストールされているパッケージを見つけ出し、ヘルプを参照してください。 [R の取得、または Python パッケージ情報](../r/determine-which-packages-are-installed-on-sql-server.md)です。
 
 ## <a name="prerequisites"></a>前提条件
 
-+ Python 言語オプションと Machine Learning Services (In-database) をインストールする必要があります。 手順については、次を参照してください。[インストール SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)です。
++ Python 言語オプションと SQL Server 2017 Machine Learning Services (In-database) をインストールする必要があります。 手順については、次を参照してください。[インストール SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md)です。
 
 + 各サーバー インスタンスには、パッケージの個別のコピーをインストールする必要があります。 パッケージは、インスタンス間で共有することはできません。
 
-+ Python 3.5 とは、Windows 環境で使用するパッケージは機能するかどうかを決定します。 
++ パッケージは、Windows での Python 3.5 実行と非準拠にする必要があります。 
 
 + パッケージは、SQL Server 環境での使用に適しているかどうかを評価します。 通常、データベース サーバーに複数のサービスとアプリケーション がサポートしているし、ファイル システム上のリソースは、サーバーへの接続と同様に、制限された可能性があります。 多くの場合は、インターネットへのアクセスがまったくブロックされます。
 
@@ -82,11 +80,11 @@ SQL Server で使用される既定 Python ライブラリの場所を見つけ�
 
 + Python のコマンドラインを使用することに慣れている場合は、PIP.exe を使用して、新しいパッケージをインストールします。 検索することができます、 **pip**内のインストーラー、`Scripts`サブフォルダーです。 
 
-    エラーが表示された場合`pip`Python 実行可能ファイルと、Python スクリプト フォルダーのパスを追加するには Windows での PATH 変数に、内部または外部コマンドとして認識されていません。
+  SQL Server セットアップでは、システム パスにスクリプトが追加されません。 エラーが表示された場合`pip`Scripts フォルダーを追加するには Windows での PATH 変数に、内部または外部コマンドとして認識されていません。
 
-    完全なパス、**スクリプト**既定のインストール フォルダーは、次のようにします。
+  完全なパス、**スクリプト**既定のインストール フォルダーは、次のようにします。
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Python の拡張子を持つ Visual Studio 2017 年 1、または Visual Studio 2015 を使用している場合は、実行`pip install`から、 **Python Environments**ウィンドウです。 をクリックして**パッケージ**、テキスト ボックスに名前またはインストールするパッケージの場所を指定します。 入力する必要はありません`pip install`; これが自動的に入力します。 
 
@@ -131,7 +129,7 @@ cntk._version_
 
 使用することができます、Python のコマンドラインを使用している場合、 **conda**は SQL Server セットアップによって追加された Anaconda Python 環境に含まれているパッケージ マネージャーです。
 
-現在の環境にインストールされている Python パッケージを表示するには、するには、コマンド プロンプトから次のコマンドを実行します。
+Python 環境でパッケージを一覧表示する管理者のコマンド プロンプトからこのコマンドを実行する、PATH 環境変数に、Scripts フォルダーを追加したと仮定した場合、します。
 
 ```python
 conda list

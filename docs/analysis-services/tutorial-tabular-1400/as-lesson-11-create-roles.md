@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 11: ロールを作成 |Microsoft ドキュメント'
-description: Analysis Services tutorial プロジェクトにロールを作成する方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 15994491230e1952d699b028c96df5a972698e39
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfiles"
+ms.openlocfilehash: 3a41b55afcbc5ac3c8bb3e87a64708f6806615df
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-roles"></a>ロールの作成
 
@@ -86,7 +77,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-an-administrator-user-role"></a>管理者ユーザー ロールを作成するには  
   
-1.  **[新規作成]**をクリックします。  
+1.  **[新規作成]** をクリックします。  
   
 2.  ロールの名前を変更**管理者**です。  
   

@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 2: データの取得 |Microsoft ドキュメント'
-description: 取得し、Analysis Services tutorial プロジェクト内のデータをインポートする方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3dd8c6e562fa1c792ff5bf9c117b687f8d77475b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: eb7c9b19950036baff8dbe4dd52447040cd9a571
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="get-data"></a>データを取得します。
 
@@ -62,7 +53,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     > Windows のユーザー アカウントとパスワードを使用することで、最も安全なデータ ソース接続方法が提供されます。
   
-5.  ナビゲーターの選択、 **AdventureWorksDW**データベースをクリックして**[ok]**です。これにより、データベースへの接続が作成されます。 
+5.  ナビゲーターの選択、 **AdventureWorksDW**データベースをクリックして **[ok]** です。これにより、データベースへの接続が作成されます。 
   
 6.  ナビゲーターで、次の表のチェック ボックスをオンにします。 **DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および**FactInternetSales**です。  
 
@@ -154,7 +145,7 @@ AdventureWorksDW サンプル データベース内のテーブル モデルに�
   
     ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
-2.  **[閉じる]**をクリックします。  
+2.  **[閉じる]** をクリックします。  
 
   
 ## <a name="save-your-model-project"></a>モデル プロジェクトを保存します。  

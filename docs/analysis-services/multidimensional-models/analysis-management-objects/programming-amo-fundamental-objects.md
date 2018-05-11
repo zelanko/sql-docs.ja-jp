@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2bc8a2cf279f204d76e96657bfb25c0ebfe14329
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: f79a3c939d53242a49bd1896b355c8489881242e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>AMO 基本オブジェクトのプログラミング
   基本オブジェクトは、一般に、単純で簡単なオブジェクトです。 これらのオブジェクトは、通常、作成およびインスタンス化され、その後、必要がなくなると、ユーザーによって切断されます。 基礎クラスには、<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource>、<xref:Microsoft.AnalysisServices.DataSourceView> などのオブジェクトが含まれます。 AMO 基本オブジェクトの中で唯一の複雑なオブジェクトは、<xref:Microsoft.AnalysisServices.DataSourceView> です。これは、データ ソース ビューを表す抽象モデルを構築するために詳細を必要とします。  
@@ -208,7 +208,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
   
  サンプル コードは、次の処理を実行します。  
   
-1.  作成、<xref:Microsoft.AnalysisServices.DataSourceView>オブジェクト。  
+1.  <xref:Microsoft.AnalysisServices.DataSourceView> オブジェクトを作成します。  
   
      場合、まずことを確認、<xref:Microsoft.AnalysisServices.DataSource>オブジェクトが存在する場合は**true**、ドロップ、<xref:Microsoft.AnalysisServices.DataSource>し、作成します。 <xref:Microsoft.AnalysisServices.DataSource> が存在しない場合は、これを作成します。  
   

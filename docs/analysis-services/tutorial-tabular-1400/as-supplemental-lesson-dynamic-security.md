@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services tutorial 補足のレッスン: 動的なセキュリティ |Microsoft ドキュメント'
-description: Analysis Services チュートリアルでは行フィルターを使用して、動的なセキュリティを使用する方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 268ead0e43a0223e66eeb85f803e86e70f4c237b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile"
+ms.openlocfilehash: e9d579c0140d1cfe15e1fcb68e9ac43db203beea
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補足のレッスンの動的なセキュリティ
 
@@ -56,7 +47,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  クエリ エディターで、クリックして、 **DimSalesTerritory**クエリ、および削除して**SalesTerritoryAlternateKey**列です。  
   
-7.  **[インポート]**をクリックします。  
+7.  **[インポート]** をクリックします。  
   
     新しいテーブルは、モデル ワークスペースに追加されます。 オブジェクトとソースの DimSalesTerritory テーブルからのデータは、AW Internet Sales Tabular Model にインポートされます。  
   
@@ -95,7 +86,7 @@ AdventureWorksDW サンプル データベース内の DimEmployee テーブル�
   
 8.  **貼り付けるデータ**データを含むすべてのユーザー データと SampleEmployee ワークシートからヘッダーを確認してください。  
   
-9. **[先頭の行を列見出しとして使用する]** がオンであることを確認し、 **[OK]**をクリックします。  
+9. **[先頭の行を列見出しとして使用する]** がオンであることを確認し、 **[OK]** をクリックします。  
   
     SampleEmployee ワークシートからコピーした従業員データを含む EmployeeSecurity をという名前の新しいテーブルが作成されます。  
   
@@ -117,7 +108,7 @@ AdventureWorksDW サンプル データベース内の DimEmployee テーブル�
   
 #### <a name="to-hide-the-employeesecurity-table-from-client-applications"></a>クライアント アプリケーションから EmployeeSecurity テーブルを非表示にするには  
   
--   モデル デザイナーのダイアグラム ビューで、 **Employee** テーブルの見出しを右クリックし、 **[クライアント ツールで非表示にする]**をクリックします。  
+-   モデル デザイナーのダイアグラム ビューで、 **Employee** テーブルの見出しを右クリックし、 **[クライアント ツールで非表示にする]** をクリックします。  
   
 ## <a name="create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールの作成  
 
@@ -140,7 +131,7 @@ AdventureWorksDW サンプル データベース内の DimEmployee テーブル�
   
 5.  クリックして、**メンバー**  タブをクリックして**追加**です。  
   
-6.  **ユーザーまたはグループ**ダイアログ ボックスで、**を選択するオブジェクト名を入力**、EmployeeSecurity テーブルを作成するときに使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]**をクリックします。  
+6.  **ユーザーまたはグループ**ダイアログ ボックスで、**を選択するオブジェクト名を入力**、EmployeeSecurity テーブルを作成するときに使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]** をクリックします。  
   
     名前の追加の他のサンプル ユーザー EmployeeSecurity テーブルを作成するときに使用した、この手順を繰り返します。  
   
@@ -177,7 +168,7 @@ AdventureWorksDW サンプル データベース内の DimEmployee テーブル�
   
 1.  SSDT をクリックして、**モデル** メニューをクリックして**Excel で分析**です。  
   
-2.  **[Excel で分析]** ダイアログ ボックスの **[モデルへの接続に使用するユーザー名またはロールの指定]**で、 **[その他の Windows ユーザー]**をクリックし、 **[参照]**をクリックします。  
+2.  **[Excel で分析]** ダイアログ ボックスの **[モデルへの接続に使用するユーザー名またはロールの指定]** で、 **[その他の Windows ユーザー]** をクリックし、 **[参照]** をクリックします。  
   
 3.  **ユーザーまたはグループ**ダイアログ ボックスで、**を選択するオブジェクト名を入力**EmployeeSecurity テーブルに含まれるユーザー名を入力して、をクリックして**名前の確認**です。  
   

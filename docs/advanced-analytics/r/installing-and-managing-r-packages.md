@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee2c8124cf3487ca300c0b08ea113c8e66b114f4
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server で既定の R、Python のパッケージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,17 +61,17 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="r-components"></a>R コンポーネント
 
-コンポーネントには、オープン ソース R としての Microsoft の分布が含まれます。 [Microsoft R Open](https://mran.microsoft.com/open)です。 ベースの R パッケージなどのコア機能**stats**と**ユーティリティ**です。 実行することができます`installed.packages(priority = "base")`パッケージ一覧を返します。 R の基本インストールには、多数のサンプル データセット、および RGui (軽量の対話型エディター) および RTerm (R コマンド プロンプト) などの標準の R ツールも含まれています。
+オープン ソース R は、Microsoft の配布[Microsoft R Open (MRO)](https://mran.microsoft.com/open)です。 ベースの R パッケージなどのコア機能**stats**と**ユーティリティ**です。 実行することができます`installed.packages(priority = "base")`パッケージ一覧を返します。 R の基本インストールには、多数のサンプル データセット、および RGui (軽量の対話型エディター) および RTerm (R コマンド プロンプト) などの標準の R ツールも含まれています。
 
-Microsoft のパッケージを含める[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)のストリーミング、リモート計算コンテキストの並列実行 rx 関数のデータのインポートおよび変換、モデリング、視覚エフェクト、および分析します。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) R. で、モデリング、機械学習の追加その他のパッケージを含める[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R での MDX ステートメントを記述するためと[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)ストアド プロシージャに R スクリプトを含めるためです。
+独自の R パッケージが含まれて[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)のストリーミング、リモート計算コンテキストの並列実行 rx 関数のデータのインポートおよび変換、モデリング、視覚エフェクト、および分析します。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) R. で、モデリング、機械学習の追加Microsoft の他のパッケージを含める[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R での MDX ステートメントを記述するためと[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)ストアド プロシージャに R スクリプトを含めるためです。
 
 
 |リリース             | R のバージョン       | Microsoft パッケージ    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2016 R サービス | 3.2.2   | RevoScaleR、sqlrutil  |
-| SQL Server 2017 Machine Learning サービス| 3.4.3 | RevoScaleR、MicrosoftML、olapR、sqlrutil|
+| SQL Server 2017 Machine Learning サービス| 3.3.3 | RevoScaleR、MicrosoftML、olapR、sqlrutil|
 
-最新のライフ サイクルのサポート ポリシーにバインドして、パッケージと事前インストールされているモデルを SQL Server 2016 の R Services を追加できます。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後に R パッケージは更新サービス パックおよび累積更新プログラムをします。 追加のパッケージと R のコア コンポーネントの完全バージョンのアップグレードは、製品のアップグレード (SQL Server 2017 する SQL Server 2016) からを介してのみ可能ですか、R をバインドすることによって Microsoft Machine Learning のサーバーにサポートします。 詳細については、次を参照してください。 [SQL Server で R のアップグレードと Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+R コンポーネントのパッケージのアップグレード、最新のライフ サイクルのサポート ポリシーに新しい R パッケージ、およびバインドによって事前インストールされているモデルを追加できます。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後に R パッケージは更新サービス パックおよび累積更新プログラムをします。 追加のパッケージと R のコア コンポーネントの完全バージョンのアップグレードは、製品のアップグレード (SQL Server 2017 する SQL Server 2016) からを介してのみ可能ですか、R をバインドすることによって Microsoft Machine Learning のサーバーにサポートします。 詳細については、次を参照してください。 [SQL Server で R のアップグレードと Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
 ### <a name="python-components"></a>Python コンポーネント
 
@@ -89,9 +89,9 @@ SQL Server 2017 Machine Learning は、R、Python のサポートの両方に最
 
 ## <a name="administrative-permissions-for-package-installation"></a>パッケージのインストールに対する管理権限
 
-パッケージのインストールに必要なアクセス許可は、SQL Server 2016 および SQL Server 2017 間で変更されました。
+データベースのインスタンスによって使用されるパッケージ ライブラリは、SQL Server インスタンスの Program Files フォルダーに物理的に配置します。 この場所に書き込むには、管理者のアクセス許可が必要です。 ただし、SQL Server 2017 は、管理者以外のユーザーにパッケージを追加する機能を提供するパッケージのインストールの他の方法論を提供します。
 
-+ SQL Server 2016 では、管理アクセス権は新しい R パッケージのインストールに必要です。
++ SQL Server 2016 での管理アクセスは新しいパッケージのインストールに必要です。
 + SQL Server 2017、パッケージを管理者として R と、Python の両方のインストールを続行できがある可能性が最も簡単な方法です。 
 
     DDL ステートメント、外部ライブラリの作成には、R ツールを使用せずにパッケージをインストールするデータベース管理者ができます。 
@@ -104,10 +104,10 @@ SQL Server 2017 Machine Learning は、R、Python のサポートの両方に最
 
 ## <a name="next-steps"></a>次の手順
 
-+ [パッケージ情報を取得します。](determine-which-packages-are-installed-on-sql-server.md)
-+ [新しい R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
-+ [新しい Python パッケージをインストールします。](../python/install-additional-python-packages-on-sql-server.md)
-+ [リモートの R パッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
-+ [R パッケージの管理の RevoScaleR 関数](use-revoscaler-to-manage-r-packages.md)
++ [パッケージ情報の取得](determine-which-packages-are-installed-on-sql-server.md)
++ [新しい R パッケージのインストール](install-additional-r-packages-on-sql-server.md)
++ [新しい Python パッケージのインストール](../python/install-additional-python-packages-on-sql-server.md)
++ [リモートの R パッケージ管理を有効にする](r-package-how-to-enable-or-disable.md)
++ [R パッケージ管理の RevoScaleR 関数](use-revoscaler-to-manage-r-packages.md)
 + [R パッケージの同期](package-install-uninstall-and-sync.md)
 + [ローカルの R パッケージ リポジトリの miniCRAN](create-a-local-package-repository-using-minicran.md)

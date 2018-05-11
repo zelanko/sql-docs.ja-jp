@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 01fee3784b60b6b36c8e1ad5b187fb6786c168dc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 9954141f2f4c69d42be879960ea183fc11d4e162
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>セルセットを使用したデータの取得
   分析データを取得する際、対話性と柔軟性に最も優れている方法が <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトです。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは階層データおよびメタデータのインメモリ キャッシュであり、これらのデータの元の次元を保持します。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトは、接続された状態でも、接続されていない状態でもスキャンすることができます。 非接続状態でもアクセス可能なことから、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用すれば、データやメタデータを任意の順序で表示することができ、データ取得の最も包括的なオブジェクト モデルといえます。 一方で、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトはオーバーヘッドが非常に大きく、最も低速な ADOMD.NET データ取得オブジェクト モデルでもあります。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  前のクエリで返された XML を読み込むことにより、接続中でなくても、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトを使用して分析データを包括的に参照することができます。  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトからアクセスできるオブジェクトのプロパティの中には、非接続状態では使用できないものがあります。 詳細については、次を参照してください。<xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>です。  
+>  <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> オブジェクトからアクセスできるオブジェクトのプロパティの中には、非接続状態では使用できないものがあります。 詳細については、「<xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>」を参照してください。  
   
 ### <a name="example-of-retrieving-data-in-a-disconnected-state"></a>非接続状態でのデータの取得例  
  次の例は、このトピックで前述したメタデータとデータの例に似ています。 ただし、次の例では、コマンドへの呼び出しで実行<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A>、として、結果が返されます、 **System.Xml.XmlReader**です。 例では、作成、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>これを使用してオブジェクト**System.Xml.XmlReader**で、<xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>メソッドです。 この例で読み込みますが、 **System.Xml.XmlReader**をハード_ディスクにリーダーに含まれるかにデータを読み込む前にすべての手段で別のアプリケーションにそのデータを転送する XML をキャッシュする、すぐに、セル セットです。  

@@ -1,28 +1,19 @@
 ---
 title: Analysis Services のチュートリアル レッスン 8 作成パースペクティブ |Microsoft ドキュメント
-description: Analysis Services tutorial プロジェクトでパースペクティブを作成する方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b6d5dd474719f33d285ac04f1643f330a618a7a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6de14f79ab00f489913153abefa1ae40aa5608e7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-perspectives"></a>パースペクティブを作成する
 
@@ -46,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  クリックして、**モデル**メニュー >**パースペクティブ** > **の作成と管理**です。  
   
-2.  **[パースペクティブ]** ダイアログ ボックスで、 **[新しいパースペクティブ]**をクリックします。  
+2.  **[パースペクティブ]** ダイアログ ボックスで、 **[新しいパースペクティブ]** をクリックします。  
   
 3.  ダブルクリックして、**新しいパースペクティブ**列見出し、および名前の変更**Internet Sales**です。  
   

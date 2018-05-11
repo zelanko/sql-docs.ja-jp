@@ -25,11 +25,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1bc7964fafb35a4da03f8d5414f93835b49ed17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|値が 1 の場合は、削除されたデータベースであることを示します。|  
 |credential_name|SYSNAME|ストレージ アカウントへの認証に使用された SQL 資格情報の名前。 NULL 値は、SQL 資格情報が設定されていないことを示します。|  
 |retention_days|INT|現在の保有期間 (日数)。 NULL 値が示す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベース用に構成されたことはありません。|  
-|is_smart_backup_enabled|INT|示すかどうか[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが現在有効です。 1 の値が示す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が現在有効で示し、値 0 を[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが無効にします。|  
+|is_managed_backup_enabled|INT|示すかどうか[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが現在有効です。 1 の値が示す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が現在有効で示し、値 0 を[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]このデータベースが無効にします。|  
 |storage_url|NVARCHAR (1024)|ストレージ アカウントの URL。|  
 |Encryption_algorithm|NCHAR (20) 型|バックアップを暗号化するときに使用する、現在の暗号化アルゴリズムを返します。|  
 |Encryptor_type|NCHAR(15)|暗号化機能の設定 (証明書または非対称キー) を返します。|  

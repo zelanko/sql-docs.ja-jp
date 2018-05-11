@@ -1,43 +1,23 @@
 ---
-title: "リモート パーティション |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- archiving remote partitions [Analysis Services]
-- partitions [Analysis Services], remote
-- restoring remote partitions [Analysis Services]
-- backing up remote partitions [Analysis Services]
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- MasterDataSourceID property
-- remote partitions [Analysis Services]
-ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
-caps.latest.revision: 
-author: Minewiskan
+title: リモート パーティション |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4366b335e5092818e33de8a0ea1b7ab8d7af607c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 218b3b1b18283463ded4693abeba70a063fe1499
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="partitions---remote-partitions"></a>リモート パーティションのパーティション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Microsoft の別のインスタンスで、リモート パーティションのデータが格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パーティションとその親キューブの定義 (メタデータ) が含まれているインスタンスよりもします。 リモート パーティションは、パーティションとその親キューブが定義されているインスタンスと同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで管理されます。  
+  Microsoft の別のインスタンスで、リモート パーティションのデータが格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パーティションとその親キューブの定義 (メタデータ) が含まれているインスタンスよりもします。 リモート パーティションは、パーティションとその親キューブが定義されているインスタンスと同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスで管理されます。  
   
 > [!NOTE]  
 >  リモート パーティションを保存するには、コンピューターがのインスタンスを持つ必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インストールし、パーティションが定義されているインスタンスと同じサービス パック レベルを実行します。 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス上でのリモート パーティションはサポートされていません。  
@@ -60,13 +40,13 @@ Microsoft の別のインスタンスで、リモート パーティションの
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに格納された複数の MOLAP パーティションまたは HOLAP パーティションがメジャー グループに含まれる場合、キューブでは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のそれらのインスタンス間でメジャー グループのデータを分散します。  
   
 ## <a name="merging-remote-partitions"></a>リモート パーティションのマージ  
- リモート パーティションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の同一のリモート インスタンスに格納されている他のリモート パーティションとのみマージできます。 パーティションのマージに関する詳細については、次を参照してください[で Analysis Services &#40; パーティションのマージ。SSAS - 多次元 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md).  
+ リモート パーティションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の同一のリモート インスタンスに格納されている他のリモート パーティションとのみマージできます。 パーティションのマージに関する詳細については、次を参照してください。 [Analysis Services でのパーティションのマージ&#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)です。  
   
 ## <a name="archiving-and-restoring-remote-partitions"></a>リモート パーティションのアーカイブと復元  
  リモート パーティションのデータのアーカイブまたは復元は、リモート パーティションを格納するデータベースをアーカイブまたは復元するときに行えます。 リモート パーティションを復元せずにデータベースを復元する場合、リモート パーティションを処理しないとパーティションのデータを使用できません。 アーカイブとデータベースの復元の詳細については、次を参照してください。[バックアップおよび Analysis Services データベースの復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)です。  
   
 ## <a name="see-also"></a>参照  
- [作成し、管理、リモート パーティションと #40 です。Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [作成し、管理、リモート パーティションと #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [処理の Analysis Services オブジェクト](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)  
   
   

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>SQL Server の Machine Learning の R、Python のパッケージ情報を取得します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python の複数の環境をインストールした複数の R ツールを使用するかは、簡単に間違ったライブラリまたは環境にパッケージをインストールして、後で検索することできません。 この記事では、クエリと determininga パッケージのバージョン、および現在の SQL Server 環境にインストールされているパッケージを一覧表示する有効なガイダンスを提供します。
+Python の複数の環境をインストールした複数の R ツールを使用するかは、簡単に間違ったライブラリまたは環境にパッケージをインストールして、後で検索することできません。 この記事では、クエリと determinin ga パッケージのバージョン、および現在の SQL Server 環境にインストールされているパッケージを一覧表示する有効なガイダンスを提供します。
 
 ## <a name="verify-the-current-default-library"></a>現在の既定のライブラリを確認してください。
 

@@ -2,9 +2,9 @@
 title: Microsoft SQL 操作 Studio (プレビュー) のリリース ノート |Microsoft ドキュメント
 description: Microsoft SQL 操作 Studio (プレビュー) のリリース ノート
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio (プレビュー) のリリース ノート
 
-**[年 4 月のパブリック プレビューをダウンロードします。](download.md)**
+**[月のパブリック プレビューをダウンロードします。](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>月 2018年 (パブリック プレビューの場合があります)
+
+リリース日: 2018 月 7日  
+バージョン: 0.29.3
+
+*パブリック プレビューの場合があります*安定化とバグの修正にフォーカスが移動します。 このビルドには、次の点が含まれています。  
+
+- Announcing Redgate SQL Search の拡張機能の拡張機能マネージャーで使用できます。
+- 10 言語の使用可能なコミュニティ ローカリゼーション: ドイツ語、スペイン語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、ロシア語、簡体字中国語、繁体字中国語です。
+- GDPR に準拠したビルドが少なくなって製品利用統計情報のコレクション、オプトアウト エクスペリエンスの向上と、製品にリンク プライバシーに関する声明をします。
+- 拡張機能マネージャーは、コミュニティの拡張機能を簡単に検出するエクスペリエンスが向上 Marketplace を持っています。
+- 拡張機能の SQL エージェント ジョブとジョブ履歴は、改善を表示します。
+- Whoisactive およびサーバーのレポートの拡張機能を更新します。
+- 管理ダッシュ ボードのプロパティのスクロールが向上します。
+- GitHub の問題を修正します。
+   - 修正[発行 703](https://github.com/Microsoft/sqlopsstudio/issues/703): 値が正しく更新されるまで表示されないデータ編集の HTML のようなテキストを入力すると、
+   - 修正[発行 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb パッケージの依存関係
+   - 修正[発行 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): 'distinct' 強調表示されていないキーワード
+   - 修正[発行 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): データ編集を元に戻す行は機能しません
+   - 修正[発行 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL エージェントの拡張機能とステータス バー
+   - 修正[発行 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): ウィンドウ サイズの変更後に SQL エージェントの今後のサイズを変更
+
+
+詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/sqlopsstudio/releases)です。
+
 
 
 ## <a name="april-2018-april-public-preview"></a>年 4 月 2018 (年 4 月のパブリック プレビュー)

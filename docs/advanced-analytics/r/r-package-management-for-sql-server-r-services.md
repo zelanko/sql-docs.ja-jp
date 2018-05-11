@@ -1,22 +1,23 @@
 ---
-title: インストールし、SQL Server で machine learning のパッケージの管理 |Microsoft ドキュメント
+title: R、Python パッケージの SQL Server の Machine Learning での管理 |Microsoft ドキュメント
+description: R、Python のパッケージ情報を取得、新しいパッケージを追加し、機械学習用に構成された SQL Server インスタンス上のクライアント アクセスを有効にします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abc77eee8d803fd94a58abfdab6f1c3cbe6621dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>インストールおよび SQL Server で machine learning のパッケージを管理します。
+# <a name="r-and-python-package-management-in-sql-server-machine-learning"></a>SQL Server の Machine Learning における R、Python パッケージの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server 2016 および SQL Server 2017 で新しい R パッケージまたは Python パッケージをインストールする方法について説明します。 SQL Server にインストールできるパッケージに対しての制限についても説明します。
+この記事は R を示し、Python は、SQL Server 2017 機械学習と SQL Server 2016 の R Services の管理をパッケージ化します。 SQL Server にインストールできるパッケージに対しての制限についても説明します。
 
 ## <a name="overview-of-package-management-methods-and-requirements"></a>パッケージの管理方法と要件の概要
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 ただし、これらの制限を使用すると、データ サイエンティストおよびアナリストの動作の変更によりを必ずしも。
 
-+ 一般に、サーバーへの管理アクセスが必要です。 SQL Server の 2017 でデータベース管理者は、ロールを使用して、プライベート用にパッケージをインストールする機能を特定のユーザーに与えることができますが、管理者は、まだこの機能を有効にします。
++ 一般に、SQL Server 上のパッケージのインストールには、管理アクセス権が必要です。 SQL Server の 2017 でデータベース管理者は、ロールを使用して、プライベート用にパッケージをインストールする機能を特定のユーザーに与えることができますが、管理者は、まだこの機能を有効にします。
 + 多くのサーバーには、インターネットへのアクセスはありません。 これらのコンピューターにパッケージをインストールするには、いくつか追加の準備が必要です。
 + パッケージは、インスタンス ライブラリにインストールされます。 パッケージは、インスタンス間で共有することはできません。
 + ユーザーは、ユーザーのライブラリがインストールされているパッケージを実行できません。
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 
 新しい R または Python パッケージをインストールする方法の詳細な手順については、次の記事を参照してください。 
 
-### <a name="install-new-r-packages"></a>新しい R パッケージをインストールします。
+### <a name="r-packages"></a>R パッケージ
 
 + [SQL Server に追加の R パッケージをインストールします。](install-additional-r-packages-on-sql-server.md)
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 
     DDL ステートメントを使用して SQL Server 2017 で R パッケージをインストールすることもできます。
 
-### <a name="install-new-python-packages"></a>新しい Python パッケージをインストールします。
+### <a name="python-packages"></a>Python パッケージ
 
 + [SQL Server に新しい Python パッケージをインストールする](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 
 ダウンロードや、新しいパッケージをインストールしようとすると、前に、要件を確認します。
 
-+ Windows のバージョンのパッケージがあることを確認してください:[適切なパッケージのバージョンと形式を取得します。](#packageVersion)
++ Windows のバージョンのパッケージがあることを確認します。
 
 + すべてのパッケージの依存関係を特定し、SQL Server 環境との互換性を確認します。
 
@@ -84,4 +85,4 @@ ms.lasthandoff: 04/16/2018
 
 すべての依存関係を識別すると、複雑なことができます。 使用することお勧めを r、 [miniCRAN](create-a-local-package-repository-using-minicran.md)オフライン パッケージ リポジトリを準備します。
 
-For Python、同様にすべての依存関係を準備して、ローカルに保存する必要があります。 使用する Windows 互換のバイナリと WHL 形式を使用してください。
+For Python、同様にすべての依存関係を準備して、ローカルに保存する必要があります。 Windows 互換のバイナリと WHL 形式を使用することを確認します。

@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 3: 日付テーブルとしてマーク |Microsoft ドキュメント'
-description: Analysis Services tutorial プロジェクト内のテーブルを日付テーブルをマークする方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 679e3d629bb69ce4aab067b1becc7df8af24e140
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a28259bbd1981b9c1146bb73e1dc5c21d7c9abb4
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mark-as-date-table"></a>日付テーブルとしてマーク
 
@@ -51,11 +42,11 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-set-mark-as-date-table"></a>日付テーブルとして設定する  
   
-1.  **[日付]** 列を選択し、 **[プロパティ]** ウィンドウの **[データ型]**で  **[日付]** が必ず選択されているようにします。  
+1.  **[日付]** 列を選択し、 **[プロパティ]** ウィンドウの **[データ型]** で  **[日付]** が必ず選択されているようにします。  
   
 2.  **[テーブル]** メニュー、**[日付]****[日付テーブルとしてマーク]** の順にクリックします。  
   
-3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意の識別子として **[Date]** 列を選択します。 これは通常、既定で選択します。 **[OK]**をクリックします。 
+3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意の識別子として **[Date]** 列を選択します。 これは通常、既定で選択します。 **[OK]** をクリックします。 
 
     ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   

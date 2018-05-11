@@ -1,27 +1,19 @@
 ---
 title: Analysis Services の Adventure Works チュートリアル (1400) |Microsoft ドキュメント
-description: Analysis Services の Adventure Works チュートリアルが導入されています
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8de5c5fc59de248e53f4c80e81c4dd32e0ce732
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 40d6132a6384bd5ef91811992b52e20d86f27dc2
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>テーブル モデリング (1400 互換性レベル)
 

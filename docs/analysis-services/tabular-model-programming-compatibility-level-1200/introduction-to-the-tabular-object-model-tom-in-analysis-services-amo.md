@@ -1,6 +1,6 @@
 ---
-title: サービス AMO の分析で表形式オブジェクト モデル (TOM) の概要 |Microsoft ドキュメント
-ms.date: 05/07/2018
+title: AMO サービスの分析で表形式オブジェクト モデル (TOM) を理解する |Microsoft ドキュメント
+ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03171e57bc57e3caa3d6cc475fd1fee4910cdf4d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 6c5f4a9e8c7190801bc6f0ef7b19833f1921ade5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO では、表形式オブジェクト モデル (TOM) の概要
+# <a name="understanding-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO で表形式オブジェクト モデル (TOM) についてください。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   表形式オブジェクト モデル (TOM) は、互換性レベル 1200 以上で作成された表形式モデルのプログラミング シナリオをサポートするために作成された、Analysis Services 管理オブジェクト (AMO) クライアント ライブラリの拡張です。 同様に、AMO は、TOM は、モデルを作成する、インポートとデータを更新するロールとアクセス許可の割り当てなどの管理機能を処理するプログラムによる方法を提供します。  
   

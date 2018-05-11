@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 10: パーティションの作成 |Microsoft ドキュメント'
-description: Analysis Services tutorial プロジェクトのパーティションを作成する方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile"
+ms.openlocfilehash: 8dc8e91271451d3f24df95846f32af8dbd9ca346
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-partitions"></a>パーティションの作成
 
@@ -52,13 +43,13 @@ ms.lasthandoff: 04/16/2018
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  行のフィルター選択 ダイアログ ボックスで**行を表示: OrderDate**のままにして**後か等しい**、し、日 フィールドで、次のように入力します。 **2010 年 1 月 1 日**です。 ままにして、**と**選択すると、演算子を選択し、**する前に**、し、[日] フィールドで、次のように入力します。 **2011 年 1 月 1 日**、順にクリック**[ok]**です。
+6.  行のフィルター選択 ダイアログ ボックスで**行を表示: OrderDate**のままにして**後か等しい**、し、日 フィールドで、次のように入力します。 **2010 年 1 月 1 日**です。 ままにして、**と**選択すると、演算子を選択し、**する前に**、し、[日] フィールドで、次のように入力します。 **2011 年 1 月 1 日**、順にクリック **[ok]** です。
 
     ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     通知クエリ エディターで、適用の手順では、フィルター選択された行をという名前の別の手順を表示します。 このフィルターでは、2010年からの注文日のみを選択します。
 
-8.  **[インポート]**をクリックします。
+8.  **[インポート]** をクリックします。
 
     パーティション マネージャーは、クエリ式は、追加の行のフィルター句に注意してください。
 
@@ -113,7 +104,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  パーティションの処理 ダイアログ ボックスで、次を確認してください。**モード**に設定されている**既定の処理**です。  
   
-4.  作成した 5 つのパーティションのそれぞれについて、 **[処理]** 列のチェック ボックスをオンにし、 **[OK]**をクリックします。  
+4.  作成した 5 つのパーティションのそれぞれについて、 **[処理]** 列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
 
     ![として-lesson10--パーティションの処理](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   

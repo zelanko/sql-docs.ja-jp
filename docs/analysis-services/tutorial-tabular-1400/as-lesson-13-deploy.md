@@ -1,28 +1,19 @@
 ---
 title: 'Analysis Services のチュートリアル レッスン 13: 展開 |Microsoft ドキュメント'
-description: Analysis services tutorial プロジェクトを展開する方法について説明します。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 874d185c5210da9fd8af7e18d79f1e6eed96f7e9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 57ddfe2f2d00b098fbffa40811a7877752fefed4
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deploy"></a>配置
 
@@ -57,7 +48,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **モデル名**プロパティで、「 **Adventure Works Internet Sales Model**です。  
   
-5.  選択内容を確認し、 **[OK]**をクリックします。  
+5.  選択内容を確認し、 **[OK]** をクリックします。  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales"></a>Adventure Works Internet Sales を展開するには
   
@@ -71,7 +62,7 @@ ms.lasthandoff: 04/16/2018
     
     ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
-3. 展開が正常に完了したら、先へ進めて、 **[閉じる]**をクリックします。  
+3. 展開が正常に完了したら、先へ進めて、 **[閉じる]** をクリックします。  
   
 
 このレッスンでは、SSDT から表形式モデルを配置する最も一般的で最も簡単な方法について説明します。 展開ウィザードまたは XMLA と AMO の自動化などの高度な展開オプションは、柔軟性、一貫性、およびスケジュールされた展開を提供します。 詳細については、次を参照してください。[表形式モデル ソリューションの配置](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)です。
