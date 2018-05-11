@@ -3,15 +3,13 @@ title: フルテキスト インデックスの作成と管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
@@ -19,13 +17,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd0868f14755f69f88b80b85df5cd2d052447066
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c69da5538488f1660dae8a3c1f56b1f7dff2e5ff
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,11 +67,11 @@ ms.lasthandoff: 04/16/2018
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Management Studio で、フルテキスト インデックスのプロパティを表示する 
 1.  Management Studio で、オブジェクト エクスプローラーでサーバーを展開します。  
   
-2.  **[データベース]**を展開し、フルテキスト インデックスを含むデータベースを展開します。  
+2.  **[データベース]** を展開し、フルテキスト インデックスを含むデータベースを展開します。  
   
-3.  **[テーブル]**を展開します。  
+3.  **[テーブル]** を展開します。  
   
-4.  フルテキスト インデックスが定義されているテーブルを右クリックし、 **[フルテキスト インデックス]**コンテキスト メニューの **[フルテキスト インデックス]** をクリックして、 **[プロパティ]**をクリックします。 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスが表示されます。  
+4.  フルテキスト インデックスが定義されているテーブルを右クリックし、 **[フルテキスト インデックス]** コンテキスト メニューの **[フルテキスト インデックス]** をクリックして、 **[プロパティ]** をクリックします。 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスが表示されます。  
   
 5.  **[ページの選択]** ペインでは、次のいずれかのページを選択できます。  
   
@@ -171,7 +168,7 @@ GO
  この例では、 `Unique Key Column`という名前の結果セット列が返され、Document テーブルの一意のキー列の名前 DocumentID を含む単一行が表示されます。 このクエリに無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどの場合には、NULL が返されます。  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>varbinary(max) 列および xml 列のインデックス  
- **varbinary(max)**列、 **varbinary**列、または **xml** 列にフルテキスト インデックスが設定されている場合は、他のフルテキスト インデックス列と同様に、フルテキスト述語 (CONTAINS および FREETEXT) とフルテキスト関数 (CONTAINSTABLE および FREETEXTTABLE) を使用して、これらの列に対するクエリを実行できます。
+ **varbinary(max)** 列、 **varbinary**列、または **xml** 列にフルテキスト インデックスが設定されている場合は、他のフルテキスト インデックス列と同様に、フルテキスト述語 (CONTAINS および FREETEXT) とフルテキスト関数 (CONTAINSTABLE および FREETEXTTABLE) を使用して、これらの列に対するクエリを実行できます。
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>varbinary(max) データまたは varbinary データのインデックス  
  単一の **varbinary(max)** 列、または **varbinary** 列は、さまざまな種類のドキュメントを格納できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、専用のフィルターがオペレーティング システムにインストールされ、使用できるようになっている任意のドキュメント型がサポートされます。 各ドキュメントのドキュメント型は、ドキュメントのファイル拡張子によって識別されます。 たとえば、ファイル拡張子が .doc である場合、フルテキスト検索では、Microsoft Word ドキュメントをサポートするフィルターが使用されます。 使用可能なドキュメント型の一覧を確認するには、 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) カタログ ビューに対してクエリを実行してください。  
@@ -194,17 +191,17 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  フルテキスト インデックスのあるテーブルでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して手動でフルテキスト インデックスを無効にしたり、再度有効にしたりすることができます。  
 
-1.  サーバー グループを展開し、 **[データベース]**を展開して、フルテキスト インデックスを有効にするテーブルを含むデータベースを展開します。  
+1.  サーバー グループを展開し、 **[データベース]** を展開して、フルテキスト インデックスを有効にするテーブルを含むデータベースを展開します。  
   
-2.  **[テーブル]**を展開し、フルテキスト インデックスを無効または再度有効にするテーブルを右クリックします。  
+2.  **[テーブル]** を展開し、フルテキスト インデックスを無効または再度有効にするテーブルを右クリックします。  
   
-3.  **[フルテキスト インデックス]**を選択し、 **[フルテキスト インデックスを無効化]** または **[フルテキスト インデックスを有効化]**をクリックします。  
+3.  **[フルテキスト インデックス]** を選択し、 **[フルテキスト インデックスを無効化]** または **[フルテキスト インデックスを有効化]** をクリックします。  
   
 ##  <a name="remove"></a>テーブルからフルテキスト インデックスを削除する  
   
 1.  オブジェクト エクスプローラーで、削除するフルテキスト インデックスが含まれているテーブルを右クリックします。  
   
-2.  **[フルテキスト インデックスの削除]**を選択します。  
+2.  **[フルテキスト インデックスの削除]** を選択します。  
   
 3.  フルテキスト インデックスの削除を確認するメッセージが表示されたら、 **[OK]** をクリックします。  
   

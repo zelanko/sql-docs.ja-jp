@@ -3,15 +3,13 @@ title: フルテキスト カタログの作成と管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -20,13 +18,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52ec4860676f445e775ff90048bd091329510cc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14f7dc1176ff57705775ae6c23e30b49202533f7
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,11 +44,11 @@ GO
 ``` 
 
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Management Studio を使用してフルテキスト カタログを作成する
-1.  オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]**を展開して、フルテキスト カタログを作成する対象のデータベースを展開します。  
+1.  オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、フルテキスト カタログを作成する対象のデータベースを展開します。  
   
-2.  **[ストレージ]**を展開し、 **[フルテキスト カタログ]**を右クリックします。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を右クリックします。  
   
-3.  **[新しいフルテキスト カタログ]**を選択します。  
+3.  **[新しいフルテキスト カタログ]** を選択します。  
   
 4.  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91)」を参照してください。  
   
@@ -92,25 +89,25 @@ Transact-SQL ステートメント [ALTER FULLTEXT CATALOG ...REBUILD](
 
 1.  SSMS では、オブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、再構築するフルテキスト カタログが格納されているデータベースを展開します。  
   
-2.  **[ストレージ]**を展開し、 **[フルテキスト カタログ]**を展開します。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を展開します。  
   
-3.  再構築するフルテキスト カタログの名前を右クリックし、 **[再構築]**を選択します。  
+3.  再構築するフルテキスト カタログの名前を右クリックし、 **[再構築]** を選択します。  
   
-4.  **"フルテキスト カタログを削除して再構築しますか?"**という確認メッセージが表示されたら、 **[OK]**をクリックします。  
+4.  **"フルテキスト カタログを削除して再構築しますか?"** という確認メッセージが表示されたら、 **[OK]** をクリックします。  
   
-5.  **[フルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]**をクリックします。  
+5.  **[フルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
    
 ##  <a name="rebuildall"></a>データベースのすべてのフルテキスト カタログの再構築  
 
-1.  SSMS のオブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]**を展開して、再構築するフルテキスト カタログが格納されているデータベースを展開します。  
+1.  SSMS のオブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、再構築するフルテキスト カタログが格納されているデータベースを展開します。  
   
-2.  **[ストレージ]**を展開し、 **[フルテキスト カタログ]**を右クリックします。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を右クリックします。  
   
-3.  **[すべて再構築]**を選択します。  
+3.  **[すべて再構築]** を選択します。  
   
-4.  **[すべてのフルテキスト カタログを削除して再構築しますか?]**という確認メッセージが表示されたら、 **[OK]**をクリックします。  
+4.  **[すべてのフルテキスト カタログを削除して再構築しますか?]** という確認メッセージが表示されたら、 **[OK]** をクリックします。  
   
-5.  **[すべてのフルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]**をクリックします。  
+5.  **[すべてのフルテキスト カタログの再構築]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
   
   
@@ -119,13 +116,13 @@ Transact-SQL ステートメント [ALTER FULLTEXT CATALOG ...REBUILD](
 Transact-SQL ステートメント [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) を実行するか、SQL Server Management Studio (SSMS) で次の処理を実行します。
 
-1.  SSMS のオブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]**を展開して、削除するフルテキスト カタログを含むデータベースを展開します。  
+1.  SSMS のオブジェクト エクスプローラーで、サーバーを展開し、 **[データベース]** を展開して、削除するフルテキスト カタログを含むデータベースを展開します。  
   
-2.  **[ストレージ]**を展開し、 **[フルテキスト カタログ]**を展開します。  
+2.  **[ストレージ]** を展開し、 **[フルテキスト カタログ]** を展開します。  
   
-3.  削除するフルテキスト カタログを右クリックし、 **[削除]**を選択します。  
+3.  削除するフルテキスト カタログを右クリックし、 **[削除]** を選択します。  
   
-4.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]**をクリックします。  
+4.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
 
 ## <a name="next-step"></a>次の手順
 [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)

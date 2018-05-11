@@ -3,33 +3,30 @@ title: フルテキスト検索の DDL、関数、ストアド プロシージ�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f1593870454d3578edc6605324ba380c48abfa6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74e711521668985119b0c3ab8f3921b4fcc7fdbf
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   プロパティ検索機能を含むフルテキスト検索をサポートする Transact-SQL ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの一覧を示します。  
   
- 非推奨化されたオブジェクトは含まれていません。  
+ 非推奨のオブジェクトは含まれていません。  
   
  セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)」を参照してください。  
   

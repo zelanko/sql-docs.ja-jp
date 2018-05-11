@@ -3,15 +3,13 @@ title: テーブルおよび列に対するセマンティック検索の有効�
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
@@ -19,12 +17,11 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34a86f82512dc2f469031aa84d13e6c84ad021c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 67dff594a953d7650875e67bdb2ecc84703eca8d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +162,7 @@ GO
 **ALTER FULLTEXT INDEX** ステートメントを使用して既存のフルテキスト インデックスを変更するとき、セマンティック インデックス作成を削除できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のさまざまなダイアログ ボックスを使用して、セマンティック インデックス作成を削除することもできます。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL を使用してセマンティック インデックスを削除する  
-1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN***<列名>***DROP STATISTICAL_SEMANTICS** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
+1 つまたは複数の列からセマンティック インデックス作成だけを削除するには、**ALTER COLUMN ***<列名>*** DROP STATISTICAL_SEMANTICS** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。 1 つの **ALTER** ステートメントを使用して複数の列からインデックス作成を削除できます。  
   
 ```sql  
 USE database_name  
@@ -177,7 +174,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN***<列名>***DROP** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
+列からフルテキスト インデックス作成とセマンティック インデックス作成の両方を削除するには、**ALTER COLUMN ***<列名>*** DROP** オプションを指定して、**ALTER FULLTEXT INDEX** ステートメントを呼び出します。  
   
 ```sql  
 USE database_name  
@@ -243,7 +240,7 @@ GO
     GO  
     ```  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のオブジェクト エクスプローラーで、列を右クリックし、 **[プロパティ]**を選びます。 **[列のプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[統計的セマンティクス]** プロパティの値を確認します。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のオブジェクト エクスプローラーで、列を右クリックし、 **[プロパティ]** を選びます。 **[列のプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[統計的セマンティクス]** プロパティの値を確認します。  
   
      値 True は、指定された列に対してフルテキスト インデックス作成とセマンティック インデックス作成が有効になっていることを示します。  
   

@@ -8,24 +8,22 @@ ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: 59
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 237c0a53319d7b4c0478cdd8527737401ab5b5f1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>テーブル (Azure SQL データ ウェアハウス) を作成します。
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -140,7 +138,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  1 つまたは複数のキー列を含むクラスター化インデックスとしてテーブルを格納します。 これは、行によって、データを格納します。 *index_column_name* を使用して、インデックスに 1 つまたは複数のキー列の名前を指定します。  詳細については、「全般的な解説」の「行ストア テーブル」を参照してください。
  
  `LOCATION = USER_DB`   
- このオプションは推奨されていません。 この構文は受け入れられますが、不要になっていて動作に影響しません。   
+ このオプションは非推奨とされます。 この構文は受け入れられますが、不要になっていて動作に影響しません。   
   
 ### <a name="TableDistributionOptions"></a> テーブル分散オプション
 最適な分散メソッドを選択する方法および分散テーブルを使用する方法を理解するには、「[Azure SQL Data Warehouse での分散テーブルの設計に関するガイダンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)」を参照してください。

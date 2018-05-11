@@ -3,15 +3,13 @@ title: フルテキスト検索に使用するストップワードとストッ�
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -24,13 +22,12 @@ caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c80ab60417368e51654b94da5c5dd61678b8a356
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3f76976b1dbb89027db6bb194b124f9813768398
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>フルテキスト検索に使用するストップワードとストップリストの構成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,11 +54,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]**を展開し、フルテキスト ストップリストを作成する対象のデータベースを展開します。  
+2.  **[データベース]** を展開し、フルテキスト ストップリストを作成する対象のデータベースを展開します。  
   
-3.  **[ストレージ]**を展開し、 **[フルテキスト ストップリスト]**を右クリックします。  
+3.  **[ストレージ]** を展開し、 **[フルテキスト ストップリスト]** を右クリックします。  
   
-4.  **[新しいフルテキスト ストップリスト]**をクリックします。  
+4.  **[新しいフルテキスト ストップリスト]** をクリックします。  
   
 5.  新しいストップリストの名前を入力します。  
   
@@ -96,15 +93,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]**を展開し、データベースを展開します。  
+2.  **[データベース]** を展開し、データベースを展開します。  
   
-3.  **[ストレージ]**を展開し、 **[フルテキスト ストップリスト]**をクリックします。  
+3.  **[ストレージ]** を展開し、 **[フルテキスト ストップリスト]** をクリックします。  
   
-4.  プロパティを変更するストップリストを右クリックし、 **[プロパティ]**をクリックします。  
+4.  プロパティを変更するストップリストを右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  [[フルテキスト ストップリストのプロパティ]](http://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ダイアログ ボックスで:  
   
-    1.  **[アクション]** ボックスの一覧で、 **[ストップワードの追加]**、 **[ストップワードの削除]**、 **[すべてのストップワードの削除]**、 **[ストップリストのクリア]**のいずれかのアクションを選択します。  
+    1.  **[アクション]** ボックスの一覧で、 **[ストップワードの追加]**、 **[ストップワードの削除]**、 **[すべてのストップワードの削除]**、 **[ストップリストのクリア]** のいずれかのアクションを選択します。  
   
     2.  選択したアクションに対して **[ストップワード]** ボックスが有効になっている場合は、単一のストップワードを入力します。 このストップワードは一意である必要があります。つまり、選択した言語で、このストップリストにまだ含まれていないものである必要があります。  
   

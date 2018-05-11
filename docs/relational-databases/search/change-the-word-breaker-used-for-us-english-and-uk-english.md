@@ -3,27 +3,24 @@ title: 米国英語と英国英語に使用されるワード ブレーカーの
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8969a3fe9e8f9722c90a90fe558f0e6c8c38d292
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2213afdfdb67449e96363e5ea9e5009a93ba9132
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーを変更する方法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **WBreakerClass** キー値を **{188D6CC5-CB03-4C01-912E-47D21295D77E}** に更新します。  
   
-5.  **StemmerClass** キー値を **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**に更新します。  
+5.  **StemmerClass** キー値を **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** に更新します。  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
@@ -82,7 +79,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **WBreakerClass** キー値を **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** に更新します。  
   
-5.  **StemmerClass** キー値を **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**に更新します。  
+5.  **StemmerClass** キー値を **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** に更新します。  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
@@ -106,7 +103,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **WBreakerClass** キー値を **{9faed859-0b30-4434-ae65-412e14a16fb8}** に更新します。  
   
-5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**に更新します。  
+5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** に更新します。  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   
@@ -128,7 +125,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **WBreakerClass** キー値を **{9faed859-0b30-4434-ae65-412e14a16fb8}** に更新します。  
   
-5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**に更新します。  
+5.  **StemmerClass** キー値を **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** に更新します。  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
   

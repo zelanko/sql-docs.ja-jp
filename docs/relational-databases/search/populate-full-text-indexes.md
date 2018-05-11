@@ -3,15 +3,13 @@ title: フルテキスト インデックスの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -31,13 +29,12 @@ caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 15619488c2b8d9f71423af9a0ca853b74ed5b12b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -183,11 +180,11 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 1.  Management Studio で、オブジェクト エクスプローラーでサーバーを展開します。  
   
-2.  **[データベース]**を展開し、フルテキスト インデックスを含むデータベースを展開します。  
+2.  **[データベース]** を展開し、フルテキスト インデックスを含むデータベースを展開します。  
   
-3.  **[テーブル]**を展開します。  
+3.  **[テーブル]** を展開します。  
   
-    フルテキスト インデックスが定義されているテーブルを右クリックし、 **[フルテキスト インデックス]**コンテキスト メニューの **[フルテキスト インデックス]** をクリックして、 **[プロパティ]**をクリックします。 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスが表示されます。  
+    フルテキスト インデックスが定義されているテーブルを右クリックし、 **[フルテキスト インデックス]** コンテキスト メニューの **[フルテキスト インデックス]** をクリックして、 **[プロパティ]** をクリックします。 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスが表示されます。  
 
     > [!IMPORTANT]  
     >  ベース テーブルまたはビューに **timestamp** データ型の列が含まれていない場合は、増分作成はできません。
@@ -200,10 +197,10 @@ ALTER FULLTEXT INDEX ON Production.Document
   
     -   新しいスケジュールを**作成**するには、**[新規作成]** をクリックします。  
   
-        スケジュールを作成できる **[新しいフルテキスト インデックス テーブルのスケジュール]** ダイアログ ボックスが表示されます。 スケジュールを保存するには、 **[OK]**をクリックします。  
+        スケジュールを作成できる **[新しいフルテキスト インデックス テーブルのスケジュール]** ダイアログ ボックスが表示されます。 スケジュールを保存するには、 **[OK]** をクリックします。  
   
         > [!IMPORTANT]  
-        >  *[フルテキスト インデックスのプロパティ]*ダイアログ ボックスを閉じると、新しいスケジュールが SQL Server エージェント ジョブ (*database_name*. **table_name** でテーブルの増分作成を開始) に関連付けられます。 同じフルテキスト インデックスのスケジュールを複数作成した場合、すべてのスケジュールで同じジョブが使用されます。  
+        >  *[フルテキスト インデックスのプロパティ]* ダイアログ ボックスを閉じると、新しいスケジュールが SQL Server エージェント ジョブ (*database_name*. **table_name** でテーブルの増分作成を開始) に関連付けられます。 同じフルテキスト インデックスのスケジュールを複数作成した場合、すべてのスケジュールで同じジョブが使用されます。  
   
     -   既存のスケジュールを**変更**するには、それを選択し、**[編集]** をクリックします。  
   

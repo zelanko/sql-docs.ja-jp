@@ -3,15 +3,13 @@ title: フルテキスト インデックス作成ウィザードの使用 | Mic
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.fulltextindexingwizard.welcome.f1
 - sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
@@ -30,13 +28,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be8a57c51f67af28d41968255e5296ba7b6966be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f176dec2a4eca0cc313bd010729b5ba267ce6323
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="create-a--full-text-index"></a>フルテキスト インデックスを作成する 
 
-1. オブジェクト エクスプローラーで、フルテキスト インデックスを作成するテーブルを右クリックして **[フルテキスト インデックス]**をポイントし、 **[フルテキスト インデックスの定義]**をクリックします。 別のウィンドウでウィザードが起動します。
+1. オブジェクト エクスプローラーで、フルテキスト インデックスを作成するテーブルを右クリックして **[フルテキスト インデックス]** をポイントし、 **[フルテキスト インデックスの定義]** をクリックします。 別のウィンドウでウィザードが起動します。
    [次へ] をクリックします。 
   
 2. **[一意インデックス]。**  ドロップダウン リストからインデックスを選択します。 インデックスは、単一キー列の、一意で NULL 値が許容されないインデックスである必要があります。 フルテキストの一意キーには、一番小さな一意キー インデックスを選択します。 最高のパフォーマンスを得るためには、クラスター化インデックスをお勧めします。  
@@ -60,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 >**注** 
 >
->選択した言語に関連付けられているセマンティック言語モデルがない場合、 **[統計的セマンティクス]** チェック ボックスは有効になりませんん。 **[言語]** を選択する前に **[統計的セマンティクス]**を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
+>選択した言語に関連付けられているセマンティック言語モデルがない場合、 **[統計的セマンティクス]** チェック ボックスは有効になりませんん。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
 >
 > セマンティック検索は、 **Azure SQL Database では使用できません**。 Azure SQL Database でこのウィザードを実行すると、[統計的セマンティクス] オプションは表示されません。
   

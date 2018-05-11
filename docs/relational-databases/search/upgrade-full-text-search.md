@@ -3,15 +3,13 @@ title: フルテキスト検索のアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -23,13 +21,12 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0215117505c5873fdaeda174de3e50e8c22a610
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 19df5a08fc062975792718c6210b93aa89f1f842
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,7 +178,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアタッチされた各フルテキスト カタログの状態は、データベースが [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からデタッチされたときと同じです。 フルテキスト インデックスの作成がデタッチ操作により中断されていた場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でその作成が再開され、このフルテキスト インデックスがフルテキスト検索に使用できるようになります。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] がフルテキスト カタログ ファイルを見つけられない場合、またはアタッチ操作時に新しい場所を指定せずにフルテキスト ファイルが移動された場合、選択したフルテキスト アップグレード オプションによって動作が異なります。 フルテキスト アップグレード オプションが **[インポート]** または **[再構築]**の場合、アタッチされたフルテキスト カタログは再構築されます。 フルテキスト アップグレード オプションが **[リセット]** の場合、アタッチされたフルテキスト カタログはリセットされます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] がフルテキスト カタログ ファイルを見つけられない場合、またはアタッチ操作時に新しい場所を指定せずにフルテキスト ファイルが移動された場合、選択したフルテキスト アップグレード オプションによって動作が異なります。 フルテキスト アップグレード オプションが **[インポート]** または **[再構築]** の場合、アタッチされたフルテキスト カタログは再構築されます。 フルテキスト アップグレード オプションが **[リセット]** の場合、アタッチされたフルテキスト カタログはリセットされます。  
   
  データベースのデタッチとアタッチの詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」、「[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)」、「[sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)」を参照してください。  
   

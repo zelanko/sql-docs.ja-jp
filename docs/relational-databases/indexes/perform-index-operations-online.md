@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
@@ -13,20 +13,17 @@ helpviewer_keywords:
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.suite: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
-ms.workload: On Demand
+ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e0fbec00b860dd510cddd767d8c8b09720588528
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 732c0510f2744df1dd361fa5e32077c571d47c9c
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="perform-index-operations-online"></a>オンラインでのインデックス操作の実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,17 +82,17 @@ ms.lasthandoff: 04/16/2018
   
 4.  **[インデックス]** フォルダーを展開します。  
   
-5.  オンラインで再構築するインデックスを右クリックし、 **[プロパティ]**を選択します。  
+5.  オンラインで再構築するインデックスを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[ページの選択]**の **[オプション]**を選択します。  
+6.  **[ページの選択]** の **[オプション]** を選択します。  
   
-7.  **[DML のオンライン処理を許可する]**を選択し、一覧から **[True]** を選択します。  
+7.  **[DML のオンライン処理を許可する]** を選択し、一覧から **[True]** を選択します。  
   
 8.  **[OK]** をクリックします。  
   
-9. オンラインで再構築するインデックスを右クリックし、 **[再構築]**を選択します。  
+9. オンラインで再構築するインデックスを右クリックし、 **[再構築]** を選択します。  
   
-10. **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
+10. **[インデックスの再構築]** ダイアログ ボックスで、 **[再構築するインデックス]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -103,9 +100,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、既存のインデックスをオンラインで再構築します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、既存のインデックスをオンラインで再構築します。  
   
     ```  
     USE AdventureWorks2012;  

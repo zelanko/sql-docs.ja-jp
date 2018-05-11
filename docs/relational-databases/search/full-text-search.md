@@ -3,13 +3,13 @@ title: フルテキスト検索 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
@@ -17,13 +17,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="full-text-search"></a>フルテキスト検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,9 +138,9 @@ ms.lasthandoff: 04/16/2018
 ###  <a name="indexing"></a> フルテキスト インデックス作成のプロセス  
  フルテキスト作成 (クロールとも呼ばれます) を開始すると、Full-Text Engine は大きなデータをバッチでメモリにプッシュして、フィルター デーモン ホストに通知します。 フィルター デーモン ホストは、データをフィルター処理してから分解し、逆単語リストに変換します。 次にフルテキスト検索が、変換されたデータを単語リストからプルし、データを処理してストップワードを削除し、バッチ用の単語リストを 1 つ以上の逆インデックスに保持します。  
   
- **varbinary(max)** 型または **image** 型の列に格納されたデータにインデックスを作成する場合には、 **IFilter** インターフェイスを実装するフィルターが、そのデータに指定されたファイル フォーマット ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word など) に基づいてテキストを抽出します。 場合によっては、フィルター コンポーネントは **varbinary(max)**型または **image** 型のデータを filterdata フォルダーに書き込む必要があります。この場合、メモリへのプッシュは行われません。  
+ **varbinary(max)** 型または **image** 型の列に格納されたデータにインデックスを作成する場合には、 **IFilter** インターフェイスを実装するフィルターが、そのデータに指定されたファイル フォーマット ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word など) に基づいてテキストを抽出します。 場合によっては、フィルター コンポーネントは **varbinary(max)** 型または **image** 型のデータを filterdata フォルダーに書き込む必要があります。この場合、メモリへのプッシュは行われません。  
   
- 一連の処理の中で、生成されたテキスト データがワード ブレーカーに渡され、そこで個々のトークンまたはキーワードに分解されます。 トークン化に使用する言語は列レベルで指定するか、 **varbinary(max)**型、 **image**型、または **xml** 型データのいずれかからフィルター コンポーネントによって識別されます。  
+ 一連の処理の中で、生成されたテキスト データがワード ブレーカーに渡され、そこで個々のトークンまたはキーワードに分解されます。 トークン化に使用する言語は列レベルで指定するか、 **varbinary(max)** 型、 **image**型、または **xml** 型データのいずれかからフィルター コンポーネントによって識別されます。  
   
  この後、追加の処理によってストップワードが削除され、トークンが正規化されて、フルテキスト インデックスまたはインデックス フラグメントに格納されます。  
   

@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
 -   既定では、実行開始時には、送信される行数に関する情報はログに記録されません。  
   
--   特定のパッケージ実行のこのデータを表示するには、ログ記録レベルを **Verbose** に設定します。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
+-   特定のパッケージ実行のこのデータを表示するには、ログ記録レベルを **Verbose** に設定します。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューには、次の権限のいずれかが必要です。  

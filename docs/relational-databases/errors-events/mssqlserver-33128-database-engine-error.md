@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f4c05b64e4667028fef298a082e62d073cd8ae4c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c2b33e7edfd392da913d6887ae8bbbbef6630093
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +35,10 @@ ms.lasthandoff: 04/16/2018
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|SEC_DEPRECATED_ALGO|  
-|メッセージ テキスト|暗号化は失敗しました。 キーでは非推奨アルゴリズム '%.*ls' が使用されていますが、このアルゴリズムはサポートされていません。|  
+|メッセージ テキスト|暗号化は失敗しました。 キーでは非推奨のアルゴリズム '%.*ls' が使用されていますが、このアルゴリズムはサポートされていません。|  
   
 ## <a name="explanation"></a>説明  
-このメッセージは、RC4 (または RC4_128) 暗号化アルゴリズムを参照した場合に表示されます。 RC4 および RC4_128 は、弱いアルゴリズムなので推奨されていません。 AES アルゴリズムのいずれかなど、強力なアルゴリズムを使用してください   
+このメッセージは、RC4 (または RC4_128) 暗号化アルゴリズムを参照した場合に表示されます。 RC4 および RC4_128 は、弱いアルゴリズムなので非推奨とされます。 AES アルゴリズムのいずれかなど、強力なアルゴリズムを使用してください   
   
 データベースの互換性レベルが 90 または 100 の場合、操作は成功し、今後廃止予定のイベントが発生し、メッセージがリング バッファーにのみ表示されます。  
   

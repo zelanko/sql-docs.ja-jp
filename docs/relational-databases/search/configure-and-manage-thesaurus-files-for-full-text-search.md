@@ -3,15 +3,13 @@ title: フルテキスト検索に使用する類義語辞典ファイルの構�
 ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
@@ -21,12 +19,11 @@ caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: eeec287627230c999a242bfb53bf196468270075
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fe04fa2462eed41ace5a8c70b0b3afd13848286c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
