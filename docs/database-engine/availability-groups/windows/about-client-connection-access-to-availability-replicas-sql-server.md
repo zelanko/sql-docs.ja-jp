@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  読み取りを目的とした接続のみ  
  セカンダリ データベースは、 **アプリケーションの目的** 接続プロパティが **ReadOnly** (*読み取り目的の接続*) に設定されている接続に対してのみ利用できます。  
   
- この接続プロパティの詳細については、「 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
+ この接続プロパティの詳細については、「 [SQL Server Native Client の HADR サポート](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
  読み取り専用接続の許可  
  セカンダリ データベースは、すべて読み取りアクセス接続に利用できます。 このオプションでは、下位バージョンのクライアントを接続できます。  
