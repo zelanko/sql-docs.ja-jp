@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>コマンドラインから machine learning の SQL Server コンポーネントをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 
 プロンプトが画面に表示されることがなく、対話型の進行状況に関する情報を表示するには、/qs 引数を使用します。
 
-> [!Important]
+> [!IMPORTANT]
 > インストールが完了したら、次の 2 つの追加の構成手順が残ります。 これらのタスクが実行されるまで、統合は完了しません。 参照してください[post-installation tasks](#post-install)手順についてはします。
 
 ### <a name="sql-server-2017-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server 2017: データベース エンジン、Python と R で分析を高度な

@@ -3,31 +3,27 @@ title: インデックスの名前変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming indexes
 - index names [SQL Server]
 - indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 26b2f2eb6e6afd5a23b98f3cb95b3e9832e32c7b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9756cc3ab6ef292860648f846b4be481a54376b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-indexes"></a>インデックスの名前変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,15 +62,15 @@ ms.lasthandoff: 04/16/2018
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスの名前を変更するテーブルを右クリックし、 **[デザイン]**を選択します。  
+3.  インデックスの名前を変更するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
 5.  **[選択された主/一意キーまたはインデックス]** ボックスで、名前の変更対象のインデックスを選択します。  
   
 6.  グリッド内の **[名前]** をクリックし、テキスト ボックスに新しい名前を入力します。  
   
-7.  **[閉じる]**をクリックします。  
+7.  **[閉じる]** をクリックします。  
   
 8.  **[ファイル]** メニューの *[<テーブル名> の保存]* をクリックします。  
   
@@ -88,7 +84,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  プラス記号をクリックして **[インデックス]** フォルダーを展開します。  
   
-5.  名前を変更するインデックスを右クリックし、 **[名前の変更]**をクリックします。  
+5.  名前を変更するインデックスを右クリックし、 **[名前の変更]** をクリックします。  
   
 6.  新しいインデックス名を入力して、Enter キーを押します。  
   
@@ -98,9 +94,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  

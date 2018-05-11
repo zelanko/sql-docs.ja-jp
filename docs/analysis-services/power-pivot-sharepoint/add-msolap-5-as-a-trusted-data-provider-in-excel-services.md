@@ -1,31 +1,23 @@
 ---
-title: "Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加 |Microsoft ドキュメント"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加 |Microsoft ドキュメント
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbf52055cb77be6a740fc5186c69d55c352d5cc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 55727f3452d2bf406ab78fa7982a0c65e48f6052
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-MSOLAP.5 は、SQL Server 2012 用の Analysis Services OLE DB プロバイダーです。 Excel Services は、サーバー上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを利用可能とする接続要求を行う前に、このプロバイダーを信頼する必要があります。  
+  MSOLAP.5 は、SQL Server 2012 用の Analysis Services OLE DB プロバイダーです。 Excel Services は、サーバー上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを利用可能とする接続要求を行う前に、このプロバイダーを信頼する必要があります。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を構成した場合、このツールは要件を満たすアクションを含むため、MSOLAP.5 は、既に信頼されたプロバイダーとなっている可能性があります。 ただし、PowerShell や全体管理を使用している場合、または信頼されたプロバイダー アクションを構成ツールで除外している場合は、このプロバイダーが不足している可能性があります。その場合は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスのファームを構成するときに、それを追加する必要があります。  
   
@@ -35,13 +27,13 @@ MSOLAP.5 は、SQL Server 2012 用の Analysis Services OLE DB プロバイダ�
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Excel Services に信頼できるプロバイダーを追加する  
   
-1.  サーバーの全体管理で、 **[アプリケーション構成の管理]**をクリックし、Excel Services サービス アプリケーションをクリックします。  
+1.  サーバーの全体管理で、 **[アプリケーション構成の管理]** をクリックし、Excel Services サービス アプリケーションをクリックします。  
   
-2.  **[信頼できるデータ プロバイダー]**をクリックします。  
+2.  **[信頼できるデータ プロバイダー]** をクリックします。  
   
 3.  MSOLAP.5 が一覧に表示されていることを確認します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の構成方法によっては、MSOLAP.5 が既に信頼されている場合があります。  
   
-4.  表示されない場合は、 **[信頼できるデータ プロバイダーの追加]**をクリックします。  
+4.  表示されない場合は、 **[信頼できるデータ プロバイダーの追加]** をクリックします。  
   
 5.  [プロバイダー ID] に、「 **MSOLAP.5**」と入力します。  
   
