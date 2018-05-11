@@ -1,16 +1,15 @@
 ---
-title: "レポート モデル クエリ デザイナーのユーザー インターフェイス | Microsoft Docs"
-ms.custom: 
+title: レポート モデル クエリ デザイナーのユーザー インターフェイス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10015"
 - sql13.rtp.rptdesigner.dataview.smqlquerydesigner.f1
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ec879b55af66aa8044327ab88a1ea65e92ec844
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 19e623c9f36d9128c0143695b9d3d1aa427bf1e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-model-query-designer-user-interface"></a>レポート モデル クエリ デザイナーのユーザー インターフェイス
   レポート デザイナーには、レポートに必要なデータを指定して、Report Server Model データ ソースから抽出するためのクエリ デザイナーが 2 つ用意されています。 モデルのエンティティやエンティティのフィールドを参照したり選択したりする場合は、グラフィカル クエリ デザイナーを使用します。 XML 形式の SMDL (セマンティック モデル定義言語) 仕様を直接操作するには、テキストベースのクエリ デザイナーを使用します。  
@@ -49,9 +47,9 @@ ms.lasthandoff: 01/09/2018
 |----------|--------------|  
 |エクスプローラー ペイン|モデル内のエンティティやエンティティ フィールドをグラフィカルに表示します。 このペインは、エンティティや、そのエンティティに関連したエンティティ、フィールドを参照するときに使用します。|  
 |デザイン領域|モデルからフィールドが一覧表示されます。 このペインは、選択したフィールドのレイアウトを調整するときに使用します。|  
-|Results pane|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** (![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリの実行")) ボタンをクリックします。|  
+|Results pane|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** (![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリの実行")) ボタンをクリックします。|  
   
- エクスプローラー ペインまたはデザイン領域ペインの情報を変更した場合、 **[実行]**をクリックしたときに、変更内容が結果ペインに反映されます。  
+ エクスプローラー ペインまたはデザイン領域ペインの情報を変更した場合、 **[実行]** をクリックしたときに、変更内容が結果ペインに反映されます。  
   
  デザイン領域から列を削除するなど、特定のペインで操作を実行するには、列を右クリックして表示されるメニューから目的のコマンドをクリックします。  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 |ペイン|機能|  
 |----------|--------------|  
 |クエリ ペイン|SMQL 仕様テキストを表示します。|  
-|結果ペイン|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]**をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
+|結果ペイン|クエリの結果を表示します。 クエリを実行するには、任意のペインで右クリックして、 **[実行]** をクリックするか、ツール バーの **[実行]** ボタンをクリックします。|  
   
 ### <a name="text-based-query-designer-toolbar"></a>テキスト ベースのクエリ デザイナーのツール バー  
  ツール バーのボタンを使用してクエリをデザインすることもできます。 次の表は、ツール バーのボタンと、各ボタンの用途を一覧にしたものです。  

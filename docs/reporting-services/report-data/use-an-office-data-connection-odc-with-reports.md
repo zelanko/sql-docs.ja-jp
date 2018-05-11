@@ -1,31 +1,29 @@
 ---
-title: "レポートで Office Data Connection (.odc) を使用する | Microsoft Docs"
-ms.custom: 
+title: レポートで Office Data Connection (.odc) を使用する | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 83af0a0eda5039eb1e9cedb554cd425e04a03145
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>レポートで Office Data Connection (.odc) を使用する
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  
@@ -58,11 +56,11 @@ ms.lasthandoff: 01/09/2018
   
 1.  Excel 2007 を起動します。  
   
-2.  **[データ]** タブで、 **[外部データの取り込み]** グループの **[その他のデータ ソース]**をクリックし、 **[データ接続ウィザード]**をクリックします。  
+2.  **[データ]** タブで、 **[外部データの取り込み]** グループの **[その他のデータ ソース]** をクリックし、 **[データ接続ウィザード]** をクリックします。  
   
-3.  **[その他/詳細]**を選択し、 **[次へ]**をクリックします。  
+3.  **[その他/詳細]** を選択し、 **[次へ]** をクリックします。  
   
-4.  **[Microsoft OLE DB Provider for SQL Server]**を選択し、 **[次へ]**をクリックします。  
+4.  **[Microsoft OLE DB Provider for SQL Server]** を選択し、 **[次へ]** をクリックします。  
   
 5.  サーバー名 (既定ではコンピューターのネットワーク名)、および有効なログインとデータベース権限が与えられたユーザー アカウントを入力します。 **[次へ]** をクリックします。  
   
@@ -70,35 +68,35 @@ ms.lasthandoff: 01/09/2018
   
 7.  **[指定したテーブルに接続]** チェック ボックスは既定でオンになっています。 このオプションは、特定のテーブルからデータを取得する場合に使用します。 レポート サーバーでは .odc ファイル内のすべてのクエリが無視されるので、このチェック ボックスはオンとオフのどちらになっていてもかまいません。 レポートのデータを取得するクエリは、外部ファイルではなくレポート定義ファイルに含まれています。  
   
-8.  接続が開いている間は、プロパティを編集してエクスポートできます。 **[データ]** タブで、 **[接続]** グループの **[プロパティ]**をクリックし、接続名の隣にある **[接続のプロパティ]** をクリックします。  
+8.  接続が開いている間は、プロパティを編集してエクスポートできます。 **[データ]** タブで、 **[接続]** グループの **[プロパティ]** をクリックし、接続名の隣にある **[接続のプロパティ]** をクリックします。  
   
-9. **[定義]** タブで、 **[接続ファイルのエクスポート]**をクリックします。  
+9. **[定義]** タブで、 **[接続ファイルのエクスポート]** をクリックします。  
   
-10. ファイル名を入力し、 **[保存]**をクリックします。 アプリケーションと開いているすべてのファイルを閉じます。  
+10. ファイル名を入力し、 **[保存]** をクリックします。 アプリケーションと開いているすべてのファイルを閉じます。  
   
 ### <a name="to-upload-and-use-an-odc-file"></a>.odc ファイルをアップロードして使用するには  
   
 1.  接続ファイルのアップロード先となるライブラリを開きます。  
   
-2.  **[アップロード]** メニューの **[ドキュメントのアップロード]**をクリックします。  
+2.  **[アップロード]** メニューの **[ドキュメントのアップロード]** をクリックします。  
   
-3.  **[参照]**をクリックします。  
+3.  **[参照]** をクリックします。  
   
 4.  作成した .odc ファイルを選択します。 既定では、.odc ファイルは [マイ ドキュメント] フォルダーの [My Data Sources] にあります。  
   
 5.  **[開く]** をクリックしてファイルを選択し、 **[OK]** をクリックして選択したファイルを保存します。 新しいアイテムのプロパティ ページが自動的に開きます。  
   
-6.  [コンテンツ タイプ] で **[レポート データ ソース]**を選択し、 **[OK]**をクリックします。  
+6.  [コンテンツ タイプ] で **[レポート データ ソース]** を選択し、 **[OK]** をクリックします。  
   
 7.  レポートをポイントします。  
   
-8.  下矢印をクリックし、 **[データ ソースの管理]**を選択します。  
+8.  下矢印をクリックし、 **[データ ソースの管理]** を選択します。  
   
 9. データ ソース名をクリックします。  
   
-10. レポートでカスタム データ ソース情報を使用する場合は、 **[共有]**をクリックします。  
+10. レポートでカスタム データ ソース情報を使用する場合は、 **[共有]** をクリックします。  
   
-11. **[データ ソース リンク]**で、参照ボタン (**[...]**) をクリックします。  
+11. **[データ ソース リンク]** で、参照ボタン (**[...]**) をクリックします。  
   
 12. アップロードする .odc ファイルを選択します。  
   

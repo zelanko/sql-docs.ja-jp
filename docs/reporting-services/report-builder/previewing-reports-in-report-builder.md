@@ -1,30 +1,28 @@
 ---
-title: "レポート ビルダーでのレポートのプレビュー | Microsoft Docs"
-ms.custom: 
+title: レポート ビルダーでのレポートのプレビュー | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: eb6447d896a68a932e24223944fd6117f54638eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページページ分割されたレポートを作成する際は、レポートが思いどおりに表示されるかどうかを確認するために、レポートをたびたびプレビューすると効果的です。 レポートをプレビューするには、 **[実行]**をクリックします。 レポートがプレビュー モードで表示されます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページページ分割されたレポートを作成する際は、レポートが思いどおりに表示されるかどうかを確認するために、レポートをたびたびプレビューすると効果的です。 レポートをプレビューするには、 **[実行]** をクリックします。 レポートがプレビュー モードで表示されます。  
   
  レポート ビルダーのプレビュー エクスペリエンスは、レポート サーバーとの接続時に編集セッションを使用することによって改善されています。 編集セッションによってデータのキャッシュが作成され、レポートを繰り返しプレビューする際は、キャッシュ内のデータセットが利用されます。 編集セッションの機能を直接操作することはできません。しかし、キャッシュ済みのデータセットがいつ最新の状態に更新されるか、という知識は、プレビューのパフォーマンス向上や、レポートのレンダリングが遅い (または速い) 理由を把握するために役立てることができます。  
   
