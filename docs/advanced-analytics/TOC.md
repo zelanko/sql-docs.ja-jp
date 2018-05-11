@@ -29,9 +29,9 @@
 ## SQL Server 2016
 ### [R Services (データベース内)](install/sql-r-services-windows-install.md)
 ### [R Server (スタンドアロン)](install/sql-r-standalone-windows-install.md)
-### [Microsoft ML Server へのバインド](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [コマンド プロンプトのセットアップ](install/sql-ml-component-commandline-install.md)
 ## [オフラインのセットアップ (インターネットなし)](install/sql-ml-component-install-without-internet-access.md)
+## [R および Python のアップグレード](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [R ツールの設定](r/set-up-a-data-science-client.md)
 ## [Python ツールの設定](python/setup-python-client-tools-sql.md)
 
@@ -95,15 +95,16 @@
 # [操作方法](r/sql-server-machine-learning-tasks.md)
 
 ## [パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
-### [SQL Server に新しい R パッケージをインストールする](r/install-additional-r-packages-on-sql-server.md)
-### [SQL Server に新しい Python パッケージをインストールする](python/install-additional-python-packages-on-sql-server.md)
-### [SQL Server インスタンスの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
-### [SQL Server にインストールされているパッケージの確認](r/determine-which-packages-are-installed-on-sql-server.md)
-### [RevoScaleR 関数を使用した SQL Server での R パッケージの検出またはインストール](r/use-revoscaler-to-manage-r-packages.md)
-### [SQL Server にインストールされている R パッケージの同期](r/package-install-uninstall-and-sync.md)
-### [SQL Server にインストールされている R パッケージ](r/installing-and-managing-r-packages.md)
-### [miniCRAN を使用したローカル パッケージ リポジトリの作成](r/create-a-local-package-repository-using-minicran.md)
-### [R のユーザー パッケージ ライブラリによるエラーの回避](r/packages-installed-in-user-libraries.md)
+### [既定のパッケージ](r/installing-and-managing-r-packages.md)
+### [パッケージ情報の取得](r/determine-which-packages-are-installed-on-sql-server.md)
+### [新しい R パッケージのインストール](r/install-additional-r-packages-on-sql-server.md)
+### [新しい Python パッケージのインストール](python/install-additional-python-packages-on-sql-server.md)
+### R のみ
+#### [リモートの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
+#### [R パッケージ管理の RevoScaleR 関数](r/use-revoscaler-to-manage-r-packages.md)
+#### [R パッケージの同期](r/package-install-uninstall-and-sync.md)
+#### [ローカルの R パッケージ リポジトリの miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [R "ユーザー ライブラリ" の回避策](r/packages-installed-in-user-libraries.md)
 
 ## データ探索と予測モデリング
 ### [R ライブラリとデータ型](r/r-libraries-and-data-types.md)
@@ -155,7 +156,6 @@
 ## [既知の問題](known-issues-for-sql-server-machine-learning-services.md)
 ## [リリース ノート](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 ## [新規および更新のアーティクル](new-updated-advanced-analytics.md)
-## [Azure SQL データベースでの R の使用](r/using-r-in-azure-sql-database.md)
 
 ## [セットアップとトラブルシューティングのヒント](machine-learning-troubleshooting-faq.md)
 ### [仮想マシンをセットアップする](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
