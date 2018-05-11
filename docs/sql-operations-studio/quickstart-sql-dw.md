@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'クイック スタート: は接続し、クエリの SQL 操作 Studio (プレビュー) を使用して Azure SQL Data Warehouse |Microsoft ドキュメント'
 description: このクイック スタートは、SQL 操作 Studio (プレビュー) を使用して SQL データベースに接続し、クエリを実行する方法を示しています。
 ms.custom: tools|sos
@@ -19,14 +19,15 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL Data Warehouse に接続しデータを照会する
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
-このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL データ ウェアハウスに接続し、TRANSACT-SQL ステートメントを使用して、データを作成、挿入、および選択する方法を説明します。
+このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL データ ウェアハウスに接続し、TRANSACT-SQL ステートメントを使用して、データを作成、挿入、および選択する方法を説明します。 
 
 ## <a name="prerequisites"></a>前提条件
 このクイック スタートを完了させるためには、[!INCLUDE[name-sos](../includes/name-sos-short.md)]、および Azure SQL データ ウェアハウス が必要です。
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)。
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)]のインストール](download.md)。
+
 
 SQL データ ウェアハウスをもっていない場合は [SQL データ ウェアハウスを作成](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision) を参照してください。
 
@@ -35,7 +36,7 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 
 ## <a name="connect-to-your-data-warehouse"></a>データ ウェアハウスに接続します。
 
-使用して[!INCLUDE[name-sos](../includes/name-sos-short.md)]Azure SQL Data Warehouse サーバーへの接続を確立します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
 1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ページを開く必要があります。 表示されない場合、**接続**] ページで [**接続の追加**、または**新しい接続**のアイコン、**サーバー**サイドバー。
    
