@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  次の例では、catalog.execution_component_phases ビューを使用して、特定のパッケージがすべてのフェーズで実行に費やした時間の合計 (**Verbose**)、およびパッケージの経過時間の合計 (**total_time**) を確認します。  
   
 > [!WARNING]  
->  catalog.execution_component_phases ビューでは、パッケージ実行のログ記録レベルが [パフォーマンス] または [詳細] に設定されている場合のみ、この情報が表示されます。 詳細については、「 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
+>  catalog.execution_component_phases ビューでは、パッケージ実行のログ記録レベルが [パフォーマンス] または [詳細] に設定されている場合のみ、この情報が表示されます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
   
 ```sql
 use SSISDB  
