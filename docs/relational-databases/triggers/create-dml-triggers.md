@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: triggers
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], DML triggers
 - deferred name resolution, DML triggers
@@ -26,13 +25,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a65cc707a53ed0a219aa31a3a7524c640268d875
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d8939ff82c0e2538667e4862677ba11a8f22dc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,9 +57,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[データベース]**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader**テーブルの順に展開します。  
   
-3.  **[トリガー]**を右クリックし、 **[新しいトリガー]**をクリックします。  
+3.  **[トリガー]** を右クリックし、 **[新しいトリガー]** をクリックします。  
   
-4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]**をクリックします。 または、Ctrl キーと Shift キーを押しながら M キーを押して、 **[テンプレート パラメーターの値の指定]** ダイアログ ボックスを開きます。  
+4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。 または、Ctrl キーと Shift キーを押しながら M キーを押して、 **[テンプレート パラメーターの値の指定]** ダイアログ ボックスを開きます。  
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
@@ -101,11 +99,11 @@ ms.lasthandoff: 04/16/2018
     END;  
     ```  
   
-8.  構文が有効であることを検証するには、 **[クエリ]** メニューの **[解析]**をクリックします。 エラー メッセージが返された場合は、ステートメントと上記の情報を比較し、必要に応じて修正してからこの手順を繰り返します。  
+8.  構文が有効であることを検証するには、 **[クエリ]** メニューの **[解析]** をクリックします。 エラー メッセージが返された場合は、ステートメントと上記の情報を比較し、必要に応じて修正してからこの手順を繰り返します。  
   
-9. DML トリガーを作成するには、 **[クエリ]** メニューの **[実行]**をクリックします。 DML トリガーがデータベース内のオブジェクトとして作成されます。  
+9. DML トリガーを作成するには、 **[クエリ]** メニューの **[実行]** をクリックします。 DML トリガーがデータベース内のオブジェクトとして作成されます。  
   
-10. オブジェクト エクスプローラーにリストされた DML トリガーを確認するには、 **[トリガー]** を右クリックして **[更新]**を選択します。  
+10. オブジェクト エクスプローラーにリストされた DML トリガーを確認するには、 **[トリガー]** を右クリックして **[更新]** を選択します。  
   
  [はじめに](#Top)  
   
@@ -113,9 +111,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[ファイル]** メニューの **[新しいクエリ]**をクリックします。  
+2.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、上と同じ DML トリガーを作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、上と同じ DML トリガーを作成します。  
   
     ```sql  
     -- Trigger valid for multirow and single row inserts  

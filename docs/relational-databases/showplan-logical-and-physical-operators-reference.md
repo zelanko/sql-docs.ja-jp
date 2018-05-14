@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 10/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
 - sql13.swb.showplan.remotedelete.f1
@@ -142,13 +141,12 @@ caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fc11ac48b6827fcf0f92ceb4ab7e05d6699f10e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 75aeadbf83ba580545ed97e9c7d5f13ea24ecda5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -294,7 +292,7 @@ ms.lasthandoff: 04/16/2018
 |![Table-valued Function 操作アイコン](../relational-databases/media/table-valued-function-32x.gif "Table-valued Function 操作アイコン")|**Table-valued Function**|**Table-valued Function** 操作は、テーブル値関数 ( [!INCLUDE[tsql](../includes/tsql-md.md)] または CLR のいずれか) を評価し、結果行を [tempdb](../relational-databases/databases/tempdb-database.md) データベースに格納します。 親反復子により行が要求されると、 **Table-valued Function** は **tempdb**から行を返します。<br /><br /> テーブル値関数への呼び出しを伴うクエリにより、 **Table-valued Function** 反復子を備えたクエリ プランが生成されます。 さまざまなパラメーター値を使用して**Table-valued Function** を評価できます。<br /><br /> -<br />                    **Table-valued Function XML Reader** では、パラメーターとして XML BLOB が入力され、XML ノードを表す行セットが XML ドキュメントの順序で生成されます。 他の入力パラメーターにより、XML ドキュメントのサブセットに返される XML ノードが制限されることがあります。<br /><br /> -**Table Valued Function XML Reader with XPath filter** は、出力を XPath 式が満たされる XML ノードに限定する、特殊な種類の **XML Reader Table-valued Function** です。<br /><br /> **Table-valued Function** は論理操作でもあり、物理操作でもあります。|  
 |![Top 操作アイコン](../relational-databases/media/top-32x.gif "Top 操作アイコン")|**Top**|**Top** 操作は、入力をスキャンし、並べ替え順に基づいて、指定した最初の数または最初の比率の行だけを返します。 **Argument** 列 (引数) には、タイ (同順位) をチェックする列のリストが入ることもあります。 **Top** 操作は、更新プランで行数制限を行うときに使用します。 **Top** は論理操作でもあり、物理操作でもあります。|  
 |なし|**Top N Sort**|**Top N Sort** は、結果セット全体ではなく最初の **N** 行のみを必要とする点を除いては、 *Sort* 反復子と類似しています。 *N*の値が小さい場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ実行エンジンは、メモリ内全体の並べ替え操作を実行しようとします。 *N*の値が大きい場合、クエリ実行エンジンは、 *N* をパラメーターとしない、より汎用的な並べ替え方法を使用します。|  
-|![拡張操作 (UDX) アイコン](../relational-databases/media/udx-32x.gif "拡張操作 (UDX) アイコン")|**UDX**|拡張操作 (UDX) には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の数ある操作のうちの XQuery 操作と XPath 操作が実装されています。 すべての UDX 操作には、論理操作と物理操作の両方があります。<br /><br /> 拡張操作 (UDX) **FOR XML** は、単一出力行の単一 BLOB 列に XML 表記で入力するリレーショナル行セットをシリアル化するのに使用します。 この操作は、順序を区別する XML 集計操作です。<br /><br /> 拡張操作 (UDX) **XML SERIALIZER** は、順序を区別する XML 集計操作です。 この操作は、XML ドキュメントの順序で XML ノードまたは XQuery スカラーを表す行を入力し、単一出力行の単一 XML 列にシリアル化した XML BLOB を生成します。<br /><br /> 拡張操作 (UDX) **XML FRAGMENT SERIALIZER** は、XQuery の挿入データの変更拡張に挿入される XML フラグメントを表す入力行の処理に使用する **XML SERIALIZER** の特殊な形式の操作です。<br /><br /> 拡張操作 (UDX) **XQUERY STRING** は、XML ノードを表す入力行の XQuery 文字列値を評価します。 これは順序を区別する文字列集計操作です。 この操作では、入力の文字列値を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 (UDX) **XQUERY LIST DECOMPOSER** は、XQuery のリスト分解操作です。 入力が XSD リストで想定されている型の場合、この操作では、XML ノードを表す入力行ごとに、リスト要素の値を含む XQuery スカラーを表す 1 行以上の行が生成されます。<br /><br /> 拡張操作 (UDX) **XQUERY DATA** は、XML ノードを表す入力の XQuery の fn:data() 関数を評価します。 これは順序を区別する文字列集計操作です。 この操作では、 **fn:data()**関数の結果を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 (UDX) **XQUERY CONTAINS** は、XML ノードを表す入力の XQuery の fn:data() 関数を評価します。 これは順序を区別する文字列集計操作です。 この操作では、 **fn:contains()**関数の結果を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 **UPDATE XML NODE** は、XML 型の **modify()** メソッドで XQuery の置換データの変更拡張の XML ノードを更新します。|  
+|![拡張操作 (UDX) アイコン](../relational-databases/media/udx-32x.gif "拡張操作 (UDX) アイコン")|**UDX**|拡張操作 (UDX) には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の数ある操作のうちの XQuery 操作と XPath 操作が実装されています。 すべての UDX 操作には、論理操作と物理操作の両方があります。<br /><br /> 拡張操作 (UDX) **FOR XML** は、単一出力行の単一 BLOB 列に XML 表記で入力するリレーショナル行セットをシリアル化するのに使用します。 この操作は、順序を区別する XML 集計操作です。<br /><br /> 拡張操作 (UDX) **XML SERIALIZER** は、順序を区別する XML 集計操作です。 この操作は、XML ドキュメントの順序で XML ノードまたは XQuery スカラーを表す行を入力し、単一出力行の単一 XML 列にシリアル化した XML BLOB を生成します。<br /><br /> 拡張操作 (UDX) **XML FRAGMENT SERIALIZER** は、XQuery の挿入データの変更拡張に挿入される XML フラグメントを表す入力行の処理に使用する **XML SERIALIZER** の特殊な形式の操作です。<br /><br /> 拡張操作 (UDX) **XQUERY STRING** は、XML ノードを表す入力行の XQuery 文字列値を評価します。 これは順序を区別する文字列集計操作です。 この操作では、入力の文字列値を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 (UDX) **XQUERY LIST DECOMPOSER** は、XQuery のリスト分解操作です。 入力が XSD リストで想定されている型の場合、この操作では、XML ノードを表す入力行ごとに、リスト要素の値を含む XQuery スカラーを表す 1 行以上の行が生成されます。<br /><br /> 拡張操作 (UDX) **XQUERY DATA** は、XML ノードを表す入力の XQuery の fn:data() 関数を評価します。 これは順序を区別する文字列集計操作です。 この操作では、 **fn:data()** 関数の結果を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 (UDX) **XQUERY CONTAINS** は、XML ノードを表す入力の XQuery の fn:data() 関数を評価します。 これは順序を区別する文字列集計操作です。 この操作では、 **fn:contains()** 関数の結果を含む XQuery スカラーを表す列を持つ 1 行が出力されます。<br /><br /> 拡張操作 **UPDATE XML NODE** は、XML 型の **modify()** メソッドで XQuery の置換データの変更拡張の XML ノードを更新します。|  
 |なし|**Union**|**Union** 操作は、複数の入力をスキャンし、重複行を削除して、スキャンした各行を出力します。 **Union** は論理操作です。|  
 |![Update (データベース エンジン) 操作アイコン](../relational-databases/media/update-32x.gif "Update (データベース エンジン) 操作アイコン")|**Update**|**Update** 操作は、クエリ実行プランの **Argument** 列で指定されているオブジェクトの入力の各行を更新します。 **Update** は論理操作です。 物理操作には、 **Table Update**、 **Index Update**、および **Clustered Index Update**があります。|  
 |![While 言語要素アイコン](../relational-databases/media/while-32x.gif "While 言語要素アイコン")|**While**|**While** 操作は [!INCLUDE[tsql](../includes/tsql-md.md)] while ループを実装します。 **While** は言語要素です。|  

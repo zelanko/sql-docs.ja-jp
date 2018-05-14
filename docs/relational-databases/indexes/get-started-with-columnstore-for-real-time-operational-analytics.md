@@ -3,27 +3,23 @@ title: 列ストアを使用したリアルタイム運用分析の概要 | Micr
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 caps.latest.revision: 40
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 59ce255693bd9148b5f63d18ec26eb522f52a181
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b23d666eda366913b6b1a22ed60804f28fb87fc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>列ストアを使用したリアルタイム運用分析の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -206,7 +202,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  推奨されているベスト プラクティスを次に示します。  
   
--   **挿入/クエリ ワークロード:**ワークロードで主にデータを挿入してクエリを実行する場合、COMPRESSION_DELAY オプションは既定の 0 のままにすることをお勧めします。 単一の DELTA 行グループに 100 万行が挿入されると、新しく挿入された行が圧縮されます。  
+-   **挿入/クエリ ワークロード:** ワークロードで主にデータを挿入してクエリを実行する場合、COMPRESSION_DELAY オプションは既定の 0 のままにすることをお勧めします。 単一の DELTA 行グループに 100 万行が挿入されると、新しく挿入された行が圧縮されます。  
     このようなワークロードの例としては、(a) 従来の DW ワークロード (b) クリック ストリーム分析 (Web アプリケーションのクリック パターンの分析) が挙げられます。  
   
 -   **OLTP ワークロード:** ワークロードに大量の DML (更新、削除、挿入が混在) がある場合、DMV の sys. dm_db_column_store_row_group_physical_stats を分析することで列ストア インデックスの断片化が見られることがあります。 10% を上回る行が最近圧縮された行グループで削除済みとマークされている場合、行を圧縮できるタイミングで COMPRESSION_DELAY オプションを使用して時間遅延を追加できます。 たとえば、ワークロードで新しく挿入された行が 60 分間「ホット」な状態にある (複数回更新される) 場合は、COMPRESSION_DELAY を 60 にすることをお勧めします。  

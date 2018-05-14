@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - merge replication join filters [SQL Server replication]
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>マージ アーティクル間の結合フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +64,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内の既存の行フィルターまたは結合フィルターを選択します。  
   
-2.  **[追加]**をクリックし、 **[選択したフィルターを拡張するために結合を追加する]**をクリックします。  
+2.  **[追加]** をクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
-3.  JOIN ステートメントを作成します。 **[ビルダーを使用してステートメントを作成する]** または **[JOIN ステートメントを手動で作成する]**を選択します。  
+3.  JOIN ステートメントを作成します。 **[ビルダーを使用してステートメントを作成する]** または **[JOIN ステートメントを手動で作成する]** を選択します。  
   
     -   ビルダーの使用を選択した場合、グリッド内の列 (**[結合]**、 **[フィルター選択されたテーブルの列]**、 **[演算子]**、 **[結合テーブルの列]**) を使用して JOIN ステートメントを作成します。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  結合オプションを指定します。  
   
-    -   フィルター選択されたテーブル (親テーブル) 内での結合先の列が一意である場合は、 **[一意キー]**を選択します。  
+    -   フィルター選択されたテーブル (親テーブル) 内での結合先の列が一意である場合は、 **[一意キー]** を選択します。  
   
         > [!CAUTION]  
         >  このオプションを選択すると、結合フィルターにおける子テーブルと親テーブルのリレーションシップが一対一または一対多となるように指定されます。 子テーブル内で結合する列に制約があり、一意性が保証される場合にのみ、このオプションを選択します。 このオプションを適切に設定しなかった場合、データを収束できない可能性があります。  

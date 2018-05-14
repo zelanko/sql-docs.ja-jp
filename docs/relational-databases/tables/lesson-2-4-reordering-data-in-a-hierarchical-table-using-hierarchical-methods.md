@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -21,18 +18,17 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90d149080610093800061aa0107691dee1972330
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7a1058effc6a942bbe75d0f6369860fb4ab73330
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>レッスン 2-4 - 階層的な手法を使用した階層テーブルのデータの並べ替え
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
   
-`GetReparentedValue` メソッドは 2 つの引数を受け取ります。 最初の引数は、変更する階層の一部を表します。 たとえば、階層が **/1/4/2/3/** の場合に、最後の 2 つのノード ( **2/3/** ) はそのままで、 **/1/4/**セクションを変更して階層を**/2/1/2/3/**にするときは、変更するノード (**/1/4/**) を最初の引数として指定する必要があります。 2 番目の引数には、新しい階層レベルを指定します。この例では、 **/2/1/**です。 2 つの引数には、異なるレベル数を指定することもできます。  
+`GetReparentedValue` メソッドは 2 つの引数を受け取ります。 最初の引数は、変更する階層の一部を表します。 たとえば、階層が **/1/4/2/3/** の場合に、最後の 2 つのノード ( **2/3/** ) はそのままで、 **/1/4/** セクションを変更して階層を **/2/1/2/3/** にするときは、変更するノード (**/1/4/**) を最初の引数として指定する必要があります。 2 番目の引数には、新しい階層レベルを指定します。この例では、 **/2/1/** です。 2 つの引数には、異なるレベル数を指定することもできます。  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>1 つの行を階層内の新しい位置に移動するには  
   
@@ -62,7 +58,7 @@ ms.lasthandoff: 04/16/2018
     GO  
     ```  
   
-    Wanida がノード **/3/1/**に移動しています。  
+    Wanida がノード **/3/1/** に移動しています。  
   
 ### <a name="to-reorganize-a-section-of-a-hierarchy"></a>階層のセクションを再編成するには  
   
@@ -73,7 +69,7 @@ ms.lasthandoff: 04/16/2018
     GO  
     ```  
   
-2.  Kevin が Wanida に直属するようになりました。Wanida は Jill に直属し、Jill は David に直属します。 したがって、Kevin のレベルは **/3/1/1/**です。 Jill の部下をすべて新しい管理者に移動するには、 **OrgNode** として **/3/** を持つすべてのノードを新しい値に更新します。 Kevin を Wanida に直属させたまま、Wanida を Sariya に直属するように更新するには、次のコードを実行します。  
+2.  Kevin が Wanida に直属するようになりました。Wanida は Jill に直属し、Jill は David に直属します。 したがって、Kevin のレベルは **/3/1/1/** です。 Jill の部下をすべて新しい管理者に移動するには、 **OrgNode** として **/3/** を持つすべてのノードを新しい値に更新します。 Kevin を Wanida に直属させたまま、Wanida を Sariya に直属するように更新するには、次のコードを実行します。  
   
     ```  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

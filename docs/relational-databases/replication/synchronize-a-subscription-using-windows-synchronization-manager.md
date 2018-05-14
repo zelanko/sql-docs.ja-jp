@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
@@ -20,12 +19,11 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86b77769f244b80e5ff3fec3ce894400a1ef0bd3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9c9342e00a22d508c0f154c34679e2d73552c263
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,23 +48,23 @@ ms.lasthandoff: 04/16/2018
   
 1.  次の方法のいずれかを使用して、同期マネージャーを起動します。  
   
-    -   Internet Explorer で、 **[ツール]**メニューの **[同期]**をクリックします。  
+    -   Internet Explorer で、 **[ツール]** メニューの **[同期]** をクリックします。  
   
-    -   **[スタート]**ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]**をポイントします。 **[アクセサリ]**をポイントし、 **[同期]**をクリックします。  
+    -   **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
   
-    -   **[スタート]**メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** in the **ボックスに「** 」と入力し、 **[OK]**」を参照してください。  
+    -   **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** in the **ボックスに「** 」と入力し、 **[OK]**」を参照してください。  
   
 2.  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
   
-3.  **[同期]**をクリックします。  
+3.  **[同期]** をクリックします。  
   
 ### <a name="to-reinitialize-a-pull-subscription-with-synchronization-manager"></a>同期マネージャーを使用してプル サブスクリプションを再初期化するには  
   
-1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]**をクリックします。  
+1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
   
-2.  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの再初期化]**をクリックします。  
+2.  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの再初期化]** をクリックします。  
   
-3.  **[はい]**をクリックします。  
+3.  **[はい]** をクリックします。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-set-properties-for-a-pull-subscription-in-synchronization-manager"></a>同期マネージャーでプル サブスクリプションのプロパティを設定するには  
   
-1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]**をクリックします。  
+1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
   
 2.  以下のタブのプロパティを参照および変更します。  
   
@@ -95,9 +93,9 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-remove-a-pull-subscription-from-synchronization-manager"></a>同期マネージャーからプル サブスクリプションを削除するには  
   
-1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]**をクリックします。  
+1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
   
-2.  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの削除]**をクリックします。  
+2.  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの削除]** をクリックします。  
   
 3.  **[サブスクリプションの削除]** ダイアログ ボックスで、オプションを選択します。  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 04/16/2018
      選択した行がパブリッシャーやサブスクライバーに適用され、以降の同期の際にトポロジ内の他のノードに反映されます。  
   
 > [!NOTE]  
->  編集した内容は、回避を選択した行の一部でなければ適用されません。 たとえば、 **[パブリッシャー]**の下を編集し、 **[サブスクライバーを優先]**をクリックしても、編集内容は破棄されます。  
+>  編集した内容は、回避を選択した行の一部でなければ適用されません。 たとえば、 **[パブリッシャー]** の下を編集し、 **[サブスクライバーを優先]** をクリックしても、編集内容は破棄されます。  
   
 ## <a name="see-also"></a>参照  
  [インタラクティブな競合解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

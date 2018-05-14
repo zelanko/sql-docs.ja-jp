@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
 - merge replication partitions [SQL Server replication], SQL Server Management Studio
@@ -21,12 +20,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 99ef71378bbefa7adda2a65bc46435c7a1554533
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ce4a960e4bbb59a4dc9982841e7a20a2407b307d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  オプションでスナップショットの更新スケジュールを指定します。  
   
-    1.  **[以下のスケジュールでこのパーティションのスナップショット エージェントを実行する]**を選択します。  
+    1.  **[以下のスケジュールでこのパーティションのスナップショット エージェントを実行する]** を選択します。  
   
     2.  スナップショットの既定の更新スケジュールをそのまま使用するか、または **[変更]** をクリックして別のスケジュールを指定します。  
   
@@ -75,11 +73,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[データ パーティション]** ページのグリッドでパーティションを選択します。  
   
-2.  **[削除]**をクリックします。  
+2.  **[削除]** をクリックします。  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>サブスクライバーにスナップショットの生成と配信を許可するには  
   
-1.  **[データ パーティション]** ページで、 **[新規サブスクライバーで同期を行うとき、パーティションを自動的に定義し、必要に応じてスナップショットを生成する]**を選択します。  
+1.  **[データ パーティション]** ページで、 **[新規サブスクライバーで同期を行うとき、パーティションを自動的に定義し、必要に応じてスナップショットを生成する]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -87,13 +85,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[データ パーティション]** ページのグリッドでパーティションを選択します。  
   
-2.  **[今すぐ選択したスナップショットを生成する]**をクリックします。  
+2.  **[今すぐ選択したスナップショットを生成する]** をクリックします。  
   
 #### <a name="to-clean-up-a-snapshot-for-a-partition"></a>パーティションのスナップショットをクリーンアップするには  
   
 1.  **[データ パーティション]** ページのグリッドでパーティションを選択します。  
   
-2.  **[既存のスナップショットをクリーンアップする]**をクリックします。  
+2.  **[既存のスナップショットをクリーンアップする]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  パラメーター化されたフィルターを使ってパブリケーションをより詳細に管理するために、プログラムからレプリケーション ストアド プロシージャを使用して既存のパーティションを列挙できます。 既存のパーティションの作成と削除も行えます。 既存パーティションに関する次の情報も取得できます。  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -25,12 +24,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c71fec881cbdd43512e1777a1c4e38e6ba83270
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a87f0391580dd8f577abf94997fd1448ae5bf198
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-conflict-information-for-merge-publications"></a>マージ パブリケーションの競合情報の表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 04/16/2018
     -   **decentralized_conflicts** - 1 は競合する行がサブスクライバーに格納されていることを示し、0 は競合する行がサブスクライバーに格納されていないことを示します。  
   
         > [!NOTE]  
-        >  マージ パブリケーションの競合ログの動作は、 **@conflict_logging** の [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。 **@centralized_conflicts** パラメータの使用は推奨されていません。  
+        >  マージ パブリケーションの競合ログの動作は、 **@conflict_logging** の [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。 Use of the **@centralized_conflicts** parameter has been deprecated.  
   
      次の表で、 **@conflict_logging**」を参照してください。  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/16/2018
     -   **decentralized_conflicts** - 1 は競合する行がサブスクライバーに格納されていることを示し、0 は競合する行がサブスクライバーに格納されていないことを示します。  
   
         > [!NOTE]  
-        >  マージ パブリケーションの競合ログの動作は、 **@conflict_logging** の [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。 **@centralized_conflicts** パラメータの使用は推奨されていません。  
+        >  マージ パブリケーションの競合ログの動作は、 **@conflict_logging** の [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。 Use of the **@centralized_conflicts** parameter has been deprecated.  
   
 2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合情報のみが返されるようにするには、 **@publication** に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **source_object** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.executeprocedure.general.f1
 - sql13.swb.executeprocedure.f1
@@ -26,13 +25,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac4f09f4e00e4590ebc2725a5fab3e49d5eea3ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 422273339e93fa5804b6cd0f5b3c4d2f1a7f833f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +74,7 @@ ms.lasthandoff: 04/16/2018
   
 -   システム ストアド プロシージャの実行  
   
-     システム ストアド プロシージャは、 **sp_**というプレフィックスで始まります。 システム ストアド プロシージャは、論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
+     システム ストアド プロシージャは、 **sp_** というプレフィックスで始まります。 システム ストアド プロシージャは、論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -140,11 +138,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-execute-a-stored-procedure"></a>ストアド プロシージャを実行するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]**を展開します。  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
-2.  目的のデータベースを展開し、 **[プログラミング]**を展開します。次に、 **[ストアド プロシージャ]**を展開します。  
+2.  目的のデータベースを展開し、 **[プログラミング]** を展開します。次に、 **[ストアド プロシージャ]** を展開します。  
   
-3.  目的のユーザー定義のストアド プロシージャを右クリックし、 **[ストアド プロシージャの実行]**をクリックします。  
+3.  目的のユーザー定義のストアド プロシージャを右クリックし、 **[ストアド プロシージャの実行]** をクリックします。  
   
 4.  **[プロシージャの実行]** ダイアログ ボックスで、各パラメーターの値と、null 値を渡すかどうかを指定します。  
   
@@ -163,7 +161,7 @@ ms.lasthandoff: 04/16/2018
      **[値]**  
      プロシージャを呼び出すときのパラメーターの値を入力します。  
   
-5.  ストアド プロシージャを実行するには、 **[OK]**をクリックします。  
+5.  ストアド プロシージャを実行するには、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -171,9 +169,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、1 つのパラメーターを受け取るストアド プロシージャを実行する方法を示します。 この例では、 `uspGetEmployeeManagers` パラメーター値として値  `6` を指定して、 `@EmployeeID` ストアド プロシージャを実行します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、1 つのパラメーターを受け取るストアド プロシージャを実行する方法を示します。 この例では、 `uspGetEmployeeManagers` パラメーター値として値  `6` を指定して、 `@EmployeeID` ストアド プロシージャを実行します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -186,9 +184,9 @@ GO
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用してプロシージャの自動実行を設定する方法を示しています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用してプロシージャの自動実行を設定する方法を示しています。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -202,9 +200,9 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例は、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用して、プロシージャの自動実行を解除する方法を示しています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) を使用して、プロシージャの自動実行を解除する方法を示しています。  
   
 ```sql  
 USE AdventureWorks2012;  

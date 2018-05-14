@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.callstack
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f131bfaa5e32339f26932fbc4806233aa9c571ab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd12b280b42e751445a9e35043004fa89d2e6b05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL デバッガー - [呼び出し履歴] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,19 +33,19 @@ ms.lasthandoff: 04/16/2018
 ## <a name="task-list"></a>タスク一覧  
  **[呼び出し履歴] ウィンドウにアクセスするには**  
   
--   **[デバッグ]** メニューの **[ウィンドウ]**をポイントし、 **[呼び出し履歴]**をクリックします。  
+-   **[デバッグ]** メニューの **[ウィンドウ]** をポイントし、 **[呼び出し履歴]** をクリックします。  
   
  **現在の呼び出し履歴フレームを変更するには**  
   
  次の手順のどちらかを使用して、スタック フレームを現在のフレームにすることができます。  
   
--   スタック フレームを右クリックし、 **[フレームに切り替え]**をクリックします。  
+-   スタック フレームを右クリックし、 **[フレームに切り替え]** をクリックします。  
   
 -   スタック フレームをダブルクリックします。  
   
  **現在のフレーム以外のフレームのソースを表示するには**  
   
--   スタック フレームを右クリックし、 **[ソース コードへ移動]**をクリックします。  
+-   スタック フレームを右クリックし、 **[ソース コードへ移動]** をクリックします。  
   
 ## <a name="stack-frames"></a>スタック フレーム  
  **[呼び出し履歴]** ウィンドウの各行はスタック フレームと呼ばれ、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルからモジュールへの呼び出し、またはあるモジュールから別のモジュールへの呼び出しを表します。 表示上、一番下のスタック フレームは、スタックへの最初の呼び出しを行った [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディター ウィンドウの行を表します。 一番上の行は、デバッガーが実行を一時停止した行を表し、ウィンドウの左余白の黄色の矢印で示されます。 その間の各行は、モジュールと、1 つ上のスタック フレームを呼び出したソース コードの行番号を表します。  
@@ -59,7 +56,7 @@ ms.lasthandoff: 04/16/2018
  **名前**  
  呼び出し履歴上のモジュールに関する情報を表示します。  
   
- 呼び出し履歴の一番下の行の場合、 **[名前]** には、クエリ エディターのソース ウィンドウとスタックへの最初の呼び出しの行番号が表示されます。 その他の行の場合、 **[名前]** は、 **[Module(Instance.Database)(ParmList) LineNumber]**の形式になります。  
+ 呼び出し履歴の一番下の行の場合、 **[名前]** には、クエリ エディターのソース ウィンドウとスタックへの最初の呼び出しの行番号が表示されます。 その他の行の場合、 **[名前]** は、 **[Module(Instance.Database)(ParmList) LineNumber]** の形式になります。  
   
  **[Module]**  
  ストアド プロシージャ、関数、または次のフレームを呼び出したストアド プロシージャの名前です。  

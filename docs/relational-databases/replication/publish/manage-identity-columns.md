@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
 - merge replication [SQL Server replication], identity range management
@@ -23,12 +22,11 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 941a6480f1629b4d2b7140be8bff734a59ee922c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8173b90d4c23ca612e80175d59969e259c2cb24c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +63,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-specify-an-identity-column-management-option"></a>ID 列の管理オプションを指定するには  
   
-1.  パブリッシャーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を実行している場合は、パブリケーションの新規作成ウィザードの **[パブリケーションの種類]** ページで、 **[マージ パブリケーション]** または **[更新可能なサブスクリプションを含むトランザクション パブリケーション]**を選択します。  
+1.  パブリッシャーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を実行している場合は、パブリケーションの新規作成ウィザードの **[パブリケーションの種類]** ページで、 **[マージ パブリケーション]** または **[更新可能なサブスクリプションを含むトランザクション パブリケーション]** を選択します。  
   
 2.  **[アーティクル]** ページで、ID 列があるテーブルを選択します。  
   
-3.  **[アーティクルのプロパティ]**をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]**をクリックします。  
+3.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
 4.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、**[ID 範囲を自動的に管理します]** プロパティを **[自動]** または **[手動]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降を実行している場合)、あるいは **[True]** または **[False]** (パブリッシャーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合) に設定します。  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[アーティクル]** ページで、ID 列があるテーブルを選択します。  
   
-2.  **[アーティクルのプロパティ]**をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]**をクリックします。  
+2.  **[アーティクルのプロパティ]** をクリックしてから、 **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
 3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ID 範囲の管理]** セクションで、**[パブリッシャーの範囲サイズ]**、**[サブスクライバーの範囲サイズ]**、および **[範囲しきい値の割合]** プロパティの 1 つ以上の値を入力します。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying subscriptions
 - viewing replication properties
@@ -25,12 +24,11 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2be3aaa15457aa89f9a3260e80bf200315a89efc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 098f022c5efbf258bd6be827164240d8f7f7e7a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>プル サブスクリプションのプロパティの表示または変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +53,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  適切なパブリケーションを展開し、サブスクリプションを右クリックして、 **[プロパティ]**をクリックします。  
+3.  適切なパブリケーションを展開し、サブスクリプションを右クリックして、 **[プロパティ]** をクリックします。  
   
-4.  プロパティを表示して **[OK]**をクリックします。  
+4.  プロパティを表示して **[OK]** をクリックします。  
   
 #### <a name="to-view-and-modify-pull-subscription-properties-from-the-subscriber-in-management-studio"></a>Management Studio でサブスクライバーからのプル サブスクリプション プロパティを表示および変更するには  
   
@@ -65,9 +63,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル サブスクリプション]** フォルダーを展開します。  
   
-3.  サブスクリプションを右クリックし、 **[プロパティ]**をクリックします。  
+3.  サブスクリプションを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-replication-monitor"></a>レプリケーション モニターでパブリッシャーからのプル サブスクリプション プロパティを表示するには  
   
@@ -75,9 +73,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[すべてのサブスクリプション]** タブをクリックします。  
   
-3.  サブスクリプションを右クリックし、 **[プロパティ]**をクリックします。  
+3.  サブスクリプションを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  プロパティを表示して **[OK]**をクリックします。  
+4.  プロパティを表示して **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用して、プル サブスクリプションを変更し、そのプロパティにプログラムからアクセスできます。 使用するストアド プロシージャは、サブスクリプションが属するパブリケーションの種類によって異なります。  

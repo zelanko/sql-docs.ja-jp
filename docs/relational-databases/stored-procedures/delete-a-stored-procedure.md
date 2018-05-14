@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing stored procedures
 - stored procedures [SQL Server], deleting
@@ -21,13 +20,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ad59c70552ad3f8c7bcddac8a24a75bad69f35f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c560d4611538c3cde5d64bcb4af7fa597bc9ba71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-stored-procedure"></a>ストアド プロシージャの削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,13 +58,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]**を展開し、削除するプロシージャを右クリックして、 **[削除]**をクリックします。  
+3.  **[ストアド プロシージャ]** を展開し、削除するプロシージャを右クリックして、 **[削除]** をクリックします。  
   
-4.  プロシージャに依存するオブジェクトを表示するには、 **[依存関係の表示]**をクリックします。  
+4.  プロシージャに依存するオブジェクトを表示するには、 **[依存関係の表示]** をクリックします。  
   
-5.  適切なプロシージャが選択されていることを確認して、 **[OK]**をクリックします。  
+5.  適切なプロシージャが選択されていることを確認して、 **[OK]** をクリックします。  
   
 6.  任意の依存オブジェクトおよびスクリプトからプロシージャへの参照を削除します。  
   
@@ -75,11 +73,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開するか、ツール バーの利用可能なデータベースの一覧からデータベースを選択します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開するか、ツール バーの利用可能なデータベースの一覧からデータベースを選択します。  
   
-3.  [ファイル] メニューの **[新しいクエリ]**をクリックします。  
+3.  [ファイル] メニューの **[新しいクエリ]** をクリックします。  
   
-4.  現在のデータベースから削除するストアド プロシージャの名前を取得します。 オブジェクト エクスプローラーから、 **[プログラミング]** を展開し、 **[ストアド プロシージャ]**を展開します。 または、クエリ エディターで次のステートメントを実行します。  
+4.  現在のデータベースから削除するストアド プロシージャの名前を取得します。 オブジェクト エクスプローラーから、 **[プログラミング]** を展開し、 **[ストアド プロシージャ]** を展開します。 または、クエリ エディターで次のステートメントを実行します。  
   
     ```sql  
     SELECT name AS procedure_name   

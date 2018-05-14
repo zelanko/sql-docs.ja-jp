@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
@@ -19,12 +18,11 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e26a19d6a054353a903681b340c55c2e9e167f86
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 65106ce68705f630b3955865b6967cfde0aae9a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>リソース正常性ポリシーの定義の変更 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +44,13 @@ ms.lasthandoff: 04/16/2018
   
 5.  必要に応じて、 **[適用]**、 **[破棄]**、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
   
-6.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[ユーティリティ管理]** ノードを右クリックし、 **[更新]**をクリックします。  
+6.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[ユーティリティ管理]** ノードを右クリックし、 **[更新]** をクリックします。  
   
 #### <a name="modify-resource-health-policy-definitions-for-an-individual-data-tier-application-or-an-individual-managed-instance-of-sql-server-in-a-sql-server-utility"></a>SQL Server ユーティリティによる個々のデータ層アプリケーションまたは SQL Server マネージ インスタンスのリソース正常性ポリシー定義の変更  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で UCP に接続します。  
   
-2.  ユーティリティ エクスプローラーのナビゲーション ウィンドウで、 **[配置済みのデータ層アプリケーション]**または **[マネージ インスタンス]**をクリックして、個々のデータ層アプリケーションやマネージ インスタンスの監視ポリシーを表示または変更します。  
+2.  ユーティリティ エクスプローラーのナビゲーション ウィンドウで、 **[配置済みのデータ層アプリケーション]** または **[マネージ インスタンス]** をクリックして、個々のデータ層アプリケーションやマネージ インスタンスの監視ポリシーを表示または変更します。  
   
 3.  ユーティリティ エクスプローラーのコンテンツ ウィンドウのリスト ビューで、ポリシーを変更するデータ層アプリケーションまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前をクリックし、 **[ポリシーの詳細]** タブをクリックします。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 7.  必要に応じて、 **[適用]**、 **[破棄]**、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
   
-8.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[配置済みのデータ層アプリケーション]** ノードを右クリックし、 **[更新]**をクリックします。  
+8.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[配置済みのデータ層アプリケーション]** ノードを右クリックし、 **[更新]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

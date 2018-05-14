@@ -3,27 +3,23 @@ title: Always Encrypted と .NET Framework Data Provider を使用して開発�
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
+ms.prod_service: security, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8765370697226043b0a8759cb496381da5a6416
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Always Encrypted と .NET Framework Data Provider を使用して開発する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -398,11 +394,11 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 個々のクエリの Always Encrypｔed 動作を制御するには、 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) および [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)のこのコンストラクターを使用する必要があります。 有用なガイドラインを次に示します。
 - クライアントがデータベース接続を介して送信するほとんどのクエリが、暗号化された列をアクセスする場合:
-    - **Column Encryption Setting** 接続文字列キーワードを *[有効]*に設定します。
+    - **Column Encryption Setting** 接続文字列キーワードを *[有効]* に設定します。
     - 暗号化された列にアクセスしない個々のクエリに対して、 **SqlCommandColumnEncryptionSetting.Disabled** を設定します。 これにより、sys.sp_describe_parameter_encryption の呼び出しと、結果セット内の値を暗号化解除しようとする試みの両方が無効になります。
     - 暗号化を必要とするパラメーターを含まないが、暗号化された列からデータを取得する個々のクエリに対して、 **SqlCommandColumnEncryptionSetting.ResultSet** を設定します。 これにより、sys.sp_describe_parameter_encryption の呼び出しと、パラメーター暗号化が無効になります。 クエリは、暗号化列の結果を暗号化解除できます。
 - クライアントがデータベース接続を介して送信するほとんどのクエリが、暗号化された列をアクセスしない場合:
-    - **Column Encryption Setting** 接続文字列キーワードを **[無効]**に設定します。
+    - **Column Encryption Setting** 接続文字列キーワードを **[無効]** に設定します。
     - 暗号化を必要とするパラメーターを含む個々のクエリに対して、 **SqlCommandColumnEncryptionSetting.Enabled** を設定します。 これにより、sys.sp_describe_parameter_encryption の呼び出しと、暗号化された列から取得されたクエリ結果の暗号化解除の両方が有効になります。
     - 暗号化を必要とするパラメーターを含まないが、暗号化された列からデータを取得するクエリに対して、 **SqlCommandColumnEncryptionSetting.ResultSet** を設定します。 これにより、sys.sp_describe_parameter_encryption の呼び出しと、パラメーター暗号化が無効になります。 クエリは、暗号化列の結果を暗号化解除できます。
 

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - modifying replication properties, articles
@@ -25,12 +24,11 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bedf89d5657a894b843d4bb7198f4273a1fd24c9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 49ea03eb5a195b0ed3fab3af04e7d3ac1a9afcff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-modify-publication-properties"></a>パブリケーション プロパティの表示および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,17 +91,17 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  パブリケーションを右クリックし、 **[プロパティ]**をクリックします。  
+3.  パブリケーションを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>レプリケーション モニターでパブリケーションのプロパティを表示および変更するには  
   
 1.  レプリケーション モニターの左ペインでパブリッシャー グループを展開し、パブリッシャーを展開します。  
   
-2.  パブリケーションを右クリックし、 **[プロパティ]**をクリックします。  
+2.  パブリケーションを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  必要に応じてプロパティを変更し、 **[OK]**をクリックします。  
+3.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリケーションのプロパティは、レプリケーションのストアド プロシージャを使用して、プログラムから変更および取得できます。 どのストアド プロシージャを使用するかは、パブリケーションの種類によって異なります。  

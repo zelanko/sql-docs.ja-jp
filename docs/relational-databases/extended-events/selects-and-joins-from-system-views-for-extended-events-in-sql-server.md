@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 89d371d30fea0d3f09931925cd4835c3881f805a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 356cfffea1189b3d7efb042fcec7e26eedc9b747
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,9 +115,9 @@ ms.lasthandoff: 04/16/2018
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI パースペクティブ
 
 
-SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]** > **[セッション]**を右クリックして **[新しいセッション]** > **[管理]**」をご覧ください。
+SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]** > **[セッション]** を右クリックして **[新しいセッション]** > **[管理]**」をご覧ください。
 
-大きい **[新しいセッション]** ダイアログの最初の **[全般]**セクションで、 **[サーバーの起動時にイベント セッションを開始する]**がオンになっています。
+大きい **[新しいセッション]** ダイアログの最初の **[全般]** セクションで、 **[サーバーの起動時にイベント セッションを開始する]** がオンになっています。
 
 ![[新しいセッション] > [全般]、[サーバーの起動時にイベント セッションを開始する]](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -577,8 +575,8 @@ type           package0       xml                           Well formed XML frag
 
 次の SELECT は、イベント タイプに固有のすべてのデータ フィールドを返します。
 
-- WHERE 句の項目 *column_type = 'data'*に注意してください。
-- また、 *o.name =*の WHERE 句の値を編集する必要があります。
+- WHERE 句の項目 *column_type = 'data'* に注意してください。
+- また、 *o.name =* の WHERE 句の値を編集する必要があります。
 
 
 ```sql
@@ -730,8 +728,8 @@ you could put:
 
 次の SELECT は、ターゲットのすべてのパラメーターを返します。 各パラメーターには、必須かどうかを示すタグが付けられます。 パラメーターに割り当てる値によって、ターゲットの動作が変わります。
 
-- WHERE 句の項目 *object_type = 'customizable'*に注意してください。
-- また、 *o.name =*の WHERE 句の値を編集する必要があります。
+- WHERE 句の項目 *object_type = 'customizable'* に注意してください。
+- また、 *o.name =* の WHERE 句の値を編集する必要があります。
 
 
 ```sql
@@ -796,7 +794,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 この DMV SELECT は、アクティブなイベント セッションのターゲットからデータ行を返します。 データは XML にキャストされており、返されたセルをクリックして SSMS で簡単に表示できます。
 
 - イベント セッションが停止すると、この SELECT はゼロ行を返します。
-- *s.name =*の WHERE 句の値を編集する必要があります。
+- *s.name =* の WHERE 句の値を編集する必要があります。
 
 
 ```sql

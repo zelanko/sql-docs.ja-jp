@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interactive searches [SQL Server Management Studio]
 - searches [SQL Server Management Studio], interactive
@@ -21,13 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78859e16a613bc6e40078bcf196b632f768fcb86
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59236674863491f9d7077c672dff9d541c1ead2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-documents-interactively"></a>ドキュメントの対話形式の検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +34,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  検索する項目を開きます。  
   
-2.  **[編集]** メニューの **[検索と置換]** をポイントし、 **[クイック検索]**をクリックします。  
+2.  **[編集]** メニューの **[検索と置換]** をポイントし、 **[クイック検索]** をクリックします。  
   
 3.  **[検索と置換]** ボックスに、検索するテキストを入力します。  
   
-4.  **[検索対象]** ボックスの一覧の **[すべての開かれているドキュメント]**をクリックします。  
+4.  **[検索対象]** ボックスの一覧の **[すべての開かれているドキュメント]** をクリックします。  
   
     > [!NOTE]  
     >  **[すべての開かれているドキュメント]** を選択しても、開いている特定のファイルは検索されないことがあります。 検索の対象になるのは、コード ビューなどのテキスト ビューで現在開いているファイルだけです。 デザイナー ビューのファイルは、検索対象に含まれません。  
@@ -54,21 +51,21 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>すべてのアクティブ ファイル内で対話的に置換を行うには  
   
-1.  **[編集]** メニューの **[検索と置換]**をポイントし、 **[クイック置換]**をクリックします。  
+1.  **[編集]** メニューの **[検索と置換]** をポイントし、 **[クイック置換]** をクリックします。  
   
 2.  **[検索する文字列]** ボックスに、検索するテキストを入力します。  
   
 3.  **[置換後の文字列]** ボックスに置換後のテキストを入力します。  
   
-4.  **[検索対象]** ボックスの一覧の **[すべての開かれているドキュメント]**をクリックします。  
+4.  **[検索対象]** ボックスの一覧の **[すべての開かれているドキュメント]** をクリックします。  
   
-5.  **[置換]**をクリックし、最後のファイル内で最後に見つかった検索結果の置換が完了するまで **[置換]** のクリックを続けます。 検索結果を置換しないでスキップする場合は、 **[次を検索]** をクリックします。  
+5.  **[置換]** をクリックし、最後のファイル内で最後に見つかった検索結果の置換が完了するまで **[置換]** のクリックを続けます。 検索結果を置換しないでスキップする場合は、 **[次を検索]** をクリックします。  
   
      - または -  
   
      **[すべて置換]** をクリックしてすべての検索結果を置換します。 置換の総数を示すメッセージ ボックスが表示されます。  
   
- **[すべて置換]** をクリックすると、 **[次を検索]** によってスキップした検索結果も含め、すべての検索結果が置換されます。 **[すべて置換]**を取り消すには、ファイルを閉じる前に **[編集]** メニューの **[元に戻す]** をクリックします。  
+ **[すべて置換]** をクリックすると、 **[次を検索]** によってスキップした検索結果も含め、すべての検索結果が置換されます。 **[すべて置換]** を取り消すには、ファイルを閉じる前に **[編集]** メニューの **[元に戻す]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [アクティブ ドキュメントのインクリメンタル検索](../../relational-databases/scripting/search-an-active-document-incrementally.md)   

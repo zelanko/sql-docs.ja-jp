@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -23,12 +22,11 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 69d8b0b5152a929ca515240f38c0ba711f7f21e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +46,11 @@ ms.lasthandoff: 04/16/2018
   
 2.  サブスクライバーの接続文字列を作成します。 この接続文字列は任意のテキスト エディターで作成できますが、データ アクセス ツールを使用することをお勧めします。 データ アクセス ツールで接続文字列を作成するには、次の手順を実行します。  
   
-    1.  **[スタート]**ボタンをクリックし、 **[プログラム]**をポイントします。次に、 **[Microsoft OLE DB Provider for DB2]**をポイントし、 **[データ アクセス ツール]**をクリックします。  
+    1.  **[スタート]** ボタンをクリックし、 **[プログラム]** をポイントします。次に、 **[Microsoft OLE DB Provider for DB2]** をポイントし、 **[データ アクセス ツール]** をクリックします。  
   
-    2.  **[データ アクセス ツール]**で、手順に従って DB2 サーバーに関する情報を指定します。 このツールを完了すると、関連付けられている接続文字列を使用してユニバーサル データ リンク (UDL) が作成されます (レプリケーションでは、実際にはこの UDL は使用されず、接続文字列が使用されます)。  
+    2.  **[データ アクセス ツール]** で、手順に従って DB2 サーバーに関する情報を指定します。 このツールを完了すると、関連付けられている接続文字列を使用してユニバーサル データ リンク (UDL) が作成されます (レプリケーションでは、実際にはこの UDL は使用されず、接続文字列が使用されます)。  
   
-    3.  接続文字列にアクセスします。[データ アクセス ツール] で UDL を右クリックし、 **[接続文字列の表示]**を選択します。  
+    3.  接続文字列にアクセスします。[データ アクセス ツール] で UDL を右クリックし、 **[接続文字列の表示]** を選択します。  
   
      接続文字列は、次のようになります (この例は、読みやすくするために改行されています)。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 04/16/2018
   
      これによって、DB2 ページ サイズ制約が行の最大サイズに対応するために十分な大きさである限り、生成されるテーブルはサブスクライバーで正常に作成できます。 DB2 データベースにアクセスするために使用されるログインに、DB2 にレプリケートされているテーブルに対して十分なサイズを持つテーブル スペースにアクセスするための権限があることを確認します。  
   
--   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**ボタンをクリックし、 **varchar(max)**ボタンをクリックし、 **ntext**、および **nvarchar(max)** 列は、生成される作成スクリプトでは VARCHAR(0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
+-   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**ボタンをクリックし、 **varchar(max)** ボタンをクリックし、 **ntext**、および **nvarchar(max)** 列は、生成される作成スクリプトでは VARCHAR(0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
   
      レプリケートするソース テーブルの情報に基づいて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を可変長の DB2 項目にマップすることが適切であるかどうかを判断し、カスタム作成スクリプトで適切な最大長を指定してください。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   

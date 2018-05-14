@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
@@ -19,13 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0c32e0619071db25adadeb7c34065c6c0319fd7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 67760c658b27bcddff443a943c65d725e23f44e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +57,7 @@ ms.lasthandoff: 04/16/2018
     
 -   CLR ユーザー定義型の列に対して外部キーを定義する場合は、型の実装でバイナリ順がサポートされている必要があります。 詳細については、「 [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。    
     
--   **varchar(max)** 型の列は、その列が参照する主キーも **varchar(max)**型として定義されている場合にのみ FOREIGN KEY 制約で使用できます。    
+-   **varchar(max)** 型の列は、その列が参照する主キーも **varchar(max)** 型として定義されている場合にのみ FOREIGN KEY 制約で使用できます。    
     
 
     
@@ -74,13 +70,13 @@ ms.lasthandoff: 04/16/2018
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>テーブル デザイナーで外部キー リレーションシップを作成する 
 ####  <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用    
     
-1.  オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、 **[デザイン]**をクリックします。    
+1.  オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、 **[デザイン]** をクリックします。    
     
      **テーブル デザイナー**にテーブルが表示されます。    
     
-2.  **[テーブル デザイナー]** メニューの **[リレーションシップ]**をクリックします。    
+2.  **[テーブル デザイナー]** メニューの **[リレーションシップ]** をクリックします。    
     
-3.  **[外部キーのリレーションシップ]** ダイアログ ボックスで、 **[追加]**をクリックします。    
+3.  **[外部キーのリレーションシップ]** ダイアログ ボックスで、 **[追加]** をクリックします。    
     
      リレーションシップが **[選択されたリレーションシップ]** ボックスに表示されます。このリレーションシップには、FK_\<*tablename*>_\<*tablename*> (*tablename* は外部キー テーブルの名前) という形式の名前が自動的に割り当てられます。    
     
@@ -101,9 +97,9 @@ ms.lasthandoff: 04/16/2018
     
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。    
     
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。    
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。    
     
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、テーブルを作成し、 `TempID` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `Sales.SalesReason` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、 `Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。    
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、テーブルを作成し、 `TempID` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `Sales.SalesReason` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、 `Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。    
     
     ```    
     USE AdventureWorks2012;    
@@ -123,9 +119,9 @@ ms.lasthandoff: 04/16/2018
     
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。    
     
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。    
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。    
     
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、`TempID` 列に外部キーを作成し、`SalesReasonID` テーブルの `Sales.SalesReason` 列を参照します。    
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`TempID` 列に外部キーを作成し、`SalesReasonID` テーブルの `Sales.SalesReason` 列を参照します。    
     
     ```    
     USE AdventureWorks2012;    

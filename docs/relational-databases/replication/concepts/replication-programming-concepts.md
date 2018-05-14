@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 03c7bf1b7fca64d18bb01732c7f98f6f106ec849
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 03bedc038bd35a85cd12d08c695491d9bba8d9c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **ネイティブ コード**  
   
-     コードが CLR によって管理されない、システム オブジェクトや COM オブジェクトへの直接アクセスを利用するオブジェクト指向開発環境です。 ネイティブ コード レプリケーション インターフェイスは、非推奨または廃止になりました。 詳細については、「[SQL Server レプリケーションの非推奨機能](../../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)」または「[レプリケーションの旧バージョンとの互換性](../../../relational-databases/replication/replication-backward-compatibility.md)」を参照してください。  
+     コードが CLR によって管理されない、システム オブジェクトや COM オブジェクトへの直接アクセスを利用するオブジェクト指向開発環境です。 ネイティブ コード レプリケーション インターフェイスは、非推奨または廃止になりました。 詳細については、「[SQL Server レプリケーションの非推奨の機能](../../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)」または「[レプリケーションの旧バージョンとの互換性](../../../relational-databases/replication/replication-backward-compatibility.md)」を参照してください。  
   
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>適切なレプリケーション プログラミング インターフェイスの選択  
  計画の最後の手順は、選択した開発環境で目的のレプリケーション機能を実装するためのレプリケーション プログラミング インターフェイスを適切に選択することです。 次の表に、使用できるレプリケーション プログラミング インターフェイスを示します。  

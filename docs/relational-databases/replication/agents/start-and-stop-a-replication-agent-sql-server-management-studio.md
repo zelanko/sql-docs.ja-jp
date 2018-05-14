@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], stopping
 - agents [SQL Server replication], starting
@@ -20,12 +19,11 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 29fd1b9771fc09c0c0d9c834a0728045a8c8327c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ed60eb50cfc24bf873127f630b30a0a50b4c3f92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +51,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[ローカル パブリケーション]** フォルダーを展開し、パブリケーションを右クリックします。  
   
-3.  **[スナップショット エージェントの状態の表示]** または **[ログ リーダー エージェントの状態の表示]**をクリックします。  
+3.  **[スナップショット エージェントの状態の表示]** または **[ログ リーダー エージェントの状態の表示]** をクリックします。  
   
-4.  **[開始]** または **[停止]**をクリックします。  
+4.  **[開始]** または **[停止]** をクリックします。  
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Management Studio からキュー リーダー エージェントを開始および停止するには  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]**をクリックします。 キュー リーダー エージェントのジョブの名前は、**[\<ディストリビューター>].\<整数>** という形式になっています。  
+3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、**[\<ディストリビューター>].\<整数>** という形式になっています。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[エージェント]** タブをクリックします。  
   
-3.  エージェントを右クリックして **[エージェントの開始]** または **[エージェントの停止]**をクリックします。  
+3.  エージェントを右クリックして **[エージェントの開始]** または **[エージェントの停止]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   

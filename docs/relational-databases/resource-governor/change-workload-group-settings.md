@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], alter
 - Resource Governor, workload group alter
@@ -20,12 +19,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2590b178c6fa34450eaa7f9c11b76b17f4efe9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 558dd0122f0959c15ad7f84029009582b797845b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-workload-group-settings"></a>ワークロード グループの設定の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +52,13 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含む **ワークロード グループ** フォルダーまで **[管理]** ノードを再帰的に展開します。  
   
-2.  変更するワークロード グループを右クリックし、 **[プロパティ]**をクリックします。  
+2.  変更するワークロード グループを右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[リソース ガバナーのプロパティ]** ページで、自動的に **[リソース プールのワークロード グループ]** グリッドの対象ワークロード グループの行が選択されない場合は、その行を選択します。  
   
 4.  変更する行のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
-5.  変更を保存するには、 **[OK]**をクリックします。  
+5.  変更を保存するには、 **[OK]** をクリックします。  
   
 ##  <a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
  **Transact-SQL を使用してワークロード グループの設定を変更するには**  

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - word completion [IntelliSense]
 - IntelliSense [SQL Server], Complete Word option
@@ -22,13 +20,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b83db1d7a5f18c240fad068bab87c8fd60eb8136
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 90030529aba0d1b79c4828aa742dce44c119dff7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="complete-word-intellisense"></a>入力候補 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +33,11 @@ ms.lasthandoff: 04/16/2018
   
  この入力候補の機能は、次の 4 つの方法で呼び出すことができます。  
   
--   **[編集]** メニューの **[IntelliSense]**をポイントし、 **[入力候補]**をクリックします。  
+-   **[編集]** メニューの **[IntelliSense]** をポイントし、 **[入力候補]** をクリックします。  
   
 -   Alt キーを押しながら右方向キーを押します。  
   
--   テキスト エディターを右クリックし、 **[入力候補]**をクリックします。  
+-   テキスト エディターを右クリックし、 **[入力候補]** をクリックします。  
   
 -   **[テキスト エディター]** ツール バーの **[入力候補]** をクリックします。  
   

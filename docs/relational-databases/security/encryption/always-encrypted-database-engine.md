@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], Always Encrypted
 - Always Encrypted
@@ -23,13 +22,12 @@ caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9852b7f0bba5e1cb589403a1f0b43d74d1aa7aac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c888fca8204c90b5d2ecf24838da19c2acf5624e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,13 +106,13 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 
 1.  Management Studio の **オブジェクト エクスプローラー** を使用して暗号化する列があるテーブルを含む既存のデータベースに接続するか、新しいデータベースを作成し、暗号化する列がある 1 つ以上のテーブルを作成し、接続します。
 2.  データベースを右クリックして **[タスク]** をポイントし、[**列の暗号化**] をクリックして **Always Encrypted ウィザード**を開きます。
-3.  **[概要]** ページの内容を確認し、 **[次へ]**をクリックします。
+3.  **[概要]** ページの内容を確認し、 **[次へ]** をクリックします。
 4.  **[列の選択]** ページで、テーブルを展開して暗号化する列を選択します。
-5.  暗号化する選択した各列で、 **[暗号化の種類]** を *[明確]* または *[ランダム化]*のいずれかに設定します。
-6.  暗号化する選択した各列で、 **[暗号化キー]**を選択します。 以前にこのデータベースに対して暗号化キーを作成していない場合は、新しく自動作成されたキーの既定の選択肢を選び、 **[次へ]**をクリックします。
-7.  **[マスター キーの構成]** ページで、新しいキーを格納する場所を選択し、マスター キー ソースを選択し、 **[次へ]**をクリックします。
-8.  **[検証]** ページで、スクリプトをすぐに実行するか PowerShell スクリプトを作成するかを選択し、 **[次へ]**をクリックします。
-9.  **[概要]** ページで、選択したオプションを確認し、 **[完了]**をクリックします。 完了したらウィザードを閉じます。
+5.  暗号化する選択した各列で、 **[暗号化の種類]** を *[明確]* または *[ランダム化]* のいずれかに設定します。
+6.  暗号化する選択した各列で、 **[暗号化キー]** を選択します。 以前にこのデータベースに対して暗号化キーを作成していない場合は、新しく自動作成されたキーの既定の選択肢を選び、 **[次へ]** をクリックします。
+7.  **[マスター キーの構成]** ページで、新しいキーを格納する場所を選択し、マスター キー ソースを選択し、 **[次へ]** をクリックします。
+8.  **[検証]** ページで、スクリプトをすぐに実行するか PowerShell スクリプトを作成するかを選択し、 **[次へ]** をクリックします。
+9.  **[概要]** ページで、選択したオプションを確認し、 **[完了]** をクリックします。 完了したらウィザードを閉じます。
 
   
 ## <a name="feature-details"></a>機能の詳細  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dta.workload.f1
 - sql13.dta.general.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8decab3a7a2bece72e381a2c1efc579e914df82c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b23898d9d14b75608d86518fa25ef750a9192d0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +52,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Windows の [スタート] メニューからデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[パフォーマンス ツール]**の順にポイントし、 **[データベース エンジン チューニング アドバイザー]**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[パフォーマンス ツール]** の順にポイントし、 **[データベース エンジン チューニング アドバイザー]** をクリックします。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio からデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]**でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **の** メニューの **[データベース エンジン チューニング アドバイザー]** でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>SQL Server Profiler からデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  SQL Server Profiler の **[ツール]** メニューの **[データベース エンジン チューニング アドバイザー]**をクリックします。  
+1.  SQL Server Profiler の **[ツール]** メニューの **[データベース エンジン チューニング アドバイザー]** をクリックします。  
   
 ##  <a name="Create"></a> ワークロードを作成する  
  ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 データベース エンジン チューニング アドバイザーでは、サーバーのクエリ パフォーマンスを向上させるインデックスやパーティション分割ストラテジを推奨するために、これらのワークロードが分析されます。  
@@ -105,9 +103,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  次の方法のいずれかを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動します。  
   
-    -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[パフォーマンス ツール]**の順にポイントして、 **[SQL Server Profiler]**をクリックします。  
+    -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[パフォーマンス ツール]** の順にポイントして、 **[SQL Server Profiler]** をクリックします。  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ツール]** メニューをクリックし、次に **[SQL Server Profiler]**をクリックします。  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ツール]** メニューをクリックし、次に **[SQL Server Profiler]** をクリックします。  
   
 2.  次の手順では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** テンプレートを使用して、トレース ファイルまたはトレース テーブルを作成します。  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  ワークロード オプションとして **[プラン キャッシュ]** を選択します。 データベース エンジン チューニング アドバイザーによって、分析に使用される上位 1,000 件のイベントがプラン キャッシュから選択されます。  
   
-4.  チューニングする必要のあるデータベースを選択し、必要に応じて、 **[選択したテーブル]**から、各データベースのテーブル (複数可) を選択します。 すべてのデータベースのキャッシュ エントリを含めるには、 **[チューニング オプション]**の **[詳細設定オプション]** をクリックし、 **[すべてのデータベースのプラン キャッシュ イベントを含める]**をオンにします。  
+4.  チューニングする必要のあるデータベースを選択し、必要に応じて、 **[選択したテーブル]** から、各データベースのテーブル (複数可) を選択します。 すべてのデータベースのキャッシュ エントリを含めるには、 **[チューニング オプション]** の **[詳細設定オプション]** をクリックし、 **[すべてのデータベースのプラン キャッシュ イベントを含める]** をオンにします。  
   
 5.  チューニング ログを保存するには、 **[チューニング ログを保存する]** をオンにします。 チューニング ログのコピーを保存しない場合は、このチェック ボックスをオフにします。  
   
@@ -176,7 +174,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  **[チューニング オプション]** タブをクリックし、必要なオプションを選択します。  
   
-7.  **[分析の開始]**をクリックします。  
+7.  **[分析の開始]** をクリックします。  
   
      チューニング セッションの開始後にセッションを停止する場合、 **[アクション]** メニューにある次のオプションから 1 つを選択します。  
   
@@ -206,7 +204,7 @@ ms.lasthandoff: 04/16/2018
     database_name.schema_name.table_name  
     ```  
   
-     ワークロード ファイルまたはテーブルを検索するには、 **[参照]**をクリックします。 データベース エンジン チューニング アドバイザーでは、ワークロード ファイルがロールオーバー ファイルであることが前提となります。 ロールオーバー ファイルの詳細については、「 [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)」を参照してください。  
+     ワークロード ファイルまたはテーブルを検索するには、 **[参照]** をクリックします。 データベース エンジン チューニング アドバイザーでは、ワークロード ファイルがロールオーバー ファイルであることが前提となります。 ロールオーバー ファイルの詳細については、「 [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)」を参照してください。  
   
      ワークロードとしてトレース テーブルを使用する場合、そのテーブルは、データベース エンジン チューニング アドバイザーがチューニングを実行するサーバーと同じサーバー上に存在する必要があります。 異なるサーバー上でトレース テーブルを作成した場合は、そのテーブルをワークロードとして使用する前に、データベース エンジン チューニング アドバイザーがチューニングを実行するサーバーに移す必要があります。  
   
@@ -392,7 +390,7 @@ database_name.owner_name.table_name
   
 1.  クエリ エディターにクエリを入力し、選択して強調表示します。  
   
-2.  強調表示したクエリを右クリックして、 **[データベース エンジン チューニング アドバイザーでのクエリの分析]**をクリックします。  
+2.  強調表示したクエリを右クリックして、 **[データベース エンジン チューニング アドバイザーでのクエリの分析]** をクリックします。  
   
  **[ワークロード ファイルを参照します。]/[ワークロード テーブルを参照します。]**  
  ワークロードのソースとして **[ファイル]** または **[テーブル]** を選択している場合に、この参照ボタンを使用して対象を選択します。  
@@ -461,7 +459,7 @@ database_name.owner_name.table_name
  インデックス付きビューを追加するための推奨設定のみが含まれます。 クラスター化インデックスおよび非クラスター化インデックスは、推奨されません。  
   
  **フィルター選択されたインデックスを含める**  
- フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、 **[インデックスおよびインデックス付きビュー]**、 **[インデックス]**、または **[非クラスター化インデックス]**のいずれかの物理デザイン構造を選択した場合に使用できます。  
+ フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、 **[インデックスおよびインデックス付きビュー]**、 **[インデックス]**、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
   
  **[インデックス]**  
  クラスター化インデックスおよび非クラスター化インデックスを追加するための推奨設定のみが含まれます。 インデックス付きビューは推奨されません。  
@@ -521,7 +519,7 @@ database_name.owner_name.table_name
  アクション ステップで返されたメッセージが表示されます。  
   
  **[チューニング ログ]**  
- このチューニング セッションに関する情報が表示されます。 このログを印刷するには、ログを右クリックして **[印刷]**をクリックします。  
+ このチューニング セッションに関する情報が表示されます。 このログを印刷するには、ログを右クリックして **[印刷]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   

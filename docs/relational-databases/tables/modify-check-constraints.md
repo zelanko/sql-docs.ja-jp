@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
 - modifying constraints
@@ -22,13 +19,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c5f6d7acb3827b425b4b3dedb533f33fc0574db4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4578301eabb2dc76f2a02dd9d556c29c8087a1e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,11 +54,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-modify-a-check-constraint"></a>CHECK 制約を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、CHECK 制約を含むテーブルを右クリックし、 **[デザイン]**をクリックします。  
+1.  **オブジェクト エクスプローラー**で、CHECK 制約を含むテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
-2.  **[テーブル デザイナー]** メニューの **[CHECK 制約]**をクリックします。  
+2.  **[テーブル デザイナー]** メニューの **[CHECK 制約]** をクリックします。  
   
-3.  **[CHECK 制約]** ダイアログ ボックスの **[選択された制約のチェック]**で、編集する制約を選択します。  
+3.  **[CHECK 制約]** ダイアログ ボックスの **[選択された制約のチェック]** で、編集する制約を選択します。  
   
 4.  次の表の操作を完了します。  
   
@@ -77,7 +73,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  CHECK 制約に対して異なる機能を持つデータベースもあります。  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 6.  **[ファイル]** メニューの *[<テーブル名> を保存]* をクリックします。  
   

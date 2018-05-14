@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
@@ -20,12 +19,11 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a70919d17a83f1592012ee0bc1064018560c17b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aa1eef0787a96ddd1661c6276a692d3ad05d7b5e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>データの変更をトランザクション アーティクルに反映する方法の設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。  
   
-2.  **[反転表示されたテーブル アーティクルのプロパティを設定]**をクリックします。  
+2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
 3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、**[INSERT 配信形式]**、**[UPDATE 配信形式]**、**[DELETE 配信形式]** の各メニューを使用して各操作の反映方法を指定します。  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。  
   
-2.  **[反転表示されたテーブル アーティクルのプロパティを設定]**をクリックします。  
+2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** をクリックします。  
   
      **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[ステートメントの配信]** セクションで、該当する配信形式メニュー (**[INSERT 配信形式]**、**[UPDATE 配信形式]**、または **[DELETE 配信形式]**) から CALL 構文を選択し、**[INSERT ストアド プロシージャ]**、**[DELETE ストアド プロシージャ]**、または **[UPDATE ストアド プロシージャ]** で使用するプロシージャ名を入力します。 CALL 構文の詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」の「ストアド プロシージャの呼び出し構文」を参照してください。  
   
@@ -124,11 +122,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **@ins_cmd** - **CALL sp_MSins_*article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_*article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_*article_name***、**CALL sp_MSupd_*article_name***、**XCALL sp_MSupd_*article_name***、**MCALL sp_MSupd_*article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  
@@ -144,11 +142,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@publication**、**@article**、および **@source_object** に、それぞれ、アーティクルが属しているパブリケーションの名前、アーティクルの名前、および、パブリッシュ対象のデータベース オブジェクトを指定します。さらに、**@schema_option** にビットマスク **0x02** (カスタム ストアド プロシージャの自動生成を有効にする) を指定し、次のいずれかのパラメーターを指定します。  
   
-    -   **@ins_cmd** - **CALL sp_MSins_*article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_*article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** または **XCALL sp_MSdel_* article_name*** の値を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd_*article_name***、**CALL sp_MSupd_*article_name***、**XCALL sp_MSupd_*article_name***、**MCALL sp_MSupd_*article_name*** を指定します。ここで、***article_name*** は **@article** に指定した値です。  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***、**CALL sp_MSupd_* article_name***、**XCALL sp_MSupd_* article_name***、**MCALL sp_MSupd_* article_name*** を指定します。ここで、***article_name*** は **@article** に指定した値です。  
   
     > [!NOTE]  
     >  上記コマンド パラメーターのそれぞれについて、レプリケーションによって生成されるストアド プロシージャに独自の名前を指定できます。  

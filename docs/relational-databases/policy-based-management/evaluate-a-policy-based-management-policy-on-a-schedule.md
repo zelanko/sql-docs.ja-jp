@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
@@ -19,12 +18,11 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af93d3f46e6fdff0bb11287e210500072b70d11c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c4fea2377f0d7abc610834216c2b9f295da384ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>ポリシー ベースの管理ポリシーがスケジュールに従っていることの評価
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +53,16 @@ ms.lasthandoff: 04/16/2018
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  プラス記号をクリックして **[ポリシー管理]**を展開します。  
+3.  プラス記号をクリックして **[ポリシー管理]** を展開します。  
   
 4.  プラス記号をクリックして **[ポリシー]** フォルダーを展開します。  
   
-5.  スケジュールを評価するポリシーを右クリックし、 **[プロパティ]**をクリックします。  
+5.  スケジュールを評価するポリシーを右クリックし、 **[プロパティ]** をクリックします。  
   
 6.  *[ポリシーを開く - <ポリシー名>]* ダイアログ ボックスで、**[評価モード]** ボックスの一覧の **[スケジュールで実行]** をクリックします。  
   
-7.  **[スケジュール]**で、 **[選択]** をクリックして既存のスケジュールを指定するか、 **[新規作成]** をクリックして新しいスケジュールを作成します。  
+7.  **[スケジュール]** で、 **[選択]** をクリックして既存のスケジュールを指定するか、 **[新規作成]** をクリックして新しいスケジュールを作成します。  
   
-8.  完了したら、 **[OK]**をクリックします。  
+8.  完了したら、 **[OK]** をクリックします。  
   
   

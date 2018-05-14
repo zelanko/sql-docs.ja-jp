@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - cache [SQL Server], replication
@@ -23,12 +22,11 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 46c981ad1aa1948a8f8a352c16e6322736dae76b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cfc8cfc20db38bafc60b1aabfd588ddd1c259833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
 -   レプリケーション モニターから起動される詳細ウィンドウは、既定では自動的に更新されません (ただし、同期されているマージ サブスクリプションに関連付けられているウィンドウは、例外です)。 詳細ウィンドウが自動的に更新されるように指定すると、レプリケーション モニターのメイン ウィンドウと同じスケジュールで更新されます。  
   
--   すべてのウィンドウは、F5 キーを押すか、またはレプリケーション モニターのツリー内でノードを右クリックし、 **[更新]**をクリックすることによって、手動で更新できます。 手動の更新を行うと、キャッシュは強制的に更新されます。  
+-   すべてのウィンドウは、F5 キーを押すか、またはレプリケーション モニターのツリー内でノードを右クリックし、 **[更新]** をクリックすることによって、手動で更新できます。 手動の更新を行うと、キャッシュは強制的に更新されます。  
   
  詳細については、「[レプリケーション モニターのデータの更新](../../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)」を参照してください。  
   

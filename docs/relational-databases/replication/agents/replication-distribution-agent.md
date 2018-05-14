@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
 - agents [SQL Server replication], Distribution Agent
@@ -22,12 +21,11 @@ caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5b124210e26ea2fcd408eb5a3ed9e04a424f136a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb6fd99b07d623e2fb3d63ddb3c25adfd01efbb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,13 +97,13 @@ distrib [-?]
  使用できるすべてのパラメーターを表示します。  
   
  **-Publisher** *server_name*[**\\***i**nstance_name*]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\*** instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
   
  **-PublisherDB** *publisher_database*  
  パブリッシャー データベースの名前です。  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
+ サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の *server_name***\\*** instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。  
   
  **-SubscriberDB** *subscriber_database*  
  サブスクライバー データベースの名前です。  
@@ -285,7 +283,7 @@ distrib [-?]
  データ変換を許可するパブリケーションでは、このパラメーターを指定する必要があります。  
   
  **-UseInprocLoader**  
- ディストリビューション エージェントがスナップショット ファイルをサブスクライバーに適用するときに、BULK INSERT コマンドが使用され、初期スナップショットのパフォーマンスが向上します。 このパラメーターは XML データ型との互換性がないため推奨されません。 XML データをレプリケートしない場合にのみ、このパラメーターを使用できます。 このパラメーターを、キャラクター モードのスナップショットや、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーで使用することはできません。 このパラメーターを使用する場合は、サブスクライバー側の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに、スナップショットの .bcp データ ファイルが格納されたディレクトリの読み取り権限が必要です。 このパラメーターを使用しない場合、これらのファイルが、エージェント ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合) またはエージェントが読み込む ODBC ドライバー ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーの場合) によって読み取られるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストは使用されません。  
+ ディストリビューション エージェントがスナップショット ファイルをサブスクライバーに適用するときに、BULK INSERT コマンドが使用され、初期スナップショットのパフォーマンスが向上します。 このパラメーターは XML データ型との互換性がないため非推奨とされます。 XML データをレプリケートしない場合にのみ、このパラメーターを使用できます。 このパラメーターを、キャラクター モードのスナップショットや、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーで使用することはできません。 このパラメーターを使用する場合は、サブスクライバー側の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに、スナップショットの .bcp データ ファイルが格納されたディレクトリの読み取り権限が必要です。 このパラメーターを使用しない場合、これらのファイルが、エージェント ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合) またはエージェントが読み込む ODBC ドライバー ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーの場合) によって読み取られるため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストは使用されません。  
   
  **-UseOledbStreaming**  
  指定した場合、BLOB データをストリームとしてバインドできるようになります。 ストリームが使用されるしきい値 (バイト サイズ) を指定するには、 **-OledbStreamThreshold** を使用します。 **UseOledbStreaming** は既定で有効になっています。 **UseOledbStreaming** は、**C:\Program Files\Microsoft SQL Server\\<version\>\COM** フォルダーに書き込みます。  

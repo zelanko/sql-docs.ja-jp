@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TextEditor
 helpviewer_keywords:
@@ -34,13 +32,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75cb4e91ef8d83db92db23b732786e4a3db7220b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2c221ac9d0c29ba7abfb6e5fa139a082db36e38d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +64,7 @@ ms.lasthandoff: 04/16/2018
  エディター内のテキストまたはコードの左に行番号を表示します。 特定の行番号に移動できます。  
   
  **右端で折り返す**  
- テキストまたはコードの長い行を複数の行に分けて表示して、すべてのテキストを見ることができるようにします。 右端で折り返すオプションは、テキストの実行時または印刷時の動作には影響を与えません。 右端で折り返す設定をオンにするには、 **[ツール]**メニューの **[オプション]** ダイアログ ボックスで、[テキスト エディター] ページまたは特定のエディター ページのいずれかにある [すべての言語] の [全般] ページを使用します。  
+ テキストまたはコードの長い行を複数の行に分けて表示して、すべてのテキストを見ることができるようにします。 右端で折り返すオプションは、テキストの実行時または印刷時の動作には影響を与えません。 右端で折り返す設定をオンにするには、 **[ツール]** メニューの **[オプション]** ダイアログ ボックスで、[テキスト エディター] ページまたは特定のエディター ページのいずれかにある [すべての言語] の [全般] ページを使用します。  
   
 ## <a name="code-editor-components"></a>コード エディターのコンポーネント  
  コード エディターには、テキスト エディターや XML エディターに共通の機能に加えて、次の機能があります。  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
  このウィンドウは、クエリの結果を表示するために使用します。 このウィンドウには、グリッド形式またはテキスト形式で結果が表示されます。結果をファイルに出力することもできます。 結果グリッドは、独立したタブ付きウィンドウとして表示できます。  
   
  **IntelliSense**  
- エディターで **[編集]** メニューの **[IntelliSense]**をポイントすると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense のオプションが表示されます。  
+ エディターで **[編集]** メニューの **[IntelliSense]** をポイントすると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense のオプションが表示されます。  
   
  **コードの色分け**  
  構文要素がその種類に応じて異なる色で表示されるため、複雑なステートメントも見やすくなります。  

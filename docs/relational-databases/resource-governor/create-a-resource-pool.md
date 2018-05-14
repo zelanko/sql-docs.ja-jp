@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
@@ -20,12 +19,11 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ade50390d2b96c9d5696cfb428465aae7037d0a2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b4cad63d2168fba3dc04e62fc4fbadff2795f21d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-resource-pool"></a>リソース プールの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +47,9 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="CreRPProp"></a> SQL Server Management Studio を使用してリソース プールを作成する  
  **を使用してリソース プールを作成するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]**ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]**を右クリックし、 **[プロパティ]**をクリックします。  
+2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[リソース プール]** グリッドで、空白行の最初の列をクリックします。 この列にアスタリスク (*) がラベルとして付加されます。  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  変更する行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
-6.  変更を保存するには、 **[OK]**をクリックします。  
+6.  変更を保存するには、 **[OK]** をクリックします。  
   
 ##  <a name="CreRPTSQL"></a> Transact-SQL を使用してリソース プールを作成する  
  **を使用してリソース プールを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.articles.f1
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
@@ -19,12 +18,11 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 29af4270b45aa0eb89c3fdaea92f1e3779fc14c8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6f363509af71532ab7d5ac2b73a0e70b26b8b847
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="articles"></a>[アーティクル]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 -   オブジェクトの横にあるチェック ボックスをオンにすることで、オブジェクトをパブリケーションに含めます。  
   
--   オブジェクトの種類 ( **[テーブル]**など) の横にあるチェック ボックスをオンにして、特定の型 (テーブルなど) のオブジェクトすべてをパブリケーションに含める。  
+-   オブジェクトの種類 ( **[テーブル]** など) の横にあるチェック ボックスをオンにして、特定の型 (テーブルなど) のオブジェクトすべてをパブリケーションに含める。  
   
 -   テーブル ノードを展開してテーブル内の列を表示する。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/16/2018
 -   ペイン内でオブジェクトを右クリックし、そのオブジェクトに対するコマンドのメニューを表示する。  
   
  **[アーティクルのプロパティ]**  
- **[アーティクルのプロパティ]**をクリックし、次のいずれかの操作を行います。  
+ **[アーティクルのプロパティ]** をクリックし、次のいずれかの操作を行います。  
   
 -   **[反転表示された \<ObjectType> アーティクルのプロパティを設定]** をクリックし、**[アーティクルのプロパティ - \<ObjectName>]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、**[アーティクル]** ページのオブジェクト ペインで反転表示されたオブジェクトのみに適用されます。  
   

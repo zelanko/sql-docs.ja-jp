@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -21,13 +20,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7019b3bca16ff7dbd6c4e8479854c9b9eeb3a8f6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0fd49b75fdb99f70d2d5b47982d8b1a7e10a7496
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,11 +53,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを展開して、 **[プログラミング]**を展開します。  
+2.  **[データベース]** を展開し、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを展開して、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]**を右クリックし、 **[新しいストアド プロシージャ]**をクリックします。  
+3.  **[ストアド プロシージャ]** を右クリックし、 **[新しいストアド プロシージャ]** をクリックします。  
   
-4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]**をクリックします。  
+4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
@@ -87,13 +85,13 @@ ms.lasthandoff: 04/16/2018
         AND EndDate IS NULL;  
     ```  
   
-8.  構文をテストするには、 **[クエリ]** メニューの **[解析]**をクリックします。 エラー メッセージが返された場合は、ステートメントと上記の情報を比較し、必要に応じて修正します。  
+8.  構文をテストするには、 **[クエリ]** メニューの **[解析]** をクリックします。 エラー メッセージが返された場合は、ステートメントと上記の情報を比較し、必要に応じて修正します。  
   
-9. ストアド プロシージャを作成するには、 **[クエリ]** メニューの **[実行]**をクリックします。 プロシージャがデータベース内のオブジェクトとして作成されます。  
+9. ストアド プロシージャを作成するには、 **[クエリ]** メニューの **[実行]** をクリックします。 プロシージャがデータベース内のオブジェクトとして作成されます。  
   
-10. オブジェクト エクスプローラーにリストされたプロシージャを確認するには、 **[ストアド プロシージャ]** を右クリックして **[更新]**を選択します。  
+10. オブジェクト エクスプローラーにリストされたプロシージャを確認するには、 **[ストアド プロシージャ]** を右クリックして **[更新]** を選択します。  
   
-11. プロシージャを実行するには、オブジェクト エクスプローラーでストアド プロシージャ名 **HumanResources.uspGetEmployeesTest** を右クリックし、 **[ストアド プロシージャの実行]**を選択します。  
+11. プロシージャを実行するには、オブジェクト エクスプローラーでストアド プロシージャ名 **HumanResources.uspGetEmployeesTest** を右クリックし、 **[ストアド プロシージャの実行]** を選択します。  
   
 12. **[プロシージャの実行]** ウィンドウでパラメーター @LastName の値に「Margheim」を、パラメーター @FirstName の値に「Diane」を入力します。  
   
@@ -105,9 +103,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  **[ファイル]** メニューの **[新しいクエリ]**をクリックします。  
+2.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 この例では、上と同じストアド プロシージャを別のプロシージャ名で作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、上と同じストアド プロシージャを別のプロシージャ名で作成します。  
   
     ```  
     USE AdventureWorks2012;  
@@ -126,7 +124,7 @@ ms.lasthandoff: 04/16/2018
   
     ```  
   
-4.  プロシージャを実行するには、次の例をコピーして新しいクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 パラメーター値を指定するときに別の方法が表示されることに注意してください。  
+4.  プロシージャを実行するには、次の例をコピーして新しいクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 パラメーター値を指定するときに別の方法が表示されることに注意してください。  
   
     ```  
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  

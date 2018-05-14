@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Publishers [SQL Server replication], Replication Monitor tasks
 - viewing Publisher information
@@ -21,12 +20,11 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0084f2e6288cb2a09810499c38a8c5e1a346fa7f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57f47623fa4d75588eb5f882fa96da97a755131e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>パブリッシャーの情報を表示し、タスクを実行する (レプリケーション モニター)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,25 +52,25 @@ ms.lasthandoff: 04/16/2018
   
 3.  サブスクリプションの情報を表示するには、 **[サブスクリプション ウォッチ リスト]** タブをクリックします。このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。  
   
-    -   サブスクリプションに関連するエージェントの詳細を表示するには、サブスクリプションを右クリックし、 **[詳細表示]**をクリックします。  
+    -   サブスクリプションに関連するエージェントの詳細を表示するには、サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-    -   サブスクリプションのプロパティを表示するには、サブスクリプションを右クリックし、 **[プロパティ]**をクリックします。  
+    -   サブスクリプションのプロパティを表示するには、サブスクリプションを右クリックし、 **[プロパティ]** をクリックします。  
   
-    -   プッシュ サブスクリプションを同期するには、サブスクリプションを右クリックし、 **[同期の開始]**をクリックします。  
+    -   プッシュ サブスクリプションを同期するには、サブスクリプションを右クリックし、 **[同期の開始]** をクリックします。  
   
-    -   サブスクリプションを再初期化するには、サブスクリプションを右クリックし、 **[サブスクリプションの再初期化]**をクリックします。  
+    -   サブスクリプションを再初期化するには、サブスクリプションを右クリックし、 **[サブスクリプションの再初期化]** をクリックします。  
   
 4.  エージェントの情報を表示するには、 **[エージェント]** タブをクリックします。このタブで、さらに詳しい情報を表示したり、タスクを実行することができます。  
   
-    -   エージェントの詳細情報 (情報メッセージやエラー メッセージなど) を表示するには、エージェントを右クリックし、 **[詳細表示]**をクリックします。  
+    -   エージェントの詳細情報 (情報メッセージやエラー メッセージなど) を表示するには、エージェントを右クリックし、 **[詳細表示]** をクリックします。  
   
-    -   エージェントを実行するジョブの詳細情報 (スケジュールやジョブ ステップの詳細など) を表示するには、エージェントを右クリックし、 **[プロパティ]**をクリックします。  
+    -   エージェントを実行するジョブの詳細情報 (スケジュールやジョブ ステップの詳細など) を表示するには、エージェントを右クリックし、 **[プロパティ]** をクリックします。  
   
-    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]**をクリックします。 詳細については、「[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」(レプリケーション エージェント プロファイルの操作) をご覧ください。  
+    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]** をクリックします。 詳細については、「[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」(レプリケーション エージェント プロファイルの操作) をご覧ください。  
   
-    -   実行されていないエージェントを開始するには、エージェントを右クリックし、 **[エージェントの開始]**をクリックします。  
+    -   実行されていないエージェントを開始するには、エージェントを右クリックし、 **[エージェントの開始]** をクリックします。  
   
-    -   実行中のエージェントを停止するには、エージェントを右クリックし、 **[エージェントの停止]**をクリックします。  
+    -   実行中のエージェントを停止するには、エージェントを右クリックし、 **[エージェントの停止]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

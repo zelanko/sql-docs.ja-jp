@@ -4,12 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
@@ -19,13 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f804f515f31b64923cdc4dd2a70bcc285568414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 099144c72ae9020e635ba36cbf37dadd6dc1826a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,12 +32,12 @@ ms.lasthandoff: 04/16/2018
   
 -   コマンド プロンプトで「 **sqlps**」と入力し、Enter キーを押します。 「 **cd xevent**」と入力して Enter キーを押します。 そこから、 **cd** コマンドと **dir** コマンド (または **Set-Location** コマンドレットと **Get-Childitem** コマンドレット) を使用して、サーバー名とインスタンス名に移動できます。  
   
--   オブジェクト エクスプローラーで、インスタンス名、 **[管理]**の順に展開し、 **[拡張イベント]**を右クリックして、 **[PowerShell の起動]**をクリックします。 これにより、次のパスで PowerShell が起動します。  
+-   オブジェクト エクスプローラーで、インスタンス名、 **[管理]** の順に展開し、 **[拡張イベント]** を右クリックして、 **[PowerShell の起動]** をクリックします。 これにより、次のパスで PowerShell が起動します。  
   
      PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
-    >  PowerShell は、 **[拡張イベント]**の下の任意のノードから起動できます。 たとえば、 **[Sessions]**を右クリックし、 **[PowerShell の起動]**をクリックできます。 これにより、1 レベル深い Sessions フォルダーで PowerShell が起動します。  
+    >  PowerShell は、 **[拡張イベント]** の下の任意のノードから起動できます。 たとえば、 **[Sessions]** を右クリックし、 **[PowerShell の起動]** をクリックできます。 これにより、1 レベル深い Sessions フォルダーで PowerShell が起動します。  
   
  XEvent フォルダー ツリーを参照して、既存の拡張イベント セッションと、関連するイベント、ターゲット、および述語を表示できます。 たとえば、PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*> パスから、「**cd sessions**」と入力し、Enter キーを押し、「**dir**」と入力して、Enter キーを押すと、そのインスタンスに格納されているセッションの一覧を表示できます。 また、セッションが実行中かどうか (および実行中の場合は実行時間)、およびセッションがインスタンスの起動時に開始されるように構成されているかどうかも表示されます。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.planguideprop.general.f1
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0b417f711c899d6ea5fe03a20d68637f016c6d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 54418d73d2ef5b2de9e6a60e6b63b6537955fd1f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  プラス記号をクリックして **[プラン ガイド]** フォルダーを展開します。  
   
-3.  プロパティを表示するプラン ガイドを右クリックし、 **[プロパティ]**を選択します。  
+3.  プロパティを表示するプラン ガイドを右クリックし、 **[プロパティ]** を選択します。  
   
      **[プラン ガイドのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 04/16/2018
      [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに適用されるクエリ ヒントまたはクエリ プランが表示されます。 クエリ プランがヒントとして指定されている場合は、そのプランの XML プラン表示出力が表示されます。  
   
      **[無効化]**  
-     プラン ガイドの状態が表示されます。 指定できる値は、 **[True]** および **[False]**です。  
+     プラン ガイドの状態が表示されます。 指定できる値は、 **[True]** および **[False]** です。  
   
      **名前**  
      プラン ガイドの名前が表示されます。  
@@ -99,9 +97,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- If a plan guide named “Guide1” already exists in the AdventureWorks2012 database, delete it.  

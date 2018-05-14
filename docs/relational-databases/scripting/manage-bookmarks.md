@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.BookmarkWindow
 helpviewer_keywords:
@@ -21,22 +19,21 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2671d5b81a7bd99492df35047988444d420c8e4e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 42b58743f319a175c9eb06905dec3ace081b1be8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
   
- ブックマークの作成やブックマーク間の移動は、 **[ブックマーク]** ウィンドウ上部の **[テキスト エディター]** ツール バーにあるボタンをクリックして実行します。 ブックマークの追加および削除や有効化および無効化を行ったり、ブックマークをフォルダーに構成したりできます。 また、 **[ブックマーク]** ウィンドウ ショートカット メニューから、特定のコマンドも利用できます。 ブックマークを追加または削除するには、エディターで目的の行にカーソルを置き、 **[ブックマークの設定/解除]**をクリックします。 ブックマークを有効化するには、 **[ブックマーク]** ウィンドウで対象ブックマークのチェック ボックスをオンにします。ブックマークを無効化する (ただし、削除しない) 場合は、チェック ボックスをオフにします。  
+ ブックマークの作成やブックマーク間の移動は、 **[ブックマーク]** ウィンドウ上部の **[テキスト エディター]** ツール バーにあるボタンをクリックして実行します。 ブックマークの追加および削除や有効化および無効化を行ったり、ブックマークをフォルダーに構成したりできます。 また、 **[ブックマーク]** ウィンドウ ショートカット メニューから、特定のコマンドも利用できます。 ブックマークを追加または削除するには、エディターで目的の行にカーソルを置き、 **[ブックマークの設定/解除]** をクリックします。 ブックマークを有効化するには、 **[ブックマーク]** ウィンドウで対象ブックマークのチェック ボックスをオンにします。ブックマークを無効化する (ただし、削除しない) 場合は、チェック ボックスをオフにします。  
   
 ## <a name="text-editor-toolbar"></a>[テキスト エディター] ツール バー  
- エディターでテキスト ドキュメントを開いているときは、 **[テキスト エディター]** ツール バーの次のボタンが有効になっています。 クエリ エディターで作業中に **[テキスト エディター]** ツール バーを表示するには、 **[表示]** メニューで **[ツール バー]**をポイントし、 **[テキスト エディター]**をクリックします。  
+ エディターでテキスト ドキュメントを開いているときは、 **[テキスト エディター]** ツール バーの次のボタンが有効になっています。 クエリ エディターで作業中に **[テキスト エディター]** ツール バーを表示するには、 **[表示]** メニューで **[ツール バー]** をポイントし、 **[テキスト エディター]** をクリックします。  
   
  **[現在行にブックマークを追加/削除します]**  
  アクティブなエディターで、ドキュメントの選択された行にブックマークを追加または削除します。 ブックマークが付けられたコードの行は変更しません。  

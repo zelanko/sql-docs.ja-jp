@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], dependencies
 - displaying stored procedure dependencies
@@ -21,13 +20,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 489595e478497d0dc326931b536f2f7068a37f13
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 119236e5dc06f1c8df5412e05ab810c824e5cb84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>ストアド プロシージャの依存関係の表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +64,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]**を展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]**を展開し、プロシージャを右クリックして、 **[依存関係の表示]**をクリックします。  
+3.  **[ストアド プロシージャ]** を展開し、プロシージャを右クリックして、 **[依存関係の表示]** をクリックします。  
   
 4.  プロシージャに依存しているオブジェクトの一覧を表示します。  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
 3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
@@ -128,7 +126,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
 3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
@@ -174,7 +172,7 @@ ms.lasthandoff: 04/16/2018
  プロシージャに依存しているオブジェクトを表示します。  
  1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
 3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
@@ -225,7 +223,7 @@ ms.lasthandoff: 04/16/2018
  プロシージャが依存しているオブジェクトを表示します。  
  1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**を展開し、プロシージャが属するデータベースを展開します。  
+2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
 3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   

@@ -3,15 +3,13 @@ title: 検索プロパティ リストを使用したドキュメント プロ�
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -25,13 +23,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 57decf1f39f5cca3f25d4aabb1941d06295a5378
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 69cb29bc9129de76fce04e9ef6d6fa644c3f3f12
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,11 +76,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]**を展開し、検索プロパティ リストを作成する対象のデータベースを展開します。  
+2.  **[データベース]** を展開し、検索プロパティ リストを作成する対象のデータベースを展開します。  
   
-3.  **[ストレージ]**を展開し、 **[検索プロパティ リスト]**を右クリックします。  
+3.  **[ストレージ]** を展開し、 **[検索プロパティ リスト]** を右クリックします。  
   
-4.  **[新しい検索プロパティ リスト]**をクリックします。  
+4.  **[新しい検索プロパティ リスト]** をクリックします。  
   
 5.  プロパティ リストの名前を指定します。  
   
@@ -194,19 +191,19 @@ GO
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]**を展開し、データベースを展開します。  
+2.  **[データベース]** を展開し、データベースを展開します。  
   
-3.  **[ストレージ]**を展開します。  
+3.  **[ストレージ]** を展開します。  
   
 4.  **[検索プロパティ リスト]** を展開して、検索プロパティ リストを表示します。  
   
-5.  プロパティ リストを右クリックし、 **[プロパティ]**をクリックします。  
+5.  プロパティ リストを右クリックし、 **[プロパティ]** をクリックします。  
   
 6.  **[検索プロパティ リスト エディター]** ダイアログ ボックスで、プロパティ グリッドを使用して、検索プロパティを追加または削除します。  
   
     1.  ドキュメント プロパティを削除するには、プロパティの左側にある行ヘッダーをクリックして、Del キーを押します。  
   
-    2.  ドキュメント プロパティを追加するには、リストの末尾で **\***の右側の空白行をクリックして、新しいプロパティの値を入力します。  
+    2.  ドキュメント プロパティを追加するには、リストの末尾で **\*** の右側の空白行をクリックして、新しいプロパティの値を入力します。  
   
          これらの値の詳細については、「 [検索プロパティ リスト エディター](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
@@ -223,11 +220,11 @@ GO
   
 1.  オブジェクト エクスプローラーで、サーバーを展開します。  
   
-2.  **[データベース]**を展開し、データベースを展開します。  
+2.  **[データベース]** を展開し、データベースを展開します。  
   
-3.  **[ストレージ]**を展開し、 **[検索プロパティ リスト]** ノードを展開します。  
+3.  **[ストレージ]** を展開し、 **[検索プロパティ リスト]** ノードを展開します。  
   
-4.  削除するプロパティ リストを右クリックして、 **[削除]**をクリックします。  
+4.  削除するプロパティ リストを右クリックして、 **[削除]** をクリックします。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

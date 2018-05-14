@@ -3,15 +3,12 @@ title: レプリケーションの CHECK 制約の無効化 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, disabling
 - constraints [SQL Server], disabling
@@ -22,13 +19,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a699b30759011b7b78152255eb35db994b2054b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 11da077a9b6450bbdc7caaf06481cad95a60d054
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disable-check-constraints-for-replication"></a>レプリケーションの CHECK 制約の無効化
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -51,11 +47,11 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、変更する CHECK 制約が設定されているテーブルを展開し、 **[制約]** フォルダーを展開します。  
   
-2.  変更する CHECK 制約を右クリックし、 **[変更]**をクリックします。  
+2.  変更する CHECK 制約を右クリックし、 **[変更]** をクリックします。  
   
-3.  **[CHECK 制約]** ダイアログ ボックスで、 **[テーブル デザイナー]**の **[レプリケーションに対して適用]** の値として **[いいえ]**を選択します。  
+3.  **[CHECK 制約]** ダイアログ ボックスで、 **[テーブル デザイナー]** の **[レプリケーションに対して適用]** の値として **[いいえ]** を選択します。  
   
-4.  **[閉じる]**をクリックします。  
+4.  **[閉じる]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -63,9 +59,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。 最初の例では、IDENTITY 列を含むテーブルとテーブルに対する CHECK 制約を作成します。 次に、制約を削除した後、NOT FOR REPLICATION 句を指定して制約を再作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 最初の例では、IDENTITY 列を含むテーブルとテーブルに対する CHECK 制約を作成します。 次に、制約を削除した後、NOT FOR REPLICATION 句を指定して制約を再作成します。  
   
     ```  
     USE AdventureWorks2012;  

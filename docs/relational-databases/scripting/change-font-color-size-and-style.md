@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], fonts
 - modifying fonts
@@ -24,13 +22,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f7102c000ec8f39dfe3a49a0d9ed74051ca6684
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 81597f44f2923b84a771e221182f8fc4d63bc584
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-font-color-size-and-style"></a>フォントの色、サイズ、およびスタイルを変更する方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +35,9 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>エディターのフォントの色、サイズ、およびスタイルを変更するには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]**をクリックし、 **[フォントおよび色]**をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** をクリックし、 **[フォントおよび色]** をクリックします。  
   
-2.  **[設定の表示]** の一覧の **[テキスト エディター]**をクリックします。  
+2.  **[設定の表示]** の一覧の **[テキスト エディター]** をクリックします。  
   
 3.  フォント、サイズ、表示項目、前景色および背景色を変更します。  
   

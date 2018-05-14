@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: resource-governor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
@@ -20,12 +19,11 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db6c5b45680f14358f3fc7b396998594a119cc61
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0d736f66b170dfca47c09b60ef131367d34ff37f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,24 +51,24 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="DelWGObjEx"></a> オブジェクト エクスプ ローラーを使用してワークロード グループを削除する  
  **オブジェクト エクスプ ローラーを使用してワークロード グループを削除するには**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース プール]**ノードまで再帰的に展開します。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース プール]** ノードまで再帰的に展開します。  
   
 2.  削除するワークロード グループを含むリソース プールで、 **[リソース プール]** ノードを **[ワークロード グループ]** ノードまで再帰的に展開します。  
   
-3.  ワークロード グループを右クリックし、 **[削除]**をクリックします。  
+3.  ワークロード グループを右クリックし、 **[削除]** をクリックします。  
   
-4.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、ワークロード グループが表示されます。 ワークロード グループを削除するには、 **[OK]**をクリックします。  
+4.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、ワークロード グループが表示されます。 ワークロード グループを削除するには、 **[OK]** をクリックします。  
   
 ##  <a name="DelWGRGProp"></a> リソース ガバナーのプロパティを使用してワークロード グループを削除する  
  **[リソース ガバナーのプロパティ] ページでワークロード グループを削除にするには**  
   
-1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[リソース プール]**ノードまで展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[リソース プール]** ノードまで展開します。  
   
-2.  削除するワークロード グループを含むリソース プールを右クリックし、 **[プロパティ]**をクリックします。 **[リソース ガバナーのプロパティ]** ページが開きます。  
+2.  削除するワークロード グループを含むリソース プールを右クリックし、 **[プロパティ]** をクリックします。 **[リソース ガバナーのプロパティ]** ページが開きます。  
   
-3.  **[リソース プールのワークロード グループ]** ウィンドウで、削除するワークロード グループの行をクリックし、行の左側にある右矢印を右クリックして **[削除]**をクリックします。  
+3.  **[リソース プールのワークロード グループ]** ウィンドウで、削除するワークロード グループの行をクリックし、行の左側にある右矢印を右クリックして **[削除]** をクリックします。  
   
-4.  ワークロード グループを削除するには、 **[OK]**をクリックします。  
+4.  ワークロード グループを削除するには、 **[OK]** をクリックします。  
   
 ##  <a name="DelWGTSQL"></a> Transact-SQL を使用してワークロード グループを削除する  
  **Transact-SQL を使用してワークロード グループを削除するには**  

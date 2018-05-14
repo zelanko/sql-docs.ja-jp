@@ -3,15 +3,12 @@ title: インデックスの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7984b3d4c968b43360594a6f79cdb3950301d30
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8115b807843c5afdf3f5f1aeb2ad3dab2f5e6f23
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-an-index"></a>インデックスの削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,9 +68,9 @@ ms.lasthandoff: 04/16/2018
   
 4.  **[インデックス]** フォルダーを展開します。  
   
-5.  削除するインデックスを右クリックして、 **[削除]**をクリックします。  
+5.  削除するインデックスを右クリックして、 **[削除]** をクリックします。  
   
-6.  **[オブジェクトの削除]** ダイアログ ボックスで、 **[削除されるオブジェクト]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]**をクリックします。  
+6.  **[オブジェクトの削除]** ダイアログ ボックスで、 **[削除されるオブジェクト]** グリッドに目的のインデックスが表示されていることを確認し、 **[OK]** をクリックします。  
   
 #### <a name="to-delete-an-index-using-table-designer"></a>テーブル デザイナーを使用してインデックスを削除するには  
   
@@ -84,13 +80,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  削除するインデックスのあるテーブルを右クリックし、[デザイン] をクリックします。  
   
-4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]**をクリックします。  
+4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
 5.  **[インデックス/キー]** ダイアログ ボックスで、削除するインデックスを選択します。  
   
-6.  **[削除]**をクリックします。  
+6.  **[削除]** をクリックします。  
   
-7.  **[閉じる]**をクリックします。  
+7.  **[閉じる]** をクリックします。  
   
 8.  **[ファイル]** メニューの *[<テーブル名> を保存]* を選択します。  
   
@@ -100,9 +96,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]**をクリックします。  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]**をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  

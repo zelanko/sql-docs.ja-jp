@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
@@ -28,12 +27,11 @@ caps.latest.revision: 61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81d0119eca700f6948b75c235ae04912e5a8dec1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 436e09d9639d7c90c4561833952e4f1efb21ce0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +94,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
   
-9. **[表示]** メニューの **[コード]**をクリックします。  
+9. **[表示]** メニューの **[コード]** をクリックします。  
   
 10. コード内で、名前空間のステートメントの前に次の **using** ステートメントを入力し、RMO 名前空間内の型を修飾します。  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
   
-9. **[表示]** メニューの **[コード]**をクリックします。  
+9. **[表示]** メニューの **[コード]** をクリックします。  
   
 10. コードでは、宣言の前に、次の **Imports** ステートメントを入力し、RMO 名前空間の型を修飾します。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
@@ -19,12 +18,11 @@ caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ba407f61ab5d5a0536b0b2adbb74ed2f89652ef9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb0f0cfa07399ada97480d7d3d9971570ae8c2cb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publisher-information-publications"></a>パブリッシャー情報、[パブリケーション]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ ms.lasthandoff: 04/16/2018
  **[現在の平均パフォーマンス]** と **[現在の最低パフォーマンス]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 それぞれ、パブリケーションに対するすべてのサブスクリプションの、平均パフォーマンスと最低パフォーマンスの評価を表します。 評価は、レプリケーション モニターにより取得された最新の計測結果に基づいています。サブスクリプションの経過的なパフォーマンスは反映されません。  
   
- トランザクション レプリケーションの場合、レプリケーション モニターには、パフォーマンスしきい値が定義されているパブリケーションに対してのみ値が表示されます。 パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]**と表示されます。 マージ レプリケーションの場合、レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続 (ダイヤルアップまたは LAN) により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
+ トランザクション レプリケーションの場合、レプリケーション モニターには、パフォーマンスしきい値が定義されているパブリケーションに対してのみ値が表示されます。 パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]** と表示されます。 マージ レプリケーションの場合、レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続 (ダイヤルアップまたは LAN) により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
   
  パフォーマンス評価は、次のいずれかの値になります。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
 - SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
@@ -39,12 +38,11 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7a50c27d51b9cab9e2d874b756fd32180a7074a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e806f794a378672b28aa2334eda1afe076bd2ab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 4.  Web 同期が使用されるように 1 つ以上のサブスクリプションを構成します。  
   
 > [!NOTE]  
->  大量のデータや **varchar(max)**などのサイズの大きなデータ型を含むデータをレプリケートする場合は、このトピックの「大量のデータのレプリケート」を参照してください。  
+>  大量のデータや **varchar(max)** などのサイズの大きなデータ型を含むデータをレプリケートする場合は、このトピックの「大量のデータのレプリケート」を参照してください。  
   
  Web 同期を正しく設定するには、特定の要件やポリシーを満たすためにセキュリティをどのように構成するかを決める必要があります。 先にこれらについて決定し、必要なアカウントを作成してから、IIS、パブリケーション、およびサブスクリプションの構成を開始することをお勧めします。  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  Web 同期サイトに関連付けられているアプリケーション プールを選択し、 **[アクション]** ペインの **[詳細設定]** をクリックします。  
   
-3.  [詳細設定] ダイアログで、 **[モデルの処理]** という見出しの下にある **[ワーカー プロセスの最大数]**というラベルの行をクリックします。 プロパティの値を変更し、 **[OK]**をクリックします。  
+3.  [詳細設定] ダイアログで、 **[モデルの処理]** という見出しの下にある **[ワーカー プロセスの最大数]** というラベルの行をクリックします。 プロパティの値を変更し、 **[OK]** をクリックします。  
   
 ## <a name="configuring-the-publication"></a>パブリケーションの構成  
  Web 同期を使用するには、標準のマージ トポロジと同じ方法でパブリケーションを作成します。 詳細については、「[Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」(データとデータベース オブジェクトのパブリッシュ) をご覧ください。  
@@ -138,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
  XML ファイルの最大サイズが 4 GB でも、バッチ内のそのファイルからの変更がレプリケーションによって同期されます。 データとメタデータの最大バッチ サイズは 25 MB です。 各バッチ内のデータが約 20 MB を超えないようにする必要があります。この場合、メタデータやその他のオーバーヘッドも考慮に入れます。 この制限による影響を次に示します。  
   
--   データとメタデータが 25 MB を超す要因となる列はレプリケートできません。 これは、 **varchar(max)**などのサイズの大きなデータ型を含む行をレプリケートするときに問題になる場合があります。  
+-   データとメタデータが 25 MB を超す要因となる列はレプリケートできません。 これは、 **varchar(max)** などのサイズの大きなデータ型を含む行をレプリケートするときに問題になる場合があります。  
   
 -   大量のデータをレプリケートする場合に、マージ エージェントのバッチ サイズの調整が必要になることがあります。  
   

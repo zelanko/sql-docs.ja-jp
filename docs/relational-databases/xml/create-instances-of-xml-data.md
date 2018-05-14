@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: xml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
 - XML [SQL Server], typed
@@ -26,12 +24,11 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 54afef1467ec06d3ca695db00aa829fa387f6292
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6181538998aefe964d728632bc1aa053436283dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 -   一括読み込みを使用する。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>文字列インスタンスとバイナリ インスタンスの型キャスト  
- [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n**][**var**]**char**、**[n]text **、**varbinary **、**image **などの**の文字列データ型は、 **xml** データ型にキャスト (CAST) または変換 (CONVERT) することにより、 **xml** データ型に解析できます。 型指定されていない XML は、正しい形式かどうかが確認されます。 **xml** 型に関連付けられたスキーマがある場合は、検証も行われます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n **][** var **]** char**、**[n]text **、**varbinary **、**image **などの**の文字列データ型は、 **xml** データ型にキャスト (CAST) または変換 (CONVERT) することにより、 **xml** データ型に解析できます。 型指定されていない XML は、正しい形式かどうかが確認されます。 **xml** 型に関連付けられたスキーマがある場合は、検証も行われます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  XML ドキュメントは、UTF-8、UTF-16、windows-1252 など、さまざまなエンコードを使用してエンコードできます。 ここでは、文字列およびバイナリの元のデータ型と XML ドキュメントのエンコード間の相互作用における規則、およびパーサーの動作に関する規則を概説します。  
   

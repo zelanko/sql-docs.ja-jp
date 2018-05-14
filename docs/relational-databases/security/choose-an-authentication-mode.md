@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ins.instwizard.authenticationmode.f1
 - sql13.swb.passwordexpired.f1
@@ -32,12 +31,11 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: efed26ea51f00df312711083423bb86632a72544
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: efb9a4044c54b81785f59c23ce74f1d4cf635b60
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,11 +73,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-determine-the-password-policies-of-the-local-computer"></a>ローカル コンピューターのパスワード ポリシーを確認するには  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]**をクリックします。  
+1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **secpol.msc**」と入力し、 **[OK]**をクリックします。  
+2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **secpol.msc**」と入力し、 **[OK]** をクリックします。  
   
-3.  **[ローカル セキュリティ設定]** アプリケーションで、 **[セキュリティの設定]**、 **[アカウント ポリシー]**の順に展開して、 **[パスワードのポリシー]**をクリックします。  
+3.  **[ローカル セキュリティ設定]** アプリケーションで、 **[セキュリティの設定]**、 **[アカウント ポリシー]** の順に展開して、 **[パスワードのポリシー]** をクリックします。  
   
      結果ペインに、パスワードのポリシーが表示されます。  
   

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
@@ -19,12 +17,11 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3460902435d1a02da6411afee5d19474a8c1cd54
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 31a76d69ca4fc6d180fa0efa97a7038f2caf3260
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>レッスン 1-1 - "既定でオフ" ポリシーの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-create-the-mail-off-condition"></a>"メールをオフ" 条件を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]**、 **[ポリシー管理]**、 **[ファセット]**の順に展開し、 **[セキュリティ構成]**を右クリックして **[新しい条件]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[管理]**、 **[ポリシー管理]**、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **メールをオフ**」と入力します。  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-create-the-off-by-default-policy"></a>"既定でオフ" ポリシーを作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[セキュリティ構成]**を右クリックし、 **[新しいポリシー]**をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[セキュリティ構成]** を右クリックし、 **[新しいポリシー]** をクリックします。  
   
 2.  **[新しいポリシーの作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **既定でオフ**」と入力します。  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  **[評価モード]** チェック ボックスで、 **[要求時]** を評価モードとして選択します。  
   
-7.  **[サーバーの制限]** チェック ボックスで **[なし]**を選択します。  
+7.  **[サーバーの制限]** チェック ボックスで **[なし]** を選択します。  
   
 8.  **[説明]** ページでポリシーの説明を入力します。  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 10. **[アドレス]** ボックスに、会社の IT 部門のホーム ページなどのヘルプ ページへのハイパーリンクを入力します。  
   
-11. Web ページを開いてアドレスを確認するには、 **[リンクのテスト]**をクリックします。  
+11. Web ページを開いてアドレスを確認するには、 **[リンクのテスト]** をクリックします。  
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

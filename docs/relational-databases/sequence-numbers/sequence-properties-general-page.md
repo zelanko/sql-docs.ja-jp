@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sequence-numbers
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
@@ -19,13 +18,12 @@ caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cec055ba07879a7116871231173f84c0aaffc61d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a2d98af4cf1b9fa152f445b4aea74fa0f34c4527
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
  **CREATE SEQUENCE** および **NEXT VALUE FOR** 関数を両方使用する場合の詳細およびシナリオについては、「 [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」をご覧ください。  
   
- このページには 2 とおりの方法でアクセスできます。オブジェクト エクスプローラーで **[シーケンス]** を右クリックして **[新しいシーケンス]**をクリックするか、既存のシーケンスを右クリックして **[プロパティ]**をクリックします。 既存のシーケンスを右クリックして **[プロパティ]** をクリックした場合は、オプションは編集不可能です。 シーケンス オプションを変更するには、[ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) ステートメントを使用するか、シーケンス オブジェクトを削除してから再作成してください。  
+ このページには 2 とおりの方法でアクセスできます。オブジェクト エクスプローラーで **[シーケンス]** を右クリックして **[新しいシーケンス]** をクリックするか、既存のシーケンスを右クリックして **[プロパティ]** をクリックします。 既存のシーケンスを右クリックして **[プロパティ]** をクリックした場合は、オプションは編集不可能です。 シーケンス オプションを変更するには、[ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) ステートメントを使用するか、シーケンス オブジェクトを削除してから再作成してください。  
   
 ## <a name="options"></a>および  
  **[シーケンス名]**  

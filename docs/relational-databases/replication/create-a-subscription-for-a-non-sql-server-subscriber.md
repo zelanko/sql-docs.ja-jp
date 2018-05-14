@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70d890ec5941dd06bc855c23e0de24624d10a27d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5c8fdd22ae4a058be09ef59a7ffaf97911647fc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +45,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  パブリケーションの新規作成ウィザードを使用して、パブリケーションを作成します。 Oracle データベースからパブリケーションを作成する方法については、「[Publisher で文書を作成するには](../../relational-databases/replication/publish/create-a-publication.md)」および「[Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) を参照してください。 パブリケーションの新規作成ウィザードで、以下のオプションを指定します。  
   
-    -   **[パブリケーションの種類]** ページで、 **[スナップショット パブリケーション]** または **[トランザクション パブリケーション]**を選択します。  
+    -   **[パブリケーションの種類]** ページで、 **[スナップショット パブリケーション]** または **[トランザクション パブリケーション]** を選択します。  
   
-    -   **[スナップショット エージェント]** ページで、 **[スナップショットをすぐに作成する]**チェック ボックスをオフにします。  
+    -   **[スナップショット エージェント]** ページで、 **[スナップショットをすぐに作成する]** チェック ボックスをオフにします。  
   
          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションが有効になったら、スナップショットを作成し、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに適したスナップショットおよび初期化スクリプトを生成することを確認します。  
   
@@ -69,9 +67,9 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  パブリケーションを右クリックし、 **[プロパティ]**をクリックします。  
+3.  パブリケーションを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[サブスクリプション オプション]** ページで、 **[SQL Server 以外のサブスクライバーを許可]** オプションに対して **[True]**の値を選択します。 このオプションを選択した場合、パブリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーとの互換性を確保するために、プロパティの数が変更されます。  
+4.  **[サブスクリプション オプション]** ページで、 **[SQL Server 以外のサブスクライバーを許可]** オプションに対して **[True]** の値を選択します。 このオプションを選択した場合、パブリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーとの互換性を確保するために、プロパティの数が変更されます。  
   
     > [!NOTE]  
     >  **[True]** を選択すると、 **pre_creation_cmd** アーティクル プロパティの値が 'drop' に設定されます。 この設定では、アーティクルのテーブル名と一致するテーブルがサブスクライバーにある場合、レプリケーションによってそのテーブルが削除されます。 サブスクライバーにある既存のテーブルを保持するには、アーティクルごとに [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) ストアド プロシージャを使用し、次のように **pre_creation_cmd**の値に 'none' を指定します。 `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`  
@@ -82,15 +80,15 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-2.  適切なパブリケーションを右クリックして、 **[新しいサブスクリプション]**をクリックします。  
+2.  適切なパブリケーションを右クリックして、 **[新しいサブスクリプション]** をクリックします。  
   
 3.  **[ディストリビューション エージェントの場所]** ページで、 **[ディストリビューター &lt;Distributor&gt; ですべてのエージェントを実行する]** が選択されていることを確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーは、サブスクライバーでのエージェントの実行をサポートしていません。  
   
-4.  **[サブスクライバー]** ページで、 **[サブスクライバーの追加]** をクリックし、次に **[SQL Server 以外のサブスクライバーの追加]**をクリックします。  
+4.  **[サブスクライバー]** ページで、 **[サブスクライバーの追加]** をクリックし、次に **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
 5.  **[SQL Server 以外のサブスクライバーの追加]** ダイアログ ボックスで、サブスクライバーの種類を選択します。  
   
-6.  **[データ ソース名]**に値を入力します。  
+6.  **[データ ソース名]** に値を入力します。  
   
     -   Oracle の場合、これは構成した Transparent Network Substrate (TNS) 名です。  
   
@@ -112,7 +110,7 @@ ms.lasthandoff: 04/16/2018
   
          アカウントには、ディストリビューション データベースの固定データベース ロール **db_owner** のメンバーであること、パブリケーション アクセス リスト (PAL) のメンバーであること、スナップショット共有での読み取り権限、および OLE DB プロバイダーのインストール ディレクトリでの読み取り権限など、最小限の権限が必要です。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
-    -   **[サブスクライバーに接続]**の、 **[ログイン]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
+    -   **[サブスクライバーに接続]** の、 **[ログイン]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
   
     -   **[追加の接続オプション]** フィールドで、接続文字列の形式でサブスクライバーの接続オプションを指定します (Oracle では追加オプションは必要ありません)。 各オプションはセミコロンで区切る必要があります。 以下に、DB2 接続文字列の例を示します (読みやすいように改行しています)。  
   
@@ -125,7 +123,7 @@ ms.lasthandoff: 04/16/2018
   
          文字列内のオプションの多くは、接続する DB2 サーバーに固有のものですが、 **Process Binary as Character** オプションは常に **False**に設定する必要があります。 サブスクリプション データベースを識別するため、 **Initial Catalog** オプションに値が必要です。  
   
-10. **[同期スケジュール]** ページで、 **[エージェント スケジュール]** メニューからディストリビューション エージェントのスケジュールを選択します (スケジュールは通常、 **[連続実行する]**です)。  
+10. **[同期スケジュール]** ページで、 **[エージェント スケジュール]** メニューからディストリビューション エージェントのスケジュールを選択します (スケジュールは通常、 **[連続実行する]** です)。  
   
 11. **[サブスクリプションの初期化]** ページで、サブスクリプションを初期化するかどうか、および初期化する場合はいつ行うのかを指定します。  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-2.  パブリケーションを右クリックし、 **[スナップショット エージェントの状態の表示]**をクリックします。  
+2.  パブリケーションを右クリックし、 **[スナップショット エージェントの状態の表示]** をクリックします。  
   
 3.  **[スナップショット エージェントの状態の表示 - \<Publication>]** ダイアログ ボックスで **[開始]** をクリックします。  
   

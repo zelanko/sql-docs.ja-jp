@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
 - snapshots [SQL Server replication], parameterized filters and
@@ -21,12 +20,11 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f86115fb622f48f9bdb36e276d4c4d8f4f4059f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cb2fb7f8a2a7519e89d05259e2723ccb700be6cf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +67,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[パブリケーション]** フォルダーを展開します。  
   
-3.  スナップショットを作成するパブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]**をクリックします。  
+3.  スナップショットを作成するパブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。  
   
 4.  **[スナップショット エージェントの状態の表示 - \<Publication>]** ダイアログ ボックスで **[開始]** をクリックします。  
   
@@ -89,13 +87,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  オプションでスナップショットの更新スケジュールを指定します。  
   
-    1.  **[以下のスケジュールでこのパーティションのスナップショット エージェントを実行する]**を選択します。  
+    1.  **[以下のスケジュールでこのパーティションのスナップショット エージェントを実行する]** を選択します。  
   
     2.  スナップショットの既定の更新スケジュールをそのまま使用するか、または **[変更]** をクリックして別のスケジュールを指定します。  
   
 4.  **[OK]** をクリックして、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスに戻ります。  
   
-5.  プロパティ グリッドでパーティションを選択し、 **[今すぐ選択したスナップショットを生成する]**をクリックします。  
+5.  プロパティ グリッドでパーティションを選択し、 **[今すぐ選択したスナップショットを生成する]** をクリックします。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

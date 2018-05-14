@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], agents
 - Log Reader Agent, monitoring
@@ -26,12 +25,11 @@ caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fb38e8f85d4322ac508f58bfae49c26a0befe6ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47b4065903a22f4d68ce3d548c14d4b0e3c16c6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
-3.  パブリケーションを右クリックし、 **[ログ リーダー エージェントの状態の表示]** または **[スナップショット エージェントの状態の表示]**をクリックします。  
+3.  パブリケーションを右クリックし、 **[ログ リーダー エージェントの状態の表示]** または **[スナップショット エージェントの状態の表示]** をクリックします。  
   
 4.  **[ログ リーダー エージェントの状態の表示]** または **[スナップショット エージェントの状態の表示]** ダイアログ ボックスで、以下の操作を行います。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **[監視]** をクリックして **レプリケーション モニター**を起動します。  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-publisher"></a>ディストリビューション エージェントおよびマージ エージェントを監視するには (パブリッシャー側から)  
   
@@ -92,7 +90,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  監視するサブスクリプションのパブリケーションを展開します。  
   
-4.  サブスクリプションを右クリックし、 **[同期の状態の表示]**をクリックします。  
+4.  サブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
 5.  **[同期の状態の表示]** ダイアログ ボックスで、以下の操作を行います。  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 04/16/2018
   
     -   プル サブスクリプションの場合、 **[ジョブ履歴の表示]** をクリックして **ログ ファイル ビューアー**を起動します。エージェント ログからの出力が表示されます。  
   
-6.  **[閉じる]**をクリックします。  
+6.  **[閉じる]** をクリックします。  
   
 #### <a name="to-monitor-the-distribution-agent-and-merge-agent-from-the-subscriber"></a>ディストリビューション エージェントおよびマージ エージェントを監視するには (サブスクライバー側から)  
   
@@ -112,7 +110,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル サブスクリプション]** フォルダーを展開します。  
   
-3.  監視するサブスクリプションを右クリックして **[同期の状態の表示]**をクリックします。  
+3.  監視するサブスクリプションを右クリックして **[同期の状態の表示]** をクリックします。  
   
 4.  **[同期の状態の表示]** ダイアログ ボックスで、以下の操作を行います。  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **[ジョブ履歴の表示]** をクリックして **ログ ファイル ビューアー**を起動します。エージェント ログからの出力が表示されます。  
   
-5.  **[閉じる]**をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   

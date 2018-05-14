@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking plan guides
 - plan guides [SQL Server], testing
@@ -29,12 +28,11 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0a19fd733c0367c53c56228aeb1e04293f3eb2ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 856ccf92fbebd897a04789142fa1c2403c3a78d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 4.  クエリに対応する **SQL:BatchStarting** イベントをクリックします。  
   
-5.  イベントを右クリックして **[イベント データの抽出]**をクリックします。  
+5.  イベントを右クリックして **[イベント データの抽出]** をクリックします。  
   
     > [!IMPORTANT]  
     >  SQL Server Profiler のトレース ウィンドウ内の下のペインで、バッチ テキストを選択してコピーすることは避けてください。 作成するプラン ガイドが元のバッチと一致しなくなる場合があります。  
@@ -74,7 +72,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  メモ帳でバッチ テキスト ファイルを開き、テキストをクリップボードにコピーします。  
   
-8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'**20000101**'** は、 **''**20000101**''**として区切る必要があります。  
+8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
   
  次に、このプラン ガイドを示します。  
   

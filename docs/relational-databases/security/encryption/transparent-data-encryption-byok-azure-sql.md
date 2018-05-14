@@ -13,17 +13,16 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
 ms.component: security
-ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,9 +65,10 @@ TDE と BYOK には、次のような利点があります。
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Azure Key Vault の構成に関するガイドライン
 
-- キー (または、キー コンテナー) を誤って削除した場合に、データの損失を防ぐには、[soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) を有効にしたキー コンテナーを構成します。  これは、TDE と BYOK の**ハード要件**です。  
-  - 論理削除のリソースは、復旧や消去が行われない限り、90 日間保持されます。
-  - **復旧**と**消去**アクションには、キー コンテナーのアクセス ポリシーで独自のアクセス許可が定義されます。 
+- キー (または、キー コンテナー) を誤って削除した場合に、データの損失を防ぐには、[論理的な削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)を有効にしたキー コンテナーを作成します。  キー コンテナーで [PowerShell で “soft-delete” プロパティを有効にする](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (このオプションは AKV ポータルからはまだ使用できませんが、SQL で必要です) を使用する必要があります。  
+  - 論理削除のリソースは、一定の期間保持されます。復旧や消去が行われない限り、その期間は 90 日間です。
+  - **復旧**と**消去**アクションには、キー コンテナーのアクセス ポリシーに関連付けられた独自のアクセス許可があります。 
+
 - Azure Active Directory (Azure AD) の ID を使用して、キー コンテナーへのアクセス権を論理サーバーに付与します。  ポータルの UI を使用すると、Azure AD の ID が自動的に作成され、キー コンテナーのアクセス許可がそのサーバーに付与されます。  BYOK で TDE を構成するために PowerShell を使用すると、Azure AD の ID が作成され、完了が確認されます。 PowerShell を使用するときの詳しいステップバイステップのガイダンスについては、「[BYOK での TDE の構成](transparent-data-encryption-byok-azure-sql-configure.md)」を参照してください。
 
   >[!NOTE]

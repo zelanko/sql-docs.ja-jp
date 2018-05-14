@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
@@ -21,12 +20,11 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acee0f4698c9a1c6d26bd042f1413257df528828
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 12c255b06cd56ff27f1ada7f3ca0f0fa36113407
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合、次の手順に従います。  
   
--   古いバージョンでは CREATE SCHEMA がサポートされないため、このオプションを **[False]**に設定します。  
+-   古いバージョンでは CREATE SCHEMA がサポートされないため、このオプションを **[False]** に設定します。  
   
 -   各スキーマについて、そのスキーマと同じ名前を持つユーザーをサブスクリプション データベースに追加します。  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="options-for-transactional-publications"></a>トランザクション パブリケーションのオプション  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  
- このダイアログ ボックスの **[ステートメントの配信]** セクションで、ストアド プロシージャを使用して変更をサブスクライバーに伝達するように指定した場合 (既定)、そのプロシージャを各サブスクライバーにコピーするかどうかを選択します。 **[False]**を選択した場合、プロシージャを手作業でコピーしなければ、ディストリビューション エージェントが変更を伝達しようとしても失敗します。  
+ このダイアログ ボックスの **[ステートメントの配信]** セクションで、ストアド プロシージャを使用して変更をサブスクライバーに伝達するように指定した場合 (既定)、そのプロシージャを各サブスクライバーにコピーするかどうかを選択します。 **[False]** を選択した場合、プロシージャを手作業でコピーしなければ、ディストリビューション エージェントが変更を伝達しようとしても失敗します。  
   
  **Statement delivery**  
  このセクションのオプションは、テーブルとしてレプリケートされるインデックス付きビューを含め、すべてのテーブルに適用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、アプリケーションで別の機能が必要にならない限り、既定のオプションを使用することをお勧めします。 既定では、トランザクション レプリケーションが、各サブスクライバーにインストールされているストアド プロシージャのセットを使用して、変更をサブスクライバーに伝達します。 パブリッシャー上のテーブルに対して挿入、更新、または削除が実行されると、その操作はサブスクライバー上のストアド プロシージャに対する呼び出しに変換されます。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 04/16/2018
  このオプションは、ストアド プロシージャにのみ適用されます。 ストアド プロシージャの定義 (CREATE PROCEDURE ステートメント) またはその実行をレプリケートするかどうかを指定します。 プロシージャの実行をレプリケートする場合、サブスクリプションが開始されたときにプロシージャの定義がサブスクライバーにレプリケートされます。プロシージャがパブリッシャー上で実行されると、サブスクライバー上の対応するプロシージャが実行されます。 これにより、大規模なバッチ操作を実行する場合のパフォーマンスが大幅に向上します。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」を参照してください。  
   
 ## <a name="options-for-merge-publications"></a>マージ パブリケーションのオプション  
- マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[競合回避モジュール]**という 2 つのタブがあります。  
+ マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[競合回避モジュール]** という 2 つのタブがあります。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[同期の方向]**  
@@ -119,13 +117,13 @@ ms.lasthandoff: 04/16/2018
  **[INSERT 権限の確認]**、 **[UPDATE 権限の確認]**、 **[DELETE 権限の確認]**  
  パブリケーション データベースにパブリッシュされたテーブルに対する INSERT 権限、UPDATE 権限、または DELETE 権限がサブスクライバーのログインにあるかどうか、同期中にチェックするかどうかを指定します。 マージ レプリケーションではこのような権限を許可する必要がないため、既定では **[False]** になっています。パブリッシュされたテーブルへのアクセスは、パブリケーション アクセス リスト (PAL) により制御されます。 PAL の詳細については、「[パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
- パブリッシュされたデータに対する特定の変更だけをアップロードするように 1 つ以上のサブスクライバーに許可する場合、権限をチェックするように要求できます。 たとえば、あるサブスクライバーを PAL に追加しながら、パブリケーション データベース内のテーブルに対する権限をそのサブスクライバーに与えないことができます。 その後で [DELETE 権限の確認] を **[True]**に設定すると、そのサブスクライバーでは挿入と更新のアップロードができますが、削除はできなくなります。  
+ パブリッシュされたデータに対する特定の変更だけをアップロードするように 1 つ以上のサブスクライバーに許可する場合、権限をチェックするように要求できます。 たとえば、あるサブスクライバーを PAL に追加しながら、パブリケーション データベース内のテーブルに対する権限をそのサブスクライバーに与えないことができます。 その後で [DELETE 権限の確認] を **[True]** に設定すると、そのサブスクライバーでは挿入と更新のアップロードができますが、削除はできなくなります。  
   
  **[複数列の UPDATE]**  
  マージ レプリケーションによって更新が実行されると、1 つの UPDATE ステートメントですべての列が更新され、変更のない列は元の値にリセットされます。 この操作の代わりに、変更された各列に対して 1 つの UPDATE ステートメントを使用し、複数の UPDATE ステートメントを実行することができます。 一般的に、複数列の UPDATE ステートメントを使用する方が効率的ですが、テーブルのトリガーが特定の列の更新に応答するように設定されており、更新が発生したときに列がリセットされることによって不適切な処理が行われる場合には、このオプションを **[False]** に設定するように検討してください。  
   
 > [!IMPORTANT]  
->  このオプションは推奨されません。将来のリリースでは廃止される予定です。  
+>  このオプションは非推奨とされます。将来のリリースでは廃止される予定です。  
   
 ### <a name="resolver-tab"></a>[競合回避モジュール] タブ  
  **[既定の競合回避モジュールを使用する]**  
@@ -143,11 +141,11 @@ ms.lasthandoff: 04/16/2018
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の提供する COM ベース競合回避モジュールはすべて署名済みです。 このオプションを選択すると、同期の際に競合回避モジュールが有効かどうか確認されます。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle パブリケーションのオプション  
- Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[データのマッピング]**という 2 つのタブがあります。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
+ Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[データのマッピング]** という 2 つのタブがあります。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  
- アーティクルがトランザクション パブリケーションに含まれているとき、このダイアログ ボックスの **[ステートメントの配信]** セクションで、ストアド プロシージャを使用して変更をサブスクライバーに伝達するように指定した場合 (既定)、そのプロシージャを各サブスクライバーにコピーするかどうかを選択します。 **[False]**を選択した場合、プロシージャを手作業でコピーしなければ、ディストリビューション エージェントが変更を伝達しようとしても失敗します。  
+ アーティクルがトランザクション パブリケーションに含まれているとき、このダイアログ ボックスの **[ステートメントの配信]** セクションで、ストアド プロシージャを使用して変更をサブスクライバーに伝達するように指定した場合 (既定)、そのプロシージャを各サブスクライバーにコピーするかどうかを選択します。 **[False]** を選択した場合、プロシージャを手作業でコピーしなければ、ディストリビューション エージェントが変更を伝達しようとしても失敗します。  
   
  **対象オブジェクトの所有者**  
  **dbo**以外の値を入力した場合、次の操作が行われます。  
