@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>Conda を使用してインストールされているパッケージを表示する方法
+## <a name="list-installed-packages-using-conda"></a>Conda を使用してインストールされているパッケージを一覧表示します。
 
 インストールされているパッケージの一覧を取得できるさまざまな方法はあります。 たとえばにインストールされているパッケージを表示することができます、 **Python Environments** Visual Studio のウィンドウ。
 
-使用することができます、Python のコマンドラインを使用している場合、 **conda**は SQL Server セットアップによって追加された Anaconda Python 環境に含まれているパッケージ マネージャーです。
+Python のコマンドラインを使用している場合、いずれかを使用できる**Pip**または**conda**パッケージ マネージャー、SQL Server セットアップによって追加された Anaconda Python 環境に含まれています。
 
-Python 環境でパッケージを一覧表示する管理者のコマンド プロンプトからこのコマンドを実行する、PATH 環境変数に、Scripts フォルダーを追加したと仮定した場合、します。
+Python 環境でパッケージを一覧表示する管理者のコマンド プロンプトからこのコマンドを実行する、PATH 環境変数に、Scripts フォルダーを追加したと仮定した場合、します。 それ以外の場合を参照してください[R の取得と Python パッケージ情報](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda)の SQL Server で、Python tools を実行する方法のポインター。
 
 ```python
 conda list

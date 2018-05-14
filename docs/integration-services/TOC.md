@@ -30,6 +30,7 @@
 ## [Azure に配置されたパッケージの検証](lift-shift/ssis-azure-validate-packages.md)
 ## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
+## [SSMS を使用して Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [インストールまたはアップグレード](../integration-services/install-windows/install-integration-services.md)
 

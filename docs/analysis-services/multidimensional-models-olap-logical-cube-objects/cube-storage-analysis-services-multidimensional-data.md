@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: olap
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 942974dd2aff1c6286e66125eb23fe4dda9a866b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 0f1b06558b356e4542a60ffc13a317b5c9fcbd25
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>キューブのストレージ (Analysis Services - 多次元データ)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  パーティションは最初、パーティションが作成されるメジャー グループと同じストレージ設定で作成されます。 ストレージ設定により、詳細および集計データを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに多次元形式で格納するか、またはソース サーバーにリレーショナル形式で格納するか、あるいはその両方の組み合わせで格納するかが決まります。 また、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に格納されている多次元データへのソース データ変更について、プロアクティブ キャッシュを使用して自動的に処理するかどうかも、ストレージ設定によって決まります。  
   
- キューブのパーティションは、ユーザーからは見えません。 ただし、各種パーティションに対するストレージ設定の選択内容は、データの即時性、使用されるディスク領域の量、およびクエリのパフォーマンスに影響を及ぼすことがあります。 パーティションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに格納できます。 これにより、キューブ ストレージをクラスター化して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でワークロードを分散できます。 詳細については、次を参照してください[パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)、および[パーティション&#40;Analysis Services - 多次元データ&#41;。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
+ キューブのパーティションは、ユーザーからは見えません。 ただし、各種パーティションに対するストレージ設定の選択内容は、データの即時性、使用されるディスク領域の量、およびクエリのパフォーマンスに影響を及ぼすことがあります。 パーティションは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに格納できます。 これにより、キューブ ストレージをクラスター化して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でワークロードを分散できます。 詳細については、次を参照してください[パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)、および[パーティション&#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)。  
   
 ## <a name="linked-measure-groups"></a>リンク メジャー グループ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の異なるインスタンスにキューブの複数のコピーを格納するために非常に大きなディスク領域が必要になる場合がありますが、メジャー グループのコピーをリンク メジャー グループに置き換えることで、必要な領域を大幅に削減できます。 リンク メジャー グループは、同じまたは異なる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス上の別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内にあるキューブのメジャー グループに基づいています。 リンク メジャー グループは、同じソース キューブのリンク ディメンションと共に使用することもできます。 リンク ディメンションとリンク メジャー グループでは、ソース キューブの集計が使用され、独自のデータのストレージ容量はありません。 このため、1 つのデータベースで基になるメジャー グループとディメンションを維持し、他のデータベースのキューブでリンク キューブとリンク ディメンションを作成すると、ストレージとして使用されるディスク領域を節約できます。 詳細については、次を参照してください。 [Linked Measure Groups](../../analysis-services/multidimensional-models/linked-measure-groups.md)です。  

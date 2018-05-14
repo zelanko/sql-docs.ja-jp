@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 9df4ec00d1800ebfbe8725d26d4bf220eda49566
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server で既定の R、Python のパッケージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,23 +31,23 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="in-database-engine-instance-file-paths"></a>データベース エンジン インスタンスのファイル パス
 
-次の表は、R、Python のバージョンとデータベースのファイルの場所にエンジンのインスタンスの組み合わせを示します。 
+次の表は、R、Python のバージョンとデータベースのファイルの場所にエンジンのインスタンスの組み合わせを示します。 MSSQL13 SQL Server 2016 を示しは R 専用です。 MSSQL14 は、SQL Server 2017 を示し、R、Python のフォルダーが存在します。 
 
-|バージョン | [インスタンス名]|既定のパス|
-|--------|--------------|------------|
-| SQL Server 2016 |既定のインスタンス (default instance)| C:\Program files \microsoft SQL Server\MSSQL13 です。MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2016 |名前付きインスタンス (named instance) | C:\Program files \microsoft SQL Server\MSSQL13 < instance_name > \R_SERVICES\library。|
-| R と SQL Server 2017|既定のインスタンス (default instance) | C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\R_SERVICES\library |
-| R と SQL Server 2017|名前付きインスタンス (named instance)| C:\Program files \microsoft SQL Server\MSSQL14 です。MyNamedInstance\R_SERVICES\library |
-| Python の SQL Server 2017 |既定のインスタンス (default instance) | C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\library |
-| Python の SQL Server 2017|名前付きインスタンス (named instance)| C:\Program files \microsoft SQL Server\MSSQL14 < instance_name > \PYTHON_SERVICES\library。 |
+ファイルのパスには、インスタンスの名前も含まれます。 SQL Server インストール[データベース エンジン インスタンス](../../database-engine/configure-windows/database-engine-instances-sql-server.md)またはユーザー定義の名前付きインスタンスとして既定のインスタンス (MSSQLSERVER) として。 SQL Server が名前付きインスタンスとしてインストールされている場合は、次のように追加されます。 その名前が表示されます:`MSSQL13.<instance_name>`です。
+
+|バージョンと言語  | 既定のパス|
+|----------------------|------------|
+| SQL Server 2016 |C:\Program files \microsoft SQL Server\MSSQL13 です。MSSQLSERVER\R_SERVICES\library|
+| R と SQL Server 2017|C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\R_SERVICES\library |
+| Python の SQL Server 2017 |C:\Program files \microsoft SQL Server\MSSQL14 です。MSSQLSERVER\PYTHON_SERVICES\Lib\site パッケージ |
+
 
 ### <a name="standalone-server-file-paths"></a>スタンドアロン サーバーのファイル パス 
 
 次の表は、SQL Server 2016 R Server (スタンドアロン) または SQL Server 2017 Machine Learning サーバー (スタンドアロン) サーバーがインストールされているときに、バイナリの既定のパスを一覧表示します。 
 
 |バージョン| インストール|既定のパス|
-|------|------|------|
+|-------|-------------|------------|
 | SQL Server 2016|R Server (スタンドアロン)| C:\Program files \microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning の R のサーバー |C:\Program files \microsoft SQL Server\140\R_SERVER|
 |SQL Server 2017|Machine Learning Python でのサーバー |C:\Program files \microsoft SQL Server\140\PYTHON_SERVER|
@@ -61,17 +61,23 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="r-components"></a>R コンポーネント
 
-オープン ソース R は、Microsoft の配布[Microsoft R Open (MRO)](https://mran.microsoft.com/open)です。 ベースの R パッケージなどのコア機能**stats**と**ユーティリティ**です。 実行することができます`installed.packages(priority = "base")`パッケージ一覧を返します。 R の基本インストールには、多数のサンプル データセット、および RGui (軽量の対話型エディター) および RTerm (R コマンド プロンプト) などの標準の R ツールも含まれています。
+オープン ソース R は、Microsoft の配布[Microsoft R Open (MRO)](https://mran.microsoft.com/open)です。 R 言語のサポートが含まれていますコア機能にはなど**基本**、 **stats**、**ユーティリティ**、およびその他。 R の基本インストールは、多数のサンプル データセット、および標準的な R などのツールも含まれます**RGui** (軽量の対話型エディター) および**RTerm** (R コマンド プロンプト)。 MRO 基本 r などその他のオープン ソース パッケージを含めることで値を追加する、 [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library)です。
 
-独自の R パッケージが含まれて[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)のストリーミング、リモート計算コンテキストの並列実行 rx 関数のデータのインポートおよび変換、モデリング、視覚エフェクト、および分析します。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) R. で、モデリング、機械学習の追加Microsoft の他のパッケージを含める[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R での MDX ステートメントを記述するためと[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)ストアド プロシージャに R スクリプトを含めるためです。
+独自の R パッケージのインストールでは、次のとおりです。
 
++ [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)のストリーミング、リモート計算コンテキストの並列実行 rx 関数のデータのインポートおよび変換、モデリング、視覚エフェクト、および分析します。 
++ [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) R. で、モデリング、機械学習の追加
++ [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) R. の MDX ステートメントを記述するため
++ [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)ストアド プロシージャに R スクリプトを含めるためです。
+
+次の表は、MRO および特定のデータベース内分析エンジンがインストールされている Microsoft パッケージによって提供される R のバージョンをまとめたものです。
 
 |リリース             | R のバージョン       | Microsoft パッケージ    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2016 R サービス | 3.2.2   | RevoScaleR、sqlrutil  |
-| SQL Server 2017 Machine Learning サービス| 3.3.3 | RevoScaleR、MicrosoftML、olapR、sqlrutil|
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | RevoScaleR、sqlrutil  |
+| [SQL Server 2017 マシンがサービスの学習](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 | RevoScaleR、MicrosoftML、olapR、sqlrutil|
 
-R コンポーネントのパッケージのアップグレード、最新のライフ サイクルのサポート ポリシーに新しい R パッケージ、およびバインドによって事前インストールされているモデルを追加できます。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後に R パッケージは更新サービス パックおよび累積更新プログラムをします。 追加のパッケージと R のコア コンポーネントの完全バージョンのアップグレードは、製品のアップグレード (SQL Server 2017 する SQL Server 2016) からを介してのみ可能ですか、R をバインドすることによって Microsoft Machine Learning のサーバーにサポートします。 詳細については、次を参照してください。 [SQL Server で R のアップグレードと Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
+R コンポーネントのパッケージのアップグレードは、新しい R パッケージ、および事前インストールされているモデルは、追加することができます*バインディング*を最新のライフ サイクルのサポート ポリシー。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後に R パッケージは更新サービス パックおよび累積更新プログラムをします。 追加のパッケージと R のコア コンポーネントの完全バージョンのアップグレードは、製品のアップグレード (SQL Server 2017 する SQL Server 2016) からを介してのみ可能ですか、R をバインドすることによって Microsoft Machine Learning のサーバーにサポートします。 詳細については、次を参照してください。 [SQL Server で R のアップグレードと Python コンポーネント](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)です。
 
 ### <a name="python-components"></a>Python コンポーネント
 

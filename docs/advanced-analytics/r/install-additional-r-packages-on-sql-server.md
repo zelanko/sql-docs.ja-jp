@@ -3,82 +3,48 @@ title: SQL Server の Machine Learning のサービスに新しい R パッケ�
 description: SQL Server 2016 の R Services または SQL Server 2017 Machine Learning Services (In-database) に新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。
+この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 SQL Server のバージョンがある場合、および、サーバーがインターネットに接続を持つかどうかに応じて、新しい R パッケージをインストールするための複数の方法はあります。
 
-SQL Server のバージョンがある場合、および、サーバーがインターネットにアクセスを持つかどうかに応じて、新しい R パッケージをインストールするための複数の方法はあります。
+## <a name="bkmk_rInstall"></a> インターネット接続経由での R パッケージをインストールします。
 
-+ [インターネットにアクセスできる R ツールを使用して新しいパッケージをインストールします。](#bkmk_rInstall)
-
-    インターネットからパッケージをインストールするのにには、従来の R コマンドを使用します。 これは最も簡単な方法ですが、管理アクセス権が必要です。
-
-    **適用されます:**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]です。 必要なのインスタンス[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] Ddl を使用してパッケージの管理が有効になっていません。
-
-+ [使用して、サーバーに新しい R パッケージをインストール**ありません**インターネットへのアクセス](#bkmk_offlineInstall)
-
-    サーバーがインターネットにアクセスを持たない場合、パッケージの準備をする追加の手順が必要です。 このセクションでは、パッケージとその依存関係のインストールに必要なファイルを準備する方法について説明します。
-
-+ [外部ライブラリの作成ステートメントを使用してパッケージをインストールします。](#bkmk_createlibrary) 
-
-    [外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントは、SQL Server 2017 年、R を実行しなくてもパッケージ ライブラリを作成できるようにすることで提供される、Python コードを直接またはします。 ただし、このメソッドは、必要なすべてのパッケージを事前に準備し、その他のデータベース権限が必要ですが必要です。
-
-    **適用されます:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 他の制限が適用されます
-
-## <a name="bkmk_rInstall"></a> インターネットを使用して新しい R パッケージをインストールします。
-
-標準の R ツールを使用すると、SQL Server 2016 または SQL Server 2017 のインスタンスに新しいパッケージをインストールします。 このプロセスでは、コンピューターの管理者を使用している必要があります。
+標準の R ツールを使用するには SQL Server 2016 のインスタンスに新しいパッケージをインストールするコンピューターを提供する、SQL Server 2017 開いているポート 80 や管理者権限します。
 
 > [!IMPORTANT] 
 > 現在のインスタンスに関連付けられている既定のライブラリにパッケージをインストールすることを確認します。 ユーザーのディレクトリにパッケージをインストールことはありません。
 
-この手順では、RGui; を使用してパッケージをインストールする方法について説明しますただし、RTerm またはその他の R コマンド ライン ツールを管理者特権でのアクセスをサポートするを使用することができます。
+この手順が RGui を使用しますが、RTerm またはその他の R コマンド ライン ツールを管理者特権でのアクセスをサポートするを使用することができます。
 
-### <a name="install-a-package-using-rgui-or-rterm"></a>RGui または RTerm を使用してパッケージをインストールします。
+### <a name="install-a-package-using-rgui"></a>RGui を使用してパッケージをインストールします。
 
-1. インスタンスは、R ライブラリがインストールされているサーバー上のフォルダーに移動します。
+1. [インスタンスのライブラリの場所を特定](installing-and-managing-r-packages.md)です。 R ツールがインストールされているフォルダーに移動します。 たとえば、SQL Server 2017 既定のインスタンスの既定のパスはとおりです。 `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-  **[既定のインスタンス]**
+1. RGui.exe を右クリックし **管理者として実行**です。 必要なアクセス許可がない、データベース管理者に連絡し、必要なパッケージの一覧を指定します。
 
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+1. コマンドラインからパッケージ名がわかっている場合を入力できます。`install.packages("the_package-name")`二重引用符は、パッケージ名に必要です。
 
-  **[名前付きインスタンス]**
+1. ミラー サイトを求められたら、現在の場所は便利では任意のサイトを選択します。
 
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+ターゲットのパッケージは、その他のパッケージに依存している場合、R インストーラーは自動的に依存関係をダウンロードして、インストールします。
 
-  機械学習のコンポーネントをアップグレードするバインディングを使用している場合、パスを変更した可能性があります。 常に新しいパッケージをインストールする前に、インスタンス パスを確認します。 
-
-2. RGui.exe を右クリックし **管理者として実行**です。
-
-    必要なアクセス許可がない、データベース管理者に連絡し、必要なパッケージの一覧を指定します。
-
-3. コマンドラインからパッケージ名がわかっている場合を入力できます。`install.packages("the_package-name")`二重引用符は、パッケージ名に必要です。
-
-4. ミラー サイトを求められたら、現在の場所は便利では任意のサイトを選択します。
-
-5. ターゲットのパッケージは、その他のパッケージに依存している場合、R インストーラーは自動的に依存関係をダウンロードして、インストールします。
-
-6. パッケージを使用する必要がある各インスタンスに対して個別にインストールを実行します。 パッケージは、インスタンス間で共有することはできません。
+SQL Server 2016 の R Services および SQL Server 2017 Machine Learning Services のサイド バイ サイド インスタンスなど、SQL Server の複数のインスタンスがある場合は、両方のコンテキストでパッケージを使用する場合、インスタンスごとに個別にインストールを実行します。 パッケージは、インスタンス間で共有することはできません。
 
 ## <a name = "bkmk_offlineInstall"></a> R ツールを使用してオフラインのインストール
 
-インターネット アクセスが許可されていないサーバーで R パッケージをインストールするには、次の必要があります。
+サーバーがインターネットにアクセスを持たない場合、パッケージの準備をする追加の手順が必要です。 インターネット アクセスが許可されていないサーバーで R パッケージをインストールするには、次の必要があります。
 
 + 事前に依存関係を分析します。
 + 対象パッケージをインターネットにアクセスできるコンピューターにダウンロードします。
@@ -96,21 +62,9 @@ SQL Server のバージョンがある場合、および、サーバーがイン
 
 1. パッケージのコピーがファイルを zip 形式または複数のパッケージのすべてのパッケージを含む完全なリポジトリがサーバーにアクセスできる場所の形式を zip 形式です。
 
-2. インスタンスは、R ライブラリがインストールされているサーバー上のフォルダーを開きます。 たとえば、Windows のコマンド プロンプトを使用している場合は、RTerm.Exe または RGui.exe が配置されているディレクトリに移動します。
+2. インスタンスの R ツールがインストールされているサーバー上のフォルダーを開きます。 たとえば、SQL Server 2016 の R Services のシステムを Windows のコマンド プロンプトを使用している場合は、切り替える`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`です。
 
-  **[既定のインスタンス]**
-
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
-
-  **[名前付きインスタンス]**
-
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
-
-3. RGui またはコマンド プロンプトを右クリックし、選択**管理者として実行**です。
+3. RGui または RTerm と選択 を右クリックして**管理者として実行**です。
 
 4. R コマンドを実行`install.packages`パッケージまたはリポジトリの名前とその zip ファイルの場所を指定します。
 
@@ -122,17 +76,17 @@ SQL Server のバージョンがある場合、および、サーバーがイン
 
     場合は、必要なパッケージは、インスタンス ライブラリに存在しない、その zip ファイルに見つかりません対象パッケージのインストールは失敗します。
 
-## <a name="bkmk_createlibrary"></a> DDL ステートメントを使用して、パッケージをインストールします。 
+## <a name="bkmk_createlibrary"></a> 使用する外部ライブラリの作成
 
-SQL Server 2017 で使用できます、[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)インスタンスまたは特定のデータベースにパッケージまたはパッケージのセットを追加するステートメント。 この DDL ステートメントとサポートのデータベース ロール、パッケージのインストールと管理を容易にするため、データベースの所有者によって R または Python のツールを使用することがなくです。
+**適用されます。**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-このプロセスには、R、Python または、従来の方法を使用してパッケージをインストールすると比較すると、いくつかの準備が必要です。
+[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)文では、特定のデータベースやインスタンスに R を実行しなくても、パッケージまたはパッケージのセットを追加すること、または Python コードを直接です。 ただし、このメソッドは、パッケージの準備と追加のデータベースのアクセス許可が必要です。
 
-+ すべてのパッケージは、インターネットからダウンロードするのではなく、ローカルのファイルを zip 形式として使用可能にする必要があります。
++ すべてのパッケージは、必要に応じて、インターネットからダウンロードではなく、ローカルの zip ファイルとして使用可能にする必要があります。
 
     サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、次を参照してください。[外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)です。
 
-+ パッケージが利用できないために必要な場合、ステートメントが失敗します。 インストールし、サーバーおよびデータベースへのパッケージがアップロードされるかどうかを確認するパッケージの依存関係を分析する必要があります。 使用することをお勧め**miniCRAN**または**igraph**パッケージの依存関係を分析するためです。
++ すべての依存関係の名前とバージョン、によって識別され、zip ファイルに含まれる必要があります。 必要なパッケージがない、ダウン ストリームのパッケージの依存関係を含む場合は、ステートメントが失敗します。 使用することをお勧め**miniCRAN**または**igraph**パッケージの依存関係を分析するためです。 間違ったバージョンのパッケージまたはパッケージの依存関係をインストールすると、ステートメントが失敗することもあります。 
 
 + データベースでは、必要なアクセス許可が必要です。 詳細については、「[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)です。
 
@@ -167,19 +121,7 @@ SQL Server 2017 で使用できます、[外部ライブラリの作成](https:/
     library(randomForest)'
     ```
 
-### <a name="known-issues-with-create-external-library"></a>外部ライブラリの作成に関する既知の問題
-
-外部ライブラリの作成は、これらの条件下でサポートされます。
-
-+ 1 つのパッケージをインストールする場合は、依存していません。
-+ 依存関係、パッケージをインストールして、すべてのパッケージを事前に準備しました。 
-
-パッケージの依存関係がない場合は、DDL ステートメントが失敗します。 たとえば、このような場合に失敗する、インストール プロセスが確認されています。
-
-+ 第 2 レベルの依存関係のあるパッケージをインストールして、分析には、第 2 レベルのパッケージを拡大できませんでした。 インストールするなど、 **gglot2**と、マニフェストに表示されているすべてのパッケージの識別。 ただし、それらのパッケージがインストールされていない他の依存関係。
-+ 一連の異なるバージョンのサポート パッケージを必要とするパッケージをインストールして、サーバーが持っているバージョンが正しくありません。
-
-## <a name="package-installation-tips"></a>パッケージのインストールに関するヒント
+## <a name="tips-for-package-installation"></a>パッケージのインストールに関するヒント
 
 このセクションでは、さまざまなヒントと SQL Server で R パッケージのインストールに関連する一般的な質問を示します。
 
@@ -219,18 +161,14 @@ R パッケージは、多くの場合、これらのいくつかできない可
 使用することをお勧めを複数のパッケージをインストールまたは正しいパッケージの種類とバージョン、組織内のすべてのユーザーを取得することを確認する必要がある場合、 [miniCRAN](https://mran.microsoft.com/package/miniCRAN)完全な依存関係チェーンを分析するパッケージ。 minicRAN では、複数のユーザーまたはコンピューター間で共有できるローカル リポジトリを作成します。 詳細については、次を参照してください。 [miniCRAN を使用して、ローカルのパッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)です。
 
 
-### <a name="know-which-library-you-are-using-for-installation"></a>インストールを使用しているライブラリを知る
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>ライブラリをインストールして、既にインストールされているパッケージを把握しています。
 
 何もインストールする前に以前、コンピューター上の R 環境を変更した場合の一時停止後、R の環境変数をことを確認して`.libPath`は 1 つのパスを使用します。
 
-このパスは、インスタンスの R_SERVICES フォルダーを指す必要があります。 詳細については、次を参照してください。 [SQL Server と共にインストールされている R パッケージ](installing-and-managing-r-packages.md)です。
+このパスは、インスタンスの R_SERVICES フォルダーを指す必要があります。 詳細については、どのパッケージが既にインストールされているかを決定する方法などを参照してください。 [SQL Server と共にインストールされている R パッケージ](installing-and-managing-r-packages.md)です。
 
-### <a name="side-by-side-installation-with-r-server"></a>R Server とサイド バイ サイド インストール
+### <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>スタンドアロン R または Python サーバーとのサイド バイ サイド インストール
 
-SQL Server マシン ラーニング サービスに加えて Microsoft マシン ラーニング Server (スタンドアロン) をインストールした場合、コンピューターがごとに、すべての R ツールとライブラリの重複を削除しない R の別のインストールに必要です。
+コンピューターにあるデータベース内分析 (SQL Server 2017 Machine Learning Services および SQL Server 2016 R サービス) に加えて SQL Server 2017 Microsoft Machine Learning サーバー (スタンドアロン) または SQL Server 2016 R Server (スタンドアロン) をインストールした場合ごとに、すべての R ツールとライブラリの重複を削除しない R のインストールを区切ります。
 
-R_SERVER ライブラリにインストールされているパッケージは、Microsoft R Server によってのみ使用され、SQL Server がアクセスできないされます。 使用してください、`R_SERVICES`ライブラリ SQL Server で使用するパッケージをインストールするときにします。
-
-### <a name="how-to-determine-which-packages-are-already-installed"></a>既にインストールされているパッケージを確認する方法ですか。
-
- 参照してください[SQL Server と共にインストールされている R パッケージ](installing-and-managing-r-packages.md)
+R_SERVER ライブラリにインストールされているパッケージは、スタンドアロン サーバーでのみ使用され、SQL Server (In-database) のインスタンスからはアクセスできません。 常に使用する、`R_SERVICES`ライブラリ データベースに SQL Server を使用するパッケージをインストールするときにします。

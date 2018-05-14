@@ -1,10 +1,10 @@
 # [テーブル モデルのプログラミング互換性レベル 1200 以降](tabular-model-programming-for-compatibility-level-1200.md)
 
+# [Analysis Services AMO の表形式オブジェクト モデル (TOM) について](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [表形式モデルにデータ ソースを追加する (Analysis Services AMO-TOM)](add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
 # [既存の Analysis Services 表形式サーバーとデータベースに接続する](connect-to-existing-analysis-services-tabular-server-and-database.md)
 # [空のデータベースの作成と配置 (Analysis Services AMO-TOM)](create-and-deploy-an-empty-database-analysis-services-amo-tom.md)
 # [表形式モデルでテーブル、パーティション、列を作成する](create-tables-partitions-and-columns-in-a-tabular-model.md)
 # [TOM API のエラー処理 (Analysis Services AMO-TOM)](handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
 # [表形式オブジェクト モデルのインストール、配布、および参照](install-distribute-and-reference-the-tabular-object-model.md)
-# [Analysis Services AMO の表形式オブジェクト モデル (TOM) の概要](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [表形式サーバーの既存のデータベースを一覧表示する (Analysis Services AMO-TOM)](list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
