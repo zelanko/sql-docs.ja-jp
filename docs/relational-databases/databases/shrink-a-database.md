@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   データベース内にある現在の空き (未割り当て) 領域の大きさを確認します。 詳細については、「 [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)」をご覧ください。  
+-   データベース内にある現在の空き (未割り当て) 領域の大きさを確認します。 詳細については、「 [データベースのデータ領域とログ領域情報の表示](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)」をご覧ください。  
   
 -   データベースを圧縮する場合は次のことを考慮してください。  
   
