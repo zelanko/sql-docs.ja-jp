@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-menu
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
@@ -21,16 +19,15 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3414012f6873feba14c1701ea72cdd9f998ff2b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d512ff8a9093433eefd5bf6eef9946433dbebda8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-as"></a>[名前を付けて保存]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **ファイル** *<file>* ****  **を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
+現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **ファイル** *<file>* **別名****を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
   
 ## <a name="central-panel"></a>中央のパネル  
 **[保存先]**  

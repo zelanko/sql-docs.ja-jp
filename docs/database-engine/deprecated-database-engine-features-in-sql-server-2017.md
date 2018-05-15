@@ -1,17 +1,16 @@
 ---
-title: SQL Server 2017 データベース エンジンの非推奨機能 | Microsoft Docs
+title: SQL Server 2017 データベース エンジンの非推奨の機能 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
@@ -21,20 +20,19 @@ caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 345c1e8766c1136577848b5fd5bae31f53ac4478
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74b05878fae9eaa8c712d87aa375517923102559
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨機能
+# <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨となった [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨機能を新しいアプリケーションで使用しないでください。  
+  このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
- 非推奨機能の使用は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
+ 非推奨の機能の使用は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features オブジェクトのパフォーマンス カウンターおよびトレース イベントを使用して監視できます。 詳細については、「 [SQL Server オブジェクトの使用](../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   
  これらのカウンターの値は、次のステートメントを実行して入手することもできます。  
   
@@ -49,12 +47,12 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンでサポートされない機能  
  以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターおよび sys.dm_os_performance_counters にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
   
-|カテゴリ|非推奨機能|代替|機能名|機能 ID|  
+|カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|バックアップと復元|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD はこれまでどおり非推奨です。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD および BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD は廃止されました。|[なし] :|BACKUP DATABASE または LOG WITH PASSWORD<br /><br /> BACKUP DATABASE または LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
+|バックアップと復元|RESTORE { DATABASE &amp;#124; LOG } WITH [MEDIA]PASSWORD はこれまでどおり非推奨とされます。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD および BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD は廃止されました。|[なし] :|BACKUP DATABASE または LOG WITH PASSWORD<br /><br /> BACKUP DATABASE または LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |互換性レベル|バージョン 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]) からのアップグレード。|互換性レベルは、最新の 2 つのバージョンについてのみ使用できます。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|Database compatibility level 100|108|  
 |データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
-|暗号化|RC4 または RC4_128 を使用した暗号化は推奨されておらず、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は推奨されていません。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
+|暗号化|RC4 または RC4_128 を使用した暗号化は非推奨とされており、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は非推奨とされます。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |リモート サーバー|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|リンク サーバーを使用してリモート サーバーを置き換えてください。 sp_addserver は、ローカル オプションでのみ使用できます。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |リモート サーバー|\@\@remserver|リンク サーバーを使用してリモート サーバーを置き換えてください。|なし|なし|  
 |リモート サーバー|SET REMOTE_PROC_TRANSACTIONS|リンク サーバーを使用してリモート サーバーを置き換えてください。|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -64,11 +62,11 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server の今後のバージョンでサポートされない機能  
  以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。  
   
-|カテゴリ|非推奨機能|代替|機能名|機能 ID|  
+|カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |互換性レベル|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL です。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|sp_dbcmptlevel|80|  
 |互換性レベル|データベース互換性レベル 110 および 120。|今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。|データベース互換性レベル 110<br /><br /> データベース互換性レベル 120||  
-|XML|インライン XDR スキーマの生成|FOR XML オプションに対する XMLDATA ディレクティブの使用は推奨されません。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。|XMLDATA|181|  
+|XML|インライン XDR スキーマの生成|FOR XML オプションに対する XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。|XMLDATA|181|  
 |バックアップと復元|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE または LOG TO TAPE|235|  
 |バックアップと復元|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |バックアップと復元|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -137,12 +135,12 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server エージェント|**net send** による通知<br /><br /> ポケットベルによる通知|電子メールによる通知<br /><br /> 電子メールによる通知 |なし|なし|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||なし|なし|  
 |システム ストアド プロシージャ|sp_db_increased_partitions|[なし] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、増加したパーティションのサポートを既定で使用できます。|sp_db_increased_partitions|253|  
-|システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)」を参照してください。<br /><br /> **\*\* 重要 \*\***互換性ビューには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]で導入された機能のメタデータが表示されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|システム テーブル|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|互換性ビュー。 詳細については、「[互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)」を参照してください。<br /><br /> **\*\* 重要 \*\*** 互換性ビューには、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]で導入された機能のメタデータが表示されません。 カタログ ビューを使用するようにアプリケーションをアップグレードすることをお勧めします。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> なし<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |システム テーブル|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|なし|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |システム関数|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |システム ビュー|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は推奨されません。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
-|テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は推奨されません。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
+|テーブル圧縮|vardecimal ストレージ形式の使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|vardecimal ストレージ形式|200|  
+|テーブル圧縮|sp_db_vardecimal_storage_format プロシージャの使用|Vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のデータ圧縮では、decimal 型の値も他のデータ型と同様に圧縮されます。 vardecimal ストレージ形式ではなくデータ圧縮を使用することをお勧めします。|sp_db_vardecimal_storage_format|201|  
 |テーブル圧縮|sp_estimated_rowsize_reduction_for_vardecimal プロシージャの使用|代わりにデータ圧縮と sp_estimate_data_compression_savings プロシージャを使用してください。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |テーブル ヒント|UPDATE または DELETE ステートメントの FROM 句での NOLOCK または READUNCOMMITTED の指定|FROM 句から NOLOCK または READUNCOMMITTED のテーブル ヒントを削除します。|NOLOCK or READUNCOMMITTED in UPDATE or DELETE|@shouldalert|  
 |テーブル ヒント|WITH キーワードを使用しないテーブル ヒントの指定|WITH を使用します。|Table hint without WITH|8|  
@@ -172,7 +170,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL トレースのストアド プロシージャ、関数、およびカタログ ビュー|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)**を返します。 開発者が **varbinary(50)** を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)」を参照してください。  
+>  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 開発者が **varbinary(50)** を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  

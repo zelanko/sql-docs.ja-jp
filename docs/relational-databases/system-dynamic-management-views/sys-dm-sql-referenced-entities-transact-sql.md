@@ -25,16 +25,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 25c80c8239653415486d18d0773c45076668ca18
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: f0b56475c29c5df9ce925db115a5ac0566f059a2
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  指定された参照元エンティティの定義で名前によって参照される各ユーザー定義エンティティに 1 つの行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 1 つのユーザー定義エンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる、別のユーザー定義エンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照します。*. たとえば、参照元エンティティとしてストアド プロシージャを指定した場合、この関数は、そのストアド プロシージャの中で参照されたすべてのユーザー定義エンティティ (テーブル、ビュー、ユーザー定義型 (UDT)、他のストアド プロシージャなど) を返します。  
+  指定された参照元エンティティの定義で名前によって参照される各ユーザー定義エンティティに 1 つの行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 1 つのユーザー定義エンティティが呼び出されたときに、2 つのエンティティ間の依存関係が作成された、*エンティティを参照*と呼ばれる、別のユーザー定義エンティティの保存されている SQL 式で名前によって表示される、*エンティティを参照します*。 たとえば、参照元エンティティとしてストアド プロシージャを指定した場合、この関数は、そのストアド プロシージャの中で参照されたすべてのユーザー定義エンティティ (テーブル、ビュー、ユーザー定義型 (UDT)、他のストアド プロシージャなど) を返します。  
   
  この動的管理関数に参照元エンティティを指定すると、そのエンティティによって参照された次の種類のエンティティをレポートできます。  
   
@@ -93,7 +93,7 @@ sys.dm_sql_referenced_entities (
 |referenced_minor_id|**int**|参照先エンティティが列の場合は列 ID。それ以外の場合は 0。 たとえば、参照先エンティティ自体を一覧表示する行では、referenced_minor_id は 0 になります。<br /><br /> 非スキーマ バインド参照の場合、列の依存関係は、すべての参照先エンティティがバインドできる場合にのみ報告されます。 バインドできない参照先エンティティが 1 つでも存在した場合、列レベルの依存関係は報告されず、referenced_minor_id は 0 になります。 例 D を参照してください。|  
 |referenced_class|**tinyint**|参照先エンティティのクラス。<br /><br /> 1 = オブジェクトまたは列<br /><br /> 6 = 型<br /><br /> 10 = XML スキーマ コレクション<br /><br /> 21 = パーティション関数|  
 |referenced_class_desc|**nvarchar(60)**|参照先エンティティのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
-|is_caller_dependent|**bit**|スキーマ バインド参照先エンティティが実行時に発生したことを示します。そのため、エンティティ ID の解決は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式の参照`EXEC MyDatabase.MyProc`が呼び出し元が依存しています。|  
+|is_caller_dependent|**bit**|スキーマ バインド参照先エンティティが実行時に発生したことを示します。そのため、エンティティ ID の解決は、呼び出し元のスキーマに依存します。 これが該当するのは、参照先エンティティがストアド プロシージャ、拡張ストアド プロシージャ、または、EXECUTE ステートメント内で呼び出されるユーザー定義関数である場合です。<br /><br /> 1 = 参照先エンティティが呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティの ID は呼び出し元に依存しません。 スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式の参照`EXEC MyDatabase..MyProc`が呼び出し元が依存しています。|  
 |is_ambiguous|**bit**|参照があいまいで、実行時、ユーザー定義関数、ユーザー定義型 (UDT)、または型の列への xquery 参照に解決できることを示します**xml**です。 たとえば、ステートメント`SELECT Sales.GetOrder() FROM Sales.MySales`ストアド プロシージャで定義されています。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = ユーザー定義関数の参照なのか、列のユーザー定義型 (UDT) のメソッドなのかがあいまいです。<br /><br /> 0 = 参照は明確です。つまり、関数を呼び出したときに、エンティティを正しくバインドできます。<br /><br /> スキーマ バインド参照の場合は常に 0 になります。|  
 |is_selected|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が選択されています。|  
 |is_updated|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = オブジェクトまたは列が変更されています。|  

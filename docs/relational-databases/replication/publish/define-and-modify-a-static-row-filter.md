@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   フィルターが静的であるため、すべてのサブスクライバーは同じデータのサブセットを受け取ることになります。 マージ パブリケーションに属しているテーブルのアーティクルから行を動的にフィルター選択して、各サブスクライバーが異なるデータ パーティションを受け取るようにする場合は、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。 マージ レプリケーションでは、既存の行フィルターに基づいて、関連する行をフィルター選択することもできます。 詳細については、「 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご参照ください。  
+-   フィルターが静的であるため、すべてのサブスクライバーは同じデータのサブセットを受け取ることになります。 マージ パブリケーションに属しているテーブルのアーティクルから行を動的にフィルター選択して、各サブスクライバーが異なるデータ パーティションを受け取るようにする場合は、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。 マージ レプリケーションでは、既存の行フィルターに基づいて、関連する行をフィルター選択することもできます。 詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご参照ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、静的行フィルターを定義、変更、削除します。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、**@publication** にパブリケーション名を、**@filter_name** にフィルター名を、**@filter_clause** にフィルター句 (`WHERE` は含めない) を指定します。  
   
-3.  列フィルターも定義する必要がある場合は、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。 それ以外の場合、[sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、**@article** にフィルター選択の対象アーティクル名を、**@filter_clause** に手順 2 で指定したフィルター句を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
+3.  列フィルターも定義する必要がある場合は、「 [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。 それ以外の場合、[sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、**@article** にフィルター選択の対象アーティクル名を、**@filter_clause** に手順 2 で指定したフィルター句を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの静的行フィルターを変更するには  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 **@subset_filterclause** にフィルター句 (`WHERE` は含めない) を指定します。 詳しくは、「 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-2.  列フィルターも定義する必要がある場合は、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。  
+2.  列フィルターも定義する必要がある場合は、「 [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>マージ パブリケーションの静的行フィルターを変更するには  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 05/03/2018
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_1.sql)]  
   
- 次のマージ レプリケーションの例では、アーティクルを行方向でフィルター選択して、指定した営業担当者に属する行だけを取得します。 結合フィルターも使用されます。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+ 次のマージ レプリケーションの例では、アーティクルを行方向でフィルター選択して、指定した営業担当者に属する行だけを取得します。 結合フィルターも使用されます。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   

@@ -1,28 +1,27 @@
 ---
-title: "インメモリ OLTP のサンプル データベース | Microsoft Docs"
-ms.custom: 
+title: インメモリ OLTP のサンプル データベース | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 883ea65354e6c45ef1aaebeb375625156063fdd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 02/12/2018
   
  このサンプルのドキュメントは、次の内容で構成されています。  
   
--   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)  
+-   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)   
   
 -   [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP のハードウェアに関する一般的なガイドラインについては、ブログ記事 ([http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)) を参照してください。  
+-   運用環境と仕様が似ているサーバー (パフォーマンス テスト用)。 このサンプルでは、SQL Server に使用できるメモリが 16 GB 以上必要です。 インメモリ OLTP でのハードウェアに関する一般的なガイドラインは、次のブログの投稿を参照してください。[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorksに基づくインメモリOLTPサンプルのインストール  
  サンプルをインストールするには、次の手順を実行します。  
@@ -318,7 +317,7 @@ ms.lasthandoff: 02/12/2018
   
  インストール手順:  
   
-1.  RML ユーティリティの x64 インストール パッケージを、 [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)からダウンロードして、実行します。  
+1.  以下のページから RML ユーティリティの x64 インストール パッケージをダウンロードして実行します。[http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  特定のファイルが使用中であることを通知するダイアログ ボックスが表示された場合は、[続行] をクリックします。  
   

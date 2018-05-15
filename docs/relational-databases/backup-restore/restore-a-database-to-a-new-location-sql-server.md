@@ -1,17 +1,14 @@
 ---
-title: "データベースを新しい場所に復元する (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: データベースを新しい場所に復元する (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -22,20 +19,19 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 
+caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 159436df1286717f2698b463a2645b6b4a58430d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、SQL Server Management Studio(SSMS) または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。 新しいディレクトリ パスにデータベースを移動できるほか、同じサーバー インスタンスまたは別のサーバー インスタンスにデータベースのコピーを作成できます。  
+  このトピックでは、SQL Server Management Studio(SSMS) または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。 新しいディレクトリ パスにデータベースを移動できるほか、同じサーバー インスタンスまたは別のサーバー インスタンスにデータベースのコピーを作成できます。  
     
 ##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
   
@@ -69,7 +65,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  適切な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、オブジェクト エクスプローラーでサーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]**を右クリックし、 **[データベースの復元]**をクリックします。 **[データベースの復元]** ダイアログ ボックスが表示されます。  
+2.  **[データベース]** を右クリックし、 **[データベースの復元]** をクリックします。 **[データベースの復元]** ダイアログ ボックスが表示されます。  
   
 3.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
@@ -81,7 +77,7 @@ ms.lasthandoff: 02/23/2018
   
     1.  **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]**をクリックします。  
+         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -89,7 +85,7 @@ ms.lasthandoff: 02/23/2018
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-4.  復元先のセクション**の** **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+4.  **復元先のセクション**の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
 5.  **[復元先]** ボックスで、既定値の **[最後に作成されたバックアップ]** のままにするか、 **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスし、具体的にどの時点で復旧アクションを停止するかを手動で選択します。 特定の時点を指定する方法の詳細については、「 [Backup Timeline](../../relational-databases/backup-restore/backup-timeline.md) 」を参照してください。  
   
@@ -97,7 +93,7 @@ ms.lasthandoff: 02/23/2018
   
      **[復元するバックアップ セット]** グリッドの列の詳細については、「[データベースの復元 &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)」を参照してください。  
   
-7.  データベース ファイルの新しい場所を指定するには、 **[ファイル]** ページを選択し、 **[すべてのファイルをフォルダーに移動する]**をクリックします。 **[データ ファイルのフォルダー]** および **[ログ ファイルのフォルダー]**の新しい場所を指定します。 このグリッドの詳細については、「[データベースの復元 &#40;[ファイル] ページ&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)」を参照してください。  
+7.  データベース ファイルの新しい場所を指定するには、 **[ファイル]** ページを選択し、 **[すべてのファイルをフォルダーに移動する]** をクリックします。 **[データ ファイルのフォルダー]** および **[ログ ファイルのフォルダー]** の新しい場所を指定します。 このグリッドの詳細については、「[データベースの復元 &#40;[ファイル] ページ&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)」を参照してください。  
   
 8.  **[オプション]** ページで必要に応じてオプションを調整します。 これらのオプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
 
@@ -143,7 +139,7 @@ ms.lasthandoff: 02/23/2018
   
     >**注:** 異なるサーバー インスタンスにデータベースを復元している場合は、新しい名前ではなく元のデータベース名を使用することができます。  
   
-     *backup_device* [ **,**[...]*n* ]  
+     *backup_device* [ **,**...*n* ]  
      データベース バックアップを復元する 1 ～ 64 個のバックアップ デバイスのコンマ区切りリストを指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。  
   
      { DISK | TAPE } **=***physical_backup_device_name*  

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-agent
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, roles
@@ -26,13 +24,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0315832b3ed7bbd16929e4384c9bdf40c13fbe85
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 19c4b994355cc4a4578342675f9f02c78ccf2bd1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 04/26/2018
 **SQLAgentUserRole** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] エージェントの固定データベース ロールのうち、最も低い特権レベルが設定されています。 オペレーター、ローカル ジョブ、ジョブ スケジュールのみに対する権限があります。 **SQLAgentUserRole** のメンバーは、所有しているローカル ジョブおよびジョブ スケジュールのみに対する権限を持っています。 このメンバーが、マルチサーバー ジョブ (マスター サーバーと対象サーバーのジョブ) を使用することはできません。また、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることもできません。 **SQLAgentUserRole** のメンバーは、 **の** [ジョブ ステップのプロパティ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]ダイアログ ボックスでのみ、使用できるプロキシのリストを表示できます。 **SQLAgentUserRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください**。** **SQLAgentReaderRole** および **SQLAgentOperatorRole** は、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** および **SQLAgentOperatorRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **に許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください **。** **SQLAgentReaderRole** および **SQLAgentOperatorRole** は、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** および **SQLAgentOperatorRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **に許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 **エージェント オブジェクトに対する** SQLAgentUserRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の権限の概要を示します。  
   
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/26/2018
 **SQLAgentReaderRole** には、すべての **SQLAgentUserRole** の権限、および使用できるマルチサーバー ジョブのリスト、ジョブのプロパティ、およびジョブの履歴を表示する権限が含まれています。 このロールのメンバーは、所有しているジョブとジョブ スケジュールだけでなく、使用できるすべてのジョブとジョブ スケジュール、およびそのプロパティのリストを表示することもできます。 **SQLAgentReaderRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。 **SQLAgentReaderRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください**。** **SQLAgentReaderRole** のメンバーは、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **に対して許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください **。** **SQLAgentReaderRole** のメンバーは、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **に対して許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 **エージェント オブジェクトに対する** SQLAgentReaderRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の権限の概要を示します。  
   
@@ -100,7 +97,7 @@ ms.lasthandoff: 04/26/2018
 **SQLAgentOperatorRole**のメンバーに対しては、 **オブジェクト エクスプローラーには**[ジョブ] **ノード、**[警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください**。** **SQLAgentOperatorRole** のメンバーは、自動的に **SQLAgentUserRole** および **SQLAgentReaderRole**のメンバーになります。 つまり、 **SQLAgentOperatorRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **または** SQLAgentReaderRole **に対して許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください **。** **SQLAgentOperatorRole** のメンバーは、自動的に **SQLAgentUserRole** および **SQLAgentReaderRole**のメンバーになります。 つまり、 **SQLAgentOperatorRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SQLAgentUserRole **または** SQLAgentReaderRole **に対して許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 **エージェント オブジェクトに対する** SQLAgentOperatorRole [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] の権限の概要を示します。  
   

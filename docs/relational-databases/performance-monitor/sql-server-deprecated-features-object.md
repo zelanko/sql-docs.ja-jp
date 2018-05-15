@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -22,17 +21,16 @@ caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04d361317e1e02378b62429fffdfc535e6405293
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨機能が検出された回数を示す使用カウントを表示します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨の機能が検出された回数を示す使用カウントを表示します。  
   
  これらのカウンターの値は、次のステートメントを実行して入手することもできます。  
   
@@ -43,7 +41,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 次の表に、SQL Server **Deprecated Features** パフォーマンス オブジェクトの説明を示します。
 
-|**SQL Server:Deprecated Features カウンター**|Description|  
+|
+  **SQL Server:Deprecated Features カウンター**|Description|  
 |-------------|-----------------|  
 |**使用方法**|SQL Server の前回起動以降の機能の使用状況。|
   
@@ -54,15 +53,15 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
 |'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|\@ または \@\@ で始まる識別子が見つかりました。 \@、\@v@、または \@\@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
-|ADDING TAPE DEVICE|非推奨機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  
+|ADDING TAPE DEVICE|非推奨の機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
-|ALTER DATABASE WITH TORN_PAGE_DETECTION|サーバー インスタンスの起動後に、ALTER DATABASE の非推奨機能 TORN_PAGE_DETECTION オプションが使用された合計回数。 代わりに、PAGE_VERIFY 構文を使用してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
-|ALTER LOGIN WITH SET CREDENTIAL|非推奨機能の構文 ALTER LOGIN WITH SET CREDENTIAL または ALTER LOGIN WITH NO CREDENTIAL が見つかりました。 代わりに、ADD または DROP CREDENTIAL 構文を使用してください。 コンパイルごとに 1 回発生します。|  
+|ALTER DATABASE WITH TORN_PAGE_DETECTION|サーバー インスタンスの起動後に、ALTER DATABASE の非推奨の機能 TORN_PAGE_DETECTION オプションが使用された合計回数。 代わりに、PAGE_VERIFY 構文を使用してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
+|ALTER LOGIN WITH SET CREDENTIAL|非推奨の機能の構文 ALTER LOGIN WITH SET CREDENTIAL または ALTER LOGIN WITH NO CREDENTIAL が見つかりました。 代わりに、ADD または DROP CREDENTIAL 構文を使用してください。 コンパイルごとに 1 回発生します。|  
 |Azeri_Cyrilllic_90|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
 |Azeri_Latin_90|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
-|BACKUP DATABASE または LOG TO TAPE|非推奨機能 BACKUP { DATABASE &#124; LOG } TO TAPE または BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape* が見つかりました。<br /><br /> 代わりに、BACKUP { DATABASE &#124; LOG } TO DISK または BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk* を使用してください。 使用するごとに 1 回発生します。|  
-|BACKUP DATABASE または LOG WITH MEDIAPASSWORD|非推奨機能 BACKUP DATABASE WITH MEDIAPASSWORD または BACKUP LOG WITH MEDIAPASSWORD が見つかりました。 WITH MEDIAPASSWORD は使用しないでください。|  
-|BACKUP DATABASE または LOG WITH PASSWORD|非推奨機能 BACKUP DATABASE WITH PASSWORD または BACKUP LOG WITH PASSWORD が見つかりました。 WITH PASSWORD は使用しないでください。|  
+|BACKUP DATABASE または LOG TO TAPE|非推奨の機能 BACKUP { DATABASE &amp;#124; LOG } TO TAPE または BACKUP { DATABASE &amp;#124; LOG } TO *device_that_is_a_tape* が見つかりました。<br /><br /> 代わりに、BACKUP { DATABASE &#124; LOG } TO DISK または BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk* を使用してください。 使用するごとに 1 回発生します。|  
+|BACKUP DATABASE または LOG WITH MEDIAPASSWORD|非推奨の機能 BACKUP DATABASE WITH MEDIAPASSWORD または BACKUP LOG WITH MEDIAPASSWORD が見つかりました。 WITH MEDIAPASSWORD は使用しないでください。|  
+|BACKUP DATABASE または LOG WITH PASSWORD|非推奨の機能 BACKUP DATABASE WITH PASSWORD または BACKUP LOG WITH PASSWORD が見つかりました。 WITH PASSWORD は使用しないでください。|  
 |COMPUTE [BY]|COMPUTE または COMPUTE BY 構文が見つかりました。 ROLLUP を指定した GROUP BY を使用してクエリを書き直してください。 コンパイルごとに 1 回発生します。|  
 |CREATE FULLTEXT CATLOG IN PATH|IN PATH 句を指定した CREATE FULLTEXT CATLOG ステートメントが見つかりました。 この句は、このバージョンの SQL Server では無効です。 使用するごとに 1 回発生します。|  
 |CREATE TRIGGER WITH APPEND|WITH APPEND 句を指定した CREATE TRIGGER ステートメントが見つかりました。 代わりに、トリガー全体を再作成してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
@@ -70,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE_DROP_RULE|CREATE RULE 構文が見つかりました。 制約を使用してコマンドを書き直してください。 コンパイルごとに 1 回発生します。|  
 |データ型 : text、ntext、または image|**text**、 **ntext**、 **image** データ型が見つかりました。 **varchar(max)** データ型を使うようにアプリケーションを書き直し、 **text**、 **ntext**、 **image** データ型の構文は削除してください。 クエリごとに 1 回発生します。|  
 ||データベースが互換性レベル 80 に変更された合計回数。 次のリリースの前にデータベースおよびアプリケーションのアップグレードを計画してください。 互換性レベルが 80 のデータベースが起動されるときにも発生します。|  
-|データベース互換性レベル 100、110。 120|データベース互換性レベルが変更された合計回数。 今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 また、非推奨になった互換性レベルでデータベースが起動されたときにも発生します。|  
+|データベース互換性レベル 100、110。 120|データベース互換性レベルが変更された合計回数。 今後のリリースでデータベースおよびアプリケーションのアップグレードを計画してください。 また、非推奨の互換性レベルでデータベースが起動されたときにも発生します。|  
 |DATABASE_MIRRORING|データベース ミラーリング機能への参照が発生しました。 Always On 可用性グループにアップグレードすることを検討するか、Always On 可用性グループがサポートされないエディションの SQL Server を実行している場合は、ログ配布に移行するようにしてください。|  
 |database_principal_aliases|非推奨の sys.database_principal_aliases への参照が見つかりました。 別名の代わりにロールを使用してください。 コンパイルごとに 1 回発生します。|  
 |DATABASEPROPERTY|ステートメントで DATABASEPROPERTY が参照されています。 ステートメント DATABASEPROPERTY を DATABASEPROPERTYEX に更新してください。 コンパイルごとに 1 回発生します。|  
@@ -80,7 +79,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |DBCC INDEXDEFRAG|DBCC INDEXDEFRAG ステートメントが見つかりました。 ALTER INDEX の REORGANIZE オプションを使用してステートメントを書き直してください。 クエリごとに 1 回発生します。|  
 |DBCC SHOWCONTIG|DBCC SHOWCONTIG ステートメントが見つかりました。 この情報については、sys.dm_db_index_physical_stats をクエリしてください。 クエリごとに 1 回発生します。|  
 |既定値としての DEFAULT キーワード|既定値として DEFAULT キーワードを使用する構文が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
-|非推奨の暗号化アルゴリズム|非推奨暗号化アルゴリズム rc4 は、SQL Server の次のバージョンで削除されます。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションでは変更を検討してください。 RC4 アルゴリズムは弱いアルゴリズムで、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
+|非推奨の暗号化アルゴリズム|非推奨の暗号化アルゴリズム rc4 は、SQL Server の次のバージョンで削除されます。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションでは変更を検討してください。 RC4 アルゴリズムは弱いアルゴリズムで、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
 |非推奨のハッシュ アルゴリズム|MD2、MD4、MD5、SHA、SHA1 アルゴリズムの使用。|  
 |DESX アルゴリズム|DESX 暗号化アルゴリズムを使用する構文が見つかりました。 別の暗号化アルゴリズムを使用してください。 コンパイルごとに 1 回発生します。|  
 |dm_fts_active_catalogs|sys.dm_fts_active_catalogs ビューの列の中には非推奨ではないものもあるので、dm_fts_active_catalogs カウンターは常に 0 のままです。 非推奨の列を監視するには、dm_fts_active_catalogs.is_paused などの列固有のカウンターを使用してください。|  
@@ -94,9 +93,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |dm_fts_memory_buffers|sys.dm_fts_memory_buffers ビューのほとんどの列が非推奨ではないので、dm_fts_memory_buffers カウンターは常に 0 のままです。 非推奨の列を監視するには、列固有のカウンター dm_fts_memory_buffers.row_count を使用してください。|  
 |dm_fts_memory_buffers.row_count|[sys.dm_fts_memory_buffers](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md) 動的管理ビューの row_count 列が見つかりました。 この列は使用しないでください。 サーバー インスタンスによって列への参照が検出されるたびに発生します。|  
 |2 部構成の名前が使用された DROP INDEX|DROP INDEX 構文で、DROP INDEX に *table_name.index_name* 形式の構文が含まれています。 DROP INDEX ステートメントで、 *index_name* ON *table_name* 構文に置き換えてください。 コンパイルごとに 1 回発生します。|  
-|EXT_CREATE_ALTER_SOAP_ENDPOINT|FOR SOAP オプションを指定した CREATE または ALTER ENDPOINT ステートメントが見つかりました。 ネイティブ XML Web サービスは推奨されません。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
-|EXT_endpoint_webmethods|sys.endpoint_webmethods が見つかりました。 ネイティブ XML Web サービスは推奨されません。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
-|EXT_soap_endpoints|sys.soap_endpoints が見つかりました。 ネイティブ XML Web サービスは推奨されません。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
+|EXT_CREATE_ALTER_SOAP_ENDPOINT|FOR SOAP オプションを指定した CREATE または ALTER ENDPOINT ステートメントが見つかりました。 ネイティブ XML Web サービスは非推奨とされます。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
+|EXT_endpoint_webmethods|sys.endpoint_webmethods が見つかりました。 ネイティブ XML Web サービスは非推奨とされます。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
+|EXT_soap_endpoints|sys.soap_endpoints が見つかりました。 ネイティブ XML Web サービスは非推奨とされます。 代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|  
 |EXTPROP_LEVEL0TYPE|TYPE が level0type で見つかりました。 level0type として SCHEMA、level1type として TYPE を使用してください。 クエリごとに 1 回発生します。|  
 |EXTPROP_LEVEL0USER|level1type も指定されている場合に level0type USER が見つかりました。 USER は、拡張プロパティをユーザーに直接追加する場合にのみ level0type として使用してください。 クエリごとに 1 回発生します。|  
 |FASTFIRSTROW|FASTFIRSTROW 構文が見つかりました。 OPTION (FAST *n*) 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
@@ -182,7 +181,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure 'priority boost'|sp_configure の priority boost オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。 Windows start /high … program.exe オプションを代わりに使用してください。|  
 |sp_configure 'remote proc trans'|sp_configure の remote proc trans オプションが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_configure 'set working set size'|sp_configure の set working set size オプションが見つかりました。 ワーキング セットのサイズは構成できなくなりました。 使用しないでください。 クエリごとに 1 回発生します。|  
-|sp_control_dbmasterkey_password|sp_control_dbmasterkey_password ストアド プロシージャでは、マスター キーがあるかどうかは確認されません。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は廃止予定となっています。 今後のリリースでは、マスター キーは存在する必要があり、ストアド プロシージャ sp_control_dbmasterkey_password で使用されるパスワードはデータベース マスター キーを暗号化するために使用されるパスワードの 1 つと同じである必要があります。|  
+|sp_control_dbmasterkey_password|sp_control_dbmasterkey_password ストアド プロシージャでは、マスター キーがあるかどうかは確認されません。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は非推奨とされます。 今後のリリースでは、マスター キーは存在する必要があり、ストアド プロシージャ sp_control_dbmasterkey_password で使用されるパスワードはデータベース マスター キーを暗号化するために使用されるパスワードの 1 つと同じである必要があります。|  
 |sp_create_removable|sp_create_removable プロシージャが見つかりました。 代わりに CREATE DATABASE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_db_vardecimal_storage_format|**vardecimal** ストレージ形式の使用が見つかりました。 代わりにデータ圧縮を使用してください。|  
 |sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 代わりに ALTER DATABASE ... SET COMPATIBILITY_LEVEL を使用してください。 クエリごとに 1 回発生します。|  
@@ -286,8 +285,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_revokelogin|xp_revokelogin プロシージャが見つかりました。 代わりに ALTER LOGIN DISABLE または DROP LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2016 データベース エンジンの非推奨機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2016 の非推奨フルテキスト検索機能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ 
+  [SQL Server 2016 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ 
+  [SQL Server 2016 の非推奨のフルテキスト検索機能](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement イベント クラス](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support イベント クラス](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   

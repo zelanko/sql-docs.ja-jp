@@ -3,15 +3,13 @@ title: SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
 ms.custom: ''
 ms.date: 02/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
@@ -19,16 +17,15 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5d0824b800c75e627ecafb1be8d30b3d53fef00d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 95c66fcb578c76f4a76a9283cf1673d92049ca99
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成を新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス パック、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の累積的な更新プログラムにアップグレードする場合、適切な順序でログ配布サーバーをアップグレードすることで、ログ配布の障害復旧ソリューションが保持されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ログ配布構成を新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス パック、または  の累積的な更新プログラムにアップグレードする場合、適切な順序でログ配布サーバーをアップグレードすることで、ログ配布の障害復旧ソリューションが保持されます。  
   
 > [!NOTE]  
 >  [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md) は [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]で導入されました。 アップグレードされたログ配布構成では、 **バックアップの圧縮の既定** サーバー レベル構成オプションを使用して、トランザクション ログ バックアップ ファイルにバックアップ圧縮を使用するかどうかを制御します。 ログ バックアップのバックアップ圧縮動作は、ログ配布構成ごとに指定できます。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。  

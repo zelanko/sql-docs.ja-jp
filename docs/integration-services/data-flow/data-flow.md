@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
 - data flow [Integration Services], elements
@@ -24,12 +23,11 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bc81141ecd5c631960f0ee7179a43f765d12ec5a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 035775f1d8fdb146e1334ff73de38800de3c1d6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 04/26/2018
  **[データ フロー]** タブがアクティブになっている場合、ツールボックスには、データ フローに追加できる変換元、変換、および変換先が表示されます。  
   
 ## <a name="expressions"></a>式  
- 多くのデータ フロー コンポーネント (変換元、変換、および変換先) では、一部のプロパティでプロパティ式を使用できます。 プロパティ式は、パッケージの読み込み時にプロパティの値を置き換える式です。 実行時に、パッケージは更新されたプロパティ値を使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文を使用して式を作成し、その式に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の関数、演算子、識別子、および変数を含めることができます。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、[](../../integration-services/expressions/integration-services-ssis-expressions.md)および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
+ 多くのデータ フロー コンポーネント (変換元、変換、および変換先) では、一部のプロパティでプロパティ式を使用できます。 プロパティ式は、パッケージの読み込み時にプロパティの値を置き換える式です。 実行時に、パッケージは更新されたプロパティ値を使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文を使用して式を作成し、その式に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の関数、演算子、識別子、および変数を含めることができます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でパッケージを構築すると、プロパティ式をサポートするすべてのデータ フロー コンポーネントのプロパティが、そのデータ フロー コンポーネントが属するデータ フロー タスクに表示されます。 データ フロー コンポーネントのプロパティ式を追加、変更、および削除するには、データ フロー タスクをクリックし、[プロパティ] ウィンドウまたはタスク用のエディターを使用してプロパティ式を追加、変更、または削除します。 データ フロー タスク自体のプロパティ式は、[プロパティ] ウィンドウで管理します。  
   

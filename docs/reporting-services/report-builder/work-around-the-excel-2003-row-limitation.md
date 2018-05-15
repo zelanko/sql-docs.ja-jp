@@ -1,33 +1,31 @@
 ---
-title: "Excel 2003 の行制限を回避するには | Microsoft Docs"
-ms.custom: 
+title: Excel 2003 の行制限を回避するには | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 76705db4f9467f412cbe2dcc7d611d8576c447d6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3a01ffa473a45a17cfab39fd0ab8cfc86d5cb022
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   このトピックでは、ページ分割されたレポートを Excel にエクスポートするときに Excel 2003 の行制限を回避する方法について説明します。 回避策は、テーブルのみを含むレポート向けのものです。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 (.xls) 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
+>  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 (.xls) 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
  Excel 2003 でサポートされる行数は、ワークシートあたり最大 65,536 行です。 この制限を回避するには、特定の行数の後に明示的な改ページを適用します。 Excel レンダラーでは、それぞれの明示的な改ページごとに、新しいワークシートが作成されます。  
   
@@ -47,19 +45,19 @@ ms.lasthandoff: 01/09/2018
   
      外部テーブルのグループを追加すると、レポートにグループ列が追加されます。  
   
-4.  グループ列を削除するには、列ヘッダーを右クリックし、 **[列の削除]**をクリックして、 **[列のみの削除]**を選択します。その後で、 **[OK]**をクリックします。  
+4.  グループ列を削除するには、列ヘッダーを右クリックし、 **[列の削除]** をクリックして、 **[列のみの削除]** を選択します。その後で、 **[OK]** をクリックします。  
   
      ![グループ列の削除](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "グループ列の削除")  
   
-5.  **[行グループ]** の **[グループ 1]** を右クリックし、 **[グループ プロパティ]**をクリックします。  
+5.  **[行グループ]** の **[グループ 1]** を右クリックし、 **[グループ プロパティ]** をクリックします。  
   
      ![グループのプロパティの表示](../../reporting-services/report-builder/media/groupproperties-updated.png "グループのプロパティの表示")  
   
-6.  **[グループ プロパティ]** ダイアログ ボックスの **[並べ替え]** ページで、既定の並べ替えオプションを選択し、 **[削除]**をクリックします。  
+6.  **[グループ プロパティ]** ダイアログ ボックスの **[並べ替え]** ページで、既定の並べ替えオプションを選択し、 **[削除]** をクリックします。  
   
      ![既定の並べ替えの削除](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "既定の並べ替えの削除")  
   
-7.  **[改ページ]** ページで、 **[グループの各インスタンスの間]** をクリックし、 **[OK]**をクリックします。  
+7.  **[改ページ]** ページで、 **[グループの各インスタンスの間]** をクリックし、 **[OK]** をクリックします。  
   
      ![改ページの設定](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "改ページの設定")  
   

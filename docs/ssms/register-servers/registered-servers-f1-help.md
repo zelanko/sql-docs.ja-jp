@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-registration
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22a9a95e73b34a9c094abf24a0b12998bc8cfc87
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 00fe3c62180ada724cf202ae1dc2c3e6e9c6df8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 04/26/2018
 
  クリックすると、[登録済みサーバー] の設定を保存します。 
  
- ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services の [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ) 
+ ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services の [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) 
   このタブを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
  このページにアクセスするには、[登録済みサーバー] で、 **[登録済みサーバー]** ツール バーの **[Reporting Services]** をクリックし、登録済みサーバー グループ ( **[Reporting Services]** など) を右クリックして、 **[新規作成]** をポイントし、 **[サーバーの登録]** をクリックします。  
@@ -82,7 +80,7 @@ ms.lasthandoff: 04/26/2018
  クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
  
- ## <a name="analysis-services---multidimensional-data-new-or-edit-server-registration-general-tab"></a>Analysis Services - 多次元データの [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ)
+ ## <a name="analysis-services---multidimensional-data-new-or-edit-server-registration-general-tab"></a>Analysis Services - 多次元データの [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ)
  
   このタブを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  
   
@@ -116,7 +114,7 @@ ms.lasthandoff: 04/26/2018
  **テスト**  
  クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。 
  
- ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS の [新規サーバーの登録] または [サーバー登録プロパティの編集]\([全般] タブ) 
+ ## <a name="ssis-new-or-edit-server-registration-general-tab"></a>SSIS の [新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) 
  
  このタブを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を登録するときのオプションを指定できます。  
   

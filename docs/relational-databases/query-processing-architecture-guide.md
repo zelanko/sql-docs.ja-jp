@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 02/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
@@ -20,12 +19,11 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f1e2a721201fbc1e497cdd65daab9ec46ad9c06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -524,7 +522,7 @@ WHERE ProductSubcategoryID = 4;
 * クライアント側のアプリケーションで既にパラメーター化されている、準備されたステートメント。
 * XQuery メソッド呼び出しを含んでいるステートメントを、 `WHERE` 句など通常は引数がパラメーター化されるコンテキストで使用した場合。 引数がパラメーター化されないコンテキストでこのメソッドを使用した場合は、ステートメントの残りの部分がパラメーター化されます。
 * TRANSACT-SQL カーソル内のステートメント (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
-* 使用が推奨されなくなったクエリ構造。
+* 非推奨のクエリ構造。
 * `ANSI_PADDING` または `ANSI_NULLS` が `OFF`に設定されている状態で実行されているステートメント。
 * パラメーター化が可能なリテラルが 2,097 を超えるステートメント。
 * `WHERE T.col2 >= @bb`など、変数を参照するステートメント。

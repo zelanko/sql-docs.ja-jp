@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssbdiagnose
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -32,12 +31,11 @@ caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b4cbf56d010afd4d97b6449fc35281baa44819de
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -251,7 +249,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  分析対象の [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスが格納されている、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスを指定します。  
   
- サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 サーバー上の [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスに接続するには、*server_name***\\*** instance_name* を指定します。 **-S** が指定されていない場合、 **ssbdiagnose** では、SQLCMDSERVER 環境変数の値を使用します。 SQLCMDSERVER も設定されていない場合、 **ssbdiagnose** はローカル コンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 サーバー上の [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。 **-S** が指定されていない場合、 **ssbdiagnose** では、SQLCMDSERVER 環境変数の値を使用します。 SQLCMDSERVER も設定されていない場合、 **ssbdiagnose** はローカル コンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-d** *database_name*  
  分析対象の [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスが格納されているデータベースを指定します。 データベースが存在しない場合は、エラー メッセージが生成されます。 **-d** が指定されていない場合、ログインの既定のデータベースのプロパティに指定されたデータベースが既定値になります。  

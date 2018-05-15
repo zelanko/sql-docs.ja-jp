@@ -24,11 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed583870d021b364545b09ecd363cbfde072d849
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: 94774941d5f121db057f9447ba96b1322ef50c6d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/04/2018
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar (256)**|名前、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]フルテキスト、または SQL Server エージェント サービスです。 null にすることはできません。|  
 |startup_type|**int**|サービスの開始モードが表示されます。 使用可能な値とその対応する説明を次に示します。<br /><br /> 0: その他の<br />1: その他の<br />2: 自動<br />3: 手動<br />4: 無効になっています。<br /><br /> NULL 値が許可されます。|  
-|startup_desc|**nvarchar (256)**|サービスの開始モードを記述します。 使用可能な値とその対応する説明を次に示します。<br /><br /> その他: その他 (ブート開始)<br />その他: その他 (システム開始)<br />自動: 自動開始<br />[手動]: 要求の開始<br />Disabled: 無効になっています。<br /><br /> null にすることはできません。|  
+|startup_desc|**nvarchar (256)**|サービスの開始モードを記述します。 使用可能な値とその対応する説明を次に示します。<br /><br /> その他: その他 (ブート開始)<br />その他: その他 (システム開始)<br />自動: 自動開始<br />手動: 要求の開始<br />Disabled: 無効になっています。<br /><br /> null にすることはできません。|  
 |ステータス|**int**|サービスの現在の状態を示します。 使用可能な値とその対応する説明を次に示します。<br /><br /> 1: が停止しました<br />2: その他 (開始保留中)<br />3: その他 (停止保留中)<br />4: を実行しています。<br />5: その他の (継続保留中)<br />6: その他 (一時停止保留中の)<br />7: 一時停止<br /><br /> NULL 値が許可されます。|  
 |status_desc|**nvarchar (256)**|サービスの現在の状態を記述します。 使用可能な値とその対応する説明を次に示します。<br /><br /> 停止しました。 サービスが停止します。<br />その他 (開始操作保留中): サービスは開始処理中です。<br />その他 (停止操作保留中): サービスは停止処理中です。<br />実行: サービスが実行されます。<br />その他の (継続操作保留中): サービスが保留中の状態。<br />その他 (一時停止保留中の): サービスが一時停止中です。<br />一時停止: サービスが一時停止します。<br /><br /> null にすることはできません。|  
 |process_id|**int**|サービスのプロセス ID。 null にすることはできません。|  

@@ -1,27 +1,25 @@
 ---
-title: "Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 
+caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9c725ae731867a57e36bc80a8a1cbac3d11953c6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 73c41c24d4572c6bc91ec0a8728be590344787df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -155,7 +153,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="AvailabilityWord"></a> Word 2003 レンダラー  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨機能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
+>  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
  Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](http://go.microsoft.com/fwlink/?LinkID=205622)」を参照してください。  
   
