@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1742e0d609372fcb2ad17859b503185ba04075ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2971701764238c0517558c1daf64296e4727d5ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Crypto API (CAPI) で生成された暗号乱数を返します。 出力は、指定されたバイト数の 16 進数です。
+この関数は、Crypto API (CAPI) でランダムに生成された暗号数を返します。 `CRYPT_GEN_RANDOM` は、長さが指定されたバイト数の 16 進数を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,27 +43,27 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>引数  
 *length*  
-作成される数の長さ。 最大値は 8000 です。 *長さ* は型です。 **int**です。
+`CRYPT_GEN_RANDOM` で作成される数値の長さ (バイト)。 *length* 引数のデータ型は **int** であり、値の範囲は 1 から 8000 です。 `CRYPT_GEN_RANDOM` は、この範囲から外れる **int** 値に対して NULL を返します。 
   
 *seed*  
-ランダム シードとして使用するデータ (省略可能)。  以上である必要がありますが *長さ* データのバイト数。 *シード* は **varbinary (8000)** です。
+ランダムなシード値として使用する省略可能な 16 進数。 *seed* の長さは、*length* 引き数の値と一致する必要があります。 *seed* 引数のデータ型は **varbinary(8000)** です。
   
 ## <a name="returned-types"></a>返される型  
 **varbinary(8000)**
   
 ## <a name="permissions"></a>アクセス許可  
-この関数はパブリックであり、特別な権限は必要ありません。
+この関数はパブリックであり、特別なアクセス許可は必要ありません。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-generating-a-random-number"></a>A. 乱数を生成する  
-次の例では、50 バイト長の乱数を生成します。
+この例では、長さ 50 バイトの乱数を生成します。
   
 ```sql
 SELECT CRYPT_GEN_RANDOM(50) ;  
 ```  
   
-次の例では、4 バイトのシードを使用して、4 バイト長の乱数を生成します。
+この例では、4 バイトのシードを使用して、長さ 4 バイトの乱数を生成します。
   
 ```sql
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  

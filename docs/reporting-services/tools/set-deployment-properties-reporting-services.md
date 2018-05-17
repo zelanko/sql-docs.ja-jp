@@ -1,32 +1,30 @@
 ---
-title: "配置プロパティを設定する (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 配置プロパティを設定する (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3646d424b9f2f66546369c74a4bb310d0fb6a4cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、レポート サーバー プロジェクトのアイテムをレポート サーバーにパブリッシュするには、レポート サーバーのほかに、必要に応じてレポートのフォルダー、および共有データ ソースを指定する必要があります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がレポートをビルド、プレビュー、および配置するために必要なプロパティと値は、レポート サーバー プロジェクトのプロジェクト構成に保存されています。 これらのプロジェクトのプロパティから成る複数の名前付きセットを作成すると、プロパティ セット間で切り替えることができるので便利です。 それぞれのプロパティのセットは、構成です。 たとえば、レポートをテスト サーバーにパブリッシュする構成や、実稼働サーバーにパブリッシュする別の構成などがあります。  
@@ -41,9 +39,9 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-set-deployment-properties"></a>配置プロパティを設定するには  
   
-1.  レポート プロジェクトを右クリックして、 **[プロパティ]**をクリックします。  
+1.  レポート プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスの **[構成]** ボックスの一覧で、編集する構成をクリックします。 一般的な構成は、 **[DebugLocal]**、 **[Debug]**、および **[Release]**です。  
+2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスの **[構成]** ボックスの一覧で、編集する構成をクリックします。 一般的な構成は、 **[DebugLocal]**、 **[Debug]**、および **[Release]** です。  
   
     > [!NOTE]  
     >  複数の構成を使用すると、異なるレポート サーバー間または設定間ですばやく切り替えることができます。  
@@ -60,9 +58,9 @@ ms.lasthandoff: 01/09/2018
   
 7.  **[TargetServerVersion]** ボックスの一覧で、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SQL Server 2016 バージョンを選択するか、 **[バージョンの検出]** を選択して、 **[TargetServer URL]** プロパティによって識別される、サーバーにインストールされているバージョンを自動的に特定します。 既定値は **SQL Server 2016 以降**です。  
   
-     [OutputPath] で指定されたパスに保存されている、 **[TargetServer URL]** で指定されたレポート サーバーのビルド レポートをカスタマイズするには、 **[TargetServerVersion]**を使用します。  
+     [OutputPath] で指定されたパスに保存されている、 **[TargetServer URL]** で指定されたレポート サーバーのビルド レポートをカスタマイズするには、 **[TargetServerVersion]** を使用します。  
   
-8.  **[TargetDataSourceFolder]** ボックスに、パブリッシュした共有データ ソースを配置するレポート サーバー上のフォルダーを入力します。 **[TargetDataSourceFolder]** の既定値は [データ ソース] です。 この値を空にした場合は、 **[TargetReportFolder]**で指定した場所にデータ ソースがパブリッシュされます。  
+8.  **[TargetDataSourceFolder]** ボックスに、パブリッシュした共有データ ソースを配置するレポート サーバー上のフォルダーを入力します。 **[TargetDataSourceFolder]** の既定値は [データ ソース] です。 この値を空にした場合は、 **[TargetReportFolder]** で指定した場所にデータ ソースがパブリッシュされます。  
   
 9. **[TargetReportFolder]** ボックスに、パブリッシュしたレポートを配置するレポート サーバー上のフォルダーを入力します。 **[TargetReportFolder]**  の既定値はレポート プロジェクトの名前です。  
   
@@ -75,13 +73,13 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-set-configuration-manager-properties"></a>構成マネージャーのプロパティを設定するには  
   
-1.  レポート プロジェクトを右クリックして、 **[プロパティ]**をクリックします。  
+1.  レポート プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスで、 **[構成マネージャー]**をクリックします。  
+2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスで、 **[構成マネージャー]** をクリックします。  
   
 3.  **[構成マネージャー]** ダイアログ ボックスで、編集する構成を選択します。 現在アクティブな構成は **[アクティブ] (***\<configuration>***)** と表示されます。  
   
-4.  ソリューションのプロジェクトごとに、 **[プロジェクトのコンテキスト]**で、 **[ビルド]** または **[配置]**をオンまたはオフにします。  
+4.  ソリューションのプロジェクトごとに、 **[プロジェクトのコンテキスト]** で、 **[ビルド]** または **[配置]** をオンまたはオフにします。  
   
     > [!NOTE]  
     >  **[ビルド]** をオンにした場合、レポート デザイナーにより、レポート プロジェクトがビルドされ、プレビュー前またはレポート サーバーにパブリッシュする前にエラーが確認されます。 **[配置]** をオンにした場合、配置プロパティで定義されている方法で、レポート デザイナーによってレポート サーバーにレポートがパブリッシュされます。 **[配置]** をオフにした場合、レポート デザイナーにより、ローカルのプレビュー ウィンドウに **[StartItem]** プロパティで指定したレポートが表示されます。  

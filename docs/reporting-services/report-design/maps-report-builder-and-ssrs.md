@@ -1,16 +1,15 @@
 ---
-title: "マップ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: マップ (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10508"
 - MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
@@ -19,16 +18,15 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1ac5c7b4af5efb160b311e7c13cd6dda0cb327f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 -   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
   
     > [!NOTE]  
-    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で提供される TIGER/Line シェープファイルのデータを使用します。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
 -   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) のシェープファイル空間データ形式に準拠するデータが格納されています。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](http://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
@@ -96,9 +94,9 @@ ms.lasthandoff: 01/09/2018
   
 -   **埋め込みデータ** レポート内のマップ レイヤーに埋め込まれたマップ要素からサンプル データが取得されます。  
   
--   **ESRI シェープファイルにリンク** ESRI シェープファイル (.shp) およびサポート ファイル (.dbf) が利用可能である場合、サンプル データがシェープファイルから読み込まれます。 それ以外の場合、レポート プロセッサによってサンプル データが生成され、 **"使用できる空間データがありません。サンプル空間データがマップに表示されます。"**というメッセージが表示されます。  
+-   **ESRI シェープファイルにリンク** ESRI シェープファイル (.shp) およびサポート ファイル (.dbf) が利用可能である場合、サンプル データがシェープファイルから読み込まれます。 それ以外の場合、レポート プロセッサによってサンプル データが生成され、 **"使用できる空間データがありません。サンプル空間データがマップに表示されます。"** というメッセージが表示されます。  
   
--   **SQL Server 空間データ** データ ソースが利用可能であり、資格情報が有効である場合は、データベース内の空間データからサンプル データが読み込まれます。 それ以外の場合、レポート プロセッサによってサンプル データが生成され、 **"使用できる空間データがありません。サンプル空間データがマップに表示されます。"**というメッセージが表示されます。  
+-   **SQL Server 空間データ** データ ソースが利用可能であり、資格情報が有効である場合は、データベース内の空間データからサンプル データが読み込まれます。 それ以外の場合、レポート プロセッサによってサンプル データが生成され、 **"使用できる空間データがありません。サンプル空間データがマップに表示されます。"** というメッセージが表示されます。  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>レポート定義への空間データの埋め込み  
  マップ レイヤーの空間データには、分析データとは異なり、レポート定義に埋め込むことができるという選択肢があります。 空間データを埋め込む場合、マップ レイヤーに使用するマップ要素を埋め込むことになります。  
@@ -150,7 +148,7 @@ ms.lasthandoff: 01/09/2018
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
 ##  <a name="TileLayer"></a> Bing マップのタイル レイヤーの追加  
- ビューポートによって定義されている現在のマップ ビューの地理的背景として、Bing マップのタイル レイヤーを追加できます。 タイル レイヤーを追加するには、座標系として **[地理]** を、投影法として **[Mercator]**を指定する必要があります。 ビューポートの中心およびズーム レベルの選択内容に応じて、対応するタイルが自動的に Bing Maps Web サービスから取得されます。  
+ ビューポートによって定義されている現在のマップ ビューの地理的背景として、Bing マップのタイル レイヤーを追加できます。 タイル レイヤーを追加するには、座標系として **[地理]** を、投影法として **[Mercator]** を指定する必要があります。 ビューポートの中心およびズーム レベルの選択内容に応じて、対応するタイルが自動的に Bing Maps Web サービスから取得されます。  
   
  レイヤーは、次のオプションを指定してカスタマイズできます。  
   

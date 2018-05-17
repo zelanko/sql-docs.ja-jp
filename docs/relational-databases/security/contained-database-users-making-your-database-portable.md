@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="firewalls"></a>ファイアウォール  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Windows ファイアウォール ルールはすべての接続に適用され、ログイン (従来のモデルの接続) と包含データベース ユーザーに同じ影響を及ぼします。 Windows ファイアウォールの詳細については、「 [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
+ Windows ファイアウォール ルールはすべての接続に適用され、ログイン (従来のモデルの接続) と包含データベース ユーザーに同じ影響を及ぼします。 Windows ファイアウォールの詳細については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] ファイアウォール  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、サーバー レベルの接続 (ログイン) 用とデータベース レベルの接続 (包含データベース ユーザー) 用にファイアウォール規則を切り離すことができます。 ユーザー データベースに接続すると、最初にデータベースのファイアウォール規則がチェックされます。 データベースへのアクセスを許可する規則が存在しない場合は、サーバー レベルのファイアウォール規則がチェックされます。これには、論理サーバーのマスター データベースへのアクセスが必要です。 データベース レベルのファイアウォール規則と包含データベース ユーザーを組み合わせることで、接続中にサーバーのマスター データベースにアクセスする必要がなくなり、接続のスケーラビリティが向上します。  

@@ -1,27 +1,25 @@
 ---
-title: "モバイル レポートにパラメーターを追加する | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: モバイル レポートにパラメーターを追加する | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d531c2f0b5d9b1e01d3d40a61f6f05ce50fe3c29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>モバイル レポートにパラメーターを追加する | Reporting Services
 パラメーターを備えた [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートを作成し、レポートをフィルター処理できるようにすることができます。 パラメーターのあるレポートは、 [ソース レポートからのドリルスルー](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)の対象にすることもできます。 
@@ -30,15 +28,15 @@ ms.lasthandoff: 01/09/2018
 
 モバイル レポートにパラメーターを追加したら、 [クエリ文字列パラメーターを使用してレポートを開く](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)URL を作成します。
 
-1. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] Web ポータルの上部のバーで、 **[新規]** > **[モバイル レポート]**の順に選択します。  
+1. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] Web ポータルの上部のバーで、 **[新規]** > **[モバイル レポート]** の順に選択します。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
 2. **左上隅にある** [データ] [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]タブを選択します。   
   
-3. 右上隅の **[データの追加]**を選択します。  
+3. 右上隅の **[データの追加]** を選択します。  
   
-4. **[レポート サーバー]**を選択し、サーバーを選びます。  
+4. **[レポート サーバー]** を選択し、サーバーを選びます。  
   
 5. サーバー上の共有データセットに移動し、パラメーターを持つデータセットを選択します。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
      
    ![SSMRP_PforParam](../../reporting-services/mobile-reports/media/ssmrp-pforparam.png)  
   
-6. タブの歯車を選択し、 **[パラメーター]**({}) を選択します。  
+6. タブの歯車を選択し、**[パラメーター {}]** を選択します。  
   
    ![SSMRP_ParamWheel](../../reporting-services/mobile-reports/media/ssmrp-paramwheel.png)  
   

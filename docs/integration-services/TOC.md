@@ -23,14 +23,14 @@
 ### [PowerShell を使用しての実行](ssis-quickstart-run-powershell.md)
 ### [C# を使用しての実行](./ssis-quickstart-run-dotnet.md) 
 
-# [SSIS パッケージを Azure にリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [チュートリアル - Azure でのパッケージを配置、実行、監視する](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Windows 認証でデータ ソースに接続する](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [Azure でのパッケージの配置と実行](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [チュートリアル - Azure でのパッケージの配置と実行](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Windows 認証でのデータへの接続](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [ファイルとファイル共有への接続](lift-shift/ssis-azure-files-file-shares.md)
+## [Azure での SSISDB への接続](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Azure に配置されたパッケージの検証](lift-shift/ssis-azure-validate-packages.md)
-## [Azure で SSIS カタログに接続する](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages.md)
-## [SSMS を使用して Azure でのパッケージ実行をスケジュールする](lift-shift/ssis-azure-schedule-packages-ssms.md)
+## [Azure でのパッケージのスケジュール設定](lift-shift/ssis-azure-schedule-packages.md)
+## [SSMS を使用した Azure でのパッケージのスケジュール設定](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [インストールまたはアップグレード](../integration-services/install-windows/install-integration-services.md)
 

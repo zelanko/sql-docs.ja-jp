@@ -15,13 +15,13 @@ ms.author: erickang
 manager: craigg
 ms.openlocfilehash: d06bd752b0cdd07d87d8e5816a74d6e2d43d31ef
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル: データベース ダッシュ ボードに *5 つの遅いクエリ* のサンプルウィジェットを追加する
 
-このチュートリアルは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の組み込みサンプルウィジェットの 1 つを *データベース ダッシュ ボード* に追加して 5 つの低速なクエリを表示する手順を示します。ここでは、低速なクエリの詳細と [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用したクエリ プランを表示する方法についても学ぶことができます。
+このチュートリアルは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の組み込みサンプルウィジェットの 1 つを *データベース ダッシュ ボード* に追加して 5 つの低速なクエリを表示する手順を示します。 ここでは、低速なクエリの詳細と [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用したクエリ プランを表示する方法についても学ぶことができます。 このチュートリアルで学習する方法。
 
 > [!div class="checklist"]
 > * データベースでクエリ ストアを有効にします。
@@ -177,8 +177,8 @@ ms.lasthandoff: 05/03/2018
 > [!div class="checklist"]
 > * データベースでクエリ ストアを有効にします。
 > * データベース ダッシュ ボードへ insight ウィジェットを追加します。
-> * データベースの速度が遅かったクエリに関する詳細を表示
-> * 低速のクエリのクエリ実行プランを表示します。
+> * データベースの遅延クエリに関する詳細を表示します。
+> * 遅延クエリに対するのクエリ実行プランを表示します。
 
 
 有効にする方法については、**領域の使用状況の表に**インサイトをサンプルを次のチュートリアルを完了します。

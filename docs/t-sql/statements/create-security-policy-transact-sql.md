@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -32,12 +30,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8d310e0dc6aa21758f63d8d7dbe755a0cea950d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3270e3e74eb11c2caace27137c8492ecea3e6e93
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-security-policy-transact-sql"></a>セキュリティ ポリシー (TRANSACT-SQL) の作成します。
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 ```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
     { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name    
+      ( { column_name | expression } [ , …n] ) ON table_schema_name. table_name    
       [ <block_dml_operation> ] , [ , …n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
     [ NOT FOR REPLICATION ] 
@@ -75,8 +72,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *tvf_schema_name.security_predicate_function_name*  
  述語として使用され、ターゲット テーブルに対するクエリで実施されるインライン テーブル値関数。 特定のテーブルの特定の DML 操作に対して定義できるセキュリティ述語の数は 1 つです。 インライン テーブル値関数は、SCHEMABINDING オプションを使用して作成する必要があります。  
   
- { *column_name* | *arguments* }  
- セキュリティ述語関数のパラメーターとして使用される列名または式。 ターゲット テーブル上の任意の列を、述語関数の引数として使用できます。 リテラルを含む式、ビルトイン、および算術演算子を使用する式を利用できます。  
+ { *column_name* | *expression* }  
+ セキュリティ述語関数のパラメーターとして使用される列名または式。 ターゲット テーブルの任意の列を使用できます。 [expression](../../t-sql/language-elements/expressions-transact-sql.md) には、定数、組み込みのスカラー関数、演算子、およびターゲット テーブルの列のみを含めることができます。 関数の各パラメーターに列名または式を指定する必要があります。  
   
  *table_schema_name.table_name*  
  セキュリティ述語の適用先となるターゲット テーブル。 複数のセキュリティを無効になっているポリシーの特定の DML 操作では、1 つのテーブルを対象にできますが、任意の時点で、1 つのみを有効にすることができます。  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5b135ad2224a2c1781afcdc04085f034b8f64f43
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: deafc5812d1fd10cd036612f7d756c44f6f94685
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-現在のセッション内の現在の要求の ID を返します。
+この関数は、現在のセッション内の現在の要求の ID を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,7 +45,7 @@ CURRENT_REQUEST_ID()
 **smallint**
   
 ## <a name="remarks"></a>Remarks  
-現在のセッションと現在の要求についての正確な情報を検索するには、それぞれ、@@SPID と CURRENT_REQUEST_ID() を使用します。
+現在のセッションに関する正確な情報を確認するには、@@SPID を使用します。 現在の要求に関する正確な情報を確認するには、CURRENT_REQUEST_ID() を使用します。
   
 ## <a name="see-also"></a>参照
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

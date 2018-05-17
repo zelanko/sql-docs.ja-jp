@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
@@ -18,12 +17,11 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e85eaa93ebeb16e9e5aff25bbe1f77e4fab3781f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 65bc7bf5e2860ac666886ca426bdfc82277f5c37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
   このページを使用すると、パブリッシュされたレポートおよびサブスクリプションを実行するための共有スケジュールを作成できます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 集中管理されるスケジュール情報と、スケジュールされた操作を一時停止して再開する機能は、アイテム固有のスケジュールと共有スケジュールを区別する 2 つの重要な機能です。  
@@ -32,10 +30,10 @@ ms.lasthandoff: 01/09/2018
   
  スケジュールは、そのスケジュールをホストおよび処理するレポート サーバーのローカル時間に基づいて処理されます。  
   
- このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバーに接続し、 **[共有スケジュール]**を右クリックして **[新しいスケジュール]**をクリックします。 スケジュールを保存するには、SQL Server エージェント サービスが実行されている必要があります。  
+ このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバーに接続し、 **[共有スケジュール]** を右クリックして **[新しいスケジュール]** をクリックします。 スケジュールを保存するには、SQL Server エージェント サービスが実行されている必要があります。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473) 」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](http://go.microsoft.com/fwlink/?linkid=232473)」(http://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ## <a name="options"></a>および  
  **名前**  

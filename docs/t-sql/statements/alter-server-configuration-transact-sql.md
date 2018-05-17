@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,19 +190,22 @@ SQLDUMPEREDUMPFLAGS
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- サーバー インスタンスの HADR クラスター コンテキストを、指定した Windows Server フェールオーバー クラスタリング (WSFC) クラスターに切り替えます。 *HADR クラスター コンテキスト*は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する Windows Server フェールオーバー クラスタリング (WSFC) を決定します。 SET HADR CLUSTER CONTEXT オプションは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を新しい WSFC クラスター上の [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降のバージョンのインスタンスに移行するクラスター間での移行中にのみ使用してください。  
+ サーバー インスタンスの HADR クラスター コンテキストを、指定した Windows Server フェールオーバー クラスター (WSFC) に切り替えます。 *HADR クラスター コンテキスト*は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する WSFC を決定します。 SET HADR CLUSTER CONTEXT オプションは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を新しい WSFC 上の [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降のバージョンのインスタンスに移行するクラスター間での移行中にのみ使用してください。  
   
- HADR クラスター コンテキストの切り替えは、ローカル WSFC クラスターとリモート クラスター間でのみ実行できます。 HADR クラスター コンテキストは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが可用性レプリカをホストしていない場合のみリモート クラスターに切り替えることができます。  
+ HADR クラスター コンテキストの切り替えは、ローカル WSFC とリモート WSFC 間でのみ実行できます。 HADR クラスター コンテキストは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが可用性レプリカをホストしていない場合のみリモート クラスターに切り替えることができます。  
   
  リモート HADR クラスター コンテキストは、いつでもローカル クラスターに切り替えることができます。 ただし、コンテキストは、サーバー インスタンスが可用性レプリカをホストしている限り、再度切り替えることはできません。  
   
  切り替え先のクラスターを識別するには、次のいずれかの値を指定します。  
   
  *windows_cluster*  
- WSFC クラスターのクラスター オブジェクト名 (CON)。 短い名前または完全なドメイン名を指定できます。 短い名前のターゲット IP アドレスを検出するために、ALTER SERVER CONFIGURATION は DNS 解決を使用します。 ある種の状況では、短い名前を使用すると混乱が生じ、DNS から誤った IP アドレスが返されることがあります。 そのため、完全なドメイン名を指定することをお勧めします。  
+ WSFC の netwirj の名前。 短い名前または完全なドメイン名を指定できます。 短い名前のターゲット IP アドレスを検出するために、ALTER SERVER CONFIGURATION は DNS 解決を使用します。 ある種の状況では、短い名前を使用すると混乱が生じ、DNS から誤った IP アドレスが返されることがあります。 そのため、完全なドメイン名を指定することをお勧めします。  
+  
+  > [!NOTE] 
+  > この設定を使用したクラスター間の移行はサポートされなくなりました。 クラスター間の移行を実行するには、分散可用性グループまたは他の方法 (ログ配布など) を使用します。 
   
  LOCAL  
- ローカル WSFC クラスター。  
+ ローカル WSFC。  
   
  詳しくは、「[サーバー インスタンスの HADR クラスター コンテキストの変更 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)」をご覧ください。  
   

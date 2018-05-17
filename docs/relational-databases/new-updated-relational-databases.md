@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: relational-databases
-ms.date: 02/03/2018
-ms.openlocfilehash: fc37abbb88aa597a6173fa5579fa320e0024581f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新規または最近の更新: リレーショナル データベース ドキュメント
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
+- "*更新日の範囲:* " &nbsp; **2018 年 2 月 3 日** &nbsp;から&nbsp; **2018 年 4 月 28 日**
 - *対象領域:* &nbsp; **リレーショナル データベース**。
 
 
@@ -41,8 +43,13 @@ ms.lasthandoff: 04/26/2018
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-1. [SQL Server または SQL Database に JSON ドキュメントを格納する](json/store-json-documents-in-sql-tables.md)
-2. [SQL 脆弱性評価](security/sql-vulnerability-assessment.md)
+1. [結合 (SQL Server)](performance/joins.md)
+2. [サブクエリ (SQL Server)](performance/subqueries.md)
+3. [Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する](replication/configure-distribution-availability-group.md)
+4. [SQL データの検出と分類](security/sql-data-discovery-and-classification.md)
+5. [トランザクションのロックおよび行のバージョン管理ガイド](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object (Azure SQL Database)](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Filestream および FileTable システム ストアド プロシージャ (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -68,15 +75,16 @@ ms.lasthandoff: 04/26/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [データベース ファイルの初期化](#TitleNum_1)
-2. [tempdb データベース](#TitleNum_2)
-3. [SQL Server の JSON データ](#TitleNum_3)
-4. [レッスン 1: データベース エンジンへの接続](#TitleNum_4)
-5. [トランザクション ログ ファイルのサイズの管理](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [SQL Server インデックス デザイン ガイド](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [主キーの作成](#TitleNum_9)
+1. [フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](#TitleNum_1)
+2. [SQL Server の JSON データ](#TitleNum_2)
+3. [クエリ処理アーキテクチャ ガイド](#TitleNum_3)
+4. [チュートリアル: レプリケーション用の SQL Server の準備 - パブリッシャー、ディストリビューター、サブスクライバー](#TitleNum_4)
+5. [チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する ](#TitleNum_5)
+6. [チュートリアル: サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する](#TitleNum_6)
+7. [フルテキスト検索でのクエリ](#TitleNum_7)
+8. [Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption](#TitleNum_8)
+9. [PowerShell と CLI: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする](#TitleNum_9)
+10. [変更データ キャプチャについて (SQL Server)](#TitleNum_10)
 
 
 
@@ -87,32 +95,43 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1.&nbsp; [データベース ファイルの初期化](databases/database-instant-file-initialization.md)
+### <a name="1-nbsp-use-a-format-file-to-skip-a-table-column-sql-serverimport-exportuse-a-format-file-to-skip-a-table-column-sql-servermd"></a>1.&nbsp; [フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-*更新日: 2018 年 1 月 23 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([次へ](#TitleNum_2))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次へ](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**OPENROWSET(BULK...) の使用**
+
+
+`OPENROWSET(BULK...)` を使用してテーブル列をスキップするために XML フォーマット ファイルを使用するには、次のように選択リストおよび対象テーブルの列リストを明示的に指定する必要があります。
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-**適用対象:** SQL Server (SQL Server 2012 SP4 以降、SQL Server 2014 SP2、SQL Server 2016 から SQL Server 2017)
+次の例では、 `OPENROWSET` 一括行セット プロバイダーと `myTestSkipCol2.xml` フォーマット ファイルを使用します。 この例では、 `myTestSkipCol2.dat` データ ファイルを `myTestSkipCol` テーブルに一括インポートします。 必要に応じて、ステートメントでは、選択リストおよびターゲット テーブルの列の一覧を明示的に指定します。
 
-**セキュリティに関する考慮事項**
+SSMS で、次のコードを実行します。 お使いのコンピューターのサンプル ファイルがある場所のファイル システム パスを更新します。
 
-ファイルの瞬時初期化 (IFI) を利用するとき、削除されたディスクの内容は、新しいデータがファイルに書き込まれるときにのみ上書きされるため、他のデータがデータ ファイルのその領域に書き込まれるまで、許可されていないプリンシパルが削除された内容にアクセスする可能性があります。 データベース ファイルが SQL Server のインスタンスにアタッチされている間は、ファイルに対する随意アクセス制御リスト (DACL) により、このような情報漏えいのリスクは軽減されます。 この DACL により、SQL Server サービス アカウントとローカル管理者のみにファイル アクセスが許可されます。 ただし、ファイルがデタッチされると、SE\_MANAGE\_VOLUME_NAME が付与されていないユーザーまたはサービスからアクセスされる可能性があります。 データベースのバックアップ時にも同様の懸案事項があります。バックアップ ファイルが適切な DACL で保護されていない場合、許可されていないユーザーやサービスが削除された内容を利用できるようになることがあります。
-
-もう 1 つの考慮事項は、IFI を使用してファイルが拡張された場合、SQL Server 管理者が未加工のページ コンテンツにアクセスして、以前削除されたコンテンツを表示する可能性があることです。
-
-データベース ファイルが記憶域ネットワークでホストされている場合、記憶域ネットワークで常に新しいページが事前に初期化されているものとして示される可能性もあり、オペレーティング システムでページが再初期化されると不要なオーバーヘッドが発生する可能性があります。
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -124,46 +143,53 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [tempdb データベース](databases/tempdb-database.md)
+### <a name="2-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>2.&nbsp; [SQL Server の JSON データ](json/json-data-sql-server.md)
 
-*更新日: 2018 年 1 月 17 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_1) | [次へ](#TitleNum_3))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_1) | [次へ](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。
+JSON ドキュメントには、サブ要素と、標準のリレーショナル列に直接マップできないデータ階層があります。 ここでは、親エンティティとサブ配列を結合することで JSON 階層をフラット化することができます。
 
-**SQL Database の Tempdb データベース**
+次の例では、配列内の 2 番目のオブジェクトは、個人のスキルを表すサブ配列を持っています。 追加の `OPENJSON` 関数呼び出しを使用してすべてのサブオブジェクトを解析できます。
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|最大 Tempdb データ ファイル サイズ (MB)|tempdb データ ファイルの数|最大 tempdb データ サイズ (MB)|
-|---|---:|---:|---:|
-|[標準]|14,225|@shouldalert|14,225|
-|S0|14,225|@shouldalert|14,225|
-|S1|14,225|@shouldalert|14,225|
-|S2|14,225| @shouldalert|14,225|
-|S3|32,768|@shouldalert|32,768|
-|S4|32,768|2|65,536|
-|S6|32,768|3|98,304|
-|S7|32,768|6|196,608|
-|S9|32,768|12|393,216|
-|S12|32,768|12|393,216|
-|P1|32,768|12|393,216|
-|P2|32,768|12|393,216|
-|P4|32,768|12|393,216|
-|P6|32,768|12|393,216|
-|P11|32,768|12|393,216|
-|P15|32,768|12|393,216|
-|Premium エラスティック プール (すべての DTU 構成)|14,225|12|170,700|
-|Standard エラスティック プール (すべての DTU 構成)|14,225|12|170,700|
-|Basic エラスティック プール (すべての DTU 構成)|14,225|12|170,700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json)
+    outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+**skills** 配列は、最初の `OPENJSON` で元の JSON テキスト フラグメントとして返され、`APPLY` 演算子を使用して別の `OPENJSON` 関数に渡されます。 2 番目の `OPENJSON` 関数は、JSON 配列を解析し、最初の `OPENJSON` の結果と結合される 1 つの列の行セットとして文字列値を返します。
+このクエリの結果は、次の表のようになります。
+
+**結果**
+
+|id|firstName|lastName|age|dateOfBirth|skill|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|John|Smith|25|||
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` は、最初のレベルのエンティティをサブ配列と結合し、フラット化された結果セットを返します。 結合により、すべてのスキルで 2 番目の行が繰り返されます。
 
 
 
@@ -176,40 +202,54 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3.&nbsp; [SQL Server の JSON データ](json/json-data-sql-server.md)
+### <a name="3-nbsp-query-processing-architecture-guidequery-processing-architecture-guidemd"></a>3.&nbsp; [クエリ処理アーキテクチャ ガイド](query-processing-architecture-guide.md)
 
-*更新日: 2018 年 2 月 1 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_2) | [次へ](#TitleNum_4))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_2) | [次へ](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [GeoJSON データを SQL Server 2016 に読み込む](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
+**論理演算子の優先順位**
 
-**SQL クエリで JSON データを分析する**
 
-レポート作成のために JSON データをフィルター処理または集計する必要がある場合は、**OPENJSON** を使用して JSON をリレーショナル形式に変換できます。 その後、標準の Transact-SQL と組み込み関数を使ってレポートを用意することができます。
+1 つのステートメントで複数の論理演算子を使用すると、最初に `NOT` が評価され、次に `AND`、最後に `OR` が評価されます。 算術演算子、およびビット演算子は論理演算子より前に処理されます。 詳細については、「[Operator Precedence (Transact-SQL)]」(演算子の順位 (Transact-SQL)) を参照してください。
+
+次の例では、色の条件が製品モデル 21 には該当しますが、製品モデル 20 には該当しません。これは、`AND` が `OR` よりも優先されるためです。
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+`OR` が必ず最初に評価されるように、かっこを付け加えることでクエリの意味を変えることができます。 次のクエリでは、モデル 20 とモデル 21 で赤色の製品のみが検索されます。
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+必要でない場合でもかっこを使用すると、クエリが読みやすくなり、演算子の優先順位が原因の微妙な間違いを犯す可能性が減少します。 かっこを使用することでパフォーマンスが大幅に低下することはありません。 次の例は、元の例と構文は同じですが、元の例よりも読みやすくなっています。
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -221,35 +261,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4.&nbsp; [レッスン 1: データベース エンジンへの接続](lesson-1-connecting-to-the-database-engine.md)
+### <a name="4-nbsp-tutorial-prepare-sql-server-for-replication---publisher-distributor-subscriberreplicationtutorial-preparing-the-server-for-replicationmd"></a>4.&nbsp; [チュートリアル: レプリケーション用の SQL Server の準備 - パブリッシャー、ディストリビューター、サブスクライバー](replication/tutorial-preparing-the-server-for-replication.md)
 
-*更新日: 2017 年 12 月 13 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_3) | [次へ](#TitleNum_5))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_3) | [次へ](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  **[データベース エンジン]** を選択します。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
+- [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法の詳細については、「[SSMS を使用してデータベース バックアップを復元する](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)」を参照してください。
 
-    ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - 3 つ以上離れたバージョンの SQL Server では、レプリケーションはサポートされていません。 詳細については、「[Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)」(Repl トポロジでサポートされている SQL バージョン) を参照してください。
+> - *{Included-Content-Goes-Here}* では、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。 sysadmin ロールの詳細については、「[サーバー レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)」を参照してください。
 
-3.  **[サーバー名]** ボックスに、データベース エンジンのインスタンスの名前を入力します。 SQL Server の既定のインスタンスでは、サーバー名はコンピューター名です。 SQL Server の名前付きインスタンスでは、サーバー名は *<コンピューター名>***\\***<インスタンス名>* となります (**ACCTG_SRVR\SQLEXPRESS** など)。 次のスクリーンショットは、"PracticeComputer" という名前のコンピューター上の、既定の (名前のない) SQL Server インスタンスへの接続を示しています。 Windows にログオンしているユーザーは、Contoso ドメインの Mary です。 Windows 認証を使用する場合は、ユーザー名を変更することはできません。
 
-    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+**このチュートリアルの推定所要時間: 30 分**
 
-4.  **[接続]** をクリックします。
+**レプリケーション用の Windows アカウントの作成**
 
-> [!NOTE]
-> このチュートリアルでは、SQL Server を初めて使い、接続時に特別な問題がないことを想定しています。 このような前提はほとんどのユーザーにとって十分であり、このチュートリアルが単純であるのはこのためです。 詳細なトラブルシューティングの手順については、「 [SQL Server データベース エンジンへの接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)」を参照してください。
+このセクションでは、レプリケーション エージェントを実行するための Windows アカウントを作成します。 また、次のエージェントを実行するための別の Windows アカウントをローカル サーバー上に作成します。
 
-**<a name="additional"></a>追加接続の認証**
-
-ここまでの作業で、管理者として SQL Server に接続できました。次に行う最初の作業の 1 つに、他のユーザーの接続の認証があります。 これには、ログインを作成し、そのログインに対し、ユーザーとしてデータベースにアクセスすることを認証します。 ログインは Windows 認証ログインまたは SQL Server 認証ログインです。Windows 認証ログインには Windows の資格情報が使用されます。SQL Server 認証ログインは Windows の資格情報に依存せず、認証情報は SQL Server に保存されます。 可能であれば、Windows 認証を使用します。
+|エージェント|場所|アカウント名|
+|---------|------------|----------------|
+|スナップショット エージェント|パブリッシャー|<*machine_name*>\repl_snapshot|
 
 
 
@@ -261,28 +303,41 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_5"/>
 
-### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5.&nbsp; [トランザクション ログ ファイルのサイズの管理](logs/manage-the-size-of-the-transaction-log-file.md)
+### <a name="5-nbsp-tutorial-configure-replication-between-two-fully-connected-servers-transactionalreplicationtutorial-replicating-data-between-continuously-connected-serversmd"></a>5.&nbsp; [チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-*更新日: 2018 年 1 月 17 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_4) | [次へ](#TitleNum_6))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_4) | [次へ](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   増分が少ないと小さな [VLF](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が過度に生成され、パフォーマンスが低下します。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
+**トランザクション パブリケーションへのサブスクリプションの作成**
 
--   増分が大きいと大きな [VLF](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) が生成される回数が極めて少なく、やはりパフォーマンスに影響が出ます。 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
+このセクションでは、前の手順で作成したパブリケーションにサブスクライバーを追加します。 このチュートリアルでは、リモート サブスクライバー (NODE2\SQL2016) を使用しますが、サブスクリプションはローカルでパブリッシャーに追加することもできます。
 
--   自動拡張を有効にしても、増加が遅く、クエリのニーズを満たせなければ、トランザクション ログがいっぱいになったというメッセージが表示されます。 増分変更の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+**サブスクリプションを作成するには**
 
--   データベースにログ ファイルが複数存在すると、パフォーマンスが向上しません。トランザクション ログ ファイルでは、同じファイル グループのデータ ファイルのように[比例配分](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)を利用することがないためです。
 
--   ログ ファイルは自動的に圧縮するように設定できます。 ただし、これは**推奨されません**。**auto_shrink** データベース プロパティは既定で FALSE に設定されています。 **auto_shrink** を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。
+1.  *{Included-Content-Goes-Here}* でパブリッシャーに接続して、サーバー ノードを展開し、**[レプリケーション]** フォルダーを展開します。
+
+2.  **[ローカル パブリケーション]** フォルダーを展開し、**[AdvWorksProductTrans]** パブリケーションを右クリックして、**[新しいサブスクリプション]** を選択します。  サブスクリプションの新規作成ウィザードが起動します。
+
+    [新しいサブスクリプション]
+
+3.  [パブリケーション] ページで **[AdvWorksProductTrans]** を選択し、**[次へ]** を選択します。
+
+    Tran パブリッシャーの選択
+
+4.  [ディストリビューション エージェントの場所] ページで、**[ディストリビューターですべてのエージェントを実行する]** を選択し、**[次へ]** を選択します。  プル サブスクリプションとプッシュ サブスクリプションの詳細については、「[パブリケーションのサブスクライブ](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)」を参照してください。
+
+    ディストリビューターでエージェントを実行する
+
+5.  [サブスクライバー] ページでサブスクライバー インスタンスの名前が表示されない場合は、**[サブスクライバーの追加]** を選択し、ドロップダウン リストから **[SQL Server サブスクライバーの追加]** を選択します。 これにより **[サーバーへの接続]** ダイアログ ボックスが表示されます。 サブスクライバー インスタンス名を入力し、**[接続]** を選択します。
 
 
 
@@ -294,62 +349,39 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_6"/>
 
-### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### <a name="6-nbsp-tutorial-configure-replication-between-a-server-and-mobile-clients-mergereplicationtutorial-replicating-data-with-mobile-clientsmd"></a>6.&nbsp; [チュートリアル: サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-*更新日: 2018 年 1 月 30 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_5) | [次へ](#TitleNum_7))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_5) | [次へ](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- 次の表では、有効な列挙データ型と対応する ODBC C データ型の一覧を示します。
+Employee テーブルには、hierarchyid データ型を持つ列 (OrganizationNode) が含まれています。これは、SQL 2017 でレプリケーションに対してのみサポートされています。 SQL 2017 より前のビルドを使用している場合は、双方向のレプリケーションでこの列を使用するとデータ損失の可能性があることを通知するメッセージが画面の下部に表示されます。 このチュートリアルでは、このメッセージは無視してかまいません。 ただし、このデータ型は、サポートされているビルドを使用している場合を除き、実稼働環境でレプリケートしないでください。 hierarchyid データ型のレプリケーションに関する詳細は、「[レプリケートされたテーブルでの hierarchyid 列の使用](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)」を参照してください。
 
-|eDataType|C 型|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char|
-|SQLBITN|char|
-|SQLINT1|char|
-|SQLINT2|short int|
-|SQLINT4|ssNoversion|
-|SQLINT8|_int64|
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|FLOAT|
-|SQLFLT8|FLOAT|
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|*以下を除く任意のデータ型:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
-|SQLXML|*サポートされる C のデータ型*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+-  [テーブル行のフィルター選択] ページで、**[追加]**、**[フィルターの追加]** の順に選択します。
+
+-  **[フィルターの追加]** ダイアログ ボックスの **[フィルターを適用するテーブルを選択します。]** で、**[Employee (HumanResources)]** を選択します。 **[LoginID]** 列を選択し、右矢印を選択して、この列をフィルター選択クエリの WHERE 句に追加します。さらに、WHERE 句を次のように修正します。
+
+    ```
+    WHERE [LoginID] = HOST_NAME()
+    ```
+
+    A. **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択して、**[OK]** を選択します。
+
+    フィルターの追加
+
+
+
+- **[テーブル行のフィルター選択]** ページで、**[Employee (Human Resources)]**、**[追加]** の順に選択し、**[選択したフィルターを拡張するために結合を追加する]** を選択します。
+
+    A. **[結合の追加]** ダイアログ ボックスで、**[結合テーブル]** の下の **[Sales.SalesOrderHeader]** を選択します。 **[JOIN ステートメントを手動で作成する]** を選択し、次のように JOIN ステートメントを完成させます。
 
 
 
@@ -361,36 +393,36 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_7"/>
 
-### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7.&nbsp; [SQL Server インデックス デザイン ガイド](sql-server-index-design-guide.md)
+### <a name="7-nbsp-query-with-full-text-searchsearchquery-with-full-text-searchmd"></a>7.&nbsp; [フルテキスト検索でのクエリ](search/query-with-full-text-search.md)
 
-*更新日: 2018 年 1 月 2 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_6) | [次へ](#TitleNum_8))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_6) | [次へ](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-SQL Server 2016 以降、更新可能な**非クラスター化列ストア インデックスを、行ストア テーブル**に作成できます。 列ストア インデックスは、データのコピーを格納するため、追加のストレージが必要です。 ただし、列ストア インデックス内のデータは、行ストア テーブルが必要とするサイズよりも小さいサイズに圧縮されます。  これにより、同時に、列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。したがって、両方のインデックスが、同じデータに対して作業を行うことになります。
-
-SQL Server 2016 以降、列ストア インデックスでは、**1 つ以上の非クラスター化行ストア インデックス**を使用できます。 これにより、基になる列ストアで、効率的なテーブル シークを実行できます。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、SQL Server でその値を列ストアに挿入することはできません。
-
-**パフォーマンスに関する考慮事項**
+**生成語検索に関する詳細情報**
 
 
--   非クラスター化列ストア インデックスの定義で、フィルター適用条件の使用をサポートします。 OLTP テーブルに列ストア インデックスを追加することによるパフォーマンスへの影響を最小限に抑えるには、フィルター条件を使って、用して、運用ワークロードのコールド データのみに、非クラスター化列ストア インデックスを作成します。
+*変化形*は、動詞のさまざまな時制および活用、または名詞の単数形と複数形です。
 
--   インメモリ テーブルでは、列ストア インデックスを 1 つ使用できます。 これは、テーブルの作成時に作成することも、後で [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) を使用して追加することもできます。 SQL Server 2016 より前のバージョンでは、列ストア インデックスを保持できたのはディスク ベースのテーブルのみでした。
+たとえば、"drive" という語の変化形を検索します。 テーブルのさまざまな行に、"drive"、"drives"、"drove"、"driving"、および "driven" が含まれている場合、これらはどれも drive という語から変化して生成されているので結果セットに入ります。
 
-詳細については、「[列ストア インデックス - クエリ パフォーマンス](../relational-databases/indexes/columnstore-indexes-query-performance.md)」を参照してください。
+[FREETEXT] および [FREETEXTTABLE] は、指定されたすべての語の変化形の語句を既定で検索します。 [CONTAINS] および [CONTAINSTABLE] は、省略可能な `INFLECTIONAL` 引数をサポートしています。
 
-**設計のガイドライン**
+**特定の語のシノニムの検索**
 
 
--   行ストア テーブルで、更新可能な非クラスター化列ストア インデックスを 1 つ使用できます。 SQL Server 2014 より前のバージョンでは、非クラスター化列ストア インデックスは読み取り専用でした。
+*類義語辞典*は、ユーザー指定の用語のシノニムを定義します。 類義語辞典ファイルの詳細については、「[フルテキスト検索に使用する類義語辞典ファイルの構成と管理]」を参照してください。
+
+たとえば、エントリ "{car, automobile, truck, van}" が類義語辞典に追加されると、"car" という語の類義語形式を検索できます。 "automobile"、"truck"、"van"、または "car" という語は、"car" という語を含むシノニムの拡張セットに属しているため、クエリ処理されるテーブルの行のうち、これらのいずれかの語を含むすべての行が結果セットに表示されます。
+
+[FREETEXT] と [FREETEXTTABLE] は、類義語辞典を既定で使用します。 [CONTAINS] および [CONTAINSTABLE] は、省略可能な `THESAURUS` 引数をサポートしています。
 
 
 
@@ -402,63 +434,37 @@ SQL Server 2016 以降、列ストア インデックスでは、**1 つ以上�
 
 <a name="TitleNum_8"/>
 
-### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### <a name="8-nbsp-transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehousesecurityencryptiontransparent-data-encryption-byok-azure-sqlmd"></a>8.&nbsp; [Azure SQL Database および Data Warehouse 用の Bring Your Own Key サポートによる Transparent Data Encryption](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-*更新日: 2018 年 1 月 23 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_7) | [次へ](#TitleNum_9))
+*更新日: 2018 年 4 月 24 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_7) | [次へ](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-Python を使って似たモデルを生成するには、言語識別子を `@language=N'R'` から `@language = N'Python'` に変更し、`@script` 引数を必要に応じて修正します。 そうしないと、すべてのパラメーターが R と同じように機能します。
-
-**C.Python モデルを作成し、それからスコアを生成する**
+**Azure Key Vault を使用して Geo-DR を構成する方法**
 
 
-この例では、\_execute\_external\_script を使って簡単な Python モデルでスコアを生成する方法を示します。
+暗号化されたデータベースの TDE プロテクターの高可用性を維持するには、既存のまたは目的の SQL Database フェールオーバー グループまたはアクティブな geo レプリケーション インスタンスに基づいて、冗長な Azure Key Vault を構成する必要があります。  geo レプリケーションされたサーバーごとに、個別のキー コンテナーが必要で、同じ Azure リージョンにそのサーバーと併置する必要があります。 プライマリ データベースは、1 つのリージョンの停止のためにアクセス不可になり、フェールオーバーがトリガーされた場合は、セカンダリ データベースが、セカンダリ キー コンテナーを使用して引き継ぐことができます。
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+geo レプリケーションされた Azure SQL データベースの場合、Azure Key Vault の次の構成が必要です。
+- 地域内にキー コンテナーがあるプライマリ データベースとセカンダリデータベースを 1 つずつ。
+- 少なくとも 1 つのセカンダリが必要です。最大 4 つのセカンダリがサポートされます。
+- セカンダリのセカンダリ (チェーン) はサポートされていません。
 
-**Input query to generate the customer data**
+次のセクションでは、セットアップと構成手順について詳しく説明します。
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Azure Key Vault の構成手順**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-Python コードで使われている列見出しは、SQL Server への出力ではありません。そのため、WITH RESULTS ステートメントを使って、SQL で使う列名とデータ型を指定します。
-
-スコアリングには、ネイティブな [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) 関数を使うこともできます。通常、これは Python や R のランタイムを呼び出さないので高速です。
-
+- [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) のインストール
+- キー コンテナーで [PowerShell で “soft-delete” プロパティを有効にする](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) (このオプションは AKV ポータルからはまだ使用できませんが、SQL で必要です) を使用して 2 つの異なる領域に 2 つの Azure Key Vault を作成します。
+- 両方の Azure Key Vault は、キーのバックアップと復元が機能するために、同じ Azure Geo で使用できる 2 つのリージョンに配置する必要があります。  SQL Geo DR の要件を満たすために、2 つのキー コンテナーを異なる Geo に配置する必要がある場合は、オンプレミス HSM からキーをインポートすることができる [BYOK プロセス](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys)に従います。
 
 
 
@@ -470,42 +476,89 @@ Python コードで使われている列見出しは、SQL Server への出力�
 
 <a name="TitleNum_9"/>
 
-### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9.&nbsp; [主キーの作成](tables/create-primary-keys.md)
+### <a name="9-nbsp-powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vaultsecurityencryptiontransparent-data-encryption-byok-azure-sql-configuremd"></a>9.&nbsp; [PowerShell と CLI: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-*更新日: 2018 年 1 月 18 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_8))
+*更新日: 2018 年 4 月 24 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_8) | [次へ](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**新しいテーブルに非クラスター化インデックスの主キーを作成するには**
+**CLI の前提条件**
 
 
-1.  **オブジェクト エクスプローラー**で、データベース エンジンのインスタンスに接続します。
+- Azure サブスクリプションを所有し、そのサブスクリプションの管理者である必要があります。
+- [推奨されますが、省略可能] TDE プロテクター キー マテリアルのローカル コピーを作成するためのハードウェア セキュリティ モジュール (HSM) またはローカル キー ストア。
+- コマンド ライン インターフェイス バージョン 2.0 以降。 最新バージョンをインストールして Azure サブスクリプションに接続する方法については、[Azure クロスプラットフォーム コマンド ライン インターフェイス 2.0 のインストールと構成](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)に関するページを参照してください。
+- TDE に使用する Azure Key Vault とキーを作成します。
+   - [CLI 2.0 を使用した Key Vault の管理](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [ハードウェア セキュリティ モジュール (HSM) と Key Vault の使用手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - キー コンテナーには、TDE で使用する次のプロパティが含まれている必要があります。
+   - [論理的な削除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [CLI で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
+- TDE に使用するには、キーに次の属性が必要です。
+   - 有効期限がない
+   - 無効ではない
+   - *キーの取得*、*キーのラップ*、*キーのラップ解除*操作を実行できる
 
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。
+**サーバーを作成し、サーバーに Azure AD ID を割り当てる**
 
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `CustomerID` 列に主キーを、`TransactionID` にクラスター化インデックスを定義します。
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### <a name="10-nbsp-about-change-data-capture-sql-servertrack-changesabout-change-data-capture-sql-servermd"></a>10.&nbsp; [変更データ キャプチャについて (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+*更新日: 2018 年 4 月 17 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**データベースとテーブルの照合順序が違う場合の対応**
+
+
+データベースの照合順序と、変更データ キャプチャ用に構成されたテーブルの列の照合順序が異なる状況について認識しておくことが重要です。 CDC は、中間記憶域を使用して、サイド テーブルを設定します。 テーブルにデータベースの照合順序とは異なる照合順序を持つ CHAR または VARCHAR 型の列があり、これらの列に非 ASCII 文字 (2 バイト DBCS 文字など) が格納される場合、CDC は変更されたデータとベース テーブル内のデータの整合性を維持できない可能性があります。 これは、中間記憶域の変数には照合順序を関連付けることができないためです。
+
+変更キャプチャ データとベース テーブルの整合性を保つには、次のいずれかの方法を検討してください。
+
+- 非 ASCII データを格納する列には NCHAR または NVARCHAR データ型を使用します。
+
+- または、列とデータベースに同じ照合順序を使用します。
+
+たとえば、SQL_Latin1_General_CP1_CI_AS の照合順序を使用するデータベースがある場合について、次のようなテーブルを考えます。
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+列 C2 の照合順序が異なるので (Chinese_PRC_CI_AI)、この列に対するバイナリ データの CDC は失敗する可能性があります。 この問題を回避するには、NVARCHAR を使用します。
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -519,40 +572,36 @@ Python コードで使われている列見出しは、SQL Server への出力�
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ある*" 対象領域
 
-
-- [新規 + 更新 (1 + 3):&nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (12 + 1): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (6 + 2):&nbsp;**Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (15 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (2 + 9):&nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (1 + 0):&nbsp;**SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (1 + 1):&nbsp;**SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新規 + 更新 (1 + 1):&nbsp;**Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (1 + 2):&nbsp;**SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 2):&nbsp;**Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (11 + 6): &nbsp; &nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (18 + 0): &nbsp; &nbsp;**SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (218 + 14):**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (14 + 0): &nbsp; &nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (3 + 2): &nbsp; &nbsp; **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 3): &nbsp; &nbsp; **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (7 + 10): &nbsp; &nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (0 + 2): &nbsp; &nbsp; **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 2): &nbsp; &nbsp; **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL** に関するドキュメント](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ない*" 対象領域
 
-
-- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
-- [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (0 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
+- [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
-
 

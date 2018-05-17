@@ -1,31 +1,29 @@
 ---
-title: "Reporting Services 2016 ネイティブ モードのレポート サーバーのインストール | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 2016 ネイティブ モードのレポート サーバーのインストール | Microsoft Docs
+ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: "68"
+caps.latest.revision: 68
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6f5209c2e5017e208110886521f74cfa37ab388e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
 
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
     -   インストール ルール  
   
-2.  **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]**を選択します。  
+2.  **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。  
   
      ![セットアップ ロールの SQL Server 機能のインストール](../../reporting-services/install-windows/media/rs-setuprole.png "セットアップ ロールの SQL Server 機能のインストール")  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  渡された **[機能ルール]** を確認します。  
   
-5.  [インスタンスの構成] ページで **[名前付きインスタンス]**の構成を選択した場合は、レポート マネージャーとレポート サーバー自体を参照するときに、URL にインスタンス名を使用する必要があります。 インスタンス名が "THESQLINSTANCE" の場合、URL は次のようになります。  
+5.  [インスタンスの構成] ページで **[名前付きインスタンス]** の構成を選択した場合は、レポート マネージャーとレポート サーバー自体を参照するときに、URL にインスタンス名を使用する必要があります。 インスタンス名が "THESQLINSTANCE" の場合、URL は次のようになります。  
   
     -   `http://[ServerName]/ReportServer_THESQLINSTANCE`  
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 01/09/2018
   
 7.  **[データベース エンジンの構成]** ページで SQL Server 管理者を追加します。  
   
-8.  **[Reporting Services の構成]** ページで、 **[インストールと構成]**を選択します。  
+8.  **[Reporting Services の構成]** ページで、 **[インストールと構成]** を選択します。  
   
      ![SSRS ネイティブ モードの構成](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "SSRS ネイティブ モードの構成")  
   

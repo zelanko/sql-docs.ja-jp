@@ -1,25 +1,23 @@
 ---
-title: "SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する | Microsoft Docs"
-ms.custom: 
+title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
 
     ![Web パーツ ドロップダウンから Web ページを編集します。](media/sharepoint-edit-web-part.png)
 
-2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 *http://myrsserver/reportserver* のような URL になります。
+2. レポートをホストするレポート サーバーの **[レポート サーバー URL]** を入力します。 これは *http://myrsserver/reportserver* のようになります。
 
 3. Web パーツ内に表示するレポートのパスと名前を入力します。 これは */AdventureWorks Sample Reports/Company Sales* のようになります。 このレイでは、「*AdventureWorks Sample Reports*」という名前のフォルダーに「*Company Sales*」というレポートが入っています。
 

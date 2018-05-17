@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-server
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
@@ -18,12 +17,11 @@ caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f956b1f0dc970529912844681af784e2b495a5e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>パフォーマンス カウンター - ReportServer サービス、パフォーマンス オブジェクト
   このトピックでは、 **の配置に含まれる** ReportServer:Service **および** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 01/09/2018
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]」を参照してください。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service パフォーマンス カウンター (ネイティブ モードのレポート サーバー)  
- **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 名前付きインスタンスのカウンターは、**ReportServer$\<***instance_name***>:Service** という形式で表示されます。  
+ **ReportServer:Service** パフォーマンス オブジェクトには複数のカウンターが含まれおり、レポート サーバー インスタンスの HTTP 関連のイベントやメモリ関連のイベントの追跡に使用されます。 このパフォーマンス オブジェクトは、コンピューター上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスごとに 1 つ存在します。各インスタンスのパフォーマンス オブジェクトに対して、カウンターを追加したり削除したりできます。 既定のインスタンスのカウンターは、 **ReportServer:Service**という形式で表示されます。 名前付きインスタンスのカウンターは、**ReportServer$\<***インスタンス名***>:Service** という形式で表示されます。  
   
  **ReportServer:Service** は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で新しく追加されたパフォーマンス オブジェクトです。以前のバージョンの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]やインターネット インフォメーション サービス (IIS) に含まれていたカウンターのサブセットを備えています。 これらは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に固有の新しいカウンターです。要求、接続、ログオン試行など、レポート サーバーにおける HTTP 関連のイベントが追跡されます。 さらに、このパフォーマンス オブジェクトには、メモリ管理イベントを追跡するカウンターも含まれています。  
   

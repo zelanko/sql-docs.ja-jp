@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   外部テーブルを作成してから、Hadoop または Azure Storage Blob に [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの結果を並列でエクスポートします。  
-  
- 次のような場合に CREATE EXTERNAL TABLE AS SELECT (CETAS) ステートメントを使用します。  
-  
--   Hadoop または Azure BLOB ストレージにデータベース テーブルをエクスポートする。  
-  
--   Hadoop または Azure BLOB ストレージからデータをインポートして、データベースに格納する。  
-  
--   Hadoop または Azure BLOB ストレージのデータに対してクエリを実行して、データベースのリレーショナル テーブルと結合し、Hadoop または Azure BLOB ストレージに結果を書き戻す。  
-  
--   Hadoop または Azure BLOB ストレージのデータに対してクエリを実行して、データベースの高速処理機能を使用して変換し、Hadoop または Azure BLOB ストレージに書き戻す。  
-  
- 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

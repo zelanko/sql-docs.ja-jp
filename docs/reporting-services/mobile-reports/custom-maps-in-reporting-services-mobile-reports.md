@@ -1,27 +1,25 @@
 ---
-title: "Reporting Services モバイル レポートのカスタム マップ | Microsoft Docs"
-ms.custom: 
+title: Reporting Services モバイル レポートのカスタム マップ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b4143913d2bab5425fede35cea6758f86820236f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ea22c2ea60a681accc747e9426fbecb4aad7b515
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートのカスタム マップ
 SQL Server Mobile Report Publisher の地理的マップは、*ESRI シェープファイル*と呼ばれる形式で定義されます。  
@@ -33,14 +31,14 @@ SQL Server Mobile Report Publisher の地理的マップは、*ESRI シェープ
   
 ベース ファイル名は一致する必要があります (例: *canada.shp* と *canada.dbf*)。 メタデータには、マップにデータを設定するときに使用する対応する図形の名前 (キー) を値として含む *NAME* フィールドを含める必要があります。  
   
-> **注**: SHP と DBF の2 つのマップ ファイルのサイズの合計が 512 KB 以下である必要があります。 マップ ファイルが大きすぎる場合は、 [http://mapshaper.org/](http://mapshaper.org/) などのツールを使用してサイズを小さくします。  
+> **注**: SHP と DBF の2 つのマップ ファイルのサイズの合計が 512 KB 以下である必要があります。 マップ ファイルが大きすぎる場合は、[http://mapshaper.org/](http://mapshaper.org/) などのツールを使用してサイズを小さくします。  
   
 [モバイル レポートにカスタムのマップを追加](../../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md)する方法を確認してください。  
   
 ## <a name="technical-information"></a>技術情報  
   
 - 公式の仕様: [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- シェープファイルに関する Wikipedia の記事: [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- Wikipedia のシェープファイルの記事: [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>マップ ジオメトリの作成および編集  
   

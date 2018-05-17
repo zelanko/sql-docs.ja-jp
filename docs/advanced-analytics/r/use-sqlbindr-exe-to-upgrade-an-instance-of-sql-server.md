@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
@@ -98,13 +98,23 @@ Microsoft Machine Learning のサーバーは、オンプレミス サーバー�
 
 Microsoft Machine Learning のセットアップは、既存の機能と SQL Server のバージョンを検出し、バインドを変更する SqlBindR.exe というユーティリティを呼び出します。 内部的には、SqlBindR セットアップにチェーンは、間接的に使用します。 後で、特定のオプションを実行するためにコマンドラインから直接 SqlBindR を呼び出すことができます。
 
-1. サーバーがビルドの最小要件を満たしていることを確認します。 最小値は、SQL Server 2016 の R Services の[Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)と[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)です。 SSMS では、実行`SELECT @@version`サーバー バージョン情報を返します。 
+1. SSMS では、実行`SELECT @@version`サーバーは、ビルドの最小要件を満たしていることを確認します。 
 
-1. 既存のバージョンよりも低いに置き換えを計画することを確認するには、R と RevoScaleR のバージョンを確認します。 SQL Server 2016 の R Services の R 基本パッケージ 3.2.2、RevoScaleR 8.0.3 です。
+   最小値は、SQL Server 2016 の R Services の[Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)と[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)です。
 
-    + \Program Files\Microsoft SQL Server\MSSQL13 に移動します。MSSQLSERVER\R_SERVICES\bin
-    + ダブルクリックして**R**コンソールを開きます。
-    + パッケージのバージョンを取得する`library(help="base")`と`library(help="RevoScaleR")`です。 
+1. 既存のバージョンよりも低いに置き換えを計画することを確認するには、R のベースと RevoScaleR パッケージのバージョンを確認します。 SQL Server 2016 の R Services の R 基本パッケージ 3.2.2、RevoScaleR 8.0.3 です。
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. アップグレードするインスタンスがコンピューターには、Microsoft Machine Learning Server をダウンロードします。 お勧め、[最新バージョン](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)します。
 
@@ -138,15 +148,23 @@ Microsoft Machine Learning のセットアップは、既存の機能と SQL Ser
 
 バージョンより新しいバージョンであることを確認するには、R と RevoScaleR を再確認します。 データベース エンジンのインスタンスに R パッケージと共に配布 R コンソールを使用して、パッケージ情報を取得します。
 
-+ \Program Files\Microsoft SQL Server\MSSQL13 に移動します。MSSQLSERVER\R_SERVICES\bin
-+ ダブルクリックして**R**コンソールを開きます。
-+ パッケージのバージョンを取得する`library(help="base")`と`library(help="RevoScaleR")`です。 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 SQL Server 2016 R サービスがマシン ラーニング サーバー 9.3 にバインドされている、R 基本パッケージを 3.4.1、RevoScaleR は 9.3、する必要があり、MicrosoftML 9.3 も必要です。 
 
 事前トレーニング済みモデルを追加した場合は、MicrosoftML ライブラリに埋め込まれているモデルおよび MicrosoftML 関数を使用して、それらを呼び出すことができます。 詳細については、次を参照してください。 [MicrosoftML の R サンプル](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)です。
 
-## <a name="offline-no-internet-access"></a>オフライン (インターネットにアクセスできない)
+## <a name="offline-binding-no-internet-access"></a>オフラインのバインディング (インターネットにアクセスできない)
 
 システムのインターネット接続がない場合、インターネットに接続されたコンピューターにインストーラーと .cab ファイルをダウンロードし、分離されたサーバーにファイルを転送できます。 
 
@@ -168,7 +186,7 @@ SQL Server 2016 R サービスがマシン ラーニング サーバー 9.3 に�
 
 1. サーバーで、次のように入力します。 `%temp%` 、一時ディレクトリの物理的な場所を取得して実行 コマンドでします。 物理パスが、コンピューターによって異なりますが、これは通常、`C:\Users\<your-user-name>\AppData\Local\Temp`です。
 
-1. %Temp% フォルダー内のファイルを Place.cab です。
+1. %Temp% フォルダーには、.cab ファイルを配置します。
 
 1. インストーラーに解凍します。
 
@@ -285,7 +303,7 @@ Machine Learning 9.2.1 および 9.3 のサーバーには、この問題はあ�
 |*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
 |*unbind*|R Server の最新バージョンを指定した SQL データベース インスタンスからアンインストールし、R Server の今後のアップグレードがインスタンスに影響を与えないようにします|
 
-< a name =「sqlbinder エラー コード」<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>エラー
 
@@ -299,10 +317,10 @@ Machine Learning 9.2.1 および 9.3 のサーバーには、この問題はあ�
 |バインド エラー 3 | 無効なインスタンス | インスタンスが、バインドに対して無効です。 |
 |バインド エラー 4 | バインドできるされません。 | |
 |バインド エラー 5 | 既にバインドされてください | *bind* コマンドを実行しましたが、指定したインスタンスは既にバインドされています。 |
-|バインド エラー 6 | バインドに失敗しました | インスタンスをバインド解除中にエラーが発生しました。 |
+|バインド エラー 6 | バインドに失敗しました | インスタンスをバインド解除中にエラーが発生しました。 このエラーは、任意の機能を選択せず MLS インストーラーを実行する場合に発生することができます。|
 |バインド エラー 7 | バインドされていません | データベース エンジンのインスタンスには、R Services または SQL Server マシン ラーニング サービスがあります。 インスタンスは、Microsoft Machine Learning のサーバーにバインドされていません。 |
 |バインド エラー 8 | バインドを解除できませんでした | インスタンスをバインド解除中にエラーが発生しました。 |
-|バインド エラー 9 | No instances found (インスタンスが見つかりませんでした) | インスタンスがこのコンピューターに見つかりませんでした。 |
+|バインド エラー 9 | No instances found (インスタンスが見つかりませんでした) | データベース エンジンのインスタンスがこのコンピューターに見つかりませんでした。 |
 
 
 ## <a name="see-also"></a>参照

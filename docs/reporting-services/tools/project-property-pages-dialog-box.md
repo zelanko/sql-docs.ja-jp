@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e6b37d9f8cd174be9cd70339217e6dba4c7cffc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cdec8567dc15962e26b238b90a2b3365f657ac28
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
 
@@ -37,9 +35,9 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="options"></a>および  
  **Configuration**  
- 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]**、 **[DebugLocal]**、および **[Release]**です。 アクティブな構成が、 **Active(Debug)**のように最初に表示されます。  
+ 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]**、 **[DebugLocal]**、および **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
   
- 複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]**を選択します。  
+ 複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]** を選択します。  
   
  新しく構成を作成するには、ツール バーの **[構成マネージャー]** をクリックします。  
   

@@ -2,16 +2,14 @@
 title: テスト リポジトリ (OracleToSQL) |Microsoft ドキュメント
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Test Cases Repository
 - Test Results Repository
@@ -20,12 +18,11 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 451567181f1963dd049b5dac6bb0177583993e78
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: aea9c873a139ed53b64098ef88c9e23aef39bef4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-test-repositories-oracletosql"></a>テスト リポジトリ (OracleToSQL) を使用します。
 SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテスト結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_oracle_utilities**の**ssmatesterdb**データベース。  

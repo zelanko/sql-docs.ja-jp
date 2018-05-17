@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: t-sql
-ms.date: 02/03/2018
-ms.openlocfilehash: a3a64bb1daf2dc38aabaf723bdf6794801c6218d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: b1bc891bf7edc4cd82c38c8d647c279828190298
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>新規および最近の更新: Transact-SQL ドキュメント
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
+- "*更新日の範囲:* " &nbsp; **2018 年 2 月 3 日** &nbsp;から&nbsp; **2018 年 4 月 28 日**
 - *対象分野:* &nbsp; **T-SQL**.
 
 
@@ -67,8 +69,8 @@ ms.lasthandoff: 04/26/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [CREATE STATISTICS (Transact-SQL)](#TitleNum_1)
-2. [UPDATE STATISTICS (Transact-SQL)](#TitleNum_2)
+1. [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](#TitleNum_1)
+2. [RESTORE ステートメント (Transact-SQL)](#TitleNum_2)
 
 
 
@@ -79,34 +81,36 @@ ms.lasthandoff: 04/26/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1.&nbsp; [CREATE STATISTICS (Transact-SQL)](statements/create-statistics-transact-sql.md)
+### <a name="1-nbsp-alter-database-scoped-configuration-transact-sqlstatementsalter-database-scoped-configuration-transact-sqlmd"></a>1.&nbsp; [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](statements/alter-database-scoped-configuration-transact-sql.md)
 
-*更新日: 2018 年 1 月 4 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([次へ](#TitleNum_2))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([次へ](#TitleNum_2))
 
-<!-- Source markdown line 200.  ms.author= "edmaca".  -->
+<!-- Source markdown line 150.  ms.author= "carlrab".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 f6833910b664d0059a9073589807b195052325b3 bf969f123b22e6ebc650380a6905156f26ed6ca6  (PR=0  ,  Filename=alter-database-scoped-configuration-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = *max_degree_of_parallelism*
-**適用対象**: SQL Server (SQL Server 2017 CU3 以降)。
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
- 統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。
+**適用対象**: *{Included-Content-Goes-Here}*
 
- *max_degree_of_parallelism* は次のように指定できます。
+現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、モジュール レベルで実行統計コレクションを有効また無効にします。 既定値は OFF です。 実行統計は [sys.dm_exec_procedure_stats] に反映されます。
 
- 1: 並列プラン生成を抑制します。
+このオプションが ON の場合、または統計コレクションが [sp_xtp_control_proc_exec_stats] によって有効化されている場合は、ネイティブ コンパイル T-SQL モジュールのモジュール レベルの実行統計が収集されます。
 
- \>1: 現在のシステム ワークロードに基づいて、並列統計操作で使用される最大プロセッサ数を指定の数以下に制限します。
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }
 
- 0 (既定値): 実際のプロセッサの数を使用または現在のシステム ワークロードに基づいて少なくします。
+**適用対象**: *{Included-Content-Goes-Here}*
 
- \<update_stats_stream_option>: 単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。
+現在のデータベース内のすべてのネイティブ コンパイル T-SQL モジュールに対し、ステートメント レベルで実行統計コレクションを有効また無効にします。 既定値は OFF です。 実行統計は、[sys.dm_exec_query_stats] および[クエリ ストア]に反映されます。
 
+このオプションが ON の場合、または統計コレクションが [sp_xtp_control_query_exec_stats] によって有効化されている場合は、ネイティブ コンパイル T-SQL モジュールのステートメント レベルの実行統計が収集されます。
+
+ネイティブ コンパイル T-SQL モジュールのパフォーマンスの監視の詳細については、「[ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視]」を参照してください。
 
 
 
@@ -118,33 +122,45 @@ MAXDOP = *max_degree_of_parallelism*
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2.&nbsp; [UPDATE STATISTICS (Transact-SQL)](statements/update-statistics-transact-sql.md)
+### <a name="2-nbsp-restore-statements-transact-sqlstatementsrestore-statements-transact-sqlmd"></a>2.&nbsp; [RESTORE ステートメント (Transact-SQL)](statements/restore-statements-transact-sql.md)
 
-*更新日: 2018 年 1 月 4 日*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;([前へ](#TitleNum_1))
+*更新日: 2018 年 4 月 13 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([前へ](#TitleNum_1))
 
-<!-- Source markdown line 167.  ms.author= "edmaca".  -->
+<!-- Source markdown line 339.  ms.author= "barbkess".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 2902efb58bb964d3e9a0660956690d37f0397c00 36186a7cffd26ffa54a83e383ffd752dbc568a4d  (PR=0  ,  Filename=restore-statements-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = *max_degree_of_parallelism*
+**全般的な解説 - SQL Database マネージ インスタンス**
 
-**適用対象**: SQL Server (SQL Server 2017 CU3 以降)。
 
- 統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。
+非同期復元では、クライアント接続が切断された場合でも復元は続行されます。 接続が切断された場合は、[sys.dm_operation_status] ビューで復元操作の状態 (と CREATE および DROP DATABASE) を確認できます。
 
- *max_degree_of_parallelism* は次のように指定できます。
+次のデータベース オプションが設定または上書きされます。後で変更することはできません。
 
- 1: 並列プラン生成を抑制します。
+- NEW_BROKER (.bak ファイルでブローカーが有効になっていない場合)
+- NEW_BROKER (.bak ファイルでブローカーが有効になっていない場合)
+- AUTO_CLOSE=OFF (.bak ファイル内のデータベースに AUTO_CLOSE=ON がある場合)
+- RECOVERY FULL (.bak ファイル内のデータベースに SIMPLE または BULK_LOGGED 回復モードがある場合)
+- メモリ最適化ファイルグループがソース .bak ファイルにない場合は、追加され、XTP と呼ばれます。 既存のメモリ最適化ファイルグループはすべて XTP に名前変更されます
+- SINGLE_USER および RESTRICTED_USER オプションは、MULTI_USER に変換されます
 
- \>1: 現在のシステム ワークロードに基づいて、並列統計操作で使用される最大プロセッサ数を指定の数以下に制限します。
+**制限事項 - SQL Database マネージ インスタンス**
 
- 0 (既定値): 実際のプロセッサの数を使用または現在のシステム ワークロードに基づいて少なくします。
+これらの制限が適用されます。
 
+- 複数のバックアップ セットを含む .BAK ファイルは復元できません。
+- 複数のログ ファイルを含む .BAK ファイルは復元できません。
+- .bak に FILESTREAM データが含まれている場合、復元は失敗します。
+- アクティブなインメモリ オブジェクトを持つデータベースが含まれているバックアップは、現在復元することができません。
+- 任意の時点でインメモリ オブジェクトが存在していたデータベースが含まれているバックアップは、現在復元することができません。
+- 読み取り専用モードのデータベースが含まれているバックアップは、現在復元することができません。 この制限は間もなく解除される予定です。
+
+詳細については、[マネージ インスタンス]に関するトピックを参照してください。
 
 
 
@@ -157,40 +173,36 @@ MAXDOP = *max_degree_of_parallelism*
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ある*" 対象領域
 
-
-- [新規 + 更新 (1 + 3):&nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (12 + 1): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (6 + 2):&nbsp;**Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (15 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (2 + 9):&nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (1 + 0):&nbsp;**SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (1 + 1):&nbsp;**SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新規 + 更新 (1 + 1):&nbsp;**Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (1 + 2):&nbsp;**SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 2):&nbsp;**Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (11 + 6): &nbsp; &nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (18 + 0): &nbsp; &nbsp;**SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (218 + 14):**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (14 + 0): &nbsp; &nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (3 + 2): &nbsp; &nbsp; **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 3): &nbsp; &nbsp; **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (7 + 10): &nbsp; &nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (0 + 2): &nbsp; &nbsp; **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 2): &nbsp; &nbsp; **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL** に関するドキュメント](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ない*" 対象領域
 
-
-- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
-- [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (0 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
+- [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
-
 

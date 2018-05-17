@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,12 +22,11 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1fa39e1d111c0a73a7fc85b4ac648e1612bdce15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9a20f55565e5cd5cf0eecdb55fdd8fe6cf4e3aa1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 |24401|無効です。原因は不明です。|  
 |24402|ポイント {0} がこの型のオブジェクトで無効な孤立点であるため無効です。|  
 |24403|多角形のエッジの一部のペアが重なり合っているため無効です。|  
-|24404|多角形のリング {0} がそのリング自体または別のリングと交差しているため無効です|  
+|24404|多角形のリング {0} がそのリング自体または別のリングと交差しているため無効です。|  
 |24405|一部の多角形のリングがそのリング自体または別のリングと交差しているため無効です。|  
 |24406|曲線 {0} が 1 点に退化しているため無効です。|  
 |24407|多角形のリング {0} がポイント {1} で破綻して直線になっているため無効です。|  

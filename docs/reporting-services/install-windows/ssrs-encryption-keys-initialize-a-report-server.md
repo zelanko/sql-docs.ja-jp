@@ -1,16 +1,15 @@
 ---
-title: "レポート サーバーの初期化 (SSRS 構成マネージャー) | Microsoft Docs"
-ms.custom: 
+title: レポート サーバーの初期化 (SSRS 構成マネージャー) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -19,23 +18,22 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2b5b5a5142b8712196484e3cca32aeae7373639b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f51884df3e202153f3da1b75b63cd2155270eedc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS の暗号化キー - レポート サーバーの初期化
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[暗号化キーの構成と管理 (構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  
   
  暗号化キーは、レポート サーバー サービスのプロファイル情報に一部基づいています。 レポート サーバー サービスの実行に使用されるユーザー ID を変更する場合は、それに応じてキーを更新する必要があります。 Reporting Services 構成ツールを使用して ID を変更すると、この手順が自動的に実行されます。  
   
- 何らかの理由で初期化が失敗すると、ユーザーおよびサービスからの要求に応じて、レポート サーバーから **RSReportServerNotActivated** エラーが返されます。 この場合、システムまたはサーバーの構成のトラブルシューティングが必要になります。 詳細については、Technet Wiki の「 [SSRS: Reporting Services に関する問題とエラーのトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) を参照してください。  
+ 何らかの理由で初期化が失敗すると、ユーザーおよびサービスからの要求に応じて、レポート サーバーから **RSReportServerNotActivated** エラーが返されます。 この場合、システムまたはサーバーの構成のトラブルシューティングが必要になります。 詳細については、TechNet Wiki (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) の「[SSRS: Troubleshoot Issues and Errors with Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx)」(SSRS: Reporting Services での問題とエラーのトラブルシューティング) を参照してください。  
   
 ## <a name="overview-of-the-initialization-process"></a>初期化処理の概要  
  初期化処理では、暗号化に使用する対称キーが作成され、格納されます。 対称キーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Cryptographic Services で作成された後、レポート サーバー サービスで暗号化と暗号化解除に使用されます。 対称キー自体も、非対称キーを使って暗号化されます。  

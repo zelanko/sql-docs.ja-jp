@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,18 +27,17 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9872e4754e375168a3ba3d2687018cc32157c71f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 665edc29f3989f73ba997e1ac693634356689aa4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-グループ内のアイテムの数を返します。 COUNT は [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 関数と同じように動作します。 2 つの関数の違いは、戻り値のデータ型だけです。 COUNT は常に **int** データ型の値を返します。 COUNT_BIG は常に **bigint** 型の値を返します。
+この関数は、グループ内で見つかった項目数を返します。 `COUNT` は [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 関数と同じように動作します。 これらの関数の違いは、戻り値のデータ型のみです。 `COUNT` は常に **int** データ型の値を返します。 `COUNT_BIG` は常に **bigint** データ型の値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -69,38 +66,38 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
   
 ## <a name="arguments"></a>引数  
 **ALL**  
-すべての値にこの集計関数を適用します。 ALL が既定値です。
+すべての値にこの集計関数を適用します。 既定として ALL が使用されます。
   
 DISTINCT  
-COUNT で、NULL でない一意な値の数を返します。
+`COUNT` で一意の NULL ではない値の数を返すことを指定します。
   
 *式 (expression)*  
-**text**、**image**、**ntext** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
+**image**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
   
 \*  
-すべての行をカウントし、テーブル内の行の総数を返します。 COUNT(\*) はパラメーターはとらず、DISTINCT と一緒には使用できません。 COUNT(\*) では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 COUNT(*) は重複値を除去しないで、指定されたテーブル内の行数を返します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
+`COUNT` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 詳しくは、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。
-  
+*partition_by_clause* は、`FROM` 句で生成された結果セットをパーティションに分割します。このパーティションに `COUNT` 関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、操作の論理的順序を決定します。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関するページを参照してください。 
+
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-COUNT(*) はグループ内のアイテム数を返します。 これには NULL 値と重複値も含まれます。
+COUNT(\*) はグループ内のアイテム数を返します。 これには NULL 値と重複値も含まれます。
   
 COUNT(ALL *expression*) はグループ内の各行に対して *expression* を評価し、非 NULL 値の数を返します。
   
 COUNT(DISTINCT *expression*) はグループ内の各行に対して *expression* を評価し、一意の非 NULL 値の数を返します。
   
-2^31-1 より大きい戻り値の場合、COUNT はエラーを生成します。 代わりに COUNT_BIG を使用してください。
+戻り値が 2^31-1 を超える場合、`COUNT` はエラーを返します。 このような場合は代わりに `COUNT_BIG` を使用してください。
   
-COUNT は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
+`COUNT` は、OVER 句や ORDER BY 句***なし***で使用される場合は決定的関数です。 OVER 句や ORDER BY 句と***共に***使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-count-and-distinct"></a>A. COUNT と DISTINCT を使用する  
-この例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] に勤務する従業員が保持できる役職の数をリストします。
+この例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員が保持できるさまざまな役職の数を返します。
   
 ```sql
 SELECT COUNT(DISTINCT Title)  
@@ -117,8 +114,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. COUNT(*) を使用する  
-この例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] に勤務する従業員の総数を検出します。
+### <a name="b-using-count"></a>B. COUNT(\*) を使用する  
+この例は、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員の合計数を返します。
   
 ```sql
 SELECT COUNT(*)  
@@ -135,8 +132,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="c-using-count-with-other-aggregates"></a>C. COUNT(*) を他の集計関数と共に使用する  
-この例では、`COUNT(*)` を選択リスト内の他の集計関数と組み合わせて使用できることを示しています。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。
+### <a name="c-using-count-with-other-aggregates"></a>C. COUNT(\*) を他の集計関数と共に使用する  
+この例は、`COUNT(*)` が `SELECT` リスト内の他の集計関数と連携していることを示しています。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。
   
 ```sql
 SELECT COUNT(*), AVG(Bonus)  
@@ -155,7 +152,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. OVER 句を使用する  
-次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。
+この例では、`MIN`、`MAX`、`AVG`、および `COUNT` 関数と `OVER` 句を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Department` テーブルの各部門について集計値を返します。
   
 ```sql
 SELECT DISTINCT Name  
@@ -200,7 +197,7 @@ Tool Design                   8.62                  29.8462               23.505
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. COUNT と DISTINCT を使用する  
-この例では、特定の会社に勤務する従業員が保持できる役職の数をリストします。
+この例では、特定の会社の従業員が保持できるさまざまな役職の数を返します。
   
 ```sql
 USE ssawPDW;  
@@ -216,8 +213,8 @@ FROM dbo.DimEmployee;
 67
 ```  
   
-### <a name="f-using-count"></a>F. COUNT(*) を使用する  
-次の例は、`dbo.DimEmployee` テーブルの合計行数を返します。
+### <a name="f-using-count"></a>F. COUNT(\*) を使用する  
+この例は、`dbo.DimEmployee` テーブルの合計行数を返します。
   
 ```sql
 USE ssawPDW;  
@@ -233,8 +230,8 @@ FROM dbo.DimEmployee;
 296
 ```  
   
-### <a name="g-using-count-with-other-aggregates"></a>G. COUNT(*) を他の集計関数と共に使用する  
-次の例は、SELECT リストで `COUNT(*)` を他の集計関数と組み合わせます。 クエリは、年間販売ノルマが $500,000 より多い販売担当者の数と平均販売ノルマを返します。
+### <a name="g-using-count-with-other-aggregates"></a>G. COUNT(\*) を他の集計関数と共に使用する  
+この例では、`COUNT(*)` と、`SELECT` リスト内の他の集計関数を組み合わせています。 年間販売ノルマが $500,000 より多い販売担当者の数と、販売担当者の平均販売ノルマを返します。
   
 ```sql
 USE ssawPDW;  
@@ -254,7 +251,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. HAVING で COUNT を使用する  
-次の例は、HAVING 句で COUNT を使って、従業員が 15 人より多い会社の部門を返します。
+この例では、`COUNT` と `HAVING` 句を使用して、従業員数が 15 人を超える会社の部門を返します。
   
 ```sql
 USE ssawPDW;  
@@ -276,7 +273,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>I. OVER で COUNT を使用する  
-次の例は、OVER 句で COUNT を使って、指定した各販売注文に含まれる製品の数を返します。
+この例では、`COUNT` と `OVER` 句を使用して、指定した各受注に含まれる製品数を返します。
   
 ```sql
 USE ssawPDW;  

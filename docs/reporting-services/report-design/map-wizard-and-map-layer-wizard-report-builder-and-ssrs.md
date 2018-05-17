@@ -1,31 +1,29 @@
 ---
-title: "マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS) | Microsoft Docs"
-ms.custom: 
+title: マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8799fa0b54d60990ee701f4fef2950cf5e0d2b86
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1ea786a129d8ce3607269c55d12405543104b637
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -44,7 +42,7 @@ ms.lasthandoff: 01/09/2018
   
 -   最初にレポート ビルダーを開いたときに、デザイン画面の中央にある **[マップ]** ウィザード アイコンをクリックします。  
   
--   **[挿入]** タブの **[マップ]**をクリックし、次に **[マップ ウィザード]**をクリックします。  
+-   **[挿入]** タブの **[マップ]** をクリックし、次に **[マップ ウィザード]** をクリックします。  
   
  マップ レイヤー ウィザードを開くには、次の操作を行います。  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 01/09/2018
  マップ ギャラリーには、レポート作成環境のマップ ギャラリー フォルダー内にあるレポートで使用されているマップが含まれます。 ギャラリーのマップを使用することで、マップを簡単にレポートに追加できます。 ギャラリーにあらかじめ定義されているマップは、マップ プロバイダーによって提供されます。  
   
 > [!NOTE]  
->  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で提供される TIGER/Line シェープファイルのデータを使用します。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+>  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
  マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「 [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)をクリックします。  
   

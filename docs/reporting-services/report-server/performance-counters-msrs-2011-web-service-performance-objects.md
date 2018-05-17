@@ -1,16 +1,15 @@
 ---
-title: "パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト | Microsoft Docs"
-ms.custom: 
+title: パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4e159f7c4fa846e30fbd1ca8f43b5c18df44d4c5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8851d1c5deac3b759452ec23115cb70dd3cf31f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト
   このトピックでは、 **MSRS 2011 Web Service** および **MSRS 2011 Windows Service** パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。 これらのオブジェクトは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] のネイティブ モードの配置の一部です。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]  
 >  これらのパフォーマンス オブジェクトは、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置ではなく、現在のサーバーに適用されます。  
   
- パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows ドキュメント「 [ランタイム プロファイル](http://msdn.microsoft.com/library/w4bz2147.aspx) 」 (http://msdn.microsoft.com/library/w4bz2147.aspx) を参照ください。  
+ パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルの「[ランタイム プロファイリング](http://msdn.microsoft.com/library/w4bz2147.aspx)」(http://msdn.microsoft.com/library/w4bz2147.aspx) を参照してください。  
   
  SharePoint Mode パフォーマンス カウンターの関連情報については、「 [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」を参照してください。  
   

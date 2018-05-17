@@ -12,18 +12,17 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
-ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: azurecli, powershell
-ms.topic: article
-ms.date: 03/15/2018
+ms.topic: conceptual
+ms.date: 04/24/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: eed635cc4b58c5ec975f0b77f8e3b69f87fd65ff
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7b930486b624244ea0863ee1fd059fafd1e8598f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell と CLI: Azure Key Vault の自分のキーを使用して Transparent Data Encryption を有効にする
 
@@ -39,6 +38,9 @@ ms.lasthandoff: 04/18/2018
 - TDE に使用する Azure Key Vault とキーを作成します。
    - [Key Vault からの PowerShell の手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [ハードウェア セキュリティ モジュール (HSM) と Key Vault の使用手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - キー コンテナーには、TDE で使用する次のプロパティが含まれている必要があります。
+   - [論理的な削除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
+   - [PowerShell で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
 - TDE に使用するには、キーに次の属性が必要です。
    - 有効期限がない
    - 無効ではない
@@ -202,35 +204,38 @@ ms.lasthandoff: 04/18/2018
 - TDE に使用する Azure Key Vault とキーを作成します。
    - [CLI 2.0 を使用した Key Vault の管理](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
    - [ハードウェア セキュリティ モジュール (HSM) と Key Vault の使用手順](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - キー コンテナーには、TDE で使用する次のプロパティが含まれている必要があります。
+   - [論理的な削除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
+   - [CLI で Key Vault の論理的な削除を使用する方法](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
 - TDE に使用するには、キーに次の属性が必要です。
    - 有効期限がない
    - 無効ではない
    - *キーの取得*、*キーのラップ*、*キーのラップ解除*操作を実行できる
    
 ## <a name="step-1-create-a-server-and-assign-an-azure-ad-identity-to-your-server"></a>手順 1. サーバーを作成し、サーバーに Azure AD ID を割り当てる
-      ```cli
+      cli
       # create server (with identity) and database
       az sql server create -n "ServerName" -g "ResourceGroupName" -l "westus" -u "cloudsa" -p "YourFavoritePassWord99@34" -I 
       az sql db create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
-      ```
+      
 
  
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>手順 2. Key Vault のアクセス許可をサーバーに付与する
-      ```cli
+      cli
       # create key vault, key and grant permission
       az keyvault create -n "VaultName" -g "ResourceGroupName" 
       az keyvault key create -n myKey -p software --vault-name "VaultName" 
       az keyvault set-policy -n "VaultName" --object-id "ServerIdentityObjectId" -g "ResourceGroupName" --key-permissions wrapKey unwrapKey get list 
-      ```
+      
 
  
 ## <a name="step-3-add-the-key-vault-key-to-the-server-and-set-the-tde-protector"></a>手順 3. Key Vault キーをサーバーに追加し、TDE プロテクターを設定する
   
-     ```cli
+     cli
      # add server key and update encryption protector
       az sql server key create -g "ResourceGroupName" -s "ServerName" -t "AzureKeyVault" -u "FullVersionedKeyUri 
       az sql server tde-key update -g "ResourceGroupName" -s "ServerName" -t AzureKeyVault -u "FullVersionedKeyUri" 
-      ```
+      
   
   > [!Note]
 > Key Vault 名とキー名を組み合わせた長さの上限は 94 文字です。
@@ -241,20 +246,19 @@ ms.lasthandoff: 04/18/2018
 >
   
 ## <a name="step-4-turn-on-tde"></a>手順 4. TDE を有効にする 
-      ```cli
+      cli
       # enable encryption
       az sql db tde create -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" --status Enabled 
-      ```
+      
 
 データベースまたはデータ ウェアハウスで、Key Vault の暗号化キーを使用して TDE が有効になりました。
 
 ## <a name="step-5-check-the-encryption-state-and-encryption-activity"></a>手順 5. 暗号化の状態と暗号化のアクティビティを確認する
 
-     ```cli
+     cli
       # get encryption scan progress
       az sql db tde show-activity -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 
       # get whether encryption is on or off
       az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
 
-      ```

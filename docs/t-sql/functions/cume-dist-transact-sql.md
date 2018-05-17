@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,18 +23,17 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc8aa5d921d0d72dc32453143c42a29c28a553b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 08d38d1d876ee5b39498e6a28247b20c6cb6cab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にある値のグループ内の値の累積分布を計算します。 つまり、CUME_DIST は、値のグループにおける指定された値の相対位置を計算します。 行の *r,* cume_dist の昇順と仮定して、 *r* の値以下の値を持つ行の数は *r*, 、パーティションまたはクエリの結果セットで評価される行の数で割った値です。 CUME_DIST は、PERCENT_RANK 関数に似ています。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] について、値のグループ内の値の累積分布を計算します。 つまり、`CUME_DIST` は、値のグループにおける指定された値の相対位置を計算します。 行 *r* の値の `CUME_DIST` は行 *r* の値以下の値を持つ行数として定義されます。これは、パーティションまたはクエリ結果セットで評価された行数で割った値です。 `CUME_DIST` は `PERCENT_RANK` 関数に似ています。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,19 +46,20 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>引数  
-OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* が必要です。 OVER 構文の \<rows or range clause> は、CUME_DIST 関数では指定できません。 詳細については、を参照してください。[ 経由句 (&) #40 です。TRANSACT-SQL と #41;.](../../t-sql/queries/select-over-clause-transact-sql.md)
+OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+
+*partition_by_clause* は、FROM 句の結果セットをパーティションに分割します。このパーティションに関数が適用されます。 *partition_by_clause* 引数を指定しない場合、`CUME_DIST` ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* は、操作が実行される論理的順序を決定します。 `CUME_DIST` には *order_by_clause* が必要です。 `CUME_DIST` は、OVER 構文の \<行または範囲句> を受け取ります。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関するページを参照してください。
   
 ## <a name="return-types"></a>戻り値の型
 **float(53)**
   
 ## <a name="remarks"></a>Remarks  
-CUME_DIST によって返される値の範囲は、0 より大きく、1 以下になります。  同順位の値は常に、同じ累積分布の値に評価されます。 NULL 値は既定で含まれており、最小値として扱われます。
+`CUME_DIST` は、0 より大きく 1 以下の値の範囲を返します。 同順位の値は常に、同じ累積分布の値に評価されます。 `CUME_DIST` は既定で NULL 値を含み、これらの値を最小限の値として扱います。
   
-CUME_DIST は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
+`CUME_DIST` は非決定的です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
-次の例では、CUME_DIST 関数を使用して、特定の部門の各従業員の給与を百分位数で計算します。  CUME_DIST 関数によって返される値は、同じ部門の現在の従業員の給与以下の従業員が部門に占める割合を表します。 PERCENT_RANK 関数は、部門における従業員の給与の割合の順位を計算します。 PARTITION BY 句を指定して、部門別に結果セットの行をパーティションに分割します。 OVER 句に指定された ORDER BY 句によって、各パーティション内の行が論理的に順序付けられます。 SELECT ステートメントの ORDER BY 句によって、結果セットの表示順序が決定されます。
+この例では、`CUME_DIST` 関数を使用して、特定の部門の各従業員の給与を百分位数で計算します。 `CUME_DIST` は、同じ部門内で、現在の従業員の給与以下の従業員の割合を表す値を返します。 `PERCENT_RANK` 関数は、部門における従業員の給与の割合の順位を計算します。 結果セット行を部門別に分割するために、この例では *partition_by_clause* 値を指定しています。 OVER 句の ORDER BY 句によって、各パーティション内の行が論理的に順序付けられます。 SELECT ステートメントの ORDER BY 句によって、結果セットの表示順序が決定されます。
   
 ```sql
 USE AdventureWorks2012;  

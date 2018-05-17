@@ -15,11 +15,11 @@ ms.author: erickang
 manager: craigg
 ms.openlocfilehash: 608ae192eacdfec2c657484015d967ae0506e791
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 を作成し、クエリを実行するストアド プロシージャやスクリプトなどは、データベース担当者の中核となるタスクです。 このチュートリアルでは、データベース オブジェクトを作成する T-SQL エディターで、主要な機能を示します。
 

@@ -3,13 +3,10 @@ title: SQLBindCol 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -26,9 +23,9 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23df3fff2ff88ecf62b332f0fca752f608894ef6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: f51f8da589db04b44ab31a493d97fe3d94b3b6d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -107,7 +104,7 @@ SQLRETURN SQLBindCol(
   
  インジケーターのバッファー長バッファーと別のバッファーには、長バッファーは、その他のすべての値を返すことができますが、インジケーター バッファーはのみの SQL_NULL_DATA を返すことができます。  
   
- 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する。](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+ 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
  場合*StrLen_or_IndPtr*は null ポインター、いない長さまたはインジケーターの値を使用します。 これは、データとデータのフェッチが NULL の場合のエラーです。  
   
@@ -288,7 +285,7 @@ SQLRETURN SQLBindCol(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションの実行、**選択**名前により、結果セットを返す、顧客の Id、名前、および電話番号、Customers テーブルでのステートメントが並べ替えられます。 呼び出して**SQLBindCol**のローカル バッファーにデータの列をバインドします。 アプリケーションが最後を使用してデータの各行をフェッチ**SQLFetch**各顧客の名前、ID、および電話番号を出力します。  
   
- コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数。](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
   
 ```  
 // SQLBindCol_ref.cpp  

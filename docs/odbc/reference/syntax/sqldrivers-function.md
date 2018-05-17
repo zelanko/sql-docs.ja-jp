@@ -3,13 +3,10 @@ title: SQLDrivers 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -26,9 +23,9 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33a0750af1a8bd667d4e225f0aa398c32dfbe1a4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: ce9fa521b4084ce61dec795ac7462504178b6b37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -73,7 +70,7 @@ SQLRETURN SQLDrivers(
  [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\* *DriverDescription*です。 返される文字数がより大きいかに等しい場合*BufferLength1*、ドライバーの説明で\* *DriverDescription*に切り捨てられます*BufferLength1* null 終端文字の長さマイナスです。  
   
  *DriverAttributes*  
- [出力](「コメント」を参照してください) ドライバー属性値のペアの一覧を返すバッファーへのポインター。  
+ [出力]\(「コメント」を参照してください) ドライバー属性値のペアの一覧を返すバッファーへのポインター。  
   
  場合*DriverAttributes*が NULL の場合、 *AttributesLengthPtr*はバイト (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能なによって示される*DriverAttributes*です。  
   

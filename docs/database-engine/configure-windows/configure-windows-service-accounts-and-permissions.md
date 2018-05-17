@@ -1,7 +1,7 @@
 ---
 title: Windows サービス アカウントとアクセス許可の構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -54,11 +54,11 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e6c8d3232bf821bce0be78e31c040d5cbb07d61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,6 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
+|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 05/03/2018
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
   
-     管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **$** DOMAIN\ACCOUNTNAME$ **など、**サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
+     管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA には、サービス プリンシパル名 (SPN) を Active Directory に登録する機能があります。 MSA には、 **$** DOMAIN\ACCOUNTNAME$ **など、** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
   
     > [!NOTE]  
     >  MSA は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが MSA を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスで使用する前に、ドメイン管理者が Active Directory に作成する必要があります。  

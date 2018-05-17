@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -24,9 +23,9 @@ caps.latest.revision: 108
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 03167b2b5544b4800cde32bed572f51bc82bd077
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 6f18769e9742c2af74efa991532bde347a676083
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -195,15 +194,15 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x04**|ID 列のスクリプトが IDENTITY プロパティを使用して作成されます。|  
 |**0x08**|レプリケート**タイムスタンプ**列です。 ない場合、**タイムスタンプ**として列をレプリケート**バイナリ**です。|  
 |**0x10**|対応するクラスター化インデックスを生成します。 このオプションが設定されていない場合でも、パブリッシュされたテーブルに主キーと一意の制約が既に定義されている場合は、これらに関連するインデックスが生成されます。|  
-|**0x20**|サブスクライバーでユーザー定義データ型 (UDT) を基本データ型に変換します。 UDT 列に CHECK 制約または DEFAULT 制約があるときに、UDT 列が主キーの一部になっている場合、または計算列で UDT 列が参照されている場合、このオプションは使用できません。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
+|**0x20**|サブスクライバーでユーザー定義データ型 (UDT) を基本データ型に変換します。 UDT 列に CHECK 制約または DEFAULT 制約があるときに、UDT 列が主キーの一部になっている場合、または計算列で UDT 列が参照されている場合、このオプションは使用できません。 *Oracle パブリッシャーに対してサポートされていません。* です。|  
 |**0x40**|対応する非クラスター化インデックスを生成します。 このオプションが設定されていない場合でも、パブリッシュされたテーブルに主キーと一意の制約が既に定義されている場合は、これらに関連するインデックスが生成されます。|  
 |**0x80**|主キー制約をレプリケートします。 制約に関連するすべてのインデックスもレプリケートされる場合でもオプション**0x10**と**0x40**有効ではありません。|  
-|**0x100**|定義されている場合、テーブル アーティクル上のユーザー トリガーをレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
-|**0x200**|外部キー制約をレプリケートします。 参照するテーブルがパブリケーションの一部でない場合は、パブリッシュされたテーブルのすべての外部キー制約がレプリケートされるわけではありません。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
-|**0x400**|CHECK 制約をレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
-|**0x800**|既定値をレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
+|**0x100**|定義されている場合、テーブル アーティクル上のユーザー トリガーをレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。* です。|  
+|**0x200**|外部キー制約をレプリケートします。 参照するテーブルがパブリケーションの一部でない場合は、パブリッシュされたテーブルのすべての外部キー制約がレプリケートされるわけではありません。 *Oracle パブリッシャーに対してサポートされていません。* です。|  
+|**0x400**|CHECK 制約をレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。* です。|  
+|**0x800**|既定値をレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。* です。|  
 |**0x1000**|列レベルの照合順序をレプリケートします。<br /><br /> **注:** を区別する比較を有効にする Oracle パブリッシャーに対してこのオプションを設定する必要があります。|  
-|**0x2000**|パブリッシュされたアーティクルのソース オブジェクトに関連付けられた拡張プロパティをレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。*です。|  
+|**0x2000**|パブリッシュされたアーティクルのソース オブジェクトに関連付けられた拡張プロパティをレプリケートします。 *Oracle パブリッシャーに対してサポートされていません。* です。|  
 |**0x4000**|UNIQUE 制約をレプリケートします。 制約に関連するすべてのインデックスもレプリケートされる場合でもオプション**0x10**と**0x40**有効ではありません。|  
 |**0x8000**|このオプションは無効[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パブリッシャーです。|  
 |**0x10000**|CHECK 制約を NOT FOR REPLICATION としてレプリケートして、この制約が同期中に適用されないようにします。|  
@@ -274,7 +273,7 @@ sp_addarticle [ @publication = ] 'publication'
  フィルターの所有者を指定します。 *filter_owner*は**sysname**、既定値は NULL です。  
   
  [  **@source_object =**] **'***source_object***'**  
- パブリッシュされるデータベース オブジェクトを指定します。 *source_object*は**sysname**、既定値は NULL です。 場合*ソース テーブル*null、 *source_object* NULL にすることはできません*。source_object*の代わりに使用する必要があります*ソース テーブル*です。 スナップショット パブリケーションまたはトランザクション レプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、次を参照してください。[公開データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)です。  
+ パブリッシュされるデータベース オブジェクトを指定します。 *source_object*は**sysname**、既定値は NULL です。 場合*ソース テーブル*null、 *source_object* NULL にすることはできません *。source_object*の代わりに使用する必要があります*ソース テーブル*です。 スナップショット パブリケーションまたはトランザクション レプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、次を参照してください。[公開データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)です。  
   
  [  **@artid =** ]*コ***出力**  
  新しいアーティクルのアーティクル ID です。 *コ*は**int**既定値は NULL の場合、これは、出力パラメーターです。  
@@ -292,13 +291,13 @@ sp_addarticle [ @publication = ] 'publication'
 >  *auto_identity_range*は廃止されておりは旧バージョンとの互換性を保つのために提供します。 使用する必要があります*identityrangemanagementoption* id 範囲管理オプションを指定するためです。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
  [  **@pub_identity_range =** ] *identity_range*  
- 場合、アーティクルはパブリッシャーの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true。**. *identity_range*は**bigint**、既定値は NULL です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
+ 場合、アーティクルはパブリッシャーの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true**。 *identity_range*は**bigint**、既定値は NULL です。 *Oracle パブリッシャーに対してサポートされていません。* です。  
   
  [  **@identity_range =** ] *identity_range*  
- 場合、アーティクルはサブスクライバーでの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true。**. *identity_range*は**bigint**、既定値は NULL です。 際に使用される*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
+ 場合、アーティクルはサブスクライバーでの範囲の大きさを制御*identityrangemanagementoption* 'éý'**自動**または*auto_identity_range* 'éý'**は true**。 *identity_range*は**bigint**、既定値は NULL です。 際に使用される*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。* です。  
   
  [  **@threshold =** ]*しきい値*  
- ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値を指定します。 値の比率が指定されている場合*しきい値*はディストリビューション エージェントは、新しい id 範囲を作成を使用します。 *しきい値*は**bigint**、既定値は NULL です。 際に使用される*identityrangemanagementoption*に設定されている**自動**または*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。*です。  
+ ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値を指定します。 値の比率が指定されている場合*しきい値*はディストリビューション エージェントは、新しい id 範囲を作成を使用します。 *しきい値*は**bigint**、既定値は NULL です。 際に使用される*identityrangemanagementoption*に設定されている**自動**または*auto_identity_range*に設定されている**true**です。 *Oracle パブリッシャーに対してサポートされていません。* です。  
   
  [  **@force_invalidate_snapshot =** ]*更によって*  
  このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は 0 です。  

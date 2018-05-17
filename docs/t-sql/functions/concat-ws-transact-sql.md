@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -24,18 +22,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 171d063e746393709629720dae40eb207d45d584
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-1 番目の引数で指定された区切り記号で可変の個数の引数を連結します。 (`CONCAT_WS` は "*区切りを使用した連結*" を示します。)
+この関数は、連結の結果、またはエンド ツー エンドの方法で 2 つ以上の文字列値の結合の結果の文字列を返します。 これらの連結文字列値を、最初の関数の引数に指定された区切り記号で区切ります。 (`CONCAT_WS` は "*区切りを使用した連結*" を示します。)
 
 ##  <a name="syntax"></a>構文   
 ```sql
@@ -44,33 +41,33 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>引数   
 separator  
-任意の文字型の式です (`nvarchar`、`varchar`、`nchar`、または `char`)。
+任意の文字型の式です (`char`'、`nchar`'、`nvarchar`、または `varchar`)。
 
 argument1, argument2, argument*N*  
-任意のデータ型の式です。
+任意のデータ型の式。
 
 ## <a name="return-types"></a>戻り値の型
-文字列です。 入力に依存する長さおよび型です。
+長さと型を入力に依存する文字列値。
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS` は、可変数の引数を取得し、最初の引数を区切りとして使用して 1 つの文字列に連結します。 1 つの区切りと最小で 2 つの引数が必要です。それ以外の場合は、エラーが発生します。 すべての引数は、暗黙的に文字列型に変換され、連結されます。 
+`CONCAT_WS` は、文字列引数の可変数を取得して、1 つの文字列に連結 (または結合) します。 これらの連結文字列値を、最初の関数の引数に指定された区切り記号で区切ります。 `CONCAT_WS` には、separator 引数と、他の 2 つの文字列値引数の最小値が必要です。指定しないと、`CONCAT_WS` でエラーが発生します。 `CONCAT_WS` は連結する前に、すべての引数を文字列型に暗黙的に変換します。 
 
-文字列への暗黙の変換は、データ型変換の既存の規則に従います。 動作とデータ型変換について詳しくは、「[CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)」をご覧ください。
+文字列への暗黙の変換は、データ型変換の既存の規則に従います。 動作とデータ型変換の詳細について、「[CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)」を参照してください。
 
 ### <a name="treatment-of-null-values"></a>NULL 値の処理方法
 
 `CONCAT_WS` は `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}` 設定を無視します。
 
-すべての引数が null 値の場合、`varchar(1)` 型の空の文字列が返されます。 
+`CONCAT_WS` はすべて NULL 値の引数を受け取ると、varchar(1) 型の空の文字列を返します。
 
-null 値は連結時に無視され、区切りを追加しません。 これにより、2 番目のアドレス フィールドなど、空白値であることが多い文字列の連結の一般的なシナリオが容易になります。 例 B をご覧ください。
+`CONCAT_WS` は連結時に null 値を無視し、null 値間に区切りを追加しません。 そのため、`CONCAT_WS` は値が空の文字列、たとえば 2 つ目のアドレス フィールドの連結を適切に処理できます。 詳細については、例 B を参照してください。
 
-null 値に区切りを含める必要があるシナリオでは、`ISNULL` 関数を使用する例 C をご覧ください。
+区切り記号で区切られた null 値があるシナリオの場合は、`ISNULL` 関数の使用を検討してください。 詳細については、例 C を参照してください。
 
 ## <a name="examples"></a>使用例   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  区切りで値を連結する
-次の例では、値を `- ` で区切って、sys.databases テーブルの 3 つの列を連結します。   
+この例では、値を `- ` で区切って、sys.databases テーブルの 3 つの列を連結します。   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -88,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  Null 値をスキップする
-次の例では、引数リスト内の `NULL` 値は無視されます。
+この例では、引数リスト内の `NULL` 値は無視されます。
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -103,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  テーブルから CSV ファイルを生成する
-次の例では、区切りとしてコンマを使用し、復帰文字を追加して列区切り値形式にします。
+この例では、区切り値としてコンマ `,` を使用し、復帰文字 `char(13)` を追加して、結果セットの列区切り値形式にします。
 
 ```sql
 SELECT 
@@ -122,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS は、列の NULL 値を無視します。 一部の列が null 許容の場合は、それを `ISNULL` 関数でラップし、次の例のように既定値を提供します。
+CONCAT_WS は、列の NULL 値を無視します。 `ISNULL` 関数を使用して null 許容の列をラップし、既定値を指定します。 詳細については、次の例を参照してください。
 
 ```sql
 SELECT 

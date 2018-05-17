@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92aa59127e07e684c6325a811e17469689e403ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -171,7 +171,7 @@ XML インデックスの詳細については、[XML インデックスの概�
   
 -   クエリをより高速かつ効率的に実行できる。 クエリからインデックスのいくつかのパーティションへアクセスしたときに、クエリ オプティマイザーでは個別のパーティションを同時に処理し、クエリによる影響を受けないパーティションを除外できます。  
   
- 詳しくは、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」をご覧ください。  
+ 詳細については、「 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
 ###  <a name="Sort_Order"></a> インデックス並べ替え順のデザイン ガイドライン  
  インデックスを定義する場合、インデックス キー列のデータを昇順と降順のどちらで格納する必要があるかを考慮する必要があります。 昇順は既定の並べ替え順で、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]との互換性が維持されます。 CREATE INDEX、CREATE TABLE、および ALTER TABLE の各ステートメントの構文では、インデックスと制約の個別の列にキーワード ASC (昇順) と DESC (降順) を使用できます。  
@@ -881,6 +881,11 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 > 非クラスター化インデックス キーの列に、多数の重複値がある場合は、更新、挿入、および削除に関してパフォーマンスが低下します。 このような場合にパフォーマンスを改善する方法の 1 つは、非クラスター化インデックスに列を追加することです。
 
 ##  <a name="Additional_Reading"></a> その他の情報  
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[インデックスの再構成と再構築](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [SQL Server 2008 のインデックス付きビューによるパフォーマンスの向上](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [主キーを作成する](../relational-databases/tables/create-primary-keys.md)    
@@ -890,8 +895,5 @@ Bw ツリーのインデックス ページは、1 行の格納から最大 8 KB
 [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算列のインデックス](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[インデックスと ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[インデックスと ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

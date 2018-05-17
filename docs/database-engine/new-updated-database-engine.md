@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: database-engine
-ms.date: 02/03/2018
-ms.openlocfilehash: cc728acbbf5bdc9fb4c8547d4d85b1d578f4e1dc
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: 3600681b4c9dddd44b5eacfc3b0d6aa268d8cb39
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>新規ドキュメントと最近更新されたドキュメント: データベース エンジン ドキュメント
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 
 
-- *"更新日の範囲:"* &nbsp; **2017 年 12 月 3 日**&nbsp;から&nbsp;**2018 年 2 月 3 日**
+- "*更新日の範囲:* " &nbsp; **2018 年 2 月 3 日** &nbsp;から&nbsp; **2018 年 4 月 28 日**
 - *件名:* &nbsp; **データベース エンジン**
 
 
@@ -41,7 +43,20 @@ ms.lasthandoff: 04/26/2018
 以下のリンクは、最近追加された新しい記事に移動します。
 
 
-***今回は新しい記事はありません。***
+1. [Always On 可用性グループのトラブルシューティングと監視のガイド](availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+2. [AlwaysOn 可用性グループの拡張イベント](availability-groups/windows/always-on-extended-events.md)
+3. [Always On 可用性グループの正常性診断ログ](availability-groups/windows/always-on-health-diagnostics-log.md)
+4. [Always On 可用性グループのポリシー](availability-groups/windows/always-on-policies.md)
+5. [Always On 可用性グループのリング バッファー](availability-groups/windows/always-on-ring-buffers.md)
+6. [Always On 可用性グループの待機の種類](availability-groups/windows/always-on-wait-types.md)
+7. [CLUSTER.LOG (Always On 可用性グループ)](availability-groups/windows/cluster-log-always-on-availability-groups.md)
+8. [動的管理ビューおよびシステム カタログ ビュー (Always On 可用性グループ)](availability-groups/windows/dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+9. [Always On 可用性グループのパフォーマンスを監視する](availability-groups/windows/monitor-performance-for-always-on-availability-groups.md)
+10. [SQL Server エラー ログ (Always On 可用性グループ)](availability-groups/windows/sql-server-error-log-always-on-availability-groups.md)
+11. [トラブルシューティング: 可用性グループ接続の超過 RPO ](availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md)
+12. [トラブルシューティング: 可用性グループ接続の超過 RTO ](availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md)
+13. [トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない](availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md)
+14. [トラブルシューティングに役立つツール](availability-groups/windows/useful-tools-for-troubleshooting.md)
 
 
 
@@ -67,54 +82,13 @@ ms.lasthandoff: 04/26/2018
 
 この短い一覧には、抜粋のセクションに記載されているすべての更新された記事へのリンクが示されています。
 
-1. [AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-upgrading-always-on-availability-group-replica-instancesavailability-groupswindowsupgrading-always-on-availability-group-replica-instancesmd"></a>1.&nbsp; [AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード](availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
-
-*更新日: 2018 年 1 月 29 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 174.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 20ca282e8965889a7a530fb67e125cc876410e41 9f27d0f9a74333b291c1cdc1529edc13960fae29  (PR=4741  ,  Filename=upgrading-always-on-availability-group-replica-instances.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
-
-
-
-**変更データ キャプチャまたはレプリケーションの特別な手順**
-
-
-更新が適用されているかによって、変更データ キャプチャまたはレプリケーションを有効にしている AG レプリカ データベースに対して追加の手順が必要な場合があります。 次の手順が必要かどうかを確認するには、更新プログラムのリリース ノートを参照してください。
-
-1. 各セカンダリ レプリカをアップグレードします。
-
-1. すべてのセカンダリ レプリカがアップグレードされてから、AG をアップグレードされたインスタンスにフェール オーバーします。
-
-1. プライマリ レプリカをホストするインスタンスで、次の Transact-SQL を実行します。
-
-   ```
-   EXECUTE [master].[sys].[sp_vupgrade_replication];
-   ```
-
-   >[!NOTE]
-   >このコマンドの実行には数分かかることがあります。
-
-1. 元はプライマリ レプリカであったインスタンスをアップグレードします。
-
-背景情報については、[最新の CU へのアップグレード後に CDC の機能が動作しない場合](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)に関するページを参照してください。
-
-
-
+***この期間にこの分野に関して更新された記事はありません。***
 
 
 
@@ -126,40 +100,36 @@ ms.lasthandoff: 04/26/2018
 このセクションでは、パブリック GitHub.com リポジトリ [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/) 内の他の対象領域の記事で、この対象領域において最近更新された記事とよく似たものの一覧を示します。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ある*" 対象領域
 
-
-- [新規 + 更新 (1 + 3):&nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
-- [新規 + 更新 (12 + 1): **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
-- [新規 + 更新 (6 + 2):&nbsp;**Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
-- [新規 + 更新 (15 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
-- [新規 + 更新 (2 + 9):&nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
-- [新規 + 更新 (1 + 0):&nbsp;**SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
-- [新規 + 更新 (1 + 1):&nbsp;**SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新規 + 更新 (1 + 1):&nbsp;**Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
-- [新規 + 更新 (0 + 1):&nbsp;**SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
-- [新規 + 更新 (1 + 2):&nbsp;**SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
-- [新規 + 更新 (0 + 2):&nbsp;**Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (11 + 6): &nbsp; &nbsp;**SQL の Advanced Analytics** に関するドキュメント](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新規 + 更新 (18 + 0): &nbsp; &nbsp;**SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (218 + 14):**SQL への接続**に関するドキュメント](../connect/new-updated-connect.md)
+- [新規 + 更新 (14 + 0): &nbsp; &nbsp;**SQL のデータベース エンジン**に関するドキュメント](../database-engine/new-updated-database-engine.md)
+- [新規 + 更新 (3 + 2): &nbsp; &nbsp; **SQL の Integration Services** に関するドキュメント](../integration-services/new-updated-integration-services.md)
+- [新規 + 更新 (3 + 3): &nbsp; &nbsp; **Linux 上の SQL** に関するドキュメント](../linux/new-updated-linux.md)
+- [新規 + 更新 (7 + 10): &nbsp; &nbsp;**SQL のリレーショナル データベース**に関するドキュメント](../relational-databases/new-updated-relational-databases.md)
+- [新規 + 更新 (0 + 2): &nbsp; &nbsp; **SQL の Reporting Services** に関するドキュメント](../reporting-services/new-updated-reporting-services.md)
+- [新規 + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio** に関するドキュメント](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新規 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** に関するドキュメント](../sql-server/new-updated-sql-server.md)
+- [新規 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** に関するドキュメント](../ssdt/new-updated-ssdt.md)
+- [新規 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** に関するドキュメント](../ssms/new-updated-ssms.md)
+- [新規 + 更新 (0 + 2): &nbsp; &nbsp; **Transact-SQL** に関するドキュメント](../t-sql/new-updated-t-sql.md)
+- [新規 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL** に関するドキュメント](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>新しい記事または最近更新された記事が "*ない*" 対象領域
 
-
-- [新規 + 更新 (0 + 0): **SQL の Data Migration Assistant (DMA)** に関するドキュメント](../dma/new-updated-dma.md)
-- [新規 + 更新 (0 + 0): **SQL の ActiveX データ オブジェクト (ADO)** に関するドキュメント](../ado/new-updated-ado.md)
-- [新規 + 更新 (0 + 0): **SQL の Analysis Services** に関するドキュメント](../analysis-services/new-updated-analysis-services.md)
+- [新規 + 更新 (0 + 0): **SQL の分析プラットフォーム システム**に関するドキュメント](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新規 + 更新 (0 + 0): **SQL の Data Quality Services** に関するドキュメント](../data-quality-services/new-updated-data-quality-services.md)
 - [新規 + 更新 (0 + 0): **SQL のデータ マイニング拡張機能 (DMX)** に関するドキュメント](../dmx/new-updated-dmx.md)
 - [新規 + 更新 (0 + 0): **SQL のマスター データ サービス (MDS)** に関するドキュメント](../master-data-services/new-updated-master-data-services.md)
 - [新規 + 更新 (0 + 0): **SQL の多次元式 (MDX)** に関するドキュメント](../mdx/new-updated-mdx.md)
 - [新規 + 更新 (0 + 0): **SQL の ODBC (Open Database Connectivity)** に関するドキュメント](../odbc/new-updated-odbc.md)
+- [新規 + 更新 (0 + 0): **SQL の PowerShell** に関するドキュメント](../powershell/new-updated-powershell.md)
 - [新規 + 更新 (0 + 0): **SQL のサンプル**に関するドキュメント](../samples/new-updated-samples.md)
 - [新規 + 更新 (0 + 0): **SQL Server Migration Assistant (SSMA)** に関するドキュメント](../ssma/new-updated-ssma.md)
-- [新規 + 更新 (0 + 0): **Tools for SQL**  に関するドキュメント](../tools/new-updated-tools.md)
 - [新規 + 更新 (0 + 0): **SQL の XQuery** に関するドキュメント](../xquery/new-updated-xquery.md)
-
 

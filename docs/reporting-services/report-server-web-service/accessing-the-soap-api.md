@@ -1,17 +1,17 @@
 ---
-title: "SOAP API へのアクセス | Microsoft Docs"
-ms.custom: 
+title: SOAP API へのアクセス | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
 - Web service [Reporting Services], SOAP
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea6fb5b31ac0a95eb287d52d865b718a45aaf652
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7c892b8953edfe61c555d1988c3aa73aae8383d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API へのアクセス
   レポート サーバー Web サービスは、SOAP (Simple Object Access Protocol) over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能します。 Web サービスには、レポート実行用とレポート管理用の 2 つのエンドポイントがあり、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の完全な機能にアクセスするために使用できるメソッドと複合型オブジェクトのセットで構成されます。 Web サービスを呼び出すには、Reporting Services Web サービス記述言語 (WSDL) を参照する必要があります。  

@@ -1,27 +1,25 @@
 ---
-title: "ネイティブ モードから SharePoint モードへの移行 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: ネイティブ モードから SharePoint モードへの移行 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c1504f51732a5f0dd6b7affabdbc49f3517db254
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移行ツール  
  このツールでは、ネイティブ モードの配置から SharePoint モードの配置へのコンテンツの移行がサポートされます。 SharePoint モードから SharePoint モードまたは SharePoint モードからネイティブ モードへの移行はサポートされません。  
   
- 詳細については、「 [Reporting Services 移行ツール](http://www.microsoft.com/download/details.aspx?id=29560) 」(http://www.microsoft.com/download/details.aspx?id=29560) をご覧ください。  
+ 詳細については、「[Reporting Services 移行ツール](http://www.microsoft.com/download/details.aspx?id=29560)」(http://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
   
 ## <a name="use-script-to-migrate-content"></a>スクリプトを使用したコンテンツの移行  
  移行ツールが目的に合わない場合は、レポート サーバー データを手動で移行できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 間でのレポート アイテムの移行を完了するための手順の概要を次に示します。 この方法では、移行元サーバーまたは移行先サーバーとしてネイティブ モードまたは SharePoint モードをサポートしています。  

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c7d3f93304f08cbbf316e092b62ed7c4b62e199d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c275770e6bbf7579d3d9f02a21937d22a2a66dfa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -313,7 +313,7 @@ WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`,
 
 SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成します。 SERVICE_OBJECTIVE を指定した場合は、指定したレベルにセカンダリ データベースが作成されます。 このオプションは、低価格のサービス レベルで地理的レプリケーションのセカンダリの作成をサポートします。 指定する SERVICE_OBJECTIVE は、ソースと同じエディション内でなければなりません。 たとえば、エディションが Premium の場合、S0 を指定することはできません。  
   
-ELASTIC_POOL (name = \<elastic_pool_name)  
+ELASTIC_POOL (name = \<elastic_pool_name>)  
 
 ELASTIC_POOL が指定されていない場合、セカンダリ データベースはエラスティック プールに作成されません。 ELASTIC_POOL が指定されている場合、セカンダリ データベースが指定されたプールに作成されます。  
   

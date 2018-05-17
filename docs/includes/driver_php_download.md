@@ -1,1 +1,1 @@
-![ダウンロード](../ssdt/media/download.png)[PHP Driver のダウンロード](https://go.microsoft.com/fwlink/?linkid=871846)
+![ダウンロード](../ssdt/media/download.png)[PHP Driver のダウンロード](../connect/php/download-drivers-php-sql-server.md)

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: be6c818401a74f4f14d6a8381fe696bc02a48e6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>アクセス許可  
  現在のデータベース内の CREATE TYPE 権限、および *schema_name*に対する ALTER 権限が必要です。 *schema_name* を指定しなかった場合は、現在のユーザーのスキーマを判断するための既定の名前解決ルールが適用されます。 *assembly_name* を指定した場合は、ユーザーがそのアセンブリの所有者であるか、そのアセンブリに対する REFERENCES 権限を持っている必要があります。  
+
+ CREATE TABLE ステートメント内の列をユーザー定義型として定義する場合は、そのユーザー定義型に対する REFERENCES 権限が必要です。
+ 
+   >[!NOTE]
+  > ユーザー定義型を使用する列があるテーブルを作成するユーザーは、そのユーザー定義型に対して REFERENCES アクセス許可を持っている必要があります。
+  > このテーブルを TempDB 内に作成する必要がある場合、テーブルを作成する**前**に毎回 REFERENCES アクセス許可を明示的に付与する必要があります。または、このデータ型と REFERENCES アクセス許可を model データベースに追加する必要があります。 この処理が完了すると、このデータ型とアクセス許可は TempDB で永続的に利用できるようになります。 この処理が完了していない場合、SQL Server の再起動時にユーザー定義のデータ型とアクセス許可は消去されます。 詳細については、「[CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)」を参照してください。
   
 ## <a name="examples"></a>使用例  
   

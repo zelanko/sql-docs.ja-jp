@@ -12,11 +12,11 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: b2c850ac32aebf78441234327ec33b6223dc447b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 51fb197c3b5177c699134a48fc4888cd134e1711
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>チュートリアル: SQL Server Management Studio のコンポーネントと構成
 このチュートリアルでは、SQL Server Management Studio (SSMS) 内のさまざまなウィンドウ コンポーネントと、ワークスペースに関する基本的な構成オプションについて説明します。 この記事では、次の内容を学習します。 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>Prerequisites
 このチュートリアルを実行するには、SQL Server Management Studio が必要です。  
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント
 このセクションでは、ワークスペースで使用できるさまざまなウィンドウ コンポーネントと、それぞれの目的について説明します。 

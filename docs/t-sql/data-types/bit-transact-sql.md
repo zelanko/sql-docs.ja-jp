@@ -1,4 +1,4 @@
-﻿---
+---
 title: bit (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 7/23/2017
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は **bit** 列の記憶域を最適化します。 テーブル内に 8 つ以内の **ビット** 列がある場合、列は 1 バイトとして格納されます。 **bit** 列が 9 ～ 16 ある場合には、列は 2 バイトとして格納されます。
   
 文字列値 TRUE および FALSE は **bit** 値へ変換することができます: TRUE は 1 へ、FALSE は 0 へと変換されます。
-
+  
 bit 型への変換において、0 以外の値はすべて 1 へと変換されます。
   
 ## <a name="see-also"></a>参照

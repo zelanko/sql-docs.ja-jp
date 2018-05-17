@@ -1,30 +1,28 @@
 ---
-title: "XML レポート データの要素パス構文 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: XML レポート データの要素パス構文 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e9ef6761a754f9f25dc47cb033ef491be544ee74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
   レポート デザイナーでは、大文字と小文字が区別される要素パスを定義して、レポートに使用するデータを XML データ ソースから指定します。 要素パスとは、XML データ ソースにおける XML 階層のノードとその属性の走査方法を指定するものです。 データセット クエリを空にするか、XML **Query** の XML **ElementPath** を空にした場合、既定の要素パスが使用されます。 XML データ ソースからデータが取得されると、テキスト値を持つ要素ノードおよび要素ノードの属性が、結果セットにおける列になります。 クエリを実行すると、これらのノードと属性の値が、行データになります。 [レポート データ] ペインでは、列がデータセット フィールド コレクションとして表示されます。 このトピックでは、要素パス構文について説明します。  
@@ -185,7 +183,7 @@ XMLLocalName :: =
   
 2.  XML データ ソースに新しいデータセットを作成します。  
   
-3.  **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ デザイナー]**をクリックします。 テキスト ベースのクエリ デザイナー ダイアログ ボックスが表示されます。  
+3.  **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ デザイナー]** をクリックします。 テキスト ベースのクエリ デザイナー ダイアログ ボックスが表示されます。  
   
 4.  クエリ ペインに次の 2 行を入力します。  
   

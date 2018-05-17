@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,12 +20,11 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 424c5166984e5ad73041c4d1b8816638240726c9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: b367c2e29949b0dcf6960eeacc501d308b131ff1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>テスト リポジトリ (SybaseToSQL) を使用します。
 SSMA テスト リポジトリ ストア SSMA Tester テスト_ケースとテスト結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_sybase_utilities**の**ssmatesterdb_syb**データベース。  

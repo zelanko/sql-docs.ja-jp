@@ -3,13 +3,10 @@ title: SQLBulkOperations 関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -26,9 +23,9 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f0e2dd99a350d3bb1bfb17d6d9ccdba46f9473e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 6f50b977d1ba296cbdc66a2f4c53407311e93631
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
@@ -107,7 +104,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>コメント  
   
 > [!CAUTION]  
->  どのようなステートメントの状態に関する情報の**SQLBulkOperations**呼び出すことができ、ODBC 2 と互換性のために行う必要があります*。x*アプリケーションを参照してください、[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」セクション。  
+>  どのようなステートメントの状態に関する情報の**SQLBulkOperations**呼び出すことができ、ODBC 2 と互換性のために行う必要があります *。x*アプリケーションを参照してください、[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)旧バージョンとの互換性のための付録 g: ドライバーのガイドライン」セクション。  
   
  アプリケーションを使用して**SQLBulkOperations**ベース テーブルまたは現在のクエリに対応するビューの次の操作を実行します。  
   
@@ -151,7 +148,7 @@ SQLRETURN SQLBulkOperations(
   
  長い形式のデータは、その SQLBulkOperations、によって呼び出し SQLParamData と SQLPutData を使用して部分に追加できます。 詳細については、この関数の参照の後で"を提供する時間がかかるデータの一括挿入および更新"を参照してください。  
   
- 呼び出すアプリケーションの必要はありません**SQLFetch**または**SQLFetchScroll**を呼び出す前に**SQLBulkOperations** (ODBC 2 に対して予定の場合を除く*。x*ドライバー; 参照してください[旧バージョンとの互換性と標準の順守](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md))。  
+ 呼び出すアプリケーションの必要はありません**SQLFetch**または**SQLFetchScroll**を呼び出す前に**SQLBulkOperations** (ODBC 2 に対して予定の場合を除く *。x*ドライバー; 参照してください[旧バージョンとの互換性と標準の順守](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md))。  
   
  動作は、ドライバーの定義済み場合**SQLBulkOperations**で、*操作*SQL_ADD の引数が重複する列を含むカーソルで呼び出されます。 ドライバーは、ドライバー固有の SQLSTATE を返す、結果に表示される最初の列にデータの設定、またはその他のドライバーで定義された動作の実行を追加できます。  
   
@@ -261,7 +258,7 @@ SQLRETURN SQLBulkOperations(
  アプリケーションを呼び出す場合**SQLCancel**ドライバーでは、実行時データ列のデータが引き続き必要があります、中に、ドライバー操作をキャンセルします。 アプリケーションが呼び出すことができますし、 **SQLBulkOperations**再度を取り消すには影響しません、カーソルの状態または現在のカーソル位置。  
   
 ## <a name="row-status-array"></a>行の状態配列  
- 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**です。 ドライバーでは、この配列に状態の値を設定への呼び出し後**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations。**. この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって参照されます。 行の状態配列内の要素の数は、(で定義されている、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性)、行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)です。  
+ 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**です。 ドライバーでは、この配列に状態の値を設定への呼び出し後**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations**。 この配列は、SQL_ATTR_ROW_STATUS_PTR ステートメント属性によって参照されます。 行の状態配列内の要素の数は、(で定義されている、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性)、行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)です。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、Customers テーブルから一度に 10 行のデータをフェッチします。 ユーザーにアクションを実行し、メッセージが表示されます。 ネットワーク トラフィックを減らすためは、例のバッファーは、更新、削除、し、バインドの配列では、過去の行セットのデータ オフセット位置にローカルに挿入します。 コードが適切にオフセット、バインドを設定しを呼び出す場合、ユーザーは、更新、削除、送信するによって選択され、データ ソースへの挿入、 **SQLBulkOperations**です。 わかりやすくするため、ユーザーは、10 個より多くの更新、削除、または挿入バッファーことはできません。  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,17 +26,16 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1cc0d866a576d0236b2a429b6266eeda155b5114
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 39767751186028fd5cd8b93621d7465094d99264
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に、成功または失敗した接続試行数を返します。
+この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に開始された後に試行された接続数 (成功と失敗の両方) を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,14 +49,14 @@ ms.lasthandoff: 04/16/2018
 **整数 (integer)**
   
 ## <a name="remarks"></a>Remarks  
-接続の数はユーザーの数とは異なります。 たとえば、アプリケーションでは、ユーザーの介入なしで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間に複数の接続を確立できます。
+接続の数はユーザーの数とは異なります。 たとえば、アプリケーションでは、ユーザーがこれらの接続を監視することなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への複数の接続を開くことができます。
   
-いくつか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含むレポートを表示する 実行の接続試行数などの統計情報 **sp_monitor**です。
+接続試行回数など、いくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計情報を含むレポートを表示するには、**sp_monitor** を実行します。
   
-@@MAX_CONNECTIONS は、サーバーに対して同時に許可される接続の最大数です。 @@CONNECTIONS はログインが試行されるたびに増えるため、@@CONNECTIONS は @@MAX_CONNECTIONS よりも大きくなる場合があります。
+@@MAX_CONNECTIONS は、サーバーに対する同時接続の最大許容数です。 @@CONNECTIONS はログインが試行されるたびに増えるため、@@CONNECTIONS は @@MAX_CONNECTIONS を超える可能性があります。
   
 ## <a name="examples"></a>使用例  
-次の例では、現在のシステム上の日付と時刻におけるログイン試行数を返します。
+この例では、現在の日付と時刻のログイン試行回数を返します。
   
 ```sql
 SELECT GETDATE() AS 'Today''s Date and Time',   
