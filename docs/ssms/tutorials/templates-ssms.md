@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f981d8455f82db44979a04611e861bb4d13d20d4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio 内でテンプレートを使用する
 このチュートリアルでは、SQL Server Management Studio (SSMS) 内で使用できる作成済みの Transact-SQL (T-SQL) テンプレートについて説明します。 この記事では、次の内容を学習します。
@@ -39,8 +39,8 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>Prerequisites
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server へのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 
  
 
