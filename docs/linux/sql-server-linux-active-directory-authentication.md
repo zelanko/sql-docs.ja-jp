@@ -24,16 +24,16 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このチュートリアルは、構成する方法を説明します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory (AD) の認証とも呼ばれる統合認証をサポートする Linux にします。 概要については、次を参照してください。 [Linux に SQL Server の Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)です。
+このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux で Active Directory (AD) 認証をサポートさせるための構成方法を説明します。Active Directory (AD) 認証は、統合認証としても知られています。概要については、「[SQL Server on Linux の Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)」を参照してください。
 
 このチュートリアルは、次のタスクで構成されます。
 
 > [!div class="checklist"]
-> * 参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
-> * AD ユーザーを作成する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN を設定し、
-> * 構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab
-> * TRANSACT-SQL の AD に基づくログインを作成します。
-> * 接続[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用します。
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホストをAD ドメインに参加させる
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の AD ユーザーを作成し、SPN を設定する
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス keytab を構成する
+> * TRANSACT-SQL で AD に基づくログインを作成する
+> * AD Authentication を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
 
 ## <a name="prerequisites"></a>前提条件
 
