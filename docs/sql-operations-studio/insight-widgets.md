@@ -1,4 +1,4 @@
----
+﻿---
 title: Insight ウィジェットを使用して、サーバーと SQL 操作 Studio (プレビュー) でデータベースを監視する |Microsoft ドキュメント
 description: SQL 操作 Studio (プレビュー) で洞察ウィジェットについて説明します。
 ms.custom: tools|sos
@@ -19,11 +19,11 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察ウィジェットを持つデータベースを管理します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとデータベースを [!INCLUDE[name-sos](../includes/name-sos-short.md)] の Insight ウィジェットで管理する
 
-Insight ウィジェットがサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察の視覚エフェクトに変えます。 
+Insight ウィジェットはサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に富んだ視覚エフェクトに変えます。
 
-洞察は、カスタマイズ可能なグラフおよびサーバーとデータベースの監視ダッシュ ボードに追加するグラフです。 サーバーおよびデータベースの概要の洞察を表示し、詳細については、ドリルを定義する管理操作を起動します。 
+Insights は、サーバーとデータベースの監視ダッシュ ボードに追加するカスタマイズ可能なチャートおよびグラフです。 サーバーおよびデータベースの概要の洞察を表示し、詳細情報を掘り下げ、独自に定義した管理操作を起動します。
 
 優れたサーバーおよびデータベース管理ダッシュ ボードに次の例と同様にビルドするには。
 
