@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL 操作 Studio プレビューの FAQ |Microsoft ドキュメント
 description: よく寄せられる質問 (FAQ) for SQL 操作 Studio (プレビュー) です。
 ms.custom: tools|sos
@@ -21,9 +21,9 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="includename-sosincludesname-sosmd-faq"></a>[!INCLUDE[name-sos](../includes/name-sos.md)] FAQ
 
-## <a name="what-is-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] とは何ですか?
+## <a name="what-is-includename-sosincludesname-sos-shortmd"></a>新機能[!INCLUDE[name-sos](../includes/name-sos-short.md)]しますか?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] はデスクトップで動作し、Windows、macOS、および Linux で利用できるフリーで軽量なデータベース開発および運用ツールです。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はオンプレミスまたはあらゆるクラウドで動作する Azure SQL Database、Azure SQL Data Warehouse、および SQL Server のサポートが組み込まれています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はお気に入りのオペレーティング システムの任意のデータベースの間で一貫した使用環境を提供します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] デスクトップで実行され、Windows、macOS、および Linux に利用する空き軽量なデータベース開発と運用ツールです。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Azure SQL Database、Azure SQL Data Warehouse、およびオンプレミスで実行して SQL Server のまたはクラウドでの組み込みサポートがあります。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] お気に入りのオペレーティング システムで任意のデータベース間で一貫した使用環境を提供します。
 
 ## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>どこで入手できます[!INCLUDE[name-sos](../includes/name-sos-short.md)]しますか?
 
