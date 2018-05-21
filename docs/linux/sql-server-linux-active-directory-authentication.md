@@ -24,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux で Active Directory (AD) 認証をサポートさせるための構成方法を説明します。Active Directory (AD) 認証は、統合認証としても知られています。概要については [Linux に SQL Server の Active Directory 認証](sql-server-linux-active-directory-auth-overview.md) を参照してください。
+このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux で Active Directory (AD) 認証をサポートさせるための構成方法を説明します。Active Directory (AD) 認証は、統合認証としても知られています。概要については、「[SQL Server on Linux の Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)」を参照してください。
 
 このチュートリアルは、次のタスクで構成されます。
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 > * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の AD ユーザーを作成し、SPN を設定する
 > * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービス keytab を構成する
 > * TRANSACT-SQL で AD に基づくログインを作成する
-> * AD 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
+> * AD Authentication を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
 
 ## <a name="prerequisites"></a>前提条件
 
