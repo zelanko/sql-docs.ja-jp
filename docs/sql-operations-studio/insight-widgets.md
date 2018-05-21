@@ -21,9 +21,9 @@ ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとデータベースを [!INCLUDE[name-sos](../includes/name-sos-short.md)] の Insight ウィジェットで管理する
 
-Insight ウィジェットはサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に役立つ視覚エフェクトに変えます。
+Insight ウィジェットはサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に富んだ視覚エフェクトに変えます。
 
-Insights は、サーバーとデータベースの監視ダッシュ ボードに追加できるカスタマイズ可能なチャートおよびグラフです。 サーバーおよびデータベースの概要の洞察を表示し、詳細情報へとドリルし、独自に定義した管理操作を起動します。
+Insights は、サーバーとデータベースの監視ダッシュ ボードに追加するカスタマイズ可能なチャートおよびグラフです。 サーバーおよびデータベースの概要の洞察を表示し、詳細情報を掘り下げ、独自に定義した管理操作を起動します。
 
 優れたサーバーおよびデータベース管理ダッシュ ボードに次の例と同様にビルドするには。
 
