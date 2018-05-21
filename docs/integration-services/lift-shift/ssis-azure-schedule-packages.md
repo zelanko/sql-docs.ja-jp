@@ -1,10 +1,9 @@
 ---
 title: Azure で SSIS パッケージの実行をスケジュールする | Microsoft Docs
-ms.date: 04/17/2018
-ms.topic: article
+ms.date: 05/07/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,19 +12,79 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c946055e7579478d65de31f737b1c265b2a38eba
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
 次のスケジュール設定のオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されているパッケージの実行をスケジュール設定することができます。
--   [SQL Server エージェント](#agent)
+-   [SQL Server Management Studio (SSMS) でのスケジュール オプション](#ssms)
+-   [Azure Data Factory での SSIS パッケージ アクティビティの実行](#execute)
+-   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#stored proc)
 -   [SQL Database エラスティック ジョブ](#elastic)
--   [Azure Data Factory での SSIS パッケージ アクティビティの実行](#activities)
--   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#activities)
+-   [SQL Server エージェント](#agent)
+
+## <a name="ssms"></a> SSMS でパッケージをスケジュールする
+
+SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、**[新しいスケジュール]** ダイアログ ボックスを開くことができます。
+
+## <a name="execute"></a> SSIS パッケージの実行アクティビティでパッケージをスケジュールする
+
+Azure Data Factory で SSIS パッケージの実行アクティビティを使用して SSIS パッケージをスケジュールする方法については、「[Azure Data Factory で SSIS アクティビティを使用して SSIS パッケージを実行する](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)」をご覧ください。
+
+## <a name="storedproc"></a> ストアド プロシージャ アクティビティを使用してパッケージをスケジュールする
+
+Azure Data Factory でストアド プロシージャ アクティビティを使用して SSIS パッケージをスケジュールする方法については、「[Azure Data Factory のストアド プロシージャ アクティビティを使用して SSIS パッケージを実行する](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)」をご覧ください。
+
+Data Factory バージョン 1 の場合は、「[Azure Data Factory のストアド プロシージャ アクティビティを使用して SSIS パッケージを呼び出す](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)」をご覧ください。
+
+## <a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
+
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
+
+### <a name="prerequisites"></a>Prerequisites
+
+エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
+
+1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
+
+2. ジョブで SSIS カタログ データベースにコマンドを送信するために使用できるデータベース スコープの資格情報を作成します。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープの資格情報を作成する (Transact-SQL)) を参照してください。
+
+### <a name="create-an-elastic-job"></a>エラスティック ジョブの作成
+
+次の例に示されているスクリプトと同じような Transact-SQL スクリプトを使用して、ジョブを作成します。
+
+```sql
+-- Create Elastic Jobs target group 
+EXEC jobs.sp_add_target_group 'TargetGroup' 
+
+-- Add Elastic Jobs target group member 
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
+
+-- Add a job to schedule SSIS package execution
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
+
+-- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
+        EXEC [SSISDB].[catalog].[create_execution]
+            @folder_name=N''folderName'', @project_name=N''projectName'',
+            @package_name=N''packageName'', @use32bitruntime=0,
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
+
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
+```
 
 ## <a name="agent"></a> SQL Server エージェントを使用してパッケージのスケジュールを設定する
 
@@ -96,62 +155,6 @@ ms.lasthandoff: 04/26/2018
     ```
 
 6.  ジョブの構成とスケジュール設定を完了します。
-
-## <a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
-
-SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
-
-### <a name="prerequisites"></a>Prerequisites
-
-エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
-
-1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
-
-2. ジョブで SSIS カタログ データベースにコマンドを送信するために使用できるデータベース スコープの資格情報を作成します。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープの資格情報を作成する (Transact-SQL)) を参照してください。
-
-### <a name="create-an-elastic-job"></a>エラスティック ジョブの作成
-
-次の例に示されているスクリプトと同じような Transact-SQL スクリプトを使用して、ジョブを作成します。
-
-```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
-
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB' 
-
--- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60
-
--- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-    @command=N'DECLARE @exe_id bigint 
-        EXEC [SSISDB].[catalog].[create_execution]
-            @folder_name=N''folderName'', @project_name=N''projectName'',
-            @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-            @execution_id=@exe_id OUTPUT         
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-    @credential_name='YourDBScopedCredentials', 
-    @target_group_name='TargetGroup' 
-
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60 
-```
-
-## <a name="activities"></a> Azure Data Factory を使用したパッケージのスケジュール
-
-Azure Data Factory アクティビティを使用して、SSIS パッケージをスケジュールする方法の詳細については、次の記事を参照してください。
-
--   Data Factory バージョン 2 の場合: [Azure Data Factory での SSIS アクティビティを使用した SSIS パッケージの実行](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
-
--   Data Factory バージョン 2 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの実行](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
-
--   Data Factory バージョン 1 の場合: [Azure Data Factory でのストアド プロシージャ アクティビティを使用した SSIS パッケージの実行](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>次の手順
 SQL Server エージェントの詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。

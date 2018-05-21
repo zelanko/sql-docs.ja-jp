@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
  MSMQ 接続マネージャーの詳細については、「 [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)」を参照してください。  
   
 > [!NOTE]  
->  MSMQ 接続マネージャーでは、ローカルのパブリック キューと専用キュー、およびリモートのパブリック キューがサポートされています。 リモートの専用キューはサポートされていません。 スクリプト タスクを使用する回避策については、「 [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)」を参照してください。  
+>  MSMQ 接続マネージャーでは、ローカルのパブリック キューと専用キュー、およびリモートのパブリック キューがサポートされています。 リモートの専用キューはサポートされていません。 スクリプト タスクを使用する回避策については、「 [スクリプト タスクによるリモート プライベート メッセージ キューへの送信](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)」を参照してください。  
   
 ### <a name="options"></a>および  
  **名前**  

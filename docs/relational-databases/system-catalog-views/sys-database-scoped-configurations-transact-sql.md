@@ -1,7 +1,7 @@
 ---
 title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 01/16/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 015db41a34cdc4f22db79328e91189a77a483418
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 373d2933d362f565799518bfe1af516ad1943276
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,6 +40,8 @@ ms.lasthandoff: 05/04/2018
 |**name**|**nvarchar(60)**|構成オプションの名前です。 可能な構成については、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)です。|  
 |**value**|**sqlvariant**|プライマリ レプリカの場合は、この構成オプションの設定値です。|  
 |**value_for_secondary**|**sqlvariant**|セカンダリ レプリカには、この構成オプションの設定値です。|  
+|**elevate_online**|**nvarchar(60)** |データベース スコープのインデックス操作、online オプションに既定の設定 |
+|**elevate_resumable**|nvarchar(60)|データベース スコープでのインデックス操作の再開可能なオプションの既定のセット| 
   
 ##  <a name="Permissions"></a> アクセス許可  
  ロール **public** のメンバーシップが必要です。  

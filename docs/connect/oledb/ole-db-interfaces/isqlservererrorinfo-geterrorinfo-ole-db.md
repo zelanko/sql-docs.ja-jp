@@ -92,7 +92,7 @@ SSERRORINFO;
  構造のポインターで返される文字列内のアドレスを参照する、*割り当てません*引数。  
   
 ## <a name="see-also"></a>参照  
- [ISQLServerErrorInfo (&) #40";"OLE DB"&"#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
- [RAISERROR と #40 です。TRANSACT-SQL と #41 です。](../../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -25,13 +23,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,12 +36,12 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-find-using-regular-expressions"></a>正規表現を使用して検索を行うには  
   
-1.  **[クイック検索]** 、 **[フォルダーを指定して検索]**、 **[クイック置換]**、 **[フォルダーを指定して置換]**の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]**をオンにし、 **[正規表現]**を選択します。  
+1.  **[クイック検索]** 、 **[フォルダーを指定して検索]**、 **[クイック置換]**、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
   
 2.  **[検索する文字列]** フィールドの横にある三角形の **参照一覧** ボタンが使用可能になります。 このボタンをクリックすると、一般的に使用される正規表現の一覧が表示されます。 正規表現ビルダーから項目を選択すると、その項目が **[検索する文字列]** の文字列に挿入されます。  
   
 > [!NOTE]  
->  **[検索する文字列]** の文字列で使用できる正規表現の構文と、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のプログラミングで有効な正規表現の構文には違いがあります。 たとえば、 **[検索と置換]**では、タグ付き正規表現に中かっこ {} を使用します。 したがって、正規表現 "zo{1}" は、"zo" の後にタグ 1 が続くすべての項目 ("Alonzo1"、"Gonzo1" など) と一致します。 ところが、.NET Framework の場合は、量化子に中かっこ {} を使用します。 したがって、正規表現 "zo{1}" は、"z" の後に 1 個の "o" が続くすべての項目と一致します (つまり、"zone" は一致項目ですが、"zoo" は違います)。  
+>  **[検索する文字列]** の文字列で使用できる正規表現の構文と、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のプログラミングで有効な正規表現の構文には違いがあります。 たとえば、 **[検索と置換]** では、タグ付き正規表現に中かっこ {} を使用します。 したがって、正規表現「zo{1}」は、「zo」の後にタグ 1 が続くすべての項目 (「Alonzo1」、「Gonzo1」など) と一致します。 ところが、.NET Framework の場合は、量化子に中かっこ {} を使用します。 したがって、正規表現「zo{1}」は、「z」の後に 1 個の「o」が続くすべての項目と一致します (つまり、「zone」は一致項目ですが、「zoo」は違います)。  
   
  **参照一覧**から使用できる正規表現を以下にまとめます。  
   

@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 -   パラメーター マーカー (?) を使用してパラメーターを指定し、プログラム変数をパラメーター マーカーにバインドしてから、データ値をプログラム変数に格納する。  
   
 > [!NOTE]  
->  OLE DB で名前付きパラメーターを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを呼び出す場合は、パラメーター名の先頭に '@' 文字を付ける必要があります。 これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の制限です。 SQL Server の OLE DB Driver は、この制限を MDAC よりも厳密に適用します。  
+>  OLE DB で名前付きパラメーターを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを呼び出す場合は、パラメーター名の先頭に '\@' 文字を付ける必要があります。 これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の制限です。 SQL Server の OLE DB Driver は、この制限を MDAC よりも厳密に適用します。  
   
  パラメーターをサポートする、 **ICommandWithParameters**コマンド オブジェクトでインターフェイスを公開します。 パラメーターを使用するコンシューマー最初パラメーターについて説明します、プロバイダーを呼び出すことによって、 **icommandwithparameters::setparameterinfo**メソッド (または必要に応じて呼び出す呼び出し元のステートメントを準備、 **GetParameterInfo**メソッド)。 次に、バッファーの構造を指定するアクセサーを作成し、このバッファーにパラメーター値を格納します。 最後にバッファーにアクセサーと、ポインターのハンドルを渡す**Execute**です。 以降の呼び出しの**Execute**、コンシューマーでは、新しいパラメーターの値を格納バッファーとの呼び出しで**Execute**アクセサー ハンドルとバッファー ポインターを使用します。  
   

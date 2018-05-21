@@ -94,7 +94,7 @@ ms.lasthandoff: 05/03/2018
  サブスクリプション情報の表示の詳細については、「[サブスクリプションの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)」を参照してください。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>トレーサー トークンによる待機時間の判断  
- トランザクション レプリケーションでは、パブリケーション データベースのトランザクション ログにトークン (少量のデータ) を挿入し、それがディストリビューターおよびサブスクライバーに到達するまでにかかった時間を記録することにより、システムの待機時間を計測できます。 このトークンを使用すると、データがディストリビューターまたはサブスクライバーに到達しているかどうかを識別することもできます。 詳細については、「 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
+ トランザクション レプリケーションでは、パブリケーション データベースのトランザクション ログにトークン (少量のデータ) を挿入し、それがディストリビューターおよびサブスクライバーに到達するまでにかかった時間を記録することにより、システムの待機時間を計測できます。 このトークンを使用すると、データがディストリビューターまたはサブスクライバーに到達しているかどうかを識別することもできます。 詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>マージ レプリケーションの詳細な同期パフォーマンスの表示  
  マージ レプリケーションの場合、レプリケーション モニターには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報の表示の詳細については、「[サブスクリプションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)」を参照してください。  

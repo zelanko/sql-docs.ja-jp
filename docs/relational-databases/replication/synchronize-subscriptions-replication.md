@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Windows 同期マネージャーを使用したサブスクリプションの同期 &#40;Windows 同期マネージャー&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)  
   
--   [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 -   [ビジネス ロジック ハンドラーのデバッグ&#40;レプリケーション プログラミング&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)  
   

@@ -4,7 +4,7 @@ description: SQL 操作 Studio (プレビュー) のユーザーとワークス�
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 93dd73b9ba77e45f284062e8a768c3f035bcac1b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 67f60d30693eeb60030f3a977ec1bcf5a1f98be1
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>ユーザーとワークスペースの設定
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
 メニュー コマンド**ファイル** > **設定** > **設定**(**コード** >  **設定** > **設定**Mac 上) はユーザーとワークスペースの設定を構成するエントリ ポイントを提供します。 既定の設定の一覧が表示されます。 適切な変更する設定をコピー`settings.json`ファイル。 右側のタブを使用して、ユーザーとワークスペースの設定ファイル間をすばやく移動できます。
 
-ユーザーとワークスペースの設定を開くことも、**コマンド パレット**(**Ctrl + Shift + P**) と**設定: ユーザー設定を開く**と**開いているワークスペースの設定を設定します。**キーボード ショートカットを使用するか (**Ctrl +**)。
+ユーザーとワークスペースの設定を開くことも、**コマンド パレット**(**Ctrl + Shift + P**) と**設定: ユーザー設定を開く**と**開いているワークスペースの設定を設定します。** キーボード ショートカットを使用するか (**Ctrl +**)。
 
 次の例では、エディターで行番号を無効にし、コード行を自動的にインデントを設定するように構成します。
 

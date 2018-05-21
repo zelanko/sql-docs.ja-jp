@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   システム テーブル **MSmerge_contents**への挿入時にエラーが発生する。  
   
-     このエラーは、結合フィルター プロパティ **join_unique_key**の値が不適切なために発生します。 このプロパティは、親テーブルの結合列が一意である場合にのみ、TRUE に設定する必要があります。 このプロパティが TRUE に設定されているにもかかわらず、結合列が一意でない場合は、このエラーが発生します。 このプロパティの設定の詳細については、「 [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
+     このエラーは、結合フィルター プロパティ **join_unique_key**の値が不適切なために発生します。 このプロパティは、親テーブルの結合列が一意である場合にのみ、TRUE に設定する必要があります。 このプロパティが TRUE に設定されているにもかかわらず、結合列が一意でない場合は、このエラーが発生します。 このプロパティの設定の詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

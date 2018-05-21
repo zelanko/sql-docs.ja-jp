@@ -4,7 +4,7 @@ description: このクイック スタートは、SQL 操作 Studio (プレビ�
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: eeb496f814546034ac4e7d90cb0f1f734bf5bb47
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 2f0ad75a6be9cb3ad1404a0406601fbef68b0303
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
@@ -42,7 +42,7 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
    
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. この記事では*SQL ログイン*が*Windows 認証*もサポートされています。 次のようにサーバー名、ユーザー名およびパスワードを使用して、フィールドに入力*、* Azure SQL server:
+2. この記事では*SQL ログイン*が*Windows 認証*もサポートされています。 次のようにサーバー名、ユーザー名およびパスワードを使用して、フィールドに入力 *、* Azure SQL server:
 
    | 設定       | 提案される値 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 

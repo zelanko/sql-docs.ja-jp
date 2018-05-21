@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  エージェントの警告としきい値の情報を表示するには、 **[警告]** タブをクリックします。詳細については、「 [レプリケーション モニターのしきい値と警告の設定](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
-6.  トレーサー トークンの情報を表示するには、 **[トレーサー トークン]** タブをクリックします。トレーサー トークンの使用方法の詳細については、「 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
+6.  トレーサー トークンの情報を表示するには、 **[トレーサー トークン]** タブをクリックします。トレーサー トークンの使用方法の詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  既定では、トランザクション レプリケーションが、各サブスクライバーにインストールされているストアド プロシージャのセットを使用して、変更をサブスクライバーに伝達します。 パブリッシャーでテーブルに挿入、更新、または削除が発生した場合、各操作はサブスクライバーでのストアド プロシージャへの呼び出しに翻訳されます。 ストアド プロシージャは、テーブル内の列にマップされるパラメーターを受け入れ、それらの列がサブスクライバーで変更されることを許可します。  
   
- データの変更をトランザクション アーティクルに反映する方法を設定するには、「 [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)」を参照してください。  
+ データの変更をトランザクション アーティクルに反映する方法を設定するには、「 [データの変更をトランザクション アーティクルに反映する方法の設定](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)」を参照してください。  
   
 ## <a name="default-and-custom-stored-procedures"></a>既定のストアド プロシージャとカスタム ストアド プロシージャ  
  各テーブル アーティクルに対して、既定でレプリケーションによって作成されるのは、次の 3 つのプロシージャです。  

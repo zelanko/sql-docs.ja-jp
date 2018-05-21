@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [== &#40;等しい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!= &#40;等しくない&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)  
   

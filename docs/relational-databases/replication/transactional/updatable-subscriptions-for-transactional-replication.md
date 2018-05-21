@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **更新モードを切り替えるには**  
   
  更新モードを切り替えるには、両方の更新モードに対してパブリケーションとサブスクリプションを有効にしてから、必要に応じてこれらを切り替える必要があります。 詳細については、「  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)」を参照してください。  
+[更新可能トランザクション サブスクリプションの更新モードの切り替え](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>更新可能なサブスクリプションの使用に関する注意点  
   

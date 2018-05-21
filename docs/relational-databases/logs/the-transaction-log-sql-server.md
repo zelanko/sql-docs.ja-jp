@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
  詳細については、このトピックの「[ログの切り捨てが遅れる原因となる要因](#FactorsThatDelayTruncation)」を参照してください。  
   
 > [!NOTE]
-> ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
+> ログの切り捨てを行っても、物理ログ ファイルのサイズは縮小されません。 物理ログ ファイルの物理サイズを削減するには、ログ ファイルを圧縮する必要があります。 物理ログ ファイルのサイズの圧縮の詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
 > ただし、[ログの切り捨てが遅れる原因となる要因](#FactorsThatDelayTruncation)には留意してください。 ログの圧縮後、ストレージ領域が再び必要になると、トランザクション ログが再び増え、その分のパフォーマンスのオーバーヘッドが発生します。
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  

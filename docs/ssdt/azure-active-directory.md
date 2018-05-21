@@ -1,27 +1,24 @@
 ---
 title: SQL Server Data Tools (SSDT) での Azure Active Directory のサポート| Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
-ms.prod: sql
+ms.date: 04/09/2018
+ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1e8f19c1dcc629ec6e97aa02cd23be1c101ad596
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 62ed13f6bb3eb5859976b5a5d970f3297c42304e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -39,13 +36,13 @@ Active Directory パスワード認証は、Azure Active Directory (Azure AD) �
 
 Active Directory 統合認証は、Azure Active Directory (Azure AD) の ID を使用して Azure SQL Database に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)」を参照してください。
 
-## <a name="active-directory-interactive-authentication-preview"></a>Active Directory 対話型認証 (プレビュー)
+## <a name="active-directory-interactive-authentication"></a>Active Directory 対話型認証
 
 SSDT では、Azure SQL データベースに接続するための新しい認証方法が提供されます - **Active Directory 対話型認証**です。
 
 
 > [!NOTE]
-> Active Directory 対話型認証は、[Visual Studio 2017 プレビュー](https://www.visualstudio.com/vs/preview/)の SSDT を使用して接続する場合に利用でき、SSDT を実行するコンピューターに [.NET 4.7.2 プレビュー (KB4038188)](https://go.microsoft.com/fwlink/?linkid=867317) がインストールされている必要があります。 .NET 4.7.2 プレビュー (KB4038188) がインストールされていない場合、Active Directory 対話型認証のオプションは使用できません。
+> Active Directory 対話型認証は、[Visual Studio 2017 バージョン 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) の SSDT を使用して接続する場合に利用でき、SSDT を実行するコンピューターに [.NET Framework 4.7.2 がダウンロードまたはインストール](https://www.microsoft.com/net/download/all)されている必要があります。 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) がインストールされていない場合、Active Directory 対話型認証のオプションは使用できません。
 
 
 Active Directory の対話型認証では、Azure Active Directory (AD) の多要素認証 (MFA) を使用して Azure SQL Database で認証することが可能な、対話型の認証がサポートされます。 この方法では、ネイティブ Azure AD ユーザーとフェデレーション Azure AD ユーザー、およびその他のアカウントからのゲスト ユーザー (B2B ユーザーや、@outlook.com、@hotmail.com、@live.com、@gmail.com などの Microsft および Microsoft 以外のアカウントなど) がサポートされます。 この方法が指定される場合、**[ユーザー名]** を指定する必要があり、[パスワード] フィールドが無効になります。 

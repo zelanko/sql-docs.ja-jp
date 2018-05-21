@@ -14,11 +14,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c891393018f69c47e93e56cd49ddf318756256d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
 Windows Server 2003 以降では、Microsoft のオペレーティング システムがサポートされている 64 ビット ODBC ライブラリです。 ODBC ヘッダーと最初 MDAC 2.7 SDK に付属のライブラリは、新しい 64 ビット プラットフォーム用のコードを簡単に記述するプログラマのための変更を含めます。 64 ビットおよび 32 ビットのプラットフォームの両方に基づいて、同じソース コードをコンパイルするコードが以下に示す ODBC が定義されている型を使用するようにするには、によって、 **_WIN64**または**WIN32**マクロです。  
@@ -397,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **Sqlsetdescfield による**  
   
- ときに、 *FieldIdentifier*パラメーターには、次の値のいずれかの 64 ビット値が渡された、**ValuePtr*:  
+ ときに、 *FieldIdentifier*パラメーターには、次の値のいずれかの 64 ビット値が渡された、 *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -421,7 +421,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- ときに、*属性*パラメーターには、次の値のいずれかの 64 ビット値が渡された、**ValuePtr*:  
+ ときに、*属性*パラメーターには、次の値のいずれかの 64 ビット値が渡された、 *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -489,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- ときに、*オプション*パラメーターには、次の値のいずれかの 64 ビット値が渡された、**値*:  
+ ときに、*オプション*パラメーターには、次の値のいずれかの 64 ビット値が渡された、*値*:  
   
  SQL_KEYSET_SIZE  
   

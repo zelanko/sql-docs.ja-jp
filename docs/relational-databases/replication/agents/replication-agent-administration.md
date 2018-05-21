@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -29,12 +28,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3cccb42d089124c5d57eaad656ff00676b385f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 04/16/2018
 |クリーンアップ ジョブ|Description|既定のスケジュール|  
 |------------------|-----------------|----------------------|  
 |エージェント履歴のクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケーション エージェントの履歴を削除します。|10 分おきに実行されます。|  
-|ディストリビューションのクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 ディストリビューションの最大保有期間内に同期されなかったサブスクリプションを非アクティブ化します。|10 分おきに実行されます。|  
-|有効期限が切れたサブスクリプションのクリーンアップ|パブリケーション データベースから期限切れのサブスクリプションを検出し、削除します。|毎日、午前 1 時に実行されます。|  
+|ディストリビューションのクリーンアップ: ディストリビューション|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 |10 分おきに実行されます。|  
+|有効期限が切れたサブスクリプションのクリーンアップ|パブリケーション データベースから期限切れのサブスクリプションを検出し、削除します。 ディストリビューターで、ディストリビューションの最大保有期間内に同期されなかったサブスクリプションを非アクティブ化します。|毎日、午前 1 時に実行されます。| 
 |データ検証で問題が見つかったサブスクリプションの再初期化|データ検証に失敗したすべてのサブスクリプションを検出し、再初期化のマークを付けます。 次回マージ エージェントまたはディストリビューション エージェントが実行されたときに、サブスクライバーで新しいスナップショットが適用されます。|既定のスケジュールはありません。既定では、有効ではありません。|  
 |レプリケーション エージェントの検査|履歴をログに記録していないレプリケーション エージェントを検出します。 ジョブ ステップが失敗した場合に、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ログに書き込みます。|10 分おきに実行されます。|  
 |ディストリビューションのレプリケーション モニターの状態更新機能|レプリケーション モニターで使用される、キャッシュされたクエリを更新します。|連続的に実行されます。|  

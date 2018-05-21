@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,30 +22,29 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3900aae4e96b5490b0b65cbbee004fc66337ff63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f168e135dd563d1b76d99254bfa17d7ba8cf721a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-tutorials"></a>レプリケーションのチュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-レプリケーションは、サーバー間でデータまたはデータのサブセットを移動するための強力なソリューションです。 トランザクション レプリケーションを使用して完全に接続されたサーバー間でデータをレプリケートすることができます。 マージ レプリケーションを使用して断続的に接続されたサーバーとクライアントの間でデータをレプリケートすることもできます。 以下に、レプリケーション用にサーバーを準備するために役立つチュートリアルを示し、トランザクション レプリケーションとマージ レプリケーションの両方を構成する方法を説明します。 
+レプリケーションは、サーバー間でデータまたはデータのサブセットを移動するための強力なソリューションです。 トランザクション レプリケーションを使用して完全に接続されたサーバー間でデータをレプリケートすることができます。 マージ レプリケーションを使用して断続的に接続されたサーバーとクライアントの間でデータをレプリケートすることもできます。 この記事では、レプリケーション用にサーバーを準備するために役立つチュートリアルを示し、トランザクション レプリケーションとマージ レプリケーションの両方を構成する方法を説明します。 
   
-レプリケーションのチュートリアルでは、"パブリッシャー" はレプリケート元のデータが配置されているサーバーを指し、"サブスクライバー" はレプリケート先のサーバーを指しています。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを共有することもできますが、これは必須条件ではありません。 詳細については、 [「レプリケーションのパブリッシング モデルの概要」](../../relational-databases/replication/publish/replication-publishing-model-overview.md)を参照してください。  
+レプリケーションのチュートリアルでは、"パブリッシャー" はレプリケート元のデータが配置されているサーバーを指します。 "サブスクライバー" は、レプリケート先のサーバーを指します。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを共有することもできますが、これは必須条件ではありません。 詳細については、「[レプリケーションのパブリッシング モデルの概要](../../relational-databases/replication/publish/replication-publishing-model-overview.md)」をご覧ください。  
 
-これらのチュートリアルでは、パブリッシャーとディストリビューターとして NODE1\SQL2016 を使用し、サブスクライバーとして NODE2\SQL2016 を使用します。 
+これらのチュートリアルでは、パブリッシャーとディストリビューターとして NODE1\SQL2016 を使います。 サブスクライバーとしては、NODE2\SQL2016 を使います。 
   
 > [!NOTE]  
-> このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、 [「開発者ガイド (レプリケーション)」](../../relational-databases/replication/concepts/replication-developer-documentation.md)を参照してください。  
+> このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、「[レプリケーション開発者のドキュメント](../../relational-databases/replication/concepts/replication-developer-documentation.md)」をご覧ください。  
   
 ## <a name="replication-tutorials"></a>レプリケーションのチュートリアル  
 [チュートリアル: レプリケーション用の SQL Server の準備 - パブリッシャー、ディストリビューター、サブスクライバー](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 最小の権限でレプリケーションを実行できるようサーバーを準備する方法を学習します。 このチュートリアルは、レプリケーション関連のチュートリアルの中で最初に実行する必要があります。  
   
-[チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する ](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 常時接続のサーバー間でデータをレプリケートするようにトランザクション レプリケーションを構成する方法を学習します。 このチュートリアルには、いくつか基本的なエラーのトラブルシューティングの手法も含まれます。 
 

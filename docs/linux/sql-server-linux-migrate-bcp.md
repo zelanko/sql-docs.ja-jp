@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 2c9e65193ad481d3e4d6f8256918616e08e4a709
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 53f1381285d8b42c59cde57eb47ce9628f0868ad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
 
@@ -120,7 +120,7 @@ Id          Name                Location
 
 このチュートリアルで使用して`bcp`を新しいデータ ファイルに以前に作成したサンプル テーブルからデータをエクスポートします。
 
-コピーし、ターミナル ウィンドウに followikng コマンドを貼り付けます。 これらのコマンドを使用して、`bcp`テーブルからデータをエクスポートするコマンド ライン ユーティリティ**TestEmployees**データベース**BcpSampleDB**と呼ばれる新しいデータ ファイルに **~/test_export.txt**.  ユーザー名を置き換えますと`<your_password>`コマンドを実行する前に必要に応じて。
+コピーし、ターミナル ウィンドウに次のコマンドを貼り付けます。 これらのコマンドを使用して、`bcp`テーブルからデータをエクスポートするコマンド ライン ユーティリティ**TestEmployees**データベース**BcpSampleDB**と呼ばれる新しいデータ ファイルに **~/test_export.txt**.  ユーザー名を置き換えますと`<your_password>`コマンドを実行する前に必要に応じて。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

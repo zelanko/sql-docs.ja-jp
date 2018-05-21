@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **allow_push** の値が **0**の場合は、**@property** に **allow_push** を、**@value** に **true** を指定して、 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションの更新方法の詳細については、「 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションの更新方法の詳細については、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)を実行します。 次の指定を行います。  
   

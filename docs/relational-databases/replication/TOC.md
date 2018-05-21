@@ -1,8 +1,7 @@
 # [レプリケーション](sql-server-replication.md)  
 # [新機能 (レプリケーション)](what-s-new-replication.md)  
 # [レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md)  
-## 
-  [SQL Server レプリケーションの非推奨の機能](deprecated-features-in-sql-server-replication.md)  
+## [SQL Server レプリケーションの非推奨の機能](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server レプリケーションにおける重大な変更](breaking-changes-in-sql-server-replication.md)  
 
 # レプリケーション領域

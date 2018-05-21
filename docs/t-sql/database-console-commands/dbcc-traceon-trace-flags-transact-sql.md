@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -27,12 +24,11 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1b0500c39e158f07c7371f853be7262ee9b82930
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 52ad63dc661cce6950b5d0939d4a6d508fb6a137
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ ms.lasthandoff: 04/20/2018
 |**2371**|自動更新の統計の固定しきい値を、自動更新の統計の動的しきい値に変更します。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2754171)をご覧ください。<br /><br />**注:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の、[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 より下では、この動作はエンジンによって制御されるようになり、トレース フラグ 2371 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
 |**2389**|昇順キー (ヒストグラム修正) に対して、自動生成されたクイック統計情報を有効にします。 トレース フラグ 2389 を設定し、先頭の統計情報列を昇順としてマークすると、カーディナリティの推定に使われるヒストグラムがクエリのコンパイル時に調整されます。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2801413)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**注:** このトレース フラグは CE バージョン 120 以上には適用されません。 トレース フラグ 4139 を代わりに使ってください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
 |**2390**|昇順キーまたは不明キー (ヒストグラム修正) に対して、自動生成されたクイック統計情報を有効にします。 トレース フラグ 2390 を設定し、先頭の統計情報列を昇順または不明としてマークすると、カーディナリティの推定に使われるヒストグラムがクエリのコンパイル時に調整されます。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2801413)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**注:** このトレース フラグは CE バージョン 120 以上には適用されません。 トレース フラグ 4139 を代わりに使ってください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
-|**2422**|Resource Governor の REQUEST_MAX_CPU_TIME_SEC の構成によって設定されている最大時間を超えたときに、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が要求を中止できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/4038419)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル|
+|**2422**|Resource Governor の REQUEST_MAX_CPU_TIME_SEC の構成によって設定されている最大時間を超えたときに、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が要求を中止できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/4038419)をご覧ください。<br /><br />**注:** このトレース フラグは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル|
 |**2430**|代替ロック クラスのクリーンアップを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2754301)をご覧ください。<br /><br />**スコープ**: グローバルのみ| 
 |**2453**|十分な数の行が変更されたときに、テーブル変数が再コンパイルをトリガーできるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/2952444)をご覧ください。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
 |**2469**|パーティション分割されている列ストア インデックスで、`INSERT INTO ... SELECT` の代替交換を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/3204769)をご覧ください。<br /><br />**スコープ**: グローバル、セッション、クエリ|
@@ -99,6 +95,7 @@ ms.lasthandoff: 04/20/2018
 |**3226**|既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 頻度の高いログ バックアップを作成すると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。<br /><br />このトレース フラグを使用すると、これらのログ エントリを除外できます。 この機能は、頻度の高いログ バックアップを実行している場合やスクリプトがこれらのエントリに依存していない場合に役立ちます。<br /><br />**スコープ**: グローバルのみ|   
 |**3427**|temp テーブルにデータを挿入する多数の連続するトランザクションが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] では [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のときより多くの CPU を消費する場合に、問題を解決できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/3216543)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 以降のビルドに適用されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4 以降には、このトレース フラグは影響しません。<br /><br />**スコープ**: グローバルのみ|  
 |**3459**|並列再実行を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/help/3200975)および [Microsoft サポート技術情報](http://support.microsoft.com/help/4101554)を参照してください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] に適用されます。<br /><br />**スコープ**: グローバルのみ| 
+|**3468**|TempDB で[間接チェックポイント](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)を無効にします。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1、およびそれ以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|  
 |**3608**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、**master** データベース以外のすべてのデータベースを自動的に開始および復旧しないようにします。 **tempdb** を必要とする操作が開始されると、**model** が復旧され、**tempdb** が作成されます。 他のデータベースはアクセス時に開始および復旧されます。 スナップショット分離や READ COMMITTED スナップショットなど、一部の機能を使用できない場合があります。 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)と[ユーザー データベースの移動](../../relational-databases/databases/move-user-databases.md)の場合に使用します。<br /><br />**注:** 通常の運用中は使用しないでください。<br /><br />**スコープ**: グローバルのみ|   
 |**3625**|"\*\*\*\*\*\*" を使用する一部のエラー メッセージのパラメーターをマスクすることによって、sysadmin 固定サーバー ロールのメンバーでないユーザーに返される情報の量を制限します。 これは、機密情報の公開を防ぐために役立ちます。<br /><br />**スコープ**: グローバルのみ|  
 |**4136**|OPTION(RECOMPILE)、WITH RECOMPILE 、または OPTIMIZE FOR \<value> が使われていない場合、パラメーター スニッフィングを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/980653)をご覧ください。 データベース レベルでこれを行う方法については、「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」の PARAMETER_SNIFFING オプションをご覧ください。 クエリ レベルでこれを行うには、OPTIMIZE FOR UNKNOWN [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、クエリ レベルでこれを行うもう 1 つのオプションとして、このトレース フラグの代わりに、USE HINT 'PARAMETER_SNIFFING' [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加することもできます。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション|  
@@ -154,7 +151,7 @@ ms.lasthandoff: 04/20/2018
 |**10204**|列ストア インデックスの再編成中に、マージ/再圧縮を無効にします。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、列ストア インデックスを再編成するときに、圧縮された小さい行グループを圧縮された大きい行グループに自動的にマージし、多数の行が削除されている行グループを圧縮する、新しい機能があります。<br /><br />**注:** トレース フラグ 10204 は、メモリ最適化テーブル上に作成された列ストア インデックスには適用されません。<br /><br />**スコープ**: グローバル、セッション|   
 |**10316**|既定のものに加えて、[内部メモリ最適化ステージング テンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)に追加のインデックスを作成できるようにします。 既定のインデックスで対応されていない列を含む特定のクエリ パターンがある場合は、新しいインデックスの追加を検討できます。<br /><br />**注:** メモリ最適化テーブルのシステムでバージョン管理されたテンポラル テーブルは、高いトランザクション スループットを提供するように設計されています。 追加のインデックスを作成すると、現在のテーブルの行を更新または削除する DML 操作にオーバーヘッドが発生する可能性があることに注意してください。 インデックスを追加するときは、テンポラル クエリのパフォーマンスと DML オーバーヘッドの増加の間の適切なバランスを見つける必要があります。<br /><br />**スコープ**: グローバル、セッション|
 |**11023**|[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) ステートメントの一部としてサンプル レートが明示的に指定されていない場合、後続のすべての統計更新に対して、最後の永続化されたサンプル レートの使用を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/4039284)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|    
-|**11024**|任意のパーティションの変更数がローカルな[しきい値](../../relational-databases/statistics/statistics.md#AutoUpdateStats)を超えた場合の統計の自動更新のトリガーを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/4041811)をご覧ください。<br /><br />**スコープ**: グローバル、セッション| 
+|**11024**|任意のパーティションの変更数がローカルな[しきい値](../../relational-databases/statistics/statistics.md#AutoUpdateStats)を超えた場合の統計の自動更新のトリガーを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](http://support.microsoft.com/kb/4041811)をご覧ください。<br /><br />**注:** このトレース フラグは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降のビルドに適用されます。<br /><br />**スコープ**: グローバル、セッション| 
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、クエリ、セッション、グローバルという 3 種類のトレース フラグがあります。 クエリ トレース フラグは、特定のクエリのコンテキストに対してアクティブです。 セッション トレース フラグは、1 つの接続についてアクティブで、その接続に対してのみ表示可能です。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。 フラグには、グローバルとしてのみ有効化できるフラグと、グローバルまたはセッション スコープのどちらかで有効化できるフラグがあります。  

@@ -1,29 +1,23 @@
 ---
 title: 動的なデータ マスキング | Microsoft Docs
-ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ ms.lasthandoff: 04/26/2018
 
 たとえば、コール センターのサポート担当者は、社会保障番号やクレジット カード番号などの数桁から顧客を識別することがありますが、これらのデータ項目をサポート担当者にすべて公開するべきではありません。 クエリの結果セットの社会保障番号やクレジット カード番号の末尾 4 桁を除くすべての番号をマスクするマスク ルールを設定することができます。 また、別の例として、適切なデータ マスクを使用して、個人を特定できる情報 (PII) データを保護すると、開発者は法令遵守規定に違反せずに、トラブルシューティングを行うために運用環境に対してクエリを実行することができます。
 
- 動的データ マスクの目的は、アクセスすべきではないユーザーがデータを閲覧することを防ぎ、デリケートなデータの公開を制限することにあります。 動的データ マスクは、ユーザーが直接データベースに接続し、徹底的なクエリを実行して、デリケートなデータの漏えいを防ぐことを目的としてはいません。 動的データ マスクは、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ機能 (監査、暗号化、行レベルのセキュリティなど) を補完します。 データベース内のデリケートなデータの保護をより強化するために、セキュリティ機能と連携して動的データ マスクを使用することをお勧めします。  
+動的データ マスクの目的は、アクセスすべきではないユーザーがデータを閲覧することを防ぎ、デリケートなデータの公開を制限することにあります。 動的データ マスクは、ユーザーが直接データベースに接続し、徹底的なクエリを実行して、デリケートなデータの漏えいを防ぐことを目的としてはいません。 動的データ マスクは、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ機能 (監査、暗号化、行レベルのセキュリティなど) を補完します。 データベース内のデリケートなデータの保護をより強化するために、セキュリティ機能と連携して動的データ マスクを使用することをお勧めします。  
   
- 動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure ポータルで動的データ マスクを構成する方法の詳細については、「 [SQL Database 動的データ マスクの使用 (Azure ポータル)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)」を参照してください。  
+動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure ポータルで動的データ マスクを構成する方法の詳細については、「 [SQL Database 動的データ マスクの使用 (Azure ポータル)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)」を参照してください。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>動的データ マスクを定義する  
  マスク ルールは、列のデータを難読化するために、テーブル内の列で定義することがあります。 4 種類のマスクを利用できます。  
@@ -75,7 +69,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="querying-for-masked-columns"></a>マスクされた列に対してクエリを実行する  
  **sys.masked_columns** ビューを使用して、マスク関数が適用されたテーブルの列に対してクエリを実行します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -109,7 +103,7 @@ WHERE is_masked = 1;
 たとえば、データベースに対してアドホック クエリを実行する十分な特権を持つデータベース プリンシパルがいて、基になるデータを ’推測’ し、最終的には実際の値を推測しようと試みているとします。 管理者は `[Employee].[Salary]` 列に対してマスクを定義しましたが、このユーザーはデータベースに直接接続し、値の推測を開始し、最終的には従業員セットの `[Salary]` 値を推測します。
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -129,7 +123,7 @@ WHERE Salary > 99999 and Salary < 100001;
 ### <a name="creating-a-dynamic-data-mask"></a>動的データ マスクを作成する  
  次の例では、3 種類の動的データ マスクでテーブルを作成します。 この例ではテーブルを作成し、結果を表示するように選びます。  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -146,7 +140,7 @@ SELECT * FROM Membership;
   
  新しいユーザーが作成され、テーブルに対する **SELECT** アクセス許可が付与されました。 `TestUser` ビューのマスクされたデータとして、クエリが実行されます。  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -167,14 +161,14 @@ REVERT;
  **ALTER TABLE** ステートメントを使用して、テーブル内の既存の列にマスクを追加したり、その列のマスクを編集したりします。  
 次の例では、マスク関数を `LastName` 列に追加します。  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  次の例では、 `LastName` 列のマスク関数を変更します。  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -182,7 +176,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>アクセス許可を付与して、マスクが解除されたデータを表示する  
  **UNMASK** アクセス許可が付与されると、 `TestUser` は、マスクが解除されたデータを閲覧できるようになります。  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -195,7 +189,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>動的データ マスクをドロップする  
  次のステートメントは、先ほどの例で作成された `LastName` 列のマスクをドロップします。  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -206,5 +200,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [SQL Database 動的データ マスクの使用 (Azure ポータル)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  
