@@ -23,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="what-is-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] とは何ですか?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] デスクトップで動作し、Windows、macOS、および Linux で利用できるフリーで軽量なデータベース開発および運用ツールです。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はオンプレミスまたはあらゆるクラウドで動作する Azure SQL Database、Azure SQL Data Warehouse、および SQL Server のサポートを組み込まれています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はお気に入りのオペレーティング システムの任意のデータベースの間で一貫した使用環境を提供します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] はデスクトップで動作し、Windows、macOS、および Linux で利用できるフリーで軽量なデータベース開発および運用ツールです。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はオンプレミスまたはあらゆるクラウドで動作する Azure SQL Database、Azure SQL Data Warehouse、および SQL Server のサポートが組み込まれています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] はお気に入りのオペレーティング システムの任意のデータベースの間で一貫した使用環境を提供します。
 
 ## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>どこで入手できます[!INCLUDE[name-sos](../includes/name-sos-short.md)]しますか?
 
