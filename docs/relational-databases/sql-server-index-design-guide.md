@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -798,11 +798,11 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 CREATE TABLE ステートメント外でハッシュ インデックスを作成する構文の例を次に示します。  
   
-    ```sql
-    ALTER TABLE MyTable_memop  
-    ADD INDEX ix_hash_Column2 UNIQUE  
-    HASH (Column2) WITH (BUCKET_COUNT = 64);
-    ``` 
+```sql
+ALTER TABLE MyTable_memop  
+ADD INDEX ix_hash_Column2 UNIQUE  
+HASH (Column2) WITH (BUCKET_COUNT = 64);
+``` 
 
 ### <a name="row-versions-and-garbage-collection"></a>行のバージョンとガベージ コレクション  
 メモリ最適化テーブルでは、行が `UPDATE` による影響を受ける場合、テーブルで行の更新バージョンが作成されます。 更新トランザクションの間、他のセッションは行の前のバージョンを読み取ることができるため、行ロックに関連するパフォーマンスの低下を回避することができます。  

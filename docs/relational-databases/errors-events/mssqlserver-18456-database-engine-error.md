@@ -3,8 +3,6 @@ title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49aeb80c984dd3b01f300e38d81e423a1fee56d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="additional-error-information"></a>エラーに関する追加情報  
 セキュリティ向上のために、クライアントに返されるエラー メッセージでは、認証エラーの性質を意図的に非表示にしています。 ただし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログでは、対応するエラーに、認証失敗条件と対応付けられるエラー状態が含まれています。 ログインできない理由を判断するには、エラー状態を次の一覧と比較してください。  
   
-|状態|Description|  
+|状態|[説明]|  
 |---------|---------------|  
 |@shouldalert|エラー情報を表示できません。 通常、この状態は、エラーの詳細情報を受け取る権限がないことを意味します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。|  
 |2|ユーザー ID が無効です。|  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
@@ -17,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4dec8aec1dc6e95b273002483674b4c2e1619843
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f81ba5079859508a3806ec33e7d91030e2e787af
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ GO
  
 コード サンプルの **NATIVE_COMPILATION** は、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャがネイティブ コンパイル ストアド プロシージャであることを示しています。 以下のオプションは必須です。  
   
-|オプション|Description|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**SCHEMABINDING**|ネイティブ コンパイル ストアド プロシージャは、参照するオブジェクトのスキーマにバインドされている必要があります。 これは、プロシージャによるテーブル参照が必要であることを意味しています。 プロシージャ内で参照されているテーブルにはスキーマ名が含まれている必要があり、クエリでワイルドカード (\*) は使用できません ( `SELECT * from...`はありません)。 このバージョンの**では、ネイティブ コンパイル ストアド プロシージャに対してのみ** SCHEMABINDING [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がサポートされます。|  
 |**BEGIN ATOMIC**|ネイティブ コンパイル ストアド プロシージャの本体は、厳密に 1 つの ATOMIC ブロックで構成されている必要があります。 ATOMIC ブロックでは、ストアド プロシージャのアトミック実行が保証されます。 プロシージャをアクティブなトランザクションのコンテキストの外部で呼び出した場合、新しいトランザクションが開始され、ATOMIC ブロックの末尾でコミットされます。 ネイティブ コンパイル ストアド プロシージャの ATOMIC ブロックには、次の 2 つの必須オプションがあります。<br /><br /> **TRANSACTION ISOLATION LEVEL**。 サポートされる分離レベルについては、「 [メモリ最適化テーブルのトランザクション分離](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 」を参照してください。<br /><br /> **LANGUAGE**。 ストアド プロシージャの言語は、使用可能な言語または言語の別名の 1 つに設定されている必要があります。|  

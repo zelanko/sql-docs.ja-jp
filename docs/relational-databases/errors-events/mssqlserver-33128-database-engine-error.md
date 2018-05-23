@@ -3,8 +3,6 @@ title: MSSQLSERVER_33128 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b33e7edfd392da913d6887ae8bbbbef6630093
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e06181582c7a08a7165f7e8545a170b5eec27310
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 > リング バッファーは完全には文書にまとめられていない内部コンポーネントであり、ユーザーが使用するためのものではありません。 リング バッファーからのメッセージは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポートに問い合わせる際に役立ちます。 リング バッファーを表示するには、sys.dm_os_ring_buffers 動的管理ビューに対してクエリを実行します。  
   
-|状態|Description|  
+|状態|[説明]|  
 |---------|---------------|  
 |@shouldalert|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
 |2|RC4 キーは、decryptbykey() 組み込み関数で使用されます。 このメッセージは、リング バッファーにのみ表示されます。|  

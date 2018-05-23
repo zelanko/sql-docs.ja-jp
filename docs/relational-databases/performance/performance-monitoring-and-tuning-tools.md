@@ -3,12 +3,9 @@ title: パフォーマンス監視およびチューニング ツール | Micros
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,11 +22,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c0cc4e5b9264c3259305027ad8ee54869c914f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の監視およびチューニング用のツールは次のとおりです。  
   
-|ツール|Description|  
+|ツール|[説明]|  
 |----------|-----------------|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、バッチまたはトランザクションの開始などのエンジン プロセス イベントが追跡され、サーバーおよびデータベースの利用状況 (デッドロック、致命的なエラー、ログインの利用状況など) を監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはファイルにキャプチャして、後で分析できます。また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャプチャしたイベントをステップごとに再生して、何が起こったかを正確に確認することもできます。|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay では、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。|  
@@ -69,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="windows-monitoring-tools"></a>Windows 監視ツール  
  Windows オペレーティング システムおよび Windows Server 2003 では、次の監視ツールが提供されています。  
   
-|ツール|Description|  
+|ツール|[説明]|  
 |----------|-----------------|  
 |タスク マネージャー|システム上で実行中のプロセスやアプリケーションの概要を示します。|  
 |ネットワーク モニター エージェント|ネットワーク トラフィックを監視します。|  

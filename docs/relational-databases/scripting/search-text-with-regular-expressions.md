@@ -3,9 +3,7 @@ title: 正規表現によるテキストの検索 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -24,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  **参照一覧**から使用できる正規表現を以下にまとめます。  
   
-|式|構文|Description|  
+|式|構文|[説明]|  
 |----------------|------------|-----------------|  
 |任意の 1 文字|を選択します。|改行以外の任意の 1 文字を検索します。|  
 |0 個以上|*|直前の正規表現のゼロ個以上の項目を検索します (考えられるすべての一致項目を取得します)。|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  **[検索と置換]** の操作で有効なすべての正規表現の一覧が **参照一覧**に表示されるわけではありません。 **[検索する文字列]** の文字列に以下の正規表現を挿入することも可能です。  
   
-|式|構文|Description|  
+|式|構文|[説明]|  
 |----------------|------------|-----------------|  
 |最短 &#x2014; ゼロ個以上|@|直前の正規表現のゼロ個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
 |最短 &#x2014; 1 個以上|#|直前の正規表現の 1 個以上の項目を検索します (一致項目の文字の数を最小限にします)。|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
  標準の Unicode 文字プロパティによる一致検索のための構文を以下にまとめます。 2 文字の省略形は、Unicode 文字プロパティ データベースに挙げられている省略形と同じです。 その省略形を文字セットの一部として指定することも可能です。 たとえば、正規表現 [:Nd:Nl:No] は任意の数字と一致します。  
   
-|式|構文|Description|  
+|式|構文|[説明]|  
 |----------------|------------|-----------------|  
 |大文字|:Lu|任意の 1 つの大文字を検索します。 たとえば、「:Luhe」と指定した場合、「The」は一致項目ですが、「the」は違います。|  
 |小文字|:Ll|任意の 1 つの小文字を検索します。 たとえば、「:Llhe」と指定した場合、「the」は一致項目ですが、「The」は違います。|  
@@ -126,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
  標準の Unicode 文字プロパティの他に、以下の追加プロパティを文字セットの一部として指定できます。  
   
-|式|構文|Description|  
+|式|構文|[説明]|  
 |----------------|------------|-----------------|  
 |[アルファ]|:Al|任意の 1 文字を検索します。 たとえば、「:Alhe」は、「The」、「then」、「reached」などの単語を検索します。|  
 |数値|:Nu|任意の 1 つの数字を検索します。|  

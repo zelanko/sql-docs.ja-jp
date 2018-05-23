@@ -1,7 +1,7 @@
 ---
 title: スクリプト タスクを使用した Excel ファイルの操作 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
@@ -23,21 +23,21 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9976b6c895b701d0e12cfd30e9af52cf6c93717b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90a2b35f3e47affb8fb7a305eb0d24e88c58af39
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には Excel 接続マネージャー、Excel ソース、Excel 変換先が用意されており、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ファイル形式のスプレッドシートに保存されているデータを操作できます。 このトピックで説明する方法では、スクリプト タスクを使用して、使用可能な Excel のデータベース (ワークブック ファイル) およびテーブル (ワークシートおよび名前付き範囲) に関する情報を取得します。
   
-> [!TIP]  
->  複数のパッケージで再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
-
 > [!IMPORTANT]
 > Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
  
+> [!TIP]  
+>  複数のパッケージで再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
+
 ##  <a name="configuring"></a> サンプルをテストするためのパッケージの構成  
  このトピックのすべてのサンプルをテストする単一のパッケージを構成することができます。 これらのサンプルでは、同じパッケージ変数と同じ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスを数多く使用します。  
   
@@ -150,7 +150,7 @@ public class ScriptMain
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
-    -   「**ExcelTable**」および「**ExcelFile**」をコンマで区切って入力します**。**  
+    -   「**ExcelTable**」および「**ExcelFile**」をコンマで区切って入力します **。**  
   
          - または -  
   
@@ -190,9 +190,9 @@ Public Class ScriptMain
   
     Dts.Variables("ExcelTableExists").Value = False  
     If File.Exists(fileToTest) Then  
-      connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+      connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & fileToTest & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
       excelConnection = New OleDbConnection(connectionString)  
       excelConnection.Open()  
       excelTables = excelConnection.GetSchema("Tables")  
@@ -227,8 +227,8 @@ public class ScriptMain
             Dts.Variables["ExcelTableExists"].Value = false;  
             if (File.Exists(fileToTest))  
             {  
-                connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + fileToTest + ";Extended Properties=Excel 8.0";  
+                connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + fileToTest + ";Extended Properties=Excel 12.0";  
                 excelConnection = new OleDbConnection(connectionString);  
                 excelConnection.Open();  
                 excelTables = excelConnection.GetSchema("Tables");  
@@ -282,7 +282,7 @@ public class ScriptMain
 ```vb  
 Public Class ScriptMain  
   Public Sub Main()  
-    Const FILE_PATTERN As String = "*.xls"  
+    Const FILE_PATTERN As String = "*.xlsx"  
   
     Dim excelFolder As String  
     Dim excelFiles As String()  
@@ -302,7 +302,7 @@ public class ScriptMain
 {  
   public void Main()  
   {  
-    const string FILE_PATTERN = "*.xls";  
+    const string FILE_PATTERN = "*.xlsx";  
   
     string excelFolder;  
     string[] excelFiles;  
@@ -371,9 +371,9 @@ Public Class ScriptMain
     Dim excelTables As String()  
   
     excelFile = Dts.Variables("ExcelFile").Value.ToString  
-    connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+    connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & excelFile & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
     excelConnection = New OleDbConnection(connectionString)  
     excelConnection.Open()  
     tablesInFile = excelConnection.GetSchema("Tables")  
@@ -408,8 +408,8 @@ public class ScriptMain
             string[] excelTables = new string[5];  
   
             excelFile = Dts.Variables["ExcelFile"].Value.ToString();  
-            connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + excelFile + ";Extended Properties=Excel 8.0";  
+            connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + excelFile + ";Extended Properties=Excel 12.0";  
             excelConnection = new OleDbConnection(connectionString);  
             excelConnection.Open();  
             tablesInFile = excelConnection.GetSchema("Tables");  

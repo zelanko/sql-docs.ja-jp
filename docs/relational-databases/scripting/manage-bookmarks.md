@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -20,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42b58743f319a175c9eb06905dec3ace081b1be8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0098e4a027587dcb6d8b07d4b8c59bfdf53d76e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +88,7 @@ ms.lasthandoff: 05/03/2018
  **削除**  
  現在選択されているブックマークを **[ブックマーク]** ウィンドウ、およびブックマークが存在するドキュメントから削除します。 ブックマークが付いたコードの行を削除するのではありません。  
   
- **名前の変更**  
+ **Rename**  
  ブックマークまたはフォルダーに新しい表示名を割り当てることができます。  
   
  **[ブックマークを有効/無効にする]**  

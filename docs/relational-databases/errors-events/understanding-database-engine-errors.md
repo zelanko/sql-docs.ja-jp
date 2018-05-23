@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -21,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5deba5923535da8a349b5bc45b2c988f1190bc3e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5ed21ec6de1f739eec94d3b47bc31eb9de2b9ebb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="understanding-database-engine-errors"></a>データベース エンジン エラーについて
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   次の表で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって発生したエラーの属性について説明します。  
   
-|属性|Description|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |エラー番号|エラー メッセージには、それぞれ一意なエラー番号が付いています。|  
 |エラー メッセージ文字列|エラー メッセージには、エラーの原因についての診断情報が含まれています。 多くのエラー メッセージには、エラーが発生したオブジェクト名などの情報を挿入するための置換変数が用意されています。|  

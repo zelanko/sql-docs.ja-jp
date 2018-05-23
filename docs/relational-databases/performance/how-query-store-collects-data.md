@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 09/13/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dafc740c11cf79294786440204e8e284dcbd518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3e839b220bb8a3464d8dfbc9a7f4afa8bbcb416
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="how-query-store-collects-data"></a>クエリ ストアがデータを収集するしくみ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  **ビューの説明**  
   
-|表示|Description|  
+|表示|[説明]|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|データベースに対して実行された一意のクエリ テキストを表示します。 クエリ テキストの前後のコメントとスペースは無視されます。 テキスト内のコメントとスペースは無視されません。 バッチ内のすべてのステートメントが、個別のクエリ テキスト エントリを生成します。|  
 |**sys.query_context_settings**|クエリが実行される設定に影響するプランの一意の組み合わせを表示します。 `context_settings_id` はクエリ キーの一部であるため、設定に影響する異なるプランで実行された同じクエリ テキストが、クエリ ストアでは個別のクエリ エントリを生成します。|  

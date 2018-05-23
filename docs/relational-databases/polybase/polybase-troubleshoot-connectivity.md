@@ -5,7 +5,7 @@ ms.author: alazad
 manager: craigg
 ms.assetid: ''
 ms.component: polybase
-ms.technology: database
+ms.technology: polybase
 ms.suite: sql
 ms.custom: ''
 ms.tgt_pltfrm: na
@@ -13,12 +13,12 @@ ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.openlocfilehash: dce5bc3018cb223a8d3c9f0f85aa56c8aba1e4f3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.prod_service: polybase, sql-data-warehouse, pdw
+ms.openlocfilehash: fc09df1265c81f1fe1a127e17c4ebd4edcc66a1a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む複数の構�
 ```
 
 ## <a name="arguments"></a>引数
-| 引数 | Description|
+| 引数 | [説明]|
 | --- | --- |
 | *名前ノードのアドレス* | 名前ノードの IP または FQDN です。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。|
 | *名前ノードのポート* | 名前ノードのポートです。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 通常は 8020 です。 |

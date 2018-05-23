@@ -3,11 +3,10 @@ title: SQL Server の既存のインスタンスのアンインストール (セ
 ms.custom: ''
 ms.date: 01/27/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +20,11 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 38c2b04996f8a3323e834a8f31088551852a6733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a9357b20ef28d78ceebd1df7db336235b9e34f8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを複数インストールしている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の最後のインスタンスがアンインストールされるときに自動的にアンインストールされます。  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のすべてのコンポーネントをアンインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール パネル **の** [プログラムと機能] **を使用して、**Browser コンポーネントを手動でアンインストールする必要があります。  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のすべてのコンポーネントをアンインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コントロール パネル **の** [プログラムと機能] **を使用して、** Browser コンポーネントを手動でアンインストールする必要があります。  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールすると、インストール プロセス中に追加された tempdb データ ファイルが削除されます。 tempdb_mssql_*.ndf という名前パターンのファイルがシステム データベース ディレクトリにある場合、そのファイルは削除されます。  
   

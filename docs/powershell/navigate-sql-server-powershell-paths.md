@@ -3,12 +3,9 @@ title: SQL Server PowerShell パスの移動 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: powershell
-ms.component: powershell
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
@@ -16,11 +13,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b1f62d53dc997408907da7e111837db06b308f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37be2c3dc4c2307cea99164a5fa955dfbbfdd6d9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +33,7 @@ Windows PowerShell では、コマンドレットを実装して、PowerShell �
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、次の表に示すように、プロバイダーのコマンドレットのサブセットを実装します。  
   
-|コマンドレット|標準の別名|コマンドの別名|UNIX シェルの別名|Description|  
+|コマンドレット|標準の別名|コマンドの別名|UNIX シェルの別名|[説明]|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|現在のノードを取得します。|  
 |**Set-Location**|**sl**|**cd、chdir**|**cd、chdir**|現在のノードを変更します。|  
