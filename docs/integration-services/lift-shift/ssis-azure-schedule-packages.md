@@ -1,6 +1,6 @@
 ---
-title: Azure で SSIS パッケージの実行をスケジュールする | Microsoft Docs
-ms.date: 05/07/2018
+title: Azure で SSIS パッケージのスケジュールを設定する | Microsoft Docs
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Azure で SSIS パッケージの実行をスケジュールする
 次のスケジュール設定のオプションのいずれかを選択して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されているパッケージの実行をスケジュール設定することができます。
 -   [SQL Server Management Studio (SSMS) でのスケジュール オプション](#ssms)
 -   [Azure Data Factory での SSIS パッケージ アクティビティの実行](#execute)
--   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#stored proc)
+-   [Azure Data Factory SQL Server ストアド プロシージャ アクティビティ](#storedproc)
 -   [SQL Database エラスティック ジョブ](#elastic)
 -   [SQL Server エージェント](#agent)
 
 ## <a name="ssms"></a> SSMS でパッケージをスケジュールする
 
-SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、**[新しいスケジュール]** ダイアログ ボックスを開くことができます。
+SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、**[新しいスケジュール]** ダイアログ ボックスを開くことができます。 詳しくは、「[Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md)」(SSMS を使用して Azure で SSIS パッケージの実行をスケジュールする) をご覧ください。
+
+この機能には、SQL Server Management Studio バージョン 17.7 以降が必要です。 最新バージョンの SSMS を入手するには、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
 ## <a name="execute"></a> SSIS パッケージの実行アクティビティでパッケージをスケジュールする
 

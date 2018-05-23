@@ -47,7 +47,6 @@
 ## [開発](sql-server-linux-develop-overview.md)
 ### [接続ライブラリ](sql-server-linux-develop-connectivity-libraries.md)
 ### [Visual Studio Code の使用](sql-server-linux-develop-use-vscode.md)
-### [SSMS の使用](sql-server-linux-develop-use-ssms.md)
 ### [SSDT の使用](sql-server-linux-develop-use-ssdt.md)
 
 ## [管理](sql-server-linux-management-overview.md)

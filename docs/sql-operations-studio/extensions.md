@@ -19,24 +19,24 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>機能を拡張します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の機能を拡張します
 
-拡張機能で[!INCLUDE[name-sos](../includes/name-sos-short.md)]より多くの機能をベースに追加する簡単な方法を提供[!INCLUDE[name-sos](../includes/name-sos-short.md)]インストールします。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張機能はベース [!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストールにより多くの機能を簡単に追加する方法を提供します。 
 
-拡張機能は、サード パーティ コミュニティ (あなた)! だけでなく、SQL 操作 Studio チーム (Microsoft) によって提供されます。 拡張機能を作成する方法については、次を参照してください。[拡張機能の概要](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)です。
+拡張機能は、SQL Operations Studio チーム (Microsoft) だけでなく、サード パーティ コミュニティ (あなた!) によって提供されます。 拡張機能を作成する方法については [拡張機能の概要](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility) を参照してください。
 
 
-## <a name="add-sql-operations-studio-extensions"></a>SQL 操作 Studio の拡張機能を追加します。
+## <a name="add-sql-operations-studio-extensions"></a>SQL Operations Studio の拡張機能の追加
 
-1. 拡張機能マネージャーを開き、使用可能な拡張機能にアクセスするには、拡張機能 アイコンを選択するか選択**拡張**で、**ビュー**メニュー。
-2. 詳細を表示する使用可能な拡張機能を選択します。
+1. 拡張機能マネージャーを開き、使用可能な拡張機能にアクセスするには、拡張機能 アイコンを選択するか、**ビュー**メニューの**拡張**を選択します。
+2. 使用可能な拡張機能を選択して詳細を表示します。
 
    ![拡張機能マネージャー](media/extensions/extension-manager.png)
 
-1. 拡張機能を選択し、**インストール**ことです。
-2. 選択**再読み込み**(初めての拡張機能をインストールするときに必要な) のみ、拡張機能を有効にします。
-1. サーバーまたはデータベースを右クリックし、管理ダッシュ ボードに移動**管理**です。
-2. インストールされた拡張機能は、管理ダッシュ ボードのタブとして表示します。
+1. 必要な拡張機能を選択し、**インストール**します。
+2. **再読み込み**を選択して拡張機能を有効にします(初めて拡張機能をインストールするときのみ必要です)。
+1. サーバーまたはデータベースを右クリックし、**管理**を選択して管理ダッシュ ボードに移動します。
+2. インストールされた拡張機能は、管理ダッシュ ボードのタブとして表示されます。
 
    ![拡張機能マネージャー](media/extensions/dashboard-extensions.png)
 

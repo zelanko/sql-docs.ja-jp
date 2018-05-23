@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: SQL 操作 Studio (プレビュー) により、TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成 |Microsoft ドキュメント'
+title: 'チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには - SQL Operations Studio (プレビュー) |Microsoft ドキュメント'
 description: このチュートリアルでは、SQL 操作 Studio (プレビュー) で T-SQL を使用して簡略化する主要な機能について説明します。
 ms.custom: tools|sos
 ms.date: 03/13/2018
@@ -21,13 +21,13 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル: TRANSACT-SQL エディターを使用してデータベース オブジェクトを作成するには - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-を作成し、クエリを実行するストアド プロシージャやスクリプトなどは、データベース担当者の中核となるタスクです。 このチュートリアルでは、データベース オブジェクトを作成する T-SQL エディターで、主要な機能を示します。
+クエリやストアドプロシージャ、スクリプトなどを作成し、実行することは、データベース担当者の中核となるタスクです。 このチュートリアルでは、T-SQL エディターの主要な機能を使用してデータベースオブジェクトを作成する方法を説明します。
 
-このチュートリアルで使用する方法を学びます[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]に。
+このチュートリアルでは、以下の操作を [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] で行う方法を示しています:
 > [!div class="checklist"]
 > * データベース オブジェクトの検索
-> * テーブル データを編集します。 
-> * スニペットを使用してすばやく T-SQL を記述するには
+> * テーブル データの編集 
+> * スニペットを使用してすばやく T-SQL を記述する
 > * 使用してデータベース オブジェクトの詳細の表示*ピークの定義*と*定義へ移動*
 
 
@@ -223,7 +223,7 @@ SQL 操作 Studio には、ピークの定義機能を使用して、オブジ�
 このチュートリアルで学習した方法。
 > [!div class="checklist"]
 > * スキーマ オブジェクトのクイック検索
-> * テーブル データを編集します。 
+> * テーブル データの編集 
 > * スニペットを使用する T-SQL スクリプトの記述
 > * ピークの定義を使用してデータベース オブジェクトの詳細について説明し、定義へ移動
 

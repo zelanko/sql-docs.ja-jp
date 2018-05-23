@@ -114,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  結合先アーティクル (親アーティクル) のフィルターを定義します。  
   
-    -   パラメーター化された行フィルターを使ったアーティクルのフィルター選択については、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。  
+    -   パラメーター化された行フィルターを使ったアーティクルのフィルター選択については、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」を参照してください。  
   
     -   静的行フィルターを使ったアーティクルのフィルター選択については、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」を参照してください。  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
- 次の例では、マージ パブリケーションでアーティクル グループを定義しています。アーティクルは、 `Employee` テーブルと比較されて、一連の結合フィルターを使ってフィルター選択されます (このテーブル自体が、 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 列の **HOST_NAME** の値に対するパラメーター化された行フィルターを使ってフィルター選択されています)。 詳しくは、「 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
+ 次の例では、マージ パブリケーションでアーティクル グループを定義しています。アーティクルは、 `Employee` テーブルと比較されて、一連の結合フィルターを使ってフィルター選択されます (このテーブル自体が、 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 列の **HOST_NAME** の値に対するパラメーター化された行フィルターを使ってフィルター選択されています)。 詳しくは、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)」をご覧ください。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   

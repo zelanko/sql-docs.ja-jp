@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  操作する CDC サービスを選択します。  
   
-     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
+     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
  **OR**  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  CDC Service 構成コンソールの中央のセクションで、操作するサービスを選択します。  
   
-     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
+     操作する CDC サービスを右クリックして、目的のアクションをクリックすることもできます。 「 [CDC Service で可能な操作](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)」を参照してください。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service で可能な操作  
  CDC サービスの操作時には、以下のアクションを実行できます。  
   
 ### <a name="delete-the-service"></a>サービスの削除  

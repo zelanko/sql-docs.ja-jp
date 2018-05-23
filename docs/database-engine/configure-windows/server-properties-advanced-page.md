@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
  **[2 桁表記の年の基準になる年]**  
  年を 2 桁で入力する場合の最大年が示されます。 表示された年からさかのぼって 99 年間を 2 桁で入力できます。 その他の年はすべて 4 桁で入力する必要があります。  
   
- たとえば、既定の設定が 2049 の場合、「3/14/49」と入力した日付は 2049 年 3 月 14 日として解釈され、「3/14/50」と入力した日付は 1950 年 5 月 14 日と解釈されます。 詳細については、「 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。  
+ たとえば、既定の設定が 2049 の場合、「3/14/49」と入力した日付は 2049 年 3 月 14 日として解釈され、「3/14/50」と入力した日付は 1950 年 5 月 14 日と解釈されます。 詳細については、「 [two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。  
   
 ## <a name="network"></a>ネットワーク  
  **[ネットワーク パケット サイズ]**  

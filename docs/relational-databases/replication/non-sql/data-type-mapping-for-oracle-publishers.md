@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   ストアド プロシージャを使用して、以降のすべてのアーティクルの既定値をグローバルに変更します (既存のアーティクルの既定値は変更されません)。  
   
- 代替データ型マッピングを指定するには、「 [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)」を参照してください。  
+ 代替データ型マッピングを指定するには、「 [Oracle パブリッシャーのデータ型マッピングの指定](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
