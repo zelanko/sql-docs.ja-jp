@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのアダプティブ クエリの処理 | Microsoft Docs | Microsoft Docs
 description: SQL Server (2017 以降) および Azure SQL Database のクエリ パフォーマンスを向上させるためのアダプティブ クエリ処理の機能です。
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: performance
@@ -17,11 +17,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Microsoft SQL データベースでのアダプティブ クエリの処理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +83,31 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>メモリ許可フィードバック、リソース ガバナー、クエリ ヒント
 実際に許可されるメモリは、リソース ガバナーまたはクエリ ヒントによって決定されるクエリ メモリ制限に従います。
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、メモリ許可フィードバックを無効にする
+メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。 データベースを発生源とするすべてのクエリ実行に対してバッチ モード メモリ許可フィードバックを無効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+有効になっているとき、この設定は sys.database_scoped_configurations で有効として表示されます。
+
+データベースを発生源とするすべてのクエリ実行に対してバッチ モード メモリ許可フィードバックを再有効化するには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK を USE HINT クエリ ヒントとして指定することで、特定のクエリのバッチ モード メモリ許可フィードバックを無効にすることもできます。  例 :
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
+
 ## <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
 バッチ モード アダプティブ結合機能を使うと、最初の入力のスキャンが "**終わる**" まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。
 しくみは次のとおりです。
@@ -139,7 +164,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>アダプティブ結合アクティビティの追跡
 アダプティブ結合演算子には次のプラン演算子属性があります。
 
-| プラン属性 | Description |
+| プラン属性 | [説明] |
 |--- |--- |
 | AdaptiveThresholdRows | ハッシュ結合から入れ子になったループ結合への切り替えに使われるしきい値を示します。 |
 | EstimatedJoinType | 予想される結合の種類を示します。 |
@@ -165,6 +190,36 @@ WHERE [fo].[Quantity] = 361;
 次のグラフは、ハッシュ結合のコストと入れ子になったループ結合のコストの交点の例を示します。  この交点で、しきい値が決定され、それによって結合操作に実際に使われるアルゴリズムが決まります。
 
 ![結合しきい値](./media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、適応型結合を無効にする
+
+適応型結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。  
+データベースを発生源とするすべてのクエリ実行に対して適応型結合を無効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+有効になっているとき、この設定は sys.database_scoped_configurations で有効として表示されます。
+データベースを発生源とするすべてのクエリ実行に対して適応型結合を再有効化するには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+USE HINT クエリ ヒントとして DISABLE_BATCH_MODE_ADAPTIVE_JOINS を指定することで、特定のクエリで適応型結合を無効にすることもできます。  例 :
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>複数ステートメントのテーブル値関数のインターリーブ実行
 インターリーブ実行は、単一クエリ実行の最適化フェーズと実行フェーズの間の一方向境界を変更し、修正されたカーディナリティ推定に基づいてプランが適応できるようにします。 最適化中に、インターリーブ実行の候補を検出した場合 (現在は**複数ステートメント テーブル値関数 (MSTVF)**)、最適化を一時停止し、該当するサブツリーを実行し、正確なカーディナリティの推定をキャプチャし、ダウンストリームの演算に対する最適化を再開します。
@@ -205,14 +260,14 @@ MSTVF の単純な "SELECT *" では、インターリーブ実行によるメ�
 ### <a name="tracking-interleaved-execution-activity"></a>インターリーブ実行アクティビティの追跡
 実際のクエリ実行プランで使用法属性を確認できます。
 
-| 実行プラン属性 | Description |
+| 実行プラン属性 | [説明] |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | *QueryPlan* ノードに適用します。 *true* の場合、プランにインターリーブ実行候補が含まれることを意味します。 |
 | IsInterleavedExecuted | TVF ノードの RelOp 以下にある *RuntimeInformation* 要素の属性。 *true* の場合、操作がインターリーブ実行操作の一部としてマテリアル化されたことを意味します。 |
 
 次の xEvent を使って、インターリーブ実行の発生を追跡することもできます。
 
-| xEvent | Description |
+| xEvent | [説明] |
 | ---- | --- |
 | interleaved_exec_status | このイベントは、インターリーブ実行が発生すると発生します。 |
 | interleaved_exec_stats_update | このイベントは、インターリーブ実行によって更新されたカーディナリティの推定を記述します。 |
@@ -226,6 +281,41 @@ MSTVF の単純な "SELECT *" では、インターリーブ実行によるメ�
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>インターリーブ実行とクエリ ストアの相互運用性
 インターリーブ実行を使うプランは強制的に実行できます。 プランは、最初の実行に基づいてカーディナリティの推定を修正されたバージョンです。    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、インターリーブ実行を無効にする
+
+インターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。  データベースを発生源とするすべてのクエリ実行に対してインターリーブ実行を無効にするには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+有効になっているとき、この設定は sys.database_scoped_configurations で有効として表示されます。
+データベースを発生源とするすべてのクエリ実行に対してインターリーブ実行を再有効化するには、該当するデータベースとの関連で次を実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+USE HINT クエリ ヒントとして DISABLE_INTERLEAVED_EXECUTION_TVF を指定することで、特定のクエリでインターリーブ実行を無効にすることもできます。  例 :
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
 
 ## <a name="see-also"></a>参照
 [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

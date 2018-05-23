@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックは、次の状況に関連しています。  
+  この記事は、次の状況に関連しています。  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループの可用性レプリカを構成する場合。  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのアドレス空間で直接実行されるので、メモリ リークや、サーバーのパフォーマンスと信頼性を低下させるその他の問題が発生する原因になる場合があります。 参照データを含んでいる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとは別のインスタンスに拡張ストアド プロシージャを格納することを検討してください。 また、データベースへのアクセスには分散クエリを使用することも検討してください。  
   
-> **重要!!** システム管理者は、拡張ストアド プロシージャをサーバーに追加して他のユーザーに Execute 権限を許可する前に、各拡張ストアド プロシージャに有害なコードや悪意のあるコードが含まれていないことを十分に確認する必要があります。  
+  > [!IMPORTANT]
+  > システム管理者は、拡張ストアド プロシージャをサーバーに追加して他のユーザーに Execute 権限を許可する前に、各拡張ストアド プロシージャに有害なコードや悪意のあるコードが含まれていないことを十分に確認する必要があります。  
   
  詳細については、「[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)」、「[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)」、および「[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)」を参照してください。  
   
@@ -279,9 +280,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>システム オブジェクトに対する GRANT 権限、REVOKE 権限、または DENY 権限  
  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限は、 **master** データベースに格納されるので、対象のサーバー インスタンスで構成する必要があります。  
   
- 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]** に設定することで作成できます。  
+ 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]** に設定することで作成できます。  
   
-> **重要!!** ログインのスクリプトを作成する場合、パスワードはスクリプトに含まれません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインがある場合、対象のサーバー インスタンスでスクリプトを変更する必要があります。  
+   > [!IMPORTANT]
+   > ログインのスクリプトを作成する場合、パスワードはスクリプトに含まれません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインがある場合、対象のサーバー インスタンスでスクリプトを変更する必要があります。  
   
  システム オブジェクトは、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューで確認できます。 システム オブジェクトの権限は、**master** データベースの [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) カタログ ビューで確認できます。 これらのカタログ ビューに対するクエリの実行およびシステム オブジェクト権限の付与に関する詳細については、「[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)」を参照してください。 詳細については、「[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)」および「[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)」を参照してください。  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  証明書および非対称キーの詳細については、「 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
-  
+## <a name="trustworthy-property"></a>TRUSTWORTHY プロパティ
+TRUSTWORTHY データベース プロパティを使用して、SQL Server インスタンスがデータベースとその内容を信頼するかどうかを示します。 データベースがアタッチされているとき、既定で、かつ、安全上の理由から、このオプションは OFF に設定されます。このことは、元のサーバーでこのオプションが ON に設定されている場合も当てはまります。 このプロパティの詳細については、「[TRUSTWORTHY データベース プロパティ](../security/trustworthy-database-property.md)」を参照してください。このオプションをオンにする方法については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  レプリケートされたデータベースのバックアップを別のサーバーまたはデータベースに復元する場合は、レプリケーションの設定は保存できません。 この場合、バックアップの復元後にすべてのパブリケーションおよびサブスクリプションを再作成する必要があります。 この処理を簡単にするには、現在のレプリケーションの設定を行うスクリプトと、レプリケーションの有効化および無効化を行うスクリプトを作成します。 レプリケーションの設定の再作成を容易にするには、これらのスクリプトをコピーし、対象のサーバー インスタンスで動作するようにサーバー名の参照を変更します。  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker アプリケーション  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  既定で、かつ、安全上の理由から、データベースが別のサーバーからアタッチされているとき、*is_broker_enabled* と *is_honoor_broker_priority_on* のオプションが OFF に設定されます。 これらのオプションを ON に設定する方法については「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

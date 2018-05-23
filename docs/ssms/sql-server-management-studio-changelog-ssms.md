@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 この記事では、SSMS の現在と以前のバージョンの更新、機能強化、およびバグの修正に関する詳細を提供します。 [SSMS の以前のバージョン](#previous-ssms-releases)は以下でダウンロードできます。
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-リリース番号: 17.6<br>
+リリース番号: 17.7<br>
+ビルド番号: 14.0.17254.0<br>
+リリース日: 2018 年 5 月 9 日
+
+### <a name="whats-new"></a>新機能
+
+**SSMS 全般**
+
+レプリケーション モニター:   
+- レプリケーション モニターでは、パブリッシャー データベースかディストリビューター データベースが可用性グループに含まれるとき、リスナーを登録できるようになりました。 パブリッシャー データベースかディストリビューター データベースが AlwaysOn 可用性グループに含まれるとき、レプリケーション環境を監視できるようになりました。 
+ 
+Azure SQL Data Warehouse: 
+- Azure SQL Data Warehouse で外部テーブルの "拒否された行の場所" サポートを追加します。 
+
+**Integration Services (IS)**
+
+- Azure SQL Database にデプロイされた SSIS パッケージのスケジュールを設定する機能を追加しました。 SQL Server がファースト クラス ジョブ スケジューラーとして使用されていたオンプレミス SQL Server や SQL Database Managed Instance (プレビュー) とは異なり、SQL Database にはスケジューラーが組み込まれていません。 この新しい SSMS 機能は SQL Server エージェントに似た、おなじみのインターフェイスを備えており、SQL Database にデプロイされているパッケージをそのインターフェイスでスケジュール設定できます。 SQL Database を使用して SSIS カタログ データベース (SSISDB) をホストする場合、この SSMS 機能を使用し、SSIS パッケージのスケジュール設定に必要なデータ ファクトリのパイプライン、アクティビティ、トリガーを生成できます。 その後、データ ファクトリでそれらのオブジェクトを編集したり、拡張したりできます。 詳細については、SSMS を使用し、[Azure SQL Database で SSIS パッケージの実行スケジュールを設定する](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)方法に関するページを参照してください。 Azure Data Factory のパイプライン、アクティビティ、トリガーの詳細については、「[Azure Data Factory のパイプラインとアクティビティ](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)」と「[Azure Data Factory でのパイプラインの実行とトリガー](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)」を参照してください。
+- SQL Managed Instance の SQL エージェントで SSIS パッケージのスケジュール設定をサポート マネージド インスタンスで SSIS パッケージを実行する SQL エージェント ジョブを作成できるようになりました。 
+
+### <a name="bug-fixes"></a>バグの修正
+
+**SSMS 全般** 
+
+メンテナンス プラン:   
+- 既存のメンテナンス プランのスケジュールを変更しようとすると例外がスローされる問題を解決しました。 詳細については、「[SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924)」 (メンテナンス プランでスケジュールをクリックすると、SSMS 17.6 がクラッシュする) を参照してください。
+
+Always On: 
+- Always On Latency Dashboard と SQL Server 2012 が連動しない問題を解決しました。
+ 
+スクリプトの作成: 
+- 管理者以外のユーザーが Azure SQL Data Warehouse に対するストアド プロシージャを作成できない問題を解決しました。
+- Azure SQL Database に対してデータベースのスクリプトを作成するとき、*SCOPED CONFIGURATION* プロパティのスクリプトが作成されなかった問題を解決しました。
+ 
+テレメトリ: 
+- SSMS がクラッシュし、テレメトリの送信を無効にした後、サーバーに接続を試行する問題を解決しました。
+ 
+Azure SQL Database: 
+- ユーザーが互換性レベルを設定または変更できない問題を解決しました (ドロップダウン フォームが空)。 注: 互換性レベルを 150 に設定するには、*[スクリプト]* ボタンを使用し、スクリプトを手動で編集する必要があります。 
+ 
+SMO: 
+- SMO でエラー ログ サイズ設定を公開しました。 詳細については、「[Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115)」 (SQL Server エラー ログの最大サイズの設定) を参照してください。  
+- Linux の SMO でラインフィード スクリプト作成を修正。
+- 滅多に使用されないプロパティを取得するときのさまざまなパフォーマンスを改善。  
+
+IntelliSense: 
+- パフォーマンス改善: 列データに関して、IntelliSense クエリの量減らしました。 これは特に、大量の列があるテーブルの利用時に効果があります。 
+
+SSMS ユーザー設定:
+- オプション ページのサイズが正しく変更されない問題を解決しました。
+
+その他:  
+- "*統計詳細*" ページのテキスト表示を改善しました。 
+
+**Integration Services (IS)**
+
+- Azure SQL Database Managed Instance のサポートが改善しました。
+- ユーザーが SQL Server 2014 以前のカタログを作成できない問題を解決しました。
+- レポートに関する 2 つの問題を解決しました。
+   - Azure サーバーのコンピューター名を削除しました。
+   - ローカライズされたオブジェクト名の処理を改善しました。
+
+
+### <a name="known-issues"></a>既知の問題
+
+新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 ビルド番号: 14.0.17230.0<br>
 リリース日: 2018 年 3 月 20 日
+
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>新機能
 

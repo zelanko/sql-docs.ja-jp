@@ -1,5 +1,5 @@
 ---
-title: Azure 上の SSISDB カタログ データベースへの接続 | Microsoft Docs
+title: Azure の SSIS カタログ データベース (SSISDB) に接続する | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure 上の SSISDB カタログ データベースへの接続
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Azure の SSIS カタログ データベース (SSISDB) に接続する
 
 Azure SQL Database でホストされている SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 接続するには、次の項目が必要です。
 - 完全修飾サーバー名
@@ -45,7 +45,7 @@ Azure SQL Database でホストされている SSIS カタログ データベー
 
 2. **サーバーに接続します**。 **[サーバーへの接続]** ダイアログ ボックスに次の情報を入力します。
 
-   | 設定       | 提案される値 | Description | 
+   | 設定       | 提案される値 | [説明] | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 | 名前は **mysqldbserver.database.windows.net** の形式である必要があります。 |

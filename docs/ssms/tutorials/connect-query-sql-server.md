@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下のことを行う方法を示します。
@@ -33,17 +33,16 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>Prerequisites
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
-- **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
-- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)。
+- **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server インスタンスに接続する
 
-1. [SQL Server Management Studio] を起動します。  
-    SSMS を初めて実行すると、**[サーバーへの接続]** ウィンドウが開きます。 開かない場合は、**[オブジェクト エクスプローラー]** > **[接続]** > **[データベース エンジン]** の順に選択して、手動で開くことができます。
+1. [SQL Server Management Studio] を起動します。 SSMS を初めて実行すると、**[サーバーへの接続]** ウィンドウが開きます。 開かない場合は、**[オブジェクト エクスプローラー]** > **[接続]** > **[データベース エンジン]** の順に選択して、手動で開くことができます。
 
     ![オブジェクト エクスプローラーの接続リンク](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 
     ![SQL Server インスタンスの使用のオプションが表示された "サーバー名" フィールド](media/connect-query-sql-server/connection2.png)
 
-    - **[認証]** に、**[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine)」を参照してください。
+    - **[認証]** に、**[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)」を参照してください。
 
     **[オプション]** を選択して追加の接続オプションを変更することもできます。 接続オプションの例には、接続しているデータベース、接続のタイムアウト値、ネットワーク プロトコルなどがあります。 この記事では、すべてのオプションについて既定値を使用します。 
 
 3. すべてのフィールドを入力したら、**[接続]** を選択します。 
 
-4. 次に示すように、オブジェクト エクスプローラーのオブジェクトを探して、SQL Server インスタンスへの接続が成功したことを確認します。 
+### <a name="examples-of-successful-connections"></a>接続の成功例
+SQL Server 接続の成功を確認するには、**オブジェクト エクスプローラー**内でオブジェクトを展開し、調べます。 これらのオブジェクトは、接続先のサーバーの種類によって異なります。 
 
-   ![成功した接続](media/connect-query-sql-server/successfulconnection.png)
+- オンプレミス SQL Server に接続 - この場合、NODE5\SQL2016ST: ![オンプレミス サーバーに接続](media/connect-query-sql-server/connect-on-prem.png)
+
+- SQL Azure DB に接続 - この場合、msftestserver.database.windows.net: ![SQL Azure DB に接続](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > このチュートリアルでは、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB ではサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)に関するページを参照してください。 
 
 ## <a name="create-a-database"></a>データベースの作成
 次の手順で、TutorialDB という名前のデータベースを作成します。 
@@ -170,8 +175,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>クエリ ウィンドウが接続するサーバーを変更する
 次の手順で、現在のクエリ ウィンドウが接続しているサーバーを変更できます。
 
-1. クエリ ウィンドウを右クリックして、**[接続]** > **[接続の変更]** を選択します。  
-    **[サーバーへの接続]** ウィンドウがもう一度開きます。
+1. クエリ ウィンドウを右クリックして、**[接続]** > **[接続の変更]** を選択します。 **[サーバーへの接続]** ウィンドウがもう一度開きます。
 2. クエリ ウィンドウが接続するサーバーを変更します。 
  
    ![[接続の変更] コマンド](media/connect-query-sql-server/changeconnection.png)

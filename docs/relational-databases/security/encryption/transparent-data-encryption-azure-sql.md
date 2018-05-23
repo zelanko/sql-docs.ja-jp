@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Azure SQL Database と Data Warehouse の透過的なデータ暗号化
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-透過的なデータ暗号化は、悪意のあるアクティビティの脅威から Azure SQL Database と Azure Data Warehouse を保護するのに役立ちます。 データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行します。アプリケーションに変更を加える必要はありません。
+透過的なデータ暗号化 (TDE) は、悪意のあるアクティビティの脅威から Azure SQL Database と Azure Data Warehouse を保護するのに役立ちます。 データベース、関連するバックアップ、静止したトランザクション ログ ファイルのリアルタイム暗号化および暗号化解除を実行します。アプリケーションに変更を加える必要はありません。 既定では、新しくデプロイされたすべての Azure SQL Database で TDE は有効になっていますが、場合によっては、古いデータベースのために手動で有効にする必要があります。  
 
 透過的なデータ暗号化では、データベース暗号化キーという対称キーを使用してデータベース全体のストレージを暗号化します。 このデータベース暗号化キーは、透過的なデータ暗号化プロテクターで保護されます。 プロテクターは、サービス管理証明書 (サービス管理の透過的なデータ暗号化) または Azure Key Vault に格納されている非対称キー (Bring Your Own Key) です。 透過的なデータ暗号化プロテクターはサーバー レベルで設定します。 
 
@@ -84,7 +84,7 @@ Azure Portal で透過的なデータ暗号化を構成するには、Azure の�
 
 PowerShell で透過的なデータ暗号化を構成するには、Azure の所有者、共同作成者、または SQL セキュリティ マネージャーとして接続する必要があります。 
 
-| コマンドレット | Description |
+| コマンドレット | [説明] |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |データベースの透過的なデータ暗号化を有効または無効にします|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |データベースの透過的なデータ暗号化の状態を取得します |
@@ -100,7 +100,7 @@ PowerShell で透過的なデータ暗号化を構成するには、Azure の所
 
 管理者またはマスター データベースの **dbmanager** ロールのメンバーとしてログインし、データベースに接続します。
 
-| コマンド | Description |
+| コマンド | [説明] |
 | --- | --- |
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF でデータベースを暗号化または暗号化解除します |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |データベースの暗号化の状態と、関連付けられているデータベース暗号化キーに関する情報を返します |
@@ -113,7 +113,7 @@ Transact-SQL を使用して、Key Vault のキーに透過的なデータ暗号
  
 REST API で透過的なデータ暗号化を構成するには、Azure の所有者、共同作成者、または SQL セキュリティ マネージャーとして接続する必要があります。 
 
-| コマンド | Description |
+| コマンド | [説明] |
 | --- | --- |
 |[サーバーの作成または更新](/rest/api/sql/servers/createorupdate)|SQL Server インスタンスに Azure Active Directory ID を追加します (Key Vault へのアクセスを許可するために使用)|
 |[サーバー キーの作成または更新](/rest/api/sql/serverkeys/createorupdate)|SQL Server インスタンスに Key Vault キーを追加します|

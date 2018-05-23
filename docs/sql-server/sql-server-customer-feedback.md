@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server を構成して Microsoft にフィードバックを送信する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ AND instance_name = '_Total'
 - エラーと使用状況レポートのアプリケーションの使用
 - サーバー上でのレジストリ サブキーの設定
 
-Linux 上の SQL Server については、「[Customer Feedback for SQL Server on Linux (Linux 上の SQL Server のカスタマー フィードバック)](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)」をご覧ください。
+Linux 上の SQL Server については、「[Customer Feedback for SQL Server on Linux (Linux 上の SQL Server のカスタマー フィードバック)](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)」をご覧ください。
 
 > [!NOTE]
 > Microsoft への情報送信を無効にできるのは、有料版の SQL Server のみです。
@@ -107,15 +106,15 @@ SQL Server エラーと使用状況レポートを開始するには、**[開始
 
     エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
 
-さらに、Visual Studio レベルでエラーと使用状況レポートをオフにするには、次のレジストリ サブキーと設定を設定します。
+    また、SSMS 17.x は Visual Studio 2015 シェルを基盤とし、Visual Studio インストールによって、既定でカスタマー フィードバックが可能になります。  
 
--    Subkey = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    個々のコンピューターでカスタマー フィードバックを無効にするように Visual Studio を構成するには、次のレジストリ サブキーの値を文字列 "0" に変更します。  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    レジストリ エントリ名 = TurnOffSwitch
+    たとえば、次のサブキーを変更します。  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    エントリのデータ型ダブルワード: 0 はオプトアウト、1 はオプトインです。
- 
-これらのレジストリ サブキー上のレジストリに基づいたグループ ポリシーは、SQL Server 2017 使用状況データ収集で受け入れられます。
+    これらのレジストリ サブキー上のレジストリに基づいたグループ ポリシーは、SQL Server 2017 使用状況データ収集で受け入れられます。
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>クラッシュ ダンプ収集のレジストリ サブキーの設定
 

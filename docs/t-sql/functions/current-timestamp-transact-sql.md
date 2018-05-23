@@ -36,23 +36,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465567e7b115b0ce92f2154a2e6047de4000a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a5dd72c23867d45fa015ebd8c055f7e8758c188
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-として現在のデータベース システムのタイムスタンプを返す、 **datetime** 、データベース タイム ゾーン オフセットを持たない値。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。
+この関数は、現在のデータベース システム タイムスタンプを **datetime** 値として、データベースのタイム ゾーン オフセットなしで返します。 `CURRENT_TIMESTAMP` は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムからこの値を派生します。
   
 > [!NOTE]  
->  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATE の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATE、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
+>  `SYSDATETIME` と `SYSUTCDATE` の場合、1 秒未満の秒の有効桁数で測定され、`GETDATE` や `GETUTCDATE` より精度が高くなります。 `SYSDATETIMEOFFSET` 関数には、システムのタイム ゾーン オフセットが含まれます。 日付と時刻のあらゆる型の変数に `SYSDATETIME`、`SYSUTCDATE`、`SYSDATETIMEOFFSET` を割り当てることができます。  
   
 この関数には、等価な ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md)です。
   
-すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] [日付と時刻のデータ型および関数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)を参照してください 日付と時刻のデータ型および関数です。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型と関数については、[日付と時刻のデータ型と関数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)に関するページで概要をご覧ください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,18 +63,18 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>引数  
-引数はありません。
+この関数は引数をとりません。
   
 ## <a name="return-type"></a>戻り値の型  
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-ステートメントを参照[!INCLUDE[tsql](../../includes/tsql-md.md)]できます CURRENT_TIMESTAMP を参照できる任意の場所、 **datetime** 式です。
+**datetime** 式を参照できる場所であれば、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは `CURRENT_TIMESTAMP` を参照できます。
   
-CURRENT_TIMESTAMP は非決定的関数です。 この列を参照するビューと式には、インデックスを付けることができません。
+`CURRENT_TIMESTAMP` は非決定的関数です。 この列を参照するビューと式には、インデックスを付けることができません。
   
 ## <a name="examples"></a>使用例  
-次の例では、6 つを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を現在の日付と日付を返すまでの時間、時間、またはその両方を返すシステム関数です。 値は順番に返されるため、秒の小数部が異なる場合があります。
+これらの例では、現在の日付値と時刻値を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用し、日付、時刻、あるいはその両方を返します。 これらの例では、値が順番に返されるため、秒の小数部が異なることがあります。 返される実際の値では実行の実際の日/時間が反映されます。
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  
   
@@ -92,6 +92,7 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
+*/
 ```  
   
 ### <a name="b-get-the-current-system-date"></a>B. 現在のシステム日付を取得する  

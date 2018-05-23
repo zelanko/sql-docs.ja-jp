@@ -2,9 +2,11 @@
 # [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [アダプティブ クエリ処理](adaptive-query-processing.md)
 # [自動調整](../automatic-tuning/automatic-tuning.md)
-# [基数推定](cardinality-estimation-sql-server.md)  
+# 
+  [カーディナリティ推定](cardinality-estimation-sql-server.md)  
+# [インテリジェントなクエリ処理](intelligent-query-processing.md)
+## [アダプティブ クエリ処理](adaptive-query-processing.md)
 
 # [パフォーマンスの監視とチューニング](monitor-and-tune-for-performance.md)  
 ## [SQL Server コンポーネントの監視](monitor-sql-server-components.md)  

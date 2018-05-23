@@ -97,13 +97,14 @@
 ## [パッケージの管理](r/r-package-management-for-sql-server-r-services.md)
 ### [既定のパッケージ](r/installing-and-managing-r-packages.md)
 ### [パッケージ情報の取得](r/determine-which-packages-are-installed-on-sql-server.md)
-### [新しい R パッケージのインストール](r/install-additional-r-packages-on-sql-server.md)
 ### [新しい Python パッケージのインストール](python/install-additional-python-packages-on-sql-server.md)
-### R のみ
+### [新しい R パッケージのインストール](r/install-additional-r-packages-on-sql-server.md)
+#### [R パッケージ マネージャーの使用](r/install-additional-r-packages-on-sql-server.md)
+#### [RevoScaleR の使用](r/use-revoscaler-to-manage-r-packages.md)
+#### [T-SQL の使用](r/install-r-packages-tsql.md)
+#### [miniCRAN リポジトリの使用](r/create-a-local-package-repository-using-minicran.md)
 #### [リモートの R パッケージ管理を有効にする](r/r-package-how-to-enable-or-disable.md)
-#### [R パッケージ管理の RevoScaleR 関数](r/use-revoscaler-to-manage-r-packages.md)
 #### [R パッケージの同期](r/package-install-uninstall-and-sync.md)
-#### [ローカルの R パッケージ リポジトリの miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 #### [R "ユーザー ライブラリ" の回避策](r/packages-installed-in-user-libraries.md)
 
 ## データ探索と予測モデリング

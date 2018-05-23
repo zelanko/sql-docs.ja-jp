@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
   
  FAILOVER  
- 接続されているセカンダリ レプリカへの可用性グループのデータ損失のない手動フェールオーバーを開始します。 レプリカのフェールオーバー ターゲット フェールオーバー コマンドを使用すると、入力と呼ばれる、します。  フェールオーバー ターゲットは、プライマリ ロールを引き継ぎ、各データベースのコピーを復旧し、新しいプライマリ データベースとしてオンラインにします。 元のプライマリ レプリカは同時にセカンダリ ロールに移行し、そのデータベースがセカンダリ データベースになって、直ちに中断されます。 これらのロールは、連続する障害によって繰り返し切り替えられる可能性があります。  
+接続されているセカンダリ レプリカへの可用性グループのデータ損失のない手動フェールオーバーを開始します。 プライマリ レプリカをホストするレプリカは*フェールオーバー ターゲット*です。  フェールオーバー ターゲットは、プライマリ ロールを引き継ぎ、各データベースのコピーを復旧し、新しいプライマリ データベースとしてオンラインにします。 元のプライマリ レプリカは同時にセカンダリ ロールに移行し、そのデータベースがセカンダリ データベースになって、直ちに中断されます。 これらのロールは、連続する障害によって繰り返し切り替えられる可能性があります。  
   
  現在プライマリ レプリカと同期されている同期コミット モードのセカンダリ レプリカでのみサポートされます。 セカンダリ レプリカを同期する場合、プライマリ レプリカも同期コミット可用性モードで実行している必要があります。  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER には、次のいずれかのオプションを指定できます。  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  指定した IP アドレスを *dns_name* で指定されている可用性グループ リスナーに追加します。  
   
  PORT **=** *listener_port*  

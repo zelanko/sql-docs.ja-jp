@@ -25,16 +25,16 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 481c4205bec9032b31b4405830827405050abb8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a608d12c790b9b9808ef0f1d84264f1423ba472b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-接続で最後にオープンされたカーソルに現在取得されている行数を返します。 パフォーマンスを向上させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、大きなキーセットと静的カーソルを非同期に作成できます。 @@CURSOR_ROWS を呼び出して、@@CURSOR_ROWS の呼び出し時にカーソルを取得できる行数を決定できます。
+接続で開いた最後のカーソルで現在登録されている行数を返します。 パフォーマンスを向上させるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、大きなキーセットと静的カーソルを非同期に作成できます。 あるカーソルに登録されている行数が @@CURSOR_ROWS の呼び出し時に取得されることは、`@@CURSOR_ROWS` を呼び出すことで決定できます。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="return-value"></a>戻り値  
   
-|戻り値|Description|  
+|戻り値|[説明]|  
 |---|---|
-|-*m*|行がカーソルに非同期的に登録されている場合に返されます。 返される値 (-*m*) は、現在キーセットにある行数です。|  
-|-1|カーソルが動的な場合に返されます。 動的カーソルはすべての変更を反映するので、そのカーソルに登録されている行数は常に変化します。 したがって、登録されているすべての行を検索したかどうかは断定できません。|  
+|-*m*|カーソルは非同期で作成されます。 返される値 (-*m*) は、現在キーセットにある行数です。|  
+|-1|カーソルが動的な場合に返されます。 動的カーソルはすべての変更を反映するので、そのカーソルに登録されている行数は常に変化します。 登録されているすべての行がカーソルによって取得されるとは限りません。|  
 |0|オープンされているカーソルがない場合、最後にオープンされたカーソルに行が登録されていない場合、または最後にオープンされたカーソルがクローズまたは割り当てを解除されている場合に返されます。|  
 |*n*|カーソルに行がすべて完全に登録されている場合に返されます。 返される値 (*n*) には、カーソル内の行の合計数。|  
   
 ## <a name="remarks"></a>Remarks  
-最後のカーソルが非同期にオープンされている場合、@@CURSOR_ROWS からの戻り値は負になります。 sp_configure カーソルしきい値が 0 より大きく、カーソル結果セットの行数がカーソルしきい値を超える場合、キーセット カーソルまたは静的カーソルは非同期にオープンされます。
+`@@CURSOR_ROWS` は、最後のカーソルが非同期で開いた場合、負の数を返します。 sp_configure カーソルしきい値が 0 を超える場合か、カーソル結果セットの行数がカーソルしきい値を超える場合、キーセットドライバー カーソルまたは静的カーソルが非同期で開きます。
   
 ## <a name="examples"></a>使用例  
-次の例では、カーソルを宣言し、`SELECT` を使用して `@@CURSOR_ROWS` の値を表示します。 カーソルをオープンする前の値は `0` に設定されています。`-1` の値は、カーソルのキーセットが非同期に作成されることを示します。
+この例では、最初にカーソルを宣言し、`SELECT` を使用して `@@CURSOR_ROWS` の値を表示します。 カーソルが開く前は値 `0` が設定され、その後、値 `-1` が設定されることで、カーソル キーセットが非同期で作成されることを示します。
   
 ```sql
 USE AdventureWorks2012;  

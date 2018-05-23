@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
 
@@ -73,7 +73,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
  次の表に、Reporting Services SharePoint 共有サービス用の PowerShell コマンドレットを示します。  
   
-|コマンドレット|Description|  
+|コマンドレット|[説明]|  
 |------------|-----------------|  
 |Install-SPRSService|Reporting Services 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server Reporting Services がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> - Reporting Services サービスがファームにインストールされます。<br /><br /> - Reporting Services サービス インスタンスが現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br /><br /> - Reporting Services サービスが現在のコンピューターからアンインストールされます。<br /><br /> - Reporting Services サービスがファームからアンインストールされます。<br /><br /> <br /><br /> Reporting Services サービスがインストールされているファーム内に他のコンピューターが存在する場合や Reporting Services サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
@@ -84,7 +84,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
  次の表には、Reporting Services サービス アプリケーションとそれらに関連付けられたプロキシ用の PowerShell コマンドレットが含まれています。  
   
-|コマンドレット|Description|  
+|コマンドレット|[説明]|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|1 つ以上の Reporting Services サービス アプリケーション オブジェクトを取得します。|  
 |New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター: レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 有効な値は、<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
@@ -102,9 +102,9 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 |Get-SPRSDatabaseRightsScript|Reporting Services サービス アプリケーション用に、データベース権限スクリプトを画面に出力します。 これを実行すると、対象のユーザーとデータベースの入力を求めるプロンプトが表示され、権限を変更するための Transact-SQL が返されます。 その後、SQL Server Management Studio でこのスクリプトを実行できます。|  
 |Get-SPRSDatabaseUpgradeScript|データベース アップグレード スクリプトを画面に出力します。 このスクリプトは、Reporting Services サービス アプリケーション データベースを、現在の Reporting Services インストールのデータベース バージョンにアップグレードします。|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services カスタム機能コマンドレット
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services カスタム機能コマンドレット
   
-|コマンドレット|Description|  
+|コマンドレット|[説明]|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|指定した Reporting Services サービス アプリケーションの暗号化キーを更新し、そのデータを再暗号化します。|  
 |Restore-SPRSEncryptionKey|以前にバックアップした、Reporting Services サービス アプリケーションの暗号化キーを復元します。|  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a10829deda74850da86bfb066ad95a6effac83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,18 +44,16 @@ SQL Server Management Studio (SSMS) を使用すると、データベースと�
 
 SSMS 17.x は、*SQL Server Management Studio* の最新世代であり、SQL Server 2017 をサポートしています。
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.6 のダウンロード](https://go.microsoft.com/fwlink/?linkid=870039)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.7 のダウンロード](https://go.microsoft.com/fwlink/?linkid=873126)**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.6 アップグレード パッケージのダウンロード (17.x から 17.6 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=870041)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 17.7 アップグレード パッケージのダウンロード (17.x から 17.7 へのアップグレード)](https://go.microsoft.com/fwlink/?linkid=873128)**
 
-> [!WARNING]
-> [メンテナンス プラン](../relational-databases/maintenance-plans/maintenance-plans.md)の使用中に SSMS 17.6 が不安定になりクラッシュするという既知の問題があります。 メンテナンス プランを使用する場合は、SSMS 17.6 をインストールしないでください。 17.6 を既にインストールしていて、この問題の影響を受けている場合は、SSMS 17.5 にダウングレードしてください。 
 
 **バージョン情報**
 
-リリース番号: 17.6<br>
-ビルド番号: 14.0.17230.0<br>
-リリース日: 2018 年 3 月 20 日
+リリース番号: 17.7<br>
+ビルド番号: 14.0.17254.0<br>
+リリース日: 2018 年 5 月 9 日
 
 SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 17.x は以前のバージョンとは別にサイド バイ サイドでインストールするので、両方のバージョンが使用できます。
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、*Microsoft SQL Server Management Studio 17* というラベルと新しいアイコンが付いています。 
@@ -71,11 +69,11 @@ SSMS 17.x のインストールでは、16.x 以前のバージョンの SSMS �
 
 SSMS の今回のリリースは、次の言語でインストールできます。
 
-SQL Server Management Studio 17.6:<br>
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+SQL Server Management Studio 17.7:<br>
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
-SQL Server Management Studio 17.6 アップグレード パッケージ (17.x から 17.6 へのアップグレード):<br>
-[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
+SQL Server Management Studio 17.7 アップグレード パッケージ (17.x から 17.7 へのアップグレード):<br>
+[中国語 (中華人民共和国)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x804) | [中国語 (台湾)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールになりました。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
@@ -84,36 +82,23 @@ SQL Server Management Studio 17.6 アップグレード パッケージ (17.x �
 
 ## <a name="new-in-this-release"></a>このリリースの新機能
 
-SSMS 17.6 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
+SSMS 17.7 は SQL Server Management Studio の最新バージョンです。 SSMS の 17.x 世代は、SQL Server 2008 から SQL Server 2017 までのほぼすべての機能領域をサポートしています。 バージョン 17.x は、SQL Analysis Service PaaS もサポートしています。
 
-バージョン 17.6 の内容:
+バージョン 17.7 の内容:
 
 **SSMS 全般**
 
-SQL Database マネージ インスタンス:
-
-- [Azure SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)のサポートが追加されました。 Azure SQL Database マネージ インスタンス (プレビュー) は Azure SQL Database の新しい種類であり、SQL Server オンプレミスとのほぼ 100% の互換性、セキュリティに関する一般的な問題に対応するネイティブな[仮想ネットワーク (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) の実装、およびオンプレミスの SQL Server ユーザーに適した[ビジネス モデル](https://azure.microsoft.com/pricing/details/sql-database/)を提供します。
-- 次のような一般的な管理シナリオをサポートします。
-   - データベースの作成と変更。
-   - データベースのバックアップと復元。
-   - データ層アプリケーションのインポート、エクスポート、抽出、公開。
-   - サーバー プロパティの表示と変更。
-   - オブジェクト エクスプローラーの完全なサポート。
-   - データベース オブジェクトのスクリプト作成。
-   - SQL エージェント ジョブのサポート。
-   - リンク サーバーのサポート。
-- マネージ インスタンスの詳細については、[こちら](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/)を参照してください。
-
-
-オブジェクト エクスプローラー:
-- オブジェクト エクスプローラーからクエリ ウィンドウにドラッグ アンド ドロップするときに、名前を角かっこで囲むことを強制しない設定が追加されました。 (ユーザー提案 [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) および [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051))
-
-データ分類:
-- 一般的な機能強化とバグの修正。
+レプリケーション モニター:   
+- レプリケーション モニターでは、パブリッシャー データベースかディストリビューター データベースが可用性グループに含まれるとき、リスナーを登録できるようになりました。 パブリッシャー データベースかディストリビューター データベースが AlwaysOn 可用性グループに含まれるとき、レプリケーション環境を監視できるようになりました。 
+ 
+Azure SQL Data Warehouse: 
+- Azure SQL Data Warehouse で外部テーブルの "拒否された行の場所" サポートを追加します。 
 
 **Integration Services (IS)**
 
-- [SQL Database マネージ インスタンス](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)にパッケージを展開するサポートが追加されました。
+- Azure SQL Database にデプロイされた SSIS パッケージのスケジュールを設定する機能を追加しました。 SQL Server がファースト クラス ジョブ スケジューラーとして使用されていたオンプレミス SQL Server や SQL Database Managed Instance (プレビュー) とは異なり、SQL Database にはスケジューラーが組み込まれていません。 この新しい SSMS 機能は SQL Server エージェントに似た、おなじみのインターフェイスを備えており、SQL Database にデプロイされているパッケージをそのインターフェイスでスケジュール設定できます。 SQL Database を使用して SSIS カタログ データベース (SSISDB) をホストする場合、この SSMS 機能を使用し、SSIS パッケージのスケジュール設定に必要なデータ ファクトリのパイプライン、アクティビティ、トリガーを生成できます。 その後、データ ファクトリでそれらのオブジェクトを編集したり、拡張したりできます。 詳細については、SSMS を使用し、[Azure SQL Database で SSIS パッケージの実行スケジュールを設定する](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)方法に関するページを参照してください。 Azure Data Factory のパイプライン、アクティビティ、トリガーの詳細については、「[Azure Data Factory のパイプラインとアクティビティ](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)」と「[Azure Data Factory でのパイプラインの実行とトリガー](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)」を参照してください。
+- SQL Managed Instance の SQL エージェントで SSIS パッケージのスケジュール設定をサポート マネージド インスタンスで SSIS パッケージを実行する SQL エージェント ジョブを作成できるようになりました。 
+
 
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 
@@ -150,9 +135,9 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="release-notes"></a>リリース ノート
 
-この 17.6 リリースの問題と制限事項を次に示します。
+この 17.7 リリースの問題と制限事項を次に示します。
 
-メンテナンス プランのスケジュールを構成するときに SSMS 17.6 がクラッシュする、という現在既知の問題があります。
+新しい *General Purpose* または *Business Critical* エディションの Azure SQL Database を使用するとき、無効なエディションであるというエラーが一部のダイアログに表示されます。
 
 
 ## <a name="previous-releases"></a>以前のリリース

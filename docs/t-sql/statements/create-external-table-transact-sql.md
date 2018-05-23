@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 5/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc04195092a1371be93410cc77d8d06460c957da
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0ea81621b94490c267b6d7c9f3e010bd22279610
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="create-external-table-transact-sql"></a>外部テーブル (TRANSACT-SQL) を作成します。
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,9 +133,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 <reject_options> ::=  
 {  
-    | REJECT_TYPE = value | percentage  
-    | REJECT_VALUE = reject_value  
-    | REJECT_SAMPLE_VALUE = reject_sample_value  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
   
 }  
 ```  
@@ -234,7 +235,8 @@ SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE
 > [!NOTE]  
 >  PolyBase では間隔を置いて失敗した行のパーセンテージを計算するため、実際の失敗した行のパーセンテージは、*reject_value* を超える場合があります。  
   
- 例:  
+
+例:  
   
  この例では、拒否の 3 つのオプションが相互にやり取りする方法を示します。 たとえば場合、REJECT_TYPE 割合、REJECT_VALUE を = = 30、および REJECT_SAMPLE_VALUE、次のシナリオが発生する可能性が 100 を =。  
   
@@ -247,6 +249,13 @@ SQL Data Warehouse と Analytics Platform System では、[CREATE EXTERNAL TABLE
 -   失敗した行の割合が 50% として再計算されます。 障害が発生した行の割合が 30% の拒否の値を超えました。  
   
 -   PolyBase クエリは、最初の 200 の行を取得しようとした後、拒否、50% の行で失敗します。 PolyBase クエリでは、拒否のしきい値を超えましたが検出する前に一致する行が返されたことに注意してください。  
+  
+REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
+  
+  外部データ ソース内のディレクトリを指定します。拒否された行と該当エラー ファイルをそこに書き込みます。
+指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 “_rejectedrows” という名前で子ディレクトリが作成されます。“_” 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond 形式 (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。 
+
+理由ファイルとデータ ファイルのいずれにも、CTAS ステートメントと関連付けられている queryID が含まれます。 データも理由も別個のファイルに含まれるため、該当するファイルにはそれに一致する接尾辞が付きます。 
   
  外部テーブルを分割のオプション  
  [Elastic Database クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)の外部データ ソース (SQL Server 以外のデータ ソース) と配布方法を指定します。  

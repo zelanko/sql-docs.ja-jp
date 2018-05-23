@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5387cd3acba6a6d4dab83213fbb44ef7c9e8c3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29765164d6eb5e677c307091cf37aa8623674f00
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-現在のユーザーの名前を返します。 この関数を実行すると、USER_NAME() と同じ結果が得られます。
+この関数によって、現在のユーザーの名前が返されます。 この関数は `USER_NAME()` に相当します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,14 +50,14 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>Remarks  
-CURRENT_USER では、現在のセキュリティ コンテキストの名前が返されます。 EXECUTE AS への呼び出しでコンテキストが切り替えられた後に CURRENT_USER を実行した場合、CURRENT_USER では権限を借用したコンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、グループの名前ではなく Windows プリンシパルの名前が返されます。
+`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `EXECUTE AS` を呼び出してコンテキストを切り替えた後に `CURRENT_USER` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
   
-現在のユーザーのログインを返すには、を参照してください。 SUSER_NAME (& a) #40 です。TRANSACT-SQL と #41;[ と ](../../t-sql/functions/suser-name-transact-sql.md)[SYSTEM_USER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/system-user-transact-sql.md).
+現在のユーザーのログインを返す方法については、「[SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)」と「[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. CURRENT_USER を使用して現在のユーザー名を返す  
-次の例では、現在のユーザー名を返します。
+この例では、現在のユーザー名を返します。
   
 ```sql
 SELECT CURRENT_USER;  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
-次の例では、sales 行の `CURRENT_USER` 列に対する `DEFAULT` 制約として `order_person` を使用するテーブルを作成します。
+この例では、sales 行の `order_person` 列に対する `DEFAULT` 制約として `CURRENT_USER` を使用するテーブルを作成します。
   
 ```sql
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-次のコードでは、テーブルにレコードを挿入します。 これらのステートメントを実行するユーザーは `Wanida` です。
+この例では、テーブルにレコードが挿入されます。 `Wanida` という名前のユーザーによってこれらのステートメントが実行されます。
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -96,7 +96,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-次のクエリでは、`orders22` テーブルからすべての情報を選択します。
+このクエリでは、`orders22` テーブルからすべての情報が選択されます。
   
 ```sql
 SELECT * FROM orders22;  
@@ -114,12 +114,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 権限を借用したコンテキストから CURRENT_USER を使用する  
-次の例では、ユーザー `Wanida` として次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行します。
+この例では、ユーザー `Wanida` によって次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードが実行されます。
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Arnalfo';  
+EXECUTE AS USER = 'Wanida';  
 GO  
 SELECT CURRENT_USER;  
 GO  

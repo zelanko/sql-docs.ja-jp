@@ -1,5 +1,5 @@
 ---
-title: オンプレミスおよび Azure のファイル共有のファイルを格納および取得する | Microsoft Docs
+title: オンプレミスと Azure でファイルとファイル共有に接続する | Microsoft Docs
 description: この記事では、SSIS でオンプレミスと Azure 両方のファイル システムおよびファイル共有を使う方法について説明します
 ms.date: 11/27/2017
 ms.topic: conceptual
@@ -9,13 +9,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7fcc0c0f61ce62a2e891d269eea16902ff691080
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6472263658ed831aade7d0951b10a712dfee312d
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>オンプレミスおよび Azure のファイル共有のファイルを格納および取得する
+# <a name="connect-to-files-and-file-shares-on-premises-and-in-azure-with-ssis"></a>SSIS を使用し、オンプレミスと Azure でファイルとファイル共有に接続する
 この記事では、ローカル ファイル システムを使う SQL Server Integration Services (SSIS) パッケージを Azure にリフト アンド シフトするときにパッケージを更新する方法について説明します。
 
 > [!IMPORTANT]

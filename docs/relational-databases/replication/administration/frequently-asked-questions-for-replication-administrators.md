@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>データベースのメンテナンス  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>パブリッシュされたテーブルで TRUNCATE TABLE を実行できないのはなぜですか。  
- TRUNCATE TABLE はログに記録されない操作であり、トリガーも起動されません。 操作による変更を追跡できないため、TRUNCATE TABLE は許可されていません。トランザクション レプリケーションでは、トランザクション ログを通じて変更が追跡され、マージ レプリケーションでは、パブリッシュされたテーブルのトリガーを通じて変更が追跡されます。  
+ TRUNCATE TABLE は、個別の行削除を記録せず、DML トリガーを開始しない DDL ステートメントです。 操作による変更を追跡できないため、このコマンドは許可されていません。トランザクション レプリケーションでは、トランザクション ログを通じて変更が追跡され、マージ レプリケーションでは、パブリッシュされたテーブルの DML トリガーを通じて変更が追跡されます。  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>レプリケートされたデータベース上で一括挿入コマンドを実行するとどのような影響がありますか。  
  トランザクション レプリケーションの場合、他の挿入と同様に一括挿入も追跡およびレプリケートされます。 マージ レプリケーションでは、変更を追跡するメタデータが正しく更新されるようにする必要があります。  

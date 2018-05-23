@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
     1.  変更セットを作成します。 変更セットは、[開く] の状態です。 「 [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  変更セットを適用し、いくつかの変更を変更セットに加えます。 「 [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  変更セットを適用し、いくつかの変更を変更セットに加えます。 「 [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  承認のために、変更セットをエンティティ管理者に送信します。 変更セットは、[保留] の状態です。 「 [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   

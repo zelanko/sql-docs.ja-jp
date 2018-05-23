@@ -1,7 +1,7 @@
 ---
 title: オンライン インデックス操作のガイドライン | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 05/14/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03b9ea68c0c0139a3faca89fb0e3c5c59e5b11f8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,16 @@ ms.lasthandoff: 05/07/2018
 - 更新の多いワークロードの場合、スループットが低下する可能性があります (弊社テストで 10% 未満の低下)。
 
 一般に、再開可能なオンライン インデックス再構築と再開不可能なオンライン インデックス再構築の間に、最適化の品質の違いはありません。
+
+## <a name="online-default-options"></a>オンラインの既定のオプション 
+
+ELEVATE_ONLINE または ELEVATE_RESUMABLE データベース スコープ構成オプションを設定することで、データベース レベルでオンラインまたは再開可能の既定のオプションを設定できます。 これらの既定のオプションを設定すると、データベースをオフラインにする操作を誤って実行してしまう事態を回避できます。 いずれのオプションでも、エンジンは特定の操作をオンラインまたは再開可能実行に自動昇格します。  
+いずれかのオプションを FAIL_UNSUPPORTED、WHEN_SUPPORTED、NEVER として設定できます。 オンラインと再開可能に異なる値を設定できます。 
+
+ELEVATE_ONLINE と ELEVATE_RESUMABLE はいずれも、オンラインと再開可能の構文をそれぞれサポートする DDL ステートメントにのみ適用されます。 たとえば、ELEVATE_ONLINE=FAIL_UNSUPORTED で XML インデックスを作成すると、操作がオフラインで実行されます。XML インデックスで ONLINE= 構文がサポートされていないためです。 これらのオプションは、ONLINE または RESUMABLE オプションを指定せずに送信される DDL ステートメントでのみ有効になります。 たとえば、ONLINE=OFF または RESUMABLE=OFF でステートメントを送信することで、ユーザーは FAIL_UNSUPPORTED 設定をオーバーライドし、オフラインか再開不可能でステートメントを実行できます。 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE と ELEVATE_RESUMABLE は XML インデックス操作に適用されません。 
  
 ## <a name="related-content"></a>関連コンテンツ  
  [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)  

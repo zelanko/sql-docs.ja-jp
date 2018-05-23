@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.lasthandoff: 05/03/2018
 SQL Server 2016 SP2 のインストールでは、インストール後に再起動が必要な場合があります。 ベスト プラクティスとして、SQL Server 2016 SP2 インストール後の再起動を計画して実行することをお勧めします。
 
 SQL Server 2016 SP2 にはパフォーマンスとスケールに関連する改善が含まれています。
-|機能|Description|詳細情報|
+|機能|[説明]|詳細情報|
 |   --- |   --- |   --- |
 |ディストリビューション DB のクリーンアップ プロシージャの向上 |   サイズ超過のディストリビューション データベース テーブルにより、ブロックとデッドロックの状況が発生していました。 クリーンアップ プロシージャの向上は、これらのブロックまたはデッドロックのシナリオの一部を排除することを目的としています。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |変更の追跡のクリーンアップ    |   変更の追跡のクリーンアップ パフォーマンスと、変更の追跡のサイド テーブルの効率性が向上しました。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |CPU のタイムアウトを使用したリソース ガバナーの要求の取り消し   |   要求の CPU しきい値に達した場合に実際に要求を取り消すことで、クエリ要求の処理が改善されます。 この動作は、トレース フラグ 2422 で有効です。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO によるファイル グループへのターゲット テーブルの作成    |   SQL Server 2016 SP2 以降では、SELECT INTO の T-SQL 構文で ON <Filegroup name> キーワードを使用して、ユーザーの既定のファイル グループ以外のファイル グループにテーブルを読み込むことができるようになりました。 |       |
 |TempDB の間接チェックポイントの改善    |   DPLists のスピンロックの競合を最小限に抑えるため、TempDB の間接チェックポイント処理が改善しました。 この機能強化により、TempDB の間接チェックポイント処理が ON になっている場合に、SQL Server 2016 の TempDB ワークロードが自由にスケールアウトできるようになります。    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
-|大容量メモリのコンピューターでのデータベース バックアップ パフォーマンスの改善  |   SQL Server 2016 SP2 ではバックアップ中に進行している I/O のドレイン方法が最適化されるため、中小規模のデータベースのバックアップ パフォーマンスが大幅に改善されています。 2TB のコンピューターでシステム データベースのバックアップを実行した場合の改善度は、以前の 100 倍という結果が出ています。 さまざまなデータベース サイズでの、より幅広いパフォーマンス テストの結果を以下に公開しています。 バックアップするページが増加してデータベースのサイズが大きくなり、バッファー プールを繰り返す場合と比べ、バックアップ IO の時間が長くなると、バッファー プールのパフォーマンスの向上の幅が小さくなります。 この改善により、大容量メモリ搭載の大規模なハイ エンドサーバーで複数の小規模データベースをホストしている顧客のバックアップ パフォーマンスが改善します。 |       |
+|大容量メモリのコンピューターでのデータベース バックアップ パフォーマンスの改善  |   SQL Server 2016 SP2 ではバックアップ中に進行している I/O のドレイン方法が最適化されるため、中小規模のデータベースのバックアップ パフォーマンスが大幅に改善されています。 2TB のコンピューターでシステム データベースのバックアップを実行した場合の改善度は、以前の 100 倍という結果が出ています。 バックアップするページが増加してデータベースのサイズが大きくなり、バッファー プールを繰り返す場合と比べ、バックアップ IO の時間が長くなると、バッファー プールのパフォーマンスの向上の幅が小さくなります。 この変更により、大容量メモリ搭載の大規模なハイ エンドサーバーで複数の小規模データベースをホストしている顧客のバックアップ パフォーマンスが改善します。    |       |
 |TDE が有効なデータベースでの VDI バックアップの圧縮のサポート   |   SQL Server 2016 SP2 では、VDI バックアップ ソリューションが TDE が有効なデータベースで圧縮を利用できるようにする、VDI サポートが追加されています。 この改善により、TDE が有効なデータベースでバックアップの圧縮をサポートするための新しいバックアップ形式が導入されました。 SQL Server エンジンは、バックアップを復元するための新旧のバックアップ形式を透過的に処理します。   |       |
 |レプリケーション エージェント プロファイルのパラメーターの動的な読み込み    |   この新しい機能強化により、エージェントを再起動しなくてもレプリケーション エージェントのパラメーターが動的に読み込まれるようになります。 この変更は、特に一般的に使用されるエージェント プロファイルのパラメーターにのみ適用されます。 |       |
 |統計の作成/更新のための MAXDOP オプションのサポート |    この機能強化により、CREATE/UPDATE の STATISTICS ステートメントに MAXDOP オプションを指定できるだけでなく、作成または再構築の一環として統計が更新される場合にすべての型のインデックスで正しい MAXDOP 設定が使用されるようになります (MAXDOP オプションが存在する場合)   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
 |増分統計の自動更新の改善 |    特定のシナリオでは、増分統計の合計変更数が自動更新のしきい値を超え、それでいて個々のパーティションのいずれもが自動更新のしきい値を超えないようにテーブルの複数のパーティションで多数のデータ変更が行われた場合、統計更新はテーブルでより多くの変更が行われるまで遅延する場合があります。 この動作は、トレース フラグ 11024 で修正されました。   |       |
 
 SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれています。
-|機能 |Description   |詳細情報   |
+|機能 |[説明]   |詳細情報   |
 |   --- |   --- |   --- |
 |可用性グループ内のデータベースでの完全な DTC サポート    |   可用性グループの一部であるデータベースでの複数データベース間トランザクションは現在 SQL Server 2016 でサポートされていません。 SQL Server 2016 SP2 では、可用性グループ データベースでの分散トランザクションの完全なサポートを導入しています。   |       |
 |TempDB の暗号化の状態を正確に反映するための sys.database の is_encrypted 列の更新 |   すべてのユーザー データベースの暗号化をオフにし、SQL Server を再起動した後でも、TempDB の sys.databases の is_encrypted 列の値は 1 です。 この状況では TempDB が暗号化されないため、この値が 0 になることが予想されます。 SQL Server 2016 SP2 以降では、sys.databases.is_encrypted で TempDB の暗号化の状態が正確に反映されます。  |       |
@@ -64,6 +64,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 |TempDB のバージョン ストア領域の使用量を監視する新しい DMV    |   TempDB のバージョン ストア使用量の監視が可能になるように、SQL Server 2016 SP2 に新しい sys.dm_tran_version_store_space_usage の DMV が導入されました。 運用サーバーでの実行時にパフォーマンスのオーバーヘッドを発生させることなく、データベースごとのバージョン ストア使用量の要件に基づいて DBA で TempDB のサイズを事前に計画できるようになりました。 |       |
 |レプリケーション エージェントの完全なダンプのサポート | 現在は、レプリケーション エージェントがハンドルされない例外に遭遇すると、既定により例外の現象のミニ ダンプが作成されます。 これにより、未処理の例外の問題のトラブルシューティングが非常に難しくなっています。 今回の変更では新しいレジストリ キーが導入され、レプリケーション エージェントの完全なダンプが作成できるようになっています。  |       |
 |可用性グループのルーティング読み取りエラーの拡張イベントの機能強化 |   以前は、ルーティング リストが存在する場合、read_only_rout_fail の xEvent が起動していましたが、ルーティング リストのどのサーバーも、接続に使用できませんでした。 SQL Server 2016 SP2 には、トラブルシューティングに役立つ追加情報と、xEvent が起動するコード ポイントの拡張も含まれます。  |       |
+|トランザクション ログを監視する新しい DMV |   概要レベルの属性とデータベースのトランザクション ログ ファイルに関する情報を返す新しい DMV sys.dm_db_log_stats を追加しました。 |       |
 |VLF 情報を監視するための新しい DMV |   顧客が遭遇する可能性のある T-Log の問題を監視し、警告し、回避するための、DBCC LOGINFO に似た VLF 情報を公開する新しい DMV、sys.dm_db_log_info が SQL Server 2016 SP2 に導入されました。    |       |
 |sys.dm_os_sys_info のプロセッサ情報|   socket_count や cores_per_numa などのプロセッサ関連情報を公開する新しい列が sys.dm_os_sys_info の DMV に追加されています。  |       |
 |sys.dm_db_file_space_usage のエクステントの変更情報| 前回の完全バックアップから変更されたエクステントの数を追跡する新しい列が sys.dm_db_file_space_usage に追加されました。  |       |
@@ -105,7 +106,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 
 次の表は、SQL Server 2016 SP1 で提供される主要な機能強化をまとめたものです。
 
-|機能|Description|詳細情報|
+|機能|[説明]|詳細情報|
 |---|---|---|
 |TF 715 での自動 TABLOCK によるヒープへの一括挿入| トレース フラグ 715 は、非クラスター化インデックスのないヒープへの一括読み込み操作用に、テーブル ロックを有効にします。|[SAP ワークロードを SQL Server に 2.5 倍の速さで移行する](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE または ALTER|ストアド プロシージャ、トリガー、ユーザー定義関数、ビューなどのオブジェクトを展開します。|[SQL Server データベース エンジンのブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -221,12 +222,13 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
     
 * メモ帳で %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings ファイルを開き、次のコード内の日付を将来の日付に変更します。
 
+```
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>追加情報
++ [SQL Server 2016 のインストール](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
