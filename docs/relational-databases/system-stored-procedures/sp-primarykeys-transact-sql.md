@@ -53,7 +53,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
  主キー情報を提供するテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
   
  [  **@table_schema =** ] **'***、table_schema、***'**  
- テーブル スキーマを指定します。 *table_schema、*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
+ テーブル スキーマを指定します。 *table_schema、* は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境では、これはテーブル所有者に相当します。  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
  カタログの名前を指定した*table_name*が存在します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]環境では、このデータベース名に対応します。 *table_catalog*は**sysname**、既定値は NULL です。  

@@ -54,7 +54,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
  指定した列が含まれるテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
   
  [  **@table_schema =** ] **'***、table_schema、***'**  
- テーブル スキーマを指定します。 *table_schema、*は**sysname**、既定値は NULL です。  
+ テーブル スキーマを指定します。 *table_schema、* は**sysname**、既定値は NULL です。  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
  対象となるデータベースの名前を指定した*table_name*が存在します。 *table_catalog*は**sysname**、既定値は NULL です。  

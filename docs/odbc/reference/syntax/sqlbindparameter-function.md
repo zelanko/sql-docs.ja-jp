@@ -228,7 +228,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
  ストリーミングされる出力のストリームの入力/出力パラメーター、 *BufferLength*でバッファーの長さが指定されているために、引数は無視されます**SQLGetData**です。  
   
 > [!NOTE]  
->  ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam** ODBC 3 *。x*ドライバー、ドライバー マネージャーに変換しますこのへの呼び出しに**SQLBindParameter**を*BufferLength*引数が SQL_SETPARAM_VALUE_MAX では常にします。 ドライバー マネージャーは、ODBC 3 の場合、エラーを返します。*x*アプリケーション セット*BufferLength* SQL_SETPARAM_VALUE_MAX、ODBC 3 にします*。x*ドライバーを使用してこの ODBC 1.0 アプリケーションによって呼び出されたときを判断します。  
+>  ODBC 1.0 アプリケーションを呼び出すと**SQLSetParam** ODBC 3 *。x*ドライバー、ドライバー マネージャーに変換しますこのへの呼び出しに**SQLBindParameter**を*BufferLength*引数が SQL_SETPARAM_VALUE_MAX では常にします。 ドライバー マネージャーは、ODBC 3 の場合、エラーを返します。*x*アプリケーション セット*BufferLength* SQL_SETPARAM_VALUE_MAX、ODBC 3 にします *。x*ドライバーを使用してこの ODBC 1.0 アプリケーションによって呼び出されたときを判断します。  
   
 > [!NOTE]  
 >  **SQLSetParam**、アプリケーションがの長さを指定する方法、**ParameterValuePtr*バッファーに格納できるように、ドライバーは、文字またはバイナリ データ、およびアプリケーションを送信する方法を返すことができます、配列の文字またはドライバーにバイナリ パラメーター値では、ドライバーで定義されています。  
@@ -386,7 +386,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) または SQL_DATA_AT_E
  パラメーターの 1 つのセットの処理のエラーの一部では、停止する配列で、後続のパラメーターのセットの処理が発生します。 その他のエラーは、後続のパラメーターの処理には影響しません。 ドライバーの定義は、どのエラーの処理が停止します。 処理は停止されません、配列内のすべてのパラメーターが処理される、SQL_SUCCESS_WITH_INFO が、エラーの結果として返されるおよび SQL_ATTR_PARAMS_PROCESSED_PTR によって定義されたバッファーが処理されたパラメーターのセットの合計数に設定されている場合 (で定義されている、SQL_ATTR_PARAMSET_SIZE ステートメント属性)、エラー セットが含まれます。  
   
 > [!CAUTION]  
->  パラメーターの配列の処理中にエラーが発生したときに、ODBC の動作は、ODBC 3 異なります。*x* ODBC 2 の場合よりも*。x*です。 ODBC 2 です。*x*SQL_ERROR と処理が中断されること、関数が返されます。 バッファーを指す、 *pirow*の引数**SQLParamOptions**エラー行の数が含まれています。 ODBC 3 です。*x*SQL_SUCCESS_WITH_INFO を返します、および停止するか続行するか月を処理します。 問題が解決しない場合は、SQL_ATTR_PARAMS_PROCESSED_PTR で指定したバッファーがでエラーが発生するものも含めすべてのパラメーター、処理の値に設定されます。 この動作の変更の既存のアプリケーションの問題が発生する可能性があります。  
+>  パラメーターの配列の処理中にエラーが発生したときに、ODBC の動作は、ODBC 3 異なります。*x* ODBC 2 の場合よりも *。x*です。 ODBC 2 です。*x*SQL_ERROR と処理が中断されること、関数が返されます。 バッファーを指す、 *pirow*の引数**SQLParamOptions**エラー行の数が含まれています。 ODBC 3 です。*x*SQL_SUCCESS_WITH_INFO を返します、および停止するか続行するか月を処理します。 問題が解決しない場合は、SQL_ATTR_PARAMS_PROCESSED_PTR で指定したバッファーがでエラーが発生するものも含めすべてのパラメーター、処理の値に設定されます。 この動作の変更の既存のアプリケーションの問題が発生する可能性があります。  
   
  ときに**SQLExecute**または**SQLExecDirect** SQL_ERROR または SQL_NEED_DATA が返されると、状態配列を含むように、パラメーター配列内のすべてのパラメーター セットの処理を完了する前に返します。既に処理されているこれらのパラメーターの状態。 IPD で SQL_DESC_ROWS_PROCESSED_PTR フィールドが指す位置には、SQL_ERROR または SQL_NEED_DATA エラー コードの原因となったパラメーター配列内の行番号が含まれています。 SELECT ステートメントにパラメーターの配列を送信すると、配列の値の状態の可用性はドライバーで定義されます。セットのフェッチの結果として、ステートメントが実行される、または後に、使用可能な必要があります。  
   

@@ -23,9 +23,9 @@ APS のすべてのノードを実行するユーザーを構成する十分な�
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Domain Admins グループにユーザーを追加するには  
   
-1.  アクティブな AD ノードへのログイン**(*appliance_domain*-AD01**または ***appliance_domain *-AD02**) 既存のアプライアンス ドメイン管理者アカウントを使用します。  
+1.  アクティブな AD ノードへのログイン **(*appliance_domain*-AD01**または ***appliance_domain *-AD02**) 既存のアプライアンス ドメイン管理者アカウントを使用します。  
   
-2.  [スタート] メニューの **[ファイル名を指定して実行]**をクリックします。 **開く**ボックスに、入力**dsa.msc**です。 **[OK]**をクリックします。  
+2.  [スタート] メニューの **[ファイル名を指定して実行]** をクリックします。 **開く**ボックスに、入力**dsa.msc**です。 **[OK]** をクリックします。  
   
 3.  **Active Directory ユーザーとコンピューター**プログラムを右クリックして**ユーザー**、 をポイント**新規**、クリックして**ユーザー**です。  
   
@@ -42,9 +42,9 @@ APS のすべてのノードを実行するユーザーを構成する十分な�
   
 6.  **メンバーの** タブで、をクリックして**追加**です。  
   
-    型**Domain Admins です。PdwControlNodeAccess**  をクリックし、**名前の確認**です。 **[OK]**をクリックします。  
+    型**Domain Admins です。PdwControlNodeAccess**  をクリックし、**名前の確認**です。 **[OK]** をクリックします。  
   
-    新しいユーザーを追加、 **Domain Admins**グループおよび**PdwControlNodeAccess**グループ。 **[OK]**をクリックします。  
+    新しいユーザーを追加、 **Domain Admins**グループおよび**PdwControlNodeAccess**グループ。 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [構成マネージャーを起動&#40;分析プラットフォーム システム&#41;](launch-the-configuration-manager.md)  

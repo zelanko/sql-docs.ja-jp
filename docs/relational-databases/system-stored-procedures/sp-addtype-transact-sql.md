@@ -52,7 +52,7 @@ sp_addtype [ @typename = ] type,
  別名データ型の名前を指定します。 データ型の名前がの規則に従う必要がありますエイリアス[識別子](../../relational-databases/databases/database-identifiers.md)し、各データベース内で一意である必要があります。 *型*は**sysname**、既定値はありません。  
   
  [  **@phystype=**] *system_data_type*  
- 物理または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、別名データ型の基になるデータ型を指定します*。system_data_type*は**sysname**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+ 物理または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、別名データ型の基になるデータ型を指定します *。system_data_type*は**sysname**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 ||||  
 |-|-|-|  

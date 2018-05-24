@@ -175,7 +175,7 @@ ms.lasthandoff: 05/03/2018
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  インスタンス名を右クリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [停止] **をクリックし、**のインスタンスを停止します。  
+6.  インスタンス名を右クリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [停止] **をクリックし、** のインスタンスを停止します。  
   
 7.  master.mdf ファイルおよび mastlog.ldf ファイルを新しい場所に移動します。  
   

@@ -35,7 +35,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  管理者オプションとして、実行を使用して、コマンド プロンプトを開きます。  
   
-3.  ディレクトリに移動`C:\PDWINST\Patches\<kbarticle>\media`場所*<kbarticle>*をアンインストールする修正プログラムのサポート技術情報の記事番号です。  
+3.  ディレクトリに移動`C:\PDWINST\Patches\<kbarticle>\media`場所*<kbarticle>* をアンインストールする修正プログラムのサポート技術情報の記事番号です。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

@@ -46,10 +46,10 @@ ms.lasthandoff: 05/03/2018
 |**CHARACTER_LENGTH (** *string_exp* **)** (ODBC 3.0)|文字列式が文字データ型以外の場合、文字列式の文字の長さを返しますそれ以外の場合、文字列式 (最小の整数 8 で割った値のビット数より小さくない) のバイト単位の長さを返します。 (この関数は CHAR_LENGTH 関数と同じ) です。|  
 |**CONCAT (** *string_exp1*、*string_exp2 * * *)** (ODBC 1.0)|連結の結果である文字列を返します*string_exp2*に*string_exp1*です。 結果の文字列は DBMS に依存します。 たとえば、次の列として表さ*string_exp1*は戻り値の NULL が SQL Server が返す NULL 以外の文字列を NULL 値を DB2 に格納されています。|  
 |**相違点 (** *string_exp1*、*string_exp2 * * *)** (ODBC 2.0)|SOUNDEX 関数によって返される値の差を示す整数値を返します*string_exp1*と*string_exp2*です。|  
-|**挿入 (** *string_exp1*、*開始*、*長さ*、 *string_exp2 * * *)** (ODBC 1.0)|Where を文字列で文字を返します*長さ*文字はから削除されている*string_exp1*で始まる、*開始*、どこで*string_exp2*が挿入されている*string_exp、*始点*開始*です。|  
+|**挿入 (** *string_exp1*、*開始*、*長さ*、 *string_exp2 * * *)** (ODBC 1.0)|Where を文字列で文字を返します*長さ*文字はから削除されている*string_exp1*で始まる、*開始*、どこで*string_exp2*が挿入されている*string_exp、* 始点*開始*です。|  
 |**LCASE (** *string_exp* **)** (ODBC 1.0)|文字列を以下にするを返します*string_exp*、すべて大文字を小文字に変換します。|  
 |**左 (** *string_exp*、*数 * * *)** (ODBC 1.0)|返します、左端*カウント*の文字*string_exp*です。|  
-|**長さ (** *string_exp* **)** (ODBC 1.0)|内の文字の数を返します*string_exp、*末尾の空白を除外します。<br /><br /> **長さ**文字列のみを受け入れます。 このため変換は暗黙的に*string_exp*文字列、および戻り値 (データ型のサイズ内部ではなく) この文字列の長さにします。|  
+|**長さ (** *string_exp* **)** (ODBC 1.0)|内の文字の数を返します*string_exp、* 末尾の空白を除外します。<br /><br /> **長さ**文字列のみを受け入れます。 このため変換は暗黙的に*string_exp*文字列、および戻り値 (データ型のサイズ内部ではなく) この文字列の長さにします。|  
 |**検索 (** *string_exp1*、 *string_exp2*[、*開始*]**)** (ODBC 1.0)|最初に見つかった位置の開始位置を返します*string_exp1*内*string_exp2*です。 最初に見つかった位置の検索*string_exp1*内の最初の文字位置から始まります*string_exp2*しない限り、オプションの引数*開始*が指定されています。 場合*開始*を指定すると、検索の値で指定された文字位置から始まります*開始*です。 最初の文字の位置*string_exp2*値 1 で示されます。 場合*string_exp1*内に見つからなかった*string_exp2*値 0 が返されます。<br /><br /> アプリケーションで、検索のスカラー関数を呼び出すことができるかどうか、 *string_exp1*、 *string_exp2*、および*開始*引数、ドライバーは SQL_FN_STR_LOCATE を返しますと**SQLGetInfo**してを呼び出すと、*オプション*SQL_STRING_FUNCTIONS のです。 アプリケーションでのみを持つ 検索のスカラー関数を呼び出すことができる場合、 *string_exp1*と*string_exp2*引数、ドライバーは SQL_FN_STR_LOCATE_2 を返しますと**SQLGetInfo**してを呼び出すと、*オプション*SQL_STRING_FUNCTIONS のです。 2 つまたは 3 つの引数を指定して検索関数の呼び出しをサポートするドライバーは、SQL_FN_STR_LOCATE と SQL_FN_STR_LOCATE_2 の両方を返します。|  
 |**LTRIM (** *string_exp* **)** (ODBC 1.0)|文字を返します*string_exp*、先行する空白が削除されたとします。|  
 |**OCTET_LENGTH (** *string_exp* **)** (ODBC 3.0)|文字列式の長さ (バイト単位) を返します。 結果は、ビット数を 8 で割った値以上の最小の整数になります。<br /><br /> 文字列データ型に対してのみは機能には、変換は暗黙的にない*string_exp*代わりに文字列にはどのようなデータ型が指定の (内部) のサイズを返します。|  

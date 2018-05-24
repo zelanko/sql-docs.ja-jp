@@ -20,13 +20,13 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="HowToDSRM"></a>管理者パスワードをリセットするには  
   
-1.  アプライアンス AD ノードでコマンド プロンプト ウィンドウを開いて***appliance_domain*– AD*xx***仮想マシン。  
+1.  アプライアンス AD ノードでコマンド プロンプト ウィンドウを開いて***appliance_domain *– AD*xx***仮想マシン。  
   
 2.  コマンド プロンプトで次のように入力します。`ntdsutil`です。  
   
 3.  **Ntdsutil**プロンプトで「`set dsrm password`です。  
   
-4.  **管理者パスワードのリセット:**プロンプトで「`reset password on server null`です。  
+4.  **管理者パスワードのリセット:** プロンプトで「`reset password on server null`です。  
   
 5.  プロンプトで、新しいパスワードを入力します。  
   

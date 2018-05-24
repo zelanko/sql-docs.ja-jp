@@ -54,7 +54,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  テーブルの特権情報を提供するテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
   
  [  **@table_schema =** ] **'***、table_schema、***'**  
- テーブル スキーマを指定します。 これは一部の DBMS 環境ではテーブル所有者になります。 *table_schema、*は**sysname**、既定値は NULL です。  
+ テーブル スキーマを指定します。 これは一部の DBMS 環境ではテーブル所有者になります。 *table_schema、* は**sysname**、既定値は NULL です。  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
  対象となるデータベースの名前を指定した*table_name*が存在します。 *table_catalog*は**sysname**、既定値は NULL です。  

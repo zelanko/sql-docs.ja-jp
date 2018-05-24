@@ -145,7 +145,7 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_ANY_ORDER です。 このオプションが返される場合は**SQLGetData**任意の順序でバインドされていない列を呼び出すことができます。  
   
--   SQL_GD_BLOCK です。 このオプションは、によって返される場合**SQLGetInfo** SQL_GETDATA_EXTENSIONS 情報の種類には、ドライバーへの呼び出しをサポートしています**SQLGetData**行セットのサイズが 1 より大きいと、アプリケーションがを呼び出すことができます**。SQLSetPos** SQL_POSITION オプションを呼び出す前に正しい行にカーソルを置きに**SQLGetData です。**  
+-   SQL_GD_BLOCK です。 このオプションは、によって返される場合**SQLGetInfo** SQL_GETDATA_EXTENSIONS 情報の種類には、ドライバーへの呼び出しをサポートしています**SQLGetData**行セットのサイズが 1 より大きいと、アプリケーションがを呼び出すことができます **。SQLSetPos** SQL_POSITION オプションを呼び出す前に正しい行にカーソルを置きに**SQLGetData です。**  
   
 -   SQL_GD_BOUND です。 このオプションが返される場合は**SQLGetData**バインドされた列に対して呼び出すことができるだけでなく、列をバインド解除されました。  
   

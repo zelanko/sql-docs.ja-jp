@@ -55,7 +55,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
  列情報を返すテーブルの名前を指定します。 *table_name*は**sysname**、既定値は NULL です。  
   
  [  **@table_schema =** ] **'***、table_schema、***'**  
- 列情報を返すテーブルのスキーマ名を指定します。 *table_schema、*は**sysname**、既定値は NULL です。  
+ 列情報を返すテーブルのスキーマ名を指定します。 *table_schema、* は**sysname**、既定値は NULL です。  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
  列情報を返すテーブルのカタログ名を指定します。 *table_catalog*は**sysname**、既定値は NULL です。  

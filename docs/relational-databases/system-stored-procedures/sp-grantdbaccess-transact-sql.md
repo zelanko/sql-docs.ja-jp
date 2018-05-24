@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\* ログイン * です。 たとえば、 **london \joeb**です。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
+ [  **@loginame =** ]  **'* * * ログイン* **'** Windows ログイン、Windows グループの名前を指定または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新しいデータベースにマップされるログインユーザー。Windows グループと Windows ログインの名前は、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ログイン * です。 たとえば、 **london \joeb**です。 既にデータベース内のユーザーにマップされているログインは指定できません。 *ログイン*は、 **sysname**、既定値はありません。  
   
  [  **@name_in_db=**] **'***name_in_db***'** **[出力]**  
  新しいデータベース ユーザーの名前です。 *name_in_db* OUTPUT 変数のデータ型では、 **sysname**、および既定値は NULL です。 指定しない場合、*ログイン*を使用します。 値は NULL の場合、出力変数として指定されている場合**@name_in_db**に設定されている*ログイン*です。 *name_in_db*現在のデータベースに既に存在する必要があります。  
