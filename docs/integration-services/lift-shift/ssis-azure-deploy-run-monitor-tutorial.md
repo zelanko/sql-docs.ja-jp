@@ -1,6 +1,6 @@
 ---
 title: Azure で SSIS パッケージをデプロイし、実行する | Microsoft Docs
-ms.date: 02/05/2018
+ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Azure で SSIS パッケージをデプロイし、実行する
 このチュートリアルでは、Azure SQL Database の SSISDB カタログ データベースに SQL Server Integration Services プロジェクトを配置する方法、Azure-SSIS Integration Runtime でのパッケージの実行方法、および実行中のパッケージの監視方法を示します。
@@ -25,10 +25,16 @@ ms.lasthandoff: 05/15/2018
 
 始める前に、バージョン 17.2 以降の SQL Server Management Studio があることを確認します。 最新バージョンの SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
-また、SSISDB データベースを設定し、Azure-SSIS Integration Runtime をプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[Azure Data Factory UI を使用した Azure SSIS 統合ランタイムのプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)」を参照してください。
+また、Azure で SSISDB データベースを設定し、Azure SSIS 統合ランタイムをプロビジョニングしていることを確認してください。 Azure で SSIS をプロビジョニングする方法については、「[SQL Server Integration Services パッケージを Azure にデプロイする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」を参照してください。
 
-> [!NOTE]
-> Azure への配置では、プロジェクト配置モデルのみがサポートされます。
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
+
+パッケージを Azure SQL Database で実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
+
+1. [Azure ポータル](https://portal.azure.com/)にログインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [SSISDB データベース] を選びます。 
+3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
+4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB データベースに接続する
 
@@ -49,7 +55,7 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 | 名前は **mysqldbserver.database.windows.net** の形式である必要があります。 サーバー名が必要な場合は、「[Azure 上の SSISDB カタログ データベースへの接続](ssis-azure-connect-to-catalog-database.md)」を参照してください。 |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | このクイック スタートでは、SQL 認証を使います。 |
+   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | Windows 認証を使用して Azure SQL Database に接続することはできません。 |
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
@@ -62,6 +68,9 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>配置ウィザードを使用してプロジェクトを配置する
 
 パッケージの配置と配置ウィザードについて詳しくは、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../packages/deploy-integration-services-ssis-projects-and-packages.md)」および「[Integration Services 配置ウィザード](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)」を参照してください。
+
+> [!NOTE]
+> Azure への配置では、プロジェクト配置モデルのみがサポートされます。
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを起動する
 1. SSMS のオブジェクト エクスプローラーで、**[Integration Services カタログ]** ノードと **[SSISDB]** ノードを展開した状態で、プロジェクト フォルダーを展開します。
@@ -84,8 +93,9 @@ SQL Server Management Studio を使用して、Azure SQL Database サーバー�
   
 3.  **[配置先の選択]** ページで、プロジェクトの配置先を選びます。
     -   完全修飾サーバー名を `<server_name>.database.windows.net` の形式で入力します。
+    -   認証情報を入力し、**[接続]** を選択します。
     -   次に、**[参照]** を選択し、SSISDB でターゲット フォルダーを選択します。
-    -   **[次へ]** を選択して **[レビュー]** ページを開きます。  
+    -   **[次へ]** を選択して **[レビュー]** ページを開きます。 (**[次へ]** ボタンは **[接続]** を選択しないと有効になりません。)
   
 4.  **[レビュー]** ページで、選択した設定を確認します。
     -   選択内容を変更するには、**[戻る]** を選択するか、左ペインで任意の手順を選択します。
@@ -182,7 +192,7 @@ SSMS で実行中のパッケージを監視する方法の詳細については
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime の監視
 
-パッケージが実行されている Azure-SSIS Integration Runtime に関する状態情報を取得するには、次の PowerShell コマンドを使用します。コマンドごとに、データ ファクトリ、Azure SSIS IR およびリソース グループの名前を指定します。
+パッケージが実行されている Azure SSIS 統合ランタイムに関する状態情報を取得するには、次の PowerShell コマンドを使用します。 コマンドごとに、データ ファクトリ、Azure SSIS IR、およびリソース グループの名前を入力します。 詳細については、[Azure SSIS 統合ランタイムの監視](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)に関するページを参照してください。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime に関するメタデータを取得する
 

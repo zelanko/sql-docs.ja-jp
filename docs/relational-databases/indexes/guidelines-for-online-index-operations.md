@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,8 +114,11 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="online-default-options"></a>オンラインの既定のオプション 
 
-ELEVATE_ONLINE または ELEVATE_RESUMABLE データベース スコープ構成オプションを設定することで、データベース レベルでオンラインまたは再開可能の既定のオプションを設定できます。 これらの既定のオプションを設定すると、データベースをオフラインにする操作を誤って実行してしまう事態を回避できます。 いずれのオプションでも、エンジンは特定の操作をオンラインまたは再開可能実行に自動昇格します。  
-いずれかのオプションを FAIL_UNSUPPORTED、WHEN_SUPPORTED、NEVER として設定できます。 オンラインと再開可能に異なる値を設定できます。 
+> [!IMPORTANT]
+> これらのオプションは、パブリック プレビューの状態です。
+
+ELEVATE_ONLINE または ELEVATE_RESUMABLE データベース スコープ構成オプションを設定することで、データベース レベルでオンラインまたは再開可能の既定のオプションを設定できます。 これらの既定のオプションを設定すると、データベース テーブルをオフラインにする操作を誤って実行してしまう事態を回避できます。 いずれのオプションでも、エンジンは特定の操作をオンラインまたは再開可能実行に自動昇格します。  
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) コマンドを使用して、オプションを FAIL_UNSUPPORTED、WHEN_SUPPORTED、または OFF のいずれかに設定できます。 オンラインと再開可能に異なる値を設定できます。 
 
 ELEVATE_ONLINE と ELEVATE_RESUMABLE はいずれも、オンラインと再開可能の構文をそれぞれサポートする DDL ステートメントにのみ適用されます。 たとえば、ELEVATE_ONLINE=FAIL_UNSUPORTED で XML インデックスを作成すると、操作がオフラインで実行されます。XML インデックスで ONLINE= 構文がサポートされていないためです。 これらのオプションは、ONLINE または RESUMABLE オプションを指定せずに送信される DDL ステートメントでのみ有効になります。 たとえば、ONLINE=OFF または RESUMABLE=OFF でステートメントを送信することで、ユーザーは FAIL_UNSUPPORTED 設定をオーバーライドし、オフラインか再開不可能でステートメントを実行できます。 
  

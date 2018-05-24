@@ -86,7 +86,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  sp_showpendingchanges の結果には、生成が 0 の行は含まれません。  
   
- 指定されたアーティクル*記事*は指定されたパブリケーションに属していません*パブリケーション、*場合、pending_deletes および pending_ins_and_upd に対して 0 のカウントが返されます。  
+ 指定されたアーティクル*記事*は指定されたパブリケーションに属していません*パブリケーション、* 場合、pending_deletes および pending_ins_and_upd に対して 0 のカウントが返されます。  
   
 ## <a name="permissions"></a>権限  
  sp_showpendingchanges を実行できるのは、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーだけです。  

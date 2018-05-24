@@ -205,7 +205,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  データ ソースを識別する OLE DB プロバイダー固有の接続文字列を指定します。 *subscriber_provider_string*は**nvarchar (4000)** 既定値は NULL です。 *subscriber_provider_string* IDataInitialize に渡したり、OLE DB プロバイダーを初期化する DBPROP_INIT_PROVIDERSTRING プロパティとして設定します。 *subscriber_provider_string*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
   
  [  **@subscriber_catalog=** ] **'***対応する、***'**  
- OLE DB プロバイダーに接続するときに使用するカタログを指定します。 *対応する、*は**sysname**既定値は NULL です。 *対応する、* OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 *対応する、*のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
+ OLE DB プロバイダーに接続するときに使用するカタログを指定します。 *対応する、* は**sysname**既定値は NULL です。 *対応する、* OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 *対応する、* のみがサポートされていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

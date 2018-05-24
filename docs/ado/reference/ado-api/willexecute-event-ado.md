@@ -42,7 +42,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  A**文字列**SQL コマンドまたはストアド プロシージャの名前を格納しています。  
   
  *CursorType*  
- A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)のカーソルの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にカーソルを変更することができます、 **Recordset**[Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)操作します。 *カーソル。*他の操作は無視されます。  
+ A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)のカーソルの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にカーソルを変更することができます、 **Recordset**[Open メソッド (ADO レコード セット)](../../../ado/reference/ado-api/open-method-ado-recordset.md)操作します。 *カーソル。* 他の操作は無視されます。  
   
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)のロックの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にロックを変更することができます、 **RecordsetOpen**操作します。 *LockType*他の操作は無視されます。  

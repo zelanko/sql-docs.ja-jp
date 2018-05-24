@@ -108,7 +108,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。  
   
  [  **@subscriber_security_mode=**] *subscriber_security_mode*  
- サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int、**既定値は NULL です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
+ サブスクライバーへ接続して同期するときに使用するセキュリティ モードを指定します。 *subscriber_security_mode*は**int、** 既定値は NULL です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
   
 > [!NOTE]  
 >  このパラメーターは、スクリプトの下位互換性を確保するために用意されているものであり、非推奨とされます。 ディストリビューション エージェントは常に Windows 認証を使用してローカル サブスクライバーに接続します。 場合は NULL 以外の値または**1**が指定されているこのパラメーターは、警告メッセージが返されます。  

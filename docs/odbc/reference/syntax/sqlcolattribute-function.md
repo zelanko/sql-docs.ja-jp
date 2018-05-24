@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  **SQLColAttribute**結果セットの列の記述子情報を返します。 記述子の情報は、文字の文字列、記述子に依存する値または整数値として返されます。  
   
 > [!NOTE]  
->  どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション*。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
+>  どのようなドライバー マネージャーの詳細と ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性を保つのための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -133,18 +133,18 @@ SQLRETURN SQLColAttribute (
  ODBC 3 です。*x*ドライバーは、の各記述子フィールドの値を返す必要があります。 記述子フィールドは、ドライバーまたはデータ ソースには適用されませんし、ドライバーに 0 を返します、明記しない限り場合\* *StringLengthPtr*または空の文字列で **CharacterAttributePtr*です。  
   
 ## <a name="backward-compatibility"></a>旧バージョンとの互換性  
- ODBC 3 です。*x*関数**SQLColAttribute**非推奨の ODBC 2 が置き換えられます*。x*関数**SQLColAttributes**です。 マップするとき**SQLColAttributes**に**SQLColAttribute** (ときに ODBC 2 *。x* ODBC 3 を利用するアプリケーション*。x*ドライバー)、またはマッピング**SQLColAttribute**に**SQLColAttributes** (ときに ODBC 3 *。x* ODBC 2 を利用するアプリケーション*。x*ドライバー)、ドライバー マネージャーがいずれかの値を渡します*FieldIdentifier*を通じて、新しい値にマップまたは次のように、エラーが返されます。  
+ ODBC 3 です。*x*関数**SQLColAttribute**非推奨の ODBC 2 が置き換えられます *。x*関数**SQLColAttributes**です。 マップするとき**SQLColAttributes**に**SQLColAttribute** (ときに ODBC 2 *。x* ODBC 3 を利用するアプリケーション *。x*ドライバー)、またはマッピング**SQLColAttribute**に**SQLColAttributes** (ときに ODBC 3 *。x* ODBC 2 を利用するアプリケーション *。x*ドライバー)、ドライバー マネージャーがいずれかの値を渡します*FieldIdentifier*を通じて、新しい値にマップまたは次のように、エラーが返されます。  
   
 > [!NOTE]  
->  使用されるプレフィックス*FieldIdentifier* ODBC 3 の値*。x*で使用される ODBC 2 から変更されました*。x*です。 新しいプレフィックスは"SQL_DESC"です。古いプレフィックスは、"SQL_COLUMN"でした。  
+>  使用されるプレフィックス*FieldIdentifier* ODBC 3 の値 *。x*で使用される ODBC 2 から変更されました *。x*です。 新しいプレフィックスは"SQL_DESC"です。古いプレフィックスは、"SQL_COLUMN"でした。  
   
--   場合、 **#define** ODBC 2 の値*。x* *FieldIdentifier*と同じ、 **#define** ODBC 3 の値*。x* *FieldIdentifier*、関数呼び出しで値が渡されるだけです。  
+-   場合、 **#define** ODBC 2 の値 *。x* *FieldIdentifier*と同じ、 **#define** ODBC 3 の値 *。x* *FieldIdentifier*、関数呼び出しで値が渡されるだけです。  
   
--   **#Define** ODBC 2 の値*。x* *FieldIdentifiers* SQL_COLUMN_LENGTH、SQL_COLUMN_PRECISION、および SQL_COLUMN_SCALE は異なる、 **#define** ODBC 3 の値*。x* *FieldIdentifiers* SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_LENGTH です。 ODBC 2 です。*x*ドライバーでは、ODBC 2 をサポートする必要がのみ*。x*値。 ODBC 3 です。*x*ドライバーがこれら 3 つの"SQL_COLUMN"と"SQL_DESC"の両方の値をサポートする必要があります*FieldIdentifiers*です。 ODBC 3 に有効桁数、小数点以下桁数、および長さが異なる方法でに定義されるため、これらの値が異なります。*x* ODBC 2 よりも*。x*です。 詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)です。  
+-   **#Define** ODBC 2 の値 *。x* *FieldIdentifiers* SQL_COLUMN_LENGTH、SQL_COLUMN_PRECISION、および SQL_COLUMN_SCALE は異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifiers* SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_LENGTH です。 ODBC 2 です。*x*ドライバーでは、ODBC 2 をサポートする必要がのみ *。x*値。 ODBC 3 です。*x*ドライバーがこれら 3 つの"SQL_COLUMN"と"SQL_DESC"の両方の値をサポートする必要があります*FieldIdentifiers*です。 ODBC 3 に有効桁数、小数点以下桁数、および長さが異なる方法でに定義されるため、これらの値が異なります。*x* ODBC 2 よりも *。x*です。 詳細については、次を参照してください。[列のサイズ、小数点以下桁数、転送オクテット長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)です。  
   
--   場合、 **#define** ODBC 2 の値*。x* *FieldIdentifier*とは異なる、 **#define** ODBC 3 の値*。x* *FieldIdentifier*、カウント、名前、としてが発生し、関数呼び出しで値、null 許容の値は、対応する値にマップします。 SQL_DESC_COUNT に SQL_COLUMN_COUNT をマップするなど、SQL_DESC_COUNT がマッピングの方向に応じて SQL_COLUMN_COUNT にマップされているとします。  
+-   場合、 **#define** ODBC 2 の値 *。x* *FieldIdentifier*とは異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifier*、カウント、名前、としてが発生し、関数呼び出しで値、null 許容の値は、対応する値にマップします。 SQL_DESC_COUNT に SQL_COLUMN_COUNT をマップするなど、SQL_DESC_COUNT がマッピングの方向に応じて SQL_COLUMN_COUNT にマップされているとします。  
   
--   場合*FieldIdentifier* ODBC 3 内の新しい値です*。x*、これがありませんでした対応する値では、ODBC 2 のです*。x*、ODBC 3 時にマップできません*。x*アプリケーションでの呼び出しで使用**SQLColAttribute** ODBC 2 *。x*ドライバー、および呼び出しは SQLSTATE HY091 を返します (無効な記述子フィールド識別子)。  
+-   場合*FieldIdentifier* ODBC 3 内の新しい値です *。x*、これがありませんでした対応する値では、ODBC 2 のです *。x*、ODBC 3 時にマップできません *。x*アプリケーションでの呼び出しで使用**SQLColAttribute** ODBC 2 *。x*ドライバー、および呼び出しは SQLSTATE HY091 を返します (無効な記述子フィールド識別子)。  
   
  次の表に、によって返される記述子型**SQLColAttribute**です。 型は、 *NumericAttributePtr*値は**SQLLEN \*** です。  
   
@@ -173,7 +173,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルのスキーマです。 列が式の場合、または列がビューの一部である場合に、返される値は、実装定義はします。 データ ソースはスキーマをサポートしていないか、スキーマ名を特定することはできません、空の文字列が返されます。 この VARCHAR レコード フィールドは、128 文字に制限はありません。|  
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE WHERE 句で列を使用できない場合。 (これは ODBC 2 で SQL_UNSEARCHABLE 値と同じです。*x*)。<br /><br /> SQL_PRED_CHAR 場合は、列は、WHERE 句では、LIKE 述語と共にのみ使用できます。 (これは ODBC 2 で SQL_LIKE_ONLY 値と同じです。*x*)。<br /><br /> SQL_PRED_BASIC 似たを除くすべての比較演算子と共に WHERE 句で列を使用できる場合です。 (これは ODBC 2 で SQL_EXCEPT_LIKE 値と同じです。*x*)。<br /><br /> SQL_PRED_SEARCHABLE 場合は、列は、任意の比較演算子と共に WHERE 句で使用できます。<br /><br /> 列は、SQL_LONGVARCHAR と SQL_LONGVARBINARY 通常戻り SQL_PRED_CHAR を入力します。|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルの名前です。 列が式の場合、または列がビューの一部である場合に、返される値は、実装定義はします。<br /><br /> テーブル名を特定できない場合は、空の文字列が返されます。|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL データ型を指定する数値。<br /><br /> ときに*ColumnNumber*と等しいの可変長のブックマークを 0 に sql_binary 型が返され、固定長のブックマークの SQL_INTEGER が返されます。<br /><br /> Datetime および時間データ型の場合は、このフィールドは、詳細なデータ型を返します。: SQL_DATETIME または SQL_INTERVAL です。 (詳細については、次を参照してください。[のデータ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)付録 d: データ型にします。<br /><br /> この情報は、IRD の SQL_DESC_TYPE レコード フィールドから返されます。 **注:** ODBC 2 を操作する*。x*ドライバー、SQL_DESC_CONCISE_TYPE を代わりに使用します。|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL データ型を指定する数値。<br /><br /> ときに*ColumnNumber*と等しいの可変長のブックマークを 0 に sql_binary 型が返され、固定長のブックマークの SQL_INTEGER が返されます。<br /><br /> Datetime および時間データ型の場合は、このフィールドは、詳細なデータ型を返します。: SQL_DATETIME または SQL_INTERVAL です。 (詳細については、次を参照してください。[のデータ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)付録 d: データ型にします。<br /><br /> この情報は、IRD の SQL_DESC_TYPE レコード フィールドから返されます。 **注:** ODBC 2 を操作する *。x*ドライバー、SQL_DESC_CONCISE_TYPE を代わりに使用します。|  
 |SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|データ ソースに依存するデータ型の名前です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR () FOR BIT DATA」です。<br /><br /> 型が不明な場合は、空の文字列が返されます。|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED またはとき。 場合は、IRD の SQL_DESC_NAME フィールドには、列の別名または列の名前が含まれています、SQL_NAMED が返されます。 列名または列の別名がない場合は、ときが返されます。<br /><br /> この情報は、IRD の SQL_DESC_UNNAMED レコード フィールドから返されます。|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|この列は署名されていない (または数値ではありません) の場合は SQL_TRUE にします。<br /><br /> 列が署名されている場合は SQL_FALSE にします。|  

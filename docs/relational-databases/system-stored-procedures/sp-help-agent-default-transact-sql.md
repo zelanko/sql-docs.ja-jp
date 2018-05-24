@@ -46,7 +46,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 ## <a name="arguments"></a>引数  
  [  **@profile_id=**] *profile_id * * * 出力**  
- エージェントの種類の既定の構成の ID を指定します。 *profile_id*は**int**、既定値はありません*。profile_id*は出力パラメーターでも、エージェントの種類の既定の構成の ID を返します。  
+ エージェントの種類の既定の構成の ID を指定します。 *profile_id*は**int**、既定値はありません *。profile_id*は出力パラメーターでも、エージェントの種類の既定の構成の ID を返します。  
   
  [  **@agent_type=**] **'***agent_type***'**  
  エージェントの種類を指定します。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
