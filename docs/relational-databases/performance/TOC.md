@@ -3,8 +3,7 @@
 # [NVDIMM-N ライトバック キャッシュを使った記憶域スペースの構成](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [自動調整](../automatic-tuning/automatic-tuning.md)
-# 
-  [カーディナリティ推定](cardinality-estimation-sql-server.md)  
+# [カーディナリティ推定](cardinality-estimation-sql-server.md)  
 # [インテリジェントなクエリ処理](intelligent-query-processing.md)
 ## [アダプティブ クエリ処理](adaptive-query-processing.md)
 
