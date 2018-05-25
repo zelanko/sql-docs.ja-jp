@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>コマンドラインから machine learning の SQL Server コンポーネントをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、コマンドラインからのコンポーネントを学習 intalling SQL Server コンピューターの説明します。
 
-+ [データベース内のインスタンス](#indb)
++ [データベース内の新しいインスタンス](#indb)
 + [既存のデータベース エンジン インスタンスへの追加します。](#add-existing)
 + [サイレント インストール](#silent)
-+ [スタンドアロン サーバー](#shared-feature)
++ [新しいスタンドアロン サーバー](#shared-feature)
 
 セットアップのユーザー インターフェイスをサイレント モード、basic、または完全の相互作用を指定できます。 この記事の内容を補足するもの[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)R、Python の machine learning コンポーネントに固有のパラメーターに対応します。
 

@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
 
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 バックアップ ファイルは、コンテナー内にあるようになりました。 バックアップを復元する前には、論理ファイル名とバックアップ内のファイルの種類を知る必要があります。 次の TRANSACT-SQL コマンドは、バックアップを検査しを使用して復元を実行**sqlcmd**コンテナーにします。
 
 > [!TIP]
-> このチュートリアルでは使用**sqlcmd**コンテナーの中、コンテナーがプレインストールされてこの tool に付属しているためです。 ただし、実行することも TRANSACT-SQL ステートメントの他のクライアントと、コンテナーの外部ツールなど[Visual Studio Code](sql-server-linux-develop-use-vscode.md)または[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)です。 接続するには、コンテナーのポート 1433 にマップされたホスト ポートを使用します。 この例ではその**localhost、1401**ホスト コンピューター上および**Host_IP_Address、1401**リモートです。
+> このチュートリアルでは使用**sqlcmd**コンテナーの中、コンテナーがプレインストールされてこの tool に付属しているためです。 ただし、実行することも TRANSACT-SQL ステートメントの他のクライアントと、コンテナーの外部ツールなど[Visual Studio Code](sql-server-linux-develop-use-vscode.md)または[SQL Server Management Studio](sql-server-linux-manage-ssms.md)です。 接続するには、コンテナーのポート 1433 にマップされたホスト ポートを使用します。 この例ではその**localhost、1401**ホスト コンピューター上および**Host_IP_Address、1401**リモートです。
 
 1. 実行**sqlcmd**論理ファイルの名前と、バックアップ内のパスを一覧に、コンテナー内です。 これは、 **RESTORE FILELISTONLY** TRANSACT-SQL ステートメント。
 

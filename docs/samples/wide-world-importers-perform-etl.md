@@ -12,67 +12,59 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dae49099f938baa071149072b277411b99e63dc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36638c4cc2bda58ac277822d5c4a4ce5421ab8b4
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-WWI_Integration ETL パッケージを使用して、データの変化に応じて WideWorldImportersDW データベースへの WideWorldImporters データベースからデータを移行します。 パッケージを定期的に実行 (最もよく毎日) です。
+使用して、 *WWI_Integration* ETL パッケージ データの変化に応じて、WideWorldImportersDW データベースに、WideWorldImporters データベースからデータを移行します。 パッケージを定期的に実行 (通常は毎日) です。
 
-## <a name="overview"></a>概要
+パッケージは、(Integration Services 内の別の変換) ではなく一括 T-SQL 操作を調整するため SQL Server Integration Services を使用して、高パフォーマンスを保証します。
 
-パッケージに使用されている一括 T-SQL 操作を調整するため SQL Server Integration Services (SSIS) (としてではなく SSIS 内の別の変換) のデザインを高パフォーマンスを確認します。
+ディメンションが最初に、読み込まれていて、ファクト テーブルが読み込まれます。 パッケージは、障害の後にいつでも実行できます。
 
-ディメンションは、ファクト テーブルによってその後に最初に読み込まれます。 パッケージは、障害の後にいつでも再実行できます。
-
-ワークフローは次のとおりです。
+ワークフローは、次のようになります。
 
  ![WideWorldImporters ETL ワークフロー](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
-これは、適切な終了時刻を動作する式タスクを開始します。 この時間は、小さい数分の現在の時刻です。 (これは現在の時刻に直接データを要求するよりも堅牢) です。 時間 (ミリ秒) の切り捨てられます。
+ワークフローは、適切な終了時刻を決定する式タスクを開始します。 終了時刻は、数分-現在の時刻です。 (このアプローチは、現在の時刻に直接データを要求するよりも堅牢です)。任意のミリ秒単位は、時間から切り詰められます。
 
-日付ディメンション テーブルを設定することで、メイン処理を開始します。 テーブルの現在の年のすべての日付が入力されていることを保証します。
+日付ディメンション テーブルを設定することで、メイン処理を開始します。 処理により、テーブルの現在の年のすべての日付が入力されていること。
 
-その後は、一連のデータ フロー タスクは、各ディメンションし、各ファクトを読み込みます。
+次に、一連のデータ フロー タスクは、各ディメンションを読み込みます。 次に、各ファクトを読み込まれるとします。
 
 ## <a name="prerequisites"></a>前提条件
 
-- SQL Server 2016 (またはそれ以降)、データベースとの WideWorldImporters と WideWorldImportersDW です。 これらは、SQL Server の同じまたは別のインスタンスに配置できます。
-- SQL Server Management Studio (SSMS)
-- SQL Server 2016 Integration Services (SSIS)。
-  - SSIS カタログを作成したことを確認してください。 いない場合は、右クリック**Integration Services** SSMS オブジェクト エクスプ ローラーで選択および**カタログの追加**です。 既定の設定に従います。 Sqlclr を有効にし、パスワードを指定することを依頼します。
+- SQL Server 2016 (またはそれ以降)、データベースとの WideWorldImporters と WideWorldImportersDW (同じまたは異なる SQL Server のインスタンスで)
+- SQL Server Management Studio
+- SQL Server 2016 Integration Services
+  - Integration Services カタログを作成することを確認します。 SQL Server Management Studio オブジェクト エクスプ ローラーで、Integration Services カタログを作成するには、右**Integration Services**、し、**カタログの追加**です。 既定のオプションのままにします。 SQLCLR を有効にし、パスワードの入力を求められます。
 
 
 ## <a name="download"></a>ダウンロード
 
-サンプルの最新リリース。
+サンプルの最新のリリースでは、次を参照してください。 [wide world importers 社リリース](http://go.microsoft.com/fwlink/?LinkID=800630)です。 ダウンロード、*毎日 ETL.ispac* Integration Services パッケージのファイルです。
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
-
-SSIS パッケージ ファイルをダウンロード**毎日 ETL.ispac**です。
-
-サンプル データベースを再作成するソース コードは、次の場所から使用可能なです。
-
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+ソース コード、サンプル データベースを再作成を次を参照してください。 [wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)です。
 
 ## <a name="install"></a>インストール
 
-1. SSIS パッケージを展開します。
-   - Windows エクスプ ローラーから、"日次 ETL.ispac"パッケージを開きます。 これにより、Integration Services 配置ウィザードが起動します。
-   - [ソースの選択] の下にある"毎日 ETL.ispac"パッケージを指すパスで既定のプロジェクトの配置に準拠します。
-   - 「先」の下には、SSIS カタログをホストするサーバーの名前を入力します。
-   - 新しいフォルダー"WideWorldImporters"下にあるなど、SSIS カタログの下のパスを選択します。
-   - [配置] をクリックしてウィザードを完了します。
+1. Integration Services パッケージを展開します。
+   1. Windows エクスプ ローラーで開く、*毎日 ETL.ispac*パッケージです。 これは、SQL Server Integration Services 配置ウィザードを起動します。
+   2. **ソースの選択**、プロジェクトの配置の既定値の後ろを指すパスと、*毎日 ETL.ispac*パッケージです。
+   3. **先の選択**、Integration Services カタログをホストするサーバーの名前を入力します。
+   4. という名前の新しいフォルダーに、たとえば、Integration Services カタログの下のパスを選択*WideWorldImporters*です。
+   5. 選択**展開**ウィザードを終了します。
 
 2. ETL プロセスの SQL Server エージェント ジョブを作成します。
-   - SSMS では、右クリックして「SQL Server エージェント」と 新規-> ジョブ
-   - 名前をたとえば"WideWorldImporters ETL"を選択します。
-   - 「SQL Server Integration Services パッケージ」の種類のジョブ ステップを追加します。
-   - SSIS カタログを使用してサーバーを選択し、"毎日"の ETL パッケージを選択します。
-   - 構成-> 接続マネージャーは、ソースとターゲットへの接続が正しく構成されていることを確認します。 既定では、ローカル インスタンスに接続します。
-   - ジョブを作成するには、[ok] をクリックします。
+   1. Management Studio を右クリックして**SQL Server エージェント**、し、**新規** > **ジョブ**です。
+   2. たとえば、名前を入力*WideWorldImporters ETL*です。
+   3. 追加、**ジョブ ステップ**型の**SQL Server Integration Services パッケージ**です。
+   4. Integration Services カタログをあるサーバーを選択し、、*毎日 ETL*パッケージです。
+   5. **構成** > **接続マネージャー**ソースとターゲットへの接続が正しく構成されていることを確認してください。 既定では、ローカル インスタンスに接続します。
+   6. 選択**OK**ジョブを作成します。
 
 3. 実行またはジョブ スケジュールを設定します。

@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL 操作 Studio (プレビュー) のリリース ノート
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/10/2018
 
 - Announcing Redgate SQL Search の拡張機能の拡張機能マネージャーで使用できます。
 - 10 言語の使用可能なコミュニティ ローカリゼーション: ドイツ語、スペイン語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、ロシア語、簡体字中国語、繁体字中国語です。
-- GDPR に準拠したビルドが少なくなって製品利用統計情報のコレクション、オプトアウト エクスペリエンスの向上と、製品にリンク プライバシーに関する声明をします。
+- 削減製品利用統計情報コレクション、オプトアウト エクスペリエンスの向上と製品内へのリンクのプライバシーに関する声明。
 - 拡張機能マネージャーは、コミュニティの拡張機能を簡単に検出するエクスペリエンスが向上 Marketplace を持っています。
 - 拡張機能の SQL エージェント ジョブとジョブ履歴は、改善を表示します。
 - Whoisactive およびサーバーのレポートの拡張機能を更新します。

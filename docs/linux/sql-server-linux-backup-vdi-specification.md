@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 0d53cba4a7338cead485b984bf8ddb296bf5478e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dab0dcc403a7e0f85cd78e69e9461ef0d566b0c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI クライアント SDK 仕様 SQL Server
 
@@ -93,7 +92,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**VD_E_NOTSUPPORTED** |1 つ以上の構成内のフィールドが無効か、サポートされています。 |
 | |**VD_E_PROTOCOL** | 仮想デバイス セットが既に存在します。
 
-**「解説」**バックアップまたは復元操作ごとに、作成方法を 1 回だけ呼び出す必要があります。 Close メソッドを呼び出した後、クライアントは、別の仮想デバイス セットを作成するには、インターフェイスを再利用できます。
+**「解説」** バックアップまたは復元操作ごとに、作成方法を 1 回だけ呼び出す必要があります。 Close メソッドを呼び出した後、クライアントは、別の仮想デバイス セットを作成するには、インターフェイスを再利用できます。
 
 ## <a name="clientvirtualdevicesetgetconfiguration"></a>ClientVirtualDeviceSet::GetConfiguration
 
@@ -117,7 +116,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**VD_E_ABORT** |SignalAbort が呼び出されました。
 | |**VD_E_TIMEOUT** |関数がタイムアウトしました。
 
-**「解説」**アラート可能な状態でこの関数をブロックします。 成功した呼び出しでは、後に仮想デバイス セット内のデバイスを開くことができます。
+**「解説」** アラート可能な状態でこの関数をブロックします。 成功した呼び出しでは、後に仮想デバイス セット内のデバイスを開くことができます。
 
 
 ## <a name="clientvirtualdevicesetopendevice"></a>ClientVirtualDeviceSet::OpenDevice
@@ -174,7 +173,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**VD_E_TIMEOUT** |コマンドを取得できませんでした、タイムアウトになりました。
 | |**VD_E_ABORT** |クライアントまたはサーバーに、シャット ダウンを強制するのに、SignalAbort が使用します。
 
-**「解説」**ときでしたが返され、SQL Server デバイスを閉じました。 これは、通常のシャット ダウンの一部です。 すべてのデバイスが閉じられると、クライアントは、仮想デバイス セットを閉じる ClientVirtualDeviceSet::Close を呼び出します。
+**「解説」** ときでしたが返され、SQL Server デバイスを閉じました。 これは、通常のシャット ダウンの一部です。 すべてのデバイスが閉じられると、クライアントは、仮想デバイス セットを閉じる ClientVirtualDeviceSet::Close を呼び出します。
 このルーチンは、コマンドの待機をブロックする必要があります、ときに、スレッドが、警告状態に残されます。
 
 ## <a name="clientvirtualdevicecompletecommand"></a>ClientVirtualDevice::CompleteCommand
@@ -206,7 +205,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**VD_E_ABORT** |シグナル状態になった中止します。
 | |**VD_E_PROTOCOL** |デバイスは、開かれていません。
 
-**「解説」**なし
+**「解説」** なし
 
 ## <a name="clientvirtualdevicesetsignalabort"></a>ClientVirtualDeviceSet::SignalAbort
 
@@ -275,7 +274,7 @@ Linux では、POSIX プリミティブは、その既定のグループを作�
 | |**VD_E_PROTOCOL** |仮想デバイス セットが作成されていない、このクライアントでは、その仮想デバイスで既に開かれてセットがセカンダリ クライアントからのオープン要求を受け入れる準備ができていません。
 | |**VD_E_ABORT** |操作を中止しています。
 
-**「解説」**複数のプロセス モデルを使用する場合、プライマリ クライアントはセカンダリ クライアントの通常および異常終了を検出します。
+**「解説」** 複数のプロセス モデルを使用する場合、プライマリ クライアントはセカンダリ クライアントの通常および異常終了を検出します。
 
 ## <a name="clientvirtualdevicesetgetbufferhandle"></a>ClientVirtualDeviceSet::GetBufferHandle
 
@@ -326,6 +325,6 @@ Remarks GetBufferHandle 関数を呼び出すプロセスは、データ転送�
 | |**VD_E_PROTOCOL** |仮想デバイス セットは、現在開いているではありません。
 | |**VD_E_INVALID** |PpBuffer は、無効なハンドルです。
 
-**「解説」**は注意が必要、ハンドルを正常に通信します。 ハンドルは、1 つの仮想デバイスのセットに対してローカルです。 ハンドルを共有するパートナーのプロセスは、そのバッファー ハンドルを使用して、仮想デバイスのバッファーが最初に取得されたセットのスコープ内でのみを確認してください。
+**「解説」** は注意が必要、ハンドルを正常に通信します。 ハンドルは、1 つの仮想デバイスのセットに対してローカルです。 ハンドルを共有するパートナーのプロセスは、そのバッファー ハンドルを使用して、仮想デバイスのバッファーが最初に取得されたセットのスコープ内でのみを確認してください。
 
 

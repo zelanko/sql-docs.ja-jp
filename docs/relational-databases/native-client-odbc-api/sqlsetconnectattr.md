@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b4066a595e7b17f5c5ff70b965aea3ca43a798f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad5c5425427f9bf5b8f7e6177379d91ebd10d6f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_COPT_SS_FAILOVER_PARTNER|[指定日付より前]|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|[指定日付より前]|  
 |SQL_COPT_SS_MARS_ENABLED|[指定日付より前]|  
-|SQL_COPT_SS_MULTISUBMIT_FAILOVER|[指定日付より前]|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|[指定日付より前]|  
 |SQL_COPT_SS_OLDPWD|[指定日付より前]|  
 |SQL_COPT_SS_PERF_DATA|After|  
 |SQL_COPT_SS_PERF_DATA_LOG|After|  
@@ -198,7 +198,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  異なるサブネット上にある [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループ (AG) に対してアプリケーションが接続している場合、この接続プロパティによって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が構成されます。 以下に例を示します。  
   
 ```  
-SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
  詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client のサポート[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]Ag を参照してください[SQL Server ネイティブ クライアントをサポートして高可用性、災害復旧](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)です。  

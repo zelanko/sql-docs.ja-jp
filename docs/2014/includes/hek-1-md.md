@@ -1,0 +1,1 @@
+SQL Server の\-OLTP のメモリ

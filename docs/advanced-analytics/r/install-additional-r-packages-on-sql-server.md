@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 SQL Server のバージョンがある場合、および、サーバーがインターネットに接続を持つかどうかに応じて、新しい R パッケージをインストールするための複数の方法はあります。
+この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 SQL Server のバージョンがある場合、および、サーバーがインターネットに接続を持つかどうかに応じて、新しい R パッケージをインストールするための複数の方法はあります。 新しいパッケージのインストールの次の方法は、考えられます。
+
+| アプローチ                           | 権限  | リモート/ローカル |
+|------------------------------------|---------------------------|-------|
+| [従来の R パッケージ マネージャーを使用します。](#bkmk_rInstall)  | 管理 | Local |
+| [RevoScaleR の使用](use-revoscaler-to-manage-r-packages.md) | 管理 | Local |
+| [T-SQL (外部ライブラリの作成) を使用します。](install-r-packages-tsql.md) | セットアップ、その後のデータベース ロールの管理 | both 
+| [MiniCRAN を使用して、ローカル リポジトリを作成するには](create-a-local-package-repository-using-minicran.md) | セットアップ、その後のデータベース ロールの管理 | both |
 
 ## <a name="bkmk_rInstall"></a> インターネット接続経由での R パッケージをインストールします。
 
@@ -75,51 +82,6 @@ SQL Server 2016 の R Services および SQL Server 2017 Machine Learning Servic
     このコマンドは、R パッケージを抽出`mynewpackage`ディレクトリにコピーを保存すると仮定した場合、ローカル zip ファイルから`C:\Temp\Downloaded packages`、し、ローカル コンピューターにパッケージをインストールします。 パッケージがすべての依存関係を持つ、インストーラーは、ライブラリ内の既存のパッケージを確認します。 依存関係を含むリポジトリを作成した場合、インストーラーは必要なパッケージをインストールします。
 
     場合は、必要なパッケージは、インスタンス ライブラリに存在しない、その zip ファイルに見つかりません対象パッケージのインストールは失敗します。
-
-## <a name="bkmk_createlibrary"></a> 使用する外部ライブラリの作成
-
-**適用されます。**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)文では、特定のデータベースやインスタンスに R を実行しなくても、パッケージまたはパッケージのセットを追加すること、または Python コードを直接です。 ただし、このメソッドは、パッケージの準備と追加のデータベースのアクセス許可が必要です。
-
-+ すべてのパッケージは、必要に応じて、インターネットからダウンロードではなく、ローカルの zip ファイルとして使用可能にする必要があります。
-
-    サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、次を参照してください。[外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)です。
-
-+ すべての依存関係の名前とバージョン、によって識別され、zip ファイルに含まれる必要があります。 必要なパッケージがない、ダウン ストリームのパッケージの依存関係を含む場合は、ステートメントが失敗します。 使用することをお勧め**miniCRAN**または**igraph**パッケージの依存関係を分析するためです。 間違ったバージョンのパッケージまたはパッケージの依存関係をインストールすると、ステートメントが失敗することもあります。 
-
-+ データベースでは、必要なアクセス許可が必要です。 詳細については、「[外部ライブラリの作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)です。
-
-### <a name="prepare-the-packages-in-archive-format"></a>アーカイブ形式でパッケージを準備します。
-
-1. 1 つのパッケージをインストールする場合は、zip 形式でパッケージをダウンロードします。 
-
-2. パッケージには、他のパッケージが必要とする場合は、必要なパッケージが利用できることを確認する必要があります。 MiniCRAN を使用して、対象パッケージを分析し、すべての依存関係を識別することができます。 
-
-3. 圧縮されたファイル サーバー上のローカル フォルダーにすべてのパッケージを含む miniCRAN リポジトリにコピーします。
-
-4. 開く、**クエリ**ウィンドウで、管理者特権を持つアカウントを使用します。
-
-5. T-SQL ステートメントを実行`CREATE EXTERNAL LIBRARY`zip 形式のパッケージのコレクションをデータベースにアップロードします。
-
-    たとえば、次のステートメントが名前にパッケージのソースとして、miniCRAN リポジトリ、 **randomForest**パッケージ、その依存関係とします。 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    任意の名前を使用することはできません。外部ライブラリ名の読み込みまたはパッケージを呼び出すときに使用するものと同じ名前が必要です。
-
-6. ライブラリが正常に作成する場合は、ストアド プロシージャ内で呼び出すことによって、SQL Server でパッケージを実行できます。
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>パッケージのインストールに関するヒント
 
