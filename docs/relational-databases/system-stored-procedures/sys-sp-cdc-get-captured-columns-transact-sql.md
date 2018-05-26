@@ -26,11 +26,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5c9c09866f34736adec722c8988c18dab16fc2dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|キャプチャ インスタンスの名前です。|  
 |column_name|**sysname**|キャプチャ対象のソース列の名前です。|  
 |column_id|**int**|ソース テーブル内の列の ID です。|  
-|ordinal_position|**int**|ソース テーブル内での列の位置です。|  
+|column_ordinal|**int**|ソース テーブル内での列の位置です。|  
 |data_type|**sysname**|列のデータ型です。|  
 |character_maximum_length|**int**|文字ベースの列の場合は最大文字長です。それ以外の場合は、NULL です。|  
 |numeric_precision|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、NULL です。|  

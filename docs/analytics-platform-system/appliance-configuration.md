@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 37d07fe45768d40b74e3b48739590648867efd94
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 17099af36994f24d182c7465bcbdc3f82e670328
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System のアプライアンス構成チェックリスト
 ご使用の環境の分析プラットフォーム システムを構成するために必要なタスクのチェックリストを提供します。 アプライアンスを使用する前に、これらの構成タスクが必要です。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  IHV によって提供される、次の情報を確認してください。  
   
-    -   PDW 管理ノードの外部 IP アドレス (*PDW_region-*CTL01)  
+    -   PDW 管理ノードの外部 IP アドレス (*PDW_region-* CTL01)  
   
     -   アプライアンスのドメイン名  
   
@@ -56,7 +56,8 @@ SQL Server PDW**Configuration Manager** (PDWCM) は、アプライアンス レ�
 |パスワードを変更、 **sa**ログオン|SQL Server PDW がという名前のシステム管理者ログオン**sa**です。 **Sa**ログオンがすべての特権を持っています。 付与、拒否、または権限を取り消すことできます。 すべてのシステム ビューを表示することもできます。<br /><br />詳細については、次を参照してください。[パスワード リセット&#40;Analytics Platform System&#41;](password-reset.md)です。|  
 |アプライアンスのタイム ゾーンを設定します。|アプライアンスのすべてのノードの時間 (ローカルまたはその他の目的の時間) を設定します。<br /><br />詳細については、次を参照してください。[アプライアンス タイム ゾーン構成&#40;Analytics Platform System&#41;](appliance-time-zone-configuration.md)です。|  
 |SQL Server PDW アプライアンスの外部に公開されたネットワーク設定を指定します。|[アプライアンス ネットワーク構成&#40;分析プラットフォーム システム&#41;](appliance-network-configuration.md)|  
-|管理コンソールのセキュリティ証明書をインポートします。|証明書が HTTPS 経由で Secure Sockets Layer (SSL) 接続を提供できる、[アプライアンスを管理コンソールを使用して監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)です。 既定では、**管理コンソール**、お客様のプライバシーがいないサーバー認証を提供する自己署名証明書が含まれています。 この証明書エラーを返しますという内容の Internet Explorer:「この web サイトのセキュリティ証明書に問題がある」ユーザーが接続する場合。 この接続は、クライアントとサーバー間のインフライトのデータを暗号化、接続が攻撃者からリスクのままであります。<br /><br />SQL Server PDW の管理者は、セキュリティで保護された接続があるし、Internet Explorer でレポートされるエラーを削除するために、クライアントによって認識される信頼された証明機関にチェーンされている証明書をすぐに取得する必要があります。 (推奨) 管理 ノードの仮想 IP アドレスをマップする完全修飾ドメイン名が必要ですか、管理者コンソールにアクセスするバーは、ブラウザーのアドレスに入力された値に一致する証明書の名前。<br /><br />使用して、 **Configuration Manager**を追加または信頼された証明書を削除します。 Microsoft Windows HTTP サービス証明書の構成ツールを使用して直接 (`winHttpCertCfg.exe`) 証明書の管理はサポートされていません。<br /><br />詳細については、次を参照してください。 [PDW 証明書のプロビジョニング&#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md)です。|  
+|管理コンソールのセキュリティ証明書をインポートします。|証明書が HTTPS 経由で Secure Sockets Layer (SSL) 接続を提供できる、[アプライアンスを管理コンソールを使用して監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)です。 既定では、**管理コンソール**、お客様のプライバシーがいないサーバー認証を提供する自己署名証明書が含まれています。 この証明書エラーを返しますという内容の Internet Explorer:「この web サイトのセキュリティ証明書に問題がある」ユーザーが接続する場合。 この接続は、クライアントとサーバー間のインフライトのデータを暗号化、接続が攻撃者からリスクのままであります。<br /><br />SQL Server PDW の管理者は、セキュリティで保護された接続があるし、Internet Explorer でレポートされるエラーを削除するために、クライアントによって認識される信頼された証明機関にチェーンされている証明書をすぐに取得する必要があります。 (推奨) 管理 ノードの仮想 IP アドレスをマップする完全修飾ドメイン名が必要ですか、管理者コンソールにアクセスするバーは、ブラウザーのアドレスに入力された値に一致する証明書の名前。<br /><br />使用して、 **Configuration Manager**を追加または信頼された証明書を削除します。 Microsoft Windows HTTP サービス証明書の構成ツールを使用して直接 (`winHttpCertCfg.exe`) 証明書の管理はサポートされていません。<br /><br />詳細については、次を参照してください。 [PDW 証明書のプロビジョニング&#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md)です。|
+|機能スイッチ|分析プラットフォーム システム AU7 で導入された機能のスイッチに関する情報を表示します。 このページを使用して、更新または Analytics Platform System の機能と設定の有効/無効にします。 機能スイッチの値を変更するには、サービスの再起動が必要です。<br /><br />詳細については、次を参照してください。 [PDW 機能スイッチ&#40;Analytics Platform System&#41;](appliance-feature-switch.md)です。|
 |有効にするにまたは許可するか、SQL Server PDW アプライアンス上の特定のポートにアクセスできないようにする Windows ファイアウォールの規則を無効にします。|IHV は構成し、正常に動作するアプライアンスに必要なファイアウォール規則を有効にします。 ほとんどの場合をいません有効にするにまたはファイアウォール ルールを無効にします。<br /><br />詳細については、次を参照してください。 [PDW のファイアウォール構成&#40;Analytics Platform System&#41;](pdw-firewall-configuration.md)です。|  
 |開始し、停止、SQL Server PDW アプライアンス|停止するか、SQL Server PDW アプライアンスを開始します。 詳細については、次を参照してください。 [PDW サービス ステータス&#40;Analytics Platform System&#41;](pdw-services-status.md)です。|  
 |使用してファイルの瞬時初期化オプションの確認、**特権** ダイアログ ボックス|ファイルの瞬時初期化は、データ ファイルの操作をより迅速に実行を許可する SQL Server 機能です。 有効にするか SQL Server PDW Network Service アカウントに SE_MANAGE_VOLUME_NAME 特権が付与されている場合にのみです。 既定でオフになっているがします。<br /><br />詳細については、次を参照してください。[瞬時ファイル初期化構成&#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md)です。|  
