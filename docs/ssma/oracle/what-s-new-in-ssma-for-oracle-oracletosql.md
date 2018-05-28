@@ -15,11 +15,11 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ca29dddb3ce5a6c933cd118c703b0ee3d09e388b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) の新機能
 このトピックでは、Oracle での変更の各リリース SSMA が一覧表示します。  
@@ -80,7 +80,7 @@ SSMA for Oracle の v7.3 リリースには、次の変更が含まれていま�
   - カスタム変換を実行するの SSMA で利用できるライブラリ。
     - これでカスタム構文変換および SSMA によって処理されなかったいた変換を処理できるコードを構築できます。
       - カスタムのコンバーターを作成する方法の手順については、このブログの投稿[変換機能を拡張する SQL Server Migration Assistant の](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)します。
-      - この変換用のサンプル プロジェクトをダウンロードできる[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)です。
+      - これからの変換用のサンプル プロジェクトをダウンロード[ブログの投稿](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)です。
 
 
 ## <a name="ssma-v72"></a>SSMA v7.2
@@ -103,18 +103,28 @@ SSMA for Oracle の v7.1 リリースには、次の変更が含まれていま�
 ## <a name="may-2016"></a>2016 年 5 月  
 SSMA for Oracle の 2016 年 5 月リリースには、次の変更が含まれています。  
 
--   SQL Server 2016 のサポートを追加します。
--   SQL Server のテンポラル テーブルにフラッシュ バック アーカイブ、Oracle テーブルの追加変換します。
--   SQL Server ポリシー オブジェクト (行レベルのセキュリティを Oracle) に変換する Oracle VPD ポリシーの追加の変換です。
--   Oracle 用の初期読み込みの減少時間です。
--   強化されたパーサーとの競合回避モジュール。
--   .Net 2.0 のインストーラーのチェックを削除します。
--   更新された拡張機能パックの依存関係から .Net 3.5 を .Net 4.0 です。
--   [保存] プロジェクト"固定と SSMA コンソールの「プロジェクトを開く」コマンド。
--   SSMA コンソールの"securepassword"コマンドを固定します。
--   初期読み込みのためのオブジェクトのカウントを修正しました。
--   Oracle の文字データ型の変換を修正しました。
--   グローバル設定のバグを修正します。
+- SQL Server 2016 のサポートを追加します。
+- SQL Server のテンポラル テーブルにフラッシュ バック アーカイブ、Oracle テーブルの追加変換します。
+
+    **注**-SSMA Oracle フラッシュ バック データ アーカイブ テーブルから履歴データはコピーされません。 その結果、履歴データは、移行プロセス中に手動でコピーする必要があります。 さらに、システム テーブルとして扱われるために、SSMA は、SQL Server メタデータ エクスプ ローラーで、履歴テーブルを表示されません、中には、SQL Server Management Studio で、履歴テーブルを表示できます。
+    SQL Server 2016 はなど、いくつかの Oracle フラッシュ バック機能をサポートしていません。
+    - Oracle フラッシュ バック トランザクション クエリ
+    - DBMS_FLASHBACK パッケージ
+    - フラッシュ バック トランザクション
+    - フラッシュ バック データのアーカイブ
+    - フラッシュ バック テーブル
+    - フラッシュ バック ドロップ
+    - フラッシュ バック データベース
+- SQL Server ポリシー オブジェクト (行レベルのセキュリティを Oracle) への Oracle VPD ポリシーの追加の変換です。
+- Oracle 用の初期読み込みの減少時間です。
+- 強化されたパーサーとの競合回避モジュール。
+- .Net 2.0 のインストーラーのチェックを削除します。
+- 更新された拡張機能パックの依存関係から .Net 3.5 を .Net 4.0 です。
+- [保存] プロジェクト"固定と SSMA コンソールの「プロジェクトを開く」コマンド。
+- SSMA コンソールの"securepassword"コマンドを固定します。
+- 初期読み込みのためのオブジェクトのカウントを修正しました。
+- Oracle の文字データ型の変換を修正しました。
+- グローバル設定のバグを修正します。
   
 ## <a name="march-2016"></a>2016 年 3 月  
 SSMA for Oracle の 2016 年 3 月のプレビュー リリースには、次の変更が含まれています。  
