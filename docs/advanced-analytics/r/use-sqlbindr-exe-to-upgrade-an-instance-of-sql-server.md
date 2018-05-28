@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンスでマシン ラーニング (R と Python) コンポーネントをアップグレードします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,6 +258,39 @@ R、Python の機能を持つ、データベース エンジンのインスタ�
 
 パッケージ ライブラリに他のオープン ソース、またはサード パーティのパッケージを追加する場合があります。 スイッチの既定のパッケージ ライブラリの場所のバインドを反転することから、R と Python で現在使用中、ライブラリにパッケージを再インストールする必要があります。 詳細については、次を参照してください。[既定のパッケージ](installing-and-managing-r-packages.md)、[新しい R パッケージをインストール](install-additional-r-packages-on-sql-server.md)、および[新しい Python パッケージをインストール](../python/install-additional-python-packages-on-sql-server.md)です。
 
+## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe コマンドの構文
+
+### <a name="usage"></a>使用方法
+
+`sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
+
+### <a name="parameters"></a>パラメーター
+
+|名前|Description|
+|------|------|
+|*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
+|*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
+|*unbind*|R Server の最新バージョンを指定した SQL データベース インスタンスからアンインストールし、R Server の今後のアップグレードがインスタンスに影響を与えないようにします|
+
+<a name="sqlbinder-error-codes"><a/>
+
+## <a name="binding-errors"></a>バインド エラー
+
+MLS インストーラーと SqlBindR は、次のエラー コードとメッセージを返します。
+
+|エラー コード  | メッセージ           | 詳細               |
+|------------|-------------------|-----------------------|
+|バインド エラー 0 | Ok (成功) | バインディングは、エラーなしで渡されます。 |
+|バインド エラー 1 | 引数が無効です。 | 構文エラーです。 |
+|バインド エラー 2 | 無効なアクション | 構文エラーです。 |
+|バインド エラー 3 | 無効なインスタンス | インスタンスが、バインドに対して無効です。 |
+|バインド エラー 4 | バインドできるされません。 | |
+|バインド エラー 5 | 既にバインドされてください | *bind* コマンドを実行しましたが、指定したインスタンスは既にバインドされています。 |
+|バインド エラー 6 | バインドに失敗しました | インスタンスをバインド解除中にエラーが発生しました。 このエラーは、任意の機能を選択せず MLS インストーラーを実行する場合に発生することができます。 バインディングには、MSSQL インスタンスと R の両方を選択して、インスタンスと仮定した場合、Python は、SQL Server 2017 ことが必要です。|
+|バインド エラー 7 | バインドされていません | データベース エンジンのインスタンスには、R Services または SQL Server マシン ラーニング サービスがあります。 インスタンスは、Microsoft Machine Learning のサーバーにバインドされていません。 |
+|バインド エラー 8 | バインドを解除できませんでした | インスタンスをバインド解除中にエラーが発生しました。 |
+|バインド エラー 9 | No instances found (インスタンスが見つかりませんでした) | データベース エンジンのインスタンスがこのコンピューターに見つかりませんでした。 |
+
 ## <a name="known-issues"></a>既知の問題
 
 このセクションでは、SqlBindR.exe ユーティリティまたは SQL Server インスタンスに影響を与える可能性があります Machine Learning のサーバーのアップグレードを使用する特定の既知の問題を一覧表示します。
@@ -288,40 +321,6 @@ Machine Learning 9.2.1 および 9.3 のサーバーには、この問題はあ�
 
 > [!NOTE]
 > インストールが完了するまで待機することを確認します。 1 つのバージョンに関連付けられた R ライブラリを削除してから、新しい R ライブラリを追加するのに長時間かかることができます。 操作が完了したら、一時フォルダーは削除されます。
-
-## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe コマンドの構文
-
-### <a name="usage"></a>使用方法
-
-`sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
-
-### <a name="parameters"></a>パラメーター
-
-|名前|Description|
-|------|------|
-|*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
-|*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
-|*unbind*|R Server の最新バージョンを指定した SQL データベース インスタンスからアンインストールし、R Server の今後のアップグレードがインスタンスに影響を与えないようにします|
-
-<a name="sqlbinder-error-codes"><a/>
-
-### <a name="errors"></a>エラー
-
-このツールでは、次のエラー メッセージが返されます。
-
-|エラー コード  | メッセージ           | 詳細               |
-|------------|-------------------|-----------------------|
-|バインド エラー 0 | Ok (成功) | バインディングは、エラーなしで渡されます。 |
-|バインド エラー 1 | 引数が無効です。 | 構文エラーです。 |
-|バインド エラー 2 | 無効なアクション | 構文エラーです。 |
-|バインド エラー 3 | 無効なインスタンス | インスタンスが、バインドに対して無効です。 |
-|バインド エラー 4 | バインドできるされません。 | |
-|バインド エラー 5 | 既にバインドされてください | *bind* コマンドを実行しましたが、指定したインスタンスは既にバインドされています。 |
-|バインド エラー 6 | バインドに失敗しました | インスタンスをバインド解除中にエラーが発生しました。 このエラーは、任意の機能を選択せず MLS インストーラーを実行する場合に発生することができます。|
-|バインド エラー 7 | バインドされていません | データベース エンジンのインスタンスには、R Services または SQL Server マシン ラーニング サービスがあります。 インスタンスは、Microsoft Machine Learning のサーバーにバインドされていません。 |
-|バインド エラー 8 | バインドを解除できませんでした | インスタンスをバインド解除中にエラーが発生しました。 |
-|バインド エラー 9 | No instances found (インスタンスが見つかりませんでした) | データベース エンジンのインスタンスがこのコンピューターに見つかりませんでした。 |
-
 
 ## <a name="see-also"></a>参照
 
