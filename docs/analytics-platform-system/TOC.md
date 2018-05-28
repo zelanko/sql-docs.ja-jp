@@ -17,7 +17,8 @@
 ## [サーバーの処理容量の見積もりワークシートのバックアップ](backup-capacity-planning-worksheet.md)
 ## [InfiniBand ネットワーク アダプターの構成](configure-infiniband-network-adapters.md)
 
-# Query
+# [クエリ]
+## [auto stats の構成](configure-auto-statistics.md)
 ## [アクティブなクエリの監視](monitoring-active-queries.md)
 
 # [読み込み]
@@ -50,7 +51,7 @@
 ## [ワークロードの管理](workload-management.md)
 ### [ワークロードの管理タスク](workload-management-tasks.md)
 
-# セキュリティ
+# Security
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [証明書のプロビジョニング](provision-certificate.md)
 
@@ -69,6 +70,7 @@
 ### [アプライアンスのネットワーク構成](appliance-network-configuration.md)
 ### [PDW のトポロジ](pdw-topology.md)
 ### [PDW の証明書のプロビジョニング](pdw-certificate-provisioning.md)
+### [PDW の機能スイッチ](appliance-feature-switch.md)
 ### [PDW のファイアウォールの構成](pdw-firewall-configuration.md)
 ### [PDW のサービス状態](pdw-services-status.md)
 ### [ファイルの瞬時初期化の構成](instant-file-initialization-configuration.md)
