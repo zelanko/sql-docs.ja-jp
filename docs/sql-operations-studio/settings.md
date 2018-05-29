@@ -21,7 +21,7 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>ユーザーとワークスペースの設定
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] の設定を好みに応じて構成することは簡単です。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]のエディター、ユーザー インターフェイス、および機能の振る舞い、ほぼすべての部分について任意に変更できます。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] の設定を好みに応じて構成するのは簡単です。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]のエディター、ユーザー インターフェイス、および機能の振る舞い、ほぼすべての部分について任意に変更できます。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 2 つのさまざまなスコープの設定を提供します。
 
