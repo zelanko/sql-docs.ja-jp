@@ -150,7 +150,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. ログインから権限を取り消す  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` から、権限 `VIEW SERVER STATE` を取り消します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` から、アクセス許可 `VIEW SERVER STATE` を取り消します。  
   
 ```  
 USE master;  
