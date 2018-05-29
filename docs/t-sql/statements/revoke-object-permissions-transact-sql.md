@@ -153,8 +153,8 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-select-permission-on-a-table"></a>A. テーブルの SELECT 権限を取り消す  
- 次の例では、`SELECT` データベースのテーブル `RosaQdM` に対する `Person.Address` 権限を、ユーザー `AdventureWorks2012` から取り消します。  
-  
+ 次の例では、ユーザー `RosaQdM` から、データベース `AdventureWorks2012` のテーブル `Person.Address` に対する `SELECT` アクセス許可を取り消します。
+
 ```  
 USE AdventureWorks2012;  
 REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;  
