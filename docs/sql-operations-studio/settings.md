@@ -21,11 +21,11 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>ユーザーとワークスペースの設定
 
-構成が容易である[!INCLUDE[name-sos](../includes/name-sos-short.md)]好みに応じて設定を使用します。 ほぼすべての部分[!INCLUDE[name-sos](../includes/name-sos-short.md)]のエディター、ユーザー インターフェイス、および機能の動作がオプションを変更できます。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] の設定を好みに応じて構成するのは簡単です。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]のエディター、ユーザー インターフェイス、および機能の振る舞い、ほぼすべての部分について任意に変更できます。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 2 つのさまざまなスコープの設定を提供します。
 
-* **ユーザー**の任意のインスタンスにこれらの設定がグローバルに適用[!INCLUDE[name-sos](../includes/name-sos-short.md)]を開きます。
+* **ユーザー設定** は開いている[!INCLUDE[name-sos](../includes/name-sos-short.md)]のすべてのインスタンスに対してグローバルに適用されます。
 * **ワークスペース**ワークスペースの設定は、コンピューター上のフォルダーに固有の設定とは、フォルダーをエクスプ ローラー サイドバーで開いている場合にのみ使用できます。 このスコープで定義された設定は、ユーザーのスコープをオーバーライドします。
 
 ## <a name="creating-user-and-workspace-settings"></a>ユーザーとワークスペースの設定を作成します。
