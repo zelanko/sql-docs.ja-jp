@@ -117,7 +117,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. ログインの IMPERSONATE 権限を取り消す  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `IMPERSONATE` の `WanidaBenshoof` 権限を、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから取り消します。  
+ 次の例では、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` のアクセス許可 `IMPERSONATE` を取り消します。
   
 ```  
 USE master;  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>C. サーバー ロールの VIEW DEFINITION 権限を取り消す  
- 次の例では、`VIEW DEFINITION` サーバー ロールに対する `Sales` サーバー ロールの `Auditors` を取り消します。  
+ 次の例では、`Auditors` サーバー ロールに対する `Sales` サーバー ロールの `VIEW DEFINITION` を取り消します。
   
 ```  
 USE master;  
